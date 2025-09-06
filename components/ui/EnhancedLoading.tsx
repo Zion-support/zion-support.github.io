@@ -10,9 +10,9 @@ type EnhancedLoadingProps = {;
 }
 
 export default function EnhancedLoading(): any ({ lines = 3 }: EnhancedLoadingProps) {;
-  return (
+  return ("
     <div className="space-y-2">;
-      {Array && Array.from({ length: lines }).map((_, idx) => (;
+      {Array && Array.from({ length: lines }).map((_, idx) => (;"
         <div key={idx} className="skeleton h-4 rounded" />;
       ))}
 <<<<<<< HEAD
@@ -21,6 +21,7 @@ import React from './react';
 type EnhancedLoadingProps = {
   lines?: number;
 }
+<<<<<<< HEAD
 ;
 export default /**
  * EnhancedLoading - Function description
@@ -38,3 +39,6 @@ function EnhancedLoading() {
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

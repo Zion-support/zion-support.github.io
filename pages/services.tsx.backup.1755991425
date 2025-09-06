@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Container from '../components/ui/Container';
@@ -84,5 +85,8 @@ export default function ServicesPage() {
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           </section>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

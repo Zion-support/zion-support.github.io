@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 <<<<<<< HEAD
 
@@ -13,10 +18,15 @@ const { execSync } = require('child_process');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+const { execSync, spawn } = require('child_process');
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /**
  * Comprehensive Automation Runner
  * Runs all automation scripts and provides comprehensive testing and improvement
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -31,6 +41,8 @@ const path = require('path');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 class ComprehensiveAutomationRunner {
   constructor() {
     this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -160,6 +172,10 @@ if (require.main === module) {
     this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
     
     try {
+<<<<<<< HEAD
+=======
+      // Run all automation steps
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       await this.runSyntaxFixes();
       await this.runBuildProcess();
       await this.runTests();

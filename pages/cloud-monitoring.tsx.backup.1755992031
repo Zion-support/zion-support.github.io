@@ -2,11 +2,16 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Activity, Server, AlertTriangle, BarChart3, Zap, Shield, Check, Star, TrendingUp } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function CloudMonitoringPage() {
   const features = [
     {
+<<<<<<< HEAD
       icon: <Activity className="w-6 h-6" />,
       title: 'Real-time Monitoring',
       description: 'Monitor your infrastructure with sub-second latency',
@@ -29,17 +34,25 @@ export default function CloudMonitoringPage() {
       title: 'Advanced Analytics',
       description: 'Deep insights and predictive analytics',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
+<<<<<<< HEAD
       price: '$29',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
         'Up to 10 servers',
+<<<<<<< HEAD
         'Basic monitoring metrics',
         'Email alerts',
         '7-day data retention',
@@ -53,11 +66,18 @@ export default function CloudMonitoringPage() {
     {
       name: 'Professional',
       price: '$99',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
         'Up to 100 servers',
+<<<<<<< HEAD
         'Advanced monitoring & APM',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'SMS & Slack alerts',
         '30-day data retention',
         'Priority support',
@@ -66,6 +86,7 @@ export default function CloudMonitoringPage() {
         'Team collaboration'
       ],
       popular: true,
+<<<<<<< HEAD
       cta: 'Start Free Trial',
       color: 'border-green-500 hover:border-green-400'
     },
@@ -419,6 +440,9 @@ export default function CloudMonitoringPage() {
           </div>
         </section>
       </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 }

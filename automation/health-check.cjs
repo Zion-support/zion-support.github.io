@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +27,9 @@ const { execSync } = require('child_process');
 console.log('🏥 Running Health Check...');
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const checks = [
   { name: 'Build Status', command: 'npm run build' },
   { name: 'Test Status', command: 'npm run test:smoke' },
@@ -41,6 +45,7 @@ checks.forEach(check => {
     console.log(`❌ ${check.name}: FAILED`);
   }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -127,13 +132,15 @@ const okChecks = Object.values(healthCheck.checks).filter(
 const errorChecks = Object.values(healthCheck.checks).filter(
   check => check.status === 'error'
 ).length;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
 
-}`);
 
+<<<<<<< HEAD
 if (healthCheck.status === 'healthy') {
   
   process.exit(0);
@@ -162,6 +169,8 @@ const path = require("path");
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
@@ -169,9 +178,12 @@ class HealthChecker {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   log(message) {
     console.log(`🏥 [Health Check] ${message}`);
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 #!/usr/bin/env node
 
@@ -180,6 +192,7 @@ class HealthChecker {
  * Monitors application health and provides alerts
  */
 
+<<<<<<< HEAD
 const healthReport = {
     timestamp: new Date().toISOString(),
     status: 'healthy',
@@ -224,6 +237,8 @@ class HealthCheckMonitor {
 
   async runCommand(command, description) {
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -238,6 +253,7 @@ class HealthCheckMonitor {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       return { success: false, error: error.message };
     }
+<<<<<<< HEAD
   }
 
   async checkApplicationHealth() {
@@ -261,10 +277,13 @@ class HealthCheckMonitor {
     
     if (healthy) {
       this.log('✅ Application is healthy');
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     } else {
       this.log('❌ Application health issues detected', 'ERROR');
     }
+<<<<<<< HEAD
 console.log(`Total Checks: ${healthReport.summary.total}`);
 console.log(`✅ Passed: ${healthReport.summary.passed}`);
 console.log(`⚠️  Warnings: ${healthReport.summary.warnings}`);
@@ -282,6 +301,14 @@ if (healthReport.status === 'unhealthy') {
 }
 ursor/fix-syntax-push-and-merge-to-main-7ef8
 
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   log(message, type = "INFO") {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type}] ${message}`);
@@ -412,7 +439,7 @@ ursor/fix-syntax-push-and-merge-to-main-7ef8
 
   async run() {
     this.log("🎯 Starting Health Check Process...");
-    this.log("===================================");
+    this.log("");
     try {
       await this.checkNodeVersion();
       await this.checkPackageJson();
@@ -422,7 +449,7 @@ ursor/fix-syntax-push-and-merge-to-main-7ef8
       await this.checkBuildCapability();
       
       this.log("\n📊 HEALTH CHECK REPORT");
-      this.log("======================");
+      this.log("=");
       this.log(`Checks Passed: ${this.checks.length}`);
       this.log(`Errors Found: ${this.errors.length}`);
       
@@ -463,7 +490,14 @@ const checker = new HealthChecker();
 checker.run().catch(console.error);
 
 
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -563,6 +597,7 @@ if (require.main === module) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = HealthCheckMonitor;
+<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 <<<<<<< HEAD
 =======
@@ -632,3 +667,7 @@ main
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

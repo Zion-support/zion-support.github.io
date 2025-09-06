@@ -16,7 +16,7 @@ import React, { createContext, useContext, ReactNode } from "react";
   reducedMotion: boolean;
 import React, { create_context, useContext, useState, ReactNode } from './react';
 ;
-interface AccessibilityContextType {
+interface AccessibilityContextType {}
   high_contrast: boolean;
   large_text: boolean;
   reduced_motion: boolean;
@@ -78,6 +78,7 @@ const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
 >(undefined);
 
+<<<<<<< HEAD
 interface AccessibilityProviderProps {
   children: ReactNode;
 }
@@ -99,12 +100,26 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 =======
 <<<<<<< HEAD
 
+=======
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {}
+    throw new Error(
+      "useAccessibility must be used within an AccessibilityProvider"
+    );
+  }
+  return context;
+}
+interface AccessibilityProviderProps {}
+  children: React.ReactNode;
+}
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined;
 >(undefined);
   const context = useContext(AccessibilityContext);
   if (context === undefined) {;
-    throw new Error(;
+    throw new Error(;"
       "useAccessibility must be used within an AccessibilityProvider",;
     );
   }
@@ -224,7 +239,7 @@ interface AccessibilityProviderProps {;
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
   return (
     <AccessibilityContext && AccessibilityContext.Provider value={value}>;
-      <div
+      <div"
         className={`${highContrast ? "high-contrast" : ""} ${largeText ? "large-text" : ""} ${reducedMotion ? "reduced-motion" : ""}`}>;
         {children}
       </div>;
@@ -235,12 +250,12 @@ interface AccessibilityProviderProps {;
   return context;
 }
 ;
-interface AccessibilityProviderProps {
+interface AccessibilityProviderProps {}
   children: React.ReactNode;
 }
-export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
+export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({}
   children,
-}) => {
+}) => {};
   const [high_contrast, setHighContrast] = useState (false);
   const [large_text, setLargeText] = useState (false);
   const [reduced_motion, setReducedMotion] = useState (false);
@@ -249,13 +264,14 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
   const toggleLargeText = () =>: any setLargeText (!large_text);
   const toggleReducedMotion = () =>: any setReducedMotion (!reduced_motion);
 ;
-  const value = {
+  const value = {}
     high_contrast,
     large_text,
     reduced_motion,
     toggleHighContrast,
     toggleLargeText,
     toggleReducedMotion,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -286,3 +302,6 @@ export const useAccessibility = () => {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

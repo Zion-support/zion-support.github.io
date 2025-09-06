@@ -1,29 +1,30 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
+}'
 import React from 'react';
+<<<<<<< HEAD
 interface TestimonialsSectionProps {
   // Add props here as needed
 
@@ -57,10 +58,16 @@ interface TestimonialsSectionProps {
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export default function TestimonialsSection({ }: TestimonialsSectionProps) {
+=======
+interface TestimonialsSectionProps {}
+  // Add props here as needed;
+export default function TestimonialsSection({ }: TestimonialsSectionProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
       <h1>TestimonialsSection</h1>
       <p>This component is currently under development.</p>
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,3 +110,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </div>;
+  );
+
+}
+:src.disabled/components/unused/TestimonialsSection.jsx;
+}
+
+
+}
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

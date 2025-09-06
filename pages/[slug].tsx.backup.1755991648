@@ -4,6 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 =======
 <<<<<<< HEAD
@@ -42,6 +43,9 @@ import { real2026Q1Additions } from '../data/real-2026-q1-additions';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2867
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServiceFallbackPage() {
   const router = useRouter();
@@ -75,6 +79,7 @@ export default function ServiceFallbackPage() {
         augmentedServicesBatch3 as any,
         real2025Q3Additions as any,
 <<<<<<< HEAD
+<<<<<<< HEAD
         realServicesQ42025 as any
 =======
 <<<<<<< HEAD
@@ -85,6 +90,9 @@ export default function ServiceFallbackPage() {
         ultimateFuturisticServices2025 as any
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2867
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       );
     const byLink = all.find(s => {
       try {
@@ -207,6 +215,7 @@ function collectAllServices(): Svc[] {
       comprehensiveITSolutions as Svc[],
       marketValidatedServices as Svc[],
 <<<<<<< HEAD
+<<<<<<< HEAD
       newRealInnovations as Svc[],
       realMarketServices as Svc[],
       augmentedServicesBatch3 as Svc[]
@@ -230,6 +239,9 @@ function collectAllServices(): Svc[] {
       ultimateFuturisticServices2025 as unknown as Svc[]
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2867
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     );
 }
 

@@ -2,38 +2,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 <<<<<<< HEAD
 
 =======
   // add more env variables as needed;
 }
-interface ImportMeta {
+interface ImportMeta {}
   readonly env: ImportMetaEnv,
   readonly url?: string;
 }
 // Type declarations for modules used in Vite configuration;
-declare module 'vitest / config' {
+declare module 'vitest / config' {'
   export { define_config } from 'vite';
 }
-<<<<<<< HEAD
-declare module '@vitejs/plugin-react - swc' {
-  import { Plugin } from 'vite',
-  export default function reactSWC (): Plugin;
-}
-declare module 'path' {
-  export function resolve (...paths: string[]): string,
-  export function join (...paths: string[]): string,
-  export function dirname (path: string): string;
-}
-declare module 'lovable - tagger' {
-  import { Plugin } from 'vite',
-  export function component_tagger (): Plugin;
-}
-// Add Node.js globals;
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -94,6 +84,8 @@ declare module 'path' {export function resolve(...paths: string[]): string;
 }
 declare module 'lovable-tagger' {import { Plugin } from 'vite';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface ImportMetaEnv {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -110,21 +102,27 @@ interface ImportMeta {;
   readonly url?: string;
 }
 ;
-// Type declarations for modules used in Vite configuration;
-declare module 'vitest/config' {;
+// Type declarations for modules used in Vite configuration;'
+declare module 'vitest/config' {;'
   export { defineConfig } from 'vite';
 }
-;
-declare module '@vitejs/plugin-react-swc' {;
+;'
+declare module '@vitejs/plugin-react-swc' {;'
   import { Plugin } from 'vite',;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   export default function reactSWC(): Plugin;
 }
-;
+;'
 declare module 'path' {;
   export function resolve(...paths: string[]): string,;
   export function join(...paths: string[]): string,;
   export function dirname(path: string): string;
 }
+<<<<<<< HEAD
 ;
 declare module 'lovable-tagger' {;
   import { Plugin } from 'vite',;
@@ -153,28 +151,36 @@ declare module 'lovable-tagger' {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 declare let __dirname: string,
-declare let process: {
-  env: {
-    [key: string]: string | undefined,
+declare let process: {}
+  env: {}
+    [key: string]: string | undefined,'
     NODE_ENV: 'development' | 'production' | 'test',
-    PORT?: string
+    PORT?: string;
 ;
 // Add Node.js globals;
 declare let __dirname: string,;
 declare let process: {;
   env: {;
-    [key: string]: string | undefined,;
+    [key: string]: string | undefined,;'
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 <<<<<<< HEAD
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -183,6 +189,8 @@ declare let process: {;
 =======
   }
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +198,7 @@ declare let process: {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 };
+<<<<<<< HEAD
   }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -202,3 +211,7 @@ declare let process: {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -112,6 +112,7 @@ const SolutionsPage: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -199,10 +200,14 @@ const SolutionsPage: React.FC = () => {
               </div>
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -355,10 +360,14 @@ const SolutionsPage: React.FC = () => {
                         {feature}
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       </li>
                     ))}
                   </ul>
                   
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -379,6 +388,9 @@ const SolutionsPage: React.FC = () => {
                     Get Started
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </a>
                 </motion.div>
               ))}

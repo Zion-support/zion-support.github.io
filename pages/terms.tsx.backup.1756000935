@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -84,10 +85,14 @@ export default function TermsOfService() {
   ];
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -256,10 +261,14 @@ export default function TermsOfService() {
               </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -544,11 +553,15 @@ export default function TermsOfService() {
                     <p className="text-gray-300">San Francisco, CA</p>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -566,6 +579,9 @@ export default function TermsOfService() {
       </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor-fixed.cjs
 
 
@@ -34,6 +35,13 @@
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+#!/usr/bin/env node;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
       ""system": {        memory: {},        cpu": {},";        "process"
       "application": {"buildSize": 0,        "bundleSize": 0,,"loadTime": 0,,"}
@@ -41,6 +49,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     this.reportFile = path.join(process.cwd(), "performance-report.json");"}"
 const fs = require("child_process")
 const path = require("path")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor-fixed.cjs
 
@@ -152,6 +161,12 @@ async collectSystemMetrics() {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "timestamp"
         "cpu"
         "process"
@@ -181,6 +196,7 @@ const { execSync } = require("child_process")
       const distPath = path.join(this.projectRoot, "dist")
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
       const srcPath = path.join(this.projectRoot, "src")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor-fixed.cjs
 
@@ -256,6 +272,12 @@ const { execSync } = require("child_process")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   getDirectorySize(dirPath) {
     let totalSize = 0
     if (!fs.existsSync(dirPath)) return 0
@@ -538,6 +560,7 @@ class PerformanceMonitor {
   getRecommendations() {
     const recommendations = []
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor-fixed.cjs
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
@@ -556,11 +579,17 @@ class PerformanceMonitor {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/performance-monitor-fixed.cjs
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
       console.log(" Application metrics collected")
       console.warn("⚠  Could not collect application "metrics": ")
@@ -615,6 +644,7 @@ class PerformanceMonitor {
         "Reduce First Input Delay - minimize JavaScript execution time"
         "Improve Cumulative Layout Shift - add size attributes to images and videos"
         "Reduce bundle size - remove unused dependencies and optimize imports"
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-monitor-fixed.cjs
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -635,3 +665,11 @@ class PerformanceMonitor {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+        "Optimize memory usage - check for memory leaks and optimize data structures"
+
+
+  console.error("Fatal "error": ")
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

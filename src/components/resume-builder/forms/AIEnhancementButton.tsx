@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -19,10 +20,14 @@ interface AIEnhancementButtonProps {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function AIEnhancementButton({
+=======
+export function AIEnhancementButton({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   currentContent,
   enhancementType,
   context,
   onEnhanced,
+<<<<<<< HEAD
   buttonText = "Enhance with AI",
   className
 }: AIEnhancementButtonProps) {
@@ -56,21 +61,27 @@ export function AIEnhancementButton({
 =======
 
       return
+=======
+  buttonText = "Enhance with AI",;
+  className;
+}: AIEnhancementButtonProps) {}
+      return;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     setError(null)
     const enhancedContent = await enhanceContent(
-      currentContent
-      enhancementType
-      context
+      currentContent;
+      enhancementType;
+      context;
     )
-    if (enhancedContent) {
+    if (enhancedContent) {}
       onEnhanced(enhancedContent)
 interface AIEnhancementButtonProps {;
   currentContent: string;
   enhancementType:;
-    | 'summary';
-    | 'work-description';
-    | 'skill-categorization';
+    | 'summary';'
+    | 'work-description';'
+    | 'skill-categorization';'
     | 'general';
   context?: string;
   onEnhanced: (enhancedContent: string) => void;
@@ -80,7 +91,7 @@ export function AIEnhancementButton(): any ({;
   currentContent,;
   enhancementType,;
   context,;
-  onEnhanced,;
+  onEnhanced,;'
   buttonText = 'Enhance with AI',;
   className,;
 }: AIEnhancementButtonProps) {;
@@ -88,36 +99,42 @@ export function AIEnhancementButton(): any ({;
   const [error, setError] = useState<string | null>(null);
 
   const handleEnhance = async () => {;
-    if (!currentContent || currentContent && currentContent.trim().length < 10) {;
+    if (!currentContent || currentContent && currentContent.trim().length < 10) {;'
       setError('Please enter at least some basic content before enhancing');
       return;
     }
 
+<<<<<<< HEAD
 import { Button } from '@/components / ui / button';
 import { Sparkles, Loader2 } from 'lucide-react';
+=======
+'
+import { Button } from '@/components / ui / button';'
+import { Sparkles, Loader2 } from 'lucide-react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useResumeEnhancer } from '@/hooks / useResumeEnhancer';
-interface AIEnhancementButtonProps {
+interface AIEnhancementButtonProps {}
   current_content: string;
-  enhancement_type:;
-    | 'summary';
-    | 'work - description';
-    | 'skill - categorization';
+  enhancement_type:;'
+    | 'summary';'
+    | 'work - description';'
+    | 'skill - categorization';'
     | 'general';
   context?: string;
   on_enhanced: (enhanced_content: string) => void;
   button_text?: string;
   class_name?: string;
-export /**
- * AIEnhancementButton - Function description
+export /**;
+ * AIEnhancementButton - Function description;
  */
-function AIEnhancementButton() {
+function AIEnhancementButton() {}
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
   const [error, set_error] = useState < string | null>(null);
-  const handle_enhance = async () => {
-    // Check condition
-if (.length < 10) {) {
-  $2
-}
+  const handle_enhance = async () => {}
+    // Check condition;
+if (.length < 10) {) {}
+  $2;
+}'
       set_error ('Please enter at least some basic content before enhancing');
       return;
     }
@@ -126,12 +143,13 @@ if (.length < 10) {) {
       current_content,
       enhancement_type,
       context);
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       on_enhanced (enhanced_content);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -266,3 +284,6 @@ export function AIEnhancementButton({
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

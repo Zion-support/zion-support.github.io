@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -25,12 +29,15 @@ interface NotificationListProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   loading: boolean,
   error: string | null,
   notifications: Notification[],
   onMarkAsRead: (id: string) => Promise<void>,
   onDismiss: (id: string) => Promise<void>,
-  onRetry: () => void
+  onRetry: () => void;
 }
 
 export const NotificationList: React.FC<NotificationListProps> = ({;
@@ -40,6 +47,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
   onMarkAsRead;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -65,6 +73,16 @@ import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
 import { Button } from '@/components/ui/button',;
 import { NotificationItem } from './NotificationItem',;
+=======
+
+
+
+import React from 'react',;'
+import { ScrollArea } from '@/components/ui/scroll-area',;'
+import { Skeleton } from '@/components/ui/skeleton',;'
+import { Button } from '@/components/ui/button',;'
+import { NotificationItem } from './NotificationItem',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Notification } from '@/context/notifications',;
 interface NotificationListProps {;
   loading: boolean,;
@@ -80,18 +98,23 @@ interface NotificationListProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  loading: boolean
-  error: string | null
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+  loading: boolean;
+  error: string | null;
   notifications: Notification[]
   onMarkAsRead: (id: string) => Promise<void>
   onDismiss: (id: string) => Promise<void>
 
+<<<<<<< HEAD
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
@@ -115,20 +138,18 @@ interface NotificationListProps {;
   notifications: Notification[],;
   onMarkAsRead: (id: string) => Promise<void>,;
   onDismiss: (id: string) => Promise<void>,;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onRetry: () => void;
 }
-
-export const NotificationList: React.FC<NotificationListProps> = ({;
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {ScrollArea} from '@/components / ui / scroll - area';
-import {Skeleton} from '@/components / ui / skeleton';
-import {Button} from '@/components / ui / button';
-import {NotificationItem} from './NotificationItem';
+export const NotificationList: React.FC<NotificationListProps> = ({}
+';
+import {ScrollArea} from '@/components / ui / scroll - area';'
+import {Skeleton} from '@/components / ui / skeleton';'
+import {Button} from '@/components / ui / button';'
+import {NotificationItem} from './NotificationItem';'
 import {Notification} from '@/context / notifications';
-interface NotificationListProps {
+interface NotificationListProps {}
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -136,13 +157,7 @@ interface NotificationListProps {
   on_dismiss: (id: string) => Promise < void>,
   on_retry: () => void;
 }
-export const NotificationList: React.FC < NotificationListProps> = ({
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export const NotificationList: React.FC < NotificationListProps> = ({};
   loading;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -151,6 +166,7 @@ export const NotificationList: React.FC < NotificationListProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   error;
   notifications;
+<<<<<<< HEAD
   onMarkAsRead;  on_dismiss,
   on_retry;
 <<<<<<< HEAD
@@ -165,112 +181,64 @@ export const NotificationList: React.FC < NotificationListProps> = ({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }) => {
+=======
+  onMarkAsRead;
+
+  loading,
+  error,
+  notifications,
+  onMarkAsRead,
+
+  onRetry;
+  on_dismiss,
+  on_retry;
+
+
+
+}) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   onDismiss,;
   onRetry;
 }) => {;
   return (
-<<<<<<< HEAD
-=======
-
-import React from 'react',;
-import { ScrollArea } from '@/components/ui/scroll-area',;
-import { Skeleton } from '@/components/ui/skeleton',;
-import { Button } from '@/components/ui/button',;
-import { NotificationItem } from './NotificationItem',;
-import { Notification } from '@/context/notifications',;
-;
-interface NotificationListProps {;
-  loading:boolean,;
-  error:string | null,;
-  notifications:Notification[],;
-  onMarkAsRead:(id:string) => Promise<void>,;
-  onDismiss:(id:string) => Promise<void>,;
-  onRetry:() => void;
-}
-;
-export const NotificationList:React.FC<NotificationListProps> = ({;
-  loading,;
-  error,;
-  notifications,;
-  onMarkAsRead,;
-  onDismiss,;
-  onRetry;
-}) => {;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"
     <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
-      {error ? (;
+      {error ? (;"
         <div className="p-8 text-center text-amber-500">;
           <p>{error}</p>;
-<<<<<<< HEAD
-          <Button
-            variant="outline" 
-            size="sm" 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+"
             className="mt-2"
             onClick={onRetry}>;
             Try Again;
           </Button>;
         </div>;
       ) : loading ? (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          <Button ;
-            variant="outline" ;
-            size="sm" ;
-            className="mt-2";
-            onClick={onRetry}
-          >;
-            Try Again;
-          </Button>;
-        </div>;
-      ) :loading ? (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <div className="p-4 space-y-4">;
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+
+
+"
+        <div className="p-4 space-y-4">;"
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;"
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;"
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      ) : notifications && notifications.length === 0 ? (;
+
+      ) : notifications && notifications.length === 0 ? (;"
         <div className="p-8 text-center text-zion-slate-light">;
           <p>No notifications yet</p>;
         </div>;
       ) : (;
         notifications && notifications.map((notification) => (;
-          <NotificationItem
-            key={notification && notification.id}
-<<<<<<< HEAD
-=======
-      ) :notifications.length === 0 ? (;
-        <div className="p-8 text-center text-zion-slate-light">;
-          <p>No notifications yet</p>;
-        </div>;
-      ) :(;
-        notifications.map((notification) => (;
           <NotificationItem;
-            key={notification.id}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+            key={notification && notification.id}
+
+
+
             notification={notification}
             onMarkAsRead={onMarkAsRead}
             onDismiss={onDismiss}
@@ -283,34 +251,28 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
 
     </ScrollArea>;
   );
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </ScrollArea>;
   );
 
 
-};
+};"
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
-          <Button;
-            variant="outline";
-            size="sm";
+          <Button;"
+            variant="outline";"
+            size="sm";"
             className="mt - 2";
             on_click={on_retry}
           >;
             Try Again;
           </Button>;
-        </div>) : loading ? (
-        <div className="p - 4 space - y-4">;
+        </div>) : loading ? ("
+        <div className="p - 4 space - y-4">;"
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;"
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;"
           <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-        </div>) : notifications.length === 0 ? (
+        </div>) : notifications.length === 0 ? ("
         <div className="p - 8 text - center text - zion - slate - light">;
           <p > No notifications yet</p>;
         </div>) : (
@@ -324,6 +286,7 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
     </ScrollArea>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -456,3 +419,9 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
     <ScrollArea className="flex - 1 overflow - y-auto max-h-[350px]">;
       {error ? (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

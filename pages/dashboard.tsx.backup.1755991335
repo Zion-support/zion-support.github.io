@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -519,3 +520,6 @@ const DashboardPage: React.FC = () => {
 };
 
 export default DashboardPage;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

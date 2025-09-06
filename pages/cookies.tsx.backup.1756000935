@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -611,6 +612,9 @@ export default function CookiePolicy() {
         <EnhancedFooter />
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>
     </>
   );

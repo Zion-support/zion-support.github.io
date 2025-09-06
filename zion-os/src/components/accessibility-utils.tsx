@@ -1,19 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-"use client",
-import { useEffect, useRef, useState  } from './react';,
-// Skip link component for keyboard navigation;
-export /**
- * SkipLink - Function description
- */
-function SkipLink() {
-  return (
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -25,6 +21,8 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <a;
       href={`#${targetId}`}
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[var(--accent)] text-white px-4 py-2 rounded z-50";
@@ -40,16 +38,15 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export /**
- * LiveRegion - Function description
- */
-function LiveRegion() {
-  return (
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -78,6 +75,12 @@ export function LiveRegion({;
       role={role}
       aria - live={aria_live}
       className="sr-only";
+=======
+    <div;
+      role={role}
+      aria - live={aria_live}"
+      className="sr - only";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       aria - atomic="true";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     >;
@@ -85,6 +88,7 @@ export function LiveRegion({;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,6 +133,10 @@ export function useFocusTrap(enabled: boolean = true) {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const handleKeyDown = (e: KeyboardEvent) => {;
+=======
+
+    const handleKeyDown = (e: KeyboardEvent) => {;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
@@ -148,6 +156,7 @@ export function useFocusTrap(enabled: boolean = true) {;
           }
         }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     },;
@@ -211,6 +220,9 @@ export function Announcement({;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (;
+=======
+  return (;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
         <div key={index}>{announcement}</div>;
@@ -218,6 +230,7 @@ export function Announcement({;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -351,189 +364,90 @@ export function useFocusTrap(enabled: boolean = true) {;
             e.preventDefault(),;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+    const handleKeyDown = (e: KeyboardEvent) => {;"
+      if (e.key === "Tab") {;
+        if (e.shiftKey) {;
+          if (document.activeElement === firstElement) {;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             firstElement.focus();
           }
         }
       }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-    container.addEventListener("keydown", handleKeyDown);
-    return () => container.removeEventListener("keydown", handleKeyDown);
-  }, [enabled]);
-  return containerRef;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 }
 // Keyboard navigation hook;
-export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {
+export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {}
   const [selected_index, setSelectedIndex] = useState (-1),
-  const handleKeyDown = (e: KeyboardEvent) =>: any {
-    switch (e.key) {
+  const handleKeyDown = (e: KeyboardEvent) =>: any {}
+    switch (e.key) {"
       case "ArrowDown": e.prevent_default (),
         setSelectedIndex (prev => (prev + 1) % items.length),
-        break,
+        break,";
       case "ArrowUp":;
         e.prevent_default (),
         setSelectedIndex (prev => (prev - 1 + items.length) % items.length),
-        break,
-      case "Enter":;
+        break,"
+      case "Enter":;"
       case " ":;
         e.prevent_default (),
-        // Check condition
-if ( {) {
-  $2
+        // Check condition;
+if ( {) {}
+  $2;
 }
           on_select (items[selected_index]);
         }
-        break,
+        break,"
       case "Escape": setSelectedIndex (-1),
         break;
     }
   },
-  useEffect (() => {
-    document.addEventListener ("keydown", handleKeyDown),
+  useEffect (() => {"
+    document.addEventListener ("keydown", handleKeyDown),"
     return () => document.removeEventListener ("keydown", handleKeyDown);
   }, [items, selected_index, on_select]),
   return { selected_index, setSelectedIndex }
 }
 // Announcement component for screen readers;
-export /**
- * Announcement - Function description
+export /**;
+ * Announcement - Function description;
  */
-function Announcement() {
+function Announcement() {}
   const [announcements, set_announcements] = useState < string[]>([]),
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
+  useEffect (() => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       set_announcements (prev => [...prev, message]),
       // Clear announcement after a delay;
-      const timer = set_timeout (() => {
+      const timer = set_timeout (() => {}
         set_announcements (prev => prev.slice (1));
       }, 1000),
       return () => clear_timeout (timer);
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }, [message]),
-  return (
-    <div aria - live={priority} aria - atomic="true" className="sr - only">;
-      {announcements.map ((announcement, index) => (
-        <div key={index}>{announcement}</div>))}
-    </div>);
-=======
-  }, [message]);
-=======
-    },;
-    container.addEventListener("keydown", handleKeyDown),;
-    return () => container.removeEventListener("keydown", handleKeyDown);
-  }, [enabled]),;
-  return containerRef;
-}
-;
-// Keyboard navigation hook;
-export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {;
-  const [selectedIndex, setSelectedIndex] = useState(-1),;
-  const handleKeyDown = (e: KeyboardEvent) => {;
-    switch (e.key) {;
-      case "ArrowDown": e.preventDefault(),;
-        setSelectedIndex(prev => (prev + 1) % items.length),;
-        break,;
-      case "ArrowUp":;
-        e.preventDefault(),;
-        setSelectedIndex(prev => (prev - 1 + items.length) % items.length),;
-        break,;
-      case "Enter":;
-      case " ":;
-        e.preventDefault(),;
-        if (selectedIndex >= 0) {;
-          onSelect(items[selectedIndex]);
-        }
-        break,;
-      case "Escape": setSelectedIndex(-1),;
-        break;
-    }
-  },;
-  useEffect(() => {;
-    document.addEventListener("keydown", handleKeyDown),;
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [items, selectedIndex, onSelect]),;
-  return { selectedIndex, setSelectedIndex }
-}
-;
-// Announcement component for screen readers;
-export function Announcement({;
-  message,;
-  priority = "polite";
-}: {;
-  message: string,;
-  priority?: "polite" | "assertive";
-}) {;
-  const [announcements, setAnnouncements] = useState<string[]>([]),;
-  useEffect(() => {;
-    if (message) {;
-      setAnnouncements(prev => [...prev, message]),;
-      // Clear announcement after a delay;
-      const timer = setTimeout(() => {;
-        setAnnouncements(prev => prev.slice(1));
-      }, 1000),;
-      return () => clearTimeout(timer);
-    }
-  }, [message]),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  return (;
+
+
+  return (;"
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
         <div key={index}>{announcement}</div>;
       ))}
     </div>;
   );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-// Progress indicator component;
-<<<<<<< HEAD
-export /**
- * ProgressIndicator - Function description
- */
-function ProgressIndicator() {
-  const percentage = Math.round ((value / max) * 100),
-  return (
-    <div className="space - y-2">;
-      <div className="flex justify - between text - sm">;
-=======
-export function ProgressIndicator({value;
-  max;
-  label;
-}: {value: number;
-  max: number;
-  label: string;
-}) {const percentage = Math.round((value / max) * 100);
-=======
-;
-// Progress indicator component;
-export function ProgressIndicator({;
-  value,;
-  max,;
-  label;
-}: {;
-  value: number,;
-  max: number,;
-  label: string;
-}) {;
-  const percentage = Math.round((value / max) * 100),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  return (;
-    <div className="space-y-2">;
+
+
+  return (;"
+    <div className="space-y-2">;"
       <div className="flex justify-between text-sm">;
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <span>{label}</span>;
@@ -554,6 +468,16 @@ export function ProgressIndicator({;
           className="bg-[var (--accent)] h - 2 rounded - full transition - all duration-300";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           style={{ width: `${percentage}%` }}
+=======
+
+        <span>{label}</span>;
+        <span>{percentage}%</span>;
+      </div>;"
+      <div className="w - full bg-[var (--border)] rounded - full h - 2">;
+        <div;"
+          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";`
+          style={{ width: `${percentage}%` }}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           role="progressbar";
           aria-valuenow={value}
           aria-valuemin={0}
@@ -564,6 +488,7 @@ export function ProgressIndicator({;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -640,11 +565,21 @@ export function CollapsibleSection({;
     <div className="border border-[var(--border)] rounded-lg">;
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify-between";
+=======
+
+
+  return (;"
+    <div className="border border-[var(--border)] rounded-lg">;
+
+      <button;"
+        className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         on_click={() => setIsExpanded (!is_expanded)}
-        aria - expanded={is_expanded}
+        aria - expanded={is_expanded}`
         aria - controls={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       >;
+<<<<<<< HEAD
         {title}
         <span className="text-[var(--accent)]">;
           {isExpanded ? "−" : "+"}
@@ -682,12 +617,27 @@ export function CollapsibleSection({;
 =======
         <div className="px - 4 pb-3">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        {title}"
+        <span className="text-[var (--accent)]">;"
+          {is_expanded ? "−" : "+"}
+        </span>;
+      </button>;
+      <div;
+
+`
+        }`}
+        aria - hidden={!is_expanded}
+      >;"
+        <div className="px - 4 pb - 3">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {children}
         </div>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -843,6 +793,13 @@ export function Tooltip({;
   return (;
     <div className="relative inline-block">;  return (;
     <div className="relative inline-block">;
+=======
+
+
+  return (;"
+    <div className="relative inline-block">;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}
@@ -855,13 +812,22 @@ export function Tooltip({;
       </div>;
       {is_visible && (
         <div;
-          id={tooltip_id}
-          className={`absolute z - 50 px - 2 py - 1 text - sm text - white bg - gray - 900 rounded shadow - lg ${position_classes[position]}`}
+          id={tooltip_id}`
+          className={`absolute z - 50 px - 2 py - 1 text - sm text - white bg - gray - 900 rounded shadow - lg ${position_classes[position]}`}"
           role="tooltip";
         >;
+<<<<<<< HEAD
           {content}
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate-45" />;
         </div>)}
     </div>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          {content}"
+          <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;
+        </div>)}
+    </div>);
+}
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

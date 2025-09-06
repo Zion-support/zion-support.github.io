@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -41,32 +42,51 @@ const whitepapers = {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import React from 'react',;'
+import Head from 'next/head',;'
+import Link from 'next/link',;'
+import { useRouter } from 'next/router',;
+// Mock whitepaper data - in a real app, this would come from an API or database;
+const whitepapers = {'
+  'autonomous-systems-guide': {'
+    id: 'autonomous-systems-guide','
+    title: 'The Complete Guide to Autonomous Systems','
+    description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.','
+    category: 'Technology','
+    pages: '45','
+    author: 'Zion Tech Group Research Team','
+    publishDate: 'January 2025',
+    content: {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       executiveSummary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
-      keyTopics: [
+      keyTopics: ['
         'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions'
-      ],
+      ],'
       targetAudience: 'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.'
     }
-  },
-  'ai-ethics-framework': {
-    id: 'ai-ethics-framework',
-    title: 'AI Ethics Framework for Business',
-    description: 'Establishing ethical guidelines for AI implementation in enterprise environments.',
-    category: 'Ethics',
-    pages: '32',
-    author: 'Zion Tech Group Ethics Committee',
-    title: 'Automation ROI Calculator Guide',
-    description: 'How to calculate and maximize return on investment for automation initiatives.',
-    category: 'Business',
-    pages: '28',
+  },'
+  'ai-ethics-framework': {'
+    id: 'ai-ethics-framework','
+    title: 'AI Ethics Framework for Business','
+    description: 'Establishing ethical guidelines for AI implementation in enterprise environments.','
+    category: 'Ethics','
+    pages: '32','
+    author: 'Zion Tech Group Ethics Committee','
+    title: 'Automation ROI Calculator Guide','
+    description: 'How to calculate and maximize return on investment for automation initiatives.','
+    category: 'Business','
+    pages: '28','
     author: 'Zion Tech Group Business Analytics Team',
-    content: {
+    content: {'
       executiveSummary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
-      keyTopics: [
+      keyTopics: ['
         'ROI Calculation MethodsCost-Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies'
-      ],
+      ],'
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -122,10 +142,20 @@ publish_date: 'January 2025',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+import React from 'react';'
+import Head from 'next/head';'
+import Link from 'next/link';'
+import { useRouter } from 'next/router';
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions'
-      ]
+      ]'
       targetAudience: 'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.'
     }
+<<<<<<< HEAD
   }
   'ai-ethics-framework': {
 <<<<<<< HEAD
@@ -156,14 +186,23 @@ publish_date: 'January 2025',
 =======
 publish_date: 'January 2025',
     content: {
+=======
+  }'
+  'ai-ethics-framework': {}
+'
+    title: 'AI Ethics Framework for Business','
+    description: 'Establishing ethical guidelines for AI implementation in enterprise environments.','
+    category: 'Ethics','
+    pages: '32','
+    author: 'Zion Tech Group Ethics Committee',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      keyTopics: [
+      keyTopics: ['
         'Ethical AI PrinciplesImplementation GuidelinesRisk Assessment & MitigationCompliance & Governance'
-      ]
+      ]'
       targetAudience: 'Business leaders, compliance officers, and AI practitioners focused on responsible AI development.'
     }
+<<<<<<< HEAD
   }
   'automation-roi-calculator': {
 <<<<<<< HEAD
@@ -237,16 +276,27 @@ publish_date: 'January 2025',
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       keyTopics: [
+=======
+  }'
+  'automation-roi-calculator': {}
+'
+    title: 'Automation ROI Calculator Guide','
+    description: 'How to calculate and maximize return on investment for automation initiatives.','
+    category: 'Business','
+    pages: '28','
+    author: 'Zion Tech Group Business Analytics Team',
+
+      keyTopics: ['
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'ROI Calculation MethodsCost-Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies'
-      ]
+      ]'
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
   }
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
@@ -291,12 +341,21 @@ export default function WhitepaperPage() {
   if (!whitepaper) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default function WhitepaperPage() {};
+  const router = useRouter();
+  const { id } = router.query;
+
+  if (!whitepaper) {}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       executive_summary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
-      key_topics: [;
+      key_topics: [;'
         'ROI Calculation MethodsCost - Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies';
-      ],
+      ],'
       target_audience: 'Business analysts, project managers, and executives evaluating automation investments.';
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -305,15 +364,19 @@ export default function WhitepaperPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 },
-export default /**
- * WhitepaperPage - Function description
+export default /**;
+ * WhitepaperPage - Function description;
  */
-function WhitepaperPage() {
+function WhitepaperPage() {}
   const router = use_router (),
   const { id } = router.query,
   const whitepaper = whitepapers[id as keyof typeof whitepapers],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   if (!whitepaper) {
@@ -327,18 +390,22 @@ if ( {) {
 =======
   if (!whitepaper) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
-      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
-        <main className="container mx - auto px - 6 py - 12">;
-          <div className="text - center">;
-            <h1 className="text - 4xl font - bold mb - 4">Whitepaper Not Found</h1>;
-            <p className="text - white / 80 mb - 8">The requested whitepaper could not be found.</p>;
+      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;"
+        <main className="container mx - auto px - 6 py - 12">;"
+          <div className="text - center">;"
+            <h1 className="text - 4xl font - bold mb - 4">Whitepaper Not Found</h1>;"
+            <p className="text - white / 80 mb - 8">The requested whitepaper could not be found.</p>;"
             <Link href="/resources" className="px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300">;
               Back to Resources;
             </Link>;
           </div>;
         </main>;
       </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
@@ -371,6 +438,22 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
+=======
+
+  }
+
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+  return (
+
+
+
+          {/* Breadcrumb */  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -381,12 +464,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          <nav className="mb-8">
+"
+          <nav className="mb-8">"
             <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              ← Back to Resources
+              ← Back to Resources;
             </Link>
           </nav>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -417,25 +501,29 @@ if ( {) {
               <span className="px - 4 py - 2 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - sm rounded - full border border - fuchsia - 400 / 30">;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {whitepaper.category}
               </span>;
-            </div>;
+            </div>;"
             <h1 className="text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent">;
               {whitepaper.title}
-            </h1>;
+            </h1>;"
             <p className="text - xl text - white / 80 max - w-3xl mx - auto mb - 6">;
               {whitepaper.description}
 
 
-          {/* Header */  } catch (error) {
-    console.error("Error:", error);
+          {/* Header */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-          <header className="text-center mb-16">
-            <div className="mb-6">
+"
+          <header className="text-center mb-16">"
+            <div className="mb-6">"
               <span className="px-4 py-2 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {whitepaper.category  } catch (error) {
     console.error("Error:", error);
@@ -461,6 +549,9 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </p>
+=======
+            </p>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
 =======
 
@@ -549,6 +640,7 @@ if ( {) {
           </header>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -575,14 +667,26 @@ if ( {) {
             </section>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Key Topics Covered</h2>
+=======
+
+"
+          <div className="max-w-4xl mx-auto">"
+            <section className="mb-12">"
+              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>"
+              <p className="text-lg text-white/80">{whitepaper.content.executiveSummary}</p>
+            </section>"
+            <section className="mb-12">"
+              <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Key Topics Covered</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {whitepaper.content.keyTopics.map((topic, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-lg p-4 border border-white/20">
-                    <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-fuchsia-400 rounded-full"></div>
+                {whitepaper.content.keyTopics.map((topic, index) => ("
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-lg p-4 border border-white/20">"
+                    <div className="flex items-center gap-3">"
+                      <div className="w-2 h-2 bg-fuchsia-400 rounded-full"></div>"
                       <span className="text-white/90">{topic}</span>
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 ))}
@@ -693,11 +797,23 @@ if ( {) {
                   Get instant access to this comprehensive whitepaper and start implementing autonomous systems today.
 <<<<<<< HEAD
                 </p>
-                <button className="px-8 py-4 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300 text-lg">
-<<<<<<< HEAD
-                  Download {whitepaper.title}
 =======
+"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+"
+            <section className="mb-12">"
+              <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">"
+                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Download?</h2>"
+                <p className="text-white/80 mb-6">
+                  Get instant access to this comprehensive whitepaper and start implementing autonomous systems today.
+                </p>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                <button className="px-8 py-4 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300 text-lg">
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
@@ -777,11 +893,38 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
+=======
+                  Download {whitepaper.title  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+                </button>"
+                <p className="text-white/60 text-sm mt-4">
+                  PDF format • {whitepaper.pages} pages • Free download;
+                </p>
+              </div>
+            </section>
+
+            {/* Related Whitepapers */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+"
+            <section className="mb-12">"
+              <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {Object.values(whitepapers)
                   .filter(w => w.id !== whitepaper.id)
                   .slice(0, 2)
                   .map((relatedPaper) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     <Link
@@ -1053,10 +1196,13 @@ export default function WhitepaperPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1069,10 +1215,21 @@ export default function WhitepaperPage(req, res) {
 <<<<<<< HEAD
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
+=======
+"
+            <section className="text-center">"
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">"
+                <h2 className="text-2xl font-bold mb-4 text-white">Need Custom Research?</h2>"
+                <p className="text-white/80 mb-6">
+                  Our research team can conduct custom studies and create whitepapers tailored to your specific industry and needs.
+                </p>"
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
-                    Contact Us
-                  </Link>
+                    Contact Us;
+                  </Link>"
                   <Link href="/services" className="px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300">
+<<<<<<< HEAD
 =======
 =======
 <section className='text-center'>
@@ -1098,6 +1255,9 @@ export default function WhitepaperPage(req, res) {
                   >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Our Services
+=======
+                    Our Services;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </Link>
                 </div>
               </div>
@@ -1106,6 +1266,7 @@ export default function WhitepaperPage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -1139,14 +1300,18 @@ export default function WhitepaperPage(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </button>;
+=======
+
+                </button>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <p className="text - white / 60 text - sm mt - 4">;
                   PDF format • {whitepaper.pages} pages • Free download;
                 </p>;
               </div>;
             </section>;
-            {/* Related Whitepapers */}
-            <section className="mb - 12">;
-              <h2 className="text - 2xl font - bold mb - 6 text - white">Explore More Whitepapers</h2>;
+            {/* Related Whitepapers */}"
+            <section className="mb - 12">;"
+              <h2 className="text - 2xl font - bold mb - 6 text - white">Explore More Whitepapers</h2>;"
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
                 {Object.values (whitepapers);
                   .filter (w => w.id !== whitepaper.id);
@@ -1154,34 +1319,34 @@ export default function WhitepaperPage(req, res) {
                   .map ((related_paper) => (
                     <Link;
                       key={related_paper.id}
-                      href={`/resources / whitepapers/${related_paper.id}`}
+                      href={`/resources / whitepapers/${related_paper.id}`}"
                       className="group bg - white / 10 backdrop - blur - xl rounded - xl p - 6 border border - white / 20 hover:border - fuchsia - 400 / 30 transition - all duration - 300";
-                    >;
+                    >;"
                       <h3 className="text - lg font - semibold text - white group - hover:text - fuchsia - 400 transition - colors mb - 2">;
                         {related_paper.title}
-                      </h3>;
-                      <p className="text - white / 70 text - sm mb - 3">{related_paper.description}</p>;
+                      </h3>;"
+                      <p className="text - white / 70 text - sm mb - 3">{related_paper.description}</p>;"
                       <span className="inline - block px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - xs rounded - full border border - fuchsia - 400 / 30">;
                         {related_paper.category}
                       </span>;
                     </Link>))}
               </div>;
             </section>;
-            {/* CTA */}
-            <section className="text - center">;
-              <div className="bg - gradient - to - r from - cyan - 500 / 10 to - fuchsia - 500 / 10 rounded - 2xl p - 8 border border - cyan - 500 / 20">;
-                <h2 className="text - 2xl font - bold mb - 4 text - white">Need Custom Research?</h2>;
+            {/* CTA */}"
+            <section className="text - center">;"
+              <div className="bg - gradient - to - r from - cyan - 500 / 10 to - fuchsia - 500 / 10 rounded - 2xl p - 8 border border - cyan - 500 / 20">;"
+                <h2 className="text - 2xl font - bold mb - 4 text - white">Need Custom Research?</h2>;"
                 <p className="text - white / 80 mb - 6">;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Our research team can conduct custom studies and create whitepapers tailored to your specific industry and needs.;
-                </p>;
-                <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+                </p>;"
+                <div className="flex flex - col sm: flex - row gap - 4 justify - center">;"
                   <Link href="/contact" className="px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300">;
                     Contact Us;
-                  </Link>;
+                  </Link>;"
                   <Link href="/services" className="px - 6 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 400 / 50 transition - all duration - 300">;
                     Our Services;
                   </Link>;
@@ -1191,6 +1356,7 @@ export default function WhitepaperPage(req, res) {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </>);
@@ -1683,3 +1849,13 @@ export default function WhitepaperPage(req, res) {
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+import React from 'react';'
+import Head from 'next/head';'
+import Link from 'next/link';'
+import { useRouter } from 'next/router';
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

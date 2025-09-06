@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 =======
@@ -9,12 +10,16 @@ import React from 'react';
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React, { useState } from 'react';
 import Head from 'next/head';
 import React from 'react';
 import SEO from '../components/SEO';
-=======
+
 import { 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -110,6 +115,9 @@ import EnhancedFooter from '../components/EnhancedFooter';
 const ContactPage: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -120,6 +128,7 @@ const ContactPage: React.FC = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -153,6 +162,9 @@ const ContactPage: React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -166,6 +178,7 @@ const ContactPage: React.FC = () => {
     setIsSubmitting(true);
     
     // Simulate form submission
+<<<<<<< HEAD
 <<<<<<< HEAD
     setTimeout(() => {
       setIsSubmitting(false);
@@ -185,6 +198,9 @@ const ContactPage: React.FC = () => {
     setTimeout(() => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setFormData({
         name: '',
         email: '',
@@ -199,6 +215,7 @@ const ContactPage: React.FC = () => {
 
   const contactMethods = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -356,6 +373,9 @@ const ContactPage: React.FC = () => {
       description: 'Media inquiries and press releases'
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -378,6 +398,7 @@ const ContactPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -578,36 +599,13 @@ const ContactPage: React.FC = () => {
                 Ready to transform your business with revolutionary AI and quantum computing solutions? 
                 Our experts are here to help you every step of the way.
               </p>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
 
-            {/* Contact Methods Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
-            >
-              {contactMethods.map((method, index) => (
-                <motion.div
-                  key={method.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
-                  className="bg-slate-800/50 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group"
-                >
-                  <a href={method.action} className="block">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${method.color} p-4 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <method.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{method.title}</h3>
-                    <p className="text-cyan-400 font-semibold text-lg mb-2">{method.details}</p>
-                    <p className="text-white/70 text-sm">{method.description}</p>
-                  </a>
-                </motion.div>
-              ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-            </motion.div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Contact Information */}
@@ -1434,6 +1432,8 @@ const ContactPage: React.FC = () => {
     </>
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

@@ -1,10 +1,16 @@
+<<<<<<< HEAD
+=======
 
-import React from './react';
-import { Button  } from '@/components / ui / button';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+import React from './react';'
+import { Button  } from '@/components / ui / button';'
 import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -14,19 +20,23 @@ interface ActionButtonsProps {
   status: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ActionButtonsProps {
+=======
+
+
+interface ActionButtonsProps {}
+  flag_id: string;
+  status: string;
+interface ActionButtonsProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   flagId: string,
-  status: string,
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
+  status: string,'
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
 }
-<<<<<<< HEAD
 
-export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="flex space-x-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -50,10 +60,16 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 
 import React from './react';
 import { Button  } from '@/components / ui / button';
+=======
+'
+import React from './react';'
+import { Button  } from '@/components / ui / button';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
-interface ActionButtonsProps {
+interface ActionButtonsProps {}
   flag_id: string;
   status: string;
+<<<<<<< HEAD
 
     <div className="flex space-x-2">
 <<<<<<< HEAD
@@ -72,24 +88,58 @@ interface ActionButtonsProps {
         title="View Details"
 import React from "react",;
 import { Button } from "@/components/ui/button",;
+=======
+
+interface ActionButtonsProps {;
+  flagId: string;
+  status: string;
+  onAction: (;
+    flagId: string,;"
+    action: "warning" | "suspension" | "ban" | "ignore",;
+  ) => void;
+}
+export const ActionButtons: React.FC<ActionButtonsProps> = ({;
+  flagId,;
+  status,;
+  onAction,;
+}) => {;
+  return ("
+    <div className="flex space-x-2">;
+
+
+
+      <Button"
+        variant="ghost""
+        size="icon""
+        title="View Details"
+
+"
+import React from "react",;"
+import { Button } from "@/components/ui/button",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
 ;
 interface ActionButtonsProps {;
   flagId:string,;
-  status:string,;
+  status:string,;'
   onAction:(flagId:string, action:'warning' | 'suspension' | 'ban' | 'ignore') => void;
 }
 ;
 export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {;
-  return (;
+  return (;"
     <div className="flex space-x-2">;
-      <Button;
-        variant="ghost";
-        size="icon";
+      <Button;"
+        variant="ghost";"
+        size="icon";"
         title="View Details";
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         onClick={() => alert("View details (would open a detailed view)")}
-      >;
+      >;"
         <Eye className="h-4 w-4" />;
+<<<<<<< HEAD
       </Button>;      <Button
         variant="ghost"
         size="icon"
@@ -100,16 +150,98 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
 =======      >
         <AlertTriangle className="h-4 w-4" />
       </Button>
-        disabled={status === "actioned" || status === "ignored"}
-      >;
-        <AlertTriangle className="h-4 w-4" />;
-      </Button>;      >
-        <Ban className="h-4 w-4" />
+=======
+      </Button>;
+
+"
+        onClick={() => alert("View details (would open a detailed view)")}
+      >;"
+        <Eye className="h-4 w-4" />;
+      </Button>;
+
+      <Button"
+        variant="ghost""
+        size="icon""
+        title="Send Warning"
+
+'
+        onClick={() => onAction(flagId, 'warning')}'
+        disabled={status === 'actioned' || status === 'ignored'}
+
+"
+        onClick={() => onAction(flagId, "warning")}"
+        disabled={status === "actioned" |status === "ignored"}'
+        onClick={() => onAction(flagId, 'warning')}'
+        disabled={status === 'actioned' || status === 'ignored'}
+      >"
+        <Info className="h-4 w-4" />
       </Button>
+
+
+      >"
+        <Info className="h-4 w-4" />
+      </Button>
+"
+        disabled={status === "actioned" || status === "ignored"}
+      >;"
+        <Info className="h-4 w-4" />;
+      </Button>;
+
+
+
+      <Button"
+        variant="ghost""
+        size="icon""
+        title="Suspend User"
+
+'
+        onClick={() => onAction(flagId, 'suspension')}'
+        disabled={status === 'actioned' || status === 'ignored'}
+
+"
+        onClick={() => onAction(flagId, "suspension")}"
+        disabled={status === "actioned" |status === "ignored"}'
+        onClick={() => onAction(flagId, 'suspension')}'
+        disabled={status === 'actioned' || status === 'ignored'}
+      >"
+        <AlertTriangle className="h-4 w-4" />
+      </Button>
+
+
+      >"
+        <AlertTriangle className="h-4 w-4" />
+      </Button>
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        disabled={status === "actioned" || status === "ignored"}
+      >;"
+        <AlertTriangle className="h-4 w-4" />;
+<<<<<<< HEAD
+      </Button>;      >
+=======
+      </Button>;
+
+
+
+      <Button"
+        variant="ghost""
+        size="icon""
+        title="Ban User"
+
+'
+        onClick={() => onAction(flagId, 'ban')}'
+        disabled={status === 'actioned' || status === 'ignored'}
+
+
+      >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        <Ban className="h-4 w-4" />
+      </Button>'
       {status === 'pending' && (
-        <Button
-          variant="ghost"
+        <Button"
+          variant="ghost""
           size="sm"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,10 +255,14 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     </div>;
 );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -156,62 +292,83 @@ import React from "react",;
 =======import React from "react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button",;
+=======
+
+
+"
+import React from "react",;"
+import { Button } from "@/components/ui/button",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
 interface ActionButtonsProps {;
   flagId: string,;
-  status: string,;
+  status: string,;'
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
 }
 ;
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {;
-  return (;
+  return (;"
     <div className="flex space-x-2">;
-      <Button;
-        variant="ghost";
-        size="icon";
-        title="View Details";
+      <Button;"
+        variant="ghost";"
+        size="icon";"
+        title="View Details";"
         onClick={() => alert("View details (would open a detailed view)")}
-      >;
+      >;"
         <Eye className="h-4 w-4" />;
       </Button>;
-      <Button;
-        variant="ghost";
-        size="icon";
-        title="Send Warning";
-        onClick={() => onAction(flagId, 'warning')}
+      <Button;"
+        variant="ghost";"
+        size="icon";"
+        title="Send Warning";'
+        onClick={() => onAction(flagId, 'warning')}'
         disabled={status === 'actioned' || status === 'ignored'}
-      >;
+      >;"
         <Info className="h-4 w-4" />;
       </Button>;
-      <Button;
-        variant="ghost";
-        size="icon";
-        title="Suspend User";
-        onClick={() => onAction(flagId, 'suspension')}
+      <Button;"
+        variant="ghost";"
+        size="icon";"
+        title="Suspend User";'
+        onClick={() => onAction(flagId, 'suspension')}'
         disabled={status === 'actioned' || status === 'ignored'}
-      >;
+      >;"
         <AlertTriangle className="h-4 w-4" />;
       </Button>;
-      <Button;
-        variant="ghost";
-        size="icon";
-        title="Ban User";
-        onClick={() => onAction(flagId, 'ban')}
+      <Button;"
+        variant="ghost";"
+        size="icon";"
+        title="Ban User";'
+        onClick={() => onAction(flagId, 'ban')}'
         disabled={status === 'actioned' || status === 'ignored'}
 
+<<<<<<< HEAD
       >;
+=======
+
+
+
+      >;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Ban className="h-4 w-4" />;
-      </Button>;
+      </Button>;"
       {status === "pending" && (;
-        <Button
-          variant="ghost"
-          size="sm"
+        <Button"
+          variant="ghost""
+          size="sm""
           onClick={() => onAction(flagId, "ignore")}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         >;
           Ignore;
         </Button>;
       )}
     </div>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -299,23 +456,36 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
   )
+=======
+
+};
+
+
+
+
+
+
+
+    </div>
+  );
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
   ),;
-},; interface ActionButtonsProps {
+},; interface ActionButtonsProps {}
   flagId: string;
-status: string;
-onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void 
-}export const ActionButtons: React.FC<ActionButtonsProps> = ({
-  flagId, status, onAction 
-}) => {
-  return (<div className="flex space-x-2" > ghost"size=" icon"title=" View Details"onClick= {
-  () => alert (" View details (would open a detailed view) ") 
+status: string;'
+onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+}export const ActionButtons: React.FC<ActionButtonsProps> = ({};
+  flagId, status, onAction;
+}) => {"
+  return (<div className="flex space-x-2" > ghost"size=" icon"title=" View Details"onClick= {"
+  () => alert (" View details (would open a detailed view) ") "
 }> <Eye className=" h-4 w-4"/> </Button> <Button > <Info className=" h-4 w-4"/> </Button> <Button > <AlertTriangle className=" h-4 w-4"/> </Button> <Button > <Ban className=" h-4 w-4" /> </Button> > Ignore </Button>) 
 }</div>) 
-};
+};"
 onClick={() => onAction(flagId, "ignore")}
         >
-          Ignore
+          Ignore;
         </Button>
       )}
 </div>
@@ -327,4 +497,9 @@ onClick={() => onAction(flagId, "ignore")}
 
   )
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

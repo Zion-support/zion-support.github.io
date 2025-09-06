@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -41,6 +42,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -63,6 +71,7 @@ class ContinuousImprovement {
     console.log(logMessage);
     this.logFile = path.join(__dirname, '..', 'logs', 'continuous-improvement.log');
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class ContinuousImprovement { constructor() { this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; return false; } } try {" this.log("Checking for dependency updates.");"" execSync("npm outdated", { stdio: "pipe" });" this.log("Dependency check completed"); return true; } catch (error) {"` this.log(`Dependency check failed: ${error.message}`); return false; } } return false; } }}module.exports = ContinuousImprovement;""`"`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -96,6 +105,13 @@ main
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -122,6 +138,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -140,6 +157,10 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const logMessage = `[${timestamp}] ${message}\n`;
     );
     fs.appendFileSync(this.logFile, logMessage);
@@ -180,6 +201,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   async runDependencyUpdates() {
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -208,6 +230,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const logMessage = `[${timestamp}] ${message}\n`;`
 console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
@@ -240,6 +269,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -265,6 +295,10 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
   async runCodeAnalysis() {
@@ -351,6 +385,7 @@ improvement.run().catch(console.error);
 
 module.exports = ContinuousImprovement;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -367,11 +402,16 @@ module.exports = ContinuousImprovement;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Run the automation
 if (require.main === module) {
   const automation = new ContinuousImprovement();
   automation.run().catch(console.error);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -414,6 +454,13 @@ main
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     };
   };
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -487,6 +534,7 @@ cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = ContinuousImprovement;
 module.exports = ContinuousImprovement;
@@ -506,11 +554,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+module.exports = ContinuousImprovement;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const improvement = new ContinuousImprovement();
 improvement.run().catch(console.error);
 
 module.exports = ContinuousImprovement;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -544,3 +598,12 @@ main
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

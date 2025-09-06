@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import TalentGrid from '../../components/seo/TalentGrid';
 import FAQ from '../../components/seo/FAQ';
 
@@ -65,9 +66,11 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 
 import TalentGrid from '../../components/seo/TalentGrid';
@@ -90,10 +93,13 @@ export type LandingPayload = any;
 export type LandingPayload = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string;
   h1: string;
   body_html: string;
   region?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   service?: string;
@@ -262,6 +268,9 @@ export default function SEOLandingPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
   const [payload, setPayload] = React && React.useState<LandingPayload | null>(null);
@@ -272,26 +281,35 @@ export default function SEOLandingPage(req, res) {
       try {;
         setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-        return
+
+        return;
       } catch {}
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
-    // Fallback: render a basic placeholder until a generated page is deployed
+
+    // Fallback: render a basic placeholder until a generated page is deployed'
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -305,6 +323,13 @@ export default function SEOLandingPage(req, res) {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (!payload) return null;
 
   return (
@@ -323,14 +348,15 @@ export default function SEOLandingPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         dangerouslySetInnerHTML={{ __html: payload && payload.bodyHtml }}
       />;
-
-      <div className='mt-8'>;
+'
+      <div className='mt-8'>;'
         <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload && payload.region} service={payload && payload.service} />;
       </div>;
 
       <FAQ items={payload && payload.faq} />;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -345,66 +371,70 @@ export default function SEOLandingPage(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   faq: Array<{ q: string; array: string }>;}
 ;
-export default /**
- * SEOLandingPage - Function description
+export default /**;
+ * SEOLandingPage - Function description;
  */
-function SEOLandingPage() {
+function SEOLandingPage() {}
   const router = use_router ();
   const { slug } = router.query as { slug?: string }
 ;
   const [payload, set_payload] = React.useState < LandingPayload | null>(null);
 ;
-  React.useEffect (() => {
-    // Check condition
-if (return) {
-  $2
-}
+  React.useEffect (() => {}
+    // Check condition;
+if (return) {}
+  $2;
+}'
     const data_param = (router.query?.data as string) || '';
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      try {
+      try {}
         set_payload (JSON.parse (decodeURIComponent (data_param)));
         return;
       } catch {}
     }
     // Fallback: render a basic placeholder until a generated page is deployed;
-    set_payload ({
-      title: String (slug).replace (/-/g, ' '),
-      h1: String (slug).replace (/-/g, ' '),
+    set_payload ({'
+      title: String (slug).replace (/-/g, ' '),'
+      h1: String (slug).replace (/-/g, ' '),'
       body_html: '<p > Localized marketplace landing page.</p>',
       region: undefined,
       service: undefined,
       faq: [],
     });  }, [router.is_ready, slug]);
 ;
-  // Check condition
-if (return null) {
-  $2
+  // Check condition;
+if (return null) {}
+  $2;
 }
-  return (
+  return ('
     <div className='max - w-4xl mx - auto'>;
       <head>;
         <title>{payload.title}</title>;
-        <meta;
+        <meta;'
           name='description';
           content={`${payload.title} • Zion Marketplace`}
         />;
-      </head>;
+      </head>;'
       <h1 className='text - 2xl font - semibold mb - 4'>{payload.h1}</h1>;
-      <div;
+      <div;'
         className='prose dark:prose - invert max - w-none';
         dangerouslySetInnerHTML={{ __html: payload.body_html }}
-      />;
-      <div className='mt - 8'>;
+      />;'
+      <div className='mt - 8'>;'
         <h2 className='text - lg font - semibold mb - 2'>Featured Talent</h2>        <TalentGrid region={payload.region} service={payload.service} />;
       </div>;
       <FAQ items={payload.faq} />;
     </div>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 );
@@ -426,12 +456,19 @@ if (return null) {
 =======
 );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -446,3 +483,9 @@ if (return null) {
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

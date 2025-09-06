@@ -74,6 +74,7 @@ class AppEnhancementSuite {
         'Content-Security-Policy':
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 =======
@@ -133,6 +134,11 @@ class AppEnhancementSuite {
       };
     };
 ursor/automate-test-improve-and-merge-code-59d5
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     fs.writeFileSync(
@@ -401,6 +407,7 @@ ursor/automate-test-improve-and-merge-code-59d5
     const report = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       timestamp: new Date().toISOString(),
       enhancements: this.enhancements,
       status: 'completed'
@@ -425,6 +432,12 @@ ursor/automate-test-improve-and-merge-code-59d5
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const securityHeaders = {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -461,6 +474,7 @@ ursor/automate-test-improve-and-merge-code-59d5
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Content-Security-Policy': "default-src 'self'"
     };
     this.log(`Security headers configured: ${Object.keys(securityHeaders).join(', ')}`);
@@ -478,6 +492,14 @@ ursor/automate-test-improve-and-merge-code-59d5
       enhancements: this.enhancements;
       status: 'completed';
 ursor/automate-test-improve-and-merge-code-59d5
+=======
+      'Content-Security-Policy': "default-src 'self''
+
+      timestamp: new Date().toISOString();
+      enhancements: this.enhancements;
+      status: 'completed';
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     };
 
     // Write enhancement report

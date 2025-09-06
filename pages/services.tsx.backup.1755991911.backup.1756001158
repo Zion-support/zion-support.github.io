@@ -4,6 +4,7 @@ import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, Trend
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
 =======
@@ -21,6 +22,9 @@ import { expandedMicroSaasServices, serviceCategories, getServicesByCategory, ge
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-acae
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991911.backup.1756001158
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -282,6 +286,7 @@ export default function ServicesPage() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <UltraFuturisticBackground variant="neural" intensity="high">
 =======
 <<<<<<<< HEAD:components/services.tsx.backup.1755991777.backup.1756001157
@@ -292,6 +297,9 @@ export default function ServicesPage() {
     <QuantumNeuralBackground variant="holographic" intensity="high">
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-acae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="min-h-screen">
         <Head>
           <title>Complete Services Portfolio | Zion Tech Group - AI, Cloud, Security & More</title>
@@ -326,11 +334,15 @@ export default function ServicesPage() {
                 <Button href="#services" variant="secondary" size="lg">
                   Explore Services
                 </Button>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991911.backup.1756001158
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <AdvancedFuturisticBackground theme="quantum" intensity="high">
       <Head>
         <title>Innovative Micro SAAS Services | Zion Tech Group</title>
@@ -1668,7 +1680,7 @@ export default function ServicesPage() {
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
             }}></div>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/10 to-transparent"></div>
-=======
+
       {/* Services Grid/List */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1683,6 +1695,7 @@ export default function ServicesPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </UltraFuturisticBackground>
 =======
 <<<<<<< HEAD
@@ -1691,9 +1704,12 @@ export default function ServicesPage() {
     </QuantumNeuralBackground>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-acae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
-=======
+
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';

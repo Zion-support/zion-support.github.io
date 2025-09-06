@@ -1,4 +1,5 @@
 export default function BlockchainSolutions() {
+<<<<<<< HEAD
   return (
     <div className="space-y-2">
       <h1 className="text-3xl font-bold">Blockchain Solutions</h1>
@@ -6,3 +7,6 @@ export default function BlockchainSolutions() {
     </div>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

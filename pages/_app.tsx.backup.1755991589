@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
 <<<<<<< HEAD
@@ -14,6 +15,9 @@ import '../styles/globals.css';
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/_app.tsx.backup.1755991589
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

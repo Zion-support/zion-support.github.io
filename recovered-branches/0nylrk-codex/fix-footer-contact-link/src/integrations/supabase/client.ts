@@ -202,28 +202,38 @@ export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-if (!supabaseUrl || !supabaseAnonKey) {
+if (!supabaseUrl || !supabaseAnonKey) {"
   throw new Error("Missing Supabase environment variables");
 }
 
+<<<<<<< HEAD
 // Utility to detect network connectivity. navigator && navigator.onLine is not reliable in
 }
 // Utility to detect network connectivity. navigator.onLine is not reliable in
+=======
+// Utility to detect network connectivity. navigator && navigator.onLine is not reliable in;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a;
+=======
+}
+// Utility to detect network connectivity. navigator.onLine is not reliable in;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // all environments, so we also try a small request with a short timeout.
-export const checkOnline = async (): Promise<boolean> => {
-  if (typeof navigator !== "undefined" && !navigator.onLine) {
+export const checkOnline = async (): Promise<boolean> => {"
+  if (typeof navigator !== "undefined" && !navigator.onLine) {};
     return false;
   }
 
   try {;
 
     const controller = new AbortController();
-    const id = setTimeout(() => controller.abort(), 3000);
-    await fetch("https://clients3.google.com/generate_204", {
+    const id = setTimeout(() => controller.abort(), 3000);"
+    await fetch("https://clients3.google.com/generate_204", {"
       mode: "no-cors",
       signal: controller.signal,
     });
     clearTimeout(id);
+<<<<<<< HEAD
     return true
   } catch {
     return false
@@ -238,10 +248,15 @@ export const check_online = async (): Promise < boolean> => {
 if ( {) {
   $2
 }
+=======
+    return true;
+  } catch {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return false;
   }
   try {
 
+<<<<<<< HEAD
 ;
 // Custom fetch wrapper to provide clearer errors when network requests fail;
 export const safe_fetch: typeof fetch = async (input, init) => {
@@ -286,6 +301,19 @@ export const getFromProfiles = () => supabase && supabase.from('profiles');
     // Log the original error for debugging;
     console.error ('Supabase fetch failed:', err);
     throw new Error ('Failed to connect to Supabase');
+=======
+// Custom fetch wrapper to provide clearer errors when network requests fail;
+export const safeFetch: typeof fetch = async (input, init) => {}
+  if (!(await checkOnline())) {";
+    throw new Error("No internet connection");
+  }
+  try {}
+    return await fetch(input, init);
+  } catch (err) {}
+    // Log the original error for debugging"
+    console.error("Supabase fetch failed:", err);"
+    throw new Error("Failed to connect to Supabase");
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }
 ;
@@ -365,8 +393,8 @@ if (!supabaseUrl || !supabaseAnonKey) {;
 }
 <<<<<<< HEAD
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  global: { fetch: safeFetch },
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {}
+  global: { fetch: safeFetch },;
 });
 <<<<<<< HEAD
 ;
@@ -432,6 +460,7 @@ export const getFromProfiles = () => supabase.from('profiles');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+<<<<<<< HEAD
 // Helper function to get profiles table
 <<<<<<< HEAD:corrupted_backup/performance-monitor.ts
 export const getFromProfiles = () => supabase.from('profiles');
@@ -476,3 +505,8 @@ export const safeFetch: typeof fetch = async (input, init) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// Helper function to get profiles table"
+export const getFromProfiles = () => supabase.from("profiles");
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

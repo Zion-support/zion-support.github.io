@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,30 +32,35 @@ import _React,{ useState } from';react'; import { cn } from 'lucide-react' expor
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React,{ useState } from\';react\'; import { cn } from \'lucide-react\' export function ImageWithRetry({ src,fallbackSrc = \'/images/image-placeholder.svg\';\';,className,retryClassName,...\"props\": \''}) {} const [currentSrc,setCurrentSrc] = useState(src) const [failed,setFailed] = useState(false) const handleError = () => {} setFailed(true) setCurrentSrc(fallbackSrc)} const handleRetry = () => {} setFailed(false) setCurrentSrc(src) } return (<div className = {}\''; cn(\'"relative\": inline-block\';\';,className) }> {} <\"img\": loading=\'lazy\' {...props} src={currentSrc} onError={handleError}/ / />\''\'' {failed && (<button type=\'button\' onClick={handleRetry} className = {}\''; cn(\'"absolute\": bottom-1 right-1 text-xs underline\';\';,retryClassName) }> \"Retry\": \'</button>)\'} </div>)} export { ImageWithRetry } export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry\' export default ImageWithRetry\'; \"export\": default ImageWithRetry\''\';\'';\''\''\';\"";
+=======
+
+import React,{ useState } from\';react\'; import { cn } from \'lucide-react\' export function ImageWithRetry({ src,fallbackSrc = \'/images/image-placeholder.svg\';\';,className,retryClassName,...\"props\": \''}) {} const [currentSrc,setCurrentSrc] = useState(src) const [failed,setFailed] = useState(false) const handleError = () => {} setFailed(true) setCurrentSrc(fallbackSrc)} const handleRetry = () => {} setFailed(false) setCurrentSrc(src) } return (<div className = {}\''; cn(\'"relative\": inline-block\';\';,className) }> {} <\"img\": loading=\'lazy\' {...props} src={currentSrc} onError={handleError}/ / />\''\'' {failed && (<button type=\'button\' onClick={handleRetry} className = {}\''; cn(\'"absolute\": bottom-1 right-1 text-xs underline\';\';,retryClassName) }> \"Retry\": \'</button>)\'} </div>)} export { ImageWithRetry } export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry\' export default ImageWithRetry\'; \"export\": default ImageWithRetry\''\';\'';\''\''\';\"";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const React,{ useState } from";react"; import { cn } from "lucide-react" export function ImageWithRetry({ src,fallbackSrc = "/images/image-placeholder.svg";";,className,retryClassName,.props: ""}) {} const [currentSrc,setCurrentSrc] = useState(src) const [failed,setFailed] = useState(false) const handleError = () => {} setFailed(true) setCurrentSrc(fallbackSrc)} const handleRetry = () => {} setFailed(false) setCurrentSrc(src) } return (<div className = {}""; cn("relative: inline-block";";,className) }> {} <img: loading="lazy" {.props} src={currentSrc} onError={handleError}/ / />"""" {failed && (<button type="button" onClick={handleRetry} className = {}""; cn("absolute: bottom-1 right-1 text-xs underline";";,retryClassName) }> Retry: "</button>)"} </div>)} export { ImageWithRetry } export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry" export default ImageWithRetry"; export: default ImageWithRetry""";"";""""";"";"""
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {'
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
+}'"
 import _React,{ useState } from';react'; import { cn } from 'lucide-react' export function ImageWithRetry({ src,fallbackSrc = '/images/image-placeholder.svg';';,className,retryClassName,..."props": ''}) {} const [currentSrc,setCurrentSrc] = useState(src) const [failed,setFailed] = useState(false) const handleError = () => {} setFailed(true) setCurrentSrc(fallbackSrc)} const handleRetry = () => {} setFailed(false) setCurrentSrc(src) } return (<div className = {}''; cn('"relative": inline-block';';,className) }> {} <"img": loading='lazy' {...props} src={currentSrc} onError={handleError}/ / />'''' {failed && (<button type='button' onClick={handleRetry} className = {}''; cn('"absolute": bottom-1 right-1 text-xs underline';';,retryClassName) }> "Retry": '</button>)'} </div>)} export { ImageWithRetry } export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry' export default ImageWithRetry'; "export": default ImageWithRetry''';'';''''';"";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -118,3 +124,23 @@ import _React,{ useState } from';react'; import { cn } from 'lucide-react' expor
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+import React,{ useState } from\';react\'; import { cn } from \'lucide-react\' export function ImageWithRetry({ src,fallbackSrc = \'/images/image-placeholder ;\';,className,retryClassName,...\"props\": \''}) {} const [currentSrc,setCurrentSrc] = useState(src) const [failed,setFailed] = useState(false) const handleError = () => {} setFailed(true) setCurrentSrc(fallbackSrc)} const handleRetry = () => {} setFailed(false) setCurrentSrc(src) } return (<divclassName = {}\'' cn(\'"relative\": inline-block\'\',className) }> {} <\"img\": loading=\'lazy\' {...props} src={currentSrc} onError={handleError}/ / />\''\'' {failed && (<buttontype=\'button\' onClick={handleRetry} className = {}\'' cn(\'"absolute\": bottom-1 right-1 text-xs underline\'\',retryClassName) }> \"Retry\": \'</button>)\'} </div>)} export { ImageWithRetry } export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry\' export default ImageWithRetry\'; \"export\": default ImageWithRetry\''\';\'';\''\''\';\"";"
+const React,{ useState } from";react"; import { cn } from "lucide-react" export function ImageWithRetry({ src,fallbackSrc = "/images/image-placeholder ;";,className,retryClassName,.props: ""}) {} const [currentSrc,setCurrentSrc] = useState(src) const [failed,setFailed] = useState(false) const handleError = () => {} setFailed(true) setCurrentSrc(fallbackSrc)} const handleRetry = () => {} setFailed(false) setCurrentSrc(src) } return (<divclassName = {}"" cn("relative: inline-block"",className) }> {} <img: loading="lazy" {.props} src={currentSrc} onError={handleError}/ / />"""" {failed && (<buttontype="button" onClick={handleRetry} className = {}"" cn("absolute: bottom-1 right-1 text-xs underline"",retryClassName) }> Retry: "</button>)"} </div>)} export { ImageWithRetry } export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry" export default ImageWithRetry"; export: default ImageWithRetry""";"";""""";"";"""'"
+import _React,{ useState } from';react'; import { cn } from 'lucide-react' export function ImageWithRetry({ src,fallbackSrc = '/images/image-placeholder ;';,className,retryClassName,..."props": ''}) {} const [currentSrc,setCurrentSrc] = useState(src) const [failed,setFailed] = useState(false) const handleError = () => {} setFailed(true) setCurrentSrc(fallbackSrc)} const handleRetry = () => {} setFailed(false) setCurrentSrc(src) } return (<divclassName = {}'' cn('"relative": inline-block'',className) }> {} <"img": loading='lazy' {...props} src={currentSrc} onError={handleError}/ / />'''' {failed && (<buttontype='button' onClick={handleRetry} className = {}'' cn('"absolute": bottom-1 right-1 text-xs underline'',retryClassName) }> "Retry": '</button>)'} </div>)} export { ImageWithRetry } export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry' export default ImageWithRetry'; "export": default ImageWithRetry''';'';''''';"";
+
+
+
+'"
+import _React,{ useState } from';react'; import { cn } from 'lucide-react' export function ImageWithRetry({ src,fallbackSrc = '/images/image-placeholder.svg';';,className,retryClassName,..."props": ''}) {} const [currentSrc,setCurrentSrc] = useState(src) const [failed,setFailed] = useState(false) const handleError = () => {} setFailed(true) setCurrentSrc(fallbackSrc)} const handleRetry = () => {} setFailed(false) setCurrentSrc(src) } return (<div className = {}''; cn('"relative": inline-block';';,className) }> {} <"img": loading='lazy' {...props} src={currentSrc} onError={handleError}/ / />'''' {failed && (<button type='button' onClick={handleRetry} className = {}''; cn('"absolute": bottom-1 right-1 text-xs underline';';,retryClassName) }> "Retry": '</button>)'} </div>)} export { ImageWithRetry } export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry' export default ImageWithRetry'; "export": default ImageWithRetry''';'';''''';"";
+'"
+import React,{ useState } from\';react\'; import { cn } from \'lucide-react\' export function ImageWithRetry({ src,fallbackSrc = \'/images/image-placeholder.svg\';\';,className,retryClassName,...\"props\": \''}) {} const [currentSrc,setCurrentSrc] = useState(src) const [failed,setFailed] = useState(false) const handleError = () => {} setFailed(true) setCurrentSrc(fallbackSrc)} const handleRetry = () => {} setFailed(false) setCurrentSrc(src) } return (<div className = {}\''; cn(\'"relative\": inline-block\';\';,className) }> {} <\"img\": loading=\'lazy\' {...props} src={currentSrc} onError={handleError}/ / />\''\'' {failed && (<button type=\'button\' onClick={handleRetry} className = {}\''; cn(\'"absolute\": bottom-1 right-1 text-xs underline\';\';,retryClassName) }> \"Retry\": \'</button>)\'} </div>)} export { ImageWithRetry } export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry\' export default ImageWithRetry\'; \"export\": default ImageWithRetry\''\';\'';\''\''\';\"";"
+const React,{ useState } from";react"; import { cn } from "lucide-react" export function ImageWithRetry({ src,fallbackSrc = "/images/image-placeholder.svg";";,className,retryClassName,.props: ""}) {} const [currentSrc,setCurrentSrc] = useState(src) const [failed,setFailed] = useState(false) const handleError = () => {} setFailed(true) setCurrentSrc(fallbackSrc)} const handleRetry = () => {} setFailed(false) setCurrentSrc(src) } return (<div className = {}""; cn("relative: inline-block";";,className) }> {} <img: loading="lazy" {.props} src={currentSrc} onError={handleError}/ / />"""" {failed && (<button type="button" onClick={handleRetry} className = {}""; cn("absolute: bottom-1 right-1 text-xs underline";";,retryClassName) }> Retry: "</button>)"} </div>)} export { ImageWithRetry } export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry" export default ImageWithRetry"; export: default ImageWithRetry""";"";""""";"";"""'"
+import _React,{ useState } from';react'; import { cn } from 'lucide-react' export function ImageWithRetry({ src,fallbackSrc = '/images/image-placeholder.svg';';,className,retryClassName,..."props": ''}) {} const [currentSrc,setCurrentSrc] = useState(src) const [failed,setFailed] = useState(false) const handleError = () => {} setFailed(true) setCurrentSrc(fallbackSrc)} const handleRetry = () => {} setFailed(false) setCurrentSrc(src) } return (<div className = {}''; cn('"relative": inline-block';';,className) }> {} <"img": loading='lazy' {...props} src={currentSrc} onError={handleError}/ / />'''' {failed && (<button type='button' onClick={handleRetry} className = {}''; cn('"absolute": bottom-1 right-1 text-xs underline';';,retryClassName) }> "Retry": '</button>)'} </div>)} export { ImageWithRetry } export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry export default ImageWithRetry' export default ImageWithRetry'; "export": default ImageWithRetry''';'';''''';"";
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

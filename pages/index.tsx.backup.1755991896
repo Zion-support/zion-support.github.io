@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import SEO from '../components/SEO';
 import Homepage2025 from '../components/Homepage2025';
 import Layout from '../components/layout/Layout';
@@ -38,6 +39,9 @@ import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularService
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991896
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const HomePage: React.FC = () => {
   const seoConfig = {
@@ -149,6 +153,7 @@ const HomePage: React.FC = () => {
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       title: '🤖 AI Autonomous Enterprise Platform',
@@ -407,12 +412,16 @@ const HomePage: React.FC = () => {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991896
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const popularServices = getPopularServices().slice(0, 6);
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<<< HEAD:components/index.tsx.backup.1755991773.backup.1756001155
@@ -456,6 +465,9 @@ const HomePage: React.FC = () => {
         <meta property="og:description" content="150+ revolutionary micro SAAS services with 500%+ ROI. Quantum AI, cybersecurity, manufacturing, space technology, and more." />
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
@@ -471,6 +483,7 @@ const HomePage: React.FC = () => {
 =======
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991896
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="min-h-screen bg-black/90 text-white">
@@ -1126,6 +1139,13 @@ const HomePage: React.FC = () => {
           </motion.div>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+          </div>
+        </section>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
@@ -1193,6 +1213,7 @@ const HomePage: React.FC = () => {
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1627,5 +1648,8 @@ const HomePage: React.FC = () => {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991896
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

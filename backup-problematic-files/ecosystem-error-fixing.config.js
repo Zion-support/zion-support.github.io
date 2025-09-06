@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/ecosystem-error-fixing.config.js
 <<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/ecosystem-error-fixing.config.js
 <<<<<<< HEAD:backup-problematic-files/ecosystem-error-fixing.config.js
@@ -69,3 +70,16 @@ export: default { apps: [{ name,: main-app","; script: "np,m,"; args: run: previ
 }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem-error-fixing.config.js

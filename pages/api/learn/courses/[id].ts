@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;'
+import fs from 'fs',;'
+import path from 'path',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
 <<<<<<< HEAD
 
@@ -58,6 +64,7 @@ import path from 'path',;
 const dataPath = path.join(process.cwd(), 'datalearncourses.json')
 
     res.status(200).json({ course })
+<<<<<<< HEAD
 res.status(200).json({ course })
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
@@ -74,13 +81,41 @@ function handler() {
     const course = courses.find ((c: any) => c.id === id)
     if (return res.status (404).json ({ error: 'Course not found' }), ) {
   $2
+=======
+
+
+res.status(200).json({ course })
+
+
+
+    res.status(200).json({ course })
+
+'
+import type { NextApiRequest, NextApiResponse } from 'next','
+import fs from 'fs','
+import path from 'path','
+const data_path = path.join (process.cwd (), 'datalearncourses.json'),
+export default /**;
+ * handler - Function description;
+ */
+function handler() {}
+  try {'
+    const raw = fs.readFileSync (data_path, 'utf - 8'),
+    const courses = JSON.parse (raw),
+    const { id } = req.query,
+    const course = courses.find ((c: any) => c.id === id),'
+    if (return res.status (404).json ({ error: 'Course not found' }), ) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
     res.status (200).json ({ course });
 
-  } catch (e: any) {
+
+  } catch (e: any) {'
     res.status (500).json ({ error: e?.message ?? 'Failed to load course' });
   }
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 =======
@@ -88,3 +123,6 @@ function handler() {
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> pr-12243
+=======
+};'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React,{ useState } from 'react''';' import { Button } from '@/components
 import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import _React,{ useState } from 'react''';' import { Button } from '@/components
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React,{ useState } from \'react\''\';\' import { Button } from \'@/components/ui/button\''\';\' import { Input } from \'@/components/ui/input\'' import { useEnqueueSnackbar } from\';\';@/context\''; \"export\": const MobileEmailCapture = () => {\'';\' const [email,setEmail] = useState(\') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {\'';\';
 const React,{ useState } from "react""";" import { Button } from "@/components/ui/button""";" import { Input } from "@/components/ui/input"" import { useEnqueueSnackbar } from";";@/context""; export: const MobileEmailCapture = () => {"";" const [email,setEmail] = useState(") const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email | isSubmitting) return setIsSubmitting(true) try {"";";'"'"
-import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
-<<<<<<< HEAD
+=======
 
+
+'"
+import React,{ useState } from \'react\''\';\' import { Button } from \'@/components/ui/button\''\';\' import { Input } from \'@/components/ui/input\'' import { useEnqueueSnackbar } from\';\';@/context\''; \"export\": const MobileEmailCapture = () => {\'';\' const [email,setEmail] = useState(\') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {\'';\';'"
+const React,{ useState } from "react""";" import { Button } from "@/components/ui/button""";" import { Input } from "@/components/ui/input"" import { useEnqueueSnackbar } from";";@/context""; export: const MobileEmailCapture = () => {"";" const [email,setEmail] = useState(") const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email | isSubmitting) return setIsSubmitting(true) try {"";";'"'"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import _React,{ useState } from 'react''';' import { Button } from '@/components
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

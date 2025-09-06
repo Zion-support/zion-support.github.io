@@ -624,7 +624,11 @@ export default function Pricing() {
                 Specialized Tools for Every Business Need
               </h2>
               <p className="text-xl text-gray-400 max-w-4xl mx-auto">
+<<<<<<< HEAD
                 Focused solutions with competitive pricing, market validation, and proven demand. All services include 14-day free trials.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </div>
 

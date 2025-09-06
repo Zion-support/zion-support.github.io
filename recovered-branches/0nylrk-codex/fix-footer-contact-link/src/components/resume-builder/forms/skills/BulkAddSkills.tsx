@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -24,86 +24,72 @@ import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 import {use_resume} from '@/hooks / use_resume';
+=======
+
+
+
+import {useState} from 'react';'
+import {Button} from '@/components / ui / button';'
+import {Loader2, Sparkles} from 'lucide-react';'
+import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';'
+import {use_resume} from '@/hooks / use_resume';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {BulkAddSkillsProps} from './types';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  const handleCategorizeSkills = async () => {;
-    if (!bulkSkills || bulkSkills && bulkSkills.trim().length === 0) {;
-
-      setError('Please enter some skills to categorize');
-      return;
-    }
 
 
 
-=======
-  const handleCategorizeSkills = async () => {;
-    if (!bulkSkills || bulkSkills && bulkSkills.trim().length === 0) {;
-      setError('Please enter some skills to categorize');
-      return;
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setError(null);
     try {;
       const enhancedContent = await enhanceContent(;
-        bulkSkills;
+        bulkSkills;'
         'skill-categorization';
       );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {Alert, AlertDescription} from '@/components / ui / alert';
+'
+import {Alert, AlertDescription} from '@/components / ui / alert';'
 import {Textarea} from '@/components / ui / textarea';
-export const BulkAddSkills = ({ resume_id, on_success }: BulkAddSkillsProps) =>: any {
+export const BulkAddSkills = ({ resume_id, on_success }: BulkAddSkillsProps) =>: any {';
   const [bulk_skills, setBulkSkills] = useState ('');
   const [error, set_error] = useState < string | null>(null);
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
   const { add_skill } = use_resume ();
 ;
-  const handleCategorizeSkills = async () => {
-    // Check condition
-if (.length === 0) {) {
-  $2
-}
+  const handleCategorizeSkills = async () => {}
+    // Check condition;
+if (.length === 0) {) {}
+  $2;
+}'
       set_error ('Please enter some skills to categorize');
       return;
     }
     set_error (null);
-    try {
+    try {}
       const enhanced_content = await enhance_content (
-        bulk_skills;
+        bulk_skills;'
         'skill - categorization');
 ;
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
-        try {
+        try {}
           // Parse the JSON response;
           const categorized_skills = JSON.parse (enhanced_content);
 ;
           // Add the categorized skills;
-          for (const [category, skills_list] of Object.entries (categorized_skills)) {
-            if () {) {
-  $2
+          for (const [category, skills_list] of Object.entries (categorized_skills)) {}
+            if () {) {}
+  $2;
 }
-              for (const skill_name of skills_list as string[]) {
-                await add_skill (resume_id, {
+              for (const skill_name of skills_list as string[]) {}
+                await add_skill (resume_id, {}
                   name: skill_name,
                   category: category,
                   proficiency: 3});
               }
             }
           }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -171,55 +157,26 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           // Reset the form and bulk input;
+=======
+          // Reset the form and bulk input;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           setBulkSkills ('');
 ;
           // Refresh the skills;
           await on_success ();
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        } catch (err) {
+
+
+        } catch (err) {'
           set_error ('Failed to parse categorized skills. Please try again.');
         }
       }
-    } catch (err: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    } catch (err: any) {}
       if (enhancedContent) {;
         try {;
           // Parse the JSON response;
           const categorizedSkills = JSON && JSON.parse(enhancedContent);
-<<<<<<< HEAD
 
-          // Add the categorized skills;
-          for (const [category, skillsList] of Object && Object.entries(categorizedSkills)) {;
-            if (Array && Array.isArray(skillsList)) {;
-=======
-          // Add the categorized skills;
-          for (const [category, skillsList] of Object && Object.entries(categorizedSkills)) {;
-            if (Array && Array.isArray(skillsList)) {;
-;
-    setError(null),;
-    try {;
-      const enhancedContent = await enhanceContent(;
-        bulkSkills,;
-        'skill-categorization';
-      ),;
-      if (enhancedContent) {;
-        try {;
-          // Parse the JSON response;
-          const categorizedSkills = JSON.parse(enhancedContent),;
-          // Add the categorized skills;
-          for (const [category, skillsList] of Object.entries(categorizedSkills)) {;
-            if (Array.isArray(skillsList)) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               for (const skillName of skillsList as string[]) {;
                 await addSkill(resumeId, {;
                   name: skillName,;
@@ -228,20 +185,12 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
               }
             }
           }
-<<<<<<< HEAD
 
-          // Reset the form and bulk input;
-          setBulkSkills('');
-
-=======
-;
-          // Reset the form and bulk input;
-          setBulkSkills(''),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           // Refresh the skills;
           await onSuccess();
-        } catch (err) {;
+        } catch (err) {;'
           setError('Failed to parse categorized skills. Please try again.');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -259,20 +208,13 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
-
-
-  },
 =======
-  };
-=======
-  },
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
+<<<<<<< HEAD
 =======
 =======
   },  return (
@@ -280,13 +222,21 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       }
-    } catch (err: any) {
+    } catch (err: any) {'
       setError(err.message |'Failed to categorize skills')
     }
   }
   },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
   },
 <<<<<<< HEAD
@@ -294,11 +244,12 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
-    <div className="bg-muted/40 p-6 rounded-lg">
-      <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
-      <div className="space-y-4">
-        <div className="space-y-2">
+    <div className="bg-muted/40 p-6 rounded-lg">"
+      <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>"
+      <div className="space-y-4">"
+        <div className="space-y-2">"
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
+<<<<<<< HEAD
           <Textarea
           <Textarea 
             className="min-h-24"
@@ -406,24 +357,27 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
-        <Button
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+          <Textarea;
+          <Textarea;
+          <Textarea;
+"
+            className="min-h-24""
+            placeholder="Python, React, TypeScript, Project Management, Communication..."
+            value={bulkSkills}
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <Button 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+        <Button;
           onClick={handleCategorizeSkills}
           disabled={isEnhancing |!bulkSkills.trim()}
           disabled={isEnhancing || !bulkSkills.trim()}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -432,18 +386,21 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className="gap-2"
         >
-          {isEnhancing ? (
+          {isEnhancing ? ("
             <Loader2 className="h-4 w-4 animate-spin" />
-          ) : (
+          ) : ("
             <Sparkles className="h-4 w-4" />
           )}
-          Categorize with AI
-        </Button>
+          Categorize with AI;
+        </Button>"
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
-        </p>
+        </p>"
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
@@ -458,17 +415,39 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           />;
         </div>;
 
-        <Button
+        <Button;
           onClick={handleCategorizeSkills}
-          disabled={isEnhancing || !bulkSkills && bulkSkills.trim()}
+          disabled={isEnhancing || !bulkSkills && bulkSkills.trim()}"
           className="gap-2">;
-          {isEnhancing ? (;
+          {isEnhancing ? (;"
             <Loader2 className="h-4 w-4 animate-spin" />;
           ) : (;
+<<<<<<< HEAD
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Sparkles className="h-4 w-4" />;
           )}
           Categorize with AI;
         </Button>;
+<<<<<<< HEAD
+=======
+
+"
+        <p className="text-xs text-muted-foreground mt-1">;
+          AI will identify skills and categorize them automatically. This may take a moment to process.;
+        </p>;
+"
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+      </div>;
+    </div>;
+  );
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 },
 
@@ -476,14 +455,15 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
     }
   }
   return (
-          <Textarea
-            className="min-h-24"
+          <Textarea"
+            className="min-h-24""
             placeholder="Python, React, TypeScript, Project Management, Communication..."
-            value={bulkSkills}
+            value={bulkSkills}'
       set_error (err.message || 'Failed to categorize skills');
     }
   }
 ;
+<<<<<<< HEAD
   return (
     <div className="bg - muted / 40 p - 6 rounded-lg">;
       <h3 className="text - md font - medium mb-4">Bulk Add & AI Categorization</h3>;
@@ -492,6 +472,16 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           <label className="text - sm font-medium">Enter multiple skills (comma separated)</label>;
           <Textarea;
             className="min-h-24";
+=======
+  return ("
+    <div className="bg - muted / 40 p - 6 rounded - lg">;"
+      <h3 className="text - md font - medium mb - 4">Bulk Add & AI Categorization</h3>;"
+      <div className="space - y-4">;"
+        <div className="space - y-2">;"
+          <label className="text - sm font - medium">Enter multiple skills (comma separated)</label>;
+          <Textarea;"
+            className="min - h-24";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             placeholder="Python, React, TypeScript, Project Management, Communication...";
             value={bulk_skills}
             on_change={(e) => setBulkSkills (e.target.value)}
@@ -499,6 +489,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
         </div>;
         <Button;
           on_click={handleCategorizeSkills}
+<<<<<<< HEAD
           disabled={is_enhancing || !bulk_skills.trim ()}
           className="gap-2";
         >;
@@ -508,13 +499,25 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           Categorize with AI;
         </Button>;
         <p className="text - xs text - muted - foreground mt-1">;
+=======
+          disabled={is_enhancing || !bulk_skills.trim ()}"
+          className="gap - 2";
+        >;
+          {is_enhancing ? ("
+            <Loader2 className="h - 4 w - 4 animate - spin" />) : ("
+            <Sparkles className="h - 4 w - 4" />)}
+          Categorize with AI;
+        </Button>;"
+        <p className="text - xs text - muted - foreground mt - 1">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           AI will identify skills and categorize them automatically. This may take a moment to process.;
-        </p>;
+        </p>;"
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>;
     </div>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -555,3 +558,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

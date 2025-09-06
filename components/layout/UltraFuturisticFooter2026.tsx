@@ -1,7 +1,7 @@
-import Link from 'next/link';
+import Link from 'next/link';'
 import { motion } from 'framer-motion';
 
-import {
+import {}
   Phone,
   Mail,
   MapPin,
@@ -19,18 +19,19 @@ import {
   Facebook,
   Twitter,
   Linkedin,
-  Instagram,
-  Youtube,;
-  Github,;} from 'lucide-react';import {
+  Instagram,;
+  Youtube,;'
+  Github,;} from 'lucide-react';import {};
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github;
+const contactInfo = {'
+  mobile: '+1 302 464 0950''
+  email: 'kleber@ziontechgroup.com''
+  address: '364 E Main St STE 1008 Middletown DE 19709''
   website: 'https://ziontechgroup.com'
 }
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
@@ -39,205 +40,208 @@ const contactInfo = null;
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
 origin/cursor/automate-test-improve-and-merge-code-2533
 {
+=======
+{'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics'
 }
-{
+{'
   name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success'
 }
-{
+{'
   name: 'AI Autonomous Marketing Orchestrator', href: '/ai-autonomous-marketing-orchestrator'
 }
-{
+{'
   name: 'AI Autonomous Sales Intelligence', href: '/ai-autonomous-sales-intelligence'
 }]
 }
-{
-  title: 'Cybersecurity & Quantum', services: [ {
+{'
+  title: 'Cybersecurity & Quantum', services: [ {'
   name: 'Quantum Encryption Platform', href: '/quantum-encryption-platform'
 }
-{
+{'
   name: 'AI Autonomous Threat Hunter', href: '/ai-autonomous-threat-hunter'
 }
-{
+{'
   name: 'Quantum Zero Trust Security', href: '/quantum-zero-trust-security'
 }
-{
+{'
   name: 'AI Autonomous Vulnerability Scanner', href: '/ai-autonomous-vulnerability-scanner'
 }
-{
+{'
   name: 'Quantum Secure Communication', href: '/quantum-secure-communication'
 }]
 }
-{
-  title: 'Fintech & Blockchain', services: [ {
+{'
+  title: 'Fintech & Blockchain', services: [ {'
   name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform'
 }
-{
+{'
   name: 'AI Autonomous Wealth Management', href: '/ai-autonomous-wealth-management'
 }
-{
+{'
   name: 'Quantum Blockchain Finance', href: '/quantum-blockchain-finance'
 }
-{
+{'
   name: 'AI Autonomous Insurance Platform', href: '/ai-autonomous-insurance-platform'
 }
-{
+{'
   name: 'Quantum Payment Processing', href: '/quantum-payment-processing'
 }]
 }
-{
-  title: 'Healthcare & Biotech', services: [ {
+{'
+  title: 'Healthcare & Biotech', services: [ {'
   name: 'AI Autonomous Medical Diagnostics', href: '/ai-autonomous-medical-diagnostics'
 }
-{
+{'
   name: 'Quantum Drug Discovery Platform', href: '/quantum-drug-discovery-platform'
 }
-{
+{'
   name: 'AI Autonomous Patient Care', href: '/ai-autonomous-patient-care'
 }
-{
+{'
   name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis'
 }
-{
+{'
   name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials'
 }]
 }];
-{
+{}
   /* Background Effects */
-}<div className="absolute inset-0 overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {
-  {
+}<div className="absolute inset-0 overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {}
+  {'
     title: 'AI & Automation'
-    services: [
-      {
-        name: 'AI Autonomous Business Processor'
+    services: []
+      {'
+        name: 'AI Autonomous Business Processor''
         href: '/ai-autonomous-business-processor'
       }
-      {
-        name: 'AI Predictive Enterprise Analytics'
+      {'
+        name: 'AI Predictive Enterprise Analytics''
         href: '/ai-predictive-enterprise-analytics'
       }
-      {
-        name: 'AI Autonomous Customer Success'
+      {'
+        name: 'AI Autonomous Customer Success''
         href: '/ai-autonomous-customer-success'
       }
-      {
-        name: 'AI Autonomous Marketing Orchestrator'
+      {'
+        name: 'AI Autonomous Marketing Orchestrator''
         href: '/ai-autonomous-marketing-orchestrator'
       }
-      {
-        name: 'AI Autonomous Sales Intelligence'
+      {'
+        name: 'AI Autonomous Sales Intelligence''
         href: '/ai-autonomous-sales-intelligence'
       }
     ]
   }
-  {
+  {'
     title: 'Cybersecurity & Quantum'
-    services: [
-      {
-        name: 'Quantum Encryption Platform'
+    services: []
+      {'
+        name: 'Quantum Encryption Platform''
         href: '/quantum-encryption-platform'
       }
-      {
-        name: 'AI Autonomous Threat Hunter'
+      {'
+        name: 'AI Autonomous Threat Hunter''
         href: '/ai-autonomous-threat-hunter'
       }
-      {
-        name: 'Quantum Zero Trust Security'
+      {'
+        name: 'Quantum Zero Trust Security''
         href: '/quantum-zero-trust-security'
       }
-      {
-        name: 'AI Autonomous Vulnerability Scanner'
+      {'
+        name: 'AI Autonomous Vulnerability Scanner''
         href: '/ai-autonomous-vulnerability-scanner'
       }
-      {
-        name: 'Quantum Secure Communication'
+      {'
+        name: 'Quantum Secure Communication''
         href: '/quantum-secure-communication'
       }
     ]
   }
-  {
+  {'
     title: 'Fintech & Blockchain'
-    services: [
-      {
-        name: 'Quantum Financial Trading Platform'
+    services: []
+      {'
+        name: 'Quantum Financial Trading Platform''
         href: '/quantum-financial-trading-platform'
       }
-      {
-        name: 'AI Autonomous Wealth Management'
+      {'
+        name: 'AI Autonomous Wealth Management''
         href: '/ai-autonomous-wealth-management'
       }
-      {
-        name: 'Quantum Blockchain Finance'
+      {'
+        name: 'Quantum Blockchain Finance''
         href: '/quantum-blockchain-finance'
       }
-      {
-        name: 'AI Autonomous Insurance Platform'
+      {'
+        name: 'AI Autonomous Insurance Platform''
         href: '/ai-autonomous-insurance-platform'
       }
-      {
-        name: 'Quantum Payment Processing'
+      {'
+        name: 'Quantum Payment Processing''
         href: '/quantum-payment-processing'
       }
     ]
   }
-  {
+  {'
     title: 'Healthcare & Biotech'
-    services: [
-      {
-        name: 'AI Autonomous Medical Diagnostics'
+    services: []
+      {'
+        name: 'AI Autonomous Medical Diagnostics''
         href: '/ai-autonomous-medical-diagnostics'
       }
-      {
-        name: 'Quantum Drug Discovery Platform'
+      {'
+        name: 'Quantum Drug Discovery Platform''
         href: '/quantum-drug-discovery-platform'
       }
-      {
-        name: 'AI Autonomous Patient Care'
+      {'
+        name: 'AI Autonomous Patient Care''
         href: '/ai-autonomous-patient-care'
-      }
+      }'
       { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }
-      {
-const serviceCategories = [
-  {
+      {}
+const serviceCategories = []
+  {'
     title: 'AI & Automation'
-    services: [
-      { name: 'AI Autonomous Business Processor', href: '/ai-autonomous-business-processor' }
-      { name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics' }
-      { name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success' }
-      { name: 'AI Autonomous Marketing Orchestrator', href: '/ai-autonomous-marketing-orchestrator' }
+    services: ['
+      { name: 'AI Autonomous Business Processor', href: '/ai-autonomous-business-processor' }'
+      { name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics' }'
+      { name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success' }'
+      { name: 'AI Autonomous Marketing Orchestrator', href: '/ai-autonomous-marketing-orchestrator' }'
       { name: 'AI Autonomous Sales Intelligence', href: '/ai-autonomous-sales-intelligence' }
     ]
   }
-  {
+  {'
     title: 'Cybersecurity & Quantum'
-    services: [
-      { name: 'Quantum Encryption Platform', href: '/quantum-encryption-platform' }
-      { name: 'AI Autonomous Threat Hunter', href: '/ai-autonomous-threat-hunter' }
-      { name: 'Quantum Zero Trust Security', href: '/quantum-zero-trust-security' }
-      { name: 'AI Autonomous Vulnerability Scanner', href: '/ai-autonomous-vulnerability-scanner' }
+    services: ['
+      { name: 'Quantum Encryption Platform', href: '/quantum-encryption-platform' }'
+      { name: 'AI Autonomous Threat Hunter', href: '/ai-autonomous-threat-hunter' }'
+      { name: 'Quantum Zero Trust Security', href: '/quantum-zero-trust-security' }'
+      { name: 'AI Autonomous Vulnerability Scanner', href: '/ai-autonomous-vulnerability-scanner' }'
       { name: 'Quantum Secure Communication', href: '/quantum-secure-communication' }
     ]
   }
-  {
+  {'
     title: 'Fintech & Blockchain'
-    services: [
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' }
-      { name: 'AI Autonomous Wealth Management', href: '/ai-autonomous-wealth-management' }
-      { name: 'Quantum Blockchain Finance', href: '/quantum-blockchain-finance' }
-      { name: 'AI Autonomous Insurance Platform', href: '/ai-autonomous-insurance-platform' }
+    services: ['
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' }'
+      { name: 'AI Autonomous Wealth Management', href: '/ai-autonomous-wealth-management' }'
+      { name: 'Quantum Blockchain Finance', href: '/quantum-blockchain-finance' }'
+      { name: 'AI Autonomous Insurance Platform', href: '/ai-autonomous-insurance-platform' }'
       { name: 'Quantum Payment Processing', href: '/quantum-payment-processing' }
     ]
   }
-  {
+  {'
     title: 'Healthcare & Biotech'
-    services: [
-      { name: 'AI Autonomous Medical Diagnostics', href: '/ai-autonomous-medical-diagnostics' }
-      { name: 'Quantum Drug Discovery Platform', href: '/quantum-drug-discovery-platform' }
-      { name: 'AI Autonomous Patient Care', href: '/ai-autonomous-patient-care' }
-      { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }
+    services: ['
+      { name: 'AI Autonomous Medical Diagnostics', href: '/ai-autonomous-medical-diagnostics' }'
+      { name: 'Quantum Drug Discovery Platform', href: '/quantum-drug-discovery-platform' }'
+      { name: 'AI Autonomous Patient Care', href: '/ai-autonomous-patient-care' }'
+      { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }'
       { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
     ]
-import {
+import {}
   Phone,
   Mail,
   MapPin,
@@ -256,192 +260,193 @@ import {
   Twitter,
   Linkedin,
   Instagram,
-  Youtube,
-  Github,} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,
+  Youtube,';
+  Github,} from 'lucide-react';import {}
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,;
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github;
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+const contact_info = {'
+  mobile: '+1 302 464 0950','
+  email: 'kleber@ziontechgroup.com','
+  address: '364 E Main St STE 1008 Middletown DE 19709','
   website: 'https://ziontechgroup.com',
 }
-{
+{'
   name: 'AI Predictive Enterprise Analytics', href: '/ai - predictive - enterprise - analytics';
 }
-{
+{'
   name: 'AI Autonomous Customer Success', href: '/ai - autonomous - customer - success';
 }
-{
+{'
   name: 'AI Autonomous Marketing Orchestrator', href: '/ai - autonomous - marketing - orchestrator';
 }
-{
+{'
   name: 'AI Autonomous Sales Intelligence', href: '/ai - autonomous - sales - intelligence';
 }];
 }
-{
-  title: 'Cybersecurity & Quantum', services: [ {
+{'
+  title: 'Cybersecurity & Quantum', services: [ {'
   name: 'Quantum Encryption Platform', href: '/quantum - encryption - platform';
 }
-{
+{'
   name: 'AI Autonomous Threat Hunter', href: '/ai - autonomous - threat - hunter';
 }
-{
+{'
   name: 'Quantum Zero Trust Security', href: '/quantum - zero - trust - security';
 }
-{
+{'
   name: 'AI Autonomous Vulnerability Scanner', href: '/ai - autonomous - vulnerability - scanner';
 }
-{
+{'
   name: 'Quantum Secure Communication', href: '/quantum - secure - communication';
 }];
 }
-{
-  title: 'Fintech & Blockchain', services: [ {
+{'
+  title: 'Fintech & Blockchain', services: [ {'
   name: 'Quantum Financial Trading Platform', href: '/quantum - financial - trading - platform';
 }
-{
+{'
   name: 'AI Autonomous Wealth Management', href: '/ai - autonomous - wealth - management';
 }
-{
+{'
   name: 'Quantum Blockchain Finance', href: '/quantum - blockchain - finance';
 }
-{
+{'
   name: 'AI Autonomous Insurance Platform', href: '/ai - autonomous - insurance - platform';
 }
-{
+{'
   name: 'Quantum Payment Processing', href: '/quantum - payment - processing';
 }];
 }
-{
-  title: 'Healthcare & Biotech', services: [ {
+{'
+  title: 'Healthcare & Biotech', services: [ {'
   name: 'AI Autonomous Medical Diagnostics', href: '/ai - autonomous - medical - diagnostics';
 }
-{
+{'
   name: 'Quantum Drug Discovery Platform', href: '/quantum - drug - discovery - platform';
 }
-{
+{'
   name: 'AI Autonomous Patient Care', href: '/ai - autonomous - patient - care';
 }
-{
+{'
   name: 'Quantum Genomic Analysis', href: '/quantum - genomic - analysis';
 }
-{
+{'
   name: 'AI Autonomous Clinical Trials', href: '/ai - autonomous - clinical - trials';
 }];
 }];
-{
-  /* Background Effects */;
-}<div className="absolute inset - 0 overflow - hidden" > <div className="absolute inset - 0 bg-[radial - gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset - 0 bg-[radial - gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {
-  {
+{}
+  /* Background Effects */;"
+}<div className="absolute inset - 0 overflow - hidden" > <div className="absolute inset - 0 bg-[radial - gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset - 0 bg-[radial - gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {}
+  {'
     title: 'AI & Automation',
     services: [;
-      {
-        name: 'AI Autonomous Business Processor',
+      {'
+        name: 'AI Autonomous Business Processor','
         href: '/ai - autonomous - business - processor',
       },
-      {
-        name: 'AI Predictive Enterprise Analytics',
+      {'
+        name: 'AI Predictive Enterprise Analytics','
         href: '/ai - predictive - enterprise - analytics',
       },
-      {
-        name: 'AI Autonomous Customer Success',
+      {'
+        name: 'AI Autonomous Customer Success','
         href: '/ai - autonomous - customer - success',
       },
-      {
-        name: 'AI Autonomous Marketing Orchestrator',
+      {'
+        name: 'AI Autonomous Marketing Orchestrator','
         href: '/ai - autonomous - marketing - orchestrator',
       },
-      {
-        name: 'AI Autonomous Sales Intelligence',
+      {'
+        name: 'AI Autonomous Sales Intelligence','
         href: '/ai - autonomous - sales - intelligence',
       },
     ],
   },
-  {
+  {'
     title: 'Cybersecurity & Quantum',
     services: [;
-      {
-        name: 'Quantum Encryption Platform',
+      {'
+        name: 'Quantum Encryption Platform','
         href: '/quantum - encryption - platform',
       },
-      {
-        name: 'AI Autonomous Threat Hunter',
+      {'
+        name: 'AI Autonomous Threat Hunter','
         href: '/ai - autonomous - threat - hunter',
       },
-      {
-        name: 'Quantum Zero Trust Security',
+      {'
+        name: 'Quantum Zero Trust Security','
         href: '/quantum - zero - trust - security',
       },
-      {
-        name: 'AI Autonomous Vulnerability Scanner',
+      {'
+        name: 'AI Autonomous Vulnerability Scanner','
         href: '/ai - autonomous - vulnerability - scanner',
       },
-      {
-        name: 'Quantum Secure Communication',
+      {'
+        name: 'Quantum Secure Communication','
         href: '/quantum - secure - communication',
       },
     ],
   },
-  {
+  {'
     title: 'Fintech & Blockchain',
     services: [;
-      {
-        name: 'Quantum Financial Trading Platform',
+      {'
+        name: 'Quantum Financial Trading Platform','
         href: '/quantum - financial - trading - platform',
       },
-      {
-        name: 'AI Autonomous Wealth Management',
+      {'
+        name: 'AI Autonomous Wealth Management','
         href: '/ai - autonomous - wealth - management',
       },
-      {
-        name: 'Quantum Blockchain Finance',
+      {'
+        name: 'Quantum Blockchain Finance','
         href: '/quantum - blockchain - finance',
       },
-      {
-        name: 'AI Autonomous Insurance Platform',
+      {'
+        name: 'AI Autonomous Insurance Platform','
         href: '/ai - autonomous - insurance - platform',
       },
-      {
-        name: 'Quantum Payment Processing',
+      {'
+        name: 'Quantum Payment Processing','
         href: '/quantum - payment - processing',
       },
     ],
   },
-  {
+  {'
     title: 'Healthcare & Biotech',
     services: [;
-      {
-        name: 'AI Autonomous Medical Diagnostics',
+      {'
+        name: 'AI Autonomous Medical Diagnostics','
         href: '/ai - autonomous - medical - diagnostics',
       },
-      {
-        name: 'Quantum Drug Discovery Platform',
+      {'
+        name: 'Quantum Drug Discovery Platform','
         href: '/quantum - drug - discovery - platform',
       },
-      {
-        name: 'AI Autonomous Patient Care',
+      {'
+        name: 'AI Autonomous Patient Care','
         href: '/ai - autonomous - patient - care',
-      },
+      },'
       { name: 'Quantum Genomic Analysis', href: '/quantum - genomic - analysis' },
-      {
-        name: 'AI Autonomous Clinical Trials',
+      {'
+        name: 'AI Autonomous Clinical Trials','
         href: '/ai - autonomous - clinical - trials',
       },
     ],
   }, ];}
 ;
 const service_categories = [;
-  {
+  {'
     title: 'AI & Automation',
-    services: [;
-      { name: 'AI Autonomous Business Processor', href: '/ai - autonomous - business - processor' },
-      { name: 'AI Predictive Enterprise Analytics', href: '/ai - predictive - enterprise - analytics' },
-      { name: 'AI Autonomous Customer Success', href: '/ai - autonomous - customer - success' },
-      { name: 'AI Autonomous Marketing Orchestrator', href: '/ai - autonomous - marketing - orchestrator' },
+    services: [;'
+      { name: 'AI Autonomous Business Processor', href: '/ai - autonomous - business - processor' },'
+      { name: 'AI Predictive Enterprise Analytics', href: '/ai - predictive - enterprise - analytics' },'
+      { name: 'AI Autonomous Customer Success', href: '/ai - autonomous - customer - success' },'
+      { name: 'AI Autonomous Marketing Orchestrator', href: '/ai - autonomous - marketing - orchestrator' },'
       { name: 'AI Autonomous Sales Intelligence', href: '/ai - autonomous - sales - intelligence' }
     ];
+<<<<<<< HEAD
   }
         name: 'AI Autonomous Clinical Trials',
         href: '/ai-autonomous-clinical-trials',
@@ -457,24 +462,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   { name: 'News & Press', href: '/news' },
   { name: 'Partners', href: '/partners' },
   { name: 'Investors', href: '/investors' },
+=======
+  }'
+  { name: 'About Us', href: '/about' },'
+  { name: 'Leadership Team', href: '/leadership' },'
+  { name: 'Careers', href: '/careers' },'
+  { name: 'News & Press', href: '/news' },'
+  { name: 'Partners', href: '/partners' },'
+  { name: 'Investors', href: '/investors' },'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { name: 'Contact Us', href: '/contact' },
-const resourceLinks = [
+const resourceLinks = ['
   { name: 'Locations', href: '/locations' }, ];  { name: 'Locations', href: '/locations' }
 ];
 ;
-const resource_links = [;
-  { name: 'Documentation', href: '/docs' },
-  { name: 'API Reference', href: '/api - documentation' },
-  { name: 'Case Studies', href: '/case - studies' },
-  { name: 'Blog & News', href: '/blog' },
-  { name: 'Support Center', href: '/support' },
-  { name: 'Training & Certification', href: '/training' },
-  { name: 'Community Forum', href: '/community' },
-          <div className='lg:col-span-2'>            <motion && motion.div      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden">;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0 && 0.05),transparent_50%)]"></div>;
+const resource_links = [;'
+  { name: 'Documentation', href: '/docs' },'
+  { name: 'API Reference', href: '/api - documentation' },'
+  { name: 'Case Studies', href: '/case - studies' },'
+  { name: 'Blog & News', href: '/blog' },'
+  { name: 'Support Center', href: '/support' },'
+  { name: 'Training & Certification', href: '/training' },'
+  { name: 'Community Forum', href: '/community' },'
+          <div className='lg:col-span-2'>            <motion && motion.div      {/* Background Effects */}"
+      <div className="absolute inset-0 overflow-hidden">;"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0 && 0.05),transparent_50%)]"></div>;"
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.05),transparent_50%)]"></div>;
       </div>;
+<<<<<<< HEAD
 { name: 'Locations', href: '/locations' },
 ];
 const resourceLinks = [
@@ -507,6 +522,9 @@ export default function UltraFuturisticFooter2026() {
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Main Footer Content */}
+=======
+        {/* Main Footer Content */}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">;
           {/* Company Info */}
               initial={{ opacity: 0, y: 20 }}
@@ -531,21 +549,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 solutions. Transforming businesses with cutting-edge technology.
 origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
-              {/* Contact Info */}
-              <div className='space-y-3'>
-                <div className='flex items-center text-gray-300'>
+              {/* Contact Info */}'
+              <div className='space-y-3'>'
+                <div className='flex items-center text-gray-300'>'
                   <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.mobile}</span>
-                </div>
-                <div className='flex items-center text-gray-300'>
+                </div>'
+                <div className='flex items-center text-gray-300'>'
                   <Mail className='w-4 h-4 mr-3 text-cyan-400' />
                   <span>{contactInfo.email}</span>
-                </div>
-                <div className='flex items-center text-gray-300'>
+                </div>'
+                <div className='flex items-center text-gray-300'>'
                   <MapPin className='w-4 h-4 mr-3 text-cyan-400' />
                   <span>{contactInfo.address}</span>
+<<<<<<< HEAD
                 </div>
                 <div className='flex items-center text-gray-300'>
                   <Globe className='w-4 h-4 mr-3 text-cyan-400' />
+=======
+                </div>'
+                <div className='flex items-center text-gray-300'>'"
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.website}</span>                <div className="flex items-center text-gray-300">"
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <span>{contactInfo.website}</span>
                 </div>
               </div>
@@ -554,27 +579,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
               </p>
-              {/* Contact Info */}
+              {/* Contact Info */}"
                   <Globe className="w-4 h-4 mr-3 text-cyan-400" />
                   <span>{contactInfo.website}</span>
                 </div>
               </div>
             </motion.div>
-          </div>
-              <div className='space-y-3'>;
-                <div className='flex items-center text-gray-300'>;
+          </div>'
+              <div className='space-y-3'>;'
+                <div className='flex items-center text-gray-300'>;'
                   <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.mobile}</span>;
-                </div>;
-                <div className='flex items-center text-gray-300'>;
+                </div>;'
+                <div className='flex items-center text-gray-300'>;'
                   <Mail className='w-4 h-4 mr-3 text-cyan-400' />;
                   <span>{contactInfo && contactInfo.email}</span>;
-                </div>;
-                <div className='flex items-center text-gray-300'>;
+                </div>;'
+                <div className='flex items-center text-gray-300'>;'
                   <MapPin className='w-4 h-4 mr-3 text-cyan-400' />;
                   <span>{contactInfo && contactInfo.address}</span>;
-                </div>;
-                <div className='flex items-center text-gray-300'>;
-                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.website}</span>                <div className="flex items-center text-gray-300">;
+                </div>;'
+                <div className='flex items-center text-gray-300'>;'"
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo && contactInfo.website}</span>                <div className="flex items-center text-gray-300">;"
                   <Globe className="w-4 h-4 mr-3 text-cyan-400" />;
                   <span>{contactInfo && contactInfo.website}</span>;
                 </div>;
@@ -584,13 +609,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {/* Service Categories */}
           {serviceCategories && serviceCategories.map((category, index) => (;
-            <motion&& motion.div
+            <motion&& motion.div;
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-                      href={service.href}
+                      href={service.href}"
                       className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group";
-                    >;
+                    >;"
                       <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
@@ -629,39 +654,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Company Links */}
-          <motion&& motion.div
+          <motion&& motion.div'
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}
 
           {/* Company Links */}
 
-          <motion.div
+          <motion.div;
           {/* Company Links */}
-          <motion&& motion.div
+          <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+=======
+          >'
+            <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Users className='w-5 h-5 mr-2 text-purple-400' />
-              Company
-            </h4>
+              Company;
+            </h4>'
             <ul className='space-y-2'>
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link
-            </h4>
+                  <Link;
+            </h4>"
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link
-                    href={link.href}
+                  <Link;
+                    href={link.href}'
                     className='text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm'                  >              Company;
-            </h4>;
+            </h4>;"
             <ul className="space - y-2">;
               {company_links.map ((link, index) => (
                 <li key={index}>;
                   <Link;
-                    href={link.href}
+                    href={link.href}"
                     className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm";
                   >;
                     href={link.href}
@@ -670,10 +700,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {link.name}
           {/* Resources */}
-          <motion&& motion.div
+          <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-                    href={link.href}
+                    href={link.href}"
                     className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm";
                   >;
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -692,7 +722,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {link.name}
           {/* Social Media */}
-          <motion&& motion.div
+          <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -726,9 +756,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               ))}
         {/* Newsletter Signup */}
-        <motion&& motion.div
+        <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.5 }}
 className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
         >
@@ -748,35 +779,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 placeholder='Enter your email'
                 className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
           <div className="text-center">
+=======
+              <input'
+                type='email''
+                placeholder='Enter your email''
+                className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'"
+          <div className="text-center">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Latest Innovations
-            </h3>
+              Stay Updated with Latest Innovations;
+            </h3>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Get exclusive access to our latest AI, quantum computing, and emerging technology insights.
               Be the first to know about breakthrough solutions and industry trends.
-            </p>
+            </p>"
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              />;
-              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>                Subscribe        >;
-          <div className="text-center">;
+              />;'
+              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>                Subscribe        >;"
+          <div className="text-center">;"
             <h3 className="text-2xl font-bold text-white mb-4">;
               Stay Updated with Latest Innovations;
-            </h3>;
+            </h3>;"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
               Get exclusive access to our latest AI, quantum computing, and emerging technology insights. ;
               Be the first to know about breakthrough solutions and industry trends.;
-            </p>;
+            </p>;"
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
-              <input
-                type="email"
-                placeholder="Enter your email"
+              <input"
+                type="email""
+                placeholder="Enter your email""
                 className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-              />
+              />"
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
+<<<<<<< HEAD
               />
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Subscribe
+=======
+                Subscribe;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </button>
             </div>
           </div>
@@ -787,17 +829,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         {/* Bottom Bar */}
-        <motion&& motion.div
+        <motion&& motion.div;
         </motion.div>;
         {/* Bottom Bar */}
         <motion.div;
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
-          className='border-t border-gray-800 pt-8'>;
-          <div className='flex flex-col md:flex-row justify-between items-center'>;
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}'
+          className='border-t border-gray-800 pt-8'>;'
+          <div className='flex flex-col md:flex-row justify-between items-center'>;'
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>;
               © 2026 Zion Tech Group. All rights reserved. |;
+<<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.6 }}
 className='border-t border-gray-800 pt-8'
         >
@@ -807,30 +850,35 @@ className='border-t border-gray-800 pt-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
               <Link
                 href='/privacy'
+=======
+              <Link'
+                href='/privacy''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'>;
                 Privacy Policy;
-              </Link>;
+              </Link>;'
               <span className='mx-2'>|</span>;
-              <Link
-                href='/terms'
-          <div className="flex flex-col md: flex-row justify-between items-center">
+              <Link'
+                href='/terms'"
+          <div className="flex flex-col md: flex-row justify-between items-center">"
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2026 Zion Tech Group. All rights reserved.
+              © 2026 Zion Tech Group. All rights reserved."
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">
-                Privacy Policy
-              </Link>
-              <span className="mx-2">|</span>
+                Privacy Policy;
+              </Link>"
+              <span className="mx-2">|</span>"
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">
-                Terms of Service
+                Terms of Service;
               </Link>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="flex items-center text-gray-400 text-sm">
+            </div>"
+            <div className="flex items-center space-x-2">"
+              <div className="flex items-center text-gray-400 text-sm">"
                 <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                Trusted by 2500+ Companies
-              </div>
-              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                Trusted by 2500+ Companies;
+              </div>"
+              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>"
               <div className="text-cyan-400 text-sm font-semibold">
+<<<<<<< HEAD
                 className='hover:text-cyan-400 transition-colors duration-300'
               >
                 Terms of Service
@@ -845,6 +893,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-cyan-400 text-sm font-semibold'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 99.9% Uptime
+=======
+                99.9% Uptime;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
           </div>
@@ -853,50 +904,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </footer>;
   );
 }
-
+'
           className='border - t border - gray - 800 pt - 8';
-        >;
-          <div className='flex flex - col md:flex - row justify - between items - center'>;
+        >;'
+          <div className='flex flex - col md:flex - row justify - between items - center'>;'
             <div className='text - gray - 400 text - sm mb - 4 md:mb - 0'>;
               © 2026 Zion Tech Group. All rights reserved. |;
-              <Link;
-                href='/privacy';
+              <Link;'
+                href='/privacy';'
                 className='hover:text - cyan - 400 transition - colors duration - 300 ml - 2';
               >;
                 Privacy Policy;
-              </Link>;
+              </Link>;'
               <span className='mx - 2'>|</span>;
-              <Link;
-                href='/terms';
+              <Link;'
+                href='/terms';'
                 className='hover:text - cyan - 400 transition - colors duration - 300';
               >;
                 Terms of Service;
               </Link>;
-            </div>;
-            <div className='flex items - center space - x-2'>;
-              <div className='flex items - center text - gray - 400 text - sm'>;
+            </div>;'
+            <div className='flex items - center space - x-2'>;'
+              <div className='flex items - center text - gray - 400 text - sm'>;'
                 <Star className='w - 4 h - 4 text - yellow - 400 mr - 1' />;
                 Trusted by 2500+ Companies;
-              </div>;
-              <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse'></div>;
-              <div className='text - cyan - 400 text - sm font - semibold'>                99.9% Uptime        >;
-          <div className="flex flex - col md: flex - row justify - between items - center">;
+              </div>;'
+              <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse'></div>;'
+              <div className='text - cyan - 400 text - sm font - semibold'>                99.9% Uptime        >;"
+          <div className="flex flex - col md: flex - row justify - between items - center">;"
             <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">;
-              © 2026 Zion Tech Group. All rights reserved. |;
+              © 2026 Zion Tech Group. All rights reserved. |;"
               <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration - 300 ml - 2">;
                 Privacy Policy;
-              </Link>;
-              <span className="mx - 2">|</span>;
+              </Link>;"
+              <span className="mx - 2">|</span>;"
               <Link href="/terms" className="hover:text - cyan - 400 transition - colors duration - 300">;
                 Terms of Service;
               </Link>;
-            </div>;
-            <div className="flex items - center space - x-2">;
-              <div className="flex items - center text - gray - 400 text - sm">;
+            </div>;"
+            <div className="flex items - center space - x-2">;"
+              <div className="flex items - center text - gray - 400 text - sm">;"
                 <Star className="w - 4 h - 4 text - yellow - 400 mr - 1" />;
                 Trusted by 2500+ Companies;
-              </div>;
-              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;
+              </div>;"
+              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;"
               <div className="text - cyan - 400 text - sm font - semibold">;
                 99.9% Uptime;
               </div>;
@@ -912,4 +963,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

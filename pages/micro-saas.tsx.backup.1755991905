@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Mail, MessageCircle, Kanban, Headphones, Brain, Code, Server, Shield as ShieldIcon, Zap as ZapIcon2, Globe as GlobeIcon, Users as UsersIcon, Bot, Database as DatabaseIcon, Network, Key, Eye, Fingerprint, Lock as LockIcon, Globe as GlobeIcon2, Zap as ZapIcon3, Shield as ShieldIcon2, Users as UsersIcon2, Rocket as RocketIcon, Target as TargetIcon, TrendingUp as TrendingUpIcon, Clock as ClockIcon, Award as AwardIcon, DollarSign as DollarSignIcon, ChartBar as ChartBarIcon, Lock as LockIcon2, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon4, Mail as MailIcon, MessageCircle as MessageCircleIcon, Kanban as KanbanIcon, Headphones as HeadphonesIcon, Brain as BrainIcon, Code as CodeIcon, Server as ServerIcon, Shield as ShieldIcon3, Zap as ZapIcon5, Globe as GlobeIcon3, Users as UsersIcon3 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import ParticleBackground from '../components/ui/ParticleBackground';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function MicroSaasPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -103,6 +107,7 @@ export default function MicroSaasPage() {
     }
   });
 
+<<<<<<< HEAD
   const categories = ['All', 'Content & Marketing', 'Development & DevOps', 'Sales & CRM', 'Legal & Compliance', 'Human Resources', 'Analytics & Data', 'Productivity & Collaboration', 'Customer Service', 'Finance & Accounting', 'Design & UX', 'Finance & Investment', 'Operations & Logistics', 'Security & Compliance', 'Healthcare & Life Sciences', 'Education & Training', 'Real Estate & Property', 'Manufacturing & Industry', 'Energy & Utilities'];
 
   return (
@@ -204,10 +209,14 @@ export default function MicroSaasPage() {
               <div className="text-gray-400 text-sm">Expert Support</div>
             </div>
           </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>
       </section>
 
       {/* Competitive Advantages */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -356,12 +365,16 @@ export default function MicroSaasPage() {
                     </Button>
                   </div>
                 </Card>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Contact Information Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -421,6 +434,9 @@ export default function MicroSaasPage() {
               Contact Us Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
 
           <div className="text-center">

@@ -9,8 +9,12 @@ import {
   Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2,
   ChevronRight, Play, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon,
   Brain as BrainIcon, Factory as FactoryIcon, Shield as ShieldIcon, FlaskConical as FlaskIcon,
+<<<<<<< HEAD
   DollarSign as DollarIcon, Rocket as RocketIcon, Globe as GlobeIcon, Link as LinkIcon,
   Zap as ZapIcon, Leaf as LeafIcon
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import ParticleBackground from '../components/ui/ParticleBackground';
@@ -34,6 +38,7 @@ export default function HomePage() {
 
   const revolutionaryServices = [
     {
+<<<<<<< HEAD
 =======
       name: 'Quantum AI Cognitive Platform',
       description: 'Revolutionary quantum AI platform combining quantum computing with advanced cognitive AI for unprecedented problem-solving capabilities. First-to-market solution with 99.99% accuracy.',
@@ -107,96 +112,9 @@ export default function HomePage() {
       growthRate: '400% annual growth'
     }
   ];
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  const emergingTechServices = [
-    {
-      name: 'Metaverse Development Studio',
-      description: 'Complete metaverse development platform with VR/AR integration, 3D modeling, and immersive experiences.',
-      icon: <GlobeIcon className="w-8 h-8" />,
-      price: '$799/month',
-      category: 'Metaverse & VR/AR',
-      variant: 'holographic-matrix',
-      link: 'https://ziontechgroup.com/metaverse-studio',
-      marketSize: '$1.2B market',
-      growthRate: '320% annual growth'
-    },
-    {
-      name: 'Blockchain DeFi Platform',
-      description: 'Decentralized finance platform with smart contracts, yield farming, and cross-chain interoperability.',
-      icon: <LinkIcon className="w-8 h-8" />,
-      price: '$599/month',
-      category: 'Blockchain & DeFi',
-      variant: 'cyberpunk-holographic',
-      link: 'https://ziontechgroup.com/blockchain-defi',
-      marketSize: '$800M market',
-      growthRate: '400% annual growth'
-    },
-    {
-      name: 'IoT Smart City Platform',
-      description: 'Intelligent IoT platform for smart city management, traffic optimization, and environmental monitoring.',
-      icon: <Building2Icon className="w-8 h-8" />,
-      price: '$1,099/month',
-      category: 'IoT & Smart Cities',
-      variant: 'neural-quantum-cyberpunk',
-      link: 'https://ziontechgroup.com/iot-smart-city',
-      marketSize: '$1.5B market',
-      growthRate: '180% annual growth'
-    },
-    {
-      name: 'Edge Computing Network',
-      description: 'Distributed edge computing platform for ultra-low latency applications and real-time data processing.',
-      icon: <ZapIcon className="w-8 h-8" />,
-      price: '$699/month',
-      category: 'Edge Computing',
-      variant: 'quantum-holographic-advanced',
-      link: 'https://ziontechgroup.com/edge-computing',
-      marketSize: '$900M market',
-      growthRate: '250% annual growth'
-    }
-  ];
-
-  const marketInsights = [
-    {
-      metric: '$3.2B',
-      label: 'AI Drug Discovery Market',
-      description: 'Growing at 200% annually',
-      icon: <FlaskIcon className="w-6 h-6" />
-    },
-    {
-      metric: '$2.1B',
-      label: 'Quantum Finance Market',
-      description: '350% annual growth rate',
-      icon: <DollarIcon className="w-6 h-6" />
-    },
-    {
-      metric: '$4.8B',
-      label: 'Autonomous Vehicle AI',
-      description: '250% annual growth rate',
-      icon: <Car className="w-6 h-6" />
-    },
-    {
-      metric: '$2.3B',
-      label: 'Smart Energy Market',
-      description: '180% annual growth rate',
-      icon: <Leaf className="w-6 h-6" />
-    },
-    {
-      metric: '$1.8B',
-      label: 'Space AI Market',
-      description: '280% annual growth rate',
-      icon: <RocketIcon className="w-6 h-6" />
-    },
-    {
-      metric: '$1.5B',
-      label: 'Climate Tech Market',
-      description: '220% annual growth rate',
-      icon: <GlobeIcon className="w-6 h-6" />
-    }
-  ];
-
-  const platformFeatures = [
-    {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7563
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: '200+ Real Micro SaaS Services',
       description: 'Complete portfolio of fully functional micro SaaS tools with real implementations, not just mockups. Starting from $49/month with 14-day free trials.',
@@ -374,28 +292,8 @@ export default function HomePage() {
     }
   ];
 
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen futuristic-bg particle-bg">
-      <ParticleBackground />
-      <Head>
-        <title>Zion Tech Group - Real Micro SaaS Services for Modern Businesses</title>
-        <meta name="description" content="Discover 40+ real, fully functional micro SaaS services built with modern technology. AI-powered tools for content, marketing, development, and business automation." />
-        <meta name="keywords" content="micro SaaS, AI services, business automation, content generation, cloud optimization, project management, customer support, healthcare, manufacturing, energy, education, real estate" />
-        <meta property="og:title" content="Zion Tech Group - Real Micro SaaS Services" />
-        <meta property="og:description" content="40+ real micro SaaS services with AI-powered automation, modern tech stack, and enterprise-grade reliability." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:type" content="website" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Revolutionary Micro SaaS Services" />
-        <meta name="twitter:description" content="500+ cutting-edge micro SaaS services with quantum AI, autonomous systems, and emerging technologies." />
-      </Head>
-      {/* Revolutionary Services Section */}
-      <RevolutionaryServices />
 
+<<<<<<< HEAD
       {/* Reusable Service Ads Strip */}
       <ServiceAds
         heading="Featured Micro SaaS & AI Services"
@@ -715,11 +613,14 @@ export default function HomePage() {
               </div>
             ))}
           </motion.div>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>
       </div>
     </section>
   );
 
+<<<<<<< HEAD
       {/* Innovative Services Showcase */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -746,11 +647,15 @@ export default function HomePage() {
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="text-center p-6"
               >
+<<<<<<< HEAD
                 <AdvancedFuturisticCard
                   title={service.name}
                   description={service.description}
@@ -911,6 +816,9 @@ export default function HomePage() {
                 
                 {/* Background gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </motion.div>
 
               <motion.div
@@ -932,6 +840,7 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
       {/* Testimonials */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-black/20 via-blue-900/10 to-black/20">
         <div className="max-w-7xl mx-auto">
@@ -1395,5 +1304,8 @@ export default function HomePage() {
         </section>
       </div>
     </EnhancedFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

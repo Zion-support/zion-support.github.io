@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -67,20 +68,48 @@ export default function ITServices() {
   return (
     <Layout
       title="IT Services - Zion Tech Group"
+=======
+
+
+export default function ITServices() {}
+  return (;
+    <Layout;
+      title="IT Services - Zion Tech Group""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
+    >"
+      <div className="min-h-screen bg-gray-50 py-20">"
+        <div className="container mx-auto px-4">"
           <div className="text-center mb-12">
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Complete IT solutions to power your digital transformation.
             </p>
-          </div>
+          </div>"
           <div className="text-center">
+<<<<<<< HEAD
+=======
+
+              IT Services page is under construction.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -88,9 +117,14 @@ export default function ITServices() {
 import { Star } from 'lucide-react';
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-import { Star } from 'lucide-react';
 =======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { Star } from 'lucide-react';
+'
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
@@ -114,6 +148,14 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import { 
+=======
+'
+import Head from 'next/head';'
+import Link from 'next/link';'
+import { motion } from 'framer-motion';'
+import MainLayout from '../src/components/layout/MainLayout';
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Server, 
   Shield, 
   Cloud, 
@@ -141,6 +183,7 @@ import {
   BarChart3,
   Headphones,
   Wrench,
+<<<<<<< HEAD
   HardDrive,
   Wifi,
   Phone,
@@ -186,50 +229,59 @@ const itServices = [
 =======
 <<<<<<< HEAD
     title: 'Cloud Infrastructure Management',
+=======
+  FileText,;
+  Cpu;'
+} from 'lucide-react';
+
+const itServices = []
+  {'
+    title: 'Cloud Infrastructure Management','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
-    icon: Cloud,
-    features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', '24/7 monitoring'],
-    price: '$2,500/month',
+    icon: Cloud,'
+    features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', '24/7 monitoring'],'
+    price: '$2,500/month','
     benefits: ['Scalable infrastructure', 'Reduced operational costs', 'Enhanced security', 'Improved performance']
   },
-  {
-    title: 'Network Security Solutions',
+  {'
+    title: 'Network Security Solutions','
     description: 'Advanced cybersecurity measures to protect your business from threats.',
-    icon: Shield,
-    features: ['Firewall management', 'Intrusion detection', 'Vulnerability assessments', 'Security audits'],
-    price: '$1,800/month',
+    icon: Shield,'
+    features: ['Firewall management', 'Intrusion detection', 'Vulnerability assessments', 'Security audits'],'
+    price: '$1,800/month','
     benefits: ['Threat protection', 'Compliance assurance', 'Risk mitigation', 'Peace of mind']
   },
-  {
-    title: 'Database Administration',
+  {'
+    title: 'Database Administration','
     description: 'Expert database management and optimization services.',
-    icon: Database,
-    features: ['Performance tuning', 'Backup strategies', 'Data migration', 'Monitoring'],
-    price: '$1,200/month',
+    icon: Database,'
+    features: ['Performance tuning', 'Backup strategies', 'Data migration', 'Monitoring'],'
+    price: '$1,200/month','
     benefits: ['Optimized performance', 'Data protection', 'Reduced downtime', 'Expert support']
   },
-  {
-    title: 'IT Support & Helpdesk',
+  {'
+    title: 'IT Support & Helpdesk','
     description: '24/7 technical support for all your IT needs.',
-    icon: Monitor,
-    features: ['Remote assistance', 'Hardware support', 'Software installation', 'User training'],
-    price: '$800/month',
+    icon: Monitor,'
+    features: ['Remote assistance', 'Hardware support', 'Software installation', 'User training'],'
+    price: '$800/month','
     benefits: ['Quick response times', 'Expert technicians', 'Reduced downtime', 'User satisfaction']
   },
-  {
-    title: 'Network Design & Implementation',
+  {'
+    title: 'Network Design & Implementation','
     description: 'Custom network solutions tailored to your business requirements.',
-    icon: Network,
-    features: ['Network planning', 'Hardware selection', 'Installation', 'Testing'],
-    price: '$3,000/project',
+    icon: Network,'
+    features: ['Network planning', 'Hardware selection', 'Installation', 'Testing'],'
+    price: '$3,000/project','
     benefits: ['Reliable connectivity', 'Scalable design', 'Future-proof architecture', 'Expert implementation']
   },
-  {
-    title: 'Server Management',
+  {'
+    title: 'Server Management','
     description: 'Complete server administration and maintenance services.',
-    icon: Server,
-    features: ['Server setup', 'Performance monitoring', 'Updates & patches', 'Backup management'],
-    price: '$1,500/month',
+    icon: Server,'
+    features: ['Server setup', 'Performance monitoring', 'Updates & patches', 'Backup management'],'
+    price: '$1,500/month','
     benefits: ['Reliable servers', 'Optimal performance', 'Data protection', 'Minimal downtime']
 =======
     category: "Managed IT Services",
@@ -510,6 +562,7 @@ const processSteps = [
   }
 ];
 
+<<<<<<< HEAD
 const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
 <<<<<<< HEAD
@@ -521,10 +574,17 @@ const stats = [
 <<<<<<< HEAD
   { number: "24/7", label: "Support Available" },
   { number: "500+", label: "Systems Managed" },
+=======
+const stats = ["
+  { number: "99.9%", label: "Uptime Guarantee" },"
+  { number: "24/7", label: "Support Available" },"
+  { number: "500+", label: "Systems Managed" },"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { number: "15min", label: "Average Response Time" }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ITServices() {
   
@@ -766,11 +826,47 @@ export default function ITServicesPage() {
                     className="px-4 py-2 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-semibold"
                   >
                     Start Free Trial
+=======
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}"
+                className="text-center"
+              >"
+                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>"
+                <div className="text-gray-300">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {itServices.map((service, index) => (
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}"
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+              >"
+                <div className="flex items-center mb-4">"
+                  <service.icon className="h-8 w-8 text-blue-400 mr-3" />"
+                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                </div>
+
+                  <Link"
+                    href="/contact""
+                    className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
+                  >
+                    Get Started"
+                    <ArrowRight className="h-4 w-4 ml-2" />
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         </div>
@@ -943,6 +1039,22 @@ export default function ITServicesPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}"
+            className="bg-blue-600 rounded-xl p-8 text-center"
+          >"
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Need Reliable IT Support?
+            </h2>"
+            <p className="text-xl text-blue-100 mb-8">
+              Contact us today to discuss your IT needs and get expert solutions.
+            </p>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </motion.div>
         </div>
@@ -966,9 +1078,10 @@ export default function ITServicesPage() {
 
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 }
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -996,3 +1109,9 @@ export default function ITServicesPage() {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

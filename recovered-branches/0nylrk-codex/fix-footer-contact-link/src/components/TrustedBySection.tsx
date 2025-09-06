@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -97,11 +98,41 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
 
+import { GradientHeading } from "./GradientHeading";"
+import { useState } from "react";"
+import { GradientHeading } from "./GradientHeading","
+import { useState } from "react",
+";
+import {GradientHeading} from "./GradientHeading";"
+import {useState} from "react";"
+import { GradientHeading } from "./GradientHeading","
+import { useState } from "react",
+
+
+
+"
+import { GradientHeading } from "./GradientHeading","
+import { useState } from "react",
+";
+import {GradientHeading} from "./GradientHeading";"
+import {useState} from "react";"
+import { GradientHeading } from "./GradientHeading","
+import { useState } from "react",
+
+;
+// Real company logos for trusted partners - with more reliable image URLs;
+const trustedCompanies = []
+  {"
+    name: "NVIDIA""
+    logo: "/logos/nvidia-logo.svg""
+    alt: "NVIDIA logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -127,11 +158,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "American Express""
+    logo: "/logos/amex-logo.svg""
+    alt: "American Express logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -151,11 +187,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Walt Disney""
+    logo: "/logos/disney-logo.svg""
+    alt: "Walt Disney logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -175,11 +216,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "AMD""
+    logo: "/logos/amd-logo.svg""
+    alt: "AMD logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -199,11 +245,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Apple""
+    logo: "/logos/apple-logo.svg""
+    alt: "Apple logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -223,11 +274,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "EA Games""
+    logo: "/logos/ea-logo.svg""
+    alt: "EA Games logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -247,11 +303,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Louis Vuitton""
+    logo: "/logos/lv-logo.svg""
+    alt: "Louis Vuitton logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -271,11 +332,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Nike""
+    logo: "/logos/nike-logo.svg""
+    alt: "Nike logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -295,11 +361,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Pandora""
+    logo: "/logos/pandora-logo.svg""
+    alt: "Pandora logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -319,11 +390,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Huawei""
+    logo: "/logos/huawei-logo.svg""
+    alt: "Huawei logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -343,11 +419,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Johnson & Johnson""
+    logo: "/logos/jnj-logo.svg""
+    alt: "Johnson & Johnson logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -367,11 +448,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Universal""
+    logo: "/logos/universal-logo.svg""
+    alt: "Universal Studios logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -391,11 +477,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Ubisoft""
+    logo: "/logos/ubisoft-logo.svg""
+    alt: "Ubisoft logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -415,11 +506,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Bayer""
+    logo: "/logos/bayer-logo.svg""
+    alt: "Bayer logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -439,11 +535,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Avaya""
+    logo: "/logos/avaya-logo.svg""
+    alt: "Avaya logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -463,11 +564,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Silicon Valley Bank""
+    logo: "/logos/svb-logo.svg""
+    alt: "Silicon Valley Bank logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -487,11 +593,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Dell""
+    logo: "/logos/dell-logo.svg""
+    alt: "Dell logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -511,11 +622,16 @@ const trustedCompanies = [
 <<<<<<< HEAD
 
   },
-
-
 =======
-  },
+  {"
+    name: "Lenovo""
+    logo: "/logos/lenovo-logo.svg""
+    alt: "Lenovo logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
   }
   },
@@ -532,15 +648,18 @@ const trustedCompanies = [
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
-  }
-  },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  {"
+    name: "Citi Bank""
+    logo: "/logos/citi-logo.svg""
+    alt: "Citi Bank logo"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
   },
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   },
@@ -556,10 +675,20 @@ const trustedCompanies = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
 
 
-],
 
+  {"
+    name: "Thomson Reuters""
+    logo: "/logos/thomson-reuters-logo.svg""
+    alt: "Thomson Reuters logo"
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+<<<<<<< HEAD
 export function TrustedBySection() {
 
 
@@ -586,43 +715,47 @@ export function TrustedBySection() {
     setFailedLogos(prev => ({
       ...prev
       [companyName]: true
+=======
+  const handleImageError = (companyName: string) => {}
+    setFailedLogos(prev => ({}
+      ...prev;
+      [companyName]: true;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }))
 <<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-<<<<<<< HEAD
 =======
-  }
-  },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
-    <section className="py-16 bg-zion-blue-dark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <GradientHeading className="mb-2">Trusted By Industry Leaders</GradientHeading>
+
+
+
+  return ("
+    <section className="py-16 bg-zion-blue-dark">"
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
+        <div className="text-center mb-12">"
+          <GradientHeading className="mb-2">Trusted By Industry Leaders</GradientHeading>"
           <p className="text-zion-slate-light">Join the growing network of companies relying on Zion's marketplace</p>
-        </div>
+        </div>"
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center max-w-7xl mx-auto">
           {trustedCompanies.map((company, index) => (
-            <div
-              key={index}
+            <div;
+              key={index}"
               className="flex items-center justify-center bg-zion-blue-light p-5 rounded-lg border border-zion-purple/10 h-20 transition-all duration-300 hover:border-zion-purple/30 hover:bg-zion-blue group"
             >
               {failedLogos[company.name] ? (
-                // Fallback to text if image fails to load
+                // Fallback to text if image fails to load"
                 <div className="text-white font-semibold text-center">
                   {company.name}
                 </div>
               ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -649,6 +782,11 @@ import { useState } from "react",;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Real company logos for trusted partners - with more reliable image URLs;
 =======
 
@@ -747,8 +885,9 @@ import { useState } from "react",;
     }))// Real company logos for trusted partners - with more reliable image URLs;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const trustedCompanies = [;
-  {;
+  {;"
     name: "NVIDIA",;
+<<<<<<< HEAD
     logo: "/logos/nvidia-logo && logo.svg",;
     alt: "NVIDIA logo"
 };
@@ -848,11 +987,11 @@ const trustedCompanies = [;
     alt: "Thomson Reuters logo";
   }
 ];
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export function TrustedBySection() {;
-  // Use state to track logos that failed to load;
-  const [failedLogos, setFailedLogos] = useState<Record<string, boolean>>({});
 
+<<<<<<< HEAD
   const handleImageError = (companyName: string) => {;
     setFailedLogos(prev => ({;
       ...prev,;
@@ -864,13 +1003,19 @@ export function TrustedBySection() {;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
           <GradientHeading className="mb-2">Trusted By Industry Leaders</GradientHeading>;
+=======
+"
+    <section className="py-16 bg-zion-blue-dark">;"
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"
+        <div className="text-center mb-12">;"
+          <GradientHeading className="mb-2">Trusted By Industry Leaders</GradientHeading>;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <p className="text-zion-slate-light">Join the growing network of companies relying on Zion's marketplace</p>;
 <<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center max-w-7xl mx-auto">;
           {trustedCompanies && trustedCompanies.map((company, index) => (;
             <div
@@ -891,24 +1036,22 @@ export function TrustedBySection() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <img
+=======
+                <img;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   src={company && company.logo} 
                   alt={company && company.alt} 
 
-<<<<<<< HEAD
-=======
-                <img
-                  src={company && company.logo} 
-                  alt={company && company.alt} 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+"
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
                   onError={() => handleImageError(company && company.name)}
                 />;
 
-                <img 
+                <img;
                   src={company.logo} 
-                  alt={company.alt} 
+                  alt={company.alt} "
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -917,45 +1060,18 @@ export function TrustedBySection() {;
               )}
             </div>;
           ))}
-<<<<<<< HEAD
-
-        </div>;
-<<<<<<< HEAD
-
-        <div className="text-center mt-10">;
-          <p className="text-zion-slate-light text-sm">And many more enterprises worldwide...</p>;
-        </div>;
-      </div>;
-    </section>;
-  );
-=======
-=======
-        ;
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center max-w-7xl mx-auto">;
-          {trustedCompanies.map((company, index) => (;
-            <div ;
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center max-w-7xl mx-auto">;
-          {trustedCompanies.map((company, index) => (;
-            <div;
-              key={index} ;
-              className="flex items-center justify-center bg-zion-blue-light p-5 rounded-lg border border-zion-purple/10 h-20 transition-all duration-300 hover:border-zion-purple/30 hover:bg-zion-blue group";
-            >;
-              {failedLogos[company.name] ? (;
-                // Fallback to text if image fails to load;
-                <div className="text-white font-semibold text-center">;
-                  {company.name}
-                </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-=======
-        </div>
-        <div className="text-center mt-10">
+
+
+        </div>"
+        <div className="text-center mt-10">"
           <p className="text-zion-slate-light text-sm">And many more enterprises worldwide...</p>
         </div>
       </div>
     </section>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -966,115 +1082,119 @@ export function TrustedBySection() {;
 =======
         </div>;}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
+}"
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
                   onError={() => handleImageError(company && company.name)}
                 />;
               )}
             </div>;
-          ))}
-import { GradientHeading } from './GradientHeading';
+          ))}'
+import { GradientHeading } from './GradientHeading';'
 import { useState } from './react';
 // Real company logos for trusted partners - with more reliable image URLs;
 const trusted_companies = [;
-  {
-    name: "NVIDIA",
-    logo: "/logos / nvidia - logo.svg",
+  {"
+    name: "NVIDIA","
+    logo: "/logos / nvidia - logo.svg","
     alt: "NVIDIA logo";
   }
-  {
-    name: "American Express",
-    logo: "/logos / amex - logo.svg",
+  {"
+    name: "American Express","
+    logo: "/logos / amex - logo.svg","
     alt: "American Express logo";
   }
-  {
-    name: "Walt Disney",
-    logo: "/logos / disney - logo.svg",
+  {"
+    name: "Walt Disney","
+    logo: "/logos / disney - logo.svg","
     alt: "Walt Disney logo";
   }
-  {
-    name: "AMD",
-    logo: "/logos / amd - logo.svg",
+  {"
+    name: "AMD","
+    logo: "/logos / amd - logo.svg","
     alt: "AMD logo";
   }
-  {
-    name: "Apple",
-    logo: "/logos / apple - logo.svg",
+  {"
+    name: "Apple","
+    logo: "/logos / apple - logo.svg","
     alt: "Apple logo";
   }
-  {
-    name: "EA Games",
-    logo: "/logos / ea - logo.svg",
+  {"
+    name: "EA Games","
+    logo: "/logos / ea - logo.svg","
     alt: "EA Games logo";
   }
-  {
-    name: "Louis Vuitton",
-    logo: "/logos / lv - logo.svg",
+  {"
+    name: "Louis Vuitton","
+    logo: "/logos / lv - logo.svg","
     alt: "Louis Vuitton logo";
   }
-  {
-    name: "Nike",
-    logo: "/logos / nike - logo.svg",
+  {"
+    name: "Nike","
+    logo: "/logos / nike - logo.svg","
     alt: "Nike logo";
   }
-  {
-    name: "Pandora",
-    logo: "/logos / pandora - logo.svg",
+  {"
+    name: "Pandora","
+    logo: "/logos / pandora - logo.svg","
     alt: "Pandora logo";
   }
-  {
-    name: "Huawei",
-    logo: "/logos / huawei - logo.svg",
+  {"
+    name: "Huawei","
+    logo: "/logos / huawei - logo.svg","
     alt: "Huawei logo";
   }
-  {
-    name: "Johnson & Johnson",
-    logo: "/logos / jnj - logo.svg",
+  {"
+    name: "Johnson & Johnson","
+    logo: "/logos / jnj - logo.svg","
     alt: "Johnson & Johnson logo";
   }
-  {
-    name: "Universal",
-    logo: "/logos / universal - logo.svg",
+  {"
+    name: "Universal","
+    logo: "/logos / universal - logo.svg","
     alt: "Universal Studios logo";
   }
-  {
-    name: "Ubisoft",
-    logo: "/logos / ubisoft - logo.svg",
+  {"
+    name: "Ubisoft","
+    logo: "/logos / ubisoft - logo.svg","
     alt: "Ubisoft logo";
   }
-  {
-    name: "Bayer",
-    logo: "/logos / bayer - logo.svg",
+  {"
+    name: "Bayer","
+    logo: "/logos / bayer - logo.svg","
     alt: "Bayer logo";
   }
-  {
-    name: "Avaya",
-    logo: "/logos / avaya - logo.svg",
+  {"
+    name: "Avaya","
+    logo: "/logos / avaya - logo.svg","
     alt: "Avaya logo";
   }
-  {
-    name: "Silicon Valley Bank",
-    logo: "/logos / svb - logo.svg",
+  {"
+    name: "Silicon Valley Bank","
+    logo: "/logos / svb - logo.svg","
     alt: "Silicon Valley Bank logo";
   }
-  {
-    name: "Dell",
-    logo: "/logos / dell - logo.svg",
+  {"
+    name: "Dell","
+    logo: "/logos / dell - logo.svg","
     alt: "Dell logo";
   }
-  {
-    name: "Lenovo",
-    logo: "/logos / lenovo - logo.svg",
+  {"
+    name: "Lenovo","
+    logo: "/logos / lenovo - logo.svg","
     alt: "Lenovo logo";
   }
-  {
-    name: "Citi Bank",
-    logo: "/logos / citi - logo.svg",
+  {"
+    name: "Citi Bank","
+    logo: "/logos / citi - logo.svg","
     alt: "Citi Bank logo";
   }
-  {
-    name: "Thomson Reuters",
-    logo: "/logos / thomson - reuters - logo.svg",
+  {"
+    name: "Thomson Reuters","
+    logo: "/logos / thomson - reuters - logo.svg","
     alt: "Thomson Reuters logo";
   }
 ];
@@ -1084,6 +1204,7 @@ const trusted_companies = [;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 export /**
  * TrustedBySection - Function description
@@ -1168,3 +1289,6 @@ function TrustedBySection() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

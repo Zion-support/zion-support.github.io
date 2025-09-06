@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,11 +49,25 @@ import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
 import { Conversation } from '@/types/messaging',;
+=======
+
+
+
+
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void;
+import React from 'react',;'
+import { format } from 'date-fns',;'
+import { cn } from '@/lib/utils',;'
+import { Conversation } from '@/types/messaging',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
 interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -89,9 +104,18 @@ interface ConversationItemProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   conversation: Conversation
   isActive: boolean
+=======
 
-  onClick: () => void
+
 }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+  conversation: Conversation;
+  isActive: boolean;
+  onClick: () => void;
+}
+<<<<<<< HEAD
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
 <<<<<<< HEAD
@@ -100,14 +124,19 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div 
+=======
+export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {}
+  return (;
+    <div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       className={cn(;
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";"
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
-      className={cn(
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+      className={cn("
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";"
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
-
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
+"
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors","
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,6 +144,7 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
     <div 
 
 <<<<<<< HEAD
@@ -134,26 +164,31 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
     <div 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    <div;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
-    >
+    >"
       <Avatar className="h-12 w-12 border border-zion-purple/20">
-        <AvatarImage src={conversation.other_user.avatar_url} alt={conversation.other_user.name} />
+        <AvatarImage src={conversation.other_user.avatar_url} alt={conversation.other_user.name} />"
         <AvatarFallback className="bg-zion-blue-dark text-white">
           {conversation.other_user.name.charAt(0).toUpperCase()}
         </AvatarFallback>
-      </Avatar>
-      <div className="flex-1 min-w-0">
-        <div className="flex justify-between items-start">
-          <div className="font-medium text-white truncate">{conversation.other_user.name}</div>
-          <div className="text-xs text-zion-slate whitespace-nowrap">
+      </Avatar>"
+      <div className="flex-1 min-w-0">"
+        <div className="flex justify-between items-start">"
+          <div className="font-medium text-white truncate">{conversation.other_user.name}</div>"
+          <div className="text-xs text-zion-slate whitespace-nowrap">'
             {format(new Date(conversation.updated_at), 'MMM d')}
           </div>
-        </div>
-        <div className="text-sm text-zion-slate truncate">
+        </div>"
+        <div className="text-sm text-zion-slate truncate">'
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -218,6 +253,22 @@ import React from 'react';import React from 'react';
 import {format} from 'date-fns';
 import {cn} from '@/lib/utils';
 import {Conversation} from '@/types/messaging';
+=======
+
+'
+import React from 'react';
+
+        {conversation.context_data?.title && ("
+          <div className="text - xs mt - 1 text - zion - cyan truncate">;
+            Re: {conversation.context_data.title}
+      {conversation.unread_count > 0 && ("
+        <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text - xs">;
+          {conversation.unread_count}
+'
+import {format} from 'date-fns';'
+import {cn} from '@/lib/utils';'
+import {Conversation} from '@/types/messaging';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
 
 interface ConversationItemProps {;
@@ -228,6 +279,7 @@ interface ConversationItemProps {;
 
 export function ConversationItem(): any ({ conversation, isActive, onClick }: ConversationItemProps) {;
   return (
+<<<<<<< HEAD
     <div
       className={cn(
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors"
@@ -235,3 +287,88 @@ export function ConversationItem(): any ({ conversation, isActive, onClick }: Co
         conversation && conversation.unread_count> 0 && "bg-zion-blue-dark/20";        </div>)}
     </div>);
 }
+=======
+    <div;
+      className={cn("
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors""
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30","
+        conversation && conversation.unread_count> 0 && "bg-zion-blue-dark/20";
+
+      )}
+      onClick={onClick}
+    >;"
+      <Avatar className="h-12 w-12 border border-zion-purple/20">;
+
+
+        </div>)}
+    </div>);
+}
+        <AvatarImage src={conversation.other_user.avatar_url} alt={conversation.other_user.name} />;"
+        <AvatarFallback className="bg-zion-blue-dark text-white">;
+          {conversation.other_user.name.charAt(0).toUpperCase()}
+        </AvatarFallback>;
+      </Avatar>;
+      ;"
+      <div className="flex-1 min-w-0">;"
+        <div className="flex justify-between items-start">;"
+          <div className="font-medium text-white truncate">{conversation.other_user.name}</div>;"
+          <div className="text-xs text-zion-slate whitespace-nowrap">;'
+            {format(new Date(conversation.updated_at), 'MMM d')}
+          </div>;
+        </div>;
+        ;"
+        <div className="text-sm text-zion-slate truncate">;'
+          {conversation.last_message?.content || '(No messages yet)'}
+        </div>;
+        ;
+        {conversation.context_data?.title && (;"
+          <div className="text-xs mt-1 text-zion-cyan truncate">;
+            Re:{conversation.context_data.title}
+          </div>;
+        )}
+      </div>;
+      ;
+      {conversation.unread_count > 0 && (;"
+        <div className="bg-zion-purple text-white rounded-full h-5 min-w-5 flex items-center justify-center text-xs">;
+          {conversation.unread_count}
+        </div>;
+      )}
+    </div>;
+  ),;}
+ export function ConversationItem ({};
+  conversation, isActive, onClick;
+}: ConversationItemProps) {}
+  return (<div className= {}
+  cn () 
+}onClick= {}
+  onClick;
+}> Re: {}
+  conversation.context data.title;
+}</div>) 
+}</div> {}
+  conversation.unread count;
+}</div>) 
+}</div>) 
+}
+        {conversation.context_data?.title && ("
+          <div className="text-xs mt-1 text-zion-cyan truncate">
+            Re: {conversation.context_data.title}
+          </div>
+        )}
+      </div>
+      {conversation.unread_count > 0 && ("
+        <div className="bg-zion-purple text-white rounded-full h-5 min-w-5 flex items-center justify-center text-xs">
+          {conversation.unread_count}
+        </div>
+      )}
+    </div>
+  )
+}
+
+
+        </div>)}
+    </div>);
+}
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

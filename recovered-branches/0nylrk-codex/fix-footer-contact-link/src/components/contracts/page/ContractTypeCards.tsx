@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import {;
   Card,;
   CardContent,;
@@ -38,11 +39,16 @@ import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Button } from "@/components/ui/button";
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
   CardTitle,;
 } from "@/components/ui/card";
@@ -87,21 +93,26 @@ interface ContractTypeCardsProps {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  onStandardClick: () => void;
-  onSmartClick: () => void
-}
-export function ContractTypeCards({
-  onStandardClick
-  onSmartClick
-}: ContractTypeCardsProps) {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+"
+import { Button } from "@/components/ui/button","
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card","
+import { FileText, ShieldCheck } from "lucide-react",
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  onStandardClick: () => void;
+  onSmartClick: () => void;
+}
+export function ContractTypeCards({};
+  onStandardClick;
+  onSmartClick;
+}: ContractTypeCardsProps) {}
   onStandardClick: () => void,
-  onSmartClick: () => void
+  onSmartClick: () => void;
 }
 
+<<<<<<< HEAD
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -116,31 +127,36 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {}
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <FileText className="h-5 w-5" />
-            Standard Contracts
+        <CardHeader>"
+          <CardTitle className="flex items-center gap-2">"
+            <FileText className="h-5 w-5" />;
+            Standard Contracts;
           </CardTitle>
           <CardDescription>
-            Generate traditional legal agreements for your projects
+            Generate traditional legal agreements for your projects;
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <ul className="space-y-2">
-            <li className="text-sm">✓ Legally binding templates</li>
-            <li className="text-sm">✓ Milestone-based payment terms</li>
-            <li className="text-sm">✓ IP rights and confidentiality clauses</li>
+        <CardContent>"
+          <ul className="space-y-2">"
+            <li className="text-sm">✓ Legally binding templates</li>"
+            <li className="text-sm">✓ Milestone-based payment terms</li>"
+            <li className="text-sm">✓ IP rights and confidentiality clauses</li>"
             <li className="text-sm">✓ DocuSign integration</li>
           </ul>
         </CardContent>
-        <CardFooter>
+        <CardFooter>"
           <Button variant="outline" onClick={onStandardClick}>
-            Create Standard Contract
+            Create Standard Contract;
           </Button>
         </CardFooter>
       </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       
@@ -151,10 +167,14 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -184,33 +204,50 @@ export function ContractTypeCards({
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
+=======
+
+
+
+      <Card>"
+        <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">"
+          <div className="flex justify-between items-center">"
+            <CardTitle className="flex items-center gap-2">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <ShieldCheck className="h-5 w-5 text-primary" />
-              Smart Contracts
-            </CardTitle>
+              Smart Contracts;
+            </CardTitle>"
             <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
-              Blockchain Powered
+              Blockchain Powered;
             </span>
           </div>
           <CardDescription>
-            Deploy agreements on Ethereum or Polygon with escrow capabilities
+            Deploy agreements on Ethereum or Polygon with escrow capabilities;
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <ul className="space-y-2">
-            <li className="text-sm">✓ All standard contract features</li>
-            <li className="text-sm">✓ Automatic escrow payment release</li>
-            <li className="text-sm">✓ Transaction verification</li>
-            <li className="text-sm">✓ Permanent on-chain record</li>
+        <CardContent>"
+          <ul className="space-y-2">"
+            <li className="text-sm">✓ All standard contract features</li>"
+            <li className="text-sm">✓ Automatic escrow payment release</li>"
+            <li className="text-sm">✓ Transaction verification</li>"
+            <li className="text-sm">✓ Permanent on-chain record</li>"
             <li className="text-sm">✓ Multi-signature approval flow</li>
           </ul>
         </CardContent>
         <CardFooter>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export function ContractTypeCards(): any ({;
   onStandardClick,;
   onSmartClick,;
@@ -218,14 +255,10 @@ export function ContractTypeCards(): any ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (
+
+
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
@@ -248,6 +281,12 @@ export function ContractTypeCards(): any ({;
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+=======
+          <Button "
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" "
+import { Button } from "@/components/ui/button",;"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { FileText, ShieldCheck } from "lucide-react",;
 interface ContractTypeCardsProps {;
   onStandardClick: () => void;
@@ -257,6 +296,7 @@ interface ContractTypeCardsProps {;
 <<<<<<< HEAD
 =======
 ;
+<<<<<<< HEAD
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
   return (;
 <<<<<<< HEAD
@@ -307,15 +347,22 @@ function ContractTypeCards() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+export function ContractTypeCards() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from "@/components/ui/card";
 
-interface ContractTypeCardsProps {
+interface ContractTypeCardsProps {}
 interface ContractTypeCardsProps {;
   onStandardClick: () => void;
-  onSmartClick: () => void
+  onSmartClick: () => void;
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Standard Contracts;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -327,11 +374,18 @@ interface ContractTypeCardsProps {;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Create Standard Contract;
           </Button>;
         </CardFooter>;
       </Card>;
 
+<<<<<<< HEAD
       <Card>;
         <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded-t-lg">;
           <div className="flex justify - between items-center">;
@@ -344,10 +398,34 @@ interface ContractTypeCardsProps {;
         <CardFooter>;
           <Button;
           >;          >;
+=======
+
+
+              Blockchain Powered;
+            </span>;
+          </div>;
+          <CardDescription>;
+            Deploy agreements on Ethereum or Polygon with escrow capabilities;
+          </CardDescription>;
+        </CardHeader>;
+        <CardContent>;
+
+
+
+          </ul>;
+        </CardContent>;
+        <CardFooter>;
+          <Button;
+
+
+          >;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -366,10 +444,10 @@ interface ContractTypeCardsProps {;
 }
 =======
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
     </div>);
 =======
 }    </div>);
@@ -385,20 +463,19 @@ interface ContractTypeCardsProps {;
 }
     </div>;
   ),;}
- interface ContractTypeCardsProps {
+ interface ContractTypeCardsProps {}
   onStandardClick: () => void;
-onSmartClick: () => void 
-}export function ContractTypeCards ({
-  onStandardClick, onSmartClick 
-}: ContractTypeCardsProps) {
-  return (<div className="grid md:grid-cols-2 gap-6 mb-10" > flex items-center gap-2"> <FileText className=" h-5 w-5"/> Standard Contracts </CardTitle> <CardDescription> Generate traditional legal agreements for your projects </CardDescription> </CardHeader> <CardContent> <ul className=" space-y-2"> <li className=" text-sm">✓ Legally binding templates</li> <li className=" text-sm">✓ Milestone-based payment terms</li> <li className=" text-sm">✓ IP rights and confidentiality clauses</li> <li className=" text-sm">✓ DocuSign integration</li> </ul> </CardContent> <CardFooter> <Button variant=" outline"onClick= {
-  onStandardClick 
+onSmartClick: () => void;
+}export function ContractTypeCards() { return null; }
+  return (<div className="grid md:grid-cols-2 gap-6 mb-10" > flex items-center gap-2"> <FileText className=" h-5 w-5"/> Standard Contracts </CardTitle> <CardDescription> Generate traditional legal agreements for your projects </CardDescription> </CardHeader> <CardContent> <ul className=" space-y-2"> <li className=" text-sm">✓ Legally binding templates</li> <li className=" text-sm">✓ Milestone-based payment terms</li> <li className=" text-sm">✓ IP rights and confidentiality clauses</li> <li className=" text-sm">✓ DocuSign integration</li> </ul> </CardContent> <CardFooter> <Button variant=" outline"onClick= {}
+  onStandardClick "
 }> Create Standard Contract </Button> </CardFooter> </Card> <Card> <CardHeader className=" bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg"> <div className=" flex justify-between items-center"> <CardTitle className=" flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart Contracts </CardTitle> <span className=" px-2 py-1 bg-primary/10 text-primary text-xs rounded-full"> Blockchain Powered </span> </div> <CardDescription> Deploy agreements on Ethereum or Polygon with escrow capabilities </CardDescription> </CardHeader> <CardContent> <ul className=" space-y-2"> <li className=" text-sm">✓ All standard contract features</li> <li className=" text-sm">✓ Automatic escrow payment release</li> <li className=" text-sm">✓ Transaction verification</li> <li className=" text-sm">✓ Permanent on-chain record</li> <li className=" text-sm" >✓ Multi-signature approval flow</li> </ul> </CardContent> <CardFooter> <Button > Create Smart Contract </Button> </CardFooter> </Card> </div>) 
 }
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -410,3 +487,10 @@ onSmartClick: () => void
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

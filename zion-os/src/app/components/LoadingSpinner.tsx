@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -39,23 +40,36 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
   const sizeClasses = {
     sm: 'w-4 h-4'
     md: 'w-6 h-6'
+=======
+
+  className?: string;
+}
+export default function LoadingSpinner({ size = 'md', text, className = '' }: LoadingSpinnerProps) {}
+  const sizeClasses = {'
+    sm: 'w-4 h-4''
+    md: 'w-6 h-6''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     lg: 'w-8 h-8'
   }
   return (
     <div className={`flex items-center gap-3 ${className}`}>
 
+<<<<<<< HEAD
       <svg 
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         />
       </svg>
       {text && <span className="text-sm">{text}</span>}
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,9 +95,16 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';
 =======
 interface LoadingSpinnerProps {;
   size?: 'sm' | 'md' | 'lg',;
+=======
+
+interface LoadingSpinnerProps {'
+  size?: 'sm' | 'md' | 'lg',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   text?: string,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  class_name?: string;
+
   className?: string;
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -92,20 +113,25 @@ interface LoadingSpinnerProps {;
 =======
 =======  className?: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-export default /**
- * LoadingSpinner - Function description
+export default /**;
+ * LoadingSpinner - Function description;
  */
-function LoadingSpinner() {
-  const size_classes = {
-    sm: 'w - 4 h - 4',
-    md: 'w - 6 h - 6',
+function LoadingSpinner() {}
+  const size_classes = {'
+    sm: 'w - 4 h - 4','
+    md: 'w - 6 h - 6','
     lg: 'w - 8 h - 8';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -154,17 +180,32 @@ function LoadingSpinner() {
           cy="12" 
           r="10" 
           stroke="currentColor" 
+=======
+
+      >
+        <circle "
+          className="opacity-25" "
+          cx="12" "
+          cy="12" "
+          r="10" "
+          stroke="currentColor" "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           strokeWidth="4"
         />
-        <path 
-          className="opacity-75" 
-          fill="currentColor" 
+        <path "
+          className="opacity-75" "
+          fill="currentColor" "
           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         />
-      </svg>
+      </svg>"
       {text && <span className="text-sm">{text}</span>}
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,3 +221,9 @@ function LoadingSpinner() {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+}
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

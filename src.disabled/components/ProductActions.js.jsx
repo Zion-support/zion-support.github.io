@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState(\"Add to Cart\"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast(\"2U Rack Mount Server added to cart\"); setLabel(\"Added!\"); setTimeout(() => setLabel(\"Add to Cart\"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className=\"flex items-center gap-2\">\" <Loader2 className=\"h-4 w-4 animate-spin\" /> {label} </span> ) : ( label )} </Button> )} \";\"
 <<<<<<< HEAD
 
@@ -15,9 +16,15 @@ module.exports = function ProductActions({ onAddToCart }) { const [loading,setLo
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
+=======
 
-module && module.exports = function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"""
 
+
+module.exports = function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -54,3 +61,6 @@ module && module.exports = function ProductActions({ onAddToCart }) { const [loa
 module && module.exports = function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"""
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

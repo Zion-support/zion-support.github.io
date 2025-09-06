@@ -17,29 +17,30 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
+}'
 import React from 'react';
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 
 import {motion} from 'framer-motion';
 <<<<<<< HEAD
@@ -56,12 +57,23 @@ import Layout from '../components/layout/Layout',
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
 import { real2036ITServices } from '../data/real-2036-it-services',
 import { real2036AIServices } from '../data/real-2036-ai-services',
+=======
+'
+import {motion} from 'framer-motion';'
+import React from 'react','
+import SEO from '../components/SEO','
+import Layout from '../components/layout/Layout','
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services','
+import { real2036ITServices } from '../data/real-2036-it-services','
+import { real2036AIServices } from '../data/real-2036-ai-services','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
 import { motion } from 'framer-motion',
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
   const categories = [...new Set(allServices.map(service => service.category))]
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -111,27 +123,44 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+';
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services';'
+import { real2036ITServices } from '../data/real-2036-it-services';'
+import { real2036AIServices } from '../data/real-2036-ai-services';'
+import { motion } from 'framer-motion';
+
+
+
+
+const ComprehensiveServicesShowcase2036: React.FC = () => {}
+  const allServices = []
+    ...real2036InnovativeServices;
+    ...real2036ITServices;
+    ...real2036AIServices;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
   const categories = [...new Set(allServices && allServices.map(service => service && service.category))],;
   return (
 
 
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
-              2036 Services Showcase
+              2036 Services Showcase;
             </motion.h1>
-            <motion.p 
+            <motion.p;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2 }}"
 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
             >
-              Experience the future of technology with our revolutionary portfolio of AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
+              Experience the future of technology with our revolutionary portfolio of AI, Quantum Computing, Space Technology, and cutting-edge IT solutions;
             </motion.p>
-            <motion.div 
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.4 }}"
 className="flex flex-col sm:flex-row gap-4 justify-center"
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -198,24 +227,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.h1
               initial={{ opacity: 0, y: 50 }  } catch (error) {
     console.error("Error:", error);
+=======
+
+
+
+
+
+
+            <motion.h1;
+              initial={{ opacity: 0, y: 50 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+              animate={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+              transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
-              2036 Services Showcase
+              2036 Services Showcase;
             </motion.h1>
-            <motion.p 
+            <motion.p;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2036.tsx
@@ -266,6 +306,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -277,19 +318,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
+=======
+            <motion.div;
+              initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+              transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center mb-16"
@@ -298,29 +345,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
-
-
 =======
-              className="flex flex-col sm:flex-row gap-4 justify-center"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            >
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
+
+            >"
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Get Started Today
-              </button>
+                Get Started Today;
+              </button>"
               <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                View Pricing
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                View Pricing;
               </button>
             </motion.div>
           </div>
         </section>
 
 
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-              className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}'
+              className='flex flex-col sm:flex-row gap-4 justify-center'>;'
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg'>;
                 Get Started Today;
-              </button>;
+              </button>;'
               <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                View Pricing;
               </button>;
             </motion && motion.div>;
@@ -332,19 +376,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Services Overview */}
 
 
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Category Cards */}
+=======
+
+            {/* Category Cards */}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories && categories.map((category, index) => (;
-                <motion&& motion.div
+                <motion&& motion.div;
                   key={category}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105'>;
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}'
+                  className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105'>;'
                   <h3 className='text-2xl font-bold mb-4 text-cyan-400'>;
 <<<<<<< HEAD
 =======
@@ -387,12 +436,12 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm bo
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2036.tsx
                     {category}
-                  </h3>;
+                  </h3>;'
                   <p className='text-gray-300 mb-4'>;
                     {;
                       allServices && allServices.filter(;
                         service => service && service.category === category;
-                      ).length;
+                      ).length;'
                     }{' '}
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
@@ -400,18 +449,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     innovative services;
-                  </p>;
-                  <div className='flex items-center justify-between'>;
-                    <span className='text-sm text-gray-400'>Starting from</span>;
+                  </p>;'
+                  <div className='flex items-center justify-between'>;'
+                    <span className='text-sm text-gray-400'>Starting from</span>;'
                     <span className='text-lg font-bold text-green-400'>;
                       $;
                       {Math && Math.min(;
                         ...allServices;
-                          .filter(service => service && service.category === category);
+                          .filter(service => service && service.category === category);'
                           .map(s => parseInt(s && s.price.replace(/[^0-9]/g, '')));
                       )}                    </span>;
                   </div>;
                 </motion && motion.div>;
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -456,12 +506,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2036.tsx
             >
+=======
+"
+              className="text-center mb-16"
+
+            >'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
-                Featured Revolutionary Services
+                Featured Revolutionary Services;
               </h2>
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
               ))}
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 =======
 <<<<<<< HEAD
               ))}
@@ -537,10 +594,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2036.tsx
             </div>
+=======
+            </div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our comprehensive portfolio spans the most advanced and innovative technology domains, designed to transform businesses and drive the future forward.
               </p>
             </motion.div>
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -560,11 +621,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Category Cards */  } catch (error) {
     console.error("Error:", error);
+=======
+
+            {/* Category Cards */  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {categories.map((category, index) => (
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -580,29 +647,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
                   key={category  } catch (error) {
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
-<<<<<<< HEAD
 =======
 
 
+                <motion.div;
+                  key={category  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
+
+
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -613,9 +686,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   <h3 className="text-2xl font-bold mb-4 text-cyan-400">{category}</h3>
+=======
+                >"
+                  <h3 className="text-2xl font-bold mb-4 text-cyan-400">{category}</h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
                   <p className="text-gray-300 mb-4">
-                    {allServices.filter(service => service.category === category).length} innovative services
+                    {allServices.filter(service => service.category === category).length} innovative services;
                   </p>
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -661,38 +739,52 @@ className="text-center mb-16"
                     <span className="text-lg font-bold text-green-400">
                       ${Math.min(...allServices.filter(service => service.category === category).map(s => parseInt(s.price.replace(/[^0-9]/g, ''))))  } catch (error) {
     console.error("Error:", error);
+=======
+
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}'
+              className='text-center mb-16'
+"
+                  <div className="flex items-center justify-between">"
+                    <span className="text-sm text-gray-400">Starting from</span>"
+                    <span className="text-lg font-bold text-green-400">'
+                      ${Math.min(...allServices.filter(service => service.category === category).map(s => parseInt(s.price.replace(/[^0-9]/g, ''))))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     </span>;
                   </div>;
                 </motion.div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
+              ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             </div>;
-            {/* Featured Services */  } catch (error) {
-    console.error("Error:", error);
+            {/* Featured Services */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             <motion.div;
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+              initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+              transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 }
               className="text-center mb-16"
 <<<<<<< HEAD
@@ -747,9 +839,17 @@ className="text-center mb-16"
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
+=======
+}"
+              className="text-center mb-16"
+
+
+
+            >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Featured Revolutionary Services
-              </h2>
+                Featured Revolutionary Services;
+              </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover our most innovative and game-changing services that are reshaping industries and defining the future of technology.
               </p>
@@ -843,9 +943,8 @@ className="text-center mb-16"
                 className="mb-16"
 =======
             </motion.div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
@@ -866,10 +965,13 @@ className="text-center mb-16"
 =======
             </motion.div>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
             {/* All Services Section */}
-            <motion&& motion.div
+            <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -879,12 +981,17 @@ className="text-center mb-16"
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
+=======
+
+            >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Complete Service Portfolio
+                Complete Service Portfolio;
               </h2>
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
             </motion.div>
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -928,15 +1035,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {categories.map((category, categoryIndex) => (
               <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
                 key={category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              >
-                <h3 className="text-3xl font-bold mb-8 text-center text-cyan-400">{category}</h3>
+
+              >"
+                <h3 className="text-3xl font-bold mb-8 text-center text-cyan-400">{category}</h3>"
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 =======
 <<<<<<< HEAD
               >
@@ -977,25 +1088,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         key={service.id  } catch (error) {
     console.error("Error:", error);
+=======
+                  {allServices;
+                    .filter(service => service.category === category)
+                    .map((service, serviceIndex) => (
+                      <motion.div;
+                        key={service.id  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                        initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
+                        initial={{ opacity: 0, y: 20 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                        whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+                        whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                        transition={{ duration: 0.6, delay: serviceIndex * 0.1 }  } catch (error) {
-    console.error("Error:", error);
+                        transition={{ duration: 0.6, delay: serviceIndex * 0.1 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
                         className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 =======
 <<<<<<< HEAD
 
@@ -1030,9 +1150,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.popular && (
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
+=======
+
+
+                      >"
+                        <div className="flex items-center justify-between mb-3">"
+                          <span className="text-2xl">{service.icon}</span>
+                          {service.popular && ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
                             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full">
-                              Popular
+                              Popular;
                             </span>
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 
 =======
@@ -1086,27 +1215,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.features.slice(0, 2).map((feature, idx) => (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             <div key={idx} className="flex items-center text-xs text-gray-300">
+=======
+
+"
+                        <p className="text-gray-300 text-sm mb-3">{service.description}</p>"
+                        <div className="mb-3">"
+                          <span className="text-2xl font-bold text-green-400">{service.price}</span>"
+                          <span className="text-gray-400 text-sm">/{service.period}</span>
+                        </div>"
+                        <div className="space-y-1 mb-3">
+                          {service.features.slice(0, 2).map((feature, idx) => (
+"
+                            <div key={idx} className="flex items-center text-xs text-gray-300">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
                               <span className="text-cyan-400 mr-2">•</span>
-                              {feature  } catch (error) {
-    console.error("Error:", error);
+                              {feature  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                             </div>;
-                          ))  } catch (error) {
-    console.error("Error:", error);
+                          ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         </div>
                         <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
 
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </div>
@@ -1207,14 +1353,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         </div>
+=======
+                        </div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
                         <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                          View Details
+
+                          View Details;
                         </button>
                       </motion.div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1225,12 +1373,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2036.tsx
             >
+=======
+            >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
-              </h2>
+              </h2>"
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join the future of technology with our revolutionary services. Get in touch to discuss how we can help you achieve your goals.
               </p>
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD:pages/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 =======
@@ -1272,6 +1424,10 @@ Contact Us Today
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2036.tsx
+=======
+
+                  Schedule Demo;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
                 </button>
               </div>
             </motion.div>
@@ -1279,6 +1435,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   ),
@@ -1311,24 +1468,27 @@ export default ComprehensiveServicesShowcase2036,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
+
+              transition={{ duration: 0 && 0.8 }}'
+              className='text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20'>;'
               <h2 className='text-4xl font-bold mb-6 text-white'>;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Ready to Transform Your Business?;
-              </h2>;
+              </h2>;'
               <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
                 Join the future of technology with our revolutionary services.;
                 Get in touch to discuss how we can help you achieve your goals.;
-              </p>;
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              </p>;'
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>;'
                 <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>;
                   Contact Us Today;
-                </button>;
+                </button>;'
                 <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                  Schedule Demo;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1343,11 +1503,10 @@ export default ComprehensiveServicesShowcase2036,
     </Layout>;
   ),;
 };
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 export default ComprehensiveServicesShowcase2036;
 export default ComprehensiveServicesShowcase2036;
 ;
@@ -1643,11 +1802,14 @@ export default ComprehensiveServicesShowcase2036,
   ),;
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
                 </button>;
               </div>;
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1658,10 +1820,14 @@ export default ComprehensiveServicesShowcase2036,
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 export default ComprehensiveServicesShowcase2036;
+<<<<<<< HEAD:pages_backup/comprehensive-services-showcase-2036.tsx
 <<<<<<< HEAD
 =======
 ;
@@ -1678,3 +1844,8 @@ export default ComprehensiveServicesShowcase2036;
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-services-showcase-2036.tsx
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-services-showcase-2036.tsx

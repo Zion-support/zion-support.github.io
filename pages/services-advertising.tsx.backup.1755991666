@@ -179,6 +179,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $5–$40/mo</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/kb/ssl-checker/sslchecker-intro')}</li>
 =======
 <<<<<<< HEAD
@@ -187,6 +188,9 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/tls-ssl/ssl-tools/')}</li>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
@@ -442,6 +446,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $9–$50/mo</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 						<li>References: {ext('https://plausible.io/#pricing')}, {ext('https://usefathom.com/pricing')}</li>
 					</ul>
 				</section>
@@ -456,6 +461,9 @@ export default function ServicesAdvertisingPage() {
 			</section>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 			<section id="it-helpdesk-suite" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">IT Helpdesk Suite</h2>
@@ -499,6 +507,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $100–$500/mo</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 						<li>References: {ext('https://www.montecarlodata.com/')}, {ext('https://docs.bigeye.com/docs/pricing')}, {ext('https://soda.io/')}</li>
 =======
 <<<<<<< HEAD
@@ -507,6 +516,9 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.montecarlodata.com/')}, {ext('https://www.bigeye.com/')}, {ext('https://soda.io/')}</li>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 

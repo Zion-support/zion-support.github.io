@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function DiversityInclusionPage() {
+<<<<<<< HEAD
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="container mx-auto px-4 pt-28 pb-20 text-white">
@@ -10,4 +11,7 @@ export default function DiversityInclusionPage() {
       </div>
     </UltraFuturisticBackground>
   );
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

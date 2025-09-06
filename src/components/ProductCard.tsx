@@ -50,13 +50,17 @@ const stockStatus =;
 
   const imageUrl = Array && Array.isArray(product && product.images) && product && product.images.length > 0 ? product && product.images[0] : null;
   const imageAltText = productTitle;
-
-  const isMobile = useMediaQuery('(max-width: 768px)'),;
+'
+  const isMobile = useMediaQuery('(max-width: 768px)'),;'
   const isTablet = useMediaQuery('(max-width: 1200px)'),;
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
 
   );
@@ -68,6 +72,7 @@ const stockStatus =;
 }
 
   const stock_status =;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     product.stock === undefined;
       ? 'In stock';
@@ -77,6 +82,11 @@ const stockStatus =;
       ? 'Low stock';
       : 'In stock',;
   const stockVariant =;
+=======
+    product.stock === undefined;'
+      : 'In stock';
+  const stock_variant =;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     product.stock === undefined;
 <<<<<<< HEAD
 =======
@@ -271,9 +281,9 @@ const stockStatus =;
 =======
   const product_title = product.title;
   const image_url = Array.is_array (product.images) && product.images.length > 0 ? product.images[0] : null;
-  const imageAltText = product_title;
-  const is_mobile = useMediaQuery ('(max - width: 768px)'),
-  const is_tablet = useMediaQuery ('(max - width: 1200px)'),
+  const imageAltText = product_title;'
+  const is_mobile = useMediaQuery ('(max - width: 768px)'),'
+  const is_tablet = useMediaQuery ('(max - width: 1200px)'),'
   const image_sizes = is_mobile ? '100vw' : is_tablet ? '50vw' : '33vw');
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -281,6 +291,7 @@ const stockStatus =;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -361,3 +372,6 @@ onBuy () > {'";
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

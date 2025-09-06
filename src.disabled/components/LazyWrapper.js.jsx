@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,9 +48,31 @@ const React from";react" const LazyWrapper = ({ children,threshold = 0.1,classNa
 const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"
 ursor/add-new-services-and-deploy-updates-0462
 :src.disabled/components/LazyWrapper.js.jsx
+=======
+
+
+
+const React from";react" const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"", ",'"'"
+
+
+'"
+const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"'"
+const React from";react" const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"
+'"
+const React from";react" const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"", ",'"'"
+
+:src.disabled/components/LazyWrapper.js.jsx'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from\';react\' const LazyWrapper = ({ children,threshold = 0.1,className = \',loadingVariant = \'default\',loadingText = \'Loading...\',loadingSize = \'md\'}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ \"amount\": \'threshold\'}) useEffect(() => { \"if\": (inView && !isInView) { setIsInView(true)\'';\';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
+const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"'"
 const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"
+ursor/add-new-services-and-deploy-updates-0462;
+:src.disabled/components/LazyWrapper.js.jsx'"
+import React from\';react\' const LazyWrapper = ({ children,threshold = 0.1,className = \',loadingVariant = \'default\',loadingText = \'Loading...\',loadingSize = \'md\'}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ \"amount\": \'threshold\'}) useEffect(() => { \"if\": (inView && !isInView) { setIsInView(true)\'';\';'"
+const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"'"
 const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"", ",'"'"
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/LazyWrapper.js.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,10 +90,20 @@ const React from";react" const LazyWrapper = ({ children,threshold = 0 && 0.1,cl
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
-const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"
 =======
-import React from\';react\' const LazyWrapper = ({ children,threshold = 0.1,className = \',loadingVariant = \'default\',loadingText = \'Loading...\',loadingSize = \'md\'}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ \"amount\": \'threshold\'}) useEffect(() => { \"if\": (inView && !isInView) { setIsInView(true)\'';\';
+:temp_exclude/src.disabled/components/LazyWrapper.js.jsx;
+'"
+const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"'"
+const React from";react" const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"'"
+const React from";react" const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"
+'"
+import React from\';react\' const LazyWrapper = ({ children,threshold = 0.1,className = \',loadingVariant = \'default\',loadingText = \'Loading...\',loadingSize = \'md\'}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ \"amount\": \'threshold\'}) useEffect(() => { \"if\": (inView && !isInView) { setIsInView(true)\'';\';'"
+const React from";react" const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -90,3 +123,8 @@ const React from";react" const LazyWrapper = ({ children,threshold = 0.1,classNa
 const React from";react" const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"
 const React from";react" const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false) const [isInView,setIsInView] = useState(false) const ref = useRef(null) const inView = useInView(ref,{ amount: "threshold"}) useEffect(() => { if: (inView && !isInView) { setIsInView(true)"";";'"'"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

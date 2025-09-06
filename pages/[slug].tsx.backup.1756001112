@@ -30,6 +30,7 @@ import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
 import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -44,6 +45,9 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 import { realImplementationServices2025 } from '../data/real-implementation-services-2025';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServiceFallbackPage() {
   const router = useRouter();
@@ -181,6 +185,7 @@ function collectAllServices(): Svc[] {
       comprehensiveITSolutions as Svc[],
       marketValidatedServices as Svc[],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -204,6 +209,9 @@ function collectAllServices(): Svc[] {
       realImplementationServices2025 as unknown as Svc[]
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     );
 }
 

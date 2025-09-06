@@ -28,7 +28,13 @@ function fixFile(filePath) {
 
 
 
+<<<<<<< HEAD
     content = content.replace(/[^\n]+\n?/g, '');
+=======
+    content = content.replace(/
+
+    content = content.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');

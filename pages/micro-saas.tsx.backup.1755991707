@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { Shield, Clock, DollarSign, TrendingUp, Brain, Rocket, ArrowRight, ExternalLink, Search, Filter, Grid, List, Phone, Mail, MapPin, Star } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { realMicroSaasServices, getServicesByCategory } from '../data/real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function MicroSaasPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -55,8 +59,12 @@ export default function MicroSaasPage() {
       title: 'Focused Solutions',
       description: 'Specialized tools that do one thing exceptionally well, without enterprise complexity. Each service solves a specific business problem with precision.',
       color: 'from-rose-500 to-pink-600',
+<<<<<<< HEAD
       bgColor: 'from-rose-500/10 to-rose-500/10',
       marketData: 'Specialized expertise vs. jack-of-all-trades approach'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -183,7 +191,11 @@ export default function MicroSaasPage() {
       trialDays: 14,
       setupTime: '5 minutes',
       category: 'Content & Marketing',
+<<<<<<< HEAD
       realService: true
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Cloud Cost Optimizer',
@@ -209,6 +221,7 @@ export default function MicroSaasPage() {
       marketPosition: 'Competitive with CloudHealth ($20-500), CloudCheckr ($50-200), and AWS Cost Explorer (included)',
       targetAudience: 'DevOps teams, cloud architects, and businesses with significant cloud spending',
       trialDays: 14,
+<<<<<<< HEAD
       setupTime: '10 minutes',
       category: 'Cloud & DevOps',
       realService: true
@@ -231,12 +244,16 @@ export default function MicroSaasPage() {
       ],
       popular: false,
       icon: '🔍',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: 'from-emerald-500 to-teal-600',
       textColor: 'text-emerald-400',
       link: 'https://ziontechgroup.com/ai-market-research',
       marketPosition: 'Competitive with SimilarWeb ($199-599), SEMrush ($119-449), and Ahrefs ($99-399)',
       targetAudience: 'Marketing teams, business analysts, startups, and strategic planners',
       trialDays: 14,
+<<<<<<< HEAD
       setupTime: '5 minutes',
       category: 'Business Intelligence',
       realService: true
@@ -244,6 +261,9 @@ export default function MicroSaasPage() {
     {
       name: 'AI Customer Support Suite',
       tagline: 'Intelligent ticket routing & automated responses',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       price: '$69',
       period: '/month',
       description: 'AI-powered customer support platform with intelligent ticket routing, sentiment analysis, and automated response generation.',
@@ -321,6 +341,7 @@ export default function MicroSaasPage() {
       marketPosition: 'Competitive with BambooHR ($6.19-8.95), Workday ($45-100), and ADP ($59-199)',
       targetAudience: 'HR professionals, recruiters, and growing businesses',
       trialDays: 14,
+<<<<<<< HEAD
       setupTime: '20 minutes',
       category: 'Human Resources',
       realService: true
@@ -328,10 +349,14 @@ export default function MicroSaasPage() {
     {
       name: 'AI Legal Assistant Pro',
       tagline: 'Intelligent legal document generation & review',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       price: '$79',
       period: '/month',
       description: 'AI-powered legal platform for document generation, contract review, and legal research assistance.',
       features: [
+<<<<<<< HEAD
         'AI contract review & analysis',
         'Legal document generation',
         'Compliance checking',
@@ -1465,6 +1490,9 @@ export default function MicroSaasPage() {
     </div>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Competitive Advantages */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">

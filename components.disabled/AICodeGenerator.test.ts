@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import AICodeGenerator from './AICodeGenerator;';
 =======
 <<<<<<< HEAD
@@ -48,16 +49,32 @@ describe('AICodeGenerator', () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import AICodeGenerator from ''
+describe('AICodeGenerator''
+  it('renders without crashing'';
+    expect(screen.getByRole('main')).toBeInTheDocument();'  });'
+  it('displays correct content''
+  it('handles user interactions'
+
+
+
+'
+import AICodeGenerator from './AICodeGenerator;'
+describe('AICodeGenerator', () => {;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   it('renders without crashing', () => {;
-    render(<AICodeGenerator />);
-    expect(screen.getByRole('main')).toBeInTheDocument();'  });';
+    render(<AICodeGenerator />);'
+    expect(screen.getByRole('main')).toBeInTheDocument();'  });';'
   it('displays correct content', () => {;
     render(<AICodeGenerator />);
-    // Add specific content checks based on component functionality});
+    // Add specific content checks based on component functionality});'
   it('handles user interactions', () => {;
-    render(<AICodeGenerator />);
+    render(<AICodeGenerator />);'
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />); }); ; it('handles user interactions',() => {; render(<AICodeGenerator />)});,});
 // Add interaction tests based on component functionality})});
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,3 +132,15 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() 
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
 import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+
+
+'
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

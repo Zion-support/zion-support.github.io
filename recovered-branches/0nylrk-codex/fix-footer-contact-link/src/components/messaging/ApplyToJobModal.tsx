@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 // Export all job application components from the job-application folder;
@@ -40,22 +41,25 @@ export * from "./job - application";
 export * from './job-application',;
 // Export all job application components from the job-application folder
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export * from "./job-application";
 
 // Export all job application components from the job-application folder;
 export * from './job-application';
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-// Export all job application components from the job - application folder;
+
+// Export all job application components from the job - application folder;"
 export * from "./job - application";
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

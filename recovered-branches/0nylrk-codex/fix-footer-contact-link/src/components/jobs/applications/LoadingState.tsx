@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -27,9 +28,16 @@ import { Loader2 } from "lucide-react",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function LoadingState() {
+=======
+
+
+
+export function LoadingState() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
-    <div className="flex justify-center items-center p-8">
+    <div className="flex justify-center items-center p-8">"
       <Loader2 className="h-8 w-8 animate-spin text-primary" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -131,3 +139,10 @@ export function LoadingState() {;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  )";
+import { Card, CardContent } from "@/components/ui/card",;"
+import { Loader2 } from "lucide-react";
+export function LoadingState() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Mail, MessageCircle, Kanban, Headphones, Brain, Code, Server, Shield as ShieldIcon, Zap as ZapIcon2, Globe as GlobeIcon, Users as UsersIcon, Bot, Database as DatabaseIcon, Network, Key, Eye, Fingerprint, Lock as LockIcon, Globe as GlobeIcon2, Zap as ZapIcon3, Shield as ShieldIcon2, Users as UsersIcon2, Rocket as RocketIcon, Target as TargetIcon, TrendingUp as TrendingUpIcon, Clock as ClockIcon, Award as AwardIcon, DollarSign as DollarSignIcon, ChartBar as ChartBarIcon, Lock as LockIcon2, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon4, Mail as MailIcon, MessageCircle as MessageCircleIcon, Kanban as KanbanIcon, Headphones as HeadphonesIcon, Brain as BrainIcon, Code as CodeIcon, Server as ServerIcon, Shield as ShieldIcon3, Zap as ZapIcon5, Globe as GlobeIcon3, Users as UsersIcon3 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import Card from '../components/ui/Card';
 import { realMicroSaasServices, getAllCategories } from '../data/real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 
 export default function MicroSaasPage() {
@@ -60,6 +64,7 @@ export default function MicroSaasPage() {
     }
   ];
 
+<<<<<<< HEAD
   const filteredServices = selectedCategory === 'All' 
     ? realMicroSaasServices 
     : realMicroSaasServices.filter(service => service.category === selectedCategory);
@@ -68,6 +73,9 @@ export default function MicroSaasPage() {
 
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>35+ Micro SaaS Services | Zion Tech Group - AI-Powered Business Solutions</title>
         <meta name="description" content="Discover 35+ real micro SaaS services that solve actual business problems. From AI content generation to cybersecurity, find the perfect solution for your business needs." />
@@ -118,6 +126,7 @@ export default function MicroSaasPage() {
             </Button>
           </div>
 
+<<<<<<< HEAD
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
@@ -125,6 +134,9 @@ export default function MicroSaasPage() {
                 {realServicesCount}+
               </div>
               <div className="text-gray-400 text-sm">Real Services</div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-neon-purple mb-2">14</div>

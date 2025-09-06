@@ -1,11 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const vendors = listVendors();
-  res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const vendors = listVendors();
+export default function handler() { return null; }
+  res.status(200).json({ vendors });export default function handler() { return null; }
   res.status(200).json({ vendors })
 
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const vendors = listVendors();
   res.status(200).json({ vendors })
@@ -25,38 +24,54 @@ pr-12243
   res.status(200).json({ vendors })
 }
 pr-12243
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {};
+  const vendors = listVendors();
+  res.status(200).json({ vendors })
+}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { list_vendors } from '../../../utils / vendor - store';
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
-function handler() {
+function handler() {}
   const vendors = list_vendors ();
-  res.status (200).json ({ vendors });export default /**
- * handler - Function description
+  res.status (200).json ({ vendors });export default /**;
+ * handler - Function description;
  */
-function handler() {
+function handler() {}
   const vendors = list_vendors ();
   res.status (200).json ({ vendors });
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+'
 import { listVendors } from '../../../utils/vendor-store';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {};
   const vendors = null;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const vendors = listVendors();
-  res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const vendors = listVendors();
+export default function handler() { return null; }
+  res.status(200).json({ vendors });export default function handler() { return null; }
   res.status(200).json({ vendors })
 }
 }
 
 }
+<<<<<<< HEAD
   const vendors = listVendors();
   res.status(200).json({ vendors });
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

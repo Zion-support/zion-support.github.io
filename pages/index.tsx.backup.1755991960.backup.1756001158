@@ -287,6 +287,7 @@ export default function HomePage() {
       </Head>
 
       {/* Hero Section */}
+<<<<<<< HEAD
       <Hero
         title="Zion Tech Group"
         subtitle="The world&apos;s most advanced autonomous innovation hub delivering cutting-edge technology solutions, intelligent automation systems, and the future of cloud-native AI infrastructure."
@@ -300,6 +301,9 @@ export default function HomePage() {
         }}
         stats={heroStats}
       />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Stats Section */}
       <section className="py-20 bg-gray-800/50">
@@ -663,7 +667,11 @@ export default function HomePage() {
               size="lg"
               className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"
             >
+<<<<<<< HEAD
               Start Your Journey
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button

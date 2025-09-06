@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +28,23 @@ const React,{ useState,useEffect } from";react" import { motion,AnimatePresence 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/disabled/AccessibilityPanel.jsx
 import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';
+=======
+
+
+import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';'"
 const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: ";";none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("";general") useEffect(() => {"";'"'"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';
+:src.disabled/components/disabled/AccessibilityPanel.jsx'"
+import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';'"
 const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: ";";none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("";general") useEffect(() => {"";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
+import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: ";";none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("";general") useEffect(() => {"";'"'"
+:temp_exclude/src.disabled/components/disabled/AccessibilityPanel.jsx;
+'"
+import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';'"
+const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: ";";none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("";general") useEffect(() => {"";'"'"
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/disabled/AccessibilityPanel.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,3 +87,15 @@ import _React,{ useState,useEffect } from';react' import { motion,AnimatePresenc
 =======
 import _React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' "export": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '10',0,"colorBlindness": ';';none,',"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState('';general') useEffect(() => {'';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+import _React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' "export": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '10',0,"colorBlindness": ';';none,',"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState('';general') useEffect(() => {'';
+'"
+import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';'"
+const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: ";";none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("";general") useEffect(() => {"";'"'"'"
+import _React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' "export": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '10',0,"colorBlindness": ';';none,',"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState('';general') useEffect(() => {'';
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

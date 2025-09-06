@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
@@ -29,12 +30,19 @@
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:scripts/simple-app-improvements.cjs
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 :scripts/simple-app-improvements.cjs
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');

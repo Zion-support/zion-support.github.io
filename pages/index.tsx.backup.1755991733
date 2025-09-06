@@ -29,6 +29,7 @@ export default function HomePage() {
   const serviceHighlights = [
     {
       title: '🧠 Revolutionary Quantum AI Cognitive Platform',
+<<<<<<< HEAD
       description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months.',
       price: 'Starting at $299/month',
       features: ['Quantum neural networks with 1000+ qubits', 'Human-like reasoning and problem-solving', 'Real-time quantum simulation', 'Advanced research collaboration tools'],
@@ -122,6 +123,9 @@ export default function HomePage() {
       competitors: 'Insitro ($1000+/month), Atomwise ($800+/month)',
       savings: 'Save 40% vs. competitors',
       contactInfo: 'Contact: +1 302 464 0950 | kleber@ziontechgroup.com'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -245,9 +249,13 @@ export default function HomePage() {
       description: 'Growing at 450% annually',
       icon: <DollarSign className="w-6 h-6" />,
       color: 'from-emerald-500 to-teal-600',
+<<<<<<< HEAD
       opportunity: 'First-mover advantage in quantum financial optimization',
       competitors: 'Bloomberg, Refinitiv, FactSet',
       ourAdvantage: 'Quantum computing integration + AI algorithms'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       metric: '$12.3B',
@@ -255,9 +263,13 @@ export default function HomePage() {
       description: '320% annual growth rate',
       icon: <Factory className="w-6 h-6" />,
       color: 'from-orange-500 to-red-600',
+<<<<<<< HEAD
       opportunity: 'Industry 4.0 transformation accelerating globally',
       competitors: 'Siemens, PTC, GE Digital',
       ourAdvantage: 'Full autonomy + AI integration'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       metric: '$6.8B',
@@ -265,9 +277,13 @@ export default function HomePage() {
       description: '380% annual growth rate',
       icon: <Shield className="w-6 h-6" />,
       color: 'from-red-500 to-pink-600',
+<<<<<<< HEAD
       opportunity: 'Post-quantum security becoming critical',
       competitors: 'Palo Alto, CrowdStrike, SentinelOne',
       ourAdvantage: 'Quantum-resistant algorithms + AI detection'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       metric: '$4.2B',
@@ -275,9 +291,13 @@ export default function HomePage() {
       description: '290% annual growth rate',
       icon: <Rocket className="w-6 h-6" />,
       color: 'from-blue-500 to-indigo-600',
+<<<<<<< HEAD
       opportunity: 'Commercial space sector expanding rapidly',
       competitors: 'Maxar, Planet Labs, BlackSky',
       ourAdvantage: 'Comprehensive space services + AI integration'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       metric: '$3.6B',
@@ -285,9 +305,13 @@ export default function HomePage() {
       description: '400% annual growth rate',
       icon: <Globe className="w-6 h-6" />,
       color: 'from-purple-500 to-violet-600',
+<<<<<<< HEAD
       opportunity: 'Virtual experiences becoming mainstream',
       competitors: 'Unity, Unreal Engine, Roblox',
       ourAdvantage: 'AI content generation + blockchain integration'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       metric: '$3.2B',
@@ -295,15 +319,20 @@ export default function HomePage() {
       description: '200% annual growth rate',
       icon: <FlaskConical className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-600',
+<<<<<<< HEAD
       opportunity: 'AI revolutionizing drug discovery',
       competitors: 'Insitro, Atomwise, BenevolentAI',
       ourAdvantage: 'Quantum computing + comprehensive AI algorithms'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   // Enhanced pricing comparison
   const pricingComparison = [
     {
+<<<<<<< HEAD
       category: 'AI Content Generation',
       ourPrice: '$49/month',
       competitors: ['Jasper: $39-99', 'Copy.ai: $36-186', 'Writesonic: $12.67-100'],
@@ -320,6 +349,9 @@ export default function HomePage() {
       ourPrice: '$2,999/month',
       competitors: ['IBM Quantum: $1,000-5,000', 'Google Quantum: $2,000-8,000'],
       ourAdvantage: 'First commercial quantum AI platform, comprehensive AI integration'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       category: 'Autonomous Manufacturing',
@@ -773,18 +805,7 @@ export default function HomePage() {
                     <div className="text-gray-400 text-sm mt-1">Revenue: {testimonial.revenue} in {testimonial.timeframe}</div>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-                <div className="flex items-center mb-3">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-slate-300 mb-3">{testimonial.content}</p>
-                <div className="text-sm text-cyan-400 font-medium">{testimonial.service}</div>
-                <p className="text-slate-400 mt-2">{testimonial.results}</p>
-                <p className="text-slate-400 mt-2 text-sm">{testimonial.industry}</p>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4bd9
+
               </motion.div>
             ))}
           </div>

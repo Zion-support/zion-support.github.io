@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -44,15 +44,25 @@ import { CountryPricing } from "@/data/onsiteServicePricing",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface CountryServiceCardProps {
+=======
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card","
+import { Button } from "@/components/ui/button","
+import { Badge } from "@/components/ui/badge",";
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react";"
+import { CountryPricing } from "@/data/onsiteServicePricing";"
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react","
+import { CountryPricing } from "@/data/onsiteServicePricing",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  country: CountryPricing
-  onSelect: (country: CountryPricing) => void
-
-  isPopular?: boolean
+interface CountryServiceCardProps {};
+  country: CountryPricing;
+  onSelect: (country: CountryPricing) => void;
+  isPopular?: boolean;
 }
-export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
+export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {}
   // Get region flag based on country name (for demo purposes)
 
+<<<<<<< HEAD
   const getRegionEmoji = (countryName: string): string => {
 <<<<<<< HEAD
     const emojiMap: Record<string, string> = {
@@ -68,6 +78,14 @@ import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Globe, Server, Clock, MapPin, Check} from "lucide-react";
+=======
+  const getRegionEmoji = (countryName: string): string => {}
+";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";"
+import {Button} from "@/components/ui/button";"
+import {Badge} from "@/components/ui/badge";"
+import {Globe, Server, Clock, MapPin, Check} from "lucide-react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {CountryPricing} from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {;
   country: CountryPricing,;
@@ -80,36 +98,29 @@ export function CountryServiceCard(): any ({ country, onSelect, isPopular }: Cou
   const getRegionEmoji = (countryName: string): string => {;
     const emojiMap: Record<string, string> = {;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Globe, Server, Clock, MapPin, Check } from './lucide-react';
+
+
+
+import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';'
+import { Button } from '@/components / ui / button';'
+import { Badge } from '@/components / ui / badge';'
+import { Globe, Server, Clock, MapPin, Check } from './lucide-react';'
 import { CountryPricing } from '@/data / onsiteServicePricing';
-interface CountryServiceCardProps {
+interface CountryServiceCardProps {}
   country: CountryPricing,
   on_select: (country: CountryPricing) => void,
   is_popular?: boolean;
 }
-export /**
- * CountryServiceCard - Function description
+export /**;
+ * CountryServiceCard - Function description;
  */
-function CountryServiceCard() {
+function CountryServiceCard() {}
   // Get region flag based on country name (for demo purposes);
-  const getRegionEmoji = (country_name: string): string => {
-    const emoji_map: Record < string, string> = {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
+  const getRegionEmoji = (country_name: string): string => {}
+    const emoji_map: Record < string, string> = {}
     const emojiMap: Record<string, string> = {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -138,8 +149,21 @@ function CountryServiceCard() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    const emojiMap: Record<string, string> = {}
+    const emojiMap: Record<string, string> = {;
 
+
+"
+      "United States": "🇺🇸";"
+      "United Kingdom": "🇬🇧";"
+      "Canada": "🇨🇦";"
+      "Australia": "🇦🇺";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+"
       "Germany": "🇩🇪", ;
+<<<<<<< HEAD
 
 =======
       "Germany": "🇩🇪",
@@ -211,10 +235,35 @@ function CountryServiceCard() {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
       "Canada": "🇨🇦",
-      "Australia": "🇦🇺",
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
+"
+      "Germany": "🇩🇪", ;"
+      "Germany": "🇩🇪","
+      "Germany": "🇩🇪"
 
+"
+      "Germany": "🇩🇪",
+"
+      "France": "🇫🇷";"
+      "Japan": "🇯🇵";"
+      "China": "🇨🇳";"
+      "Brazil": "🇧🇷";"
+      "India": "🇮🇳";"
+      "Russia": "🇷🇺";"
+      "Singapore": "🇸🇬";"
+      "South Korea": "🇰🇷";"
+      "South Africa": "🇿🇦";
+
+
+
+    const emojiMap: Record<string string> = {"
+      "United States": "🇺🇸","
+      "United Kingdom": "🇬🇧","
+      "Canada": "🇨🇦","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      "Australia": "🇦🇺",
+
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -245,10 +294,26 @@ function CountryServiceCard() {
   },
 
 =======
+=======
+
+"
+      "Germany": "🇩🇪", "
+      "France": "🇫🇷","
+      "Japan": "🇯🇵","
+      "China": "🇨🇳","
+      "Brazil": "🇧🇷","
+      "India": "🇮🇳","
+      "Russia": "🇷🇺","
+      "Singapore": "🇸🇬","
+      "South Korea": "🇰🇷","
+      "South Africa": "🇿🇦",
+      // Default if no flag is found"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "default": ""
-    }
+    }"
     return emojiMap[countryName] |emojiMap["default"]
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Get response time estimate based on country
 <<<<<<< HEAD
@@ -279,14 +344,20 @@ function CountryServiceCard() {
 =======
   const getResponseTime = (countryName: string): string => {    if (tier1.includes(countryName)) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  // Get response time estimate based on country;
+  const getResponseTime = (countryName: string): string => {}
+    if (tier1.includes(countryName)) {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return "4 hours"
-    } else if (tier2.includes(countryName)) {
+    } else if (tier2.includes(countryName)) {"
       return "6 hours"
-    } else {
+    } else {"
       return "8-24 hours"
 <<<<<<< HEAD
 <<<<<<< HEAD
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -315,10 +386,21 @@ function CountryServiceCard() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  },
+  
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
-    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
-      isPopular
+    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${}
+      isPopular"
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -390,18 +472,32 @@ function CountryServiceCard() {
       isPopular
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }`}
         >
-          Select Service
+          Select Service;
         </Button>
       </CardFooter>
     </Card>
   )
+<<<<<<< HEAD
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;
+=======
+}
+            isPopular "
+              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" "
+              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light""
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;"
+import { Button } from "@/components/ui/button",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 interface CountryServiceCardProps {;
   country: CountryPricing,;
@@ -409,6 +505,7 @@ interface CountryServiceCardProps {;
   isPopular?: boolean;
 }
 ;
+<<<<<<< HEAD
 export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {;
   // Get region flag based on country name (for demo purposes);
   const getRegionEmoji = (countryName: string): string => {;
@@ -438,17 +535,22 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       // Default if no flag is found;
       "default": "🌐";
     };
+=======
+export function CountryServiceCard() { return null; }
+    };"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return emojiMap[countryName] || emojiMap["default"];
   };
 
   // Get response time estimate based on country;
-  const getResponseTime = (countryName: string): string => {;
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
+  const getResponseTime = (countryName: string): string => {;"
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];"
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
 
-    if (tier1 && tier1.includes(countryName)) {;
+    if (tier1 && tier1.includes(countryName)) {;"
       return "4 hours";
     } else if (tier2 && tier2.includes(countryName)) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -471,12 +573,18 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return "6 hours";
-    } else {;
+    } else {;"
       return "8-24 hours";
     }
   };
 
+<<<<<<< HEAD
   return (
     <CardclassName={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 
@@ -485,141 +593,42 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        : "bg-zion-blue-dark border-zion-blue-light"
 =======
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;
-import { CountryPricing } from "@/data/onsiteServicePricing",;
-;
-interface CountryServiceCardProps {;
-  country:CountryPricing,;
-  onSelect:(country:CountryPricing) => void,;
-  isPopular?:boolean;
-}
-;
-export function CountryServiceCard({ country, onSelect, isPopular } CountryServiceCardProps) {;
-  // Get region flag based on country name (for demo purposes);
-  const getRegionEmoji = (countryName:string):string => {;
-    const emojiMap:Record<string string> = {;
-      "United States":"🇺🇸",;
-      "United Kingdom":"🇬🇧",;
-      "Canada":"🇨🇦",;
-      "Australia":"🇦🇺",;
-      "Germany":"🇩🇪", ;
-      "France":"🇫🇷",;
-      "Japan":"🇯🇵",;
-      "China":"🇨🇳",;
-      "Brazil":"🇧🇷",;
-      "India":"🇮🇳",;
-      "Russia":"🇷🇺",;
-      "Singapore":"🇸🇬",;
-      "South Korea":"🇰🇷",;
-      "South Africa":"🇿🇦",;
-      // Default if no flag is found;
-      "default":"🌐";
-    },;
-    ;
-    return emojiMap[countryName] || emojiMap["default"],;
-  },;
-  ;
-  // Get response time estimate based on country;
-  const getResponseTime = (countryName:string):string => {;
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],;
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],;
-    ;
-    if (tier1.includes(countryName)) {;
-      return "4 hours",;
-    } else if (tier2.includes(countryName)) {;
-      return "6 hours",;
-    } else {;
-      return "8-24 hours",;
-    }
-  },;
-  ;
-  return (;
-    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${;
-      isPopular ;
-        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" ;
-        :"bg-zion-blue-dark border-zion-blue-light";
-  return (;
-    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${;
-      isPopular;
-        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple";
-        : "bg-zion-blue-dark border-zion-blue-light";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         : "bg-zion-blue-dark border-zion-blue-light"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    }`}>;
-      <CardHeader className="pb-2">;
-        <div className="flex items-center justify-between">;
+`
+    }`}>;"
+      <CardHeader className="pb-2">;"
+        <div className="flex items-center justify-between">;"
           <div className="flex items-center space-x-2">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country && country.country)}</span>;
-            <h3 className="text-lg font-semibold text-white truncate">{country && country.country}</h3>;
-=======
-            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>;
-            <h3 className="text-lg font-semibold text-white truncate">{country.country}</h3>;
-            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>;
-            <h3 className="text-lg font-semibold text-white truncate">{country.country}</h3>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
           </div>;
-          {isPopular && (;
+          {isPopular && (;"
             <Badge className="bg-zion-purple text-white border-none">Popular</Badge>;
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>;
-      </CardHeader>;
-      <CardContent className="pb-4">;
+      </CardHeader>;"
+      <CardContent className="pb-4">;"
         <p className="text-3xl font-bold text-zion-cyan mb-4">;
-<<<<<<< HEAD
-          ${country && country.pricePerIncident.toFixed(2)}
-        </p>;
 
-        <div className="space-y-2 text-zion-slate-light">;
-          <div className="flex items-start">;
-            <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
-            <span>Typical response time: {getResponseTime(country && country.country)}</span>;
-=======
-          ${country.pricePerIncident.toFixed(2)}
-        </p>;
-        ;
-        <div className="space-y-2 text-zion-slate-light">;
-          <div className="flex items-start">;
-            <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
-            <span>Typical response time:{getResponseTime(country.country)}</span>;
-        </div>
-      </CardHeader>
-      <CardContent className="pb-4">
-        <p className="text-3xl font-bold text-zion-cyan mb-4">
-          ${country.pricePerIncident.toFixed(2)}
-        </p>;
-        <div className="space-y-2 text-zion-slate-light">;
-          <div className="flex items-start">;
-            <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
-            <span>Typical response time: {getResponseTime(country.country)}</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          </div>;
-          <div className="flex items-start">;
+          </div>;"
+          <div className="flex items-start">;"
             <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
             <span>Service available in major cities</span>;
-          </div>;
-          <div className="flex items-start">;
+          </div>;"
+          <div className="flex items-start">;"
             <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
             <span>Hardware & network support</span>;
-          </div>;
-          <div className="flex items-start">;
+          </div>;"
+          <div className="flex items-start">;"
             <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />;
             <span>First hour included</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
@@ -689,41 +698,18 @@ export function CountryServiceCard({ country, onSelect, isPopular } CountryServi
           <div className="flex items - start">;
             <Check className="h - 4 w - 4 mr - 2 text - zion - purple mt - 1" />;
             <span > First hour included</span>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
           </div>;
         </div>;
       </CardContent>;
       <CardFooter>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        <Button;
-          on_click={() => on_select (country)}
-          className={`w - full ${
-            is_popular;
-              ? "bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
-              : "bg - zion - blue hover:bg - zion - blue - light border border - zion - blue - light";
 
-=======
-        <Button ;
-          onClick={() => onSelect(country)} ;
-          className={`w-full ${;
-            isPopular ;
-              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" ;
-              :"bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light";
-        <Button;
-          onClick={() => onSelect(country)} ;
-          className={`w-full ${;
-            isPopular;
-              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
-              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+`
           }`}
         >;
           Select Service;
@@ -734,45 +720,40 @@ export function CountryServiceCard({ country, onSelect, isPopular } CountryServi
 
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Card>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+
+
     </Card>);
 }
     </Card>);
 }
     </Card>;
   ),;}
- interface CountryServiceCardProps {
+ interface CountryServiceCardProps {}
   country: CountryPricing;
 onSelect: (country: CountryPricing) => void;
-isPopular?: boolean 
-}export function CountryServiceCard ({
-  country, onSelect, isPopular 
-}: CountryServiceCardProps) {
-  //Get region flag based on country name (for demo purposes) const getRegionEmoji = (countryName: string) : string => {
+isPopular?: boolean;
+}export function CountryServiceCard ({};
+  country, onSelect, isPopular;
+}: CountryServiceCardProps) {}
+  //Get region flag based on country name (for demo purposes) const getRegionEmoji = (countryName: string) : string => {"
   return emojiMap[countryName] || emojiMap["default" ];
 };
-//Get response time estimate based on country return (<Card className= {
-  `h-full transition-all duration-300 hover:shadow-lg $ {
-  isPopular </div> <div className="flex items-start" > <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Service available in major cities</span> </div> <div className="flex items-start" > <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Hardware & network support</span> </div> <div className="flex items-start" > <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>First hour included</span> </div> </div> </CardContent> <CardFooter> <Button onClick= {
+//Get response time estimate based on country return (<Card className= {}`
+  `h-full transition-all duration-300 hover:shadow-lg $ {"
+  isPopular </div> <div className="flex items-start" > <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Service available in major cities</span> </div> <div className="flex items-start" > <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Hardware & network support</span> </div> <div className="flex items-start" > <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>First hour included</span> </div> </div> </CardContent> <CardFooter> <Button onClick= {}
   () => onSelect (country) 
-}className= {
-  `w-full $ {
+}className= {}`
+  `w-full $ {}
   isPopular > Select Service </Button> </CardFooter> </Card>) 
 }
     </Card>;
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
 ;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -795,3 +776,7 @@ isPopular?: boolean
       </CardContent>;
       <CardFooter>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

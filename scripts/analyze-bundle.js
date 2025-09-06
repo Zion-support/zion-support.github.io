@@ -1,20 +1,20 @@
 const { BundleAnalyzerPlugin } = // // require('webpack-bundle-analyzer');
-module.exports = (nextConfig = {}) => {
-  return Object.assign({;}, nextConfig, {
-    webpack(config, { isServer }) {
-      if ( {
+module.exports = (nextConfig = {}) => {}
+  return Object.assign({;}, nextConfig, {}
+    webpack(config, { isServer }) {}
+      if ( {}
         config.plugins.push(
-          new BundleAnalyzerPlugin({
-            "analyzerMode": 'server',
-            "analyzerPort": 'isServer ? 8888 : 8889',
+          new BundleAnalyzerPlugin({'
+            "analyzerMode": 'server','"
+            "analyzerPort": 'isServer ? 8888 : 8889','"
             "openAnalyzer": 'true'})
         )}
-      return config) {
-     {
+      return config) {}
+     {}
         config.plugins.push(
-          new BundleAnalyzerPlugin({
-            "analyzerMode": 'server',
-            "analyzerPort": isServer ? 8888 : 8889,
+          new BundleAnalyzerPlugin({'"
+            "analyzerMode": 'server',"
+            "analyzerPort": isServer ? 8888 : 8889,"
             "openAnalyzer": true})
         )}
 <<<<<<<< HEAD:backup-problematic-files/scripts/analyze-bundle.js
@@ -46,4 +46,8 @@ const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return 
   }},
   })}
       return config}}})}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

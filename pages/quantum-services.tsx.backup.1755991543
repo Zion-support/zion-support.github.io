@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -219,10 +220,14 @@ export default function QuantumServices() {
           <div className="relative z-10 max-w-7xl mx-auto text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -255,10 +260,14 @@ export default function QuantumServices() {
               </p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Services Grid */}
         <section className="py-20 px-4">
@@ -274,6 +283,9 @@ export default function QuantumServices() {
           <div className="max-w-7xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -281,6 +293,7 @@ export default function QuantumServices() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -349,10 +362,14 @@ export default function QuantumServices() {
                         <Star className="w-4 h-4 text-purple-400 mr-2" />
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {feature}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="text-blue-400 font-semibold text-lg">{service.price}</div>
 =======
@@ -370,12 +387,16 @@ export default function QuantumServices() {
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Applications Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-blue-900/30 to-black/50">
@@ -391,6 +412,9 @@ export default function QuantumServices() {
           <div className="max-w-7xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -398,6 +422,7 @@ export default function QuantumServices() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -475,12 +500,16 @@ export default function QuantumServices() {
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -533,6 +562,9 @@ export default function QuantumServices() {
         <section className="py-20 px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -540,6 +572,7 @@ export default function QuantumServices() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -573,6 +606,9 @@ export default function QuantumServices() {
                   Learn More
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </button>
               </div>
             </motion.div>

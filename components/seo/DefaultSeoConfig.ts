@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 pr-12243
 import type { DefaultSeoProps } from 'next-seo';
 
@@ -38,30 +39,48 @@ pr-12243
 import type { DefaultSeoProps } from 'next - seo';
   default_title: 'Zion Tech Solutions';
   title_template: '%s | Zion Tech Solutions',
+=======
+
+  additionalMetaTags: []
+{ name: 'viewport', content: 'width=device-width, initial-scale=1' }'
+    { name: 'theme-color', content: '#111827' }]}
+export default config;
+'
+import type { DefaultSeoProps } from 'next - seo';'
+  default_title: 'Zion Tech Solutions';'
+  title_template: '%s | Zion Tech Solutions','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   description: 'Engineering services, AI / ML, DevOps, and product development by Zion.';
-  open_graph: {
-    type: 'website';
-    locale: 'en_US';
-    url: 'https://ziontechgroup.netlify.app',
+  open_graph: {'
+    type: 'website';'
+    locale: 'en_US';'
+    url: 'https://ziontechgroup.netlify.app','
     site_name: 'Zion Tech Solutions'}
-  twitter: {
-    handle: '@ziontech';
-    site: '@ziontech',
+  twitter: {'
+    handle: '@ziontech';'
+    site: '@ziontech','
     card_type: 'summary_large_image'}
-  additionalMetaTags: [;
-{ name: 'viewport', content: 'width = device - width, initial - scale = 1' }
+  additionalMetaTags: [;'
+{ name: 'viewport', content: 'width = device - width, initial - scale = 1' }'
     { name: 'theme - color', content: '#111827' }]}
 ;
 export default config;
 ;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
-export default config
 
-
+<<<<<<< HEAD
 import type { DefaultSeoProps } from 'next-seo';
 const config: DefaultSeoProps;
 export default config;
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+export default config;
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

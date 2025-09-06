@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -13,9 +14,13 @@ export type FeedbackRecord = {;
 
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
 
-export interface FeedbackRecord {;
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -97,14 +102,22 @@ export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<vo
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  id: string;
+  type: string;
+  message: string;
+  rating: number;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
-export interface FeedbackStats {
+export interface FeedbackStats {};
   total: number;
   averageRating: number;
-  byKind: {
+  byKind: {}
     bug: number;
     feature: number;
+<<<<<<< HEAD
     general: number
 };
   byRating: {
@@ -120,6 +133,17 @@ export function getAllFeedback(): FeedbackRecord[] {;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+    general: number;
+  };
+  byRating: {}
+    [rating: number]: number;
+  };
+  recent: FeedbackRecord[];
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   metadata: Record < string, any>;
   created_at: string;
   ip: string;
@@ -130,7 +154,7 @@ const feedbackData: FeedbackRecord[] = [];
 
 export async function saveFeedbackFallback(
   feedback: FeedbackRecord,
-): Promise<void> {
+): Promise<void> {};
   feedbackData.push(feedback);
   console.log("Feedback saved:", feedback.id);
 =======
@@ -145,18 +169,23 @@ main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
-export function writeAll(rows: any[]): void {
+export function writeAll(rows: any[]): void {";
   console.log("Writing feedback rows:", rows.length);
+<<<<<<< HEAD
   // Implementation would write to database or file
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  // Implementation would write to database or file;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
-export function getAllFeedback(): FeedbackRecord[] {
+export function getAllFeedback(): FeedbackRecord[] {};
   return [...feedbackData];
 }
+<<<<<<< HEAD
 export function getAllFeedback (): FeedbackRecord[] {
   return [...feedback_data];
 }
@@ -200,3 +229,9 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

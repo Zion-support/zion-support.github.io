@@ -1,4 +1,5 @@
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 <<<<<<< HEAD:pages/api/disputes/[id].ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,10 +33,11 @@ export default async function handler(
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
 
-} from "../../../utils/auth";
-export default async function handler(
 
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -44,9 +46,16 @@ export default async function handler(
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
 
-import type { NextApiRequest, NextApiResponse } from "next";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";"
 import { getDisputeById } from "../../../utils/fsdb";
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 import {;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
@@ -63,9 +72,14 @@ export default async function handler(;
 ) {;
 ;
   parseUserFromRequest;
+=======
+import {}
+  parseUserFromRequest,;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
   ensureInvolvedOrAdmin,;
-
+"
 } from "../../../utils/auth";
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 export default async function handler(;
 
   req: NextApiRequest;
@@ -76,10 +90,18 @@ export default async function handler(;
 ;
   if (typeof id !== "string");
 
+=======
+export default async function handler() { return null; }
+  const { id } = req.query;
+"
+  if (typeof id !== "string")
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
     return res && res.status(400).json({ error: "Invalid id" });
 
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 =======
@@ -95,10 +117,33 @@ export default async function handler(;
   res.setHeader("Allow", "GET");
   return res.status(405).end("Method Not Allowed");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+
+  const user = parseUserFromRequest(req);
+"
+  if (req && req.method === "GET") {}
+    const dispute = await getDisputeById(id);"
+    if (!dispute) return res.status(404).json({ error: "Dispute not found" });
+    try {}
+    }
+    return res && res.status(200).json({ dispute });
+  }
+
+
+"
+  res.setHeader("Allow", "GET");"
+  return res.status(405).end("Method Not Allowed");
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
 }
 
 
 
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 =======
 =======;
 
@@ -133,17 +178,48 @@ function handler() {;
   if (;
     return res.status (400).json ({ error: "Invalid id" })) {
   $2
+=======
+
+
+
+
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from './next';'
+import { getDisputeById  } from '../../../utils / fsdb';
+import {}
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,';
+} from '../../../utils / auth';
+;
+export default async /**;
+ * handler - Function description;
+ */
+function handler() {}
+  const { id } = req.query;
+  if ("
+    return res.status (400).json ({ error: "Invalid id" })) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
 }
   const user = parseUserFromRequest (req);
 ;
   // Check condition;
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 if ( {) {
   $2
+=======
+if ( {) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
 }
 
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 
 
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 =======;
     const dispute = await getDisputeById (id);
     if (return res.status (404).json ({ error: "Dispute not found" })) {
@@ -208,15 +284,18 @@ export default async function handler(req, res) {;
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id].ts
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['GET']);
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDisputeById } from '../../../utils/fsdb';
+export default function handler() { return null; }
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import { getDisputeById } from '../../../utils/fsdb';'
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../utils/auth';
-export default async function handler(req, res) {
-  try {
+export default async function handler(req, res) {}
+  try {};
   const { id } = req.query;
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
@@ -230,17 +309,24 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 =======
 
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
   if (typeof id !== "string")
-
+"
     return res && res.status(400).json({ error: "Invalid id" });
 
   const user = parseUserFromRequest(req);
-
-  if (req && req.method === "GET") {
-    const dispute = await getDisputeById(id);
+"
+  if (req && req.method === "GET") {}
+    const dispute = await getDisputeById(id);"
     if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
     try {
 
+=======
+    try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
     }
     return res && res.status(200).json({ dispute });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id].ts
@@ -248,12 +334,18 @@ export default async function handler(req, res) {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
   } catch (error) {;
     console.error("Error:", error);
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     return res.status(200).json({ dispute });
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
     } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -264,10 +356,23 @@ export default async function handler(req, res) {
 }
   } catch (error) {;
     console.error("Error:", error);
+=======
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 export default async /**
  * handler - Function description
  */;
@@ -276,10 +381,21 @@ function handler() {;
   if (;
     return res.status (400).json ({ error: "Invalid id" })) {
   $2
+=======
+export default async /**;
+ * handler - Function description;
+ */
+function handler() {}
+  const { id } = req.query;
+  if ("
+    return res.status (400).json ({ error: "Invalid id" })) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
 }
   const user = parseUserFromRequest (req);
 ;
   // Check condition;
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 if ( {) {
   $2
 }
@@ -293,10 +409,16 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/disputes/[id].ts
 =======
+=======
+if ( {) {}
+  $2;
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts
 
 
 
 
+<<<<<<< HEAD:pages/api-disabled/api/disputes/[id].ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD:pages/api/disputes/[id].ts
 =======
@@ -309,3 +431,7 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/disputes/[id].ts
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id].ts

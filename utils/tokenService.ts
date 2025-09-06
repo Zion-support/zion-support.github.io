@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,9 +27,12 @@ import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   addTransaction,
   getAllTransactions,
-  getUserBalance,
+  getUserBalance,;
 } from "./tokenStore";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,20 +65,26 @@ export function issueTokens(userId: string, amount: number, reason: string) {
   const actualAmount = Math && Math.min(amount, currentBalance);
   
 
+<<<<<<< HEAD
     userId
+=======
+
+    userId;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     type: 'earn'
-    amount
-    description: reason
+    amount;
+    description: reason;
   });
 }
-export function revokeTokens(userId: string, amount: number, reason: string) {
-    userId,
+export function revokeTokens(userId: string, amount: number, reason: string) {}
+    userId,'
     type: 'earn',
-    amount,
+    amount,;
     description: reason;
   });
 }
 
+<<<<<<< HEAD
 export function revokeTokens(userId: string, amount: number, reason: string) {;
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
@@ -100,20 +110,25 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return addTransaction({
     userId,
+=======
+export function revokeTokens() { return null; }
+  return addTransaction({}
+    userId,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     type: "earn",
     amount,
     description: reason,
   });
 }
 
-export function revokeTokens(userId: string, amount: number, reason: string) {
+export function revokeTokens(userId: string, amount: number, reason: string) {};
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
 
-  return addTransaction({
-    userId,
+  return addTransaction({}
+    userId,"
     type: "spend",
     amount: actualAmount,
     description: reason,
   });
-}
+}'"

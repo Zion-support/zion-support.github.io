@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import {;
   Card,;
   CardContent,;
@@ -36,12 +37,18 @@ import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React, { useState } from "react";"
+import { Button } from "@/components/ui/button";
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Card,
   CardContent,
   CardDescription,
   CardFooter,
-  CardHeader,
+  CardHeader,;
   CardTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -71,15 +78,21 @@ import { Badge } from "@/components/ui/badge";
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-
-export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace");
+=======
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"
+} from "@/components/ui/card";"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
+import { IntegrationCards } from "./IntegrationCards";"
+import { ZapierIntegration } from "./ZapierIntegration";"
+import { Badge } from "@/components/ui/badge";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import { WebhookManager } from "./WebhookManager";
+"
+import { WebhookManager } from "./WebhookManager";"
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -301,10 +314,18 @@ export function IntegrationsHub() {
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
           <TabsTrigger value="zapier">Zapier</TabsTrigger>
+=======
+export function IntegrationsHub() { return null; }
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">"
+        <TabsList className="grid grid-cols-3 md: w-[400px]">"
+          <TabsTrigger value="marketplace">Marketplace</TabsTrigger>"
+          <TabsTrigger value="zapier">Zapier</TabsTrigger>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
 <<<<<<< HEAD
 <<<<<<< HEAD
         </TabsList>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -313,13 +334,14 @@ export function IntegrationsHub() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
         
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -330,11 +352,17 @@ export function IntegrationsHub() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mt-6">
+=======
+
+
+"
+        <div className="mt-6">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsContent value="marketplace" className="m-0">
             <IntegrationCards />
           </TabsContent>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -349,19 +377,25 @@ export function IntegrationsHub() {
           </TabsContent>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           
+=======
+          "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsContent value="zapier" className="m-0">
             <ZapierIntegration />
           </TabsContent>
           
+
+
 <<<<<<< HEAD
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsContent value="webhooks" className="m-0">
 =======
         </TabsList>          <TabsContent value="webhooks" className="m-0">
@@ -373,7 +407,14 @@ export function IntegrationsHub() {
               <CardHeader>
                 <CardTitle>Webhook Management</CardTitle>
                 <CardDescription>
+<<<<<<< HEAD
                   Set up webhook endpoints to receive real-time updates from your Zion platform.                  Set up webhook endpoints to receive real-time updates from your Zion platform.
+=======
+
+
+                  Set up webhook endpoints to receive real-time updates from your Zion platform.
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -383,6 +424,7 @@ export function IntegrationsHub() {
 <<<<<<< HEAD
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -390,13 +432,14 @@ export function IntegrationsHub() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
             
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -406,6 +449,11 @@ export function IntegrationsHub() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Card className="mt-6">
 =======
             </Card>            <Card className="mt-6">
@@ -416,7 +464,14 @@ export function IntegrationsHub() {
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
                 <CardDescription>
+<<<<<<< HEAD
                   View the history of synchronization events between integrations.                  View the history of synchronization events between integrations.
+=======
+
+
+                  View the history of synchronization events between integrations.
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -430,6 +485,7 @@ export function IntegrationsHub() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 =======
@@ -437,11 +493,12 @@ export function IntegrationsHub() {
 
 <<<<<<< HEAD
 =======
-
-
 =======
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
   )
 export function IntegrationsHub() {;
   const [activeTab, setActiveTab] = useState("marketplace");
@@ -471,23 +528,47 @@ import { WebhookManager } from "./WebhookManager",;
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog",;
 export function IntegrationsHub() {;
   const [activeTab, setActiveTab] = useState("marketplace");
+=======
+  )"
+import React, { useState } from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import { IntegrationCards } from "./IntegrationCards",;"
+import { ZapierIntegration } from "./ZapierIntegration",;"
+import { Badge } from "@/components/ui/badge",;"
+import { WebhookManager } from "./WebhookManager",;"
+import { IntegrationsSyncLog } from "./IntegrationsSyncLog",;
+"
+    <div className="space-y-6">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="flex justify-between items-center">;
-        <div>;
-          <h1 className="text-3xl font-bold">Integrations Hub</h1>;
+        <div>;"
+          <h1 className="text-3xl font-bold">Integrations Hub</h1>;"
           <p className="text-muted-foreground mt-1">;
             Connect your platform with the tools and services you use every day;
           </p>;
         </div>;
+<<<<<<< HEAD
         <div className="flex gap-2">;
+=======
+"
+        <div className="flex gap-2">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Button variant="outline">View Documentation</Button>;
           <Button>Connect New Integration</Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
-        <Card>;
-          <CardHeader className="pb-2">;
-            <div className="flex justify-between items-center">;
+        <Card>;"
+          <CardHeader className="pb-2">;"
+            <div className="flex justify-between items-center">;"
               <CardTitle className="text-lg">Status</CardTitle>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -499,6 +580,9 @@ export function IntegrationsHub() {;
 export function IntegrationsHub() {;
   const [activeTab, setActiveTab] = useState("marketplace");
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -511,19 +595,70 @@ export function IntegrationsHub() {;
               </Badge>;
             </div>;
           </CardHeader>;
+<<<<<<< HEAD
           <CardContent>;              </div>;
             </div>;
           </CardContent>;
         </Card>;                    New job application received;
+=======
+          <CardContent>;
+"
+            <div className="space - y-2">;"
+              <div className="flex justify - between text - sm">;"
+                <span className="text - muted - foreground">;
+                  Connected Services;
+                </span>;"
+                <span className="font - medium">7 / 12</span>;
+              </div>;"
+              <div className="flex justify - between text - sm">;"
+                <span className="text - muted - foreground">Last Sync</span>;"
+                <span className="font - medium">2 mins ago</span>;
+              </div>;"
+              <div className="flex justify - between text - sm">;"
+                <span className="text - muted - foreground">Pending Webhooks</span>;"
+                <span className="font - medium">0</span>;
+
+
+
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+
+
+
+                    New job application received;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </p>;
-                </div>;
+                </div>;"
                 <Badge variant="outline">5m ago</Badge>;
+<<<<<<< HEAD
               </li>;                </div>;
+=======
+              </li>;
+"
+              <li className="flex justify - between items - center pb - 2 border - b">;
+                <div>;"
+                  <p className="font - medium">Google Calendar sync</p>;"
+                  <p className="text - muted - foreground">Interview scheduled</p>;
+                </div>;"
+                <Badge variant="outline">1h ago</Badge>;
+              </li>;"
+              <li className="flex justify - between items - center">;
+                <div>;"
+                  <p className="font - medium">Zapier webhook trigger</p>;"
+                  <p className="text - muted - foreground">Contract signed</p>;
+
+
+
+                </div>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Badge variant="outline">2h ago</Badge>;
               </li>;
             </ul>;
           </CardContent>;
 
+<<<<<<< HEAD
           <CardFooter className="pt-4">;
             <Button variant="outline" className="w-full">;
 
@@ -535,11 +670,31 @@ export function IntegrationsHub() {;
 
       <Tabs value={active_tab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="grid grid - cols-3 md: w-[400px]">;                </CardDescription>;
+=======
+
+"
+          <TabsTrigger value="marketplace">Marketplace</TabsTrigger>;"
+          <TabsTrigger value="zapier">Zapier</TabsTrigger>;"
+          <TabsTrigger value="webhooks">Webhooks</TabsTrigger>;
+        </TabsList>;
+
+
+
+                </CardDescription>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </CardHeader>;
               <CardContent>;
                 <WebhookManager />;
               </CardContent>;
+<<<<<<< HEAD
             </Card>;                </CardDescription>;
+=======
+            </Card>;
+
+
+
+                </CardDescription>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </CardHeader>;
               <CardContent>;
                 <IntegrationsSyncLog />;
@@ -548,6 +703,7 @@ export function IntegrationsHub() {;
           </TabsContent>;
         </div>;
       </Tabs>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -568,6 +724,20 @@ export function IntegrationsHub() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+}
+
+
+  );
+    </div>);
+}
+    </div>;
+  );}"
+ space-y-6"> <div className=" flex justify-between items-center"> <div> <h1 className=" text-3xl font-bold">Integrations Hub</h1> <p className=" text-muted-foreground mt-1"> Connect your platform with the tools and services you use every day </p> </div> <div className=" flex gap-2"> <Button variant=" outline">View Documentation</Button> <Button>Connect New Integration</Button> </div> </div> <div className=" grid grid-cols-1 md:grid-cols-3 gap-4"> <Card> <CardHeader className=" pb-2"> <div className=" flex justify-between items-center"> <CardTitle className=" text-lg">Status</CardTitle> <Badge variant=" outline"className=" bg-green-100 text-green-800">Healthy</Badge> </div> </CardHeader> <CardContent> <div className=" space-y-2"> <div className=" flex justify-between text-sm"> <span className=" text-muted-foreground">Connected Services</span> <span className=" font-medium">7 /12</span> </div> <div className=" flex justify-between text-sm"> <span className=" text-muted-foreground">Last Sync</span> <span className=" font-medium">2 mins ago</span> </div> <div className=" flex justify-between text-sm"> <span className=" text-muted-foreground">Pending Webhooks</span> <span className=" font-medium">0</span> </div> </div> </CardContent> </Card> <Card className=" md:col-span-2"> <CardHeader className=" pb-2"> <CardTitle className=" text-lg">Recent Activity</CardTitle> </CardHeader> <CardContent className=" pb-0"> <ul className=" space-y-2 text-sm"> <li className=" flex justify-between items-center pb-2 border-b"> <div> <p className=" font-medium">Slack notification sent</p> <p className=" text-muted-foreground">New job application received</p> </div> <Badge variant=" outline">5m ago</Badge> </li> <li className=" flex justify-between items-center pb-2 border-b"> <div> <p className=" font-medium">Google Calendar sync</p> <p className=" text-muted-foreground">Interview scheduled</p> </div> <Badge variant=" outline">1h ago</Badge> </li> <li className=" flex justify-between items-center"> <div> <p className=" font-medium">Zapier webhook trigger</p> <p className=" text-muted-foreground">Contract signed</p> </div> <Badge variant=" outline">2h ago</Badge> </li> </ul> </CardContent> <CardFooter className=" pt-4"> <Button variant=" outline"className=" w-full">View All Activity</Button> </CardFooter> </Card> </div> <TabsTrigger value="marketplace">Marketplace</TabsTrigger> <TabsTrigger value="zapier">Zapier</TabsTrigger> <TabsTrigger value="webhooks">Webhooks</TabsTrigger> mt-6" > <TabsContent value="marketplace" className="m-0" > <IntegrationCards /> </TabsContent> <TabsContent value="zapier" className="m-0" > <ZapierIntegration /> </TabsContent> <TabsContent value="webhooks" className="m-0" > <Card> <CardHeader> <CardTitle>Webhook Management</CardTitle> <CardDescription> Set up webhook endpoints to receive real-time updates from your Zion platform. </CardDescription> </CardHeader> <CardContent> <WebhookManager /> </CardContent> </Card> <Card className="mt-6" > <CardHeader> <CardTitle>Synchronization Log</CardTitle> <CardDescription> View the history of synchronization events between integrations. </CardDescription> </CardHeader> <CardContent> <IntegrationsSyncLog /> </CardContent> </Card> </TabsContent> </div> </Tabs> </div>) 
+}
+    </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
 ;  );  );
@@ -578,6 +748,7 @@ export function IntegrationsHub() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -591,3 +762,12 @@ export function IntegrationsHub() {;
 =======
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  );
+}
+;
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

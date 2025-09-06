@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Integration registry
 
 import { IntegrationProviderMeta } from "./types";
@@ -30,14 +31,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     id: "salesforce"
     name: "Salesforce"
     category: "crm"
+=======
+
+
+import { IntegrationProviderMeta } from "./types";
+export const PROVIDERS: IntegrationProviderMeta[] = []
+  {"
+    id: "salesforce""
+    name: "Salesforce""
+    category: "crm""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: "Enterprise CRM"
   }
-  {
-    id: "hubspot"
-    name: "HubSpot"
-    category: "crm"
+  {"
+    id: "hubspot""
+    name: "HubSpot""
+    category: "crm""
     description: "Marketing & Sales CRM"
   }
+<<<<<<< HEAD
   {
 pr-12243
 
@@ -60,21 +72,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     id: "pipedrive"
     name: "PipeDrive"
     category: "crm"
+=======
+  {}
+  {"
+    id: "pipedrive""
+    name: "PipeDrive""
+    category: "crm""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: "Sales pipeline CRM"
   }
-  {
-    id: "greenhouse"
-    name: "Greenhouse"
-    category: "ats"
+  {"
+    id: "greenhouse""
+    name: "Greenhouse""
+    category: "ats""
     description: "ATS & recruiting"
-  }
+  }"
   { id: "lever", name: "Lever", category: "ats", description: "ATS & CRM" }
-  {
-    id: "workable"
-    name: "Workable"
-    category: "ats"
+  {"
+    id: "workable""
+    name: "Workable""
+    category: "ats""
     description: "Recruiting software"
   }
+<<<<<<< HEAD
   {
     id: "bamboohr"
     name: "BambooHR"
@@ -108,12 +128,30 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 ];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  {}
+};
+import { IntegrationProviderMeta } from './types';
+export const PROVIDERS: IntegrationProviderMeta[] = ['
+  { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },'
+  { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },'
+  { id: 'zoho', name: 'Zoho CRM', category: 'crm', description: 'All-in-one CRM' },'
+  { id: 'pipedrive', name: 'PipeDrive', category: 'crm', description: 'Sales pipeline CRM' },'
+  { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },'
+  { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },'
+  { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },'
+  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' };
+];
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 export function getProviderById (
   id: string,
-): IntegrationProviderMeta | undefined {
+): IntegrationProviderMeta | undefined {};
   return PROVIDERS.find ((p) => p.id === id);
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12243
@@ -127,6 +165,17 @@ integrationRegistry.registerConnector('slack', new SlackConnector({
   credentials: {},
   settings: {},
 }));
+=======
+
+
+
+"
+    id: "bamboohr","
+    name: "BambooHR","
+    category: "ats","
+    description: "HRIS & ATS",
+  },;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 integrationRegistry.registerConnector('webhook', new WebhookConnector({
   id: 'default-webhook',
@@ -140,6 +189,7 @@ integrationRegistry.registerConnector('webhook', new WebhookConnector({
 export function getProviderById(
 
   id: string,
+<<<<<<< HEAD
 ): IntegrationProviderMeta | undefined {;
   return PROVIDERS.find((p) => p.id === id);
 }
@@ -155,3 +205,9 @@ export function getProviderById(id: string): IntegrationProviderMeta | undefined
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+
+
+'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

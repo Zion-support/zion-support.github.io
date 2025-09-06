@@ -1,56 +1,62 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import React from 'react';'
+import SEO from '../components/SEO';'
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';'
 import Link from 'next/link';
-export default function ResourcesPage() {
+export default function ResourcesPage() {}
   return (
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
+=======
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {'
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
+}'
 import React from 'react';
-
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+'
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';'
 import Link from 'next/link';
   return (
-            {
-              name: 'Support Center'
-              href: '/support'
+            {'
+              name: 'Support Center''
+              href: '/support''
               blurb: 'Help, FAQs, and contact options.'
             }
-            {
-              name: 'Training & Certification'
-              href: '/training'
+            {'
+              name: 'Training & Certification''
+              href: '/training''
               blurb: 'Workshops and curated curricula.'
             }
-            {
-            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
-            { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },;
+            {'
+            { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };'
+            { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },;'
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
           ].map((it) => (;
-            <Link key={it && it.href} href={it && it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover: border-cyan-500/50 transition-colors block">;
-              <div className="text-sm text-gray-400">Resource</div>;
-              <h3 className="text-xl font-semibold text-white">{it && it.name}</h3>;
-              <p className="mt-1 text-gray-300">{it && it.blurb}</p>;
+            <Link key={it && it.href} href={it && it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover: border-cyan-500/50 transition-colors block">;"
+              <div className="text-sm text-gray-400">Resource</div>;"
+              <h3 className="text-xl font-semibold text-white">{it && it.name}</h3>;"
+              <p className="mt-1 text-gray-300">{it && it.blurb}</p>;"
               <div className="mt-3 text-cyan-300">Open →</div>;
           ))}
         </div>;
@@ -60,47 +66,56 @@ import Link from 'next/link';
 };
 
 export default ResourcesPage;
-
-              name: 'Market Pricing',
-              href: '/market - pricing',
+'
+              name: 'Market Pricing','
+              href: '/market - pricing','
               blurb: 'Vendor links and typical budgets.',
             },
-            {
-              name: 'Services Advertising',
-              href: '/services - advertising',
+            {'
+              name: 'Services Advertising','
+              href: '/services - advertising','
               blurb: 'Features, capabilities, and benefits.',
             },
-            {
-              name: 'Case Studies',
-              href: '/case - studies',
+            {'
+              name: 'Case Studies','
+              href: '/case - studies','
               blurb: 'Proof of value and outcomes.',
             },
-            {
-              name: 'Developer Hub',
-              href: '/developer',
+            {'
+              name: 'Developer Hub','
+              href: '/developer','
               blurb: 'APIs, SDKs, and examples.',
             },
           ].map (it => (
             <Link;
               key={it.href}
-              href={it.href}
+              href={it.href}'
               className='p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover:border - cyan - 500 / 50 transition - colors block';
-            >;
-              <div className='text - sm text - gray - 400'>Resource</div>;
-              <h3 className='text - xl font - semibold text - white'>{it.name}</h3>;
-              <p className='mt - 1 text - gray - 300'>{it.blurb}</p>;
-              <div className='mt - 3 text - cyan - 300'>Open →</div>            </Link>            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' }
-            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
-            { name: 'Market Pricing', href: '/market - pricing', blurb: 'Vendor links and typical budgets.' },
-            { name: 'Services Advertising', href: '/services - advertising', blurb: 'Features, capabilities, and benefits.' }
-            { name: 'Case Studies', href: '/case - studies', blurb: 'Proof of value and outcomes.' },
+            >;'
+              <div className='text - sm text - gray - 400'>Resource</div>;'
+              <h3 className='text - xl font - semibold text - white'>{it.name}</h3>;'
+              <p className='mt - 1 text - gray - 300'>{it.blurb}</p>;'
+              <div className='mt - 3 text - cyan - 300'>Open →</div>            </Link>            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' }'
+            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },'
+            { name: 'Market Pricing', href: '/market - pricing', blurb: 'Vendor links and typical budgets.' },'
+            { name: 'Services Advertising', href: '/services - advertising', blurb: 'Features, capabilities, and benefits.' }'
+            { name: 'Case Studies', href: '/case - studies', blurb: 'Proof of value and outcomes.' },'
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
+<<<<<<< HEAD
           ].map ((it) => (
             <Link key={it.href} href={it.href} className="p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover: border - cyan-500 / 50 transition-colors block">;
               <div className="text - sm text-gray-400">Resource</div>;
               <h3 className="text - xl font-semibold text-white">{it.name}</h3>;
               <p className="mt - 1 text-gray-300">{it.blurb}</p>;
               <div className="mt - 3 text-cyan-300">Open →</div>))}
+=======
+          ].map ((it) => ("
+            <Link key={it.href} href={it.href} className="p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover: border - cyan - 500 / 50 transition - colors block">;"
+              <div className="text - sm text - gray - 400">Resource</div>;"
+              <h3 className="text - xl font - semibold text - white">{it.name}</h3>;"
+              <p className="mt - 1 text - gray - 300">{it.blurb}</p>;"
+              <div className="mt - 3 text - cyan - 300">Open →</div>))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>;
       </div>;
     </UltraFuturisticBackground>));
@@ -108,6 +123,7 @@ export default ResourcesPage;
 ;
 export default ResourcesPage;
 ;
+<<<<<<< HEAD
               <div className='mt-3 text-cyan-300'>Open →</div>
             </Link>
           ))}
@@ -118,3 +134,6 @@ export default ResourcesPage;
 
 export default ResourcesPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

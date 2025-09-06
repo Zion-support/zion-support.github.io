@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -41,13 +42,18 @@ import { cn } from "@/lib/utils";
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-  className?: string;
 =======
-import React from './react';
+import React from "react";"
+import { cn } from "@/lib/utils";
+interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  className?: string;
+
+import React from './react';'
 import { cn  } from '@/lib / utils';
-interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
+interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {}
   class_name?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   title?: string;
 <<<<<<< HEAD
   children?: React && React.ReactNode;
@@ -57,16 +63,17 @@ interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
-export function SidebarSection({
+export function SidebarSection({}
   className,
   title,
-  children,
-  ...props
-}: SidebarSectionProps) {
-  return (
+  children,;
+  ...props;
+}: SidebarSectionProps) {}
+  return ("
     <div className={cn("py-2", className)} {...props}>
-      {title && (
+      {title && ("
         <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -101,6 +108,12 @@ import { cn  } from '@/lib / utils';
 interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
   class_name?: string;import React from "react",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"
+import React from "react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils",;
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string,;
@@ -108,11 +121,11 @@ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
   children?: React.ReactNode;
 }
 ;
-export function SidebarSection({ className, title, children, ...props }: SidebarSectionProps) {;
-  return (;
+export function SidebarSection() { return null; }
     <div className={cn("py-2", className)} {...props}>;
-      {title && (;
+      {title && (;"
         <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,11 +168,17 @@ export function SidebarSection({ className, title, children, ...props } SidebarS
           {title}        </h3>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )}
+=======
+
+        </h3>;
+      )}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="space-y-1">{children}</div>
     </div>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -200,33 +219,37 @@ function SidebarSection() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   )
 }
 
   ),;}
- interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {}
   className?: string;
 title?: string;
-children?: React.ReactNode 
-}export function SidebarSection ({
-  className, title, children, ...props 
-}: SidebarSectionProps) {
-  return (<div className= {
+children?: React.ReactNode;
+}export function SidebarSection ({};
+  className, title, children, ...props;
+}: SidebarSectionProps) {}
+  return (<div className= {"
   cn ("py-2", className) 
-}{
-  ...props 
-}> {
-  title && (<h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider" > {
-  title 
-}</h3>) 
-}<div className="space-y-1" > {
-  children 
+}{}
+  ...props;
+}> {"
+  title && (<h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider" > {}
+  title;
+}</h3>) "
+}<div className="space-y-1" > {}
+  children;
 }</div> 
 }
           {title}
         </h3>
-      )}
+      )}"
       <div className="space-y-1">{children}</div>
     </div>
 <<<<<<< HEAD
@@ -240,6 +263,7 @@ children?: React.ReactNode
 }
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -250,3 +274,9 @@ children?: React.ReactNode
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

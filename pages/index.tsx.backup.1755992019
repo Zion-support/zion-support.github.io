@@ -85,7 +85,7 @@ export default function HomePage() {
       price: 'Starting at $49/month',
       marketSize: '$50B+ global market',
       competitors: 'Stripe, PayPal, Square'
-=======
+
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Code Review Assistant',
       description: 'AI-powered code analysis with security, performance, and maintainability insights. Support for JavaScript, Python, and TypeScript.',
@@ -310,6 +310,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Why Choose Us */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -370,6 +371,9 @@ export default function HomePage() {
                 Each service solves real problems faced by developers and businesses every day.
               </p>
             </Card>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>

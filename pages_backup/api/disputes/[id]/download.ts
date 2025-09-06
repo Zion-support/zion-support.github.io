@@ -20,6 +20,7 @@ import {
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/download.ts
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -100,9 +101,17 @@ export default async function handler(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======;
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next";"
+import fs from "fs";"
+import path from "path";"
+import { getDisputeById } from "../../../../utils/fsdb";
+import {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/download.ts
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
 ;
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
   parseUserFromRequest;
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
@@ -153,6 +162,50 @@ export default async function handler(;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+
+
+
+
+
+
+
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;"
+} from "../../../../utils/auth";
+
+export default async function handler() { return null; }
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+
+
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;"
+} from "../../../../utils/auth";
+
+export default async function handler() { return null; }
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+
+
+
+
+
+
+  if (
+    !id |
+    !fileName |"
+    typeof id !== "string" |"
+    typeof fileName !== "string"
+  ) {}
+"
+    return res.status(400).json({ error: "Invalid parameters" });
+
+
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/download.ts
 
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 =======
@@ -200,9 +253,15 @@ export default async function handler(
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
   if (!dispute) return res.status($1).json({ $2 });
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
   try {;
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
   } catch (e: any) {;
+=======
+  try {}
+    ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+  } catch (e: any) {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/download.ts
     return res.status(e.statusCode |403).json({ error: "Forbidden" });
   const user = null;
   stream.pipe(res)
@@ -211,6 +270,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   const att = dispute.attachments.find((a) => a.fileName === fileName);
   if (!att) return res.status($1).json({ $2 });
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
   const stat = fs.statSync(att.path);
   res.setHeader('Content-Type', att.mimeType);
   res.setHeader('Content-Length', String(stat.size));
@@ -269,6 +329,40 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 ========
+=======
+  const stat = fs.statSync(att.path);"
+  res.setHeader("Content-Type", att.mimeType);"
+  res.setHeader("Content-Length", String(stat.size));
+  res.setHeader("
+    "Content-Disposition""
+    `attachment; filename="${path.basename(att.fileName)}"`
+  );
+
+
+
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
+import { getDisputeById } from '../../../../utils/fsdb';'
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {};
+  const { id, fileName } = req.query as { id?: string, fileName?: string };'
+  if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {'
+    return res.status(400).json({ error: 'Invalid parameters' })
+
+
+
+
+
+
+
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/download.ts
 
 
 
@@ -284,6 +378,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
 =======
   if (!dispute) return res && res.status($1).json({ $2 });
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
   try {
 <<<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
 <<<<<<< HEAD:pages/api-disabled/api/disputes/[id]/download.ts
@@ -478,3 +573,7 @@ export default async function handler(req, res) {;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/download.ts
+=======
+  try {}
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/download.ts

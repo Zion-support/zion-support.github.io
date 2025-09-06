@@ -18,6 +18,7 @@ export default function RegisterPage() {;
 =======
 
 
+<<<<<<< HEAD
 export default function RegisterPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -33,6 +34,9 @@ export default function RegisterPage() {;
     company: "",;
     agreeToTerms: false,;
     subscribeNewsletter: false,;
+=======
+export default function RegisterPage() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   });
 
   const [passwordRequirements, setPasswordRequirements] = useState({;
@@ -51,17 +55,17 @@ export default function RegisterPage() {;
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value, type, checked } = e && e.target;
     setFormData((prev) => ({;
-      ...prev,;
+      ...prev,;"
       [name]: type === "checkbox" ? checked : value,;
     }));
 
-    // Check password requirements;
+    // Check password requirements;"
     if (name === "password") {;
       setPasswordRequirements({;
         length: value && value.length >= 8,;
         uppercase: /[A-Z]/.test(value),;
         lowercase: /[a-z]/.test(value),;
-        number: /\d/.test(value),;
+        number: /\d/.test(value),;"
         special: /[!@#$%^&*(),.?":{}|<>]/.test(value),;
       });
     }
@@ -77,219 +81,160 @@ export default function RegisterPage() {;
     formData && formData.password === formData && formData.confirmPassword &&;
     isPasswordValid &&;
     formData && formData.agreeToTerms;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
-    <Layout
-      title="Register - Zion Tech Group"
-      description="Create your Zion Tech Group account to access our services, dashboard, and exclusive resources."
-      keywords="register, sign up, create account, Zion Tech Group, new user">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">;
+    <Layout"
+      title="Register - Zion Tech Group""
+      description="Create your Zion Tech Group account to access our services, dashboard, and exclusive resources.""
+      keywords="register, sign up, create account, Zion Tech Group, new user">;"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-md w-full space-y-8">;
-          <motion&& motion.div
+          <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
-            transition={{ duration: 0 && 0.6 }}
-            className="text-center">;
-            <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
-              <span className="text-white font-bold text-xl">Z</span>;
-            </div>;
-            <h2 className="mt-6 text-3xl font-bold text-white">;
-              Create your account;
-            </h2>;
-            <p className="mt-2 text-sm text-gray-300">;
-              Join Zion Tech Group and start your digital transformation journey;
-            </p>;
-          </motion && motion.div>;
-          <motion&& motion.div
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-            className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-8">;
-            <form className="space-y-6" onSubmit={handleSubmit}>;
+            transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}"
+            className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-8">;"
+            <form className="space-y-6" onSubmit={handleSubmit}>;"
               <div className="grid grid-cols-2 gap-4">;
                 <div>;
-                  <label
-                    htmlFor="firstName"
+                  <label"
+                    htmlFor="firstName""
                     className="block text-sm font-medium text-gray-300 mb-2">;
                     First name;
-                  </label>;
-                  <div className="relative">;
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
+                  </label>;"
+                  <div className="relative">;"
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;"
                       <User className="h-5 w-5 text-gray-400" />;
                     </div>;
-                    <input
-                      id="firstName"
-                      name="firstName"
+                    <input"
+                      id="firstName""
+                      name="firstName""
                       type="text"
-                      required
+                      required;
                       value={formData && formData.firstName}
-                      onChange={handleChange}
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      onChange={handleChange}"
+                      className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
                       placeholder="First name"
-<<<<<<< HEAD
-=======
 
-                    />;
-                  </div>;
-                </div>;
-                <div>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                  <label
-                    htmlFor="lastName"
+                  <label"
+                    htmlFor="lastName""
                     className="block text-sm font-medium text-gray-300 mb-2">;
                     Last name;
                   </label>;
-                  <input
-                    id="lastName"
-                    name="lastName"
+                  <input"
+                    id="lastName""
+                    name="lastName""
                     type="text"
-                    required
+                    required;
                     value={formData && formData.lastName}
-                    onChange={handleChange}
-                    className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    onChange={handleChange}"
+                    className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
                     placeholder="Last name"
-<<<<<<< HEAD
-=======
 
-                  />;
-                </div>;
-              </div>;
-              <div>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                <label
-                  htmlFor="email"
+                <label"
+                  htmlFor="email""
                   className="block text-sm font-medium text-gray-300 mb-2">;
                   Email address;
-                </label>;
-                <div className="relative">;
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
+                </label>;"
+                <div className="relative">;"
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;"
                     <Mail className="h-5 w-5 text-gray-400" />;
                   </div>;
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
+                  <input"
+                    id="email""
+                    name="email""
+                    type="email""
                     autoComplete="email"
-                    required
+                    required;
                     value={formData && formData.email}
-                    onChange={handleChange}
-                    className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    onChange={handleChange}"
+                    className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
                     placeholder="Enter your email"
-<<<<<<< HEAD
-=======
 
-                  />;
-                </div>;
-              </div>;
-              <div>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                <label
-                  htmlFor="company"
+                <label"
+                  htmlFor="company""
                   className="block text-sm font-medium text-gray-300 mb-2">;
                   Company (optional);
                 </label>;
-                <input
-                  id="company"
-                  name="company"
+                <input"
+                  id="company""
+                  name="company""
                   type="text"
                   value={formData && formData.company}
-                  onChange={handleChange}
-                  className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  onChange={handleChange}"
+                  className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
                   placeholder="Your company name"
-<<<<<<< HEAD
-=======
 
-                />;
-              </div>;
-              <div>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                <label
-                  htmlFor="password"
+                <label"
+                  htmlFor="password""
                   className="block text-sm font-medium text-gray-300 mb-2">;
                   Password;
-                </label>;
-                <div className="relative">;
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
+                </label>;"
+                <div className="relative">;"
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;"
                     <Lock className="h-5 w-5 text-gray-400" />;
                   </div>;
-                  <input
-                    id="password"
-                    name="password"
-                    type={showPassword ? "text" : "password"}
+                  <input"
+                    id="password""
+                    name="password""
+                    type={showPassword ? "text" : "password"}"
                     autoComplete="new-password"
-                    required
+                    required;
                     value={formData && formData.password}
-                    onChange={handleChange}
-                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    onChange={handleChange}"
+                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
                     placeholder="Create a password"
                   />;
-                  <button
-                    type="button"
+                  <button"
+                    type="button""
                     className="absolute inset-y-0 right-0 pr-3 flex items-center"
                     onClick={() => setShowPassword(!showPassword)}
                   >;
-                    {showPassword ? (;
+                    {showPassword ? (;"
                       <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-300" />;
-                    ) : (;
+                    ) : (;"
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />;
                     )}
-<<<<<<< HEAD
-=======
 
-                  </button>;
-                </div>;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                {/* Password Requirements */}
+                {/* Password Requirements */}"
                 <div className="mt-2 space-y-1">;
                   {Object && Object.entries(passwordRequirements).map(;
-                    ([key, isValid]) => (;
+                    ([key, isValid]) => (;"
                       <div key={key} className="flex items-center text-xs">;
-                        <Check
+                        <Check"
                           className={`h-3 w-3 mr-2 ${isValid ? "text-green-400" : "text-gray-500"}`}
                         />;
-                        <span
-                          className={
+                        <span;
+                          className={"
                             isValid ? "text-green-400" : "text-gray-400"
                           }>;
-import React, { useState } from './react';
-import Link from './next / link';
-import { motion  } from './framer-motion';
-import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check  } from './lucide-react';
+import React, { useState } from './react';'
+import Link from './next / link';'
+import { motion  } from './framer-motion';'
+import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check  } from './lucide-react';"
 import Layout from "../components / Layout";
 ;
-export default /**
- * RegisterPage - Function description
+export default /**;
+ * RegisterPage - Function description;
  */
-function RegisterPage() {
+function RegisterPage() {}
   const [show_password, setShowPassword] = useState (false);
   const [showConfirmPassword, setShowConfirmPassword] = useState (false);
-  const [form_data, setFormData] = useState ({
-    first_name: "",
-    last_name: "",
-    email: "",
-    password: "",
-    confirm_password: "",
+  const [form_data, setFormData] = useState ({"
+    first_name: "","
+    last_name: "","
+    email: "","
+    password: "","
+    confirm_password: "","
     company: "",
     agreeToTerms: false,
     subscribe_newsletter: false,
   });
 ;
-  const [password_requirements, setPasswordRequirements] = useState ({
+  const [password_requirements, setPasswordRequirements] = useState ({}
     length: false,
     uppercase: false,
     lowercase: false,
@@ -297,28 +242,28 @@ function RegisterPage() {
     special: false,
   });
 ;
-  const handle_submit = (e: React.FormEvent) =>: any {
+  const handle_submit = (e: React.FormEvent) =>: any {}
     e.prevent_default ();
     // Handle registration logic here;
   }
 ;
-  const handle_change = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+  const handle_change = (e: React.ChangeEvent < HTMLInputElement>) =>: any {}
     const { name, value, type, checked } = e.target;
-    setFormData ((prev) => ({
-      ...prev,
+    setFormData ((prev) => ({}
+      ...prev,"
       [name]: type === "checkbox" ? checked : value,
     }));
 ;
     // Check password requirements;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      setPasswordRequirements ({
+      setPasswordRequirements ({}
         length: value.length >= 8,
         uppercase: /[A - Z]/.test (value),
         lowercase: /[a - z]/.test (value),
-        number: /\d/.test (value),
+        number: /\d/.test (value),"
         special: /[!@#$%^&*(), .?":{}|<>]/.test (value),
       });
     }
@@ -336,25 +281,25 @@ if ( {) {
     form_data.agreeToTerms;
 ;
   return (
-    <Layout;
-      title="Register - Zion Tech Group";
-      description="Create your Zion Tech Group account to access our services, dashboard, and exclusive resources.";
+    <Layout;"
+      title="Register - Zion Tech Group";"
+      description="Create your Zion Tech Group account to access our services, dashboard, and exclusive resources.";"
       keywords="register, sign up, create account, Zion Tech Group, new user";
-    >;
-      <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify - center py - 12 px - 4 sm:px - 6 lg:px - 8">;
+    >;"
+      <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify - center py - 12 px - 4 sm:px - 6 lg:px - 8">;"
         <div className="max - w-md w - full space - y-8">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6 }}"
             className="text - center";
-          >;
-            <div className="mx - auto h - 12 w - 12 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify - center">;
+          >;"
+            <div className="mx - auto h - 12 w - 12 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify - center">;"
               <span className="text - white font - bold text - xl">Z</span>;
-            </div>;
+            </div>;"
             <h2 className="mt - 6 text - 3xl font - bold text - white">;
               Create your account;
-            </h2>;
+            </h2>;"
             <p className="mt - 2 text - sm text - gray - 300">;
               Join Zion Tech Group and start your digital transformation journey;
             </p>;
@@ -362,376 +307,228 @@ if ( {) {
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}"
             className="bg - white / 10 backdrop - blur - md rounded - lg shadow - xl p - 8";
-          >;
-            <form className="space - y-6" on_submit={handle_submit}>;
+          >;"
+            <form className="space - y-6" on_submit={handle_submit}>;"
               <div className="grid grid - cols - 2 gap - 4">;
                 <div>;
-                  <label;
-                    html_for="first_name";
+                  <label;"
+                    html_for="first_name";"
                     className="block text - sm font - medium text - gray - 300 mb - 2";
                   >;
                     First name;
-                  </label>;
-                  <div className="relative">;
-                    <div className="absolute inset - y-0 left - 0 pl - 3 flex items - center pointer - events - none">;
+                  </label>;"
+                  <div className="relative">;"
+                    <div className="absolute inset - y-0 left - 0 pl - 3 flex items - center pointer - events - none">;"
                       <User className="h - 5 w - 5 text - gray - 400" />;
                     </div>;
-                    <input;
-                      id="first_name";
-                      name="first_name";
+                    <input;"
+                      id="first_name";"
+                      name="first_name";"
                       type="text";
                       required;
                       value={form_data.first_name}
-                      on_change={handle_change}
-                      className="block w - full pl - 10 pr - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+                      on_change={handle_change}"
+                      className="block w - full pl - 10 pr - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";"
                       placeholder="First name";
                     />;
                   </div>;
                 </div>;
                 <div>;
-                  <label;
-                    html_for="last_name";
+                  <label;"
+                    html_for="last_name";"
                     className="block text - sm font - medium text - gray - 300 mb - 2";
                   >;
                     Last name;
                   </label>;
-                  <input;
-                    id="last_name";
-                    name="last_name";
+                  <input;"
+                    id="last_name";"
+                    name="last_name";"
                     type="text";
                     required;
                     value={form_data.last_name}
-                    on_change={handle_change}
-                    className="block w - full px - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+                    on_change={handle_change}"
+                    className="block w - full px - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";"
                     placeholder="Last name";
                   />;
                 </div>;
               </div>;
               <div>;
-                <label;
-                  html_for="email";
+                <label;"
+                  html_for="email";"
                   className="block text - sm font - medium text - gray - 300 mb - 2";
                 >;
                   Email address;
-                </label>;
-                <div className="relative">;
-                  <div className="absolute inset - y-0 left - 0 pl - 3 flex items - center pointer - events - none">;
+                </label>;"
+                <div className="relative">;"
+                  <div className="absolute inset - y-0 left - 0 pl - 3 flex items - center pointer - events - none">;"
                     <Mail className="h - 5 w - 5 text - gray - 400" />;
                   </div>;
-                  <input;
-                    id="email";
-                    name="email";
-                    type="email";
+                  <input;"
+                    id="email";"
+                    name="email";"
+                    type="email";"
                     auto_complete="email";
                     required;
                     value={form_data.email}
-                    on_change={handle_change}
-                    className="block w - full pl - 10 pr - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+                    on_change={handle_change}"
+                    className="block w - full pl - 10 pr - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";"
                     placeholder="Enter your email";
                   />;
                 </div>;
               </div>;
               <div>;
-                <label;
-                  html_for="company";
+                <label;"
+                  html_for="company";"
                   className="block text - sm font - medium text - gray - 300 mb - 2";
                 >;
                   Company (optional);
                 </label>;
-                <input;
-                  id="company";
-                  name="company";
+                <input;"
+                  id="company";"
+                  name="company";"
                   type="text";
                   value={form_data.company}
-                  on_change={handle_change}
-                  className="block w - full px - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+                  on_change={handle_change}"
+                  className="block w - full px - 3 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";"
                   placeholder="Your company name";
                 />;
               </div>;
               <div>;
-                <label;
-                  html_for="password";
+                <label;"
+                  html_for="password";"
                   className="block text - sm font - medium text - gray - 300 mb - 2";
                 >;
                   Password;
-                </label>;
-                <div className="relative">;
-                  <div className="absolute inset - y-0 left - 0 pl - 3 flex items - center pointer - events - none">;
+                </label>;"
+                <div className="relative">;"
+                  <div className="absolute inset - y-0 left - 0 pl - 3 flex items - center pointer - events - none">;"
                     <Lock className="h - 5 w - 5 text - gray - 400" />;
                   </div>;
-                  <input;
-                    id="password";
-                    name="password";
-                    type={show_password ? "text" : "password"}
+                  <input;"
+                    id="password";"
+                    name="password";"
+                    type={show_password ? "text" : "password"}"
                     auto_complete="new - password";
                     required;
                     value={form_data.password}
-                    on_change={handle_change}
-                    className="block w - full pl - 10 pr - 12 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+                    on_change={handle_change}"
+                    className="block w - full pl - 10 pr - 12 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";"
                     placeholder="Create a password";
                   />;
-                  <button;
-                    type="button";
+                  <button;"
+                    type="button";"
                     className="absolute inset - y-0 right - 0 pr - 3 flex items - center";
                     on_click={() => setShowPassword (!show_password)}
                   >;
-                    {show_password ? (
-                      <EyeOff className="h - 5 w - 5 text - gray - 400 hover:text - gray - 300" />) : (
+                    {show_password ? ("
+                      <EyeOff className="h - 5 w - 5 text - gray - 400 hover:text - gray - 300" />) : ("
                       <Eye className="h - 5 w - 5 text - gray - 400 hover:text - gray - 300" />)}
                   </button>;
                 </div>;
-                {/* Password Requirements */}
+                {/* Password Requirements */}"
                 <div className="mt - 2 space - y-1">;
                   {Object.entries (password_requirements).map (
-                    ([key, is_valid]) => (
+                    ([key, is_valid]) => ("
                       <div key={key} className="flex items - center text - xs">;
-                        <Check;
+                        <Check;"`
                           className={`h - 3 w - 3 mr - 2 ${is_valid ? "text - green - 400" : "text - gray - 500"}`}
                         />;
                         <span;
-                          className={
+                          className={"
                             is_valid ? "text - green - 400" : "text - gray - 400";
                           }
-                        >;
-                          {key === "length" && "At least 8 characters"}
-                          {key === "uppercase" && "One uppercase letter"}
-                          {key === "lowercase" && "One lowercase letter"}
-                          {key === "number" && "One number"}
+                        >;"
+                          {key === "length" && "At least 8 characters"}"
+                          {key === "uppercase" && "One uppercase letter"}"
+                          {key === "lowercase" && "One lowercase letter"}"
+                          {key === "number" && "One number"}"
                           {key === "special" && "One special character"}
-<<<<<<< HEAD
-=======
 
-                        </span>;
-                      </div>;
-                    ),;
-                  )}
-                </div>;
-              </div>;
-              <div>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                <label
-                  htmlFor="confirmPassword"
+                <label"
+                  htmlFor="confirmPassword""
                   className="block text-sm font-medium text-gray-300 mb-2">;
                   Confirm password;
-                </label>;
-                <div className="relative">;
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
+                </label>;"
+                <div className="relative">;"
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;"
                     <Lock className="h-5 w-5 text-gray-400" />;
                   </div>;
-                  <input
-                    id="confirmPassword"
-                    name="confirmPassword"
-                    type={showConfirmPassword ? "text" : "password"}
+                  <input"
+                    id="confirmPassword""
+                    name="confirmPassword""
+                    type={showConfirmPassword ? "text" : "password"}"
                     autoComplete="new-password"
-                    required
+                    required;
                     value={formData && formData.confirmPassword}
-                    onChange={handleChange}
-                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    onChange={handleChange}"
+                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
                     placeholder="Confirm your password"
                   />;
-                  <button
-                    type="button"
+                  <button"
+                    type="button""
                     className="absolute inset-y-0 right-0 pr-3 flex items-center"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                   >;
-                    {showConfirmPassword ? (;
+                    {showConfirmPassword ? (;"
                       <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-300" />;
-                    ) : (;
+                    ) : (;"
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />;
                     )}
                   </button>;
                 </div>;
                 {formData && formData.confirmPassword &&;
-                  formData && formData.password !== formData && formData.confirmPassword && (;
+                  formData && formData.password !== formData && formData.confirmPassword && (;"
                     <p className="mt-1 text-xs text-red-400">;
                       Passwords do not match;
                     </p>;
                   )}
-<<<<<<< HEAD
-=======
 
-              </div>;
-              <div className="space-y-4">;
-                <div className="flex items-center">;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                  <input
-                    id="agreeToTerms"
-                    name="agreeToTerms"
+                  <input"
+                    id="agreeToTerms""
+                    name="agreeToTerms""
                     type="checkbox"
-                    required
+                    required;
                     checked={formData && formData.agreeToTerms}
-                    onChange={handleChange}
+                    onChange={handleChange}"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-600 rounded bg-white/10"
                   />;
-                  <label
-                    htmlFor="agreeToTerms"
-                    className="ml-2 block text-sm text-gray-300">;
+                  <label"
+                    htmlFor="agreeToTerms""
+                    className="ml-2 block text-sm text-gray-300">;"
                     I agree to the{" "}
-                    <Link
-                      href="/terms"
+                    <Link"
+                      href="/terms""
                       className="text-blue-400 hover:text-blue-300">;
-                      Terms of Service;
-                    </Link>{" "}
+                      Terms of Service;"
+                    </Link>{" "}"
                     and{" "}
-                    <Link
+                    <Link"
                       href="/privacy"
-<<<<<<< HEAD
-=======
 
-                      className="text-blue-400 hover:text-blue-300">;
-                        </span>;
-                      </div>),
-                  )}
-                </div>;
-              </div>;
-              <div>;
-                <label;
-                  html_for="confirm_password";
-                  className="block text - sm font - medium text - gray - 300 mb - 2";
-                >;
-                  Confirm password;
-                </label>;
-                <div className="relative">;
-                  <div className="absolute inset - y-0 left - 0 pl - 3 flex items - center pointer - events - none">;
-                    <Lock className="h - 5 w - 5 text - gray - 400" />;
-                  </div>;
-                  <input;
-                    id="confirm_password";
-                    name="confirm_password";
-                    type={showConfirmPassword ? "text" : "password"}
-                    auto_complete="new - password";
-                    required;
-                    value={form_data.confirm_password}
-                    on_change={handle_change}
-                    className="block w - full pl - 10 pr - 12 py - 3 border border - gray - 600 rounded - lg bg - white / 10 text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-                    placeholder="Confirm your password";
-                  />;
-                  <button;
-                    type="button";
-                    className="absolute inset - y-0 right - 0 pr - 3 flex items - center";
-                    on_click={() => setShowConfirmPassword (!showConfirmPassword)}
-                  >;
-                    {showConfirmPassword ? (
-                      <EyeOff className="h - 5 w - 5 text - gray - 400 hover:text - gray - 300" />) : (
-                      <Eye className="h - 5 w - 5 text - gray - 400 hover:text - gray - 300" />)}
-                  </button>;
-                </div>;
-                {form_data.confirm_password &&;
-                  form_data.password !== form_data.confirm_password && (
-                    <p className="mt - 1 text - xs text - red - 400">;
-                      Passwords do not match;
-                    </p>)}
-              </div>;
-              <div className="space - y-4">;
-                <div className="flex items - center">;
-                  <input;
-                    id="agreeToTerms";
-                    name="agreeToTerms";
-                    type="checkbox";
-                    required;
-                    checked={form_data.agreeToTerms}
-                    on_change={handle_change}
-                    className="h - 4 w - 4 text - blue - 600 focus:ring - blue - 500 border - gray - 600 rounded bg - white / 10";
-                  />;
-                  <label;
-                    html_for="agreeToTerms";
-                    className="ml - 2 block text - sm text - gray - 300";
-                  >;
-                    I agree to the{" "}
-                    <Link;
-                      href="/terms";
-                      className="text - blue - 400 hover:text - blue - 300";
-                    >;
-                      Terms of Service;
-                    </Link>{" "}
-                    and{" "}
-                    <Link;
-                      href="/privacy";
-                      className="text - blue - 400 hover:text - blue - 300";
-                    >;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       Privacy Policy;
                     </Link>;
                   </label>;
                 </div>;
-<<<<<<< HEAD
-=======
 
-                    className="ml-2 block text-sm text-gray-300">;
-                    Subscribe to our newsletter for updates and insights;
-                  </label>;
-                </div>;
-              </div>;
-              <div>;
-                <button
-                  type="submit"
-                  disabled={!isFormValid}
-                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed">;
-                  <span className="absolute left-0 inset-y-0 flex items-center pl-3">;
-                    <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />;
-                <div className="flex items - center">;
-                  <input;
-                    id="subscribe_newsletter";
-                    name="subscribe_newsletter";
-                    type="checkbox";
-                    checked={form_data.subscribe_newsletter}
-                    on_change={handle_change}
-                    className="h - 4 w - 4 text - blue - 600 focus:ring - blue - 500 border - gray - 600 rounded bg - white / 10";
-                  />;
-                  <label;
-                    html_for="subscribe_newsletter";
-                    className="ml - 2 block text - sm text - gray - 300";
-                  >;
-                    Subscribe to our newsletter for updates and insights;
-                  </label>;
-                </div>;
-              </div>;
-              <div>;
-                <button;
-                  type="submit";
-                  disabled={!isFormValid}
-                  className="group relative w - full flex justify - center py - 3 px - 4 border border - transparent text - sm font - medium rounded - lg text - white bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 transition - all duration - 200 disabled:opacity - 50 disabled:cursor - not - allowed";
-                >;
-                  <span className="absolute left - 0 inset - y-0 flex items - center pl - 3">;
-                    <ArrowRight className="h - 5 w - 5 text - white group - hover:translate - x-1 transition - transform" />;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </span>;
                   Create account;
                 </button>;
               </div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              <div className="text - center">;
-                <p className="text - sm text - gray - 300">;
+"
+              <div className="text - center">;"
+                <p className="text - sm text - gray - 300">;"
                   Already have an account?{" "}
-                  <Link;
-                    href="/login";
+                  <Link;"
+                    href="/login";"
                     className="font - medium text - blue - 400 hover:text - blue - 300 transition - colors";
                   >;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     Sign in here;
                   </Link>;
                 </p>;
               </div>;
             </form>;
-<<<<<<< HEAD
-=======
 
-          </motion.div>;
-        </div>;
-      </div>;
-    </Layout>);
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}
+}'"`

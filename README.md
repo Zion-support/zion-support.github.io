@@ -1,5 +1,6 @@
 # Zion Tech Group - Advanced Technology Solutions
 
+<<<<<<< HEAD
 ## 🌟 Overview
 Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, cloud infrastructure, and digital transformation services. We provide comprehensive technology solutions for enterprises, startups, and government organizations.
 
@@ -96,6 +97,9 @@ A modern, responsive website built with React, TypeScript, and Vite, showcasing 
 
 main
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 1. Clone the repository:
 ```bash
@@ -104,6 +108,7 @@ cd zion.app
 ```
 
 
+<<<<<<< HEAD
 2. Install dependencies:
 ```bash
 npm install
@@ -112,12 +117,15 @@ npm install
 - npm or yarn
 main
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 3. Start the development server:
 ```bash
 npm run dev
 ```
 
+<<<<<<< HEAD
 4. Open your browser and navigate to `http://localhost:3000`
 
 ## 🏗️ Build for Production
@@ -157,10 +165,14 @@ npm start
 ```
 main
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ## 📁 Project Structure
 
 ```
+<<<<<<< HEAD
 4. Open your browser and navigate to `http://localhost:3000`
 
 ## 🏗️ Build for Production
@@ -192,12 +204,16 @@ The built files will be in the `dist` directory, ready for deployment.
 
 main
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ## 🔧 Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+<<<<<<< HEAD
 ### Frontend
 - **React 18.2.0** - Modern React with concurrent features
 - **TypeScript 5.6.3** - Type-safe JavaScript development
@@ -650,6 +666,9 @@ The project uses a consistent design system with:
 - Performance monitoring
 main
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ## 🤝 Contributing
 
@@ -675,6 +694,7 @@ main
 
 ### Pull Request Process
 1. Fork the repository
+<<<<<<< HEAD
 2. Create feature branch
 3. Make changes with tests
 4. Submit pull request
@@ -933,3 +953,6 @@ Built with ❤️ by the Zion Tech Group team
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

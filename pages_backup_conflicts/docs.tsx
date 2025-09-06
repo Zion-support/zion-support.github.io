@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 
 interface DocsProps {
@@ -51,12 +52,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5export default function 
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5export default function Docs({ }: DocsProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+interface DocsProps {}
+  // Add props here as needed;
+export default function Docs({ }: DocsProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
       <h1>Docs</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,10 +88,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5export default function 
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -104,3 +115,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5=======
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

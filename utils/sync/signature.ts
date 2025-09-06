@@ -24,6 +24,7 @@ import crypto from "crypto";
 }
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
@@ -46,14 +47,17 @@ export function getSyncSecret(): string | null {
 }
 =======export function getSyncSecret(): string | null {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export function getSyncSecret(): string | null {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
 }
 // Signature utilities;
-export const signature = {
+export const signature = {};
   // Add signature functionality here;
-  verify: (signature: string, message: string, address: string) => false,
-  sign: (message: string, privateKey: string) => '',
+  verify: (signature: string, message: string, address: string) => false,'
+  sign: (message: string, privateKey: string) => '','
   recover: (signature: string, message: string) => '';
 
 <<<<<<< HEAD
@@ -84,18 +88,18 @@ export function verifySignature(payload: unknown, signature?: string | null): bo
 export function signPayload(
   payload: any,
   privateKey?: string,
-): SignatureResult {
-  const timestamp = Date.now();
+): SignatureResult {};
+  const timestamp = Date.now();"
   const nonce = crypto.randomBytes(16).toString("hex");
 
-  // Create a simple signature using the payload, timestamp, and nonce
+  // Create a simple signature using the payload, timestamp, and nonce;
   const dataToSign = JSON.stringify(payload) + timestamp + nonce;
-  const signature = crypto
+  const signature = crypto"
     .createHash("sha256")
-    .update(dataToSign)
+    .update(dataToSign)"
     .digest("hex");
 
-  return {
+  return {}
     signature,
     timestamp,
     nonce,
@@ -107,23 +111,28 @@ export function verifySignature(
   signature: string,
   timestamp: number,
   nonce: string,
-): boolean {
+): boolean {};
   const dataToSign = JSON.stringify(payload) + timestamp + nonce;
-  const expectedSignature = crypto
+  const expectedSignature = crypto"
     .createHash("sha256")
-    .update(dataToSign)
+    .update(dataToSign)"
     .digest("hex");
   return signature === expectedSignature;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
+<<<<<<< HEAD
 export function generateNonce(): string {
   return crypto.randomBytes(16).toString("hex");  verify: (signature: string, message: string, address: string) => false,
   sign: (message: string, private_key: string) => '',
   recover: (signature: string, message: string) => '';
+=======
+export function generateNonce(): string {";
+  return crypto.randomBytes(16).toString("hex");
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
-export function hashData(data: string): string {
+export function hashData(data: string): string {";
   return crypto.createHash("sha256").update(data).digest("hex");
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,6 +142,7 @@ export function hashData(data: string): string {
 =======
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -143,3 +153,9 @@ export function hashData(data: string): string {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b;
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

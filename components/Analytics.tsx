@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -114,12 +115,16 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
+=======
+const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {}
+  useEffect (() => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // Google Analytics 4;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      // Load gtag script;
+      // Load gtag script;'
       const script = document.create_element ('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com / gtag / js?id=${tracking_id}`;
@@ -128,21 +133,21 @@ if ( {) {
       // Initialize gtag;
       window.data_layer = window.data_layer || [];
       /**
- * gtag - Function description
+ * gtag - Function description;
  */
-function gtag() {
+function gtag() {}
         window.data_layer.push (args),
       }
-      window.gtag = gtag;
-      gtag ('js', new Date ());
-      gtag ('config', tracking_id, {
+      window.gtag = gtag;'
+      gtag ('js', new Date ());'
+      gtag ('config', tracking_id, {}
         page_title: document.title,
         page_location: window.location.href,
       });
 ;
       // Track page views;
-      const trackPageView = () =>: any {
-        gtag ('event', 'page_view', {
+      const trackPageView = () =>: any {'
+        gtag ('event', 'page_view', {}
           page_title: document.title,
           page_location: window.location.href,
           page_path: window.location.pathname,
@@ -153,49 +158,49 @@ function gtag() {
       trackPageView ();
 ;
       // Track page view on route change (for SPA behavior);
-      const handleRouteChange = () =>: any {
+      const handleRouteChange = () =>: any {}
         trackPageView ();
       }
 ;
-      // Listen for popstate events (back / forward navigation);
+      // Listen for popstate events (back / forward navigation);'
       window.addEventListener ('popstate', handleRouteChange);
 ;
       // Cleanup;
-      return () => {
+      return () => {'
         window.removeEventListener ('popstate', handleRouteChange);
       }
     }
   }, [tracking_id]);
 ;
   // Track custom events;
-  const track_event = (event_name: string, parameters?: Record < string, any>) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
+  const track_event = (event_name: string, parameters?: Record < string, any>) =>: any {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       window.gtag ('event', event_name, parameters);
     }
   }
 ;
   // Track button clicks;
-  const trackButtonClick = (button_name: string, location?: string) =>: any {
-    track_event ('button_click', {
+  const trackButtonClick = (button_name: string, location?: string) =>: any {'
+    track_event ('button_click', {}
       button_name: button_name,
       location: location || window.location.pathname,
     });
   }
 ;
   // Track form submissions;
-  const trackFormSubmission = (form_name: string) =>: any {
-    track_event ('form_submit', {
+  const trackFormSubmission = (form_name: string) =>: any {'
+    track_event ('form_submit', {}
       form_name: form_name,
       page_location: window.location.href,
     });
   }
 ;
   // Track external link clicks;
-  const trackExternalLink = (url: string, link_text: string) =>: any {
-    track_event ('external_link_click', {
+  const trackExternalLink = (url: string, link_text: string) =>: any {'
+    track_event ('external_link_click', {}
       link_url: url,
       link_text: link_text,
       page_location: window.location.href,
@@ -203,9 +208,9 @@ if ( {) {
   }
 ;
   // Expose tracking functions globally for use in other components;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     (window as any).track_event = track_event;
     (window as any).trackButtonClick = trackButtonClick;
@@ -213,6 +218,7 @@ if ( {) {
     (window as any).trackExternalLink = trackExternalLink;
   }
   return (
+<<<<<<< HEAD
     <Head>;
 <<<<<<< HEAD
 
@@ -223,25 +229,34 @@ if ( {) {
                       });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+    <Head>;`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           __html: `
-            // Performance monitoring
-            if ('performance' in window) {
-              window.addEventListener('load', function() {
-                setTimeout(function() {
+            // Performance monitoring'
+            if ('performance' in window) {'
+              window.addEventListener('load', function() {}
+                setTimeout(function() {'
                   const perfData = performance.getEntriesByType('navigation')[0];
-                  if (perfData) {
+                  if (perfData) {}
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+<<<<<<< HEAD
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                    if (window.gtag) {'
+                      window.gtag('event', 'timing_complete', {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       });
-                    const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
-                    if (window && window.gtag) {
-                      window && window.gtag('event', 'timing_complete', {
+                    const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart;
+                    if (window && window.gtag) {'
+                      window && window.gtag('event', 'timing_complete', {'
                         name: 'load',
                         value: Math && Math.round(loadTime),
                       })
                     }
+<<<<<<< HEAD
 <<<<<<< HEAD
                   }
 
@@ -344,3 +359,6 @@ export const trackPageView = (url: string, title: string) => {
 
 export default Analytics;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

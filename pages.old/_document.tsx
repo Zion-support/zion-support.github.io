@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
 
@@ -23,22 +24,28 @@ import { Html,Head,Main,NextScript } from 'next/document'; export default functi
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
-
-import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
-const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"
-import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'";
+const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"'";
+import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""'";
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+
+'";
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
-import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
-const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"
+
+
+'";
+import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'";
+const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"'";
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -62,3 +69,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+
+'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

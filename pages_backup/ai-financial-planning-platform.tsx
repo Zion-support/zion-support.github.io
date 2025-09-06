@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/ai-financial-planning-platform.tsx
 <<<<<<< HEAD:pages/ai-financial-planning-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,17 +91,21 @@ export default function AiFinancialPlanningPlatform() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-financial-planning-platform.tsx
 			pricePerMonthUSD={349}
-			implementationWeeks="1-2 weeks"
+			implementationWeeks="1-2 weeks""
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
-			features={[
-				"Driver-based planning and what-if scenarios"
-				"Automated variance analysis and anomaly detection"
-				"Cohort and retention-aware revenue forecasting"
-				"Cash flow projections and runway insights"
-				"Budget vs. actuals with alerting"
-				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake"
+			features={["
+				"Driver-based planning and what-if scenarios""
+				"Automated variance analysis and anomaly detection""
+				"Cohort and retention-aware revenue forecasting""
+				"Cash flow projections and runway insights""
+				"Budget vs. actuals with alerting""
+				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake""
 				"Executive dashboards and board-ready reports"
+<<<<<<< HEAD:pages_backup/ai-financial-planning-platform.tsx
 
 <<<<<<< HEAD
 =======
@@ -109,13 +114,17 @@ import React from 'react';
 			title;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-financial-planning-platform.tsx
 				"Headcount planning and hiring plans"
-			]}
-			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
-			title="AI Financial Planning Platform"
-			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence."
+			]}"
+			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}"
+			title="AI Financial Planning Platform""
+			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence.""
 			subtitle="Smarter, faster financial decisions"
 			pricePerMonthUSD={349}
+<<<<<<< HEAD:pages_backup/ai-financial-planning-platform.tsx
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -145,16 +154,32 @@ import React from 'react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="1-2 weeks"
+=======
+			pricePerMonthUSD={349  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+
+
+
+"
+			implementationWeeks="1-2 weeks""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-financial-planning-platform.tsx
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
-			features={[
-				"Driver-based planning and what-if scenarios",
-				"Automated variance analysis and anomaly detection",
-				"Cohort and retention-aware revenue forecasting",
-				"Cash flow projections and runway insights",
-				"Budget vs. actuals with alerting",
-				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake",
-				"Executive dashboards and board-ready reports",
+			features={["
+				"Driver-based planning and what-if scenarios","
+				"Automated variance analysis and anomaly detection","
+				"Cohort and retention-aware revenue forecasting","
+				"Cash flow projections and runway insights","
+				"Budget vs. actuals with alerting","
+				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake","
+				"Executive dashboards and board-ready reports","
 				"Headcount planning and hiring plans"
+<<<<<<< HEAD:pages_backup/ai-financial-planning-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -178,32 +203,42 @@ import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			]  } catch (error) {
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+=======
 
+			]  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-financial-planning-platform.tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+"
 			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
 		/>
+<<<<<<< HEAD:pages_backup/ai-financial-planning-platform.tsx
 	)
 <<<<<<< HEAD:pages/ai-financial-planning-platform.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+	)"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-financial-planning-platform.tsx
 			canonical="https: //ziontechgroup.com/ai-financial-planning-platform";
 		/>;
 	);
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD:pages_backup/ai-financial-planning-platform.tsx
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -225,3 +260,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-financial-planning-platform.tsx
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-financial-planning-platform.tsx

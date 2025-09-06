@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   id: string;
 export interface Ultimate2026Service {
 id: string;
@@ -82,16 +83,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
+<<<<<<< HEAD
   contactInfo: {
     mobile: string, email: string,
     address: string
@@ -113,16 +122,29 @@ export const ultimate2026Services: Ultimate2026Service[] = [
       "All technologies";
       "Maximum capabilities";
       "Premium features";
+=======
+  contactInfo: {}
+    features: ["
+      "Ultimate platform";"
+      "All technologies";"
+      "Maximum capabilities";"
+      "Premium features";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "24/7 support"
-    ];
+    ];"
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: {"
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
@@ -140,15 +162,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "All technologies",
       "Maximum capabilities",
       "Premium features",
+=======
+
+    features: ["
+      "Ultimate platform","
+      "All technologies","
+      "Maximum capabilities","
+      "Premium features","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "24/7 support"
-    ];
+    ];"
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
     realImplementation: true,
+<<<<<<< HEAD
     contactInfo: {
+=======
+    contactInfo: {}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -167,3 +203,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

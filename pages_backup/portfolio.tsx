@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react',
@@ -203,18 +204,15 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
+=======
+
+} from 'lucide-react';'
+import EnhancedNavigation from '../components/EnhancedNavigation';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
 import EnhancedFooter from '../components/EnhancedFooter';
-export default function PortfolioPage() {
-  const projects = [
-    {
-
-<<<<<<< HEAD
-=======
-
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default function PortfolioPage() {}
+  const projects = []
+    {}
   Rocket,
   Brain,
   Atom,
@@ -225,6 +223,7 @@ export default function PortfolioPage() {
   ExternalLink,
   Star,
   Users,
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -260,12 +259,18 @@ export default function PortfolioPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 } from 'lucide-react';
 import EnhancedNavigation from '../components / EnhancedNavigation';
+=======
+';
+} from 'lucide-react';'
+import EnhancedNavigation from '../components / EnhancedNavigation';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
 import EnhancedFooter from '../components / EnhancedFooter';
-export default /**
- * PortfolioPage - Function description
+export default /**;
+ * PortfolioPage - Function description;
  */
-function PortfolioPage() {
+function PortfolioPage() {}
   const projects = [;
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
@@ -469,12 +474,18 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <meta
           name='description'
+=======
+    {}
+        <meta'
+          name='description''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
           content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions."
-        />;
+        />;'
         <meta property='og:title' content='Our Work - Zion Tech Group' />;
-        <meta
-          property='og:description'
+        <meta'
+          property='og:description''
           content='Explore our portfolio of innovative technology projects and solutions.'
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
 =======
@@ -518,8 +529,12 @@ className='mb-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
           >
+=======
+
+          >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
-              Our Work
+              Our Work;
             </h1>
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
@@ -539,7 +554,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
           </motion.div>
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -550,22 +565,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-            transition={{ duration: 0 && 0.8 }}
-            className='mb-8'>;
+            transition={{ duration: 0 && 0.8 }}'
+            className='mb-8'>;'
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
               Our Work;
-            </h1>;
+            </h1>;'
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
               Innovative technology solutions that drive business transformation;
               and growth            </p>;
           </motion && motion.div>;
 
-          <motion&& motion.div
+          <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-            className='mb-12'>;
-            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}'
+            className='mb-12'>;'
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;'
               Discover how we've helped organizations leverage cutting-edge;
               technology to solve complex challenges and achieve remarkable;
               results.            </p>;
@@ -573,13 +588,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
-      {/* Stats Section */}
-      <section className='py-16 px-6'>;
-        <div className='max-w-7xl mx-auto'>;
+      {/* Stats Section */}'
+      <section className='py-16 px-6'>;'
+        <div className='max-w-7xl mx-auto'>;'
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats && stats.map((stat, index) => (;
-              <motion&& motion.div
+              <motion&& motion.div;
                 key={stat && stat.label}
 
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -600,6 +616,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Discover how we've helped organizations leverage cutting-edge technology to solve
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
               complex challenges and achieve remarkable results.
 =======
               complex challenges and achieve remarkable results.
@@ -626,6 +646,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 =======
 <<<<<<< HEAD
 
@@ -674,6 +695,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              >"
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">"
+                  <stat.icon className="w-8 h-8 text-cyan-400" />
+                </div>
+"
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>"
+                <div className="text-white/70">{stat.label}</div>
+              </motion.div>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
             ))}
 
           </div>;
@@ -681,6 +714,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
 
 
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -689,9 +723,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto'>;
           <div className='flex flex-wrap justify-center gap-4'>;
             {categories && categories.map(category => (              <button
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
 
+
+<<<<<<< HEAD:pages_backup/portfolio.tsx
       {/* Category Filter */}
       <section className="py-8 px-6">
         <div className="max-w-7xl mx-auto">
@@ -730,15 +766,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${;
-                  selectedCategory === category;
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white';
-                    : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white';
+                  selectedCategory === category;'
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white';'
+                    : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white';`
                 }`}
               >;
                 {category}
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -805,6 +844,13 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center`}>
+=======
+
+              >"
+                <div className="p-8">"
+                  <div className="flex items-center gap-3 mb-4">`
+                    <div className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center`}>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
                       <project.icon className="w-6 h-6 text-white" />
                     </div>
 <<<<<<< HEAD
@@ -814,23 +860,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
                   </div>
-<<<<<<< HEAD
-=======
-                  <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
-                  <p className="text-white/70 mb-6">{project.description}</p>
-                  
-=======
-
-                  <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
-                  <p className="text-white/70 mb-6">{project.description}</p>
-
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Technologies</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <span key={tech} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">
 
 
+<<<<<<< HEAD:pages_backup/portfolio.tsx
                     </div>;
                   </div>;
                   <div className='mb-6'>;
@@ -866,6 +898,17 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                           {tech  } catch (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
+=======
+                        <li;
+                          key={result}'
+                          className='text-sm text-white/80 flex items-center'>;'
+                          <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2' />                          {result}
+                        </li>;
+
+
+                          {tech  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -876,25 +919,32 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 =======
 =======
                         </span>;
-                      ))  } catch (error) {
-    console.error("Error:", error);
+                      ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     </div>
                   </div>
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Results</h4>
+=======
+"
+                  <div className="mb-6">"
+                    <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Results</h4>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
                     <ul className="space-y-1">
-                      {project.results.map((result) => (
-                        <li key={result} className="text-sm text-white/80 flex items-center">
+                      {project.results.map((result) => ("
+                        <li key={result} className="text-sm text-white/80 flex items-center">"
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
                           {result}
                         </li>
                       ))}
 
+<<<<<<< HEAD:pages_backup/portfolio.tsx
                   
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -990,10 +1040,18 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 origin/cursor/automate-test-improve-and-merge-code-2533
                       View Details
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  "
+                  <div className="flex items-center justify-between">"
+                    <span className="text-sm text-white/60">Client: {project.client}</span>"
+                    <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                      View Details;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
                     </button>
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1027,10 +1085,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
           </div>;
         </div>;
       </section>;
 
+<<<<<<< HEAD:pages_backup/portfolio.tsx
       {/* CTA Section */}
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
@@ -1059,24 +1122,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
+=======
+      {/* CTA Section */}'
+      <section className='py-20 px-6'>;'
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div;
+      {/* CTA Section */}"
+      <section className="py-20 px-6">"
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+            transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
+            viewport={{ once: true }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1085,8 +1160,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          >
+=======
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
+          >
+"
             <h2 className="text-4xl font-bold text-white mb-6">
 =======
           >
@@ -1111,10 +1190,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
               Ready to Start Your Project?
-            </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+            </h2>"
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">'
               Let's discuss how we can help you achieve similar results with our innovative technology solutions.
             </p>
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
 =======
@@ -1156,11 +1236,16 @@ Start Your Project
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+
+                Schedule Consultation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD:pages/portfolio.tsx
 <<<<<<< HEAD
 
@@ -1173,14 +1258,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <EnhancedFooter />
     </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-),
+
+),'"
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
 
 
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1200,17 +1289,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </section> key= {
   category
 }onClick= {
+=======
+}</div> </div> </section> key= {}
+  category;
+}onClick= {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
   () => setSelectedCategory (category)
-}className= {
-  `px-6 py-3 rounded-full font-semibold transition-all duration-300 $ {
-  selectedCategory === category ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white': 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
+}className= {}`
+  `px-6 py-3 rounded-full font-semibold transition-all duration-300 $ {'
+  selectedCategory === category ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white': 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'`
 }`
-}> {
-  category
+}> {}
+  category;
 }</button>) )
 }</div> </div> </section> </span>) )
 }</div> </div> </li>) )
 }</ul> </div> View Details </button> </div> </div> </motion.div>) )
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 }</div> </div> </section> <motion.div initial= {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1272,17 +1367,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </section> key= {
   category
 }onClick= {
+=======
+}</div> </div> </section> <motion.div initial= {}
+}</div> </div> </section> key= {}
+  category;
+}onClick= {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
   () => setSelectedCategory (category)
-}className= {
-  `px-6 py-3 rounded-full font-semibold transition-all duration-300 $ {
-  selectedCategory === category ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white': 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
+}className= {}`
+  `px-6 py-3 rounded-full font-semibold transition-all duration-300 $ {'
+  selectedCategory === category ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white': 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'`
 }`
-}> {
-  category
+}> {}
+  category;
 }</button>) )
 }</div> </div> </section> </span>) )
 }</div> </div> </li>) )
 }</ul> </div> View Details </button> </div> </div> </motion.div>) )
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 }</div> </div> </section> <motion.div initial= {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1636,12 +1738,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}</div> </div> </section> <motion.div initial= {}
+  {}
+  opacity: 0, y: 30;
+}whileInView= {}
+  {}
+  opacity: 1, y: 0;
+}transition= {}
+  {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
               </button>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
       <EnhancedFooter />;
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1655,14 +1768,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx
     </div>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD:pages_backup/portfolio.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1688,3 +1805,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/portfolio.tsx
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/portfolio.tsx

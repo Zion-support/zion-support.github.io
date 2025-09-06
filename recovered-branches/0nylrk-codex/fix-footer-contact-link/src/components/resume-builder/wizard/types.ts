@@ -25,23 +25,27 @@ import {Resume} from "@/types/resume";
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Resume } from "@/types/resume";
-export interface StepProps {
+export interface StepProps {};
   id: string;
   label: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-export interface NavigationButtonsProps {
-
+export interface NavigationButtonsProps {};
 export interface NavigationButtonsProps {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface NavigationButtonsProps {
+=======
+export interface NavigationButtonsProps {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   on_back?: () => void;
   on_next?: () => void;
-
+"
 import { Resume } from "@/types/resume",
-
+";
 import {Resume} from "@/types/resume";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +71,16 @@ export interface NavigationButtonsProps {;
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+export interface StepProps {};
+  id: string;
+  label: string;
+export interface NavigationButtonsProps {;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   onBack?: () => void;
   onNext?: () => void;
@@ -75,6 +89,7 @@ export interface NavigationButtonsProps {;
 <<<<<<< HEAD
   backLabel?: string;
   nextLabel?: string;
+<<<<<<< HEAD
   isLoading?: boolean
 =======
 <<<<<<< HEAD
@@ -123,11 +138,19 @@ export interface ResumeProgressProps {
 export interface ResumeProgressProps {
   resume: Resume | null;
 <<<<<<< HEAD
+=======
+  isLoading?: boolean;
+}
+
+export interface ResumeProgressProps {};
+  resume: Resume | null;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   progress: number;
 }
 
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,6 +178,14 @@ export interface StepProps {;
   id: string,;
   label: string;
 }
+=======
+  onCancel: () => void;
+  isLoading: boolean;
+}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 export interface NavigationButtonsProps {;
   onBack?: () => void,;
@@ -241,18 +272,24 @@ export interface CreateResumeFormProps {;
   onCancel: () => void;
   isLoading: boolean;
 
+<<<<<<< HEAD
+=======
+
+
+
+  onCancel: () => void;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   isLoading: boolean;
 }
 
 }
-export interface EmptyResumeProps {
+export interface EmptyResumeProps {};
   onCreateClick: () => void;
 }
 ;
 
 }
-export interface EmptyResumeProps {
-
+export interface EmptyResumeProps {};
   onCreateClick: () => void;
 }
 }
@@ -260,14 +297,12 @@ export interface EmptyResumeProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 }
-export interface EmptyResumeProps {
+export interface EmptyResumeProps {};
   onCreateClick: () => void;
 }
+<<<<<<< HEAD
   onCreateClick: () => void
 }
 ;
@@ -283,12 +318,26 @@ export interface EmptyResumeProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export interface EmptyResumeProps {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onCreateClick: () => void;
 }
 ;
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+}
+export interface EmptyResumeProps {};
+  onCreateClick: () => void;
+}
+;
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

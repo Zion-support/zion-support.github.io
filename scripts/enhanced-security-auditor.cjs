@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-auditor.cjs
 <<<<<<< HEAD
 
@@ -295,6 +296,13 @@ auditor;
 
 :scripts/enhanced-security-auditor.cjs
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+#!/usr/bin/env node;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require("fs")";const path = require("path")""
     this.reportFile = path.join(this.projectRoot, "security-audit-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -332,6 +340,7 @@ const fs = require("fs")";const path = require("path")""
       this.log(" Security audit "failed": ${error.message}");"
 =======
   .then(report => {);    console.log(" Security audit completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-auditor.cjs
 <<<<<<< HEAD
@@ -404,3 +413,10 @@ auditor
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+  .catch(error => {);    console.error(" Security audit "failed":", error.message);"}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

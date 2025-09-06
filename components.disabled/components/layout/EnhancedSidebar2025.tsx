@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 origin/main
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -462,3 +463,8 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
 
 export default EnhancedSidebar2025;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/main;
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

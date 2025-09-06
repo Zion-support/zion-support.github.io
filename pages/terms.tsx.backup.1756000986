@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -110,6 +111,9 @@ import {
 } from 'lucide-react';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -121,6 +125,7 @@ import {
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -253,6 +258,9 @@ export default function Terms() {
                 These terms govern your use of our services and establish our mutual rights and obligations.
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <p className="text-gray-600">
                 These Terms of Service ("Terms") govern your use of Zion Tech Group's website and services. By accessing or using our services, you agree to be bound by these Terms.
@@ -427,6 +435,7 @@ export default function Terms() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1471,11 +1480,14 @@ export default function Terms() {
     </Layout>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 
 export default Terms;
-=======
+
             </div>
           </section>
 

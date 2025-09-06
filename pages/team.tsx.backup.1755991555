@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -131,10 +132,14 @@ export default function TeamPage() {
           <div className="relative z-10 container mx-auto px-4 text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -433,6 +438,9 @@ export default function TeamPage() {
                     </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
@@ -440,6 +448,7 @@ export default function TeamPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -699,11 +708,15 @@ export default function TeamPage() {
               ))}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
 
         {/* Join Our Team */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -738,10 +751,14 @@ export default function TeamPage() {
                 We're always looking for brilliant minds, passionate innovators, and technology enthusiasts who want to shape the future. Join us in revolutionizing technology and making a difference.
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/careers"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 =======
@@ -751,11 +768,15 @@ export default function TeamPage() {
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   View Open Positions
                 </a>
                 <a
                   href="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
 =======
@@ -765,6 +786,9 @@ export default function TeamPage() {
                   className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   Get in Touch
                 </a>
@@ -776,6 +800,7 @@ export default function TeamPage() {
     </Layout>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -784,3 +809,6 @@ export default function TeamPage() {
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

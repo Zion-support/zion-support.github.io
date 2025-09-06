@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -35,10 +36,14 @@ export default function ContactPage() {
     lastName: '',
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     email: '',
     company: '',
     phone: '',
     service: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
     message: ''
   });
@@ -55,10 +60,14 @@ export default function ContactPage() {
 
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -77,6 +86,9 @@ export default function ContactPage() {
     }));
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -89,6 +101,7 @@ export default function ContactPage() {
       setSubmitStatus('success');
       setFormData({
 <<<<<<< HEAD
+<<<<<<< HEAD
         name: '',
 =======
 <<<<<<< HEAD
@@ -98,10 +111,14 @@ export default function ContactPage() {
         lastName: '',
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         email: '',
         company: '',
         phone: '',
         service: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
         message: ''
 =======
@@ -114,6 +131,9 @@ export default function ContactPage() {
         preferredContact: 'email'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       });
       
       // Reset success message after 5 seconds
@@ -121,6 +141,7 @@ export default function ContactPage() {
     }, 2000);
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -826,12 +847,16 @@ export default function ContactPage() {
                     </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </motion.div>
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -889,6 +914,9 @@ export default function ContactPage() {
                     <div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                         Email Address *
                       </label>
@@ -899,6 +927,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -929,6 +958,9 @@ export default function ContactPage() {
                         placeholder="Enter your email address"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       />
                     </div>
                     <div>
@@ -942,6 +974,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleInputChange}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="+1 (555) 123-4567"
 =======
@@ -953,11 +986,15 @@ export default function ContactPage() {
                         placeholder="Enter your phone number"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       />
                     </div>
                   </div>
 
                   <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service of Interest
@@ -985,12 +1022,16 @@ export default function ContactPage() {
                       Service of Interest *
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </label>
                     <select
                       id="service"
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1013,10 +1054,14 @@ export default function ContactPage() {
                         <option key={index} value={service}>{service}</option>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       ))}
                     </select>
                   </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
@@ -1069,6 +1114,9 @@ export default function ContactPage() {
                       Project Details *
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </label>
                     <textarea
                       id="message"
@@ -1077,6 +1125,7 @@ export default function ContactPage() {
                       onChange={handleInputChange}
                       required
                       rows={5}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1139,11 +1188,15 @@ export default function ContactPage() {
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         Sending Message...
                       </>
                     ) : (
                       <>
                         Send Message
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <Send className="w-5 h-5 ml-2" />
 =======
@@ -1153,11 +1206,15 @@ export default function ContactPage() {
                         <Send className="w-4 h-4" />
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       </>
                     )}
                   </button>
                 </form>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1412,3 +1469,6 @@ export default ContactPage;
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

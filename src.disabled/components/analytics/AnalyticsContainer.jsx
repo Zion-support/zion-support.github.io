@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,10 +12,13 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-:src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx
 
+:src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx;
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
+<<<<<<< HEAD
 <<<<<<< HEAD
 :src.disabled/components/analytics/AnalyticsContainer.js.jsx
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
@@ -48,11 +52,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
-' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
 =======
-:src.disabled/components/analytics/AnalyticsContainer.js.jsx
+:src.disabled/components/analytics/AnalyticsContainer.js.jsx"
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
+
+
+"
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+
+:src.disabled/components/analytics/AnalyticsContainer.js.jsx"
+" " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""'"
+' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -71,3 +85,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

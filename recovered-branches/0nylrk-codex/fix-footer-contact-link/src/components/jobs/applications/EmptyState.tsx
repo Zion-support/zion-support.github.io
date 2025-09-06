@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
-import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",";
+import { Card, CardContent } from "@/components/ui/card";"
+import { Link } from "react-router-dom";"
+import { Card, CardContent } from "@/components/ui/card","
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -19,23 +20,29 @@ import { Link } from "react-router-dom",
 
 import { Button  } from '@/components / ui / button';
 import { Card, CardContent  } from '@/components / ui / card';
+=======
+;
+import { Button  } from '@/components / ui / button';'
+import { Card, CardContent  } from '@/components / ui / card';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Link  } from './react-router-dom';
-export /**
- * EmptyState - Function description
+export /**;
+ * EmptyState - Function description;
  */
-function EmptyState() {
-  return (
-    <Card className="bg-muted/30">;
-      <CardContent className="pt-6 text-center">;
-        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>;
-        <p className="text-muted-foreground mb-4">;
+function EmptyState() {}
+  return ("
+    <Card className="bg-muted/30">;"
+      <CardContent className="pt-6 text-center">;"
+        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>;"
+        <p className="text-muted-foreground mb-4">;'
           You haven't submitted any applications yet. Browse available jobs to;
           get started!;
-        </p>;
-        <Button className="mt-4" asChild>;
+        </p>;"
+        <Button className="mt-4" asChild>;"
           <Link to="/jobs">Browse Jobs</Link>;
         </Button>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>);
 
 <<<<<<< HEAD
@@ -61,43 +68,55 @@ export function EmptyState() {
       <CardContent className="pt-6 text-center">
         <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>
         <p className="text-muted-foreground mb-4">
+=======
+
+
+
+export function EmptyState() {}
+  return ("
+    <Card className="bg-muted/30">"
+      <CardContent className="pt-6 text-center">"
+        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>"
+        <p className="text-muted-foreground mb-4">'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           You haven't submitted any applications yet. Browse available jobs to get started!
-        </p>
-        <Button className="mt-4" asChild>
+        </p>"
+        <Button className="mt-4" asChild>"
           <Link to="/jobs">Browse Jobs</Link>
         </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
       </CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+";
+import { Button } from "@/components/ui/button";"
+import { Card, CardContent } from "@/components/ui/card";"
 import { Link } from "react-router-dom";
-
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
-import { Card, CardContent } from "@/components/ui/card",
+"
+import { Button } from "@/components/ui/button",";
+import { Card, CardContent } from "@/components/ui/card";"
+import { Link } from "react-router-dom";"
+import { Card, CardContent } from "@/components/ui/card","
 import { Link } from "react-router-dom",
-export function EmptyState() {
-  return (
-    <Card className="bg-muted/30">
-      <CardContent className="pt-6 text-center">
-        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>
-        <p className="text-muted-foreground mb-4">
+export function EmptyState() {}
+  return ("
+    <Card className="bg-muted/30">"
+      <CardContent className="pt-6 text-center">"
+        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>"
+        <p className="text-muted-foreground mb-4">'
           You haven't submitted any applications yet. Browse available jobs to get started!
-        </p>
-        <Button className="mt-4" asChild>
+        </p>"
+        <Button className="mt-4" asChild>"
           <Link to="/jobs">Browse Jobs</Link>
         </Button>
+<<<<<<< HEAD
       </CardContent>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </Card>
@@ -130,11 +149,26 @@ export function EmptyState() {;
         <Button className="mt-4" asChild>;
           <Link to="/jobs">Browse Jobs</Link>;
         </Button>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </CardContent>;
     </Card>;
   );
 }
+
+
+    </Card>;
+  );
+}
+    </Card>
+  )"
+import { Button } from "@/components/ui/button",;"
+import { Card, CardContent } from "@/components/ui/card",;"
+import { Link } from "react-router-dom";
+export function EmptyState() { return null; }
+}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -154,3 +188,7 @@ export function EmptyState() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

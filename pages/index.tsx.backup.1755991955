@@ -4,9 +4,13 @@ import Hero from '../components/sections/Hero';
 import Features from '../components/sections/Features';
 import FuturisticCard, { ServiceCard, FeatureCard } from '../components/ui/FuturisticCard';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
 import QuantumCard from '../components/ui/QuantumCard';
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, Star, Users, Globe, Lock, Rocket, Cpu, Database, TrendingUp, Clock, Target, Building, Award, DollarSign, ChartBar, Code, BookOpen, Activity, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, Settings, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Brain, Atom, Cpu as CpuIcon, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Rocket as RocketIcon } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const heroStats = [
@@ -118,6 +122,7 @@ export default function HomePage() {
       gradient: 'from-green-400 to-emerald-500',
     },
     {
+<<<<<<< HEAD
       icon: '📊',
       title: 'Data Intelligence',
       description: 'Advanced analytics, machine learning, and business intelligence for data-driven decisions.',
@@ -185,11 +190,18 @@ export default function HomePage() {
       count: '10+ Services',
       description: 'Enterprise AR/VR platforms and immersive experiences',
       color: 'from-pink-500 to-rose-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
     <QuantumNeuralBackground variant="quantum" intensity="medium">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="min-h-screen">
         {/* Navigation Section */}
         <section className="relative py-8 px-4 sm:px-6 lg:px-8">
@@ -236,6 +248,7 @@ export default function HomePage() {
           <link rel="canonical" href="https://ziontechgroup.com" />
         </Head>
 
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
@@ -254,11 +267,15 @@ export default function HomePage() {
               
               {/* Hero Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {heroStats.map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className={`text-3xl md:text-4xl font-bold ${stat.color} mb-2`}>
                       {stat.value}
                     </div>
+<<<<<<< HEAD
                     <div className="text-gray-400 text-sm md:text-base">
                       {stat.label}
                     </div>
@@ -290,10 +307,14 @@ export default function HomePage() {
                   Get Started
                   <ExternalLink className="ml-2 w-5 h-5" />
                 </Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
           </section>
 
+<<<<<<< HEAD
               {/* Contact Info */}
               <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 max-w-2xl mx-auto">
                 <h3 className="text-xl font-semibold text-white mb-4">Ready to Transform Your Business?</h3>
@@ -547,5 +568,16 @@ export default function HomePage() {
         </section>
       </div>
     </QuantumNeuralBackground>
+=======
+
+            </div>
+          </section>
+
+
+            </div>
+          </section>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

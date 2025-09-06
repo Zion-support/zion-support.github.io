@@ -19,6 +19,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 import { motion } from 'framer-motion';
 
 export default function HomePage() {
+<<<<<<< HEAD
   const popularServices = getPopularServices();
   const allCategories = getAllCategories();
 
@@ -27,6 +28,9 @@ export default function HomePage() {
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '14 Days', label: 'Free Trial' },
     { number: '24/7', label: 'Expert Support' }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const contactInfo = {
@@ -38,6 +42,7 @@ export default function HomePage() {
 
   const revolutionaryServices = [
     {
+<<<<<<< HEAD
       name: 'AI Content Factory Pro',
       description: 'Advanced AI-powered content creation platform that generates blog posts, social media content, marketing copy, and technical documentation. Features GPT-4 integration and SEO optimization.',
       icon: '✍️',
@@ -253,6 +258,9 @@ export default function HomePage() {
       content: 'Quantum Cybersecurity Fortress gives us peace of mind knowing we\'re protected against both current and future threats. The AI threat detection is incredibly accurate.',
       rating: 5,
       avatar: '👨‍💼'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -620,6 +628,7 @@ export default function HomePage() {
                   <Mail className="w-4 h-4 text-purple-400" />
                   <span className="text-gray-300">{contactInfo.email}</span>
                 </div>
+<<<<<<< HEAD
                 <div className="flex items-center justify-center space-x-2">
                   <MapPin className="w-4 h-4 text-green-400" />
                   <span className="text-gray-300">{contactInfo.address}</span>
@@ -630,5 +639,8 @@ export default function HomePage() {
         </div>
       </section>
     </UltraFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

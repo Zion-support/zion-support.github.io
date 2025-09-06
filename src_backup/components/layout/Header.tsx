@@ -19,20 +19,21 @@ export default function LayoutHeader() {
 <span>{contactInfo.phone}</span>,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>,
-            <div className="flex items-center space-x-2">,
+            <div className="flex items-center space-x-2">,"
               <Mail className="w-4 h-4" />,
               <span>{contactInfo.email}</span>,
-            </div>,
-            <div className="flex items-center space-x-2">,
+            </div>,"
+            <div className="flex items-center space-x-2">,"
               <MapPin className="w-4 h-4" />,
               <span>{contactInfo.address}</span>,
             </div>,
-          </div>,
-          <div className="text-blue-200">,
+          </div>,"
+          <div className="text-blue-200">,"
             <span className="font-semibold">Zion Tech Group</span> - Your Digital Transformation Partner,
           </div>,
         </div>,
       </div>,
+<<<<<<< HEAD:src_backup/components/layout/Header.tsx
       {/* Main Navigation */};
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -56,6 +57,31 @@ export default function LayoutHeader() {
                   onMouseLeave={() => setActiveDropdown(null)};
                 >
                   <span>{item.name}</span>
+=======
+      {/* Main Navigation */};"
+      <nav className="container mx-auto px-4 py-4">,"
+        <div className="flex items-center justify-between">,
+          {/* Logo */};"
+          <Link href="/" className="flex items-center space-x-2">,"
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">,"
+              <Brain className="w-6 h-6 text-white" />,
+            </div>,"
+            <span className="text-xl font-bold text-gray-900">,
+              Zion Tech Group,
+            </span>,
+          </Link>,
+          {/* Desktop Navigation */};"
+          <div className="hidden lg: flex items-center space-x-8">,
+            {navigationItems.map((item) => (,"
+              <div key={item.name} className="relative group">,
+                <Link,
+                  href={item.href};"
+                  className="flex items-center space-x-1 text-gray-700 hover: text-blue-600 transition-colors duration-200 font-medium",
+                  onMouseEnter={() => setActiveDropdown(item.name)};
+                  onMouseLeave={() => setActiveDropdown(null)};
+                >,
+                  <span>{item.name}</span>,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/layout/Header.tsx
                   {item.dropdown && <ChevronDown className="w-4 h-4" />};
                 </Link>
                 {/* Dropdown Menu */};
@@ -63,9 +89,15 @@ export default function LayoutHeader() {
                   <AnimatePresence>,
                     {activeDropdown === item.name && (,
                       <motion.div,
+<<<<<<< HEAD:src_backup/components/layout/Header.tsx
                         initial={{ opacit: y: 0, y: 10 }};
                         animate={{ opacit: y: 1, y: 0 }};
                         exit={{ opacit: y: 0, y: 10 }};
+=======
+                        initial={{ opacity: 0, y: 10 }};
+                        animate={{ opacity: 1, y: 0 }};
+                        exit={{ opacity: 0, y: 10 }};"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/layout/Header.tsx
                         className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50",
                         onMouseEnter={() => setActiveDropdown(item.name)};
                         onMouseLeave={() => setActiveDropdown(null)};
@@ -75,6 +107,7 @@ export default function LayoutHeader() {
                           return (
                             <Link
                               key={index};
+<<<<<<< HEAD:src_backup/components/layout/Header.tsx
                               href={subItem.href};
                               className="flex items-start space-x-3 px-6 py-3: hover: bg-gray-50 transition-colors duration-200 group",
                             >,
@@ -83,8 +116,18 @@ export default function LayoutHeader() {
                               </div>,
                               <div>,
                                 <div className="font-medium text-gray-900 group-hove: r: text-blue-600 transition-colors">,
+=======
+                              href={subItem.href};"
+                              className="flex items-start space-x-3 px-6 py-3 hover: bg-gray-50 transition-colors duration-200 group",
+                            >,"
+                              <div className="flex-shrink-0">,"
+                                <IconComponent className="w-5 h-5 text-blue-600 group-hover: text-purple-600 transition-colors" />,
+                              </div>,
+                              <div>,"
+                                <div className="font-medium text-gray-900 group-hover: text-blue-600 transition-colors">,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/layout/Header.tsx
                                   {subItem.name};
-                                </div>,
+                                </div>,"
                                 <div className="text-sm text-gray-500">,
                                   {subItem.description};
                         })};
@@ -94,21 +137,36 @@ export default function LayoutHeader() {
                 )};
               </div>
             ))};
+<<<<<<< HEAD:src_backup/components/layout/Header.tsx
           </div>
           {/* CTA Button */};
           <div className="hidden: lg: flex items-center space-x-4">,
             <Link,
               href="/contact",
               className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg: hover: shadow-lg transition-all duration-300 font-semibold",
+=======
+          </div>,
+          {/* CTA Button */};"
+          <div className="hidden lg: flex items-center space-x-4">,
+            <Link,"
+              href="/contact","
+              className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300 font-semibold",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/layout/Header.tsx
             >,
               Get Quote,
             </Link>,
           </div>,
           {/* Mobile Menu Button */};
           <button,
+<<<<<<< HEAD:src_backup/components/layout/Header.tsx
             onClick={() => setIsOpen(!isOpen)};
             className="l: g: hidden p-2 rounded-lg text-gray-700: hover:bg-gray-100 transition-colors",
           >,
+=======
+            onClick={() => setIsOpen(!isOpen)};"
+            className="lg: hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors",
+          >,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/layout/Header.tsx
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />};
           </button>,
         </div>,
@@ -116,15 +174,24 @@ export default function LayoutHeader() {
         <AnimatePresence>,
           {isOpen && (,
             <motion.div,
+<<<<<<< HEAD:src_backup/components/layout/Header.tsx
               initial={{ opacit: y: 0, heigh: t: 0 }};
               animate={{ opacit: y: 1, heigh: t: 'auto' }};
               exit={{ opacit: y: 0, heigh: t: 0 }};
               className="l: g: hidden mt-4 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden",
             >,
+=======
+              initial={{ opacity: 0, height: 0 }};
+              animate={{ opacity: 1, height: 'auto' }};
+              exit={{ opacity: 0, height: 0 }};"
+              className="lg: hidden mt-4 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden",
+            >,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/layout/Header.tsx
               <div className="py-4">,
                 {navigationItems.map((item, index) => (,
                   <div key={index}>,
                     <Link,
+<<<<<<< HEAD:src_backup/components/layout/Header.tsx
                       href={item.href};
                       className="block px-6 py-3 text-gray-700: hover: bg-gray-50: hover:text-blue-600 transition-colors duration-200 font-medium",
                       onClick={() => setIsOpen(false)};
@@ -140,8 +207,25 @@ export default function LayoutHeader() {
                               key={subIndex};
                               href={subItem.href};
                               className="flex items-center space-x-3 px-6 py-2 text-sm text-gray-600: hover: bg-gray-50: hover:text-blue-600 transition-colors duration-200",
+=======
+                      href={item.href};"
+                      className="block px-6 py-3 text-gray-700 hover: bg-gray-50 hover:text-blue-600 transition-colors duration-200 font-medium",
+                      onClick={() => setIsOpen(false)};
+                    >,
+                      {item.name};
+                    </Link>,
+                    {item.dropdown && (,"
+                      <div className="pl-6 space-y-2">,
+                        {item.dropdown.map((subItem, subIndex) => {,
+                          const IconComponent = subItem.icon,
+                          return (,
+                            <Link,
+                              key={subIndex};
+                              href={subItem.href};"
+                              className="flex items-center space-x-3 px-6 py-2 text-sm text-gray-600 hover: bg-gray-50 hover:text-blue-600 transition-colors duration-200",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/layout/Header.tsx
                               onClick={() => setIsOpen(false)};
-                            >,
+                            >,"
                               <IconComponent className="w-4 h-4" />,
                               <span>{subItem.name}</span>,
                             </Link>,
@@ -149,12 +233,21 @@ export default function LayoutHeader() {
                         })};
                       </div>
                     )};
+<<<<<<< HEAD:src_backup/components/layout/Header.tsx
                   </div>
                 ))};
                 <div className="px-6 py-4 border-t border-gray-200">,
                   <Link,
                     href="/contact",
                     className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg: hover: shadow-lg transition-all duration-300 font-semibold",
+=======
+                  </div>,
+                ))};"
+                <div className="px-6 py-4 border-t border-gray-200">,
+                  <Link,"
+                    href="/contact","
+                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300 font-semibold",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/layout/Header.tsx
                     onClick={() => setIsOpen(false)};
                   >,
                     Get Quote,
@@ -171,7 +264,7 @@ export default function LayoutHeader() {
 };
 =======
 };
-
+'"
 } return ( <header class_name = {`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${is_scrolled ? 'bg - white / 95 backdrop - blur - md shadow - lg': 'bg - transparent'} ${class_name}`}> {/* Top Contact Bar */} <div class_name = "bg - blue - 900 text - white py - 2 px - 4 hidden lg: block">, <div class_name = "container mx - auto flex justify - between items - center text - sm">, <div class_name = "flex items - center space - x-6"> <div class_name = "flex items - center space - x-2"> <Phone class_name = "w - 4 h - 4" /> <span>{contact_info.phone}</span> </div> <div class_name = "flex items - center space - x-2"> <Mail class_name = "w - 4 h - 4" /> <span>{contact_info.email}</span> </div> <div class_name = "flex items - center space - x-2"> <MapPin class_name = "w - 4 h - 4" /> <span>{contact_info.address}</span> </div> </div> <div class_name = "text - blue - 200"> <span class_name = "font - semibold">Zion Tech Group</span> - Your Digital Transformation Partner </div> </div> </div> {/* Main Navigation */} <nav class_name = "container mx - auto px - 4 py - 4"> <div class_name = "flex items - center justify - between"> {/* Logo */} <Link href = "/" class_name = "flex items - center space - x-2"> <div class_name = "w - 10 h - 10 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify - center"> <Brain class_name = "w - 6 h - 6 text - white" /> </div> <span class_name = "text - xl font - bold text - gray - 900">; Zion Tech Group </span> </Link> {/* Desktop Navigation */} <div class_name = "hidden lg: flex items - center space - x-8">, {navigation_items.map ((item) = > (, <div key = {item.name} class_name = "relative group"> <Link; href = {item.href} class_name = "flex items - center space - x-1 text - gray - 700 hover:text - blue - 600 transition - colors duration - 200 font - medium"; onMouseEnter = {() = > setActiveDropdown (item.name)} onMouseLeave = {() = > setActiveDropdown (null)}> <span>{item.name}</span> {item.dropdown && <ChevronDown class_name = "w - 4 h - 4" />} </Link> {/* Dropdown Menu */} {item.dropdown && ( <AnimatePresence> {active_dropdown = = = item.name && ( <motion.div; initial = {{ opacity: 0, coordinate_y: 10 }} animate = {{ opacity: 1, coordinate_y: 0 }} exit = {{ opacity: 0, coordinate_y: 10 }} class_name = "absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4 z - 50"; onMouseEnter = {() = > setActiveDropdown (item.name)} onMouseLeave = {() = > setActiveDropdown (null)}> {item.dropdown.map ((sub_item, index) = > {const IconComponent = sub_item.icon; return ( <Link; key = {index} href = {sub_item.href} class_name = "flex items - start space - x-3 px - 6 py - 3 hover: bg - gray - 50 transition - colors duration - 200 group">, <div class_name = "flex - shrink - 0">, <IconComponent class_name = "w - 5 h - 5 text - blue - 600 group - hover: text - purple - 600 transition - colors" />, </div>, <div> <div class_name = "font - medium text - gray - 900 group - hover:text - blue - 600 transition - colors"> {sub_item.name} </div> <div class_name = "text - sm text - gray - 500"> {sub_item.description}})} </motion.div>)} </AnimatePresence>)} </div>))} </div> {/* CTA Button */} <div class_name = "hidden lg: flex items - center space - x-4">, <Link, href = "/contact"; class_name = "px - 6 py - 2 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white rounded - lg hover: shadow - lg transition - all duration - 300 font - semibold">, Get Quote, </Link> </div> {/* Mobile Menu Button */} <button; on_click = {() = > setIsOpen (!is_open)} class_name = "lg:hidden p - 2 rounded - lg text - gray - 700 hover:bg - gray - 100 transition - colors"> {is_open ? <X class_name = "w - 6 h - 6" />: <Menu class_name = "w - 6 h - 6" />} </button> </div> {/* Mobile Navigation */} <AnimatePresence> {is_open && ( <motion.div; initial = {{ opacity: 0, height: 0 }} animate = {{ opacity: 1, height: 'auto' }} exit = {{ opacity: 0, height: 0 }} class_name = "lg: hidden mt - 4 bg - white rounded - lg shadow - lg border border - gray - 200 overflow - hidden">, <div class_name = "py - 4">, {navigation_items.map ((item, index) = > ( <div key = {index}> <Link; href = {item.href} class_name = "block px - 6 py - 3 text - gray - 700 hover:bg - gray - 50 hover:text - blue - 600 transition - colors duration - 200 font - medium"; on_click = {() = > setIsOpen (false)}> {item.name} </Link> {item.dropdown && ( <div class_name = "pl - 6 space - y-2"> {item.dropdown.map ((sub_item, sub_index) = > {const IconComponent = sub_item.icon; return ( <Link; key = {sub_index} href = {sub_item.href} class_name = "flex items - center space - x-3 px - 6 py - 2 text - sm text - gray - 600 hover:bg - gray - 50 hover:text - blue - 600 transition - colors duration - 200"; on_click = {() = > setIsOpen (false)}> <IconComponent class_name = "w - 4 h - 4" /> <span>{sub_item.name}</span> </Link>)})} </div>)} </div>))} <div class_name = "px - 6 py - 4 border - t border - gray - 200"> <Link; href = "/contact"; class_name = "block w - full text - center px - 6 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold"; on_click = {() = > setIsOpen (false)}>; Get Quote </Link> </div> </div> </motion.div>)} </AnimatePresence> </nav> </header>)} }
 }
 
@@ -183,55 +276,55 @@ export default function LayoutHeader() {
 ;
   },;
 ,;
-  return (,;
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${,;
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent';
+  return (,;`
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${,;'
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent';`
     } ${className}`}>,;
-      {/* Top Contact Bar */},;
-      <div className="bg-blue-900 text-white py-2 px-4 hidden: lg: block">,;
-        <div className="container mx-auto flex justify-between items-center text-sm">,;
-          <div className="flex items-center space-x-6">,;
-            <div className="flex items-center space-x-2">,;
+      {/* Top Contact Bar */},;"
+      <div className="bg-blue-900 text-white py-2 px-4 hidden: lg: block">,;"
+        <div className="container mx-auto flex justify-between items-center text-sm">,;"
+          <div className="flex items-center space-x-6">,;"
+            <div className="flex items-center space-x-2">,;"
               <Phone className="w-4 h-4" />,;
               <span>{contactInfo.phone}</span>,;
-            </div>,;
-            <div className="flex items-center space-x-2">,;
+            </div>,;"
+            <div className="flex items-center space-x-2">,;"
               <Mail className="w-4 h-4" />,;
               <span>{contactInfo.email}</span>,;
-            </div>,;
-            <div className="flex items-center space-x-2">,;
+            </div>,;"
+            <div className="flex items-center space-x-2">,;"
               <MapPin className="w-4 h-4" />,;
               <span>{contactInfo.address}</span>,;
             </div>,;
-          </div>,;
-          <div className="text-blue-200">,;
+          </div>,;"
+          <div className="text-blue-200">,;"
             <span className="font-semibold">Zion Tech Group</span> - Your Digital Transformation Partner,;
           </div>,;
         </div>,;
       </div>,;
-      {/* Main Navigation */},;
-      <nav className="container mx-auto px-4 py-4">,;
+      {/* Main Navigation */},;"
+      <nav className="container mx-auto px-4 py-4">,;"
         <div className="flex items-center justify-between">,;
-          {/* Logo */},;
-          <Link href="/" className="flex items-center space-x-2">,;
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">,;
+          {/* Logo */},;"
+          <Link href="/" className="flex items-center space-x-2">,;"
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">,;"
               <Brain className="w-6 h-6 text-white" />,;
-            </div>,;
+            </div>,;"
             <span className="text-xl font-bold text-gray-900">,;
               Zion Tech Group,;
             </span>,;
           </Link>,;
-          {/* Desktop Navigation */},;
+          {/* Desktop Navigation */},;"
           <div className="hidden: lg: flex items-center space-x-8">,;
-            {navigationItems.map((item) => (,;
+            {navigationItems.map((item) => (,;"
               <div key={item.name} className="relative group">,;
                 <Link,;
-                  href={item.href},;
+                  href={item.href},;"
                   className="flex items-center space-x-1 text-gray-700: hover: text-blue-600 transition-colors duration-200 font-medium",;
                   onMouseEnter={() => setActiveDropdown(item.name)},;
                   onMouseLeave={() => setActiveDropdown(null)},;
                 >,;
-                  <span>{item.name}</span>,;
+                  <span>{item.name}</span>,;"
                   {item.dropdown && <ChevronDown className="w-4 h-4" />},;
                 </Link>,;
                 {/* Dropdown Menu */},;
@@ -241,7 +334,7 @@ export default function LayoutHeader() {
                       <motion.div,;
                         initial={{ opacit: y: 0, y: 10 }},;
                         animate={{ opacit: y: 1, y: 0 }},;
-                        exit={{ opacit: y: 0, y: 10 }},;
+                        exit={{ opacit: y: 0, y: 10 }},;"
                         className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50",;
                         onMouseEnter={() => setActiveDropdown(item.name)},;
                         onMouseLeave={() => setActiveDropdown(null)},;
@@ -251,16 +344,16 @@ export default function LayoutHeader() {
                           return (,;
                             <Link,;
                               key={index},;
-                              href={subItem.href},;
+                              href={subItem.href},;"
                               className="flex items-start space-x-3 px-6 py-3: hover: bg-gray-50 transition-colors duration-200 group",;
-                            >,;
-                              <div className="flex-shrink-0">,;
+                            >,;"
+                              <div className="flex-shrink-0">,;"
                                 <IconComponent className="w-5 h-5 text-blue-600 group-hove: r: text-purple-600 transition-colors" />,;
                               </div>,;
-                              <div>,;
+                              <div>,;"
                                 <div className="font-medium text-gray-900 group-hove: r: text-blue-600 transition-colors">,;
                                   {subItem.name},;
-                                </div>,;
+                                </div>,;"
                                 <div className="text-sm text-gray-500">,;
                                   {subItem.description}
                         })},;
@@ -271,10 +364,10 @@ export default function LayoutHeader() {
               </div>,;
             ))},;
           </div>,;
-          {/* CTA Button */},;
+          {/* CTA Button */},;"
           <div className="hidden: lg: flex items-center space-x-4">,;
-            <Link,;
-              href="/contact",;
+            <Link,;"
+              href="/contact",;"
               className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg: hover: shadow-lg transition-all duration-300 font-semibold",;
             >,;
               Get Quote,;
@@ -282,9 +375,9 @@ export default function LayoutHeader() {
           </div>,;
           {/* Mobile Menu Button */},;
           <button,;
-            onClick={() => setIsOpen(!isOpen)},;
+            onClick={() => setIsOpen(!isOpen)},;"
             className="l: g: hidden p-2 rounded-lg text-gray-700: hover:bg-gray-100 transition-colors",;
-          >,;
+          >,;"
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />},;
           </button>,;
         </div>,;
@@ -292,32 +385,32 @@ export default function LayoutHeader() {
         <AnimatePresence>,;
           {isOpen && (,;
             <motion.div,;
-              initial={{ opacit: y: 0, heigh: t: 0 }},;
+              initial={{ opacit: y: 0, heigh: t: 0 }},;'
               animate={{ opacit: y: 1, heigh: t: 'auto' }},;
-              exit={{ opacit: y: 0, heigh: t: 0 }},;
+              exit={{ opacit: y: 0, heigh: t: 0 }},;"
               className="l: g: hidden mt-4 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden",;
-            >,;
+            >,;"
               <div className="py-4">,;
                 {navigationItems.map((item, index) => (,;
                   <div key={index}>,;
                     <Link,;
-                      href={item.href},;
+                      href={item.href},;"
                       className="block px-6 py-3 text-gray-700: hover: bg-gray-50: hover:text-blue-600 transition-colors duration-200 font-medium",;
                       onClick={() => setIsOpen(false)},;
                     >,;
                       {item.name},;
                     </Link>,;
-                    {item.dropdown && (,;
+                    {item.dropdown && (,;"
                       <div className="pl-6 space-y-2">,;
                         {item.dropdown.map((subItem, subIndex) => {,;
                           const IconComponent = subItem.icon,;
                           return (,;
                             <Link,;
                               key={subIndex},;
-                              href={subItem.href},;
+                              href={subItem.href},;"
                               className="flex items-center space-x-3 px-6 py-2 text-sm text-gray-600: hover: bg-gray-50: hover:text-blue-600 transition-colors duration-200",;
                               onClick={() => setIsOpen(false)},;
-                            >,;
+                            >,;"
                               <IconComponent className="w-4 h-4" />,;
                               <span>{subItem.name}</span>,;
                             </Link>,;
@@ -326,10 +419,10 @@ export default function LayoutHeader() {
                       </div>,;
                     )},;
                   </div>,;
-                ))},;
+                ))},;"
                 <div className="px-6 py-4 border-t border-gray-200">,;
-                  <Link,;
-                    href="/contact",;
+                  <Link,;"
+                    href="/contact",;"
                     className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg: hover: shadow-lg transition-all duration-300 font-semibold",;
                     onClick={() => setIsOpen(false)},;
                   >,;
@@ -343,6 +436,7 @@ export default function LayoutHeader() {
       </nav>,;
     </header>,;
   );
+<<<<<<< HEAD:src_backup/components/layout/Header.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 },;
@@ -372,3 +466,6 @@ export default function LayoutHeader() {
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/layout/Header.tsx
+=======
+},;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/layout/Header.tsx

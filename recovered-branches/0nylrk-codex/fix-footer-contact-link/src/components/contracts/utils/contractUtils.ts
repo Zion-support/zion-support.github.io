@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,37 +56,38 @@ interface Milestone {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import { supabase } from "@/integrations/supabase/client","
+import { TalentProfile } from "@/types/talent",";
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";"
+import { ContractFormValues } from "../components/ContractForm";
+interface Milestone {}
+  title: string;
+  description: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  estimatedHours: number
+"
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator","
+import { ContractFormValues } from "../components/ContractForm",
+
+interface Milestone {}
+  title: string,
+  description: string,
+  dueDate: string,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+;
+  estimatedHours: number;
 }
 export async function generateContract(
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  const additionalClauses = values && values.additionalClauses || [];
-  
-  // Prepare milestone data if we have AI-generated milestones
-  const milestoneData = generatedMilestones && generatedMilestones.length > 0 
-    ? generatedMilestones && generatedMilestones.map(m => ({
-        title: m && m.title;
-        description: m && m.description;
-        dueDate: m && m.dueDate,
-        estimatedHours: m && m.estimatedHours
-      }))
-    : [];
-  
-  const { data, error } = await supabase && supabase.functions.invoke("generate-contract", {
 
-    body: {
+    body: {};
       talentName: talent && talent.full_name;
       clientName: clientName;
 
+<<<<<<< HEAD
       projectName: values && values.projectName;
       scopeSummary: values && values.scopeSummary;
       startDate: values && values.startDate.toISOString();
@@ -133,25 +135,17 @@ export async function generateContract(
       talentName: talent && talent.full_name;
       clientName: clientName;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       milestones: milestoneData}
   });
 
-  if (error) {
-    throw error
+  if (error) {}
+    throw error;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  values: ContractFormValues,
 
-  // Prepare milestone data if we have AI-generated milestones
-  const milestoneData = generatedMilestones.length > 0
-    ? generatedMilestones.map(m => ({
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title: m.title,
 =======
 interface Milestone {
@@ -167,12 +161,12 @@ interface Milestone {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         description: m.description,
         dueDate: m.dueDate,
-        estimatedHours: m.estimatedHours
+        estimatedHours: m.estimatedHours;
       }))
     : [],
-  
-  const { data, error } = await supabase.functions.invoke("generate-contract", {
-    body: {
+  "
+  const { data, error } = await supabase.functions.invoke("generate-contract", {}
+    body: {}
       talentName: talent.full_name,
       clientName: clientName,
       projectName: values.projectName,
@@ -183,19 +177,24 @@ interface Milestone {
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
 
+<<<<<<< HEAD
   }
   
 
   if (data.success && data.contract) {
     return data.contract  } else {
+=======
+  } else {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     throw new Error("Failed to generate contract")
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-=======
+
       milestones: milestoneData}
   });
   
+<<<<<<< HEAD
   if (error) {
     throw error
 =======
@@ -208,6 +207,14 @@ interface Milestone {
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
+=======
+  if (error) {}
+    throw error;
+"
+import { supabase } from "@/integrations/supabase/client",;"
+import { TalentProfile } from "@/types/talent",;"
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ContractFormValues } from "../components/ContractForm",;
 interface Milestone {;
   title: string,,
@@ -231,7 +238,7 @@ export async function generateContract(;
         dueDate: m.dueDate,;
         estimatedHours: m.estimatedHours;
       }));
-    : [],;
+    : [],;"
   const { data, error } = await supabase.functions.invoke("generate-contract", {;
     body: {;
       talentName: talent.full_name,;
@@ -252,6 +259,7 @@ export async function generateContract(;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (data.success && data.contract) {
@@ -268,16 +276,21 @@ export async function generateContract(;
   } else {
 <<<<<<< HEAD
 <<<<<<< HEAD
-    throw new Error("Failed to generate contract")
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { supabase } from '@/integrations / supabase / client';
-import { TalentProfile } from '@/types / talent';
-import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';
+  
+  if (data.success && data.contract) {}
+    return data.contract;
+  if (data && data.success && data && data.contract) {}
+    return data && data.contract;
+  } else {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    throw new Error("Failed to generate contract")
+
+import { supabase } from '@/integrations / supabase / client';'
+import { TalentProfile } from '@/types / talent';'
+import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';'
 import { ContractFormValues } from '../components / ContractForm';
-interface Milestone {
+interface Milestone {}
   title: string;
   description: string;
   due_date: string,
@@ -285,37 +298,35 @@ interface Milestone {
 }
 export async function generate_contract (
   values: ContractFormValues,
-  talent: TalentProfile,
+  talent: TalentProfile,;
   client_name: string;
-  generated_milestones: GeneratedMilestone[]): Promise < string> {
+  generated_milestones: GeneratedMilestone[]): Promise < string> {}
   const additional_clauses = values.additional_clauses || [];
+
+
+
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
-
-
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
   // Prepare milestone data if we have AI - generated milestones;
   const milestone_data = generated_milestones.length > 0;
-    ? generated_milestones.map (m => ({
+    ? generated_milestones.map (m => ({}
         title: m.title;
         description: m.description;
         due_date: m.due_date,
         estimated_hours: m.estimated_hours;
       }));
     : [];
-;
-  const { data, error } = await supabase.functions.invoke ("generate - contract", {
-    body: {
+;"
+  const { data, error } = await supabase.functions.invoke ("generate - contract", {}
+    body: {}
       talent_name: talent.full_name;
       client_name: client_name;
       project_name: values.project_name;
@@ -328,13 +339,19 @@ export async function generate_contract (
       milestones: milestone_data}
   });
 ;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     throw error;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
+<<<<<<< HEAD
+=======
+  // Check condition;
+if ( {) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 <<<<<<< HEAD
 ;
@@ -348,8 +365,8 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
     return data.contract;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   } else {;
     throw new Error("Failed to generate contract");
@@ -397,3 +414,11 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  } else {"
+    throw new Error ("Failed to generate contract");
+  }
+}
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,11 +10,11 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
+
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -25,9 +26,16 @@
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
-import type { NextApiRequest, NextApiResponse } from "next";
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";"
 import path from "path";
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 import {
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
@@ -91,10 +99,14 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
+=======
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
   ensureDisputeUploadDir,
-  getDisputeById,
-  upsertDispute,;
+  getDisputeById,;
+  upsertDispute,;"
 } from "../../../../utils/fsdb";
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 import {
 <<<<<<< HEAD
 =======
@@ -114,11 +126,17 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
+=======
+import {}
+  parseUserFromRequest,;
+  ensureInvolvedOrAdmin,;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 } from "../../../../utils/auth";
-export const config = {
+export const config = {";
   api: { bodyParser: { sizeLimit: "20mb" } },;
 };
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
@@ -140,13 +158,19 @@ export default async function handler(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default async function handler() { return null; }
+  const { id } = req.query;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
+"
   if (typeof id !== "string")
-
+"
     return res && res.status(400).json({ error: "Invalid id" });
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -170,10 +194,18 @@ export default async function handler(
     return res.status(400).json({ error: 'Invalid id' });
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
-  const user = parseUserFromRequest(req);
+=======
 
-  if (req && req.method === "POST") {
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
+  const user = parseUserFromRequest(req);
+"
+  if (req && req.method === "POST") {}
     const dispute = await getDisputeById(id);
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -185,12 +217,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
+"
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
 
     }
     const { files } =
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
 =======
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
@@ -202,53 +238,63 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
 import type { NextApiRequest, NextApiResponse } from './next';
+=======
+
+
+
+import type { NextApiRequest, NextApiResponse } from './next';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 import path from './path';
-import {
+import {}
   ensureDisputeUploadDir,
   getDisputeById,
-  upsert_dispute,
+  upsert_dispute,';
 } from '../../../../utils / fsdb';
-import {
+import {}
   parseUserFromRequest,
-  ensureInvolvedOrAdmin,
+  ensureInvolvedOrAdmin,';
 } from '../../../../utils / auth';
-export const config = {
+export const config = {"
   api: { body_parser: { size_limit: "20mb" } },
-}
+};
 ;
-export default async /**
- * handler - Function description
+export default async /**;
+ * handler - Function description;
  */
-function handler() {
+function handler() {}
   const { id } = req.query;
-  if (
-    return res.status (400).json ({ error: "Invalid id" })) {
-  $2
+  if ("
+    return res.status (400).json ({ error: "Invalid id" })) {}
+  $2;
 }
   const user = parseUserFromRequest (req);
 ;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    const dispute = await getDisputeById (id);
-    if (return res.status (404).json ({ error: "Dispute not found" })) {
-  $2
+    const dispute = await getDisputeById (id);"
+    if (return res.status (404).json ({ error: "Dispute not found" })) {}
+  $2;
 }
-    try {
+    try {}
       ensureInvolvedOrAdmin (user, dispute.clientUserId, dispute.talentUserId);
-    } catch (e: any) {
+    } catch (e: any) {"
       return res.status (e.status_code || 403).json ({ error: "Forbidden" });
     }
     const { files } =;
       req.body ||;
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
-      ({} as {
+
+      ({} as {}
         files: { file_name: string; mime_type: string; base64: string }[];
       });
 
@@ -260,8 +306,9 @@ if ( {) {
 
 
 
-async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {"
   const fs = await import("fs");
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
   await new Promise<void>((resolve, reject) => {
 <<<<<<< HEAD
 
@@ -383,15 +430,14 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import("fs");
   await new Promise<void>((resolve, reject) => {
     fs.mkdir(
-      require("path").dirname(filePath),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    fs.mkdir(
+  await new Promise<void>((resolve, reject) => {}
+    fs.mkdir("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
       require("path").dirname(filePath),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
       { recursive: true },
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 =======
 
       { recursive: true }
@@ -468,10 +514,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           err2 ? reject (err2) : resolve (),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      (err: any) => {}
+        if (return reject (err)) {}
+  $2;
+}
+        fs.write_file (file_path, data, (err2: any) =>;
+          err2 ? reject (err2) : resolve (),
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
         );
       }
     );
   });
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -492,11 +548,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
 }
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
 
 }
 
-    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
+
+}
+
+
+}
+'
+    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {}
       if (err) return reject(err);
       fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
     })
@@ -506,6 +570,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -516,28 +581,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['POST']);
-  return res.status(405).end('Method Not Allowed');
-import type { NextApiRequest, NextApiResponse } from 'next';
-import path from 'path';
-import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
+export default function handler() { return null; }
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import path from 'path';'
+import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';'
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
-export const config = {;
+export const config = {;'
   api: { bodyParser: { sizeLimit: '20mb' } }};
-export default async function handler(req, res) {
-  try {
-  const { id } = req.query;
+export default async function handler(req, res) {}
+  try {};
+  const { id } = req.query;'
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
-    } catch (error) {
+    } catch (error) {'
       return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
@@ -548,6 +615,7 @@ export default async function handler(req, res) {
 
 
 }
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
 
 =======
@@ -559,6 +627,10 @@ export default async function handler(req, res) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
@@ -566,14 +638,11 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
 }
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -582,37 +651,42 @@ export default async function handler(req, res) {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
   } catch (error) {
     console.error("Error:", error);
+=======
+
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-    const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] },;
+    const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] },;'
     if (!Array.isArray(files) || files.length === 0) return res.status( error: 'No files' ).json({$2});
     const now = new Date().toISOString();
     const dir = await ensureDisputeUploadDir(dispute.id);
-    for (const f of files) {;
-      const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
+    for (const f of files) {;'
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');'
       const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64'),;
       const filePath = path.join(dir, safeName);
       await fsPromisesWrite(filePath, buffer);
       dispute.attachments.push({;
         id: `${Date.now()}-${safeName}`,;
         fileName: safeName,;
-        fileSize: buffer.length,;
+        fileSize: buffer.length,;'
         mimeType: f.mimeType || 'application/octet-stream',;
         path: filePath,;
         uploadedAt: now,;
         uploadedByUserId: user.id});
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -620,65 +694,67 @@ export default async function handler(req, res) {
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-  res.setHeader('Allow', 'POST');
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;'
+  res.setHeader('Allow', 'POST');'
   return res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;'
   const fs = await import('fs');
-  await new Promise<void>((resolve, reject) => {;
-    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {;
+  await new Promise<void>((resolve, reject) => {;'
+    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {;'
       if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()));
     });
   });
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 <<<<<<< HEAD:pages/api/disputes/[id]/upload.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -703,3 +779,10 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/disputes/[id]/upload.ts
+=======
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/disputes/[id]/upload.ts

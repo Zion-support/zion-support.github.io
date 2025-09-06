@@ -54,11 +54,15 @@ export default function MicroSaasPage() {
       title: 'Focused Solutions',
       description: 'Specialized tools that do one thing exceptionally well, without enterprise complexity. Each service solves a specific business problem with precision.',
       color: 'from-rose-500 to-pink-600',
+<<<<<<< HEAD
       bgColor: 'from-rose-500/10 to-rose-500/10'
     }
   ];
   
   const microSaasServices = [
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     {
       name: 'AI Content Generator Pro',
       tagline: 'Professional AI-powered content creation',
@@ -554,6 +558,7 @@ export default function MicroSaasPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -563,6 +568,9 @@ export default function MicroSaasPage() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Not just mockups - these are fully functional, production-ready tools that solve real business problems.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
             
             {/* Category Filter */}

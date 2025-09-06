@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -23,23 +24,57 @@ import * as React from "react"
 import { PanelLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+=======
+import * as React from "react""
+import { PanelLeft } from "lucide-react""
+import { Button } from "@/components/ui/button""
+import { cn } from "@/lib/utils""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useSidebar } from "./sidebar-context"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>
   React.ComponentProps<typeof Button>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()  return (
+=======
+
+
+
+export const SidebarTrigger = React.forwardRef<
+  React.ElementRef<typeof Button>
+  React.ComponentProps<typeof Button>
+>((props, ref) => {}
+  const { toggleSidebar } = useSidebar();
+;
+import * as React from &quot;react & quot;
+import { PanelLeft } from &quot;lucide-react & quot;
+import { Button } from &quot;@/components / ui / button & quot;
+import { cn } from &quot;@/lib / utils & quot;
+import { use_sidebar } from &quot;./sidebar - context & quot;
+;
+export const SidebarTrigger = React.forward_ref<;
+  React.ElementRef < typeof Button>,
+  React.ComponentProps < typeof Button>;
+>((props, ref) => {}
+  const { toggle_sidebar } = use_sidebar ();
+
+
+
+  return (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Button;
       ref={ref}
       data - sidebar=&quot;trigger & quot;
       variant=&quot;ghost & quot;
       size=&quot;icon & quot;
       className={cn (&quot;h - 7 w - 7&quot;, props.class_name)}
-      on_click={(event) => {
+      on_click={(event) => {}
         props.on_click?.(event);
         toggle_sidebar ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,9 +103,16 @@ export const SidebarTrigger = React.forwardRef<
       data-sidebar="trigger"
       variant="ghost"
       size="icon"
-      className={cn("h-7 w-7", props.className)}
-<<<<<<< HEAD
+=======
 
+      ref={ref}"
+      data-sidebar="trigger""
+      variant="ghost""
+      size="icon""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      className={cn("h-7 w-7", props.className)}
+
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }}
       {...props}
@@ -97,15 +139,25 @@ SidebarTrigger.displayName = "SidebarTrigger"
 });
 SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
 ;      }}
+=======
+
+      onClick={(event) => {}
+        props.onClick?.(event)
+        toggleSidebar()
+
+
+      }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {...props}
     >
-      <PanelLeft />
+      <PanelLeft />"
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   )
 })
-SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
+SidebarTrigger.displayName = &quot;SidebarTrigger&quot;"
 SidebarTrigger.displayName = "SidebarTrigger"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,3 +171,7 @@ SidebarTrigger.displayName = "SidebarTrigger"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

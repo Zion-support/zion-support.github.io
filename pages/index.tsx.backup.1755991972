@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { 
+<<<<<<< HEAD
   Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, 
   Star, Users, Globe, Lock, Rocket, Cpu, Database, TrendingUp, Clock, Target, 
   Building, Award, DollarSign, ChartBar, Code, BookOpen, Activity, Smartphone, 
@@ -26,6 +27,9 @@ export default function HomePage() {
     { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <BotIcon className="w-6 h-6" /> },
     { value: '$1B+', label: 'Market Value', color: 'text-yellow-400', icon: <DollarIcon className="w-6 h-6" /> },
     { value: '2500%+', label: 'Average ROI', color: 'text-purple-400', icon: <TrendingUp className="w-6 h-6" /> },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const heroStats = marketStats;
@@ -110,6 +114,7 @@ export default function HomePage() {
       color: 'from-purple-500 to-indigo-600'
     },
     {
+<<<<<<< HEAD
       name: 'Space Technology & Mining',
       description: 'AI-powered space exploration and asteroid mining platforms',
       icon: <RocketIcon className="w-8 h-8" />,
@@ -234,14 +239,21 @@ export default function HomePage() {
         <meta name="keywords" content="micro SaaS, AI services, quantum computing, cybersecurity, healthcare AI, fintech, logistics AI, space technology" />
         <meta property="og:title" content="Zion Tech Group - Revolutionary Micro SaaS Services" />
         <meta property="og:description" content="500+ innovative micro SaaS services powered by AI and quantum computing" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
 
+<<<<<<< HEAD
       <UltraFuturisticBackground>
         {/* Hero Section */}
       <section className="relative z-10 pt-20 pb-32 px-4 sm:px-6 lg:px-8">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -249,6 +261,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
+<<<<<<< HEAD
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               The Future of
               <span className="block text-6xl md:text-8xl bg-gradient-to-r from-blue-400 via-indigo-500 to-violet-500 bg-clip-text text-transparent">
@@ -258,6 +271,9 @@ export default function HomePage() {
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Discover 500+ revolutionary micro SaaS services powered by AI, quantum computing, and cutting-edge technology. 
               Transform your business with our innovative solutions that deliver unprecedented ROI and competitive advantages.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </motion.div>
 
@@ -296,6 +312,7 @@ export default function HomePage() {
           >
             {heroStats.map((stat, index) => (
               <motion.div
+<<<<<<< HEAD
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -313,6 +330,9 @@ export default function HomePage() {
                   </div>
                   <div className="text-sm text-gray-400">
                     {stat.label}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
               </motion.div>
@@ -322,7 +342,11 @@ export default function HomePage() {
       </section>
 
       {/* Revolutionary Services Section */}
+<<<<<<< HEAD
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -331,23 +355,32 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
+<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
               Revolutionary Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future with our cutting-edge services that combine AI, quantum computing, and innovative technology
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {revolutionaryServices.map((service, index) => (
               <motion.div
+<<<<<<< HEAD
                 key={service.name}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
+<<<<<<< HEAD
                 <UltraFuturisticCard
                   variant="default"
                   className="h-full group hover:scale-105 transition-transform duration-300"
@@ -410,6 +443,13 @@ export default function HomePage() {
 
       {/* Service Categories Section */}
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+=======
+
+          </div>
+        </section>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -418,6 +458,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
+<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-6">
               Service Categories
             </h2>
@@ -430,10 +471,14 @@ export default function HomePage() {
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.name}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
               >
                 <div className={`bg-gradient-to-br ${category.color} p-6 rounded-2xl group hover:scale-105 transition-all duration-300 cursor-pointer`}>
                   <div className="flex items-center justify-between mb-4">
@@ -454,12 +499,38 @@ export default function HomePage() {
                     <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
+=======
+
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
       {/* Featured Services Section */}
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -537,6 +608,9 @@ export default function HomePage() {
 
       {/* Contact CTA Section */}
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -544,6 +618,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -590,6 +665,9 @@ export default function HomePage() {
                 <span className="text-sm text-gray-400">Address</span>
                 <span className="text-white font-semibold text-center text-sm">{contactInfo.address}</span>
               </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
 
             {/* Contact Information */}

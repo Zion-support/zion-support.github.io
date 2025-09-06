@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from "@/components/GradientHeading";
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
@@ -43,17 +44,20 @@ import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { GradientHeading } from "@/components/GradientHeading";
+=======
+import { GradientHeading } from "@/components/GradientHeading";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
-export function NewsletterSection() {
-  return (
-    <section className="py-20 bg-zion-blue-dark" id="newsletter">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+export function NewsletterSection() {}
+  return ("
+    <section className="py-20 bg-zion-blue-dark" id="newsletter">"
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="max-w-4xl mx-auto text-center">
-          <GradientHeading>Stay Informed</GradientHeading>
-          <p className="mt-4 text-zion-slate-light text-xl mb-8">
-            Subscribe to our newsletter for the latest updates on Zion's
+          <GradientHeading>Stay Informed</GradientHeading>"
+          <p className="mt-4 text-zion-slate-light text-xl mb-8">;
+            Subscribe to our newsletter for the latest updates on Zion's;
             services, Google trending tech news, and marketplace opportunities.
-          </p>
+          </p>"
           <div className="max-w-md mx-auto">
             <EnhancedNewsletterForm />
           </div>
@@ -67,7 +71,15 @@ export function NewsletterSection() {
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",  );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+<<<<<<< HEAD
   )
+=======
+
+
+
+  )
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
 import { GradientHeading } from "@/components/GradientHeading",;
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
@@ -75,6 +87,7 @@ import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import {GradientHeading} from "@/components/GradientHeading";
 import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -151,17 +164,38 @@ import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",  )
 }
 ;
 
+=======
+
+    </section>;
+  );
+
+
+  );
+
+
+
+  );
+
+}
+;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </section>);
 }
     </section>;
   ),;
-} export function NewsletterSection () {
-  return (<section className="py-20 bg-zion-blue-dark" id="newsletter" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="max-w-4xl mx-auto text-center" > <GradientHeading>Stay Informed</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl mb-8" > Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities. max-w-md mx-auto" > <EnhancedNewsletterForm /> </div> </div> </div> </section> 
-  );
+} export function NewsletterSection() { return null; }
 }
 }
 ;
 
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

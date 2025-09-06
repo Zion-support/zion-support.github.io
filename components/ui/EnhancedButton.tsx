@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -21,13 +22,19 @@ class ErrorBoundary extends React.Component {
 }
 pr-12243
 import React from "react";
+=======
+
+
+import React from "react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import clsx from "clsx";
 export type EnhancedButtonProps =;
-  React && React.ButtonHTMLAttributes<HTMLButtonElement> & {;
-    variant?: "primary" | "secondary" | "ghost";
+  React && React.ButtonHTMLAttributes<HTMLButtonElement> & {;"
+    variant?: "primary" | "secondary" | "ghost";"
     size?: "sm" | "md" | "lg";
     fullWidth?: boolean;
 
+<<<<<<< HEAD
 pr-12243
   };
 const baseStyles =;
@@ -35,25 +42,33 @@ const baseStyles =;
 const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
   sm: "text-sm px-3 py-2",;
   md: "text-sm px-4 py-3",;
+=======
+const baseStyles =;"
+  "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";"
+const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;"
+  sm: "text-sm px-3 py-2",;"
+  md: "text-sm px-4 py-3",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   lg: "text-base px-5 py-3",;
 };
-const variantStyles: Record<;
+const variantStyles: Record<;"
   NonNullable<EnhancedButtonProps["variant"]>,;
   string;
-> = {;
+> = {;"
   primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400",;
-  secondary:;
+  secondary:;"
     "bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100",;
-  ghost:;
+  ghost:;"
     "bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100",;
 };
 export default function EnhancedButton(): any ({;
-  className,;
-  variant = "primary",;
+  className,;"
+  variant = "primary",;"
   size = "md",;
   fullWidth,;
   ...props;
 }: EnhancedButtonProps) {;
+<<<<<<< HEAD
   return (
     <button
       className={clsx(
@@ -122,17 +137,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className={clsx(
 pr-12243
         baseStyles
+=======
+
+
+
+        baseStyles;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         sizeStyles[size]
-        variantStyles[variant]
+        variantStyles[variant]"
         fullWidth && "w-full"
-        className
+        className;
       )}
       {...props}
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
 }
 
-
-}
-
+<<<<<<< HEAD
 pr-12243
 import React from './react';
 import clsx from './clsx';
@@ -178,17 +204,25 @@ function EnhancedButton() {
 }
 
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     />;
 );
 }
 
+<<<<<<< HEAD
     />
   );
 main
 pr-12243
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
-const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
+const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {}
   return (
     <div className={className || ''}>
       <h1>EnhancedButton</h1>
@@ -198,8 +232,17 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
 };
 
 export default EnhancedButton;
+<<<<<<< HEAD
 }
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+
+}
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

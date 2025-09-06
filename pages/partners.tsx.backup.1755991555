@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -302,11 +303,15 @@ export default function PartnersPage() {
           <div className="relative z-10 container mx-auto px-4 text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -354,11 +359,15 @@ export default function PartnersPage() {
                 </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Partnership Benefits */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
@@ -374,6 +383,9 @@ export default function PartnersPage() {
           <div className="container mx-auto px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -381,6 +393,7 @@ export default function PartnersPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -458,12 +471,16 @@ export default function PartnersPage() {
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Partnership Types */}
         <section className="py-20 px-4">
@@ -584,10 +601,9 @@ export default function PartnersPage() {
             </div>
           </div>
         </section>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-        {/* Partnership Process */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -595,46 +611,8 @@ export default function PartnersPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Partnership Process
-              </h2>
-              <p className="text-xl text-gray-400">
-                Simple steps to establish a successful partnership
-              </p>
-            </motion.div>
-            
-            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {partnershipProcess.map((step, index) => (
-                <motion.div
-                  key={step.step}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="flex gap-6 p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50"
-                >
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-2xl">
-                      {step.step}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-300 mb-3">
-                      {step.description}
-                    </p>
-                    <div className="text-cyan-400 font-medium">
-                      Timeline: {step.duration}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
+<<<<<<< HEAD
         {/* Existing Partners */}
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
@@ -697,6 +675,8 @@ export default function PartnersPage() {
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -704,6 +684,7 @@ export default function PartnersPage() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -716,12 +697,16 @@ export default function PartnersPage() {
           <div className="container mx-auto px-4 text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -767,11 +752,15 @@ export default function PartnersPage() {
                   Explore Our Solutions
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </main>
 =======
@@ -781,6 +770,9 @@ export default function PartnersPage() {
       </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Layout>
   );
 };

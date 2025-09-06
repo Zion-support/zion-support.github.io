@@ -60,19 +60,20 @@ export type InterviewStatus =
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 export type InterviewStatus =
-  | "requested"
-  | "confirmed"
-  | "declined"
-  | "rescheduled"
-  | "completed"
+  | "requested""
+  | "confirmed""
+  | "declined""
+  | "rescheduled""
+  | "completed"";
   | "cancelled";
-
+"
 export type InterviewType = "video" | "phone" | "in-person";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 export type InterviewStatus =
   | 'requested'
   | 'confirmed'
@@ -105,10 +106,18 @@ export type MeetingPlatform =
   | "google-meet"
   | "teams"
   | "other"
+=======
+export type MeetingPlatform ="
+  | "zoom""
+  | "google-meet""
+  | "teams""
+  | "other"";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | "in-app";
 
 export interface Interview {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,6 +153,11 @@ export interface Interview {
 =======
 export interface Interview {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+export interface Interview {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   client_id: string;
   talent_id: string;
@@ -191,6 +205,7 @@ export interface InterviewRequest {
 
 export interface InterviewRequest {;
 
+<<<<<<< HEAD
   client_avatar?: string
   talent_avatar?: string
 }
@@ -210,6 +225,15 @@ export interface InterviewRequest {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  client_avatar?: string;
+  talent_avatar?: string;
+}
+export interface InterviewRequest {};
+export interface InterviewRequest {;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -233,6 +257,7 @@ export interface InterviewResponse {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -274,6 +299,10 @@ export interface InterviewResponse {;  interview_id: string;
 export interface InterviewResponse {
 
 export interface InterviewResponse {;
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   interview_id: string;
   status: InterviewStatus;
 
@@ -327,6 +356,7 @@ export interface InterviewResponse {;
   alternative_date?: string;
   message?: string;
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -372,3 +402,6 @@ export interface InterviewResponse {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/learn/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -69,43 +70,42 @@ export default function LearnMarketplace(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
   const [loading, setLoading] = useState(true);
   useEffect(() => {;
-    async function load() {;
-      setLoading(true);
-      const params = new URLSearchParams();
-
-
-      setLoading(false);
-import {useEffect, useState} from 'react';
-import CourseCard, { Course } from '../../components / learn / CourseCard';
+    async function load() { return null; }
+import {useEffect, useState} from 'react';'
+import CourseCard, { Course } from '../../components / learn / CourseCard';'
 import FilterBar from '../../components / learn / FilterBar';
-export default /**
- * LearnMarketplace - Function description
+export default /**;
+ * LearnMarketplace - Function description;
  */
-function LearnMarketplace() {
-  const [filters, set_filters] = useState ({
-    category: '',
-    level: '',
+function LearnMarketplace() {}
+  const [filters, set_filters] = useState ({'
+    category: '','
+    level: '','
     is_free: '',
   });  const [courses, set_courses] = useState < Course[]>([]);
   const [loading, set_loading] = useState (true);
 ;
-  useEffect (() => {
+  useEffect (() => {}
     async /**
- * load - Function description
+ * load - Function description;
  */
-function load() {
+function load() {}
       set_loading (true);
-      const params = new URLSearchParams ();
-      if (params.set ('category', filters.category)) {
-  $2
-}
-      if (params.set ('level', filters.level)) {
-  $2
-}
-      if (params.set ('is_free', filters.is_free)) {
-  $2
+      const params = new URLSearchParams ();'
+      if (params.set ('category', filters.category)) {}
+  $2;
+}'
+      if (params.set ('level', filters.level)) {}
+  $2;
+}'
+      if (params.set ('is_free', filters.is_free)) {}
+  $2;
 }
       const resp = await fetch (`/api / learn / courses?${params.to_string ()}`);
       const data = await resp.json ();
@@ -122,6 +122,7 @@ function load() {
     }
     load()
   }, [filters]);
+<<<<<<< HEAD:pages_backup/learn/index.tsx
 <<<<<<< HEAD
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
@@ -271,6 +272,15 @@ export default function LearnMarketplace() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {
     console.error("Error:", error);
+=======
+
+'
+import CourseCard, { Course } from '../../components/learn/CourseCard';'
+import FilterBar from '../../components/learn/FilterBar';
+
+      } catch (error) {}
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -278,6 +288,7 @@ export default function LearnMarketplace() {
   }, [filters]),
 
 
+<<<<<<< HEAD:pages_backup/learn/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -288,6 +299,12 @@ export default function LearnMarketplace() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6">
+=======
+
+
+  return ("
+    <div className="space-y-6">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
       <div className="flex items-end justify-between gap-4">
         <div>
 <<<<<<< HEAD:pages/learn/index.tsx
@@ -313,6 +330,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {loading ? (
         <div>Loading...</div>
       ) : (
+<<<<<<< HEAD:pages_backup/learn/index.tsx
 <<<<<<< HEAD:pages/learn/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -330,9 +348,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     <div className='space-y-6'>;
+=======
+'
+    <div className='space-y-6'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
       <div className='flex items-end justify-between gap-4'>;
-        <div>;
-          <h1 className='text-2xl font-semibold'>Zion Academy</h1>;
+        <div>;'
+          <h1 className='text-2xl font-semibold'>Zion Academy</h1>;'
           <div className='text-gray-500 text-sm'>;
             Courses • Certifications • Career Boost;
           </div>        </div>;
@@ -342,10 +364,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {loading ? (;
         <div>Loading...</div>;
-      ) : (;
+      ) : (;'
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
           {courses && courses.map(c => (            <CourseCard key={c && c.id} course={c} />;
 
+<<<<<<< HEAD:pages_backup/learn/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -377,6 +400,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <CourseCard key={c.id} course={c} />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
           ))}
         </div>;
       )}
@@ -384,6 +410,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );
 
+<<<<<<< HEAD:pages_backup/learn/index.tsx
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -396,21 +423,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className='space - y-6'>;
+=======
+
+'
+    <div className='space - y-6'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx
       <div className='flex items - end justify - between gap - 4'>;
-        <div>;
-          <h1 className='text - 2xl font - semibold'>Zion Academy</h1>;
+        <div>;'
+          <h1 className='text - 2xl font - semibold'>Zion Academy</h1>;'
           <div className='text - gray - 500 text - sm'>;
             Courses • Certifications • Career Boost;
           </div>        </div>;
       </div>;
       <FilterBar {...filters} on_change={set_filters} />;
       {loading ? (
-        <div > Loading...</div>) : (
+        <div > Loading...</div>) : ('
         <div className='grid sm:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
           {courses.map (c => (            <CourseCard key={c.id} course={c} />))}
         </div>)}
     </div>);
 ;
+<<<<<<< HEAD:pages_backup/learn/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -445,3 +478,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/learn/index.tsx
+=======
+
+
+
+
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/learn/index.tsx

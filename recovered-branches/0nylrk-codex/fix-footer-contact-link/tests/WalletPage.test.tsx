@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/react';
 import WalletPage from '@/pages/Wallet';
 import { vi  } from 'vitest';
@@ -56,18 +57,16 @@ describe ('WalletPage', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
-
 =======
 
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { render, screen } from '@testing-library/react',;
-import WalletPage from '@/pages/Wallet',;
-import { vi } from 'vitest',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+import { render, screen } from '@testing-library/react',;'
+import WalletPage from '@/pages/Wallet',;'
+import { vi } from 'vitest',;'
 import * as useWalletHook from '@/hooks/useWallet',;
+<<<<<<< HEAD
 <<<<<<< HEAD
     ).toBeInTheDocument()
   })
@@ -114,6 +113,14 @@ describe('WalletPage', () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   it('renders balance heading', () => {
     vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({
+=======
+
+
+'
+describe('WalletPage', () => {'
+  it('renders balance heading', () => {'
+    vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       wallet: { user_id: '1', balance: 100, updated_at: '' };
       transactions: [];
       loading: false;
@@ -122,13 +129,14 @@ describe('WalletPage', () => {
       earnTokens: vi.fn();
       spendTokens: vi.fn()} as any);
     render(<WalletPage />);
-    expect(
+    expect('
       screen.getByRole('heading', { name: /balance/i })
     ).toBeInTheDocument()
   })
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
@@ -144,3 +152,10 @@ describe('WalletPage', () => {
 =======
 });
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
@@ -36,6 +37,9 @@ class MyDocument extends Document {
 >>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/_document.tsx.backup.1755991463
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Main />
           <NextScript />
         </body>
@@ -44,6 +48,7 @@ class MyDocument extends Document {
   }
 }
 
+<<<<<<< HEAD
 export default MyDocument;
 <<<<<<< HEAD
 =======
@@ -54,3 +59,6 @@ export default MyDocument;
 >>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/_document.tsx.backup.1755991463
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

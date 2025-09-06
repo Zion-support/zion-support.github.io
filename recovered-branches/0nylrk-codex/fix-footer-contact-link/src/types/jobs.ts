@@ -48,6 +48,7 @@ export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 =======
 export type JobStatus = "new" | "in_progress" | "filled" | "closed";
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export type JobCategory =
   | "development"
@@ -62,11 +63,21 @@ export interface JobBudget {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export type JobCategory ="
+  | "development""
+  | "design""
+  | "marketing""
+  | "content""
+  | "data""
+  | "business"";
+  | "other";
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface JobBudget {;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
   min: number;
 =======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
@@ -93,6 +104,7 @@ export interface JobBudget {;  min: number;
 
 export interface Job {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,6 +150,12 @@ export interface Job {;
 }
 export interface Job {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+export interface Job {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   client_id: string;
   title: string,
@@ -174,6 +192,7 @@ export interface JobFormData {
 
 export interface JobFormData {;
 
+<<<<<<< HEAD
   created_at: string
   updated_at: string
 }
@@ -189,6 +208,15 @@ export interface JobFormData {;
 export interface JobFormData {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+  created_at: string;
+  updated_at: string;
+}
+export interface JobFormData {};
+export interface JobFormData {;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string;
   description: string;
   category: JobCategory;
@@ -204,27 +232,26 @@ export interface JobFormData {
 }
 // Add JobMatch interface to be shared across components;
 
-export interface JobMatch {
-=======
+export interface JobMatch {};
   budgetMin: number;
-  budgetMax: number
-  deadline: Date
+  budgetMax: number;
+  deadline: Date;
 }
-// Add JobMatch interface to be shared across components
+// Add JobMatch interface to be shared across components;
 export interface JobMatch {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
   id: string;
   job_id: string;
   talent_id: string;
   match_score: number;
-  matched_skills: string[];
+  matched_skills: string[];"
   status?: "new" | "viewed" | "applied" | "declined";
   created_at: string;
   viewed_at?: string;
   job?: Job;
-  talent_profile?: {
+  talent_profile?: {}
     id?: string;
     user_id: string;
     full_name: string;
@@ -247,24 +274,17 @@ export interface ResumeAttachment {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
 
 
 export interface ResumeAttachment {;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    category?: string
-    company_name?: string
-  }
-}
-export interface ResumeAttachment {
 
+<<<<<<< HEAD
 export interface ResumeAttachment {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -291,8 +311,12 @@ export interface ResumeAttachment {;
 
 export interface ResumeAttachment {export interface ResumeAttachment {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export interface ResumeAttachment {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
-  title: string;
+  title: string;"
   type: "ai_resume" | "custom_upload";
   file_url?: string;
   resume_id?: string;
@@ -310,18 +334,19 @@ export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' |
 ;
 =======
 
-export type ApplicationStatus =
-  | "new"
-  | "viewed"
-  | "shortlisted"
-  | "interview"
-  | "hired"
+export type ApplicationStatus ="
+  | "new""
+  | "viewed""
+  | "shortlisted""
+  | "interview""
+  | "hired"";
   | "rejected";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 export interface JobApplication {
 export interface JobApplication {
 
@@ -343,6 +368,18 @@ export interface JobApplication {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface JobApplication {};
+;
+
+export interface JobApplication {}
+export interface JobApplication {};
+export interface JobApplication {;
+
+
+
+export interface JobApplication {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   job_id: string;
   talent_id: string;
@@ -354,22 +391,39 @@ export interface JobApplication {
   updated_at?: string;
   viewed_at?: string;
   job?: Job;
-  talent_profile?: {
+  talent_profile?: {}
     id?: string;
     full_name: string;
     professional_title: string;
     profile_picture_url?: string;
     bio: string;
+<<<<<<< HEAD
+=======
+    skills: string[];
+  };
+  resume?: ResumeAttachment;
+  // New fields for resume scoring;
+
+    bio: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     skills: string[]
 };
   resume?: ResumeAttachment;
+<<<<<<< HEAD
   // New fields for resume scoring;  }
   resume?: ResumeAttachment;
   // New fields for resume scoring;
+=======
+  // New fields for resume scoring;
+  }
+  resume?: ResumeAttachment;
+  // New fields for resume scoring;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   match_score?: number;
   match_summary?: string;
-  match_breakdown?: {
-    skills_match?: {
+  match_breakdown?: {}
+    skills_match?: {}
       score: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -531,20 +585,21 @@ export interface JobApplication {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       missing: string[];
     };
-    experience_match?: {
+    experience_match?: {}
       score: number;
       analysis: string;
     };
-    education_match?: {
+    education_match?: {}
       score: number;
       analysis: string;
     };
   };
   match_suggestion?: string;
   scored_at?: string;
-  notes?: string; // New field for client notes
+  notes?: string; // New field for client notes;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -673,10 +728,17 @@ export interface JobApplication {;
   notes?: string,  // New field for client notes;
 }
 ;
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
 ;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -685,3 +747,7 @@ export interface JobApplication {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

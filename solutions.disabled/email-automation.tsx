@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,11 +24,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
-interface EmailautomationProps {
-  // Add props here as needed
-}
+interface EmailautomationProps {}
+  // Add props here as needed;
+}'
 import React from 'react';
+<<<<<<< HEAD
 interface EmailautomationProps {
   // Add props here as needed
 <<<<<<< HEAD
@@ -54,28 +59,26 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function Emailautomation({ }: EmailautomationProps) {
+=======
+interface EmailautomationProps {}
+  // Add props here as needed;
+export default function Emailautomation({ }: EmailautomationProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
       <h1>Emailautomation</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
 <<<<<<< HEAD
 =======
 =======
 
-<<<<<<< HEAD
-}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 }
 }
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -110,3 +113,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

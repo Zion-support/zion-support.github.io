@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -36,23 +37,27 @@ import {useAuth} from '@/hooks/useAuth';
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
-
-import {useToast} from '@/hooks/use-toast';
-export const useTalentQuotes = () => {
 =======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
+import { useState  } from 'react';'
+import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';'
+import { quoteRequestService  } from '@/services/quoteRequestService';'
+import { useAuth  } from '@/hooks/useAuth';
+'
+import {useState} from 'react';'
+import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';'
+import {quoteRequestService} from '@/services/quoteRequestService';'
+import {useAuth} from '@/hooks/useAuth';
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
+'
 import {useToast} from '@/hooks/use-toast';
 export const useTalentQuotes = () => {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   const { user } = useAuth();
   const { toast } = useToast();
+<<<<<<< HEAD
 =======
 
 import { useState  } from 'react';
@@ -76,22 +81,25 @@ import { useAuth  } from '@/hooks/useAuth';  const { toast } = useToast();
   const { data: allQuotes = [], isLoading, error } = useQuery({
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  const queryClient = useQueryClient();'
+  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');'
+  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');'
+  // Get the talent's ID (user's ID)'
+  const talentId = user?.id |'';
+  // Fetch quotes for this talent;
+  const { data: allQuotes = [], isLoading, error } = useQuery({'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     queryKey: ['quotestalent', talentId];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    queryFn: () => quoteRequestService && quoteRequestService.getByTalentId(talentId),
 
-=======
-queryFn: () => quoteRequestService && quoteRequestService.getByTalentId(talentId),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     enabled: !!talentId});
-  // Count unread quotes
-  const unreadCount = allQuotes && allQuotes.filter(
-    quote => quote && quote.status === 'new' && !quote && quote.viewed_at
+  // Count unread quotes;
+  const unreadCount = allQuotes && allQuotes.filter('
+    quote => quote && quote.status === 'new' && !quote && quote.viewed_at;
   ).length;
+<<<<<<< HEAD
   // Filter quotes based on selected filters
   const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
     // Status filter
@@ -125,31 +133,45 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
 import { useAuth } from '@/hooks/useAuth',;
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes',;
+=======
+  // Filter quotes based on selected filters;
+  const filteredQuotes = allQuotes && allQuotes.filter((quote) => {}
+    // Status filter'
+    if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {}
+      return false;
+'
+import { useState } from 'react',;'
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;'
+import { quoteRequestService } from '@/services/quoteRequestService',;'
+import { useAuth } from '@/hooks/useAuth',;'
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useToast } from '@/hooks/use-toast',;
 export const useTalentQuotes = () => {;
   const { user } = useAuth(),;
   const { toast } = useToast(),;
-  const queryClient = useQueryClient(),;
-  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all'),;
-  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active'),;
-  // Get the talent's ID (user's ID);
+  const queryClient = useQueryClient(),;'
+  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all'),;'
+  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active'),;'
+  // Get the talent's ID (user's ID);'
   const talentId = user?.id || '',;
   // Fetch quotes for this talent;
-  const { data: allQuotes = [], isLoading, error } = useQuery({;
+  const { data: allQuotes = [], isLoading, error } = useQuery({;'
     queryKey: ['quotestalent', talentId],;
     queryFn: () => quoteRequestService.getByTalentId(talentId),;
     enabled: !!talentId}),;
   // Count unread quotes;
-  const unreadCount = allQuotes.filter(;
+  const unreadCount = allQuotes.filter(;'
     quote => quote.status === 'new' && !quote.viewed_at;
   ).length,;
   // Filter quotes based on selected filters;
   const filteredQuotes = allQuotes.filter((quote) => {;
-    // Status filter;
+    // Status filter;'
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -174,19 +196,22 @@ export const useTalentQuotes = () => {;
 =======
 
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     }
-    // Archive filter
-    if (archiveFilter === 'active' && quote.is_archived) {
-      return false
+    // Archive filter'
+    if (archiveFilter === 'active' && quote && quote.is_archived) {}
+      return false;
+    }'
+    if (archiveFilter === 'archived' && !quote && quote.is_archived) {}
+      return false;
     }
-    if (archiveFilter === 'archived' && !quote.is_archived) {
-      return false
-    }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    return true
+
+    return true;
   });
+<<<<<<< HEAD
   // Mark as viewed/responded mutation
   const updateStatusMutation = useMutation({
 <<<<<<< HEAD
@@ -237,21 +262,30 @@ export const useTalentQuotes = () => {;
         title: message
 <<<<<<< HEAD
 <<<<<<< HEAD
-        description: "The quote request status has been updated"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 =======
-      });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  // Mark as viewed/responded mutation;
+  const updateStatusMutation = useMutation({}
+    onSuccess: (_, variables) => {}
+      let message = "Status updated";'
+      if (variables && variables.status === 'in_review') {"
+        message = "Quote marked as viewed"'
+      } else if (variables && variables.status === 'responded') {}
+"
+        message = "Quote marked as responded"
+      }
+      toast({}
+        title: message"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        description: "The quote request status has been updated"
+'
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     };
-    onError: (error: Error) => {
-      toast({
-        title: "Error";
+    onError: (error: Error) => {}
+      toast({"
+        title: "Error";"
         description: "Failed to update status: " + error && error.message,
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
@@ -266,6 +300,10 @@ export const useTalentQuotes = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"
 =======
         description: "The quote request status has been updated"        variant: "destructive"
@@ -276,6 +314,7 @@ export const useTalentQuotes = () => {;
       })
     }
   });
+<<<<<<< HEAD
   // Archive/Unarchive mutation
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -290,23 +329,27 @@ export const useTalentQuotes = () => {;
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
       quoteRequestService.toggleArchive(id, isArchived);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  // Archive/Unarchive mutation;
+  const toggleArchiveMutation = useMutation({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
-    onError: (error: Error) => {
-      toast({
-        title: "Error",
-        description: "Failed to update status: " + error.message,
+    onError: (error: Error) => {}
+      toast({"
+        title: "Error","
+        description: "Failed to update status: " + error.message,"
         variant: "destructive"
       })
     }
   }),
 
-  // Archive/Unarchive mutation
-  const toggleArchiveMutation = useMutation({
+  // Archive/Unarchive mutation;
+  const toggleArchiveMutation = useMutation({}
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
+
+
 <<<<<<< HEAD
-
-
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -335,16 +378,24 @@ export const useTalentQuotes = () => {;
     };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    onSuccess: (_, variables) => {}
+      toast({"
+        title: variables.isArchived ? "Quote archived" : "Quote unarchived"
+        description: variables.isArchived"
+          ? "The quote request has been archived""
+          : "The quote request has been moved back to active quotes"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
 
     };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -369,6 +420,15 @@ export const useTalentQuotes = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+    onError: (error: Error) => {}
+      toast({"
+        title: "Error";"
+        description: "Failed to update quote: " + error.message;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
 =======
           : "The quote request has been moved back to active quotes"    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
@@ -377,15 +437,16 @@ export const useTalentQuotes = () => {;
           : "The quote request has been moved back to active quotes"    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
-    onSuccess: (_, variables) => {
-      toast({
+    onSuccess: (_, variables) => {}
+      toast({"
         title: variables && variables.isArchived ? "Quote archived" : "Quote unarchived",
-        description: variables && variables.isArchived 
-          ? "The quote request has been archived" 
+        description: variables && variables.isArchived "
+          ? "The quote request has been archived" "
           : "The quote request has been moved back to active quotes"
-      });
+      });'
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     };
+<<<<<<< HEAD
     onError: (error: Error) => {
       toast({
 <<<<<<< HEAD
@@ -400,10 +461,20 @@ export const useTalentQuotes = () => {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    onError: (error: Error) => {}
+      toast({"
+        title: "Error";"
+        description: "Failed to update quote: " + error && error.message,
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"
       })
     }
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -430,46 +501,54 @@ import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query
 import {quoteRequestService} from '@/services / quoteRequestService';
 import {use_auth} from '@/hooks / use_auth';
 import type { QuoteRequest, QuoteStatus } from '@/types / quotes';
+=======
+'
+import {useState} from 'react';'
+import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';'
+import {quoteRequestService} from '@/services / quoteRequestService';'
+import {use_auth} from '@/hooks / use_auth';'
+import type { QuoteRequest, QuoteStatus } from '@/types / quotes';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {use_toast} from '@/hooks / use - toast';
-export const useTalentQuotes = () =>: any {
+export const useTalentQuotes = () =>: any {};
   const { user } = use_auth ();
   const { toast } = use_toast ();
-  const query_client = useQueryClient ();
-  const [status_filter, setStatusFilter] = useState < QuoteStatus | 'all'>('all');
+  const query_client = useQueryClient ();'
+  const [status_filter, setStatusFilter] = useState < QuoteStatus | 'all'>('all');'
   const [archive_filter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');
-;
-  // Get the talent's ID (user's ID);
+;'
+  // Get the talent's ID (user's ID);'
   const talent_id = user?.id || '';
 ;
   // Fetch quotes for this talent;
-  const { data: all_quotes = [], is_loading, error } = use_query ({
+  const { data: all_quotes = [], is_loading, error } = use_query ({'
     query_key: ['quotestalent', talent_id];
     query_fn: () => quoteRequestService.getByTalentId (talent_id),
     enabled: !!talent_id});
 ;
   // Count unread quotes;
-  const unread_count = all_quotes.filter (
+  const unread_count = all_quotes.filter ('
     quote => quote.status === 'new' && !quote.viewed_at).length;
 ;
   // Filter quotes based on selected filters;
-  const filtered_quotes = all_quotes.filter ((quote) => {
+  const filtered_quotes = all_quotes.filter ((quote) => {}
     // Status filter;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       return false;
     }
     // Archive filter;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       return false;
     }
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       return false;
     }
@@ -477,85 +556,77 @@ if ( {) {
   });
 ;
   // Mark as viewed / responded mutation;
-  const updateStatusMutation = use_mutation ({
+  const updateStatusMutation = use_mutation ({}
     mutation_fn: ({ id, status }: { id: string, status: QuoteStatus }) =>;
       quoteRequestService.update_status (id, status);
-    on_success: (_, variables) => {
+    on_success: (_, variables) => {"
       let message = "Status updated";
-      // Check condition
-if ( {) {
-  $2
-}
+      // Check condition;
+if ( {) {}
+  $2;
+}"
         message = "Quote marked as viewed";
-      } else // Check condition
-if ( {) {
-  $2
-}
+      } else // Check condition;
+if ( {) {}
+  $2;
+}"
         message = "Quote marked as responded";
       }
-      toast ({
-        title: message,
+      toast ({}
+        title: message,"
         description: "The quote request status has been updated";
-      });
+      });'
       query_client.invalidate_queries ({ query_key: ['quotestalent', talent_id] });
     }
-    on_error: (error: Error) => {
-      toast ({
-        title: "Error";
-        description: "Failed to update status: " + error.message,
+    on_error: (error: Error) => {}
+      toast ({"
+        title: "Error";"
+        description: "Failed to update status: " + error.message,"
         variant: "destructive";
       });
     }
   });
 ;
   // Archive / Unarchive mutation;
-  const toggleArchiveMutation = use_mutation ({
+  const toggleArchiveMutation = use_mutation ({}
     mutation_fn: ({ id, is_archived }: { id: string, is_archived: boolean }) =>;
       quoteRequestService.toggle_archive (id, is_archived);
-    on_success: (_, variables) => {
-      toast ({
+    on_success: (_, variables) => {}
+      toast ({"
         title: variables.is_archived ? "Quote archived" : "Quote unarchived",
-        description: variables.is_archived;
-          ? "The quote request has been archived";
+        description: variables.is_archived;"
+          ? "The quote request has been archived";"
           : "The quote request has been moved back to active quotes";
-      });
+      });'
       query_client.invalidate_queries ({ query_key: ['quotestalent', talent_id] });
     }
-    on_error: (error: Error) => {
-      toast ({
-        title: "Error";
-        description: "Failed to update quote: " + error.message,
+    on_error: (error: Error) => {}
+      toast ({"
+        title: "Error";"
+        description: "Failed to update quote: " + error.message,"
         variant: "destructive";
       });
     }
   });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  return {
+
+  return {}
     quotes: filtered_quotes;
     unread_count;
     is_loading;
     error;
     status_filter;
     setStatusFilter;
+
+
+  return {}
+    toggleArchive: (id: string, isArchived: boolean) =>
+    toggleArchive: (id: string, isArchived: boolean) => 
+
+
+    toggleArchive: (id: string, isArchived: boolean) => 
+
 <<<<<<< HEAD
-
-
-    toggleArchive: (id: string, isArchived: boolean) => 
-
-=======
-=======
-    toggleArchive: (id: string, isArchived: boolean) =>
-    toggleArchive: (id: string, isArchived: boolean) => 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  return {
-    toggleArchive: (id: string, isArchived: boolean) =>
-    toggleArchive: (id: string, isArchived: boolean) => 
-
-
-    toggleArchive: (id: string, isArchived: boolean) => 
-
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
@@ -579,6 +650,14 @@ if ( {) {
       toast({
         title: "Error",
         description: "Failed to update quote: " + error.message,
+=======
+
+    },
+    onError: (error: Error) => {}
+      toast({"
+        title: "Error","
+        description: "Failed to update quote: " + error.message,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"
       })
 ;
@@ -588,15 +667,16 @@ if ( {) {
   const updateStatusMutation = useMutation({;
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>;
       quoteRequestService.updateStatus(id, status),;
-    onSuccess: (_, variables) => {;
-      let message = "Status updated",;
-      if (variables.status === 'in_review') {;
-        message = "Quote marked as viewed";
-      } else if (variables.status === 'responded') {;
+    onSuccess: (_, variables) => {;"
+      let message = "Status updated",;'
+      if (variables.status === 'in_review') {;"
+        message = "Quote marked as viewed";'
+      } else if (variables.status === 'responded') {;"
         message = "Quote marked as responded";
       }
 ;
       toast({;
+<<<<<<< HEAD
         title: message,,
   description: "The quote request status has been updated";
       }),;
@@ -606,6 +686,17 @@ if ( {) {
       toast({;
         title: "Error",,
   description: "Failed to update status: " + error.message,;
+=======
+        title: message,;"
+        description: "The quote request status has been updated";
+      }),;'
+      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] });
+    },;
+    onError: (error: Error) => {;
+      toast({;"
+        title: "Error",;"
+        description: "Failed to update status: " + error.message,;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive";
       });
     }
@@ -615,18 +706,31 @@ if ( {) {
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>;
       quoteRequestService.toggleArchive(id, isArchived),;
     onSuccess: (_, variables) => {;
+<<<<<<< HEAD
       toast({;
         title: variables.isArchived ? "Quote archived" : "Quote unarchived",,
   description: variables.isArchived;
           ? "The quote request has been archived";
+=======
+      toast({;"
+        title: variables.isArchived ? "Quote archived" : "Quote unarchived",;
+        description: variables.isArchived;"
+          ? "The quote request has been archived";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           : "The quote request has been moved back to active quotes";
-      }),;
+      }),;'
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] });
     },;
     onError: (error: Error) => {;
+<<<<<<< HEAD
       toast({;
         title: "Error",,
   description: "Failed to update quote: " + error.message,;
+=======
+      toast({;"
+        title: "Error",;"
+        description: "Failed to update quote: " + error.message,;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive";
       });
     }
@@ -640,11 +744,12 @@ if ( {) {
     setStatusFilter,;
     archiveFilter,;
     setArchiveFilter,;
-    markAsViewed: (id: string) =>;
+    markAsViewed: (id: string) =>;'
       updateStatusMutation.mutate({ id, status: 'in_review' }),;
-    markAsResponded: (id: string) =>;
+    markAsResponded: (id: string) =>;'
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -687,10 +792,18 @@ if ( {) {
 }
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+      toggleArchiveMutation.mutate({ id, isArchived })}
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setArchiveFilter,
-    markAsViewed: (id: string) => 
+    markAsViewed: (id: string) => '
       updateStatusMutation && updateStatusMutation.mutate({ id, status: 'in_review' });
-    markAsResponded: (id: string) => 
+    markAsResponded: (id: string) => '
       updateStatusMutation && updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) => 
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived })}
@@ -698,11 +811,18 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     archive_filter;
     setArchiveFilter,
-    markAsViewed: (id: string) =>;
+    markAsViewed: (id: string) =>;'
       updateStatusMutation.mutate ({ id, status: 'in_review' });
-    markAsResponded: (id: string) =>;
+    markAsResponded: (id: string) =>;'
       updateStatusMutation.mutate ({ id, status: 'responded' });
     toggle_archive: (id: string, is_archived: boolean) =>;
       toggleArchiveMutation.mutate ({ id, is_archived })}
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

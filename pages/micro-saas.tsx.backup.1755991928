@@ -1,10 +1,14 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { Shield, Clock, DollarSign, TrendingUp, Brain, Rocket, ArrowRight, ExternalLink, Search, Filter, Grid, List, Phone, Mail, MapPin, Star, Check, Sparkles, Atom, Cpu, Globe, FlaskConical, MessageSquare } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 
 export default function MicroSaasPage() {
@@ -847,6 +851,7 @@ export default function MicroSaasPage() {
     }
   });
 
+<<<<<<< HEAD
   const categories = [
     'All',
     'Content & Marketing',
@@ -869,6 +874,9 @@ export default function MicroSaasPage() {
     'Energy & Sustainability',
     'Education & Training',
     'Real Estate & Property'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const contactInfo = {
@@ -972,11 +980,15 @@ export default function MicroSaasPage() {
   const categoryStats = getCategoryStats();
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.1),transparent_50%)]" />
       
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>Real Micro SaaS Services | Zion Tech Group</title>
         <meta name="description" content="Discover 48+ real, fully-functional micro SaaS services. From AI content generation to cloud cost optimization, get started in minutes with our enterprise-grade solutions." />
@@ -1310,7 +1322,11 @@ export default function MicroSaasPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
         {/* Enhanced CTA Section */}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1364,6 +1380,10 @@ export default function MicroSaasPage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

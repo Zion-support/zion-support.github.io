@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { 
+<<<<<<< HEAD
   Clock, DollarSign, TrendingUp, Brain, 
   Zap, Rocket, Mail, Phone, MapPin, Sparkles, 
   ArrowRight, ExternalLink, Check, Cpu, 
@@ -10,18 +11,25 @@ import Button from '../components/ui/Button';
 import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
 import QuantumCard from '../components/ui/QuantumCard';
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, Star, Users, Globe, Lock, Rocket, Cpu, Database, TrendingUp, Clock, Target, Building, Award, DollarSign, ChartBar, Code, BookOpen, Activity, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, Settings, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Brain, Atom, Cpu as CpuIcon, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Rocket as RocketIcon } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState('hero');
 
   const heroStats = [
+<<<<<<< HEAD
     { value: '100+', label: 'Real Micro SaaS Services', color: 'text-cyan-400' },
     { value: '99.9%', label: 'Uptime Guarantee', color: 'text-fuchsia-400' },
     { value: '30', label: 'Day Free Trials', color: 'text-blue-400' },
     { value: '24/7', label: 'AI Support', color: 'text-green-400' },
     { value: '$500M+', label: 'Market Value', color: 'text-yellow-400' },
     { value: '2500%+', label: 'Average ROI', color: 'text-purple-400' },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const contactInfo = {
@@ -31,6 +39,7 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   const revolutionaryServices = [
     {
       name: 'Quantum AI Cognitive Platform',
@@ -152,6 +161,9 @@ export default function HomePage() {
       growthRate: '250% annual growth'
     }
   ];
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const marketInsights = [
     {
@@ -344,16 +356,21 @@ export default function HomePage() {
       color: 'from-purple-500 to-violet-600'
     },
     {
+<<<<<<< HEAD
       name: 'AR/VR & Immersive Tech',
       icon: '🥽',
       count: '10+ Services',
       description: 'Enterprise AR/VR platforms and immersive experiences',
       color: 'from-pink-500 to-rose-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     setIsMenuOpen(false);
   };
 
   return (
+<<<<<<< HEAD
     <QuantumNeuralBackground variant="quantum" intensity="medium">
       <div className="min-h-screen">
         <Head>
@@ -653,5 +670,8 @@ export default function HomePage() {
         </section>
       </div>
     </QuantumNeuralBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

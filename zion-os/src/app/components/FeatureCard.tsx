@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -78,13 +79,28 @@ export default function FeatureCard({
 =======
   className?: string;  className?: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-}
-export default /**
- * FeatureCard - Function description
- */
-function FeatureCard() {
+=======
 
+  className?: string;
+}
+export default function FeatureCard({};
+  icon;
+  title;
+  description;
+  features;
+  gradient;
+  className = ''
+}: FeatureCardProps) {}
+  className?: string;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+}
+export default /**;
+ * FeatureCard - Function description;
+ */
+function FeatureCard() {}
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,3 +149,11 @@ function FeatureCard() {
     </div>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+      </ul>;
+    </div>);
+}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

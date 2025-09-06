@@ -2,14 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Import Inter font for modern typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
+<<<<<<< HEAD
 :root {
 /* CSS Variables for modern theming */:root {
 =======
@@ -23,6 +34,19 @@
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+:root {
+/* CSS Variables for modern theming */:root {
+
+
+
+/* CSS Variables for modern theming */:root {
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   --background: #000000;
   --foreground: #ffffff;
   --primary: #3b82f6;
@@ -84,13 +108,21 @@
   box-shadow: var(--holographic-glow);
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 /* Enhanced Selection */
 ::selection {
   background: rgba(0, 255, 255, 0.4);
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   color: white;
   background: rgba(0, 255, 255, 0.4);  color: white;
+<<<<<<< HEAD
 .text-high-contrast-accent {
   color: var(--text-accent);
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
@@ -358,6 +390,16 @@ input, textarea, select {
   background: rgba(0, 255, 255, 0.4);  color: white;
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+/* Enhanced Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.4);  color: white;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
 

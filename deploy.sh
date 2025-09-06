@@ -1,5 +1,6 @@
 #!/bin/bash
 
+<<<<<<< HEAD
 echo "🚀 Starting deployment process..."
 
 # Check if we're on the main branch
@@ -30,3 +31,5 @@ echo "🚀 Deploying to production..."
 # Add your deployment commands here
 
 echo "✅ Deployment completed successfully!"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

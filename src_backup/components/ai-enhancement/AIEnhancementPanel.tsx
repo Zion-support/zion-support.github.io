@@ -55,16 +55,16 @@ import {;
   CardContent,;
   CardHeader,;
   CardTitle,;
-  CardFooter,;
-} from '@/components/ui/card';import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+  CardFooter,;'
+} from '@/components/ui/card';import React, { useState } from 'react';'
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';'
+import { Textarea } from '@/components/ui/textarea';'
+import { Button } from '@/components/ui/button';'
+import { Input } from '@/components/ui/input';'
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
 import {;
   useAIContentEnhancer,;
-  AIEnhancementOptions,;
+  AIEnhancementOptions,;'
 } from '@/hooks/useAIContentEnhancer';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -83,6 +83,7 @@ interface AIEnhancementPanelProps {;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 <<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,46 +94,49 @@ import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
 <<<<<<< HEAD
 =======
 
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
 import React, { useState } from 'react';
-import {
+import {}
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-  CardFooter,
-} from '@/components / ui / card'; import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components / ui / card';
-import { Textarea } from '@/components / ui / textarea';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
+  CardFooter,';
+} from '@/components / ui / card'; import React, { useState } from 'react';'
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components / ui / card';'
+import { Textarea } from '@/components / ui / textarea';'
+import { Button } from '@/components / ui / button';'
+import { Input } from '@/components / ui / input';'
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   useAIContentEnhancer,
-  AIEnhancementOptions,
+  AIEnhancementOptions,'
 } from '@/hooks / useAIContentEnhancer';
-interface AIEnhancementPanelProps {
+interface AIEnhancementPanelProps {}
   title: string;
   default_options: AIEnhancementOptions;
   on_apply: (content: string) => void;
   on_close?: () => void;
   show_instructions?: boolean;
   initial_content?: string;
-export /**
- * AIEnhancementPanel - Function description
+export /**;
+ * AIEnhancementPanel - Function description;
  */
-function AIEnhancementPanel() {
-  const [options, set_options] = useState < AIEnhancementOptions>({
+function AIEnhancementPanel() {}
+  const [options, set_options] = useState < AIEnhancementOptions>({}
     ...default_options,
     content: initial_content || default_options.content,
-  });
+  });'
   const [generated_content, setGeneratedContent] = useState < string>('');
   const [copied, set_copied] = useState (false);
   const { enhance_content, is_enhancing } = useAIContentEnhancer ();
-  const handle_generate = async () => {
+  const handle_generate = async () => {}
     const result = await enhance_content (options);
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       setGeneratedContent (result);
     }
@@ -140,15 +144,16 @@ if ( {) {
   const handleInputChange = (
     e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement>,
     field: keyof AIEnhancementOptions;
-  , ) =>: any {
-    set_options ({
+  , ) =>: any {}
+    set_options ({}
       ...options,
       [field]: e.target.value,
     });
 
   }
-  const handle_apply = () =>: any {
+  const handle_apply = () =>: any {}
     on_apply (generated_content);
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
     if (on_close ()) {
   $2
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -156,6 +161,17 @@ if ( {) {
 ;
 export function AIEnhancementPanel({;
 =======
+=======
+    if (on_close ()) {}
+  $2;
+}
+  }
+  const handle_copy = () =>: any {}
+    navigator.clipboard.write_text (generated_content);
+    set_copied (true);
+    set_timeout (() => set_copied (false), 2000);
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
 
 <<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -181,21 +197,34 @@ export function AIEnhancementPanel({;  title,;
   defaultOptions,;
   onApply,;
   onClose,;
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   showInstructions = true,;
 <<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   initialContent = '';
 =======
+=======
+  showInstructions = true,;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
   initialContent = '',;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions,;
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
     content: initialContent || defaultOptions.content}),;
   const [generatedContent, setGeneratedContent] = useState<string>(''),;
   const [copied, setCopied] = useState(false),;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+=======
+    content: initialContent || defaultOptions && defaultOptions.content,;
+  });'
+  const [generatedContent, setGeneratedContent] = useState<string>('');
+  const [copied, setCopied] = useState(false);
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
   const handleGenerate = async () => {;
     const result = await enhanceContent(options),;
     if (result) {;
@@ -207,22 +236,26 @@ export function AIEnhancementPanel({;  title,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 <<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
             value={options && options.content}
+=======
+            value={options && options.content}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
             onChange={e => handleInputChange(e, 'content')}          />;
         </div>;
 
 
-        {/* Context input */}
-        <div className='space-y-2'>;
+        {/* Context input */}'
+        <div className='space-y-2'>;'
           <label className='text-sm font-medium'>Context (optional)</label>;
-          <Textarea
-            placeholder='Add any relevant context to guide the AI...'
+          <Textarea'
+            placeholder='Add any relevant context to guide the AI...''
             className='min-h-[60px]'
 
-            value={options && options.context}
+            value={options && options.context}'
             onChange={e => handleInputChange(e, 'context')}          />;
         </div>;
 
@@ -232,6 +265,7 @@ export function AIEnhancementPanel({;  title,;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   const handleInputChange = (
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: keyof AIEnhancementOptions
   ) => {
@@ -297,6 +331,12 @@ export function AIEnhancementPanel({;  title,;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    field: keyof AIEnhancementOptions;
+  ) => {}
+    setOptions({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
       ...options,
 
 
@@ -318,16 +358,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
   return (
     <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+      <CardHeader>"
+        <CardTitle className="flex items-center gap-2">"
           <Sparkles className="h-5 w-5 text-primary" />
           {title}
         </CardTitle>
-      </CardHeader>
+      </CardHeader>"
       <CardContent className="space-y-4">
-        {/* Input area */}
-        <div className="space-y-2">
+        {/* Input area */}"
+        <div className="space-y-2">"
           <label className="text-sm font-medium">Content to enhance</label>
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
           <Textarea
 
 <<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
@@ -339,18 +380,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
             placeholder="Enter your content to enhance..."
+=======
+          <Textarea;
+"
+            placeholder="Enter your content to enhance...""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
             className="min-h-[100px]"
-            value={options.content}
+            value={options.content}'
             onChange={(e) => handleInputChange(e, 'content')}
           />;
         </div>;
-        {/* Context input */}
-        <div className="space-y-2">
+        {/* Context input */}"
+        <div className="space-y-2">"
           <label className="text-sm font-medium">Context (optional)</label>
-          <Textarea
-            placeholder="Add any relevant context to guide the AI..."
+          <Textarea"
+            placeholder="Add any relevant context to guide the AI...""
             className="min-h-[60px]"
-            value={options.context}
+            value={options.context}'
             onChange={(e) => handleInputChange(e, 'context')}
           />;
         </div>;
@@ -359,18 +405,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Instructions input (optional) */}
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
         {showInstructions && (
           <div className="space-y-2">
             <label className="text-sm font-medium">Special instructions (optional)</label>
             <Input
+=======
+        {showInstructions && (;'
+          <div className='space-y-2'>;'
+            <label className='text-sm font-medium'>;
+              Special instructions (optional);
+            </label>;
+            <Input;
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
 <<<<<<< HEAD
 =======
 
           disabled={isEnhancing || (!options.content && !options.context)}        >
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
@@ -381,6 +441,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Generate button */}
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 <<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -388,6 +449,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
         <Button 
           onClick={handleGenerate} 
+=======
+        <Button;
+          onClick={handleGenerate} "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
@@ -408,12 +473,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
           {isEnhancing ? (
-            <>
+            <>'
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Enhancing...
             </>
           ) : (
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
             <>
 <<<<<<< HEAD
               <Sparkles className="mr-2 h-4 w-4" />
@@ -422,8 +488,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
         </Button>;
 =======
+=======
+            <>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
               <Sparkles className='mr-2 h-4 w-4' />
-              Generate Enhanced Content
+              Generate Enhanced Content;
             </>
           )}
 <<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
@@ -434,12 +503,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
-            <>;
+            <>;'
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
               Enhancing...;
             </>;
           ) : (;
-            <>;
+            <>;'
               <Sparkles className='mr-2 h-4 w-4' />;
               Generate Enhanced Content;
             </>;
@@ -450,21 +519,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Output area */}
 
         {generatedContent && (
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="space-y-2 mt-4">
             <div className="flex justify-between items-center">
+=======
+"
+          <div className="space-y-2 mt-4">"
+            <div className="flex justify-between items-center">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
               <label className="text-sm font-medium">Generated content</label>
-              <Button 
-                variant="ghost" 
+              <Button "
+                variant="ghost" "
                 size="sm" 
-                onClick={handleCopy}
+                onClick={handleCopy}"
                 className="h-8"
               >
 
 
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 <<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
 =======
         </Button>
@@ -474,24 +550,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
                 {copied ? (
+=======
+                {copied ? ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
-                ) : (
+                ) : ("
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>
                 )}
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
               </Button>
             </div>
             <div className="relative">
               <Textarea
+=======
+              </Button>;
+            </div>;'
+            <div className='relative'>;
+              <Textarea;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
                 value={generatedContent}
 <<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 onChange={(e) => setGeneratedContent(e.target.value)}
+=======
+                onChange={(e) => setGeneratedContent(e.target.value)}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
                 className="min-h-[200px]"
               />
 
@@ -516,6 +606,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 <<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -523,10 +614,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
       {generatedContent && (
+=======
+      {generatedContent && ('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
         <CardFooter className='flex justify-between'>
-          {onClose && (
+          {onClose && ('
             <Button variant='outline' onClick={onClose}>
-              Cancel
+              Cancel;
             </Button>
 <<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementPanel.tsx
 <<<<<<< HEAD
@@ -534,9 +628,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
       </CardContent>;
 
-      {generatedContent && (;
+      {generatedContent && (;'
         <CardFooter className='flex justify-between'>;
-          {onClose && (;
+          {onClose && (;'
             <Button variant='outline' onClick={onClose}>;
               Cancel;
             </Button>;
@@ -552,92 +646,96 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 }
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 =======
         </Button>}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx
     <Card className='w - full max - w-2xl mx - auto'>;
-      <CardHeader>;
-        <CardTitle className='flex items - center gap - 2'>;
+      <CardHeader>;'
+        <CardTitle className='flex items - center gap - 2'>;'
           <Sparkles className='h - 5 w - 5 text - primary' />;
           {title}
         </CardTitle>;
-      </CardHeader>;
+      </CardHeader>;'
       <CardContent className='space - y-4'>;
-        {/* Input area */}
-        <div className='space - y-2'>;
+        {/* Input area */}'
+        <div className='space - y-2'>;'
           <label className='text - sm font - medium'>Content to enhance</label>;
-          <Textarea;
-            placeholder='Enter your content to enhance...';
+          <Textarea;'
+            placeholder='Enter your content to enhance...';'
             className='min - h-[100px]';
-            value={options.content}
+            value={options.content}'
             on_change={e => handleInputChange (e, 'content')}          />;
         </div>;
-        {/* Context input */}
-        <div className='space - y-2'>;
+        {/* Context input */}'
+        <div className='space - y-2'>;'
           <label className='text - sm font - medium'>Context (optional)</label>;
-          <Textarea;
-            placeholder='Add any relevant context to guide the AI...';
+          <Textarea;'
+            placeholder='Add any relevant context to guide the AI...';'
             className='min - h-[60px]';
-            value={options.context}
+            value={options.context}'
             on_change={e => handleInputChange (e, 'context')}          />;
         </div>;
         {/* Instructions input (optional) */}
-        {show_instructions && (
-          <div className='space - y-2'>;
+        {show_instructions && ('
+          <div className='space - y-2'>;'
             <label className='text - sm font - medium'>;
               Special instructions (optional);
             </label>;
-            <Input;
+            <Input;'"
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'";
-              value={options.instructions}
+              value={options.instructions}'
               on_change={e => handleInputChange (e, 'instructions')}            />;
           </div>)}
         {/* Generate button */}
         <Button;
-          on_click={handle_generate}
+          on_click={handle_generate}'
           className='w - full';
           disabled={is_enhancing || (!options.content && !options.context)}        >;
           {is_enhancing ? (
-            <>;
+            <>;'
               <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
               Enhancing...;
             </>) : (
-            <>;
+            <>;'
               <Sparkles className='mr - 2 h - 4 w - 4' />;
               Generate Enhanced Content;
             </>)}
         </Button>;
         {/* Output area */}
-        {generated_content && (
-          <div className='space - y-2 mt - 4'>;
-            <div className='flex justify - between items - center'>;
+        {generated_content && ('
+          <div className='space - y-2 mt - 4'>;'
+            <div className='flex justify - between items - center'>;'
               <label className='text - sm font - medium'>Generated content</label>;
-              <Button;
-                variant='ghost';
+              <Button;'
+                variant='ghost';'
                 size='sm';
-                on_click={handle_copy}
+                on_click={handle_copy}'
                 className='h - 8'              >;
                 {copied ? (
-                  <>;
+                  <>;'
                     <Check className='h - 4 w - 4 mr - 1' /> Copied;
                   </>) : (
-                  <>;
+                  <>;'
                     <Copy className='h - 4 w - 4 mr - 1' /> Copy;
                   </>)}
               </Button>;
-            </div>;
+            </div>;'
             <div className='relative'>;
               <Textarea;
                 value={generated_content}
-                on_change={e => setGeneratedContent (e.target.value)}
+                on_change={e => setGeneratedContent (e.target.value)}'
                 className='min - h-[200px]'              />;
             </div>;
           </div>)}
       </CardContent>;
-      {generated_content && (
+      {generated_content && ('
         <CardFooter className='flex justify - between'>;
-          {on_close && (
+          {on_close && ('
             <Button variant='outline' on_click={on_close}>;
               Cancel;
             </Button>)}
@@ -662,6 +760,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>;
   );
 }
+<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -681,3 +780,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ai-enhancement/AIEnhancementPanel.tsx
+=======
+;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ai-enhancement/AIEnhancementPanel.tsx

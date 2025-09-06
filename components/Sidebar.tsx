@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-interface SidebarProps {
+
+interface SidebarProps {}
   isOpen: boolean;
   onClose: () => void;
 }
 
+<<<<<<< HEAD
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -24,12 +29,15 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -37,41 +45,56 @@ pr-12243
             onClick={onClose}
           />
           {/* Sidebar */}
-          <motion.div
+          <motion.div;
             initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
+            animate={{ x: 0 }}'
             exit={{ x: '-100%' }}
+<<<<<<< HEAD
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
 
 pr-12243
           >
+=======
+
+          >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="p-6">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center space-x-2">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+              {/* Header */}"
+              <div className="flex items-center justify-between mb-8">"
+                <div className="flex items-center space-x-2">"
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">"
                     <Building2 className="w-8 h-8 text-white" />
-                  </div>
+                  </div>"
                   <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
                 </div>
-                <button
+                <button;
                   onClick={onClose}
+<<<<<<< HEAD
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
 
 pr-12243
                 >
+=======
+
+                >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <X className="w-6 h-6" />
                 </button>
               </div>
 
+<<<<<<< HEAD
 pr-12243
               {/* Navigation */}
+=======
+              {/* Navigation */}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
                   <div key={title}>
-                    <button
+                    <button;
                       onClick={() => handleDropdownToggle(title)}
+<<<<<<< HEAD
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
                     >
                       <span>{title}</span>
@@ -106,11 +129,17 @@ pr-12243
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+=======
+
+              {/* Quick Links */}"
+              <div className="mt-8 pt-8 border-t border-gray-200">"
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="space-y-2">
                   {quickLinks.map((link) => (
-                    <Link
+                    <Link;
                       key={link.name}
-                      href={link.href}
+                      href={link.href}"
                       className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
                       onClick={onClose}
                     >
@@ -119,6 +148,7 @@ pr-12243
                   ))}
                 </div>
               </div>
+<<<<<<< HEAD
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
@@ -142,6 +172,9 @@ pr-12243
                 </button>
 
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
           </motion.div>
@@ -149,6 +182,7 @@ pr-12243
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 }
 
 class ErrorBoundary extends React.Component {
@@ -488,3 +522,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
 export default Sidebar;
 pr-12243
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -19,13 +20,22 @@ import { HireRequestNotificationParams } from './types',
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {createNotification} from './createNotification';
+=======
+import { createNotification  } from './createNotification';'
+import { HireRequestNotificationParams } from './types';'
+import { createNotification } from './createNotification','
+import { HireRequestNotificationParams } from './types',
+';
+import {createNotification} from './createNotification';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {HireRequestNotificationParams} from './types';
 /**
- * Creates a hire request notification for admin and talent
+ * Creates a hire request notification for admin and talent;
  */
 export async function createHireRequestNotifications({;
   talentId;
   adminId;
+<<<<<<< HEAD
   requesterName;
 =======
 import { createNotification } from './createNotification',
@@ -70,53 +80,53 @@ export async function createHireRequestNotifications({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   try {
   const projectInfo = projectType 
+=======
+  requesterName;'
+import { createNotification } from './createNotification','
+import { HireRequestNotificationParams } from './types',
+
+
+
+/**;
+ * Creates a hire request notification for admin and talent;
+ */
+export async function createHireRequestNotifications({}
+  try {};
+  const projectInfo = projectType;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     ? `${projectType} project` 
 
-<<<<<<< HEAD
-=======
-  talentId;
-  adminId;
-  requesterName;
 
-  requesterEmail
 
-  projectType;
-  projectSummary;
-  hireRequestId
-}: HireRequestNotificationParams) {
 
-  const projectInfo = projectType
-    ? `${projectType} project`
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     : "project";
-  const summaryText = projectSummary
-    ? `: "${projectSummary}"`
+  const summaryText = projectSummary"`
+    ? `: "${projectSummary}"`"
     : "";
-  // Create notification for talent
-  const talentNotification = await createNotification({
-    userId: talentId
-    title: `New Hire Request from ${requesterName}`;
-    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`;
+  // Create notification for talent;
+  const talentNotification = await createNotification({}
+    userId: talentId;`
+    title: `New Hire Request from ${requesterName}`;`
+    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`;'
     type: 'hire_request';
     relatedId: hireRequestId;
-    sendEmail: true;
-    actionUrl: '/dashboard'
+    sendEmail: true;'
+    actionUrl: '/dashboard''
     actionText: 'View Request'
   });
-  // Create notification for admin if admin ID is provided
-  if (adminId) {
-    const adminNotification = await createNotification({
-      userId: adminId;
-      title: `New Hire Request for Talent`
-      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`;
+  // Create notification for admin if admin ID is provided;
+  if (adminId) {}
+    const adminNotification = await createNotification({}
+      userId: adminId;`
+      title: `New Hire Request for Talent``
+      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`;'
       type: 'hire_request';
       relatedId: hireRequestId;
-      sendEmail: true;
-      actionUrl: '/admin/hire-requests'
+      sendEmail: true;'
+      actionUrl: '/admin/hire-requests''
       actionText: 'Review Request'
     });
+<<<<<<< HEAD
     return {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,6 +141,9 @@ export async function createHireRequestNotifications({
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   talentId,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -139,6 +152,7 @@ export async function createHireRequestNotifications({
   adminId,
   requesterName,
 
+<<<<<<< HEAD
       success: talentNotification.success && adminNotification.success;
       talentNotification
       adminNotification
@@ -150,6 +164,11 @@ export async function createHireRequestNotifications({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   requesterEmail, 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -158,6 +177,7 @@ export async function createHireRequestNotifications({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   projectType,
   projectSummary,
+<<<<<<< HEAD
   hireRequestId
 }: HireRequestNotificationParams) {
   const projectInfo = projectType
@@ -173,12 +193,30 @@ export async function createHireRequestNotifications({
     userId: talentId,
     title: `New Hire Request from ${requesterName}`,
     message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,
+=======
+  hireRequestId;
+}: HireRequestNotificationParams) {}
+  const projectInfo = projectType;`
+    ? `${projectType} project` "
+    : "project",
+  
+  const summaryText = projectSummary "`
+    ? `: "${projectSummary}"` "
+    : "",
+  
+  // Create notification for talent;
+  const talentNotification = await createNotification({}
+    userId: talentId,`
+    title: `New Hire Request from ${requesterName}`,`
+    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     type: 'hire_request',
     relatedId: hireRequestId,
-    sendEmail: true,
-    actionUrl: '/dashboard',
+    sendEmail: true,'
+    actionUrl: '/dashboard','
     actionText: 'View Request'
   }),
+<<<<<<< HEAD
 
   // Create notification for admin if admin ID is provided
   if (adminId) {
@@ -186,12 +224,22 @@ export async function createHireRequestNotifications({
       userId: adminId,
       title: `New Hire Request for Talent`,
       message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,
+=======
+  
+  // Create notification for admin if admin ID is provided;
+  if (adminId) {}
+    const adminNotification = await createNotification({}
+      userId: adminId,`
+      title: `New Hire Request for Talent`,`
+      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       type: 'hire_request',
       relatedId: hireRequestId,
-      sendEmail: true,
-      actionUrl: '/admin/hire-requests',
+      sendEmail: true,'
+      actionUrl: '/admin/hire-requests','
       actionText: 'Review Request'
     }),
+<<<<<<< HEAD
 
     return {
       success: talentNotification.success && adminNotification.success,
@@ -213,52 +261,53 @@ export async function createHireRequestNotifications({
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { createNotification } from './createNotification',;
+=======
+    
+    return {}
+      success: talentNotification.success && adminNotification.success,
+      talentNotification,
+      adminNotification;
+'
+import { createNotification } from './createNotification',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { HireRequestNotificationParams } from './types',;
 /**;
  * Creates a hire request notification for admin and talent;
  */;
-export async function createHireRequestNotifications({;
-  talentId,;
-  adminId,;
-  requesterName,;
-  requesterEmail,;
-  projectType,;
-  projectSummary,;
-  hireRequestId;
-}: HireRequestNotificationParams) {;
-  const projectInfo = projectType;
-    ? `${projectType} project`;
+export async function createHireRequestNotifications() { return null; }`
+    ? `${projectType} project`;"
     : "project",;
-  const summaryText = projectSummary;
-    ? `: "${projectSummary}"`;
+  const summaryText = projectSummary;"`
+    ? `: "${projectSummary}"`;"
     : "",;
   // Create notification for talent;
   const talentNotification = await createNotification({;
-    userId: talentId,;
-    title: `New Hire Request from ${requesterName}`,;
-    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,;
+    userId: talentId,;`
+    title: `New Hire Request from ${requesterName}`,;`
+    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,;'
     type: 'hire_request',;
     relatedId: hireRequestId,;
-    sendEmail: true,;
-    actionUrl: '/dashboard',;
+    sendEmail: true,;'
+    actionUrl: '/dashboard',;'
     actionText: 'View Request';
   }),;
   // Create notification for admin if admin ID is provided;
   if (adminId) {;
     const adminNotification = await createNotification({;
-      userId: adminId,;
-      title: `New Hire Request for Talent`,;
-      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,;
+      userId: adminId,;`
+      title: `New Hire Request for Talent`,;`
+      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,;'
       type: 'hire_request',;
       relatedId: hireRequestId,;
-      sendEmail: true,;
-      actionUrl: '/admin/hire-requests',;
+      sendEmail: true,;'
+      actionUrl: '/admin/hire-requests',;'
       actionText: 'Review Request';
     }),;
     return {;
       success: talentNotification.success && adminNotification.success,;
       talentNotification;
       adminNotification;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -276,9 +325,18 @@ export async function createHireRequestNotifications({;
 <<<<<<< HEAD
 =======
 import {create_notification} from './create_notification';
+=======
+
+    }
+  }
+  return {}
+    talentNotification'
+import {create_notification} from './create_notification';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {HireRequestNotificationParams} from './types';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /**;
+<<<<<<< HEAD
  * Creates a hire request notification for admin and talent;
  */;
 export async function createHireRequestNotifications({;
@@ -328,36 +386,61 @@ export async function createHireRequestNotifications({;
   // Check condition
 if ( {) {
   $2
+=======
+* Creates a hire request notification for admin and talent;
+*/;
+export async /**;
+ * createHireRequestNotifications - Function description;
+ */
+function createHireRequestNotifications() {}
+  const project_info = project_type;`
+    ? `${project_type} project`;"
+    : "project";
+;
+  const summary_text = project_summary;"`
+    ? `: "${project_summary}"`;"
+    : "";
+;
+  // Create notification for talent;
+  const talent_notification = await create_notification ({}
+    user_id: talent_id,`
+    title: `New Hire Request from ${requester_name}`;`
+    message: `${requester_name} (${requester_email}) wants to hire you for a ${project_info}${summary_text}`;'
+    type: 'hire_request';
+    related_id: hireRequestId;
+    send_email: true;'
+    action_url: '/dashboard','
+    action_text: 'View Request';
+  });
+;
+  // Create notification for admin if admin ID is provided;
+  // Check condition;
+if ( {) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-    const admin_notification = await create_notification ({
-      user_id: admin_id;
-      title: `New Hire Request for Talent`,
-      message: `${requester_name} (${requester_email}) wants to hire talent for a ${project_info}${summary_text}`;
+    const admin_notification = await create_notification ({}
+      user_id: admin_id;`
+      title: `New Hire Request for Talent`,`
+      message: `${requester_name} (${requester_email}) wants to hire talent for a ${project_info}${summary_text}`;'
       type: 'hire_request';
       related_id: hireRequestId;
-      send_email: true;
-      action_url: '/admin / hire - requests',
+      send_email: true;'
+      action_url: '/admin / hire - requests','
       action_text: 'Review Request';
     });
 ;
-    return {
+    return {}
       success: talent_notification.success && admin_notification.success;
       talent_notification,
       admin_notification;
     }
   }
-  return {
+  return {}
     success: talent_notification.success,
     talent_notification;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    }
-  }
-  return {
-    success: talentNotification.success
 
+<<<<<<< HEAD
     talentNotification
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -369,3 +452,9 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
+=======
+
+
+  }
+}'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

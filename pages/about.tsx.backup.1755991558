@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -111,10 +112,14 @@ export default function About() {
       expertise: ['Quantum Computing', 'Cryptography', 'Quantum Algorithms']
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -641,6 +646,9 @@ export default function About() {
     </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

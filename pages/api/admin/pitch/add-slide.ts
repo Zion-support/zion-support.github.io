@@ -1,7 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;'
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  const { allowed } = await ensureAdminFromApi(req),'
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 <<<<<<< HEAD
@@ -18,6 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
   return res.status(200).json({
     title: 'Additional Insight'
     content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
@@ -33,3 +42,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  return res.status(200).json({'
+    title: 'Additional Insight','
+    content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'});
+};'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

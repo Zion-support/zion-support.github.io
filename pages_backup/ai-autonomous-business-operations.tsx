@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/ai-autonomous-business-operations.tsx
 <<<<<<< HEAD:pages/ai-autonomous-business-operations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,20 +104,26 @@ export default function AIAutonomousBusinessOperations() {
 				"Compliance logging and role-based access"
 
 <<<<<<< HEAD
+=======
+
+			implementationWeeks="Implementation: 3–6 weeks""
+			roiNote="Average ROI 5–12x within 120 days"
+			features={["
+				"Autonomous KPI monitoring and anomaly detection""
+				"Agentic workflows for ticket triage, billing, collections, and renewals""
+				"Human-in-the-loop approvals and audit trails""
+				"Playbooks for incident response and customer recovery""
+				"Compliance logging and role-based access"
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-autonomous-business-operations.tsx
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
-			]}
+			]}"
 			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
+<<<<<<< HEAD:pages_backup/ai-autonomous-business-operations.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -143,30 +150,44 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 
+
+
+			pricePerMonthUSD={3500  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-autonomous-business-operations.tsx
+
+
+
+
+<<<<<<< HEAD:pages_backup/ai-autonomous-business-operations.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 3–6 weeks"
+=======
+
+
+
+"
+			implementationWeeks="Implementation: 3–6 weeks""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-autonomous-business-operations.tsx
 			roiNote="Average ROI 5–12x within 120 days"
-			features={[
-				"Autonomous KPI monitoring and anomaly detection",
-				"Agentic workflows for ticket triage, billing, collections, and renewals",
-				"Human-in-the-loop approvals and audit trails",
-				"Playbooks for incident response and customer recovery",
-				"Compliance logging and role-based access",
+			features={["
+				"Autonomous KPI monitoring and anomaly detection","
+				"Agentic workflows for ticket triage, billing, collections, and renewals","
+				"Human-in-the-loop approvals and audit trails","
+				"Playbooks for incident response and customer recovery","
+				"Compliance logging and role-based access","
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
+<<<<<<< HEAD:pages_backup/ai-autonomous-business-operations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -190,32 +211,42 @@ import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			]  } catch (error) {
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["SaaS", "Healthcare", "Finance", "Retail"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+=======
 
+			]  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+			industries={["SaaS", "Healthcare", "Finance", "Retail"]  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-autonomous-business-operations.tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+"
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
 		/>
+<<<<<<< HEAD:pages_backup/ai-autonomous-business-operations.tsx
 	)
 <<<<<<< HEAD:pages/ai-autonomous-business-operations.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+	)"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-autonomous-business-operations.tsx
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations";
 		/>;
 	);
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD:pages_backup/ai-autonomous-business-operations.tsx
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -237,3 +268,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-autonomous-business-operations.tsx
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-autonomous-business-operations.tsx

@@ -331,13 +331,14 @@ export function TenantsList() {;
 
 <<<<<<< HEAD
 
-
+'
         .order ('created_at', { ascending: false }),
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -408,3 +409,6 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

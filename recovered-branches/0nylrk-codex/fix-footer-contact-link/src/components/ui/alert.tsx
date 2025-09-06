@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -18,22 +19,26 @@ import {cva, type, VariantProps} from 'class-variance-authority';
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {cn} from '@/lib/utils';
-const alertVariants = cva(
+const alertVariants = cva('
   'relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground'
-  {
-    variants: {
-      variant: {
+  {}
+    variants: {}
+      variant: {'
         default: 'bg-background text-foreground'
-        destructive:
+        destructive:'
           'border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive'
       }
     }
-    defaultVariants: {
+    defaultVariants: {'
       variant: 'default'
     }
   }
 );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,24 +66,43 @@ import { cva, type VariantProps } from "class-variance-authority"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import * as React from "react""
+import { cva, type VariantProps } from "class-variance-authority""
+import * as React from "react""
+import { cva, type VariantProps } from "class-variance-authority"
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils"
 
-const alertVariants = cva(
+const alertVariants = cva("
   "relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground",
-  {
-    variants: {
-      variant: {
+  {}
+    variants: {}
+      variant: {"
         default: "bg-background text-foreground",
-        destructive:
+        destructive:"
           "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive"}},
-    defaultVariants: {
+    defaultVariants: {"
       variant: "default"}}
 )
+<<<<<<< HEAD
 const Alert = React.forwardRef<
   HTMLDivElement
+=======
+
+
+const Alert = React.forwardRef<;
+  HTMLDivElement;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
-  <div
+  <div;
     ref={ref}
+<<<<<<< HEAD
     role="alert"
     className={cn(alertVariants({ variant }), className)}
     {...props}
@@ -101,45 +125,26 @@ const Alert = React.forwardRef<
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-
-const alertVariants = cva(;
-  'relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground',;
-  {;
-    variants: {;
-      variant: {;
-        default: 'bg-background text-foreground',;
-        destructive:;
-          'border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive',;
-      },;
-    },;
-    defaultVariants: {;
-      variant: 'default',;
-    },;
-  }
-);
-
-const Alert = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>;
-></typeof>(({ className, variant, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  <div
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+  <div;
+'
 import {cva, type, VariantProps} from 'class - variance - authority';
-;
+;'
 import {cn} from '@/lib / utils';
 ;
-const alert_variants = cva (
+const alert_variants = cva ('
   'relative w - full rounded - lg border p - 4 [&>svg~*]:pl - 7 [&>svg + div]:translate - y-[-3px] [&>svg]:absolute [&>svg]:left - 4 [&>svg]:top - 4 [&>svg]:text - foreground',
-  {
-    variants: {
-      variant: {
+  {}
+    variants: {}
+      variant: {'
         default: 'bg - background text - foreground',
-        destructive:;
+        destructive:;'
           'border - destructive / 50 text - destructive dark:border - destructive [&>svg]:text - destructive',
       },
     },
-    default_variants: {
+    default_variants: {'
       variant: 'default',
     },
   }
@@ -150,32 +155,25 @@ const Alert = React.forward_ref<;
   React.HTMLAttributes < HTMLDivElement> & VariantProps < typeof alert_variants>;
 ></typeof>(({ class_name, variant, ...props }, ref) => (
   <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     ref={ref}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+'
     role='alert';
     className={cn (alert_variants ({ variant }), class_name)}
     {...props}
   />
 
-<<<<<<< HEAD
-=======
 
-));
-Alert.displayName = 'Alert';
-const AlertTitle = React.forwardRef<
-  HTMLParagraphElement
-  React.HTMLAttributes<HTMLHeadingE</HTMLHeadingElement>lement>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-))
+
+
+))"
 Alert.displayName = "Alert"
 
 const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -185,6 +183,9 @@ const AlertTitle = React.forwardRef<
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 Alert && Alert.displayName = 'Alert';
 
 =======
@@ -195,8 +196,14 @@ const AlertTitle = React && React.forwardRef<;
   HTMLParagraphElement,;
   React && React.HTMLAttributes<HTMLHeadingE</HTMLHeadingElement>lement>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
   <h5
   />));
+=======
+
+  <h5;
+  />));'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 Alert.display_name = 'Alert';
 ;
 const AlertTitle = React.forward_ref<;
@@ -204,6 +211,7 @@ const AlertTitle = React.forward_ref<;
   React.HTMLAttributes < HTMLHeadingE</HTMLHeadingElement > lement>;
 >(({ class_name, ...props }, ref) => (
   <h5;
+<<<<<<< HEAD
     ref={ref}
     className={cn ('mb - 1 font - medium leading - none tracking - tight', class_name)}
     {...props}
@@ -237,23 +245,63 @@ const AlertDescription = React.forwardRef<
   React.HTMLAttributes<HTMLParagraphElement>
 
 >(({ className, ...props }, ref) => (AlertTitle && AlertTitle.displayName = 'AlertTitle';
+=======
+
+    ref={ref}'
+    className={cn ('mb - 1 font - medium leading - none tracking - tight', class_name)}
+    {...props}
+
+  <h5;
+    ref={ref}'
+    className={cn('mb-1 font-medium leading-none tracking-tight', className)}
+    {...props}
+  />
+'
+AlertTitle && AlertTitle.displayName = 'AlertTitle';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const AlertDescription = React && React.forwardRef<;
   HTMLParagraphElement,;
   React && React.HTMLAttr</HTMLParagraphElement>ibutes<HTMLParagraphElement>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
 AlertDescription.display_name = 'AlertDescription';
 ;
 export { Alert, AlertTitle, AlertDescription }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+
+
+  <div;
+    ref={ref}'
+    className={cn('text-sm [&_p]:leading-relaxed', className)}
+    {...props}
+'
+AlertDescription && AlertDescription.displayName = 'AlertDescription';
+
+export { Alert, AlertTitle, AlertDescription };
+
+
+))"
+AlertDescription.displayName = "AlertDescription"
+
+export { Alert, AlertTitle, AlertDescription };
+export { Alert, AlertTitle, AlertDescription };
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
+
+
+  />));'
+AlertDescription.display_name = 'AlertDescription';
+;
+export { Alert, AlertTitle, AlertDescription };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+;
+
   />
+<<<<<<< HEAD
 
 ))
 AlertDescription.displayName = "AlertDescription"
@@ -343,11 +391,15 @@ React.HTMLAttributes<HTMLParagraphElement> > ( ({
 =======
 ;));
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+));'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 AlertDescription.displayName = 'AlertDescription';
 export { Alert, AlertTitle, AlertDescription }
-))
+))"
 AlertDescription.displayName = "AlertDescription"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -367,3 +419,9 @@ export { Alert, AlertTitle, AlertDescription }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,15 +1,15 @@
 export default function Page(){return null}
-=======
-=======
+
+
 import React from 'react';
-=======
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { Mail, Phone, MapPin, MessageSquare, Clock, Globe, Send, CheckCircle, Star, Zap, Shield, Users, ArrowRight, DollarSign } from 'lucide-react';
 import { motion } from 'framer-motion';
-=======
+
 import React from 'react';
 import SEO from '../components/SEO';
 
@@ -60,6 +60,7 @@ export default function ContactPage() {
   const contactMethods = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -98,6 +99,9 @@ export default function ContactPage() {
       gradient: 'from-fuchsia-400 to-purple-500',
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b289
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -140,6 +144,7 @@ export default function ContactPage() {
   const whyChooseUs = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -180,6 +185,9 @@ export default function ContactPage() {
       gradient: 'from-green-400 to-teal-500',
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b289
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: <Users className="w-5 h-5" />,
@@ -503,7 +511,7 @@ export default function ContactPage() {
           </Card>
         </div>
       </section>
-=======
+
     <div className="min-h-[60vh] px-6 py-24">
       <SEO title="Contact | Zion Tech Group" description="Contact Zion Tech Group" />
       <div className="max-w-3xl mx-auto">

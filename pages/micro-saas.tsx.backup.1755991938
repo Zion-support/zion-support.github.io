@@ -2,9 +2,13 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { Shield, Clock, DollarSign, TrendingUp, Brain, Rocket, ArrowRight, ExternalLink, Search, Filter, Grid, List, Phone, Mail, MapPin, Star, Check, Sparkles, Atom, Cpu, Globe, FlaskConical, Zap, Users, Target, Building, Award, ChartBar, Lock, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Bot, ChevronRight, LinkIcon, Building2 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getRevolutionaryServices } from '../data/enhanced-real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 
 export default function MicroSaasPage() {
@@ -920,6 +924,7 @@ export default function MicroSaasPage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = enhancedRealMicroSaasServices;
@@ -1021,6 +1026,9 @@ export default function MicroSaasPage() {
         <meta name="keywords" content="micro SaaS, AI services, cloud optimization, content generation, business automation, software as a service" />
         <meta property="og:title" content="Real Micro SaaS Services | Zion Tech Group" />
         <meta property="og:description" content="48+ real micro SaaS services with immediate value delivery. Start your free trial today." />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
@@ -1032,6 +1040,7 @@ export default function MicroSaasPage() {
       </Head>
 
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -1443,5 +1452,11 @@ export default function MicroSaasPage() {
         </section>
       </div>
     </UltraFuturisticMatrixBackground>
+=======
+
+          </div>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
@@ -46,6 +47,12 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
 import React, { forwardRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+=======
+interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {}
+import React, { forwardRef } from 'react';'
+import { ChevronDown } from 'lucide-react';'
+import { cn } from '@/lib/utils';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { SafeRef } from '@/types/ref-types';
 interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -55,6 +62,7 @@ interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement
   title?: string;
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
+<<<<<<< HEAD
   showChevron?: boolean
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,6 +84,9 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
 =======
 
 
+=======
+  showChevron?: boolean;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   (;
     {;
@@ -93,6 +104,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -116,6 +128,17 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 =======
             type='button'
             className='flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30'
+=======
+        ref={ref as SafeRef<HTMLDivElement>}'
+        className={cn('px-3 py-2', className)}        {...props}
+      >
+        {title && (
+          <button'
+            type='button''
+            className='flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30'
+            onClick={() => setExpanded(!expanded)}          >;'
+            <div className='flex items-center gap-2'>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -126,6 +149,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
               <span>{title}</span>
             </div>
             {showChevron && (
+<<<<<<< HEAD
               <ChevronDown
 <<<<<<< HEAD
 =======
@@ -229,12 +253,24 @@ export { SidebarGroup };
 ),
 =======
 
+=======
+              <ChevronDown;
+                className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
+              />
+
+
+            )}
+          </button>
+        )}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className={cn('mt-1', !expanded && 'hidden')}>{children}</div>;
       </div>;
     );
 
   }
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -287,3 +323,6 @@ SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

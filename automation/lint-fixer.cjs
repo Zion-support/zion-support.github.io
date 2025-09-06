@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -48,6 +49,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -63,6 +74,7 @@ class LintFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -112,6 +124,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -298,6 +320,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = LintFixer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = LintFixer;
 module.exports = LintFixer;
 =======
@@ -314,10 +337,14 @@ module.exports = LintFixer;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 module.exports = LintFixer;
 <<<<<<< HEAD
 =======
 module.exports = LintFixer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -356,3 +383,14 @@ main
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+module.exports = LintFixer;
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

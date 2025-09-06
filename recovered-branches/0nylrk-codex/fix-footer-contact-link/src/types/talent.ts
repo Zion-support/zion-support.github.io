@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -18,6 +19,9 @@ export interface TalentProfile {
 =======
 export interface TalentProfile {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface TalentProfile {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   user_id: string;
   full_name: string;
@@ -108,7 +112,7 @@ export interface HireRequest {
   average_rating?: number;
   rating_count?: number;
   is_verified?: boolean;
-  key_projects?: {
+  key_projects?: {}
     title: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     description: string;
@@ -120,7 +124,7 @@ export interface HireRequest {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }[];
 }
-export interface TalentProfileFilters {
+export interface TalentProfileFilters {};
   search?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,16 +135,16 @@ export interface TalentProfileFilters {
   experienceRange?: [number, number];
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 }
-export interface HireRequest {
+export interface HireRequest {};
   id: string;
   client_id: string;
   talent_id: string;
   project_title: string;
   project_description: string;
-  budget: {
+  budget: {}
     min: number;
     max: number;
     currency: string;
@@ -192,8 +196,12 @@ export interface HireRequest {;
   }
 =======
   };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   timeline: {
+=======
+  timeline: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     startDate: string;
     endDate?: string;
     estimatedDuration?: string;
@@ -208,6 +216,7 @@ export interface TalentProfile {;
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -288,3 +297,10 @@ export interface HireRequest {;
 =======
   skills?: string[];}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

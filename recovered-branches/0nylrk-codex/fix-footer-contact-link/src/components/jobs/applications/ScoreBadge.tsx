@@ -2,9 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 
@@ -22,17 +23,10 @@ export function ScoreBadge(): any ({ application }: ScoreBadgeProps) {;
 
 
 
+
+
+
 <<<<<<< HEAD
-=======
-
-import { JobApplication } from "@/types/jobs";
-interface ScoreBadgeProps {
-  application: JobApplication;
-}
-export function ScoreBadge({ application }: ScoreBadgeProps) {
-
-  const score = application.match_score |0;
-
 export function ScoreBadge({ application }: ScoreBadgeProps) {;
   const score = application.match_score || 0;
 
@@ -60,12 +54,20 @@ interface ScoreBadgeProps {;
   if (score >= 80) className = "text-green-700 bg-green-100",
   else if (score >= 60) className = "text-blue-700 bg-blue-100",
   else if (score >= 40) className = "text-yellow-700 bg-yellow-100",
+=======
+  // Determine color based on score"
+  let className = "text-gray-700 bg-gray-100","
+  if (score >= 80) className = "text-green-700 bg-green-100","
+  else if (score >= 60) className = "text-blue-700 bg-blue-100","
+  else if (score >= 40) className = "text-yellow-700 bg-yellow-100","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   else if (score > 0) className = "text-orange-700 bg-orange-100",
 
   return (
-    <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>
+    <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>"`
       {score ? `${score}%` : "Not scored"}
     </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -83,11 +85,18 @@ interface ScoreBadgeProps {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
+=======
+
+
+
+  )"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { JobApplication } from "@/types/jobs",;
 interface ScoreBadgeProps {;
   application: JobApplication;
 }
 ;
+<<<<<<< HEAD
 export function ScoreBadge({ application }: ScoreBadgeProps) {;
   const score = application.match_score || 0,;
 <<<<<<< HEAD
@@ -114,52 +123,52 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {;
 
   return (
     <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>;
+=======
+export function ScoreBadge() { return null; }`
+    <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>;"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {score ? `${score}%` : "Not scored"}
     </span>;
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 import { JobApplication  } from '@/types / jobs';
-interface ScoreBadgeProps {
+interface ScoreBadgeProps {}
   application: JobApplication;
 }
-export /**
- * ScoreBadge - Function description
+export /**;
+ * ScoreBadge - Function description;
  */
-function ScoreBadge() {
+function ScoreBadge() {}
   const score = application.match_score || 0;
 ;
-  // Determine color based on score;
+  // Determine color based on score;"
   let class_name = "text - gray - 700 bg - gray - 100";
-  // Check condition
-if (class_name = "text - green - 700 bg - green - 100") {
-  $2
+  // Check condition"
+if (class_name = "text - green - 700 bg - green - 100") {}
+  $2;
 }
-  else // Check condition
-if (class_name = "text - blue - 700 bg - blue - 100") {
-  $2
+  else // Check condition"
+if (class_name = "text - blue - 700 bg - blue - 100") {}
+  $2;
 }
-  else // Check condition
-if (class_name = "text - yellow - 700 bg - yellow - 100") {
-  $2
+  else // Check condition"
+if (class_name = "text - yellow - 700 bg - yellow - 100") {}
+  $2;
 }
-  else // Check condition
-if (class_name = "text - orange - 700 bg - orange - 100") {
-  $2
+  else // Check condition"
+if (class_name = "text - orange - 700 bg - orange - 100") {}
+  $2;
 }
-  return (
-    <span className={`rounded - full px - 2 py - 1 text - xs font - medium ${class_name}`}>;
+  return (`
+    <span className={`rounded - full px - 2 py - 1 text - xs font - medium ${class_name}`}>;"`
       {score ? `${score}%` : "Not scored"}
     </span>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,41 +179,31 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
-}
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
 
-
+"
 import { JobApplication } from "@/types/jobs",;
 ;
 interface ScoreBadgeProps {;
   application:JobApplication;
 }
 ;
-export function ScoreBadge({ application } ScoreBadgeProps) {;
-  const score = application.match_score || 0,;
-  ;
-  // Determine color based on score;
-  let className = "text-gray-700 bg-gray-100",;
-  if (score >= 80) className = "text-green-700 bg-green-100",;
-  else if (score >= 60) className = "text-blue-700 bg-blue-100",;
-  else if (score >= 40) className = "text-yellow-700 bg-yellow-100";
-  else if (score > 0) className = "text-orange-700 bg-orange-100";
-  return (;
-    <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>;
+export function ScoreBadge() { return null; }`
+    <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>;"`
       {score ? `${score}%` : "Not scored"}
     </span>;
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -213,3 +212,7 @@ export function ScoreBadge({ application } ScoreBadgeProps) {;
 =======
   );}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

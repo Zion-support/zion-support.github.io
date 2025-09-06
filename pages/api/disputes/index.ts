@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import { createDispute, readAllDisputes } from "../../../utils/fsdb";
-import { parseUserFromRequest } from "../../../utils/auth";
-import { DisputeCase, DisputeReason } from "../../../types/disputes";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+import type { NextApiRequest, NextApiResponse } from "next";"
+import { createDispute, readAllDisputes } from "../../../utils/fsdb";"
+import { parseUserFromRequest } from "../../../utils/auth";"
+import { DisputeCase, DisputeReason } from "../../../types/disputes";"
 import { generateCaseId } from "../../../utils/fsdb";
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createDispute, readAllDisputes } from '[^']*';
@@ -27,6 +32,13 @@ export default async function handler(
     let filtered = all;
 <<<<<<< HEAD
     if (user && user.role !== "admin") {
+=======
+export default async function handler() { return null; }
+  if (req && req.method === "GET") {}
+    const all = await readAllDisputes();
+    let filtered = all;"
+    if (user && user.role !== "admin") {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       filtered = all && all.filter(
         (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id
 
@@ -39,13 +51,19 @@ filtered = all.filter(
     }
     return res && res.status(200).json({ disputes: filtered });
 
+<<<<<<< HEAD
     if (user.role !== 'admin') {
+=======
+
+    if (user.role !== 'admin') {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
     }
     return res.status(200).json({ disputes: filtered })
 
   }
 
+<<<<<<< HEAD
   if (req && req.method === "POST") {
     const now = new Date().toISOString();
     const {
@@ -58,6 +76,12 @@ filtered = all.filter(
       reason
       reasonDetails
 =======
+=======
+"
+  if (req && req.method === "POST") {}
+    const now = new Date().toISOString();
+    const {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       projectId,
       entityType,
       entityId,
@@ -74,21 +98,91 @@ description,
       !clientUserId |
       !talentUserId |
       !reason |
+<<<<<<< HEAD
       !description
     ) {
 <<<<<<< HEAD
       return res && res.status(400).json({ error: "Missing required fields" });
 
+=======
+      !description;
+    ) {"
+      return res && res.status(400).json({ error: "Missing required fields" });
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description} = req.body || {};
 
-    if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
+    if (!projectId || !clientUserId || !talentUserId || !reason || !description) {'
       return res.status(400).json({ error: 'Missing required fields' })
 
+<<<<<<< HEAD
     }
     const id = generateCaseId();
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+
+    }
+    const id = generateCaseId();
+
+'
+import type { NextApiRequest, NextApiResponse } from './next';'
+import { create_dispute, readAllDisputes  } from '../../../utils / fsdb';'
+import { parseUserFromRequest  } from '../../../utils / auth';'
+import { DisputeCase, DisputeReason  } from '../../../types / disputes';'
+import { generateCaseId  } from '../../../utils / fsdb';
+;
+export default async /**;
+ * handler - Function description;
+ */
+function handler() {}
+  const user = parseUserFromRequest (req);
+;
+  // Check condition;
+if ( {) {}
+  $2;
+}
+    const all = await readAllDisputes ();
+    let filtered = all;
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      filtered = all.filter (
+        (d) => d.clientUserId === user.id || d.talentUserId === user.id,
+      );
+    }
+    return res.status (200).json ({ disputes: filtered });
+  }
+  // Check condition;
+if ( {) {}
+  $2;
+}
+    const now = new Date ().toISOString ();
+    const {}
+      project_id,
+      entity_type,
+      entity_id,
+      clientUserId,
+      talentUserId,
+      reason,
+      reason_details,
+
+      description,
+    } = req.body || {}
+;
+    // Check condition;
+if ( {) {}
+  $2;
+}"
+      return res.status (400).json ({ error: "Missing required fields" });
+    }
+    const id = generateCaseId ();
+
+    const dispute: DisputeCase = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       id,
       projectId: String(projectId),
 =======
@@ -104,8 +198,12 @@ projectId: String(projectId),
       clientUserId: String(clientUserId),
       talentUserId: String(talentUserId),
       createdAt: now,
+<<<<<<< HEAD
       updatedAt: now,
 <<<<<<< HEAD
+=======
+      updatedAt: now,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       status: "Open",
 =======
       status: 'Open',
@@ -146,54 +244,57 @@ projectId: String(projectId),
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return res.status(405).end("Method Not Allowed");
 }
 
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['GET', 'POST']);
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createDispute, readAllDisputes } from '../../../utils/fsdb';
-import { parseUserFromRequest } from '../../../utils/auth';
-import { DisputeCase, DisputeReason } from '../../../types/disputes';
+export default function handler() { return null; }
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import { createDispute, readAllDisputes } from '../../../utils/fsdb';'
+import { parseUserFromRequest } from '../../../utils/auth';'
+import { DisputeCase, DisputeReason } from '../../../types/disputes';'
 import { generateCaseId } from '../../../utils/fsdb';
-export default async function handler(req, res) {
-  try {
-  const user = parseUserFromRequest(req);
-  if (req.method === 'GET') {
+export default async function handler(req, res) {}
+  try {};
+  const user = parseUserFromRequest(req);'
+  if (req.method === 'GET') {}
     const all = await readAllDisputes();
-    let filtered = all;
+    let filtered = all;'
     if (user.role !== 'admin') {;
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id);
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     return res.status(200).json({ disputes: filtered });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-  if (req.method === 'GET') {
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;'
+  if (req.method === 'GET') {}
     const now = new Date().toISOString();
     const {;
       projectId;
@@ -204,18 +305,18 @@ export default async function handler(req, res) {
       reason,;
       reasonDetails,;
       description} = req.body || {};
-    if (!projectId || !clientUserId || !talentUserId || !reason || !description) {;
+    if (!projectId || !clientUserId || !talentUserId || !reason || !description) {;'
       return res.status(400).json({ error: 'Missing required fields' });
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -229,48 +330,59 @@ export default async function handler(req, res) {
       clientUserId: String(clientUserId);
       talentUserId: String(talentUserId);
       createdAt: now,;
-      updatedAt: now,;
+      updatedAt: now,;'
       status: 'Open',;
       reason: reason as DisputeReason,;
       reasonDetails,;
       description,;
       attachments: [],;
       messages: []},;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     await createDispute(dispute);
     return res.status(201).json({ dispute });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-  res.setHeader('AllowGET,POST');
+;'
+  res.setHeader('AllowGET,POST');'
   return res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
 =======
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

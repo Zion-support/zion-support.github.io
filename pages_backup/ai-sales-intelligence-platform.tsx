@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
 <<<<<<< HEAD:pages/ai-sales-intelligence-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,13 +10,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
 
 
+
+
+<<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AISalesIntelligencePlatform() {
@@ -26,6 +27,15 @@ export default function AISalesIntelligencePlatform() {
 			title="AI Sales Intelligence Platform"
 			slug="ai-sales-intelligence-platform"
 			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows."
+=======
+
+export default function AISalesIntelligencePlatform() {}
+	return (;
+		<ServiceLanding;
+			title="AI Sales Intelligence Platform""
+			slug="ai-sales-intelligence-platform""
+			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows.""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
 			subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI-first workflows."
 <<<<<<< HEAD
 			pricePerMonthUSD={1499}
@@ -44,9 +54,10 @@ export default function AISalesIntelligencePlatform() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-=======
+
 }
 
+<<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -99,51 +110,88 @@ export default function AISalesIntelligencePlatform() {
 	return (
 		<ServiceLanding
 
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
-import React from 'react';
+export default /**;
+ * AISalesIntelligencePlatform - Function description;
+ */
+function AISalesIntelligencePlatform() {}
+return (
+  <ServiceLanding;"
+  title="AI Sales Intelligence Platform";"
+  slug="ai - sales - intelligence - platform";"
+  description="Auto - prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows.";"
+  subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI - first workflows.";
+  pricePerMonthUSD={1499}"
+    implementation_weeks="Implementation: 1–3 weeks";"
+  roi_note="Average ROI 3–8x within 60 days";
+  features={[;"
+    "AI lead scoring using firmographics, intent, and engagement","
+    "One - click hyper - personalized emails and sequences","
+    "Meeting prep briefs and objection handling","
+    "Forecasting with scenario simulations","
+    "CRM automations for notes, tasks, and next steps","
+    "Integrations: Salesforce, HubSpot, Gmail / Outlook, Gong, Zoom";
+  ]}"
+    industries={["B2B SaaS", "Professional Services", "Manufacturing"]}"
+    canonical="https: //ziontechgroup.com / ai - sales - intelligence - platform";
+  />);
+'
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+export default function AISalesIntelligencePlatform() {}
+	return (;
+		<ServiceLanding;
+'
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;'
+import React from 'react';'
 import Layout from '../components/layout/Layout';
-export default function AISalesIntelligencePlatform() {
-  return (
-    <Layout title="AI Sales Intelligence Platform - Zion Tech Group">
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-20">
-          <h1 className="text-4xl font-bold text-center mb-8">
-            AI Sales Intelligence Platform
-          </h1>
+export default function AISalesIntelligencePlatform() {}
+  return ("
+    <Layout title="AI Sales Intelligence Platform - Zion Tech Group">"
+      <div className="min-h-screen bg-gray-50">"
+        <div className="container mx-auto px-6 py-20">"
+          <h1 className="text-4xl font-bold text-center mb-8">;
+            AI Sales Intelligence Platform;
+          </h1>"
           <p className="text-center text-gray-600">
             Leverage AI for intelligent sales insights and automation.
           </p>
         </div>
       </div>
     </Layout>
-  );
+  );'
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
-export default function AISalesIntelligencePlatform() {
+export default function AISalesIntelligencePlatform() {}
 	return (
-		<ServiceLanding
-			title="AI Sales Intelligence Platform"
-			slug="ai-sales-intelligence-platform"
-			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows."
-			subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI-first workflows."
-			implementationWeeks="Implementation: 1–3 weeks"
+		<ServiceLanding"
+			title="AI Sales Intelligence Platform""
+			slug="ai-sales-intelligence-platform""
+			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows.""
+			subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI-first workflows.""
+			implementationWeeks="Implementation: 1–3 weeks""
 			roiNote="Average ROI 3–8x within 60 days"
-			features={[
-				"AI lead scoring using firmographics, intent, and engagement"
-				"One-click hyper-personalized emails and sequences"
-				"Meeting prep briefs and objection handling"
-				"Forecasting with scenario simulations"
+			features={["
+				"AI lead scoring using firmographics, intent, and engagement""
+				"One-click hyper-personalized emails and sequences""
+				"Meeting prep briefs and objection handling""
+				"Forecasting with scenario simulations""
 				"CRM automations for notes, tasks, and next steps"
+<<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
 
 <<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
-			]}
+			]}"
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
 
+<<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
 export default function AISalesIntelligencePlatform() {_return (
 		<ServiceLanding
 			title=&quot;AI Sales Intelligence Platform&quot;
@@ -174,37 +222,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
 
 }
-
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+';
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
-export default /**
- * AISalesIntelligencePlatform - Function description
+export default /**;
+ * AISalesIntelligencePlatform - Function description;
  */
-function AISalesIntelligencePlatform() {
+function AISalesIntelligencePlatform() {}
 return (
-  <ServiceLanding;
-  title="AI Sales Intelligence Platform";
-  slug="ai - sales - intelligence - platform";
-  description="Auto - prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows.";
+  <ServiceLanding;"
+  title="AI Sales Intelligence Platform";"
+  slug="ai - sales - intelligence - platform";"
+  description="Auto - prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows.";"
   subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI - first workflows.";
-  pricePerMonthUSD={1499}
-    implementation_weeks="Implementation: 1–3 weeks";
+  pricePerMonthUSD={1499}"
+    implementation_weeks="Implementation: 1–3 weeks";"
   roi_note="Average ROI 3–8x within 60 days";
-  features={[;
-    "AI lead scoring using firmographics, intent, and engagement",
-    "One - click hyper - personalized emails and sequences",
-    "Meeting prep briefs and objection handling",
-    "Forecasting with scenario simulations",
-    "CRM automations for notes, tasks, and next steps",
+  features={[;"
+    "AI lead scoring using firmographics, intent, and engagement","
+    "One - click hyper - personalized emails and sequences","
+    "Meeting prep briefs and objection handling","
+    "Forecasting with scenario simulations","
+    "CRM automations for notes, tasks, and next steps","
     "Integrations: Salesforce, HubSpot, Gmail / Outlook, Gong, Zoom";
-  ]}
-    industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
+  ]}"
+    industries={["B2B SaaS", "Professional Services", "Manufacturing"]}"
     canonical="https: //ziontechgroup.com / ai - sales - intelligence - platform";
   />);
 
 
+<<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -215,27 +266,34 @@ return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			pricePerMonthUSD={1499  } catch (error) {
     console.error("Error:", error);
+=======
+
+			pricePerMonthUSD={1499  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -252,14 +310,23 @@ return (
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="Implementation: 1–3 weeks"
+=======
+
+
+
+
+"
+			implementationWeeks="Implementation: 1–3 weeks""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
 			roiNote="Average ROI 3–8x within 60 days"
-			features={[
-				"AI lead scoring using firmographics, intent, and engagement",
-				"One-click hyper-personalized emails and sequences",
-				"Meeting prep briefs and objection handling",
-				"Forecasting with scenario simulations",
-				"CRM automations for notes, tasks, and next steps",
+			features={["
+				"AI lead scoring using firmographics, intent, and engagement","
+				"One-click hyper-personalized emails and sequences","
+				"Meeting prep briefs and objection handling","
+				"Forecasting with scenario simulations","
+				"CRM automations for notes, tasks, and next steps","
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
+<<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -315,19 +382,51 @@ return (
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
+=======
+
+			]  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+			industries={["B2B SaaS", "Professional Services", "Manufacturing"]  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
+		/>
+	)"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx
+			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform";
+		/>;
+	);
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -336,14 +435,9 @@ return (
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
 
+<<<<<<< HEAD:pages_backup/ai-sales-intelligence-platform.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -358,3 +452,10 @@ return (
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-sales-intelligence-platform.tsx
+=======
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-sales-intelligence-platform.tsx

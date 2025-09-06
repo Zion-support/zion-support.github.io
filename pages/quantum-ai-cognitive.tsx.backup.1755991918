@@ -15,7 +15,11 @@ export default function QuantumAICognitivePage() {
   const contactInfo = service.contactInfo;
 
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />

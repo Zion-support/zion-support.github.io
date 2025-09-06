@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,17 +65,42 @@ const CommunityRoutes = () => {;  return (
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-
-const CommunityRoutes = () => {
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-const CommunityRoutes = () => {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { Fragment } from "react";"
+import { Route, Routes } from "react-router-dom";"
+import { ProtectedRoute } from "../components/ProtectedRoute";"
+import CommunityPage from "../pages/CommunityPage";"
+import ForumCategoryPage from "../pages/ForumCategoryPage";"
+import ForumPostPage from "../pages/ForumPostPage";"
+import CreatePostPage from "../pages/CreatePostPage";"
+import EditPostPage from "../pages/EditPostPage";"
+import CommunityProfilePage from "../pages/CommunityProfilePage";
+const CommunityRoutes = () => {}
+"
+import {Fragment} from "react";"
+import {Route, Routes} from "react-router-dom";"
+import {ProtectedRoute} from "../components/ProtectedRoute";"
+import CommunityPage from "../pages/CommunityPage";"
+import ForumCategoryPage from "../pages/ForumCategoryPage";"
+import ForumPostPage from "../pages/ForumPostPage";"
+import CreatePostPage from "../pages/CreatePostPage";"
+import EditPostPage from "../pages/EditPostPage";"
+import CommunityProfilePage from "../pages/CommunityProfilePage";
+
+"
+import { Fragment } from "react","
+import { Route, Routes } from "react-router-dom","
+import { ProtectedRoute } from "../components/ProtectedRoute","
+import CommunityPage from "../pages/CommunityPage","
+import ForumCategoryPage from "../pages/ForumCategoryPage","
+import ForumPostPage from "../pages/ForumPostPage","
+import CreatePostPage from "../pages/CreatePostPage",";
+import EditPostPage from "../pages/EditPostPage";"
+import CommunityProfilePage from "../pages/CommunityProfilePage";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+const CommunityRoutes = () => {}
+const CommunityRoutes = () => {}
 const CommunityRoutes = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -88,6 +114,7 @@ const CommunityRoutes = () => {
 =======const CommunityRoutes = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
+<<<<<<< HEAD
     <Routes>;
       {/* Public routes */}
       <Route path="/community" element={<CommunityPage />} />
@@ -188,12 +215,28 @@ import ForumCategoryPage from "../pages/ForumCategoryPage",;
 import ForumPostPage from "../pages/ForumPostPage",;
 import CreatePostPage from "../pages/CreatePostPage",;
 import EditPostPage from "../pages/EditPostPage",;
+=======
+
+
+
+
+"
+import { Fragment } from "react",;"
+import { Route, Routes } from "react-router-dom",;"
+import { ProtectedRoute } from "../components/ProtectedRoute",;"
+import CommunityPage from "../pages/CommunityPage",;"
+import ForumCategoryPage from "../pages/ForumCategoryPage",;"
+import ForumPostPage from "../pages/ForumPostPage",;"
+import CreatePostPage from "../pages/CreatePostPage",;"
+import EditPostPage from "../pages/EditPostPage",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import CommunityProfilePage from "../pages/CommunityProfilePage",;
 ;
 const CommunityRoutes = () => {;
   return (;
     <Routes>;
       {/* Public routes */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -225,32 +268,40 @@ import ForumCategoryPage from "../pages / ForumCategoryPage";
 import ForumPostPage from "../pages / ForumPostPage";
 import CreatePostPage from "../pages / CreatePostPage";
 import EditPostPage from "../pages / EditPostPage";
+=======
+"
+      <Route path="/community" element={<CommunityPage />} />;"
+      <Route path="/forum" element={<CommunityPage />} />;"
+      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />;"
+      <Route path="/community/post/:postId" element={<ForumPostPage />} />;"
+      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />;
+
+import { Fragment } from './react';'
+import { Route, Routes } from './react-router-dom';'
+import { ProtectedRoute } from '../components / ProtectedRoute';"
+import CommunityPage from "../pages / CommunityPage";"
+import ForumCategoryPage from "../pages / ForumCategoryPage";"
+import ForumPostPage from "../pages / ForumPostPage";"
+import CreatePostPage from "../pages / CreatePostPage";"
+import EditPostPage from "../pages / EditPostPage";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import CommunityProfilePage from "../pages / CommunityProfilePage";
-const CommunityRoutes = () =>: any {
+const CommunityRoutes = () =>: any {}
   return (
     <Routes>;
-      {/* Public routes */}
-      <Route path="/community" element={<CommunityPage />} />;
-      <Route path="/forum" element={<CommunityPage />} />;
-      <Route path="/community / category/:category_id" element={<ForumCategoryPage />} />;
-      <Route path="/community / post/:post_id" element={<ForumPostPage />} />;
+      {/* Public routes */}"
+      <Route path="/community" element={<CommunityPage />} />;"
+      <Route path="/forum" element={<CommunityPage />} />;"
+      <Route path="/community / category/:category_id" element={<ForumCategoryPage />} />;"
+      <Route path="/community / post/:post_id" element={<ForumPostPage />} />;"
       <Route path="/community / profile/:user_id" element={<CommunityProfilePage />} />;
       {/* Protected routes */}
-      <Route;
+      <Route;"
         path="/community / create";
-        element={
-<<<<<<< HEAD
-=======
-      ;
-      {/* Protected routes */}
-      <Route;
-        path="/community/create";
-        element={;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        element={}
           <ProtectedRoute>;
             <CreatePostPage />;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -283,6 +334,18 @@ export default CommunityRoutes;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+          </ProtectedRoute>;
+        }
+
+          <ProtectedRoute>;
+            <EditPostPage />;
+          </ProtectedRoute>;
+        }
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       />;
     </Routes>;
 },;
@@ -299,37 +362,37 @@ export default CommunityRoutes;
   ),;
 },;
 ;export default CommunityRoutes,
- const CommunityRoutes = () => {
-  return (<Routes> {
-  /* Public routes */ 
-}<Route path="/community" element= {
-  <CommunityPage /> 
-}/> <Route path="/forum" element= {
-  <CommunityPage /> 
-}/> <Route path="/community/category/:categoryId" element= {
-  <ForumCategoryPage /> 
-}/> <Route path="/community/post/:postId" element= {
-  <ForumPostPage /> 
-}/> <Route path="/community/profile/:userId" element= {
+ const CommunityRoutes = () => {}
+  return (<Routes> {}
+  /* Public routes */ "
+}<Route path="/community" element= {}
+  <CommunityPage /> "
+}/> <Route path="/forum" element= {}
+  <CommunityPage /> "
+}/> <Route path="/community/category/:categoryId" element= {}
+  <ForumCategoryPage /> "
+}/> <Route path="/community/post/:postId" element= {}
+  <ForumPostPage /> "
+}/> <Route path="/community/profile/:userId" element= {}
   <CommunityProfilePage /> 
 }/> /* Protected routes */ 
 }<Route <CreatePostPage /> </ProtectedRoute> 
 }/> <Route <EditPostPage /> </ProtectedRoute> 
-}/> </Routes>) 
+}/> </Routes>) ;
 };
 export default CommunityRoutes;
       {/* Protected routes */}
-      <Route
+      <Route"
         path="/community/create"
-        element={
+        element={}
           <ProtectedRoute>
             <CreatePostPage />
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route"
         path="/community/edit/:postId"
-        element={
+        element={}
           <ProtectedRoute>
             <EditPostPage />
           </ProtectedRoute>
@@ -339,12 +402,17 @@ export default CommunityRoutes;
   );
 },;
 export default CommunityRoutes;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
 ;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

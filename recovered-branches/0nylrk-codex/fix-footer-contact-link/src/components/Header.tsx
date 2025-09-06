@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Header, as, HeaderComponent } from "./header/Header";
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -15,6 +16,16 @@ export { HeaderComponent as Header };
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { Header, as, HeaderComponent  } from './header / Header';
+export { HeaderComponent as Header }
+
+
+;
+export { HeaderComponent as Header };
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export { HeaderComponent as Header }
 
@@ -27,8 +38,9 @@ export { HeaderComponent as Header };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Header, as, HeaderComponent } from "./header/Header";
 export { HeaderComponent as Header }
-
+;
 export { HeaderComponent as Header };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,3 +54,7 @@ export { HeaderComponent as Header };
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

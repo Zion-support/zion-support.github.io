@@ -27,10 +27,11 @@ export interface SmartContractInfo {;
   transactionHash?: string;
   networkName?: BlockchainNetwork;
   blockNumber?: number;
-  deployedAddress?: string;
+  deployedAddress?: string;"
   contractType: "escrow" | "milestone" | "simpleAgreement";
   metadataUrl?: string;
   createdAt: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +60,9 @@ export interface EscrowContractDetails {;
 export interface EscrowContractDetails {
 =======
   createdBy: string;
+=======
+  createdBy: string;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   status: "draft" | "deployed" | "executed" | "cancelled";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
@@ -75,9 +79,15 @@ export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';}
 
 export interface EscrowContractDetails {;
 
+<<<<<<< HEAD
 export interface EscrowContractDetails {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+}
+export interface EscrowContractDetails {};
 export interface EscrowContractDetails {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +95,9 @@ export interface EscrowContractDetails {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   client: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -113,14 +126,8 @@ export interface DeploymentOptions {;
 
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  completionDeadline: string
-  arbitrator?: string
-}
-export interface DeploymentOptions {
 
+<<<<<<< HEAD
 export interface DeploymentOptions {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -131,6 +138,10 @@ export interface DeploymentOptions {;
 export interface DeploymentOptions {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
@@ -181,6 +192,7 @@ export interface EscrowContractDetails {;
   deployToChain: boolean;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+<<<<<<< HEAD
 =======
   network: BlockchainNetwork;
   walletAddress?: string;
@@ -193,6 +205,9 @@ export interface EscrowContractDetails {;
   arbitrator?: string;}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface DeploymentOptions {
+=======
+export interface DeploymentOptions {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   network: BlockchainNetwork;
   wallet_address?: string;
   use_escrow: boolean,
@@ -201,6 +216,7 @@ export interface DeploymentOptions {
 }
 ;
 
+<<<<<<< HEAD
 }  arbitrator?: string;
 }
 ;
@@ -222,3 +238,12 @@ export interface DeploymentOptions {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

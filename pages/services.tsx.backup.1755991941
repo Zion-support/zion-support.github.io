@@ -241,6 +241,7 @@ export default function ServicesPage() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:components/services.tsx.backup.1755991815.backup.1756001157
 ========
@@ -395,6 +396,9 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c9ab
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991941
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
@@ -402,7 +406,7 @@ export default function ServicesPage() {
     </QuantumNeuralBackground>
   );
 }
-=======
+
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -415,6 +419,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -909,6 +914,9 @@ export default function Services() {
                 Experience the future of technology with our most innovative and cutting-edge micro SaaS services.
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c9ab
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-gray-400">
                 <div className="flex items-center gap-2">
@@ -928,6 +936,7 @@ export default function Services() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -990,11 +999,15 @@ export default function Services() {
                 </EnhancedFuturisticCard>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c9ab
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1752,6 +1765,9 @@ export default function Services() {
                 <div className="text-3xl font-bold text-cyan-400 mb-2">200+</div>
                 <div className="text-slate-300">Revolutionary Services</div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-2">800%+</div>

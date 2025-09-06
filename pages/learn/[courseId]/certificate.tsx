@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -8,13 +9,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -22,9 +21,17 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useRouter } from 'next/router';
+=======
+
+
+
+
+import { useRouter } from 'next/router';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import CertificatePreview from '../../../components/learn/CertificatePreview';
-export default function CertificatePage() {
+export default function CertificatePage() {}
   const router = useRouter()
+<<<<<<< HEAD
   const { courseId } = router.query as { courseId: string }
   if (!courseId) return null
 <<<<<<< HEAD
@@ -47,11 +54,16 @@ export default function CertificatePage() {
   const router = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const { courseId } = router.query as { courseId: string };
+  if (!courseId) return null;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
-    <div className="space-y-4">
+    <div className="space-y-4">"
       <h1 className="text-2xl font-semibold">Certificate</h1>
       <CertificatePreview courseId={courseId} />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -98,22 +110,32 @@ export default function CertificatePage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { use_router } from 'next / router',
+=======
+
+
+
+}
+
+'
+import { use_router } from 'next / router','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import CertificatePreview from '../../../components / learn / CertificatePreview',
-export default /**
- * CertificatePage - Function description
+export default /**;
+ * CertificatePage - Function description;
  */
-function CertificatePage() {
+function CertificatePage() {}
   const router = use_router (),
   const { course_id } = router.query as { course_id: string },
-  // Check condition
-if (return null, ) {
-  $2
+  // Check condition;
+if (return null, ) {}
+  $2;
 }
-  return (
-    <div className="space - y-4">;
+  return ("
+    <div className="space - y-4">;"
       <h1 className="text - 2xl font - semibold">Certificate</h1>;
       <CertificatePreview course_id={course_id} />;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -131,11 +153,15 @@ if (return null, ) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -156,3 +182,8 @@ if (return null, ) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React from 'react';'''; import { useParams } from 'react-router-dom';'''
 import _React from 'react';'''; import { useParams } from 'react-router-dom';'''; import { useQuery } from '@tanstack/react-query';'''; import api from '@/services/apiClient';'''; import NotFound from '@/components/NotFound';'''; import Spinner from '@/components/Spinner';'''; import TalentProfile from '@/components/TalentProfile'; export {}; return null} const { id } = useParams(); const { data,isLoading } = useQuery('; ['talent',id],; () => api.get(`/talent/${id}`).then((r) => r.data),; { "enabled": '!!id' } ); if (isLoading) return <Spinner /> ; if (isLoading) return <Spinner /> if (!data) return <NotFound /> ; return <TalentProfile {...data} />;'";}'"'"; '"'"'"; export { TalentDetail };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React from 'react';'''; import { useParams } from 'react-router-dom';'''; import { useQuery } from '@tanstack/react-query';'''; import api from '@/services/apiClient';'''; import NotFound from '@/components/NotFound';'''; import Spinner from '@/components/Spinner';'''; import TalentProfile from '@/components/TalentProfile'; export {}; return null} const { id } = useParams(); const { data,isLoading } = useQuery('; ['talent',id],; () => api.get(`/talent/${id}`).then((r) => r.data),; { "enabled": '!!id' } ); if (isLoading) return <Spinner /> ; if (isLoading) return <Spinner /> if (!data) return <NotFound /> ; return <TalentProfile {...data} />;'";}'"'"; '"'"'"; export { TalentDetail };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import _React from 'react';'''; import { useParams } from 'react-router-dom';'''
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from \'react\';\''\'; import { useParams } from \'react-router-dom\';\''\'; import { useQuery } from \'@tanstack/react-query\';\''\'; import api from \'@/services/apiClient\';\''\'; import NotFound from \'@/components/NotFound\';\''\'; import Spinner from \'@/components/Spinner\';\''\'; import TalentProfile from \'@/components/TalentProfile\'; export {}; return null} const { id } = useParams(); const { data,isLoading } = useQuery(\'; [\'talent\',id],; () => api && api.get(`/talent/${id}`).then((r) => r && r.data),; { \"enabled\": \'!!id\' } ); if (isLoading) return <Spinner /> ; if (isLoading) return <Spinner /> if (!data) return <NotFound /> ; return <TalentProfile {...data} />;\'";}\'"\'"; \'"\'"\'"; export { TalentDetail };
 const React from "react";"""; import { useParams } from "react-router-dom";"""; import { useQuery } from "@tanstack/react-query";"""; import api from "@/services/apiClient";"""; import NotFound from "@/components/NotFound";"""; import Spinner from "@/components/Spinner";"""; import TalentProfile from "@/components/TalentProfile"; export {}; return null} const { id } = useParams(); const { data,isLoading } = useQuery("; ["talent",id],; () => api && api.get(`/talent/${id}`).then((r) => r && r.data),; { enabled: "!id" } ); if (isLoading) return <Spinner /> ; if (isLoading) return <Spinner /> if (!data) return <NotFound /> ; return <TalentProfile {.data} />;"";}""""; """"""; export { TalentDetail };""`"`
-import _React from 'react';'''; import { useParams } from 'react-router-dom';'''; import { useQuery } from '@tanstack/react-query';'''; import api from '@/services/apiClient';'''; import NotFound from '@/components/NotFound';'''; import Spinner from '@/components/Spinner';'''; import TalentProfile from '@/components/TalentProfile'; export {}; return null} const { id } = useParams(); const { data,isLoading } = useQuery('; ['talent',id],; () => api && api.get(`/talent/${id}`).then((r) => r && r.data),; { "enabled": '!!id' } ); if (isLoading) return <Spinner /> ; if (isLoading) return <Spinner /> if (!data) return <NotFound /> ; return <TalentProfile {...data} />;'";}'"'"; '"'"'"; export { TalentDetail };
-<<<<<<< HEAD
+=======
 
+
+'"`
+import React from \'react\';\''\'; import { useParams } from \'react-router-dom\';\''\'; import { useQuery } from \'@tanstack/react-query\';\''\'; import api from \'@/services/apiClient\';\''\'; import NotFound from \'@/components/NotFound\';\''\'; import Spinner from \'@/components/Spinner\';\''\'; import TalentProfile from \'@/components/TalentProfile\'; export {}; return null} const { id } = useParams(); const { data,isLoading } = useQuery(\'; [\'talent\',id],; () => api && api.get(`/talent/${id}`).then((r) => r && r.data),; { \"enabled\": \'!!id\' } ); if (isLoading) return <Spinner /> ; if (isLoading) return <Spinner /> if (!data) return <NotFound /> ; return <TalentProfile {...data} />;\'";}\'"\'"; \'"\'"\'"; export { TalentDetail };"`
+const React from "react";"""; import { useParams } from "react-router-dom";"""; import { useQuery } from "@tanstack/react-query";"""; import api from "@/services/apiClient";"""; import NotFound from "@/components/NotFound";"""; import Spinner from "@/components/Spinner";"""; import TalentProfile from "@/components/TalentProfile"; export {}; return null} const { id } = useParams(); const { data,isLoading } = useQuery("; ["talent",id],; () => api && api.get(`/talent/${id}`).then((r) => r && r.data),; { enabled: "!id" } ); if (isLoading) return <Spinner /> ; if (isLoading) return <Spinner /> if (!data) return <NotFound /> ; return <TalentProfile {.data} />;"";}""""; """"""; export { TalentDetail };""`"`'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React from 'react';'''; import { useParams } from 'react-router-dom';'''; import { useQuery } from '@tanstack/react-query';'''; import api from '@/services/apiClient';'''; import NotFound from '@/components/NotFound';'''; import Spinner from '@/components/Spinner';'''; import TalentProfile from '@/components/TalentProfile'; export {}; return null} const { id } = useParams(); const { data,isLoading } = useQuery('; ['talent',id],; () => api && api.get(`/talent/${id}`).then((r) => r && r.data),; { "enabled": '!!id' } ); if (isLoading) return <Spinner /> ; if (isLoading) return <Spinner /> if (!data) return <NotFound /> ; return <TalentProfile {...data} />;'";}'"'"; '"'"'"; export { TalentDetail };
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import _React from 'react';'''; import { useParams } from 'react-router-dom';'''
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+import _React from 'react';'''; import { useParams } from 'react-router-dom';'''; import { useQuery } from '@tanstack/react-query';'''; import api from '@/services/apiClient';'''; import NotFound from '@/components/NotFound';'''; import Spinner from '@/components/Spinner';'''; import TalentProfile from '@/components/TalentProfile'; export {}; return null} const { id } = useParams(); const { data,isLoading } = useQuery('; ['talent',id],; () => api && api.get(`/talent/${id}`).then((r) => r && r.data),; { "enabled": '!!id' } ); if (isLoading) return <Spinner /> ; if (isLoading) return <Spinner /> if (!data) return <NotFound /> ; return <TalentProfile {...data} />;'";}'"'"; '"'"'"; export { TalentDetail };
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

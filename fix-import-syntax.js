@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -28,6 +29,9 @@ function fixImportSyntax(filePath) {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -44,10 +48,11 @@ function fixImportSyntax(filePath) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
-    content = content.replace(importCommaRegex, (match, imports) => {
-      // Add missing commas between import items
-      const fixedImports = imports
+    content = content.replace(importCommaRegex, (match, imports) => {}
+      // Add missing commas between import items;
+      const fixedImports = imports;
         .split(/\s+/)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,41 +70,69 @@ function fixImportSyntax(filePath) {
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     // Fix function parameter syntax errors
+=======
+
+    // Fix function parameter syntax errors;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     content = content.replace(
-      /function\s*\(([^)]+)\)\s*{/g
-      (match, params) => {
+      /function\s*\(([^)]+)\)\s*{/g;
+      (match, params) => {"
         const fixedParams = params.replace(/;/g, ",");
         return match.replace(params, fixedParams);
       }
     );
+<<<<<<< HEAD
       modified = true;
     }
     return modified;
   } catch (error) {
     for (const item of items) {
+=======
+
+      modified = true;
+    }
+    return modified;
+  } catch (error) {}
+    for (const item of items) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const fullPath = path && path.join(currentDir, item);
       const stat = fs && fs.statSync(fullPath);
 
-      if (stat && stat.isDirectory()) {
-        // Skip certain directories
+      if (stat && stat.isDirectory()) {}
+        // Skip certain directories;
         if (
+<<<<<<< HEAD
           [
+=======
+          []
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ].includes(item)
-        ) {
+        ) {}
           continue;
         }
         traverse(fullPath);
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
-        if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
+      } else if (stat.isFile()) {}
+        const ext = path.extname(item);"
+        if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {}
           files.push(fullPath);
         }
       }
     }
   }
+<<<<<<< HEAD
 for (const file of files) {
   if (fixImportSyntax(file)) {
+=======
+
+for (const file of files) {}
+  if (fixImportSyntax(file)) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     fixedCount++;
     console.log(`Fixed syntax in: ${file}`);
   }
 }
+<<<<<<< HEAD
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

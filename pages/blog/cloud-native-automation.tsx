@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -20,8 +21,12 @@ import Head from 'next/head',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Link from 'next/link';
+=======
+
+import Link from 'next/link';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
-export default function CloudNativeAutomation() {
+export default function CloudNativeAutomation() {}
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,9 +36,10 @@ export default function CloudNativeAutomation() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <>
       <Head>
-        <title>
-          Building Cloud-Native Automation Infrastructure | Zion Tech Group
+        <title>;
+          Building Cloud-Native Automation Infrastructure | Zion Tech Group;
         </title>
+<<<<<<< HEAD
         <meta
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,32 +55,40 @@ content='A deep dive into our cloud-native approach to building scalable, reliab
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <meta;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         />
-        <meta
-          property='og:title'
+        <meta'
+          property='og:title''
           content='Building Cloud-Native Automation Infrastructure'
         />
-        <meta
-          property='og:description'
+        <meta'
+          property='og:description''
           content='A deep dive into our cloud-native approach to building scalable, reliable automation systems.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />
+=======
+        />'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
-        <main className='container mx-auto px-6 py-12'>
-          <div className='max-w-4xl mx-auto'>
+      </Head>'
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>'
+        <main className='container mx-auto px-6 py-12'>'
+          <div className='max-w-4xl mx-auto'>'
             <nav className='mb-8'>
-              <Link
-                href='/blog'
+              <Link'
+                href='/blog''
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'
               >
-                ← Back to Blog
+                ← Back to Blog;
               </Link>
             </nav>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -88,46 +102,53 @@ content='A deep dive into our cloud-native approach to building scalable, reliab
             <article className='prose prose-invert prose-lg max-w-none'>
               <header className='mb-12 text-center'>
                 <div className='flex items-center gap-3 justify-center mb-4'>
+=======
+'
+            <article className='prose prose-invert prose-lg max-w-none'>'
+              <header className='mb-12 text-center'>'
+                <div className='flex items-center gap-3 justify-center mb-4'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <span className='px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30'>
-                    Infrastructure
-                  </span>
+                    Infrastructure;
+                  </span>'
                   <span className='text-white/60 text-sm'>
-                    January 12, 2025
-                  </span>
-                  <span className='text-white/60 text-sm'>•</span>
+                    January 12, 2025;
+                  </span>'
+                  <span className='text-white/60 text-sm'>•</span>'
                   <span className='text-white/60 text-sm'>10 min read</span>
-                </div>
+                </div>'
                 <h1 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
-                  Building Cloud-Native Automation Infrastructure
-                </h1>
+                  Building Cloud-Native Automation Infrastructure;
+                </h1>'
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-                  A deep dive into our cloud-native approach to building
-                  scalable, reliable automation systems that can handle the
+                  A deep dive into our cloud-native approach to building;
+                  scalable, reliable automation systems that can handle the;
                   demands of modern business operations.
                 </p>
-              </header>
-              <section className='mb-12'>
+              </header>'
+              <section className='mb-12'>'
                 <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>
-                  The Foundation: Microservices Architecture
-                </h2>
+                  The Foundation: Microservices Architecture;
+                </h2>'
                 <p className='text-white/90 mb-4'>
-                  At the heart of our cloud-native automation infrastructure
-                  lies a robust microservices architecture. This approach allows
+                  At the heart of our cloud-native automation infrastructure;
+                  lies a robust microservices architecture. This approach allows;
                   us to build systems that are:
-                </p>
+                </p>'
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Highly scalable and can handle varying workloads</li>
                   <li>Resilient to failures with built-in redundancy</li>
                   <li>Easy to maintain and update without downtime</li>
                   <li>Cost-effective through efficient resource utilization</li>
-                </ul>
+                </ul>'
                 <p className='text-white/90 mb-4'>
-                  Each automation service operates independently, communicating
-                  through well-defined APIs and message queues. This decoupling
-                  ensures that a failure in one service doesn&apos,t bring down
+                  Each automation service operates independently, communicating;
+                  through well-defined APIs and message queues. This decoupling;
+                  ensures that a failure in one service doesn&apos,t bring down;
                   the entire system.
                 </p>
               </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -137,20 +158,30 @@ content='A deep dive into our cloud-native approach to building scalable, reliab
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <section className='mb-12'>
+=======
+'
+              <section className='mb-12'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
-                  Containerization and Orchestration
-                </h2>
+                  Containerization and Orchestration;
+                </h2>'
                 <p className='text-white/90 mb-4'>
+<<<<<<< HEAD
                   We leverage Docker containers and Kubernetes orchestration to
 <<<<<<< HEAD
 
 =======
                   create a flexible, portable automation environment. This
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  We leverage Docker containers and Kubernetes orchestration to;
+                  create a flexible, portable automation environment. This;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   approach provides several key benefits:
-                </p>
+                </p>'
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -159,14 +190,18 @@ content='A deep dive into our cloud-native approach to building scalable, reliab
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     staging, and production
+=======
+                    staging, and production;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </li>
                   <li>
-                    Automatic scaling based on demand and resource utilization
+                    Automatic scaling based on demand and resource utilization;
                   </li>
                   <li>Easy deployment and rollback capabilities</li>
                   <li>Efficient resource allocation and management</li>
-                </ul>
+                </ul>'
                 <p className='text-white/90 mb-4'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -187,32 +222,42 @@ Our Kubernetes clusters automatically handle load balancing
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   service discovery, and failover, ensuring high availability
+=======
+
+
+                  service discovery, and failover, ensuring high availability;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   and performance.
                 </p>
-              </section>
-              <section className='mb-12'>
+              </section>'
+              <section className='mb-12'>'
                 <h2 className='text-2xl font-semibold mb-6 text-green-400'>
-                  Infrastructure as Code
-                </h2>
+                  Infrastructure as Code;
+                </h2>'
                 <p className='text-white/90 mb-4'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
                   We treat infrastructure as code, using tools like Terraform
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  We treat infrastructure as code, using tools like Terraform;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   and CloudFormation to define and manage our cloud resources.
                   This approach enables:
-                </p>
+                </p>'
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Version-controlled infrastructure configurations</li>
                   <li>
-                    Reproducible environments across different regions and
-                    accounts
+                    Reproducible environments across different regions and;
+                    accounts;
                   </li>
                   <li>Automated provisioning and deprovisioning</li>
                   <li>Easy disaster recovery and environment replication</li>
-                </ul>
+                </ul>'
                 <p className='text-white/90 mb-4'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -226,28 +271,33 @@ Our Kubernetes clusters automatically handle load balancing
                   By codifying our infrastructure, we can quickly spin up new
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   environments, test changes safely, and maintain consistency
+=======
+                  By codifying our infrastructure, we can quickly spin up new;
+                  environments, test changes safely, and maintain consistency;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   across our automation platform.
                 </p>
-              </section>
-              <section className='mb-12'>
+              </section>'
+              <section className='mb-12'>'
                 <h2 className='text-2xl font-semibold mb-6 text-blue-400'>
-                  Monitoring and Observability
-                </h2>
+                  Monitoring and Observability;
+                </h2>'
                 <p className='text-white/90 mb-4'>
-                  Comprehensive monitoring and observability are crucial for
+                  Comprehensive monitoring and observability are crucial for;
                   maintaining reliable automation systems. We implement:
-                </p>
+                </p>'
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Real-time metrics collection and alerting</li>
                   <li>Distributed tracing for complex workflow analysis</li>
                   <li>Centralized logging with structured data</li>
                   <li>Performance dashboards and automated reporting</li>
-                </ul>
+                </ul>'
                 <p className='text-white/90 mb-4'>
-                  This visibility allows us to proactively identify and resolve
+                  This visibility allows us to proactively identify and resolve;
                   issues before they impact business operations.
                 </p>
               </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -261,32 +311,37 @@ Our Kubernetes clusters automatically handle load balancing
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <section className='mb-12'>
+=======
+'
+              <section className='mb-12'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <h2 className='text-2xl font-semibold mb-6 text-purple-400'>
-                  Security and Compliance
-                </h2>
+                  Security and Compliance;
+                </h2>'
                 <p className='text-white/90 mb-4'>
-                  Security is built into every layer of our cloud-native
+                  Security is built into every layer of our cloud-native;
                   automation infrastructure:
-                </p>
+                </p>'
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
-                    • Identity and access management with role-based permissions
+                    • Identity and access management with role-based permissions;
                   </li>
                   <li>Encryption at rest and in transit</li>
                   <li>Network security with VPCs and security groups</li>
                   <li>Regular security audits and vulnerability assessments</li>
-                </ul>
+                </ul>'
                 <p className='text-white/90 mb-4'>
-                  We maintain compliance with industry standards and
-                  regulations, ensuring that our automation systems meet the
+                  We maintain compliance with industry standards and;
+                  regulations, ensuring that our automation systems meet the;
                   highest security requirements.
                 </p>
-              </section>
-              <section className='mb-12'>
+              </section>'
+              <section className='mb-12'>'
                 <h2 className='text-2xl font-semibold mb-6 text-yellow-400'>
-                  Looking Ahead
-                </h2>
+                  Looking Ahead;
+                </h2>'
                 <p className='text-white/90 mb-4'>
+<<<<<<< HEAD
                   As we continue to evolve our cloud-native automation
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -306,18 +361,23 @@ Our Kubernetes clusters automatically handle load balancing
 =======
                   like: </p>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  As we continue to evolve our cloud-native automation;
+                  like: </p>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>
                   <li>Edge computing for low-latency processing</li>
                   <li>AI-powered infrastructure optimization</li>
                   <li>Multi-cloud strategies for enhanced reliability</li>
-                </ul>
+                </ul>'
                 <p className='text-white/90 mb-4'>
-                  Our commitment to cloud-native principles ensures that our
-                  automation systems remain cutting-edge and capable of meeting
+                  Our commitment to cloud-native principles ensures that our;
+                  automation systems remain cutting-edge and capable of meeting;
                   future business challenges.
                 </p>
               </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -329,25 +389,29 @@ Our Kubernetes clusters automatically handle load balancing
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className='mt-12 p-6 bg-white/10 rounded-xl border border-white/20'>
+=======
+'
+              <div className='mt-12 p-6 bg-white/10 rounded-xl border border-white/20'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <h3 className='text-xl font-semibold mb-4 text-cyan-400'>
                   Ready to Transform Your Infrastructure?
-                </h3>
+                </h3>'
                 <p className='text-white/80 mb-4'>
-                  Discover how our cloud-native automation solutions can
+                  Discover how our cloud-native automation solutions can;
                   revolutionize your business operations.
-                </p>
+                </p>'
                 <div className='flex flex-wrap gap-4'>
-                  <Link
-                    href='/contact'
+                  <Link'
+                    href='/contact''
                     className='px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
                   >
-                    Get Started
+                    Get Started;
                   </Link>
-                  <Link
-                    href='/case-studies'
+                  <Link'
+                    href='/case-studies''
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'
                   >
-                    View Case Studies
+                    View Case Studies;
                   </Link>
                 </div>
               </div>
@@ -359,11 +423,13 @@ Our Kubernetes clusters automatically handle load balancing
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
-
 =======
-}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 =======
 import Head from 'next / head',
 import Link from 'next / link',
@@ -386,32 +452,35 @@ export default function CloudNativeAutomation(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <>;
       <Head>;
         <title>;
           Building Cloud - Native Automation Infrastructure | Zion Tech Group;
         </title>;
-        <meta;
-          name='description';
+        <meta;'
+          name='description';'
           content='A deep dive into our cloud - native approach to building scalable, reliable automation systems.';
         />;
-        <meta;
-          property='og:title';
+        <meta;'
+          property='og:title';'
           content='Building Cloud - Native Automation Infrastructure';
         />;
-        <meta;
-          property='og:description';
+        <meta;'
+          property='og:description';'
           content='A deep dive into our cloud - native approach to building scalable, reliable automation systems.';
-        />;
+        />;'
         <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;
-        <main className='container mx - auto px - 6 py - 12'>;
-          <div className='max - w-4xl mx - auto'>;
+      </Head>;'
+      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;'
+        <main className='container mx - auto px - 6 py - 12'>;'
+          <div className='max - w-4xl mx - auto'>;'
             <nav className='mb - 8'>;
-              <Link;
-                href='/blog';
+              <Link;'
+                href='/blog';'
                 className='text - cyan - 400 hover:text - cyan - 300 transition - colors';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -456,10 +525,14 @@ export default function CloudNativeAutomation(req, res) {
                 className='text-cyan-400 hover:text-cyan-300 transition-colors';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
                 ← Back to Blog;
               </Link>;
             </nav>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -504,10 +577,15 @@ export default function CloudNativeAutomation(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   scalable, reliable automation systems that can handle the;
                   demands of modern business operations.;
                 </p>;
               </header>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -575,10 +653,15 @@ export default function CloudNativeAutomation(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   We leverage Docker containers and Kubernetes orchestration to;
                   create a flexible, portable automation environment. This;
                   approach provides several key benefits:;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -598,11 +681,16 @@ export default function CloudNativeAutomation(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     staging, and production;
                   </li>;
                   <li>;
                     Automatic scaling based on demand and resource utilization;
                   </li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -644,10 +732,15 @@ export default function CloudNativeAutomation(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   We treat infrastructure as code, using tools like Terraform;
                   and CloudFormation to define and manage our cloud resources.;
                   This approach enables:;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -665,10 +758,15 @@ export default function CloudNativeAutomation(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <li>;
                     Reproducible environments across different regions and;
                     accounts;
                   </li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -690,11 +788,16 @@ export default function CloudNativeAutomation(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   By codifying our infrastructure, we can quickly spin up new;
                   environments, test changes safely, and maintain consistency;
                   across our automation platform.;
                 </p>;
               </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -738,10 +841,15 @@ export default function CloudNativeAutomation(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   This visibility allows us to proactively identify and resolve;
                   issues before they impact business operations.;
                 </p>;
               </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -789,11 +897,16 @@ export default function CloudNativeAutomation(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   We maintain compliance with industry standards and;
                   regulations, ensuring that our automation systems meet the;
                   highest security requirements.;
                 </p>;
               </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -871,10 +984,15 @@ export default function CloudNativeAutomation(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   >;
                     Get Started;
                   </Link>;
                   <Link;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -892,6 +1010,10 @@ export default function CloudNativeAutomation(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   >;
                     View Case Studies;
                   </Link>;
@@ -900,6 +1022,7 @@ export default function CloudNativeAutomation(req, res) {
             </article>;
           </div>;
         </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -926,3 +1049,7 @@ export default function CloudNativeAutomation(req, res) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

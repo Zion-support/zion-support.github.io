@@ -13,6 +13,7 @@ import {
   Cyberpunk, Neural, Space, Matrix, Infinity, Target, ZapIcon
 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedFuturisticCard from '../components/ui/UltraAdvancedFuturisticCard';
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices, serviceCategories } from '../data/enhanced-real-micro-saas-services';
@@ -44,6 +45,9 @@ export default function HomePage() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-acae
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991911.backup.1756001158
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const contactInfo = {
@@ -61,8 +65,12 @@ export default function HomePage() {
   const marketInsights = [
     {
       icon: <Cloud className="w-8 h-8 text-white" />,
+<<<<<<< HEAD
       title: '100+ Real Micro SaaS Services',
       description: 'Complete portfolio of fully functional micro SaaS tools with real implementations, not just mockups. Starting from $29/month with 21-day free trials.',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
       gradient: 'from-cyan-400 to-blue-500',
       features: ['Quantum Computing', 'Edge AI', 'Autonomous Systems', 'Synthetic Biology', 'Neuromorphic Computing']
@@ -228,6 +236,7 @@ export default function HomePage() {
   };
 
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground variant="quantum" intensity="high">
       <Head>
         <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions</title>
@@ -249,6 +258,9 @@ export default function HomePage() {
         <meta name="twitter:description" content="200+ AI-powered micro SaaS services transforming industries with quantum computing, space tech, and autonomous systems." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
       </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
@@ -612,9 +624,13 @@ export default function HomePage() {
                 <div className="text-gray-300 text-sm">{contactInfo.address}</div>
               </div>
             </div>
+<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
     </UltraAdvancedFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

@@ -1,6 +1,7 @@
 export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Sustainability' |';';Digital: Transformation' |';';Enterprise: Solutions' price: string'';,;
-"export": type ServiceItem = { id: string: title: string: description: string: category,:
+"export": type ServiceItem = { id: string: title: string: description: string: category,:'"
   "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Sustainability' |';';Digital: Transformation' |';';Enterprise: Solutions' price: string'',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Sustainability' |';';Digital: Transformation' |';';Enterprise: Solutions' price: string'',
@@ -45,3 +46,12 @@ export: type ServiceItem = { id: string: title: string: description: string: cat
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'
+export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Sustainability' |';';Digital: Transformation' |';';Enterprise: Solutions' price: string'',
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

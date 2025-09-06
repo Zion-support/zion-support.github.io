@@ -1,6 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { Shield, Clock, DollarSign, TrendingUp, Brain, Rocket, ArrowRight, ExternalLink, Search, Filter, Grid, List, Phone, Mail, MapPin, Star, Check, Sparkles, Atom, Cpu, Globe, FlaskConical, Zap, Users, Target, Building, Award, ChartBar, Lock, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Bot, ChevronRight, LinkIcon, Building2 } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
@@ -872,6 +876,7 @@ export default function MicroSaasPage() {
       color: 'from-orange-500 to-red-600'
     },
     {
+<<<<<<< HEAD
       title: '🔒 Quantum Cybersecurity Suite',
       description: 'Post-quantum era security with AI threat detection. 300% ROI within 4 months.',
       price: '$159/month',
@@ -910,6 +915,9 @@ export default function MicroSaasPage() {
       savings: 'Save 55% vs. competitors',
       link: 'https://ziontechgroup.com/quantum-financial-trading',
       color: 'from-yellow-500 to-amber-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -1025,6 +1033,7 @@ export default function MicroSaasPage() {
               <br />
               <span className="text-gradient-purple">Micro SaaS Services</span>
             </h1>
+<<<<<<< HEAD
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
               Transform your business with cutting-edge micro SaaS solutions powered by quantum computing, 
               AI, autonomous systems, and space technology. Experience unprecedented ROI and efficiency.
@@ -1045,6 +1054,13 @@ export default function MicroSaasPage() {
             <div className="bg-slate-900/50 backdrop-blur-xl rounded-xl p-4 border border-slate-700/50">
               <div className="text-2xl font-bold text-purple-400 mb-1">30+</div>
               <div className="text-sm text-slate-400">Day Free Trials</div>
+=======
+
+            </p>
+          </motion.div>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
             <div className="bg-slate-900/50 backdrop-blur-xl rounded-xl p-4 border border-slate-700/50">
               <div className="text-2xl font-bold text-green-400 mb-1">500%+</div>
@@ -1110,6 +1126,7 @@ export default function MicroSaasPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="text-gradient-purple">Featured</span> Revolutionary Services
             </h2>
+<<<<<<< HEAD
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Our most popular and innovative micro SaaS services that are transforming industries
             </p>
@@ -1263,6 +1280,9 @@ export default function MicroSaasPage() {
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Get started with our revolutionary micro SaaS services today
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -1271,10 +1291,14 @@ export default function MicroSaasPage() {
                 <div className="text-white font-semibold">Call Us</div>
                 <div className="text-slate-400 text-sm">{contactInfo.mobile}</div>
               </div>
+<<<<<<< HEAD
               <div className="bg-slate-900/50 backdrop-blur-xl rounded-xl p-4 border border-slate-700/50">
                 <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
                 <div className="text-white font-semibold">Email Us</div>
                 <div className="text-slate-400 text-sm">{contactInfo.email}</div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
               <div className="bg-slate-900/50 backdrop-blur-xl rounded-xl p-4 border border-slate-700/50">
                 <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />

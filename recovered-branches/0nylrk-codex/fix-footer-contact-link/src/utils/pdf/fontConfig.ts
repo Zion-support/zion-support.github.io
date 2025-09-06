@@ -1,10 +1,16 @@
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -28,14 +34,20 @@ export interface FontConfig {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
-  italic?: ArrayBuffer
-  boldItalic?: ArrayBuffer
-}
+  italic?: ArrayBuffer;
+  boldItalic?: ArrayBuffer;
+}'
 export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
 /**
+<<<<<<< HEAD
  * Loads and registers custom fonts for PDF documents
  */
 export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'default'): Promise<void> {
@@ -74,69 +86,57 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
 =======
 =======
       case 'montserrat':;
-        doc.setFont('helvetica');
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        break;
-      case 'open-sans':
+ * Loads and registers custom fonts for PDF documents;
+ */'
+export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'default'): Promise<void> {';
+  if (fontFamily === 'default') return;
+  try {}
+    // Font loading logic would go here'
+    // For demonstration purposes, we'll just set up the font using standard fonts;
+    switch (fontFamily) {}
+        break;'
+      case 'open-sans':'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         doc.setFont('helvetica');
-        break;
-      case 'roboto':
+        break;'
+      case 'roboto':'
         doc.setFont('helvetica');
-        break;
+        break;'
       default: doc.setFont('helvetica')
     }
-  } catch (error) {
-
-    // Fall back to default font
-<<<<<<< HEAD
-    doc.setFont('helvetica')
-import { jsPDF } from 'jspdf',;
-export interface FontConfig {;
-  regular: ArrayBuffer,;
-  bold?: ArrayBuffer,;
-  italic?: ArrayBuffer,;
-  boldItalic?: ArrayBuffer;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    doc && doc.setFont('helvetica')
-=======
-import {jsPDF} from 'jspdf';
-export interface FontConfig {
-  regular: ArrayBuffer;
-  bold?: ArrayBuffer;
-  italic?: ArrayBuffer,
-  bold_italic?: ArrayBuffer;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-}
+  } catch (error) {}
+    // Fall back to default font;
+}'
 export type FontFamily = 'default' | 'montserrat' | 'open - sans' | 'roboto';
 ;
 /**;
 * Loads and registers custom fonts for PDF documents;
-*/;
-export async function loadCustomFonts (doc: jsPDF, font_family: FontFamily = 'default'): Promise < void> {
-  // Check condition
-if (return, ) {
-  $2
+*/;'
+export async function loadCustomFonts (doc: jsPDF, font_family: FontFamily = 'default'): Promise < void> {};
+  // Check condition;
+if (return, ) {}
+  $2;
 }
-  try {
-    // Font loading logic would go here;
+  try {}
+    // Font loading logic would go here;'
     // For demonstration purposes, we'll just set up the font using standard fonts;
-    switch (font_family) {
-      case 'montserrat':;
+    switch (font_family) {'
+      case 'montserrat':;'
         doc.set_font ('helvetica');
-        break;
-      case 'open - sans':;
+        break;'
+      case 'open - sans':;'
         doc.set_font ('helvetica');
-        break;
-      case 'roboto':;
+        break;'
+      case 'roboto':;'
         doc.set_font ('helvetica');
-        break;
+        break;'
       default: doc.set_font ('helvetica');
     }
-  } catch (error) {
+  } catch (error) {'
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -154,3 +154,11 @@ if (return, ) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
+=======
+'
+    doc.set_font ('helvetica');
+  }
+}
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

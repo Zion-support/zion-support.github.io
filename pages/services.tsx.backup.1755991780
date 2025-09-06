@@ -4,9 +4,13 @@ import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, Trend
 import { motion } from 'framer-motion';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
+<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import AdvancedFuturisticCard from '../components/ui/AdvancedFuturisticCard';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 import { ArrowRight as ArrowRightIcon } from 'lucide-react';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
@@ -118,6 +122,7 @@ export default function ServicesPage() {
 
   const popularServices = enhancedRealMicroSaasServices.filter(service => service.popular).slice(0, 6);
 
+<<<<<<< HEAD
   // Enhanced service categories with better descriptions and market positioning
   const enhancedCategories = [
     {
@@ -625,3 +630,14 @@ export default function Placeholder() {
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+              </div>
+            </motion.div>
+
+
+                </div>
+              </div>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

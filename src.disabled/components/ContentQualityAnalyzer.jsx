@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +28,23 @@ const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,Trend
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/ContentQualityAnalyzer.jsx
 import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";
+=======
+
+
+import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";"
 const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";
+:src.disabled/components/ContentQualityAnalyzer.jsx'"
+import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";"
 const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
+import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
+:temp_exclude/src.disabled/components/ContentQualityAnalyzer.jsx;
+'"
+import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";"
+const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/ContentQualityAnalyzer.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,11 +67,17 @@ import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,s
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
-import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
 =======
-import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";
-const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
+'
 import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
+'"
+import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";"
+const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""'
+import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -75,3 +95,8 @@ import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,Tren
 const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
 import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

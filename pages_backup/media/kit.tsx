@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 import { useCallback, useMemo, useState  } from 'react';
 import Head from 'next/head',
 import {useCallback, useMemo, useState} from 'react';
@@ -26,12 +27,15 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
 
 
-import {useCallback, useMemo, useState} from 'react';
+
+import {useCallback, useMemo, useState} from 'react';'
 import Head from 'next/head';
 
-
+'
 import DatePicker from 'react-datepicker';
 
 
@@ -40,13 +44,14 @@ import DatePicker from 'react-datepicker';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   MediaAsset,;
-  PressReleaseType,;
+  PressReleaseType,;'
 } from '../../utils/mediaKit';
 import {;
   getDefaultAssets,;
   buildPressRelease,;
-  buildTimeline,;
+  buildTimeline,;'
 } from '../../utils/mediaKit';
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -72,6 +77,8 @@ const KitPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -80,19 +87,13 @@ const KitPage = () => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-} from '../../utils/mediaKit';
-const KitPage = () => {;
-
-import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
-import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
-
-const KitPage = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 =======
 const KitPage = () => {;
 
@@ -115,11 +116,15 @@ const KitPage = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
   const [bundle, setBundle] = useState<MediaBundle>('general');
-  const [startDate, setStartDate] = useState<Date>(new Date());
-  const [companyName, setCompanyName] = useState('Zion');
-  const [raiseAmount, setRaiseAmount] = useState('$5M');
+  const [startDate, setStartDate] = useState<Date>(new Date());'
+  const [companyName, setCompanyName] = useState('Zion');'
+  const [raiseAmount, setRaiseAmount] = useState('$5M');'
   const [tokenName, setTokenName] = useState('ZION');
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD:pages/media/kit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -316,10 +321,15 @@ zip.file('rollout-timeline.txt', tl);
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/media/kit.tsx
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD:pages/media/kit.tsx
 <<<<<<< HEAD
 =======
@@ -405,22 +415,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     drawText('Zion Media Kit', 50, y, 18);
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next / head';
+=======
+
+'
+    drawText('Zion Media Kit', 50, y, 18);'
+import {useCallback, useMemo, useState} from 'react';'
+import Head from 'next / head';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
 import DatePicker from 'react - datepicker';
-import type {
+import type {}
   MediaBundle,
   MediaAsset,
-  PressReleaseType,
+  PressReleaseType,';
 } from '../../utils / media_kit';
-import {
+import {}
   getDefaultAssets,
   buildPressRelease,
-  build_timeline,
+  build_timeline,';
 } from '../../utils / media_kit';
-const KitPage = () =>: any {
+const KitPage = () =>: any {'
   const [bundle, set_bundle] = useState < MediaBundle>('general');
-  const [start_date, setStartDate] = useState < Date>(new Date ());
-  const [company_name, setCompanyName] = useState ('Zion');
-  const [raise_amount, setRaiseAmount] = useState ('$5M');
+  const [start_date, setStartDate] = useState < Date>(new Date ());'
+  const [company_name, setCompanyName] = useState ('Zion');'
+  const [raise_amount, setRaiseAmount] = useState ('$5M');'
   const [token_name, setTokenName] = useState ('ZION');
   const [timeline, set_timeline] = useState<{ label: string, date: string }[]>(
     []);
@@ -429,68 +446,69 @@ const KitPage = () =>: any {
     () => getDefaultAssets (bundle),
     [bundle]);
 ;
-  const onGenerateTimeline = useCallback (() => {
+  const onGenerateTimeline = useCallback (() => {}
     set_timeline (build_timeline (start_date));  }, [start_date]);
 ;
-  const onDownloadZip = useCallback (async () => {
+  const onDownloadZip = useCallback (async () => {'
     const JSZip = (await import ('jszip')).default;
     const zip = new JSZip ();
 ;
     // Add static / dynamic assets;
-    else // Check condition
-if ( {) {
-  $2
+    else // Check condition;
+if ( {) {}
+  $2;
 }
         const res = await fetch (asset.path);
         const blob = await res.blob ();
         zip.file (asset.filename, blob);      }
     }
     // Add press releases;
-    const now_str = new Date ().toISOString ().substring (0, 10);
-    const pr_seed = buildPressRelease ('seed - round', {
+    const now_str = new Date ().toISOString ().substring (0, 10);'
+    const pr_seed = buildPressRelease ('seed - round', {}
       company_name,
       date: now_str,
       raise_amount,
-    });
-    const pr_launch = buildPressRelease ('launch', { company_name, date: now_str });
-    const pr_token = buildPressRelease ('token - sale', {
+    });'
+    const pr_launch = buildPressRelease ('launch', { company_name, date: now_str });'
+    const pr_token = buildPressRelease ('token - sale', {}
       company_name,
       date: now_str,
-      token_name,
-    });    zip.file ('press - releases / seed - round.md', pr_seed);
-    zip.file ('press - releases / launch.md', pr_launch);
-    if (zip.file ('press - releases / token - sale.md', pr_token)) {
-  $2
+      token_name,'
+    });    zip.file ('press - releases / seed - round.md', pr_seed);'
+    zip.file ('press - releases / launch.md', pr_launch);'
+    if (zip.file ('press - releases / token - sale.md', pr_token)) {}
+  $2;
 }
     // Add timeline if generated;
-    // Check condition
-if ( {) {
-  $2
-}
-      const tl = timeline.map (t => `${t.label}: ${t.date}`).join ('\n');
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      const tl = timeline.map (t => `${t.label}: ${t.date}`).join ('\n');'
       zip.file ('rollout - timeline.txt', tl);
-    }
-    const blob = await zip.generate_async ({ type: 'blob' });
-    const { save_as } = await import ('file - saver');
+    }'
+    const blob = await zip.generate_async ({ type: 'blob' });'
+    const { save_as } = await import ('file - saver');`
     save_as (blob, `zion - media - kit-${bundle}.zip`);  }, [assets, bundle, company_name, raise_amount, timeline, token_name]);
 ;
-  const onGeneratePdf = useCallback (async () => {
+  const onGeneratePdf = useCallback (async () => {'
     const { PDFDocument, StandardFonts, rgb } = await import ('pdf - lib');
     const pdf_doc = await PDFDocument.create ();
     const page = pdf_doc.add_page ([612, 792]);
     const font = await pdf_doc.embed_font (StandardFonts.Helvetica);
 ;
-    const draw_text = (text: string, coordinate_x: number, coordinate_y: number, size = 12) =>: any {
+    const draw_text = (text: string, coordinate_x: number, coordinate_y: number, size = 12) =>: any {}
       page.draw_text (text, { x, y, size, font, color: rgb (0, 0, 0) });
     }
 ;
-    let coordinate_y = 760;
+    let coordinate_y = 760;'
     draw_text ('Zion Media Kit', 50, y, 18);
-    y -= 24;
+    y -= 24;`
     draw_text (`Bundle: ${bundle}`, 50, y);
-    y -= 16;
+    y -= 16;'
     draw_text ('Assets:', 50, y);
     y -= 16;
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -500,14 +518,18 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
       y -= 14;
     });
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       pdf_doc.add_page ([612, 792]);
     }
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -526,14 +548,18 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-    const url = URL && URL.createObjectURL(blob);
+    const url = URL && URL.createObjectURL(blob);'
     const link = document && document.createElement('a');
-    link && link.href = url;
+    link && link.href = url;`
     link && link.download = `zion-media-kit-${bundle}.pdf`;
     link && link.click();
     URL && URL.revokeObjectURL(url);
   }, [assets, bundle, timeline]);
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -561,13 +587,20 @@ if ( {) {
     type
     title
   }: {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
 
+  const PressReleaseCard = ({}
+    type;
+    title;
+  }: {}
   const PressReleaseCard = ({;
     type,;
     title,;
   }: {;
     type: PressReleaseType;
     title: string;
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -727,11 +760,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <button
               onClick={onDownloadZip}
+=======
+
+            <button;
+              onClick={onDownloadZip}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700'>;
               Download all as ZIP;
             </button>;
-            <button
+            <button;
               onClick={onGeneratePdf}
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -753,34 +792,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <button
+=======
+
+              Generate PDF;
+            </button>;
+          </div>;
+        </header>;
+
+                  <button;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
                     key={b}
-                    onClick={() => setBundle(b)}
+                    onClick={() => setBundle(b)}'`
                     className={`px-3 py-1 rounded border ${bundle === b ? 'bg-blue-600 text-white border-blue-600' : 'bg-white'}`}
-            </div>;
+            </div>;'
             <p className='text-xs text-gray-500 mt-2'>;
               Toggle to tailor assets and legal docs.;
             </p>;
-          </div>;
-          <div className='p-4 border rounded-lg'>;
-            <h3 className='font-semibold mb-2'>Organization</h3>;
+          </div>;'
+          <div className='p-4 border rounded-lg'>;'
+            <h3 className='font-semibold mb-2'>Organization</h3>;'
             <div className='space-y-2'>;
-              <input
+              <input'
                 className='w-full border rounded px-2 py-1'
                 value={companyName}
-                onChange={e => setCompanyName(e && e.target.value)}
+                onChange={e => setCompanyName(e && e.target.value)}'
                 placeholder='Company name';
               />;
-              <input
+              <input'
                 className='w-full border rounded px-2 py-1'
                 value={raiseAmount}
-                onChange={e => setRaiseAmount(e && e.target.value)}
+                onChange={e => setRaiseAmount(e && e.target.value)}'
                 placeholder='Seed raise amount';
               />;
-              <input
+              <input'
                 className='w-full border rounded px-2 py-1'
                 value={tokenName}
                 onChange={e => setTokenName(e && e.target.value)}
 
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -792,40 +841,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='p - 4 border rounded - lg'>;
             <h3 className='font - semibold mb - 2'>Bundle</h3>;
             <div className='flex gap - 2'>;
+=======
+'
+        <section className='grid md:grid - cols - 3 gap - 6'>;'
+          <div className='p - 4 border rounded - lg'>;'
+            <h3 className='font - semibold mb - 2'>Bundle</h3>;'
+            <div className='flex gap - 2'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
               {(['general', 'web3', 'institutional'] as MediaBundle[]).map (
                 boolean => (
                   <button;
                     key={b}
-                    on_click={() => set_bundle (b)}
+                    on_click={() => set_bundle (b)}'`
                     className={`px - 3 py - 1 rounded border ${bundle === b ? 'bg - blue - 600 text - white border - blue - 600' : 'bg - white'}`}
                   >;
                     {b}
                   </button>))}
-            </div>;
+            </div>;'
             <p className='text - xs text - gray - 500 mt - 2'>;
               Toggle to tailor assets and legal docs.;
             </p>;
-          </div>;
-          <div className='p - 4 border rounded - lg'>;
-            <h3 className='font - semibold mb - 2'>Organization</h3>;
+          </div>;'
+          <div className='p - 4 border rounded - lg'>;'
+            <h3 className='font - semibold mb - 2'>Organization</h3>;'
             <div className='space - y-2'>;
-              <input;
+              <input;'
                 className='w - full border rounded px - 2 py - 1';
                 value={company_name}
-                on_change={e => setCompanyName (e.target.value)}
+                on_change={e => setCompanyName (e.target.value)}'
                 placeholder='Company name';
               />;
-              <input;
+              <input;'
                 className='w - full border rounded px - 2 py - 1';
                 value={raise_amount}
-                on_change={e => setRaiseAmount (e.target.value)}
+                on_change={e => setRaiseAmount (e.target.value)}'
                 placeholder='Seed raise amount';
               />;
-              <input;
+              <input;'
                 className='w - full border rounded px - 2 py - 1';
                 value={token_name}
                 on_change={e => setTokenName (e.target.value)}
 
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -834,6 +891,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
                 placeholder='Token name';
               />;
             </div>;
@@ -849,21 +910,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
             <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
-          </div>
-          <div className="p-4 border rounded-lg">
-            <h3 className="font-semibold mb-2">Organization</h3>
-            <div className="space-y-2">
-              <input className="w-full border rounded px-2 py-1" value={companyName} onChange={e=>setCompanyName(e.target.value)} placeholder="Company name" />
-              <input className="w-full border rounded px-2 py-1" value={raiseAmount} onChange={e=>setRaiseAmount(e.target.value)} placeholder="Seed raise amount" />
+          </div>"
+          <div className="p-4 border rounded-lg">"
+            <h3 className="font-semibold mb-2">Organization</h3>"
+            <div className="space-y-2">"
+              <input className="w-full border rounded px-2 py-1" value={companyName} onChange={e=>setCompanyName(e.target.value)} placeholder="Company name" />"
+              <input className="w-full border rounded px-2 py-1" value={raiseAmount} onChange={e=>setRaiseAmount(e.target.value)} placeholder="Seed raise amount" />"
               <input className="w-full border rounded px-2 py-1" value={tokenName} onChange={e=>setTokenName(e.target.value)} placeholder="Token name" />
             </div>
-          </div>
-          <div className="p-4 border rounded-lg">
-            <h3 className="font-semibold mb-2">Rollout Timeline</h3>
-            <div className="space-y-2">
-              <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className="w-full border rounded px-2 py-1" />
+          </div>"
+          <div className="p-4 border rounded-lg">"
+            <h3 className="font-semibold mb-2">Rollout Timeline</h3>"
+            <div className="space-y-2">"
+              <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className="w-full border rounded px-2 py-1" />"
               <button onClick={onGenerateTimeline} className="px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700">Generate</button>
             </div>
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD:pages/media/kit.tsx
 <<<<<<< HEAD
             {timeline.length>0 && (
@@ -938,37 +1000,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </ul>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+            {timeline.length>0 && ("
+              <ul className="mt-3 text-sm list-disc list-inside space-y-1">
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
             )}
 
           </div>;
-        </section>;
-        <section className='p-4 border rounded-lg'>;
-          <h3 className='font-semibold mb-3'>Assets Included</h3>;
+        </section>;'
+        <section className='p-4 border rounded-lg'>;'
+          <h3 className='font-semibold mb-3'>Assets Included</h3>;'
           <ul className='grid md:grid-cols-2 gap-3'>;
             {assets && assets.map(a => (;
 
-              <li
-                key={a && a.filename}
-                className='flex items-center justify-between border rounded p-2'>;
+              <li;
+                key={a && a.filename}'
+                className='flex items-center justify-between border rounded p-2'>;'
                 <span className='text-sm'>{a && a.filename}</span>;
-                {a && a.path ? (;
+                {a && a.path ? (;'
                   <a href={a && a.path} download className='text-blue-600 text-sm'>;
                     Download;
                   </a>;
-                ) : (;
+                ) : (;'
                   <span className='text-gray-400 text-xs'>generated</span>;
                 )}              </li>;
 
-=======
-=======
 
 
-        <section className="p-4 border rounded-lg">
-          <h3 className="font-semibold mb-3">Assets Included</h3>
+
+"
+        <section className="p-4 border rounded-lg">"
+          <h3 className="font-semibold mb-3">Assets Included</h3>"
           <ul className="grid md:grid-cols-2 gap-3">
 
 
 
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -993,26 +1062,42 @@ export default KitPage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+            {assets.map(a => ("
+              <li key={a.filename} className="flex items-center justify-between border rounded p-2">"
+                <span className="text-sm">{a.filename}</span>"
+                {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
+              </li>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
             ))}
 
           </ul>;
         </section>;
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD
 =======
 =======
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
 
 
 
-
-        <section className="p-4 border rounded-lg space-y-4">
-          <h3 className="font-semibold">Prewritten Press Releases</h3>
-          <div className="grid md:grid-cols-3 gap-4">
-            <PressReleaseCard type="seed-round" title="Seed round" />
-            <PressReleaseCard type="launch" title="Launch" />
+"
+        <section className="p-4 border rounded-lg space-y-4">"
+          <h3 className="font-semibold">Prewritten Press Releases</h3>"
+          <div className="grid md:grid-cols-3 gap-4">"
+            <PressReleaseCard type="seed-round" title="Seed round" />"
+            <PressReleaseCard type="launch" title="Launch" />'"
             {bundle === 'web3' && <PressReleaseCard type="token-sale" title="Token sale" />}
               ))}
             </div>
@@ -1056,7 +1141,7 @@ export default KitPage;
           <h3 className=&quot;font-semibold&quot;>Prewritten Press Releases</h3>
           <div className=&quot;grid md:grid-cols-3 gap-4&quot;>
             <PressReleaseCard type=&quot;seed-round&quot; title=&quot;Seed round&quot; />
-            <PressReleaseCard type=&quot;launch&quot; title=&quot;Launch&quot; />
+            <PressReleaseCard type=&quot;launch&quot; title=&quot;Launch&quot; />'
             {bundle === 'web3' && <PressReleaseCard type=&quot;token-sale&quot; title=&quot;Token sale&quot; />}
 
           </div>
@@ -1065,62 +1150,54 @@ export default KitPage;
     </div>
   )
 
-};
-        <section className='p-4 border rounded-lg space-y-4'>;
-          <h3 className='font-semibold'>Prewritten Press Releases</h3>;
-          <div className='grid md:grid-cols-3 gap-4'>;
-            <PressReleaseCard type='seed-round' title='Seed round' />;
-            <PressReleaseCard type='launch' title='Launch' />;
-            {bundle === 'web3' && (;
+};'
+        <section className='p-4 border rounded-lg space-y-4'>;'
+          <h3 className='font-semibold'>Prewritten Press Releases</h3>;'
+          <div className='grid md:grid-cols-3 gap-4'>;'
+            <PressReleaseCard type='seed-round' title='Seed round' />;'
+            <PressReleaseCard type='launch' title='Launch' />;'
+            {bundle === 'web3' && (;'
               <PressReleaseCard type='token-sale' title='Token sale' />;
             )}          </div>;
         </section>;
       </div>;
     </div>;
-=======
-                {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))  } catch (error) {
-    console.error("Error:", error);
+"
+                {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </ul>
-            )  } catch (error) {
-    console.error("Error:", error);
+            )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </div>
         </section>
-<<<<<<< HEAD
-        <section className='p-4 border rounded-lg'>
-          <h3 className='font-semibold mb-3'>Assets Included</h3>
-          <ul className='grid md:grid-cols-2 gap-3'>
-=======
-        <section className="p-4 border rounded-lg">
-          <h3 className="font-semibold mb-3">Assets Included</h3>
-          <ul className="grid md:grid-cols-2 gap-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            {assets.map(a => (
-              <li key={a.filename} className="flex items-center justify-between border rounded p-2">
-                <span className="text-sm">{a.filename}</span>
-                {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</Link> : <span className="text-gray-400 text-xs">generated</span>  } catch (error) {
-    console.error("Error:", error);
+
+
+
+
+            {assets.map(a => ("
+              <li key={a.filename} className="flex items-center justify-between border rounded p-2">"
+                <span className="text-sm">{a.filename}</span>"
+                {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</Link> : <span className="text-gray-400 text-xs">generated</span>  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </li>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-            ))  } catch (error) {
-    console.error("Error:", error);
+
+            ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </ul>
         </section>
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 <<<<<<< HEAD
         <section className='p-4 border rounded-lg space-y-4'>
 =======
@@ -1244,13 +1321,16 @@ export default KitPage;
       </div>
     </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx
   );
 
 },;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 export default KitPage;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1262,52 +1342,52 @@ export default KitPage;
 =======
 
 
-=======
-          <div className='p - 4 border rounded - lg'>;
-            <h3 className='font - semibold mb - 2'>Rollout Timeline</h3>;
+'
+          <div className='p - 4 border rounded - lg'>;'
+            <h3 className='font - semibold mb - 2'>Rollout Timeline</h3>;'
             <div className='space - y-2'>;
               <DatePicker;
                 selected={start_date}
-                on_change={d => d && setStartDate (d)}
+                on_change={d => d && setStartDate (d)}'
                 className='w - full border rounded px - 2 py - 1';
               />;
               <button;
-                on_click={onGenerateTimeline}
+                on_click={onGenerateTimeline}'
                 className='px - 3 py - 1 rounded bg - green - 600 text - white hover:bg - green - 700';
               >;
                 Generate;
               </button>;
             </div>;
-            {timeline.length > 0 && (
+            {timeline.length > 0 && ('
               <ul className='mt - 3 text - sm list - disc list - inside space - y-1'>;
                 {timeline.map (t => (
-                  <li key={t.label}>;
+                  <li key={t.label}>;'
                     <span className='font - medium'>{t.label}:</span> {t.date}
                   </li>))}              </ul>)}
           </div>;
-        </section>;
-        <section className='p - 4 border rounded - lg'>;
-          <h3 className='font - semibold mb - 3'>Assets Included</h3>;
+        </section>;'
+        <section className='p - 4 border rounded - lg'>;'
+          <h3 className='font - semibold mb - 3'>Assets Included</h3>;'
           <ul className='grid md:grid - cols - 2 gap - 3'>;
             {assets.map (array => (
               <li;
-                key={a.filename}
+                key={a.filename}'
                 className='flex items - center justify - between border rounded p - 2';
-              >;
+              >;'
                 <span className='text - sm'>{a.filename}</span>;
-                {a.path ? (
+                {a.path ? ('
                   <a href={a.path} download className='text - blue - 600 text - sm'>;
                     Download;
-                  </a>) : (
+                  </a>) : ('
                   <span className='text - gray - 400 text - xs'>generated</span>)}              </li>))}
           </ul>;
-        </section>;
-        <section className='p - 4 border rounded - lg space - y-4'>;
-          <h3 className='font - semibold'>Prewritten Press Releases</h3>;
-          <div className='grid md:grid - cols - 3 gap - 4'>;
-            <PressReleaseCard type='seed - round' title='Seed round' />;
-            <PressReleaseCard type='launch' title='Launch' />;
-            {bundle === 'web3' && (
+        </section>;'
+        <section className='p - 4 border rounded - lg space - y-4'>;'
+          <h3 className='font - semibold'>Prewritten Press Releases</h3>;'
+          <div className='grid md:grid - cols - 3 gap - 4'>;'
+            <PressReleaseCard type='seed - round' title='Seed round' />;'
+            <PressReleaseCard type='launch' title='Launch' />;'
+            {bundle === 'web3' && ('
               <PressReleaseCard type='token - sale' title='Token sale' />)}          </div>;
         </section>;
       </div>;
@@ -1316,6 +1396,7 @@ export default KitPage;
 ;
 export default KitPage;
 ;
+<<<<<<< HEAD:pages_backup/media/kit.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1328,3 +1409,8 @@ export default KitPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default KitPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/media/kit.tsx

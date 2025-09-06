@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -34,17 +35,42 @@ export interface HireRequestFormProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-  initialJobTitle?: string;
-<<<<<<< HEAD
-import { TimelineField } from "./TimelineField",
-import { BudgetFields } from "./BudgetFields",
-export interface HireRequestFormProps {
-  talent: TalentProfile,
-  onClose: () => void,
-  initialJobTitle?: string,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+import React from "react";"
+import {useHireRequestForm, FormValues} from "./useHireRequestForm";"
+import {Button} from "@/components/ui/button";"
+import {DialogFooter} from "@/components/ui/dialog";"
+import {Form} from "@/components/ui/form";"
+import {Loader2} from "lucide-react";"
+import {TalentProfile} from "@/types/talent";"
+import {PersonalInfoFields} from "./PersonalInfoFields";"
+import {ProjectDetailsField} from "./ProjectDetailsField";"
+import {TimelineField} from "./TimelineField";"
+import {BudgetFields} from "./BudgetFields";
 
+  initialJobTitle?: string;
+  userDetails?: {;
+    name?: string;
+    email?: string;
+"
+import React from "react","
+import { useHireRequestForm, FormValues } from "./useHireRequestForm","
+import { Button } from "@/components/ui/button","
+import { DialogFooter } from "@/components/ui/dialog","
+import { Form } from "@/components/ui/form","
+import { Loader2 } from "lucide-react","
+import { TalentProfile } from "@/types/talent","
+import { PersonalInfoFields } from "./PersonalInfoFields","
+import { ProjectDetailsField } from "./ProjectDetailsField",";
+import { TimelineField } from "./TimelineField";"
+import { BudgetFields } from "./BudgetFields";
+export interface HireRequestFormProps {};
+  talent: TalentProfile;
+  onClose: () => void;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  initialJobTitle?: string;
+
+<<<<<<< HEAD
   initialJobTitle?: string;
   userDetails?: {;
     name?: string;
@@ -64,12 +90,19 @@ export interface HireRequestFormProps {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  userDetails?: {}
+    name?: string,
+    email?: string,
+    id?: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  onSubmitSuccess?: () => void
+
+
+  onSubmitSuccess?: () => void;
 }
+<<<<<<< HEAD
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
 
 
@@ -131,32 +164,42 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     userDetails
   });
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {};
+    initialJobTitle;
+    userDetails;
+  });
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+    <Form {...form}>"
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <PersonalInfoFields form={form} />
         </div>
         <ProjectDetailsField form={form} />
-        <TimelineField form={form} />
+        <TimelineField form={form} />"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <BudgetFields form={form} talent={talent} />
-        </div>
+        </div>"
         <DialogFooter className="pt-4">
-          <Button
-            type="button"
+          <Button"
+            type="button""
             variant="outline"
-            onClick={onClose}
+            onClick={onClose}"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled={isSubmitting}
           >
+<<<<<<< HEAD
             Cancel
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+            Cancel;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -165,30 +208,31 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Button
             type="submit"
+=======
+          <Button"
+            type="submit""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             disabled={isSubmitting}
           >
             {isSubmitting ? (
-              <>
+              <>"
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Submitting...
               </>
             ) : (
               'Submit Request'
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React from "react",;
-import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
-import { Button } from "@/components/ui/button",;
-import { DialogFooter } from "@/components/ui/dialog",;
-import { Form } from "@/components/ui/form",;
-import { Loader2 } from "lucide-react",;
-import { TalentProfile } from "@/types/talent",;
-import { PersonalInfoFields } from "./PersonalInfoFields",;
-import { ProjectDetailsField } from "./ProjectDetailsField",;
-import { TimelineField } from "./TimelineField",;
+"
+import React from "react",;"
+import { useHireRequestForm, FormValues } from "./useHireRequestForm",;"
+import { Button } from "@/components/ui/button",;"
+import { DialogFooter } from "@/components/ui/dialog",;"
+import { Form } from "@/components/ui/form",;"
+import { Loader2 } from "lucide-react",;"
+import { TalentProfile } from "@/types/talent",;"
+import { PersonalInfoFields } from "./PersonalInfoFields",;"
+import { ProjectDetailsField } from "./ProjectDetailsField",;"
+import { TimelineField } from "./TimelineField",;"
 import { BudgetFields } from "./BudgetFields",;
 export interface HireRequestFormProps {;
   talent: TalentProfile,;
@@ -197,10 +241,7 @@ export interface HireRequestFormProps {;
   userDetails?: {;
     name?: string,;
     email?: string,;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id?: string;
   };
   onSubmitSuccess?: () => void;
@@ -215,118 +256,53 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
   });
 
   return (
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+    <Form {...form}>;"
+      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <PersonalInfoFields form={form} />;
         </div>;
 
         <ProjectDetailsField form={form} />;
         <TimelineField form={form} />;
-
+"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <BudgetFields form={form} talent={talent} />;
         </div>;
-
+"
         <DialogFooter className="pt-4">;
-          <Button
-            type="button" 
+          <Button"
+            type="button" "
             variant="outline" 
-            onClick={onClose}
+            onClick={onClose}"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled={isSubmitting}>;
             Cancel;
           </Button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button
             type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-            disabled={isSubmitting}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 
-import React from "react",;
-import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
-import { Button } from "@/components/ui/button",;
-import { DialogFooter } from "@/components/ui/dialog",;
-import { Form } from "@/components/ui/form",;
-import { Loader2 } from "lucide-react",;
-import { TalentProfile } from "@/types/talent",;
-import { PersonalInfoFields } from "./PersonalInfoFields",;
-import { ProjectDetailsField } from "./ProjectDetailsField",;
-import { TimelineField } from "./TimelineField",;
-import { BudgetFields } from "./BudgetFields",;
-;
-export interface HireRequestFormProps {;
-  talent:TalentProfile,;
-  onClose:() => void,;
-  initialJobTitle?:string,;
-  userDetails?:{;
-    name?:string,;
-    email?:string,;
-    id?:string;
-  },;
-  onSubmitSuccess?:() => void,;
-}
-;
-export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess } HireRequestFormProps) {;
-  const { form, isSubmitting, onSubmit } = useHireRequestForm({ ;
-    talent, ;
-    onClose:onSubmitSuccess || onClose, ;
-    initialJobTitle,;
-    userDetails ;
-  }),;
-  ;
-    id?: string;
-  },;
-  onSubmitSuccess?: () => void;
-}
-;
-export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {;
-  const { form, isSubmitting, onSubmit } = useHireRequestForm({;
-    talent,;
-    onClose: onSubmitSuccess || onClose,;
-    initialJobTitle;
-    userDetails;
-  });
-  return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <PersonalInfoFields form={form} />;
-        </div>;
-        <ProjectDetailsField form={form} />;
-        <TimelineField form={form} />;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <BudgetFields form={form} talent={talent} />;
-        </div>;
-        <DialogFooter className="pt-4">;
-          <Button;
-            type="button";
-            variant="outline";
-            onClick={onClose}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            disabled={isSubmitting}
-          >;
-            Cancel;
-          </Button>;
-          <Button;
-            type="submit";
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white";
-            disabled={isSubmitting}
-          >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+          <Button"
+            type="submit""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            disabled={isSubmitting}>;
+
+
+
             {isSubmitting ? (;
-              <>;
+              <>;"
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                 Submitting...;
               </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ) : (;
               'Submit Request';
@@ -342,27 +318,22 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 <<<<<<< HEAD
             ) : (;
 =======
-            ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ) :(;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+'
               'Submit Request';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </Button>;
         </DialogFooter>;
       </form>;
     </Form>;
-<<<<<<< HEAD
-  );
-}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -380,23 +351,37 @@ import { TalentProfile } from '@/types / talent';
 import { PersonalInfoFields } from './PersonalInfoFields';
 import { ProjectDetailsField } from './ProjectDetailsField';
 import { TimelineField } from './TimelineField';
+=======
+
+'
+import React from './react';'
+import { useHireRequestForm, FormValues } from './useHireRequestForm';'
+import { Button } from '@/components / ui / button';'
+import { DialogFooter } from '@/components / ui / dialog';'
+import { Form } from '@/components / ui / form';'
+import { Loader2 } from './lucide-react';'
+import { TalentProfile } from '@/types / talent';'
+import { PersonalInfoFields } from './PersonalInfoFields';'
+import { ProjectDetailsField } from './ProjectDetailsField';'
+import { TimelineField } from './TimelineField';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { BudgetFields } from './BudgetFields';
-export interface HireRequestFormProps {
+export interface HireRequestFormProps {}
   talent: TalentProfile,
-  on_close: () => void,
+  on_close: () => void,;
   initialJobTitle?: string;
-  user_details?: {
+  user_details?: {}
     name?: string;
     email?: string;
     id?: string;
   }
   onSubmitSuccess?: () => void;
 }
-export /**
- * HireRequestForm - Function description
+export /**;
+ * HireRequestForm - Function description;
  */
-function HireRequestForm() {
-  const { form, is_submitting, on_submit } = useHireRequestForm ({
+function HireRequestForm() {}
+  const { form, is_submitting, on_submit } = useHireRequestForm ({}
     talent,
     on_close: onSubmitSuccess || on_close,
     initialJobTitle;
@@ -404,42 +389,43 @@ function HireRequestForm() {
   });
 ;
   return (
-    <Form {...form}>;
-      <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+    <Form {...form}>;"
+      <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;"
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
           <PersonalInfoFields form={form} />;
         </div>;
         <ProjectDetailsField form={form} />;
-        <TimelineField form={form} />;
+        <TimelineField form={form} />;"
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
           <BudgetFields form={form} talent={talent} />;
-        </div>;
+        </div>;"
         <DialogFooter className="pt - 4">;
-          <Button;
-            type="button";
+          <Button;"
+            type="button";"
             variant="outline";
-            on_click={on_close}
+            on_click={on_close}"
             className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
             disabled={is_submitting}
           >;
             Cancel;
           </Button>;
-          <Button;
-            type="submit";
+          <Button;"
+            type="submit";"
             className="bg - zion - purple hover:bg - zion - purple - dark text - white";
             disabled={is_submitting}
           >;
             {is_submitting ? (
-              <>;
+              <>;"
                 <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
                 Submitting...;
-              </>) : (
+              </>) : ('
               'Submit Request')}
           </Button>;
         </DialogFooter>;
       </form>;
     </Form>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -498,3 +484,9 @@ return (<Form {
 =======
           </Button>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

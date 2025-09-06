@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,10 +42,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;'
+import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { getFlagById } from '../../../../../utils/moderationDb',;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = parseUserFromRequest(req),
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  const user = parseUserFromRequest(req),'
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
+<<<<<<< HEAD
 =======
 >>>>>>> pr-12243
 
@@ -82,3 +88,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(405).end('Method Not Allowed');
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+
+
+
+'
+  res.setHeader('AllowGET'),';
+  return res.status(405).end('Method Not Allowed');
+};'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

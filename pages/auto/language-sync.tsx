@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -22,19 +23,29 @@ import Link from 'next/link';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const LanguageSync: NextPage = () => {
+=======
+
+
+
+
+
+
+
+const LanguageSync: NextPage = () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
       <Head>
         <title>Global Language Sync Agent</title>
         <meta name="description" content="AI-powered translation backfill for locale files." />
-      </Head>
-      <main className="space-y-4">
+      </Head>"
+      <main className="space-y-4">"
         <h1 className="text-2xl font-bold">Global Language Sync Agent</h1>
-        <p>This autonomous agent scans English strings and backfills missing translations in Portuguese, Spanish, and Arabic. It opens commits automatically.</p>
-        <div className="space-x-4 text-blue-600 underline">
-          <Link href="/public/locales/en/common.json">EN</Link>
-          <Link href="/public/locales/pt/common.json">PT</Link>
-          <Link href="/public/locales/es/common.json">ES</Link>
+        <p>This autonomous agent scans English strings and backfills missing translations in Portuguese, Spanish, and Arabic. It opens commits automatically.</p>"
+        <div className="space-x-4 text-blue-600 underline">"
+          <Link href="/public/locales/en/common.json">EN</Link>"
+          <Link href="/public/locales/pt/common.json">PT</Link>"
+          <Link href="/public/locales/es/common.json">ES</Link>"
           <Link href="/public/locales/ar/common.json">AR</Link>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,6 +62,7 @@ const LanguageSync: NextPage = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,10 +71,16 @@ const LanguageSync: NextPage = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 },
 export default LanguageSync,
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -71,14 +89,17 @@ export default LanguageSync,
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
 },
 
 export default LanguageSync,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -118,21 +139,26 @@ export default LanguageSync,
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 },
 export default LanguageSync,
 
 },
 export default LanguageSync,
 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export default LanguageSync,;
 export default LanguageSync,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -155,3 +181,10 @@ import Link from 'next/link';
 const LanguageSync: NextPage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

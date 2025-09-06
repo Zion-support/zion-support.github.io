@@ -1,5 +1,6 @@
-import React from "react";
+import React from "react";"
 import { UseFormReturn } from "react-hook-form";
+<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -9,8 +10,19 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { TalentProfile } from "@/types/talent";
+=======
+import {}
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,";
+} from "@/components/ui/form";"
+import { Input } from "@/components/ui/input";"
+import { TalentProfile } from "@/types/talent";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { FormValues } from "./useHireRequestForm";
-interface BudgetFieldsProps {
+interface BudgetFieldsProps {}
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
 <<<<<<< HEAD
@@ -96,6 +108,7 @@ interface BudgetFieldsProps {;
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -105,43 +118,47 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>;
-      <FormField
-        control={form && form.control}
+      <FormField;
+        control={form && form.control}"
         name="budgetMin"
         render={({ field }) => (
-          <FormItem>
+          <FormItem>"
             <FormLabel className="text-white">Budget (Min)</FormLabel>
-            <FormControl>
-              <div className="relative">
+            <FormControl>"
+              <div className="relative">"
                 <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
                   $
                 </span>
-                <Input
-                  type="number"
+                <Input"
+                  type="number""
                   className="pl-7 bg-zion-blue border-zion-blue-light text-white"
                   {...field}
                 />
               </div>
-            </FormControl>
+            </FormControl>"
             <FormMessage className="text-red-400" />
           </FormItem>
         )}
       />
 
-      <FormField
-        control={form.control}
+      <FormField;
+        control={form.control}"
         name="budget_min";
 
         render={({ field }) => (
-          <FormItem>
+          <FormItem>"
             <FormLabel className="text-white">Budget (Max)</FormLabel>
-            <FormControl>
-              <div className="relative">
+            <FormControl>"
+              <div className="relative">"
                 <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
                   $
                 </span>
+<<<<<<< HEAD
                 <Input
 <<<<<<< HEAD
                   type="number" 
@@ -192,12 +209,16 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
                   className="pl - 7 bg - zion - blue border - zion - blue - light text - white";
 =======
                   type="number"
+=======
+                <Input"
+                  type="number""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="pl-7 bg-zion-blue border-zion-blue-light text-white"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                   {...field}
                 />
               </div>
-            </FormControl>
+            </FormControl>"
             <FormMessage className="text-red-400" />
           </FormItem>
         )}
@@ -226,39 +247,63 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 ;
 
+<<<<<<< HEAD
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+=======
+
+
+
+
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
-      <FormField
-        control={form.control}
+      <FormField;
+        control={form.control}"
         name="budgetMin"
         render={({ field }) => (
-          <FormItem>
+          <FormItem>"
             <FormLabel className="text-white">Budget (Min)</FormLabel>
-            <FormControl>
-              <div className="relative">
+            <FormControl>"
+              <div className="relative">"
                 <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
                   $
                 </span>
-                <Input
-                  type="number"
+                <Input"
+                  type="number""
                   className="pl-7 bg-zion-blue border-zion-blue-light text-white"
                   {...field}
                 />
               </div>
-            </FormControl>
+            </FormControl>"
             <FormMessage className="text-red-400" />
           </FormItem>
         )}
       />
-      <FormField
+      <FormField;
         control={form.control}
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

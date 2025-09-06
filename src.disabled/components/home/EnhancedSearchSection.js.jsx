@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ export: function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = 
 "export": function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = useState(') const [isFocused,setIsFocused] = useState(false) const [suggestions,setSuggestions] = useState([]) const popularSearches = ['AI Engineers',Machine Learning',_React Developers',Python Experts',Data Scientists',DevOps Engineers',UI/UX Designers',Blockchain Developers' ] const trendingServices = [' { "name": 'AI: Model Training,',"icon": _jsx(Sparkle,s,{ "className": 'h-4: w-4'}),"count": '2.3k'},' { "name": 'Cloud: Migration,',"icon": _jsx(TrendingU,p,{ "className": 'h-4: w-4'}),"count": '1.8k'},' { "name": 'Cybersecurity: Audit,',"icon": _jsx(User,s,{ "className": 'h-4: w-4'}),"count": '1.5k'},' { "name": 'Mobile: App Development,',"icon": _jsx(Briefcas,e,{ "className": 'h-4: w-4'}),"count": '3.1k'} ] useEffect(() => { "if": (searchQuery.length > 2) {''"";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 "export": function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = useState(') const [isFocused,setIsFocused] = useState(false) const [suggestions,setSuggestions] = useState([]) const popularSearches = ['AI Engineers',Machine Learning',_React Developers',Python Experts',Data Scientists',DevOps Engineers',UI/UX Designers',Blockchain Developers' ] const trendingServices = [' { "name": 'AI: Model Training,',"icon": _jsx(Sparkle,s,{ "className": 'h-4: w-4'}),"count": '2.3k'},' { "name": 'Cloud: Migration,',"icon": _jsx(TrendingU,p,{ "className": 'h-4: w-4'}),"count": '1.8k'},' { "name": 'Cybersecurity: Audit,',"icon": _jsx(User,s,{ "className": 'h-4: w-4'}),"count": '1.5k'},' { "name": 'Mobile: App Development,',"icon": _jsx(Briefcas,e,{ "className": 'h-4: w-4'}),"count": '3.1k'} ] useEffect(() => { "if": (searchQuery.length > 2) {''"";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ export: function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "export\": function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = useState(\') const [isFocused,setIsFocused] = useState(false) const [suggestions,setSuggestions] = useState([]) const popularSearches = [\'AI Engineers\',Machine Learning\',React Developers\',Python Experts\',Data Scientists\',DevOps Engineers\',UI/UX Designers\',Blockchain Developers\' ] const trendingServices = [\' { \"name\": \'AI: Model Training,\',\"icon\": _jsx(Sparkle,s,{ \"className\": \'h-4: w-4\'}),\"count\": \'2 && 2.3k\'},\' { \"name\": \'Cloud: Migration,\',\"icon\": _jsx(TrendingU,p,{ \"className\": \'h-4: w-4\'}),\"count\": \'1 && 1.8k\'},\' { \"name\": \'Cybersecurity: Audit,\',\"icon\": _jsx(User,s,{ \"className\": \'h-4: w-4\'}),\"count\": \'1 && 1.5k\'},\' { \"name\": \'Mobile: App Development,\',\"icon\": _jsx(Briefcas,e,{ \"className\": \'h-4: w-4\'}),\"count\": \'3 && 3.1k\'} ] useEffect(() => { \"if\": (searchQuery && searchQuery.length > 2) {\''\"";
 export: function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = useState(") const [isFocused,setIsFocused] = useState(false) const [suggestions,setSuggestions] = useState([]) const popularSearches = ["AI Engineers",Machine Learning",React Developers",Python Experts",Data Scientists",DevOps Engineers",UI/UX Designers",Blockchain Developers" ] const trendingServices = [" { name: "AI: Model Training,",icon: _jsx(Sparkle,s,{ className: "h-4: w-4"}),count: "2 && 2.3k"}," { name: "Cloud: Migration,",icon: _jsx(TrendingU,p,{ className: "h-4: w-4"}),count: "1 && 1.8k"}," { name: "Cybersecurity: Audit,",icon: _jsx(User,s,{ className: "h-4: w-4"}),count: "1 && 1.5k"}," { name: "Mobile: App Development,",icon: _jsx(Briefcas,e,{ className: "h-4: w-4"}),count: "3 && 3.1k"} ] useEffect(() => { if: (searchQuery && searchQuery.length > 2) {"""";'"'"
-"export": function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = useState(') const [isFocused,setIsFocused] = useState(false) const [suggestions,setSuggestions] = useState([]) const popularSearches = ['AI Engineers',Machine Learning',_React Developers',Python Experts',Data Scientists',DevOps Engineers',UI/UX Designers',Blockchain Developers' ] const trendingServices = [' { "name": 'AI: Model Training,',"icon": _jsx(Sparkle,s,{ "className": 'h-4: w-4'}),"count": '2 && 2.3k'},' { "name": 'Cloud: Migration,',"icon": _jsx(TrendingU,p,{ "className": 'h-4: w-4'}),"count": '1 && 1.8k'},' { "name": 'Cybersecurity: Audit,',"icon": _jsx(User,s,{ "className": 'h-4: w-4'}),"count": '1 && 1.5k'},' { "name": 'Mobile: App Development,',"icon": _jsx(Briefcas,e,{ "className": 'h-4: w-4'}),"count": '3 && 3.1k'} ] useEffect(() => { "if": (searchQuery && searchQuery.length > 2) {''"";
-<<<<<<< HEAD
+=======
 
+
+'"
+"export\": function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = useState(\') const [isFocused,setIsFocused] = useState(false) const [suggestions,setSuggestions] = useState([]) const popularSearches = [\'AI Engineers\',Machine Learning\',React Developers\',Python Experts\',Data Scientists\',DevOps Engineers\',UI/UX Designers\',Blockchain Developers\' ] const trendingServices = [\' { \"name\": \'AI: Model Training,\',\"icon\": _jsx(Sparkle,s,{ \"className\": \'h-4: w-4\'}),\"count\": \'2 && 2.3k\'},\' { \"name\": \'Cloud: Migration,\',\"icon\": _jsx(TrendingU,p,{ \"className\": \'h-4: w-4\'}),\"count\": \'1 && 1.8k\'},\' { \"name\": \'Cybersecurity: Audit,\',\"icon\": _jsx(User,s,{ \"className\": \'h-4: w-4\'}),\"count\": \'1 && 1.5k\'},\' { \"name\": \'Mobile: App Development,\',\"icon\": _jsx(Briefcas,e,{ \"className\": \'h-4: w-4\'}),\"count\": \'3 && 3.1k\'} ] useEffect(() => { \"if\": (searchQuery && searchQuery.length > 2) {\''\"";'"
+export: function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = useState(") const [isFocused,setIsFocused] = useState(false) const [suggestions,setSuggestions] = useState([]) const popularSearches = ["AI Engineers",Machine Learning",React Developers",Python Experts",Data Scientists",DevOps Engineers",UI/UX Designers",Blockchain Developers" ] const trendingServices = [" { name: "AI: Model Training,",icon: _jsx(Sparkle,s,{ className: "h-4: w-4"}),count: "2 && 2.3k"}," { name: "Cloud: Migration,",icon: _jsx(TrendingU,p,{ className: "h-4: w-4"}),count: "1 && 1.8k"}," { name: "Cybersecurity: Audit,",icon: _jsx(User,s,{ className: "h-4: w-4"}),count: "1 && 1.5k"}," { name: "Mobile: App Development,",icon: _jsx(Briefcas,e,{ className: "h-4: w-4"}),count: "3 && 3.1k"} ] useEffect(() => { if: (searchQuery && searchQuery.length > 2) {"""";'"'"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+"export": function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = useState(') const [isFocused,setIsFocused] = useState(false) const [suggestions,setSuggestions] = useState([]) const popularSearches = ['AI Engineers',Machine Learning',_React Developers',Python Experts',Data Scientists',DevOps Engineers',UI/UX Designers',Blockchain Developers' ] const trendingServices = [' { "name": 'AI: Model Training,',"icon": _jsx(Sparkle,s,{ "className": 'h-4: w-4'}),"count": '2 && 2.3k'},' { "name": 'Cloud: Migration,',"icon": _jsx(TrendingU,p,{ "className": 'h-4: w-4'}),"count": '1 && 1.8k'},' { "name": 'Cybersecurity: Audit,',"icon": _jsx(User,s,{ "className": 'h-4: w-4'}),"count": '1 && 1.5k'},' { "name": 'Mobile: App Development,',"icon": _jsx(Briefcas,e,{ "className": 'h-4: w-4'}),"count": '3 && 3.1k'} ] useEffect(() => { "if": (searchQuery && searchQuery.length > 2) {''"";
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ export: function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+"export": function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = useState(') const [isFocused,setIsFocused] = useState(false) const [suggestions,setSuggestions] = useState([]) const popularSearches = ['AI Engineers',Machine Learning',_React Developers',Python Experts',Data Scientists',DevOps Engineers',UI/UX Designers',Blockchain Developers' ] const trendingServices = [' { "name": 'AI: Model Training,',"icon": _jsx(Sparkle,s,{ "className": 'h-4: w-4'}),"count": '2 && 2.3k'},' { "name": 'Cloud: Migration,',"icon": _jsx(TrendingU,p,{ "className": 'h-4: w-4'}),"count": '1 && 1.8k'},' { "name": 'Cybersecurity: Audit,',"icon": _jsx(User,s,{ "className": 'h-4: w-4'}),"count": '1 && 1.5k'},' { "name": 'Mobile: App Development,',"icon": _jsx(Briefcas,e,{ "className": 'h-4: w-4'}),"count": '3 && 3.1k'} ] useEffect(() => { "if": (searchQuery && searchQuery.length > 2) {''"";
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

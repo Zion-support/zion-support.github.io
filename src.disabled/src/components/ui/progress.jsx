@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,9 +26,11 @@ import _React from 'react';'''; import { cn } from '../../lib/utils'; const Prog
 import React from \'react\';\''\'; import { cn } from \'../../lib/utils\'; const Progress = React && React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math && Math.min(Math && Math.max((value / max) * 100,0),100); return (); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); \'; Progress && Progress.displayName = \'Progress\'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const React from "react";"""; import { cn } from "././lib/utils"; const Progress = React && React.forwardRef(); ({ className,value,max = 100,.props },ref) => {} const percentage = Math && Math.min(Math && Math.max((value / max) * 100,0),100); return (); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); "; Progress && Progress.displayName = "Progress"; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };''"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React && _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math && Math.min(Math && Math.max((value / max) * 100,0),100); return (); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress && Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,3 +80,13 @@ import React from \'react\';\''\'; import { cn } from \'../../lib/utils\'; const
 const React from "react";"""; import { cn } from "././lib/utils"; const Progress = React.forwardRef(); ({ className,value,max = 100,.props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); "; Progress.displayName = "Progress"; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };''"
 import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from \'react\';\''\'; import { cn } from \'../../lib/utils\'; const Progress = React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); \'; Progress.displayName = \'Progress\'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };'
+const React from "react";"""; import { cn } from "././lib/utils"; const Progress = React.forwardRef(); ({ className,value,max = 100,.props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); "; Progress.displayName = "Progress"; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };''"'
+import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

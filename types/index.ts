@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,6 +43,10 @@ export interface ContactForm {
 // Type definitions index
 
 export interface ContactInfo {
+=======
+// Type definitions index;
+export interface ContactInfo {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   phone: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   email: string;
@@ -49,12 +54,12 @@ export interface ContactInfo {
   site: string;
 }
 
-export interface AnimationState {
+export interface AnimationState {};
   isLoaded: boolean;
   hasError: boolean;
 }
 
-export interface ProjectBrief {
+export interface ProjectBrief {};
   projectName: string;
   goals: string;
   timeline: string;

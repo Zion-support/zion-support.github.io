@@ -2,15 +2,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
+<<<<<<< HEAD
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
@@ -20,14 +19,19 @@ import Layout from '../components/layout/Layout';
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </div>
     </Layout>
 <<<<<<< HEAD
   )
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 }
 
       </Head>
@@ -41,18 +45,18 @@ import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Layout>;
       <Head>;
         <title > SSO User Lifecycle Automation | Zion Tech Group</title>;
-        <meta name="description" content="Automate Joiner / Mover / Leaver across SSO / SCIM apps with approvals, logging, and policies." />;
+        <meta name="description" content="Automate Joiner / Mover / Leaver across SSO / SCIM apps with approvals, logging, and policies." />;"
         <link rel="canonical" href="https://ziontechgroup.com / sso - user - lifecycle - automation" />;
       </Head>;
 
+
+
 <<<<<<< HEAD
-=======
-
-import React from 'react';
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -114,15 +118,23 @@ export default function SsoUserLifecycleAutomationPage(req, res) {
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent">SSO User Lifecycle Automation</h1>;
           <p className="text-slate-300">SCIM connectors with approvals, deprovisioning, audit trails, and role change workflows.</p>;
+=======
+"
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;"
+        <div className="max-w-4xl mx-auto space-y-6">;"
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent">SSO User Lifecycle Automation</h1>;"
+          <p className="text-slate-300">SCIM connectors with approvals, deprovisioning, audit trails, and role change workflows.</p>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            {[ 'SCIM connectors with approvalsRole change workflowsDeprovisioning with evidenceAudit trails and reports' ].map((f) => (;
+            {[ 'SCIM connectors with approvalsRole change workflowsDeprovisioning with evidenceAudit trails and reports' ].map((f) => (;"
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-emerald-500/30 text-slate-200">{f}</div>;
-            ))  } catch (error) {
-    console.error("Error:", error);
+            ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -149,11 +161,16 @@ export default function SsoUserLifecycleAutomationPage(req, res) {
   )
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
+=======
+"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -162,12 +179,14 @@ export default function SsoUserLifecycleAutomationPage(req, res) {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -178,3 +197,7 @@ export default function SsoUserLifecycleAutomationPage(req, res) {
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

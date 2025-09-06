@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,3 +96,16 @@ function handler() {
   res.status(200).json({ nonce })
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
+function randomString() { return null; }
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  const nonce = randomString(16)'
+  res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
+
+
+  res.status(200).json({ nonce });
+};'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

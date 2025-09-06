@@ -139,6 +139,7 @@ export default function ServicesAdvertisingPage() {
 				</section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -160,10 +161,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.honeycomb.io/pricing/')}, {ext('https://www.datadoghq.com/pricing/')}, {ext('https://newrelic.com/pricing')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f8ca
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -183,10 +188,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.stackhawk.com/pricing/')}, {ext('https://snyk.io/plans/')}, {ext('https://owasp.org/www-project-api-security/')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f8ca
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -206,10 +215,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://postmarkapp.com/features/deliverability')}, {ext('https://sendgrid.com/pricing/')}, {ext('https://dmarc.org/overview/')}, {ext('https://mxtoolbox.com/problem/dmarc/dmarc-record-not-found')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f8ca
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -229,10 +242,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.cloudzero.com/pricing')}, {ext('https://www.kubecost.com/pricing')}, {ext('https://aws.amazon.com/savingsplans/')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f8ca
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -253,10 +270,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.pagerduty.com/pricing/')}, {ext('https://www.firehydrant.com/pricing/')}, {ext('https://rootly.com/pricing')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f8ca
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -276,10 +297,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://docraptor.com/pricing')}, {ext('https://www.pdfmonkey.io/en/pricing')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f8ca
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -317,6 +342,9 @@ export default function ServicesAdvertisingPage() {
 				</section>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f8ca
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			</div>
 		</div>
 	);

@@ -1,28 +1,32 @@
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
+import type { NextPage } from "next";"
+import Head from "next/head";"
 import Link from "next/link";
 const DataPipelineEngineeringChat: NextPage = () => {;
   return (
     <div>;
       <Head>;
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
-        <meta
-          name="description"
-          content="DataPipelineEngineeringChat service"
+        <meta"
+          name="description""
+          content="DataPipelineEngineeringChat service""
         />{" "}
       <main>
         <h1>DataPipelineEngineeringChat</h1>
-        <p>Service details coming soon...</p>
+        <p>Service details coming soon...</p>"
         <a href="/services">Back to Services</a>
       </main>
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <main>;
         <h1>DataPipelineEngineeringChat</h1>;
-        <p>Service details coming soon...</p>;
+        <p>Service details coming soon...</p>;"
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
@@ -33,14 +37,17 @@ export default DataPipelineEngineeringChat;
 
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
+
+
+"
+import type { NextPage } from "next";"
+import Head from "next/head";"
 import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
 import Link from 'next/link';
 
-const DataPipelineEngineeringChat: NextPage = () => {
+const DataPipelineEngineeringChat: NextPage = () => {}
   return (
     <div>
       <Head>
@@ -51,24 +58,32 @@ const DataPipelineEngineeringChat: NextPage = () => {
 
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
 import type { NextPage } from './next';
 import Head from './next / head';
+=======
+
+
+'
+import type { NextPage } from './next';'
+import Head from './next / head';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from './next / link';
-const DataPipelineEngineeringChat: NextPage = () => {
+const DataPipelineEngineeringChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
         <title > DataPipelineEngineeringChat - Zion Tech Solutions</title>;
-        <meta;
-          name="description";
-          content="DataPipelineEngineeringChat service";
+        <meta;"
+          name="description";"
+          content="DataPipelineEngineeringChat service";"
         />{" "}
       </Head>;
       <main>;
         <h1 > DataPipelineEngineeringChat</h1>;
-        <p > Service details coming soon...</p>;
+        <p > Service details coming soon...</p>;"
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
@@ -76,6 +91,7 @@ const DataPipelineEngineeringChat: NextPage = () => {
 ;
 export default DataPipelineEngineeringChat;
 ;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
     <div>
@@ -94,15 +110,12 @@ pr-12243
 },
 
 export default DataPipelineEngineeringChat
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
+<<<<<<< HEAD
 const DataPipelineEngineeringChat: NextPage = () => {
   return (
     <div>
@@ -127,3 +140,6 @@ export default DataPipelineEngineeringChat;
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

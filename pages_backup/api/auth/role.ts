@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/auth/role.ts
 <<<<<<< HEAD:pages/api/auth/role.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,12 +8,14 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
-
-
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/role.ts
 
 
+
+
+
+<<<<<<< HEAD:pages_backup/api/auth/role.ts
 =======
 }
 
@@ -37,15 +40,22 @@ function handler() {
 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/role.ts
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/role.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   res.status(200).json({ ok: true })
+<<<<<<< HEAD:pages_backup/api/auth/role.ts
 <<<<<<< HEAD:pages/api/auth/role.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/role.ts
 import type { NextApiRequest, NextApiResponse } from 'next',;
 =======
 
@@ -59,19 +69,20 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/role.ts
 ;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ ok: true })
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req, res) {
-  try {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   res.status(200).json({ ok: true });
-  } catch (error) {
-    console.error("Error:", error);
+};'
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req, res) {}
+  try {};
+  res.status(200).json({ ok: true });
+  } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 }
+<<<<<<< HEAD:pages_backup/api/auth/role.ts
 <<<<<<< HEAD:pages/api/auth/role.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,12 +96,17 @@ export default function handler(req, res) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/role.ts
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/role.ts
 
 
 
 
 
 }
+<<<<<<< HEAD:pages_backup/api/auth/role.ts
 
 <<<<<<< HEAD:pages/api/auth/role.ts
 import type { NextApiRequest, NextApiResponse } from 'next',
@@ -98,13 +114,18 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/role.ts
+=======
+'
+import type { NextApiRequest, NextApiResponse } from 'next',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/role.ts
 ;
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
-function handler() {
+function handler() {}
   res.status (200).json ({ ok: true });
 }
+<<<<<<< HEAD:pages_backup/api/auth/role.ts
 <<<<<<< HEAD:pages/api/auth/role.ts
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -122,3 +143,11 @@ function handler() {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/role.ts
+=======
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/role.ts

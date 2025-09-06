@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/summit/PartnersSection.js.jsx
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -29,10 +30,20 @@ const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;'"
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+:src.disabled/components/summit/PartnersSection.js.jsx'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
-:src.disabled/components/summit/PartnersSection.js.jsx
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+:temp_exclude/src.disabled/components/summit/PartnersSection.js.jsx;
+'"
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 :temp_exclude/src.disabled/components/summit/PartnersSection.js.jsx
@@ -51,3 +62,15 @@ const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+'"
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+'"
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+'"
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;'"
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

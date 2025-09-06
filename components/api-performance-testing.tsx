@@ -1,26 +1,27 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 pr-12243
 
 
@@ -74,73 +75,92 @@ export default function ApiPerformanceTestingPage() {
     "Regression baselines per endpoint"
     "CI checks and PR annotations"
     "Synthetic traffic for staging"
+=======
+
+
+export default function ApiPerformanceTestingPage() {}
+  const features = []
+    "k6/Gatling-compatible test runner""
+    "SLO-aware latency reports""
+    "Regression baselines per endpoint""
+    "CI checks and PR annotations""
+    "Synthetic traffic for staging";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
   return (
 
-export default function ApiPerformanceTestingPage() {
-  const features = [
-    "k6/Gatling-compatible test runner",
+export default function ApiPerformanceTestingPage() {}
+  const features = ["
+    "k6/Gatling-compatible test runner","
     "SLO-aware latency reports",
+<<<<<<< HEAD
 pr-12243
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
+=======
+"
+    "Regression baselines per endpoint","
+    "CI checks and PR annotations","
+    "Synthetic traffic for staging",;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 ;
   return (
     <>;
-      <SEO;
-        title="API Performance Testing";
+      <SEO;"
+        title="API Performance Testing";"
         description="Load, latency and regression testing - as - a-service with CI and SLOs.";
-      />;
-      <main id="main" className="container mx - auto px - 4 py - 24">;
-        <section className="max - w-5xl mx - auto">;
+      />;"
+      <main id="main" className="container mx - auto px - 4 py - 24">;"
+        <section className="max - w-5xl mx - auto">;"
           <h1 className="text - 4xl font - extrabold tracking - tight">;
             API Performance Testing;
-          </h1>;
+          </h1>;"
           <p className="mt - 4 text - lg text - gray - 300">;
             Ship with confidence using automated performance tests and;
             guardrails integrated into your pipeline.;
-          </p>;
+          </p>;"
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
-                key={f}
+                key={f}"
                 className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";
-              >;
-                <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;
+              >;"
+                <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;"
                 <p className="text - gray - 200">{f}</p>;
               </div>))}
-          </div>;
+          </div>;"
           <div className="mt - 8 flex flex - wrap items - center gap - 4">;
-            <a;
-              href="/contact";
+            <a;"
+              href="/contact";"
               className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover:bg - gray - 200";
             >;
               Start from $129 / mo;
             </a>;
-            <a;
-              href="/market - pricing";
+            <a;"
+              href="/market - pricing";"
               className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10";
             >;
               Market Pricing;
             </a>;
-            <a;
-              href="https://grafana.com / docs / k6/";
-              target="_blank";
-              rel="noreferrer";
+            <a;"
+              href="https://grafana.com / docs / k6/";"
+              target="_blank";"
+              rel="noreferrer";"
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
-            >;
+            >;"
               <ExternalLink className="w - 4 h - 4" /> k6 Docs;
             </a>;
-            <a;
-              href="https://gatling.io / open - source/";
-              target="_blank";
-              rel="noreferrer";
+            <a;"
+              href="https://gatling.io / open - source/";"
+              target="_blank";"
+              rel="noreferrer";"
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
-            >;
+            >;"
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
 
+<<<<<<< HEAD
             </a>;
           </div>;
         </section>;
@@ -151,63 +171,74 @@ pr-12243
   return (
   return (
   return (
+=======
+
+  return (
+
+
+  return (
+
+
+  return (
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <>
-      <SEO
-        title="API Performance Testing"
+      <SEO"
+        title="API Performance Testing""
         description="Load, latency and regression testing-as-a-service with CI and SLOs."
-      />
-      <main id="main" className="container mx-auto px-4 py-24">
-        <section className="max-w-5xl mx-auto">
+      />"
+      <main id="main" className="container mx-auto px-4 py-24">"
+        <section className="max-w-5xl mx-auto">"
           <h1 className="text-4xl font-extrabold tracking-tight">
-            API Performance Testing
-          </h1>
+            API Performance Testing;
+          </h1>"
           <p className="mt-4 text-lg text-gray-300">
-            Ship with confidence using automated performance tests and
+            Ship with confidence using automated performance tests and;
             guardrails integrated into your pipeline.
-          </p>
+          </p>"
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {features.map((f) => (
-              <div
-
-                key={f}
+              <div;
+                key={f}"
                 className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";
-              >;
-                <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;
+              >;"
+                <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;"
                 <p className="text - gray - 200">{f}</p>;
               </div>))}
-          </div>;
+          </div>;"
           <div className="mt - 8 flex flex - wrap items - center gap - 4">;
-            <a;
-              href="/contact";
+            <a;"
+              href="/contact";"
               className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover: bg - gray - 200";
             >;
               Start from $129 / mo;
             </a>;
-            <a;
-              href="/market - pricing";
+            <a;"
+              href="/market - pricing";"
               className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10";
             >;
               Market Pricing;
             </a>;
-            <a;
-              href="https://grafana.com / docs / k6/";
-              target="_blank";
-              rel="noreferrer";
+            <a;"
+              href="https://grafana.com / docs / k6/";"
+              target="_blank";"
+              rel="noreferrer";"
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
-            >;
+            >;"
               <ExternalLink className="w - 4 h - 4" /> k6 Docs;
             </a>;
-            <a;
-              href="https://gatling.io / open - source/";
-              target="_blank";
-              rel="noreferrer";
+            <a;"
+              href="https://gatling.io / open - source/";"
+              target="_blank";"
+              rel="noreferrer";"
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
-            >;
+            >;"
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 
 }
 
@@ -216,39 +247,46 @@ pr-12243
     </>);
 }
 
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     </>);
 }
 
-	const features = [
+	const features = ['
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	];
 	const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 	return (
-		<>
-			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
-			<main id="main" className="container mx-auto px-4 py-24">
-				<section className="max-w-5xl mx-auto">
-					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>
-					<p className="mt-4 text-lg text-gray-300">Ship with confidence using automated performance tests and guardrails integrated into your pipeline.</p>
+		<>"
+			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />"
+			<main id="main" className="container mx-auto px-4 py-24">"
+				<section className="max-w-5xl mx-auto">"
+					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>"
+					<p className="mt-4 text-lg text-gray-300">Ship with confidence using automated performance tests and guardrails integrated into your pipeline.</p>"
 					<div className="mt-8 grid sm:grid-cols-2 gap-6">
-						{features.map((f) => (
-							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
-								<Check className="w-5 h-5 text-cyan-400 mt-1" />
+						{features.map((f) => ("
+							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">"
+								<Check className="w-5 h-5 text-cyan-400 mt-1" />"
 <p className="text-gray-200">{f}</p>
 
 							</div>
 						))}
-					</div>
-					<div className="mt-8 flex flex-wrap items-center gap-4">
-						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $129/mo</a>
-						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>
-						<a href="https://grafana.com/docs/k6/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-							<ExternalLink className="w-4 h-4" /> k6 Docs
-							</a>
-<a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-							<ExternalLink className="w-4 h-4" /> Gatling OSS
+					</div>"
+					<div className="mt-8 flex flex-wrap items-center gap-4">"
+						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $129/mo</a>"
+						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>"
+						<a href="https://grafana.com/docs/k6/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">"
+							<ExternalLink className="w-4 h-4" /> k6 Docs;
+							</a>"
+<a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">"
+							<ExternalLink className="w-4 h-4" /> Gatling OSS;
 							</a>
 					</div>
 				</section>
@@ -266,44 +304,51 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return (
   return (
     <>
-      <SEO
-        title="API Performance Testing"
+      <SEO"
+        title="API Performance Testing""
         description="Load, latency and regression testing-as-a-service with CI and SLOs."
-      />
-      <main id="main" className="container mx-auto px-4 py-24">
-        <section className="max-w-5xl mx-auto">
+      />"
+      <main id="main" className="container mx-auto px-4 py-24">"
+        <section className="max-w-5xl mx-auto">"
           <h1 className="text-4xl font-extrabold tracking-tight">
-            API Performance Testing
-          </h1>
+            API Performance Testing;
+          </h1>"
           <p className="mt-4 text-lg text-gray-300">
-            Ship with confidence using automated performance tests and
+            Ship with confidence using automated performance tests and;
             guardrails integrated into your pipeline.
-          </p>
+          </p>"
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {features.map((f) => (
-              <div
-                key={f}
+              <div;
+                key={f}"
                 className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10"
-              >
-                <Check className="w-5 h-5 text-cyan-400 mt-1" />
+              >"
+                <Check className="w-5 h-5 text-cyan-400 mt-1" />"
                 <p className="text-gray-200">{f}</p>
               </div>
             ))}
-          </div>
+          </div>"
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href="/contact"
+            <a"
+              href="/contact""
               className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200"
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
-              Start from $129/mo
+              Start from $129/mo;
             </a>
+<<<<<<< HEAD
             <a
               href='/market-pricing'
               className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10'
+=======
+            <a"
+              href="/market-pricing""
+              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >
-              Market Pricing
+              Market Pricing;
             </a>
+<<<<<<< HEAD
             <a
               href='https://grafana.com/docs/k6/'
               target='_blank'
@@ -319,6 +364,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
             >
               <ExternalLink className='w-4 h-4' /> Gatling OSS
+=======
+            <a"
+              href="https://grafana.com/docs/k6/""
+              target="_blank""
+              rel="noreferrer""
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+            >"
+              <ExternalLink className="w-4 h-4" /> k6 Docs;
+            </a>
+            <a"
+              href="https://gatling.io/open-source/""
+              target="_blank""
+              rel="noreferrer""
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+            >"
+              <ExternalLink className="w-4 h-4" /> Gatling OSS;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </a>
           </div>
         </section>
@@ -327,58 +389,58 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
   return (
     <>
-      <SEO
-        title="API Performance Testing"
+      <SEO"
+        title="API Performance Testing""
         description="Load, latency and regression testing-as-a-service with CI and SLOs."
-      />
-      <main id="main" className="container mx-auto px-4 py-24">
-        <section className="max-w-5xl mx-auto">
+      />"
+      <main id="main" className="container mx-auto px-4 py-24">"
+        <section className="max-w-5xl mx-auto">"
           <h1 className="text-4xl font-extrabold tracking-tight">
-            API Performance Testing
-          </h1>
+            API Performance Testing;
+          </h1>"
           <p className="mt-4 text-lg text-gray-300">
-            Ship with confidence using automated performance tests and
+            Ship with confidence using automated performance tests and;
             guardrails integrated into your pipeline.
-          </p>
+          </p>"
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {features.map((f) => (
-              <div
-                key={f}
+              <div;
+                key={f}"
                 className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10"
-              >
-                <Check className="w-5 h-5 text-cyan-400 mt-1" />
+              >"
+                <Check className="w-5 h-5 text-cyan-400 mt-1" />"
                 <p className="text-gray-200">{f}</p>
               </div>
             ))}
-          </div>
+          </div>"
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href="/contact"
+            <a"
+              href="/contact""
               className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200"
             >
-              Start from $129/mo
+              Start from $129/mo;
             </a>
-            <a
-              href="/market-pricing"
+            <a"
+              href="/market-pricing""
               className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10"
             >
-              Market Pricing
+              Market Pricing;
             </a>
-            <a
-              href="https://grafana.com/docs/k6/"
-              target="_blank"
-              rel="noreferrer"
+            <a"
+              href="https://grafana.com/docs/k6/""
+              target="_blank""
+              rel="noreferrer""
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
-            >
-              <ExternalLink className="w-4 h-4" /> k6 Docs
+            >"
+              <ExternalLink className="w-4 h-4" /> k6 Docs;
             </a>
-            <a
-              href="https://gatling.io/open-source/"
-              target="_blank"
-              rel="noreferrer"
+            <a"
+              href="https://gatling.io/open-source/""
+              target="_blank""
+              rel="noreferrer""
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
-            >
-              <ExternalLink className="w-4 h-4" /> Gatling OSS
+            >"
+              <ExternalLink className="w-4 h-4" /> Gatling OSS;
             </a>
           </div>
         </section>
@@ -387,10 +449,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 
+<<<<<<< HEAD
 pr-12243
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

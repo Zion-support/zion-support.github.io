@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Fragment} from "react";
@@ -163,16 +164,41 @@ const ContentRoutes = () => {;
       {/* Content Routes */}
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
+=======
+import { Fragment } from "react";"
+import { Route, Routes, Navigate } from "react-router-dom";"
+import Home from "@/pages/Home";"
+import About from "@/pages/About";"
+import Blog from "@/pages/Blog";"
+import BlogPost from "@/pages/BlogPost";"
+import GreenIT from "@/pages/GreenIT";"
+import Careers from "@/pages/Careers";"
+import SearchPage from "@/pages/SearchPage";"
+import { SitemapPage } from "@/components/SitemapPage";"
+import HelpCenterPage from "@/pages/HelpCenterPage";"
+import AccountSettings from "@/pages/AccountSettings";"
+import ProjectRoom from "@/pages/ProjectRoom";"
+import VideoCall from "@/pages/VideoCall";
+const ContentRoutes = () => {}
+const ContentRoutes = () => {;
+
+  return (
+    <Routes>;
+      {/* Content Routes */}"
+      <Route path="/" element={<Home />} />"
+      <Route path="/home" element={<Home />} />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Route path="/about" element={<About />} />
 
-      {/* Help Center Routes */}
-      <Route path="/help" element={<HelpCenterPage />} />
+      {/* Help Center Routes */}"
+      <Route path="/help" element={<HelpCenterPage />} />"
       <Route path="/support" element={<HelpCenterPage />} />
 
-      {/* Blog Routes */}
-      <Route path="/blog" element={<Blog />} />
+      {/* Blog Routes */}"
+      <Route path="/blog" element={<Blog />} />"
       <Route path="/blog/:slug" element={<BlogPost />} />
 
+<<<<<<< HEAD
       {/* Green IT Route */}
 <<<<<<< HEAD
 export default ContentRoutes;
@@ -202,26 +228,30 @@ const ContentRoutes = () => {;
       <Route path="/sitemap-page" element={<SitemapPage />} />;
     </Routes>;
 =======
+=======
+      {/* Green IT Route */}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Route path="/green-it" element={<GreenIT />} />
 
-      {/* Careers Route */}
+      {/* Careers Route */}"
       <Route path="/careers" element={<Careers />} />;
 
-      {/* Account Settings */}
+      {/* Account Settings */}"
       <Route path="/settings/account" element={<AccountSettings />} />
 
-      {/* Project Room */}
+      {/* Project Room */}"
       <Route path="/project-room/:projectId" element={<ProjectRoom />} />
 
-      {/* Video Call */}
+      {/* Video Call */}"
       <Route path="/video-call/:roomId" element={<VideoCall />} />;
 
-      {/* Global Search Route */}
+      {/* Global Search Route */}"
       <Route path="/search" element={<SearchPage />} />
 
-      {/* Sitemap Page */}
+      {/* Sitemap Page */}"
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -247,33 +277,57 @@ import { SitemapPage } from '@/components / SitemapPage';
 import HelpCenterPage from "@/pages / HelpCenterPage";
 import AccountSettings from "@/pages / AccountSettings";
 import ProjectRoom from "@/pages / ProjectRoom";
+=======
+  );
+};
+
+export default ContentRoutes;
+
+
+
+
+import { Fragment } from './react';'
+import { Route, Routes, Navigate } from './react-router-dom';"
+import Home from "@/pages / Home";"
+import About from "@/pages / About";"
+import Blog from "@/pages / Blog";"
+import BlogPost from "@/pages / BlogPost";"
+import GreenIT from "@/pages / GreenIT";"
+import Careers from "@/pages / Careers";"
+import SearchPage from "@/pages / SearchPage";'
+import { SitemapPage } from '@/components / SitemapPage';"
+import HelpCenterPage from "@/pages / HelpCenterPage";"
+import AccountSettings from "@/pages / AccountSettings";"
+import ProjectRoom from "@/pages / ProjectRoom";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import VideoCall from "@/pages / VideoCall";
-const ContentRoutes = () =>: any {
+const ContentRoutes = () =>: any {}
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Routes>;
-      {/* Content Routes */}
-      <Route path="/" element={<Home />} />;
-      <Route path="/home" element={<Home />} />;
+      {/* Content Routes */}"
+      <Route path="/" element={<Home />} />;"
+      <Route path="/home" element={<Home />} />;"
       <Route path="/about" element={<About />} />;
-      {/* Help Center Routes */}
-      <Route path="/help" element={<HelpCenterPage />} />;
+      {/* Help Center Routes */}"
+      <Route path="/help" element={<HelpCenterPage />} />;"
       <Route path="/support" element={<HelpCenterPage />} />;
-      {/* Blog Routes */}
-      <Route path="/blog" element={<Blog />} />;
+      {/* Blog Routes */}"
+      <Route path="/blog" element={<Blog />} />;"
       <Route path="/blog/:slug" element={<BlogPost />} />;
-      {/* Green IT Route */}
+      {/* Green IT Route */}"
       <Route path="/green - it" element={<GreenIT />} />;
-      {/* Careers Route */}
+      {/* Careers Route */}"
       <Route path="/careers" element={<Careers />} />;
-      {/* Account Settings */}
+      {/* Account Settings */}"
       <Route path="/settings / account" element={<AccountSettings />} />;
-      {/* Project Room */}
+      {/* Project Room */}"
       <Route path="/project - room/:project_id" element={<ProjectRoom />} />;
-      {/* Video Call */}
+      {/* Video Call */}"
       <Route path="/video - call/:room_id" element={<VideoCall />} />;
-      {/* Global Search Route */}
+      {/* Global Search Route */}"
       <Route path="/search" element={<SearchPage />} />;
+<<<<<<< HEAD
       {/* Sitemap Page */}
 <<<<<<< HEAD
       <Route path="/sitemap-page" element={<SitemapPage />} />;
@@ -291,6 +345,9 @@ export default ContentRoutes;
 export default ContentRoutes;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+      {/* Sitemap Page */}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Route path="/sitemap - page" element={<SitemapPage />} />;
     </Routes>);
 }
@@ -299,6 +356,7 @@ export default ContentRoutes;
 },
 
 export default ContentRoutes;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -400,3 +458,9 @@ export default ContentRoutes;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

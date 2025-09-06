@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { render, screen } from '@testing-library/react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -72,12 +73,20 @@ describe('AppMinimal', () => {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-  it('displays correct content', () => {
-    render(<AppMinimal />);
-    // Add content tests here
+=======
+import { render, screen } from '@testing-library/react';'
+import { describe, it, expect } from 'vitest';'
+import AppMinimal from './AppMinimal';
+'
+describe('AppMinimal', () => {'
+  it('renders without crashing', () => {}
+    render(<AppMinimal />);'
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
   it('handles user interactions', () => {
     render(<AppMinimal />);
     // Add interaction tests here
@@ -158,10 +167,15 @@ import { render,screen } from \'@testing-library/react\'; import { describe,it,e
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions"
 =======
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions"
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+});
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -216,3 +230,14 @@ describe('AppMinimal'
 =======
 });
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'
+</AppMinimal>'
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

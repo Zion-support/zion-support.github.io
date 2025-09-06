@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +28,23 @@ const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onTogg
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/MobileNavigation.jsx
 import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";
+=======
+
+
+import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";"
 const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";
+:src.disabled/components/MobileNavigation.jsx'"
+import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";"
 const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
+import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""
+:temp_exclude/src.disabled/components/MobileNavigation.jsx;
+'"
+import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";"
+const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/MobileNavigation.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,3 +87,15 @@ import React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { co
 =======
 import React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';''}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'
+import React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';''}
+'"
+import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";"
+const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""'
+import React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';''}
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

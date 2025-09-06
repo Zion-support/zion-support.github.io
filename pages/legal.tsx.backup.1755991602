@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 =======
@@ -10,11 +11,15 @@ import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-4a15
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from 'next/link';
 
 export default function LegalPage() {
 	return (
 		<>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -49,6 +54,9 @@ export default function LegalPage() {
 			</div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-4a15
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 		</>
 	);
 }

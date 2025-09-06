@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -70,6 +71,9 @@ export default function Careers() {
     }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const locations = [
@@ -81,6 +85,7 @@ export default function Careers() {
 
   const jobOpenings = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -105,10 +110,14 @@ export default function Careers() {
       description: 'Lead research in AI consciousness, emotional intelligence, and autonomous decision-making systems.',
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       requirements: [
         'PhD in Computer Science, AI, or related field',
         'Experience with large language models and neural networks',
         'Background in cognitive science or psychology',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -455,10 +464,14 @@ export default function Careers() {
             ))}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -755,10 +768,14 @@ export default function Careers() {
               </motion.div>
             ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       {/* Open Positions */}
@@ -1157,3 +1174,6 @@ export default function Careers() {
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

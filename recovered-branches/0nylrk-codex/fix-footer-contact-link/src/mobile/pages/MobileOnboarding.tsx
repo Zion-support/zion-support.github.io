@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -146,43 +147,65 @@ export function MobileOnboarding() {;
             <LanguageThemeSelector />
 
             <div className="px-4 mt-8">
+=======
+import React, { useState } from "react";"
+import { useNavigate } from "react-router-dom";"
+import { Button } from "@/components/ui/button";"
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector";"
+import { RolePicker } from "../components/onboarding/RolePicker";"
+import { SignUpForm } from "../components/onboarding/SignUpForm";"
+type OnboardingStep = "language" | "role" | "signup";
+
+
+export function MobileOnboarding() { return null; }
+import React, { useState } from "react","
+import { useNavigate } from "react-router-dom","
+import { Button } from "@/components/ui/button","
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector","
+import { RolePicker } from "../components/onboarding/RolePicker","
+import { SignUpForm } from "../components/onboarding/SignUpForm","
+type OnboardingStep = "language" | "role" | "signup",
+
+export function MobileOnboarding() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
-                Continue
+                Continue;
               </Button>
             </div>
           </div>
         )}
-
-        {currentStep === "role" && (
-          <div className="space-y-6">
-            <div className="text-center mb-8">
-              <h1 className="text-3xl font-bold mb-2">Tell us about you</h1>
+"
+        {currentStep === "role" && ("
+          <div className="space-y-6">"
+            <div className="text-center mb-8">"
+              <h1 className="text-3xl font-bold mb-2">Tell us about you</h1>"
               <p className="text-muted-foreground">
-                Choose what brought you to Zion
+                Choose what brought you to Zion;
               </p>
             </div>
 
             <RolePicker onSelect={handleRoleSelect} />
-
-            <div className="px-4 mt-8">
+"
+            <div className="px-4 mt-8">"
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
-                Continue
+                Continue;
               </Button>
             </div>
           </div>
         )}
-
-        {currentStep === "signup" && (
-          <div className="space-y-6">
-            <div className="text-center mb-6">
-              <h1 className="text-3xl font-bold mb-2">Almost there!</h1>
+"
+        {currentStep === "signup" && ("
+          <div className="space-y-6">"
+            <div className="text-center mb-6">"
+              <h1 className="text-3xl font-bold mb-2">Almost there!</h1>"
               <p className="text-muted-foreground">
-                Create your account to get started
+                Create your account to get started;
               </p>
             </div>
 
             <SignUpForm />
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -231,12 +254,28 @@ export function MobileOnboarding() {;
     if (currentStep === "language") {;
       setCurrentStep("role");
     } else if (currentStep === "role") {;
+=======
+"
+import React, { useState } from "react",;"
+import { useNavigate } from "react-router-dom",;"
+import { Button } from "@/components/ui/button",;"
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;"
+import { RolePicker } from "../components/onboarding/RolePicker",;"
+import { SignUpForm } from "../components/onboarding/SignUpForm",;"
+type OnboardingStep = "language" | "role" | "signup",;
+
+  const goToNextStep = () => {;"
+    if (currentStep === "language") {;"
+      setCurrentStep("role");"
+    } else if (currentStep === "role") {;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setCurrentStep("signup");
-    } else {;
+    } else {;"
       navigate("/mobile");
     }
   };
 
+<<<<<<< HEAD
   const handleRoleSelect = () => {;
     setCurrentStep("signup")
 };
@@ -247,12 +286,24 @@ export function MobileOnboarding() {;
           <div className="space-y-6">;
             <div className="text-center mb-8">;
               <h1 className="text-3xl font-bold mb-2">Welcome to Zion</h1>;
+=======
+  const handleRoleSelect = () => {;"
+    setCurrentStep("signup");
+  };
+"
+    <div className="min-h-screen flex flex-col">;"
+      <div className="flex-1 py-8">;"
+        {currentStep === "language" && (;"
+          <div className="space-y-6">;"
+            <div className="text-center mb-8">;"
+              <h1 className="text-3xl font-bold mb-2">Welcome to Zion</h1>;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-muted-foreground">Let's set up your experience</p>;
             </div>;
 
             <LanguageThemeSelector />;
-
-            <div className="px-4 mt-8">;
+"
+            <div className="px-4 mt-8">;"
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
               </Button>;
@@ -263,6 +314,7 @@ export function MobileOnboarding() {;
     </div>
   );
 }
+<<<<<<< HEAD
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -340,82 +392,85 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
+
+
+'
+import React, { useState } from './react';'
+import { use_navigate } from './react-router-dom';'
+import { Button } from '@/components / ui / button';'
+import { LanguageThemeSelector } from '../components / onboarding / LanguageThemeSelector';'
+import { RolePicker } from '../components / onboarding / RolePicker';'
+import { SignUpForm } from '../components / onboarding / SignUpForm';"
+type OnboardingStep = "language" | "role" | "signup";
 ;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
-import React, { useState } from "react",;
-import { useNavigate } from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;
-import { RolePicker } from "../components/onboarding/RolePicker",;
+
+"
+import React, { useState } from "react",;"
+import { useNavigate } from "react-router-dom",;"
+import { Button } from "@/components/ui/button",;"
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;"
+import { RolePicker } from "../components/onboarding/RolePicker",;"
 import { SignUpForm } from "../components/onboarding/SignUpForm",;
-;
+;"
 type OnboardingStep = "language" | "role" | "signup",;
 ;
-export function MobileOnboarding() {;
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),;
-  const navigate = useNavigate(),;
-  ;
-  const goToNextStep = () => {;
-    if (currentStep === "language") {;
-      setCurrentStep("role"),;
-    } else if (currentStep === "role") {;
+export function MobileOnboarding() { return null; }
+    } else if (currentStep === "role") {;"
       setCurrentStep("signup"),;
-    } else {;
+    } else {;"
       navigate("/mobile"),;
     }
   },;
   ;
-  const handleRoleSelect = () => {;
+  const handleRoleSelect = () => {;"
     setCurrentStep("signup"),;
   },;
 ;
-  return (;
-    <div className="min-h-screen flex flex-col">;
-      <div className="flex-1 py-8">;
-        {currentStep === "language" && (;
-          <div className="space-y-6">;
-            <div className="text-center mb-8">;
-              <h1 className="text-3xl font-bold mb-2">Welcome to Zion</h1>;
+  return (;"
+    <div className="min-h-screen flex flex-col">;"
+      <div className="flex-1 py-8">;"
+        {currentStep === "language" && (;"
+          <div className="space-y-6">;"
+            <div className="text-center mb-8">;"
+              <h1 className="text-3xl font-bold mb-2">Welcome to Zion</h1>;'"
               <p className="text-muted-foreground">Let's set up your experience</p>;
             </div>;
             ;
             <LanguageThemeSelector />;
-            ;
-            <div className="px-4 mt-8">;
+            ;"
+            <div className="px-4 mt-8">;"
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
               </Button>;
             </div>;
           </div>;
         )}
-        ;
-        {currentStep === "role" && (;
-          <div className="space-y-6">;
-            <div className="text-center mb-8">;
-              <h1 className="text-3xl font-bold mb-2">Tell us about you</h1>;
+        ;"
+        {currentStep === "role" && (;"
+          <div className="space-y-6">;"
+            <div className="text-center mb-8">;"
+              <h1 className="text-3xl font-bold mb-2">Tell us about you</h1>;"
               <p className="text-muted-foreground">Choose what brought you to Zion</p>;
             </div>;
             ;
             <RolePicker onSelect={handleRoleSelect} />;
-            ;
-            <div className="px-4 mt-8">;
+            ;"
+            <div className="px-4 mt-8">;"
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
               </Button>;
             </div>;
           </div>;
         )}
-        ;
-        {currentStep === "signup" && (;
-          <div className="space-y-6">;
-            <div className="text-center mb-6">;
-              <h1 className="text-3xl font-bold mb-2">Almost there!</h1>;
+        ;"
+        {currentStep === "signup" && (;"
+          <div className="space-y-6">;"
+            <div className="text-center mb-6">;"
+              <h1 className="text-3xl font-bold mb-2">Almost there!</h1>;"
               <p className="text-muted-foreground">Create your account to get started</p>;
             </div>;
             ;
@@ -424,25 +479,25 @@ export function MobileOnboarding() {;
         )}
       </div>;
     </div>;
-  ),; const goToNextStep = () => {
-  if (currentStep === "language") {
-  
+  ),; const goToNextStep = () => {"
+  if (currentStep === "language") {}
 }
 ;
 
 };
-const handleRoleSelect = () => {
-  return (<div className="min-h-screen flex flex-col" > <div className="flex-1 py-8" > {
-  currentStep === "language" && (<div className="space-y-6" > <div className="text-center mb-8" > <h1 className="text-3xl font-bold mb-2" >Welcome to Zion</h1> <p className="text-muted-foreground" >Let's set up your experience</p> px-4 mt-8"> <Button size=" lg"className=" w-full py-6" onClick= {
-  goToNextStep 
+const handleRoleSelect = () => {"
+  return (<div className="min-h-screen flex flex-col" > <div className="flex-1 py-8" > {'"
+  currentStep === "language" && (<div className="space-y-6" > <div className="text-center mb-8" > <h1 className="text-3xl font-bold mb-2" >Welcome to Zion</h1> <p className="text-muted-foreground" >Let's set up your experience</p> px-4 mt-8"> <Button size=" lg"className=" w-full py-6" onClick= {}
+  goToNextStep;
 }> Continue </Button> </div> </div>) 
-}</div> <RolePicker onSelect= {
-  handleRoleSelect 
+}</div> <RolePicker onSelect= {}
+  handleRoleSelect;
 }/> Continue </Button> </div> </div>) 
 }</div> <SignUpForm /> </div>) 
 }</div> </div>) 
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -453,3 +508,9 @@ const handleRoleSelect = () => {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

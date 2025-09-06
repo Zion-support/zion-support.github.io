@@ -1,12 +1,16 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 import { HireRequestModal } from "./hire-request",
@@ -50,34 +54,33 @@ import { useState } from "react",
 import { TalentProfile } from "@/types/talent",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import {Button} from "@/components/ui/button";"
+import {HireRequestModal} from "./hire-request";"
+import {useState} from "react";"
+import {TalentProfile} from "@/types/talent";
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface HireNowCTAProps {;
   talentProfile: {;
     id: string,;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { Button } from '@/components / ui / button';
-import { HireRequestModal } from './hire - request';
-import { useState } from './react';
+
+
+
+import { Button } from '@/components / ui / button';'
+import { HireRequestModal } from './hire - request';'
+import { useState } from './react';'
 import { TalentProfile } from '@/types / talent';
-interface HireNowCTAProps {
-  talent_profile: {
+interface HireNowCTAProps {}
+  talent_profile: {}
     id: string,
     full_name?: string;
     professional_title?: string;
     hourly_rate?: number;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -93,16 +96,8 @@ export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
   const canHire = talentProfile && talentProfile.id && talentProfile && talentProfile.full_name;
 
   // Calculate talent profile completeness (simplified);
-<<<<<<< HEAD
-=======
-import { Button } from "@/components/ui/button",
-import { HireRequestModal } from "./hire-request",
-import { useState } from "react";
-import { TalentProfile } from "@/types/talent";
-interface HireNowCTAProps {
-  talentProfile: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -118,6 +113,25 @@ interface HireNowCTAProps {
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
   const [modalOpen, setModalOpen] = useState(false);
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
+=======
+
+    id: string;
+interface HireNowCTAProps {}
+  talentProfile: {}
+    id: string,
+    full_name?: string,
+    professional_title?: string,
+
+
+
+
+  const handleOpenModal = () => {}
+    setModalOpen(true)
+
+
+export function HireNowCTA() { return null; }
+export function HireNowCTA({ talentProfile }: HireNowCTAProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [modalOpen, setModalOpen] = useState(false),
 <<<<<<< HEAD
 =======
@@ -128,6 +142,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleOpenModal = () => {
@@ -179,31 +194,44 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="mb-4">
+=======
+
+  const handleOpenModal = () => {}
+    setModalOpen(true)
+
+
+'"
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
+
+"
+      <div className="mb-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex justify-between mb-2">
-          <span>Profile Completeness</span>
+          <span>Profile Completeness</span>"
           <span className="font-bold">{profileCompleteness}%</span>
-        </div>
+        </div>"
         <div className="h-2 bg-zion-blue-light rounded-full overflow-hidden">
-          <div
+          <div"
             className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
             style={{ width: `${profileCompleteness}%` }}
           />
         </div>
-      </div>
-      <div className="flex flex-col space-y-4 mt-6">
-        <Button
+      </div>"
+      <div className="flex flex-col space-y-4 mt-6">;
+        <Button;
           onClick={handleOpenModal}
-          disabled={!canHire}
+          disabled={!canHire}"
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
         >
-          Request to Hire
-        </Button>
+          Request to Hire;
+        </Button>"
         <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-          Schedule Interview
+          Schedule Interview;
         </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <HireRequestModal
 
@@ -225,6 +253,13 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 import { Button } from "@/components/ui/button",;
 import { HireRequestModal } from "./hire-request",;
 import { useState } from "react",;
+=======
+
+      <HireRequestModal "
+import { Button } from "@/components/ui/button",;"
+import { HireRequestModal } from "./hire-request",;"
+import { useState } from "react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { TalentProfile } from "@/types/talent",;
 interface HireNowCTAProps {;
   talentProfile: {;
@@ -235,10 +270,7 @@ interface HireNowCTAProps {;
   }
 }
 ;
-export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
-  const [modalOpen, setModalOpen] = useState(false),;
-  const handleOpenModal = () => {;
-    setModalOpen(true);
+export function HireNowCTA() { return null; }
   },;
   const handleCloseModal = () => {;
     setModalOpen(false);
@@ -247,104 +279,35 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
   const canHire = talentProfile && talentProfile.id && talentProfile.full_name,;
   // Calculate talent profile completeness (simplified);
   const profileCompleteness = calculateProfileCompleteness(talentProfile),;
+<<<<<<< HEAD
   return (;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
+=======
+  return (;"
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>;
 
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",;
-import { HireRequestModal } from "./hire-request",;
-import { useState } from "react",;
-import { TalentProfile } from "@/types/talent",;
-;
-interface HireNowCTAProps {;
-  talentProfile:{;
-    id:string,;
-    full_name?:string,;
-    professional_title?:string,;
-    hourly_rate?:number;
-  },;
-}
-;
-export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
-  const [modalOpen, setModalOpen] = useState(false),;
-;
-  const handleOpenModal = () => {;
-    setModalOpen(true),;
-  },;
-;
-  const handleCloseModal = () => {;
-    setModalOpen(false),;
-  },;
-;
-  // Check if we have minimum required data;
-  const canHire = talentProfile && talentProfile.id && talentProfile.full_name,;
-;
-  // Calculate talent profile completeness (simplified);
-  const profileCompleteness = calculateProfileCompleteness(talentProfile),;
-;
-  return (;
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
-      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>;
-      ;
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
-      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <div className="mb-4">;
+"
+      <div className="mb-4">;"
         <div className="flex justify-between mb-2">;
-          <span>Profile Completeness</span>;
+          <span>Profile Completeness</span>;"
           <span className="font-bold">{profileCompleteness}%</span>;
-        </div>;
+        </div>;"
         <div className="h-2 bg-zion-blue-light rounded-full overflow-hidden">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div
-            className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
-=======
-          <div;
-            className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+`
             style={{ width: `${profileCompleteness}%` }}
           />;
         </div>;
       </div>;
-<<<<<<< HEAD
 
-      <div className="flex flex-col space-y-4 mt-6">;
-<<<<<<< HEAD
-        <Button
-          onClick={handleOpenModal}
-          disabled={!canHire}
-          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
-          Request to Hire;
-        </Button>;
 
-=======
-          <div;
-            className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";
-            style={{ width:`${profileCompleteness}%` }}
-          />;
-        </div>;
-      </div>;
-      ;
-      <div className="flex flex-col space-y-4 mt-6">;
-        <Button;
-          onClick={handleOpenModal}
-          disabled={!canHire}
-          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
-        >;
-          Request to Hire;
-        </Button>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+"
         <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
 =======
       </div>        <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
@@ -355,18 +318,23 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
           Schedule Interview;
         </Button>;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         isOpen={modalOpen}
         onClose={handleCloseModal}
-        talent={talentProfile ? {
-          id: talentProfile.id
-          user_id: talentProfile.id
-          full_name: talentProfile.full_name |'Talent'
-          professional_title: talentProfile.professional_title |'Professional'
+        talent={talentProfile ? {}
+          id: talentProfile.id;
+          user_id: talentProfile.id'
+          full_name: talentProfile.full_name |'Talent''
+          professional_title: talentProfile.professional_title |'Professional''
           bio: ''
-          years_experience: 0
-          skills: []
-          availability_type: 'full_time'
+          years_experience: 0;
+          skills: []'
+          availability_type: 'full_time''
           timezone: ''
+<<<<<<< HEAD
           hourly_rate: talentProfile.hourly_rate
 
       <HireRequestModal
@@ -390,24 +358,33 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
         onClose={handleCloseModal}
         talent={talentProfile ? {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          hourly_rate: talentProfile.hourly_rate;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           id: talentProfile.id,
-          user_id: talentProfile.id,
-          full_name: talentProfile && talentProfile.full_name || 'Talent',
+          user_id: talentProfile.id,'
+          full_name: talentProfile && talentProfile.full_name || 'Talent','
           professional_title: talentProfile && talentProfile.professional_title || 'Professional',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 export /**
  * HireNowCTA - Function description
+=======
+
+export /**;
+ * HireNowCTA - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
-function HireNowCTA() {
+function HireNowCTA() {}
   const [modal_open, setModalOpen] = useState (false);
 ;
-  const handleOpenModal = () =>: any {
+  const handleOpenModal = () =>: any {}
     setModalOpen (true);
   }
 ;
-  const handleCloseModal = () =>: any {
+  const handleCloseModal = () =>: any {}
     setModalOpen (false);
   }
 ;
@@ -417,29 +394,29 @@ function HireNowCTA() {
   // Calculate talent profile completeness (simplified);
   const profile_completeness = calculateProfileCompleteness (talent_profile);
 ;
-  return (
-    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 sticky top - 4">;
-      <h3 className="text - xl font - bold mb - 4">Hire {talent_profile?.full_name || 'This Talent'}</h3>;
-      <div className="mb - 4">;
+  return ("
+    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 sticky top - 4">;'"
+      <h3 className="text - xl font - bold mb - 4">Hire {talent_profile?.full_name || 'This Talent'}</h3>;"
+      <div className="mb - 4">;"
         <div className="flex justify - between mb - 2">;
-          <span > Profile Completeness</span>;
+          <span > Profile Completeness</span>;"
           <span className="font - bold">{profile_completeness}%</span>;
-        </div>;
+        </div>;"
         <div className="h - 2 bg - zion - blue - light rounded - full overflow - hidden">;
-          <div;
-            className="h - full bg - gradient - to - r from - zion - purple to - zion - cyan";
+          <div;"
+            className="h - full bg - gradient - to - r from - zion - purple to - zion - cyan";`
             style={{ width: `${profile_completeness}%` }}
           />;
         </div>;
-      </div>;
+      </div>;"
       <div className="flex flex - col space - y-4 mt - 6">;
         <Button;
           on_click={handleOpenModal}
-          disabled={!can_hire}
+          disabled={!can_hire}"
           className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
         >;
           Request to Hire;
-        </Button>;
+        </Button>;"
         <Button variant="outline" className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">;
           Schedule Interview;
         </Button>;
@@ -447,32 +424,26 @@ function HireNowCTA() {
       <HireRequestModal;
         is_open={modal_open}
         on_close={handleCloseModal}
-        talent={talent_profile ? {
+        talent={talent_profile ? {}
           id: talent_profile.id,
-          user_id: talent_profile.id,
-          full_name: talent_profile.full_name || 'Talent',
+          user_id: talent_profile.id,'
+          full_name: talent_profile.full_name || 'Talent','
           professional_title: talent_profile.professional_title || 'Professional',
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
-      <HireRequestModal
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+      <HireRequestModal;
+'
           bio: '',
           years_experience: 0,
-          skills: [],
-          availability_type: 'full_time',
+          skills: [],'
+          availability_type: 'full_time','
           timezone: '',
+
+
+
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -497,23 +468,23 @@ function calculateProfileCompleteness(profile: any) {
 <<<<<<< HEAD
   return Math.min(Math.round((completedFields / totalFields) * 100), 100)
 =======
+=======
+// Helper function to calculate profile completeness;
+function calculateProfileCompleteness(profile: any) {}
+  if (!profile) return 0;
+  const fields = []
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(): any (profile: any) {;
   if (!profile) return 0;
-<<<<<<< HEAD
-
-  const fields = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  const fields = [;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
+'
+    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';'
     'availability_type';
   ];
 
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }
@@ -546,6 +517,8 @@ function calculateProfileCompleteness(): any (profile: any) {;
     'availability_type';
   ];
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     totalFields++;
   });
@@ -576,20 +549,21 @@ function calculateProfileCompleteness(): any (profile: any) {;
 }
 // Helper function to calculate profile completeness;
 /**
- * calculateProfileCompleteness - Function description
+ * calculateProfileCompleteness - Function description;
  */
-function calculateProfileCompleteness() {
-  // Check condition
-if (return 0) {
-  $2
+function calculateProfileCompleteness() {}
+  // Check condition;
+if (return 0) {}
+  $2;
 }
-  const fields = [;
-    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
+  const fields = [;'
+    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';'
     'availability_type';
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -612,32 +586,15 @@ if (return 0) {
     }
     totalFields++
   });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  return Math.min(Math.round((completedFields / totalFields) * 100), 100)
-}
-;
-// Helper function to calculate profile completeness;
-function calculateProfileCompleteness(profile: any) {;
-  if (!profile) return 0,;
-  const fields = [;
-    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience',;
-    'availability_type';
-  ],;
-  let completedFields = 0,;
-  let totalFields = 0;
-  fields.forEach(field => {;
-    if (profile[field]) {;
-      completedFields++;
-    }
-    totalFields++;
-  });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   let completed_fields = 0;
   let total_fields = 0,
-  fields.for_each (field => {
-    // Check condition
-if ( {) {
-  $2
+  fields.for_each (field => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       completed_fields++;
     }
@@ -645,6 +602,7 @@ if ( {) {
   });
 ;
   return Math.min (Math.round ((completed_fields / total_fields) * 100), 100);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -737,3 +695,9 @@ return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-
 =======
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -6,6 +6,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+<<<<<<< HEAD:pages_backup/api/docs/graphql.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,18 +25,11 @@ import v1 from "../../../data/api-docs/v1";
 function toSDL() {
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/docs/graphql.ts
 
-  const typedefs = [
-    `schema { query: Query, mutation: Mutation }`
-    "type Query { _placeholder: String }"
-    "type Mutation { _placeholder: String }"
-  ];
-  // Simple mapping: create types per section for illustration
-  v1.sections.forEach((section) => {
-    const typeName = section.title.replace(/[^a-zA-Z0-9]/g, "") + "Type";
-    typedefs.push(
-      `type ${typeName} { id: ID, title: String, description: String }`
 
+<<<<<<< HEAD:pages_backup/api/docs/graphql.ts
     );
   });
   return typedefs && typedefs.join("\n");
@@ -68,26 +62,33 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/graphql.ts
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/docs/graphql.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
- * toSDL - Function description
+ * toSDL - Function description;
  */
-function toSDL() {
+function toSDL() {}
   const typedefs = [;
-    `schema { query: Query, mutation: Mutation }`,
-    "type Query { _placeholder: String }",
+    `schema { query: Query, mutation: Mutation }`,"
+    "type Query { _placeholder: String }","
     "type Mutation { _placeholder: String }",
   ];
   // Simple mapping: create types per section for illustration;
-  v1.sections.for_each ((section) => {
+  v1.sections.for_each ((section) => {"
     const type_name = section.title.replace (/[^a - z_a - Z0 - 9]/g, "") + "Type";
-    typedefs.push (
+    typedefs.push (`
       `type ${type_name} { id: ID, title: String, description: String }`,
     );
-  });
+  });"
   return typedefs.join ("\n");
 }
+<<<<<<< HEAD:pages_backup/api/docs/graphql.ts
 <<<<<<< HEAD:pages/api/docs/graphql.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -168,3 +169,24 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/docs/graphql.ts
+=======
+
+
+
+
+  res.status(200).send(toSDL());
+}
+
+
+
+
+export default function handler() { return null; }
+}
+
+
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/docs/graphql.ts

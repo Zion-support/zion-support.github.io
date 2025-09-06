@@ -1,21 +1,22 @@
 } from 'lucide-react';
 
-import {
-  Mail
-  Lock
-  Link
-  FileText
-  CheckCircle
-  Zap
-  BarChart3
-  Code
-  Play;
+import {};
+  Mail;
+  Lock;
+  Link;
+  FileText;
+  CheckCircle;
+  Zap;
+  BarChart3;
+  Code;
+  Play;'
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 
 
 
 
 
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -209,45 +210,105 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {demos.map(demo => (
 origin/cursor/automate-test-improve-and-merge-code-2533
               <button
+=======
+export default function DemosPage() { return null; }
+    }
+    {'
+      id: 'password-strength''
+      title: 'Password Strength Analyzer''
+      description: 'Comprehensive password security analysis with entropy calculation'
+      icon: <Lock className="w-6 h-6" />'
+      color: 'from-green-500 to-emerald-600'
+      component: <PasswordStrengthDemo />
+    }
+    {'
+      id: 'url-shortener''
+      title: 'Smart URL Shortener''
+      description: 'Professional URL shortening with analytics and custom codes'"
+      icon: <Link className="w-6 h-6" />'
+      color: 'from-purple-500 to-pink-600'
+      component: <UrlShortenerDemo />
+    }
+    {'
+      id: 'text-analyzer''
+      title: 'Text Analysis Suite''
+      description: 'Advanced text analysis with readability and sentiment analysis'"
+      icon: <FileText className="w-6 h-6" />'
+      color: 'from-orange-500 to-red-600'
+      component: <TextAnalyzerDemo />
+    }
+    {'
+      id: 'password-strength''
+      title: 'Password Strength Analyzer'
+      description:'
+        'Comprehensive password security analysis with entropy calculation''
+      icon: <Lock className='w-6 h-6' />'
+      color: 'from-green-500 to-emerald-600'
+      component: <PasswordStrengthDemo />
+    }
+    {'
+      id: 'url-shortener''
+      title: 'Smart URL Shortener'
+      description:'
+        'Professional URL shortening with analytics and custom codes''
+      icon: <Link className='w-6 h-6' />'
+      color: 'from-purple-500 to-pink-600'
+      component: <UrlShortenerDemo />
+    }
+    {'
+      id: 'text-analyzer''
+      title: 'Text Analysis Suite'
+      description:'
+        'Advanced text analysis with readability and sentiment analysis''
+      icon: <FileText className='w-6 h-6' />'
+      color: 'from-orange-500 to-red-600'
+      component: <TextAnalyzerDemo />
+    },  ];      component: <TextAnalyzerDemo />
+    }
+  ];
+  const activeDemoData = demos.find(demo => demo.id === activeDemo);
+
+export default function DemosPage() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 key={demo && demo.id}
                 onClick={() => setActiveDemo(demo && demo.id)}
                 className={`p-4 rounded-lg border transition-all duration-300 text-left group ${;
-                  activeDemo === demo && demo.id;
-                    ? 'border-blue-500 bg-blue-500/10';
-                    : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';
+                  activeDemo === demo && demo.id;'
+                    ? 'border-blue-500 bg-blue-500/10';'
+                    : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';`
                 }`}
               >;
-                <div
+                <div;`
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo && demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>;
                   {demo && demo.icon}
-                </div>;
+                </div>;'
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>;
                   {demo && demo.title}
-                </h3>;
+                </h3>;'
                 <p className='text-sm text-gray-400 leading-relaxed'>;
                   {demo && demo.description}
                 </p>;
-                {activeDemo === demo && demo.id && (;
-                  <div className='mt-3 flex items-center text-blue-400 text-sm'>;
+                {activeDemo === demo && demo.id && (;'
+                  <div className='mt-3 flex items-center text-blue-400 text-sm'>;'
                     <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo                  {demo && demo.icon}
-                </div>;
+                </div>;"
                 <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">;
                   {demo && demo.title}
-                </h3>;
+                </h3>;"
                 <p className="text-sm text-gray-400 leading-relaxed">;
                   {demo && demo.description}
                 </p>;
-                {activeDemo === demo && demo.id && (;
-                  <div className="mt-3 flex items-center text-blue-400 text-sm">;
+                {activeDemo === demo && demo.id && (;"
+                  <div className="mt-3 flex items-center text-blue-400 text-sm">;"
                     <CheckCircle className="w-4 h-4 mr-2" />;
                     Active Demo;
                   </div>;
                 key={demo.id}
-                on_click={() => setActiveDemo (demo.id)}
-                className={`p - 4 rounded - lg border transition - all duration - 300 text - left group ${
-                  active_demo === demo.id;
-                    ? 'border - blue - 500 bg - blue - 500 / 10';
-                    : 'border - gray - 700 bg - gray - 800 / 50 hover:border - gray - 600 hover:bg - gray - 800 / 80';
+                on_click={() => setActiveDemo (demo.id)}`
+                className={`p - 4 rounded - lg border transition - all duration - 300 text - left group ${}
+                  active_demo === demo.id;'
+                    ? 'border - blue - 500 bg - blue - 500 / 10';'
+                    : 'border - gray - 700 bg - gray - 800 / 50 hover:border - gray - 600 hover:bg - gray - 800 / 80';`
                 }`}
               >
 <div
@@ -255,10 +316,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
                   {demo.icon}
-                </div>
+                </div>'
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>
                   {demo.title}
-                </h3>
+                </h3>'
                 <p className='text-sm text-gray-400 leading-relaxed'>
                   {demo.description}
                 </p>
@@ -275,42 +336,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-      {/* Active Demo */}
-      <section className='py-16 bg-black relative overflow-hidden'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
-          <div className='text-center mb-12'>;
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>;
+      {/* Active Demo */}'
+      <section className='py-16 bg-black relative overflow-hidden'>;'
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;'
+          <div className='text-center mb-12'>;'
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>;'
               <Play className='w-4 h-4 mr-2' />;
               Live Demo;
-            </div>;
+            </div>;'
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>;
+<<<<<<< HEAD
       {/* Active Demo */}
 <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-12'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>
+=======
+      {/* Active Demo */}'
+      <section className='py-16 bg-black relative overflow-hidden'>'
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>'
+          <div className='text-center mb-12'>'
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Play className='w-4 h-4 mr-2' />
-              Live Demo
-            </div>
+              Live Demo;
+            </div>'
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
               {activeDemoData?.title}
-            </h2>;
+            </h2>;'
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
 
             </p>;
-          </div>;
+          </div>;'
           <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>;
       </section>;
       {/* Features */}              Live Demo;
-            </div>;
+            </div>;"
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">;
 
               {activeDemoData?.title}
-            </h2>;
+            </h2>;"
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">;
               {activeDemoData?.description}
               {activeDemoData?.title}
-            </h2>;
+            </h2>;"
             <p className="text - lg text - gray - 400 max - w-2xl mx - auto">;
               {activeDemoData?.description}
             </h2>
@@ -323,58 +392,67 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
+<<<<<<< HEAD
       {/* Features */}
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
+=======
+      {/* Features */}'
+      <section className='py-24 bg-gray-900 relative overflow-hidden'>'
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />'
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>'
+          <div className='text-center mb-20'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-            </h2>
+            </h2>'
             <p className='text-lg text-gray-400 max-w-3xl mx-auto'>
-              Experience the quality and reliability of our services before
-              integrating them into your applications
+              Experience the quality and reliability of our services before;
+              integrating them into your applications;
             </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
-              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+          </div>'
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'
+            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>'
+              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>'
                 <Zap className='w-8 h-8 text-blue-400' />
-              </div>
+              </div>'
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>
-                Real Performance
-              </h3>
+                Real Performance;
+              </h3>'
               <p className='text-gray-400 leading-relaxed'>
-                Test actual API endpoints with real data processing and response
-                times
+                Test actual API endpoints with real data processing and response;
+                times;
               </p>
-            </Card>
-            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
-              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+            </Card>'
+            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>'
+              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>'
                 <CheckCircle className='w-8 h-8 text-green-400' />
-              </div>
+              </div>'
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300'>
-                Full Functionality
-              </h3>
+                Full Functionality;
+              </h3>'
               <p className='text-gray-400 leading-relaxed'>
-                Experience complete service capabilities, not just mock
-                responses
+                Experience complete service capabilities, not just mock;
+                responses;
               </p>
-            </Card>
-            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
-              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+            </Card>'
+            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>'
+              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>'
                 <Code className='w-8 h-8 text-purple-400' />
-              </div>
+              </div>'
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300'>
-                API Examples
-              </h3>
-              <p className='text-gray-400 leading-relaxed'>                See exact request/response formats for easy integration
+                API Examples;
+              </h3>'
+              <p className='text-gray-400 leading-relaxed'>                See exact request/response formats for easy integration;
               </p>
-            </Card>
-            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
-              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+            </Card>'
+            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>'
+              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>'"
                 <BarChart3 className='w-8 h-8 text-orange-400' />              <p className="text-gray-400 leading-relaxed">
 
 
+<<<<<<< HEAD
               <p className='text-gray-400 leading-relaxed'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 See exact request/response formats for easy integration
@@ -383,88 +461,96 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                <BarChart3 className='w-8 h-8 text-orange-400' />
-              </div>
-              <h3 className='text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300'>
-                Detailed Results
-              </h3>
-              <p className='text-gray-400 leading-relaxed'>                Get comprehensive analysis and insights from each service
+=======
+                See exact request/response formats for easy integration;
               </p>
-            </Card>
-            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
-              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                <Play className='w-8 h-8 text-cyan-400' />              </div>
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
+            </Card>'
+            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>'
+              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                <BarChart3 className='w-8 h-8 text-orange-400' />
+              </div>'
+              <h3 className='text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300'>
+                Detailed Results;
+              </h3>'
+              <p className='text-gray-400 leading-relaxed'>                Get comprehensive analysis and insights from each service;
+              </p>
+            </Card>'
+            <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>'
+              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>'
+                <Play className='w-8 h-8 text-cyan-400' />              </div>"
+      <section className="py-24 bg-gray-900 relative overflow-hidden">"
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">"
+          <div className="text-center mb-20">"
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
               Why Test Our Demos?
-            </h2>
+            </h2>"
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Experience the quality and reliability of our services before integrating them into your applications
+              Experience the quality and reliability of our services before integrating them into your applications;
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">"
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
                 <Zap className="w-8 h-8 text-blue-400" />
-              </div>
+              </div>"
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
-                Real Performance
-              </h3>
+                Real Performance;
+              </h3>"
               <p className="text-gray-400 leading-relaxed">
-                Test actual API endpoints with real data processing and response times
+                Test actual API endpoints with real data processing and response times;
               </p>
             </Card>
-
-            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+"
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">"
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
                 <CheckCircle className="w-8 h-8 text-green-400" />
-              </div>
+              </div>"
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300">
-                Full Functionality
-              </h3>
+                Full Functionality;
+              </h3>"
               <p className="text-gray-400 leading-relaxed">
-                Experience complete service capabilities, not just mock responses
+                Experience complete service capabilities, not just mock responses;
               </p>
             </Card>
-
-            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+"
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">"
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
                 <Code className="w-8 h-8 text-purple-400" />
-              </div>
+              </div>"
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300">
-                API Examples
-              </h3>
+                API Examples;
+              </h3>"
               <p className="text-gray-400 leading-relaxed">
-                See exact request/response formats for easy integration
+                See exact request/response formats for easy integration;
               </p>
             </Card>
-
-            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+"
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">"
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
                 <BarChart3 className="w-8 h-8 text-orange-400" />
-              </div>
+              </div>"
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300">
-                Detailed Results
-              </h3>
+                Detailed Results;
+              </h3>"
               <p className="text-gray-400 leading-relaxed">
-                Get comprehensive analysis and insights from each service
+                Get comprehensive analysis and insights from each service;
               </p>
-            </Card>
+            </Card>"
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors duration-300">
-                Instant Testing
-              </h3>
+                Instant Testing;
+              </h3>"
               <p className="text-gray-400 leading-relaxed">
-                No signup required - start testing immediately
+                No signup required - start testing immediately;
               </p>
-            </Card>
+            </Card>"
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-pink-400 transition-colors duration-300">
-                Production Ready
-              </h3>
+                Production Ready;
+              </h3>"
               <p className="text-gray-400 leading-relaxed">
+<<<<<<< HEAD
               <p className='text-gray-400 leading-relaxed'>
                 Get comprehensive analysis and insights from each service
               </p>
@@ -492,39 +578,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className='text-gray-400 leading-relaxed'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Same infrastructure that powers our production services
+=======
+                Same infrastructure that powers our production services;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </Card>
           </div>
         </div>
       </section>
-          </div>;
+          </div>;'"
           <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
             {activeDemoData?.component}
           </div>;
         </div>;
       </section>;
-      {/* Features */}
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>;
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
-          <div className='text-center mb-20'>;
+      {/* Features */}'
+      <section className='py-24 bg-gray-900 relative overflow-hidden'>;'
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;'
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;'
+          <div className='text-center mb-20'>;'
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
-            </h2>;
+            </h2>;'
             <p className='text-lg text-gray-400 max-w-3xl mx-auto'>;
             </p>;
-          </div>;
+          </div>;'"
           <div className='animate - fade - in'>{activeDemoData?.component}</div>          <div className="animate - fade - in">;
             {activeDemoData?.component}
           </div>;
         </div>;
       </section>;
-      {/* Features */}
-      <section className='py - 24 bg - gray - 900 relative overflow - hidden'>;
-        <div className='absolute inset - 0 bg-[linear - gradient (rgba (59, 130, 246, 0.05)_1px, transparent_1px), linear - gradient (90deg, rgba (59, 130, 246, 0.05)_1px, transparent_1px)] bg-[size:50px_50px] opacity - 20' />;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
-          <div className='text - center mb - 20'>;
+      {/* Features */}'
+      <section className='py - 24 bg - gray - 900 relative overflow - hidden'>;'
+        <div className='absolute inset - 0 bg-[linear - gradient (rgba (59, 130, 246, 0.05)_1px, transparent_1px), linear - gradient (90deg, rgba (59, 130, 246, 0.05)_1px, transparent_1px)] bg-[size:50px_50px] opacity - 20' />;'
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;'
+          <div className='text - center mb - 20'>;'
             <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
-            </h2>;
+            </h2>;'
             <p className='text - lg text - gray - 400 max - w-3xl mx - auto'>;
               Experience the quality and reliability of our services before;
               integrating them into your applications;
@@ -586,3 +675,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
+'"`

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 export default function NotFoundPage() {
@@ -39,3 +40,6 @@ export default Custom404;
 >>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/404.tsx.backup.1755991463
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

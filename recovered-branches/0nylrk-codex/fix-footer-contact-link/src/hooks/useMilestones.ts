@@ -46,11 +46,12 @@ export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export { useMilestones } from "./milestones/useMilestones";
-export type {
+export type {}
   Milestone,
   MilestoneStatus,
-  MilestoneActivity,
+  MilestoneActivity,";
 } from "./milestones/types";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 
@@ -63,3 +64,6 @@ export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones
 =======
 export type { Milestone, MilestoneStatus, MilestoneActivity } from './milestones/types';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

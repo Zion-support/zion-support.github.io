@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { 
+<<<<<<< HEAD
   Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, 
   Star, Users, Globe, Lock, Rocket, Cpu, Database, TrendingUp, Clock, Target, 
   Building, Award, DollarSign, ChartBar, Code, BookOpen, Activity, Smartphone, 
@@ -9,6 +10,9 @@ import {
   Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2,
   ChevronRight, Play, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon,
   Sparkles as SparklesIcon, Zap as ZapIcon, Rocket as RocketIcon, Brain as BrainIcon
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
@@ -23,7 +27,11 @@ export default function HomePage() {
   const [activeSection, setActiveSection] = React.useState('hero');
 
   const heroStats = [
+<<<<<<< HEAD
     { value: '25+', label: 'Real AI Services', color: 'text-cyan-400', icon: <BrainIcon className="w-6 h-6" /> },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
     { value: '21', label: 'Day Free Trials', color: 'text-blue-400', icon: <Clock className="w-6 h-6" /> },
     { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Bot className="w-6 h-6" /> },
@@ -85,6 +93,7 @@ export default function HomePage() {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
 
+<<<<<<< HEAD
       {/* Hero Section with Ultra Futuristic Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <UltraFuturisticBackground intensity="high" variant="quantum" className="min-h-screen">
@@ -103,6 +112,9 @@ export default function HomePage() {
                 with proven ROI and 21-day free trials.
               </p>
             </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
             {/* Hero Stats */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">

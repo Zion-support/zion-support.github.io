@@ -78,6 +78,7 @@ export default function ServicesPage() {
   const popularServices = getPopularServices();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -196,6 +197,9 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d240
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991950
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="min-h-screen">
         <Head>
           <title>300+ Real Micro SaaS Services | Zion Tech Group - AI, Quantum Computing & Emerging Tech</title>
@@ -254,7 +258,7 @@ export default function ServicesPage() {
     </QuantumNeuralBackground>
   );
 }
-=======
+
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -529,7 +533,7 @@ import Link from 'next/link';
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">200+</div>
                 <div className="text-slate-300">Revolutionary Services</div>
-=======
+
         {/* Services Grid */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -899,8 +903,12 @@ import Link from 'next/link';
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </EnhancedFuturisticBackground>
   );
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import MicroSaasServices from '../components/sections/MicroSaasServices';
@@ -66,10 +67,14 @@ export default function MicroSaasPage() {
       </span>
     );
   };
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Micro SaaS Services | Zion Tech Group - AI-Powered Solutions</title>
         <meta name="description" content="Explore our comprehensive portfolio of micro SaaS services. AI-powered solutions for content creation, analytics, customer support, SEO, project management, and more." />
         <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" />
@@ -300,6 +305,9 @@ export default function MicroSaasPage() {
           </div>
         </section>
       </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 }

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },;
 module.exports = {;
   plugins: {;
@@ -21,6 +22,12 @@ module.exports = {
     tailwindcss: {},
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     autoprefixer: {},
   },
 }

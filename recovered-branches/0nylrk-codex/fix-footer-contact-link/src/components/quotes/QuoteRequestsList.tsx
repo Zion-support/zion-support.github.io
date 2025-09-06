@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -43,37 +44,37 @@ import { QuoteRequestCard } from "./QuoteRequestCard",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 type QuoteRequestsListProps = {
+=======
+import React from "react","
+import { QuoteRequestCard } from "./QuoteRequestCard",";
+import { EmptyStateCard } from "./EmptyStateCard";"
+import type { QuoteRequest } from "@/types/quotes";"
+import { EmptyStateCard } from "./EmptyStateCard","
+import type { QuoteRequest } from "@/types/quotes",
+
+type QuoteRequestsListProps = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   quotes: QuoteRequest[],
   isLoading: boolean,
   isArchived: boolean,
   onViewDetails: (quote: QuoteRequest) => void,
-  onMarkAsResponded: (id: string) => void,
-  onToggleArchive: (id: string, isArchived: boolean) => void
+  onMarkAsResponded: (id: string) => void,;
+  onToggleArchive: (id: string, isArchived: boolean) => void;
 },
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
 <<<<<<< HEAD
 =======
-type QuoteRequestsListProps = {
-  quotes: QuoteRequest[]
-  isLoading: boolean
-  isArchived: boolean
-  onViewDetails: (quote: QuoteRequest) => void
-  onMarkAsResponded: (id: string) => void
-  onToggleArchive: (id: string, isArchived: boolean) => void
-}
+<<<<<<< HEAD
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
   quotes;
   isLoading;
   isArchived;
   onViewDetails;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
 
@@ -115,13 +116,32 @@ import type { QuoteRequest } from "@/types/quotes",}) => {
 import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
+=======
+export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({};
+  quotes;
+  isLoading;
+  isArchived;
+  onViewDetails;
+  onMarkAsResponded;
+  quotes,
+  isLoading,
+  isArchived,
+  onViewDetails,
+  onMarkAsResponded,
+
+  onToggleArchive;
+}) => {}
+  if (isLoading) {}
+    return (
+"
+import React from "react",;"
+import { QuoteRequestCard } from "./QuoteRequestCard",;"
+import { EmptyStateCard } from "./EmptyStateCard",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { QuoteRequest } from "@/types/quotes",;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
 type QuoteRequestsListProps = {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -137,6 +157,7 @@ type QuoteRequestsListProps = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
@@ -148,8 +169,17 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 import React from './react';
 import { QuoteRequestCard } from './QuoteRequestCard';
 import { EmptyStateCard } from './EmptyStateCard';
+=======
+
+};
+
+export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
+import React from './react';'
+import { QuoteRequestCard } from './QuoteRequestCard';'
+import { EmptyStateCard } from './EmptyStateCard';"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { QuoteRequest } from "@/types / quotes";
-type QuoteRequestsListProps = {
+type QuoteRequestsListProps = {}
   quotes: QuoteRequest[],
   is_loading: boolean,
   is_archived: boolean,
@@ -158,16 +188,19 @@ type QuoteRequestsListProps = {
   onToggleArchive: (id: string, is_archived: boolean) => void;
 }
 ;
+<<<<<<< HEAD
 export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   quotes;
   is_loading;
   is_archived;
   onViewDetails;
     return (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
@@ -219,6 +252,15 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+      <div className="text-center py-20">;'"
+        <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
+      </div>;
+    );
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 
 =======
@@ -226,7 +268,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  if (quotes && quotes.length === 0) {;
+  if (quotes && quotes.length === 0) {;'
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
   }
 <<<<<<< HEAD
@@ -235,24 +277,18 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
 
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   }
-  if (quotes.length === 0) {
+  if (quotes.length === 0) {'
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   
-  return (
+  return ("
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {quotes.map(quote => (
-        <QuoteRequestCard
+        <QuoteRequestCard;
           key={quote.id}
           quote={quote}
           onViewDetails={onViewDetails}
@@ -270,60 +306,84 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 
   
 
-  if (quotes && quotes.length === 0) {;
+  if (quotes && quotes.length === 0) {;'
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
     </div>;
   );
   }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
+=======
+
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
       {quotes && quotes.map(quote => (;
-        <QuoteRequestCard
+        <QuoteRequestCard;
           key={quote && quote.id}
   onMarkAsResponded,
   onToggleArchive;
-}) => {
-  // Check condition
-if ( {) {
-  $2
+}) => {}
+  // Check condition;
+if ( {) {}
+  $2;
 }
+<<<<<<< HEAD
     return (
       <div className="text - center py-20">;
         <p className="text - zion - slate-light">Loading {is_archived ? 'archived' : 'your'} hire requests...</p>;
+=======
+    return ("
+      <div className="text - center py - 20">;'"
+        <p className="text - zion - slate - light">Loading {is_archived ? 'archived' : 'your'} hire requests...</p>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>);
   }
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
     return <EmptyStateCard type={is_archived ? 'archived' : 'active'} />;
   }
+<<<<<<< HEAD
   return (
     <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-5">;
       {quotes.map (quote => (
+=======
+  return ("
+    <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 5">;
+      {quotes.map (quote => (
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <QuoteRequestCard;
           key={quote.id}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           quote={quote}
           onViewDetails={onViewDetails}
+<<<<<<< HEAD
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     </div>;
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
@@ -338,58 +398,20 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>;
   );
-
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 };
         />))}
     </div>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-          onMarkAsResponded={!isArchived ? onMarkAsResponded :undefined}
-          onToggleArchive={onToggleArchive}
-        />;
-      ))}
-    </div>;
-  ),;
-},; type QuoteRequestsListProps = {
-  quotes: QuoteRequest[];
-isLoading: boolean;
-isArchived: boolean;
-onViewDetails: (quote: QuoteRequest) => void;
-onMarkAsResponded: (id: string) => void;
-onToggleArchive: (id: string, isArchived: boolean) => void 
-};
-quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive 
-}) => {
-  if (isLoading) {
-  return (<div className="text-center py-20" > <p className="text-zion-slate-light" >Loading {
-  isArchived ? 'archived' : 'your' 
-}hire requests...</p> </div>) 
-}<QuoteRequestCard key= {
-  quote.id 
-}quote= {
-  quote 
-}onViewDetails= {
-  onViewDetails 
-}onMarkAsResponded= {
-  !isArchived ? onMarkAsResponded : undefined 
-}onToggleArchive= {
-  onToggleArchive 
-}/>) ) 
-}</div>) 
-};
-    </div>
-  )
-}
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -411,3 +433,8 @@ quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

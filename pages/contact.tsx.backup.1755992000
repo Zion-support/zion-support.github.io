@@ -1,13 +1,13 @@
 export default function Page(){return null}
-=======
-=======
+
+
 import React from 'react';
-=======
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import React from 'react';
 import SEO from '../components/SEO';
-=======
+
 import { 
   Mail, Phone, MapPin, Send, Clock, Globe, MessageSquare, CheckCircle, 
   ArrowRight, Star, Users, Shield, Zap, Brain, Factory, FlaskConical, 
@@ -95,6 +95,7 @@ export default function ContactPage() {
 
   const contactMethods = [
     {
+<<<<<<< HEAD
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone Support',
       value: '+1 302 464 0950',
@@ -109,6 +110,9 @@ export default function ContactPage() {
       description: 'Response within 2 hours during business hours',
       color: 'from-green-500 to-green-600',
       bgColor: 'from-green-500/10 to-green-600/10'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -130,6 +134,7 @@ export default function ContactPage() {
 
   const whyChooseUs = [
     {
+<<<<<<< HEAD
       icon: <Star className="w-5 h-5" />,
       title: 'Expert Team',
       description: 'Certified professionals with 10+ years of experience in cutting-edge technologies'
@@ -143,6 +148,9 @@ export default function ContactPage() {
       icon: <Shield className="w-5 h-5" />,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and 99.99% uptime guarantee'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: <Users className="w-5 h-5" />,
@@ -607,7 +615,7 @@ export default function ContactPage() {
           <a href="mailto:kleber@ziontechgroup.com" className="block hover:text-purple-400">kleber@ziontechgroup.com</a>
         </div>
       </div>
-=======
+
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div

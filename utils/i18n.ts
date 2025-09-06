@@ -50,6 +50,7 @@ export const supportedLocales = ["en", "pt", "es", "ar"] as const;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -82,12 +83,16 @@ export const i18n = {
 }
 export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
 export function isRtl(locale: string): boolean {
+=======
+export function isRtl(locale: string): boolean {";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return ["ar", "he", "fa", "ur"].includes(locale);
 }
-export const i18n = {
-  language: "en",
-  resolvedLanguage: "en",
+export const i18n = {"
+  language: "en","
+  resolvedLanguage: "en",;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,3 +127,6 @@ export const i18n = {
 }
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

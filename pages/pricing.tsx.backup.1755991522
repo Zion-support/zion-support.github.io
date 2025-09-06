@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -182,10 +183,14 @@ const Pricing: React.FC = () => {
       href: '/contact'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -228,10 +233,14 @@ const Pricing: React.FC = () => {
       href: '/contact'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Enterprise',
       description: 'For large organizations with complex needs',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -386,10 +395,14 @@ const Pricing: React.FC = () => {
       price: 'From $1,000'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -935,3 +948,6 @@ export default Pricing;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/pricing.tsx.backup.1755991522
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

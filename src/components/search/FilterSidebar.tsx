@@ -6,18 +6,51 @@ interface FilterSidebarProps {;
 }
 
 import React from 'react';
+<<<<<<< HEAD
 interface FilterSidebarProps {
 <<<<<<< HEAD
+=======
+interface FilterSidebarProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   class_name?: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   children?: React.ReactNode;
 }
+<<<<<<< HEAD
 ;
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
   className,;
   children;
 }) => {;
   return (;
+=======
+export const FilterSidebar: React.FC < FilterSidebarProps> = ({}
+  class_name,;
+  children;
+}, ) => {  return ('
+    <div className={`filter - sidebar ${class_name || ''}`}>;
+
+      {children}
+    </div>
+  )
+}
+export default FilterSidebar;
+interface FilterOption {}
+  value: string;
+  label: string;
+  count?: number;
+}
+interface FilterGroup {}
+  title: string;
+  key: string;
+  options: FilterOption[]'
+  type: 'checkbox' | 'radio' | 'range'}
+interface FilterSidebarProps extends React.PropsWithChildren<{}> {}
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;
+  className,;
+  children ;
+},) => {  return ('`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className={`filter-sidebar ${className || ''}`}>;
       {children}
     </div>;
@@ -28,23 +61,23 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
 
 export default FilterSidebar;
 
-        <div
+        <div;
           className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         />
       )}
       {/* Sidebar */}
-
-      <divclassName={`
-        fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none'
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`
-      `}>";
-        <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/20">";
-          <h3 className="text-lg font-semibold text-white flex items-center gap-2">";
-            <Filter className="w-5 h-5"  />;
+`
+      <divclassName={`'
+        fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none''`
+        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`"`
+      `}>";"
+        <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/20">";"
+          <h3 className="text-lg font-semibold text-white flex items-center gap-2">";"
+            <Filter className="w-5 h-5"  />;"
             Filters                      <span className="text-sm text-zion-slate-light">;
-                        {option && option.label}
-                        {option && option.count && (";
+                        {option && option.label}"
+                        {option && option.count && (";"
                           <span className="ml-2 text-zion-slate-light/60">;
                             ({option && option.count});
                           </span>;
@@ -64,14 +97,15 @@ export default FilterSidebar;
   onClearFilters: : unknown void;
   is_open: boolean;
   on_close: ()  => void}
-export /**
- * FilterSidebar - Function description
+export /**;
+ * FilterSidebar - Function description;
  */
-function FilterSidebar() {
+function FilterSidebar() {}
   return ();
     <>;
       {/* Mobile overlay */}
       {is_open && (
+<<<<<<< HEAD
         <div;
           className="fixed inset - 0 bg - black / 50 z-40 lg: hidden";
           on_click={on_close}
@@ -88,6 +122,24 @@ function FilterSidebar() {
                         {option.label}
                         {option.count && (";
                           <span className="ml - 2 text - zion - slate-light / 60">;
+=======
+        <div;"
+          className="fixed inset - 0 bg - black / 50 z - 40 lg: hidden";
+          on_click={on_close}
+        />)}
+      {/* Sidebar */}`
+      <div className={`;'
+        fixed lg:static inset - y-0 left - 0 z - 50 w - 80 bg - zion - blue - dark / 95 backdrop - blur - xl border - r border - zion - blue - light / 20 transform transition - transform duration - 300 lg:transform - none';'`
+        ${is_open ? 'translate - x-0' : '-translate - x-full lg:translate - x-0'}`;"`
+      `}>";"
+        <div className="flex items - center justify - between p - 4 border - b border - zion - blue - light / 20">";"
+          <h3 className="text - lg font - semibold text - white flex items - center gap - 2">";"
+            <Filter className="w - 5 h - 5"  />;"
+            Filters                      <span className="text - sm text - zion - slate - light">;
+                        {option.label}"
+                        {option.count && (";"
+                          <span className="ml - 2 text - zion - slate - light / 60">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             ({option.count});
                           </span>)}
                       </span>;
@@ -97,9 +149,18 @@ function FilterSidebar() {
         </div>;
 
       </div>;
+<<<<<<< HEAD
     </>)}
 '"`;
 
+=======
+    </>;
+  )};'"`
+'"`;
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react',;
 interface FilterSidebarProps {;
   className?: string,;
@@ -110,12 +171,13 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
   className,;
   children;
 }) => {;
-  return (;
+  return (;'`
     <div className={`filter-sidebar ${className || ''}`}>;
       {children}
     </div>;
   )
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default FilterSidebar;
@@ -132,3 +194,6 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
     <div className;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default FilterSidebar;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

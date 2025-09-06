@@ -1,11 +1,12 @@
-export { TalentCardAvatar } from "./TalentCardAvatar";
-export { TalentCardAvailability } from "./TalentCardAvailability";
-export { TalentCardBadges } from "./TalentCardBadges";
-export { TalentCardContent } from "./TalentCardContent";
-export { TalentCardFooter } from "./TalentCardFooter";
-export { TalentCardHeader } from "./TalentCardHeader";
-export { TalentCardSaveButton } from "./TalentCardSaveButton";
+export { TalentCardAvatar } from "./TalentCardAvatar";"
+export { TalentCardAvailability } from "./TalentCardAvailability";"
+export { TalentCardBadges } from "./TalentCardBadges";"
+export { TalentCardContent } from "./TalentCardContent";"
+export { TalentCardFooter } from "./TalentCardFooter";"
+export { TalentCardHeader } from "./TalentCardHeader";"
+export { TalentCardSaveButton } from "./TalentCardSaveButton";"
 export { TalentCardSkills } from "./TalentCardSkills";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,3 +36,6 @@ export { TalentCardSkills } from './TalentCardSkills';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

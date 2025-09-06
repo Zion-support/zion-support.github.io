@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -96,3 +97,9 @@ export * from './useNotificationOperations';
 export * from './types';
 export * from './NotificationContext';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export * from "./types";"
+export * from "./NotificationContext";"
+export * from "./useNotificationOperations";
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

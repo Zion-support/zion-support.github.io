@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { MultiverseState, InstanceConfig, SyncEvent } from "./types";
@@ -229,6 +230,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface SyncMapping {
+=======
+
+}
+
+
+
+
+
+
+export interface SyncMapping {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   name: string;
   sourceConnectionId: string;
@@ -236,7 +248,7 @@ export interface SyncMapping {
   sourceTable?: string;
   destinationTable?: string;
   fieldMappings: Record<string, string>;
-  transformations?: Array<{
+  transformations?: Array<{}
     field: string;
     type: 'format' | 'convert' | 'calculate' | 'filter';
     config: Record<string, any>;
@@ -246,41 +258,19 @@ export interface SyncMapping {
   updatedAt: string;
 }
 
-export interface SyncLog {
+export interface SyncLog {};
   id: string;
-  jobId: string;
+  jobId: string;'
   level: 'info' | 'warn' | 'error' | 'debug';
   message: string;
   details?: Record<string, any>;
   timestamp: string;
 }
 
+
+
+
 <<<<<<< HEAD
-class SyncStorage {
-  private jobs: Map<string, SyncJob> = new Map();
-  private connections: Map<string, SyncConnection> = new Map();
-  private mappings: Map<string, SyncMapping> = new Map();
-  private logs: Map<string, SyncLog> = new Map();
-
-  // Job methods
-  async createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
-    const newJob: SyncJob = {
-      ...job,
-      id: `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      progress: {
-        total: 0,
-        processed: 0,
-        failed: 0,
-        skipped: 0
-      },
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
-    };
-
-    this.jobs.set(newJob.id, newJob);
-    return newJob;
-  }
-
   async getJob(id: string): Promise<SyncJob | null> {
     return this.jobs.get(id) || null;
   }
@@ -463,13 +453,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const default_state: SyncState = {
   config: {
+=======
+const default_state: SyncState = {}
+  config: {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     instance_id: 'default - instance',
-    peers: [],
+    peers: [],'
     scope: 'global',
     opt_in: false,
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
+<<<<<<< HEAD
 <<<<<<< HEAD
   return events;export function resetState(): void {;
   state = { ...defaultState };
@@ -489,12 +484,15 @@ if ( {) {
   $2
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     state.latestVersionByEntityId[entity_id] = event.version;
   }
@@ -503,24 +501,25 @@ if ( {) {
   state.lastSyncedAt = Math.max (state.lastSyncedAt || 0, event.timestamp || 0);
   return state;
 ;
-export function getEntityId (event: SyncEvent): string {
-  switch (event.type) {
+export function getEntityId (event: SyncEvent): string {}
+  switch (event.type) {';
     case 'proposal':;
-      return (event.payload as any).proposal_id;
+      return (event.payload as any).proposal_id;'
     case 'token_transfer':;
-      return (event.payload as any).tx_id;
+      return (event.payload as any).tx_id;'
     case 'talent_mobility':;
-      return (
-        (event.payload as any).person_id + ':' + (event.payload as any).start_date);
+      return ('
+        (event.payload as any).person_id + ':' + (event.payload as any).start_date);'
     case 'dao_endorsement':;
-      return (event.payload as any).resolution_id;
+      return (event.payload as any).resolution_id;'
     case 'leaderboard_entry':;
-      return (
+      return ('
         (event.payload as any).subject_id + ':' + (event.payload as any).period);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     default:;
       return (event.payload as any).id || event.eventId;
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -578,3 +577,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   return events;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+export function filterEventsByScope (
+  events: SyncEvent[],'
+  scope: InstanceConfig['scope']): SyncEvent[] {};
+  // Check condition;
+if (return events) {}
+  $2;
+}
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

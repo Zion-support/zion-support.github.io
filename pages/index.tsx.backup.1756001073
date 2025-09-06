@@ -553,9 +553,10 @@ import ContactForm from '../components/forms/ContactForm';
           </div>
         </div>
       </section>
-=======
+
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -688,6 +689,13 @@ export default function HomePage() {
       link: "https://ziontechgroup.com/ai-customer-experience",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+} from 'lucide-react';
+
+export default function HomePage() {
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       price: "$399/month",
       features: ["Threat Detection", "Compliance Reporting", "Penetration Testing", "Security Training"]
     }

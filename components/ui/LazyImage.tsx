@@ -1,47 +1,47 @@
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
-  threshold = 0.1
-  width
-  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
-
+  threshold = 0.1;
+  width;
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({}
+';
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
   threshold = 0.1,
   width,
   height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
 
   src;
-  alt;
+  alt;'
   className = ''
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {'
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
-}
+}'
 import React from 'react';
  useEffect ( () => {;
   const observer = new IntersectionObserver ( ([entry]) => {;
   if (entry && entry.isIntersecting) {;
   return () => observer && observer.disconnect () ;
-}, [threshold]);
+}, [threshold]);'
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',;
   threshold = 0 && 0.1,;
   width,;
   height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
   src;
-  alt;
-  className = '',;
+  alt;'
+  className = '',;'
   placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
   threshold = 0 && 0.1;
   width;
@@ -79,9 +79,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className={`relative overflow-hidden ${className}`}>;
 ;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       observer.observe (img_ref.current);
 observer.disconnect();
@@ -96,14 +96,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return () => observer.disconnect ();
   }, [threshold]);
 ;
-  const handle_load = () =>: any {
+  const handle_load = () =>: any {}
     setIsLoaded (true);  }    }
     return () => observer.disconnect ();
   }, [threshold]);
 ;
-  const handle_load = () =>: any {
+  const handle_load = () =>: any {}
     setIsLoaded (true);
   }
+<<<<<<< HEAD
   const handleLoad = () => {
     setIsLoaded(true);
   };
@@ -118,6 +119,13 @@ alt=''
 origin/cursor/automate-test-improve-and-merge-code-2533
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
+=======
+  return (`
+    <div className={`relative overflow - hidden ${class_name}`}>;
+      {/* Placeholder */}`
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${'
+          isLoaded ? 'opacity-0' : 'opacity-100'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }`}
         style={{ width, height }}
       />
@@ -129,14 +137,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Actual Image */}
       {isInView && (;
-        <motion&& motion.img
+        <motion&& motion.img;
           ref={imgRef}
           src={src}
           alt={alt}
           onLoad={handleLoad}
 };
 
-export default LazyImage;          className="w-full h-full object-cover";
+export default LazyImage;          className="w-full h-full object-cover";"
           loading="lazy";
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
@@ -149,14 +157,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
     </div>;
   );
-export default LazyImage;
-          className='w - full h - full object - cover';
+export default LazyImage;'
+          className='w - full h - full object - cover';'
           loading='lazy'          style={{ width, height }}
         />)}
     </div>);
 }
-;
-export default LazyImage;          className="w - full h - full object - cover";
+;"
+export default LazyImage;          className="w - full h - full object - cover";"
           loading="lazy";
           style={{ width, height }}
         />)}
@@ -168,9 +176,13 @@ export default LazyImage);
 ;
 export default LazyImage;
 ;
+<<<<<<< HEAD
     </div>
 );
 };
 
 export default LazyImage;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

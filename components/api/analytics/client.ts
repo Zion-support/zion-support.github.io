@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -71,6 +72,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const shortlisted = 5; // Placeholder
     const funnel = [
       },
+=======
+    const talentViewed = 12; // Placeholder;
+    const shortlisted = 5; // Placeholder;
+    const funnel = []
+      },'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       { label: 'Hire', value: filled && filled.length },
     ];
       timeToHireDays,
@@ -78,22 +85,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       shortlisted,
       funnel,
     });
-  } catch (e) {
-      funnel: [
-        { label: 'Post', value: 3 }
+  } catch (e) {}
+      funnel: ['
+        { label: 'Post', value: 3 }'
         { label: 'Invite', value: 2 }
-
+'
         { label: 'Hire', value: 2 }]})
   }
-    res.status (200).json ({
+    res.status (200).json ({}
       jobs_posted: 3,
       quotes_received: 2,
       timeToHireDays: 3.1,
       talent_viewed: 12,
       shortlisted: 5,
-      funnel: [;
-        { label: 'Post', value: 3 },
-        { label: 'Invite', value: 2 },
+      funnel: [;'
+        { label: 'Post', value: 3 },'
+        { label: 'Invite', value: 2 },'
         { label: 'Hire', value: 2 },
       ],
     });
@@ -102,9 +109,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       timeToHireDays: 3.1;
       talent_viewed: 12;
       shortlisted: 5;
-      funnel: [;
-        { label: 'Post', value: 3 }
-        { label: 'Invite', value: 2 }
+      funnel: [;'
+        { label: 'Post', value: 3 }'
+        { label: 'Invite', value: 2 }'
         { label: 'Hire', value: 2 }]});
   }
         { label: 'Hire', value: 2 }
@@ -115,3 +122,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
+'

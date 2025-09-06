@@ -10,7 +10,11 @@ export default function IncidentAutomationSuitePage() {
   if (!service) return null;
 
   return (
+<<<<<<< HEAD
     <UltraFuturisticBackground variant="holographic" intensity="high">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />

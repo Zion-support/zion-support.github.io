@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -18,10 +19,14 @@ import {
   ChevronRight, ArrowRight, CheckCircle, Clock, TrendingUp, ExternalLink, Building
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -315,10 +320,14 @@ const PortfolioPage: React.FC = () => {
   ];
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -351,10 +360,14 @@ const PortfolioPage: React.FC = () => {
           <div className="max-w-7xl mx-auto text-center">
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -464,11 +477,15 @@ const PortfolioPage: React.FC = () => {
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -661,10 +678,14 @@ const PortfolioPage: React.FC = () => {
                           )}
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         </div>
                       </div>
 
                       {/* Results */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -688,10 +709,14 @@ const PortfolioPage: React.FC = () => {
                               <span>{result}</span>
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             </li>
                           ))}
                         </ul>
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -869,6 +894,9 @@ const PortfolioPage: React.FC = () => {
             </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
 
@@ -877,6 +905,7 @@ const PortfolioPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -926,10 +955,14 @@ const PortfolioPage: React.FC = () => {
                 </button>
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -953,3 +986,6 @@ const PortfolioPage: React.FC = () => {
 export default PortfolioPage;
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

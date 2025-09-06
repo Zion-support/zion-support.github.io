@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { 
   Clock, DollarSign, TrendingUp, Brain, 
   Zap, Rocket, Mail, Phone, MapPin, Sparkles, 
@@ -58,10 +59,14 @@ export default function HomePage() {
         <title>Zion Tech Group - Revolutionary Micro SAAS Services & AI Solutions</title>
         <meta name="description" content="Transform your business with 500+ cutting-edge micro SAAS services powered by quantum AI, autonomous systems, and revolutionary technology. First-to-market solutions with proven ROI." />
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, autonomous systems, business automation, cybersecurity, fintech, healthcare analytics" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         
         {/* Open Graph */}
+<<<<<<< HEAD
         <meta property="og:title" content="Zion Tech Group - Revolutionary Micro SAAS Services" />
         <meta property="og:description" content="500+ cutting-edge micro SAAS services powered by quantum AI and autonomous systems" />
         <meta property="og:url" content="https://ziontechgroup.com" />
@@ -531,5 +536,12 @@ export default function HomePage() {
         </div>
       </section>
     </UltraFuturisticBackground>
+=======
+
+            </p>
+          </motion.div>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

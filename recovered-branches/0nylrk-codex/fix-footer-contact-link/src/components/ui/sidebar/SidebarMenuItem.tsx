@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from "react";
@@ -73,6 +74,11 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
+=======
+import React from "react";"
+import { cn } from "@/lib/utils";
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   className?: string;
   children?: React.ReactNode;
 <<<<<<< HEAD
@@ -96,12 +102,12 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
-export function SidebarMenuItem({
+export function SidebarMenuItem({}
   className,
-  children,
-  ...props
-}: SidebarMenuItemProps) {
-  return (
+  children,;
+  ...props;
+}: SidebarMenuItemProps) {}
+  return ("
     <li className={cn("", className)} {...props}>
       {children}
 <<<<<<< HEAD
@@ -111,9 +117,7 @@ export function SidebarMenuItem({
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 
 =======
 =======
@@ -146,7 +150,7 @@ import { cn } from "@/lib/utils",interface SidebarMenuItemProps extends React.HT
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function SidebarMenuItem(): any ({ className, children, ...props }: SidebarMenuItemProps) {;
   return (
-    <li
+    <li"
       className={cn("", className)} 
       {...props}>;
       {children}
@@ -154,16 +158,33 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
   );
 }
 
+<<<<<<< HEAD
     </li>);
 }
+=======
+
+
+
+    </li>);
+}
+
+    </li>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
 ;
 
+<<<<<<< HEAD
+=======
+
+
+  )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
     </li>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -172,3 +193,7 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

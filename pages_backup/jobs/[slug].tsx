@@ -1,23 +1,19 @@
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import {useRouter} from 'next/router';
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import useResponsive from '../../hooks/useResponsive';
-import {useToast} from '../../components/ui/NotificationSystem';
+import {useRouter} from 'next/router';'
+import EnhancedCard from '../../components/ui/EnhancedCard';'
+import EnhancedButton from '../../components/ui/EnhancedButton';'
+import EnhancedLoading from '../../components/ui/EnhancedLoading';'
+import useResponsive from '../../hooks/useResponsive';'
+import {useToast} from '../../components/ui/NotificationSystem';'
 import {useEffect, useState} from 'react';
-export default function JobDetailsPage() {;
-  const router = useRouter();
+export default function JobDetailsPage() { return null; }
   const { slug } = router.query as { slug?: string };
   const { isMobile } = useResponsive();
   const { notify } = useToast();
@@ -25,10 +21,11 @@ export default function JobDetailsPage() {;
 
 
 
-  useEffect(() => {
+  useEffect(() => {}
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -49,11 +46,23 @@ export default function JobDetailsPage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+import { useRouter  } from 'next/router';'
+import EnhancedCard from '../../components/ui/EnhancedCard','
+import EnhancedButton from '../../components/ui/EnhancedButton','
+import EnhancedLoading from '../../components/ui/EnhancedLoading',';
+import useResponsive from '../../hooks/useResponsive';'
+import { useToast  } from '../../components/ui/NotificationSystem';'
+import { useEffect, useState } from 'react';
+export default function JobDetailsPage() {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const { isMobile } = useResponsive();
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -86,12 +95,21 @@ export default function JobDetailsPage() {;
   const [loading, setLoading] = useState(true);
 
 <<<<<<< HEAD
+=======
+'
+import {useRouter} from 'next/router';'
+import EnhancedCard from '../../components/ui/EnhancedCard';'
+import EnhancedButton from '../../components/ui/EnhancedButton';'
+import EnhancedLoading from '../../components/ui/EnhancedLoading';'
+import useResponsive from '../../hooks/useResponsive';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -151,12 +169,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return () => clearTimeout(t);
   }, []);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
-import {useToast} from '../../components/ui/NotificationSystem';
+  useEffect(() => {}
+    const t = setTimeout(() => setLoading(false), 600);
+    return () => clearTimeout(t);
+  }, []);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
+
+
+
+
+'
+import {useToast} from '../../components/ui/NotificationSystem';'
 import {useEffect, useState} from 'react';
 
-export default function JobDetailsPage() {;
-  const router = useRouter();
+export default function JobDetailsPage() { return null; }
   const { slug } = router && router.query as { slug?: string };
   const { isMobile } = useResponsive();
   const { notify } = useToast();
@@ -168,12 +197,13 @@ export default function JobDetailsPage() {;
   }, []);
 
   const onApply = () => {;
-    notify(;
-      'Application submitted! We’ll notify you when it’s viewed.',;
+    notify(;'
+      'Application submitted! We’ll notify you when it’s viewed.',;'
       'success';
 
     );
   }
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD:pages/jobs/[slug].tsx
 <<<<<<< HEAD
 
@@ -185,6 +215,10 @@ export default function JobDetailsPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
 
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -202,11 +236,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <div className="relative">
       {loading ? (
         <EnhancedLoading lines={5} />
-      ) : (
+      ) : ("
         <div className="space-y-4">
-          <EnhancedCard>
+          <EnhancedCard>"
             <div className="flex items-start justify-between gap-3">
               <div>
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD:pages/jobs/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,16 +252,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
 
             </div>
           </EnhancedCard>
 
           <EnhancedCard>
-
-            <h2 className="font-semibold mb-2">Description</h2>
+"
+            <h2 className="font-semibold mb-2">Description</h2>"
             <p className="text-sm text-gray-700 dark:text-gray-300">You will design, build, and scale AI features using LLMs and modern tooling.</p>
           </EnhancedCard>
 
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -238,20 +277,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/jobs/[slug].tsx
                 <h1 className='text-xl font-semibold'>
+=======
+
+              <li>3+ years with Python or TypeScript</li>
+
+'
+                <h1 className='text-xl font-semibold'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
                   {slug?.replace(/-/g, ' ') |'Job Title'}
-                </h1>
+                </h1>'
                 <p className='text-sm text-gray-600 dark:text-gray-300'>
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
                   Remote • Contract • Posted today
                 </p>
 <<<<<<< HEAD
                 <h1 className="text-xl font-semibold">{slug?.replace(/-/g, ' ') || 'Job Title'}</h1>
+=======
+                  Remote • Contract • Posted today;
+                </p>'"
+                <h1 className="text-xl font-semibold">{slug?.replace(/-/g, ' ') || 'Job Title'}</h1>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
                 <p className="text-sm text-gray-600 dark:text-gray-300">Remote • Contract • Posted today</p>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </div>
-              {!isMobile && (
+              {!isMobile && ("
                 <EnhancedButton onClick={onApply} variant="primary">Apply Now</EnhancedButton>
-              )  } catch (error) {
-    console.error("Error:", error);
+              )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -261,12 +313,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
             </div>
           </EnhancedCard>
-          <EnhancedCard>
-            <h2 className="font-semibold mb-2">Description</h2>
+          <EnhancedCard>"
+            <h2 className="font-semibold mb-2">Description</h2>"
             <p className="text-sm text-gray-700 dark:text-gray-300">You will design, build, and scale AI features using LLMs and modern tooling.</p>
           </EnhancedCard>
-          <EnhancedCard>
-            <h2 className="font-semibold mb-2">Requirements</h2>
+          <EnhancedCard>"
+            <h2 className="font-semibold mb-2">Requirements</h2>"
             <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
             <h2 className=&quot;font-semibold mb-2&quot;>Description</h2>
             <p className=&quot;text-sm text-gray-700 dark:text-gray-300&quot;>You will design, build, and scale AI features using LLMs and modern tooling.</p>
@@ -277,6 +329,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <ul className=&quot;list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300&quot;>
 
               <li>3+ years with Python or TypeScript</li>
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -314,11 +367,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/jobs/[slug].tsx
+=======
+
+
+
+
+              <li>3+ years with Python or TypeScript</li>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
               <li>Experience with ML/AI production systems</li>
               <li>Familiarity with cloud infra and CI/CD</li>
             </ul>
           </EnhancedCard>
         </div>
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -327,24 +390,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
 
+'
     <div className='relative'>;
       {loading ? (;
         <EnhancedLoading lines={5} />;
-      ) : (;
+      ) : (;'
         <div className='space-y-4'>;
-          <EnhancedCard>;
+          <EnhancedCard>;'
             <div className='flex items-start justify-between gap-3'>;
-              <div>;
-                <h1 className='text-xl font-semibold'>;
+              <div>;'
+                <h1 className='text-xl font-semibold'>;'
                   {slug?.replace(/-/g, ' ') || 'Job Title'}
-                </h1>;
+                </h1>;'
                 <p className='text-sm text-gray-600 dark:text-gray-300'>;
                   Remote • Contract • Posted today;
                 </p>;
               </div>;
-              {!isMobile && (;
+              {!isMobile && (;'
                 <EnhancedButton onClick={onApply} variant='primary'>;
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD
 =======
     <div className='relative'>;
@@ -400,10 +467,18 @@ function JobDetailsPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
                   Apply Now;
                 </EnhancedButton>              )}
             </div>;
           </EnhancedCard>;
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -456,6 +531,19 @@ function JobDetailsPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3">
           <div className="container mx-auto px-2">
+=======
+
+
+
+
+
+
+
+
+      {isMobile && ("
+        <div className="fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3">"
+          <div className="container mx-auto px-2">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
             <EnhancedButton onClick={onApply} variant="primary" fullWidth>Apply Now</EnhancedButton>
           </div>
         </div>
@@ -466,6 +554,7 @@ function JobDetailsPage() {
 =======
 =======
 
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -478,6 +567,13 @@ function JobDetailsPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <EnhancedCard>;
             <h2 className='font - semibold mb - 2'>Requirements</h2>;
+=======
+
+
+
+          <EnhancedCard>;'
+            <h2 className='font - semibold mb - 2'>Requirements</h2>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
             <ul className='list - disc pl - 5 space - y-1 text - sm text - gray - 700 dark:text - gray - 300'>              <li > 3+ years with Python or TypeScript</li>;
               <li > Experience with ML / AI production systems</li>;
               <li > Familiarity with cloud infra and CI / CD</li>;
@@ -485,9 +581,9 @@ function JobDetailsPage() {
           </EnhancedCard>;
         </div>)}
       {/* Sticky mobile apply CTA */}
-      {is_mobile && (
-        <div className='fixed inset - x-0 bottom - 0 z - 30 bg - white / 90 dark:bg - black / 80 backdrop - blur border - t border - gray - 200 dark:border - gray - 800 p - 3'>;
-          <div className='container mx - auto px - 2'>;
+      {is_mobile && ('
+        <div className='fixed inset - x-0 bottom - 0 z - 30 bg - white / 90 dark:bg - black / 80 backdrop - blur border - t border - gray - 200 dark:border - gray - 800 p - 3'>;'
+          <div className='container mx - auto px - 2'>;'
             <EnhancedButton on_click={on_apply} variant='primary' full_width>;
               Apply Now;
             </EnhancedButton>          </div>;
@@ -503,18 +599,18 @@ function JobDetailsPage() {
 
 }
 
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
 
-}
 
-      )}
-    </div>
-);
 
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -525,22 +621,30 @@ function JobDetailsPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )  } catch (error) {
     console.error("Error:", error);
+=======
+
+
+      )  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     </div>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/jobs/[slug].tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -577,3 +681,12 @@ function JobDetailsPage() {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/jobs/[slug].tsx
+=======
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/jobs/[slug].tsx

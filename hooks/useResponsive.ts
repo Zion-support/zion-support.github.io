@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface ResponsiveState {
@@ -53,11 +54,15 @@ const defaultBreakpoints: Breakpoints = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     updateDimensions(),;
     window && window.addEventListener(;
   'resize', updateDimensions),;
-    return () => window && window.removeEventListener(;
+    return () => window && window.removeEventListener(;'
   'resize', updateDimensions)}, []),;
+<<<<<<< HEAD
   return state},;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,27 +124,33 @@ export default useResponsive,
 export default useResponsive;
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+  return state},;'
+export default useResponsive,;import { useState, useEffect } from 'react';
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   'resize', updateDimensions)}, []);
-  return state}
+  return state}'
 export default useResponsive;import { useState, useEffect } from 'react';
         "is_desktop":width >= 1024})},
 ;
     update_dimensions (),
-    window.addEventListener (
+    window.addEventListener ('
   'resize', update_dimensions),
-    return () => window.removeEventListener (
+    return () => window.removeEventListener ('
   'resize', update_dimensions)}, []),
-  return state},
+  return state},'
 export default use_responsive,import { useState, useEffect } from 'react';
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-interface Breakpoints {
+
+interface Breakpoints {}
   sm: number;
   md: number;
   lg: number;
-  xl: number;
+  xl: number;'
   '2xl': number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -209,37 +220,33 @@ export default useResponsive;
 export default useResponsive;
 =======
 >>>>>>> main
-  'resize', updateDimensions)}, []);
-export default useResponsive;
-<<<<<<< HEAD
-import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
 =======
 
-    window && window.addEventListener(;
-
-  'resize', updateDimensions);
-    return () => window && window.removeEventListener(;
+  useEffect(() => {}
+    const updateDimensions = () => {}
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   'resize', updateDimensions)}, []);
-
 export default useResponsive;
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 ;
 
   return state}
-export default useResponsive
+export default useResponsive'";
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
-
+'"
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window && window.innerWidth; const height = window && window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window && window.addEventListener( 'resize',updateDimensions); return () => window && window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
-const default_breakpoints: Breakpoints = {
-const defaultBreakpoints: Breakpoints = {
+const default_breakpoints: Breakpoints = {}
+const defaultBreakpoints: Breakpoints = {}
   sm: 640,
   md: 768,
   lg: 1024,
-  xl: 1280,
+  xl: 1280,'
   '2xl': 1536,
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <<<<<<< HEAD
@@ -304,3 +311,15 @@ export default useResponsive,;import { useState, useEffect } from 'react';
 =======
 export default useResponsive,;import { useState, useEffect } from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -80,6 +81,18 @@ type Props = { items: TalentItem[] };
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
+=======
+
+
+import type { NextPage, GetServerSideProps } from "next";"
+import fs from "fs";"
+import path from "path";"
+import Link from "next/link";
+
+import type { NextPage, GetServerSideProps } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from 'next/link';
 type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
 type Props = { items: TalentItem[] },
@@ -88,49 +101,39 @@ type Props = { items: TalentItem[] },
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
       <h1 className="text-2xl font-semibold">Top Talents — Auto Generated</h1>
+=======
+
+const TopTalentsPage: NextPage<Props> = ({ items }) => {}
+  return ("
+    <main className="space-y-6">"
+      <h1 className="text-2xl font-semibold">Top Talents — Auto Generated</h1>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="grid gap-3">
         {items.map((t) => (
-          <Link key={t.talentSlug} href={`/talent/${t.talentSlug}`}>
+          <Link key={t.talentSlug} href={`/talent/${t.talentSlug}`}>"
             <div className="enhanced-card hover:shadow-lg cursor-pointer flex items-center justify-between">
-              <div>
-                <div className="font-medium">{t.talentName}</div>
+              <div>"
+                <div className="font-medium">{t.talentName}</div>"
                 <div className="text-sm text-gray-600">{t.averageRating.toFixed(1)}★ • {t.totalReviews} reviews</div>
-              </div>
+              </div>"
               <span className="pill">Auto</span>
             </div>
           </Link>
-        ))}
+        ))}"
         {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>
     </main>
-<<<<<<< HEAD
-  );
-}
-export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join(
-    process.cwd()
-    "public"
-    "automations"
-    "top-talents.json"
-=======
 
-
-};
-export const getServerSideProps: GetServerSideProps = async () => {;
-  const p = path && path.join(;
-    process && process.cwd(),;
-    "public",;
-    "automations",;
-    "top-talents && talents.json",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
   let items: TalentItem[] = [];
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -174,6 +177,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {;
+=======
+  try {;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const raw = fs && fs.readFileSync(p, "utf8");
     const data = JSON && JSON.parse(raw);
     items = data && data.items || [];
@@ -183,6 +189,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { items } }
 }
 export default TopTalentsPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -253,6 +260,15 @@ export default TopTalentsPage;
     const raw = fs.readFileSync(p, "utf8");
     const data = JSON.parse(raw);
 =======
+=======
+"
+    "public","
+    "automations","
+    "top - talents.json",
+  );
+  let items: TalentItem[] = [];
+  try {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const raw = fs.readFileSync (p, "utf8");
     const data = JSON.parse (raw);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -265,6 +281,7 @@ export default TopTalentsPage;
   return { props: { items } }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -320,3 +337,14 @@ export default TopTalentsPage;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  )
+},
+export const getServerSideProps: GetServerSideProps = async () => {};
+export default TopTalentsPage;
+;
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

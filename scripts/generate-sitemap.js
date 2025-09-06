@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createWriteStream } from 'fs',
 import { join } from 'path',
 =======
@@ -22,9 +23,14 @@ import fs from 'fs';
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ '','/about','/services','/services/ai-services','/services/micro-saas','/services/it-services','/contact',]; const generateSitemap = () => { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${pages.map(page => ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url>`).join('\n')} </urlset>`; const outDir = path.join(__dirname,'..','out'); if (!fs.existsSync(outDir)) { fs.mkdirSync(outDir,{ recursive: true })} fs.writeFileSync(path.join(outDir,'sitemap.xml'),sitemap)
 }; generateSitemap();import fs from 'fs';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import fs from 'fs';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import path from 'path';
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { fileURLToPath } from 'url';
@@ -54,10 +60,28 @@ ${pages.map(page => `  <url>
     <priority>${page.priority}</priority>
   </url>`).join('')}
 </urlset>`;
+=======
+const generateSitemap = () => {}
+  const pages = ['
+    { url: '', priority: '1.0', changefreq: 'daily' },'
+    { url: '/about', priority: '0.8', changefreq: 'weekly' },'
+    { url: '/services', priority: '0.8', changefreq: 'weekly' },'
+    { url: '/services/ai-services', priority: '0.7', changefreq: 'weekly' },'
+    { url: '/services/micro-saas', priority: '0.7', changefreq: 'weekly' },'
+    { url: '/services/it-services', priority: '0.7', changefreq: 'weekly' },'
+    { url: '/contact', priority: '0.6', changefreq: 'monthly' }
+  ];
 
-  fs.writeFileSync(path.join(process.cwd(), 'public/sitemap.xml'), sitemap);
-};
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`
+${pages.map(page => `
+  <url>
+    <loc>https://ziontechgroup.com${page.url}</loc>'
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 export default generateSitemap;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -222,3 +246,8 @@ export default generateSitemap;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -20,12 +21,16 @@ export default function ComposePage(req, res) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
+<<<<<<< HEAD
 
 =======
 
@@ -103,12 +108,27 @@ const headerTitle =
         ? `Apply to ${jobTitle |'Job'}`
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const [message, setMessage] = React.useState('');'
+  const [linkUrl, setLinkUrl] = React.useState('');
+  const [file, setFile] = React.useState<File | null>(null);
+  const [sending, setSending] = React.useState(false);
+
+  if (!user) return null;
+
+  const headerTitle =;'
+    type === 'invite';'
+      ? `Invite ${recipientName || talentName || 'Talent'}`;'
+      : type === 'apply';'`
+        ? `Apply to ${jobTitle || 'Job'}`;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         : 'New Message';
-  const context =;
-    type === 'invite';
-      ? { type: 'invite', jobId, jobTitle, talentId, talentName }
-      : type === 'apply';
+  const context =;'
+    type === 'invite';'
+      ? { type: 'invite', jobId, jobTitle, talentId, talentName }'
+      : type === 'apply';'
         ? { type: 'application', jobId, jobTitle }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -156,11 +176,15 @@ const headerTitle =
         : { type: 'general' };
   const onSend = async () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message && message.trim() && !file && !linkUrl) return;
     setSending(true);
 
     let attachmentBase64: string | undefined,
+<<<<<<< HEAD
     if (file) {
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
@@ -191,11 +215,19 @@ let attachmentBase64: string | undefined;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
+=======
+    if (file) {}
+      const buff = await file.arrayBuffer();'
+      const base64 = Buffer.from(buff).toString('base64');'
+      const mime = file.type || 'application/octet-stream';`
+      attachmentBase64 = `data:${mime};base64,${base64}`;    }`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       attachmentBase64 = `data:${mime},base64,${base64}`;
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -252,61 +284,74 @@ attachmentBase64 = `data:${mime};base64,${base64}`;
         context,;
       }),;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}'
+      const mime = file.type || 'application/octet-stream';`
+      attachmentBase64 = `data:${mime},base64,${base64}`
+    }
+
+
+'
+    const res = await fetch('/api/messages/compose', {'
+      method: 'POST''
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     });
     const data = await res && res.json();
     setSending(false);
 
-    if (data?.conversation?.id);
+    if (data?.conversation?.id);`
       router && router.replace(`/messages/${data && data.conversation.id}`);
   };
-  return (
-    <div className='min-h-screen bg-gray-50'>;
-      <div className='max-w-2xl mx-auto p-4'>;
-        <div className='bg-white rounded-xl shadow-sm'>;
-          <div className='p-4 border-b'>;
-            <h1 className='text-xl font-semibold'>{headerTitle}</h1>;
-            <p className='text-sm text-gray-500'>;
-              {type === 'invite' && jobTitle;
+  return ('
+    <div className='min-h-screen bg-gray-50'>;'
+      <div className='max-w-2xl mx-auto p-4'>;'
+        <div className='bg-white rounded-xl shadow-sm'>;'
+          <div className='p-4 border-b'>;'
+            <h1 className='text-xl font-semibold'>{headerTitle}</h1>;'
+            <p className='text-sm text-gray-500'>;'
+              {type === 'invite' && jobTitle;'`
                 ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`;
 
-                : null}
+                : null}'`
               {type === 'apply' && jobTitle ? `Applying to: ${jobTitle}` : null}
             </p>;
-          </div>;
+          </div>;'
           <div className='p-4 space-y-3'>;
-            <textarea
+            <textarea;
               value={message}
               onChange={e => setMessage(e && e.target.value)}
               rows={6}
-
+'
               className='w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500';
-              placeholder={;
-                type === 'invite' && jobTitle;
-                  ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`;
+              placeholder={;'
+                type === 'invite' && jobTitle;'`
+                  ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`;'
                   : 'Write your message...';
 
               }
             />;
-            <input
+            <input'
               type='url'
               value={linkUrl}
-              onChange={e => setLinkUrl(e && e.target.value)}
-              placeholder='Optional proposal or portfolio link';
+              onChange={e => setLinkUrl(e && e.target.value)}'
+              placeholder='Optional proposal or portfolio link';'
               className='border rounded-lg p-2 w-full';
             />;
-            <input
+            <input'
               type='file'
 
-              onChange={e => setFile(e && e.target.files?.[0] || null)}
+              onChange={e => setFile(e && e.target.files?.[0] || null)}'
               className='text-sm';
             />;
-          </div>;
+          </div>;'
           <div className='p-4 border-t flex justify-end'>;
 
-            <button
+            <button;
               onClick={onSend}
-              disabled={sending}
-              className='px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50'>;
+              disabled={sending}'
+              className='px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50'>;'
               {sending ? 'Sending...' : 'Send'}
 
             </button>          </div>;
@@ -315,7 +360,7 @@ attachmentBase64 = `data:${mime};base64,${base64}`;
     </div>;
   );
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
         recipientId: recipientId || talentId,
         body: message,
         linkUrl: linkUrl || undefined,
@@ -329,10 +374,11 @@ attachmentBase64 = `data:${mime};base64,${base64}`;
         attachmentName: file?.name,
         context})});
     const data = await res.json();
-    setSending(false);
+    setSending(false);`
     if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`)
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -405,9 +451,21 @@ attachmentBase64,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             />
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />
+=======
+  return ("
+    <div className="min-h-screen bg-gray-50">"
+      <div className="max-w-2xl mx-auto p-4">"
+        <div className="bg-white rounded-xl shadow-sm">"
+          <div className="p-4 border-b">"
+            <h1 className="text-xl font-semibold">{headerTitle}</h1>"
+            <p className="text-sm text-gray-500">
+
+            />"
+            <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <input type="file" onChange={(e) => setFile(e.target.files?.[0] || null)} className="text-sm" />
-          </div>
-          <div className="p-4 border-t flex justify-end">
+          </div>"
+          <div className="p-4 border-t flex justify-end">'"
             <button onClick={onSend} disabled={sending} className="px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50">{sending ? 'Sending...' : 'Send'}</button>
           </div>
 <<<<<<< HEAD
@@ -439,21 +497,25 @@ attachmentBase64,
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   )
 }
-
-import {use_router} from 'next / router';
+'
+import {use_router} from 'next / router';'
 import {useCurrentUser} from '../../hooks / useCurrentUser';
-export default /**
- * ComposePage - Function description
+export default /**;
+ * ComposePage - Function description;
  */
-function ComposePage() {
+function ComposePage() {}
   const router = use_router ();
-  const {
+  const {}
     type,
     recipient_id,
     recipient_name,
@@ -461,26 +523,27 @@ function ComposePage() {
     job_title,
     talent_id,
     talent_name,
-  } = router.query as Record < string, string>;  const { user, loading } = useCurrentUser ();
-  const [message, set_message] = React.useState ('');
+  } = router.query as Record < string, string>;  const { user, loading } = useCurrentUser ();'
+  const [message, set_message] = React.useState ('');'
   const [link_url, setLinkUrl] = React.useState ('');
   const [file, set_file] = React.useState < File | null>(null);
   const [sending, set_sending] = React.useState (false);
 ;
-  React.useEffect (() => {
-    if (router.replace ('/auth')) {
-  $2
+  React.useEffect (() => {'
+    if (router.replace ('/auth')) {}
+  $2;
 }  }, [loading, user, router]);
 ;
-  // Check condition
-if (return null) {
-  $2
+  // Check condition;
+if (return null) {}
+  $2;
 }
-  const header_title =;
-    type === 'invite';
-      ? `Invite ${recipient_name || talent_name || 'Talent'}`;
-      : type === 'apply';
+  const header_title =;'
+    type === 'invite';'`
+      ? `Invite ${recipient_name || talent_name || 'Talent'}`;'
+      : type === 'apply';'`
         ? `Apply to ${job_title || 'Job'}`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -490,25 +553,13 @@ if (return null) {
 import { useRouter  } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage() {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  const router = useRouter();
-  const {
-    type
-    recipientId
-    recipientName
-    jobId
-    jobTitle
-    talentId
-    talentName
-  } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
-=======
-import {useRouter} from 'next/router';
-import {useCurrentUser} from '../../hooks/useCurrentUser';
-export default function ComposePage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useRouter } from 'next/router';
+'
+import { useRouter } from 'next/router';'
 import { useCurrentUser } from '../../hooks/useCurrentUser';
+<<<<<<< HEAD
 export default function ComposePage(req, res) {
   try {
 <<<<<<< HEAD
@@ -516,14 +567,19 @@ export default function ComposePage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default function ComposePage(req, res) {}
+  try {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const [message, setMessage] = React.useState('');
+'
+  const [message, setMessage] = React.useState('');'
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -610,11 +666,16 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setSending(true);
     let attachmentBase64: string | undefined;
     if (file) {;
-      const buff = await file.arrayBuffer();
+      const buff = await file.arrayBuffer();'
       const base64 = Buffer.from(buff).toString('base64');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -637,12 +698,17 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       attachmentBase64 = `data:${mime},base64,${base64}`;
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -694,25 +760,34 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+    const res = await fetch('/api/messages/compose', {'
+      method: 'POST''
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     });
     const data = await res.json ();
     set_sending (false);
-    if (
-      router.replace (`/messages/${data.conversation.id}`)) {
-  $2
+    if (`
+      router.replace (`/messages/${data.conversation.id}`)) {}
+  $2;
 }
   }
 ;
-  return (
-    <div className='min - h-screen bg - gray - 50'>;
-      <div className='max - w-2xl mx - auto p - 4'>;
-        <div className='bg - white rounded - xl shadow - sm'>;
-          <div className='p - 4 border - b'>;
-            <h1 className='text - xl font - semibold'>{header_title}</h1>;
-            <p className='text - sm text - gray - 500'>;
-              {type === 'invite' && job_title;
+  return ('
+    <div className='min - h-screen bg - gray - 50'>;'
+      <div className='max - w-2xl mx - auto p - 4'>;'
+        <div className='bg - white rounded - xl shadow - sm'>;'
+          <div className='p - 4 border - b'>;'
+            <h1 className='text - xl font - semibold'>{header_title}</h1>;'
+            <p className='text - sm text - gray - 500'>;'
+              {type === 'invite' && job_title;'`
                 ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                 : null}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -756,9 +831,13 @@ if ( {) {
   }
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
-          </div>
+          </div>"
           <div className="p-4 space-y-3">
+<<<<<<< HEAD
             <textarea
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -834,3 +913,7 @@ if ( {) {
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            <textarea;
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

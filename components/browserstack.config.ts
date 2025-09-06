@@ -1,6 +1,6 @@
 
-    baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
 
+<<<<<<< HEAD
 pr-12243
 import { defineConfig, devices } from @playwright/test';
 default defineConfig({
@@ -9,19 +9,25 @@ default defineConfig({
 pr-12243
   projects: [
       name: Desktop Chrome',      use: {
+=======
+
+  projects: []
+      name: Desktop Chrome',      use: {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         browserName: chromium',        channel: chrome'}
     }
-    {
-      name: Desktop Firefox',      use: {
+    {'
+      name: Desktop Firefox',      use: {'
         browserName: firefox'}
     }
-    {
-      name: Desktop Safari',      use: {
+    {'
+      name: Desktop Safari',      use: {'
         browserName: webkit'}
     }
-    {
-      name: Mobile Chrome',      use: {
+    {'
+      name: Mobile Chrome',      use: {'
         browserName: chromium',        ...devices['Pixel 5']}
+<<<<<<< HEAD
 pr-12243
 import { define_config, devices } from @playwright / test';
 default define_config ({
@@ -85,13 +91,27 @@ pr-12243
   ];
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
+=======
+
+
+
+
+    }
+    {'
+      name: Mobile Safari',      use: {'
+        browser_name: webkit',        ...devices['i_phone 12']}
+    }
+  ];
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 });
-  reporter: [;
+  reporter: [;'
     ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never' }]];
 });
 ;
 
+<<<<<<< HEAD
 });
 });
 projects: [ {
@@ -122,3 +142,9 @@ projects: [ {
 reporter: [
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function LinkedInRedirect() {
 
   useEffect(() => {
@@ -56,6 +57,13 @@ export default function LinkedInRedirect() {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       );
+=======
+
+
+
+
+export default function LinkedInRedirect() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }, []);
   return (
@@ -94,25 +102,26 @@ export default function LinkedInRedirect() {;
     <>;
       <Head>;
         <title>LinkedIn | Zion Tech Group</title>;
-        <link
-          rel='canonical'
+        <link'
+          rel='canonical''
           href='https: //www && www.linkedin.com/company/zion-tech-group'
         />;
-        <meta
-          httpEquiv='refresh'
+        <meta'
+          httpEquiv='refresh''
           content='0,url=https://www && www.linkedin.com/company/zion-tech-group'
-        />;
+        />;'
         <meta name='robots' content='noindex, nofollow' />;
-      </Head>;
+      </Head>;'
       <div className='min-h-screen bg-black text-white flex items-center justify-center p-8'>;
-        <a
-          href='https: //www && www.linkedin.com/company/zion-tech-group'
+        <a'
+          href='https: //www && www.linkedin.com/company/zion-tech-group''
           className='text-cyan-400 underline'>;
           Continue to LinkedIn;
         </a>;
       </div>;
     </>;
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function LinkedInRedirect(req, res) {
   try {
@@ -160,22 +169,26 @@ export default function LinkedInRedirect() {
 	}, []);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	return (
 		<>
 			<Head>
 				<title>LinkedIn | Zion Tech Group</title>
-				<link rel="canonical" href="https: //www.linkedin.com/company/zion-tech-group" />
-				<meta httpEquiv="refresh" content="0,url=https://www.linkedin.com/company/zion-tech-group" />
+				<link rel="canonical" href="https: //www.linkedin.com/company/zion-tech-group" />"
+				<meta httpEquiv="refresh" content="0,url=https://www.linkedin.com/company/zion-tech-group" />"
 				<meta name="robots" content="noindex, nofollow" />
-			</Head>
-			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
+			</Head>"
+			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">"
 				<a href="https: //www.linkedin.com/company/zion-tech-group" className="text-cyan-400 underline">
-					Continue to LinkedIn
+					Continue to LinkedIn;
 				</a>
 			</div>
 		</>
 	)
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -188,18 +201,21 @@ export default function LinkedInRedirect() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next / head';
 ;
-export default /**
- * LinkedInRedirect - Function description
+export default /**;
+ * LinkedInRedirect - Function description;
  */
-function LinkedInRedirect() {
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
+function LinkedInRedirect() {}
+  useEffect (() => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      window.location.replace (
+      window.location.replace ('
         'https://www.linkedin.com / company / zion - tech - group');
     }
   }, []);
@@ -208,19 +224,19 @@ if ( {) {
     <>;
       <Head>;
         <title > LinkedIn | Zion Tech Group</title>;
-        <link;
-          rel='canonical';
+        <link;'
+          rel='canonical';'
           href='https: //www.linkedin.com / company / zion - tech - group';
         />;
-        <meta;
-          http_equiv='refresh';
+        <meta;'
+          http_equiv='refresh';'
           content='0, url = https://www.linkedin.com / company / zion - tech - group';
-        />;
+        />;'
         <meta name='robots' content='noindex, nofollow' />;
-      </Head>;
+      </Head>;'
       <div className='min - h-screen bg - black text - white flex items - center justify - center p - 8'>;
-        <a;
-          href='https: //www.linkedin.com / company / zion - tech - group';
+        <a;'
+          href='https: //www.linkedin.com / company / zion - tech - group';'
           className='text - cyan - 400 underline';
         >;
           Continue to LinkedIn;
@@ -229,6 +245,7 @@ if ( {) {
     </>);
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -278,3 +295,13 @@ if ( {) {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

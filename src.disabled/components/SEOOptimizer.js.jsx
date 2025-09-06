@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/SEOOptimizer.js.jsx
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -29,10 +30,20 @@ import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';'
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
+:src.disabled/components/SEOOptimizer.js.jsx'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
-:src.disabled/components/SEOOptimizer.js.jsx
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
+:temp_exclude/src.disabled/components/SEOOptimizer.js.jsx;
+'
+import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
 :temp_exclude/src.disabled/components/SEOOptimizer.js.jsx
@@ -51,3 +62,15 @@ const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] =
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {""";""
+"
+const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {""";""
+'
+import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';"
+const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {""";""
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

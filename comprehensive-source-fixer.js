@@ -1,15 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -20,6 +19,14 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 <<<<<<< HEAD
@@ -27,18 +34,24 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
+
+'`
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
@@ -52,9 +65,29 @@
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { await this.fixDirectory(fullPath)} else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+ursor/fix-syntax-push-and-merge-to-main-40de'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { await this.fixDirectory(fullPath)} else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/integrate-build-improve-and-re-verify-8f7d'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
 
+
+
+
+'`
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { await this.fixDirectory(fullPath)} else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
+<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -96,30 +129,39 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node
 const fs = require('fs');
+=======
+'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
+
+
+
+#!/usr/bin/env node'
+const fs = require('fs');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const path = require('path');
-class ComprehensiveSourceFixer {
-  constructor() {
+class ComprehensiveSourceFixer {}
+  constructor() {}
     this.fixes = [];
-    this.errors = [];
-    this.reportFile = path.join(__dirname, 'source-fix-report.json')}
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
+    this.errors = [];'
+    this.reportFile = path.join(__dirname, 'source-fix-report.json')}'
+  log(message, level = 'INFO') {}
+    const timestamp = new Date().toISOString();`
     console.log(`[${timestamp}] [${level}] ${message}`)}
-  async fixAllSourceFiles() {
+  async fixAllSourceFiles() {'
     this.log('🔧 Starting comprehensive source file fixing...');
-    // Fix src directory
+    // Fix src directory'
     await this.fixDirectory(path.join(__dirname, 'src'));
-    // Fix pages directory
-    await this.fixDirectory(path.join(__dirname, 'pages'));
+    // Fix pages directory'
+    await this.fixDirectory(path.join(__dirname, 'pages'));`
     this.log(`✅ Fixed ${this.fixes.length} files`);
-    if (this.errors.length > 0) {
+    if (this.errors.length > 0) {}`
       this.log(`❌ ${this.errors.length} errors encountered`)}
     await this.generateReport()}
-  async fixDirectory(dir) {
+  async fixDirectory(dir) {}
     if (!fs.existsSync(dir)) return;
     const items = fs.readdirSync(dir);
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -129,14 +171,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
-ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -212,25 +251,45 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
   isSourceFile(filename) {
     return filename.endsWith('.ts') || filename.endsWith('.tsx') ||
+=======
+
+
+
+    for (const item of items) {}
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);'
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
+        await this.fixDirectory(fullPath)} else if (this.isSourceFile(item)) {}
+     else if (this.isSourceFile(item)) {}
+     else if (this.isSourceFile(item)) {}
+     else if (this.isSourceFile(item)) {}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+        await this.fixFile(fullPath)}
+    }
+  }
+  isSourceFile(filename) {'
+    return filename.endsWith('.ts') || filename.endsWith('.tsx') || '
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
            filename.endsWith('.js') || filename.endsWith('.jsx')}
-  async fixFile(filePath) {
-    try {
+  async fixFile(filePath) {}
+    try {'
       const content = fs.readFileSync(filePath, 'utf8');
       const fixedContent = this.fixSourceContent(content, filePath);
-      if (content !== fixedContent) {
+      if (content !== fixedContent) {}
         fs.writeFileSync(filePath, fixedContent);
-        this.fixes.push({
-          "file": path.relative(__dirname, filePath),
-          "fixes": this.getAppliedFixes(content, fixedContent),
+        this.fixes.push({}
+          "file": path.relative(__dirname, filePath),"
+          "fixes": this.getAppliedFixes(content, fixedContent),"
           "timestamp": new Date().toISOString()
-        });
+        });"`
         this.log(`✅ "Fixed": ${path.basename(filePath)}`)}
-    } catch (error) {
-      this.errors.push({ "file": filePath, "error": error.message });
+    } catch (error) {"
+      this.errors.push({ "file": filePath, "error": error.message });'`
       this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`, 'ERROR')}
   }
-  fixSourceContent(content, filePath) {
+  fixSourceContent(content, filePath) {}
     let fixed = content;
+<<<<<<< HEAD
     // Fix merge conflict markers
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -287,14 +346,33 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { await this.fixDirectory(fullPath)} else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
+=======
+    // Fix merge conflict markers;
+'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { await this.fixDirectory(fullPath)} else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
+
+'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;'`
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
+
+
+
+
+
+'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;'`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;'`
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ComprehensiveSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting comprehensive source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir);  else if (this.isSourceFile(item)) { await this.fixFile(fullPath)} } } isSourceFile(filename) { return filename.endsWith('.ts') || filename.endsWith('.tsx') || filename.endsWith('.js') || filename.endsWith('.jsx')} async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const fixedContent = this.fixSourceContent(content,filePath); if (content !== fixedContent) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: path.relative(__dirname,filePath),fixes: this.getAppliedFixes(content,fixedContent),timestamp: new Date().toISOString() }); this.log(`✅ Fixed: ${path.basename(filePath)}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message }); this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`,'ERROR')} } fixSourceContent(content,filePath) { let fixed = content;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -321,3 +399,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -91,6 +92,23 @@ import { X } from "lucide-react",
   // Use our custom hook to manage state
   const {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+import React, { useState } from "react";"
+import {useNavigate} from "react-router-dom";"
+import {AppLayout} from "@/layout/AppLayout";"
+import {TalentGrid} from "@/components/talent/TalentGrid";"
+import {FilterSidebar} from "@/components/talent/FilterSidebar";"
+import {TalentResults} from "@/components/talent/TalentResults";"
+import {useTalentDirectory} from "@/hooks/useTalentDirectory";"
+import {SORT_OPTIONS} from "@/data/sortOptions";"
+import {X} from "lucide-react";"
+import {Button} from "@/components/ui/button";"
+import {TalentProfile} from "@/types/talent";
+export default function TalentDirectory() { return null; }
+  const {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     filteredTalents;
 =======
   const navigate = useNavigate();    filteredTalents;
@@ -100,6 +118,7 @@ import { X } from "lucide-react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     isLoading;
     searchTerm;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -113,15 +132,27 @@ import { useTalentDirectory } from '@/hooks / useTalentDirectory';
 import { SORT_OPTIONS } from '@/data / sort_options';
 import { X } from './lucide-react';
 import { Button } from '@/components / ui / button';
+=======
+import React, { useState } from './react';'
+import { use_navigate } from './react-router-dom';'
+import { AppLayout } from '@/layout / AppLayout';'
+import { TalentGrid } from '@/components / talent / TalentGrid';'
+import { FilterSidebar } from '@/components / talent / FilterSidebar';'
+import { TalentResults } from '@/components / talent / TalentResults';'
+import { useTalentDirectory } from '@/hooks / useTalentDirectory';'
+import { SORT_OPTIONS } from '@/data / sort_options';'
+import { X } from './lucide-react';'
+import { Button } from '@/components / ui / button';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { TalentProfile } from '@/types / talent';
-export default /**
- * TalentDirectory - Function description
+export default /**;
+ * TalentDirectory - Function description;
  */
-function TalentDirectory() {
+function TalentDirectory() {}
   const navigate = use_navigate ();
 ;
   // Use our custom hook to manage state;
-  const {
+  const {}
     filtered_talents;
     is_loading;
     search_term;
@@ -135,11 +166,18 @@ function TalentDirectory() {
     experience_range;
     setExperienceRange;
     sort_option;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setSortOption;
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
+<<<<<<< HEAD
     selected_talent;
     setSelectedTalent;
 <<<<<<< HEAD
@@ -173,6 +211,9 @@ function TalentDirectory() {
     handleToggleSave} = useTalentDirectory();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     filteredTalents,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -207,6 +248,7 @@ function TalentDirectory() {
     handleToggleSave} = useTalentDirectory(),
   
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
@@ -222,14 +264,17 @@ function TalentDirectory() {
     setIsHireModalOpen(true)
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
   
-  const viewProfile = (id: string) => {
-    // Navigate to the talent profile page
+  const viewProfile = (id: string) => {}
+    // Navigate to the talent profile page;
     navigate(`/talent/${id}`)
   },
   
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -244,22 +289,27 @@ function TalentDirectory() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+    selected_talent;
+    setSelectedTalent;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
-    <AppLayout>
-      <div className="container mx-auto px-4 py-8">
+    <AppLayout>"
+      <div className="container mx-auto px-4 py-8">"
         <div className="flex flex-col space-y-8">
-          <div>
-            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>
+          <div>"
+            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>"
             <p className="text-zion-slate-light">
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -271,194 +321,57 @@ function TalentDirectory() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Main content */}
+=======
+
+          {/* Main content */}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="flex flex-col lg:flex-row gap-6">;
-            {/* Sidebar - Desktop */}
+            {/* Sidebar - Desktop */}"
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
-              <FilterSidebar
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-                selectedSkills={selectedSkills}
-                toggleSkill={toggleSkill}
-                selectedAvailability={selectedAvailability}
-                toggleAvailability={toggleAvailability}
-                selectedRegions={selectedRegions}
-                toggleRegion={toggleRegion}
-                priceRange={priceRange}
-                setPriceRange={setPriceRange}
-                experienceRange={experienceRange}
-                setExperienceRange={setExperienceRange}
-                expandedSections={expandedSections}
-                toggleSection={toggleSection}
-                sortOption={sortOption}
-                setSortOption={setSortOption}
-                clearFilters={clearFilters}
-              />
-            </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React, { useState } from "react",;
-import { useNavigate } from "react-router-dom",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { TalentGrid } from "@/components/talent/TalentGrid",;
-import { FilterSidebar } from "@/components/talent/FilterSidebar",;
-import { TalentResults } from "@/components/talent/TalentResults",;
-import { useTalentDirectory } from "@/hooks/useTalentDirectory",;
-import { SORT_OPTIONS } from "@/data/sortOptions",;
-import { X } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
+              <FilterSidebar;
+"
+import React, { useState } from "react",;"
+import { useNavigate } from "react-router-dom",;"
+import { AppLayout } from "@/layout/AppLayout",;"
+import { TalentGrid } from "@/components/talent/TalentGrid",;"
+import { FilterSidebar } from "@/components/talent/FilterSidebar",;"
+import { TalentResults } from "@/components/talent/TalentResults",;"
+import { useTalentDirectory } from "@/hooks/useTalentDirectory",;"
+import { SORT_OPTIONS } from "@/data/sortOptions",;"
+import { X } from "lucide-react",;"
+import { Button } from "@/components/ui/button",;"
 import { TalentProfile } from "@/types/talent",;
-export default function TalentDirectory() {;
-  const navigate = useNavigate(),;
-  // Use our custom hook to manage state;
-  const {;
-    filteredTalents,;
-    isLoading,;
-    searchTerm,;
-    setSearchTerm,;
-    selectedSkills,;
-    selectedAvailability,;
-    selectedRegions,;
-    priceRange,;
-    setPriceRange,;
-    experienceRange,;
-    setExperienceRange,;
-    sortOption,;
-    setSortOption,;
-    isMobileFilterOpen,;
-    setIsMobileFilterOpen,;
-    isHireModalOpen,;
-    setIsHireModalOpen,;
-    selectedTalent,;
-    setSelectedTalent,;
-    expandedSections,;
-    isAuthenticated,;
-    savedTalents,;
-    toggleSkill,;
-    toggleAvailability,;
-    toggleRegion,;
-    clearFilters,;
-    toggleSection,;
+export default function TalentDirectory() { return null; }
     handleToggleSave} = useTalentDirectory(),;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   const handleRequestHire = (talent: TalentProfile) => {;
     setSelectedTalent(talent),;
     setIsHireModalOpen(true);
   };
   const viewProfile = (id: string) => {;
-    // Navigate to the talent profile page;
+    // Navigate to the talent profile page;`
     navigate(`/talent/${id}`);
   };
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-import React, { useState } from "react",;
-import { useNavigate } from "react-router-dom",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { TalentGrid } from "@/components/talent/TalentGrid",;
-import { FilterSidebar } from "@/components/talent/FilterSidebar",;
-import { TalentResults } from "@/components/talent/TalentResults",;
-import { useTalentDirectory } from "@/hooks/useTalentDirectory",;
-import { SORT_OPTIONS } from "@/data/sortOptions",;
-import { X } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { TalentProfile } from "@/types/talent",;
-;
-export default function TalentDirectory() {;
-  const navigate = useNavigate(),;
-;
-  // Use our custom hook to manage state;
-  const {;
-    filteredTalents,;
-    isLoading,;
-    searchTerm,;
-    setSearchTerm,;
-    selectedSkills,;
-    selectedAvailability,;
-    selectedRegions,;
-    priceRange,;
-    setPriceRange,;
-    experienceRange,;
-    setExperienceRange,;
-    sortOption,;
-    setSortOption,;
-    isMobileFilterOpen,;
-    setIsMobileFilterOpen,;
-    isHireModalOpen,;
-    setIsHireModalOpen,;
-    selectedTalent,;
-    setSelectedTalent,;
-    expandedSections,;
-    isAuthenticated,;
-    savedTalents,;
-    toggleSkill,;
-    toggleAvailability,;
-    toggleRegion,;
-    clearFilters,;
-    toggleSection,;
-    handleToggleSave} = useTalentDirectory(),;
-  ;
-  const handleRequestHire = (talent:TalentProfile) => {;
-    setSelectedTalent(talent),;
-    setIsHireModalOpen(true);
-  },;
-  ;
-  const viewProfile = (id:string) => {;
-    // Navigate to the talent profile page;
-    navigate(`/talent/${id}`),;
-  },;
-  ;
-  return (;
-  const handleRequestHire = (talent: TalentProfile) => {;
-    setSelectedTalent(talent),;
-    setIsHireModalOpen(true);
-  },;
-  const viewProfile = (id: string) => {;
-    // Navigate to the talent profile page;
-    navigate(`/talent/${id}`);
-  },;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <AppLayout>;
-      <div className="container mx-auto px-4 py-8">;
+
+
+    <AppLayout>;"
+      <div className="container mx-auto px-4 py-8">;"
         <div className="flex flex-col space-y-8">;
-          <div>;
-            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>;
+          <div>;"
+            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>;"
             <p className="text-zion-slate-light">;
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
             </p>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-          ;
-          {/* Main content */}
-          <div className="flex flex-col lg:flex-row gap-6">;
-            {/* Sidebar - Desktop */}
-            <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
-              <FilterSidebar;
-                searchTerm={searchTerm}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     expanded_sections;
     is_authenticated;
     saved_talents;
@@ -469,39 +382,35 @@ export default function TalentDirectory() {;
     toggle_section;
     handleToggleSave} = useTalentDirectory ();
 ;
-  const handleRequestHire = (talent: TalentProfile) =>: any {
+  const handleRequestHire = (talent: TalentProfile) =>: any {}
     setSelectedTalent (talent),
     setIsHireModalOpen (true);
   }
 ;
-  const view_profile = (id: string) =>: any {
-    // Navigate to the talent profile page;
+  const view_profile = (id: string) =>: any {}
+    // Navigate to the talent profile page;`
     navigate (`/talent/${id}`);
   }
 ;
   return (
-    <AppLayout>;
-      <div className="container mx - auto px - 4 py - 8">;
+    <AppLayout>;"
+      <div className="container mx - auto px - 4 py - 8">;"
         <div className="flex flex - col space - y-8">;
-          <div>;
-            <h1 className="text - 3xl font - bold text - white mb - 2">AI & Tech Talent Directory</h1>;
+          <div>;"
+            <h1 className="text - 3xl font - bold text - white mb - 2">AI & Tech Talent Directory</h1>;"
             <p className="text - zion - slate - light">;
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
             </p>;
           </div>;
-          {/* Main content */}
+          {/* Main content */}"
           <div className="flex flex - col lg:flex - row gap - 6">;
-            {/* Sidebar - Desktop */}
+            {/* Sidebar - Desktop */}"
             <div className="w - full lg:w - 64 shrink - 0 hidden lg:block">;
               <FilterSidebar;
                 search_term={search_term}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
                 setSearchTerm={setSearchTerm}
                 selected_skills={selected_skills}
                 toggle_skill={toggle_skill}
@@ -517,13 +426,9 @@ export default function TalentDirectory() {;
                 toggle_section={toggle_section}
                 sort_option={sort_option}
                 setSortOption={setSortOption}
+
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-              />;
-            </div>;
-
-
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -531,9 +436,15 @@ export default function TalentDirectory() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Mobile filter button */}
+=======
+
+
+            {/* Mobile filter button */}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="lg:hidden mb-4">
-              <Button
+              <Button;
                 onClick={() => setIsMobileFilterOpen(true)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 variant="outline"
@@ -545,48 +456,36 @@ export default function TalentDirectory() {;
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-                variant="outline";
-                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+"
+                variant="outline";"
+                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
+
                 clear_filters={clear_filters}
               />;
             </div>;
-            {/* Mobile filter button */}
+            {/* Mobile filter button */}"
             <div className="lg:hidden mb - 4">;
               <Button;
-                on_click={() => setIsMobileFilterOpen (true)}
-                variant="outline";
+                on_click={() => setIsMobileFilterOpen (true)}"
+                variant="outline";"
                 className="w - full border - zion - blue - light text - zion - purple hover:bg - zion - blue - light";
-<<<<<<< HEAD
 
-=======
-                clearFilters={clearFilters}
-              />;
-            </div>;
-            ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            {/* Mobile filter button */}
+            {/* Mobile filter button */}"
             <div className="lg:hidden mb-4">;
-              <Button
+              <Button;
                 onClick={() => setIsMobileFilterOpen(true)}
-<<<<<<< HEAD
-                variant="outline";
-                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
               >;
                 Filter & Sort;
               </Button>;
             </div>;
+
+
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-
             
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -600,6 +499,9 @@ export default function TalentDirectory() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {/* Results */}
 =======
           </div>          {/* Main content */}
@@ -620,6 +522,7 @@ export default function TalentDirectory() {;
               is_loading={is_loading}
               view_profile={view_profile}
 
+<<<<<<< HEAD
             
 
             ;
@@ -631,6 +534,14 @@ export default function TalentDirectory() {;
               handleRequestHire={handleRequestHire}
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
+=======
+              handleRequestHire={handleRequestHire}
+              saved_talents={saved_talents}
+              handleToggleSave={handleToggleSave}
+
+
+                selected_skills;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 toggle_skill;
                 selected_availability;
                 toggle_availability;
@@ -638,6 +549,7 @@ export default function TalentDirectory() {;
                 toggle_region;
                 price_range;
 
+<<<<<<< HEAD
                 setPriceRange;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -665,6 +577,18 @@ export default function TalentDirectory() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
               activeFiltersProps={{
+=======
+              activeFiltersProps={{;
+                selectedSkills,;
+                toggleSkill,;
+                selectedAvailability,;
+                toggleAvailability,;
+                selectedRegions,;
+                toggleRegion,;
+                priceRange,;
+                setPriceRange,;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 selectedSkills;
                 toggleSkill;
                 selectedAvailability;
@@ -673,6 +597,7 @@ export default function TalentDirectory() {;
                 toggleRegion;
                 priceRange;
                 setPriceRange;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               activeFiltersProps={{;
 =======
@@ -747,37 +672,90 @@ export default function TalentDirectory() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     searchTerm={searchTerm}
 =======
+=======
+                experienceRange;
+                setExperienceRange;
+                clearFilters}}
+            />;
+
+
+              handleRequestHire={handleRequestHire}
+              saved_talents={saved_talents}
+              handleToggleSave={handleToggleSave}
+              activeFiltersProps={{;
+                selectedSkills,;
+                toggleSkill,;
+                selectedAvailability,;
+                toggleAvailability,;
+                selectedRegions,;
+                toggleRegion,;
+                priceRange,;
+                setPriceRange,;
+                experienceRange;
+              is_authenticated={is_authenticated}
+              activeFiltersProps={{}
+                setPriceRange;
+                experience_range;
+                setExperienceRange;
+
+            {/* Mobile filter sidebar */}
+            {isMobileFilterOpen && (;"
+              <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;"
+                <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">;"
+                  <div className="flex justify-between items-center mb-4">;"
+                    <h3 className="font-bold text-white">Filter & Sort</h3>;
+
+
+                    <Button"
+                      variant="ghost""
+                      size="sm"
+
+                      onClick={() => setIsMobileFilterOpen(false)}"
+                      className="text-zion-slate-light h-8 w-8 p-0";
+                    >;"
+                      <X className="h-4 w-4" />;"
+                      <span className="sr-only">Close</span>;
+                    </Button>;
+                  </div>;
+
+                    searchTerm={searchTerm}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 clear_filters}}
             />;
             {/* Mobile filter sidebar */}
-            {isMobileFilterOpen && (
-              <div className="fixed inset - 0 bg - black bg - opacity - 50 z - 50 lg:hidden flex">;
-                <div className="w - 80 h - full bg - zion - blue - dark overflow - y-auto p - 4 ml - auto">;
-                  <div className="flex justify - between items - center mb - 4">;
+            {isMobileFilterOpen && ("
+              <div className="fixed inset - 0 bg - black bg - opacity - 50 z - 50 lg:hidden flex">;"
+                <div className="w - 80 h - full bg - zion - blue - dark overflow - y-auto p - 4 ml - auto">;"
+                  <div className="flex justify - between items - center mb - 4">;"
                     <h3 className="font - bold text - white">Filter & Sort</h3>;
-                    <Button;
-                      variant="ghost";
+                    <Button;"
+                      variant="ghost";"
                       size="sm";
-                      on_click={() => setIsMobileFilterOpen (false)}
+                      on_click={() => setIsMobileFilterOpen (false)}"
                       className="text - zion - slate - light h - 8 w - 8 p - 0";
-                    >;
-                      <X className="h - 4 w - 4" />;
+                    >;"
+                      <X className="h - 4 w - 4" />;"
                       <span className="sr - only">Close</span>;
                     </Button>;
                   </div>;
                   <FilterSidebar;
                     search_term={search_term}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                     setSearchTerm={setSearchTerm}
-=======
-                  <FilterSidebar
+
+                  <FilterSidebar;
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     selected_skills={selected_skills}
                     toggle_skill={toggle_skill}
                     selected_availability={selected_availability}
@@ -794,6 +772,7 @@ export default function TalentDirectory() {;
                     setSortOption={setSortOption}
                     clear_filters={clear_filters}
                     isMobileFilterOpen={isMobileFilterOpen}
+<<<<<<< HEAD
                   />;
                 </div>;
 
@@ -965,3 +944,17 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>);
+}
+
+;
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

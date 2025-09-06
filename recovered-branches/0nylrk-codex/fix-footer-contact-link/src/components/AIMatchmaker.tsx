@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -24,28 +25,51 @@ import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 <<<<<<< HEAD
 =======
 import { Textarea } from "@/components/ui/textarea";
+=======
+import {useState} from "react";"
+import {toast} from "@/hooks/use-toast";"
+import {Button} from "@/components/ui/button";"
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";"
+import {AIMatchingResults} from "@/components/AIMatchingResults";"
+import {findMatches, MatchResult} from "@/lib/ai-matchmaking";"
+import {Textarea} from "@/components/ui/textarea";"
+import {Sparkles, Search} from "lucide-react";"
+import { useState } from "react","
+import { toast } from "@/hooks/use-toast","
+import { Button } from "@/components/ui/button","
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card","
+import { AIMatchingResults } from "@/components/AIMatchingResults","
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking",";
+import { Textarea } from "@/components/ui/textarea";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Sparkles, Search } from "lucide-react";
-interface AIMatchmakerProps {
-
+interface AIMatchmakerProps {}
 interface AIMatchmakerProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   serviceType?: string;
   onMatchSelect?: (match: any) => void,;
   className?: string;
 }
-
+"
 export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
-
+"
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
 
+<<<<<<< HEAD
   onMatchSelect?: (match: any) => void
 import { Textarea } from "@/components/ui/textarea",
+=======
+
+  onMatchSelect?: (match: any) => void"
+import { Textarea } from "@/components/ui/textarea","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Sparkles, Search } from "lucide-react",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -53,10 +77,14 @@ import { Sparkles, Search } from "lucide-react",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 interface AIMatchmakerProps {
+=======
+interface AIMatchmakerProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   serviceType?: string,
-  onMatchSelect?: (match: any) => void,
-  className?: string
+  onMatchSelect?: (match: any) => void,;
+  className?: string;
 }
+<<<<<<< HEAD
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
   const [query, setQuery] = useState("");
@@ -92,6 +120,18 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       return
 <<<<<<< HEAD
 
+=======
+"
+export function AIMatchmaker() { return null; }
+export function AIMatchmaker() { return null; }
+  const handleSearch = async () => {}
+    if (!query.trim()) {}
+      toast({"
+        title: "Please enter a description""
+        description: "Tell us what you're looking for so we can find matches.""
+        variant: "destructive"})
+      return;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
 <<<<<<< HEAD
@@ -101,6 +141,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         serviceType,
         3
 
+<<<<<<< HEAD
       ),
       
       // // // console.log("AI matching results:", results),
@@ -127,6 +168,9 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {;
+=======
+    try {;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       console && console.log("Starting AI matching with query:", query, "and service type:", serviceType);
 
       // Get AI matches;
@@ -136,23 +180,29 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         serviceType;
         3;
       );
-      toast({
+      toast({"
         title: "Matches Found"
         description: `Found ${results.length} matches based on your description.`})
-    } catch (error) {
+    } catch (error) {"
       console.error("Error during AI matching:", error),
-      toast({
-        title: "Matching Error"
-        description: "We couldn't find matches for your request. Please try again."
+      toast({"
+        title: "Matching Error"'"
+        description: "We couldn't find matches for your request. Please try again.""
         variant: "destructive"})
-      // Set empty matches to show no results found UI
+      // Set empty matches to show no results found UI;
       setMatches([])
+<<<<<<< HEAD
     } finally {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   // Extract just the items from each MatchResult
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    } finally {}
+  }
+  // Extract just the items from each MatchResult;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const matchItems = matches.map(match => match.item);
 
   };
@@ -171,6 +221,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       setIsMatchmaking(false)
 
   };
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",;
@@ -180,12 +231,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { AIMatchingResults } from "@/components/AIMatchingResults",;
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;
 import { Textarea } from "@/components/ui/textarea",;
+=======
+"
+import { useState } from "react",;"
+import { toast } from "@/hooks/use-toast",;"
+import { Button } from "@/components/ui/button",;"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { AIMatchingResults } from "@/components/AIMatchingResults",;"
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;"
+import { Textarea } from "@/components/ui/textarea",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Sparkles, Search } from "lucide-react",;
 interface AIMatchmakerProps {;
   serviceType?: string,;
   onMatchSelect?: (match: any) => void,;
   className?: string;
 }
+<<<<<<< HEAD
 ;
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
   const [query, setQuery] = useState(""),;
@@ -197,15 +259,19 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       toast({;
         title: "Please enter a description",,
   description: "Tell us what you're looking for so we can find matches.",;
+=======
+;"
+export function AIMatchmaker() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"}),;
       return;
     }
   }
-  const handleItemSelect = (item: any) => {
-    if (onMatchSelect) {
-      // Find the original MatchResult that contains this item
+  const handleItemSelect = (item: any) => {}
+    if (onMatchSelect) {}
+      // Find the original MatchResult that contains this item;
       const matchResult = matches.find(match => match.item.id === item.id)
-      if (matchResult) {
+      if (matchResult) {}
         onMatchSelect(matchResult)
       }
     }
@@ -219,46 +285,57 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   
-  // Extract just the items from each MatchResult
+  // Extract just the items from each MatchResult;
   const matchItems = matches.map(match => match.item),
   
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center text-white">
+=======
+  return ("`
+    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>"
+      <CardHeader className="pb-2">"
+        <CardTitle className="flex items-center text-white">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
-          AI Matchmaker
-        </CardTitle>
-        <p className="text-sm text-zion-slate-light">
-          Describe what you're looking for and our AI will find the best matches
+          AI Matchmaker;
+        </CardTitle>"
+        <p className="text-sm text-zion-slate-light">'
+          Describe what you're looking for and our AI will find the best matches;
         </p>
       </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
+      <CardContent>"
+        <div className="space-y-4">"
           <div className="space-y-2">
 <<<<<<< HEAD
 =======
     }
+<<<<<<< HEAD
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           Describe what you're looking for and our AI will find the best matches;
         </p>;
       </CardHeader>;
       <CardContent>;
-            <Button
+            <Button;
               onClick={handleSearch}
-              disabled={isMatchmaking}
+              disabled={isMatchmaking}"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
               {isMatchmaking ? (;
                 <>Analyzing your needs...</>;
               ) : (;
-                <>;
+                <>;"
                   <Search className="h-4 w-4 mr-2" />;
                   Find Matches;
                 </>;
               )}
-            <AIMatchingResults
+            <AIMatchingResults;
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
@@ -268,6 +345,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         </div>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
   );
         <div className="space-y-4">;
           <div className="space-y-2">;
@@ -286,6 +364,26 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
                 <>Analyzing your needs...</>) : (
                 <>;
                   <Search className="h - 4 w - 4 mr-2" />;
+=======
+  );"
+        <div className="space - y-4">;"
+          <div className="space - y-2">;
+            <Textarea;'"
+              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')";
+              value={query}
+              on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) => set_query (e.target.value)}"
+              className="min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+            />;
+            <Button;
+              on_click={handle_search}
+              disabled={is_matchmaking}"
+              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
+            >;
+              {is_matchmaking ? (
+                <>Analyzing your needs...</>) : (
+                <>;"
+                  <Search className="h - 4 w - 4 mr - 2" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Find Matches;
                 </>)}
             </Button>;
@@ -301,4 +399,4 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         </div>;
       </CardContent>;
     </Card>);
-}
+}'"`

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 =======
 import Head from 'next/head';
 import { 
@@ -8,27 +9,20 @@ import {
   ShieldCheck
 } from 'lucide-react';
 import Button from '../components/ui/Button';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
-import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
-import UltraAdvancedServiceCard from '../components/ui/UltraAdvancedServiceCard';
-import ServiceAds from '../components/sections/ServiceAds';
-import InnovativeServicesShowcase from '../components/sections/InnovativeServicesShowcase';
-import EnhancedNavigation from '../components/layout/EnhancedNavigation';
-import Card from '../components/ui/Card';
-import { motion } from 'framer-motion';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-17ac
 
 export default function HomePage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Zion AI Marketplace</h1>
       <p className="mt-2 text-gray-600 dark:text-gray-300">Welcome. Explore our products and services.</p>
     </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

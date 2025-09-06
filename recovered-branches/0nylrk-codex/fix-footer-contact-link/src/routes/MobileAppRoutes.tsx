@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,29 +39,48 @@ import OpenAppRedirect from "../pages/OpenAppRedirect";
 import { Route, Routes } from "react-router-dom",
 import MobileAppPage from "../pages/MobileAppPage",
 import MobileLaunchPage from "../pages/MobileLaunchPage";
+=======
+import { Route, Routes } from "react-router-dom";"
+import MobileAppPage from "../pages/MobileAppPage";"
+import MobileLaunchPage from "../pages/MobileLaunchPage";"
+import OpenAppRedirect from "../pages/OpenAppRedirect";
+const MobileAppRoutes = () => {}
+const MobileAppRoutes = () => {;
+
+"
+import {Route, Routes} from "react-router-dom";"
+import MobileAppPage from "../pages/MobileAppPage";"
+import MobileLaunchPage from "../pages/MobileLaunchPage";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import OpenAppRedirect from "../pages/OpenAppRedirect";
 
-import MobileLaunchPage from "../pages/MobileLaunchPage",
+"
+import { Route, Routes } from "react-router-dom","
+import MobileAppPage from "../pages/MobileAppPage",";
+import MobileLaunchPage from "../pages/MobileLaunchPage";"
+import OpenAppRedirect from "../pages/OpenAppRedirect";
+"
+import MobileLaunchPage from "../pages/MobileLaunchPage","
 import OpenAppRedirect from "../pages/OpenAppRedirect",
-const MobileAppRoutes = () => {
+const MobileAppRoutes = () => {}
   return (
     <Routes>
-      {/* Mobile App Routes */}
-      <Route path="/download" element={<MobileAppPage />} />
-      <Route path="/mobile-app" element={<MobileAppPage />} />
-      <Route path="/mobile-launch" element={<MobileLaunchPage />} />
+      {/* Mobile App Routes */}"
+      <Route path="/download" element={<MobileAppPage />} />"
+      <Route path="/mobile-app" element={<MobileAppPage />} />"
+      <Route path="/mobile-launch" element={<MobileLaunchPage />} />"
       <Route path="/open-app" element={<OpenAppRedirect />} />
     </Routes>
   )
-}
+};
 export default MobileAppRoutes;
 
 },
 
-export default MobileAppRoutes,
-import { Route, Routes } from "react-router-dom",;
-import MobileAppPage from "../pages/MobileAppPage",;
-import MobileLaunchPage from "../pages/MobileLaunchPage",;
+export default MobileAppRoutes,";
+import { Route, Routes } from "react-router-dom",;"
+import MobileAppPage from "../pages/MobileAppPage",;"
+import MobileLaunchPage from "../pages/MobileLaunchPage",;"
 import OpenAppRedirect from "../pages/OpenAppRedirect",;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,20 +89,21 @@ import OpenAppRedirect from "../pages/OpenAppRedirect",;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 const MobileAppRoutes = () => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-const MobileAppRoutes = () => {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+const MobileAppRoutes = () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const MobileAppRoutes = () => {;
+
   return (
     <Routes>;
-      {/* Mobile App Routes */}
-      <Route path="/download" element={<MobileAppPage />} />
-      <Route path="/mobile-app" element={<MobileAppPage />} />
-      <Route path="/mobile-launch" element={<MobileLaunchPage />} />
+      {/* Mobile App Routes */}"
+      <Route path="/download" element={<MobileAppPage />} />"
+      <Route path="/mobile-app" element={<MobileAppPage />} />"
+      <Route path="/mobile-launch" element={<MobileLaunchPage />} />"
       <Route path="/open-app" element={<OpenAppRedirect />} />
     </Routes>
   );
@@ -104,6 +125,7 @@ const MobileAppRoutes = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 const MobileAppRoutes = () => {
 const MobileAppRoutes = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -111,19 +133,31 @@ const MobileAppRoutes = () => {
 import { Route, Routes } from './react-router-dom';
 import MobileAppPage from "../pages / MobileAppPage";
 import MobileLaunchPage from "../pages / MobileLaunchPage";
+=======
+
+
+};
+
+
+
+import { Route, Routes } from './react-router-dom';"
+import MobileAppPage from "../pages / MobileAppPage";"
+import MobileLaunchPage from "../pages / MobileLaunchPage";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import OpenAppRedirect from "../pages / OpenAppRedirect";
-const MobileAppRoutes = () =>: any {
+const MobileAppRoutes = () =>: any {}
   return (
     <Routes>;
-      {/* Mobile App Routes */}
-      <Route path="/download" element={<MobileAppPage />} />;
-      <Route path="/mobile - app" element={<MobileAppPage />} />;
-      <Route path="/mobile - launch" element={<MobileLaunchPage />} />;
+      {/* Mobile App Routes */}"
+      <Route path="/download" element={<MobileAppPage />} />;"
+      <Route path="/mobile - app" element={<MobileAppPage />} />;"
+      <Route path="/mobile - launch" element={<MobileLaunchPage />} />;"
       <Route path="/open - app" element={<OpenAppRedirect />} />;
     </Routes>);
 }
 ;
 export default MobileAppRoutes;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,3 +192,9 @@ export default MobileAppRoutes;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

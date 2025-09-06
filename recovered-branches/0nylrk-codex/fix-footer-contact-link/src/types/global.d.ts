@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ReactNode } from 'react';
 import {ReactNode} from 'react';
@@ -53,10 +54,28 @@ declare module "@/components/FeatureCard" {
     icon: ReactNode;
     title: string,
   description: string;
+=======
+import { ReactNode } from "react";
+// Extend FeatureCardProps to include key for mapping"
+declare module "@/components/FeatureCard" {}
+  export interface FeatureCardProps {};
+    title: string;
+    description: string;
+    icon: ReactNode;
+    className?: string;
+    key?: number | string;
+  }
+}
+// Extend ListingScoreCardProps to include key for mapping;
+declare module '@/components / ListingScoreCard' {}
+    title: string;
+    description: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     category: string;
     image?: string;
     tags?: string[];
     author?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -252,6 +271,10 @@ declare module '@/components/ProductListingCard' {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     author_image?: string;
     ai_score?: number;
     rating?: number;
@@ -261,3 +284,8 @@ declare module '@/components/ProductListingCard' {;
     rating?: number;
   }
 }
+<<<<<<< HEAD
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

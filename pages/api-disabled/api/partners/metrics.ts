@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD:pages/api-disabled/api/partners/metrics.ts
 <<<<<<< HEAD:pages/api/partners/metrics.ts
 <<<<<<< HEAD
 =======
@@ -181,9 +182,18 @@ export default async function handler(
     if (usingPlaceholder) {
       return res.status(200).json({
 
+=======
+
+  const code = (req.query.code as string)?.toLowerCase();
+  if (!code) return res.status(400).json({ error: 'Missing code' });'
+  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+  try {}
+    if (usingPlaceholder) {}
+      return res.status(200).json({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/metrics.ts
         total_signups: 12, total_visits: 180,
         total_profile_completions: 7, total_job_creations: 5,
-        conversion_rate: 7 / 12, payout_amount: 210,
+        conversion_rate: 7 / 12, payout_amount: 210,'
         currency: 'USD'})
     }
     const supabase = getServerSupabase();
@@ -194,20 +204,21 @@ export default async function handler(
     }
     const supabase = getServerSupabase();
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     const events = ["visitsignupprofile_completedjob_createdhire"] as const;
     const counts: Record < string, number> = {}
-    for (const ev of events) {
-      const { count, error } = await supabase;
-        .from ("referral_events");
-        .select ("*", { count: "exact", head: true });
-        .eq ("partner_code", code);
+    for (const ev of events) {}
+      const { count, error } = await supabase;"
+        .from ("referral_events");"
+        .select ("*", { count: "exact", head: true });"
+        .eq ("partner_code", code);"
         .eq ("event", ev);
-      if (return res.status ($1).json ({ $2 })) {
-  $2
+      if (return res.status ($1).json ({ $2 })) {}
+  $2;
 }
       counts[ev] = count || 0;
     }
+<<<<<<< HEAD:pages/api-disabled/api/partners/metrics.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -220,14 +231,26 @@ export default async function handler(
         .from('referral_events')
         .select('*', { count: 'exact', head: true })
         .eq('partner_code', code)
+=======
+'
+    const events = ['visitsignupprofile_completedjob_createdhire'] as const;
+    const counts: Record<string, number> = {};
+
+    for (const ev of events) {}
+      const { count, error } = await supabase'
+        .from('referral_events')'
+        .select('*', { count: 'exact', head: true })'
+        .eq('partner_code', code)'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/metrics.ts
         .eq('event', ev);
       if (error) return res.status(500).json({ error: error.message });
-      counts[ev] = count || 0
-    }
-    const total_signups = counts['signup'] || 0;
-    const total_visits = counts['visit'] || 0;
-    const total_profile_completions = counts['profile_completed'] || 0;
+      counts[ev] = count || 0;
+    }'
+    const total_signups = counts['signup'] || 0;'
+    const total_visits = counts['visit'] || 0;'
+    const total_profile_completions = counts['profile_completed'] || 0;'
     const total_job_creations = counts['job_created'] || 0;
+<<<<<<< HEAD:pages/api-disabled/api/partners/metrics.ts
 <<<<<<< HEAD:pages/api/partners/metrics.ts
     return res.status(200).json({
 <<<<<<< HEAD
@@ -251,10 +274,14 @@ export default async function handler(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     return res.status(200).json({;
+=======
+    return res.status(200).json({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/metrics.ts
       total_signups;
       total_visits;
       total_profile_completions;
       total_job_creations;
+<<<<<<< HEAD:pages/api-disabled/api/partners/metrics.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/metrics.ts
     const total_signups = counts["signup"] || 0;
     const total_visits = counts["visit"] || 0;
@@ -346,3 +373,6 @@ export default async function handler(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/metrics.ts
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/metrics.ts

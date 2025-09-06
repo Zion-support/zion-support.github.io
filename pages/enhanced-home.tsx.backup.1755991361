@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -10,3 +11,6 @@ const EnhancedHome: NextPage = () => (
 );
 
 export default EnhancedHome;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

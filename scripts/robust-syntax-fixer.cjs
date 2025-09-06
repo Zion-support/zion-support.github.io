@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
 
 
@@ -30,6 +31,12 @@
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require("$1");
 const path = require("path");
@@ -39,6 +46,7 @@ class RobustSyntaxFixer {;}
     this.fixedFiles = [];
     this.errors = [],};
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
 
@@ -66,6 +74,12 @@ class RobustSyntaxFixer {;}
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   log(message) {;}
     console.log(`[${new Date().toISOString()}] ${message}`),};
 ;
@@ -157,6 +171,7 @@ class RobustSyntaxFixer {;}
 if (require.main === module) {;}
   const fixer = new RobustSyntaxFixer();
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -181,11 +196,18 @@ if (require.main === module) {;}
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   fixer.fixAllFiles().then(result => {;})
     console.log("Robust syntax fixing "completed": ", result);
     process.exit(0),}).catch(error => {;})
     console.error("Robust syntax fixing "failed": ', error);
     process.exit(1),}),};
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -206,3 +228,11 @@ module.exports = RobustSyntaxFixer);
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+;
+
+
+module.exports = RobustSyntaxFixer);
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

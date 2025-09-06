@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
 =======
 =======
@@ -43,30 +44,13 @@ export interface CompanyRecord {
     dueDate: string;
   }>;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-function generateId(): string {
-  return Math.random().toString(36).substr(2, 9);
-}
 
-const companiesById: Record<string, CompanyRecord> = {};
-const companiesBySlug: Record<string, CompanyRecord> = {};
 
-export function createCompany(record: Omit<CompanyRecord, 'members' | 'activity' | 'invoices'>): CompanyRecord {
-  const { id, slug } = record;
-  
-  const fullRecord: CompanyRecord = {
-    ...record,
-    members: [],
-    activity: [],
-    invoices: []
-  };
-  
-  companiesById[id] = fullRecord;
-  companiesBySlug[slug] = fullRecord;
-  
-  return fullRecord;
-}
 
+<<<<<<< HEAD
 export function getCompanyById(id: string): CompanyRecord | undefined {
   return companiesById[id];
 }
@@ -102,15 +86,19 @@ export function updateCompany(id: string, updates: Partial<CompanyRecord>): Comp
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
+=======
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   CompanyRecord,
   CompanyMember,
   EnterpriseRole,
-  InvoiceRecord,
+  InvoiceRecord,;
 } from '../types/enterprise';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -238,23 +226,42 @@ const seed_company: CompanyRecord = {
       monthlyJobPosts: 50,
       budgetCapUsd: 10000}},
   logoUrl: '/logo-acme.svg',;
+=======
+
+
+
+
+
+const generateId = () => Math.random().toString(36).slice(2, 10);
+'
+  slug: 'acme',;'
+  logoUrl: '/logo-acme.svg',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   brandColor: '#4F46E5',;
-  plan: {;
+  plan: {;'
     tier: 'business',;
     seatsPurchased: 25,;
     seatsUsed: 3,;
     usageLimits: {;
       monthlyJobPosts: 50,;
       budgetCapUsd: 10000}},;
+<<<<<<< HEAD
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
+=======
+
+  members: [;'
+    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },'
+    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],
-  activity: [;
-    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },
+  activity: [;'
+    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },'
     { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],
   invoices: [;
 
+<<<<<<< HEAD
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },;
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;
 
@@ -292,6 +299,9 @@ const seed_company: CompanyRecord = {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
   }}const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
+=======
+const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const store = {;
@@ -302,12 +312,13 @@ export const store = {;
     return companiesById[id] || null
 };
   createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
-    const id = `cmp_${generateId()}`;
+    const id = `cmp_${generateId()}`;`
     const slug = input.slug || `co-${generateId()}`;
     const record: CompanyRecord = {;
-      id;
+      id;'
       name: input.name || 'New Company';
       slug;
+<<<<<<< HEAD
       logoUrl: input.logoUrl;
 <<<<<<< HEAD
       brandColor: input.brandColor || '#111827';
@@ -324,9 +335,24 @@ export const store = {;
       invoices: []};
     companiesById[id] = record;
     companiesBySlug[slug] = record;
+=======
+      logoUrl: input.logoUrl;'
+      brandColor: input.brandColor || '#111827',;
+      plan: input.plan || {;'
+        tier: 'teams',;
+        seatsPurchased: 10,;
+        seatsUsed: 0,;
+        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 }},;
+      members: [],;
+      activity: [],;
+      invoices: []},;
+    companiesById[id] = record,;
+    companiesBySlug[slug] = record,;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return record;
   };
   addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {;
+<<<<<<< HEAD
     const company = companiesById[companyId];
     if (!company) return null;
     const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role };
@@ -335,11 +361,19 @@ export const store = {;
 <<<<<<< HEAD
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' });
 =======
+=======
+    const company = companiesById[companyId];'
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });`
+    const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },;
+    company.members.push(member);
+    company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return member;
   };
   removeMember(companyId: string, memberId: string): boolean {;
+<<<<<<< HEAD
     const company = companiesById[companyId];
 <<<<<<< HEAD
     if (!company) return false;
@@ -353,11 +387,14 @@ export const store = {;
     return changed;
   };
 =======
+=======
+    const company = companiesById[companyId];'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
+      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);'
       company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } });
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -365,6 +402,7 @@ export const store = {;
   },;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {;
+<<<<<<< HEAD
     const company = companiesById[companyId];
     if (!company) return false;
     const member = company.members.find(m => m.id === memberId);
@@ -373,6 +411,11 @@ export const store = {;
 <<<<<<< HEAD
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } });
 =======
+=======
+    const company = companiesById[companyId];'
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    member.role = role;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return true;
@@ -386,14 +429,20 @@ export const store = {;
 =======
     const company = companiesById[companyId],;
     if (!company) return false,;
-    const company = companiesById[companyId];
+    const company = companiesById[companyId];'
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
+<<<<<<< HEAD
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
+=======
+
+    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   };
@@ -428,3 +477,15 @@ export const store = {;
     const company = companiesById[company_id];
     return company ? company.invoices : [];
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  },
+  list_invoices (company_id: string): InvoiceRecord[] {}
+    const company = companiesById[company_id];
+    return company ? company.invoices : [];
+
+
+  }}
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

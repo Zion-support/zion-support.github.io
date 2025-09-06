@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -93,11 +94,20 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',function DisputeDet
 =======
 import { ProtectedRoute } from '@/components/ProtectedRoute',function DisputeDetailPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";"
+import { SEO } from "@/components/SEO";"
+import { AppHeader } from "@/layout/AppHeader";"
+import { Footer } from "@/components/Footer";"
+import { DisputeDetail } from "@/components/disputes";"
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+function DisputeDetailPage() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <ProtectedRoute>
       <>
-        <SEO
-          title="Dispute Details | Zion AI Marketplace"
+        <SEO"
+          title="Dispute Details | Zion AI Marketplace""
           description="View and manage dispute details"
         />
         <AppHeader />
@@ -108,8 +118,9 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',function DisputeDet
   );
 }
 
-        <SEO
+        <SEO"
           title="Dispute Details | Zion AI Marketplace"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,22 +148,28 @@ function DisputeDetailPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           description="View and manage dispute details"
-import React from 'react';
-import {SEO} from '@/components / SEO';
-import {AppHeader} from '@/layout / AppHeader';
-import {Footer} from '@/components / Footer';
-import {DisputeDetail} from '@/components / disputes';
+import React from 'react';'
+import {SEO} from '@/components / SEO';'
+import {AppHeader} from '@/layout / AppHeader';'
+import {Footer} from '@/components / Footer';'
+import {DisputeDetail} from '@/components / disputes';'
 import {ProtectedRoute} from '@/components / ProtectedRoute';
 /**
- * DisputeDetailPage - Function description
+ * DisputeDetailPage - Function description;
  */
-function DisputeDetailPage() {
+function DisputeDetailPage() {}
   return (
     <ProtectedRoute>;
       <>;
-        <SEO;
+        <SEO;"
           title="Dispute Details | Zion AI Marketplace";
+<<<<<<< HEAD
     </ProtectedRoute>);
 }
 <<<<<<< HEAD
@@ -166,13 +183,32 @@ export default DisputeDetailPage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+
+
+"
+          description="View and manage dispute details";
+        />;
+        <AppHeader />;
+        <DisputeDetail />;
+        <Footer />;
+      </>;
+
+;
+
+
+export default DisputeDetailPage;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export default DisputeDetailPage;
 ;
     </ProtectedRoute>;
   ),;
 }
-;
-export default DisputeDetailPage,; <ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details" /> <AppHeader /> <DisputeDetail /> <Footer /> </> </ProtectedRoute> export default DisputeDetailPage;
+;"
+export default DisputeDetailPage,; <ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details" /> <AppHeader /> <DisputeDetail /> <Footer /> </> </ProtectedRoute> export default DisputeDetailPage;"
           description="View and manage dispute details"
         />
         <AppHeader />
@@ -182,16 +218,20 @@ export default DisputeDetailPage,; <ProtectedRoute> <> <SEO title="Dispute Detai
     </ProtectedRoute>
   )
 }
-=======
+
 export default DisputeDetailPage;
 
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -199,6 +239,7 @@ export default DisputeDetailPage;
 
 ;
 export default DisputeDetailPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,3 +254,7 @@ export default DisputeDetailPage;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

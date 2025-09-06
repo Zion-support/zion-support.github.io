@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +28,23 @@ const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/ComprehensiveServicesShowcase2025.jsx
 import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
+=======
+
+
+import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';'
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
+:src.disabled/components/ComprehensiveServicesShowcase2025.jsx'
+import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';'"
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'
+import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
+:temp_exclude/src.disabled/components/ComprehensiveServicesShowcase2025.jsx;
+'
+import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';'"
+const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/ComprehensiveServicesShowcase2025.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,3 +87,15 @@ import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Cloc
 =======
 import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from';';lucide-react' import { useState } from';';react'';';''
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'
+import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from';';lucide-react' import { useState } from';';react'';';''
+'
+import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';'"
+const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"'
+import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from';';lucide-react' import { useState } from';';react'';';''
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

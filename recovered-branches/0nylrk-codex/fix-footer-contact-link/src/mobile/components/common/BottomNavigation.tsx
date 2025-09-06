@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
@@ -59,13 +60,23 @@ import React from "react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
+=======
+import React from "react";"
+import {Link, useLocation} from "react-router-dom";"
+import {Home, Search, Briefcase, MessageSquare, User} from "lucide-react";"
+import {cn} from "@/lib/utils";
+export function BottomNavigation() { return null; }
+import { Link, useLocation } from "react-router-dom",";
+import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils";
-export function BottomNavigation() {
-import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",
+export function BottomNavigation() { return null; }
+import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react","
 import { cn } from "@/lib/utils",
-export function BottomNavigation() {
+export function BottomNavigation() {}
   const location = useLocation(),
   
+<<<<<<< HEAD
   const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" },
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },
@@ -94,23 +105,27 @@ export function BottomNavigation() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+  const navItems = ["
+    { path: "/mobile", icon: <Home />, label: "Home" },"
+    { path: "/mobile/browse", icon: <Search />, label: "Browse" },"
+    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },"
+    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },"
+    { path: "/mobile/profile", icon: <User />, label: "Profile" }],
+;
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const location = useLocation();
-  const navItems = [
-    { path: "/mobile", icon: <Home />, label: "Home" }
-    { path: "/mobile/browse", icon: <Search />, label: "Browse" }
-    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" }
-    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" }
+  const navItems = ["
+    { path: "/mobile", icon: <Home />, label: "Home" }"
+    { path: "/mobile/browse", icon: <Search />, label: "Browse" }"
+    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" }"
+    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" }"
     { path: "/mobile/profile", icon: <User />, label: "Profile" }]
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">;
-      {navItems && navItems.map((item) => {;
-        const isActive = location && location.pathname === item && item.path;
-        return (
-          <Link
 
 
+<<<<<<< HEAD
               "flex flex-col items-center justify-center flex-1 py-1 px-2",
 
 
@@ -136,32 +151,29 @@ export function BottomNavigation() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               isActive ? "text-primary" : "text-muted-foreground"
             )}
-          >
+          >"
             <div className="h-5 w-5">
-              {React.cloneElement(item.icon as React.ReactElement, {
+              {React.cloneElement(item.icon as React.ReactElement, {"
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             key={item && item.path} 
             to={item && item.path}
-            className={cn(
-              "flex flex-col items-center justify-center flex-1 py-1 px-2"
+            className={cn("
+              "flex flex-col items-center justify-center flex-1 py-1 px-2""
               isActive ? "text-primary" : "text-muted-foreground"
             )}>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
               })}
-            </div>
+            </div>"
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -173,16 +185,20 @@ export function BottomNavigation() {
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;
+=======
+"
+import React from "react",;"
+import { Link, useLocation } from "react-router-dom",;"
+import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils",;
-export function BottomNavigation() {;
-  const location = useLocation(),;
-  const navItems = [;
-    { path: "/mobile", icon: <Home />, label: "Home" },;
-    { path: "/mobile/browse", icon: <Search />, label: "Browse" },;
-    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;
-    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;
+export function BottomNavigation() { return null; }
+    { path: "/mobile", icon: <Home />, label: "Home" },;"
+    { path: "/mobile/browse", icon: <Search />, label: "Browse" },;"
+    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;"
+    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;"
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
-  return (;
+  return (;"
     <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">;
       {navItems.map((item) => {;
         const isActive = location.pathname === item.path;
@@ -190,21 +206,14 @@ export function BottomNavigation() {;
           <Link;
             key={item.path} ;
             to={item.path}
-            className={cn(;
-              "flex flex-col items-center justify-center flex-1 py-1 px-2";
+            className={cn(;"
+              "flex flex-col items-center justify-center flex-1 py-1 px-2";"
               isActive ? "text-primary" : "text-muted-foreground";
             )}
           >;
-<<<<<<< HEAD
 
-            <div className="h-5 w-5">;
-              {React && React.cloneElement(item && item.icon as React && React.ReactElement, { ;
-                className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               })}
-            </div>;
+            </div>;"
             <span className="text-xs mt-1">{item && item.label}</span>;
           </Link>;
         );
@@ -219,12 +228,9 @@ export function BottomNavigation() {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       })}
+
+
 <<<<<<< HEAD
-
-    </div>;
-  );
-}
-
 <<<<<<< HEAD
 =======
 =======
@@ -238,46 +244,49 @@ export function BottomNavigation() {;
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, Briefcase, MessageSquare, User } from './lucide-react';
+=======
+
+import React from './react';'
+import { Link, use_location } from './react-router-dom';'
+import { Home, Search, Briefcase, MessageSquare, User } from './lucide-react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from '@/lib / utils';
-export /**
- * BottomNavigation - Function description
+export /**;
+ * BottomNavigation - Function description;
  */
-function BottomNavigation() {
+function BottomNavigation() {}
   const location = use_location ();
 ;
-  const nav_items = [;
-    { path: "/mobile", icon: <Home />, label: "Home" },
-    { path: "/mobile / browse", icon: <Search />, label: "Browse" },
-    { path: "/mobile / projects", icon: <Briefcase />, label: "Projects" },
-    { path: "/mobile / inbox", icon: <MessageSquare />, label: "Messages" },
+  const nav_items = [;"
+    { path: "/mobile", icon: <Home />, label: "Home" },"
+    { path: "/mobile / browse", icon: <Search />, label: "Browse" },"
+    { path: "/mobile / projects", icon: <Briefcase />, label: "Projects" },"
+    { path: "/mobile / inbox", icon: <MessageSquare />, label: "Messages" },"
     { path: "/mobile / profile", icon: <User />, label: "Profile" }],
-  return (
+  return ("
     <div className="fixed bottom - 0 left - 0 right - 0 bg - background border - t border - border flex justify - between px - 1 py - 2 z - 50">;
-      {nav_items.map ((item) => {
+      {nav_items.map ((item) => {}
         const is_active = location.pathname === item.path;
         return (
           <Link;
             key={item.path}
             to={item.path}
-            className={cn (
-              "flex flex - col items - center justify - center flex - 1 py - 1 px - 2";
+            className={cn ("
+              "flex flex - col items - center justify - center flex - 1 py - 1 px - 2";"
               is_active ? "text - primary" : "text - muted - foreground")}
-          >;
+          >;"
             <div className="h - 5 w - 5">;
-              {React.clone_element (item.icon as React.ReactElement, {
+              {React.clone_element (item.icon as React.ReactElement, {"
                 class_name: cn ("h - 5 w - 5", is_active ? "stroke - primary" : "stroke - muted - foreground");
               })}
-            </div>;
+            </div>;"
             <span className="text - xs mt - 1">{item.label}</span>;
           </Link>);
       })}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
+<<<<<<< HEAD
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;
@@ -331,3 +340,8 @@ export function BottomNavigation() {;
 =======
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

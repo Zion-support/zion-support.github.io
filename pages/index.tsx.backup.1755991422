@@ -1,10 +1,14 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 =======
 import AnimatedBackground from '@/components/ui/AnimatedBackground';
 import FuturisticHero from '@/components/ui/FuturisticHero';
 import FuturisticCard from '@/components/ui/FuturisticCard';
 import InteractiveStats from '@/components/ui/InteractiveStats';
 >>>>>>> origin/cursor/continuous-website-link-checker-and-fixer-d4cc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function Home() {
   return (
@@ -17,6 +21,10 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
@@ -51,6 +59,7 @@ export default function Home() {
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
             <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
@@ -192,5 +201,8 @@ export default function Home() {
         </main>
       </div>
     </>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

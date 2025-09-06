@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -157,10 +158,41 @@ initialPost: BlogPost | null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
+=======
+
+import React from 'react',;'
+import ReactMarkdown from 'react-markdown',;'
+import { useRouter } from 'next/router',;'
+import AdvancedSEO from '@/components/seo/AdvancedSEO',;'
+import { BLOG_POSTS } from '@/data/blog-posts',;'
+import { AuthorBio } from '@/components/blog/AuthorBio',;'
+import { SocialShareButtons } from '@/components/blog/SocialShareButtons',;'
+import { CommentsSection } from '@/components/blog/CommentsSection',;'
+import type { BlogPost } from '@/types/blog',;'
+import type { GetStaticPaths, GetStaticProps } from 'next',;'
+import fs from 'fs',;'
+import path from 'path',;
+function parseMarkdown(filePath: string): BlogPost | null {}
+  if (!fs.existsSync(filePath)) {}
+    return null;
+'
+import React from 'react';'
+import ReactMarkdown from 'react-markdown';'
+import { useRouter } from 'next/router';'
+import AdvancedSEO from '@/components/seo/AdvancedSEO';'
+import { BLOG_POSTS } from '@/data/blog-posts';'
+import { AuthorBio } from '@/components/blog/AuthorBio';'
+import { SocialShareButtons } from '@/components/blog/SocialShareButtons';'
+import { CommentsSection } from '@/components/blog/CommentsSection';
+
+
+const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const router = useRouter()
-  const { slug } = router.query
+  const { slug } = router.query;
   const [post, setPost] = React.useState<BlogPost | null>(initialPost)
   const [error, setError] = React.useState<string | null>(null)
+<<<<<<< HEAD
   React.useEffect(() => {
     if (initialPost && initialPost.slug === slug) {
 <<<<<<< HEAD
@@ -180,16 +212,24 @@ setError(null); // Clear any previous error
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } else if (slug) {
       // This case handles if the slug changes and initialPost is not for the current slug
+=======
+  React.useEffect(() => {}
+    if (initialPost && initialPost.slug === slug) {}
+      setError(null), // Clear any previous error;
+    } else if (slug) {}
+      // This case handles if the slug changes and initialPost is not for the current slug'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       // Or if initialPost was null from getStaticProps (which shouldn't happen if notFound is true)
-      // For now, we will rely on getStaticProps to provide the correct post or a 404.
+      // For now, we will rely on getStaticProps to provide the correct post or a 404.'
       // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.
 <<<<<<< HEAD
 
         setError(null)
-      } else {
+      } else {}
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
         // should ideally not be hit frequently, as getStaticProps would have returned notFound.
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -199,6 +239,9 @@ setError(null); // Clear any previous error
         // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null)
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         setError('Article not found')
 =======
 <<<<<<< HEAD
@@ -221,6 +264,7 @@ const directFallback = BLOG_POSTS.find(p => p.slug === slug) || null;
       }
     }
   }, [slug, initialPost])
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -249,11 +293,14 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 function parseMarkdown(filePath: string): BlogPost | null {;
   if (!fs.existsSync(filePath)) {;
     return null;
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 
 <<<<<<< HEAD
@@ -278,32 +325,33 @@ function parseMarkdown(filePath: string): BlogPost | null {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       set_post (initial_post),
       set_error (null), // Clear any previous error;
-    } else // Check condition
-if ( {) {
-  $2
+    } else // Check condition;
+if ( {) {}
+  $2;
 }
-      // For now, we will rely on getStaticProps to provide the correct post or a 404.;
+      // For now, we will rely on getStaticProps to provide the correct post or a 404.;'
       // If initial_post is null and getStaticProps didn't return not_found, that's an inconsistent state.;
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.;
       const direct_fallback = BLOG_POSTS.find ((p) => p.slug === slug) || null,
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         set_post (direct_fallback),
         set_error (null);
-      } else {
+      } else {}
         // If getStaticProps is working correctly, this path (slug exists, no initial_post, no fallback);
         // should ideally not be hit frequently, as getStaticProps would have returned not_found.;
-        // However, to maintain some robustness for dynamic client - side slug changes not triggering a new getStaticProps: set_post (null),
+        // However, to maintain some robustness for dynamic client - side slug changes not triggering a new getStaticProps: set_post (null),'
         set_error ('Article not found');
       }
     }
   }, [slug, initial_post]),
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -325,15 +373,12 @@ if ( {) {
 }
     return <div > Article not found</div>;
   }
-
 =======
-  const article_ld = {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    author: post.author.name,
-    published_time: post.published_date,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     tags: post.tags || []},
   const body = (post as any).body || post.content;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -353,11 +398,16 @@ tags: post.tags || [],
   };
   const body = (post as any).body || post.content;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>;
       <AdvancedSEO;
         title={post.title}
         description={post.excerpt}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -373,10 +423,15 @@ tags: post.tags || [],
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {post.excerpt && <p className="lead">{post.excerpt}</p>}
+=======
+"
+        {post.excerpt && <p className="lead">{post.excerpt}</p>}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex items - center gap - 3 mb - 6">;
           <img;
             src={post.author.avatar_url}
             alt={post.author.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -468,10 +523,15 @@ interface BlogPostPageProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="w-10 h-10 rounded-full"
-            onError={(e) => {
-              const target = e.currentTarget as HTMLImageElement
+            onError={(e) => {}
+              const target = e.currentTarget as HTMLImageElement'
               target.src = '/images/blog-placeholder.svg'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -482,10 +542,16 @@ interface BlogPostPageProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {post.author.title  } catch (error) {
     console.error("Error:", error);
+=======
+
+                {post.author.title  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </p>;
+<<<<<<< HEAD
             )  } catch (error) {
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -515,10 +581,20 @@ interface BlogPostPageProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            )  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
-        {post.featuredImage && (
+        {post.featuredImage && ("
           <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
+<<<<<<< HEAD
             <img
 <<<<<<< HEAD
 
@@ -588,14 +664,24 @@ type='article'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               src={post.featuredImage  } catch (error) {
     console.error("Error:", error);
+=======
+            <img;
+              alt={post.title}
+
+
+
+              src={post.featuredImage  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              alt={post.title  } catch (error) {
-    console.error("Error:", error);
+              alt={post.title  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -637,70 +723,39 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
 =======
 <<<<<<< HEAD
 =======
-
-=======
-              className="object - cover w - full h - full";
-              on_error={(e) => {
-                const target = e.current_target as HTMLImageElement,
-                target.src = '/images / blog - placeholder.svg';
-              }}
-            />;
-          </div>)}
-        <ReactMarkdown>{body}</ReactMarkdown>;
-        <AuthorBio author={post.author} />;
-        <SocialShareButtons title={post.title} />;
-        <CommentsSection slug={post.slug} />;
-      </main>;
-    </>);
-},
-export default BlogPostPage,
-export const getStaticPaths: GetStaticPaths = async () => {
-  const dir = path.join (process.cwd (), 'contentblog'),
-  const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.md')),
-  const paths = files.map ((f) => ({
-    params: { slug: f.replace (/\.md$/, '') }})),
-  // Use `blocking` so new posts added after build can be generated on demand;
-  return { paths, fallback: 'blocking' }
-},
-export const getStaticProps: GetStaticProps < BlogPostPageProps> = async ({
-  params}: {
-  params?: { slug?: string }
-}) => {
-  const slug = params?.slug as string,
-  // Validate slug to prevent malformed paths;
-  if () {) {
-  $2
-}
-    return { not_found: true }
-  }
-  const file_path = path.join (process.cwd (), 'contentblog', `${slug}.md`),
-  const post = parse_markdown (file_path),
-  // Check condition
-if ( {) {
-  $2
-}
-    return { not_found: true }
-  }
-  return { props: { initial_post: post }, revalidate: 60 }
-},
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+"
+              className="object-cover w-full h-full"
+              onError={(e) => {}
+                const target = e.currentTarget as HTMLImageElement'
+                target.src = '/images/blog-placeholder.svg'
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               }  } catch (error) {
     console.error("Error:", error);
+=======
+
+
+              }  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             />;
           </div>;
-        )  } catch (error) {
-    console.error("Error:", error);
+        )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -781,9 +836,11 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -839,3 +896,6 @@ return { notFound: true };
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

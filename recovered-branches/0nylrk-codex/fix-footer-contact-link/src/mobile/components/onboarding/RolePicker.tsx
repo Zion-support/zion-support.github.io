@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -25,12 +26,18 @@ type UserRole = "talent" | "client" | null;
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+=======
+import React, { useState } from "react";"
+import { Button } from "@/components/ui/button";"
+import { Card, CardContent } from "@/components/ui/card";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Briefcase, Users, Check } from "lucide-react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -38,34 +45,41 @@ import { Briefcase, Users, Check } from "lucide-react";
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
+=======
+
+
+
+
+
+import React, { useState } from './react';'
+import { Button } from '@/components / ui / button';'
+import { Card, CardContent } from '@/components / ui / card';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Briefcase, Users, Check } from './lucide-react';
-;
+;"
 type UserRole = "talent" | "client" | null;
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
 =======
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-type UserRole = "talent" | "client" | null;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
+"
+import React, { useState } from "react","
+import { Button } from "@/components/ui/button","
+import { Card, CardContent } from "@/components/ui/card","
 import { Briefcase, Users, Check } from "lucide-react",
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -78,6 +92,12 @@ type UserRole = "talent" | "client" | null,
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface RolePickerProps {
+=======
+"
+type UserRole = "talent" | "client" | null,
+
+interface RolePickerProps {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onSelect: (role: UserRole) => void;
 }
 <<<<<<< HEAD
@@ -85,15 +105,10 @@ interface RolePickerProps {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+
+
+
 <<<<<<< HEAD
-=======
-
-type UserRole = "talent" | "client" | null,
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-
   const handleSelect = (role: UserRole) => {
 <<<<<<< HEAD
     setSelectedRole(role)
@@ -139,18 +154,23 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+
+  const handleSelect = (role: UserRole) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     (setSelectedRole(role), onSelect(role));
   };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-  return (
-    <div className="space-y-4 px-4">
-      <h2 className="text-xl font-medium">What brings you to Zion?</h2>
+  return ("
+    <div className="space-y-4 px-4">"
+      <h2 className="text-xl font-medium">What brings you to Zion?</h2>"
       <p className="text-muted-foreground">
-        Choose how you want to use our platform
+        Choose how you want to use our platform;
       </p>
-
+"
       <div className="space-y-3 mt-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -199,43 +219,41 @@ interface RolePickerProps {
           className={`cursor-pointer transition-all ${
             selectedRole === "talent"
               ? "border-primary bg-primary/5"
+=======
+        <Card;
+          className={`cursor-pointer transition-all ${"
+            selectedRole === "talent""
+              ? "border-primary bg-primary/5""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               : "border-border hover:border-primary/40"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
+"
+import React, { useState } from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { Card, CardContent } from "@/components/ui/card",;"
 import { Briefcase, Users, Check } from "lucide-react",;
-;
+;"
 type UserRole = "talent" | "client" | null,;
 ;
 interface RolePickerProps {;
   onSelect:(role:UserRole) => void;
 }
 ;
-export function RolePicker({ onSelect } RolePickerProps) {;
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null),;
-;
-  const handleSelect = (role:UserRole) => {;
-    setSelectedRole(role),;
-    onSelect(role);
+export function RolePicker() { return null; }
   },;
 ;
-  return (;
-    <div className="space-y-4 px-4">;
-      <h2 className="text-xl font-medium">What brings you to Zion?</h2>;
+  return (;"
+    <div className="space-y-4 px-4">;"
+      <h2 className="text-xl font-medium">What brings you to Zion?</h2>;"
       <p className="text-muted-foreground">Choose how you want to use our platform</p>;
-;
+;"
       <div className="space-y-3 mt-6">;
-        <Card ;
-          className={`cursor-pointer transition-all ${;
-            selectedRole === 'talent' ;
-              ? "border-primary bg-primary/5" ;
+        <Card ;`
+          className={`cursor-pointer transition-all ${;'
+            selectedRole === 'talent' ;"
+              ? "border-primary bg-primary/5" ;"
               :"border-border hover:border-primary/40";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -295,15 +313,24 @@ export function RolePicker({ onSelect } RolePickerProps) {;
           <CardContent className="p-5">
             <div className="flex items-center">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+=======
+`
+          }`}"
+          onClick={() => handleSelect("talent")}
+        >"
+          <CardContent className="p-5">"
+            <div className="flex items-center">"
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Briefcase className="h-6 w-6 text-primary" />
-              </div>
-              <div className="flex-1">
-                <h3 className="font-medium">I'm offering services</h3>
+              </div>"
+              <div className="flex-1">'"
+                <h3 className="font-medium">I'm offering services</h3>"
                 <p className="text-sm text-muted-foreground">
-                  Find work and showcase your skills
+                  Find work and showcase your skills;
                 </p>
-              </div>
-              {selectedRole === "talent" && (
+              </div>"
+              {selectedRole === "talent" && ("
                 <Check className="h-5 w-5 text-primary" />
               )}
 
@@ -312,11 +339,8 @@ export function RolePicker({ onSelect } RolePickerProps) {;
         </Card>;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <Card
-=======
 
+<<<<<<< HEAD
         <Card
 <<<<<<< HEAD
         <Card
@@ -462,10 +486,13 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
                 <Check className="h-5 w-5 text-primary" />
               )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
           </CardContent>;
         </Card>;
         <Card;
+<<<<<<< HEAD
 <<<<<<< HEAD
           className={`cursor - pointer transition - all ${
             selected_role === 'client';
@@ -510,35 +537,21 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    </div>);
-=======
-;
-
-    </div>;
-  ),;}
- type UserRole = "talent" | "client" | null;
-space-y-3 mt-6"> <Card className= {
-  `cursor-pointer transition-all $ {
-  selectedRole === 'talent' > <CardContent className=" p-5"> <div className=" flex items-center"> <div className=" w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4"> <Briefcase className=" h-6 w-6 text-primary"/> </div> <div className=" flex-1"> <h3 className=" font-medium">I'm offering services</h3> <p className=" text-sm text-muted-foreground">Find work and showcase your skills</p> </div>) 
-}</div> </CardContent> </Card> <Card className= {
-  `cursor-pointer transition-all $ {
-  selectedRole === 'client'> <CardContent className=" p-5"> <div className=" flex items-center"> <div className=" w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4"> <Users className=" h-6 w-6 text-primary"/> </div> <div className=" flex-1"> <h3 className=" font-medium">I'm hiring</h3> <p className=" text-sm text-muted-foreground" >Post jobs and find talented professionals</p> </div>) 
-}</div> </CardContent> </Card> </div> </div>) 
-}
-    </div>;
-  );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 <<<<<<< HEAD
 =======
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -566,3 +579,9 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Briefcase, Users, Check } from "lucide-react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

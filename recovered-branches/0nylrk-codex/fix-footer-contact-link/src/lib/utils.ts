@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import clsx, { type ClassValue } from &quot;clsx&quot;
@@ -16,10 +17,11 @@ export function cn(...inputs: ClassValue[]) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -29,47 +31,48 @@ import { twMerge } from "tailwind-merge"
  
 
 export function cn(...inputs: ClassValue[]) {
+=======
+import clsx, { type ClassValue } from "clsx""
+import { twMerge } from "tailwind-merge"
+ 
+
+
+
+export function cn(...inputs: ClassValue[]) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return twMerge(clsx(inputs))
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 207d7230e0649fa517bb469b27623282180528c9
+;
+;
 import clsx, { type ClassValue } from &quot;clsx & quot;
 import { tw_merge } from &quot;tailwind - merge & quot;
 ;
-export /**
- * cn - Function description
+export /**;
+ * cn - Function description;
  */
-function cn() {
+function cn() {}
   return tw_merge (clsx (inputs));
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-import clsx, { type ClassValue } from "clsx";
+
+"
+import clsx, { type ClassValue } from "clsx";"
 import { twMerge } from "tailwind-merge";
  ;
-export function cn(...inputs:ClassValue[]) {;
-  return twMerge(clsx(inputs));
-} export function cn (...inputs: ClassValue[]) {
+export function cn() { return null; }
+} export function cn (...inputs: ClassValue[]) {}
   return twMerge (clsx (inputs) ) 
-}
+};
 import clsx, { type ClassValue } from &quot;clsx&quot;
-import { twMerge } from &quot;tailwind-merge&quot;
-import clsx, { type ClassValue } from "clsx"
+import { twMerge } from &quot;tailwind-merge&quot;"
+import clsx, { type ClassValue } from "clsx""
 import { twMerge } from "tailwind-merge"
  
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+export function cn(...inputs: ClassValue[]) {};
+  return twMerge(clsx(inputs));
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> 207d7230e0649fa517bb469b27623282180528c9
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -79,3 +82,8 @@ export function cn(...inputs: ClassValue[]) {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

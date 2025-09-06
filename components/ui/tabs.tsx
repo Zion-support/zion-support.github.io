@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface TabsProps {
@@ -186,3 +187,13 @@ export function TabsContent({ children, value, className = '', activeTab }) {
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
+=======
+import React from 'react''
+export function Tabs({ children, defaultValue, value, onValueChange, className = '''
+  const [activeTab, setActiveTab] = React.useState(defaultValue || '''
+export function TabsList({ children, className = '''
+export function TabsTrigger({ children, value, className = ''';
+          ? 'bg-purple-600 text-white';
+          : any;'
+export function TabsContent({ children, value, className = ''';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

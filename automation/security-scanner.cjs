@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -83,6 +84,11 @@ class SecurityScanner {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const { execSync } = require("child_process");"console.log(" Starting Security Scan.");const report = { timestamp: new Date().toISOString()," checks: []," vulnerabilities: [],"" overallStatus: "healthy"};/ npm audit (non-fatal)try {" const auditJson = execSync("npm audit --json", {"" encoding: "utf8","" stdio: ["ignore", "pipe", "pipe"]}); const audit = JSON.parse(auditJson); const vulnCount audit.metadata && audit.metadata.vulnerabilities ? Object.values(audit.metadata.vulnerabilities).reduce((a, b) => a + b, 0) : 0; report.checks.push({"" name: "npm audit","" status: vulnCount ? "warning" : "pass"," summary: vulnCount}); if (vulnCount) {" report.overallStatus = "warning"; }} catch (e) {"" report.checks.push({ name: "npm audit", status: "error", error: e.message });}/ sensitive files"const sensitiveFiles = [".env"," ".env.local"," ".env.production"," "private-key.pem",];const found = sensitiveFiles.filter(f => fs.existsSync(f));report.checks.push({"" name: "sensitive files","" status: found.length ? "warning" : "pass", found});"if (found.length) report.overallStatus = "warning";const out = `security-scan-report-${Date.now()}.json`;fs.writeFileSync(out, JSON.stringify(report, null, 2));"`console.log(` Security scan completed. Report: ${out}`);""`"`
 #!/usr/bin/env node;
 const fs = require('fs');
@@ -130,6 +136,7 @@ report.checks.push({
   found,
 });
 if (found.length) report.overallStatus = 'warning';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -322,6 +329,13 @@ class SecurityScanner {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
 =======
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -345,6 +359,7 @@ class SecurityScanner {
     };
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
@@ -356,6 +371,9 @@ class SecurityScanner {
 =======
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node
 
 <<<<<<< HEAD
@@ -366,8 +384,8 @@ class SecurityScanner {
  * Security Scanner
  * Automatically scans for security vulnerabilities
  */
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const { execSync } = require('child_process');
@@ -427,6 +445,13 @@ function runSecurityCheck(name, checkFunction) {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    }
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -451,14 +476,15 @@ class SecurityScanner {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
+<<<<<<< HEAD
 /**
  * Security Scanner
  * Comprehensive security scanning and enhancement automation
@@ -485,6 +511,8 @@ class SecurityScanner {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
@@ -493,6 +521,7 @@ class SecurityScanner {
 
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -509,8 +538,14 @@ class SecurityScanner {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-    
 =======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    
+
 #!/usr/bin/env node
 
 const fs = require("fs");
@@ -532,6 +567,7 @@ class SecurityScanner {
 
   async runNpmAudit() {
     this.log("🔍 Running npm audit...");
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 =======
@@ -602,6 +638,11 @@ class SecurityScanner {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     try {
         const result = checkFunction();
         if (result.status === 'pass') {
@@ -634,6 +675,7 @@ class SecurityScanner {
         console.log(`❌ ${name}: Error - ${error.message}`);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -646,6 +688,12 @@ class SecurityScanner {
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -692,6 +740,7 @@ runSecurityCheck('Sensitive Data Scan', () => {
         };
     }
 });
+<<<<<<< HEAD
 const out = `security-scan-report-${Date.now()}.json`;
 fs.writeFileSync(out, JSON.stringify(report, null, 2));
 console.log(`✅ Security scan completed. Report: ${out}`);
@@ -734,10 +783,31 @@ runSecurityCheck('Dependency Security', () => {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+
+class SecurityScanner {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logs', 'security-scanner.log');
+    this.ensureLogDir();
+  }
+
+
+
+// Check for outdated dependencies
+runSecurityCheck('Dependency Security', () => {
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 
   async auditDependencies() {
     this.log('\n🔍 AUDITING DEPENDENCIES');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -773,12 +843,18 @@ runSecurityCheck('Dependency Security', () => {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     try {
         if (!fs.existsSync('package.json')) {
             return {
                 status: 'fail',
                 message: 'package.json not found'
             };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -793,10 +869,17 @@ runSecurityCheck('Dependency Security', () => {
 =======
 =======
 =======
+=======
+
+    
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 
   async checkSensitiveFiles() {
     this.log("🔐 Checking for sensitive files...");
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 =======
@@ -804,6 +887,11 @@ runSecurityCheck('Dependency Security', () => {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     try {
       const sensitiveFiles = [
         ".env",
@@ -827,16 +915,25 @@ runSecurityCheck('Dependency Security', () => {
           foundSensitive = true;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
         const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+=======
+
+
+
+
+        
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         // Check for known vulnerable packages
         const vulnerablePackages = [
             'lodash', // Known for prototype pollution
             'moment', // Deprecated, use date-fns or dayjs
             'request' // Deprecated
         ];
+<<<<<<< HEAD
         const foundVulnerable = Object.keys(dependencies).filter(dep =>
             vulnerablePackages.includes(dep)
         );
@@ -852,6 +949,13 @@ runSecurityCheck('Dependency Security', () => {
                 message: `Potentially vulnerable packages: ${foundVulnerable.join(', ')}`,
                 recommendation: 'Consider updating or replacing these packages'
             };
+=======
+        
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
     } catch (error) {
         return {
@@ -859,6 +963,7 @@ runSecurityCheck('Dependency Security', () => {
             message: 'Could not analyze dependencies'
         };
     }
+<<<<<<< HEAD
 });
 // Check for security headers in Next.js config
 runSecurityCheck('Security Headers', () => {
@@ -914,6 +1019,15 @@ runSecurityCheck('Security Headers', () => {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+
+        }
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -944,6 +1058,7 @@ runSecurityCheck('Security Headers', () => {
         fixes
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -958,19 +1073,30 @@ runSecurityCheck('Security Headers', () => {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
       
       if (!permissionIssues) {
         this.fixes.push("File permissions are secure");
         this.log("✅ File permissions are secure");
       }
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     } catch (error) {
       this.log(`❌ Failed to check file permissions: ${error.message}`, "ERROR");
       this.errors.push(error.message);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -984,6 +1110,12 @@ runSecurityCheck('Security Headers', () => {
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -1018,6 +1150,7 @@ runSecurityCheck('Environment Security', () => {
                 issues.push(`Weak password detected in ${file}`);
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -1036,6 +1169,10 @@ runSecurityCheck('Environment Security', () => {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 
   async scanCodeSecurity() {
@@ -1067,6 +1204,7 @@ runSecurityCheck('Environment Security', () => {
           issue: 'Potential XSS in localStorage',
           fix: 'Sanitize data before storing in localStorage'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1086,6 +1224,11 @@ runSecurityCheck('Environment Security', () => {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       ];
 
@@ -1329,6 +1472,7 @@ export function securityHeaders(req, res, next) {
       this.log(`${status} ${task}: ${JSON.stringify(result, null, 2)}`);
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Save detailed report
     });
 =======
@@ -1350,11 +1494,19 @@ export function securityHeaders(req, res, next) {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+    
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (issues.length === 0) {
         return {
             status: 'pass',
             message: 'Environment files are properly secured'
         };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1382,48 +1534,14 @@ export function securityHeaders(req, res, next) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
   }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
-
-  async runCommand(command, description) {
-    try {
-      this.log(`Running: ${description}`);
-      const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
-        timeout: 120000
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message };
-    }
-  }
-
-  async scanDependencies() {
-    this.log('🔍 Scanning dependencies for vulnerabilities...');
-    
-    const depScan = await this.runCommand(
-      'npm audit --audit-level=moderate --json',
-      'Dependency vulnerability scan'
-    );
-    
-    if (depScan.success) {
-      this.log('✅ Dependency scan completed');
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     } else {
       this.log('⚠️ Dependency vulnerabilities found', 'WARN');
     }
-<<<<<<< HEAD
-});
 
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Check for HTTPS configuration
@@ -1438,6 +1556,8 @@ runSecurityCheck('HTTPS Configuration', () => {
             
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             if (configContent.includes('https') || configContent.includes('SSL')) {
                 return {
                     status: 'pass',
@@ -1446,17 +1566,22 @@ runSecurityCheck('HTTPS Configuration', () => {
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
         
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return {
             status: 'warning',
             message: 'HTTPS configuration not explicitly found',
             recommendation: 'Ensure HTTPS is properly configured for production'
         };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1592,6 +1717,11 @@ scanner.runSecurityScan().catch(console.error);
 =======
     
     // Save detailed report
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const report = {
       timestamp: new Date().toISOString(),
       totalDuration,
@@ -1608,12 +1738,18 @@ scanner.runSecurityScan().catch(console.error);
     this.log(`📊 Security scan completed! Report saved to: ${reportPath}`);
     this.log(`🔒 Security Score: ${report.securityScore}% (${passedChecks}/${securityChecks.length} checks passed)`);
     
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     try {
       await this.auditDependencies();
       await this.scanCodeSecurity();
       await this.setupSecurityHeaders();
       await this.setupContentSecurityPolicy();
       await this.checkAuthenticationSecurity();
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     } catch (error) {
       this.log(`⚠️ Security fix had issues: ${error.message}`, "WARN");
@@ -1638,10 +1774,44 @@ runSecurityCheck('File Permissions', () => {
         
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+    } catch (error) {
+        return {
+            status: 'fail',
+            message: 'Could not check HTTPS configuration'
+        };
+    }
+
+
+});
+
+
+  }
+
+  async runSecurityFix() {
+    this.log("🔧 Running security fixes...");
+    try {
+      execSync("npm audit fix", {
+        cwd: this.projectRoot,
+        stdio: "inherit"
+      });
+      this.fixes.push("Security vulnerabilities fixed");
+      this.log("✅ Security vulnerabilities fixed");
+
+
+    } catch (error) {
+      this.log(`⚠️ Security fix had issues: ${error.message}`, "WARN");
+    }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         sensitiveFiles.forEach(file => {
             if (fs.existsSync(file)) {
                 const stats = fs.statSync(file);
                 const mode = stats.mode & parseInt('777', 8);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1649,11 +1819,15 @@ runSecurityCheck('File Permissions', () => {
                 
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 // Check if file is world-readable (should not be)
                 if (mode & 4) {
                     issues.push(`${file} is world-readable`);
                 }
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1665,23 +1839,13 @@ runSecurityCheck('File Permissions', () => {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
 
-  async runSecurityScan() {
-    const securityChecks = [
-      { name: 'NPM Audit', command: 'npm audit', description: 'Checking for vulnerable dependencies' },
-      { name: 'Security Fix', command: 'npm audit fix --force', description: 'Fixing security vulnerabilities' },
-      { name: 'Dependency Check', command: 'npm outdated', description: 'Checking for outdated dependencies' },
-      { name: 'License Check', command: 'npm audit --audit-level moderate', description: 'Checking license compliance' }
-    ];
 
-    const results = [];
-    let passedChecks = 0;
 
+<<<<<<< HEAD
     for (const check of securityChecks) {
       try {
         this.log(`🔍 Running ${check.name}...`);
@@ -1819,46 +1983,13 @@ console.log(`\n📄 Report saved to: ${reportPath}`);
 =======
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     } catch (error) {
       this.log(`💥 Fatal error: ${error.message}`, "ERROR");
       process.exit(1);
     }
-<<<<<<< HEAD
-});
 
-// Determine overall security status
-if (securityReport.summary.failed > 0) {
-    securityReport.status = 'vulnerable';
-} else if (securityReport.summary.warnings > 0) {
-    securityReport.status = 'needs_attention';
-}
-
-// Save security report
-const reportPath = 'security-scan-report.json';
-fs.writeFileSync(reportPath, JSON.stringify(securityReport, null, 2));
-
-console.log('\n📊 Security Scan Summary');
-console.log('========================');
-console.log(`Total Checks: ${securityReport.summary.total}`);
-console.log(`✅ Passed: ${securityReport.summary.passed}`);
-console.log(`⚠️  Warnings: ${securityReport.summary.warnings}`);
-console.log(`❌ Failed: ${securityReport.summary.failed}`);
-console.log(`🚨 Vulnerabilities: ${securityReport.summary.vulnerabilities}`);
-console.log(`\nOverall Status: ${securityReport.status.toUpperCase()}`);
-
-if (securityReport.vulnerabilities.length > 0) {
-    console.log('\n🚨 Security Issues Found:');
-    securityReport.vulnerabilities.forEach((vuln, index) => {
-        console.log(`${index + 1}. ${vuln.check}: ${vuln.message}`);
-        if (vuln.recommendation) {
-            console.log(`   💡 Recommendation: ${vuln.recommendation}`);
-        }
-    });
-}
-
-console.log(`\n📄 Report saved to: ${reportPath}`);
-
->>>>>>> main
 // Exit with appropriate code
 if (securityReport.status === 'vulnerable') {
     process.exit(1);
@@ -1866,43 +1997,27 @@ if (securityReport.status === 'vulnerable') {
     process.exit(2);
 } else {
     process.exit(0);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 }
-=======
-}
-=======
-}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
+
+
+
+
   }
 }
 
 const scanner = new SecurityScanner();
 scanner.run().catch(console.error);
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
+
+
+
+
+
+
+
+
   }
 
   async scanCode() {
@@ -3208,12 +3323,16 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 
     this.log('🔄 Security Scanner is running. Scans every 4 hours.');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -3236,6 +3355,7 @@ if (require.main === module) {
 =======
 
 module.exports = SecurityScanner;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -3301,3 +3421,13 @@ main
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

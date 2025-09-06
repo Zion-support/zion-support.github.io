@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
@@ -10,14 +11,23 @@ const steps = [;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
 =======
-import { GradientHeading } from "./GradientHeading",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+  {}
+    title: "Post","
+    description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
+    icon: Send},
+
+
+"
+import { GradientHeading } from "./GradientHeading","
 import { Check, Handshake, Search, Send } from "lucide-react",
 
 
 
 
+<<<<<<< HEAD
 const steps = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
@@ -34,25 +44,41 @@ const steps = [;
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
     icon: Send},
+=======
+const steps = []
+  {"
+    title: "Post",";
+    description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
+    icon: Send},
+
+
+"
+import {GradientHeading} from "./GradientHeading";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Check, Handshake, Search, Send} from "lucide-react";
-const steps = [
-  {
-    title: "Post"
+const steps = []
+  {"
+    title: "Post""
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
-    icon: Send}
-import {GradientHeading} from "./GradientHeading";
-import {Check, Handshake, Search, Send} from "lucide-react";
-import { GradientHeading } from "./GradientHeading",
+    icon: Send}"
+import {GradientHeading} from "./GradientHeading";"
+import {Check, Handshake, Search, Send} from "lucide-react";"
+import { GradientHeading } from "./GradientHeading","
 import { Check, Handshake, Search, Send } from "lucide-react",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 import { GradientHeading } from './GradientHeading';
+=======
+;
+import { GradientHeading } from './GradientHeading';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Check, Handshake, Search, Send } from './lucide-react';
 const steps = [;
-
-import { GradientHeading } from "./GradientHeading",
+"
+import { GradientHeading } from "./GradientHeading","
 import { Check, Handshake, Search, Send } from "lucide-react",
 
 <<<<<<< HEAD
@@ -60,6 +86,7 @@ import { Check, Handshake, Search, Send } from "lucide-react",
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -81,80 +108,36 @@ const steps = [
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: "Match"
+=======
+const steps = []
+  {"
+    title: "Post",";
+    description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
+    icon: Send},
+
+  {"
+    title: "Match""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     description: "Our AI automatically matches your needs with the perfect providers or opportunities."
     icon: Search}
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
+  {}
 const steps = [;
-  {;
-    title: "Post",;
-    description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
-    icon: Send},;
-  {;
-    title: "Match",;
-    description: "Our AI automatically matches your needs with the perfect providers or opportunities.",;
-    icon: Search},;
-  {;
-    title: "Hire/Buy",;
-    description: "Connect directly with matched providers and complete your transaction securely.",;
-    icon: Handshake},;
-  {;
-    title: "Done",;
-    description: "Enjoy hassle-free delivery and support for your technology solutions.",;
-    icon: Check}],;
-                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-
-    title: "Hire/Buy"
-    description: "Connect directly with matched providers and complete your transaction securely."
-    icon: Handshake}
-  {
-    title: "Done"
-    description: "Enjoy hassle-free delivery and support for your technology solutions."
-    icon: Check}]
-
-export function HowItWorksSection() {
-  return (
-    <section className="py-20 bg-zion-blue">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <GradientHeading>How It Works</GradientHeading>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-            A simple four-step process to connect technology providers with clients
-          </p>
-        </div>
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
-          <div className="space-y-12 md:space-y-0">
-            {steps.map((step, index) => (
-              <div
-                key={step.title}
-                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-import { GradientHeading } from "./GradientHeading",;
-import { Check, Handshake, Search, Send } from "lucide-react",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-const steps = [;
-  {;
-    title: "Post",;
+  {;"
+    title: "Post",;"
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.",;
     icon: Send},;
-  {;
-    title: "Match",;
+  {;"
+    title: "Match",;"
     description: "Our AI automatically matches your needs with the perfect providers or opportunities.",;
     icon: Search},;
-  {;
-    title: "Hire/Buy",;
+  {;"
+    title: "Hire/Buy",;"
     description: "Connect directly with matched providers and complete your transaction securely.",;
     icon: Handshake},;
-  {;
-    title: "Done",;
+  {;"
+    title: "Done",;"
     description: "Enjoy hassle-free delivery and support for your technology solutions.",;
+<<<<<<< HEAD
 <<<<<<< HEAD
     icon: Check}],;
 
@@ -170,24 +153,29 @@ export function HowItWorksSection() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { GradientHeading } from "./GradientHeading",;
+=======
+"
+import { GradientHeading } from "./GradientHeading",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Check, Handshake, Search, Send } from "lucide-react",;
 const steps = [;
-  {;
-    title: "Post",;
+  {;"
+    title: "Post",;"
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.",;
     icon: Send},;
-  {;
-    title: "Match",;
+  {;"
+    title: "Match",;"
     description: "Our AI automatically matches your needs with the perfect providers or opportunities.",;
     icon: Search},;
-  {;
-    title: "Hire/Buy",;
+  {;"
+    title: "Hire/Buy",;"
     description: "Connect directly with matched providers and complete your transaction securely.",;
     icon: Handshake},;
-  {;
-    title: "Done",;
+  {;"
+    title: "Done",;"
     description: "Enjoy hassle-free delivery and support for your technology solutions.",;
     icon: Check}];
+<<<<<<< HEAD
 export function HowItWorksSection() {;
   return (;
 <<<<<<< HEAD
@@ -245,11 +233,23 @@ export function HowItWorksSection() {;
             A simple four-step process to connect technology providers with clients;
           </p>;
         </div>;
+=======
+export function HowItWorksSection() { return null; }
+          {/* Timeline line */}"
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0 && 0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;
+"
+          <div className="space-y-12 md:space-y-0">;
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {steps.map((step, index) => (;
               <div;
                 key={step.title}
-                className={`flex flex-col md:flex-row items-center ${;
+                className={`flex flex-col md:flex-row items-center ${;"
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -269,29 +269,47 @@ export function HowItWorksSection() {;
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 } relative`}
-              >
+              >"
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
                   {index % 2 === 0 ? (
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
+                    <div>"
+                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>"
                       <p className="text-zion-slate-light">{step.description}</p>
+<<<<<<< HEAD
                     </div>                </div>;
 
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
+=======
+                    </div>
+
+
+                  ) : null}
+
+
+                </div>;
+"
+                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <step && step.icon className="w-6 h-6 text-zion-cyan" />;
                 </div>;
-
+"
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">;
-                  {index % 2 !== 0 ? (;
-                } relative`}>;
+                  {index % 2 !== 0 ? (;`
+                } relative`}>;"
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">;
                   {index % 2 === 0 ? (;
-                    <div>;
-                      <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
+                    <div>;"
+                      <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;"
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
 
+<<<<<<< HEAD
                   ) : null}
                 </div>;
               </div>;
@@ -369,6 +387,10 @@ export function HowItWorksSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -378,64 +400,62 @@ export function HowItWorksSection() {;
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  );
-}
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    title: "Hire / Buy",
+"
+    title: "Hire / Buy","
     description: "Connect directly with matched providers and complete your transaction securely.",
     icon: Handshake},
-  {
-    title: "Done",
+  {"
+    title: "Done","
     description: "Enjoy hassle - free delivery and support for your technology solutions.",
     icon: Check}],
-export /**
- * HowItWorksSection - Function description
+export /**;
+ * HowItWorksSection - Function description;
  */
-function HowItWorksSection() {
-  return (
-    <section className="py - 20 bg - zion - blue">;
-      <div className="container mx - auto px - 4">;
+function HowItWorksSection() {}
+  return ("
+    <section className="py - 20 bg - zion - blue">;"
+      <div className="container mx - auto px - 4">;"
         <div className="text - center mb - 16">;
-          <GradientHeading > How It Works</GradientHeading>;
+          <GradientHeading > How It Works</GradientHeading>;"
           <p className="text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto">;
             A simple four - step process to connect technology providers with clients;
           </p>;
-        </div>;
+        </div>;"
         <div className="relative">;
-          {/* Timeline line */}
-          <div className="absolute left - 4 md:left - 1/2 top - 0 h - full w - 0.5 bg - gradient - to - b from - zion - purple via - zion - cyan to - zion - purple - light transform -translate - x-1 / 2 md:block hidden"></div>;
+          {/* Timeline line */}"
+          <div className="absolute left - 4 md:left - 1/2 top - 0 h - full w - 0.5 bg - gradient - to - b from - zion - purple via - zion - cyan to - zion - purple - light transform -translate - x-1 / 2 md:block hidden"></div>;"
           <div className="space - y-12 md:space - y-0">;
             {steps.map ((step, index) => (
               <div;
-                key={step.title}
-                className={`flex flex - col md:flex - row items - center ${
-                  index % 2 === 0 ? "md:flex - row - reverse" : "";
+                key={step.title}`
+                className={`flex flex - col md:flex - row items - center ${"
+                  index % 2 === 0 ? "md:flex - row - reverse" : "";`
                 } relative`}
-              >;
+              >;"
                 <div className="md:w - 1/2 mb - 6 md:mb - 0 md:px - 12 text - center md:text - right">;
                   {index % 2 === 0 ? (
-                    <div>;
-                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
+                    <div>;"
+                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;"
                       <p className="text - zion - slate - light">{step.description}</p>;
                     </div>) : null}
-                </div>;
-                <div className="relative z - 10 flex items - center justify - center w - 12 h - 12 rounded - full bg - zion - blue - light border - 2 border - zion - purple mx - 4 md:mx - 0">;
+                </div>;"
+                <div className="relative z - 10 flex items - center justify - center w - 12 h - 12 rounded - full bg - zion - blue - light border - 2 border - zion - purple mx - 4 md:mx - 0">;"
                   <step.icon className="w - 6 h - 6 text - zion - cyan" />;
-                </div>;
+                </div>;"
                 <div className="md:w - 1/2 md:px - 12 text - center md:text - left">;
                   {index % 2 !== 0 ? (
-                    <div>;
-                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
+                    <div>;"
+                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;"
                       <p className="text - zion - slate - light">{step.description}</p>;
                     </div>) : null}
                 </div>;
@@ -445,23 +465,14 @@ function HowItWorksSection() {
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 
 };
 ;
 
+
+
 <<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-};
-;
-
   ),;}
  const steps = [ {
   title: "Post";
@@ -510,3 +521,7 @@ icon: Handshake
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

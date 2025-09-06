@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,39 +64,39 @@ function useUIState() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+import {useState} from 'react';'
+import {TalentProfile} from '@/types/talent';
+export function useUIState() { return null; }
+  const [expandedSections, setExpandedSections] = useState({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     skills: true;
     availability: true;
     region: true;
 
-    experience: true
+    experience: true;
     price: true});
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   // Toggle expanded sections in the sidebar;
-  const toggle_section = (section_name: keyof typeof expanded_sections) =>: any {
-    setExpandedSections (prev => ({
+  const toggle_section = (section_name: keyof typeof expanded_sections) =>: any {}
+    setExpandedSections (prev => ({}
       ...prev,
       [section_name]: !prev[section_name];
     }));
   }
 ;
   // Handler for closing mobile filter sidebar;
-  const closeMobileFilter = () =>: any {
+  const closeMobileFilter = () =>: any {}
     setIsMobileFilterOpen (false);
   }
 ;
-  // Effect to listen for the custom event to close mobile filter;
+  // Effect to listen for the custom event to close mobile filter;'
   // This would typically be in a useEffect hook, but we'll handle it via the button's on_click;
+
+
 <<<<<<< HEAD
-
-=======
-    skills: true;
-    availability: true;
-    region: true;
-
     experience: true
     price: true});
   // Toggle expanded sections in the sidebar
@@ -119,10 +120,15 @@ function useUIState() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return {
+=======
+
+  return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
+<<<<<<< HEAD
     selected_talent;
     setSelectedTalent;
 <<<<<<< HEAD
@@ -146,16 +152,16 @@ function useUIState() {
     selected_talent;
     setSelectedTalent;
 import { useState } from 'react',;
+=======
+
+
+    selected_talent;
+    setSelectedTalent;
+'
+import { useState } from 'react',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { TalentProfile } from '@/types/talent',;
-export function useUIState() {;
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false),;
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
-  const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),;
-  const [expandedSections, setExpandedSections] = useState({;
-    skills: true,;
-    availability: true,;
-    region: true,;
-    experience: true,;
+export function useUIState() { return null; }
     price: true}),;
   // Toggle expanded sections in the sidebar;
   const toggleSection = (sectionName: keyof typeof expandedSections) => {;
@@ -168,7 +174,7 @@ export function useUIState() {;
   const closeMobileFilter = () => {;
     setIsMobileFilterOpen(false);
   },;
-  // Effect to listen for the custom event to close mobile filter;
+  // Effect to listen for the custom event to close mobile filter;'
   // This would typically be in a useEffect hook, but we'll handle it via the button's onClick;
   return {;
     isMobileFilterOpen,;
@@ -179,8 +185,8 @@ export function useUIState() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
     setSelectedTalent,;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -198,9 +204,23 @@ export function useUIState() {;
     toggle_section;
     closeMobileFilter}
 }    expandedSections;
+=======
+    expanded_sections;
+    toggle_section;
+
+    closeMobileFilter}
+
+
+    expandedSections;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     toggleSection;
 
     expanded_sections;
     toggle_section;
     closeMobileFilter}
 }
+<<<<<<< HEAD
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

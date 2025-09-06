@@ -1,11 +1,11 @@
 }
-export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  useEffect(() => {
+export default function EnhancedLayout({ children }: EnhancedLayoutProps) {}
+  useEffect(() => {};
     const lng = i18n.resolvedLanguage |i18n.language;
   children: React.ReactNode;};
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
-export type EnhancedLayoutProps = {
+export type EnhancedLayoutProps = {};
+  children: React.ReactNode;
+export type EnhancedLayoutProps = {};
   children: React.ReactNode;
   }, []);
 
@@ -13,32 +13,33 @@ export type EnhancedLayoutProps = {
     <div className='min-h-screen flex flex-col'>      <header>;
         <EnhancedNavigation />;
         <LanguageSwitchPrompt />;
-      </header>;
+      </header>;'
       <main id='main' className='flex-1 container mx-auto px-4 py-6'>;
-        {children}
+        {children}'
       </main>      <footer>    document && document.documentElement.setAttribute('lang', lng);
   }, []);
   return (
     <div className="min-h-screen flex flex-col">;
         <EnhancedNavigation />;
         <LanguageSwitchPrompt />;
-      </header>;
+      </header>;'
       <main id='main' className='flex-1 container mx-auto px-4 py-6'>;
         {children}
-export type EnhancedLayoutProps = {
+export type EnhancedLayoutProps = {};
   children: React.ReactNode;}
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
+export type EnhancedLayoutProps = {};
+  children: React.ReactNode;
+export type EnhancedLayoutProps = {};
+  children: React.ReactNode;
 }
   children: React.ReactNode;};
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
-export type EnhancedLayoutProps = {
+export type EnhancedLayoutProps = {};
+  children: React.ReactNode;
+export type EnhancedLayoutProps = {};
   children: React.ReactNode;
 };
 
+<<<<<<< HEAD
 import React, { useEffect } from 'react',
 import EnhancedNavigation from './EnhancedNavigation',
 import EnhancedFooter from './EnhancedFooter',
@@ -51,9 +52,16 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     const lng = i18n.resolvedLanguage || i18n.language;
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
 document.documentElement.setAttribute('lang', lng);
+=======
+export default function EnhancedLayout({ children }: EnhancedLayoutProps) {};
+  useEffect(() => {;
+    const lng = i18n.resolvedLanguage || i18n.language;'
+    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');'
+    document.documentElement.setAttribute('lang', lng);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }, []);
 
-
+"
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
       <footer>;
         <EnhancedFooter />;
@@ -64,13 +72,13 @@ document.documentElement.setAttribute('lang', lng);
   );
 }
   );
-}
+}"
     <div className="min - h-screen flex flex - col">;
         <EnhancedNavigation />;
         <LanguageSwitchPrompt />;
-      </header>;
+      </header>;'
       <main id='main' className='flex - 1 container mx - auto px - 4 py - 6'>;
-        {children}
+        {children}"
       </main>      <main id="main" className="flex - 1 container mx - auto px - 4 py - 6">{children}</main>;
       <footer>;
         <EnhancedFooter />;
@@ -82,6 +90,7 @@ document.documentElement.setAttribute('lang', lng);
 }
 
 
+<<<<<<< HEAD
   return (
     <div className='min-h-screen flex flex-col'>
       <header>
@@ -98,3 +107,6 @@ document.documentElement.setAttribute('lang', lng);
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

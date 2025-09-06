@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
 
-interface UltraFuturisticBackgroundProps {
+interface UltraFuturisticBackgroundProps {}
   children: React.ReactNode;
+<<<<<<< HEAD
   variant?: 'quantum' | 'neon' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
 
@@ -17,25 +21,40 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   intensity = 'medium',
 
 pr-12243
+=======
+
+  className?: string;
+}
+
+const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({}
+  children,
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   className = ''
-}) => {
-  const getBackgroundClasses = () => {
+}) => {}
+  const getBackgroundClasses = () => {'
     const baseClasses = 'relative overflow-hidden';
     
-    switch (variant) {
+    switch (variant) {'
       case 'quantum':
-        return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
-      case 'neon':
-        return `${baseClasses} bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900`;
+        return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;'
+      case 'neon':`
+        return `${baseClasses} bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900`;'
       case 'cyber':
+<<<<<<< HEAD
         return `${baseClasses} bg-gradient-to-br from-green-900 via-slate-900 to-blue-900`;
 
 pr-12243
       default:
+=======
+
+      default:`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
     }
   };
 
+<<<<<<< HEAD
   const getIntensityClasses = () => {
     switch (intensity) {
       case 'low':
@@ -62,6 +81,9 @@ pr-12243
       
       {/* Content */}
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="relative z-10">
         {children}
       </div>
@@ -71,4 +93,10 @@ pr-12243
 
 export default UltraFuturisticBackground;
 
+<<<<<<< HEAD
 pr-12243
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

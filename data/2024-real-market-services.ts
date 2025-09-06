@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from "../types/service-variants";
 
 export interface RealMarketService {
@@ -110,3 +111,6 @@ export const realMarketServices: RealMarketService[] = [
 =======
 ];
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

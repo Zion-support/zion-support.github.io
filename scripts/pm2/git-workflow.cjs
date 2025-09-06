@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/git-workflow.cjs
 
 
@@ -387,13 +388,19 @@ automator.run().catch(error => {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 /**
  * PM2 Git Workflow Service;
@@ -421,6 +428,7 @@ class GitWorkflow {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/git-workflow.cjs
 
@@ -459,13 +467,19 @@ class GitWorkflow {}
 
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -585,6 +599,7 @@ main
           // Read the file and resolve conflicts (simplified approach);
           let content = fs.readFileSync(file, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/git-workflow.cjs
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -618,13 +633,19 @@ main
 =======
 
           // Remove conflict markers and keep both versions (simplified)
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           // Remove conflict markers and keep both versions (simplified);
           content = content.replace(/\n/g, '');
           content = content.replace(/\n/g, '');
@@ -749,6 +770,7 @@ module.exports = GitWorkflow;
 =======
 cursor/website-audit-and-update-with-deployment-76dc;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/git-workflow.cjs
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -762,10 +784,14 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-ma
 cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 
+<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
@@ -782,3 +808,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-ma
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

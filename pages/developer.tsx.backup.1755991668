@@ -6,6 +6,7 @@ import Card from '../components/ui/Card';
 export default function DeveloperPage() {
 	return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -56,5 +57,12 @@ export default function DeveloperPage() {
 		</div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+				<link rel="canonical" href="https://ziontechgroup.com/developer" />
+				<meta name="description" content="Developer resources, docs, and SDK links for Zion Tech Group services." />
+			</Head>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	);
 }

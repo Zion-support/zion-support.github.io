@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -267,3 +268,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export { Button };
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

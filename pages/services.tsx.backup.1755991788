@@ -1,17 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp } from 'lucide-react';
 import Button from '../components/ui/Button';
 import QuantumCard from '../components/ui/QuantumCard';
 import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
 import { expandedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/expanded-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
   const [showFilters, setShowFilters] = useState(false);
+<<<<<<< HEAD
   const [selectedService, setSelectedService] = useState<string | null>(null);
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
@@ -103,7 +111,7 @@ export default function ServicesPage() {
   const getPopularServices = () => {
     return enhancedRealMicroSaasServices.filter(service => service.popular).slice(0, 6);
   };
-=======
+
 import { motion } from 'framer-motion';
 import { 
   Star, 
@@ -142,6 +150,7 @@ export default function ServicesPage() {
 
   const categories = ['All', 'AI & Machine Learning', 'Cybersecurity', 'Industrial AI', 'Healthcare AI', 'Financial Technology', 'Space Technology', 'Energy Technology', 'Transportation AI', 'Marketing AI', 'Data Analytics'];
 
+<<<<<<< HEAD
   const filteredServices = selectedCategory === 'All' 
     ? realMicroSaasServices 
     : realMicroSaasServices.filter(service => service.category === selectedCategory);
@@ -467,6 +476,17 @@ export default function ServicesPage() {
                     <option key={option.value} value={option.value}>{option.label}</option>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-85fa
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+                  ))}
+                </select>
+
+
+                  ))}
+                </select>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   ))}
                 </select>
 
@@ -493,11 +513,15 @@ export default function ServicesPage() {
                     <List className="w-5 h-5" />
                   </button>
                 </div>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991788
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <QuantumNeuralBackground variant="neural" intensity="medium">
       <div className="min-h-screen">
         <Head>
@@ -555,6 +579,7 @@ export default function ServicesPage() {
               </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -598,6 +623,9 @@ export default function ServicesPage() {
                   }`}
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-85fa
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   View Pricing
                   <ExternalLink className="ml-2 w-5 h-5" />
@@ -623,6 +651,7 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           </motion.div>
         </div>
@@ -753,6 +782,12 @@ export default function ServicesPage() {
             </div>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-85fa
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+        </div>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -817,6 +852,7 @@ export default function ServicesPage() {
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="px-4 py-3 bg-white/10 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1108,5 +1144,8 @@ export default function ServicesPage() {
         </section>
       </div>
     </QuantumNeuralBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

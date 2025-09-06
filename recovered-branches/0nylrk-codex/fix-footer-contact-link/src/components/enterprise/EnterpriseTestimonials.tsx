@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from "react";
 import { Quote } from "lucide-react";
@@ -10,39 +11,21 @@ import {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+import {;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Carousel,;
   CarouselContent,;
   CarouselItem,;
   CarouselNext,;
+<<<<<<< HEAD
   CarouselPrevious,;
 } from "@/components/ui/carousel";
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-const testimonials = [;
-  {;
-    quote:;
-      "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",;
-    author: "Sarah Johnson",;
-    title: "VP of Talent Acquisition",;
-    company: "TechGlobal Inc.",;
-    image: "/placeholder && placeholder.svg",;
-  },;
-  {;
-    quote:;
-      "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",;
-    author: "Michael Chen",;
-    title: "Director of HR",;
-    company: "InnovateCorp",;
-    image: "/placeholder && placeholder.svg",;
-  },;
-  {;
-    quote:;
-      "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",;
-    author: "Elena Rodriguez",;
-    title: "CTO",;
-    company: "FutureTech Systems",;
-    image: "/placeholder && placeholder.svg",;
-  },;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ];
@@ -60,6 +43,9 @@ import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Carousel,
 =======
 ];  Carousel,
@@ -73,6 +59,7 @@ import {
   CarouselPrevious,;
 } from "@/components/ui/carousel";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,33 +83,42 @@ import {
   CarouselItem
   CarouselNext
   CarouselPrevious
+=======
+
+  Carousel;
+  CarouselContent;
+  CarouselItem;
+  CarouselNext;
+  CarouselPrevious"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from "@/components/ui/carousel";
-const testimonials = [
-  {
-    quote:
-      "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing."
-    author: "Sarah Johnson"
-    title: "VP of Talent Acquisition"
-    company: "TechGlobal Inc."
+const testimonials = []
+  {}
+    quote:"
+      "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.""
+    author: "Sarah Johnson""
+    title: "VP of Talent Acquisition""
+    company: "TechGlobal Inc.""
     image: "/placeholder.svg"
   }
-  {
-    quote:
-      "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options."
-    author: "Michael Chen"
-    title: "Director of HR"
-    company: "InnovateCorp"
+  {}
+    quote:"
+      "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.""
+    author: "Michael Chen""
+    title: "Director of HR""
+    company: "InnovateCorp""
     image: "/placeholder.svg"
   }
-  {
-    quote:
-      "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous."
-    author: "Elena Rodriguez"
-    title: "CTO"
-    company: "FutureTech Systems"
+  {}
+    quote:"
+      "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.""
+    author: "Elena Rodriguez""
+    title: "CTO""
+    company: "FutureTech Systems""
     image: "/placeholder.svg"
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,11 +129,40 @@ import React from "react",
 import { Quote } from "lucide-react",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {
+=======
+"
+import React from "react","
+import { Quote } from "lucide-react",
+import {}
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,"
+  CarouselPrevious} from "@/components/ui/carousel",
+
+const testimonials = []
+  {'"
+    quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.","
+    author: "Sarah Johnson","
+    title: "VP of Talent Acquisition","
+    company: "TechGlobal Inc.","
+    image: "/placeholder.svg"},
+  {"
+    quote: "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.","
+    author: "Michael Chen","
+    title: "Director of HR","
+    company: "InnovateCorp","
+    image: "/placeholder.svg"},
+  {"
+    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.","
+    author: "Elena Rodriguez","
+    title: "CTO","
+    company: "FutureTech Systems","
+    image: "/placeholder.svg"}],
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
 export function EnterpriseTestimonials() {;
   return (
 
@@ -184,36 +209,50 @@ export function EnterpriseTestimonials() {;
 export function EnterpriseTestimonials() {;
   return (                      <img
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;
+];
+
+export function EnterpriseTestimonials() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         src={testimonial && testimonial.image}
-                        alt={testimonial && testimonial.author}
+                        alt={testimonial && testimonial.author}"
                         className="h-full w-full object-cover"
+<<<<<<< HEAD
 import React from "react",;
+=======
+
+
+"
+import React from "react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Quote } from "lucide-react",;
 import {;
   Carousel,;
   CarouselContent,;
   CarouselItem,;
-  CarouselNext,;
+  CarouselNext,;"
   CarouselPrevious} from "@/components/ui/carousel",;
 const testimonials = [;
-  {;
-    quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",;
-    author: "Sarah Johnson",;
-    title: "VP of Talent Acquisition",;
-    company: "TechGlobal Inc.",;
+  {;'"
+    quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",;"
+    author: "Sarah Johnson",;"
+    title: "VP of Talent Acquisition",;"
+    company: "TechGlobal Inc.",;"
     image: "/placeholder.svg"},;
-  {;
-    quote: "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",;
-    author: "Michael Chen",;
-    title: "Director of HR",;
-    company: "InnovateCorp",;
+  {;"
+    quote: "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",;"
+    author: "Michael Chen",;"
+    title: "Director of HR",;"
+    company: "InnovateCorp",;"
     image: "/placeholder.svg"},;
-  {;
-    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",;
-    author: "Elena Rodriguez",;
-    title: "CTO",;
-    company: "FutureTech Systems",;
+  {;"
+    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",;"
+    author: "Elena Rodriguez",;"
+    title: "CTO",;"
+    company: "FutureTech Systems",;"
     image: "/placeholder.svg"}];
+<<<<<<< HEAD
 export function EnterpriseTestimonials() {;
   return (;
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
@@ -225,25 +264,35 @@ export function EnterpriseTestimonials() {;
                   <div className="flex items-center gap-4">;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
 import React from './react';
+=======
+export function EnterpriseTestimonials() { return null; }
+              <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;"
+                <div className="bg-card rounded-xl p-8 border border-border h-full">;"
+                  <Quote className="h-10 w-10 text-primary/20 mb-4" />;"
+                  <blockquote className="text-xl mb-6 italic">;
+'
+import React from './react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Quote  } from './lucide-react';
-import {
+import {}
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
+  CarouselPrevious,';
 } from '@/components / ui / carousel';
 <<<<<<< HEAD
 <<<<<<< HEAD
                       <img;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -316,19 +365,23 @@ function EnterpriseTestimonials() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       </p>;
                     </div>;
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-              </CarouselItem>))}
-          </CarouselContent>;
-          <div className="flex justify - center gap - 2 mt - 8">;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -345,19 +398,25 @@ function EnterpriseTestimonials() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <CarouselPrevious />;
             <CarouselNext />;
           </div>;
         </Carousel>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    </section>);
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -405,3 +464,7 @@ image: "/placeholder.svg"
 =======
                       <img;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

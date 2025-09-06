@@ -297,6 +297,7 @@ export type ServiceVariant =
 <<<<<<< HEAD
 =======
 export type ServiceVariant = 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -659,18 +660,34 @@ origin/automation-improvements-final
   | 'advanced'
   | 'premium'
   | 'enterprise'
+=======
+  | 'default''
+  | 'holographic''
+  | 'quantum''
+  | 'cyberpunk''
+  | 'neural''
+  | 'quantum-holographic''
+  | 'quantum-advanced''
+  | 'quantum-cyberpunk''
+  | 'neural-holographic''
+  | 'cyberpunk-neural''
+  | 'advanced''
+  | 'premium''
+  | 'enterprise'';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | 'custom';
 
-export interface ServiceVariantConfig {
+export interface ServiceVariantConfig {};
   name: string;
   description: string;
   features: string[];
-  pricing: {
+  pricing: {}
     monthly: number;
     yearly: number;
   };
   popular?: boolean;
   recommended?: boolean;
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -681,3 +698,6 @@ export interface ServiceVariantConfig {
 =======
   | 'neural - futuristic';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

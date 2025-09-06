@@ -5,6 +5,7 @@ import Features from '../components/sections/Features';
 import FeaturedServices from '../components/sections/FeaturedServices';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Globe, Brain, Rocket } from 'lucide-react';
 
 export default function HomePage() {
@@ -15,6 +16,9 @@ export default function HomePage() {
     { value: '24/7', label: 'AI Support', color: 'text-green-400' },
     { value: '$200M+', label: 'Market Value', color: 'text-yellow-400' },
     { value: '1000%+', label: 'Average ROI', color: 'text-purple-400' },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const heroStats = marketStats;
@@ -29,6 +33,7 @@ export default function HomePage() {
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
     {
+<<<<<<< HEAD
         <title>Zion Tech Group | Revolutionary Micro SaaS, IT & AI Solutions | 250+ Services</title>
         <meta name="description" content="Discover 250+ revolutionary micro SaaS, IT services and AI solutions delivering 1000%+ ROI. Quantum AI, autonomous systems, space technology, and more. Free trials available." />
         <meta name="keywords" content="micro SaaS, AI services, IT services, quantum computing, autonomous systems, space technology, biotechnology, cybersecurity, metaverse, IoT" />
@@ -490,6 +495,9 @@ export default function HomePage() {
         </div>
       </footer>
     </UltraFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: <QrCode className="w-8 h-8 text-white" />,
@@ -510,6 +518,7 @@ export default function HomePage() {
   ];
 
   const technologyStack = [
+<<<<<<< HEAD
     { name: 'Next.js 14', category: 'Framework', icon: '⚡', description: 'Latest React framework with App Router' },
     { name: 'React 18', category: 'Library', icon: '⚛️', description: 'Concurrent features and Suspense' },
     { name: 'TypeScript 5', category: 'Language', icon: '📘', description: 'Type-safe development' },
@@ -705,10 +714,14 @@ export default function HomePage() {
       services: ['Quantum Internet Infrastructure', 'Quantum Cybersecurity', 'AI Intelligence Systems'],
       description: 'Secure national infrastructure with quantum-resistant technology and AI intelligence.',
       color: 'from-gray-500 to-slate-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
     <AdvancedFuturisticBackground variant="quantum-holographic" intensity="high">
       <div className="min-h-screen bg-gray-900 text-white">
         <Head>
@@ -730,18 +743,25 @@ export default function HomePage() {
           <meta name="twitter:title" content="Zion Tech Group - Revolutionary Technology Solutions" />
           <meta name="twitter:description" content="300+ Real Micro SaaS Services, AI Solutions, Quantum Computing" />
         </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Hero Section */}
       <Hero
         title="Zion Tech Group"
         subtitle="Professional micro SaaS services built for developers and businesses. Start with free tiers and scale as you grow."
         primaryAction={{
+<<<<<<< HEAD
           text: "Explore Micro SaaS",
           href: "/micro-saas"
         }}
         secondaryAction={{
           text: "View All Services",
           href: "/services"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }}
         stats={heroStats}
       />
@@ -768,6 +788,7 @@ export default function HomePage() {
         columns={2}
       />
 
+<<<<<<< HEAD
       {/* Featured Services */}
       <FeaturedServices />
 
@@ -836,6 +857,9 @@ export default function HomePage() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Card>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
@@ -843,6 +867,7 @@ export default function HomePage() {
       {/* Technology Stack */}
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
           <div className="text-center mb-20 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />
@@ -918,6 +943,9 @@ export default function HomePage() {
       <section className="py-24 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />
               Built with Modern Technology
@@ -947,6 +975,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Micro SaaS Services Section */}
       <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
@@ -1004,6 +1033,9 @@ export default function HomePage() {
               Explore Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>

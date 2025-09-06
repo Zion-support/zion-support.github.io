@@ -1,13 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-
-=======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+
+
+
+<<<<<<< HEAD
 =======
 import { cva } from "class-variance-authority",
 export const badgeVariants = cva(
@@ -68,3 +70,6 @@ export const badgeVariants = cva(;
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

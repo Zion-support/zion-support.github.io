@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
 class MyDocument extends Document {
@@ -10,6 +11,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <body className="bg-white dark:bg-black text-gray-900 dark:text-gray-100">
           <Main />
           <NextScript />
@@ -17,6 +21,10 @@ class MyDocument extends Document {
       </Html>
     );
   }
+<<<<<<< HEAD
 }
 
 export default MyDocument;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

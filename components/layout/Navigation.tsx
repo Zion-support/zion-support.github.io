@@ -1,44 +1,49 @@
-  Menu
-  X
-  Home
-  Brain
-  Cpu
-  Rocket
-  Phone
-  Mail
-  MapPin
-  Globe
+  Menu;
+  X;
+  Home;
+  Brain;
+  Cpu;
+  Rocket;
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
   ChevronDown;
 
   Globe,;
   ChevronDown,;
-} from 'lucide-react';
+} from 'lucide-react';'
 import Link from 'next/link';import { ;
   Menu, X, Home, Brain, Cpu, Rocket, ;
-  Phone, Mail, MapPin, Globe, ChevronDown;
-} from 'lucide-react';
+  Phone, Mail, MapPin, Globe, ChevronDown;'
+} from 'lucide-react';'
 import Link from 'next/link';
 
 
-import { 
+import {}
   Menu, X, Home, Brain, Cpu, Rocket, 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Home, Brain, Cpu, Rocket;
 origin/cursor/automate-test-improve-and-merge-code-2533
   Phone, Mail, MapPin, Globe, ChevronDown
+=======
+  Phone, Mail, MapPin, Globe, ChevronDown';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  } from 'lucide-react';
-import { 
+import {}
   Menu, X, Home, Brain, Cpu, Rocket, 
-  Phone, Mail, MapPin, Globe, ChevronDown
-} from 'lucide-react';
+  Phone, Mail, MapPin, Globe, ChevronDown';
+} from 'lucide-react';'
 import Link from 'next/link';
-const Navigation: React.FC = () => {
-
+const Navigation: React.FC = () => {}
+'
 import Link from 'next/link';
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+<<<<<<< HEAD
 const Navigation: React.FC;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,9 +66,13 @@ icon: Home,
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Services'
+=======
+    {'
+      name: 'Services''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       href: '/services'
-      icon: Rocket
-      dropdown: [
+      icon: Rocket;
+      dropdown: []
   Menu,
   X,
   Home,
@@ -74,58 +83,62 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Mail,
   MapPin,
   Globe,
-  ChevronDown,
-} from 'lucide-react';
-import Link from 'next / link';import {
-  Menu, X, Home, Brain, Cpu, Rocket,
-  Phone, Mail, MapPin, Globe, ChevronDown;
+  ChevronDown,'
+} from 'lucide-react';'
+import Link from 'next / link';import {}
+  Menu, X, Home, Brain, Cpu, Rocket,;
+  Phone, Mail, MapPin, Globe, ChevronDown;'
 } from 'lucide-react';
     }
-;
-    window.addEventListener ('scroll', handle_scroll);
+;'
+    window.addEventListener ('scroll', handle_scroll);'
     return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 50);
     }
-;
-    window.addEventListener ('scroll', handle_scroll);
+;'
+    window.addEventListener ('scroll', handle_scroll);'
     return () => window.removeEventListener ('scroll', handle_scroll);
   const navigation_items = [;
-    {
-      name: 'Home',
+    {'
+      name: 'Home','
       href: '/',
       icon: Home,
     },    {      icon: Home;
     }
-    {
-      name: 'Services',
+    {'
+      name: 'Services','
       href: '/services',
       icon: Rocket,
       dropdown: [;
-        {
-          name: 'AI Services',
+        {'
+          name: 'AI Services','
           href: '/ai - services',
+<<<<<<< HEAD
 {
           name: 'AI Services',
           href: '/ai-services',
 origin/cursor/automate-test-improve-and-merge-code-2533
           icon: Brain,
+=======
+          icon: Brain,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           description: 'Revolutionary AI solutions',
         },
-        {
-          name: 'IT Services',
+        {'
+          name: 'IT Services','
           href: '/it - services',
-          icon: Cpu,
+          icon: Cpu,'
           description: 'Enterprise IT solutions',
         },
-        {
-          name: 'Micro SaaS',
+        {'
+          name: 'Micro SaaS','
           href: '/micro - saas',
-          icon: Rocket,
+          icon: Rocket,'
           description: 'Specialized software solutions',
         },
-        {
-          name: 'Innovative Showcase',
+        {'
+          name: 'Innovative Showcase','
           href: '/innovative - services - showcase',
-          icon: Globe,
+          icon: Globe,'
           description: 'Cutting - edge technology',
           name: 'IT Services'
           href: '/it-services'
@@ -147,15 +160,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
       ],
     },
-    {
-      name: 'Solutions'
+    {'
+      name: 'Solutions''
       href: '/solutions'
-      icon: Cpu,    {
+      icon: Cpu,    {}
     }
-    {
-      name: 'Contact'
+    {'
+      name: 'Contact''
       href: '/contact'
-      icon: Phone
+      icon: Phone;
     }
       name: 'Solutions',
       href: '/solutions',
@@ -183,34 +196,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
       {/* Navigation Bar */}
-      <motion&& motion.nav
+      <motion&& motion.nav;
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0 && 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${}
                     Z;
                   </span>;
+<<<<<<< HEAD
                 </div>;
                 <div className='hidden sm:block'>;
 isScrolled
             ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10'
             : 'bg-transparent'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                </div>;'
+                <div className='hidden sm:block'>;`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }`}
       >;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
           <div className="flex items-center justify-between h-16 lg:h-20">;
             {/* Logo */}
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation */}'
             <div className='hidden lg:flex items-center space-x-8'>;
-              {navigationItems && navigationItems.map(item => (;
+              {navigationItems && navigationItems.map(item => (;'
                 <div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (;
-                    <div
-                      onMouseEnter={() => setActiveDropdown(item && item.name)}
+                    <div;
+                      onMouseEnter={() => setActiveDropdown(item && item.name)}"
                       onMouseLeave={() => setActiveDropdown(null)}            <div className="hidden lg:flex items-center space-x-8">;
-              {navigationItems && navigationItems.map((item) => (;
+              {navigationItems && navigationItems.map((item) => (;"
                 <div key={item && item.name} className="relative group">;
                   {item && item.dropdown ? (;
+<<<<<<< HEAD
             <motion.div
               whileHover={{ scale: 1.05 }}
               className='flex items-center space-x-2'
@@ -238,6 +257,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {item.dropdown ? (
 origin/cursor/automate-test-improve-and-merge-code-2533
                     <div
+=======
+                    <div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
 className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300'
@@ -248,96 +270,98 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <AnimatePresence>
                         {activeDropdown === item.name && (
-                          <motion.div
+                          <motion.div;
                             initial={{ opacity: 0, y: 10, scale: 0.95 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             transition={{ duration: 0.2 }}
+<<<<<<< HEAD
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
                           >
+=======
+                          >'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             <div className='grid grid-cols-1 gap-3'>
-                              {item.dropdown.map(dropdownItem => {
+                              {item.dropdown.map(dropdownItem => {}
                                 const Icon = dropdownItem.icon;
-                                  >
-                                    <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300'>
+                                  >'
+                                    <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300'>'
                                       <Icon className='w-5 h-5 text-cyan-400' />
                                     </div>
-                                    <div>
+                                    <div>'
                                       <div className='text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300'>
                                         {dropdownItem.name}
-                                      </div>
+                                      </div>'
                                       <div className='text-gray-400 text-sm'>                                        {dropdownItem.description}
                                       </div>
                                     </div>
                                   </Link>
-                                );                              })}                          >
+                                );                              })}                          >"
                             <div className="grid grid-cols-1 gap-3">
-                              {item.dropdown.map((dropdownItem) => {
-                                const Icon = dropdownItem.icon;
+                              {item.dropdown.map((dropdownItem) => {}
+                                const Icon = dropdownItem.icon;'
                       className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300';
-                    >;
-                      <span className='font-medium'>{item && item.name}</span>;
-                      <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />;
+                    >;'
+                      <span className='font-medium'>{item && item.name}</span>;'
+                      <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />;"
                       className="flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300";
-                    >;
-                      <span className="font-medium">{item && item.name}</span>;
+                    >;"
+                      <span className="font-medium">{item && item.name}</span>;"
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />;
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
-                          <motion&& motion.div
+                          <motion&& motion.div;
                             initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                            transition={{ duration: 0 && 0.2 }}
-                            className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'>;
+                            transition={{ duration: 0 && 0.2 }}'
+                            className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'>;'
                             <div className='grid grid-cols-1 gap-3'>;
                               {item && item.dropdown.map(dropdownItem => {;
                                 const Icon = dropdownItem && dropdownItem.icon;
-                                  >;
-                                    <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300'>;
+                                  >;'
+                                    <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300'>;'
                                       <Icon className='w-5 h-5 text-cyan-400' />;
                                     </div>;
-                                    <div>;
+                                    <div>;'
                                       <div className='text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300'>;
                                         {dropdownItem && dropdownItem.name}
-                                      </div>;
+                                      </div>;'
                                       <div className='text-gray-400 text-sm'>                                        {dropdownItem && dropdownItem.description}
                                       </div>;
                                     </div>;
                                   </Link>;
-                                );                              })}                          >;
+                                );                              })}                          >;"
                             <div className="grid grid-cols-1 gap-3">;
                               {item && item.dropdown.map((dropdownItem) => {;
                                 const Icon = dropdownItem && dropdownItem.icon;
                                 return (
-                                  <Link
-
-
+                                  <Link;
                             </div>
                           </motion.div>
                         )}
                       </AnimatePresence>
                     </div>
                   ) : (
-                    <Link
-                      href={item && item.href}
-                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'>;
-                      <item && item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />;
+                    <Link;
+                      href={item && item.href}'
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'>;'
+                      <item && item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />;'"
                       <span className='font-medium'>{item && item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group";
-                    >;
-                      <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />;
+                    >;"
+                      <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />;"
                       <span className="font-medium">{item && item.name}</span>;
                                     key={dropdownItem && dropdownItem.name}
-                                    href={dropdownItem && dropdownItem.href}
-                                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item">;
-                                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300">;
+                                    href={dropdownItem && dropdownItem.href}"
+                                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item">;"
+                                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300">;"
                                       <Icon className="w-5 h-5 text-cyan-400" />;
                                     </div>;
-                                    <div>;
+                                    <div>;"
                                       <div className="text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300">;
                                         {dropdownItem && dropdownItem.name}
-                                      </div>;
+                                      </div>;"
                                       <div className="text-gray-400 text-sm">;
                                         {dropdownItem && dropdownItem.description}
                                       </div>;
@@ -359,24 +383,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               ))}
             </div>
-
+"
                 href="/contact"
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button */}'
             <div className='lg:hidden'>;
-              <motion&& motion.button
+              <motion&& motion.button;
                 whileTap={{ scale: 0 && 0.95 }}
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button */}"
             <div className="lg:hidden">
-              <motion.button
+              <motion.button;
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => setIsOpen(!isOpen)}'
                 className='text-gray-300 hover:text-white transition-colors duration-300';
               >;
-                {isOpen ? (;
+                {isOpen ? (;'
                   <X className='w-6 h-6' />;
-                ) : (;
+                ) : (;'
                   <Menu className='w-6 h-6' />;
-                )}              </motion && motion.button>              <motion&& motion.button
+                )}              </motion && motion.button>              <motion&& motion.button;
                 whileTap={{ scale: 0 && 0.95 }}
                             </div>
                           </motion.div>
@@ -384,9 +408,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </AnimatePresence>
                     </div>
                   ) : (
+<<<<<<< HEAD
                     <Link
                       href={item.href}
 className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
+=======
+                    <Link;
+                      href={item.href}'
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     >
                       <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
                       <span className='font-medium'>{item.name}</span>
@@ -396,6 +426,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
             {/* CTA Button */}
 <div className='hidden lg:block'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -404,14 +435,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'
+=======
+              <motion.a'
+                href='/contact'
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}'
+                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >              <motion.a"
+                href="/contact"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >
-                Get Started
+                Get Started;
               </motion.a>
             </div>
             {/* Mobile Menu Button */}
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => setIsOpen(!isOpen)}"
                 className="text-gray-300 hover:text-white transition-colors duration-300";
-              >;
+              >;"
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </motion && motion.button>;
             </div>;
@@ -422,6 +464,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
+<<<<<<< HEAD
           <motion&& motion.div
 <div className='lg:hidden'>
               <motion.button
@@ -440,12 +483,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </motion.nav>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          <motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div'
             initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}'
             exit={{ opacity: 0, x: '100%' }}
 
 
@@ -454,11 +500,11 @@ className='fixed inset-0 z-40 lg:hidden'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
             {/* Backdrop */}
-            <div
+            <div'
               className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
             {/* Backdrop */}
-            <div 
+            <div "
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -467,26 +513,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
             {/* Mobile Menu */}
-            <motion&& motion.div
+            <motion&& motion.div'
               initial={{ x: '100%' }}
-              animate={{ x: 0 }}
+              animate={{ x: 0 }}'
               exit={{ x: '100%' }}
 
+<<<<<<< HEAD
               transition={{ duration: 0.3 }}
 className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
+=======
+            >'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className='p-6'>
-                {/* Close Button */}
+                {/* Close Button */}'
                 <div className='flex justify-end mb-6'>;
-                  <motion&& motion.button
+                  <motion&& motion.button;
                     whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
-                {/* Close Button */}
+                {/* Close Button */}"
                 <div className="flex justify-end mb-6">;
-                  <motion&& motion.button
+                  <motion&& motion.button;
                     whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
                     className='text-gray-300 hover:text-white transition-colors duration-300'
                   >
                     <X className='w-6 h-6' />
@@ -499,26 +550,56 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                       {item.dropdown ? (
                         <div className='space-y-2'>
+=======
+                      {item.dropdown ? ('
+                        <div className='space-y-2'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <div className='text-gray-400 font-medium text-sm uppercase tracking-wider'>
                             {item.name}
-                          </div>
+                          </div>'
                           <div className='pl-4 space-y-2'>
-                            {item.dropdown.map(dropdownItem => {
+                            {item.dropdown.map(dropdownItem => {}
                               const Icon = dropdownItem.icon;
-                                  onClick={() => setIsOpen(false)}
+                                  onClick={() => setIsOpen(false)}'
                                   className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
-                                >
+                                >'
                                   <Icon className='w-5 h-5 text-cyan-400' />
-                                  <div>
+                                  <div>'
                                     <div className='text-white font-medium'>
                                       {dropdownItem.name}
-                                    </div>
+                                    </div>'
                                     <div className='text-gray-400 text-sm'>
                                       {dropdownItem.description}
                                     </div>
                                   </div>
                                 </Link>
+<<<<<<< HEAD
                               );
+=======
+                              );                            })}                    <div key={item.name}>
+                      {item.dropdown ? ("
+                        <div className="space-y-2">"
+                          <div className="text-gray-400 font-medium text-sm uppercase tracking-wider">
+                            {item.name}
+                          </div>"
+                          <div className="pl-4 space-y-2">
+                            {item.dropdown.map((dropdownItem) => {}
+                              const Icon = dropdownItem.icon;
+                              return (
+                                <Link;
+                                  key={dropdownItem.name}
+                                  href={dropdownItem.href}
+                                  onClick={() => setIsOpen(false)}"
+                                  className="flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 transition-all duration-300"
+                                >"
+                                  <Icon className="w-5 h-5 text-cyan-400" />
+                                  <div>"
+                                    <div className="text-white font-medium">{dropdownItem.name}</div>"
+                                    <div className="text-gray-400 text-sm">{dropdownItem.description}</div>
+                                  </div>
+                                </Link>
+                              )
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             })}
                           </div>;
                         </div>;
@@ -526,16 +607,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
                         </div>
                       ) : (
-                        <Link
+                        <Link;
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}
 
-
+'
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
+<<<<<<< HEAD
 className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
                         >
                           <item.icon className='w-5 h-5 text-cyan-400' />
+=======
+                        >'
+                          <item.icon className='w-5 h-5 text-cyan-400' />'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <span className='text-white font-medium'>
                             {item.name}
                           </span>                        </Link>
@@ -557,71 +643,76 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD
                 {/* Contact Information */}
 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
+=======
+                {/* Contact Information */}'
+                <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <h3 className='text-cyan-400 font-semibold mb-3'>
-                    Contact Information
-                  </h3>
-                  <div className='space-y-2 text-sm'>
-                    <div className='flex items-center space-x-2 text-gray-300'>
+                    Contact Information;
+                  </h3>'
+                  <div className='space-y-2 text-sm'>'
+                    <div className='flex items-center space-x-2 text-gray-300'>'
                       <Phone className='w-4 h-4 text-cyan-400' />
 
                       <span>{contactInfo.mobile}</span>
-                        <Link
+                        <Link;
                           href={item && item.href}
-                          onClick={() => setIsOpen(false)}
+                          onClick={() => setIsOpen(false)}'
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
-                        >;
-                          <item && item.icon className='w-5 h-5 text-cyan-400' />;
+                        >;'
+                          <item && item.icon className='w-5 h-5 text-cyan-400' />;'
                           <span className='text-white font-medium'>;
-                            {item && item.name}
+                            {item && item.name}"
                           </span>                        </Link>                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300";
-                        >;
-                          <item && item.icon className="w-5 h-5 text-cyan-400" />;
+                        >;"
+                          <item && item.icon className="w-5 h-5 text-cyan-400" />;"
                           <span className="text-white font-medium">{item && item.name}</span>;
                       )}
                     </div>;
                   ))}
-                    </div>
-                    <div className="flex items-center space-x-2 text-gray-300">
+                    </div>"
+                    <div className="flex items-center space-x-2 text-gray-300">"
                       <Mail className="w-4 h-4 text-purple-400" />
                       <span>{contactInfo.email}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-gray-300">
-                      <MapPin className="w-4 h-4 text-pink-400" />
+                    </div>"
+                    <div className="flex items-center space-x-2 text-gray-300">"
+                      <MapPin className="w-4 h-4 text-pink-400" />"
                       <span className="text-xs">{contactInfo.address}</span>
                     </div>
                   </div>
                 </div>
-                {/* Contact Information */}
-                <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>;
+                {/* Contact Information */}'
+                <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>;'
                   <h3 className='text-cyan-400 font-semibold mb-3'>;
                     Contact Information;
-                  </h3>;
-                  <div className='space-y-2 text-sm'>;
-                    <div className='flex items-center space-x-2 text-gray-300'>;
+                  </h3>;'
+                  <div className='space-y-2 text-sm'>;'
+                    <div className='flex items-center space-x-2 text-gray-300'>;'
                       <Phone className='w-4 h-4 text-cyan-400' />;
                       <span>{contactInfo && contactInfo.mobile}</span>;
-                    </div>;
-                    <div className='flex items-center space-x-2 text-gray-300'>;
+                    </div>;'
+                    <div className='flex items-center space-x-2 text-gray-300'>;'
                       <Mail className='w-4 h-4 text-purple-400' />;
                       <span>{contactInfo && contactInfo.email}</span>;
-                    </div>;
-                    <div className='flex items-center space-x-2 text-gray-300'>;
-                      <MapPin className='w-4 h-4 text-pink-400' />;
+                    </div>;'
+                    <div className='flex items-center space-x-2 text-gray-300'>;'
+                      <MapPin className='w-4 h-4 text-pink-400' />;'
                       <span className='text-xs'>{contactInfo && contactInfo.address}</span>                    </div>                      <span>{contactInfo && contactInfo.mobile}</span>;
-                    </div>;
-                    <div className="flex items-center space-x-2 text-gray-300">;
+                    </div>;"
+                    <div className="flex items-center space-x-2 text-gray-300">;"
                       <Mail className="w-4 h-4 text-purple-400" />;
                       <span>{contactInfo && contactInfo.email}</span>;
-                    </div>;
-                    <div className="flex items-center space-x-2 text-gray-300">;
-                      <MapPin className="w-4 h-4 text-pink-400" />;
+                    </div>;"
+                    <div className="flex items-center space-x-2 text-gray-300">;"
+                      <MapPin className="w-4 h-4 text-pink-400" />;"
                       <span className="text-xs">{contactInfo && contactInfo.address}</span>;
                     </div>;
                   </div>;
                 </div>;
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => setIsOpen(false)}"
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25";
                   >;
                     Get Started Today;
@@ -640,20 +731,20 @@ export default Navigation;  );
 };
 
 export default Navigation;
-                          </div>;
+                          </div>;"
                           <div className="pl - 4 space - y-2">;
-                            {item.dropdown.map ((dropdown_item) => {
+                            {item.dropdown.map ((dropdown_item) => {}
                               const Icon = dropdown_item.icon;
                               return (
                                 <Link;
                                   key={dropdown_item.name}
                                   href={dropdown_item.href}
-                                  on_click={() => setIsOpen (false)}
+                                  on_click={() => setIsOpen (false)}"
                                   className="flex items - center space - x-3 p - 3 rounded - lg hover: bg - cyan - 500 / 10 transition - all duration - 300";
-                                >;
+                                >;"
                                   <Icon className="w - 5 h - 5 text - cyan - 400" />;
-                                  <div>;
-                                    <div className="text - white font - medium">{dropdown_item.name}</div>;
+                                  <div>;"
+                                    <div className="text - white font - medium">{dropdown_item.name}</div>;"
                                     <div className="text - gray - 400 text - sm">{dropdown_item.description}</div>;
                                   </div>;
                                 </Link>);
@@ -662,56 +753,56 @@ export default Navigation;
                         </div>) : (
                         <Link;
                           href={item.href}
-                          on_click={() => setIsOpen (false)}
+                          on_click={() => setIsOpen (false)}'
                           className='flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300';
-                        >;
-                          <item.icon className='w - 5 h - 5 text - cyan - 400' />;
+                        >;'
+                          <item.icon className='w - 5 h - 5 text - cyan - 400' />;'
                           <span className='text - white font - medium'>;
-                            {item.name}
+                            {item.name}"
                           </span>                        </Link>                          className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300";
-                        >;
-                          <item.icon className="w - 5 h - 5 text - cyan - 400" />;
+                        >;"
+                          <item.icon className="w - 5 h - 5 text - cyan - 400" />;"
                           <span className="text - white font - medium">{item.name}</span>)}
                     </div>))}
                 </div>;
-                {/* Contact Information */}
-                <div className='mt - 8 p - 4 bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 rounded - xl border border - cyan - 500 / 20'>;
+                {/* Contact Information */}'
+                <div className='mt - 8 p - 4 bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 rounded - xl border border - cyan - 500 / 20'>;'
                   <h3 className='text - cyan - 400 font - semibold mb - 3'>;
                     Contact Information;
-                  </h3>;
-                  <div className='space - y-2 text - sm'>;
-                    <div className='flex items - center space - x-2 text - gray - 300'>;
+                  </h3>;'
+                  <div className='space - y-2 text - sm'>;'
+                    <div className='flex items - center space - x-2 text - gray - 300'>;'
                       <Phone className='w - 4 h - 4 text - cyan - 400' />;
                       <span>{contact_info.mobile}</span>;
-                    </div>;
-                    <div className='flex items - center space - x-2 text - gray - 300'>;
+                    </div>;'
+                    <div className='flex items - center space - x-2 text - gray - 300'>;'
                       <Mail className='w - 4 h - 4 text - purple - 400' />;
                       <span>{contact_info.email}</span>;
-                    </div>;
-                    <div className='flex items - center space - x-2 text - gray - 300'>;
-                      <MapPin className='w - 4 h - 4 text - pink - 400' />;
+                    </div>;'
+                    <div className='flex items - center space - x-2 text - gray - 300'>;'
+                      <MapPin className='w - 4 h - 4 text - pink - 400' />;'
                       <span className='text - xs'>{contact_info.address}</span>                    </div>                      <span>{contact_info.mobile}</span>;
-                    </div>;
-                    <div className="flex items - center space - x-2 text - gray - 300">;
+                    </div>;"
+                    <div className="flex items - center space - x-2 text - gray - 300">;"
                       <Mail className="w - 4 h - 4 text - purple - 400" />;
                       <span>{contact_info.email}</span>;
-                    </div>;
-                    <div className="flex items - center space - x-2 text - gray - 300">;
-                      <MapPin className="w - 4 h - 4 text - pink - 400" />;
+                    </div>;"
+                    <div className="flex items - center space - x-2 text - gray - 300">;"
+                      <MapPin className="w - 4 h - 4 text - pink - 400" />;"
                       <span className="text - xs">{contact_info.address}</span>;
                     </div>;
                   </div>;
                 </div>;
-                {/* Mobile CTA */}
+                {/* Mobile CTA */}'
                 <div className='mt - 6'>;
-                  <motion.a;
+                  <motion.a;'
                     href='/contact';
                     while_tap={{ scale: 0.95 }}
-                    on_click={() => setIsOpen (false)}
-                    className='block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 3 px - 6 rounded - xl text - center transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25'                  >                  <motion.a;
+                    on_click={() => setIsOpen (false)}'
+                    className='block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 3 px - 6 rounded - xl text - center transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25'                  >                  <motion.a;"
                     href="/contact";
                     while_tap={{ scale: 0.95 }}
-                    on_click={() => setIsOpen (false)}
+                    on_click={() => setIsOpen (false)}"
                     className="block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 3 px - 6 rounded - xl text - center transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25";
                   >;
                     Get Started Today;
@@ -735,6 +826,7 @@ export default Navigation;  )
 export default Navigation;
 
 export default Navigation;
+<<<<<<< HEAD
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <Mail className='w-4 h-4 text-purple-400' />
@@ -768,3 +860,6 @@ export default Navigation;
 
 export default Navigation;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

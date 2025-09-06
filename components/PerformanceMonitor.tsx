@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   memory: {
     used: number
     total: number
@@ -5,8 +6,11 @@
   } | null;
 }
 import React, { useEffect } from 'react';
+=======
+import React, { useEffect } from "react";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-interface PerformanceMonitorProps {
+interface PerformanceMonitorProps {}
   onPerformanceData?: (data: any) => void;
 }
 interface Performance {
@@ -281,10 +285,12 @@ interface PerformanceMetrics {fcp?: number;
           </div>;
         )}
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  useEffect(() => {
-    // Only run on client side
-    if (typeof window === 'undefined' || typeof performance === 'undefined') {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
+  onPerformanceData,
+}) => {}
+  useEffect(() => {}
+    // Only run on client side"
+    if (typeof window === "undefined" || typeof performance === "undefined") {}
       return;
     if (typeof window === 'undefined') return
     // Only show in development or for admin users
@@ -329,33 +335,43 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
 
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const performanceData = {
-        // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+    const measurePerformance = () => {}
+      const navigation = performance.getEntriesByType("
+        "navigation",
+      )[0] as PerformanceNavigationTiming;"
+      const paint = performance.getEntriesByType("paint");
+
+      const performanceData = {}
+        // Navigation timing;
+        domContentLoaded:
+          navigation.domContentLoadedEventEnd -
+          navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
         totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-        
-        // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
-        // Resource timing
-        resourceCount: performance.getEntriesByType('resource').length,
-        
+
+        // Paint timing;
+        firstPaint:"
+          paint.find((entry) => entry.name === "first-paint")?.startTime || 0,
+        firstContentfulPaint:"
+          paint.find((entry) => entry.name === "first-contentful-paint")
+            ?.startTime || 0,
+
+        // Resource timing"
+        resourceCount: performance.getEntriesByType("resource").length,
+
         // Memory usage (if available)
-        memory: (performance as any).memory ? {
-          used: (performance as any).memory.usedJSHeapSize,
-          total: (performance as any).memory.totalJSHeapSize,
-          limit: (performance as any).memory.jsHeapSizeLimit
-        } : null
+        memory: (performance as any).memory;
+          ? {}
+              used: (performance as any).memory.usedJSHeapSize,
+              total: (performance as any).memory.totalJSHeapSize,
+              limit: (performance as any).memory.jsHeapSizeLimit,
+            }
+          : null,
       };
 pr-12243
 import React, { useEffect, useState } from 'react';
 
+<<<<<<< HEAD
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -433,16 +449,26 @@ origin/cursor/analyze-improve-and-deploy-application-347d
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
         console.log('Performance Metrics:', performanceData);
+=======
+      if (onPerformanceData) {}
+        onPerformanceData(performanceData);
+      }
+
+      // Log performance data in development"
+      if (process.env.NODE_ENV === "development") {"
+        console.log("Performance Metrics:", performanceData);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
     };
 
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
+    // Measure performance after page load"
+    if (document.readyState === "complete") {}
       measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
+    } else {"
+      window.addEventListener("load", measurePerformance);
     }
 
+<<<<<<< HEAD
     return () => {
       observer.disconnect ();
       clear_timeout (timer);
@@ -658,6 +684,10 @@ if (return 'Needs Improvement) {
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
       window.removeEventListener('load', measurePerformance);
+=======
+    return () => {"
+      window.removeEventListener("load", measurePerformance);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     };
   }, [onPerformanceData]);
 pr-12243
@@ -729,8 +759,12 @@ origin/cursor/analyze-improve-and-deploy-application-347d
 };
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
   return null; // This component doesn't render anything
 };
 
 export default PerformanceMonitor;
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

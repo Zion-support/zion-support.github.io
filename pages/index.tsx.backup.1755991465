@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -101,3 +102,6 @@ function AutomationCard(props: {
 }
 
 export default Index;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

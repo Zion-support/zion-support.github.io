@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,10 +8,14 @@ import { getUserFromRequest } from '../../../utils/auth';
 =======
 <<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next',;
+=======
+import { NextApiRequest, NextApiResponse } from 'next',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { getUserFromRequest } from '../../../utils/auth',;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   const user = getUserFromRequest(req),
   if (!user) return res.status(200).json({ user: null }),
+<<<<<<< HEAD
 =======
 >>>>>>> pr-12243
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -49,3 +54,7 @@ function handler() {
 =======
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  res.status(200).json({ user });
+};'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import dynamic from 'next/dynamic';
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
   loading: () => null,
@@ -25,15 +26,16 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+;,
+
+
 <<<<<<< HEAD
-
-;,
-
-=======
-;,
-
 ;,
 ;,
 ;,
@@ -69,11 +71,21 @@ ursor/add-new-services-and-deploy-updates-0462
 ;,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import dynamic from 'next/dynamic';';,
+=======
+
+
+
+;,
+
+
+import dynamic from 'next/dynamic';';,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {',
-  "loading": () => null,",
+  "loading": () => null,",'"
 ;  "ssr": 'false'});',
 export default AnalyticsManager;,
 ;
+<<<<<<< HEAD
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false,}); export default AnalyticsManager;',
 import dynamic from 'next/dynamic';
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
@@ -105,15 +117,29 @@ import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => impor
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
 =======
+
+'
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false,}); export default AnalyticsManager;','
+import dynamic from 'next/dynamic';'
+const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {"
+  "loading": () => null,'"
+  "ssr": 'false'});
+export default AnalyticsManager;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+'
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
+
+
+
+
+'
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
+
 <<<<<<< HEAD
-
-import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
-
-=======
-import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
-
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
@@ -154,3 +180,10 @@ import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => impor
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

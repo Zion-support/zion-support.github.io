@@ -8,8 +8,12 @@ const createJestConfig = nextJest({
   dir: './',
 });
 
+<<<<<<< HEAD
 const config = {
   testEnvironment: 'jsdom',
+=======
+const customJestConfig = {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
@@ -44,6 +48,7 @@ const config = {
     '<rootDir>/corrupted_backup/',
     '<rootDir>/temp_*/',
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +88,8 @@ const config = {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 =======
   coverageThreshold: {
@@ -102,6 +109,7 @@ const config = {
 
 <<<<<<< HEAD
 module.exports = createJestConfig(customJestConfig);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   coverageThreshold: {
@@ -124,3 +132,5 @@ module.exports = createJestConfig(config);
 =======
 module.exports = createJestConfig(config);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,8 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Check, Star, ArrowRight, Zap, Shield, Users, Globe, TrendingUp, CheckCircle } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function PricingPage() {
   const microSaasServices = [
@@ -359,6 +363,7 @@ export default function Pricing() {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {enterpriseFeatures.map((feature, index) => (
               <Card
@@ -442,6 +447,8 @@ export default function Pricing() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 };

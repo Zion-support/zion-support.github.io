@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     autoprefixer: {}}}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -21,11 +22,21 @@ export default {
     tailwindcss: {}
     autoprefixer: {}}}
 
+=======
+
+export default {}
+  plugins: {}
+    tailwindcss: {}
+    autoprefixer: {}}}
+
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export default {;
   plugins: {;
     tailwindcss: {};
 
     autoprefixer: {}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,3 +57,9 @@ export default {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+    autoprefixer: {}}}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

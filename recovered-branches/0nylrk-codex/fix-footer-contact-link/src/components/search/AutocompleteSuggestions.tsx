@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -10,6 +11,8 @@ import React from "react",
 import { SearchSuggestion, SearchHighlight } from "@/types/search",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 =======
@@ -19,11 +22,18 @@ import { SearchSuggestion, SearchHighlight } from "@/types/search",
 <<<<<<< HEAD
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
 
-=======
-import React from "react",
+"
+import React from "react";"
+import { SearchSuggestion, SearchHighlight } from "@/types/search";"
+import {SearchSuggestion, SearchHighlight} from "@/types/search";"
+import React from "react","
+import { SearchSuggestion, SearchHighlight } from "@/types/search",
+"
+import React from "react","
 import { SearchSuggestion, SearchHighlight } from "@/types/search",
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -32,18 +42,16 @@ import { SearchSuggestion, SearchHighlight } from "@/types/search",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
-
-
-import React from "react";
-import { SearchSuggestion, SearchHighlight } from "@/types/search";
-import {SearchSuggestion, SearchHighlight} from "@/types/search";
-import React from "react",
+"
+import React from "react","
 import { SearchSuggestion, SearchHighlight } from "@/types/search",
 
-import React from "react",
-import { SearchSuggestion, SearchHighlight } from "@/types/search",
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
@@ -85,12 +93,22 @@ import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+interface AutocompleteSuggestionsProps {}
+  suggestions: SearchSuggestion[];
+  searchTerm: string;
+  onSelectSuggestion: (suggestion: string) => void;
+  visible: boolean;
+"
+import React from "react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;
 interface AutocompleteSuggestionsProps {;
   suggestions: SearchSuggestion[],;
   searchTerm: string,;
   onSelectSuggestion: (suggestion: string) => void,;
   visible: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,13 +133,18 @@ interface AutocompleteSuggestionsProps {;
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-}
-// Helper function to highlight matching text
+=======
 
-const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
-  if (!searchTerm |searchTerm.length === 0) {
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+}
+// Helper function to highlight matching text;
+const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {}
+  if (!searchTerm |searchTerm.length === 0) {}
     return { before: '', match: text, after: '' }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,16 +153,17 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
 
   
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -206,12 +230,26 @@ if ( {) {
   }    return { before: '', match: text, after: '' }
   }
   return {
+=======
+
+
+
+  const lowerText = text.toLowerCase();
+  const lowerSearchTerm = searchTerm.toLowerCase();
+  const index = lowerText.indexOf(lowerSearchTerm);
+  if (index === -1) {}
+'
+    return { before: '', match: text, after: '' }
+  }
+  return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     before: text.substring (0, index);
     match: text.substring (index, index + search_term.length);
     after: text.substring (index + search_term.length);
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -264,21 +302,39 @@ export function AutocompleteSuggestions({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 };
 
-export function AutocompleteSuggestions({ 
-  suggestions, 
+export function AutocompleteSuggestions({}
+  suggestions, ;
   searchTerm, ;
   onSelectSuggestion;
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+};
+
+export function AutocompleteSuggestions({}
+  suggestions, ;
+  searchTerm, ;
+  onSelectSuggestion;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;
   const index = lowerText.indexOf(lowerSearchTerm),;
-  if (index === -1) {;
+  if (index === -1) {;'
     return { before: '', match: text, after: '' }
   }
 ;
@@ -289,20 +345,16 @@ export function AutocompleteSuggestions({
   }
 },
 
-export function AutocompleteSuggestions({ 
+export function AutocompleteSuggestions({}
   suggestions, 
   searchTerm, 
   onSelectSuggestion,
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  visible 
-}: AutocompleteSuggestionsProps) {
+;
+  visible;
+}: AutocompleteSuggestionsProps) {}
   if (!visible || suggestions.length === 0) return null,
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -361,14 +413,24 @@ export function AutocompleteSuggestions({
 <<<<<<< HEAD
         })}
 <<<<<<< HEAD
+=======
+
+
+
+  return ("
+    <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">"
+      <ul className="py-2 max-h-60 overflow-y-auto">
+        {suggestions.map((suggestion, index) => {}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
-                onClick={() => onSelectSuggestion(suggestion.text)}>
+                onClick={() => onSelectSuggestion(suggestion.text)}>"
               <div className="flex items-center justify-between">
                 <div>
-                  <span>{highlight.before}</span>
+                  <span>{highlight.before}</span>"
                   <span className="font-bold text-zion-purple">{highlight.match}</span>
                   <span>{highlight.after}</span>
-                </div>
+                </div>"
                 <span className="text-xs text-zion-slate-light capitalize">
                   {suggestion.type}
                 </span>
@@ -376,6 +438,7 @@ export function AutocompleteSuggestions({
             </li>
           )
         })}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -389,6 +452,10 @@ export function AutocompleteSuggestions({
 
           return (
             <li key={`${suggestion.type}-${index}`}
+=======
+"
+import {SearchSuggestion, SearchHighlight} from "@/types/search";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 interface AutocompleteSuggestionsProps {;
   suggestions: SearchSuggestion[],;
@@ -399,7 +466,7 @@ interface AutocompleteSuggestionsProps {;
 
 // Helper function to highlight matching text;
 const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {;
-  if (!searchTerm || searchTerm && searchTerm.length === 0) {;
+  if (!searchTerm || searchTerm && searchTerm.length === 0) {;'
     return { before: '', match: text, after: '' }
   }
 
@@ -407,7 +474,7 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {;
   const lowerSearchTerm = searchTerm && searchTerm.toLowerCase();
   const index = lowerText && lowerText.indexOf(lowerSearchTerm);
 
-  if (index === -1) {;
+  if (index === -1) {;'
     return { before: '', match: text, after: '' }
   }
 
@@ -426,22 +493,26 @@ export function AutocompleteSuggestions(): any ({ ;
 }: AutocompleteSuggestionsProps) {;
   if (!visible || suggestions && suggestions.length === 0) return null;
 
-  return (
-    <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">;
+  return ("
+    <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">;"
       <ul className="py-2 max-h-60 overflow-y-auto">;
         {suggestions && suggestions.map((suggestion, index) => {;
           const highlight = highlightMatch(suggestion && suggestion.text, searchTerm);
 
           return (
             <likey={`${suggestion && suggestion.type}-${index}`} 
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
-                onClick={() => onSelectSuggestion(suggestion && suggestion.text)}>;
+                onClick={() => onSelectSuggestion(suggestion && suggestion.text)}>;"
               <div className="flex items-center justify-between">;
                 <div>;
-                  <span>{highlight && highlight.before}</span>;
+                  <span>{highlight && highlight.before}</span>;"
                   <span className="font-bold text-zion-purple">{highlight && highlight.match}</span>;
                   <span>{highlight && highlight.after}</span>;
-                </div>;
+                </div>;"
                 <span className="text-xs text-zion-slate-light capitalize">;
                   {suggestion && suggestion.type}
                 </span>;
@@ -449,6 +520,7 @@ export function AutocompleteSuggestions(): any ({ ;
             </li>;
           );
         })}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -464,10 +536,14 @@ export function AutocompleteSuggestions(): any ({ ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </ul>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -500,12 +576,18 @@ export /**
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
  * AutocompleteSuggestions - Function description
+=======
+
+export /**;
+ * AutocompleteSuggestions - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
-function AutocompleteSuggestions() {
-  // Check condition
-if (return null) {
-  $2
+function AutocompleteSuggestions() {}
+  // Check condition;
+if (return null) {}
+  $2;
 }
+<<<<<<< HEAD
   return (
     <div className="absolute z - 50 top - full left - 0 right - 0 mt - 1 bg - zion - blue - dark border border - zion - blue - light rounded - lg shadow - lg overflow-hidden">;
       <ul className="py - 2 max - h-60 overflow-y-auto">;
@@ -523,6 +605,25 @@ if (return null) {
                   <span>{highlight.after}</span>;
                 </div>;
                 <span className="text - xs text - zion - slate-light capitalize">;
+=======
+  return ("
+    <div className="absolute z - 50 top - full left - 0 right - 0 mt - 1 bg - zion - blue - dark border border - zion - blue - light rounded - lg shadow - lg overflow - hidden">;"
+      <ul className="py - 2 max - h-60 overflow - y-auto">;
+        {suggestions.map ((suggestion, index) => {}
+          const highlight = highlight_match (suggestion.text, search_term);
+;
+          return (`
+            <li key={`${suggestion.type}-${index}`}"
+                className="px - 4 py - 2 hover:bg - zion - blue - light / 20 cursor - pointer";
+                on_click={() => onSelectSuggestion (suggestion.text)}>;"
+              <div className="flex items - center justify - between">;
+                <div>;
+                  <span>{highlight.before}</span>;"
+                  <span className="font - bold text - zion - purple">{highlight.match}</span>;
+                  <span>{highlight.after}</span>;
+                </div>;"
+                <span className="text - xs text - zion - slate - light capitalize">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   {suggestion.type}
                 </span>;
               </div>;
@@ -532,6 +633,7 @@ if (return null) {
       </ul>;
     </div>);
 }
+<<<<<<< HEAD
 }return {
   before: text.substring (0, index);
 match: text.substring (index, index + searchTerm.length);
@@ -581,3 +683,7 @@ return (<li key= {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

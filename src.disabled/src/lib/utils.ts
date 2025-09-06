@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge  } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {;
@@ -25,3 +26,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { type ClassValue,clsx } from 'clsx'; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) {; return twMerge(clsx(inputs));,}'
+import { type ClassValue, clsx } from 'clsx';'
+import { twMerge  } from 'tailwind-merge';
+export function cn() { return null; }
+  return twMerge(clsx(inputs))}'
+import { type ClassValue,clsx } from 'clsx'; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) {; return twMerge(clsx(inputs)),}
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

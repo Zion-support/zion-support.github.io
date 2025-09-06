@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -36,11 +37,14 @@ export interface ModerationFlag {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
   reason: string;
-  userEmail: string;
+  userEmail: string;"
   status: "pending" | "approved" | "removed" | "warned" | "banned";
   createdAt: string;
   updatedAt: string;
@@ -73,6 +77,7 @@ main
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export async function readAllFlags(): Promise<FlaggedContent[]> {;
   await ensureBaseFiles();
   const raw = await readFile(MODERATION_FILE, 'utf8');
@@ -81,6 +86,9 @@ export async function readAllFlags(): Promise<FlaggedContent[]> {;
 =======
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
 <<<<<<< HEAD
+=======
+export async function getFlagById (id: string): Promise < ModerationFlag | null> {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return flags.find (flag => flag.id === id) || null;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,12 +146,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
-export async function readAllFlags (): Promise < ModerationFlag[]> {
+export async function readAllFlags (): Promise < ModerationFlag[]> {};
   return [...flags];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+=======
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return flags.find((flag) => flag.id === id) || null;
 =======
 <<<<<<< HEAD
@@ -298,6 +310,7 @@ export async function createFlag(init: Omit<FlaggedContent 'id' | 'createdAt' | 
 
 export async function createFlag(
   data: Partial<ModerationFlag>,
+<<<<<<< HEAD
 ): Promise<ModerationFlag> {
   const flag: ModerationFlag = {
     id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -312,9 +325,18 @@ export async function createFlag(
     contentType: data.contentType || "post",
     reason: data.reason || "",
     userEmail: data.userEmail || "",
+=======
+): Promise<ModerationFlag> {}
+  const flag: ModerationFlag = {}
+    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,"
+    contentId: data.contentId || "","
+    contentType: data.contentType || "post","
+    reason: data.reason || "","
+    userEmail: data.userEmail || "","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     status: "pending",
     createdAt: new Date().toISOString(),
-    ...data,
+    ...data,;
   };
 
   flags.push(flag);
@@ -364,10 +386,10 @@ export async function updateFlagStatus(id: string, status: ModerationStatus, adm
 =======
 
 export async function updateFlagStatus(
-  id: string,
+  id: string,"
   status: ModerationFlag["status"],
   adminNotes?: string,
-): Promise<FlaggedContent | undefined> {
+): Promise<FlaggedContent | undefined> {};
   const flag = await getFlagById(id);
   if (!flag) return undefined;
 <<<<<<< HEAD
@@ -429,6 +451,7 @@ main
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 <<<<<<< HEAD
@@ -453,3 +476,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,9 +1,25 @@
-<<<<<<< HEAD
+
+export default function Performance.test({ }: Performance.testProps) {}
+<
+
+
+
+
+export default function PricingGuidePage({ }: PricingGuidePageProps) {}
+=;
 import React from 'react';
+<<<<<<< HEAD:src.pages.disabled/PricingGuidePage.jsx
 interface PricingGuidePageProps {
   // Add props here as needed
+=======
+interface Performance.testProps {}
+  // Add props here as needed;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/performance.test.js
 }
+export default function Performance.test({ }: Performance.testProps) {}
+>
 
+<<<<<<< HEAD:src.pages.disabled/PricingGuidePage.jsx
 =======
 
 
@@ -52,12 +68,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function PricingGuidePage({ }: PricingGuidePageProps) {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/performance.test.js
   return (
     <div>
       <h1>PricingGuidePage</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+<<<<<<< HEAD:src.pages.disabled/PricingGuidePage.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,11 +115,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 :src.pages.disabled/PricingGuidePage.jsx
+=======
+
+
+
+:src.pages.disabled/PricingGuidePage.jsx;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/performance.test.js
 }
 }
 }
 }
 }
+<<<<<<< HEAD:src.pages.disabled/PricingGuidePage.jsx
 <<<<<<< HEAD
 :temp_exclude/src.pages.disabled/PricingGuidePage.jsx
 <<<<<<< HEAD
@@ -114,8 +140,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
+=======
 
 
+=
+>
+}
+
+
+
+=
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/performance.test.js
+
+>
+
+<<<<<<< HEAD:src.pages.disabled/PricingGuidePage.jsx
 
 :src.pages.disabled/PricingGuidePage.jsx
 }
@@ -130,3 +169,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 :temp_exclude/src.pages.disabled/PricingGuidePage.jsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/performance.test.js

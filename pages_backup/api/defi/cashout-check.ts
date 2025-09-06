@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/defi/cashout-check.ts
 <<<<<<< HEAD:pages/api/defi/cashout-check.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,13 +28,19 @@ import path from 'path';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch {
+=======
+
+
+  } catch {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/defi/cashout-check.ts
     return {}
   }
 }
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { userId, amount, currency } = req.body as { userId?: string, amount?: number, currency?: string };
+  const { userId, amount, currency } = req.body as { userId?: string, amount?: number, currency?: string };'
   if (!userId || typeof amount !== 'number') return res.status(400).json({ error: 'Missing userId or amount' });
+<<<<<<< HEAD:pages_backup/api/defi/cashout-check.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -95,15 +102,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function load(): Record<string, KycProfile> {
   try {
+=======
+'
+  if (amount <= THRESHOLD) return res.status(200).json({ allowed: true, reason: 'Below threshold' });'
+  if (!profile) return res.status(200).json({ allowed: false, reason: 'KYC not started' });'
+  if (profile.status !== 'approved') return res.status(200).json({ allowed: false, reason: 'KYC not approved' });'
+  if (profile.amlStatus === 'match' || (profile.flags || []).includes('aml_alert')) return res.status(200).json({ allowed: false, reason: 'AML alert' });
+
+
+
+
+
+function load(): Record<string, KycProfile> {}
+  try {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/defi/cashout-check.ts
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
   } catch {;
-    return {  } catch (error) {
-    console.error("Error:", error);
+    return {  } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD:pages_backup/api/defi/cashout-check.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -147,3 +169,8 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/defi/cashout-check.ts

@@ -1,6 +1,20 @@
+<<<<<<< HEAD
   const handleChange = (values: number[]) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import { ChevronDown, ChevronUp } from "lucide-react";"
+import { Slider } from "@/components/ui/slider";"
+import { PriceFilterProps } from "@/types/filters";
+export function PriceFilter({}
+  priceRange,
+  setPriceRange,
+  expanded,
+  toggleSection,
+  isMobileFilterOpen,
+}: PriceFilterProps) {}
+  const handleChange = (values: number[]) => {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setPriceRange([values[0], values[1]]);
   };
 <<<<<<< HEAD
@@ -74,15 +88,15 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  return (
+  return ("
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
-      <button
-        onClick={toggleSection}
+      <button;
+        onClick={toggleSection}"
         className="flex w-full items-center justify-between text-white font-medium">;
         <span>Hourly Rate</span>;
-        {expanded ? (;
+        {expanded ? (;"
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
-        ) : (;
+        ) : (;"
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
 <<<<<<< HEAD
@@ -146,12 +160,13 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
       </button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-      {expanded && (
-        <div className="mt-6">
+      {expanded && ("
+        <div className="mt-6">"
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
+<<<<<<< HEAD
           <Slider
 <<<<<<< HEAD
 =======
@@ -178,11 +193,15 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
           </div>;          <Slider
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          <Slider;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}
             step={5}
             onValueChange={handleChange}
+<<<<<<< HEAD
             className="mt-6"
           />;
         </div>;
@@ -192,15 +211,21 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 }
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
+=======
+
+import { ChevronDown, ChevronUp  } from './lucide-react';'
+import { Slider  } from '@/components / ui / slider';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { PriceFilterProps  } from '@/types / filters';
-export /**
- * PriceFilter - Function description
+export /**;
+ * PriceFilter - Function description;
  */
-function PriceFilter() {
-  const handle_change = (values: number[]) =>: any {
+function PriceFilter() {}
+  const handle_change = (values: number[]) =>: any {}
     setPriceRange ([values[0], values[1]]);
   }
 ;
+<<<<<<< HEAD
   return (
     <div className="mb - 6 border - b border - zion - blue - light pb-6">;
       <button;
@@ -215,6 +240,22 @@ function PriceFilter() {
       {expanded && (
         <div className="mt-6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb-2">;
+=======
+  return ("
+    <div className="mb - 6 border - b border - zion - blue - light pb - 6">;
+      <button;
+        on_click={toggle_section}"
+        className="flex w - full items - center justify - between text - white font - medium";
+      >;
+        <span > Hourly Rate</span>;
+        {expanded ? ("
+          <ChevronUp className="h - 4 w - 4 text - zion - slate - light" />) : ("
+          <ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}
+      </button>;
+      {expanded && ("
+        <div className="mt - 6">;"
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span>${price_range[0]}/hr</span>;
             <span>${price_range[1]}/hr</span>;
           </div>;
@@ -223,9 +264,15 @@ function PriceFilter() {
             min={50}
             max={200}
             step={5}
+<<<<<<< HEAD
             onValueChange={handle_change}
             className="mt-6";
+=======
+            onValueChange={handle_change}"
+            className="mt - 6";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           />;
         </div>)}
     </div>);
 }
+'"

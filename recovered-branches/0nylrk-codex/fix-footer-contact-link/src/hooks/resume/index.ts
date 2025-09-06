@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -151,51 +151,81 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return {
+=======
+import { useState  } from 'react';'
+import { Resume  } from '@/types/resume';'
+import { useFetchResume  } from './useFetchResume';'
+import { useResumeActions  } from './useResumeActions';'
+import { useWorkExperience  } from './useWorkExperience';'
+import { useEducation  } from './useEducation';'
+import { useSkills  } from './useSkills';'
+import { useCertifications  } from './useCertifications';'
+import { useResumeList  } from './useResumeList';
+export function useResume() {}
+';
+import {useState} from 'react';'
+import {Resume} from '@/types/resume';'
+import {useFetchResume} from './useFetchResume';'
+import {useResumeActions} from './useResumeActions';'
+import {useWorkExperience} from './useWorkExperience';'
+import {useEducation} from './useEducation';'
+import {useSkills} from './useSkills';'
+import {useCertifications} from './useCertifications';'
+import {useResumeList} from './useResumeList';
+export function useResume() { return null; }
+  const fetchResume = async (resumeId?: string) => {}
+    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
+
+    if (result) {}
+      setResume(result)
+    }
+    return result;
+  }
+
+
+
+  return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // State;
     is_loading;
     error;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     resume: resume || fetchResumeOperations && fetchResumeOperations.resume;
     resumes: resumeListOperations && resumeListOperations.resumes;
     
-    // Basic resume operations
+    // Basic resume operations;
     fetchResume;
     createResume: resumeActions && resumeActions.createResume;
     updateBasicInfo: resumeActions && resumeActions.updateBasicInfo;
     setActiveResume: resumeActions && resumeActions.setActiveResume;
     
-    // Work experience operations
+    // Work experience operations;
     addWorkExperience: workOperations && workOperations.addWorkExperience;
     updateWorkExperience: workOperations && workOperations.updateWorkExperience;
     deleteWorkExperience: workOperations && workOperations.deleteWorkExperience;
     
-    // Education operations
+    // Education operations;
     addEducation: educationOperations && educationOperations.addEducation;
     updateEducation: educationOperations && educationOperations.updateEducation;
     deleteEducation: educationOperations && educationOperations.deleteEducation;
     
-    // Skills operations
+    // Skills operations;
     addSkill: skillsOperations && skillsOperations.addSkill;
     deleteSkill: skillsOperations && skillsOperations.deleteSkill;
     
-    // Certifications operations
+    // Certifications operations;
     addCertification: certOperations && certOperations.addCertification;
     updateCertification: certOperations && certOperations.updateCertification,
-    deleteCertification: certOperations && certOperations.deleteCertification
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    deleteCertification: certOperations && certOperations.deleteCertification;
   }
 }
+<<<<<<< HEAD
 // Export all hooks
 <<<<<<< HEAD
 =======
+=======
+// Export all hooks;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     // Basic resume operations;
     fetch_resume;
@@ -223,6 +253,7 @@ if ( {) {
     delete_certification: cert_operations.delete_certification;
   }
 }
+<<<<<<< HEAD
 // Export all hooks;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export * from './useFetchResume';
@@ -349,52 +380,22 @@ export * from './useResumeUtils';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
-
-
-;
-
-
-<<<<<<< HEAD
 =======
-=======
-  return {
-    // State
-    isLoading;
-    error;
-    resume: resume |fetchResumeOperations.resume;
-    resumes: resumeListOperations.resumes;
-    // Basic resume operations
-    fetchResume;
-    createResume: resumeActions.createResume;
-    updateBasicInfo: resumeActions.updateBasicInfo;
-    setActiveResume: resumeActions.setActiveResume;
-    // Work experience operations
-    addWorkExperience: workOperations.addWorkExperience;
-    updateWorkExperience: workOperations.updateWorkExperience;
-    deleteWorkExperience: workOperations.deleteWorkExperience;
-    // Education operations
-    addEducation: educationOperations.addEducation;
-    updateEducation: educationOperations.updateEducation;
-    deleteEducation: educationOperations.deleteEducation;
-    // Skills operations
-    addSkill: skillsOperations.addSkill;
-    deleteSkill: skillsOperations.deleteSkill;
-    // Certifications operations
-    addCertification: certOperations.addCertification;
-    updateCertification: certOperations.updateCertification
-    deleteCertification: certOperations.deleteCertification
-  }
-}
-// Export all hooks
+// Export all hooks;'
 export * from './useFetchResume';
-export * from './useResumeActions';
-export * from './useWorkExperience';
-export * from './useEducation';
-export * from './useSkills';
-export * from './useCertifications';
-export * from './useResumeList';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+'
+export * from './useResumeActions';'
+export * from './useWorkExperience';'
+export * from './use_education';'
+export * from './use_skills';'
+export * from './use_certifications';'
+export * from './useResumeList';'
 export * from './useResumeUtils';
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -417,39 +418,20 @@ import { useWorkExperience } from './useWorkExperience',;
 import { useEducation } from './useEducation',;
 import { useSkills } from './useSkills',;
 import { useCertifications } from './useCertifications',;
+=======
+
+'
+import { useState } from 'react',;'
+import { Resume } from '@/types/resume',;'
+import { useFetchResume } from './useFetchResume',;'
+import { useResumeActions } from './useResumeActions',;'
+import { useWorkExperience } from './useWorkExperience',;'
+import { useEducation } from './useEducation',;'
+import { useSkills } from './useSkills',;'
+import { useCertifications } from './useCertifications',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useResumeList } from './useResumeList',;
-export function useResume() {;
-  const [resume, setResume] = useState<Resume | null>(null),;
-  const fetchResumeOperations = useFetchResume(),;
-  const resumeActions = useResumeActions(),;
-  const workOperations = useWorkExperience(),;
-  const educationOperations = useEducation(),;
-  const skillsOperations = useSkills(),;
-  const certOperations = useCertifications(),;
-  const resumeListOperations = useResumeList(),;
-  // Determine overall loading state;
-  const isLoading =;
-    fetchResumeOperations.isLoading ||;
-    resumeActions.isLoading ||;
-    workOperations.isLoading ||;
-    educationOperations.isLoading ||;
-    skillsOperations.isLoading ||;
-    certOperations.isLoading ||;
-    resumeListOperations.isLoading,;
-  // Determine overall error state (use first non-null error);
-  const error =;
-    fetchResumeOperations.error ||;
-    resumeActions.error ||;
-    workOperations.error ||;
-    educationOperations.error ||;
-    skillsOperations.isLoading ||;
-    certOperations.error ||;
-    resumeListOperations.error,;
-  // Override the fetch resume function to update local state;
-  const fetchResume = async (resumeId?: string) => {;
-    const result = await fetchResumeOperations.fetchResume(resumeId),;
-    if (result) {;
-      setResume(result);
+export function useResume() { return null; }
     }
     return result;
   },;
@@ -482,6 +464,7 @@ export function useResume() {;
   }
 }
 ;
+<<<<<<< HEAD
 // Export all hooks;
 export * from './useFetchResume',;
 export * from './useResumeActions',;
@@ -492,11 +475,20 @@ export * from './useCertifications',;
 export * from './useResumeList';
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+// Export all hooks;'
+export * from './useFetchResume',;'
+export * from './useResumeActions',;'
+export * from './useWorkExperience',;'
+export * from './useEducation',;'
+export * from './useSkills',;'
+export * from './useCertifications',;'
+export * from './useResumeList';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export * from './useResumeUtils';
-<<<<<<< HEAD
+
 
 <<<<<<< HEAD
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -515,3 +507,7 @@ export * from './useResumeUtils';
 =======
 export * from './useResumeUtils';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -15,11 +15,15 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react";
+=======
+import { useState, useEffect } from "react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from "@/integrations/supabase/client";
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {
+export function useDisputeCheck(projectId?: string, milestoneId?: string) {};
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,26 +52,28 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isLoading, setIsLoading] = useState(true);
 import { useState, useEffect } from "react",
+=======
+"
+import {useState, useEffect} from "react";"
+import {supabase} from "@/integrations/supabase/client";
+export function useDisputeCheck() { return null; }
+import { useState, useEffect } from "react","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from "@/integrations/supabase/client",
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {
-  const [isUnderDispute, setIsUnderDispute] = useState(false),
+export function useDisputeCheck(projectId?: string, milestoneId?: string) {}
+  const [isUnderDispute, setIsUnderDispute] = useState(false),'
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
   const [isLoading, setIsLoading] = useState(true),
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  useEffect(() => {
 
-    const checkDispute = async () => {
-      if (!projectId && !milestoneId) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        setIsLoading(false);
-        return
+  useEffect(() => {}
+    const checkDispute = async () => {}
+      if (!projectId && !milestoneId) {};
+        setIsLoading(false),;
+        return;
       }
+<<<<<<< HEAD
       try {
 
 <<<<<<< HEAD
@@ -132,12 +138,19 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
         const { data, error } = await query;
         if (error) throw error;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      try {}
+        // If milestone ID is provided, filter by that too;
+        if (milestoneId) {}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         query = query.order("status", { ascending: true }),
         
         const { data, error } = await query,
         
         if (error) throw error,
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -160,111 +173,105 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
 <<<<<<< HEAD
 =======
 import { useState, useEffect } from './react';
+=======
+
+        if (data && data.length > 0) {}
+          // Get the first dispute (highest priority based on status)
+          setIsUnderDispute(true),
+          setDisputeStatus(data[0].status as any),
+          setDisputeId(data[0].id)'
+import { useState, useEffect } from './react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from '@/integrations / supabase / client';
-export /**
- * useDisputeCheck - Function description
+export /**;
+ * useDisputeCheck - Function description;
  */
-function useDisputeCheck() {
-  const [isUnderDispute, setIsUnderDispute] = useState (false);
+function useDisputeCheck() {}
+  const [isUnderDispute, setIsUnderDispute] = useState (false);'
   const [dispute_status, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
   const [dispute_id, setDisputeId] = useState < string | null>(null);
   const [is_loading, setIsLoading] = useState (true);
 ;
-  useEffect (() => {
-    const check_dispute = async () => {
-      // Check condition
-if ( {) {
-  $2
+  useEffect (() => {}
+    const check_dispute = async () => {}
+      // Check condition;
+if ( {) {}
+  $2;
 }
         setIsLoading (false);
         return;
       }
-      try {
+      try {}
         setIsLoading (true);
 ;
-        let query = supabase;
-          .from ("disputes");
-          .select ("id, status");
+        let query = supabase;"
+          .from ("disputes");"
+          .select ("id, status");"
           .eq ("project_id", project_id);
 ;
         // If milestone ID is provided, filter by that too;
-        // Check condition
-if ( {) {
-  $2
-}
+        // Check condition;
+if ( {) {}
+  $2;
+}"
           query = query.eq ("milestone_id", milestone_id);
         }
-        // Order by status priority: open, under_review, resolved, closed;
+        // Order by status priority: open, under_review, resolved, closed;"
         query = query.order ("status", { ascending: true });
 ;
         const { data, error } = await query;
 ;
-        // Check condition
-if (throw error) {
-  $2
+        // Check condition;
+if (throw error) {}
+  $2;
 }
-        // Check condition
-if ( {) {
-  $2
+        // Check condition;
+if ( {) {}
+  $2;
 }
           // Get the first dispute (highest priority based on status);
           setIsUnderDispute (true);
           setDisputeStatus (data[0].status as any);
           setDisputeId (data[0].id);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         } else {
+=======
+        } else {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           setIsUnderDispute (false);
           setDisputeStatus (null);
           setDisputeId (null);
         }
-      } catch (err) {
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      } catch (err) {}
+"
         console.error ("Error checking dispute status:", err);
         setIsUnderDispute (false);
         setDisputeStatus (null);
         setDisputeId (null);
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      } finally {
+
+
+      } finally {}
         setIsLoading (false);
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-        if (data && data.length > 0) {
-          // Get the first dispute (highest priority based on status)
-          setIsUnderDispute(true),
-          setDisputeStatus(data[0].status as any),
-          setDisputeId(data[0].id)
-        } else {
-          setIsUnderDispute(false),
-          setDisputeStatus(null),
-          setDisputeId(null)
-        }
-      } catch (err) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"
         console.error("Error checking dispute status:", err),
         setIsUnderDispute(false),
         setDisputeStatus(null),
         setDisputeId(null)
-      } finally {
+      } finally {}
         setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    isLoading 
 
+<<<<<<< HEAD
 =======
 =======
     isLoading 
@@ -318,18 +325,23 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState, useEffect } from "react",;
+=======
+    isLoading;
+    isLoading;
+    isLoading;
+"
+import { useState, useEffect } from "react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from "@/integrations/supabase/client",;
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
-  const [isUnderDispute, setIsUnderDispute] = useState(false),;
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),;
-  const [disputeId, setDisputeId] = useState<string | null>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  useEffect(() => {;
-    const checkDispute = async () => {;
-      if (!projectId && !milestoneId) {;
-        setIsLoading(false),;
-        return;
+export function useDisputeCheck() { return null; }
       }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     check_dispute ();
   }, [project_id, milestone_id]);
@@ -338,25 +350,14 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
-;
-      try {;
-        setIsLoading(true),;
-        let query = supabase;
-          .from("disputes");
-          .select("id, status");
-          .eq("project_id", projectId),;
-        // If milestone ID is provided, filter by that too;
-        if (milestoneId) {;
-          query = query.eq("milestone_id", milestoneId);
-        }
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        // Order by status priority: open, under_review, resolved, closed;
+
+
+
+        // Order by status priority: open, under_review, resolved, closed;"
         query = query.order("status", { ascending: true }),;
         const { data, error } = await query,;
         if (error) throw error,;
@@ -370,7 +371,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
           setDisputeStatus(null),;
           setDisputeId(null);
         }
-      } catch (err) {;
+      } catch (err) {;"
         console.error("Error checking dispute status:", err),;
         setIsUnderDispute(false),;
         setDisputeStatus(null),;
@@ -386,8 +387,8 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     disputeStatus;
     disputeId;
     isLoading;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -417,35 +418,31 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
 }
 
 import { useState, useEffect } from "react",;
+=======
+  }
+}
+"
+import { useState, useEffect } from "react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from "@/integrations/supabase/client",;
 ;
-export function useDisputeCheck(projectId?:string, milestoneId?:string) {;
-  const [isUnderDispute, setIsUnderDispute] = useState(false),;
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),;
-  const [disputeId, setDisputeId] = useState<string | null>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-;
-  useEffect(() => {;
-    const checkDispute = async () => {;
-      if (!projectId && !milestoneId) {;
-        setIsLoading(false),;
-        return,;
+export function useDisputeCheck() { return null; }
       }
 ;
       try {;
         setIsLoading(true),;
         ;
-        let query = supabase;
-          .from("disputes");
-          .select("id, status");
+        let query = supabase;"
+          .from("disputes");"
+          .select("id, status");"
           .eq("project_id", projectId),;
         ;
         // If milestone ID is provided, filter by that too;
-        if (milestoneId) {;
+        if (milestoneId) {;"
           query = query.eq("milestone_id", milestoneId),;
         }
         ;
-        // Order by status priority:open, under_review, resolved, closed;
+        // Order by status priority:open, under_review, resolved, closed;"
         query = query.order("status", { ascending:true }),;
         ;
         const { data, error } = await query,;
@@ -462,7 +459,7 @@ export function useDisputeCheck(projectId?:string, milestoneId?:string) {;
           setDisputeStatus(null),;
           setDisputeId(null),;
         }
-      } catch (err) {;
+      } catch (err) {;"
         console.error("Error checking dispute status:", err),;
         setIsUnderDispute(false),;
         setDisputeStatus(null),;
@@ -481,21 +478,21 @@ export function useDisputeCheck(projectId?:string, milestoneId?:string) {;
     disputeId,;
     isLoading ;
   },;
-} export function useDisputeCheck (projectId?: string, milestoneId?: string) {
-  const [isUnderDispute, setIsUnderDispute] = useState (false);
+} export function useDisputeCheck (projectId?: string, milestoneId?: string) {};
+  const [isUnderDispute, setIsUnderDispute] = useState (false);'
 const [disputeStatus, setDisputeStatus] = useState<'open' | 'under review' | 'resolved' | 'closed' | null> (null);
 const [disputeId, setDisputeId] = useState<string | null> (null);
 const [isLoading, setIsLoading] = useState (true);
-const checkDispute = async () => {
-  if (!projectId && !milestoneId) {
-  //If milestone ID is provided, filter by that too if (milestoneId) {
-  //Order by status priority: open, under review, resolved, closed query = query.order ("status", {
-  ascending: true 
+const checkDispute = async () => {}
+  if (!projectId && !milestoneId) {}
+  //If milestone ID is provided, filter by that too if (milestoneId) {"
+  //Order by status priority: open, under review, resolved, closed query = query.order ("status", {}
+  ascending: true;
 });
-  data, error 
+  data, error;
 }= await query;
 if (error) throw error;
-}finally {
+}finally {}
   setIsLoading (false) 
 }
 };
@@ -503,3 +500,8 @@ if (error) throw error;
 }
   }
 }
+<<<<<<< HEAD
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GetStaticPaths, GetStaticProps  } from 'next';
 import { useState  } from 'react';
 import { readJson  } from '../../utils/fsDb';
@@ -16,9 +17,12 @@ import type { HelpArticle } from '../../utils/support';
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-import {GetStaticPaths, GetStaticProps} from 'next';
+
+import {GetStaticPaths, GetStaticProps} from 'next';'
 import {useState} from 'react';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -26,8 +30,9 @@ import {useState} from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-
+'
 import type { HelpArticle } from '../../utils/support';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -39,11 +44,15 @@ import type { HelpArticle } from '../../utils / support';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const getStaticPaths: GetStaticPaths = async () => {
-  const articles = read_json < HelpArticle[]>('help / articles.json', []);
-  return {
+=======
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  const articles = read_json < HelpArticle[]>('help / articles.json', []);
+  return {}
+export const getStaticPaths: GetStaticPaths = async () => {';
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
+<<<<<<< HEAD
   return {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,11 +75,16 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const slug = ctx.params?.slug as string;
+=======
+  return {}
+  const slug = ctx.params?.slug as string;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find((a) => a.slug === slug) || null;
   return { props: { article } }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
 <<<<<<< HEAD
@@ -95,10 +109,18 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const getStaticPaths: GetStaticPaths = async () => {;
+=======
+export default function HelpArticlePage({ article }: { article: HelpArticle }) {};
+  const [voted, setVoted] = useState<null | boolean>(null);
+  async function vote() { return null; }
+    await fetch('/api/support/feedback', {}
+export const getStaticPaths: GetStaticPaths = async () => {;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return {;
     paths: articles && articles.map(a => ({ params: { slug: a && a.slug } })),;
     fallback: false,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -110,6 +132,9 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     paths: articles.map(a => ({ params: { slug: a.slug } })),
     fallback: false,
 
@@ -117,66 +142,68 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 };
 
 export const getStaticProps: GetStaticProps = async ctx => {;
-  const slug = ctx && ctx.params?.slug as string;
+  const slug = ctx && ctx.params?.slug as string;'
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   const article = articles && articles.find(a => a && a.slug === slug) || null;
   return { props: { article } };};
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className='enhanced-button enhanced-button-secondary';
     paths: articles.map (array => ({ params: { slug: a.slug } })),
     fallback: false,
   }
 }
 ;
-export const getStaticProps: GetStaticProps = async ctx => {
-  const slug = ctx.params?.slug as string;
+export const getStaticProps: GetStaticProps = async ctx => {};
+  const slug = ctx.params?.slug as string;'
   const articles = read_json < HelpArticle[]>('help / articles.json', []);
   const article = articles.find (array => a.slug === slug) || null;
   return { props: { article } }}
 ;
-export default /**
- * HelpArticlePage - Function description
+export default /**;
+ * HelpArticlePage - Function description;
  */
-function HelpArticlePage() {
+function HelpArticlePage() {}
   const [voted, set_voted] = useState < null | boolean>(null);
 ;
   async /**
- * vote - Function description
+ * vote - Function description;
  */
-function vote() {
-    await fetch ('/api / support / feedback', {
-      method: 'POST',
+function vote() { return null; }
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ article_id: article.id, helpful }),
     });
     set_voted (helpful);
   }
-  return (
+  return ('
     <article className='prose dark:prose - invert max - w-none'>;
-      <h1>{article.title}</h1>;
+      <h1>{article.title}</h1>;'
       <div className='text - sm opacity - 70'>;
         Last updated {new Date (article.updated_at).toLocaleDateString ()}
-      </div>;
-      <div className='mt - 6 whitespace - pre - wrap'>{article.body}</div>;
+      </div>;'
+      <div className='mt - 6 whitespace - pre - wrap'>{article.body}</div>;'
       <div className='mt - 8 p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800 flex items - center justify - between'>;
-        <div > Was this article helpful?</div>;
+        <div > Was this article helpful?</div>;'
         <div className='flex gap - 2'>;
           <button;
             on_click={() => vote (true)}
-            disabled={voted !== null}
+            disabled={voted !== null}'
             className='enhanced - button enhanced - button - primary';
           >;
             Yes;
           </button>;
           <button;
             on_click={() => vote (false)}
-            disabled={voted !== null}
+            disabled={voted !== null}'
             className='enhanced - button enhanced - button - secondary';
 
           >;
@@ -188,16 +215,22 @@ function vote() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       method: 'POST',
+=======
+'
+      method: 'POST','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ articleId: article.id, helpful })});
     setVoted(helpful)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -231,13 +264,23 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export default function HelpArticlePage() { return null; }
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ articleId: article.id, helpful })
+    });'
+import { GetStaticPaths, GetStaticProps } from 'next';'
+import { useState } from 'react';'
+import { readJson } from '../../utils/fsDb';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { HelpArticle } from '../../utils/support';
-export const getStaticPaths: GetStaticPaths = async () => {;
+export const getStaticPaths: GetStaticPaths = async () => {;'
   const articles = readJson<HelpArticle[]>('help/articles.json', []),;
   return {;
     paths: articles.map((a) => ({ params: { slug: a.slug } })),;
-    fallback: false  } catch (error) {
-    console.error("Error:", error);
+    fallback: false  } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
 =======
@@ -253,23 +296,22 @@ body: JSON.stringify({ articleId: article.id, helpful }),
 }
 },;
 export const getStaticProps: GetStaticProps = async (ctx) => {;
-  const slug = ctx.params?.slug as string;
+  const slug = ctx.params?.slug as string;'
   const articles = readJson<HelpArticle[]>('help/articles.json', []),;
   const article = articles.find((a) => a.slug === slug) || null;
-  return { props: { article }   } catch (error) {
-    console.error("Error:", error);
+  return { props: { article }   } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 };
-export default function HelpArticlePage(req, res) {
-  try {
+export default function HelpArticlePage(req, res) {}
+  try {};
   const [voted, setVoted] = useState<null | boolean>(null);
-  async function vote(helpful: boolean) {;
-    await fetch('/api/support/feedback', {;
-      method: 'POST',;
+  async function vote() { return null; }
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify({ articleId: article.id, helpful })});
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -281,100 +323,80 @@ export default function HelpArticlePage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setVoted(helpful);
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 
 <<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-export const getStaticPaths: GetStaticPaths = async () => {;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  return {
 <<<<<<< HEAD
-    paths: articles.map(a => ({ params: { slug: a.slug } }))
-    fallback: false
-  }
-}
-export const getStaticProps: GetStaticProps = async ctx => {
-  const slug = ctx.params?.slug as string;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const article = articles.find(a => a.slug === slug) |null;
-  return { props: { article } };}
-export default function HelpArticlePage({ article }: { article: HelpArticle }) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-    paths: articles.map(a => ({ params: { slug: a.slug } })),
-    fallback: false,
-  };
-};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export const getStaticProps: GetStaticProps = async ctx => {;
-  const slug = ctx.params?.slug as string;
+
+export const getStaticPaths: GetStaticPaths = async () => {;'
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const article = articles.find(a => a.slug === slug) || null;
-  return { props: { article } };};
-
-export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return {}
   const [voted, setVoted] = useState<null | boolean>(null);
-  async function vote(helpful: boolean) {
-    await fetch('/api/support/feedback', {
-      method: 'POST'
+  async function vote() { return null; }
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
     });
-<<<<<<< HEAD
-    setVoted(helpful);
 
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
+'
+import { GetStaticPaths, GetStaticProps } from 'next';'
+import { useState } from 'react';'
+import { readJson } from '../../utils/fsDb';'
 import type { HelpArticle } from '../../utils/support';
-export const getStaticPaths: GetStaticPaths = async () => {;
+export const getStaticPaths: GetStaticPaths = async () => {;'
   const articles = readJson<HelpArticle[]>('help/articles.json', []),;
   return {;
     paths: articles.map((a) => ({ params: { slug: a.slug } })),;
-    fallback: false  } catch (error) {
-    console.error("Error:", error);
+    fallback: false  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 },;
 export const getStaticProps: GetStaticProps = async (ctx) => {;
-  const slug = ctx.params?.slug as string;
+  const slug = ctx.params?.slug as string;'
   const articles = readJson<HelpArticle[]>('help/articles.json', []),;
   const article = articles.find((a) => a.slug === slug) || null;
-  return { props: { article }   } catch (error) {
-    console.error("Error:", error);
+  return { props: { article }   } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 };
-export default function HelpArticlePage(req, res) {
-  try {
+export default function HelpArticlePage(req, res) {}
+  try {};
   const [voted, setVoted] = useState<null | boolean>(null);
-  async function vote(helpful: boolean) {;
-    await fetch('/api/support/feedback', {;
-      method: 'POST',;
+  async function vote() { return null; }
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify({ articleId: article.id, helpful })});
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setVoted(helpful);
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -402,9 +424,11 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 <<<<<<< HEAD
-
 =======
 =======
 }
@@ -419,11 +443,17 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
+=======
+
+
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <article className="prose dark:prose-invert max-w-none">
-      <h1>{article.title}</h1>
-      <div className="text-sm opacity-70">Last updated {new Date(article.updatedAt).toLocaleDateString()}</div>
-      <div className="mt-6 whitespace-pre-wrap">{article.body}</div>
+      <h1>{article.title}</h1>"
+      <div className="text-sm opacity-70">Last updated {new Date(article.updatedAt).toLocaleDateString()}</div>"
+      <div className="mt-6 whitespace-pre-wrap">{article.body}</div>"
       <div className="mt-8 p-4 rounded-lg border border-gray-200 dark:border-gray-800 flex items-center justify-between">
+<<<<<<< HEAD
         <div>Was this article helpful?</div>
 <<<<<<< HEAD
         <div className="flex gap-2">
@@ -454,10 +484,17 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <div>Was this article helpful?</div>"
+        <div className="flex gap-2">"
+          <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -465,6 +502,9 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   )
 }
@@ -474,6 +514,7 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -504,3 +545,9 @@ export const getStaticPaths: GetStaticPaths = async () => {;
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

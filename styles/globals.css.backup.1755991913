@@ -185,11 +185,21 @@ h3 {
   height: 100%;
   background:
   background: 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.2) 0%, transparent 50%),
@@ -198,6 +208,7 @@ h3 {
     radial-gradient(circle at 10% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 30% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+<<<<<<< HEAD
   pointer-events: none;
     radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);  pointer-events: none;
     radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);
@@ -214,6 +225,19 @@ h3 {
 =======
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  pointer-events: none;
+    radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);  pointer-events: none;
+
+
+
+    radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);  pointer-events: none;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   z-index: -1;
   animation: backgroundFloat 30s ease-in-out infinite;
 }
@@ -484,12 +508,20 @@ body::after {
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 /* Advanced Card Hover Effects */
 .futuristic-card {
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   position: relative;
 .futuristic-card {  position: relative;
+<<<<<<< HEAD
 @keyframes holographicWave {
   0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.1; }
   50% { transform: scale(1.2) rotate(180deg); opacity: 0.3; }
@@ -662,10 +694,20 @@ body::after {
 .futuristic-card {  position: relative;
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+/* Advanced Card Hover Effects */
+.futuristic-card {  position: relative;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   content: '';
 .futuristic-card::before {  content: '';
@@ -720,6 +762,19 @@ body::after {
 .quantum-button::before {
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  content: '';
+.futuristic-card::before {  content: '';
+
+
+
+.futuristic-card::before {  content: '';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   position: absolute;
   top: 0;
   left: -100%;

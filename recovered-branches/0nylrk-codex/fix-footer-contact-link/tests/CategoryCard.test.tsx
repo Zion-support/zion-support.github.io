@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,18 +85,42 @@ import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components/CategoryCard';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 it('renders category card with link to slug', () => {
+=======
+
+import {render, screen} from '@testing-library/react','
+import {MemoryRouter} from 'react-router-dom','
+import {CategoryCard} from '@/components/CategoryCard',
+
+
+';
+import {render, screen} from '@testing-library/react';'
+import {MemoryRouter} from 'react-router-dom';'
+import {CategoryCard} from '@/components/CategoryCard';
+
+
+'
+import {render, screen} from '@testing-library/react';'
+import {MemoryRouter} from 'react-router-dom';'
+import {CategoryCard} from '@/components/CategoryCard';
+'
+it('renders category card with link to slug', () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   render(
     <MemoryRouter>
       <CategoryCard title="Test Category" description="desc" icon="*" />
     </MemoryRouter>
   ),
 
+
+
+'
 it('renders category card with link to slug', () => {;
   render(;
-    <MemoryRouter>;
+    <MemoryRouter>;'
       <CategoryCard title='Test Category' description='desc' icon='*' />;
     </MemoryRouter>;
   ),;
+<<<<<<< HEAD
 
 import {render, screen} from '@testing - library / react';
 import {MemoryRouter} from 'react-router-dom';
@@ -171,62 +196,70 @@ it('treats underscores as spaces in slug', () => {
 =======
 import { render, screen } from '@testing-library/react',;
 import { MemoryRouter } from 'react-router-dom',;
+=======
+
+
+'
+import { render, screen } from '@testing-library/react',;'
+import { MemoryRouter } from 'react-router-dom',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { CategoryCard } from '@/components/CategoryCard',;
-;
+;'
 it('renders category card with link to slug', () => {;
   render(;
-    <MemoryRouter>;
+    <MemoryRouter>;"
       <CategoryCard title="Test Category" description="desc" icon="*" />;
     </MemoryRouter>;
   ),;
-;
-  const link = screen.getByRole('link', { name:/test category/i }),;
+;'
+  const link = screen.getByRole('link', { name:/test category/i }),;'
   expect(link).toHaveAttribute('href/category/test-category'),;
 }),;
-;
+;'
 it('normalizes slug with special characters', () => {;
   render(;
-    <MemoryRouter>;
+    <MemoryRouter>;"
       <CategoryCard title="R&D Tools!" description="desc" icon="*" />;
     </MemoryRouter>;
   ),;
-;
-  const link = screen.getByRole('link', { name:/r&d tools!/i }),;
+;'
+  const link = screen.getByRole('link', { name:/r&d tools!/i }),;'
   expect(link).toHaveAttribute('href/category/rd-tools'),;
 }),;
-;
+;'
 it('removes accents from slug', () => {;
   render(;
-    <MemoryRouter>;
+    <MemoryRouter>;"
       <CategoryCard title="Crème Brûlée" description="desc" icon="*" />;
     </MemoryRouter>;
   ),;
-;
-  const link = screen.getByRole('link', { name:/crème brûlée/i }),;
+;'
+  const link = screen.getByRole('link', { name:/crème brûlée/i }),;'
   expect(link).toHaveAttribute('href/category/creme-brulee'),;
 }),;
-;
+;'
 it('treats underscores as spaces in slug', () => {;
   render(;
-    <MemoryRouter>;
+    <MemoryRouter>;"
       <CategoryCard title="AI_Tools" description="desc" icon="*" />;
     </MemoryRouter>;
   ),;
-;
-  const link = screen.getByRole('link', { name:/ai_tools/i }),;
-  expect(link).toHaveAttribute('href/category/ai-tools'),;
-}),; <MemoryRouter> <CategoryCard title="Test Category" description="desc" icon="*" /> </MemoryRouter>);
-it ('normalizes slug with special characters', () => {
-  render (<MemoryRouter> <CategoryCard title="R&D Tools!" description="desc" icon="*" /> </MemoryRouter>);
-it ('removes accents from slug', () => {
-  render (<MemoryRouter> <CategoryCard title="Crème Brûlée" description="desc" icon="*" /> </MemoryRouter>);
-it ('treats underscores as spaces in slug', () => {
-  render (<MemoryRouter> <CategoryCard title="AI Tools" description="desc" icon="*" /> </MemoryRouter>);
+;'
+  const link = screen.getByRole('link', { name:/ai_tools/i }),;'
+  expect(link).toHaveAttribute('href/category/ai-tools'),;"
+}),; <MemoryRouter> <CategoryCard title="Test Category" description="desc" icon="*" /> </MemoryRouter>);'
+it ('normalizes slug with special characters', () => {"
+  render (<MemoryRouter> <CategoryCard title="R&D Tools!" description="desc" icon="*" /> </MemoryRouter>);'
+it ('removes accents from slug', () => {"
+  render (<MemoryRouter> <CategoryCard title="Crème Brûlée" description="desc" icon="*" /> </MemoryRouter>);'
+it ('treats underscores as spaces in slug', () => {"
+  render (<MemoryRouter> <CategoryCard title="AI Tools" description="desc" icon="*" /> </MemoryRouter>);'
   expect(link).toHaveAttribute('href/category/ai-tools'),
 }),;
-;
+;'
   expect(link).toHaveAttribute('href/category/ai-tools')
 }),
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
 =======
@@ -265,3 +298,27 @@ it('treats underscores as spaces in slug', () => {
 =======
   expect(link).toHaveAttribute('href/category/ai-tools');>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+  );'
+  const link = screen.getByRole('link', { name: /test category/i });'
+  expect(link).toHaveAttribute('href/category/test-category');
+});'
+it('normalizes slug with special characters', () => {'
+      <CategoryCard title='R&D Tools!' description='desc' icon='*' />'
+  const link = screen.getByRole('link', { name: /r&d tools!/i });'
+  expect(link).toHaveAttribute('href/category/rd-tools');'
+it('removes accents from slug', () => {'
+      <CategoryCard title='Crème Brûlée' description='desc' icon='*' />'
+  const link = screen.getByRole('link', { name: /crème brûlée/i });'
+  expect(link).toHaveAttribute('href/category/creme-brulee');'
+it('treats underscores as spaces in slug', () => {'
+      <CategoryCard title='AI_Tools' description='desc' icon='*' />'
+  const link = screen.getByRole('link', { name: /ai_tools/i });'
+  expect(link).toHaveAttribute('href/category/ai-tools');
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

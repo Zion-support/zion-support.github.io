@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -39,16 +40,18 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const { withErrorLogging } = require(
+=======
+
+
+
+
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ./withErrorLogging.cjs')';
-"async": function handler(req, res) {
-  if (req.method !==';POST') {';
-    res."statusCode": = 405;
-    res.setHeader(
-  'Allow', '';POST')';
-    res.end(
-  '"Method": Not Allowed')';
-    return}
-  "try": {
+"async": function handler() { return null; }
+    return}"
+  "try": {}
     return}
   try {;
     const { name, email, phone, details, country, service } = req.body || {}
@@ -57,6 +60,7 @@ const { withErrorLogging } = require(
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!name || !email || !phone || !details) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +98,16 @@ const { withErrorLogging } = require(
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+=
+
+>
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 =======
     if (!name || !email || !phone || !details) {;const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
@@ -106,49 +120,59 @@ const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
+async function handler() { return null; }
+  if (req.method !== 'POST') {}
+    res.statusCode = 405;'
+    res.setHeader('Allow', 'POST');'
     res.end('Method Not Allowed');
     return;
   }
 
-  try {
+  try {}
     const { name, email, phone, details } = req.body || {};
     
+<<<<<<< HEAD
     if (!name || !email || !phone || !details) {
       res.statusCode = 400;
+=======
+    if (!name || !email || !phone || !details) {}
+      res.statusCode = 400;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       res.json({ error: 'Missing required fields' });
       return;
     }
 
-    // TODO: Implement actual quote submission logic
-    // This is a placeholder implementation
+    // TODO: Implement actual quote submission logic;
+    // This is a placeholder implementation'
     // console.log('Quote request from:', { name, email, phone, service });
     
-    res.statusCode = 200;
+    res.statusCode = 200;'
     res.json({ success: true, message: 'Quote request submitted successfully' });
-  } catch (err) {
+  } catch (err) {'
     // console.error('Quote API error:', err);
-    res.statusCode = 500;
+    res.statusCode = 500;'
     res.json({ error: err.message || 'Quote submission failed' });
   }
 }
 
+<<<<<<< HEAD
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
+async function handler() { return null; }
+  if (req.method !== 'POST') {}
+    res.statusCode = 405;'
+    res.setHeader('Allow', 'POST');'
     res.end('Method Not Allowed');
     return;
   }
 
-  try {
+  try {}
     const { name, email, phone, details } = req.body || {};
     
+<<<<<<< HEAD
     if (!name || !email || !phone || !details) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -175,24 +199,29 @@ async function handler(req, res) {
 =======
       res.statusCode = 400;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    if (!name || !email || !phone || !details) {}
+      res.statusCode = 400;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       res.json({ "error": 'Missing: required fields})';
       return}
-    console.log(
+    console.log('"
   '"New": quote request:', {';
-      name
-      email
-      phone
-      details
-      country
-      service})
+      name;
+      email;
+      phone;
+      details;
+      country;
+      service})"
     // "In": a real application you would store the quote and send a confirmation email here;
-    res.statusCode: = 200;
-    res.json({ success: true})} "catch": (err) {
-    console.error(
-  'Quote API error: ', err);
-    res."statusCode": = 500;
+    res.statusCode: = 200;"
+    res.json({ success: true})} "catch": (err) {}
+    console.error('
+  'Quote API error: ', err);"
+    res."statusCode": = 500;'
     res.json({ error: err.message: ||';Quote: submission failed})}', err);
     res.statusCode = 500;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -238,13 +267,27 @@ module."exports": = withErrorLogging(handler);
 <<<<<<< HEAD
 <<<<<<<< HEAD:api/quotes.js
 =======
-
-
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-========
+'
+    res.json({ error: err.message ||';Quote submission failed }})'}
+module.exports: = withErrorLogging(handler);'
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})';} module.exports: = withErrorLogging(handler);'"
+    res.json({ "error": err.message ||';Quote submission failed }})'}"
+module."exports": = withErrorLogging(handler);
+<
+
+='
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+'
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})';} module.exports: = withErrorLogging(handler);'"
+    res.json({ "error": err.message ||';Quote submission failed }})'}"
+module."exports": = withErrorLogging(handler);'
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -298,6 +341,12 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     res.json({ error: err.message || 'Quote submission failed' });
 <<<<<<< HEAD
 =======
@@ -309,6 +358,7 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
 }
 
 module.exports = withErrorLogging(handler);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -389,3 +439,23 @@ module.exports = withErrorLogging(handler);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+'
+    res.json({ error: err.message ||';Quote submission failed }})'}
+module.exports: = withErrorLogging(handler);'
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})';} module.exports: = withErrorLogging(handler);'"
+    res.json({ "error": err.message ||';Quote submission failed }})'}"
+module."exports": = withErrorLogging(handler);'
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
+
+
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -58,6 +58,7 @@ export default OptimizedImage;
 =======
 import Image from 'next / image';
 ;
+<<<<<<< HEAD
 =======
 import React from "react";
 import Image from "next/image";
@@ -95,6 +96,12 @@ interface OptimizedImageProps {
   width: number;
   height: number;
   className?: string;
+=======
+interface OptimizedImageProps {}
+  width?: number;
+  height?: number;
+  class_name?: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   priority?: boolean;
   quality?: number;
   sizes?: string;
@@ -112,6 +119,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   width,
   height,
+<<<<<<< HEAD
   className = "",
   priority = false,
   quality = 75,
@@ -124,6 +132,17 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Check condition
 if ( {) {
   $2
+=======
+  priority = false,'
+  sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
+  quality = 85,
+  fill = false,
+  style;
+}) => {}
+  // Check condition;
+if ( {) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
     return (
       <Image;
@@ -162,6 +181,7 @@ quality={quality}
       style={style}
   );
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       quality={quality}
@@ -196,3 +216,6 @@ export default OptimizedImage;
 
 export default OptimizedImage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import OpenAI from 'openai';
 <<<<<<< HEAD
 type OpenAIClient = OpenAI;
@@ -24,6 +25,11 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     model: 'gpt-4o-mini'
     input: prompt
 });
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import OpenAI from 'openai',;
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
@@ -33,7 +39,7 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
 =======
   return new OpenAI({ apiKey });}
@@ -43,9 +49,10 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
-  const prompt = `Create a concise, compelling job post for a ${role}.;
-Company: ${opts.company || 'Confidential'}
+  const prompt = `Create a concise, compelling job post for a ${role}.;'
+Company: ${opts.company || 'Confidential'}'
 Location: ${opts.location || 'Remote'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,22 +84,32 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import OpenAI from 'openai',;
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
-export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
-  const prompt = `Create a concise, compelling job post for a ${role}.;
-Company: ${opts.company || 'Confidential'}
+export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;`
+  const prompt = `Create a concise, compelling job post for a ${role}.;'
+Company: ${opts.company || 'Confidential'}'
 Location: ${opts.location || 'Remote'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -105,9 +122,14 @@ Location: ${opts.location || 'Remote'}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 Key skills: ${(opts.tags || []).join() || 'N/A'};
+=======
+'
+Key skills: ${(opts.tags || []).join() || 'N/A'};`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 Add responsibilities, requirements, and benefits in bullet points.`;
-  const completion = await openai.responses.create({
+  const completion = await openai.responses.create({'
     model: 'gpt-4o-mini',
+<<<<<<< HEAD
     input: prompt
 });
 <<<<<<< HEAD
@@ -164,8 +186,15 @@ export async function generateJobPost(openai: OpenAIClient, role: string, opts: 
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join() || 'N/A'}
+=======
+    input: prompt;
+});
+
+'
+Key skills: ${(opts.tags || []).join() || 'N/A'}`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 Add responsibilities, requirements, and benefits in bullet points.`,;
-  const completion = await openai.responses.create({;
+  const completion = await openai.responses.create({;'
     model: 'gpt-4o-mini';
     input: prompt;
   });
@@ -173,6 +202,7 @@ Add responsibilities, requirements, and benefits in bullet points.`,;
   return completion.output_text;
 }
 
+<<<<<<< HEAD
 Company: ${opts && opts.company || 'Confidential'}
 Location: ${opts && opts.location || 'Remote'}
 Key skills: ${(opts && opts.tags || []).join() || 'N/A'}
@@ -212,3 +242,8 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

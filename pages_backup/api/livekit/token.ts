@@ -1,14 +1,8 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { AccessToken } from "livekit-server-sdk";
-
-
-
-=======
 
     });
+<<<<<<< HEAD:pages_backup/api/livekit/token.ts
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -71,20 +65,25 @@ return res.status(400).json({ error: 'Missing roomName or identity' });
     });
     at.addGrant({
       roomJoin: true
+=======
+    at.addGrant({}
+      roomJoin: true;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/livekit/token.ts
       room: String(roomName)
-      canPublish: audioOnly ? false : true
-      canPublishData: true
-      canSubscribe: true
+      canPublish: audioOnly ? false : true;
+      canPublishData: true;
+      canSubscribe: true;
     });
     const token = await at.toJwt();
-    return res.status(200).json({
-      token
-      url: LIVEKIT_HOST
+    return res.status(200).json({}
+      token;
+      url: LIVEKIT_HOST;
     });
-  } catch (err: any) {
-    console.error("Token error", err);
+  } catch (err: any) {}
+    console.error("Token error", err);"
     return res.status(500).json({ error: "Failed to create token" });
 
+<<<<<<< HEAD:pages_backup/api/livekit/token.ts
 <<<<<<< HEAD
     at.addGrant({
 
@@ -98,23 +97,20 @@ return res.status(400).json({ error: 'Missing roomName or identity' });
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/livekit/token.ts
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 
   }
 }
-<<<<<<< HEAD
-  }
-}
-=======
 
+<<<<<<< HEAD:pages_backup/api/livekit/token.ts
 ;
   try {
     const { roomName, identity, name, audioOnly } = req.body || {};
@@ -297,10 +293,15 @@ url: LIVEKIT_HOST,
   } catch (error) {
 
     console.error('Token error', err);
+=======
+
+    console.error('Token error', err);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/livekit/token.ts
     return res.status(500).json({ error: 'Failed to create token' });
 
   }
 
+<<<<<<< HEAD:pages_backup/api/livekit/token.ts
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -315,3 +316,8 @@ url: LIVEKIT_HOST,
 =======
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/livekit/token.ts

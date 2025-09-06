@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SkillCategoryProps  } from './types';
 import { SkillItem  } from './SkillItem';
 export const SkillCategory = ({
@@ -93,13 +94,17 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { SkillCategoryProps } from "./types";
+=======
+import { SkillCategoryProps } from "./types";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { SkillItem } from "./SkillItem";
-export const SkillCategory = ({
+export const SkillCategory = ({}
   category,
   skills,
   onDelete,
-}: SkillCategoryProps) => {
+}: SkillCategoryProps) => {};
   if (!skills || skills.length === 0) return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,19 +134,25 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-  );
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
+
+
+
+  );
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   );
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
             on_delete={on_delete}
           />))}
@@ -149,38 +160,10 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
     </div>);
 }
 ;
+
+
+
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  ),;
-},; <SkillItem key= {
-  skill.id 
-}skill= {
-  skill 
-}category= {
-  category 
-}onDelete= {
-  onDelete 
-}/>) ) 
-}</div> </div>) 
-};
-import { SkillCategoryProps } from "./types";
-import { SkillItem } from "./SkillItem";
-export const SkillCategory = ({
-category
-  skills
-  onDelete
-}: SkillCategoryProps) => {
-
-  if (!skills |skills.length === 0) return null;
-
-  category,
-  skills,
-  onDelete,
-}: SkillCategoryProps) => {
-  if (!skills || skills.length === 0) return null;
-
   
   return (
     <div className="space-y-2">
@@ -205,3 +188,6 @@ category
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 };
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

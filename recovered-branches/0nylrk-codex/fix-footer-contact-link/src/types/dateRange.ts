@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface DateRange {
+=======
+export interface DateRange {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   from?: Date;
   to?: Date
 }
@@ -20,13 +24,29 @@ export interface DateRange {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   to?: Date;
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+  to?: Date;
+
+}
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface DateRange {;
   from?: Date;
-  to?: Date
+  to?: Date;
 }
   to?: Date;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,6 +66,10 @@ export interface DateRange {;
 export interface DateRange {
 =======
 export interface DateRange {
+=======
+
+export interface DateRange {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   from?: Date;
 }export interface DateRange {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -53,6 +77,7 @@ export interface DateRange {
 }export interface DateRange {
   from?: Date;
 }
+<<<<<<< HEAD
 export interface DateRange {;
   from?: Date;
   to?: Date
@@ -72,3 +97,6 @@ export interface DateRange {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

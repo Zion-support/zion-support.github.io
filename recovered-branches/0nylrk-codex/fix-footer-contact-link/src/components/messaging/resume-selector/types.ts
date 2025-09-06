@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Resume } from "@/types/resume";
 export interface ResumeOption {;
@@ -33,18 +32,30 @@ export interface ResumeOption {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+import { Resume  } from '@/types / resume';
+
+export interface ResumeOption {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
-  title: string;
+  title: string;'
   type: 'ai_resume' | 'custom_upload';
   resume?: Resume;
+<<<<<<< HEAD
   file?: File
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  file?: File;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
+
+
 <<<<<<< HEAD
-export interface ResumeSelectorProps {
-
-
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -68,20 +79,26 @@ import { Resume } from "@/types/resume",
 }import { Resume } from "@/types/resume",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ResumeOption {
+=======
+
+import { Resume } from "@/types/resume",
+export interface ResumeOption {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string,
-  title: string,
+  title: string,'
   type: 'ai_resume' | 'custom_upload',
-  resume?: Resume,
-  file?: File
+  resume?: Resume,;
+  file?: File";
 import { Resume } from "@/types/resume",;
 export interface ResumeOption {;
   id: string,;
-  title: string,;
+  title: string,;'
   type: 'ai_resume' | 'custom_upload';
   resume?: Resume;
   file?: File;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,10 +120,15 @@ export interface ResumeSelectorProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   onResumeSelected: (resume_option: ResumeOption) => void;  onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;
 export interface ResumeSelectorProps {;
   onResumeSelected: (resumeOption: ResumeOption) => void;
+<<<<<<< HEAD
   onResumeSelected: (resumeOption: ResumeOption) => void;
   onResumeSelected: (resume_option: ResumeOption) => void;
 <<<<<<< HEAD
@@ -118,3 +140,11 @@ export interface ResumeSelectorProps {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
+=======
+
+
+  onResumeSelected: (resumeOption: ResumeOption) => void;
+  onResumeSelected: (resume_option: ResumeOption) => void;
+
+}'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

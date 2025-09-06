@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -12,3 +13,6 @@ const Contact: NextPage = () => (
 );
 
 export default Contact;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

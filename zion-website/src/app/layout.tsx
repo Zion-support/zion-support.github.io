@@ -1,47 +1,55 @@
+<<<<<<< HEAD
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import Navigation from '@/components/Navigation';
+=======
+import type { Metadata } from 'next';'
+import { Inter } from 'next/font/google';'
+import './globals.css';'
+import Navigation from '@/components/Navigation';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Footer from '@/components/Footer';
-
+'
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
-  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
+export const metadata: Metadata = {'
+  title: 'Zion Tech Group - Leading AI and Technology Solutions','
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.','
+  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],'
+  authors: [{ name: 'Zion Tech Group' }],'
+  creator: 'Zion Tech Group','
+  publisher: 'Zion Tech Group','
   robots: 'index, follow',
-  openGraph: {
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
-    url: 'https://ziontechgroup.com',
+  openGraph: {'
+    title: 'Zion Tech Group - Leading AI and Technology Solutions','
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.','
+    url: 'https://ziontechgroup.com','
     siteName: 'Zion Tech Group',
-    images: [
-      {
+    images: []
+      {'
         url: '/og-image.jpg',
         width: 1200,
-        height: 630,
+        height: 630,'
         alt: 'Zion Tech Group',
       },
-    ],
-    locale: 'en_US',
+    ],'
+    locale: 'en_US','
     type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions.',
+  twitter: {'
+    card: 'summary_large_image','
+    title: 'Zion Tech Group - Leading AI and Technology Solutions','
+    description: 'Transform your business with cutting-edge AI and technology solutions.','
     images: ['/og-image.jpg'],
-  },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#000000',
+  },'
+  viewport: 'width=device-width, initial-scale=1','
+  themeColor: '#000000',;
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -50,6 +58,13 @@ export const metadata: Metadata = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export default function RootLayout({}
+  children,
+}: {};
+  children: React.ReactNode;
+}) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
       <body className={`${inter.class_name} bg - black text - white antialiased`}>;
@@ -193,6 +208,7 @@ export default function RootLayout({
       </body>
     </html>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -212,3 +228,6 @@ export default function RootLayout({
 =======
       </body>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

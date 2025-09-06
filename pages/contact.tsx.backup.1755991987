@@ -1,13 +1,13 @@
 export default function Page(){return null}
-=======
-=======
+
+
 import React from 'react';
-=======
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import React from 'react';
 import SEO from '../components/SEO';
-=======
+
 import { 
   Mail, Phone, MapPin, Send, Clock, Globe, MessageSquare, CheckCircle, 
   ArrowRight, Star, Users, Shield, Zap, Brain, Factory, FlaskConical, 
@@ -93,6 +93,7 @@ export default function ContactPage() {
     }, 3000);
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<<< HEAD:components/contact.tsx.backup.1755991860.backup.1756001154
@@ -347,6 +348,9 @@ export default function ContactPage() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/contact.tsx.backup.1755991987
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   return (
@@ -800,7 +804,7 @@ export default function ContactPage() {
           <a href="mailto:kleber@ziontechgroup.com" className="block hover:text-purple-400">kleber@ziontechgroup.com</a>
         </div>
       </div>
-=======
+
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div

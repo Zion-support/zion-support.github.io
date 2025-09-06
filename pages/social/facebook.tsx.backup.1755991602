@@ -5,6 +5,7 @@ export default function FacebookRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -20,10 +21,14 @@ export default function FacebookRedirect() {
 	}, []);
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-4a15
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	return (
 		<>
 			<Head>
 				<title>Facebook | Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -45,6 +50,9 @@ export default function FacebookRedirect() {
 				<a href="https://facebook.com/ziontechgroup" className="text-cyan-400 underline">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-4a15
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					Continue to Facebook
 				</a>
 			</div>

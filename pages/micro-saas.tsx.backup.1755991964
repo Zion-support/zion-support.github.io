@@ -874,6 +874,7 @@ export default function MicroSaasPage() {
       savings: 'Save 60% vs. competitors'
     },
     {
+<<<<<<< HEAD
       name: 'AI Sales Forecasting Engine',
       tagline: 'Predictive sales intelligence',
       price: '$99',
@@ -1412,6 +1413,9 @@ export default function MicroSaasPage() {
       trialDays: 14,
       setupTime: '20 minutes',
       category: 'Content & Marketing'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -1423,6 +1427,7 @@ export default function MicroSaasPage() {
   };
 
   return (
+<<<<<<< HEAD
     <EnhancedFuturisticBackground variant="quantum" intensity="medium">
       <div className="min-h-screen">
         <Head>
@@ -1731,6 +1736,9 @@ export default function MicroSaasPage() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500"
                 />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1924,6 +1932,7 @@ export default function MicroSaasPage() {
               </div>
             </div>
 
+<<<<<<< HEAD
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredServices.map((service, index) => (
@@ -2049,6 +2058,9 @@ export default function MicroSaasPage() {
                 <div className="text-white font-semibold">Visit Us</div>
                 <div className="text-slate-400 text-sm">{contactInfo.address}</div>
               </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
 
             {filteredServices.length === 0 && (

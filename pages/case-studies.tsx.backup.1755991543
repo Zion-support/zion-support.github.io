@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 =======
 <<<<<<< HEAD
@@ -9,6 +10,9 @@ import { motion } from 'framer-motion';
 import { Award, TrendingUp, Users, DollarSign, Clock, ArrowRight, Star, CheckCircle, Target, Rocket, Brain, Atom } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -19,6 +23,7 @@ import {
   DollarSign, BarChart3, PieChart
 } from 'lucide-react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -354,11 +359,15 @@ const testimonials = [
 ];
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <Layout>
       <main className="relative z-10 pt-8">
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -646,11 +655,15 @@ const testimonials = [
               {testimonials.map((testimonial, index) => (
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <motion.div
                   key={study.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -755,6 +768,9 @@ const testimonials = [
                     <div className="text-sm text-gray-400">{testimonial.company}</div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
@@ -762,6 +778,7 @@ const testimonials = [
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -918,10 +935,14 @@ const testimonials = [
                 Let's discuss how our revolutionary technology solutions can transform your business
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -950,6 +971,9 @@ const testimonials = [
                   Schedule Consultation
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               </div>
             </motion.div>

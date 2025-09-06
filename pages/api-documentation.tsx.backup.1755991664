@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -395,3 +396,6 @@ export default function APIDocumentationPage() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e274
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/api-documentation.tsx.backup.1755991664
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

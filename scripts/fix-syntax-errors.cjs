@@ -1,7 +1,16 @@
 
+<<<<<<< HEAD
 
 
 main
+=======
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   }
 
@@ -83,6 +92,31 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     }
   }
 
+<<<<<<< HEAD
+=======
+  fixCommonErrors(content) {
+    // Fix unterminated strings
+    content = content.replace(/'([^']*?)(?=\n|$)/g, (match, str) => {
+      if (!str.endsWith("'")) {
+        return match + "'";
+      }
+      return match;
+    });
+    
+    content = content.replace(/"([^"]*?)(?=\n|$)/g, (match, str) => {
+      if (!str.endsWith('"')) {
+        return match + '"';
+      }
+      return match;
+    });
+    
+    // Fix missing semicolons
+    content = content.replace(/([^;}])\n/g, '$1;\n');
+    
+    // Fix merge conflict markers
+    content = content.replace(/
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 

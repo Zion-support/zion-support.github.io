@@ -17,6 +17,7 @@
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -34,9 +35,11 @@ function handler() {
   const callback_url = `/api / integrations / oauth/${provider}/callback?code = mock_code & state = mock_state`;
   res.write_head (302, { Location: callback_url });
   res.end ();
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -58,10 +61,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+
+export default function handler() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
+export default function handler() { return null; }
+  res.status(200).json({ message: 'API endpoint' });'
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 export default function handler(req, res) {
   try {
 <<<<<<< HEAD
@@ -111,3 +124,14 @@ res.end();
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default function handler(req, res) {}
+  try {};
+  const { provider } = req.query as { provider: string };`
+  const callbackUrl = `/api/integrations/oauth/${provider}/callback?code=mock_code&state=mock_state`;
+  res.writeHead(302, { Location: callbackUrl });
+  res.end();
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

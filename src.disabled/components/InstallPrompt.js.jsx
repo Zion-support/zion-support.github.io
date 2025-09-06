@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React from';react' "export": const InstallPrompt = () => { const [deferr
 import _React from';react' "export": const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e.preventDefault() setDeferred(e) } window.addEventListener('beforeinstallprompt',handler) return () => window.removeEventListener('beforeinstallprompt',handler) },[]) if (!deferred) return null const onClick = async () => { deferred.prompt() const result = await deferred.userChoice if (result.outcome !== 'accepted') {''';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React from';react' "export": const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e.preventDefault() setDeferred(e) } window.addEventListener('beforeinstallprompt',handler) return () => window.removeEventListener('beforeinstallprompt',handler) },[]) if (!deferred) return null const onClick = async () => { deferred.prompt() const result = await deferred.userChoice if (result.outcome !== 'accepted') {''';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import _React from';react' "export": const InstallPrompt = () => { const [deferr
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from\';react\' \"export\": const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e && e.preventDefault() setDeferred(e) } window && window.addEventListener(\'beforeinstallprompt\',handler) return () => window && window.removeEventListener(\'beforeinstallprompt\',handler) },[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== \'accepted\') {\''\';
 const React from";react" export: const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e && e.preventDefault() setDeferred(e) } window && window.addEventListener("beforeinstallprompt",handler) return () => window && window.removeEventListener("beforeinstallprompt",handler) },[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== "accepted") {""";"""
-import _React from';react' "export": const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e && e.preventDefault() setDeferred(e) } window && window.addEventListener('beforeinstallprompt',handler) return () => window && window.removeEventListener('beforeinstallprompt',handler) },[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== 'accepted') {''';
-<<<<<<< HEAD
+=======
 
+
+'"
+import React from\';react\' \"export\": const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e && e.preventDefault() setDeferred(e) } window && window.addEventListener(\'beforeinstallprompt\',handler) return () => window && window.removeEventListener(\'beforeinstallprompt\',handler) },[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== \'accepted\') {\''\';"
+const React from";react" export: const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e && e.preventDefault() setDeferred(e) } window && window.addEventListener("beforeinstallprompt",handler) return () => window && window.removeEventListener("beforeinstallprompt",handler) },[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== "accepted") {""";"""'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React from';react' "export": const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e && e.preventDefault() setDeferred(e) } window && window.addEventListener('beforeinstallprompt',handler) return () => window && window.removeEventListener('beforeinstallprompt',handler) },[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== 'accepted') {''';
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import _React from';react' "export": const InstallPrompt = () => { const [deferr
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+import _React from';react' "export": const InstallPrompt = () => { const [deferred,setDeferred] = useState(null) useEffect(() => { const handler = e => { e && e.preventDefault() setDeferred(e) } window && window.addEventListener('beforeinstallprompt',handler) return () => window && window.removeEventListener('beforeinstallprompt',handler) },[]) if (!deferred) return null const onClick = async () => { deferred && deferred.prompt() const result = await deferred && deferred.userChoice if (result && result.outcome !== 'accepted') {''';
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -29,12 +30,12 @@ ursor/add-new-services-and-deploy-updates-0462
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
-
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
 const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -75,3 +76,23 @@ const Component = () => {; import _React from "react"; "class": ErrorBoundary ex
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'";
+const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}'";
+const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
+
+
+
+'";
+const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
+
+'";
+const Component = () => {; import _React from "react"; "class": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { "hasError": 'fals',e,"error": 'null'} } "static": getDerivedStateFromError(error) { return { hasError tru,e,"error": ''} } componentDidCatch(error,errorInfo) {" } render() { if (this.state.hasError) { return (" <div className="error-boundary"> <h2>Something went wrong.</h2> <details>{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
+
+
+
+'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

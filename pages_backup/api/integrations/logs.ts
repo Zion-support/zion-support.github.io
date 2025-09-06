@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/integrations/logs.ts
 <<<<<<< HEAD:pages/api/integrations/logs.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,13 +7,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/logs.ts
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD:pages_backup/api/integrations/logs.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -61,10 +60,30 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/logs.ts
-  const state = readState();
-  const logs = providerId
+=======
 
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";"
+import { readState } from "../../../lib/integrations/fileStore";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+"
+  if (req && req.method !== "GET")";
+    return res && res.status(405).json({ error: "Method not allowed" });
+  const { providerId } = req && req.query as { providerId?: string };
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/logs.ts
+  const state = readState();
+  const logs = providerId;
 }
+<<<<<<< HEAD:pages_backup/api/integrations/logs.ts
 <<<<<<< HEAD:pages/api/integrations/logs.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,15 +92,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/logs.ts
 
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD:pages_backup/api/integrations/logs.ts
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -92,24 +107,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/logs.ts
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/logs.ts
     ? state.logs.filter((l) => l.providerId === providerId)
     : state.logs;
   res.status(200).json({ logs });
 }
+<<<<<<< HEAD:pages_backup/api/integrations/logs.ts
 <<<<<<< HEAD:pages/api/integrations/logs.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/logs.ts
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD:pages_backup/api/integrations/logs.ts
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -118,23 +137,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/logs.ts
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/logs.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler() { return null; }
   res.status(200).json({ message: 'API endpoint' });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import type { NextApiRequest, NextApiResponse } from 'next';
+'
+import type { NextApiRequest, NextApiResponse } from 'next';'
 import { readState } from '../../../lib/integrations/fileStore';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler() { return null; }
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId } = req.query as { providerId?: string };
   const state = readState();
   const logs = providerId ? state.logs.filter(l => l.providerId === providerId) : state.logs;
   res.status(200).json({ logs })
+<<<<<<< HEAD:pages_backup/api/integrations/logs.ts
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
@@ -159,11 +181,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/logs.ts
 import type { NextApiRequest, NextApiResponse } from './next';
+=======
+
+}
+
+
+
+}
+
+
+
+'
+import type { NextApiRequest, NextApiResponse } from './next';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/logs.ts
 import { read_state  } from '../../../lib / integrations / file_store';
 ;
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
+<<<<<<< HEAD:pages_backup/api/integrations/logs.ts
 function handler() {
   if (
     return res.status (405).json ({ error: "Method not allowed" })) {
@@ -272,3 +308,32 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/logs.ts
+=======
+function handler() {}
+  if ("
+    return res.status (405).json ({ error: "Method not allowed" })) {}
+  $2;
+}
+
+
+
+
+
+
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/logs.ts

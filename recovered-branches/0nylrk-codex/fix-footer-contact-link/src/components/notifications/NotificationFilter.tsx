@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type FilterType =
   | "all"
@@ -115,38 +116,54 @@ export type FilterType =
   | "unread"
   | "onboarding"
   | "messages"
+=======
+import React from "react";"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+export type FilterType ="
+  | "all""
+  | "unread""
+  | "onboarding""
+  | "messages"";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | "system";
 
-interface NotificationFilterProps {
+interface NotificationFilterProps {}
   filter: FilterType;
   onFilterChange: (filter: FilterType) => void;
 }
 
+<<<<<<< HEAD
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
+=======
+
+
+export const NotificationFilter: React.FC<NotificationFilterProps> = ({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   filter,
   onFilterChange,
-}) => {
-  return (
-    <div className="border-b border-zion-blue-light">
-      <Tabs
+}) => {}
+  return ("
+    <div className="border-b border-zion-blue-light">;
+      <Tabs;
         defaultValue={filter}
         onValueChange={(value) => onFilterChange(value as FilterType)}
-      >
-        <TabsList className="bg-zion-blue-dark/30 grid grid-cols-5 h-9 w-full">
+      >"
+        <TabsList className="bg-zion-blue-dark/30 grid grid-cols-5 h-9 w-full">"
           <TabsTrigger value="all" className="text-xs">
-            All
-          </TabsTrigger>
+            All;
+          </TabsTrigger>"
           <TabsTrigger value="unread" className="text-xs">
-            Unread
-          </TabsTrigger>
+            Unread;
+          </TabsTrigger>"
           <TabsTrigger value="onboarding" className="text-xs">
-            Onboarding
-          </TabsTrigger>
+            Onboarding;
+          </TabsTrigger>"
           <TabsTrigger value="messages" className="text-xs">
-            Messages
-          </TabsTrigger>
+            Messages;
+          </TabsTrigger>"
           <TabsTrigger value="system" className="text-xs">
-            System
+            System;
           </TabsTrigger>
         </TabsList>
       </Tabs>
@@ -160,6 +177,7 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   )
 },
 };
+<<<<<<< HEAD
   )
 },
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -239,3 +257,40 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export const NotificationFilter: React.FC < NotificationFilterProps> = ({}
+  filter,
+  onFilterChange,
+}) => {}
+  return (";
+    <div className="border - b border - zion - blue - light">;
+      <Tabs;
+        default_value={filter}
+        onValueChange={(value) => onFilterChange (value as FilterType)}
+      >;"
+        <TabsList className="bg - zion - blue - dark / 30 grid grid - cols - 5 h - 9 w - full">;"
+          <TabsTrigger value="all" className="text - xs">;
+            All;
+          </TabsTrigger>;"
+          <TabsTrigger value="unread" className="text - xs">;
+            Unread;
+          </TabsTrigger>;"
+          <TabsTrigger value="onboarding" className="text - xs">;
+            Onboarding;
+          </TabsTrigger>;"
+          <TabsTrigger value="messages" className="text - xs">;
+            Messages;
+          </TabsTrigger>;"
+          <TabsTrigger value="system" className="text - xs">;
+            System;
+          </TabsTrigger>;
+        </TabsList>;
+      </Tabs>;
+    </div>);
+}
+;
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

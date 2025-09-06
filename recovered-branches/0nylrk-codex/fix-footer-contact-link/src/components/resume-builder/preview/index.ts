@@ -1,9 +1,10 @@
-export { WorkExperienceSection } from "./WorkExperienceSection";
-export { EducationSection } from "./EducationSection";
-export { SkillsSection } from "./SkillsSection";
-export { CertificationsSection } from "./CertificationsSection";
-export { ResumeBasicInfoSection } from "./ResumeBasicInfo";
+export { WorkExperienceSection } from "./WorkExperienceSection";"
+export { EducationSection } from "./EducationSection";"
+export { SkillsSection } from "./SkillsSection";"
+export { CertificationsSection } from "./CertificationsSection";"
+export { ResumeBasicInfoSection } from "./ResumeBasicInfo";"
 export { PreviewHeader } from "./PreviewHeader";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,3 +30,6 @@ export { PreviewHeader } from './PreviewHeader';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

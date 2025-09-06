@@ -1,30 +1,36 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 "use client",
 import { useEffect  } from './react';,
-interface FirstInputEntry extends PerformanceEntry {
+interface FirstInputEntry extends PerformanceEntry {}
   processing_start: number,
   processing_end: number,
   target?: Element;
 }
-export /**
- * Analytics - Function description
+export /**;
+ * Analytics - Function description;
  */
+<<<<<<< HEAD
 function Analytics() {
   useEffect (() => {
 
@@ -49,6 +55,12 @@ export function Analytics() {useEffect(() => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 "use client",;
+=======
+function Analytics() {}
+  useEffect (() => {}
+"
+"use client",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useEffect } from "react",;
 interface FirstInputEntry extends PerformanceEntry {;
   processingStart: number,;
@@ -56,6 +68,7 @@ interface FirstInputEntry extends PerformanceEntry {;
   target?: Element;
 }
 ;
+<<<<<<< HEAD
 export function Analytics() {;
   useEffect(() => {;
 <<<<<<< HEAD
@@ -96,28 +109,39 @@ export function Analytics() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-          // Check condition
-if ( {) {
-  $2
+export function Analytics() { return null; }
+if ( {) {}
+  $2;
 }
-            const firstInputEntry = entry as FirstInputEntry,
-            // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+      // Core Web Vitals monitoring;
+      const observer = new PerformanceObserver ((list) => {}
+        for (const entry of list.get_entries ()) {}
+          // Check condition;
+if ( {) {}
+  $2;
+}"
+            // // // console.log ("LCP:", entry.start_time);
+          }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+
+          // Check condition;
+if ( {) {}
+  $2;
+}
+            const firstInputEntry = entry as FirstInputEntry,"
+            // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
+
+
+"
           if (entry.entryType === "first-input") {;
-            const firstInputEntry = entry as FirstInputEntry,;
+            const firstInputEntry = entry as FirstInputEntry,;"
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           if (entry.entryType === "first-input") {const firstInputEntry = entry as FirstInputEntry;
@@ -131,13 +155,21 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
         }
-      });
+      });"
       observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
 <<<<<<< HEAD
 <<<<<<< HEAD
       // Cumulative Layout Shift monitoring;
+<<<<<<< HEAD
 <<<<<<< HEAD
       let cls = 0,
       const observer2 = new PerformanceObserver ((list) => {
@@ -164,6 +196,9 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return () => {;
@@ -173,6 +208,7 @@ if ( {) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       return () => {observer.disconnect();
@@ -208,6 +244,13 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
 =======
       // Cumulative Layout Shift monitoring;      }
@@ -216,6 +259,7 @@ if ( {) {
       // Cumulative Layout Shift monitoring;      }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
-  }, []);
+  }, []);'
   return null, // This component doesn't render anything;
 }
+'"

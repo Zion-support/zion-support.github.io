@@ -382,6 +382,7 @@ export default function PricingPage() {
   const yearlyDiscount = 0.2; // 20% discount for yearly billing
 
   return (
+<<<<<<< HEAD
     <EnhancedFuturisticBackground variant="quantum-particles" intensity="medium">
       <div className="min-h-screen">
         <Head>
@@ -395,6 +396,9 @@ export default function PricingPage() {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/pricing" />
         </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Services Pricing */}
       <section className="py-20 bg-gray-50">

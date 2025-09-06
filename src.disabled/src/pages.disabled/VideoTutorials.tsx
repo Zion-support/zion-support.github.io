@@ -1,6 +1,7 @@
 =======
 export default function AddToCart.test({ }: AddToCart.testProps) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/tests/AddToCart.test.tsx
 =======
 interface VideoTutorialsProps {
@@ -10,6 +11,14 @@ interface VideoTutorialsProps {
 const VideoTutorials: React.FC<VideoTutorialsProps> = ({ className }) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:src.disabled/src/pages.disabled/VideoTutorials.tsx
   return (
+=======
+interface VideoTutorialsProps {}
+  className?: string;
+}
+
+const VideoTutorials: React.FC<VideoTutorialsProps> = ({ className }) => {}
+  return ('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className={className || ''}>
       <h1>VideoTutorials</h1>
       <p>This component is under development.</p>
@@ -31,5 +40,9 @@ const VideoTutorials: React.FC<VideoTutorialsProps> = ({ className }) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
+<<<<<<< HEAD
 export default VideoTutorials;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:src.disabled/src/pages.disabled/VideoTutorials.tsx
+=======
+export default VideoTutorials;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

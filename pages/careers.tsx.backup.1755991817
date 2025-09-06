@@ -127,6 +127,7 @@ export default function Careers() {
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/careers.tsx.backup.1755991817
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <UltraFuturisticBackground>
       <div className="min-h-screen">
@@ -395,6 +396,9 @@ export default function Careers() {
           <a className="text-cyan-400 hover:text-cyan-300 underline" href="mailto:careers@ziontechgroup.com">careers@ziontechgroup.com</a>
         </section>
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>
 <<<<<<<< HEAD:backup-problematic-files/components/careers.tsx.backup.1755991548
     </Layout>

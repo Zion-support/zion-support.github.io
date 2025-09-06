@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react',
@@ -36,32 +37,36 @@ const contactInfo = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
+}'
 import React from 'react';
 
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function Innovations2034Page() {
@@ -100,19 +105,24 @@ export default function Innovations2034Page() {;
 
 
                   key={i}
-                  className='absolute w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - full opacity - 60';
-                  style={{
+=======
 
-                    left: `${Math && Math.random() * 100}%`,
+export default function Innovations2034Page() {};
+export default function Innovations2034Page() { return null; }
+                  key={i}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
+                  className='absolute w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - full opacity - 60';
+                  style={{}
+                    left: `${Math && Math.random() * 100}%`,`
                     top: `${Math && Math.random() * 100}%`,
                   }}
-                  animate={{
+                  animate={{}
                     y: [0, -100, 0],
                     opacity: [0 && 0.6, 1, 0 && 0.6],
                     scale: [1, 1 && 1.5, 1],
                     rotate: [0, 360],
                   }}
-                  transition={{
+                  transition={{}
                     duration: 4 + Math && Math.random() * 3,
                     repeat: Infinity,
                     delay: Math && Math.random() * 2,
@@ -124,11 +134,11 @@ export default function Innovations2034Page() {;
 
 
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <motion.div
-
+            <motion.div;
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -225,10 +235,25 @@ export default function Innovations2034Page() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2034 Cutting-Edge Innovations | Zion Tech Group" />
+=======
+'"
+        <meta name="description" content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms. From AI consciousness to space mining automation, we're building tomorrow's technology today." />"
+        <meta name="keywords" content="2034 innovations, AI consciousness, quantum computing, space mining, metaverse, neural interfaces, fusion energy, nanotechnology, Zion Tech Group" />"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />"
+        <link rel="canonical" href="https://ziontechgroup.com/2034-innovations" />"
+        <meta property="og:title" content="2034 Cutting-Edge Innovations | Zion Tech Group" />"
+        <meta property="og:description" content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms." />"
+        <meta property="og:url" content="https://ziontechgroup.com/2034-innovations" />"
+        <meta property="og:type" content="website" />"
+        <meta property="og:site_name" content="Zion Tech Group" />"
+        <meta name="twitter:card" content="summary_large_image" />"
+        <meta name="twitter:title" content="2034 Cutting-Edge Innovations | Zion Tech Group" />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
         <meta name="twitter:description" content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms." />
       </Head>
-
+"
       <div className="min-h-screen bg-black">
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
         <UltraFuturisticNavigation2032 />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -262,9 +287,19 @@ export default function Innovations2034Page() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <UltraFuturisticNavigation2032 />"
+          <div className="absolute inset-0 overflow-hidden">"
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,255,255,0.15),transparent_50%)] animate-pulse"></div>"
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(139,92,246,0.15),transparent_50%)] animate-pulse delay-1000"></div>"
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(236,73,153,0.15),transparent_50%)] animate-pulse delay-2000"></div>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
               {[...Array(15)].map((_, i) => (
-                <motion.div
+                <motion.div"
                   key={i} className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-60"
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
                   style={{
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -441,38 +476,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className="text-6xl md:text-8xl">Innovations</span>
               </motion.h1>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  style={{}
+            >"
+              <motion.h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight"
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
               <motion.p className="text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12"
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+                initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+                animate={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 1, delay: 0.4 }  } catch (error) {
-    console.error("Error:", error);
+                transition={{ duration: 1, delay: 0.4 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               >;
-                Experience the future with our revolutionary micro SAAS services, IT solutions, and AI platforms.;
+                Experience the future with our revolutionary micro SAAS services, IT solutions, and AI platforms.;'
                 From AI consciousness to space mining automation, we're building tomorrow's technology today.;
               </motion.p>;
               <motion.div;
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+                initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+                animate={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
                 transition={{ duration: 1, delay: 0.6 }} className="flex flex-col sm:flex-row items-center justify-center gap-6">
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 =======
 <<<<<<< HEAD
 
@@ -511,16 +553,22 @@ transition={{ duration: 1, delay: 0.6 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2034-innovations.tsx
                 <motion.button
+=======
+
+
+                <motion.button;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.95 }}'
                   className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'
                 >
-                  Explore Innovations
+                  Explore Innovations;
                 </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.95 }}'
                   className='border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg'
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD:pages/2034-innovations.tsx
 <<<<<<< HEAD
                 >                  Contact Us
@@ -596,9 +644,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                >                  Contact Us;
+                <motion.button;
+                  whileHover={{ scale: 1.05 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                   whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
-                  Explore Innovations
+                  Explore Innovations;
                 </motion.button>
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
                 <motion.button
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -631,10 +690,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Contact Us
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                <motion.button;
+"
+                  whileTap={{ scale: 0.95 }} className="border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg">
+                  Contact Us;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                 </motion.button>
               </motion.div>
             </motion.div>
           </div>
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -685,40 +751,43 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
           {/* Scroll Indicator */}
-          <motion&& motion.div
+          <motion&& motion.div;
               >;
                 2034;
-                <br />;
+                <br />;'
                 <span className='text - 5xl md:text - 7xl'>Cutting - Edge</span>;
-                <br />;
+                <br />;'
                 <span className='text - 6xl md:text - 8xl'>Innovations</span>;
               </motion.h1>;
-              <motion.p;
+              <motion.p;'
                 className='text - xl md:text - 3xl text - gray - 300 max - w-5xl mx - auto leading - relaxed mb - 12'                initial={{ opacity: 0, coordinate_y: 30 }}
                 animate={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 1, delay: 0.4 }}
               >;
                 Experience the future with our revolutionary micro SAAS;
-                services, IT solutions, and AI platforms. From AI consciousness;
+                services, IT solutions, and AI platforms. From AI consciousness;'
                 to space mining automation, we're building tomorrow's technology;
                 today.              </motion.p>;
               <motion.div;
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 1, delay: 0.6 }}
+                transition={{ duration: 1, delay: 0.6 }}'
                 className='flex flex - col sm:flex - row items - center justify - center gap - 6';
               >;
                 <motion.button;
                   while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_tap={{ scale: 0.95 }}'
                   className='bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold py - 4 px - 8 rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - lg hover:shadow - cyan - 500 / 25 text - lg';
                 >;
                   Explore Innovations;
                 </motion.button>;
                 <motion.button;
                   while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
+                  while_tap={{ scale: 0.95 }}'
                   className='border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold py - 4 px - 8 rounded - xl hover:bg - cyan - 500 / 10 hover:border - cyan - 400 transition - all duration - 300 text - lg';
                 >                  Contact Us;
                 </motion.button>;
@@ -739,9 +808,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
-<<<<<<< HEAD
-            <motion.div
+
+            <motion.div;
+              animate={{ y: [0, 10, 0] }}"
               transition={{ duration: 2, repeat: Infinity }} className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
               <motion.div
                 animate={{ y: [0, 12, 0] }  } catch (error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -796,6 +867,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              <motion.div;
+                animate={{ y: [0, 12, 0] }}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                 transition={{ duration: 2, repeat: Infinity }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
 =======
                 transition={{ duration: 2, repeat: Infinity }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
@@ -815,6 +891,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </motion.div>
         </section>
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD:pages/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -869,11 +946,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2034-innovations.tsx
                 Innovation Categories
               </h2>
+=======
+
+
+                Innovation Categories;
+              </h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our 2034 innovations span across multiple cutting-edge technology domains,
                 each designed to revolutionize industries and accelerate human progress.
               </p>
             </motion.div>
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD:pages/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1077,10 +1161,24 @@ viewport={{ once: true }}
               {[
                 {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+                  description:;'
+                    'Revolutionary AI consciousness and emotional intelligence platforms','
+                  color: 'from - violet - 500 to - purple - 600','
+                  count: '5+ Services',
+
+
+"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[]
+                {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                 },
-                {
-                  icon: '⚛️',
+                {'
+                  icon: '⚛️','
                   title: 'Quantum Tech',
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
                   description: 'Quantum computing, DNA computing, and quantum internet infrastructure',
                   color: 'from-indigo-500 to-blue-600',
@@ -1089,13 +1187,19 @@ viewport={{ once: true }}
 
                   description: 'Quantum computing, DNA computing, and quantum internet infrastructure',
                   color: 'from-indigo-500 to-blue-600',
+=======
+'
+                  description: 'Quantum computing, DNA computing, and quantum internet infrastructure','
+                  color: 'from-indigo-500 to-blue-600','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                   count: '6+ Services'
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 },
-                {
-                  icon: '🌌',
+                {'
+                  icon: '🌌','
                   title: 'Space & Metaverse',
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
                   description: 'Space mining automation and metaverse development platforms',
                   color: 'from-teal-500 to-emerald-600',
@@ -1104,13 +1208,19 @@ viewport={{ once: true }}
 
                   description: 'Space mining automation and metaverse development platforms',
                   color: 'from-teal-500 to-emerald-600',
+=======
+'
+                  description: 'Space mining automation and metaverse development platforms','
+                  color: 'from-teal-500 to-emerald-600','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                   count: '4+ Services'
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 },
-                {
-                  icon: '🏙️',
+                {'
+                  icon: '🏙️','
                   title: 'Enterprise IT',
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
                   description: 'Autonomous DevOps and zero-trust security solutions',
                   color: 'from-blue-500 to-cyan-600',
@@ -1119,17 +1229,23 @@ viewport={{ once: true }}
 
                   description: 'Autonomous DevOps and zero-trust security solutions',
                   color: 'from-blue-500 to-cyan-600',
+=======
+'
+                  description: 'Autonomous DevOps and zero-trust security solutions','
+                  color: 'from-blue-500 to-cyan-600','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                   count: '5+ Services'
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 },
-                {
-                  icon: '🧬',
+                {'
+                  icon: '🧬','
                   title: 'Biotech & Neural',
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -1139,12 +1255,18 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   description: 'Synthetic biology automation and neural interface platforms',
                   color: 'from-green-500 to-emerald-600',
+=======
+'
+                  description: 'Synthetic biology automation and neural interface platforms','
+                  color: 'from-green-500 to-emerald-600','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                   count: '3+ Services'
                 },
-                {
-
-                  icon: '🤖',
+                {}
+'
+                  icon: '🤖','
                   title: 'Robotics & Automation',
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1211,85 +1333,91 @@ viewport={{ once: true }}
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className='text-center mb-16'>;
+=======
+
+'
+              className='text-center mb-16'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Innovation Categories;
-              </h2>;
+              </h2>;'
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
                 Our 2034 innovations span across multiple cutting-edge;
                 technology domains, each designed to revolutionize industries;
                 and accelerate human progress.;
               </p>;
             </motion && motion.div>;
-
+'
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              {[;
-                {;
-                  icon: '🧠',;
+                {;'
+                  icon: '🧠',;'
                   title: 'AI Consciousness',;
-                  description:;
-                    'Revolutionary AI consciousness and emotional intelligence platforms',;
-                  color: 'from-violet-500 to-purple-600',;
+                  description:;'
+                    'Revolutionary AI consciousness and emotional intelligence platforms',;'
+                  color: 'from-violet-500 to-purple-600',;'
                   count: '5+ Services',;
                 },;
-                {;
-                  icon: '⚛️',;
+                {;'
+                  icon: '⚛️',;'
                   title: 'Quantum Tech',;
-                  description:;
-                    'Quantum computing, DNA computing, and quantum internet infrastructure',;
-                  color: 'from-indigo-500 to-blue-600',;
+                  description:;'
+                    'Quantum computing, DNA computing, and quantum internet infrastructure',;'
+                  color: 'from-indigo-500 to-blue-600',;'
                   count: '6+ Services',;
                 },;
-                {;
-                  icon: '🌌',;
+                {;'
+                  icon: '🌌',;'
                   title: 'Space & Metaverse',;
-                  description:;
-                    'Space mining automation and metaverse development platforms',;
-                  color: 'from-teal-500 to-emerald-600',;
+                  description:;'
+                    'Space mining automation and metaverse development platforms',;'
+                  color: 'from-teal-500 to-emerald-600',;'
                   count: '4+ Services',;
                 },;
-                {;
-                  icon: '🏙️',;
+                {;'
+                  icon: '🏙️',;'
                   title: 'Enterprise IT',;
-                  description:;
-                    'Autonomous DevOps and zero-trust security solutions',;
-                  color: 'from-blue-500 to-cyan-600',;
+                  description:;'
+                    'Autonomous DevOps and zero-trust security solutions',;'
+                  color: 'from-blue-500 to-cyan-600',;'
                   count: '5+ Services',;
                 },;
-                {;
-                  icon: '🧬',;
+                {;'
+                  icon: '🧬',;'
                   title: 'Biotech & Neural',;
-                  description:;
-                    'Synthetic biology automation and neural interface platforms',;
-                  color: 'from-green-500 to-emerald-600',;
+                  description:;'
+                    'Synthetic biology automation and neural interface platforms',;'
+                  color: 'from-green-500 to-emerald-600',;'
                   count: '3+ Services',;
                 },;
-                {;
-                  icon: '🤖',;
+                {;'
+                  icon: '🤖',;'
                   title: 'Robotics & Automation',;
-                  description:;
-                    'Swarm robotics orchestration and autonomous systems',;
-                  color: 'from-orange-500 to-red-600',;
+                  description:;'
+                    'Swarm robotics orchestration and autonomous systems',;'
+                  color: 'from-orange-500 to-red-600',;'
                   count: '2+ Services',;
                 },;
-                {;
-                  icon: '⚡',;
+                {;'
+                  icon: '⚡',;'
                   title: 'Energy & Materials',;
-                  description:;
-                    'Fusion energy control and nanotechnology materials',;
-                  color: 'from-yellow-500 to-orange-600',;
+                  description:;'
+                    'Fusion energy control and nanotechnology materials',;'
+                  color: 'from-yellow-500 to-orange-600',;'
                   count: '3+ Services',;
-                },                {;
-                  icon: '🔄',;
-                  title: 'Digital Twins',;
-                  description: 'Digital twin simulation and edge AI computing',;
-                  color: 'from-teal-500 to-cyan-600',;
+                },                {;'
+                  icon: '🔄',;'
+                  title: 'Digital Twins',;'
+                  description: 'Digital twin simulation and edge AI computing',;'
+                  color: 'from-teal-500 to-cyan-600',;'
                   count: '2+ Services',;
                 },              ].map((category, index) => (;
-                <motion&& motion.div
+                <motion&& motion.div;
                   key={category && category.title}
 
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1314,12 +1442,23 @@ viewport={{ once: true }}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </div>
+=======
+
+                  transition={{ duration: 0.6, delay: index * 0.1 }}"
+                  viewport={{ once: true }} className="group">"
+                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300 group-hover:scale-105">`
+                    <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      {category.icon}
+
+                    </div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                       {category.title}
-                    </h3>
+                    </h3>"
                     <p className="text-gray-400 text-sm mb-4">
                       {category.description}
                     </p>
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD:pages/2034-innovations.tsx
 <<<<<<< HEAD
               viewport={{ once: true }}
@@ -1381,10 +1520,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </section>;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
 
         {/* Services Showcase */}
 
 
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1397,30 +1539,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
         {/* Why Choose Zion Tech Group */}
-
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+"
+        <section className="py-20 bg-gradient-to-b from-gray-900 to-black">"
           <div className="container mx-auto px-4">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-                  description:;
-                    'Swarm robotics orchestration and autonomous systems',
-                  color: 'from - orange - 500 to - red - 600',
+                  description:;'
+                    'Swarm robotics orchestration and autonomous systems','
+                  color: 'from - orange - 500 to - red - 600','
                   count: '2+ Services',
                 },
-                {
-                  icon: '⚡',
+                {'
+                  icon: '⚡','
                   title: 'Energy & Materials',
-                  description:;
-                    'Fusion energy control and nanotechnology materials',
-                  color: 'from - yellow - 500 to - orange - 600',
+                  description:;'
+                    'Fusion energy control and nanotechnology materials','
+                  color: 'from - yellow - 500 to - orange - 600','
                   count: '3+ Services',
-                },                {
-                  icon: '🔄',
-                  title: 'Digital Twins',
-                  description: 'Digital twin simulation and edge AI computing',
-                  color: 'from - teal - 500 to - cyan - 600',
+                },                {'
+                  icon: '🔄','
+                  title: 'Digital Twins','
+                  description: 'Digital twin simulation and edge AI computing','
+                  color: 'from - teal - 500 to - cyan - 600','
                   count: '2+ Services',
                 },              ].map ((category, index) => (
                 <motion.div;
@@ -1428,21 +1572,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   initial={{ opacity: 0, coordinate_y: 50 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true }}'
                   className='group';
-                >;
+                >;'
                   <div className='bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl rounded - 2xl border border - gray - 700 / 50 p - 6 hover:border - cyan - 500 / 50 transition - all duration - 300 group - hover:scale - 105'>;
-                    <div;
+                    <div;`
                       className={`w - 16 h - 16 bg - gradient - to - br ${category.color} rounded - xl flex items - center justify - center text - 3xl mb - 4 group - hover:scale - 110 transition - transform duration - 300`}
                     >;
                       {category.icon}
-                    </div>;
+                    </div>;'
                     <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors'>;
                       {category.title}
-                    </h3>;
+                    </h3>;'
                     <p className='text - gray - 400 text - sm mb - 4'>;
                       {category.description}
-                    </p>;
+                    </p>;'
                     <div className='text - cyan - 400 font - semibold text - sm'>                      {category.count}
                     </div>;
                   </div>;
@@ -1451,64 +1595,64 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </section>;
         {/* Services Showcase */}
-        {/* Why Choose Zion Tech Group */}
-        <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black'>;
+        {/* Why Choose Zion Tech Group */}'
+        <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black'>;'
           <div className='container mx - auto px - 4'>            <motion.div;
               initial={{ opacity: 0, coordinate_y: 50 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true }}'
               className='text - center mb - 16';
-            >;
+            >;'
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Why Choose Zion Tech Group?;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+              </h2>;'
+              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;'
                 We're not just another technology company. We're pioneers;
                 building the future, one breakthrough innovation at a time.;
               </p>;
-            </motion.div>;
+            </motion.div>;'
             <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>              {[;
-                {
-                  icon: '🚀',
+                {'
+                  icon: '🚀','
                   title: 'First - to - Market',
-                  description:;
-                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",
+                  description:;'"
+                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",'
                   color: 'from - cyan - 500 to - blue - 600',
                 },
-                {
-                  icon: '🧠',
+                {'
+                  icon: '🧠','
                   title: 'AI - First Approach',
-                  description:;
-                    'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',
+                  description:;'
+                    'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.','
                   color: 'from - purple - 500 to - pink - 600',
                 },
-                {
-                  icon: '⚡',
+                {'
+                  icon: '⚡','
                   title: 'Lightning Fast',
-                  description:;
-                    'Our platforms are designed for speed and performance, handling the most demanding workloads.',
+                  description:;'
+                    'Our platforms are designed for speed and performance, handling the most demanding workloads.','
                   color: 'from - yellow - 500 to - orange - 600',
                 },
-                {
-                  icon: '🛡️',
+                {'
+                  icon: '🛡️','
                   title: 'Enterprise Security',
-                  description:;
-                    'Military - grade security protocols ensure your data and operations are always protected.',
+                  description:;'
+                    'Military - grade security protocols ensure your data and operations are always protected.','
                   color: 'from - green - 500 to - emerald - 600',
                 },
-                {
-                  icon: '🌍',
+                {'
+                  icon: '🌍','
                   title: 'Global Scale',
-                  description:;
-                    'Built to scale globally, our services work seamlessly across borders and time zones.',
+                  description:;'
+                    'Built to scale globally, our services work seamlessly across borders and time zones.','
                   color: 'from - teal - 500 to - cyan - 600',
                 },
-                {
-                  icon: '💎',
+                {'
+                  icon: '💎','
                   title: 'Premium Support',
-                  description:;
-                    '24 / 7 expert support from our team of technology pioneers and industry experts.',
+                  description:;'
+                    '24 / 7 expert support from our team of technology pioneers and industry experts.','
                   color: 'from - indigo - 500 to - purple - 600',
                 },              ].map ((feature, index) => (
                 <motion.div;
@@ -1516,32 +1660,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   initial={{ opacity: 0, coordinate_y: 50 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true }}'
                   className='group';
-                >;
+                >;'
                   <div className='bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl rounded - 2xl border border - gray - 700 / 50 p - 6 hover:border - cyan - 500 / 50 transition - all duration - 300 group - hover:scale - 105'>;
-                    <div;
+                    <div;`
                       className={`w - 16 h - 16 bg - gradient - to - br ${feature.color} rounded - xl flex items - center justify - center text - 3xl mb - 4 group - hover:scale - 110 transition - transform duration - 300`}
                     >;
                       {feature.icon}
-                    </div>;
+                    </div>;'
                     <h3 className='text - xl font - bold text - white mb - 3 group - hover:text - cyan - 400 transition - colors'>;
                       {feature.title}
-                    </h3>;
+                    </h3>;'
                     <p className='text - gray - 400'>{feature.description}</p>                  </div>;
                 </motion.div>))}
             </div>;
           </div>;
         </section>;
-        {/* Contact CTA */}
-        <section className='py - 20 bg - gradient - to - r from - cyan - 900 / 20 to - purple - 900 / 20'>;
+        {/* Contact CTA */}'
+        <section className='py - 20 bg - gradient - to - r from - cyan - 900 / 20 to - purple - 900 / 20'>;'
           <div className='container mx - auto px - 4 text - center'>            <motion.div;
               initial={{ opacity: 0, coordinate_y: 50 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
 
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-16">
+              transition={{ duration: 0.8 }}"
+              viewport={{ once: true }} className="text-center mb-16">"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1557,12 +1702,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
 
                 },
-                {
-                  icon: '🌌',
+                {'
+                  icon: '🌌','
                   title: 'Space & Metaverse',
 
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1576,13 +1725,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                 Why Choose Zion Tech Group?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              </h2>"
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
                 We're not just another technology company. We're pioneers building the future,
                 one breakthrough innovation at a time.
               </p>
             </motion.div>
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD:pages/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1708,62 +1862,70 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   key={feature.title}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className='text-center mb-16'>;
+=======
+
+
+                <motion.div;
+                  key={feature.title}'
+              className='text-center mb-16'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Why Choose Zion Tech Group?;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              </h2>;'
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;'
                 We're not just another technology company. We're pioneers;
                 building the future, one breakthrough innovation at a time.;
               </p>;
             </motion && motion.div>;
-
+'
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {[;
-                {;
-                  icon: '🚀',;
+                {;'
+                  icon: '🚀',;'
                   title: 'First-to-Market',;
-                  description:;
-                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",;
+                  description:;'"
+                    "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",;'
                   color: 'from-cyan-500 to-blue-600',;
                 },;
-                {;
-                  icon: '🧠',;
+                {;'
+                  icon: '🧠',;'
                   title: 'AI-First Approach',;
-                  description:;
-                    'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',;
+                  description:;'
+                    'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',;'
                   color: 'from-purple-500 to-pink-600',;
                 },;
-                {;
-                  icon: '⚡',;
+                {;'
+                  icon: '⚡',;'
                   title: 'Lightning Fast',;
-                  description:;
-                    'Our platforms are designed for speed and performance, handling the most demanding workloads.',;
+                  description:;'
+                    'Our platforms are designed for speed and performance, handling the most demanding workloads.',;'
                   color: 'from-yellow-500 to-orange-600',;
                 },;
-                {;
-                  icon: '🛡️',;
+                {;'
+                  icon: '🛡️',;'
                   title: 'Enterprise Security',;
-                  description:;
-                    'Military-grade security protocols ensure your data and operations are always protected.',;
+                  description:;'
+                    'Military-grade security protocols ensure your data and operations are always protected.',;'
                   color: 'from-green-500 to-emerald-600',;
                 },;
-                {;
-                  icon: '🌍',;
+                {;'
+                  icon: '🌍',;'
                   title: 'Global Scale',;
-                  description:;
-                    'Built to scale globally, our services work seamlessly across borders and time zones.',;
+                  description:;'
+                    'Built to scale globally, our services work seamlessly across borders and time zones.',;'
                   color: 'from-teal-500 to-cyan-600',;
                 },;
-                {;
-                  icon: '💎',;
+                {;'
+                  icon: '💎',;'
                   title: 'Premium Support',;
-                  description:;
-                    '24/7 expert support from our team of technology pioneers and industry experts.',;
+                  description:;'
+                    '24/7 expert support from our team of technology pioneers and industry experts.',;'
                   color: 'from-indigo-500 to-purple-600',;
                 },              ].map((feature, index) => (;
-                <motion&& motion.div
+                <motion&& motion.div;
                   key={feature && feature.title}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD:pages/2034-innovations.tsx
 <<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1793,35 +1955,43 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   icon: '🚀',
                   title: 'First-to-Market',
                   description: 'We\'re the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.',
+=======
+
+                {'
+                  icon: '🚀','
+                  title: 'First-to-Market','
+                  description: 'We\'re the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                   color: 'from-cyan-500 to-blue-600'
                 },
-                {
-                  icon: '🧠',
-                  title: 'AI-First Approach',
-                  description: 'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',
+                {'
+                  icon: '🧠','
+                  title: 'AI-First Approach','
+                  description: 'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.','
                   color: 'from-purple-500 to-pink-600'
                 },
-                {
-                  icon: '⚡',
-                  title: 'Lightning Fast',
-                  description: 'Our platforms are designed for speed and performance, handling the most demanding workloads.',
+                {'
+                  icon: '⚡','
+                  title: 'Lightning Fast','
+                  description: 'Our platforms are designed for speed and performance, handling the most demanding workloads.','
                   color: 'from-yellow-500 to-orange-600'
                 },
-                {
-                  icon: '🛡️',
-                  title: 'Enterprise Security',
-                  description: 'Military-grade security protocols ensure your data and operations are always protected.',
+                {'
+                  icon: '🛡️','
+                  title: 'Enterprise Security','
+                  description: 'Military-grade security protocols ensure your data and operations are always protected.','
                   color: 'from-green-500 to-emerald-600'
                 },
-                {
-                  icon: '🌍',
-                  title: 'Global Scale',
-                  description: 'Built to scale globally, our services work seamlessly across borders and time zones.',
+                {'
+                  icon: '🌍','
+                  title: 'Global Scale','
+                  description: 'Built to scale globally, our services work seamlessly across borders and time zones.','
                   color: 'from-teal-500 to-cyan-600'
                 },
-                {
-                  icon: '💎',
+                {'
+                  icon: '💎','
                   title: 'Premium Support',
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
                   description:
@@ -1936,10 +2106,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Contact CTA */}
         <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20'>;
           <div className='container mx-auto px-4 text-center'>            <motion&& motion.div
+=======
+
+
+                    </div>"
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {feature.title}
+                    </h3>
+
+        {/* Contact CTA */}'
+        <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20'>;'
+          <div className='container mx-auto px-4 text-center'>            <motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2023,36 +2206,45 @@ viewport={{ once: true }}
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2034-innovations.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                 Ready to Build the Future?
-              </h2>
+              </h2>'
               <p className='text-xl text-gray-300 mb-8'>
-                Join the ranks of forward-thinking organizations that are
-                already leveraging our 2034 innovations to transform their
+                Join the ranks of forward-thinking organizations that are;
+                already leveraging our 2034 innovations to transform their;
                 industries and accelerate their growth.
               </p>
 
 
-        {/* Contact CTA */}
-        <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
+        {/* Contact CTA */}"
+        <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">"
           <div className="container mx-auto px-4 text-center">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               viewport={{ once: true }} className="max-w-4xl mx-auto">
 =======
 viewport={{ once: true }} className="max-w-4xl mx-auto">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Ready to Build the Future?
-              </h2>
+              </h2>"
               <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
                 Join the ranks of forward-thinking organizations that are already leveraging our 2034 innovations
                 to transform their industries and accelerate their growth.
@@ -2082,12 +2274,16 @@ viewport={{ once: true }} className="max-w-4xl mx-auto">
                 to transform their industries and accelerate their growth.
               </p>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-3 text-gray-300">
+"
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
+                <div className="flex items-center justify-center space-x-3 text-gray-300">"
                   <span className="text-cyan-400">📱</span>
 
 
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2096,12 +2292,17 @@ viewport={{ once: true }} className="max-w-4xl mx-auto">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                   <span>{contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 text-gray-300">
+                </div>"
+                <div className="flex items-center justify-center space-x-3 text-gray-300">"
                   <span className="text-purple-400">✉️</span>
                   <span>{contactInfo.email}</span>
                 </div>
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD:pages/2034-innovations.tsx
 <<<<<<< HEAD
 =======
@@ -2117,10 +2318,18 @@ viewport={{ once: true }} className="max-w-4xl mx-auto">
 
 <<<<<<< HEAD
 =======
-                whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
-<<<<<<< HEAD
 =======
 
+
+                </div>
+              </div>
+              <motion.button;
+                whileHover={{ scale: 1.05 }}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
+                whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">
+
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 =======
                 whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
@@ -2154,11 +2363,16 @@ whileTap={{ scale: 0.95 }}
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2034-innovations.tsx
+=======
+
+                Start Your Innovation Journey;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
               </motion.button>
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2231,31 +2445,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
                 Ready to Build the Future?;
-              </h2>;
+              </h2>;'
               <p className='text-xl text-gray-300 mb-8'>;
                 Join the ranks of forward-thinking organizations that are;
                 already leveraging our 2034 innovations to transform their;
                 industries and accelerate their growth.;
               </p>;
-
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>;
-                <div className='flex items-center justify-center space-x-3 text-gray-300'>;
+'
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>;'
+                <div className='flex items-center justify-center space-x-3 text-gray-300'>;'
                   <span className='text-cyan-400'>📱</span>;
                   <span>{contactInfo && contactInfo.mobile}</span>;
-                </div>;
-                <div className='flex items-center justify-center space-x-3 text-gray-300'>;
+                </div>;'
+                <div className='flex items-center justify-center space-x-3 text-gray-300'>;'
                   <span className='text-purple-400'>✉️</span>;
                   <span>{contactInfo && contactInfo.email}</span>;
-                </div>;
-                <div className='flex items-center justify-center space-x-3 text-gray-300'>;
+                </div>;'
+                <div className='flex items-center justify-center space-x-3 text-gray-300'>;'
                   <span className='text-pink-400'>📍</span>                  <span>{contactInfo && contactInfo.address}</span>;
                 </div>;
               </div>;
 
-              <motion&& motion.button
+              <motion&& motion.button;
                 whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
+                whileTap={{ scale: 0 && 0.95 }}'
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'>                Start Your Innovation Journey;
               </motion && motion.button>;
             </motion && motion.div>;
@@ -2267,6 +2484,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   );
 
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2276,30 +2494,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
               className='max - w-4xl mx - auto';
-            >;
+            >;'
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Ready to Build the Future?;
-              </h2>;
+              </h2>;'
               <p className='text - xl text - gray - 300 mb - 8'>;
                 Join the ranks of forward - thinking organizations that are;
                 already leveraging our 2034 innovations to transform their;
                 industries and accelerate their growth.;
-              </p>;
-              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;
-                <div className='flex items - center justify - center space - x-3 text - gray - 300'>;
+              </p>;'
+              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;'
+                <div className='flex items - center justify - center space - x-3 text - gray - 300'>;'
                   <span className='text - cyan - 400'>📱</span>;
                   <span>{contact_info.mobile}</span>;
-                </div>;
-                <div className='flex items - center justify - center space - x-3 text - gray - 300'>;
+                </div>;'
+                <div className='flex items - center justify - center space - x-3 text - gray - 300'>;'
                   <span className='text - purple - 400'>✉️</span>;
                   <span>{contact_info.email}</span>;
-                </div>;
-                <div className='flex items - center justify - center space - x-3 text - gray - 300'>;
+                </div>;'
+                <div className='flex items - center justify - center space - x-3 text - gray - 300'>;'
                   <span className='text - pink - 400'>📍</span>                  <span>{contact_info.address}</span>;
                 </div>;
               </div>;
               <motion.button;
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2323,63 +2545,74 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
         <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">;
+=======
+
+  )"
+        <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
           <div className="container mx-auto px-4 text-center">;
             <motion.div;
-              initial={{ opacity: 0, y: 50 }  } catch (error) {
-    console.error("Error:", error);
+              initial={{ opacity: 0, y: 50 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+              transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-              viewport={{ once: true }} className="max-w-4xl mx-auto">;
+}"
+              viewport={{ once: true }} className="max-w-4xl mx-auto">;"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Ready to Build the Future?;
-              </h2>;
+              </h2>;"
               <p className="text-xl text-gray-300 mb-8">;
                 Join the ranks of forward-thinking organizations that are already leveraging our 2034 innovations;
                 to transform their industries and accelerate their growth.;
-              </p>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
-                <div className="flex items-center justify-center space-x-3 text-gray-300">;
+              </p>;"
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;"
+                <div className="flex items-center justify-center space-x-3 text-gray-300">;"
                   <span className="text-cyan-400">📱</span>;
                   <span>{contactInfo.mobile}</span>;
-                </div>;
-                <div className="flex items-center justify-center space-x-3 text-gray-300">;
+                </div>;"
+                <div className="flex items-center justify-center space-x-3 text-gray-300">;"
                   <span className="text-purple-400">✉️</span>;
                   <span>{contactInfo.email}</span>;
-                </div>;
-                <div className="flex items-center justify-center space-x-3 text-gray-300">;
+                </div>;"
+                <div className="flex items-center justify-center space-x-3 text-gray-300">;"
                   <span className="text-pink-400">📍</span>;
                   <span>{contactInfo.address}</span>;
                 </div>;
               </div>;
               <motion.button;
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
+                whileHover={{ scale: 1.05 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
                 whileTap={{ scale: 0.95 }} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg">;
                 Start Your Innovation Journey;
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
               </motion.button>;
             </motion.div>;
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2397,9 +2630,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
 =======
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx
+
+
+<<<<<<< HEAD:pages_backup/2034-innovations.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -2418,3 +2655,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/2034-innovations.tsx
+=======
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/2034-innovations.tsx

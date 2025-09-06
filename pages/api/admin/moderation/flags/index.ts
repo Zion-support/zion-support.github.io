@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb'
@@ -10,6 +11,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>
     const flags = await readAllFlags()
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;'
+import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;'
+import { createFlag, readAllFlags } from '../../../../../utils/moderationDb',;
+;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  const user = parseUserFromRequest(req),'
+  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
+'
+  if (req.method === 'GET') {}
+    const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>,
+    const flags = await readAllFlags(),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const filtered = flags.filter(f =>
 
       (!status || f.status === status) &&
@@ -19,6 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     )
     return res.status(200).json({ flags: filtered })
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -100,3 +115,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39;
+=======
+'
+  res.setHeader('AllowGET,POST'),'
+  return res.status(405).end('Method Not Allowed')
+};'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

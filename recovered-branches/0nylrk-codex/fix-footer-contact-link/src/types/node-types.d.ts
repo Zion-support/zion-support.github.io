@@ -1,4 +1,20 @@
+<<<<<<< HEAD
 // Add basic type definitions for Node.js globals used in the project;
+=======
+
+
+interface Process {}
+  env: {}
+    [key: string]: string | undefined,
+    NODE_ENV: 'development' | 'production' | 'test',
+    PORT?: string,
+    SLACK_SIGNING_SECRET?: string,
+    SLACK_BOT_TOKEN?: string,
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Add basic type definitions for Node.js globals used in the project;
 <<<<<<< HEAD
 
@@ -11,7 +27,7 @@ declare let console: Console,;
 declare let __dirname: string,;
 =======
 interface Process {env: {;
-    [key: string]: string | undefined;
+    [key: string]: string | undefined;'
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
     SLACK_SIGNING_SECRET?: string;
@@ -22,13 +38,19 @@ interface Process {env: {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface Process {;
   env: {;
-    [key: string]: string | undefined,;
+    [key: string]: string | undefined,;'
     NODE_ENV: 'development' | 'production' | 'test',;
     PORT?: string,;
     SLACK_SIGNING_SECRET?: string,;
@@ -38,6 +60,7 @@ interface Process {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,6 +69,9 @@ interface Process {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 declare let process: Process,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -57,6 +83,7 @@ declare let __dirname: string,
 declare let process: Process,;
 declare let console: Console,;
 declare let __dirname: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,3 +101,7 @@ declare let __dirname: string,;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

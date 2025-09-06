@@ -23,9 +23,9 @@ import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader',;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { ProjectHeader, as, OriginalProjectHeader } from "../ProjectHeader";
-// Re-export the existing ProjectHeader component
->>>>>>> main
+// Re-export the existing ProjectHeader component;
 export { OriginalProjectHeader as ProjectHeader };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -42,3 +42,14 @@ import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader',;
 import { ProjectHeader, as, OriginalProjectHeader  } from '../ProjectHeader';
 // Re - export the existing ProjectHeader component;
 export { OriginalProjectHeader as ProjectHeader }
+=======
+
+
+import { ProjectHeader, as, OriginalProjectHeader  } from '../ProjectHeader';
+// Re - export the existing ProjectHeader component;
+export { OriginalProjectHeader as ProjectHeader }
+
+
+
+'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

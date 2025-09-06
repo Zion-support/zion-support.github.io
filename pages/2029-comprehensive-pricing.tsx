@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -15,10 +16,17 @@
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
+=======
+
+import React, { useState } from 'react',;'
+import Head from 'next/head',;'
+import Link from 'next/link',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion',;
-import { 
+import {}
   CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain, 
   Atom, Rocket, Target, Microscope, DollarSign, Phone, 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
@@ -36,14 +44,24 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
 import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029',;
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',;
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',;
+=======
+  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase';
+} from 'lucide-react',;'
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;'
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;'
+import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029',;'
+import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',;'
+import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',;
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+const contactInfo = {'
+  mobile: '+1 302 464 0950','
+  email: 'kleber@ziontechgroup.com','
+  address: '364 E Main St STE 1008 Middletown DE 19709','
   website: 'https://ziontechgroup.com'
 },
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ComprehensivePricing2029() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -59,19 +77,26 @@ export default function ComprehensivePricing2029() {
     { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length },
     { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices2029.length },
     { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length },
+=======
+export default function ComprehensivePricing2029() { return null; }
+    { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length },'
+    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices2029.length },'
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length },'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
   ],
-
+'
   const filteredServices = selectedCategory === 'all' 
-    ? allServices 
-    : allServices.filter(service => {
-        if (selectedCategory === 'ai-autonomous') {
-          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))
-        } else if (selectedCategory === 'emerging-tech') {
-          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space'))
-        } else if (selectedCategory === 'business-solutions') {
+    ? allServices;
+    : allServices.filter(service => {'
+        if (selectedCategory === 'ai-autonomous') {'
+          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))'
+        } else if (selectedCategory === 'emerging-tech') {'
+          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space'))'
+        } else if (selectedCategory === 'business-solutions') {'
           return service.category.some(cat => cat.includes('Business') || cat.includes('Marketing') || cat.includes('Education'))
         }
+<<<<<<< HEAD
         return true
       }),
 
@@ -295,18 +320,58 @@ if ( {) {
 }
           return service.category.some (cat => cat.includes ('Business') || cat.includes ('Marketing') || cat.includes ('Education'));
         }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return true;
       }),
-  const get_price = (price: string) =>: any {
-    const numeric_price = parse_int (price.replace (/[^0 - 9]/g, '')),
-    return billing_cycle === 'monthly' ? numeric_price : Math.round (numeric_price * 0.8);
-  },
-  const getBillingText = (price: string) =>: any {
-    const numeric_price = parse_int (price.replace (/[^0 - 9]/g, '')),
-    // Check condition
-if ( {) {
-  $2
+
+  const getPrice = (price: string) => {'
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),'
+    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
+
+'
+import React, { useState } from 'react';'
+import Head from 'next/head';'
+import Link from 'next/link';'
+import { motion } from 'framer-motion';
+
+'
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';'
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';'
+import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029';'
+import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';'
+import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';'
+import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+
+export default function ComprehensivePricing2029() { return null; }
+    { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length }'
+    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices2029.length }'
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length }'
+    { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
+  ]'
+  const filteredServices = selectedCategory === 'all'
+    ? allServices;
+    : allServices.filter(service => {'
+        if (selectedCategory === 'ai-autonomous') {'
+          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))'
+        } else if (selectedCategory === 'emerging-tech') {}
+'
+        } else if (selectedCategory === 'business-solutions') {'
+          return service.category.some(cat => cat.includes('Business') |cat.includes('Marketing') |cat.includes('Education'))
+        }
+        return true;
+      })
+  const getPrice = (price: string) => {'
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))'
+    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
+
+  const getBillingText = (price: string) => {'
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))'
+    if (billingCycle === 'monthly') {}
+      return `$${numericPrice.toLocaleString()}/month`
+
 }
+<<<<<<< HEAD
       return `$${numeric_price.toLocaleString ()}/month`;
     } else {
 
@@ -343,57 +408,67 @@ export default function ComprehensivePricing2029(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
   ],;
+=======
+  ],;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const filteredServices = selectedCategory === 'all';
     ? allServices;
-    : allServices.filter(service => {;
-        if (selectedCategory === 'ai-autonomous') {;
-          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'));
-        } else if (selectedCategory === 'emerging-tech') {;
-          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space'));
-        } else if (selectedCategory === 'business-solutions') {;
+    : allServices.filter(service => {;'
+        if (selectedCategory === 'ai-autonomous') {;'
+          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'));'
+        } else if (selectedCategory === 'emerging-tech') {;'
+          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space'));'
+        } else if (selectedCategory === 'business-solutions') {;'
           return service.category.some(cat => cat.includes('Business') || cat.includes('Marketing') || cat.includes('Education'));
-          } catch (error) {
-    console.error("Error:", error);
+          } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         return true;
       });
-  const getPrice = (price: string) => {;
-    const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),;
+  const getPrice = (price: string) => {;'
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),;'
     return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8);
   },;
-  const getBillingText = (price: string) => {;
-    const numericPrice = parseInt(price.replace(/[^0-9]/g, ''));
-    if (billingCycle === 'monthly') {;
+  const getBillingText = (price: string) => {;'
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, ''));'
+    if (billingCycle === 'monthly') {;`
       return `$${numericPrice.toLocaleString()}/month`;
-    } else {;
+    } else {;`
       return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`;
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  },
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="min-h-screen bg-black text-white relative">
       <FuturisticAnimatedBackground2029 />
       <Head>
-        <title>2029 Comprehensive Pricing - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive 2029 pricing for AI autonomous ecosystems, emerging tech breakthroughs, and practical business solutions. Transparent pricing with flexible billing options." />
-        <meta name="keywords" content="2029 pricing, AI services pricing, quantum technology pricing, business solutions pricing, Zion Tech Group" />
+        <title>2029 Comprehensive Pricing - Zion Tech Group</title>"
+        <meta name="description" content="Explore our comprehensive 2029 pricing for AI autonomous ecosystems, emerging tech breakthroughs, and practical business solutions. Transparent pricing with flexible billing options." />"
+        <meta name="keywords" content="2029 pricing, AI services pricing, quantum technology pricing, business solutions pricing, Zion Tech Group" />"
         <link rel="canonical" href="https://ziontechgroup.com/2029-comprehensive-pricing" />
       </Head>
       <UltraFuturisticNavigation2029 />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -612,6 +687,24 @@ return `$${numericPrice.toLocaleString()}/month`;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="relative overflow - hidden py - 32">;
+=======
+
+      {/* Hero Section */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+"
+      <section className="relative overflow-hidden py-32">"
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+"
+      <section className="relative overflow - hidden py - 32">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="relative z - 10 container mx - auto px - 4 text - center">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
@@ -621,6 +714,7 @@ return `$${numericPrice.toLocaleString()}/month`;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -675,27 +769,50 @@ return `$${numericPrice.toLocaleString()}/month`;
                     billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >;
+=======
+
+"
+            <div className="flex items-center justify-center gap-4 mb-12">"
+              <span className="text-gray-400">Monthly</span>
+              <button'
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}`
+                className={`relative w-16 h-8 bg-gray-700 rounded-full transition-colors duration-300 ${'
+                  billingCycle === 'annual' ? 'bg-purple-600' : ''`
+                }`}
+              >
+                <div;`
+                  className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${'
+                    billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
+
+          >;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h1 className="text - 6xl md:text - 8xl font - bold bg - gradient - to - r from - purple - 400 via - pink - 400 to - blue - 400 bg - clip - text text - transparent mb - 8">;
               2029 Comprehensive Pricing;
-            </h1>;
+            </h1>;"
             <p className="text - xl md:text - 2xl text - gray - 300 mb - 12 max - w-4xl mx - auto">;
               Transparent pricing for our revolutionary 2029 services. Choose the perfect plan;
               for your business transformation journey.;
             </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Billing Toggle */}
             <div className="flex items - center justify - center gap - 4 mb - 12">;
+=======
+            {/* Billing Toggle */}"
+            <div className="flex items - center justify - center gap - 4 mb - 12">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className="text - gray - 400">Monthly</span>;
-              <button;
-                on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'annual' : 'monthly')}
-                className={`relative w - 16 h - 8 bg - gray - 700 rounded - full transition - colors duration - 300 ${
-                  billing_cycle === 'annual' ? 'bg - purple - 600' : '';
+              <button;'
+                on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'annual' : 'monthly')}`
+                className={`relative w - 16 h - 8 bg - gray - 700 rounded - full transition - colors duration - 300 ${'
+                  billing_cycle === 'annual' ? 'bg - purple - 600' : '';`
                 }`}
               >;
                 <div;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${;
@@ -708,10 +825,13 @@ return `$${numericPrice.toLocaleString()}/month`;
                     billing_cycle === 'annual' ? 'translate - x-8' : 'translate - x-1';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   }`}
 
                 />;
-              </button>;
+              </button>;"
               <span className="text - gray - 400">Annual (20% off)</span>;
             </div>;
           </motion.div>;
@@ -725,6 +845,7 @@ return `$${numericPrice.toLocaleString()}/month`;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Category Filter */  } catch (error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -774,28 +895,40 @@ return `$${numericPrice.toLocaleString()}/month`;
         <div className="container mx - auto px - 4">;
           <div className="flex flex - wrap justify - center gap - 4">;
             {categories.map ((category) => (
+=======
+
+      {/* Category Filter */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+"
+      <section className="py-12 bg-gradient-to-b from-black to-gray-900">"
+        <div className="container mx-auto px-4">"
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <motion.button;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={category.id}
-                on_click={() => setSelectedCategory (category.id)}
-                className={`flex items - center gap - 3 px - 6 py - 3 rounded - full border - 2 transition - all duration - 300 ${
-                  selected_category === category.id;
-                    ? 'border - purple - 500 bg - purple - 500 / 20 text - purple - 300';
-                    : 'border - gray - 600 text - gray - 400 hover:border - gray - 500 hover:text - gray - 300';
+                on_click={() => setSelectedCategory (category.id)}`
+                className={`flex items - center gap - 3 px - 6 py - 3 rounded - full border - 2 transition - all duration - 300 ${}
+                  selected_category === category.id;'
+                    ? 'border - purple - 500 bg - purple - 500 / 20 text - purple - 300';'
+                    : 'border - gray - 600 text - gray - 400 hover:border - gray - 500 hover:text - gray - 300';`
                 }`}
 
                 while_hover={{ scale: 1.05 }}
                 while_tap={{ scale: 0.95 }}
-              >;
+              >;"
                 <category.icon className="w - 5 h - 5" />;
-                <span>{category.name}</span>;
+                <span>{category.name}</span>;"
                 <span className="px - 2 py - 1 bg - gray - 700 rounded - full text - xs">;
 
                   {category.count}
 
-=======
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   {category.count  } catch (error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -803,6 +936,13 @@ return `$${numericPrice.toLocaleString()}/month`;
                   {category.count  } catch (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
+=======
+
+
+
+                  {category.count  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -869,34 +1009,40 @@ return `$${numericPrice.toLocaleString()}/month`;
         </div>;
       </section>;
 
-      {/* Services Grid */  } catch (error) {
-    console.error("Error:", error);
+      {/* Services Grid */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-      <section className="py-20 bg-black">
+}"
+      <section className="py-20 bg-black">"
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+            transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             viewport={{ once: true }} className="text-center mb-16">
+=======
+
+"
+            viewport={{ once: true }} className="text-center mb-16">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
-              Service Pricing
-            </h2>
+              Service Pricing;
+            </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -917,9 +1063,10 @@ return `$${numericPrice.toLocaleString()}/month`;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Each service includes comprehensive features, support, and implementation.
             </p>
-          </motion.div>
+          </motion.div>"
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
+<<<<<<< HEAD
               <motion.div
 <<<<<<< HEAD
 
@@ -1064,11 +1211,26 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="text-center mb-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">
+=======
+              <motion.div;
+                  {/* Service Header */}
+
+
+                key={service.id  } catch (error) {}
+"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                  <div className="text-center mb-6">"
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <Brain className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+                    </div>"
+                    <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>"
                     <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1110,16 +1272,22 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {/* Pricing */  } catch (error) {
     console.error("Error:", error);
+=======
+
+                  {/* Pricing */  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-                  <div className="text-center mb-6">
+}"
+                  <div className="text-center mb-6">"
                     <div className="text-4xl font-bold text-purple-400 mb-2">
-                      {getBillingText(service.price)  } catch (error) {
-    console.error("Error:", error);
+                      {getBillingText(service.price)  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1154,16 +1322,27 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       )  } catch (error) {
     console.error("Error:", error);
+=======
+
+
+                    </div>"
+                    <div className="text-sm text-gray-400">'
+                      {billingCycle === 'annual' && ("
+                        <span className="text-green-400">Save 20% with annual billing</span>
+                      )  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     </div>;
                   </div>;
-                  {/* Categories */  } catch (error) {
-    console.error("Error:", error);
+                  {/* Categories */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1172,10 +1351,15 @@ viewport={{ once: true }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
                     {service.category.slice(0, 3).map((cat, catIndex) => (
-                      <span
+                      <span"
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1184,34 +1368,12 @@ viewport={{ once: true }}
 =======
 <<<<<<< HEAD
 =======
-
 =======
-                  <div className="text - center mb - 6">;
-                    <div className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - 2xl mb - 4">;
-                      <Brain className="w - 8 h - 8 text - white" />;
-                    </div>;
-                    <h3 className="text - 2xl font - bold text - white mb - 2">{service.name}</h3>;
-                    <p className="text - gray - 400 text - sm mb - 4">{service.description}</p>;
-                  </div>;
-                  {/* Pricing */}
-                  <div className="text - center mb - 6">;
-                    <div className="text - 4xl font - bold text - purple - 400 mb - 2">;
-                      {getBillingText (service.price)}
-                    </div>;
-                    <div className="text - sm text - gray - 400">;
-                      {billing_cycle === 'annual' && (
-                        <span className="text - green - 400">Save 20% with annual billing</span>)}
-                    </div>;
-                  </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-                  {/* Categories */}
-                  <div className="flex flex - wrap gap - 2 mb - 6 justify - center">;
-                    {service.category.slice (0, 3).map ((cat, cat_index) => (
-                      <span;
-                        key={cat_index} className="px - 3 py - 1 bg - gray - 800 text - gray - 300 text - sm rounded - full border border - gray - 600">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
                         {cat}
+<<<<<<< HEAD
 =======
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
 =======
@@ -1234,20 +1396,25 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         {cat  } catch (error) {
     console.error("Error:", error);
+=======
+                        {cat  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                       </span>;
-                    ))  } catch (error) {
-    console.error("Error:", error);
+                    ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </div>;
-                  {/* Key Features */  } catch (error) {
-    console.error("Error:", error);
+                  {/* Key Features */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1255,12 +1422,18 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+=======
+}"
+                  <div className="mb-6">"
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <ul className="space-y-2">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-gray-300 text-sm">
+                      {service.features.slice(0, 4).map((feature, featureIndex) => ("
+                        <li key={featureIndex} className="flex items-center gap-2 text-gray-300 text-sm">"
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1275,16 +1448,22 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       ))  } catch (error) {
     console.error("Error:", error);
+=======
+
+                      ))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     </ul>;
                   </div>;
-                  {/* Key Benefits */  } catch (error) {
-    console.error("Error:", error);
+                  {/* Key Benefits */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1300,12 +1479,19 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>
+=======
+
+"
+                  <div className="mb-6">"
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <ul className="space-y-2">
-                      {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center gap-2 text-gray-300 text-sm">
+                      {service.benefits.slice(0, 2).map((benefit, benefitIndex) => ("
+                        <li key={benefitIndex} className="flex items-center gap-2 text-gray-300 text-sm">"
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1334,16 +1520,21 @@ viewport={{ once: true }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="grid grid-cols-2 gap-4 mb-6 text-center">
-                    <div>
-                      <div className="text-gray-400 text-xs mb-1">Market Size</div>
+                    <div>"
+                      <div className="text-gray-400 text-xs mb-1">Market Size</div>"
                       <div className="text-sm font-semibold text-blue-400">{service.marketSize}</div>
                     </div>
-                    <div>
-                      <div className="text-gray-400 text-xs mb-1">ROI</div>
+                    <div>"
+                      <div className="text-gray-400 text-xs mb-1">ROI</div>"
                       <div className="text-sm font-semibold text-green-400">{service.roi}</div>
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1364,13 +1555,18 @@ viewport={{ once: true }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="flex gap-3">
-                    <Link
+                    <Link"`
                       href={`/services/${service.id}`} className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-sm">
-                      Learn More
+                      Learn More;
                     </Link>
-                    <Link
+                    <Link"
                       href="/contact" className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 text-sm">
+<<<<<<< HEAD
 =======
                   <div className="grid grid-cols-2 gap-4 mb-6 text-center">
 =======
@@ -1451,10 +1647,14 @@ viewport={{ once: true }}
                     >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Get Started
+=======
+                      Get Started;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </Link>
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1463,17 +1663,22 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))  } catch (error) {
     console.error("Error:", error);
+=======
+            ))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </div>;
         </div>;
       </section>;
-      {/* Enterprise Solutions */  } catch (error) {
-    console.error("Error:", error);
+      {/* Enterprise Solutions */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1536,10 +1741,18 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <motion.div
+=======
+
+"
+      <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">"
+        <div className="container mx-auto px-4 text-center">
+          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1550,48 +1763,51 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       </span>))}
                   </div>;
-                  {/* Key Features */}
-                  <div className="mb - 6">;
-                    <h4 className="text - lg font - semibold text - white mb - 3">Key Features</h4>;
+                  {/* Key Features */}"
+                  <div className="mb - 6">;"
+                    <h4 className="text - lg font - semibold text - white mb - 3">Key Features</h4>;"
                     <ul className="space - y-2">;
-                      {service.features.slice (0, 4).map ((feature, feature_index) => (
-                        <li key={feature_index} className="flex items - center gap - 2 text - gray - 300 text - sm">;
+                      {service.features.slice (0, 4).map ((feature, feature_index) => ("
+                        <li key={feature_index} className="flex items - center gap - 2 text - gray - 300 text - sm">;"
                           <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
                           <span>{feature}</span>;
                         </li>))}
                     </ul>;
                   </div>;
-                  {/* Key Benefits */}
-                  <div className="mb - 6">;
-                    <h4 className="text - lg font - semibold text - white mb - 3">Key Benefits</h4>;
+                  {/* Key Benefits */}"
+                  <div className="mb - 6">;"
+                    <h4 className="text - lg font - semibold text - white mb - 3">Key Benefits</h4>;"
                     <ul className="space - y-2">;
-                      {service.benefits.slice (0, 2).map ((benefit, benefit_index) => (
-                        <li key={benefit_index} className="flex items - center gap - 2 text - gray - 300 text - sm">;
+                      {service.benefits.slice (0, 2).map ((benefit, benefit_index) => ("
+                        <li key={benefit_index} className="flex items - center gap - 2 text - gray - 300 text - sm">;"
                           <Star className="w - 4 h - 4 text - yellow - 400 flex - shrink - 0" />;
                           <span>{benefit}</span>;
                         </li>))}
                     </ul>;
                   </div>;
-                  {/* Market Info */}
+                  {/* Market Info */}"
                   <div className="grid grid - cols - 2 gap - 4 mb - 6 text - center">;
-                    <div>;
-                      <div className="text - gray - 400 text - xs mb - 1">Market Size</div>;
+                    <div>;"
+                      <div className="text - gray - 400 text - xs mb - 1">Market Size</div>;"
                       <div className="text - sm font - semibold text - blue - 400">{service.market_size}</div>;
                     </div>;
-                    <div>;
-                      <div className="text - gray - 400 text - xs mb - 1">ROI</div>;
+                    <div>;"
+                      <div className="text - gray - 400 text - xs mb - 1">ROI</div>;"
                       <div className="text - sm font - semibold text - green - 400">{service.roi}</div>;
                     </div>;
                   </div>;
-                  {/* CTA Buttons */}
+                  {/* CTA Buttons */}"
                   <div className="flex gap - 3">;
-                    <Link;
+                    <Link;"`
                       href={`/services/${service.id}`} className="flex - 1 inline - flex items - center justify - center px - 4 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 text - sm">;
                       Learn More;
                     </Link>;
-                    <Link;
+                    <Link;"
                       href="/contact" className="flex - 1 inline - flex items - center justify - center px - 4 py - 3 border border - purple - 500 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 500 hover:text - white transition - all duration - 300 text - sm">;
                       Get Started;
                     </Link>;
@@ -1601,8 +1817,8 @@ viewport={{ once: true }}
           </div>;
         </div>;
       </section>;
-      {/* Enterprise Solutions */}
-      <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
+      {/* Enterprise Solutions */}"
+      <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;"
         <div className="container mx - auto px - 4 text - center">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1616,22 +1832,23 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               for large organizations with specific requirements.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+            </p>"
+            <div className="grid md:grid-cols-3 gap-8 mb-12">"
+              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">"
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">"
                   <Users className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Custom Development</h3>
+                </div>"
+                <h3 className="text-2xl font-bold text-white mb-4">Custom Development</h3>"
                 <p className="text-gray-300 mb-6">
                   Tailored solutions built specifically for your business needs and requirements.
-                </p>
+                </p>"
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>
-                <Link
+                <Link"
                   href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                  Contact Sales
+                  Contact Sales;
                 </Link>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1644,34 +1861,36 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+=======
+"
+              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">"
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
+                </div>"
+                <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>"
                 <p className="text-gray-300 mb-6">
                   Advanced security features and compliance for enterprise environments.
-                </p>
+                </p>"
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>
-                <Link
+                <Link"
                   href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                  Contact Sales
+                  Contact Sales;
                 </Link>
               </div>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
+"
+              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">"
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">"
                   <Globe className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Global Deployment</h3>
+                </div>"
+                <h3 className="text-2xl font-bold text-white mb-4">Global Deployment</h3>"
                 <p className="text-gray-300 mb-6">
                   Multi-region deployment and global support for international organizations.
-                </p>
+                </p>"
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>
-                <Link
+                <Link"
                   href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+<<<<<<< HEAD
 =======
 
               for large organizations with specific requirements.
@@ -1751,12 +1970,16 @@ viewport={{ once: true }}
                 >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   Contact Sales
+=======
+                  Contact Sales;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Link>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1840,10 +2063,23 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <motion.div
+=======
+"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+"
+      <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">"
+        <div className="container mx-auto px-4 text-center">
+          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1911,6 +2147,11 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Contact CTA */}
       <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
+=======
+
+      {/* Contact CTA */}"
+      <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="container mx - auto px - 4 text - center">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1924,21 +2165,22 @@ viewport={{ once: true }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               for our revolutionary 2029 services.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="flex items-center justify-center gap-4 text-gray-300">
+            </p>"
+            <div className="grid md:grid-cols-3 gap-8 mb-12">"
+              <div className="flex items-center justify-center gap-4 text-gray-300">"
                 <Phone className="w-6 h-6 text-purple-400" />
                 <span>{contactInfo.mobile}</span>
-              </div>
-              <div className="flex items-center justify-center gap-4 text-gray-300">
+              </div>"
+              <div className="flex items-center justify-center gap-4 text-gray-300">"
                 <Mail className="w-6 h-6 text-blue-400" />
                 <span>{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center justify-center gap-4 text-gray-300">
+              </div>"
+              <div className="flex items-center justify-center gap-4 text-gray-300">"
                 <MapPin className="w-6 h-6 text-green-400" />
                 <span>{contactInfo.address}</span>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1985,8 +2227,17 @@ viewport={{ once: true }}
               >
                 <Link
 <<<<<<< HEAD
+=======
+"
+            <div className="flex flex-wrap justify-center gap-4">
+              <motion.div;
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
-                  Contact Us Now
+                  Contact Us Now"
                   <ArrowRight className="ml-2 h-5 w-5" />
 =======
 href='/contact'
@@ -1997,10 +2248,11 @@ href='/contact'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </Link>
               </motion.div>
-              <motion.div
+              <motion.div;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+<<<<<<< HEAD
                 <Link
 <<<<<<< HEAD
                   href="/2029-innovative-services-showcase" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover: bg-purple-500 hover:text-white transition-all duration-300 text-lg">
@@ -2014,14 +2266,19 @@ href='/2029-innovative-services-showcase'
                 >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   View All Services
+=======
+                <Link"
+                  href="/2029-innovative-services-showcase" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover: bg-purple-500 hover:text-white transition-all duration-300 text-lg">
+                  View All Services;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Link>
               </motion.div>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -2031,46 +2288,54 @@ href='/2029-innovative-services-showcase'
 =======
       <UltraFuturisticFooter2029 />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>
 
-=======
+
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >;
+=======
+
+
+          >;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
               Ready to Get Started?;
-            </h2>;
+            </h2>;"
             <p className="text - xl text - gray - 300 mb - 12 max - w-3xl mx - auto">;
               Contact our team to discuss your specific needs and get a personalized quote;
               for our revolutionary 2029 services.;
-            </p>;
-            <div className="grid md:grid - cols - 3 gap - 8 mb - 12">;
-              <div className="flex items - center justify - center gap - 4 text - gray - 300">;
+            </p>;"
+            <div className="grid md:grid - cols - 3 gap - 8 mb - 12">;"
+              <div className="flex items - center justify - center gap - 4 text - gray - 300">;"
                 <Phone className="w - 6 h - 6 text - purple - 400" />;
                 <span>{contact_info.mobile}</span>;
-              </div>;
-              <div className="flex items - center justify - center gap - 4 text - gray - 300">;
+              </div>;"
+              <div className="flex items - center justify - center gap - 4 text - gray - 300">;"
                 <Mail className="w - 6 h - 6 text - blue - 400" />;
                 <span>{contact_info.email}</span>;
-              </div>;
-              <div className="flex items - center justify - center gap - 4 text - gray - 300">;
+              </div>;"
+              <div className="flex items - center justify - center gap - 4 text - gray - 300">;"
                 <MapPin className="w - 6 h - 6 text - green - 400" />;
                 <span>{contact_info.address}</span>;
               </div>;
-            </div>;
+            </div>;"
             <div className="flex flex - wrap justify - center gap - 4">;
               <motion.div;
                 while_hover={{ scale: 1.05 }}
                 while_tap={{ scale: 0.95 }}
               >;
-                <Link;
+                <Link;"
                   href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - full hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 text - lg">;
-                  Contact Us Now;
+                  Contact Us Now;"
                   <ArrowRight className="ml - 2 h - 5 w - 5" />;
                 </Link>;
               </motion.div>;
@@ -2078,8 +2343,9 @@ href='/2029-innovative-services-showcase'
                 while_hover={{ scale: 1.05 }}
                 while_tap={{ scale: 0.95 }}
               >;
-                <Link;
+                <Link;"
                   href="/2029 - innovative - services - showcase" className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 text - purple - 400 font - semibold rounded - full hover: bg - purple - 500 hover:text - white transition - all duration - 300 text - lg">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -2147,6 +2413,10 @@ href='/2029-innovative-services-showcase'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   View All Services;
                 </Link>;
               </motion.div>;
@@ -2154,6 +2424,7 @@ href='/2029-innovative-services-showcase'
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2189,3 +2460,13 @@ href='/2029-innovative-services-showcase'
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

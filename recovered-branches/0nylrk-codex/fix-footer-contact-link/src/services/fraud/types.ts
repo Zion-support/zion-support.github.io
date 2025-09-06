@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -69,12 +70,15 @@ export interface AnalysisResult {
   isSuspicious: boolean
 
   reasons: string[]
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Types used across fraud detection modules;
-import { FraudSeverity } from '@/types/fraud',;
-export interface AnalysisResult {;
+import { FraudSeverity } from "@/types/fraud";
+export interface AnalysisResult {};
   isSuspicious: boolean;
   reasons: string[];
 }
+<<<<<<< HEAD
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity
 }
@@ -85,14 +89,17 @@ export interface MessageAnalysisResult extends AnalysisResult {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface MessageAnalysisResult extends AnalysisResult {
+=======
+export interface MessageAnalysisResult extends AnalysisResult {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   severity: FraudSeverity;
 }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -110,47 +117,45 @@ export interface SignupCheckResult extends AnalysisResult {}
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+export interface MessageAnalysisResult extends AnalysisResult {};
+  severity: FraudSeverity;
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+export interface EmailAnalysisResult extends AnalysisResult {}
+export interface FlagResult {}
+}
 ;
-export interface SignupCheckResult extends AnalysisResult {}
+;
+export interface SignupCheckResult extends AnalysisResult {};
 ;
 
-<<<<<<< HEAD
-=======
+
+
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
-
-export interface MessageAnalysisResult extends AnalysisResult {
-  severity: FraudSeverity
+export interface MessageAnalysisResult extends AnalysisResult {};
+  severity: FraudSeverity;
 }
 
 export interface EmailAnalysisResult extends AnalysisResult {}
-export interface FlagResult {
+export interface FlagResult {};
   success: boolean;
   error?: string;
 }
 export interface SignupCheckResult extends AnalysisResult {}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-;
-export interface SignupCheckResult extends AnalysisResult {}
+
 ;
 ;
+export interface SignupCheckResult extends AnalysisResult {};
+;
+;
+
 <<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-;
-export interface SignupCheckResult extends AnalysisResult {}
-;
-
 ;
 
 export interface SignupCheckResult extends AnalysisResult {}
@@ -166,3 +171,6 @@ export interface SignupCheckResult extends AnalysisResult {}
 export interface SignupCheckResult extends AnalysisResult {}
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

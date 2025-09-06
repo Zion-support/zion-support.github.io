@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from "react",
@@ -30,11 +31,21 @@ export function MobileHome() {
 =======
 
 =======
+=======
+import React from "react";"
+import { MobileHeader } from "../components/common/MobileHeader";"
+import { BottomNavigation } from "../components/common/BottomNavigation";"
+import { ClientDashboard } from "../components/dashboard/ClientDashboard";"
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";"
+import { useAuth } from "@/hooks/useAuth";
+export function MobileHome() {};
+  const { user } = useAuth();"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const isClient = user?.userType === "employer" || user?.userType === "buyer";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-=======
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -49,8 +60,18 @@ import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",
 import { TalentDashboard } from "../components/dashboard/TalentDashboard";
+=======
+
+
+"
+import React from "react","
+import { MobileHeader } from "../components/common/MobileHeader","
+import { BottomNavigation } from "../components/common/BottomNavigation","
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",";
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useAuth } from "@/hooks/useAuth";
-export function MobileHome() {
+export function MobileHome() {};
   const { user } = useAuth();
 
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
@@ -62,6 +83,7 @@ export function MobileHome() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
@@ -69,11 +91,16 @@ export function MobileHome() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { TalentDashboard } from "../components/dashboard/TalentDashboard",
+=======
+"
+import { TalentDashboard } from "../components/dashboard/TalentDashboard","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useAuth } from "@/hooks/useAuth",
-export function MobileHome() {
-  const { user } = useAuth(),
+export function MobileHome() {}
+  const { user } = useAuth(),'
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   
+<<<<<<< HEAD
     <div className="min-h-screen">
       <MobileHeader
         title={isClient ? "Client Dashboard" : "Talent Dashboard"}
@@ -226,3 +253,17 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
 =======
       />
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  return ("
+    <div className="min-h-screen">
+      <MobileHeader";
+        title={isClient ? "Client Dashboard" : "Talent Dashboard"};
+        showNotifications;
+        showSettings;
+      />
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

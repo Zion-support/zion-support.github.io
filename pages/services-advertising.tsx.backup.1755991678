@@ -13,6 +13,7 @@ export default function ServicesAdvertisingPage() {
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -35,6 +36,9 @@ export default function ServicesAdvertisingPage() {
 				{/* Original sections */}
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
 					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
@@ -159,6 +163,7 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://auth0.com/pricing')}, {ext('https://workos.com/pricing')}, {ext('https://www.okta.com/pricing/')}</li>
 					</ul>
 				</section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -559,11 +564,15 @@ export default function ServicesAdvertisingPage() {
 						<li>Typical SMB budget: $20–$500/mo</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 						<li>References: {ext('https://www.zendesk.com/pricing/')}, {ext('https://freshdesk.com/pricing')}, {ext('https://www.intercom.com/pricing')}</li>
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -583,10 +592,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.loopreturns.com/pricing')}, {ext('https://www.aftership.com/returns-center/pricing')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -606,10 +619,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://deepgram.com/pricing')}, {ext('https://www.assemblyai.com/pricing')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -629,10 +646,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://mailchimp.com/pricing/')} (automations), {ext('https://customer.io/pricing')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -653,10 +674,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://webflow.com/pricing')}, {ext('https://www.squarespace.com/pricing')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -676,10 +701,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://calendly.com/pricing')}, {ext('https://cal.com/pricing')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1807,6 +1836,9 @@ export default function ServicesAdvertisingPage() {
 				</div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			</div>
 		</div>
 	);

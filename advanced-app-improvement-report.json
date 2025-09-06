@@ -1,4 +1,10 @@
 {
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   "timestamp": "2025-09-06T01:31:58.924Z",
   "duration": 151,
   "improvements": [
@@ -12,7 +18,11 @@
   "success": true
 
 }
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   "timestamp": "2025-09-06T10:42:44.767Z",
   "totalDuration": 17470,
   "successfulTasks": 3,
@@ -27,3 +37,10 @@
     "monitoringSetup": true
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

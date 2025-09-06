@@ -960,6 +960,7 @@ h3 {
   .particle-bg::before {
     display: none;
   }
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -968,6 +969,15 @@ h3 {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   .text-gradient-cyan,
@@ -1007,6 +1017,7 @@ h3 {
   .neural-network,
   .cyberpunk-glitch {
     display: none;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 /* Additional Futuristic Styles */
 .text-gradient-green {
@@ -1232,3 +1243,21 @@ h3 {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  }
+  
+  body::before,
+  body::after {
+    display: none;
+  }
+
+
+}
+}
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

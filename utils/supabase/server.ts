@@ -34,11 +34,12 @@ import { createClient } from '@supabase/supabase-js';
 import { createClient } from "@supabase/supabase-js";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-const supabaseUrl =
+const supabaseUrl ="
   process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
-const supabaseKey =
+const supabaseKey ="
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
 
+<<<<<<< HEAD
 export function getServerSupabase() {
   return createClient(supabaseUrl, supabaseKey);
 <<<<<<< HEAD
@@ -209,3 +210,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+export function getServerSupabase() {};
+  return createClient(supabaseUrl, supabaseKey);
+}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

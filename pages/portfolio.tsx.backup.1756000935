@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -19,10 +20,14 @@ import {
   Filter, Code, Database, Shield, Cpu, Globe, Brain
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -278,10 +283,14 @@ export default function Portfolio() {
     : projects.filter(project => project.category === selectedCategory);
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -877,6 +886,9 @@ export default function Portfolio() {
       </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 }

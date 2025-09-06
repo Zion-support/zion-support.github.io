@@ -59,5 +59,9 @@ describe('App Smoke Tests', () => {
 =======
     expect(container.firstChild).toBeTruthy();
   });
+<<<<<<< HEAD
 });
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

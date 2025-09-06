@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,3 +42,16 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 </header>"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+</header>""
+</header>"
+ursor/add-new-services-and-deploy-updates-0462"
+</header>"
+
+"
+</header>""
+</header>"
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

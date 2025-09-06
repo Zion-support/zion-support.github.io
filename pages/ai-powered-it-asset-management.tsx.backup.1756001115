@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -98,10 +99,14 @@ const AIPoweredITAssetManagement = () => {
     "Peripheral devices and accessories"
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const benefits = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -164,10 +169,14 @@ const AIPoweredITAssetManagement = () => {
 
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Head>
         <title>AI-Powered IT Asset Management - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -254,10 +263,14 @@ const AIPoweredITAssetManagement = () => {
             </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -314,11 +327,15 @@ const AIPoweredITAssetManagement = () => {
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -373,12 +390,16 @@ const AIPoweredITAssetManagement = () => {
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -474,12 +495,16 @@ const AIPoweredITAssetManagement = () => {
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -535,11 +560,15 @@ const AIPoweredITAssetManagement = () => {
             </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
       </div>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -551,3 +580,6 @@ const AIPoweredITAssetManagement = () => {
 export default AIPoweredITAssetManagement;
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

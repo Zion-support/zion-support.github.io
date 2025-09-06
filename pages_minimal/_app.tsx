@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -8,18 +9,16 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-<<<<<<< HEAD
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-export default MyApp,
+
+
+
+
+export default MyApp,;
 ;
 ;
 :pages_minimal/_app && _app.tsx;
@@ -27,19 +26,19 @@ export default function App(): any ({ Component, pageProps }: AppProps) {;
   return <Component {...pageProps} />;
 }
 :pages_minimal / _app.tsx;
-export default /**
- * App - Function description
+export default /**;
+ * App - Function description;
  */
-function App() {
+function App() {}
   return <Component {...page_props} />;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-import type { AppProps } from 'next / app',
+import type { AppProps } from 'next / app','
 import '../styles / globals.css',
-/**
- * MyApp - Function description
+/**;
+ * MyApp - Function description;
  */
-function MyApp() {
+function MyApp() {}
   return <Component {...page_props} />;
 <<<<<<< HEAD
 }
@@ -48,10 +47,9 @@ function MyApp() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 }
+
+
 <<<<<<< HEAD
-
-export default MyApp;
-
 import type { AppProps } from 'next/app';
 import '../styles/globals.css'
 function MyApp({ Component, pageProps }: AppProps) {
@@ -75,15 +73,16 @@ export default MyApp,
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+export default MyApp,;
+;
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 export default MyApp,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -93,3 +92,10 @@ export default MyApp,
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

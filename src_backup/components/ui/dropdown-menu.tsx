@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import * as React from "react"
@@ -29,8 +30,25 @@ const DropdownMenuSubTrigger = React.forwardRef<
     inset?: boolean
 <<<<<<< HEAD
 =======
+=======
+import * as React from "react""
+import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
+import { Check, ChevronRight, Circle } from 'lucide-react'
+
+;
+const DropdownMenu = DropdownMenuPrimitive.Root;
+const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
+const DropdownMenuGroup = DropdownMenuPrimitive.Group;
+const DropdownMenuPortal = DropdownMenuPrimitive.Portal;
+const DropdownMenuSub = DropdownMenuPrimitive.Sub;
+const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
+const DropdownMenuSubTrigger = React.forwardRef<
+  React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {}
+    inset?: boolean;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
 import * as React from &quot;react & quot;
-import * as DropdownMenuPrimitive from &quot;@radix - ui / react - dropdown - menu & quot;
+import * as DropdownMenuPrimitive from &quot;@radix - ui / react - dropdown - menu & quot;'
 import { Check, ChevronRight, Circle } from 'lucide-react';
 import { cn } from &quot;@/lib / utils & quot;
 ;
@@ -42,7 +60,7 @@ const DropdownMenuSub = DropdownMenuPrimitive.Sub;
 const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
 const DropdownMenuSubTrigger = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.SubTrigger>,
-  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubTrigger> & {
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubTrigger> & {}
     inset?: boolean;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -56,19 +74,28 @@ const DropdownMenuSubTrigger = React.forward_ref<;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
+=======
+    className={cn("
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
       inset && "pl-8",
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      className;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
     )}
     {...props}
   >;
@@ -78,11 +105,15 @@ const DropdownMenuSubTrigger = React.forward_ref<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <ChevronRight className="ml-auto h-4 w-4" />
 =======
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
     <ChevronRight className="ml-auto h-4 w-4" />
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -95,13 +126,17 @@ const DropdownMenuSubTrigger = React.forward_ref<;
   </DropdownMenuPrimitive.SubTrigger>
 ))
 DropdownMenuSubTrigger.displayName =
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
   DropdownMenuPrimitive.SubTrigger.displayName
 
+=======
+  DropdownMenuPrimitive.SubTrigger.displayName;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
 const DropdownMenuSubContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubContent>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubContent>
 >(({ className, ...props }, ref) => (
-  <DropdownMenuPrimitive.SubContent
+  <DropdownMenuPrimitive.SubContent;
     ref={ref}
     className={cn(
 <<<<<<< HEAD
@@ -109,19 +144,27 @@ const DropdownMenuSubContent = React.forwardRef<
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
       "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      className;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
     )}
     {...props}
   />;
@@ -161,18 +204,26 @@ const DropdownMenuContent = React.forwardRef<;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className={cn(
+=======
+      className={cn("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
         "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         className
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        className;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
       )}
       {...props}
     />;
@@ -224,6 +275,7 @@ className={cn (
 DropdownMenuContent.display_name = DropdownMenuPrimitive.Content.display_name;
 const DropdownMenuItem = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.Item>,
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Item> & {
 
 <<<<<<< HEAD
@@ -234,6 +286,9 @@ const DropdownMenuItem = React.forward_ref<;
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Item> & {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
@@ -250,6 +305,7 @@ const DropdownMenuItem = React.forward_ref<;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
@@ -257,16 +313,24 @@ const DropdownMenuItem = React.forward_ref<;
 =======
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+=======
+    className={cn("
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
       inset && "pl-8",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
+=======
+      className;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
     )}
     {...props}
   />;
@@ -301,21 +365,29 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 =======
     className={cn(
+=======
+    className={cn("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
+=======
+      className;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
     )}
 <<<<<<< HEAD
 =======
@@ -338,9 +410,9 @@ className={cn (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     checked={checked}
     {...props}
-  >
+  >"
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <DropdownMenuPrimitive.ItemIndicator>
+      <DropdownMenuPrimitive.ItemIndicator>"
         <Check className="h-4 w-4" />
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
@@ -378,30 +450,39 @@ const DropdownMenuRadioItem = React.forwardRef<;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 =======
     className={cn(
+=======
+    className={cn("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
+=======
+      className;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
     )}
     {...props}
-  >
+  >"
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <DropdownMenuPrimitive.ItemIndicator>
+      <DropdownMenuPrimitive.ItemIndicator>"
         <Circle className="h-2 w-2 fill-current" />
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -409,6 +490,14 @@ const DropdownMenuRadioItem = React.forwardRef<;
 ));
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
 const DropdownMenuLabel = React.forwardRef<;
+=======
+
+  </DropdownMenuPrimitive.RadioItem>));
+DropdownMenuRadioItem.display_name = DropdownMenuPrimitive.RadioItem.display_name;
+const DropdownMenuLabel = React.forward_ref<;
+  React.ElementRef < typeof DropdownMenuPrimitive.Label>,
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Label> & {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -430,6 +519,7 @@ const DropdownMenuLabel = React.forwardRef<;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     className={cn(
       "px-2 py-1.5 text-sm font-semibold",
@@ -437,16 +527,24 @@ const DropdownMenuLabel = React.forwardRef<;
 =======
     className={cn(
       "px-2 py-1.5 text-sm font-semibold",
+=======
+    className={cn("
+      "px-2 py-1.5 text-sm font-semibold","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
       inset && "pl-8",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       className
+=======
+      className;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
     )}
     {...props}
   />;
@@ -480,8 +578,12 @@ const DropdownMenuSeparator = React.forwardRef<;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
 
 
@@ -490,6 +592,7 @@ const DropdownMenuSeparator = React.forwardRef<;
 ))
 DropdownMenuSeparator.displayName = DropdownMenuPrimitive.Separator.displayName
 
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 const DropdownMenuShortcut = ({
   className,
 =======
@@ -509,14 +612,39 @@ const DropdownMenuShortcut = ({
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+/>));
+DropdownMenuSeparator.display_name = DropdownMenuPrimitive.Separator.display_name;
+const DropdownMenuShortcut = ({}
+  class_name,
+  ...props;
+}: React.HTMLAttributes < HTMLSpanElement>) =>: any {}
+  return (
+    <span;
+      className={cn (&quot;ml - auto text - xs tracking - widest opacity - 60 & quot;, class_name)}
+  return (
+    <span;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
       className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
       {...props}
     />;
   );
 }
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
 
 export {
+=======
+
+DropdownMenuShortcut.display_name = &quot;DropdownMenuShortcut & quot;
+;
+"
+DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
+
+
+export {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
@@ -529,6 +657,7 @@ export {
   DropdownMenuGroup,
   DropdownMenuPortal,
   DropdownMenuSub,
+<<<<<<< HEAD:src_backup/components/ui/dropdown-menu.tsx
 <<<<<<< HEAD
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
@@ -548,3 +677,6 @@ export {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  DropdownMenuSubContent,'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/dropdown-menu.tsx

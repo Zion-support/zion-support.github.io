@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 interface BadgeEarnedProps {
 
@@ -22,6 +22,12 @@ interface BadgeEarnedProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 import React from "react",
+=======
+interface BadgeEarnedProps {}
+  badge: BadgeKey;
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";"
+import React from "react","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
 <<<<<<< HEAD
@@ -29,19 +35,24 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
   show_name?: boolean;
   show_desc?: boolean;
   earned_date?: string;
 }
-export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
+export const BadgeEarned: React.FC < BadgeEarnedProps> = ({};
   badge;
+<<<<<<< HEAD
   size = 44;
 
   badge: BadgeKey
@@ -55,29 +66,37 @@ import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 interface BadgeEarnedProps {;
   badge: BadgeKey,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   size?: number;
 
 
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
-=======
+
   show_name?: boolean;
   show_desc?: boolean;
   earned_date?: string;
 }
+<<<<<<< HEAD
 export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  badge;
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export const BadgeEarned: React.FC < BadgeEarnedProps> = ({};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  badge;
 
-  size = 44;
-import React from "react",
+
+
+  size = 44;"
+import React from "react","
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
@@ -90,10 +109,11 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import React from "react",
-import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -117,29 +137,31 @@ interface BadgeEarnedProps {
 
 =======
   earnedDate?: string
+=======
+
+interface BadgeEarnedProps {}
+  badge: BadgeKey,
+  size?: number,
+  showName?: boolean,
+  showDesc?: boolean,;
+  earnedDate?: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
   badge;
   size = 44;
   showName = true;
-export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({};
   badge;
 
   size = 44;
   showName = true;
-  showDesc = false
-  earnedDate}) => {
+  showDesc = false;
+  earnedDate}) => {}
   const meta = getBadgeMeta(badge);
   if (!meta) return null;
   const Icon = meta.icon;
@@ -148,7 +170,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   showName = true,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   showDesc = false,
-  earnedDate}) => {
+  earnedDate}) => {}
   const meta = getBadgeMeta(badge),
   if (!meta) return null,
   const Icon = meta.icon,
@@ -159,8 +181,8 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -173,12 +195,26 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
         style={{
+=======
+  return ("
+    <div className="flex flex-col items-center text-center gap-1 px-2">;
+      <div;
+        style={{}
+          background: meta && meta.bg,"
+          borderRadius: "9999px",
+          width: size,
+          height: size,"
+          display: "flex","
+          alignItems: "center",
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         title={meta.name}
       >
         <Icon color={meta.color} size={size * 0.7} />
       </div>
-      {showName && (
+      {showName && ("
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +226,10 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
+=======
+"
+import React from "react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
 interface BadgeEarnedProps {;
   badge: BadgeKey,;
@@ -208,26 +248,30 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
   const meta = getBadgeMeta(badge),;
   if (!meta) return null,;
   const Icon = meta.icon,;
-  return (;
+  return (;"
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div;
         style={{;
-          background: meta.bg,;
+          background: meta.bg,;"
           borderRadius: "9999px",;
           width: size,;
-          height: size,;
-          display: "flex",;
-          alignItems: "center";
-          justifyContent: "center"}}
+          height: size,;"
+          display: "flex",;"
+          alignItems: "center";"
+          justifyContent: "center"}}"
         className="shadow hover-scale";
         title={meta.name}
       >;
         <Icon color={meta.color} size={size * 0.7} />;
       </div>;
-      {showName && (;
+      {showName && (;"
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -243,43 +287,43 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
         title={meta && meta.name}>;
         <Icon color={meta && meta.color} size={size * 0 && 0.7} />;
       </div>;
-      {showName && (;
+      {showName && (;"
         <span className="text-xs font-semibold mt-1" style={{ color: meta && meta.color }}>;
           {meta && meta.name}
         </span>;
       )}
-      {earnedDate && (;
+      {earnedDate && (;"
         <span className="text-[10px] text-gray-400">;
           {earnedDate}
         </span>;
       )}
-      {showDesc && (;
+      {showDesc && (;"
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
 <<<<<<< HEAD
 <<<<<<< HEAD
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
     </div>;
   );
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
 }
 
     </div>;
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     </div>;
   );
 
@@ -287,48 +331,45 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 };
   show_name = true;
   show_desc = false,
-  earned_date}) => {
+  earned_date}) => {}
   const meta = getBadgeMeta (badge);
-  // Check condition
-if (return null) {
-  $2
+  // Check condition;
+if (return null) {}
+  $2;
 }
   const Icon = meta.icon;
 ;
-  return (
+  return ("
     <div className="flex flex - col items - center text - center gap - 1 px - 2">;
       <div;
-        style={{
-          background: meta.bg,
+        style={{}
+          background: meta.bg,"
           border_radius: "9999px",
           width: size,
-          height: size,
-          display: "flex",
-          align_items: "center",
-          justify_content: "center"}}
+          height: size,"
+          display: "flex","
+          align_items: "center","
+          justify_content: "center"}}"
         className="shadow hover - scale";
         title={meta.name}
       >;
         <Icon color={meta.color} size={size * 0.7} />;
       </div>;
-      {show_name && (
+      {show_name && ("
         <span className="text - xs font - semibold mt - 1" style={{ color: meta.color }}>;
           {meta.name}
         </span>)}
-      {earned_date && (
+      {earned_date && ("
         <span className="text-[10px] text - gray - 400">;
           {earned_date}
         </span>)}
-      {show_desc && (
+      {show_desc && ("
         <span className="text - xs text - zion - slate - light">{meta.description}</span>)}
     </div>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
+<<<<<<< HEAD
 import React from "react",;
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
 ;
@@ -441,3 +482,8 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
 =======
       )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,15 +1,19 @@
 
+<<<<<<< HEAD
 
   id: string;
   type: "success" | "error" | "warning" | "info";
 
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title?: string;
   message: string;
   duration?: number;
 }
 
 
+<<<<<<< HEAD
 pr-12243
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
@@ -179,3 +183,13 @@ export const useNotifications = () => {
   return context;
 };
 pr-12243
+=======
+        <div;
+          key={notification.id}
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
+        >
+          <div className="flex items-start justify-between">"
+            <div className="flex-1">
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

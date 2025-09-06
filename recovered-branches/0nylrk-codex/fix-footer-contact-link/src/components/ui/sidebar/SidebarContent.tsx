@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -31,9 +32,15 @@ import { cn } from "@/lib/utils",
 
 import {cn} from "@/lib/utils";
 interface SidebarContentProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+=======
+import React from "react";"
+import { cn } from "@/lib/utils";
+interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   className?: string;
   children?: React && React.ReactNode;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -121,19 +128,16 @@ export function SidebarContent({ className, children, ...props }: SidebarContent
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+"
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
       {children}
 
+
+
 <<<<<<< HEAD
-    </div>;
-  );
-}
-
-=======
-;
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -152,27 +156,36 @@ export function SidebarContent({ className, children, ...props }: SidebarContent
 export function SidebarContent({ className, children, ...props }: SidebarContentProps) {;
   return (;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 ;
 
+<<<<<<< HEAD
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
       {children}
-import React from './react';
+import React from './react';'
 import { cn  } from '@/lib / utils';
-interface SidebarContentProps extends React.HTMLAttributes < HTMLDivElement> {
+interface SidebarContentProps extends React.HTMLAttributes < HTMLDivElement> {}
   class_name?: string;
   children?: React.ReactNode;
 }
-export /**
- * SidebarContent - Function description
+export /**;
+ * SidebarContent - Function description;
  */
-function SidebarContent() {
-  return (
+function SidebarContent() {}
+  return ("
     <div className={cn ("flex - 1 px - 2 py - 4", class_name)} {...props}>;
       {children}
     </div>);
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -186,3 +199,7 @@ function SidebarContent() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

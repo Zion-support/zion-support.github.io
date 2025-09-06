@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 export const JOB_POSTS: Job[] = [
   {
@@ -29,6 +30,11 @@ export const JOB_POSTS: Job[] = [
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 ];
@@ -36,6 +42,7 @@ export const JOB_POSTS: Job[] = [
 updated at: "2024-05-05"
 }];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -130,37 +137,81 @@ updated at: "2024-05-05"
 ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+"
+created at: "2024 - 05 - 05";"
+updated at: "2024 - 05 - 05";
+}];
+;
+
+
+
+
+"
+import { Job } from "@/types/jobs",
+export const JOB_POSTS: Job[] = [;
+import { Job } from '@/types/jobs';"
+import { Job } from "@/types/jobs",
+export const JOB_POSTS: Job[] = []
+  {"
+    id: "job-1","
+    client_id: "client-1","
+    title: "React Developer Needed","
+    description: "Seeking a React developer for a 3 month contract building dashboards.","
+    category: "development","
+    skills: ["React", "TypeScript"],"
+    budget: { min: 40, max: 50, currency: "USD" },"
+    deadline: "2024-07-01","
+    status: "new","
+    created_at: "2024-05-10","
+    updated_at: "2024-05-10"},
+  {}
+"
+    id: "job-2","
+    client_id: "client-2","
+    title: "Part-time DevOps Engineer","
+    description: "Looking for a DevOps expert to maintain CI/CD pipelines.","
+    category: "development","
+    skills: ["DevOps", "AWS", "Terraform"],"
+    budget: { min: 30, max: 60, currency: "USD" },"
+    deadline: "2024-06-15","
+    status: "new","
+    created_at: "2024-05-05","
+    updated_at: "2024-05-05"};
+],";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Job } from "@/types/jobs",;
 export const JOB_POSTS: Job[] = [;
-  {;
-    id: "job-1",;
-    client_id: "client-1",;
-    title: "React Developer Needed",;
-    description: "Seeking a React developer for a 3 month contract building dashboards.",;
-    category: "development",;
-    skills: ["React", "TypeScript"],;
-    budget: { min: 40, max: 50, currency: "USD" },;
-    deadline: "2024-07-01",;
-    status: "new",;
-    created_at: "2024-05-10",;
+  {;"
+    id: "job-1",;"
+    client_id: "client-1",;"
+    title: "React Developer Needed",;"
+    description: "Seeking a React developer for a 3 month contract building dashboards.",;"
+    category: "development",;"
+    skills: ["React", "TypeScript"],;"
+    budget: { min: 40, max: 50, currency: "USD" },;"
+    deadline: "2024-07-01",;"
+    status: "new",;"
+    created_at: "2024-05-10",;"
     updated_at: "2024-05-10"},;
-  {;
-    id: "job-2",;
-    client_id: "client-2",;
-    title: "Part-time DevOps Engineer",;
-    description: "Looking for a DevOps expert to maintain CI/CD pipelines.",;
-    category: "development",;
-    skills: ["DevOps", "AWS", "Terraform"],;
-    budget: { min: 30, max: 60, currency: "USD" },;
-    deadline: "2024-06-15",;
-    status: "new",;
-    created_at: "2024-05-05";
+  {;"
+    id: "job-2",;"
+    client_id: "client-2",;"
+    title: "Part-time DevOps Engineer",;"
+    description: "Looking for a DevOps expert to maintain CI/CD pipelines.",;"
+    category: "development",;"
+    skills: ["DevOps", "AWS", "Terraform"],;"
+    budget: { min: 30, max: 60, currency: "USD" },;"
+    deadline: "2024-06-15",;"
+    status: "new",;"
+    created_at: "2024-05-05";"
     updated_at: "2024-05-05"}
 ];
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -245,3 +296,7 @@ updated at: "2024 - 05 - 05";
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

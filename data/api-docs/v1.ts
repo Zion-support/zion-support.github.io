@@ -1,4 +1,5 @@
 import { ApiDocsSpec } from './types';
+<<<<<<< HEAD
   ]
 }
 export default v1;
@@ -206,18 +207,24 @@ const v1: ApiDocsSpec = {
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+        }
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       ];
     }
-
-            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
+'
+            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },'`
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },'`
             { language: 'python', code: `import requests\nrequests ;
 
 
 
-  ];
 
+<<<<<<< HEAD
   }
 
   ];
@@ -225,6 +232,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
 export default v1;
   ];
@@ -232,6 +242,7 @@ export default v1;
 ;
 export default v1;
 ;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
             {
@@ -444,3 +455,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export default v1;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

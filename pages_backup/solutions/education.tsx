@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
 import React from 'react';
@@ -20,17 +21,23 @@ import * as React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+import * as React from 'react';'
+import Head from 'next/head';'
+import Link from 'next/link';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
-import { 
+import {}
   GraduationCap, 
   Users, 
   BookOpen, 
   Laptop, 
   Globe, 
   CheckCircle, 
-  ArrowRight 
+  ArrowRight ';
 } from 'lucide-react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
@@ -200,29 +207,44 @@ const features = [
     icon: GraduationCap,
     title: 'Learning Management System',
     description: 'Comprehensive LMS with course management and student tracking',
+=======
+const features = []
+  {}
+    icon: GraduationCap,'
+    title: 'Learning Management System','
+    description: 'Comprehensive LMS with course management and student tracking','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
   },
-  {
-    icon: Users,
-    title: 'Student Analytics',
-    description: 'AI-powered analytics to improve student outcomes',
+  {}
+    icon: Users,'
+    title: 'Student Analytics','
+    description: 'AI-powered analytics to improve student outcomes','
     benefits: ['Performance tracking', 'Predictive analytics', 'Intervention alerts', 'Reporting']
   },
-  {
-    icon: BookOpen,
-    title: 'Digital Content',
-    description: 'Interactive digital content and multimedia learning materials',
+  {}
+    icon: BookOpen,'
+    title: 'Digital Content','
+    description: 'Interactive digital content and multimedia learning materials','
     benefits: ['Interactive content', 'Multimedia support', 'Accessibility', 'Mobile learning']
   },
+<<<<<<< HEAD
   {
     icon: Laptop,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
+=======
+  {}
+    icon: Laptop,'
+    title: 'Virtual Classrooms','
+    description: 'Online learning platform with video conferencing and collaboration','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
   }
 ];
 
+<<<<<<< HEAD
 export default function EducationSolutionsPage() {
 <<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -438,12 +460,27 @@ const benefits = [;
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
+=======
+export default function EducationSolutionsPage() {}
+  return (
+    <>
+      <Head>
+        <title>Education Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive education technology solutions including LMS, student analytics, digital content, and virtual classrooms." />
+      </Head>
+"
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}"
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">"
+          <div className="max-w-7xl mx-auto px-4">;
+            <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8 }}"
               className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Education Solutions</h1>
+            >"
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Education Solutions</h1>"
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Transform education with our comprehensive technology solutions. 
                 From learning management systems to virtual classrooms.
@@ -467,6 +504,7 @@ const benefits = [;
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
 <<<<<<< HEAD
         <section className="py-20 bg-gray-50">
@@ -493,38 +531,48 @@ const benefits = [;
 <<<<<<< HEAD
 =======
         <section className="py-16 px-4">
+=======
+        {/* Features Section */}"
+        <section className="py-16 px-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8 }}"
               className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Education Technology Features</h2>
+            >"
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Education Technology Features</h2>"
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our education solutions are designed to enhance learning and improve outcomes.
               </p>
-            </motion.div>
+            </motion.div>"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}"
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                >"
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">"
                     <feature.icon className="w-6 h-6 text-blue-600" />
+<<<<<<< HEAD
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
+=======
+                  </div>"
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>"
+                  <p className="text-gray-600 mb-4">{feature.description}</p>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                    {feature.benefits.map((benefit, benefitIndex) => ("
+                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {benefit}
                       </div>
@@ -915,6 +963,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -933,6 +982,38 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
                 Download Education Brochure
               </button>
             </div>
+=======
+        {/* CTA Section */}"
+        <section className="py-20 bg-blue-600">"
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Education?
+              </h2>"
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">'
+                Let's discuss how our education solutions can enhance your learning environment.
+              </p>"
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link"
+                  href="/contact""
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Get Started"
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link"
+                  href="/solutions""
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View Solutions;
+                </Link>
+              </div>
+            </motion.div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
       </div>
@@ -951,6 +1032,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
@@ -982,3 +1064,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de            </div>
     </>;
   ),;
 }
+=======
+}'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

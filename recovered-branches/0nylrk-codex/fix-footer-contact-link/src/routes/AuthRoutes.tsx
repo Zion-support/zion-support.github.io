@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -56,38 +57,75 @@ import UpdatePassword from "@/pages/UpdatePassword",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import Onboarding from "@/pages/Onboarding",
 import TalentOnboarding from "@/pages/TalentOnboarding";
+=======
+import { Fragment } from "react";"
+import { Route, Routes } from "react-router-dom";"
+import Login from "@/pages/Login";"
+import Signup from "@/pages/Signup";"
+import ForgotPassword from "@/pages/ForgotPassword";"
+import UpdatePassword from "@/pages/UpdatePassword";"
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+import Onboarding from "@/pages/Onboarding";"
+import TalentOnboarding from "@/pages/TalentOnboarding";"
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
+const AuthRoutes = () => {}
+const AuthRoutes = () => {;
+
+"
+import {Fragment} from "react";"
+import {Route, Routes} from "react-router-dom";"
+import Login from "@/pages/Login";"
+import Signup from "@/pages/Signup";"
+import ForgotPassword from "@/pages/ForgotPassword";"
+import UpdatePassword from "@/pages/UpdatePassword";"
+import {ProtectedRoute} from "@/components/ProtectedRoute";"
+import Onboarding from "@/pages/Onboarding";"
+import TalentOnboarding from "@/pages/TalentOnboarding";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
 
-import TalentOnboarding from "@/pages/TalentOnboarding",
+"
+import { Fragment } from "react","
+import { Route, Routes } from "react-router-dom","
+import Login from "@/pages/Login","
+import Signup from "@/pages/Signup","
+import ForgotPassword from "@/pages/ForgotPassword","
+import UpdatePassword from "@/pages/UpdatePassword","
+import { ProtectedRoute } from "@/components/ProtectedRoute","
+import Onboarding from "@/pages/Onboarding",";
+import TalentOnboarding from "@/pages/TalentOnboarding";"
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
+"
+import TalentOnboarding from "@/pages/TalentOnboarding","
 import ServiceOnboarding from "@/pages/ServiceOnboarding",
-const AuthRoutes = () => {
+const AuthRoutes = () => {}
   return (
     <Routes>
-      {/* Auth Routes */}
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/forgot-password" element={<ForgotPassword />} />
+      {/* Auth Routes */}"
+      <Route path="/login" element={<Login />} />"
+      <Route path="/signup" element={<Signup />} />"
+      <Route path="/forgot-password" element={<ForgotPassword />} />"
       <Route path="/update-password" element={<UpdatePassword />} />
       {/* Onboarding Routes */}
-      <Route
+      <Route"
         path="/onboarding"
-        element={
+        element={}
           <ProtectedRoute>
             <Onboarding />
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route"
         path="/talent-onboarding"
-        element={
+        element={}
           <ProtectedRoute>
             <TalentOnboarding />
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route"
         path="/service-onboarding"
-        element={
+        element={}
           <ProtectedRoute>
             <ServiceOnboarding />
           </ProtectedRoute>
@@ -95,21 +133,21 @@ const AuthRoutes = () => {
       />
     </Routes>
   )
-}
+};
 export default AuthRoutes;
 
 },
 
-export default AuthRoutes,
-import { Fragment } from "react",;
-import { Route, Routes } from "react-router-dom",;
-import Login from "@/pages/Login",;
-import Signup from "@/pages/Signup",;
-import ForgotPassword from "@/pages/ForgotPassword",;
-import UpdatePassword from "@/pages/UpdatePassword",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import Onboarding from "@/pages/Onboarding",;
-import TalentOnboarding from "@/pages/TalentOnboarding",;
+export default AuthRoutes,";
+import { Fragment } from "react",;"
+import { Route, Routes } from "react-router-dom",;"
+import Login from "@/pages/Login",;"
+import Signup from "@/pages/Signup",;"
+import ForgotPassword from "@/pages/ForgotPassword",;"
+import UpdatePassword from "@/pages/UpdatePassword",;"
+import { ProtectedRoute } from "@/components/ProtectedRoute",;"
+import Onboarding from "@/pages/Onboarding",;"
+import TalentOnboarding from "@/pages/TalentOnboarding",;"
 import ServiceOnboarding from "@/pages/ServiceOnboarding",;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,35 +158,43 @@ import ServiceOnboarding from "@/pages/ServiceOnboarding",;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 const AuthRoutes = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const AuthRoutes = () => {;
+=======
+const AuthRoutes = () => {}
+const AuthRoutes = () => {;
+
+  return (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Routes>;
-      {/* Auth Routes */}
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/forgot-password" element={<ForgotPassword />} />
+      {/* Auth Routes */}"
+      <Route path="/login" element={<Login />} />"
+      <Route path="/signup" element={<Signup />} />"
+      <Route path="/forgot-password" element={<ForgotPassword />} />"
       <Route path="/update-password" element={<UpdatePassword />} />
 
       {/* Onboarding Routes */}
-      <Route
+      <Route"
         path="/onboarding"
-        element={
+        element={}
           <ProtectedRoute>
             <Onboarding />
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route"
         path="/talent-onboarding"
-        element={
+        element={}
           <ProtectedRoute>
             <TalentOnboarding />
           </ProtectedRoute>
         }
       />
-      <Route
+      <Route"
         path="/service-onboarding"
+<<<<<<< HEAD
         element={
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -206,6 +252,9 @@ export default AuthRoutes;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+        element={}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <ProtectedRoute>
             <ServiceOnboarding />
           </ProtectedRoute>
@@ -214,6 +263,7 @@ export default AuthRoutes;
     </Routes>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
+<<<<<<< HEAD
 =======
     </Routes>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -224,12 +274,46 @@ export default AuthRoutes;
 
 },
 
+=======
+};
+
+
+
+
+};
+
+
+};
+
+
+
+
+},
+
+
+
+export default AuthRoutes;
+
+
+import { Fragment } from './react';'
+import { Route, Routes } from './react-router-dom';"
+import Login from "@/pages / Login";"
+import Signup from "@/pages / Signup";"
+import ForgotPassword from "@/pages / ForgotPassword";"
+import UpdatePassword from "@/pages / UpdatePassword";'
+import { ProtectedRoute } from '@/components / ProtectedRoute';"
+import Onboarding from "@/pages / Onboarding";"
+import TalentOnboarding from "@/pages / TalentOnboarding";"
+import ServiceOnboarding from "@/pages / ServiceOnboarding";
+const AuthRoutes = () =>: any {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <Routes>;
       {/* Auth Routes */}
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default AuthRoutes;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -269,3 +353,9 @@ export default AuthRoutes;
 =======
 export default AuthRoutes;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

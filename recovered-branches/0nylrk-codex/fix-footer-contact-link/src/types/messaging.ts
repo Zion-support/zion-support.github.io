@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   attachment_url?: string,
   attachment_name?: string;
@@ -13,6 +14,8 @@
 // Define the shape of a conversation;
 
 export interface Conversation {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   sender_id: string;
   recipient_id: string;
@@ -23,8 +26,8 @@ export interface Conversation {
 <<<<<<< HEAD
 <<<<<<< HEAD
   sender_avatar?: string;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   attachment_url?: string
 
   attachment_name?: string
@@ -36,23 +39,16 @@ export interface Conversation {;
 =======
 export interface Conversation {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   user_id: string;
-  other_user: {
+  other_user: {}
     id: string;
     name: string;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-    avatar_url?: string,
-    user_type?: string;
 
-=======
-    avatar_url?: string
-    user_type?: string
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   }
 =======
   sender_avatar?: string;  }
@@ -62,6 +58,7 @@ export interface Conversation {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string;
   avatar_url?: string;
+<<<<<<< HEAD
   last_message?: {
 
     content: string,
@@ -75,12 +72,15 @@ export interface Conversation {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  last_message?: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   updated_at: string;
   unread_count: number;
   context_type?: 'job' | 'talent' | 'general';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   context_id?: string,
   context_data?: ConversationContextData;
@@ -143,6 +143,8 @@ export interface MessagingContextType {;
   loadMessages: (conversationId: string) => Promise<void>
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Define the shape of a message;
 export interface Message {;
   id: string,;
@@ -174,7 +176,7 @@ export interface Conversation {;
     created_at: string;
   },;
   updated_at: string,;
-  unread_count: number,;
+  unread_count: number,;'
   context_type?: 'job' | 'talent' | 'general',;
   context_id?: string,;
   context_data?: ConversationContextData;
@@ -187,48 +189,9 @@ export interface ConversationContextData {;
   image_url?: string;
 }
 ;
-<<<<<<< HEAD
 
-// Define the shape of the messaging context;
-export interface MessagingContextType {
-  messages: Message[];
-  conversations: Conversation[];
-  unread_count: number;
-  active_conversation: Conversation | null;
-  active_messages: Message[];
-  is_loading: boolean,
-  send_message: (conversation_id: string, content: string) => Promise < void>,
-  create_conversation: (
-    recipient_id: string,
-    initial_message: string,
-    context_type?: 'job' | 'talent' | 'general';
-    context_id?: string;
-    context_data?: ConversationContextData) => Promise < void>;
-  markAsRead: (conversation_id: string) => Promise < void>;
-  /**;
 
-=======
-// Define the shape of the messaging context;
-export interface MessagingContextType {;
-  messages: Message[],;
-  conversations: Conversation[],;
-  unreadCount: number,;
-  activeConversation: Conversation | null,;
-  activeMessages: Message[],;
-  isLoading: boolean,;
-  sendMessage: (conversationId: string, content: string) => Promise<void>,;
-  createConversation: (;
-    recipientId: string,;
-    initialMessage: string,;
-    contextType?: 'job' | 'talent' | 'general',;
-    contextId?: string,;
-    contextData?: ConversationContextData;
-  ) => Promise<void>,;
-  markAsRead: (conversationId: string) => Promise<void>,;
-  /**;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
    * Set the currently active conversation. Passing `null` will clear the;
 =======
     created_at: string;   * Set the currently active conversation. Passing `null` will clear the;
@@ -247,13 +210,13 @@ export interface MessagingContextType {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -262,3 +225,7 @@ export interface MessagingContextType {;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Config} from "tailwindcss";
 import {fontFamily} from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
@@ -8,9 +9,14 @@ import animatePlugin from "tailwindcss-animate";
 import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
 import plugin from "tailwindcss/plugin";
+=======
+import { Config } from "tailwindcss","
+import { fontFamily } from "tailwindcss/defaultTheme",";
+import plugin from "tailwindcss/plugin";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import animatePlugin from "tailwindcss-animate";
-
-import plugin from "tailwindcss/plugin",
+"
+import plugin from "tailwindcss/plugin","
 import animatePlugin from "tailwindcss-animate",
 
 <<<<<<< HEAD
@@ -23,30 +29,43 @@ import animatePlugin from "tailwindcss-animate",
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const config: Config = {
+=======
+
+const config: Config = {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   darkMode: ["class"]
-  content: [
-    "./pages/**/*.{ts,tsx}";
-    "./components/**/*.{ts,tsx}";
-    "./app/**/*.{ts,tsx}";
+  content: [";
+    "./pages/**/*.{ts,tsx}";"
+    "./components/**/*.{ts,tsx}";"
+    "./app/**/*.{ts,tsx}";"
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
+<<<<<<< HEAD
 import { font_family } from './tailwindcss / default_theme';
 import plugin from './tailwindcss / plugin';
+=======
+'
+import { Config } from './tailwindcss';'
+import { font_family } from './tailwindcss / default_theme';'
+import plugin from './tailwindcss / plugin';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import animate_plugin from './tailwindcss - animate';
-const config: Config = {
+const config: Config = {"
   dark_mode: ["class"],
-  content: [;
-    "./pages/**/*.{ts, tsx}";
-    "./components/**/*.{ts, tsx}";
-    "./app/**/*.{ts, tsx}";
-    "./src/**/*.{ts, tsx}"];
+  content: [;"
+    "./pages/**/*.{ts, tsx}";"
+    "./components/**/*.{ts, tsx}";"
+    "./app/**/*.{ts, tsx}";"
+    "./src/**/*.{ts, tsx}"];'
   safelist: ['border - border'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -99,9 +118,21 @@ const config: Config = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       center: true,
+=======
+
+  theme: {}
+    container: {}
+  theme: {}
+    container: {}
+      center: true;"
+      padding: "2rem"
+
+      center: true,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       padding: "2rem",
-      screens: {
+      screens: {"
         "2xl": "1400px"}},
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -222,58 +253,80 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out"}}}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           DEFAULT: "hsl(var(--primary))",
+=======
+
+    extend: {}
+      colors: {"
+        border: "hsl (var (--border))";"
+        input: "hsl (var (--input))";"
+        ring: "hsl (var (--ring))";"
+        background: "hsl (var (--background))";"
+        foreground: "hsl (var (--foreground))";
+        primary: {}
+      keyframes: {"
+        "accordion-down": {"
+          from: { height: "0" }"
+          to: { height: "var(--radix-accordion-content-height)" }}"
+        "accordion-up": {"
+          from: { height: "var(--radix-accordion-content-height)" }"
+          to: { height: "0" }}}
+      animation: {}
+"
+          DEFAULT: "hsl(var(--primary))","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           foreground: "hsl(var(--primary-foreground))"},
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+        secondary: {"
+          DEFAULT: "hsl(var(--secondary))","
           foreground: "hsl(var(--secondary-foreground))"},
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
+        destructive: {"
+          DEFAULT: "hsl(var(--destructive))","
           foreground: "hsl(var(--destructive-foreground))"},
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
+        muted: {"
+          DEFAULT: "hsl(var(--muted))","
           foreground: "hsl(var(--muted-foreground))"},
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
+        accent: {"
+          DEFAULT: "hsl(var(--accent))","
           foreground: "hsl(var(--accent-foreground))"},
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
+        popover: {"
+          DEFAULT: "hsl(var(--popover))","
           foreground: "hsl(var(--popover-foreground))"},
-        card: {
-          DEFAULT: "hsl(var(--card))",
+        card: {"
+          DEFAULT: "hsl(var(--card))","
           foreground: "hsl(var(--card-foreground))"},
-        // Custom Zion colors
-        "zion-blue": {
-          DEFAULT: "#0a0f1f",
-          light: "#1e263b",
-          dark: "#090c1a"},
-        "zion-purple": {
-          DEFAULT: "#a855f7",
-          light: "#d8b4fe",
-          dark: "#9333ea"},
-        "zion-cyan": {
-          DEFAULT: "#00e5ff",
-          light: "#7df9ff",
-          dark: "#00c4cc"},
-        "zion-slate": {
-          DEFAULT: "#94A3B8",
-          light: "#CBD5E1",
+        // Custom Zion colors"
+        "zion-blue": {"
+          DEFAULT: "#0a0f1f","
+          light: "#1e263b","
+          dark: "#090c1a"},"
+        "zion-purple": {"
+          DEFAULT: "#a855f7","
+          light: "#d8b4fe","
+          dark: "#9333ea"},"
+        "zion-cyan": {"
+          DEFAULT: "#00e5ff","
+          light: "#7df9ff","
+          dark: "#00c4cc"},"
+        "zion-slate": {"
+          DEFAULT: "#94A3B8","
+          light: "#CBD5E1","
           dark: "#64748B"}},
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
+      borderRadius: {"
+        lg: "var(--radius)","
+        md: "calc(var(--radius) - 2px)","
         sm: "calc(var(--radius) - 4px)"},
-      fontFamily: {
+      fontFamily: {"
         sans: ["var(--font-sans)", ...fontFamily.sans]},
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" }},
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
+      keyframes: {"
+        "accordion-down": {"
+          from: { height: "0" },"
+          to: { height: "var(--radix-accordion-content-height)" }},"
+        "accordion-up": {"
+          from: { height: "var(--radix-accordion-content-height)" },"
           to: { height: "0" }}},
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
+      animation: {"
+        "accordion-down": "accordion-down 0.2s ease-out","
         "accordion-up": "accordion-up 0.2s ease-out"}}},
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -363,35 +416,27 @@ const config: Config = {
       const new_utilities = {
         '.rtl': {
 =======
-
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          direction: 'rtl',
-          text_align: 'right'}
-        '.ltr': {
-          direction: 'ltr',
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
-          direction: 'rtl'
-          textAlign: 'right'}
-        '.ltr': {
-          direction: 'ltr'
-          textAlign: 'left'}}
-      addUtilities(newUtilities)
-    })]}
-export default config;
 
-          direction: 'rtl',
-          textAlign: 'right'},
-        '.ltr': {
+
+  plugins: []
+    animatePlugin;
+    plugin(function({ addUtilities }) {}
+      const newUtilities = {'
+        '.rtl': {}
+'
+          direction: 'rtl','
+          text_align: 'right'}'
+        '.ltr': {'
           direction: 'ltr',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+'
           textAlign: 'left'}},
       addUtilities(newUtilities)
     })]},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -401,154 +446,103 @@ export default config,
 import { Config } from "tailwindcss",;
 import { fontFamily } from "tailwindcss/defaultTheme",;
 import plugin from "tailwindcss/plugin",;
+=======
+
+export default config,";
+import { Config } from "tailwindcss",;"
+import { fontFamily } from "tailwindcss/defaultTheme",;"
+import plugin from "tailwindcss/plugin",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import animatePlugin from "tailwindcss-animate",;
-const config: Config = {;
+const config: Config = {;"
   darkMode: ["class"],;
-  content: [;
-    "./pages/**/*.{ts,tsx}",;
-    "./components/**/*.{ts,tsx}",;
-    "./app/**/*.{ts,tsx}",;
-    "./src/**/*.{ts,tsx}"],;
+  content: [;"
+    "./pages/**/*.{ts,tsx}",;"
+    "./components/**/*.{ts,tsx}",;"
+    "./app/**/*.{ts,tsx}",;"
+    "./src/**/*.{ts,tsx}"],;'
   safelist: ['border-border'],;
   theme: {;
     container: {;
-      center: true,;
+      center: true,;"
       padding: "2rem",;
-      screens: {;
+      screens: {;"
         "2xl": "1400px"}},;
     extend: {;
-      colors: {;
-        border: "hsl(var(--border))",;
-        input: "hsl(var(--input))",;
-        ring: "hsl(var(--ring))",;
-        background: "hsl(var(--background))",;
+      colors: {;"
+        border: "hsl(var(--border))",;"
+        input: "hsl(var(--input))",;"
+        ring: "hsl(var(--ring))",;"
+        background: "hsl(var(--background))",;"
         foreground: "hsl(var(--foreground))",;
-        primary: {;
-          DEFAULT: "hsl(var(--primary))",;
+        primary: {;"
+          DEFAULT: "hsl(var(--primary))",;"
           foreground: "hsl(var(--primary-foreground))"},;
-        secondary: {;
-          DEFAULT: "hsl(var(--secondary))",;
+        secondary: {;"
+          DEFAULT: "hsl(var(--secondary))",;"
           foreground: "hsl(var(--secondary-foreground))"},;
-        destructive: {;
-          DEFAULT: "hsl(var(--destructive))",;
+        destructive: {;"
+          DEFAULT: "hsl(var(--destructive))",;"
           foreground: "hsl(var(--destructive-foreground))"},;
-        muted: {;
-          DEFAULT: "hsl(var(--muted))",;
+        muted: {;"
+          DEFAULT: "hsl(var(--muted))",;"
           foreground: "hsl(var(--muted-foreground))"},;
-        accent: {;
-          DEFAULT: "hsl(var(--accent))",;
+        accent: {;"
+          DEFAULT: "hsl(var(--accent))",;"
           foreground: "hsl(var(--accent-foreground))"},;
-        popover: {;
-          DEFAULT: "hsl(var(--popover))",;
+        popover: {;"
+          DEFAULT: "hsl(var(--popover))",;"
           foreground: "hsl(var(--popover-foreground))"},;
-        card: {;
-          DEFAULT: "hsl(var(--card))",;
+        card: {;"
+          DEFAULT: "hsl(var(--card))",;"
           foreground: "hsl(var(--card-foreground))"},;
-        // Custom Zion colors;
-        "zion-blue": {;
-          DEFAULT: "#0a0f1f",;
-          light: "#1e263b",;
-          dark: "#090c1a"},;
-        "zion-purple": {;
-          DEFAULT: "#a855f7",;
-          light: "#d8b4fe",;
-          dark: "#9333ea"},;
-        "zion-cyan": {;
-          DEFAULT: "#00e5ff",;
-          light: "#7df9ff",;
-          dark: "#00c4cc"},;
-        "zion-slate": {;
-          DEFAULT: "#94A3B8",;
-          light: "#CBD5E1",;
+        // Custom Zion colors;"
+        "zion-blue": {;"
+          DEFAULT: "#0a0f1f",;"
+          light: "#1e263b",;"
+          dark: "#090c1a"},;"
+        "zion-purple": {;"
+          DEFAULT: "#a855f7",;"
+          light: "#d8b4fe",;"
+          dark: "#9333ea"},;"
+        "zion-cyan": {;"
+          DEFAULT: "#00e5ff",;"
+          light: "#7df9ff",;"
+          dark: "#00c4cc"},;"
+        "zion-slate": {;"
+          DEFAULT: "#94A3B8",;"
+          light: "#CBD5E1",;"
           dark: "#64748B"}},;
-      borderRadius: {;
-        lg: "var(--radius)",;
-        md: "calc(var(--radius) - 2px)",;
+      borderRadius: {;"
+        lg: "var(--radius)",;"
+        md: "calc(var(--radius) - 2px)",;"
         sm: "calc(var(--radius) - 4px)"},;
-      fontFamily: {;
+      fontFamily: {;"
         sans: ["var(--font-sans)", ...fontFamily.sans]},;
-      keyframes: {;
-        "accordion-down": {;
-          from: { height: "0" },;
-          to: { height: "var(--radix-accordion-content-height)" }},;
-        "accordion-up": {;
-          from: { height: "var(--radix-accordion-content-height)" },;
+      keyframes: {;"
+        "accordion-down": {;"
+          from: { height: "0" },;"
+          to: { height: "var(--radix-accordion-content-height)" }},;"
+        "accordion-up": {;"
+          from: { height: "var(--radix-accordion-content-height)" },;"
           to: { height: "0" }}},;
-      animation: {;
-        "accordion-down": "accordion-down 0.2s ease-out",;
+      animation: {;"
+        "accordion-down": "accordion-down 0.2s ease-out",;"
         "accordion-up": "accordion-up 0.2s ease-out"}}},;
   plugins: [;
     animatePlugin,;
     plugin(function({ addUtilities }) {;
-      const newUtilities = {;
-        '.rtl': {;
-          direction: 'rtl',;
-          textAlign: 'right'},;
-        '.ltr': {;
-          direction: 'ltr',;
+      const newUtilities = {;'
+        '.rtl': {;'
+          direction: 'rtl',;'
+          textAlign: 'right'},;'
+        '.ltr': {;'
+          direction: 'ltr',;'
           textAlign: 'left'}},;
       addUtilities(newUtilities);
     })]},;
-<<<<<<< HEAD
-          DEFAULT: "hsl (var (--primary))",
-          foreground: "hsl (var (--primary - foreground))"}
-        secondary: {
-          DEFAULT: "hsl (var (--secondary))",
-          foreground: "hsl (var (--secondary - foreground))"}
-        destructive: {
-          DEFAULT: "hsl (var (--destructive))",
-          foreground: "hsl (var (--destructive - foreground))"}
-        muted: {
-          DEFAULT: "hsl (var (--muted))",
-          foreground: "hsl (var (--muted - foreground))"}
-        accent: {
-          DEFAULT: "hsl (var (--accent))",
-          foreground: "hsl (var (--accent - foreground))"}
-        popover: {
-          DEFAULT: "hsl (var (--popover))",
-          foreground: "hsl (var (--popover - foreground))"}
-        card: {
-          DEFAULT: "hsl (var (--card))",
-          foreground: "hsl (var (--card - foreground))"}
-        // Custom Zion colors;
-        "zion - blue": {
-          DEFAULT: "#0a0f1f";
-          light: "#1e263b",
-          dark: "#090c1a"}
-        "zion - purple": {
-          DEFAULT: "#a855f7";
-          light: "#d8b4fe",
-          dark: "#9333ea"}
-        "zion - cyan": {
-          DEFAULT: "#00e5ff";
-          light: "#7df9ff",
-          dark: "#00c4cc"}
-        "zion - slate": {
-          DEFAULT: "#94A3B8";
-          light: "#CBD5E1",
-          dark: "#64748B"}}
-      border_radius: {
-        lg: "var (--radius)";
-        md: "calc (var (--radius) - 2px)",
-        sm: "calc (var (--radius) - 4px)"}
-      font_family: {
-        sans: ["var (--font - sans)", ...font_family.sans]}
-      keyframes: {
-        "accordion - down": {
-          from: { height: "0" }
-          to: { height: "var (--radix - accordion - content - height)" }}
-        "accordion - up": {
-          from: { height: "var (--radix - accordion - content - height)" }
-          to: { height: "0" }}}
-      animation: {
-        "accordion - down": "accordion - down 0.2s ease - out",
-        "accordion - up": "accordion - up 0.2s ease - out"}}}
-  plugins: [;
-    animate_plugin,
-    plugin (function ({ add_utilities }) {
-      const new_utilities = {
-        '.rtl': {
 
+<<<<<<< HEAD
 
           direction: 'rtl',
           text_align: 'right'}
@@ -576,10 +570,15 @@ export default config;
 
 export default config;
 ;
+=======
+'
+          text_align: 'left'}}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       add_utilities (new_utilities);
     })]}
 ;
 export default config;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -590,3 +589,7 @@ export default config;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

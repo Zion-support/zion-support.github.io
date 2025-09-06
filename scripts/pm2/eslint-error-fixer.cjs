@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
 
@@ -53,13 +54,19 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 /**
  * ESLint Error Fixer Service;
@@ -74,15 +81,16 @@ const path = // // require('path');
 const { execSync } = // // require('child_process');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
-
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 =======
 =======
@@ -123,6 +131,11 @@ class ESLintErrorFixer {
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 class ESLintErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -144,6 +157,7 @@ class ESLintErrorFixer {}
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 =======
@@ -188,13 +202,19 @@ class ESLintErrorFixer {}
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.fixedFiles = new Set()};
   log(level, message, data = null) {}
     const timestamp = new Date().toISOString();
@@ -203,6 +223,7 @@ main
       level,
       message,
       data,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
@@ -229,13 +250,16 @@ main
 <<<<<<< HEAD
       "service": 'eslint-error-fixer'
     };
-
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
       "service": 'eslint-error-fixer'
     };
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
 =======
@@ -310,6 +334,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -345,6 +372,7 @@ main
 =======
       
       this.log('info', 'ESLint Error Fixer Service started successfully');
+<<<<<<< HEAD
             
       
       this.log('info', 'ESLint Error Fixer Service started successfully');
@@ -514,6 +542,14 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+      
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setInterval(async () => {}
         await this.performESLintFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start ESLint Error Fixer Service', error);
@@ -726,6 +762,7 @@ main
       const lines = content.split('\n');
       let hasChanges = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
       // Process errors in reverse order to maintain line numbers;
@@ -795,6 +832,13 @@ main
             
 
 main
+=======
+
+
+      
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       // Process errors in reverse order to maintain line numbers;
       const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
@@ -870,6 +914,7 @@ main
         
         this.fixedFiles.add(filePath);
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -924,13 +969,19 @@ main
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         this.log('info', `Successfully fixed ESLint errors "in": ${filePath}`);
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
@@ -952,6 +1003,7 @@ main
            trimmed.startsWith('/*') ||
            trimmed.startsWith('*') ||
            trimmed.startsWith('import') ||
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
@@ -1014,13 +1066,19 @@ main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
            trimmed.startsWith('export')};
   async fixESLintError(line, error, allLines, lineIndex) {}
     let fixedLine = line;
@@ -1053,6 +1111,7 @@ main
 =======
     
     const varName = varMatch[1];
+<<<<<<< HEAD
         
     
     const varName = varMatch[1];
@@ -1165,6 +1224,14 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+    
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // Add underscore prefix to indicate intentionally unused;
     if (line.includes(varName)) {}
       return line.replace(new RegExp(`\\b${varName}\\b`, 'g'), `_${varName}`)};
@@ -1220,6 +1287,7 @@ main
 
       fs.copyFileSync(filePath, backupPath);
 
+<<<<<<< HEAD
       
       fs.copyFileSync(filePath, backupPath);
 =======
@@ -1305,6 +1373,12 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this.log('debug', `Backup "created": ${backupPath}`)} catch (error) {`}
       this.log('warn', `Failed to create backup "for": ${filePath}`, error.message)};
   };
@@ -1355,15 +1429,16 @@ main
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
-
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 =======
 =======
@@ -1468,6 +1543,11 @@ fixer.start().catch(error => {
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.log('info', `ESLint fix report "generated": ${reportPath}`);
     return report};
   generateRecommendations() {}
@@ -1618,6 +1698,7 @@ fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1631,10 +1712,14 @@ fixer.start().catch(error => {})
 });});
 
 });
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 });
 
 
+<<<<<<< HEAD
 });});
 });});
 <<<<<<< HEAD
@@ -1651,3 +1736,6 @@ fixer.start().catch(error => {})
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

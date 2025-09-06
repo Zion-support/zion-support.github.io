@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 pr-12243
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
 
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 pr-12243
@@ -36,3 +45,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+export default function handler() { return null; }
+}
+
+
+
+}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

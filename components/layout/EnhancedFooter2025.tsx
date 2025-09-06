@@ -1,30 +1,28 @@
 import { motion } from 'framer-motion';
 
-  Phone
-  Mail
-  MapPin
-  Star
-  ArrowRight
-  Brain
-  Atom
-  Shield
-  Rocket
-  Target
-  Microscope
-  Zap
-  Globe
-  Database
-  Lock
-  Cloud
-  BarChart3
-  Twitter
-  Linkedin
-  Github
-  Youtube
-  Instagram;} from 'lucide-react';import {
-import { 
-
-
+  Phone;
+  Mail;
+  MapPin;
+  Star;
+  ArrowRight;
+  Brain;
+  Atom;
+  Shield;
+  Rocket;
+  Target;
+  Microscope;
+  Zap;
+  Globe;
+  Database;
+  Lock;
+  Cloud;
+  BarChart3;
+  Twitter;
+  Linkedin;
+  Github;
+  Youtube'
+  Instagram;} from 'lucide-react';import {}
+import {}
   Phone,
   Mail,
   MapPin,
@@ -44,12 +42,13 @@ import {
   BarChart3,
   Twitter,
   Linkedin,
-  Github,
-  Youtube,;
+  Github,;
+  Youtube,;'
   Instagram,;} from 'lucide-react';import { ;
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
+<<<<<<< HEAD
   Twitter, Linkedin, Github, Youtube, Instagram
 import { Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
@@ -60,82 +59,87 @@ const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 const serviceCategories = [
   {
+=======
+  Twitter, Linkedin, Github, Youtube, Instagram;
+const serviceCategories = []
+  {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     title: 'AI & Consciousness'
-    icon: Brain
-    services: [
+    icon: Brain;
+    services: []
     services: [;
-      {
-        name: 'AI Consciousness Evolution',
+      {'
+        name: 'AI Consciousness Evolution','
         href: '/ai - consciousness - evolution - 2029',
-      },
+      },'
       { name: 'Quantum AI Fusion', href: '/quantum - ai - fusion' },
-      {
-        name: 'Multimodal AI Orchestrator',
+      {'
+        name: 'Multimodal AI Orchestrator','
         href: '/multimodal - ai - orchestrator',
-      },
-      { name: 'AI Autonomous Ecosystem', href: '/ai - autonomous - ecosystem' },
+      },'
+      { name: 'AI Autonomous Ecosystem', href: '/ai - autonomous - ecosystem' },'
       { name: 'AI Ethics & Governance', href: '/ai - ethics - governance' },
-    ],
-  },  {      { name: 'Quantum AI Fusion', href: '/quantum - ai - fusion' },
-      { name: 'Multimodal AI Orchestrator', href: '/multimodal - ai - orchestrator' },
-      { name: 'AI Autonomous Ecosystem', href: '/ai - autonomous - ecosystem' },
+    ],'
+  },  {      { name: 'Quantum AI Fusion', href: '/quantum - ai - fusion' },'
+      { name: 'Multimodal AI Orchestrator', href: '/multimodal - ai - orchestrator' },'
+      { name: 'AI Autonomous Ecosystem', href: '/ai - autonomous - ecosystem' },'
       { name: 'AI Ethics & Governance', href: '/ai - ethics - governance' }
     ];
   }
-  {
+  {'
     title: 'Quantum & Emerging Tech',
     icon: Atom,
-    services: [;
-      { name: 'Space Mining Platform', href: '/space - mining - platform' },
-      { name: 'Quantum Bio - Computing', href: '/quantum - bio - computing' },
-      { name: 'Brain - Computer Interface', href: '/brain - computer - interface' },
-      { name: 'Quantum Energy Platform', href: '/quantum - energy - platform' },
+    services: [;'
+      { name: 'Space Mining Platform', href: '/space - mining - platform' },'
+      { name: 'Quantum Bio - Computing', href: '/quantum - bio - computing' },'
+      { name: 'Brain - Computer Interface', href: '/brain - computer - interface' },'
+      { name: 'Quantum Energy Platform', href: '/quantum - energy - platform' },'
       { name: 'Autonomous Vehicle AI', href: '/autonomous - vehicle - ai' },
     ],
-  },  {
+  },  {'
     title: 'Enterprise IT',
-    icon: Shield,
+    icon: Shield,'
     services: [      { name: 'Autonomous Vehicle AI', href: '/autonomous - vehicle - ai' }
     ];
   }
-  {
+  {'
     title: 'Enterprise IT',
     icon: Shield,
     services: [;
-      {
-        name: 'Quantum Cloud Infrastructure',
+      {'
+        name: 'Quantum Cloud Infrastructure','
         href: '/quantum - cloud - infrastructure',
       },
-      {
-        name: 'Edge Computing Orchestrator',
+      {'
+        name: 'Edge Computing Orchestrator','
         href: '/edge - computing - orchestrator',
       },
-      {
-        name: 'Zero Trust Security Platform',
+      {'
+        name: 'Zero Trust Security Platform','
         href: '/zero - trust - security - platform',
       },
-      {
-        name: 'Blockchain Enterprise Platform',
+      {'
+        name: 'Blockchain Enterprise Platform','
         href: '/blockchain - enterprise - platform',
-      },
+      },'
       { name: 'AI - Powered DevOps', href: '/ai - powered - devops' },
-    ],
-  },  {      { name: 'Quantum Cloud Infrastructure', href: '/quantum - cloud - infrastructure' },
-      { name: 'Edge Computing Orchestrator', href: '/edge - computing - orchestrator' },
-      { name: 'Zero Trust Security Platform', href: '/zero - trust - security - platform' },
-      { name: 'Blockchain Enterprise Platform', href: '/blockchain - enterprise - platform' },
+    ],'
+  },  {      { name: 'Quantum Cloud Infrastructure', href: '/quantum - cloud - infrastructure' },'
+      { name: 'Edge Computing Orchestrator', href: '/edge - computing - orchestrator' },'
+      { name: 'Zero Trust Security Platform', href: '/zero - trust - security - platform' },'
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain - enterprise - platform' },'
       { name: 'AI - Powered DevOps', href: '/ai - powered - devops' }
     ];
-  }
+  }'
     title: 'Micro SAAS',
     icon: Target,
-    services: [;
-      { name: 'AI Content Factory Pro', href: '/ai - content - factory' },
-      { name: 'Quantum CRM Suite', href: '/quantum - crm' },
-      { name: 'CyberShield Pro', href: '/cyber - shield - pro' },
-      { name: 'DataVault Hub', href: '/data - vault - hub' },
+    services: [;'
+      { name: 'AI Content Factory Pro', href: '/ai - content - factory' },'
+      { name: 'Quantum CRM Suite', href: '/quantum - crm' },'
+      { name: 'CyberShield Pro', href: '/cyber - shield - pro' },'
+      { name: 'DataVault Hub', href: '/data - vault - hub' },'
       { name: 'DevOps Automation Studio', href: '/devops - automation - studio' },
-    ],
+    ],'
   }, ];      { name: 'DevOps Automation Studio', href: '/devops - automation - studio' }
     ];
   }
@@ -237,7 +241,7 @@ const EnhancedFooter2025: React.FC = () => {
       <div className='relative z-10'>
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">;
             {/* Company Info */}
             <div className='lg:col-span-1'>
@@ -288,42 +292,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (;
-              <motion&& motion.div
+              <motion&& motion.div;
                 key={category && category.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
+<<<<<<< HEAD
 className='space-y-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className='flex items-center space-x-3'>
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
+=======
+              >'
+                <div className='flex items-center space-x-3'>'
+                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <category.icon className='w-4 h-4 text-white' />
-                  </div>
+                  </div>'
                   <h3 className='text-lg font-semibold text-white'>
                     {category.title}
                   </h3>
-                </div>
+                </div>'
                 <div className='space-y-2'>
                   {category.services.map(service => (
-                    <Link
+                    <Link;
                       key={service.name}
-                      href={service.href}
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                      href={service.href}"
+                <div className="flex items-center space-x-3">"
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">"
                     <category.icon className="w-4 h-4 text-white" />
-                  </div>
+                  </div>"
                   <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                </div>
+                </div>"
                 <div className="space-y-2">
-                  {category.services.map((service) => (
-                className='space-y-4'>;
-                <div className='flex items-center space-x-3'>;
-                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
+                  {category.services.map((service) => ('
+                className='space-y-4'>;'
+                <div className='flex items-center space-x-3'>;'
+                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;'
                     <category && category.icon className='w-4 h-4 text-white' />;
-                  </div>;
+                  </div>;'
                   <h3 className='text-lg font-semibold text-white'>;
                     {category && category.title}
                   </h3>;
@@ -345,53 +355,57 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
-          {/* Additional Links */}
+          {/* Additional Links */}'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
 
 
                       key={service.name}
-                      href={service.href}
+                      href={service.href}"
                       className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200 text - sm";
                     >;
                   ))}
                 </div>;
               </motion && motion.div>;
             ))}
-          {/* Additional Links */}
+          {/* Additional Links */}'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>;
 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Company Links */}
-            <div>;
-              <h4 className='text-white font-semibold mb-4'>Company</h4>;
+            <div>;'
+              <h4 className='text-white font-semibold mb-4'>Company</h4>;'
               <div className='space-y-2'>;
                 {companyLinks && companyLinks.map(link => (;
-                  <Link
-            <div>
-              <h4 className="text-white font-semibold mb-4">Company</h4>
+                  <Link;
+            <div>"
+              <h4 className="text-white font-semibold mb-4">Company</h4>"
               <div className="space-y-2">
                 {companyLinks.map((link) => (
-                  <Link
+                  <Link;
                     </Link>))}
                 </div>;
               </motion.div>))}
           </div>;
-          {/* Additional Links */}
+          {/* Additional Links */}'
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mt - 12 pt - 8 border - t border - gray - 800 / 50'>;
             {/* Company Links */}
-            <div>;
-              <h4 className='text - white font - semibold mb - 4'>Company</h4>;
+            <div>;'
+              <h4 className='text - white font - semibold mb - 4'>Company</h4>;'
               <div className='space - y-2'>;
                 {company_links.map (link => (
                   <Link;
                     key={link.name}
-                    href={link.href}
+                    href={link.href}"
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+<<<<<<< HEAD
                     key={link.name}
                     href={link.href}
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
+=======
+                  >'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
 
                   >
@@ -412,21 +426,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
 
-
+"
                     className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
                   >;
                 ))}
             {/* Legal Links */}
-            <div>;
-              <h4 className='text-white font-semibold mb-4'>Legal</h4>;
+            <div>;'
+              <h4 className='text-white font-semibold mb-4'>Legal</h4>;'
               <div className='space-y-2'>;
                 {legalLinks && legalLinks.map(link => (;
-                  <Link
+                  <Link;
                     key={link && link.name}
-                    href={link && link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className="text-white font-semibold mb-4">Legal</h4>;
+                    href={link && link.href}'"
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className="text-white font-semibold mb-4">Legal</h4>;"
               <div className="space-y-2">;
                 {legalLinks && legalLinks.map((link) => (;
+<<<<<<< HEAD
             <div>
 <h4 className='text-white font-semibold mb-4'>Legal</h4>
               <div className='space-y-2'>
@@ -437,6 +452,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={link.href}
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
                   >
+=======
+                  <Link;
+                    key={link.name}
+                    href={link.href}'"
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >              <h4 className="text-white font-semibold mb-4">Legal</h4>"
+              <div className="space-y-2">
+                {legalLinks.map((link) => (
+                  <Link;
+                    key={link.name}
+                    href={link.href}"
+                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     {link.name}
                   </Link>
                 ))}
@@ -444,6 +471,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
             {/* Social Links */}
+<<<<<<< HEAD
             <div>
 <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
               <div className='flex space-x-4'>
@@ -453,6 +481,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+            <div>'
+              <h4 className='text-white font-semibold mb-4'>Follow Us</h4>'
+              <div className='flex space-x-4'>"
+                {socialLinks.map(social => (                  <a              <h4 className="text-white font-semibold mb-4">Follow Us</h4>"
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {/* Social Links */}
 
 
@@ -474,19 +511,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
             {/* Legal Links */}
-            <div>;
-              <h4 className='text - white font - semibold mb - 4'>Legal</h4>;
+            <div>;'
+              <h4 className='text - white font - semibold mb - 4'>Legal</h4>;'
               <div className='space - y-2'>;
                 {legal_links.map (link => (
                   <Link;
                     key={link.name}
-                    href={link.href}
-                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >              <h4 className="text - white font - semibold mb - 4">Legal</h4>;
+                    href={link.href}'"
+                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >              <h4 className="text - white font - semibold mb - 4">Legal</h4>;"
               <div className="space - y-2">;
                 {legal_links.map ((link) => (
                   <Link;
                     key={link.name}
-                    href={link.href}
+                    href={link.href}"
                     className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
                     {link.name}
                   </Link>))}
@@ -513,9 +550,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-2xl md:text-3xl font-bold text-white mb-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                Stay Ahead of the Future
+                Stay Ahead of the Future;
               </motion.h3>
-              <motion.p
+              <motion.p;
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
@@ -524,15 +561,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='text-gray-400 mb-6 max-w-2xl mx-auto'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                Get the latest insights on AI, quantum computing, and emerging
+                Get the latest insights on AI, quantum computing, and emerging;
                 technologies delivered to your inbox.
+<<<<<<< HEAD
               </motion.p>
+=======
+              </motion.p>              >
+                Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
+              </motion.p>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="text-gray-400 mb-6 max-w-2xl mx-auto"
               >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
               
-              <motion.div
+              <motion.div'
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'>;
                 Get the latest insights on AI, quantum computing, and emerging;
                 technologies delivered to your inbox.;
@@ -547,15 +590,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
-                <input
-                  type='email'
-                  placeholder='Enter your email'
+                <input'
+                  type='email''
+                  placeholder='Enter your email''
                   className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-                />;
+                />;'
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  Subscribe              >;
-                <input
-                  type="email"
-                  placeholder="Enter your email"
+                <input"
+                  type="email""
+                  placeholder="Enter your email""
                   className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 </div>;
               </div>;
@@ -571,6 +614,7 @@ export default EnhancedFooter2025;
 };
 
 
+<<<<<<< HEAD
                 />
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                   Subscribe
@@ -607,3 +651,6 @@ export default EnhancedFooter2025;
 
 export default EnhancedFooter2025;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

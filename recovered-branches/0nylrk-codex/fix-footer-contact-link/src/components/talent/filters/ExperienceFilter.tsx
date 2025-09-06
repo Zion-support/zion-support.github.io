@@ -1,6 +1,20 @@
+<<<<<<< HEAD
   const handleChange = (values: number[]) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import { ChevronDown, ChevronUp } from "lucide-react";"
+import { Slider } from "@/components/ui/slider";"
+import { ExperienceFilterProps } from "@/types/filters";
+export function ExperienceFilter({}
+  experienceRange,
+  setExperienceRange,
+  expanded,
+  toggleSection,
+  isMobileFilterOpen,
+}: ExperienceFilterProps) {}
+  const handleChange = (values: number[]) => {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setExperienceRange([values[0], values[1]]);
   };
 <<<<<<< HEAD
@@ -74,15 +88,15 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  return (
+  return ("
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
-      <button
-        onClick={toggleSection}
+      <button;
+        onClick={toggleSection}"
         className="flex w-full items-center justify-between text-white font-medium">;
         <span>Years of Experience</span>;
-        {expanded ? (;
+        {expanded ? (;"
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
-        ) : (;
+        ) : (;"
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
 <<<<<<< HEAD
@@ -146,12 +160,13 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
       </button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-      {expanded && (
-        <div className="mt-6">
+      {expanded && ("
+        <div className="mt-6">"
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
+<<<<<<< HEAD
           <Slider
 <<<<<<< HEAD
 =======
@@ -178,11 +193,15 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 =======
           </div>;          <Slider
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          <Slider;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
             step={1}
             onValueChange={handleChange}
+<<<<<<< HEAD
             className="mt-6"
           />;
         </div>;
@@ -192,15 +211,21 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 }
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
+=======
+
+import { ChevronDown, ChevronUp  } from './lucide-react';'
+import { Slider  } from '@/components / ui / slider';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ExperienceFilterProps  } from '@/types / filters';
-export /**
- * ExperienceFilter - Function description
+export /**;
+ * ExperienceFilter - Function description;
  */
-function ExperienceFilter() {
-  const handle_change = (values: number[]) =>: any {
+function ExperienceFilter() {}
+  const handle_change = (values: number[]) =>: any {}
     setExperienceRange ([values[0], values[1]]);
   }
 ;
+<<<<<<< HEAD
   return (
     <div className="mb - 6 border - b border - zion - blue - light pb-6">;
       <button;
@@ -215,6 +240,22 @@ function ExperienceFilter() {
       {expanded && (
         <div className="mt-6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb-2">;
+=======
+  return ("
+    <div className="mb - 6 border - b border - zion - blue - light pb - 6">;
+      <button;
+        on_click={toggle_section}"
+        className="flex w - full items - center justify - between text - white font - medium";
+      >;
+        <span > Years of Experience</span>;
+        {expanded ? ("
+          <ChevronUp className="h - 4 w - 4 text - zion - slate - light" />) : ("
+          <ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}
+      </button>;
+      {expanded && ("
+        <div className="mt - 6">;"
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span>{experience_range[0]} years</span>;
             <span>{experience_range[1]} years</span>;
           </div>;
@@ -223,9 +264,15 @@ function ExperienceFilter() {
             min={0}
             max={15}
             step={1}
+<<<<<<< HEAD
             onValueChange={handle_change}
             className="mt-6";
+=======
+            onValueChange={handle_change}"
+            className="mt - 6";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           />;
         </div>)}
     </div>);
 }
+'"

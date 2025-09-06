@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -23,50 +24,47 @@
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { Peer } from "../../../utils/sync/types",;
+=======
+import type { NextApiRequest, NextApiResponse } from "next",;"
+import { readState, writeState } from "../../../utils/sync/storage",;"
+import { Peer } from "../../../utils/sync/types",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { v4 as uuidv4 } from "uuid",;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({
-    peers: []
-  });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, writeState } from "../../../utils/sync/storage",
-import { Peer } from "../../../utils/sync/types",
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  res.status(200).json({}
+    peers: [];
+  });"
+import type { NextApiRequest, NextApiResponse } from "next","
+import { readState, writeState } from "../../../utils/sync/storage","
+import { Peer } from "../../../utils/sync/types","
 import { v4 as uuidv4 } from "uuid",
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+
+
+export default function handler() { return null; }
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
-  const peer = req.body as Partial<Peer>,
+  const peer = req.body as Partial<Peer>,"
   if (!peer.baseUrl) return res.status(400).json({ error: "baseUrl required" }),
 
 
   const id = peer.id || uuidv4(),
   const existing = state.config.peers.find((p) => p.baseUrl === peer.baseUrl),
-  if (existing) {
-    existing.scope = peer.scope || existing.scope,
-    existing.paused = typeof peer.paused === "boolean" ? peer.paused : existing.paused
-  } else {
+  if (existing) {};
+    existing.scope = peer.scope || existing.scope,";
+    existing.paused = typeof peer.paused === "boolean" ? peer.paused : existing.paused;
+  } else {}
     state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false })
-<<<<<<< HEAD
+
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -86,6 +84,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   return res.status(200).json({ peers: state.config.peers })
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { Peer } from "../../../utils/sync/types",;
@@ -231,3 +230,6 @@ export default function handler(req, res) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+};'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

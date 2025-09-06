@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Mail, MessageCircle, Kanban, Headphones, ChevronRight, Play, BookOpen, Code, Server, Shield as ShieldIcon, Zap as ZapIcon2, Globe as GlobeIcon, Users as UsersIcon, Phone, MapPin } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { motion } from 'framer-motion';
@@ -10,6 +11,9 @@ import { motion } from 'framer-motion';
 export default function HomePage() {
   const heroStats = [
     { value: '42+', label: 'Real Micro SaaS Services', color: 'text-cyan-400' },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { value: '99.9%', label: 'Uptime Guarantee', color: 'text-fuchsia-400' },
     { value: '14', label: 'Day Free Trials', color: 'text-blue-400' },
     { value: '24/7', label: 'AI Support', color: 'text-green-400' },
@@ -27,6 +31,7 @@ export default function HomePage() {
   // Enhanced service advertising content with real market data
   const serviceHighlights = [
     {
+<<<<<<< HEAD
       title: '🚀 Quantum AI Cognitive Platform',
       description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI through quantum neural networks and advanced cognitive architecture.',
       price: 'Starting at $299/month',
@@ -36,6 +41,9 @@ export default function HomePage() {
       marketPosition: 'First-to-market quantum AI platform. No direct competitors yet. Traditional AI platforms cost $2000+/month with limited capabilities.',
       roi: '1000% ROI within 6 months',
       competitors: 'OpenAI ($20/user/month), Anthropic ($15/user/month)'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       title: '🏭 Autonomous Manufacturing AI',
@@ -332,6 +340,7 @@ export default function HomePage() {
   ];
 
   return (
+<<<<<<< HEAD
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
         <title>Zion Tech Group - Revolutionary Quantum AI & Micro SaaS Solutions</title>
@@ -353,6 +362,9 @@ export default function HomePage() {
         <meta name="twitter:title" content="Zion Tech Group - Revolutionary Quantum AI & Micro SaaS Solutions" />
         <meta name="twitter:description" content="Leading provider of revolutionary quantum AI, autonomous systems, and 500+ innovative micro SaaS solutions." />
       </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -613,6 +625,7 @@ export default function HomePage() {
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 href="/contact"
@@ -633,6 +646,9 @@ export default function HomePage() {
                 Explore Services
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </motion.div>
         </div>

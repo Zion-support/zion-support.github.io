@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 console.log('🔧 Starting Merge Conflict Resolution');
@@ -508,24 +509,45 @@ async function main() {;
 }
 ;  let fixedCount = 0;
 =======
+=======
+const fs = require('fs');'
+const path = require('path');
+'
+console.log('🔧 Starting Merge Conflict Resolution');
+
+// Function to fix merge conflicts in a file;
+function fixMergeConflicts(filePath) {}
+  try {'
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Remove merge conflict markers and keep HEAD version;
+    content = content.replace(/
+    content = content.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   let fixedCount = 0;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   for (const file of files) {;
-    try {;
+    try {;'
       const content = fs.readFileSync(file, 'utf8'),;
         if (fixMergeConflicts(file)) {;
+<<<<<<< HEAD
       if (content.includes('        if (fixMergeConflicts(file)) {
+=======
+'
+      if (content.includes('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           fixedCount++;
         }
       }
-    } catch (error) {
-      // Skip files that can't be read
+    } catch (error) {'
+      // Skip files that can't be read;
     }
   }
   
-  console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
+  console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);'
   console.log('🎉 Merge conflict resolution completed!');
 }
 <<<<<<< HEAD
@@ -546,6 +568,7 @@ main().catch(console.error),;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -573,3 +596,7 @@ main().catch(console.error);
 main().catch(console.error),;
 main().catch(console.error);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import React from 'react',
@@ -63,16 +64,34 @@ export function ProfileLoadingState() {;
   return (;
     <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">;
       <div className="text-zion-cyan animate-pulse text-xl">Loading profile...</div>;
+=======
+import React from "react";
+export function ProfileLoadingState() {}
+  return ("
+    <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">"
+      <div className="text-zion-cyan animate-pulse text-xl">
+        Loading profile...
+      </div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
-  ),;
-} 
   );
-}
 }
 ;
 
+
+
+"
+import React from "react";
+export function ProfileLoadingState() {}
+  return ("
+    <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">"
+      <div className="text-zion-cyan animate-pulse text-xl">
+        Loading profile...
+      </div>
+    </div>;
   );
 }
+<<<<<<< HEAD
   )
 }
 ;
@@ -92,3 +111,7 @@ export function ProfileLoadingState() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

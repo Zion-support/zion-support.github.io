@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -36,6 +37,12 @@
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -53,6 +60,7 @@ const securityChecks = [{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }},
 
@@ -67,6 +75,10 @@ const securityChecks = [{
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }},
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
@@ -85,6 +97,7 @@ main
 =======
 =======
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,6 +145,13 @@ main
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }},
   {
     "name": 'API Security Check',
@@ -146,6 +166,7 @@ main
           const content = fs.readFileSync(path.join(apiDir, file), 'utf8');
           if (
             content.includes('process.env') &&
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -195,11 +216,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             !content.includes('// "Security": ')
           ) {
             securityIssues++;
           }
         });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,6 +271,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         console.log(
           `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
         );
@@ -249,6 +287,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -279,6 +318,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+        
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
     }},
   {
@@ -302,6 +350,7 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -335,6 +384,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
       }
     },
@@ -343,6 +398,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -373,6 +429,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+        
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
     }},
   {
@@ -386,6 +451,7 @@ main
         }
       } else {
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -436,6 +502,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }},
 ];
 // Run security checks
@@ -456,6 +532,7 @@ const report = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -484,6 +561,12 @@ const report = {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     status: 'completed',
   })),
   summary: {
@@ -492,6 +575,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     failed: totalCount - successCount,
   },
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -531,11 +615,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -563,6 +659,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -571,11 +669,15 @@ main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -597,6 +699,13 @@ main
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -604,6 +713,7 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -657,15 +767,27 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
 
+<<<<<<< HEAD
 main
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -684,6 +806,7 @@ console.log('� Security Audit Starting...\n')
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     "status"
+<<<<<<< HEAD
 <<<<<<< HEAD
     "status"
     "status"
@@ -737,3 +860,17 @@ main
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+    "status"
+    "status"
+
+
+
+    "status"
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,15 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "export\": function WaitlistSection () { const [email,setEmail] = useState (\') const handleSubmit = e => { e && e.preventDefault () \'';\"";
 export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = e => { e && e.preventDefault () "";"";"""
-"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
-<<<<<<< HEAD
+=======
 
+
+'"
+"export\": function WaitlistSection() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +112,12 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -11,14 +11,15 @@ export type NotificationType = 'message' | 'quote_request' | 'booking_confirmati
 ;
 =======
 export type NotificationType =
-  | "message"
-  | "quote_request"
-  | "booking_confirmation"
-  | "hire_request"
-  | "onboarding"
+  | "message""
+  | "quote_request""
+  | "booking_confirmation""
+  | "hire_request""
+  | "onboarding"";
   | "system";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 =======
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 ;
@@ -42,6 +43,9 @@ export type NotificationType = 'message' | 'quote_request' | 'booking_confirmati
 export interface CreateNotificationParams {
   user_id: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface CreateNotificationParams {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface CreateNotificationParams {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -49,9 +53,13 @@ export interface CreateNotificationParams {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string;
   message: string;
   type: NotificationType;
@@ -77,12 +85,7 @@ export interface CreateNotificationParams {;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-<<<<<<< HEAD
-=======
-export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-export interface CreateNotificationParams {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -98,19 +101,20 @@ export interface CreateNotificationParams {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 export interface CreateNotificationResult {;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export interface CreateNotificationResult {
 
+<<<<<<< HEAD
 export interface CreateNotificationResult {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -120,6 +124,10 @@ export interface CreateNotificationResult {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   success: boolean;
   notificationId?: string;
   error?: any;
@@ -136,11 +144,8 @@ export interface HireRequestNotificationParams {;
 
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export interface HireRequestNotificationParams {
 
+<<<<<<< HEAD
 export interface HireRequestNotificationParams {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -152,6 +157,10 @@ export interface HireRequestNotificationParams {;
 export interface HireRequestNotificationParams {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   talentId: string;
   adminId?: string;
   requesterName: string;
@@ -163,6 +172,7 @@ export interface HireRequestNotificationParams {;
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface OnboardingNotificationParams {
 
 
@@ -171,22 +181,22 @@ export interface OnboardingNotificationParams {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   related_id?: string | null;
   send_email?: boolean;
   action_url?: string | null,
   action_text?: string | null;
 }
-export interface CreateNotificationResult {
+export interface CreateNotificationResult {};
   success: boolean;
   notification_id?: string,
   error?: any;
 }
-export interface HireRequestNotificationParams {
+export interface HireRequestNotificationParams {};
   talent_id: string;
   admin_id?: string;
   requester_name: string;
@@ -195,19 +205,18 @@ export interface HireRequestNotificationParams {
   project_summary?: string,
   hireRequestId: string;
 }
-export interface OnboardingNotificationParams {
+export interface OnboardingNotificationParams {};
   user_id: string;
-  missing_milestone: string,
+  missing_milestone: string,'
   user_role: 'talent' | 'client';
 
 }
-export interface SystemNotificationParams {
+export interface SystemNotificationParams {};
   user_id: string;
+
+
+
 <<<<<<< HEAD
-
-
-export interface OnboardingNotificationParams {;
-
 <<<<<<< HEAD
 =======
 export interface OnboardingNotificationParams {
@@ -217,10 +226,13 @@ export interface OnboardingNotificationParams {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   userId: string;
-  missingMilestone: string;
+  missingMilestone: string;"
   userRole: "talent" | "client";
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface SystemNotificationParams {
 
@@ -229,6 +241,10 @@ export interface SystemNotificationParams {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 }  userId: string;
@@ -270,6 +286,10 @@ export interface SystemNotificationParams {;
 export interface SystemNotificationParams {;
 
   userId: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string;
   message: string;
 
@@ -350,6 +370,7 @@ export interface CreateNotificationParams {
   sendEmail?: boolean;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 export interface SystemNotificationParams {
@@ -360,3 +381,6 @@ export interface SystemNotificationParams {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

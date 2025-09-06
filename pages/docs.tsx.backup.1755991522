@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -187,11 +188,15 @@ const Docs: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/docs.tsx.backup.1755991522
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const quickLinks = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -235,10 +240,14 @@ const Docs: React.FC = () => {
       icon: <Users className="w-6 h-6" />,
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       href: '/support',
       color: 'text-purple-400'
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -875,3 +884,6 @@ const Docs: React.FC = () => {
 export default Docs;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

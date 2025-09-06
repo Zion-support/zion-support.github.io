@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
+<<<<<<< HEAD
 export default class MyDocument extends Document {
   render() {
     return (
@@ -12,4 +13,7 @@ export default class MyDocument extends Document {
       </Html>
     );
   }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

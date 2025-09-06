@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -24,19 +25,38 @@ import * as React from "react"
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import * as PopoverPrimitive from "@radix-ui/react-popover"
+=======
 
+import * as React from "react""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import * as PopoverPrimitive from "@radix-ui/react-popover"
+"
 import { cn } from "@/lib/utils"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
 const Popover = PopoverPrimitive.Root
 const PopoverTrigger = PopoverPrimitive.Trigger
 const PopoverContent = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
 >(({ className, align = "center", sideOffset = 4, ...props }, ref) => (>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+=======
+
+
+;
+const Popover = PopoverPrimitive.Root;
+const PopoverTrigger = PopoverPrimitive.Trigger;
+const PopoverContent = React.forwardRef<
+  React.ElementRef<typeof PopoverPrimitive.Content>
+  React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
+
+"
+>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   <PopoverPrimitive.Portal>
-    <PopoverPrimitive.Content
+    <PopoverPrimitive.Content;
       ref={ref}
       align={align}
       sideOffset={sideOffset}
@@ -44,6 +64,7 @@ const PopoverContent = React.forwardRef<
 <<<<<<< HEAD
       className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -51,11 +72,12 @@ const PopoverContent = React.forwardRef<
 <<<<<<< HEAD
 
         "z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-
-
 =======
-        "z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
         &quot;z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
         "z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
@@ -70,12 +92,16 @@ const PopoverContent = React.forwardRef<
 =======
       className={cn(        className
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        className;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       )}
       {...props}
     />;
   </PopoverPrimitive.Portal>;
 ));
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,24 +118,41 @@ PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export { Popover, PopoverTrigger, PopoverContent }
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export { Popover, PopoverTrigger, PopoverContent }
+export { Popover, PopoverTrigger, PopoverContent };
 ;
 export { Popover, PopoverTrigger, PopoverContent };
-export { Popover, PopoverTrigger, PopoverContent }
+export { Popover, PopoverTrigger, PopoverContent };
 ;
 <<<<<<< HEAD
 export { Popover, PopoverTrigger, PopoverContent }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import * as React from &quot;react & quot;
 import * as PopoverPrimitive from &quot;@radix - ui / react - popover & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
 
-export { Popover, PopoverTrigger, PopoverContent }
+export { Popover, PopoverTrigger, PopoverContent };
 ;
 
+<<<<<<< HEAD
+=======
+
+export { Popover, PopoverTrigger, PopoverContent };
+export { Popover, PopoverTrigger, PopoverContent }
+
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 const Popover = PopoverPrimitive.Root;
 const PopoverTrigger = PopoverPrimitive.Trigger;
@@ -117,10 +160,17 @@ const PopoverContent = React.forward_ref<;
   React.ElementRef < typeof PopoverPrimitive.Content>,
   React.ComponentPropsWithoutRef < typeof PopoverPrimitive.Content>;
 >(({ class_name, align = &quot;center & quot;, side_offset = 4, ...props }, ref) => (
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   <PopoverPrimitive.Portal>;
     <PopoverPrimitive.Content;
       ref={ref}
       align={align}
+<<<<<<< HEAD
       sideOffset={sideOffset}
       className={cn(;
         "z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",;
@@ -152,3 +202,20 @@ export { Popover, PopoverTrigger, PopoverContent }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+      side_offset={side_offset}
+      className={cn (
+        &quot;z - 50 w - 72 rounded - md border bg - popover p - 4 text - popover - foreground shadow - md outline - none data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+        class_name)}
+      {...props}
+    />;
+  </PopoverPrimitive.Portal>));
+PopoverContent.display_name = PopoverPrimitive.Content.display_name;
+export { Popover, PopoverTrigger, PopoverContent }
+
+
+export { Popover, PopoverTrigger, PopoverContent }
+
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -39,6 +39,7 @@ export default function MarketPricingPage() {
 					</Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -64,6 +65,9 @@ export default function MarketPricingPage() {
             </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 					<Card className="p-6 bg-black/40 border border-gray-800">
 						<h2 className="text-xl font-semibold mb-2">Identity & SSO/SCIM</h2>
@@ -100,6 +104,7 @@ export default function MarketPricingPage() {
 					</Card>
 				</div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -408,3 +413,6 @@ export default function MarketPricingPage() {
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

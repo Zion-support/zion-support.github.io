@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +28,23 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/ServicesOverview.jsx
 ' import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe\''\'";\";
+=======
+
+
+' import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe\''\'";\";'"
 " import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe"""";";'"'"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-' import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe\''\'";\";
+:src.disabled/components/ServicesOverview.jsx'"
+' import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe\''\'";\";'"
 " import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe"""";";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
+' import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe\''\'";\";'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+" import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe"""";";'"'"
+:temp_exclude/src.disabled/components/ServicesOverview.jsx;
+'"
+' import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe\''\'";\";'"
+" import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe"""";";'"'"
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/ServicesOverview.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,3 +87,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 ' '''";";""
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+' '''";";""
+'"
+' import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe\''\'";\";'"
+" import { Zap,Shield,Cloud,Database,Code,ShoppingCart,BarChart3,Link as LinkIcon,Network,Monitor,Smartphone,CheckCircle,Star,Clock,Users,Globe"""";";'"'"'"
+' '''";";""
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

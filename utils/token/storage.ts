@@ -37,6 +37,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   tokenName: string;
   tokenSymbol: string;
 
+<<<<<<< HEAD
 export interface TokenConfig {
 <<<<<<< HEAD
 export interface TokenConfig {
@@ -49,6 +50,19 @@ const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json'
 =======
 
 export interface TokenConfig {
+=======
+
+
+
+
+export interface TokenConfig {};
+export interface TokenConfig {;
+
+  tokenName: string;
+  tokenSymbol: string;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   decimals: number;
   totalSupply: number;
@@ -57,20 +71,34 @@ export interface TokenConfig {
   minIssueAmount: number;
   maxIssueAmount: number;
 }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-const DATA_DIR = path && path.join(process && process.cwd(), 'data');
+
+const DATA_DIR = path && path.join(process && process.cwd(), 'data');'
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
 
 
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
+=======
+
+
+
+
+class TokenStore {}
+  private config: TokenConfig = {'
+    token_name: 'ZION$','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     token_symbol: 'ZION',
     decimals: 18,
     total_supply: 1000000000,
@@ -81,18 +109,24 @@ class TokenStore {
   }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface TokenStoreData {
+=======
+
+export interface TokenStoreData {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   wallets: Record < string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
 }
-class TokenStore {
-  private config: TokenConfig = {
-    tokenName: 'ZION$'
+class TokenStore {}
+  private config: TokenConfig = {'
+    tokenName: 'ZION$''
     tokenSymbol: 'ZION'
+<<<<<<< HEAD
     decimals: 18
     totalSupply: 1000000000
     issueRate: 1.0
@@ -145,11 +179,29 @@ export interface TokenStoreData {
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    decimals: 18;
+    totalSupply: 1000000000;
+    issueRate: 1.0;
+    redeemRate: 1.0;
+    minIssueAmount: 1;
+    maxIssueAmount: 10000;
+  }
+export interface TokenStoreData {};
+  };
+
+export interface TokenStoreData {;
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   wallets: Record<string, Wallet>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   transactions: TokenTransaction[];
   config: TokenConfig;
 }
+<<<<<<< HEAD
 ;
 function ensureDataDir(): void {;
   try {;
@@ -169,6 +221,13 @@ function readFromDisk(): TokenStoreData | null {;
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+function readFromDisk(): TokenStoreData | null {}
+  try {}
+    ensureDataDir();
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 =======
@@ -178,25 +237,30 @@ export interface TokenStoreData {}
 
 }
 
+<<<<<<< HEAD
   async loadConfigs(): Promise<TokenConfig[]> {
+=======
+
+  async loadConfigs(): Promise<TokenConfig[]> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return this.storage.configs;
   }
 
-  async saveBalances(balances: TokenBalance[]): Promise<void> {
+  async saveBalances(balances: TokenBalance[]): Promise<void> {}
     this.storage.balances = balances;
     this.storage.lastUpdated = new Date();
   }
 
-  async loadBalances(): Promise<TokenBalance[]> {
+  async loadBalances(): Promise<TokenBalance[]> {}
     return this.storage.balances;
   }
 
-  async getStorage(): Promise<TokenStorage> {
+  async getStorage(): Promise<TokenStorage> {}
     return this.storage;
   }
 
-  async clearStorage(): Promise<void> {
-    this.storage = {
+  async clearStorage(): Promise<void> {}
+    this.storage = {}
       configs: [],
       balances: [],
       lastUpdated: new Date()
@@ -204,8 +268,9 @@ export interface TokenStoreData {}
   }
 }
 
-// Singleton instance
+// Singleton instance;
 export const tokenStorage = new TokenStorageManager();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -213,11 +278,20 @@ export const tokenStorage = new TokenStorageManager();
 origin/cursor/expand-services-advertise-and-build-project-c28b
   set_config (new_config: Partial < TokenConfig>): void {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+  set_config (new_config: Partial < TokenConfig>): void {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.config = { ...this.config, ...new_config }
   }
 }
 export const token_store = new TokenStore ();
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -248,6 +322,23 @@ ursor/fix-website-loading-errors-and-merge-6662
     return null;
   }
 <<<<<<< HEAD
+=======
+
+
+
+
+
+    if (!fs.existsSync(STORE_FILE)) return null;'
+    const raw = fs.readFileSync(STORE_FILE, 'utf8');
+    const parsed = JSON.parse(raw) as TokenStoreData;
+    return parsed;
+  } catch {}
+    return null;
+  }
+  setConfig(newConfig: Partial<TokenConfig>): void {}
+    this.config = { ...this.config, ...newConfig }
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 <<<<<<< HEAD
 ;
@@ -336,6 +427,7 @@ export const tokenStore = new TokenStore();
 
 }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
@@ -413,3 +505,20 @@ export const tokenStore = {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -15,6 +16,8 @@ const path = require("path");
 const { execSync } = require("child_process");
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           this.log(`Fixing merge conflicts in ${file}`);
           
@@ -24,8 +27,12 @@ const { execSync } = require("child_process");
           let inConflict = false;
           
           for (const line of lines) {
+<<<<<<< HEAD
               continue;
             } else if (line.includes("")) {
+=======
+            if (line.includes("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               inConflict = false;
               continue;
             } else if (!inConflict) {
@@ -112,6 +119,7 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedErrorFixingAutomation;
+<<<<<<< HEAD
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 <<<<<<< HEAD
@@ -128,6 +136,11 @@ module.exports = EnhancedErrorFixingAutomation;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -306,6 +319,7 @@ export default function"
 
 =======
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -325,3 +339,6 @@ export default function"
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

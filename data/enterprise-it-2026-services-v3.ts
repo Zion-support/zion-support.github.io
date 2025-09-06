@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   id: string;
 export interface EnterpriseIt2026ServiceV3 {
 id: string;
@@ -34,16 +35,24 @@ export interface EnterpriseIt2026ServiceV3 {;
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
+<<<<<<< HEAD
   contactInfo: {
 export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
   {
@@ -74,10 +83,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       "Enhanced solutions";
       "Advanced infrastructure";
       "Improved security";
+=======
+  contactInfo: {}
+export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = []
+  {}
+    features: [";
+      "Third generation IT";"
+      "Enhanced solutions";"
+      "Advanced infrastructure";"
+      "Improved security";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "Better performance"
-    ];
+    ];"
     link: "/services/2026-enterprise-it-v3", category: "Enterprise IT 2026 V3",
     realImplementation: true,
+<<<<<<< HEAD
     contactInfo: {
       "Improved security",
       "Better performance"
@@ -89,15 +109,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    contactInfo: {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+];"
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
@@ -131,9 +159,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

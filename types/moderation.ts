@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 export type AiScores = {;
   toxicity: number, // 0-1;
@@ -7,6 +8,9 @@ export type AiScores = {;
   scam: number, // 0-1;
 };
 export type FlaggedContent = {;
+=======
+export interface ModerationResult {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
 <<<<<<< HEAD
   contentType: ContentType;
@@ -105,7 +109,7 @@ export interface ModerationFlag {
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-export interface ModerationRule {
+export interface ModerationRule {};
   id: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -232,9 +236,10 @@ export interface ModerationFlag {;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   name: string;
-  pattern: string;
-  action: 'approve' | 'reject' | 'flag';
+  pattern: string;'
+  action: 'approve' | 'reject' | 'flag';'
   severity: 'low' | 'medium' | 'high';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -264,3 +269,6 @@ export interface ModerationFlag {;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

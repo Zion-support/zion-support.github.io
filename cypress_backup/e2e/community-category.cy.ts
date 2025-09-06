@@ -1,14 +1,36 @@
+<<<<<<< HEAD
 describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})});
 describe("community category listing",() => { it("displays posts in Getting Hired category",() => { cy.visit("/community/getting-hired"); cy.get("[data-testid="post-card"]") .its("length") .should("be.greaterThan",0)})});'"'"
 describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+});'''
+});'''
+});'''
 });''
 
+<<<<<<< HEAD
+=======
+
+
+'
+});'''
+});'''
+});'''
+});''
+'
+});'''
+});''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
 
+<<<<<<< HEAD
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -60,3 +82,21 @@ describe('community category listing', () => {
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+'
+});''
+
+
+
+
+
+
+'
+});''
+
+'
+});''
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

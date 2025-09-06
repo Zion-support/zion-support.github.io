@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -23,6 +24,9 @@ export interface FilterSidebarProps {;
 =======
 export interface FilterSidebarProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export interface FilterSidebarProps {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   searchTerm: string;
   setSearchTerm: (term: string) => void;
   selectedSkills: string[];
@@ -57,9 +61,13 @@ export interface FilterSidebarProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   setPriceRange: (range: [number, number]) => void;
   experience_range: [number, number];
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   selected_skills: string[];
   toggle_skill: (skill: string) => void;
@@ -71,7 +79,7 @@ export interface FilterSidebarProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   setExperienceRange: (range: [number, number]) => void;
-  expanded_sections: {
+  expanded_sections: {}
     skills: boolean;
     availability: boolean;
     region: boolean;
@@ -84,6 +92,14 @@ export interface FilterSidebarProps {
   clearFilters: () => void;
   isMobileFilterOpen?: boolean;
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     experience: boolean,
     price: boolean;
   }
@@ -94,15 +110,20 @@ export interface FilterSidebarProps {
   isMobileFilterOpen?: boolean;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export interface FilterComponentProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface FilterComponentProps {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   expanded: boolean;
   toggleSection: () => void;
   isMobileFilterOpen?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,8 +166,12 @@ export interface SkillsFilterProps extends FilterComponentProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+export interface SkillsFilterProps extends FilterComponentProps {}
   selectedSkills: string[]
+<<<<<<< HEAD
 
   toggleSkill: (skill: string) => void
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -228,15 +253,20 @@ export interface FilterComponentProps {;
 export interface SkillsFilterProps extends FilterComponentProps {;
   selectedSkills: string[],;
 =======
+=======
+;
+  toggleSkill: (skill: string) => void;
+export interface SkillsFilterProps extends FilterComponentProps {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   selectedSkills: string[];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   toggleSkill: (skill: string) => void;
 }
-export interface AvailabilityFilterProps extends FilterComponentProps {
+export interface AvailabilityFilterProps extends FilterComponentProps {};
   selectedAvailability: string[];
   toggleAvailability: (availability: string) => void;
 }
-export interface RegionFilterProps extends FilterComponentProps {
+export interface RegionFilterProps extends FilterComponentProps {};
   selectedRegions: string[];
   toggleRegion: (region: string) => void;
 }
@@ -265,6 +295,7 @@ export interface RegionFilterProps extends FilterComponentProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 }
+<<<<<<< HEAD
 export interface ExperienceFilterProps extends FilterComponentProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,6 +305,9 @@ export interface ExperienceFilterProps extends FilterComponentProps {
   experience_range: [number, number];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+export interface ExperienceFilterProps extends FilterComponentProps {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   experienceRange: [number, number];
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   setExperienceRange: (range: [number, number]) => void;
@@ -359,11 +393,12 @@ export interface ExperienceFilterProps extends FilterComponentProps {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
-export interface PriceFilterProps extends FilterComponentProps {
+export interface PriceFilterProps extends FilterComponentProps {};
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -382,9 +417,16 @@ export interface FilterSidebarProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export interface SearchFilterProps {
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   searchTerm: string;
+}
+export interface SearchFilterProps {}
+  search_term: string,;
   setSearchTerm: (term: string) => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -418,6 +460,12 @@ export interface SortFilterProps {
   setSortOption: (option: string) => void
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface SortFilterProps {};
+  sortOption: string;
+  setSortOption: (option: string) => void;
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 export interface SortFilterProps {;
   sortOption: string;
@@ -431,56 +479,16 @@ export interface SortFilterProps {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 }
+<<<<<<< HEAD
 export interface SearchFilterProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+export interface SearchFilterProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-<<<<<<< HEAD
-;
-export interface FilterComponentProps {;
-  expanded:boolean,;
-  toggleSection:() => void,;
-  isMobileFilterOpen?:boolean;
-}
-;
-export interface SkillsFilterProps extends FilterComponentProps {;
-  selectedSkills:string[],;
-  toggleSkill:(skill:string) => void;
-}
-;
-export interface AvailabilityFilterProps extends FilterComponentProps {;
-  selectedAvailability:string[],;
-  toggleAvailability:(availability:string) => void;
-}
-;
-export interface RegionFilterProps extends FilterComponentProps {;
-  selectedRegions:string[],;
-  toggleRegion:(region:string) => void;
-}
-;
-export interface ExperienceFilterProps extends FilterComponentProps {;
-  experienceRange:[number, number],;
-  setExperienceRange:(range:[number, number]) => void,;
-}
-;
-export interface PriceFilterProps extends FilterComponentProps {;
-  priceRange:[number, number],;
-  setPriceRange:(range:[number, number]) => void,;}
-;
-export interface SearchFilterProps {;
-  searchTerm:string,;
-  setSearchTerm:(term:string) => void;
-}
-;
-export interface SortFilterProps {;
-  sortOption:string,;
-  setSortOption:(option:string) => void;
-} 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-;
-;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -496,3 +504,11 @@ export interface SortFilterProps {;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

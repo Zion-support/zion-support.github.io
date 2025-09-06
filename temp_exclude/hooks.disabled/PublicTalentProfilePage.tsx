@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
 <<<<<<< HEAD
 
 import { useState, useEffect } from "react",
@@ -14,47 +15,52 @@ import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, Check
 =======
 if (error) {
           throw error
+=======
+if (error) {}
+          throw error;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
         }
 
 
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
         setIsError(true),
-
+'
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
 
         setIsError(true),
 
 
-        toast({
-          title: "Error"
-          description: "Failed to load profile. Please try again later."
+        toast({}
+          title: "Error""
+          description: "Failed to load profile. Please try again later.""
           variant: "destructive"})
         setProfileData (data);
-      } catch (error) {
+      } catch (error) {'
         logErrorToProduction (error instanceof Error ? error.message : String (error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
         setIsError (true);
-        toast ({
-          title: "Error",
-          description: "Failed to load profile. Please try again later.",
+        toast ({"
+          title: "Error","
+          description: "Failed to load profile. Please try again later.","
           variant: "destructive"});
-      } finally {
-
-import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Star } from 'lucide-react';
+      } finally {}
+'
+import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react';'
+import { Badge } from '@/components/ui/badge';'
+import { Star } from 'lucide-react';'
 import { logErrorToProduction } from '@/utils/productionLogger';
         setIsLoading(false)
-
-import { useState, useEffect } from "react",;
-import { useRouter } from "next/router",;
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "@/components/ui/use-toast",;
-import { SEO } from "@/components/SEO",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { HireNowCTA } from "@/components/profile/HireNowCTA",;
+"
+import { useState, useEffect } from "react",;"
+import { useRouter } from "next/router",;"
+import { supabase } from "@/integrations/supabase/client",;"
+import { toast } from "@/components/ui/use-toast",;"
+import { SEO } from "@/components/SEO",;"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Button } from "@/components/ui/button",;"
+import { HireNowCTA } from "@/components/profile/HireNowCTA",;'
 import { logErrorToProduction } from '@/utils/productionLogger',;
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function ProfilePage() {
@@ -101,23 +107,14 @@ import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { HireNowCTA } from "@/components/profile/HireNowCTA",;
 import { logErrorToProduction } from '@/utils/productionLogger',;
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react';
-export default function ProfilePage() {;
-  // useParams may be untyped in this environment, so avoid passing a;
-  // type argument and cast the result instead to prevent TS2347 errors.;
-  const router = useRouter(),;
-  const profileId = router.query.profileId as string,;
-  const [profileData, setProfileData] = useState<any>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [isError, setIsError] = useState(false),;
-  useEffect(() => {;
-    const fetchProfile = async () => {;
-      setIsLoading(true),;
-      setIsError(false),;
-      try {;
-        const { data, error } = await supabase;
-          .from("talent_profiles");
-          .select("*");
+export default function ProfilePage() { return null; }
+        const { data, error } = await supabase;"
+          .from("talent_profiles");"
+          .select("*");"
           .eq("id", profileId);
           .single(),;
         if (error) {;
@@ -125,12 +122,12 @@ export default function ProfilePage() {;
         }
 ;
         setProfileData(data);
-      } catch (error) {;
+      } catch (error) {;'
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),;
         setIsError(true),;
-        toast({;
-          title: "Error",;
-          description: "Failed to load profile. Please try again later.",;
+        toast({;"
+          title: "Error",;"
+          description: "Failed to load profile. Please try again later.",;"
           variant: "destructive"});
       } finally {;
         setIsLoading(false);
@@ -146,18 +143,30 @@ export default function ProfilePage() {;
 
 
 
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
+=======
+  if (isLoading) {}
+    return ("
+      <div className="min-h-screen flex items-center justify-center">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
         <span className="loading loading-ring loading-lg"></span>
       </div>
     )
   }
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
 
   if (isError || !profileData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
+=======
+  if (isError |!profileData) {}
+    return ("
+      <div className="min-h-screen flex items-center justify-center">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
         <p className="text-red-500">Failed to load profile.</p>
       </div>
     )
@@ -168,18 +177,17 @@ export default function ProfilePage() {;
 
   if (isError || !profileData) {;
 
-    return (
-      <div className="min-h-screen flex items-center justify-center">;
+    return ("
+      <div className="min-h-screen flex items-center justify-center">;"
         <p className="text-red-500">Failed to load profile.</p>;
       </div>;
     );
   }
   return (
     <>
-      <SEO
-
-    return (
-      <div className="min-h-screen flex items-center justify-center">
+      <SEO;
+    return ("
+      <div className="min-h-screen flex items-center justify-center">"
         <p className="text-red-500">Failed to load profile.</p>
       </div>
     )
@@ -189,28 +197,43 @@ export default function ProfilePage() {;
 
   return (
     <>
-      <SEO
+      <SEO;
         title={`${profileData.full_name} | Talent Profile`}
-
+"
         description = {profileData.bio || "View the profile of this talented individual.",}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   return (;
     <>;
-      <SEO;
-        title={`${profileData.full_name} | Talent Profile`}
+      <SEO;`
+        title={`${profileData.full_name} | Talent Profile`}"
         description={profileData.bio || "View the profile of this talented individual."}
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
           {/* Main Content Area */}
+=======
+
+
+
+      />"
+      <div className="container mx-auto px-4 py-8">"
+        <div className="grid grid-cols-12 gap-6">`
+        title={`${profileData && profileData.full_name} | Talent Profile`}"
+        description = {profileData && profileData.bio || "View the profile of this talented individual.",}
+      />;"
+      <div className="container mx-auto px-4 py-8">;"
+        <div className="grid grid-cols-12 gap-6">;
+          {/* Main Content Area */}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
           <div className="col-span-12 lg:col-span-8">
-            {/* Profile Header */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
+            {/* Profile Header */}"
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">"
               <div className="flex items-start">
-                {/* Avatar */}
-                <div className="relative mr-4">
+                {/* Avatar */}"
+                <div className="relative mr-4">"
                   <Avatar className="w-24 h-24">
                     {profileData.profile_picture_url ? (
                       <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
@@ -218,8 +241,8 @@ export default function ProfilePage() {;
                       <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
                     )}
                   </Avatar>
-                  {profileData.is_verified && (
-                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
+                  {profileData.is_verified && ("
+                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">"
                       <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
                     </div>
                   )}
@@ -230,12 +253,17 @@ export default function ProfilePage() {;
                 </div>;
 
 
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Main Info */}
                 <div className="flex-1">
+=======
+                {/* Main Info */}"
+                <div className="flex-1">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
                   <div className="flex justify-between items-start">
-                    <div>
-                      <h1 className="text-2xl font-bold text-white">{profileData.full_name}</h1>
+                    <div>"
+                      <h1 className="text-2xl font-bold text-white">{profileData.full_name}</h1>"
                       <p className="text-zion-cyan font-medium">{profileData.professional_title}</p>
                     </div>
                     {/* Add Save/Unsave Button Here */}
@@ -246,17 +274,21 @@ export default function ProfilePage() {;
                   </div>;
 
 
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {/* Location & Availability */}
+=======
+                  {/* Location & Availability */}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">
-                    {profileData.location && (
-                      <div className="flex items-center text-zion-slate-light">
+                    {profileData.location && ("
+                      <div className="flex items-center text-zion-slate-light">"
                         <MapPin className="h-4 w-4 mr-1" />
                         <span>{profileData.location}</span>
                       </div>
                     )}
-                    {profileData.availability && (
-                      <div className="flex items-center text-zion-slate-light">
+                    {profileData.availability && ("
+                      <div className="flex items-center text-zion-slate-light">"
                         <Clock className="h-4 w-4 mr-1" />
                         <span>{profileData.availability}</span>
                       </div>
@@ -269,12 +301,21 @@ export default function ProfilePage() {;
                 </div>;
               </div>;
               {/* Skills */}
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className="mt-4">
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>
                   <div className="flex flex-wrap gap-2">
                     {profileData.skills.map((skill: string, index: number) => (
                       <Badge key={skill + index} variant="secondary">{skill}</Badge>
+=======
+              {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;"
+                <div className="mt-4">;"
+                  <h4 className="text-lg font-bold text-white mb-2">Skills</h4>;"
+                  <div className="flex flex-wrap gap-2">;
+                    {profileData && profileData.skills.map((skill: string, index: number,) => (;"
+                      <Badge key={skill + index} variant="secondary">{skill}</Badge>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
                     ))}
                   </div>;
                 </div>;
@@ -286,12 +327,17 @@ export default function ProfilePage() {;
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
 =======
 
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
 
 
             </div>
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
 
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
@@ -304,13 +350,34 @@ export default function ProfilePage() {;
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
+=======
+            </div>;
+
+            {/* Bio Section */}"
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;"
+              <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;"
+              <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
+            </div>;
+
+            {/* Portfolio Section */}"
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;"
+              <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;"
+              <div className="space-y-3">;
+                {profileData && profileData.portfolio_links && profileData && profileData.portfolio_links.length > 0 ? (;
+                  profileData && profileData.portfolio_links.map((link: string, index: number,) => (;
+                    <a;
+                      key = {link + index,}
+                      href = {link,}"
+                      target="_blank""
+                      rel="noopener noreferrer""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
                       className="flex items-center text-zion-cyan hover:text-white transition-colors"
-                    >
+                    >"
                       <LinkIcon className="h-4 w-4 mr-2" />
                       {link}
                     </Link>
                   ))
-                ) : (
+                ) : ("
                   <p className="text-zion-slate-light">No portfolio links provided.</p>
                 )}
 <<<<<<< HEAD
@@ -321,26 +388,51 @@ export default function ProfilePage() {;
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
 =======
 
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
 
 
             </div>
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
+=======
+              </div>;
+            </div>;
 
-            {/* Social Links */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
-              <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
+            {/* Experience Section */}"
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;"
+              <h2 className="text-xl font-bold text-white mb-3">Experience</h2>;"
+              <p className="text-zion-slate-light">{profileData && profileData.experience || "No experience provided."}</p>;
+            </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
+
+            {/* Social Links */}"
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">"
+              <h2 className="text-xl font-bold text-white mb-3">Connect</h2>"
               <div className="flex space-x-4">
                 {profileData.github_link && (
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
                   <a
                     href={profileData.github_link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="GitHub"
+=======
+                  <a;
+                    href = {profileData && profileData.github_link,}"
+                    target="_blank""
+                    rel="noopener noreferrer""
+                    className="text-zion-cyan hover:text-white transition-colors""
+                    aria-label="GitHub"
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
                     title="GitHub"
-                  >
+                  >"
                     <Github className="h-6 w-6" />
 <<<<<<< HEAD
 =======
@@ -351,6 +443,7 @@ export default function ProfilePage() {;
                 {profileData.twitter_link && (;
                   <a;
                     href={profileData.twitter_link}
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -367,8 +460,28 @@ export default function ProfilePage() {;
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="LinkedIn"
+=======
+
+"
+                    target="_blank""
+                    rel="noopener noreferrer""
+                    className="text-zion-cyan hover:text-white transition-colors""
+                    aria-label="Twitter""
+                    title="Twitter">;"
+                    <Twitter className="h-6 w-6" />;
+                  </a>;
+                )}
+                {profileData && profileData.linkedin_link && (;
+                  <a;
+                    href = {profileData && profileData.linkedin_link,}"
+                    target="_blank""
+                    rel="noopener noreferrer""
+                    className="text-zion-cyan hover:text-white transition-colors""
+                    aria-label="LinkedIn"
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
                     title="LinkedIn"
-                  >
+                  >"
                     <Linkedin className="h-6 w-6" />
 <<<<<<< HEAD
                   </Link>
@@ -382,6 +495,7 @@ export default function ProfilePage() {;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA
@@ -396,6 +510,17 @@ export default function ProfilePage() {;
 
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
+=======
+
+
+          {/* Sidebar with HireNowCTA */}"
+          <div className="col-span-12 lg:col-span-4 space-y-6">
+            <HireNowCTA;
+              talentProfile={{}
+'
+                id: profileData?.id || '','
+                full_name: profileData?.full_name || '','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
                 professional_title: profileData?.professional_title || '',
 
 
@@ -405,7 +530,7 @@ export default function ProfilePage() {;
 
 
   /* Placeholder for other sidebar elements */ ;
-}</div> </div> </div> </>) ;
+}</div> </div> </div> </>) ;'"
 }'"};
 
 
@@ -417,74 +542,74 @@ export default function ProfilePage() {;
 
 
 
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       fetch_profile ();
     }
   }, [profile_id]);
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    return (
-      <div className="min - h-screen flex items - center justify - center">;
+    return ("
+      <div className="min - h-screen flex items - center justify - center">;"
         <span className="loading loading - ring loading - lg"></span>;
       </div>);
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    return (
-      <div className="min - h-screen flex items - center justify - center">;
+    return ("
+      <div className="min - h-screen flex items - center justify - center">;"
         <p className="text - red - 500">Failed to load profile.</p>;
       </div>);
   }
   return (
     <>;
-      <SEO;
-        title={`${profile_data.full_name} | Talent Profile`}
+      <SEO;`
+        title={`${profile_data.full_name} | Talent Profile`}"
         description = {profile_data.bio || "View the profile of this talented individual.", }
-      />;
-      <div className="container mx - auto px - 4 py - 8">;
+      />;"
+      <div className="container mx - auto px - 4 py - 8">;"
         <div className="grid grid - cols - 12 gap - 6">;
-          {/* Main Content Area */}
+          {/* Main Content Area */}"
           <div className="col - span - 12 lg:col - span - 8">;
-            {/* Profile Header */}
-            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 6">;
+            {/* Profile Header */}"
+            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 6">;"
               <div className="flex items - start">;
-                {/* Avatar */}
-                <div className="relative mr - 4">;
+                {/* Avatar */}"
+                <div className="relative mr - 4">;"
                   <Avatar className="w - 24 h - 24">;
                     {profile_data.profile_picture_url ? (
                       <AvatarImage src={profile_data.profile_picture_url} alt={profile_data.full_name} />) : (
                       <AvatarFallback>{profile_data.full_name?.char_at (0)}</AvatarFallback>)}
                   </Avatar>;
-                  {profile_data.is_verified && (
-                    <div className="absolute -bottom - 1 -right - 1 bg - zion - blue p - 0.5 rounded - full">;
+                  {profile_data.is_verified && ("
+                    <div className="absolute -bottom - 1 -right - 1 bg - zion - blue p - 0.5 rounded - full">;"
                       <CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />;
                     </div>)}
                 </div>;
-                {/* Main Info */}
-                <div className="flex - 1">;
+                {/* Main Info */}"
+                <div className="flex - 1">;"
                   <div className="flex justify - between items - start">;
-                    <div>;
-                      <h1 className="text - 2xl font - bold text - white">{profile_data.full_name}</h1>;
+                    <div>;"
+                      <h1 className="text - 2xl font - bold text - white">{profile_data.full_name}</h1>;"
                       <p className="text - zion - cyan font - medium">{profile_data.professional_title}</p>;
                     </div>;
                     {/* Add Save / Unsave Button Here */}
                   </div>;
-                  {/* Location & Availability */}
+                  {/* Location & Availability */}"
                   <div className="mt - 2 flex flex - wrap gap - 3 text - sm">;
-                    {profile_data.location && (
-                      <div className="flex items - center text - zion - slate - light">;
+                    {profile_data.location && ("
+                      <div className="flex items - center text - zion - slate - light">;"
                         <MapPin className="h - 4 w - 4 mr - 1" />;
                         <span>{profile_data.location}</span>;
                       </div>)}
-                    {profile_data.availability && (
-                      <div className="flex items - center text - zion - slate - light">;
+                    {profile_data.availability && ("
+                      <div className="flex items - center text - zion - slate - light">;"
                         <Clock className="h - 4 w - 4 mr - 1" />;
                         <span>{profile_data.availability}</span>;
                       </div>)}
@@ -492,90 +617,90 @@ if ( {) {
                 </div>;
               </div>;
               {/* Skills */}
-              {profile_data.skills && profile_data.skills.length > 0 && (
-                <div className="mt - 4">;
-                  <h4 className="text - lg font - bold text - white mb - 2">Skills</h4>;
+              {profile_data.skills && profile_data.skills.length > 0 && ("
+                <div className="mt - 4">;"
+                  <h4 className="text - lg font - bold text - white mb - 2">Skills</h4>;"
                   <div className="flex flex - wrap gap - 2">;
-                    {profile_data.skills.map ((skill: string, index: number, ) => (
+                    {profile_data.skills.map ((skill: string, index: number, ) => ("
                       <Badge key={skill + index} variant="secondary">{skill}</Badge>))}
                   </div>;
                 </div>)}
             </div>;
-            {/* Bio Section */}
-            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 6">;
-              <h2 className="text - xl font - bold text - white mb - 3">About Me</h2>;
+            {/* Bio Section */}"
+            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 6">;"
+              <h2 className="text - xl font - bold text - white mb - 3">About Me</h2>;"
               <p className="text - zion - slate - light">{profile_data.bio || "No bio provided."}</p>;
             </div>;
-            {/* Portfolio Section */}
-            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 6">;
-              <h2 className="text - xl font - bold text - white mb - 3">Portfolio</h2>;
+            {/* Portfolio Section */}"
+            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 6">;"
+              <h2 className="text - xl font - bold text - white mb - 3">Portfolio</h2>;"
               <div className="space - y-3">;
                 {profile_data.portfolio_links && profile_data.portfolio_links.length > 0 ? (
                   profile_data.portfolio_links.map ((link: string, index: number, ) => (
                     <a;
                       key = {link + index, }
-                      href = {link, }
-                      target="_blank";
-                      rel="noopener noreferrer";
+                      href = {link, }"
+                      target="_blank";"
+                      rel="noopener noreferrer";"
                       className="flex items - center text - zion - cyan hover:text - white transition - colors";
-                    >;
+                    >;"
                       <LinkIcon className="h - 4 w - 4 mr - 2" />;
                       {link}
-                    </a>))) : (
+                    </a>))) : ("
                   <p className="text - zion - slate - light">No portfolio links provided.</p>)}
               </div>;
             </div>;
-            {/* Experience Section */}
-            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 6">;
-              <h2 className="text - xl font - bold text - white mb - 3">Experience</h2>;
+            {/* Experience Section */}"
+            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 6">;"
+              <h2 className="text - xl font - bold text - white mb - 3">Experience</h2>;"
               <p className="text - zion - slate - light">{profile_data.experience || "No experience provided."}</p>;
             </div>;
-            {/* Social Links */}
-            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 6">;
-              <h2 className="text - xl font - bold text - white mb - 3">Connect</h2>;
+            {/* Social Links */}"
+            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 6">;"
+              <h2 className="text - xl font - bold text - white mb - 3">Connect</h2>;"
               <div className="flex space - x-4">;
                 {profile_data.github_link && (
                   <a;
-                    href = {profile_data.github_link, }
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="text - zion - cyan hover:text - white transition - colors";
-                    aria - label="GitHub";
+                    href = {profile_data.github_link, }"
+                    target="_blank";"
+                    rel="noopener noreferrer";"
+                    className="text - zion - cyan hover:text - white transition - colors";"
+                    aria - label="GitHub";"
                     title="GitHub";
-                  >;
+                  >;"
                     <Github className="h - 6 w - 6" />;
                   </a>)}
                 {profile_data.twitter_link && (
                   <a;
-                    href = {profile_data.twitter_link, }
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="text - zion - cyan hover:text - white transition - colors";
-                    aria - label="Twitter";
+                    href = {profile_data.twitter_link, }"
+                    target="_blank";"
+                    rel="noopener noreferrer";"
+                    className="text - zion - cyan hover:text - white transition - colors";"
+                    aria - label="Twitter";"
                     title="Twitter";
-                  >;
+                  >;"
                     <Twitter className="h - 6 w - 6" />;
                   </a>)}
                 {profile_data.linkedin_link && (
                   <a;
-                    href = {profile_data.linkedin_link, }
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="text - zion - cyan hover:text - white transition - colors";
-                    aria - label="LinkedIn";
+                    href = {profile_data.linkedin_link, }"
+                    target="_blank";"
+                    rel="noopener noreferrer";"
+                    className="text - zion - cyan hover:text - white transition - colors";"
+                    aria - label="LinkedIn";"
                     title="LinkedIn";
-                  >;
+                  >;"
                     <Linkedin className="h - 6 w - 6" />;
                   </a>)}
               </div>;
             </div>;
           </div>;
-          {/* Sidebar with HireNowCTA */}
+          {/* Sidebar with HireNowCTA */}"
           <div className="col - span - 12 lg:col - span - 4 space - y-6">;
             <HireNowCTA;
-              talent_profile={{
-                id: profile_data?.id || '',
-                full_name: profile_data?.full_name || '',
+              talent_profile={{'
+                id: profile_data?.id || '','
+                full_name: profile_data?.full_name || '','
                 professional_title: profile_data?.professional_title || '',
                 hourly_rate: profile_data?.hourly_rate || 0,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -588,53 +713,63 @@ if ( {) {
     </>;
   );
 }
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
 <<<<<<< HEAD
 =======
 // Check condition
 if ( {) {
   $2
+=======
+// Check condition;
+if ( {) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx
 }
   fetch_profile ();
 }, [profile_id]);
-// Check condition
-if ( {") {
-  $2
-}
+// Check condition"
+if ( {") {}
+  $2;
+}"
   return (<div className="min - h-screen flex items - center justify - center" > <span className="loading loading - ring loading - lg" ></span> </div>);
-}// Check condition
-if ( {") {
-  $2
-}
+}// Check condition"
+if ( {") {}
+  $2;
+}"
   return (<div className="min - h-screen flex items - center justify - center" > <p className="text - red - 500" >Failed to load profile.</p> </div>);
 }profile_data.full name?.char_at (0);
 }</AvatarFallback>);
 }</Avatar> </div>);
-}</div> </div> {
+}</div> </div> {}
   /* Add Save / Unsave Button Here */;
-}</div> <span> {
+}</div> <span> {}
   profile_data.availability;
 }</span> </div>);
-}</div> </div> </div>) );
-}</div> </div>) ";
+}</div> </div> </div>) );"
+}</div> </div>) ";"
 }</div>) ) ) : (<p className="text - zion - slate - light" >No portfolio links provided.</p>);
-}</div> </div> <a href= {
-  profile_data.github link ";
+}</div> </div> <a href= {"
+  profile_data.github link ";"
 }target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="GitHub" title="GitHub" > <Github className="h - 6 w - 6" /> </Link>);
-}{
-  profile_data.twitter link && (<a href= {
-  profile_data.twitter link ";
+}{}
+  profile_data.twitter link && (<a href= {"
+  profile_data.twitter link ";"
 }target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="Twitter" title="Twitter" > <Twitter className="h - 6 w - 6" /> </Link>);
-}{
-  profile_data.linkedin link && (<a href= {
-  profile_data.linkedin link ";
+}{}
+  profile_data.linkedin link && (<a href= {"
+  profile_data.linkedin link ";"
 }target="blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - white transition - colors" aria - label="LinkedIn" title="LinkedIn" > <Linkedin className="h - 6 w - 6" /> </Link>);
-}</div> </div> </div> <HireNowCTA talent_profile= {
-  {';
+}</div> </div> </div> <HireNowCTA talent_profile= {'
+  {';'
   id: profile_data?.id || '', full name: profile_data?.full name || '',  professional title: profile_data?.professional title || '', hourly rate: profile_data?.hourly rate || 0;
-}/> {
+}/> {}
   /* Placeholder for other sidebar elements */;
-}</div> </div> </div> </>);
+}</div> </div> </div> </>);'"
 }'"}
 }
+<<<<<<< HEAD:temp_exclude/hooks.disabled/PublicTalentProfilePage.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/PublicTalentProfilePage.tsx

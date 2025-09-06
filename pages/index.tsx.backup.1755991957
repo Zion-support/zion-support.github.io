@@ -277,6 +277,7 @@ export default function HomePage() {
   ];
 
   return (
+<<<<<<< HEAD
     <QuantumHolographicBackground variant="quantum-holographic" intensity="high">
       <div className="min-h-screen">
         {/* Navigation Section */}
@@ -296,6 +297,9 @@ export default function HomePage() {
                     <a href="/about" className="text-white hover:text-cyan-400 transition-colors">About</a>
                     <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">Contact</a>
                   </nav>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <div className="flex items-center space-x-4">
                   <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors">
@@ -475,6 +479,7 @@ export default function HomePage() {
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* Featured Services */}
           <section className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
@@ -993,5 +998,8 @@ export default function HomePage() {
         </div>
       </div>
     </QuantumHolographicBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

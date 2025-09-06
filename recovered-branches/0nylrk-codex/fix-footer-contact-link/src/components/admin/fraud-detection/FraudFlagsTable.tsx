@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -51,32 +52,40 @@ import { EmptyFraudState } from "./EmptyFraudState",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface FraudFlagsTableProps {
+=======
 
-  flags: FraudFlag[]
-  isLoading: boolean
-  hasFilters: boolean
-  resetFilters: () => void
+import React from "react","
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table","
+import { Badge } from "@/components/ui/badge","
+import { FraudFlag } from "@/types/fraud","
+import { SeverityDisplay } from "./SeverityDisplay",";
+import { ActionButtons } from "./ActionButtons";"
+import { EmptyFraudState } from "./EmptyFraudState";"
+import { ActionButtons } from "./ActionButtons","
+import { EmptyFraudState } from "./EmptyFraudState",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
+interface FraudFlagsTableProps {}
+  flags: FraudFlag[];
+  isLoading: boolean;
+  hasFilters: boolean;
+  resetFilters: () => void;
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
 }
 <<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-
-
 <<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   flags;
   isLoading;
   hasFilters;
-export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({};
   flags;
   isLoading;
   hasFilters;
@@ -87,6 +96,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   isLoading,
   hasFilters,
   resetFilters,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -101,15 +111,22 @@ import { EmptyFraudState } from "./EmptyFraudState",}) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (isLoading) {
     return (
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-      <div className="flex justify-center items-center h-64">
+  onAction;
+}) => {}
+  if (isLoading) {}
+    return (
+"
+      <div className="flex justify-center items-center h-64">"
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
     )
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -141,6 +158,39 @@ import { FraudFlag } from "@/types/fraud",;
 import { SeverityDisplay } from "./SeverityDisplay",;
 import { ActionButtons } from "./ActionButtons",;
 import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex justify-center items-center h-64">;
+=======
+
+"
+import React from "react",;"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;"
+import { Badge } from "@/components/ui/badge",;"
+import { FraudFlag } from "@/types/fraud",;"
+import { SeverityDisplay } from "./SeverityDisplay",;"
+import { ActionButtons } from "./ActionButtons",;"
+import { EmptyFraudState } from "./EmptyFraudState",;
+
+
+
+interface FraudFlagsTableProps {;
+  flags: FraudFlag[],;
+  isLoading: boolean,;
+  hasFilters: boolean,;
+  resetFilters: () => void,;'
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+}
+
+
+
+
+  resetFilters,;
+  onAction;
+}) => {;
+  if (isLoading) {;
+
+
+"
+      <div className="flex justify-center items-center h-64">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
@@ -149,20 +199,22 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
-  if (flags.length === 0) {
+  if (flags.length === 0) {}
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   return (
@@ -202,36 +254,18 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              {flag.gpt_explanation || (
+
+
+              {flag.gpt_explanation || ("
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  if (flags && flags.length === 0) {;
-    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />;
-  }
-  return (
-    return (;
-      <div className="flex justify-center items-center h-64">;
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
-      </div>;
-    ),;
-  }
-;
-  if (flags.length === 0) {;
-    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />,;
-  }
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
     <Table>;
 =======
   }
@@ -259,6 +293,7 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
         </TableRow>;
       </TableHeader>;
       <TableBody>;
+<<<<<<< HEAD
         {flags && flags.map((flag) => (;
           <TableRow key={flag && flag.id}>;
             <TableCell>;
@@ -272,6 +307,17 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
             </TableCell>;
             <TableCell>;
               <Badge variant="outline">{flag && flag.content_type}</Badge>;                <span className="text-muted-foreground text-xs">Not analyzed</span>;
+=======
+
+            </TableCell>;"
+            <TableCell className="max-w-xs truncate">{flag && flag.reason}</TableCell>;"
+            <TableCell className="max-w-xs truncate">;
+              {flag && flag.gpt_explanation || (;
+
+
+"
+                <span className="text-muted-foreground text-xs">Not analyzed</span>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -282,18 +328,22 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {new Date(flag && flag.timestamp).toLocaleDateString()} {new Date(flag && flag.timestamp).toLocaleTimeString()}
             </TableCell>;
             <TableCell>;
-              <Badgevariant={
-                flag && flag.status === 'pending'
-                  ? 'secondary'
-                  : flag && flag.status === 'actioned'
-                  ? 'destructive'
-                  : flag && flag.status === 'ignored'
-                  ? 'outline'
+              <Badgevariant={'
+                flag && flag.status === 'pending''
+                  ? 'secondary''
+                  : flag && flag.status === 'actioned''
+                  ? 'destructive''
+                  : flag && flag.status === 'ignored''
+                  ? 'outline''
                   : 'default'
 <<<<<<< HEAD
 =======
@@ -301,9 +351,7 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
 =======
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
               }>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -313,90 +361,59 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
               </Badge>;
             </TableCell>;
             <TableCell>;
-              <ActionButtons
+              <ActionButtons;
                 flagId={flag && flag.id} 
                 status={flag && flag.status} 
 <<<<<<< HEAD
 <<<<<<< HEAD
                 onAction={onAction} 
-<<<<<<< HEAD
-=======
-              {new Date(flag.timestamp).toLocaleDateString()} {new Date(flag.timestamp).toLocaleTimeString()}
-            </TableCell>;
-            <TableCell>;
-              <Badge variant={;
-                flag.status === 'pending';
-                  ? 'secondary';
-                  :flag.status === 'actioned';
-                  ? 'destructive';
-                  :flag.status === 'ignored';
-                  ? 'outline';
-                  :'default';
-              }>;
-                {flag.status}
-              </Badge>;
-            </TableCell>;
-            <TableCell>;
-              <ActionButtons ;
-                flagId={flag.id} ;
-                status={flag.status} ;
-                onAction={onAction} ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
               />;
             </TableCell>;
           </TableRow>;
         ))}
       </TableBody>;
     </Table>;
-<<<<<<< HEAD
-  );
-=======
 
 
-=======
-=======
 
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </TableBody>;
     </Table>;
   );
-};
-import React from './react';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { Badge } from '@/components / ui / badge';
-import { FraudFlag } from '@/types / fraud';
-import { SeverityDisplay } from './SeverityDisplay';
-import { ActionButtons } from './ActionButtons';
+};'
+import React from './react';'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';'
+import { Badge } from '@/components / ui / badge';'
+import { FraudFlag } from '@/types / fraud';'
+import { SeverityDisplay } from './SeverityDisplay';'
+import { ActionButtons } from './ActionButtons';'
 import { EmptyFraudState } from './EmptyFraudState';
-interface FraudFlagsTableProps {
+interface FraudFlagsTableProps {}
   flags: FraudFlag[],
   is_loading: boolean,
   has_filters: boolean,
-  reset_filters: () => void,
+  reset_filters: () => void,'
   on_action: (flag_id: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
 }
-export const FraudFlagsTable: React.FC < FraudFlagsTableProps> = ({
+export const FraudFlagsTable: React.FC < FraudFlagsTableProps> = ({};
   flags;
   is_loading;
   has_filters;
   reset_filters,
   on_action;
-}) => {
-  // Check condition
-if ( {) {
-  $2
+}) => {}
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    return (
-      <div className="flex justify - center items - center h - 64">;
+    return ("
+      <div className="flex justify - center items - center h - 64">;"
         <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - purple"></div>;
       </div>);
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     return <EmptyFraudState has_filters={has_filters} onResetFilters={reset_filters} />;
   }
@@ -420,32 +437,32 @@ if ( {) {
           <TableRow key={flag.id}>;
             <TableCell>;
               <SeverityDisplay severity={flag.severity} />;
-            </TableCell>;
+            </TableCell>;"
             <TableCell className="font - medium">;
               {flag.user_email || flag.user_id.substring (0, 8)}
-            </TableCell>;
+            </TableCell>;"
             <TableCell className="max - w-xs truncate">;
               {flag.content_excerpt}
             </TableCell>;
-            <TableCell>;
+            <TableCell>;"
               <Badge variant="outline">{flag.content_type}</Badge>;
-            </TableCell>;
-            <TableCell className="max - w-xs truncate">{flag.reason}</TableCell>;
+            </TableCell>;"
+            <TableCell className="max - w-xs truncate">{flag.reason}</TableCell>;"
             <TableCell className="max - w-xs truncate">;
-              {flag.gpt_explanation || (
+              {flag.gpt_explanation || ("
                 <span className="text - muted - foreground text - xs">Not analyzed</span>)}
             </TableCell>;
             <TableCell>;
               {new Date (flag.timestamp).toLocaleDateString ()} {new Date (flag.timestamp).toLocaleTimeString ()}
             </TableCell>;
             <TableCell>;
-              <Badge variant={
-                flag.status === 'pending';
-                  ? 'secondary';
-                  : flag.status === 'actioned';
-                  ? 'destructive';
-                  : flag.status === 'ignored';
-                  ? 'outline';
+              <Badge variant={'
+                flag.status === 'pending';'
+                  ? 'secondary';'
+                  : flag.status === 'actioned';'
+                  ? 'destructive';'
+                  : flag.status === 'ignored';'
+                  ? 'outline';'
                   : 'default';
               }>;
                 {flag.status}
@@ -460,6 +477,7 @@ if ( {) {
             </TableCell>;
           </TableRow>))}
       </TableBody>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Table>);
 }
@@ -556,3 +574,9 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
 =======
                 onAction={onAction} 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

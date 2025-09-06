@@ -16,8 +16,12 @@ import { Skill  } from '@/types / resume';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Skill } from "@/types/resume";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface SkillsFormProps {
+=======
+export interface SkillsFormProps {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   resumeId: string;
   skills: Skill[];
   onComplete: () => void;
@@ -26,6 +30,10 @@ export interface SkillsFormProps {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   resumeId: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   skills: Skill[];
 
   on_complete: () => void;
@@ -33,6 +41,7 @@ export interface SkillsFormProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export interface SkillItemProps {
@@ -53,11 +62,15 @@ export interface SkillCategoryProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Skill  } from '@/types / resume';
 
-export interface SkillsFormProps {
+export interface SkillsFormProps {};
   resume_id: string;
-
+'
 import {Skill} from '@/types/resume';
 export interface SkillsFormProps {;
   resumeId: string;
@@ -67,17 +80,21 @@ export interface SkillsFormProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-export interface SkillItemProps {
+export interface SkillItemProps {};
   skill: Skill;
   category: string;
   onDelete: (id: string, category: string) => Promise<void>;
 }
 
-export interface SkillCategoryProps {
+export interface SkillCategoryProps {};
   category: string;
   skills: Skill[];
   onDelete: (id: string, category: string) => Promise<void>;
@@ -88,6 +105,7 @@ export interface SkillCategoryProps {;
 
   category: string;
   skills: Skill[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -108,6 +126,10 @@ export interface AddSkillFormProps {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface AddSkillFormProps {;
 
   resumeId: string;
@@ -174,10 +196,11 @@ export interface AddSkillFormProps {;
 <<<<<<< HEAD
 }
 
-export interface BulkAddSkillsProps {
+export interface BulkAddSkillsProps {};
   resumeId: string;
   onSuccess: () => Promise<void>;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,11 +221,14 @@ export interface BulkAddSkillsProps {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export interface AddSkillFormProps {
+=======
+export interface AddSkillFormProps {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   resume_id: string;
   onAddSkill: (skill: Skill) => Promise < boolean>;
   default_category?: string;
 }
-export interface BulkAddSkillsProps {
+export interface BulkAddSkillsProps {};
   resume_id: string;
   on_success: () => Promise < void>;
 }
@@ -211,12 +237,15 @@ export interface BulkAddSkillsProps {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
   onAddSkill: (skill: Skill) => Promise<boolean>;
@@ -228,5 +257,10 @@ export interface BulkAddSkillsProps {
   defaultCategory?: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 ;
 ;
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

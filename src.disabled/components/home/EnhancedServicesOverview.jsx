@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +28,23 @@ const React from";react""";"";''"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/home/EnhancedServicesOverview.jsx
 import React from\';react\''\';\'';
+=======
+
+
+import React from\';react\''\';\'';'
 const React from";react""";"";''"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from\';react\''\';\'';
+:src.disabled/components/home/EnhancedServicesOverview.jsx'
+import React from\';react\''\';\'';'"
 const React from";react""";"";''"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'
+import React from\';react\''\';\'';'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const React from";react""";"";''"
+:temp_exclude/src.disabled/components/home/EnhancedServicesOverview.jsx;
+'
+import React from\';react\''\';\'';'"
+const React from";react""";"";''"
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/home/EnhancedServicesOverview.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,3 +87,15 @@ import _React from';react''';'';
 =======
 import _React from';react''';'';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'
+import _React from';react''';'';
+'
+import React from\';react\''\';\'';'"
+const React from";react""";"";''"'
+import _React from';react''';'';
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

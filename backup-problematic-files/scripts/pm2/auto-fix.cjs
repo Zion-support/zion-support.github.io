@@ -1,5 +1,12 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/auto-fix.cjs
 <<<<<<< HEAD
 =======
+=======
+
+
+#!/usr/bin/env node;
+const { execSync } = require('child_process');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/auto-fix.cjs
 
 
 =======
@@ -19,6 +26,7 @@ try {}
 <<<<<<< HEAD
 
 	process.exit(1)};
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/auto-fix.cjs
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> origin/main
@@ -31,16 +39,12 @@ try {}
 =======
 	process.exit(1)};
 #!/usr/bin/env node
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/auto-fix.cjs
 
-/**
- * Auto Fix Automation Script
- * Automatically fixes common issues in the codebase
- */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/auto-fix.cjs
 class AutoFixer {
   constructor() {
     this.logFile = './logs/pm2/auto-fix.log';
@@ -254,3 +258,5 @@ try {}
 	console.error('Auto-fix run "failed": ', e.message);
 	process.exit(1)};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/auto-fix.cjs

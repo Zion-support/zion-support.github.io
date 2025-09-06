@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -14,6 +15,13 @@
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
 import ReviewForm from "../../components/reviews/ReviewForm";
+=======
+
+
+import React from "react";"
+import type { NextPage, GetServerSideProps } from "next";"
+import ReviewForm from "../../components/reviews/ReviewForm";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { findProjectById } from "../../utils/dataStore";
 <<<<<<< HEAD
 type Props = {
@@ -22,15 +30,20 @@ type Props = {
 
 type Props = {;
 
+<<<<<<< HEAD
 =======
 type Props = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   projectId: string;
+=======
+  projectId: string;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   fromRole: "client" | "talent";
   fromId: string;
   valid: boolean;
   reason?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -46,18 +59,23 @@ const ReviewSubmitPage: NextPage<Props> = ({
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type Props = {
+=======
+type Props = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   projectId: string,
   fromRole: 'client' | 'talent',
   fromId: string,
   valid: boolean,
-  reason?: string
+  reason?: string;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
-const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -231,21 +249,29 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  if (!valid) {}
+    return ("
+      <main className="max-w-2xl mx-auto p-6">"
+        <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
 
 
-  }
+  }"
   if (project && project.status !== "Completed") {;
     return {;
       props: {;
         projectId,;
         fromRole: role,;
         fromId,;
-        valid: false,;
+        valid: false,;"
         reason: "Project is not completed yet",;
       },;
     } as any;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -263,6 +289,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   } as any;
 
 }
@@ -272,6 +301,7 @@ export default ReviewSubmitPage;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -279,14 +309,18 @@ export default ReviewSubmitPage;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         project_id,
         from_role: role,
         from_id,
-        valid: false,
+        valid: false,"
         reason: "Project is not completed yet",
       },
     } as any;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -316,11 +350,20 @@ export default ReviewSubmitPage;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+      valid,"
+      reason: valid ? null : "Invalid reviewer for this project",
+    },
+  } as any;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
 },
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { projectId } = ctx.query as { projectId: string },
+export const getServerSideProps: GetServerSideProps = async (ctx) => {}
+  const { projectId } = ctx.query as { projectId: string },'
   const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
+<<<<<<< HEAD
   if (!projectId || !role || !fromId) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -332,35 +375,42 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return { props: { projectId: projectId || '', fromRole: role || 'client', fromId: fromId || '', valid: false, reason: 'Missing parameters' }   } catch (error) {
     console.error("Error:", error);
+=======
+  if (!projectId || !role || !fromId) {}
+'
+    return { props: { projectId: projectId || '', fromRole: role || 'client', fromId: fromId || '', valid: false, reason: 'Missing parameters' }   } catch (error) {";
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
   const project = await findProjectById(projectId);
-  if (!project) {;
+  if (!project) {;'
     return { props: { projectId, fromRole: role, fromId, valid: false, reason: 'Project not found' } } as any;
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-  if (project.status !== 'Completed') {;
+}'
+  if (project.status !== 'Completed') {;'
     return { props: { projectId, fromRole: role, fromId, valid: false, reason: 'Project is not completed yet' } } as any;
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
+;'
   const expectedFromId = role === 'client' ? project.clientId : project.talentSlug;
-  const valid = expectedFromId === fromId;
+  const valid = expectedFromId === fromId;'
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -378,12 +428,12 @@ export default ReviewSubmitPage;
 <<<<<<< HEAD
 export default ReviewSubmitPage;
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ReviewSubmitPage;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -392,3 +442,8 @@ export default ReviewSubmitPage;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

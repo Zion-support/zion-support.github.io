@@ -1,4 +1,5 @@
 <<<<<<< HEAD:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
+<<<<<<< HEAD:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
 <<<<<<< HEAD:pages/api/integrations/zapier/jobs-posted.ts
 <<<<<<< HEAD
 =======
@@ -107,8 +108,66 @@ const events = state && state.events.filter(
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler($2) {;
   res.status(200).json({ message: 'API endpoint' });
+=======
+
+
+
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";"
+import { readState } from "../../../../lib/integrations/fileStore";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+"
+  if (req && req.method !== "GET")";
+    return res && res.status(405).json({ error: "Method not allowed" });
+  const { since } = req && req.query as { since?: string };
+
+  const state = readState();
+  const sinceTs = since ? Number(since) : 0;
+
+
+  );
+  res.status(200).json({ events });
+}
+
+
+
+import type { NextApiRequest, NextApiResponse } from './next';'
+import { read_state  } from '../../../../lib / integrations / file_store';
+;
+export default /**;
+ * handler - Function description;
+ */
+function handler() {}
+  if ("
+    return res.status (405).json ({ error: "Method not allowed" })) {}
+  $2;
+}
+
+
+
+  const { since } = req.query as { since?: string }
+  const state = read_state ();
+  const since_ts = since ? Number (since) : 0;
+  const events = state.events.filter ("
+    (e) => e.type === "zion.job.posted" && e.timestamp > since_ts,
+  );
+  res.status (200).json ({ events });
+}
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/zapier/jobs-posted.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler() { return null; }
+  res.status(200).json({ message: 'API endpoint' });'
+import type { NextApiRequest, NextApiResponse } from 'next';'
 import { readState } from '../../../../lib/integrations/fileStore';
+<<<<<<< HEAD:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
 export default function handler($2) {;
   try {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -117,11 +176,22 @@ export default function handler($2) {;
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {;
     console.error("Error:", error);
+=======
+export default function handler(req, res) {}
+  try {';
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/zapier/jobs-posted.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
 ;
 
+<<<<<<< HEAD:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/zapier/jobs-posted.ts
 
@@ -136,10 +206,25 @@ function handler() {;
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+'
+import type { NextApiRequest, NextApiResponse } from './next';'
+import { read_state  } from '../../../../lib / integrations / file_store';
+;
+export default /**;
+ * handler - Function description;
+ */
+function handler() {}
+  if ("
+    return res.status (405).json ({ error: "Method not allowed" })) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/zapier/jobs-posted.ts
 }
   const { since } = req.query as { since?: string }
   const state = read_state ();
   const since_ts = since ? Number (since) : 0;
+<<<<<<< HEAD:pages/api-disabled/api/integrations/zapier/jobs-posted.ts
   const events = state.events.filter (
     (e) => e.type === "zion.job.posted" && e.timestamp > since_ts
   );
@@ -169,3 +254,15 @@ function handler() {;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5:pages/api/integrations/zapier/jobs-posted.ts
+=======
+  const events = state.events.filter ("
+    (e) => e.type === "zion.job.posted" && e.timestamp > since_ts,
+  );
+  res.status (200).json ({ events });
+}
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/zapier/jobs-posted.ts

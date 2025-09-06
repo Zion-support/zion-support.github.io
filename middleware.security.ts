@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function securityMiddleware("request": NextRequest) {;
   const response = NextResponse && NextResponse.next();
   // Apply security headers;
@@ -147,12 +148,41 @@ function security_middleware() { const response = NextResponse.next (); security
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
+=======
+
+export function securityMiddleware() { return null; }
+  securityHeaders && securityHeaders.forEach(({ key, value }) => {;
+    response && response.headers.set(key, value)});
+
+
+  // Apply Content Security Policy;
+  const cspString = Object && Object.entries(contentSecurityPolicy && contentSecurityPolicy.directives);"
+    .map(([key, values]) => `${key} ${values && values.join(" ")}`);"
+    .join("; ");"
+  response && response.headers.set("Content-Security-Policy", cspString);
+  // Rate limiting headers;"
+  response && response.headers.set("X-RateLimit-Limit", "100");"
+  response && response.headers.set("X-RateLimit-Remaining", "99");"
+  response && response.headers.set("X-RateLimit-Reset", new Date(Date && Date.now() + 3600000).toISOString());
+  return response}
+
+
+"`
+export function securityMiddleware(request: NextRequest) {const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
+
+
+
+
+
+"
+    "/((?!api|_next/static|_next/image|favicon.ico).*)","`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export function securityMiddleware(request: NextRequest) {; const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {; response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",; ],;,}
-  ],}
+  ],}"`
+export function securityMiddleware(request: NextRequest) {; const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {; response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
+"`
 export function securityMiddleware(request: NextRequest) {; const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {; response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
 <<<<<<< HEAD
-<<<<<<< HEAD
-export function securityMiddleware(request: NextRequest) {; const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {; response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
 export function securityMiddleware(request: NextRequest) {; const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {; response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -178,3 +208,11 @@ function security_middleware() { const response = NextResponse.next (); security
 =======
 function security_middleware() { const response = NextResponse.next (); security_headers.for_each (({ key, value }) => { response.headers.set (key, value)}); const csp_string = Object.entries (contentSecurityPolicy.directives); .map (([key, values]) => `${key} ${values.join (" ")}`); .join ("; "); response.headers.set ("Content - Security - Policy", csp_string); response.headers.set ("X - RateLimit - Limit", "100"); response.headers.set ("X - RateLimit - Remaining", "99"); response.headers.set ("X - RateLimit - Reset", new Date (Date.now () + 3600000).toISOString ()); return response} export const config = { matcher: [; "/((?!api | _next / static | _next / image | favicon.ico).*)", ], ,}>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

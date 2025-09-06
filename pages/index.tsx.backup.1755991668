@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Mail, MessageCircle, Kanban, Headphones, ChevronRight, Play, BookOpen, Code, Server, Shield as ShieldIcon, Zap as ZapIcon2, Globe as GlobeIcon, Users as UsersIcon, Phone, MapPin } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import FuturisticHero from '../components/sections/FuturisticHero';
 import FuturisticCard from '../components/ui/FuturisticCard';
 import { realMicroSaasServices, getPopularServices } from '../data/real-micro-saas-services';
@@ -15,6 +16,9 @@ export default function HomePage() {
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '14 Days', label: 'Free Trial' },
     { number: '24/7', label: 'Expert Support' }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const testimonials = [
@@ -95,6 +99,7 @@ export default function HomePage() {
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
       </Head>
 
+<<<<<<< HEAD
       {/* Futuristic Hero Section */}
       <FuturisticHero />
 
@@ -102,6 +107,9 @@ export default function HomePage() {
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 cyber-grid opacity-10" />
         <div className="container mx-auto px-4 relative z-10">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="neon-text-blue">Popular</span> Services
@@ -390,6 +398,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 bg-black relative overflow-hidden">
         <div className="absolute inset-0 futuristic-bg opacity-30" />
@@ -415,6 +424,9 @@ export default function HomePage() {
             >
               Contact Sales
             </Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>

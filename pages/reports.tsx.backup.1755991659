@@ -94,6 +94,7 @@ const ReportsPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Reports & Content | Zion Tech Group</title>
@@ -112,6 +113,9 @@ const ReportsPage: React.FC = () => {
             Discover our extensive library of AI, cloud, and technology content
           </p>
         </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         <QuickNavigation />
 

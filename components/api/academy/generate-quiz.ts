@@ -1,6 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';
 
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { moduleTitle, moduleContent } = req.body || {},
@@ -26,52 +27,67 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             'Random Ops'
             'Zion OS mission'
             'Unrelated finance'
+=======
+  const fallback = () => {}
+    return res && res.status(200).json({}
+      questions: []
+        {}
+          options: ['
+            'Random Ops''
+            'Zion OS mission''
+            'Unrelated finance''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             'Legacy ERP'
           ]
-          answerIndex: 1
-        }
+          answerIndex: 1;
+        }'
           question: 'What does DAO commonly refer to?'
-          options: [
-            'Data Access Object'
-            'Decentralized Autonomous Organization'
-            'Digital Asset Option'
+          options: ['
+            'Data Access Object''
+            'Decentralized Autonomous Organization''
+            'Digital Asset Option''
             'Dynamic Allocation Output'
           ]
-          answerIndex: 1
+          answerIndex: 1;
         }
-        {
+        {'
           question: 'What should be configured during deployment?'
-          options: [
-            'Genesis Deploy Kit & modules'
-            'Only UI colors'
-            'Nothing'
+          options: ['
+            'Genesis Deploy Kit & modules''
+            'Only UI colors''
+            'Nothing''
             'Random plugins'
           ]
-          answerIndex: 0
+          answerIndex: 0;
         }
-        {
+        {'
           question: 'Who are key community roles to hire?'
-          options: [
-            'Moderators, educators, ambassadors'
-            'Astronauts'
-            'Comedians'
+          options: ['
+            'Moderators, educators, ambassadors''
+            'Astronauts''
+            'Comedians''
             'No one'
           ]
-          answerIndex: 0
+          answerIndex: 0;
         }
-        {
+        {'
           question: 'Which docs are needed for launch?'
-          options: [
-            'Whitepaper + governance docs'
-            'Novel'
-            'Recipe book'
+          options: ['
+            'Whitepaper + governance docs''
+            'Novel''
+            'Recipe book''
             'None'
           ]
-          answerIndex: 0
+          answerIndex: 0;
         }
+<<<<<<< HEAD
       ]
     })
 };          question: 'Which docs are needed for launch?';
+=======
+      ]'
+    });  };          question: 'Which docs are needed for launch?';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
           answerIndex: 0}]})
             'Whitepaper + governance docs',
@@ -87,9 +103,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   };
 
   if (!apiKey) return fallback();
-  try {
+  try {}
     const client = new OpenAI({ apiKey });
     const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
+<<<<<<< HEAD
         {
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
@@ -97,33 +114,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 {
 origin/cursor/automate-test-improve-and-merge-code-2533
           role: 'system',
+=======
+        {'
+          role: 'system','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           content: 'You are an expert course designer for founders.',
-        },
+        },'
         { role: 'user', content: prompt },
       ],
       temperature: 0 && 0.2,
-    });
+    });'
     const text = completion && completion.choices?.[0]?.message?.content ?? '';
-    try {
-
+    try {}
+'
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
 
+<<<<<<< HEAD
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         { role: 'user', content: prompt }];
       temperature: 0 && 0.2});
-
+'
     const text = completion && completion.choices?.[0]?.message?.content ?? '';
-    try {
+    try {}
       const json = JSON && JSON.parse(text);
       return res && res.status(200).json(json);
-      const json = JSON.parse (text);
-      return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }
+      const json = JSON.parse (text);'
+      return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }'
         { role: 'user', content: prompt }];
       temperature: 0.2});
-;
+;'
     const text = completion.choices?.[0]?.message?.content ?? '';
-    try {
+    try {}
       const json = JSON.parse (text);
       return res.status (200).json (json);
+<<<<<<< HEAD
       temperature: 0.2,
     });
 
@@ -133,30 +159,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return res.status(200).json(json);
 origin/cursor/automate-test-improve-and-merge-code-2533
     } catch {
+=======
+    } catch {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return fallback ();
     }
-  } catch (err) {
+  } catch (err) {}
     return fallback ();
-  }    } catch {
+  }    } catch {}
       return fallback()
     }
-  } catch (err) {
+  } catch (err) {}
     return fallback()
 }
 
 }
 
       return res.status(200).json(json);
-
+'
     const text = completion.choices?.[0]?.message?.content ?? '';
-    try {
+    try {}
       const json = JSON.parse(text);
       return fallback ();
     }
-  } catch (err) {
+  } catch (err) {}
     return fallback ();
 }
 }
+<<<<<<< HEAD
     return fallback();
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +28,23 @@ const React from";react"";import { Loader2 export const LoadingOverlay = ({ visi
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/LoadingOverlay.jsx
 import React from\';react\'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return (<div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\'/>\' </div>)}\';\"export\": default LoadingOverlay\'';\''\';
+=======
+
+
+import React from\';react\'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return (<div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\'/>\' </div>)}\';\"export\": default LoadingOverlay\'';\''\';'"
 const React from";react"";import { Loader2 export const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white"/>" </div>)}";export: default LoadingOverlay"";""";'"'"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from\';react\'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return (<div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\'/>\' </div>)}\';\"export\": default LoadingOverlay\'';\''\';
+:src.disabled/components/LoadingOverlay.jsx'"
+import React from\';react\'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return (<div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\'/>\' </div>)}\';\"export\": default LoadingOverlay\'';\''\';'"
 const React from";react"";import { Loader2 export const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white"/>" </div>)}";export: default LoadingOverlay"";""";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
+import React from\';react\'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return (<div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\'/>\' </div>)}\';\"export\": default LoadingOverlay\'';\''\';'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const React from";react"";import { Loader2 export const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white"/>" </div>)}";export: default LoadingOverlay"";""";'"'"
+:temp_exclude/src.disabled/components/LoadingOverlay.jsx;
+'"
+import React from\';react\'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return (<div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\'/>\' </div>)}\';\"export\": default LoadingOverlay\'';\''\';'"
+const React from";react"";import { Loader2 export const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white"/>" </div>)}";export: default LoadingOverlay"";""";'"'"
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/LoadingOverlay.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,11 +67,17 @@ import _React from';react'';import { Loader2 export const LoadingOverlay = ({ vi
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
-import _React from';react'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return (<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white'/>' </div>)}';"export": default LoadingOverlay'';''';
 =======
-import React from\';react\'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return (<div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\'/>\' </div>)}\';\"export\": default LoadingOverlay\'';\''\';
-const React from";react"";import { Loader2 export const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white"/>" </div>)}";export: default LoadingOverlay"";""";'"'"
+'"
 import _React from';react'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return (<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white'/>' </div>)}';"export": default LoadingOverlay'';''';
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React from';react'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return (<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white'/>' </div>)}';"export": default LoadingOverlay'';''';
+'"
+import React from\';react\'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return (<div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\'/>\' </div>)}\';\"export\": default LoadingOverlay\'';\''\';'"
+const React from";react"";import { Loader2 export const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white"/>" </div>)}";export: default LoadingOverlay"";""";'"'"'"
+import _React from';react'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return (<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white'/>' </div>)}';"export": default LoadingOverlay'';''';
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -75,3 +95,8 @@ import React from\';react\'';import { Loader2 export const LoadingOverlay = ({ v
 const React from";react"";import { Loader2 export const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white"/>" </div>)}";export: default LoadingOverlay"";""";'"'"
 import _React from';react'';import { Loader2 export const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return (<div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white'/>' </div>)}';"export": default LoadingOverlay'';''';
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

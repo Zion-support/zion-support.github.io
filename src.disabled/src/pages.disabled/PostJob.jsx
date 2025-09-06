@@ -1,25 +1,27 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,10 +41,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}'
 import React from 'react';
-interface PostJobProps {
-  // Add props here as needed
+interface PostJobProps {}
+  // Add props here as needed;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+='
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import React from 'react';
+interface PostJobProps {}
+  // Add props here as needed;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,12 +77,18 @@ export default function PostJob({ }: PostJobProps) {
 =======
 >export default function PostJob({ }: PostJobProps) {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>
+
+export default function PostJob({ }: PostJobProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
       <h1>PostJob</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -208,3 +225,32 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+}
+:src.disabled/src/pages.disabled/PostJob.jsx;
+}
+
+
+}
+
+
+<
+:src.pages.disabled/PostJob.jsx;
+}
+}
+}
+}
+}
+
+
+}
+
+
+
+=
+}
+>
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

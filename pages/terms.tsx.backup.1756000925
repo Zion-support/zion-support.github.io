@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FileText, CheckCircle, AlertTriangle, Shield, Users, Clock } from 'lucide-react';
 =======
 <<<<<<< HEAD
@@ -12,10 +13,14 @@ import {
 } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
 export default function TermsPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -77,11 +82,15 @@ export default function TermsPage() {
   const lastUpdated = "January 15, 2025";
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
         <title>Terms of Service - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -99,12 +108,16 @@ export default function TermsPage() {
         <meta property="og:description" content="Zion Tech Group's terms of service. Read about the terms and conditions governing your use of our services." />
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/terms" />
       </Head>
 
       <EnhancedNavigation />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -532,6 +545,9 @@ export default function TermsPage() {
       </section>
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <EnhancedFooter />
     </>

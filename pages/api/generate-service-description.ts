@@ -13,17 +13,14 @@ export type GenerateServiceDescriptionRequest = {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";"
 import OpenAI from "openai";
 
-import type { NextApiRequest, NextApiResponse } from './next';
+import type { NextApiRequest, NextApiResponse } from './next';'
 import OpenAI from './openai';
 
-<<<<<<< HEAD
-=======
-=======
-export type GenerateServiceDescriptionRequest = {;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -53,6 +50,9 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export type GenerateServiceDescriptionRequest = {
+=======
+export type GenerateServiceDescriptionRequest = {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string;
 
 
@@ -62,28 +62,20 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 =======
 };
 const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
-export type GenerateServiceDescriptionRequest = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+'
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page. Service Title: ${req.body?.title || 'Service'} Target Audience: ${req.body?.targetAudience || 'General'} Key Features: - ${req.body?.keyFeatures?.join('\n- ') || 'Feature 1'} ${req.body?.additionalNotes ? `Additional Notes: ${req.body.additionalNotes}` : ''} ${req.body?.toneInstruction || ''} Requirements: - 2-3 sentence hook opening that addresses audience needs - 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline) - Use clear, benefit-focused language - End with a short call to action`;
-  res.status(200).json({ description: 'Service description generated' });
-import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler() { return null; }
+  const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page. Service Title: ${req.body?.title || 'Service'} Target Audience: ${req.body?.targetAudience || 'General'} Key Features: - ${req.body?.keyFeatures?.join('\n- ') || 'Feature 1'} ${req.body?.additionalNotes ? `Additional Notes: ${req.body.additionalNotes}` : ''} ${req.body?.toneInstruction || ''} Requirements: - 2-3 sentence hook opening that addresses audience needs - 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline) - Use clear, benefit-focused language - End with a short call to action`;'
+  res.status(200).json({ description: 'Service description generated' });'
+import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';
-export type GenerateServiceDescriptionRequest = {
+export type GenerateServiceDescriptionRequest = {};
   title: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,10 +150,20 @@ return res.status(405).json({ error: 'Method not allowed' });
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+export default async function handler(;
+  req: NextApiRequest;
+  res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
+) {}`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.
 Service Title: ${title}
 Target Audience: ${targetAudience}
 Key Features:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -234,10 +236,28 @@ model: 'gpt-4o-mini',
       // Aggregate all text parts from the first message
       description = output.content
 <<<<<<< HEAD
+=======
+"`
+${additionalNotes ? `Additional Notes: ${additionalNotes}` : ""}
+${toneInstruction}
+Requirements:
+- 2-3 sentence hook opening that addresses audience needs;
+'
+      model: 'gpt-4o-mini', input: prompt,
+      temperature: 0.7;
+      });
+'
+    let description = '';
+    const output = response.output?.[0];'
+    if (output && output.type === 'message') {}
+      // Aggregate all text parts from the first message;
+      description = output.content'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .filter((c) => c.type === 'output_text')
-        .map((c: any) => c.text)
+        .map((c: any) => c.text)'
         .join('\n')
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -422,91 +442,79 @@ Requirements:;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+    }
+    if (!description) {}
+      // Fallback to top-level text if available;
+      // @ts-ignore;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const output = response.output?.[0];
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       // Aggregate all text parts from the first message;
       description = output.content;
-<<<<<<< HEAD
-=======
-        .filter ((c) => c.type === "output_text");
-        .map ((c: any) => c.text);
-        .join ("\n");
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      // Fallback to top - level text if available;
-      // @ts - ignore;
-      description =;
-        (response as any).content?.[0]?.text ||;
-        "Unable to generate description at this time.";
-    }
-    return res.status (200).json ({ description });
-  } catch (error: any) {
-<<<<<<< HEAD
-    console.error ("OpenAI generation error:", error);
-    return res.status (500).json ({ error: "Failed to generate description" });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
   }
 }
 
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
     if (!description) {;
       // Fallback to top-level text if available;
-      // @ts-ignore;
+      // @ts-ignore;'
       description = (response as any).content?.[0]?.text || 'Unable to generate description at this time.';
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
     return res.status(200).json({ description });
-  } catch (error) {
-    console.error('OpenAI generation error:', error);
+  } catch (error) {'
+    console.error('OpenAI generation error:', error);'
     return res.status(500).json({ error: 'Failed to generate description' });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -537,3 +545,8 @@ description =
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

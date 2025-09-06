@@ -1,39 +1,42 @@
 <<<<<<< HEAD
 =======
 import React from "react";
-import {
+import {}
   Card,
   CardContent,
   CardDescription,
-  CardHeader,
+  CardHeader,;
   CardTitle,;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 } from "@/components/ui/card";
+=======
+"
+} from "@/components/ui/card";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import {;
   Card,;
   CardContent,;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-
+"
 } from "@/components/ui/card";
-
+"
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
   timeRange: string;
-  onTimeRangeChange: (range: string) => void
+  onTimeRangeChange: (range: string) => void;
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from "react";
@@ -92,11 +95,18 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface PageViewsChartProps {
+=======
+
+
+
+interface PageViewsChartProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   data: Array<{ date: string, views: number }>,
   timeRange: string,
-  onTimeRangeChange: (range: string) => void
+  onTimeRangeChange: (range: string) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,17 +114,9 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 
 =======
 <<<<<<< HEAD
-
-<<<<<<< HEAD
 =======
-} from "@/components/ui/card";
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-interface PageViewsChartProps {;
-  data: Array<{ date: string; views: number }>;
-  timeRange: string;
-  onTimeRangeChange: (range: string) => void
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 export function PageViewsChart(): any ({;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -124,6 +126,7 @@ export function PageViewsChart(): any ({;
   timeRange,;
   onTimeRangeChange,;
 }: PageViewsChartProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -138,9 +141,24 @@ export function PageViewsChart(): any ({;
       </CardHeader>
       <CardContent className="p-0 pb-4">
         <AnalyticsChart
-          title=""
-<<<<<<< HEAD
+=======
 
+
+
+  return ("
+    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;"
+      <CardHeader className="pb-2">;"
+        <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>;"
+        <CardDescription className="text-zion-slate-light">;
+          Daily page view statistics;
+        </CardDescription>;
+      </CardHeader>;"
+      <CardContent className="p-0 pb-4">;
+        <AnalyticsChart"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          title=""
+
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -162,12 +180,16 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           data={data |[]}
+=======
+          data={data |[]}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />
       </CardContent>
     </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -179,6 +201,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+import React from "react",;"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
 interface PageViewsChartProps {;
   data: Array<{ date: string, views: number }>,;
@@ -186,6 +213,7 @@ interface PageViewsChartProps {;
   onTimeRangeChange: (range: string) => void;
 }
 ;
+<<<<<<< HEAD
 export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {;
   return (;
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
@@ -215,10 +243,23 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           data={data || []}
           dataKeys={["views"]}          onTimeRangeChange={onTimeRangeChange}
+=======
+export function PageViewsChart() { return null; }
+          data={data || []}"
+          dataKeys={["views"]}
+
+
+          data={data || []}"
+          dataKeys={["views"]}
+
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         />;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -232,37 +273,41 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    </Card>;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 import React from './react';
-import {
+import {}
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle,';
+} from '@/components / ui / card';'
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
-interface PageViewsChartProps {
+interface PageViewsChartProps {}
   data: Array<{ date: string; views: number }>;
   time_range: string;
   onTimeRangeChange: (range: string) => void;
 }
-export /**
- * PageViewsChart - Function description
+export /**;
+ * PageViewsChart - Function description;
  */
-function PageViewsChart() {
-  return (
-    <Card className="bg - zion - blue - dark border - zion - blue - light overflow - hidden">;
-      <CardHeader className="pb - 2">;
-        <CardTitle className="text - white text - lg">Page Views Trend</CardTitle>;
+function PageViewsChart() {}
+  return ("
+    <Card className="bg - zion - blue - dark border - zion - blue - light overflow - hidden">;"
+      <CardHeader className="pb - 2">;"
+        <CardTitle className="text - white text - lg">Page Views Trend</CardTitle>;"
         <CardDescription className="text - zion - slate - light">;
           Daily page view statistics;
         </CardDescription>;
-      </CardHeader>;
+      </CardHeader>;"
       <CardContent className="p - 0 pb - 4">;
-        <AnalyticsChart;
+        <AnalyticsChart;"
           title="";
-          data={data || []}
+          data={data || []}"
           data_keys={["views"]}
           time_range={time_range}
           onTimeRangeChange={onTimeRangeChange}
@@ -270,6 +315,7 @@ function PageViewsChart() {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -314,3 +360,9 @@ onTimeRangeChange: (range: string) => void
     </Card>;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -96,10 +97,14 @@ export default function CaseStudiesPage() {
     { id: 'automation', name: 'Business Automation', count: 8 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const featuredCaseStudies = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -379,10 +384,14 @@ export default function CaseStudiesPage() {
 
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <Layout>
       <SEO 
         title="Case Studies - Zion Tech Group"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -408,11 +417,15 @@ export default function CaseStudiesPage() {
           <div className="relative z-10 container mx-auto px-4 text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -527,6 +540,9 @@ export default function CaseStudiesPage() {
           <div className="container mx-auto px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -534,6 +550,7 @@ export default function CaseStudiesPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -630,6 +647,9 @@ export default function CaseStudiesPage() {
                     </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
@@ -637,6 +657,7 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Featured Case Studies */}
         <section id="featured" className="py-20 px-4">
@@ -652,6 +673,9 @@ export default function CaseStudiesPage() {
           <div className="container mx-auto px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -659,6 +683,7 @@ export default function CaseStudiesPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -803,11 +828,15 @@ export default function CaseStudiesPage() {
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* All Case Studies */}
         <section className="py-20 px-4 bg-black/30">
@@ -823,6 +852,9 @@ export default function CaseStudiesPage() {
           <div className="container mx-auto px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -830,6 +862,7 @@ export default function CaseStudiesPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -977,6 +1010,9 @@ export default function CaseStudiesPage() {
           <div className="container mx-auto px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -984,6 +1020,7 @@ export default function CaseStudiesPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1079,12 +1116,16 @@ export default function CaseStudiesPage() {
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -1097,12 +1138,16 @@ export default function CaseStudiesPage() {
           <div className="container mx-auto px-4 text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1148,11 +1193,15 @@ export default function CaseStudiesPage() {
                   Explore Our Solutions
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1172,3 +1221,6 @@ export default CaseStudiesPage;
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const pages = [
 =======
 
@@ -15,60 +16,77 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '/certifications'
       '/blog'
       '/services'
+=======
+
+
+    const pages = []
+      '/''
+      '/about''
+      '/learn''
+      '/dao''
+      '/certifications''
+      '/blog''
+      '/services''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       '/talent'
     ];
     const xml =
-      `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +
-      `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +
-      pages && pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
+      `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +"`
+      `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +'`
+      pages && pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +`
       `</urlset>`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const owner = process && process.env.GITHUB_OWNER;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
-    if (owner && repo && token) {
-      await upsertFile({
+    if (owner && repo && token) {}
+      await upsertFile({}
         owner,
-        repo,
-        path: 'public/sitemap-autogen && autogen.xml',
+        repo,'
+        path: 'public/sitemap-autogen && autogen.xml','
 const { upsert_file } = require ('./_lib / github');
 ;
-exports.handler = async function () {
-  try {
+exports.handler = async function () {}
+  try {'
     const base_url = process.env.URL || process.env.DEPLOY_URL || '';
-    const pages = [;
-      '/',
-      '/about',
-      '/learn',
-      '/dao',
-      '/certifications',
-      '/blog',
-      '/services',
+    const pages = [;'
+      '/','
+      '/about','
+      '/learn','
+      '/dao','
+      '/certifications','
+      '/blog','
+      '/services','
       '/talent',
     ];
-    const xml =;
-      `<?xml version="1.0" encoding="UTF - 8"?>\n` +;
-      `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;
-      pages.map (p => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;
+    const xml =;"`
+      `<?xml version="1.0" encoding="UTF - 8"?>\n` +;"`
+      `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;'`
+      pages.map (p => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;`
       `</urlset>`;
 ;
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
 ;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      await upsert_file ({
+      await upsert_file ({}
         owner,
-        repo,
+        repo,'
         path: 'public / sitemap - autogen.xml',
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -77,10 +95,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
         content: xml,
+=======
+
+
+        content: xml,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         message: 'chore (automation): weekly sitemap refresh',
         token,
       });
     }
+<<<<<<< HEAD
     return {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,19 +127,29 @@ exports.handler = async function() {
     const pages = ['//about/learn/dao/certifications/blog/services/talent'],
     const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
       `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
+=======
+    return {}
+exports.handler = async function() {}
+  try {'
+    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '','
+    const pages = ['//about/learn/dao/certifications/blog/services/talent'],"`
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +"`
+      `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
       status_code: 200,
       body: JSON.stringify ({ ok: true, pages: pages.length }),
     }
-  } catch (e) {
+  } catch (e) {}
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-}  try {
-    const base_url = process.env.URL || process.env.DEPLOY_URL || '',
-    const pages = ['//about / learn / dao / certifications / blog / services / talent'],
-    const xml = `<?xml version="1.0" encoding="UTF - 8"?>\n` +;
-      `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;
+}  try {'
+    const base_url = process.env.URL || process.env.DEPLOY_URL || '','
+    const pages = ['//about / learn / dao / certifications / blog / services / talent'],"`
+    const xml = `<?xml version="1.0" encoding="UTF - 8"?>\n` +;"`
+      `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;'`
       pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -141,12 +175,17 @@ ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+=======
+
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       `</urlset>`,
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
 <<<<<<< HEAD
 <<<<<<< HEAD
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 =======
 
 ursor/expand-services-advertise-and-build-project-4b36
@@ -171,23 +210,36 @@ if ( {) {
   }
 
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+
+
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      await upsert_file ({ owner, repo, path: 'public / sitemap - autogen.xml', content: xml, message: 'chore (automation): weekly sitemap refresh', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, pages: pages.length }) }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       statusCode: 200,
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }),
     };
-  } catch (e) {
+  } catch (e) {}
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
   }
-};  try {
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
-    const pages = ['//about/learn/dao/certifications/blog/services/talent'],
-    const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +
-      `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +
-      pages && pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
+};  try {'
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '','
+    const pages = ['//about/learn/dao/certifications/blog/services/talent'],"`
+    const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +"`
+      `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +'`
+      pages && pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +`
       `</urlset>`,
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen && autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
@@ -225,3 +277,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  } catch (e) {}
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+}
+
+},
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

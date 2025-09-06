@@ -85,6 +85,7 @@ export type UserRole = 'admin' | 'user' | 'guest';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export type UserRole = "admin" | "user" | "guest";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 export type UserRole = "admin" | "user" | "guest";
@@ -125,3 +126,6 @@ export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin'
 export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin' | 'user' | 'guest';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

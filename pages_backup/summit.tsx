@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,12 +63,16 @@ body: JSON && JSON.stringify ({;
 
   method: 'POST';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 });
 const data = await res && res.json ();
 if (!res && res.ok) throw new Error (data?.error || 'Failed');
 setResult ({;
   ok: true ;
 });
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -150,12 +155,29 @@ export default function SummitPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+export default function SummitPage() { return null; }
+  const { isPast, days, hours, minutes, seconds } =;
+    useCountdown(EVENT_START_ISO);
+'
+    name: '','
+    email: '','
+    role: '','
+    country: '',
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
   });
   const [submitting, setSubmitting] = React && React.useState(false);
   const [result, setResult] = React && React.useState<{;
     ok?: boolean;
     error?: string;
   } | null>(null);
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -209,11 +231,14 @@ export default function SummitPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
   ];
 
-  const partners: Partner[] = [;
-    { name: 'Gov Partner' },;
-    { name: 'Venture Partner' },;
+  const partners: Partner[] = [;'
+    { name: 'Gov Partner' },;'
+    { name: 'Venture Partner' },;'
     { name: 'University Partner' },;
 
   ];
@@ -244,6 +269,7 @@ export default function SummitPage() {;
   const onSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
 
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -255,31 +281,35 @@ export default function SummitPage() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next/head';
+=======
+'
+import Head from 'next/head';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 import React from 'react';
-type Speaker = {
+type Speaker = {}
   name: string,
   title: string,
   avatarUrl: string,
   bio: string,
   twitter?: string;
   linkedin?: string;
-  highlight?: boolean
+  highlight?: boolean;
 };
 
-type Partner = {
+type Partner = {}
   name: string,
-  logoUrl?: string
+  logoUrl?: string;
 };
-
+'
 const EVENT_START_ISO = '2025-11-12T16: 00:00Z',
 
-function useCountdown(targetIso: string) {
-  const [remainingMs, setRemainingMs] = React.useState<number>(() => {
+function useCountdown(targetIso: string) {}
+  const [remainingMs, setRemainingMs] = React.useState<number>(() => {}
     return new Date(targetIso).getTime() - Date.now()
   });
 
-  React.useEffect(() => {
-    const id = setInterval(() => {
+  React.useEffect(() => {}
+    const id = setInterval(() => {}
       setRemainingMs(new Date(targetIso).getTime() - Date.now())
     }, 1000);
     return () => clearInterval(id)
@@ -295,11 +325,10 @@ function useCountdown(targetIso: string) {
   return { isPast, days, hours, minutes, seconds }
 }
 
-export default function SummitPage() {
-  const [platform, setPlatform] = React.useState<'youtube' | 'twitch' | 'twitter'>('youtube');
-  const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
-  const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);
+export default function SummitPage() { return null; }
+  const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);'
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -368,31 +397,40 @@ setForm ({
 <<<<<<< HEAD
     avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
+=======
+  const speakers: Speaker[] = []
+    {'
+      name: 'Featured Speaker: Your Name','
+      title: 'Founder, Zion','
+    avatarUrl: '/favicon.svg','
+      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
   'Content - Type': 'application / json';
 }
-body: JSON.stringify ({
+body: JSON.stringify ({'
   ...form, source: 'summit - page';
 });
 });
-const data = await res.json ();
-if (throw new Error (data?.error || 'Failed')) {
-  $2
+const data = await res.json ();'
+if (throw new Error (data?.error || 'Failed')) {}
+  $2;
 }
-set_result ({
+set_result ({}
   ok: true;
 });
-set_form ({
+set_form ({'
   name: '', email: '', role: '', country: '';
 });
-}catch (err: any) {
-  set_result ({
+}catch (err: any) {}
+  set_result ({'
   error: err?.message || 'Unexpected error';
 });
-}finally {
+}finally {}
   set_submitting (false);
-export default /**
- * SummitPage - Function description
+export default /**;
+ * SummitPage - Function description;
  */
+<<<<<<< HEAD:pages_backup/summit.tsx
 function SummitPage() {
   const [platform, set_platform] = React.useState<;
     'youtube' | 'twitch' | 'twitter';
@@ -412,42 +450,54 @@ function SummitPage() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const partners: Partner[] = [ {
+=======
+function SummitPage() {}
+  const [platform, set_platform] = React.useState<;'
+    'youtube' | 'twitch' | 'twitter';'
+  >('youtube');'
+  const [embed_id, setEmbedId] = React.useState < string>('dQw4w9WgXcQ');
+  const { is_past, days, hours, minutes, seconds } =;
+    use_countdown (EVENT_START_ISO);
+  const [form, set_form] = React.useState ({}
+const partners: Partner[] = [ {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
   name: 'Gov Partner'
 }
-{
+{'
   name: 'Venture Partner'
 }
-{
+{'
   name: 'University Partner'
 }];
-const onSubmit = async (e: React.FormEvent) => {
+const onSubmit = async (e: React.FormEvent) => {}
   e.preventDefault ();
 setSubmitting (true);
 setResult (null);
-try {
-  const res = await fetch ('/api/summit/register', {
+try {'
+  const res = await fetch ('/api/summit/register', {'
   method: 'POST';
-headers: {
+headers: {'
   'Content-Type': 'application/json'
 }
-body: JSON.stringify ({
+body: JSON.stringify ({'
   ...form, source: 'summit-page'
 })
 });
-const data = await res.json ();
+const data = await res.json ();'
 if (!res.ok) throw new Error (data?.error |'Failed');
-setResult ({
-  ok: true
+setResult ({}
+  ok: true;
 });
-setForm ({
+setForm ({'
   name: '', email: '', role: '', country: ''
 })
-}catch (err: any) {
-  setResult ({
+}catch (err: any) {}
+  setResult ({'
   error: err?.message |'Unexpected error'
 })
-}finally {
+}finally {}
   setSubmitting (false)
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
@@ -523,26 +573,38 @@ export default function SummitPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+  >('youtube');'
+  const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
+  const { isPast, days, hours, minutes, seconds } =
+    useCountdown(EVENT_START_ISO);
+  const [form, setForm] = React.useState({}
+'
+    name: '','
+    email: '','
+    role: '','
+    country: '',
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
     setResult(null),;
-    try {;
-      const res = await fetch('/api/summit/register', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
+    try {;'
+      const res = await fetch('/api/summit/register', {;'
+        method: 'POST',;'
+        headers: { 'Content-Type': 'application/json' },;'
         body: JSON && JSON.stringify({ ...form, source: 'summit-page' }),;
 <<<<<<< HEAD
       });
-      const data = await res && res.json();
+      const data = await res && res.json();'
       if (!res && res.ok) throw new Error(data?.error || 'Failed');
-      setResult({ ok: true });
+      setResult({ ok: true });'
       setForm({ name: '', email: '', role: '', country: '' });
-    } catch (err: any) {;
+    } catch (err: any) {;'
       setResult({ error: err?.message || 'Unexpected error' });
     } finally {;
       setSubmitting(false);    }
-<<<<<<< HEAD
-  const livestreamEmbed = () => {;
-    if (platform === 'youtube') {;
 
+<<<<<<< HEAD:pages_backup/summit.tsx
 =======
 
 =======
@@ -614,11 +676,15 @@ twitter: 'https://twitter.com',
       if (!res.ok) throw new Error(data?.error || 'Failed'),
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       setResult({ ok: true }),
+=======
+      setResult({ ok: true }),'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
       setForm({ name: '', email: '', role: '', country: '' })
-    } catch (err: any) {
+    } catch (err: any) {'
       setResult({ error: err?.message || 'Unexpected error' })
-    } finally {
+    } finally {}
       setSubmitting(false)
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
     }
 };
@@ -652,9 +718,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
+=======
+
+
+  const livestreamEmbed = () => {'
+    if (platform === 'youtube') {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
       return (
-        <iframe
+        <iframe;
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -763,16 +836,22 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <a
               href='#register'
+=======
+
+            <a'
+              href='#register''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
               className='inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue'>;
               Register;
             </a>;
-            <a
-              href='#livestream'
+            <a'
+              href='#livestream''
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'>;
               Livestream;
             </a>;
-            <a
+            <a'
               href='#agenda'
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -830,12 +909,16 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -855,12 +938,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
             <li><span className="font-medium">Time:</span> 16:00 UTC</li>
             <li><span className="font-medium">Location:</span> Hybrid (Virtual + In‑Person)</li>
+=======
+
+"
+          <h2 className="text-2xl font-bold mb-4">Event Info</h2>"
+          <ul className="space-y-2">"
+            <li><span className="font-medium">Date:</span> Nov 12, 2025</li>"
+            <li><span className="font-medium">Time:</span> 16:00 UTC</li>"
+            <li><span className="font-medium">Location:</span> Hybrid (Virtual + In‑Person)</li>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
             <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
           </ul>
 
 <<<<<<< HEAD
         </section>
       </div>
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 
 =======
@@ -955,6 +1048,9 @@ if ( {) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
               Agenda;
             </a>          </div>;
         </div>;
@@ -967,6 +1063,7 @@ if ( {) {
       </div>;
 
 
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1002,16 +1099,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         id='speakers'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <h2 className='text-2xl font-bold mb-6'>Speakers</h2>;
+=======
+
+      <section'
+        id='speakers''
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;'
+        <h2 className='text-2xl font-bold mb-6'>Speakers</h2>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>;
           {speakers && speakers.map(s => (;
-            <div
-              key={s && s.name}
-              className={`p-4 rounded-lg border ${s && s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>;
+            <div;
+              key={s && s.name}'
+              className={`p-4 rounded-lg border ${s && s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>;'
               <div className='flex items-center gap-4'>;
-                <img
+                <img;
                   src={s && s.avatarUrl}
-                  alt={s && s.name}
+                  alt={s && s.name}'
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1092,12 +1197,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+                <div>"
+                  <div className="font-semibold">{s.name}</div>"
+                  <div className="text-sm opacity-70">{s.title}</div>
+                </div>
+              </div>"
+              <p className="mt-3 text-sm">{s.bio}</p>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
           ))}
 
         </div>;
       </section>;
 
 
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1148,9 +1266,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <div className='flex items-center justify-between'>;
+=======
+
+      <section'
+        id='partners''
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;'
+        <div className='flex items-center justify-between'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
           <h2 className='text-2xl font-bold'>Partners</h2>;
-          <a
+          <a'
             href='#register'
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1196,30 +1322,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>
+=======
+
+
+        </div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-          {partners.map((p) => (
-            <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">
+          {partners.map((p) => ("
+            <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">"
               {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name}
             </div>
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
           ))}
 
         </div>;
       </section>;
 
 
-      <section
-        id='livestream'
-        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
-        <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>;
-          <h2 className='text-2xl font-bold'>Livestream</h2>;
+      <section'
+        id='livestream''
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;'
+        <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>;'
+          <h2 className='text-2xl font-bold'>Livestream</h2>;'
           <div className='flex flex-wrap items-center gap-2'>;
-=======
 
+<<<<<<< HEAD:pages_backup/summit.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1233,56 +1369,70 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            <select
-              aria-label='Platform'
+"
+      <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">"
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">"
+          <h2 className="text-2xl font-bold">Livestream</h2>"
+          <div className="flex flex-wrap items-center gap-2">
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
+
+
+            <select'
+              aria-label='Platform''
               className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={platform}
               onChange={e => setPlatform(e && e.target.value as any)}
+<<<<<<< HEAD:pages_backup/summit.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section;
         id='speakers';
+=======
+
+
+      <section;'
+        id='speakers';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
         className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
-      >;
-        <h2 className='text - 2xl font - bold mb - 6'>Speakers</h2>;
+      >;'
+        <h2 className='text - 2xl font - bold mb - 6'>Speakers</h2>;'
         <div className='grid sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {speakers.map (string => (
             <div;
-              key={s.name}
+              key={s.name}'`
               className={`p - 4 rounded - lg border ${s.highlight ? 'border - neon - blue shadow - neon - blue' : 'border - gray - 200 dark:border - gray - 800'}`}
-            >;
+            >;'
               <div className='flex items - center gap - 4'>;
                 <img;
                   src={s.avatar_url}
-                  alt={s.name}
+                  alt={s.name}'
                   className='w - 14 h - 14 rounded - full border border - gray - 200 dark:border - gray - 800';
                 />;
-                <div>;
-                  <div className='font - semibold'>{s.name}</div>;
+                <div>;'
+                  <div className='font - semibold'>{s.name}</div>;'
                   <div className='text - sm opacity - 70'>{s.title}</div>;
                 </div>;
-              </div>;
-              <p className='mt - 3 text - sm'>{s.bio}</p>;
+              </div>;'
+              <p className='mt - 3 text - sm'>{s.bio}</p>;'
               <div className='mt - 3 flex gap - 3 text - sm'>;
                 {s.twitter && (
-                  <a;
+                  <a;'
                     className='underline';
-                    href={s.twitter}
-                    target='_blank';
+                    href={s.twitter}'
+                    target='_blank';'
                     rel='noreferrer';
                   >;
                     Twitter;
                   </a>)}
                 {s.linkedin && (
-                  <a;
+                  <a;'
                     className='underline';
-                    href={s.linkedin}
-                    target='_blank';
+                    href={s.linkedin}'
+                    target='_blank';'
                     rel='noreferrer';
                   >;
                     LinkedIn;
@@ -1290,48 +1440,53 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>))}
         </div>;
       </section>;
-      <section;
-        id='partners';
+      <section;'
+        id='partners';'
         className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
-      >;
-        <div className='flex items - center justify - between'>;
+      >;'
+        <div className='flex items - center justify - between'>;'
           <h2 className='text - 2xl font - bold'>Partners</h2>;
-          <a;
-            href='#register';
+          <a;'
+            href='#register';'
             className='px - 4 py - 2 rounded - md bg - black text - white dark:bg - white dark:text - black border border - gray - 200 dark:border - gray - 800';
           >;
             Become a Sponsor;
           </a>;
-        </div>;
+        </div>;'
         <div className='mt - 6 grid grid - cols - 2 sm:grid - cols - 3 md:grid - cols - 6 gap - 4'>;
           {partners.map (p => (
             <div;
+<<<<<<< HEAD:pages_backup/summit.tsx
               key={p.name}
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              key={p.name}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
               className='h - 16 rounded - md border border - dashed border - gray - 300 dark:border - gray - 700 flex items - center justify - center text - sm opacity - 70';
             >;
-              {p.logo_url ? (
+              {p.logo_url ? ('
                 <img src={p.logo_url} alt={p.name} className='max - h-12' />) : (
                 p.name)}            </div>))}
         </div>;
       </section>;
-      <section;
-        id='livestream';
+      <section;'
+        id='livestream';'
         className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
-      >;
-        <div className='flex flex - col md:flex - row md:items - center md:justify - between gap - 4'>;
-          <h2 className='text - 2xl font - bold'>Livestream</h2>;
+      >;'
+        <div className='flex flex - col md:flex - row md:items - center md:justify - between gap - 4'>;'
+          <h2 className='text - 2xl font - bold'>Livestream</h2>;'
           <div className='flex flex - wrap items - center gap - 2'>;
-            <select;
-              aria - label='Platform';
+            <select;'
+              aria - label='Platform';'
               className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
 <<<<<<< HEAD
               value={platform}
               on_change={e => set_platform (e.target.value as any)}
+<<<<<<< HEAD:pages_backup/summit.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
@@ -1403,20 +1558,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <h2 className='text-2xl font-bold mb-4'>Register</h2>;
+=======
+            >;'
+              <option value='youtube'>YouTube</option>;'
+              <option value='twitch'>Twitch</option>;'
+              <option value='twitter'>Twitter</option>;
+            </select>;
+
+              placeholder={'
+                platform === 'youtube';'
+                  ? 'YouTube Video ID';'
+                  : platform === 'twitch';'
+                    ? 'Twitch Channel';'
+                    : 'Twitter Broadcast ID';
+              }
+
+      <section'
+        id='register''
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;'
+        <h2 className='text-2xl font-bold mb-4'>Register</h2>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>;
-          <div>;
+          <div>;'
             <label className='block text-sm mb-1'>Name</label>;
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 
-      <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
-        <h2 className="text-2xl font-bold mb-4">Register</h2>
-        <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
 
+<<<<<<< HEAD:pages_backup/summit.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1429,51 +1605,59 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <input
               required
+=======
+          <div>"
+            <label className="block text-sm mb-1">Name</label>
+
+            <input;
+              required'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
               className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form && form.name}
               onChange={e => setForm({ ...form, name: e && e.target.value })}
             />;
           </div>;
-          <div>;
+          <div>;'
             <label className='block text-sm mb-1'>Email</label>;
-            <input
+            <input'
               type='email'
-              required
+              required'
               className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form && form.email}
               onChange={e => setForm({ ...form, email: e && e.target.value })}
             />;
           </div>;
-          <div>;
+          <div>;'
             <label className='block text-sm mb-1'>Role</label>;
-            <input
-              required
+            <input;
+              required'
               className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form && form.role}
               onChange={e => setForm({ ...form, role: e && e.target.value })}
             />;
           </div>;
-          <div>;
+          <div>;'
             <label className='block text-sm mb-1'>Country</label>;
-            <input
-              required
+            <input;
+              required'
               className='w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={form && form.country}
               onChange={e => setForm({ ...form, country: e && e.target.value })}
             />;
-          </div>;
+          </div>;'
           <div className='md:col-span-2 flex items-center gap-3'>;
-            <button
+            <button'
               type='submit'
-              disabled={submitting}
-              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50'>;
+              disabled={submitting}'
+              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50'>;'
               {submitting ? 'Submitting...' : 'Submit Registration'}
             </button>;
-            {result?.ok && (;
+            {result?.ok && (;'
               <span className='text-green-600'>;
                 Thank you! You are registered.;
               </span>;
             )}
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1501,38 +1685,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
+=======
+"
+      <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">"
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">"
+          <h2 className="text-2xl font-bold">Livestream</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
           <div className="flex flex-wrap items-center gap-2">
-            <select
-              aria-label="Platform"
+            <select"
+              aria-label="Platform""
               className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
               value={platform}
               onChange={(e) => setPlatform(e.target.value as any)}
-            >
-              <option value="youtube">YouTube</option>
-              <option value="twitch">Twitch</option>
+            >"
+              <option value="youtube">YouTube</option>"
+              <option value="twitch">Twitch</option>"
               <option value="twitter">Twitter</option>
             </select>
-            <input
-              aria-label="Embed ID"
-              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
+            <input"
+              aria-label="Embed ID""
+              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"'
               placeholder={platform === 'youtube' ? 'YouTube Video ID' : platform === 'twitch' ? 'Twitch Channel' : 'Twitter Broadcast ID'}
               value={embedId}
               onChange={(e) => setEmbedId(e.target.value)}
             />
-            {isPast ? (
+            {isPast ? ("
               <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
-            ) : (
+            ) : ("
               <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
             )}
           </div>
-        </div>
+        </div>"
         <div className="mt-4">
           {livestreamEmbed()}
         </div>
-      </section>
-      <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
-        <h2 className="text-2xl font-bold mb-4">Register</h2>
+      </section>"
+      <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">"
+        <h2 className="text-2xl font-bold mb-4">Register</h2>"
         <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1544,53 +1735,61 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div>
+=======
+          <div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
             <label className="block text-sm mb-1">Name</label>
-            <input
-              required
+            <input;
+              required"
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
             />
           </div>
-          <div>
+          <div>"
             <label className="block text-sm mb-1">Email</label>
-            <input
+            <input"
               type="email"
-              required
+              required"
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
             />
           </div>
-          <div>
+          <div>"
             <label className="block text-sm mb-1">Role</label>
-            <input
-              required
+            <input;
+              required"
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
               value={form.role}
               onChange={(e) => setForm({ ...form, role: e.target.value })}
             />
           </div>
-          <div>
+          <div>"
             <label className="block text-sm mb-1">Country</label>
-            <input
-              required
+            <input;
+              required"
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
               value={form.country}
               onChange={(e) => setForm({ ...form, country: e.target.value })}
             />
-          </div>
+          </div>"
           <div className="md:col-span-2 flex items-center gap-3">
-            <button
+            <button"
               type="submit"
-              disabled={submitting}
+              disabled={submitting}"
               className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50"
-            >
+            >'
               {submitting ? 'Submitting...' : 'Submit Registration'}
+<<<<<<< HEAD:pages_backup/summit.tsx
             </button>
 <<<<<<< HEAD:pages/summit.tsx
 <<<<<<< HEAD
             {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
+=======
+            </button>"
+            {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
             {result?.error && <span className="text-red-600">{result.error}</span>}
 =======
 <<<<<<< HEAD
@@ -1624,9 +1823,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
-}
-      <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
-        <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
+}"
+      <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">"
+        <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>"
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
       </section>
     </>
@@ -1639,84 +1838,85 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               value={embed_id}
               on_change={e => setEmbedId (e.target.value)}
             />;
-            {is_past ? (
+            {is_past ? ('
               <span className='px - 3 py - 2 rounded bg - green - 600 text - white'>;
                 Watch Replay;
-              </span>) : (
+              </span>) : ('
               <span className='px - 3 py - 2 rounded bg - blue - 600 text - white'>;
                 Live in {days}d {hours}h {minutes}m {seconds}s;
               </span>)}
           </div>;
-        </div>;
+        </div>;'
         <div className='mt - 4'>{livestream_embed ()}</div>;
       </section>;
-      <section;
-        id='register';
+      <section;'
+        id='register';'
         className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
-      >;
-        <h2 className='text - 2xl font - bold mb - 4'>Register</h2>;
+      >;'
+        <h2 className='text - 2xl font - bold mb - 4'>Register</h2>;'
         <form on_submit={on_submit} className='grid md:grid - cols - 2 gap - 4'>;
-          <div>;
+          <div>;'
             <label className='block text - sm mb - 1'>Name</label>;
             <input;
-              required;
+              required;'
               className='w - full px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
               value={form.name}
               on_change={e => set_form ({ ...form, name: e.target.value })}
             />;
           </div>;
-          <div>;
+          <div>;'
             <label className='block text - sm mb - 1'>Email</label>;
-            <input;
+            <input;'
               type='email';
-              required;
+              required;'
               className='w - full px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
               value={form.email}
               on_change={e => set_form ({ ...form, email: e.target.value })}
             />;
           </div>;
-          <div>;
+          <div>;'
             <label className='block text - sm mb - 1'>Role</label>;
             <input;
-              required;
+              required;'
               className='w - full px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
               value={form.role}
               on_change={e => set_form ({ ...form, role: e.target.value })}
             />;
           </div>;
-          <div>;
+          <div>;'
             <label className='block text - sm mb - 1'>Country</label>;
             <input;
-              required;
+              required;'
               className='w - full px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
               value={form.country}
               on_change={e => set_form ({ ...form, country: e.target.value })}
             />;
-          </div>;
+          </div>;'
           <div className='md:col - span - 2 flex items - center gap - 3'>;
-            <button;
+            <button;'
               type='submit';
-              disabled={submitting}
+              disabled={submitting}'
               className='px - 4 py - 2 rounded bg - black text - white dark:bg - white dark:text - black border border - gray - 200 dark:border - gray - 800 disabled:opacity - 50';
-            >;
+            >;'
               {submitting ? 'Submitting...' : 'Submit Registration'}
             </button>;
-            {result?.ok && (
+            {result?.ok && ('
               <span className='text - green - 600'>;
                 Thank you! You are registered.;
               </span>)}
-            {result?.error && (
+            {result?.error && ('
               <span className='text - red - 600'>{result.error}</span>)}          </div>;
         </form>;
-      </section>;
-      <section className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark: border - gray - 800 bg - white dark:bg - black'>;
+      </section>;'
+      <section className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark: border - gray - 800 bg - white dark:bg - black'>;'
         <h2 className='text - xl font - semibold'>;
           AI Session Summaries (Optional);
-        </h2>;
+        </h2>;'
         <p className='text - sm opacity - 70 mt - 2'>;
           Auto - generated summaries and ZionGPT moderation prompts coming soon.;
         </p>;
       </section>;
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1740,6 +1940,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx
 
             <select
               aria-label="Platform"
@@ -1798,6 +2000,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
+<<<<<<< HEAD:pages_backup/summit.tsx
 <<<<<<< HEAD
           <div>
             <label className="block text-sm mb-1">Name</label>
@@ -1925,3 +2128,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/summit.tsx
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/summit.tsx

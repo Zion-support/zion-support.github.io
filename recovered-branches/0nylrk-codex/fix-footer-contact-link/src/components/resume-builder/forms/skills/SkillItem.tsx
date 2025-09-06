@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -94,25 +95,43 @@ import { SkillItemProps } from './types',  return (
     <Badge
       key={skill.id}
       variant="secondary"
+=======
+import { Badge } from "@/components/ui/badge";"
+import { Button } from "@/components/ui/button";"
+import { Trash2 } from "lucide-react";"
+import { SkillItemProps } from "./types";
+export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {}
+  return (;
+    <Badge;
+      key={skill.id}"
+      variant="secondary""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       className="flex items-center gap-1 py-1 && 1.5 px-3">;
       {skill && skill.name}
-      {skill && skill.proficiency && (;
+      {skill && skill.proficiency && (;"
         <span className="ml-1 text-xs opacity-60">({skill && skill.proficiency}/5)</span>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       )}
-      <Button
-        variant="ghost"
-        size="icon"
+      <Button"
+        variant="ghost""
+        size="icon""
         className="h-5 w-5 p-0 ml-1"
 <<<<<<< HEAD
 <<<<<<< HEAD
         onClick={() => onDelete(skill.id!, category)}
-      >
+      >"
         <Trash2 className="h-3 w-3" />
       </Button>
     </Badge>
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 }
 
   )
@@ -160,7 +179,30 @@ import { SkillItemProps } from './types',  return (
         on_click={() => on_delete (skill.id!, category)}
       >;
         <Trash2 className="h - 3 w-3" />;
+=======
+};"
+      variant="secondary";"
+      className="flex items - center gap - 1 py - 1.5 px - 3";
+    >;
+      {skill.name}
+      {skill.proficiency && ("
+        <span className="ml - 1 text - xs opacity - 60">({skill.proficiency}/5)</span>)}
+      <Button;"
+        variant="ghost";"
+        size="icon";"
+        className="h - 5 w - 5 p - 0 ml - 1";
+        on_click={() => on_delete (skill.id!, category)}
+      >;"
+        <Trash2 className="h - 3 w - 3" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </Button>;
     </Badge>);
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

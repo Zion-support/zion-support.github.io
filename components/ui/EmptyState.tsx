@@ -6,7 +6,7 @@ import React from "react";
 import Link from "next/link";
 origin/cursor/automate-test-improve-and-merge-code-2533
 import EnhancedButton from "./EnhancedButton";
-export type EmptyStateProps = {
+export type EmptyStateProps = {};
   title: string;
   description?: string;
   primaryAction?: { label: string; href: string };
@@ -25,47 +25,52 @@ export default function EmptyState(): any ({;
   primaryAction?: { label: string; href: string };
   secondaryAction?: { label: string; href: string }
 };
-
+'
 import React from 'react';
 
-interface EmptyStateProps {
+interface EmptyStateProps {}
   className?: string;
 }
 
-const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
-  return (
-    <div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>;
-      <div className='text-3xl opacity-70'>{icon ?? '🧭'}</div>;
+const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {}
+  return ('
+    <div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>;'
+      <div className='text-3xl opacity-70'>{icon ?? '🧭'}</div>;'
       <h3 className='text-lg font-semibold'>{title}</h3>;
-      {description && (;
+      {description && (;'
         <p className='text-sm opacity-80 max-w-prose'>{description}</p>;
       )}
-
-import React from 'react';
-import Link from 'next/link';
+'
+import React from 'react';'
+import Link from 'next/link';'
 import EnhancedButton from './EnhancedButton';
-export type EmptyStateProps = {
+export type EmptyStateProps = {};
   primary_action?: { label: string; href: string }
   secondary_action?: { label: string; href: string }
 }
 ;
-export default /**
- * EmptyState - Function description
+export default /**;
+ * EmptyState - Function description;
  */
-function EmptyState() {
-  return (
-    <div className='w - full border border - dashed border - gray - 300 dark:border - gray - 700 rounded - lg p - 6 text - center flex flex - col items - center gap - 3'>;
-      <div className='text - 3xl opacity - 70'>{icon ?? '🧭'}</div>;
+function EmptyState() {}
+  return ('
+    <div className='w - full border border - dashed border - gray - 300 dark:border - gray - 700 rounded - lg p - 6 text - center flex flex - col items - center gap - 3'>;'
+      <div className='text - 3xl opacity - 70'>{icon ?? '🧭'}</div>;'
       <h3 className='text - lg font - semibold'>{title}</h3>;
-      {description && (
+      {description && ('
         <p className='text - sm opacity - 80 max - w-prose'>{description}</p>)}
-      {(primary_action || secondary_action) && (
+      {(primary_action || secondary_action) && ('
         <div className='flex gap - 2 mt - 2'>;
           {primary_action && (
             <Link href={primary_action.href}>;
+<<<<<<< HEAD
               <a>;
                 <EnhancedButton size='md'>{primary_action.label}</EnhancedButton>              </a > export type EmptyStateProps = {
 
+=======
+              <a>;'
+                <EnhancedButton size='md'>{primary_action.label}</EnhancedButton>              </a > export type EmptyStateProps = {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string,;
   title: string,
   description?: string;
@@ -74,6 +79,7 @@ function EmptyState() {
 }
 
 export default function EmptyState(): any ({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {;
+<<<<<<< HEAD
       {(primaryAction |secondaryAction) && (
         <div className='flex gap-2 mt-2'>
           {primaryAction && (
@@ -86,6 +92,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">;
       <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>;
       <h3 className="text-lg font-semibold">{title}</h3>;
+=======
+  return ("
+    <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">;'"
+      <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>;"
+      <h3 className="text-lg font-semibold">{title}</h3>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {description && <p className="text-sm opacity-80 max-w-prose">{description}</p>}
           )}
           {secondaryAction && (
@@ -100,9 +112,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
           {secondaryAction && (;
             <Link href={secondaryAction && secondaryAction.href}>;
-              <a>;
+              <a>;'
                 <EnhancedButton variant='secondary' size='md'>;
-                  {secondaryAction && secondaryAction.label}
+                  {secondaryAction && secondaryAction.label}"
                 </EnhancedButton>              </a>                <EnhancedButton variant="secondary" size="md">{secondaryAction && secondaryAction.label}</EnhancedButton>;
               </a>;
             </Link>;
@@ -114,3 +126,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
+'"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { cn } from '@/lib / utils';
 import { NavLink } from './react-router-dom';
@@ -44,13 +45,20 @@ import {NavLink} from "react-router-dom";
 =======
 import {Link} from 'react-router-dom';
 import { cn } from '@/lib / utils';
+=======
+
+import {Link} from 'react-router-dom';'
+import { cn } from '@/lib / utils';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { NavLink } from './react-router-dom';
 
 
 
+'
 import {Link} from 'react-router-dom';
-import {cn} from "@/lib/utils";
+import {cn} from "@/lib/utils";"
 import {NavLink} from "react-router-dom";
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',
@@ -68,40 +76,48 @@ import { NavLink } from "react-router-dom",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface MainNavigationProps {
   className?: string
+=======
+
+'
+import { Link  } from 'react-router-dom';"
+import { cn } from "@/lib/utils";"
+import { NavLink } from "react-router-dom";'
+import {Link} from 'react-router-dom';"
+import {cn} from "@/lib/utils";"
+import {NavLink} from "react-router-dom";
+'
+import React from 'react','
+import { Link } from 'react-router-dom',"
+import { cn } from "@/lib/utils","
+import { NavLink } from "react-router-dom",
+
+interface MainNavigationProps {};
+  className?: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-export function MainNavigation({ className }: MainNavigationProps) {
+export function MainNavigation({ className }: MainNavigationProps) {}
   return (
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-interface MainNavigationProps {
+
+interface MainNavigationProps {};
   class_name?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {Link} from 'react-router-dom';
-import {cn} from "@/lib/utils";
-import {NavLink} from "react-router-dom";
-interface MainNavigationProps {;
-  className?: string;
-}
 
-export function MainNavigation(): any ({ className }: MainNavigationProps) {;
-  return (
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>;
-      <NavLink
-        to="/"
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         className={({ isActive }) =>;
+<<<<<<< HEAD
 =======
 import {NavLink} from "react-router-dom";        className={({ isActive }) =>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -114,16 +130,26 @@ import {NavLink} from "react-router-dom";        className={({ isActive }) =>;
           );
 
  * MainNavigation - Function description
+=======
+          cn(;"
+            "text-sm font-medium transition-colors hover: text-primary",;"
+            isActive ? "text-zion-cyan" : "text-muted-foreground";
+          );
+
+export /**;
+ * MainNavigation - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
-function MainNavigation() {
-  return (
+function MainNavigation() {}
+  return ("
     <nav className={cn ("hidden md:flex items - center space - x-6", class_name)}>;
-      <NavLink;
+      <NavLink;"
         to="/";
         className={({ is_active }) =>;
-          cn (
-            "text - sm font - medium transition - colors hover: text - primary",
+          cn ("
+            "text - sm font - medium transition - colors hover: text - primary","
             is_active ? "text - zion - cyan" : "text - muted - foreground");
+<<<<<<< HEAD
       >;
         Home;
       </NavLink>;
@@ -153,10 +179,40 @@ function MainNavigation() {
         Blog;
       </Link>;
       <Link to="/categories" className="text-zion-slate-light hover:text-white transition-colors">;
+=======
+
+        }
+      >;
+        Home;
+      </NavLink>;
+
+        className={({ isActive }) =>;
+          cn(;"
+            "text-sm font-medium transition-colors hover: text-primary",;"
+            isActive ? "text-zion-cyan" : "text-muted-foreground";
+          );
+
+"
+      <Link to="/talent" className="text - zion - slate - light hover:text - white transition - colors">;
+        Find Talent;
+      </Link>;"
+      <Link to="/services" className="text - zion - slate - light hover:text - white transition - colors">;
+        Services;
+      </Link>;"
+      <Link to="/equipment" className="text - zion - slate - light hover:text - white transition - colors">;
+        Equipment;
+      </Link>;"
+      <Link to="/blog" className="text - zion - slate - light hover:text - white transition - colors">;
+        Blog;
+      </Link>;"
+      <Link to="/categories" className="text - zion - slate - light hover:text - white transition - colors">;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         Categories;
       </Link>;
-      <NavLink;
+      <NavLink;"
         to="/partners";
+<<<<<<< HEAD
         className={({ is_active }) =>;
           cn (
             "text - sm font - medium transition - colors hover: text - primary",
@@ -166,20 +222,34 @@ function MainNavigation() {
       </NavLink>;
 
             isActive ? "text-zion-cyan" : "text-muted-foreground",;            "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light";
+=======
+
+        }
+      >;
+        Partner Program;
+      </NavLink>;
+"
+            "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           );
         }
       >;
         Register;
       </NavLink>;
     </nav>;
+<<<<<<< HEAD
   );
 }
       <NavLink;
+=======
+
+      <NavLink;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         to="/signup";
         className={({ is_active }) =>;
-          cn (
-            "text - sm font - medium transition - colors hover: text - primary";
-            is_active ? "text - zion - cyan" : "text - muted - foreground",
+          cn ("
+            "text - sm font - medium transition - colors hover: text - primary";"
+            is_active ? "text - zion - cyan" : "text - muted - foreground","
             "bg - zion - purple px - 4 py - 2 rounded - md hover:bg - zion - purple - light");
         }
       >;
@@ -190,11 +260,16 @@ function MainNavigation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+"
             "text-sm font-medium transition-colors hover:text-primary",
 
+<<<<<<< HEAD
 =======
 
             "text-sm font-medium transition-colors hover:text-primary",
@@ -253,31 +328,35 @@ function MainNavigation() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
       >
-        Home
-      </NavLink>
+        Home;
+      </NavLink>"
       <Link to="/talent" className="text-zion-slate-light hover:text-white transition-colors">
-        Find Talent
-      </Link>
+        Find Talent;
+      </Link>"
       <Link to="/services" className="text-zion-slate-light hover:text-white transition-colors">
-        Services
-      </Link>
+        Services;
+      </Link>"
       <Link to="/equipment" className="text-zion-slate-light hover:text-white transition-colors">
-        Equipment
-      </Link>
+        Equipment;
+      </Link>"
       <Link to="/blog" className="text-zion-slate-light hover:text-white transition-colors">
-        Blog
-      </Link>
+        Blog;
+      </Link>"
       <Link to="/categories" className="text-zion-slate-light hover:text-white transition-colors">
-        Categories
+        Categories;
       </Link>
-      <NavLink
+      <NavLink"
         to="/partners"
         className={({ isActive }) =>
           cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,9 +368,11 @@ function MainNavigation() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-            "text-sm font-medium transition-colors hover:text-primary",
 
+<<<<<<< HEAD
 =======
             "text-sm font-medium transition-colors hover:text-primary",
 
@@ -301,15 +382,19 @@ function MainNavigation() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
       >
-        Partner Program
+        Partner Program;
       </NavLink>
-      <NavLink
+      <NavLink"
         to="/signup"
         className={({ isActive }) =>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -336,53 +421,58 @@ function MainNavigation() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground",
+=======
+
+          cn(;"
+            "text-sm font-medium transition-colors hover: text-primary";"
+            isActive ? "text-zion-cyan" : "text-muted-foreground","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
           )
         }
       >
-        Register
+        Register;
       </NavLink>
     </nav>
   )
 }
-          cn(
-            "text-sm font-medium transition-colors hover:text-primary",
-            isActive ? "text-zion-cyan" : "text-muted-foreground",
+          cn("
+            "text-sm font-medium transition-colors hover:text-primary","
+            isActive ? "text-zion-cyan" : "text-muted-foreground","
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"
-          )
-import React from 'react',;
-import { Link } from 'react-router-dom',;
-import { cn } from "@/lib/utils",;
+          )'
+import React from 'react',;'
+import { Link } from 'react-router-dom',;"
+import { cn } from "@/lib/utils",;"
 import { NavLink } from "react-router-dom",;
 interface MainNavigationProps {;
   className?: string;
 }
 ;
-export function MainNavigation({ className }: MainNavigationProps) {;
-  return (;
+export function MainNavigation() { return null; }
     <nav className={cn("hidden md:flex items-center space-x-6", className)}>;
-      <NavLink;
+      <NavLink;"
         to="/";
         className={({ isActive }) =>;
-          cn(;
-            "text-sm font-medium transition-colors hover:text-primary",;
+          cn(;"
+            "text-sm font-medium transition-colors hover:text-primary",;"
             isActive ? "text-zion-cyan" : "text-muted-foreground";
-          );
+          );'
 import React from 'react';
-interface MainNavigationProps {
+interface MainNavigationProps {}
   class_name?: string;
 }
-export /**
- * MainNavigation - Function description
+export /**;
+ * MainNavigation - Function description;
  */
-function MainNavigation() {
-  return (
+function MainNavigation() {}
+  return ("
     <nav className={cn ("hidden md:flex items - center space - x-6", class_name)}>;
-      <NavLink;
+      <NavLink;"
         to="/";
         className={({ is_active }) =>;
-          cn (
-            "text - sm font - medium transition - colors hover: text - primary",
+          cn ("
+            "text - sm font - medium transition - colors hover: text - primary","
             is_active ? "text - zion - cyan" : "text - muted - foreground");
         }
       >;
@@ -390,7 +480,7 @@ function MainNavigation() {
       </NavLink>;
         Categories;
       </Link>;
-      <NavLink;
+      <NavLink;"
         to="/partners";
         }
       >;
@@ -402,6 +492,7 @@ function MainNavigation() {
       </NavLink>;
     </nav>);
 }
+<<<<<<< HEAD
 ;
 
   ),;}
@@ -441,3 +532,7 @@ isActive ? " text-zion-cyan": " text-muted-foreground";
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

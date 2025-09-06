@@ -1,18 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
   setVendorApproval
   setVendorCommission
   suspendVendor;
+=======
+  setVendorApproval;
+  setVendorCommission;
+  suspendVendor;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from '../../../utils/vendor-store';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
+export default function handler() { return null; }
     return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body |{};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
   setVendorApproval,
   setVendorCommission,;
-  suspendVendor,;
+  suspendVendor,;'
 } from '../../../utils/vendor-store';
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });
   const { action, vendorId, value } = req.body || {};
   try {
@@ -30,37 +36,43 @@ else if (action === 'commission')
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
+=======
+export default function handler() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 
-import {
-  try {
-    if (action === 'approve') setVendorApproval(String(vendorId), true);
-    else if (action === 'revoke') setVendorApproval(String(vendorId), false);
-    else if (action === 'suspend') suspendVendor(String(vendorId), true);
+import {}
+  try {';
+    if (action === 'approve') setVendorApproval(String(vendorId), true);'
+    else if (action === 'revoke') setVendorApproval(String(vendorId), false);'
+    else if (action === 'suspend') suspendVendor(String(vendorId), true);'
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false);
-  } catch (e: any) {
+  } catch (e: any) {}
     res && res.status(500).json({ error: e && e.message })
   };
 }
   setVendorApproval,
   setVendorCommission,;
-  suspendVendor,;
+  suspendVendor,;'
 } from '../../../utils/vendor-store';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST');
+export default function handler() { return null; }
     return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+export default function handler() { return null; }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { action, vendorId, value } = req.body || {},
-  try {
-    if (action === 'approve') setVendorApproval(String(vendorId), true);
-    else if (action === 'revoke') setVendorApproval(String(vendorId), false);
-    else if (action === 'suspend') suspendVendor(String(vendorId), true);
+  try {'
+    if (action === 'approve') setVendorApproval(String(vendorId), true);'
+    else if (action === 'revoke') setVendorApproval(String(vendorId), false);'
+    else if (action === 'suspend') suspendVendor(String(vendorId), true);'
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false);
-  } catch (e: any) {
+  } catch (e: any) {}
     res && res.status(500).json({ error: e && e.message })
   };
 }
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

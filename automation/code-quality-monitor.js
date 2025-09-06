@@ -28,6 +28,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
 #!/usr/bin/env node;
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
@@ -45,6 +46,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const fs = require("fs");
 const path = require("path");
+=======
+const fs = require("fs");"
+const path = require("path");"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const { execSync } = require("child_process");
 ;
 class CodeQualityMonitor {;
@@ -55,7 +60,7 @@ class CodeQualityMonitor {;
       testCoverage: 0;
       performance: 0;
       lastUpdated: new Date().toISOString();
-    ;
+    ;"
     this.logFile = path.join(__dirname, "logs", "code-quality.log");
 };
 ;
@@ -173,7 +178,7 @@ module.exports = CodeQualityMonitor;
 };
 ;
   async analyzeCodeQuality() {;
-    try {;
+    try {;"
       this.log("Starting code quality analysis...");
 ;
       this.metrics.complexity = this.calculateComplexity();
@@ -182,16 +187,16 @@ module.exports = CodeQualityMonitor;
       this.metrics.performance = this.calculatePerformance();
       this.metrics.lastUpdated = new Date().toISOString();
 ;
-      this.saveMetrics();
+      this.saveMetrics();"
       this.log("Code quality analysis completed successfully");
       return this.metrics;
-    } catch (error) {;
+    } catch (error) {;"`
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR");
       return null;
 };
-#!/usr/bin/env node,
-const fs = require("fs"),
-const path = require("path"),
+#!/usr/bin/env node,"
+const fs = require("fs"),"
+const path = require("path"),"
 const { execSync } = require("child_process"),
 ,
 class CodeQualityMonitor {,
@@ -202,19 +207,19 @@ class CodeQualityMonitor {,
       testCoverage: 0,
       performance: 0,
       lastUpdated: new Date().toISOString(),
-    };
+    };"
     this.logFile = path.join(__dirname, "logs", "code-quality.log"),
   };
 ,
   log(message) {,
-    const timestamp = new Date().toISOString(),
+    const timestamp = new Date().toISOString(),`
     const logMessage = `[${timestamp}] ${message}\n`,
     console.log(message),
     fs.appendFileSync(this.logFile, logMessage),
   };
 ,
   async analyzeCodeQuality() {,
-    try {,
+    try {,"
       this.log("Starting code quality analysis..."),
 ,
       this.metrics.complexity = this.calculateComplexity(),
@@ -223,13 +228,14 @@ class CodeQualityMonitor {,
       this.metrics.performance = this.calculatePerformance(),
       this.metrics.lastUpdated = new Date().toISOString(),
 ,
-      this.saveMetrics(),
+      this.saveMetrics(),"
       this.log("Code quality analysis completed successfully"),
       return this.metrics,
-    } catch (error) {,
+    } catch (error) {,"`
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
       return null,
     };
+<<<<<<< HEAD
       this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),
       return null
     },
@@ -302,3 +308,6 @@ module.exports = CodeQualityMonitor;
 main
 main
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

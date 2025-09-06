@@ -3,11 +3,15 @@ import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, LinkIcon, Building2 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
+<<<<<<< HEAD
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import AdvancedFuturisticCard from '../components/ui/AdvancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 
@@ -127,7 +131,7 @@ export default function ServicesPage() {
       </div>
     </div>
   );
-=======
+
   // Enhanced service categories with better descriptions
   const enhancedCategories = [
     {
@@ -957,7 +961,7 @@ import Link from 'next/link';
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">200+</div>
                 <div className="text-slate-300">Revolutionary Services</div>
-=======
+
         {/* Services Grid */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -1065,6 +1069,7 @@ import Link from 'next/link';
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1345,6 +1350,9 @@ import Link from 'next/link';
           </motion.div>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d7ba
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         )}
 
         {/* No Results Message */}
@@ -1602,7 +1610,7 @@ import Link from 'next/link';
         </section>
       </div>
     </EnhancedFuturisticBackground>
-=======
+
   );
 };
 

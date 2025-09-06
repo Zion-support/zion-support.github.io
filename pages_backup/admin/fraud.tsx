@@ -11,6 +11,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface FraudItem {
@@ -36,10 +37,15 @@ id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/fraud.tsx
 export default function FraudAdminPage() {
+=======
+interface FraudItem {}
+export default function FraudAdminPage() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
   const [items, setItems] = useState<FraudItem[]>([])
   const [adminToken, setAdminToken] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
   useEffect(() => {
 <<<<<<< HEAD:pages/admin/fraud.tsx
 <<<<<<< HEAD
@@ -47,14 +53,19 @@ export default function FraudAdminPage() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+  useEffect(() => {}
+';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
     const saved = localStorage.getItem('admin-token') || '';
     setAdminToken(saved)
   }, []);
 
-
+'
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
   }, [])
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -165,13 +176,25 @@ export default function FraudAdminPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const fetchItems = async () => {}
+    setLoading(true)
+    setError(null)
+    try {}
+    } finally {}
+      set_loading (false);
+
+    }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
     fetchItems()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, [adminToken])
-  const onSaveToken = () => {
+  const onSaveToken = () => {'
     localStorage.setItem('admin-token', adminToken)
     fetchItems()
   }
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -387,13 +410,23 @@ const FraudPage: React.FC = () => {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/fraud.tsx
+=======
+
+'
+  const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {}
+'
+    const res = await fetch('/api/fraud/admin/action', {'
+      method: 'POST'
+      headers: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
   return (
-    <div className="p-6 max-w-7xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
+    <div className="p-6 max-w-7xl mx-auto">"
+      <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>"
       <div className="flex items-center gap-2 mb-4">
-        <input
-          className="border rounded px-2 py-1 w-80"
+        <input"
+          className="border rounded px-2 py-1 w-80""
           placeholder="Admin token (optional)"
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -424,6 +457,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
+=======
+
+
+        />"
+        <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
 <<<<<<< HEAD
@@ -438,6 +477,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -448,17 +488,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      {error && <div className="text-red-600">{error}</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
 =======
 
+      {loading && <div>Loading...</div>  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+      {error && <div className="text-red-600">{error}</div>  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -471,21 +515,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="overflow-x-auto">
+=======
+"
+      <div className="overflow-x-auto">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
         <table className="min-w-full border">
-          <thead>
-            <tr className="bg-gray-50 text-left">
-              <th className="p-2 border">User</th>
-              <th className="p-2 border">Source</th>
-              <th className="p-2 border">Timestamp</th>
-              <th className="p-2 border">Reason</th>
-              <th className="p-2 border">GPT</th>
-              <th className="p-2 border">Status</th>
+          <thead>"
+            <tr className="bg-gray-50 text-left">"
+              <th className="p-2 border">User</th>"
+              <th className="p-2 border">Source</th>"
+              <th className="p-2 border">Timestamp</th>"
+              <th className="p-2 border">Reason</th>"
+              <th className="p-2 border">GPT</th>"
+              <th className="p-2 border">Status</th>"
               <th className="p-2 border">Actions</th>
             </tr>
           </thead>
           <tbody>
-            {items.map((it) => (
+            {items.map((it) => ("
               <tr key={it.id} className="border-t">
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -504,9 +553,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
+=======
+"
+                <td className="p-2 border">{it.source}</td>"
+                <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>"
+                <td className="p-2 border">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
                   <div className="text-sm space-y-1">
-                    {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
+                    {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => ("
                       <div key={idx} className="text-gray-700">{r}</div>
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -530,10 +586,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
                   </div>
-                </td>
-                <td className="p-2 border">
+                </td>"
+                <td className="p-2 border">"
                   <div className="text-sm">
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -549,14 +610,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
-                </td>
-                <td className="p-2 border">{it.status}</td>
-                <td className="p-2 border">
-                  <div className="flex gap-2">
-                    <button className="px-2 py-1 text-xs bg-yellow-500 text-white rounded" onClick={() => takeAction(it.id, 'WARN')}>Warn</button>
-                    <button className="px-2 py-1 text-xs bg-red-600 text-white rounded" onClick={() => takeAction(it.id, 'SUSPEND')}>Suspend</button>
+                </td>"
+                <td className="p-2 border">{it.status}</td>"
+                <td className="p-2 border">"
+                  <div className="flex gap-2">'"
+                    <button className="px-2 py-1 text-xs bg-yellow-500 text-white rounded" onClick={() => takeAction(it.id, 'WARN')}>Warn</button>'"
+                    <button className="px-2 py-1 text-xs bg-red-600 text-white rounded" onClick={() => takeAction(it.id, 'SUSPEND')}>Suspend</button>'"
                     <button className="px-2 py-1 text-xs bg-gray-300 rounded" onClick={() => takeAction(it.id, 'IGNORE')}>Ignore</button>
                   </div>
                 </td>
@@ -566,6 +630,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </table>
       </div>
     </div>
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
 <<<<<<< HEAD:pages/admin/fraud.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -578,98 +643,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 };
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx
 
-=======
-}
 
-=======
-  },
-  useEffect (() => {
-    fetch_items (),
-    // eslint - disable - next - line react - hooks / exhaustive - deps;
-  }, [admin_token]),
-  const onSaveToken = () =>: any {
-    local_storage.set_item ('admin - token', admin_token),
-    fetch_items ();
-  },
-  const take_action = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
-    const res = await fetch ('/api / fraud / admin / action', {
-      method: 'POST',
-      headers: {
-        'Content - Type': 'application / json',
-        ...(admin_token ? { 'x - admin - token': admin_token } : {})},
-      body: JSON.stringify ({ fraud_id: id, action })}),
-    const json = await res.json (),
-    if (fetch_items (), ) {
-  $2
-}
-    else alert (json.error || 'Action failed');
-  },
-  return (
-    <div className="p - 6 max - w-7xl mx - auto">;
-      <h1 className="text - 2xl font - bold mb - 4">Fraud Monitoring - Admin Review</h1>;
-      <div className="flex items - center gap - 2 mb - 4">;
-        <input;
-          className="border rounded px - 2 py - 1 w - 80";
-          placeholder="Admin token (optional)";
-          value={admin_token}
-          on_change={(e) => setAdminToken (e.target.value)}
-        />;
-        <button className="bg - blue - 600 text - white px - 3 py - 1 rounded" on_click={onSaveToken}>Save</button>;
-        <button className="bg - gray - 200 px - 3 py - 1 rounded" on_click={fetch_items}>Refresh</button>;
-      </div>;
-      {loading && <div > Loading...</div>}
-      {error && <div className="text - red - 600">{error}</div>}
-      <div className="overflow - x-auto">;
-        <table className="min - w-full border">;
-          <thead>;
-            <tr className="bg - gray - 50 text - left">;
-              <th className="p - 2 border">User</th>;
-              <th className="p - 2 border">Source</th>;
-              <th className="p - 2 border">Timestamp</th>;
-              <th className="p - 2 border">Reason</th>;
-              <th className="p - 2 border">GPT</th>;
-              <th className="p - 2 border">Status</th>;
-              <th className="p - 2 border">Actions</th>;
-            </tr>;
-          </thead>;
-          <tbody>;
-            {items.map ((it) => (
-              <tr key={it.id} className="border - t">;
-                <td className="p - 2 border">{it.user_id || '—'}</td>;
-                <td className="p - 2 border">{it.source}</td>;
-                <td className="p - 2 border">{new Date (it.created_at).toLocaleString ()}</td>;
-                <td className="p - 2 border">;
-                  <div className="text - sm space - y-1">;
-                    {it.heuristic?.reasons?.slice (0, 3).map ((r, idx) => (
-                      <div key={idx} className="text - gray - 700">{r}</div>))}
-                  </div>;
-                </td>;
-                <td className="p - 2 border">;
-                  <div className="text - sm">;
-                    <div className="font - semibold">{it.gpt?.label || '—'}</div>;
-                    <div className="text - gray - 700">{it.gpt?.reason}</div>;
-                  </div>;
-                </td>;
-                <td className="p - 2 border">{it.status}</td>;
-                <td className="p - 2 border">;
-                  <div className="flex gap - 2">;
-                    <button className="px - 2 py - 1 text - xs bg - yellow - 500 text - white rounded" on_click={() => take_action (it.id, 'WARN')}>Warn</button>;
-                    <button className="px - 2 py - 1 text - xs bg - red - 600 text - white rounded" on_click={() => take_action (it.id, 'SUSPEND')}>Suspend</button>;
-                    <button className="px - 2 py - 1 text - xs bg - gray - 300 rounded" on_click={() => take_action (it.id, 'IGNORE')}>Ignore</button>;
-                  </div>;
-                </td>;
-              </tr>))}
-          </tbody>;
-        </table>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+
   );
 
+<<<<<<< HEAD:pages_backup/admin/fraud.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
   );
@@ -695,3 +676,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/fraud.tsx
+=======
+
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/fraud.tsx

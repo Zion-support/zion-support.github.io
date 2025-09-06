@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -1173,3 +1174,6 @@ export default Navigation;
 main
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -4,6 +4,7 @@ import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -65,12 +66,20 @@ import { marketValidatedServices } from '../data/market-validated-services';
 import { industryRealServices } from '../data/industry-real-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62b6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+} from 'lucide-react';
+import Link from 'next/link';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 // Import our new real services
 import { realMicroSaas2025Expansion } from '../data/real-micro-saas-2025-expansion';
 import { realITServices2025Expansion } from '../data/real-it-services-2025-expansion';
 import { realAIServices2025Expansion } from '../data/real-ai-services-2025-expansion';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ServicesPage() {
 =======
@@ -219,6 +228,9 @@ export default function Services() {
   const [searchQuery, setSearchQuery] = useState('');
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-62b6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedService, setExpandedService] = useState<number | null>(null);
 

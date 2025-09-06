@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next'
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 const memoryStore: { q: string, ts: number }[] = []
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { q } = req.body || {}
@@ -49,6 +54,17 @@ export default function handler(req, res) {
 }
   if (req.method === 'GET') {
     const counts = new Map<string number>();
+=======
+export default function handler() { return null; }
+  if (req.method === 'POST') {}
+    const { q } = req.body || {},'
+    if (typeof q === 'string' && q.trim()) {}
+      memoryStore.push({ q: q.trim(), ts: Date.now() })
+
+    }
+
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status (204).end ();
 
   }
@@ -87,6 +103,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+
+
+
+
+  }
+  return res.status(405).end()
+};'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

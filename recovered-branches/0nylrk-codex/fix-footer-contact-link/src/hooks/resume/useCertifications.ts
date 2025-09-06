@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,6 +51,21 @@ export function useCertifications() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { useState  } from 'react';'
+import { supabase  } from '@/integrations/supabase/client';'
+import { Certification  } from '@/types/resume';'
+import { useAuth  } from '@/hooks/useAuth';'
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useCertifications() {}
+';
+import {useState} from 'react';'
+import {supabase} from '@/integrations/supabase/client';'
+import {Certification} from '@/types/resume';'
+import {useAuth} from '@/hooks/useAuth';'
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export function useCertifications() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
 =======
 export function useCertifications() {  const { user } = useAuth();
@@ -61,9 +76,10 @@ export function useCertifications() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
-  const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {
-    if (!user) {
+  const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {}
+    if (!user) {'
       setError('You must be logged in to add certifications')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       return false
@@ -90,28 +106,41 @@ import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Certification } from '@/types/resume',;
 import { useAuth } from '@/hooks/useAuth',;
+=======
+      return false;
+'
+import { useState } from 'react',;'
+import { supabase } from '@/integrations/supabase/client',;'
+import { Certification } from '@/types/resume',;'
+import { useAuth } from '@/hooks/useAuth',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;
-export function useCertifications() {;
+export function useCertifications() { return null; }
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to add certifications'),;
       return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 <<<<<<< HEAD
-
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
     setIsLoading(true),
@@ -122,6 +151,7 @@ export function useCertifications() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -168,9 +198,19 @@ export function useCertifications() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+    try {}
+      const { error } = await supabase'
+        .from('certifications')
+        .insert({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return showSuccessToast("Certification added", "Your certification has been added to your resume")
-    } catch (e: any) {
+    } catch (e: any) {'
       return handleResumeError(e, 'Could not add certification')
+<<<<<<< HEAD
     } finally {
       setIsLoading(false)
 <<<<<<< HEAD
@@ -206,11 +246,15 @@ export function useCertifications() {;
     } catch (e: any) {
       return handleResumeError(e, 'Could not add certification')
     } finally {
+=======
+    } finally {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setIsLoading(false)
 <<<<<<< HEAD
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   }
@@ -228,6 +272,9 @@ export function useCertifications() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 =======
       return false    try {
@@ -244,7 +291,7 @@ export function useCertifications() {;
     setIsLoading(true),;
     setError(null),;
     try {;
-      const { error } = await supabase;
+      const { error } = await supabase;'
         .from('certifications');
         .insert({;
           resume_id: resumeId,;
@@ -255,18 +302,19 @@ export function useCertifications() {;
           credential_id: cert.credential_id,;
           credential_url: cert.credential_url;
         }),;
-      if (error) throw error,;
+      if (error) throw error,;"
       return showSuccessToast("Certification added", "Your certification has been added to your resume");
-    } catch (e: any) {;
+    } catch (e: any) {;'
       return handleResumeError(e, 'Could not add certification');
     } finally {;
       setIsLoading(false);
     }
   },;
   const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to update certifications'),;
       return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -299,12 +347,16 @@ export function useCertifications() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     
     setIsLoading(true),
     setError(null),
     
 
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Certification } from '@/types/resume',;
@@ -418,61 +470,58 @@ export function useCertifications() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+    try {}
+      const { error } = await supabase'
+        .from('certifications')
+        .update({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           name: cert && cert.name;
           issuing_organization: cert && cert.issuing_organization;
           issue_date: cert && cert.issue_date ? formatDateForDB(cert && cert.issue_date) : null;
           expiration_date: cert && cert.expiration_date ? formatDateForDB(cert && cert.expiration_date) : null;
           credential_id: cert && cert.credential_id,
-          credential_url: cert && cert.credential_url
-<<<<<<< HEAD
-
-        })
-        .eq('id', certId);
-      if (error) throw error;
-=======
-
-=======
-          name: cert.name;
-          issuing_organization: cert.issuing_organization;
-          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
-          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null;
-          credential_id: cert.credential_id
-          credential_url: cert.credential_url
-        })
-        .eq('id', certId);
-      if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          credential_url: cert && cert.credential_url;
           name: cert.name,
           issuing_organization: cert.issuing_organization,
           issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,
           expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,
           credential_id: cert.credential_id,
-          credential_url: cert.credential_url
-        })
+          credential_url: cert.credential_url;
+        })'
         .eq('id', certId),
       
       if (error) throw error,
       
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return showSuccessToast("Certification updated", "Your certification has been updated")
-    } catch (e: any) {
+    } catch (e: any) {'
       return handleResumeError(e, 'Could not update certification')
-    } finally {
+    } finally {}
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 <<<<<<< HEAD
-
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -497,11 +546,13 @@ export function useCertifications() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     setIsLoading(true),;
     setError(null),;
     try {;
-      const { error } = await supabase;
+      const { error } = await supabase;'
         .from('certifications');
         .update({;
           name: cert.name,;
@@ -510,37 +561,43 @@ export function useCertifications() {;
           expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,;
           credential_id: cert.credential_id,;
           credential_url: cert.credential_url;
-        });
+        });'
         .eq('id', certId),;
-      if (error) throw error,;
+      if (error) throw error,;"
       return showSuccessToast("Certification updated", "Your certification has been updated");
-    } catch (e: any) {;
+    } catch (e: any) {;'
       return handleResumeError(e, 'Could not update certification');
     } finally {;
       setIsLoading(false);
     }
   },;
   const deleteCertification = async (certId: string): Promise<boolean> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to delete certifications'),;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 <<<<<<< HEAD
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -570,13 +627,23 @@ export function useCertifications() {;
       if (error) throw error;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+    try {}
+      const { error } = await supabase'
+        .from('certifications')
+        .delete()
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .eq('id', certId),
       
       if (error) throw error,
       
+
+
 <<<<<<< HEAD
-
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -586,11 +653,15 @@ export function useCertifications() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")
-    } catch (e: any) {
+    } catch (e: any) {'
       return handleResumeError(e, 'Could not delete certification')
-    } finally {
+    } finally {}
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -624,24 +695,35 @@ import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Certification} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
+=======
+'
+import {useState} from 'react';'
+import {supabase} from '@/integrations / supabase / client';'
+import {Certification} from '@/types / resume';'
+import {use_auth} from '@/hooks / use_auth';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
-export /**
- * use_certifications - Function description
+export /**;
+ * use_certifications - Function description;
  */
-function use_certifications() {
+function use_certifications() {}
   const { user } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-  const add_certification = async (resume_id: string, cert: Certification): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
+  const add_certification = async (resume_id: string, cert: Certification): Promise < boolean> => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
+<<<<<<< HEAD
       set_error ('You must be logged in to add certifications'),
       return false;
     }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },;
   return {;
     isLoading,;
@@ -653,17 +735,19 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -675,8 +759,12 @@ if ( {) {
 =======
     try {
       const { error } = await supabase;
+=======
+    try {}
+      const { error } = await supabase;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .from ('certifications');
-        .insert ({
+        .insert ({}
           resume_id: resume_id;
           name: cert.name;
           issuing_organization: cert.issuing_organization;
@@ -686,91 +774,92 @@ if ( {) {
           credential_url: cert.credential_url;
         });
 ;
-      // Check condition
-if (throw error) {
-  $2
-}
+      // Check condition;
+if (throw error) {}
+  $2;
+}"
       return showSuccessToast ("Certification added", "Your certification has been added to your resume");
-    } catch (e: any) {
+    } catch (e: any) {'
       return handleResumeError (e, 'Could not add certification');
-    } finally {
+    } finally {}
       setIsLoading (false);
     }
   }
 ;
-  const update_certification = async (cert_id: string, cert: Certification): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
+  const update_certification = async (cert_id: string, cert: Certification): Promise < boolean> => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       set_error ('You must be logged in to update certifications'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
-    try {
-      const { error } = await supabase;
+    try {}
+      const { error } = await supabase;'
         .from ('certifications');
-        .update ({
+        .update ({}
           name: cert.name;
           issuing_organization: cert.issuing_organization;
           issue_date: cert.issue_date ? formatDateForDB (cert.issue_date) : null;
           expiration_date: cert.expiration_date ? formatDateForDB (cert.expiration_date) : null;
           credential_id: cert.credential_id,
           credential_url: cert.credential_url;
-        });
+        });'
         .eq ('id', cert_id);
 ;
-      // Check condition
-if (throw error) {
-  $2
-}
+      // Check condition;
+if (throw error) {}
+  $2;
+}"
       return showSuccessToast ("Certification updated", "Your certification has been updated");
-    } catch (e: any) {
+    } catch (e: any) {'
       return handleResumeError (e, 'Could not update certification');
-    } finally {
+    } finally {}
       setIsLoading (false);
     }
   }
 ;
-  const delete_certification = async (cert_id: string): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
+  const delete_certification = async (cert_id: string): Promise < boolean> => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       set_error ('You must be logged in to delete certifications'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
-    try {
-      const { error } = await supabase;
+    try {}
+      const { error } = await supabase;'
         .from ('certifications');
-        .delete ();
+        .delete ();'
         .eq ('id', cert_id);
 ;
-      // Check condition
-if (throw error) {
-  $2
-}
+      // Check condition;
+if (throw error) {}
+  $2;
+}"
       return showSuccessToast ("Certification deleted", "Your certification has been removed from your resume");
-    } catch (e: any) {
+    } catch (e: any) {'
       return handleResumeError (e, 'Could not delete certification');
-    } finally {
+    } finally {}
       setIsLoading (false);
     }
   }
 ;
-  return {
+  return {}
     is_loading;
     error;
     add_certification;
     update_certification;
     delete_certification;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -845,12 +934,17 @@ deleteCertification
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }  }
 }
     setIsLoading (true);
     set_error (null);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -861,3 +955,7 @@ deleteCertification
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

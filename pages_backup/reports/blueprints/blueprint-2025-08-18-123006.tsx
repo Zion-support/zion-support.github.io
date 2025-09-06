@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
@@ -103,11 +104,24 @@ const Blueprint20250818123006: React.FC = () => {
 =======
 
     lastUpdated: '2025-08-18 12:30:06',
+=======
+'
+    id: 'blueprint-2025-08-18-123006',
+'
+    name: 'Edge Computing Network Blueprint','
+    description: 'Distributed computing architecture for improved global performance','
+    category: 'Infrastructure','
+    status: 'development','
+    complexity: 'critical',
+'
+    lastUpdated: '2025-08-18 12:30:06','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
     version: '1.5.0'
   };
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 =======
 =======
 
@@ -135,12 +149,23 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    },
-    {
-      name: 'Europe',
-      description: 'Secondary edge node for EU traffic',
-      status: 'active',
+=======
+  const edgeNodes = []
+    {'
+      name: 'North America','
+      description: 'Primary edge node with high availability','
+      status: 'active','
       health: 'excellent',
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
+    },
+    {'
+      name: 'Europe','
+      description: 'Secondary edge node for EU traffic','
+      status: 'active','
+      health: 'excellent',
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
 
 =======
@@ -154,12 +179,17 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
     },
-    {
-      name: 'Asia Pacific',
-      description: 'Edge node for APAC region',
-      status: 'active',
+    {'
+      name: 'Asia Pacific','
+      description: 'Edge node for APAC region','
+      status: 'active','
       health: 'excellent',
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
 
 =======
@@ -173,12 +203,17 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
     },
-    {
-      name: 'South America',
-      description: 'Edge node for LATAM region',
-      status: 'deploying',
+    {'
+      name: 'South America','
+      description: 'Edge node for LATAM region','
+      status: 'deploying','
       health: 'good',
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
       latency: '45ms'
 =======
@@ -197,10 +232,14 @@ const Blueprint20250818123006: React.FC = () => {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
 
+'
       latency: '45ms'
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const features = [
 <<<<<<< HEAD
@@ -223,11 +262,21 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const features = []
+    {'
+      feature: 'Global Load Balancing','
+      description: 'Intelligent traffic routing based on location and performance','
+      benefit: 'Reduced latency and improved user experience',
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
     },
-    {
-      feature: 'Content Delivery',
-      description: 'Edge caching and content distribution',
+    {'
+      feature: 'Content Delivery','
+      description: 'Edge caching and content distribution','
       benefit: 'Faster content delivery worldwide',
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
 
 =======
@@ -240,10 +289,15 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
     },
-    {
-      feature: 'Failover Management',
+    {'
+      feature: 'Failover Management','
       description: 'Automatic failover between edge nodes',
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
       } catch (error) {
     console.error("Error:", error);
@@ -279,18 +333,29 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
 
 
   ];
 
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
       case 'implemented': return 'text-green-400';
       case 'deploying': return 'text-yellow-400';
+=======
+  const getStatusColor = (status: string) => {}
+    switch (status) {'
+      case 'active': return 'text-green-400';'
+      case 'implemented': return 'text-green-400';'
+      case 'deploying': return 'text-yellow-400';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
       default: return 'text-gray-400';
 <<<<<<< HEAD
     }
@@ -302,14 +367,21 @@ const Blueprint20250818123006: React.FC = () => {
   };
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       } catch (error) {
     console.error("Error:", error);
+=======
+
+      } catch (error) {}
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -334,6 +406,19 @@ const Blueprint20250818123006: React.FC = () => {
       case 'good': return 'bg-yellow-500/20 text-yellow-400';
       case 'warning': return 'bg-orange-500/20 text-orange-400';
       case 'critical': return 'bg-red-500/20 text-red-400';
+=======
+
+
+  const getHealthColor = (health: string) => {}
+;
+  const getHealthColor = (health: string) =>: any {}
+    switch (health) {}
+'
+      case 'excellent': return 'bg-green-500/20 text-green-400';'
+      case 'good': return 'bg-yellow-500/20 text-yellow-400';'
+      case 'warning': return 'bg-orange-500/20 text-orange-400';'
+      case 'critical': return 'bg-red-500/20 text-red-400';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
       default: return 'bg-gray-500/20 text-gray-400';
 <<<<<<< HEAD
     }
@@ -345,6 +430,7 @@ const Blueprint20250818123006: React.FC = () => {
   };
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -352,12 +438,20 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       } catch (error) {
     console.error("Error:", error);
+=======
+
+      } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
 
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Edge Computing Nodes</h2>
@@ -368,6 +462,7 @@ const Blueprint20250818123006: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white">{node.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(node.health)}`}>
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{node.description}</p>
@@ -482,16 +577,18 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <Head>
-        <title>Edge Computing Network Blueprint - bolt.new.zion.app</title>
-        <meta name="description" content="Distributed computing architecture for improved global performance" />
+        <title>Edge Computing Network Blueprint - bolt.new.zion.app</title>"
+        <meta name="description" content="Distributed computing architecture for improved global performance" />"
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      </Head>"
       <div className="container mx-auto px-4 py-8">
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 
         {/* Header */  } catch (error) {
     console.error("Error:", error);
@@ -507,18 +604,16 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-8">
-          <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            ← Back to Blueprints
-          </Link>
-          <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-          </h1>
-          <p className="text-gray-300 text-lg">
-            {blueprintDetails.description}
-          </p>
-        </div>
 =======
+"
+        <div className="mb-8">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
+          <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+            ← Back to Blueprints;
+          </Link>"
+          <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 
             {blueprintDetails.name  } catch (error) {
     console.error("Error:", error);
@@ -551,24 +646,32 @@ const Blueprint20250818123006: React.FC = () => {
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-purple-400">Status</h3>
             <div className="text-2xl font-bold text-yellow-400">{blueprintDetails.status}</div>
+=======
+"
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-purple-400">Status</h3>"
+            <div className="text-2xl font-bold text-yellow-400">{blueprintDetails.status}</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
             <p className="text-gray-300 text-sm mt-2">Under development</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-purple-400">Complexity</h3>
-            <div className="text-2xl font-bold text-red-400">{blueprintDetails.complexity}</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-purple-400">Complexity</h3>"
+            <div className="text-2xl font-bold text-red-400">{blueprintDetails.complexity}</div>"
             <p className="text-gray-300 text-sm mt-2">Maximum complexity</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-purple-400">Version</h3>
-            <div className="text-2xl font-bold text-cyan-400">{blueprintDetails.version}</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-purple-400">Version</h3>"
+            <div className="text-2xl font-bold text-cyan-400">{blueprintDetails.version}</div>"
             <p className="text-gray-300 text-sm mt-2">Development version</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-purple-400">Last Updated</h3>
-            <div className="text-2xl font-bold text-blue-400">{blueprintDetails.lastUpdated}</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-purple-400">Last Updated</h3>"
+            <div className="text-2xl font-bold text-blue-400">{blueprintDetails.lastUpdated}</div>"
             <p className="text-gray-300 text-sm mt-2">Recently updated</p>
           </div>
         </div>
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
 =======
 
@@ -666,21 +769,24 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Edge Computing Nodes</h2>
+=======
+"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Edge Computing Nodes</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {edgeNodes.map((node, index) => (
-              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <div className="flex justify-between items-start mb-4">
+            {edgeNodes.map((node, index) => ("
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">"
+                <div className="flex justify-between items-start mb-4">"
                   <h3 className="text-lg font-semibold text-white">{node.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(node.health)}`}>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                    {node.health  } catch (error) {
-    console.error("Error:", error);
+                    {node.health  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -690,36 +796,38 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                  </span>
-                </div>
-                <p className="text-gray-300 text-sm mb-4">{node.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">Latency: {node.latency}</span>
-                  <span className={`text-xs ${getStatusColor(node.status)}`}>
-<<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                    ● {node.status  } catch (error) {
-    console.error("Error:", error);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
+                  </span>
+                </div>"
+                <p className="text-gray-300 text-sm mb-4">{node.description}</p>"
+                <div className="flex justify-between items-center">"
+                  <span className="text-gray-400 text-sm">Latency: {node.latency}</span>`
+                  <span className={`text-xs ${getStatusColor(node.status)}`}>
+
+                    ● {node.status  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </span>
                 </div>
               </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
+            ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </div>
         </div>
-        {/* Features */  } catch (error) {
-    console.error("Error:", error);
+        {/* Features */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -731,31 +839,39 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
-                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
-<<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                    {feature.status  } catch (error) {
-    console.error("Error:", error);
+"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {features.map((feature, index) => ("
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">"
+                <div className="flex justify-between items-start mb-4">"
+                  <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>`
+                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
+
+                    {feature.status  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                  </span>
-                </div>
-                <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
-                <p className="text-purple-400 text-sm font-medium">Benefit: {feature.benefit}</p>
-              </div>
-<<<<<<< HEAD
 =======
 
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
+                  </span>
+                </div>"
+                <p className="text-gray-300 text-sm mb-2">{feature.description}</p>"
+                <p className="text-purple-400 text-sm font-medium">Benefit: {feature.benefit}</p>
+              </div>
+
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -798,37 +914,47 @@ const Blueprint20250818123006: React.FC = () => {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Network Architecture</h2>"
+          <div className="bg-white/10 rounded-xl p-8 border border-white/20">"
+            <div className="text-center">"
+              <div className="text-6xl font-bold text-purple-400 mb-4">🌐</div>"
+              <h3 className="text-xl font-semibold mb-2 text-white">Global Edge Network</h3>"
+              <p className="text-gray-300 mb-6">
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
 
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 for users worldwide.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-                <div className="bg-purple-500/20 rounded-lg p-4 border border-purple-400/30">
-                  <div className="text-lg font-bold text-purple-400">North America</div>
+              </p>"
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">"
+                <div className="bg-purple-500/20 rounded-lg p-4 border border-purple-400/30">"
+                  <div className="text-lg font-bold text-purple-400">North America</div>"
                   <div className="text-xs text-gray-300">Primary Node</div>
-                </div>
-                <div className="bg-pink-500/20 rounded-lg p-4 border border-pink-400/30">
-                  <div className="text-lg font-bold text-pink-400">Europe</div>
+                </div>"
+                <div className="bg-pink-500/20 rounded-lg p-4 border border-pink-400/30">"
+                  <div className="text-lg font-bold text-pink-400">Europe</div>"
                   <div className="text-xs text-gray-300">Secondary Node</div>
-                </div>
-                <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400/30">
-                  <div className="text-lg font-bold text-blue-400">Asia Pacific</div>
+                </div>"
+                <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400/30">"
+                  <div className="text-lg font-bold text-blue-400">Asia Pacific</div>"
                   <div className="text-xs text-gray-300">Regional Node</div>
-                </div>
-                <div className="bg-green-500/20 rounded-lg p-4 border border-green-400/30">
-                  <div className="text-lg font-bold text-green-400">South America</div>
+                </div>"
+                <div className="bg-green-500/20 rounded-lg p-4 border border-green-400/30">"
+                  <div className="text-lg font-bold text-green-400">South America</div>"
                   <div className="text-xs text-gray-300">Deploying</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 
         {/* Technology Stack */  } catch (error) {
     console.error("Error:", error);
@@ -848,6 +974,14 @@ const Blueprint20250818123006: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-white/10 rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-purple-400">Edge Computing</h3>
+=======
+"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+              <h3 className="text-xl font-semibold mb-4 text-purple-400">Edge Computing</h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
               <ul className="space-y-2 text-gray-300">
                 <li>• Kubernetes for edge orchestration</li>
                 <li>• Istio for service mesh</li>
@@ -856,9 +990,9 @@ const Blueprint20250818123006: React.FC = () => {
                 <li>• Prometheus for monitoring</li>
                 <li>• Grafana for visualization</li>
               </ul>
-            </div>
-            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold mb-4 text-purple-400">Network & Security</h3>
+            </div>"
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+              <h3 className="text-xl font-semibold mb-4 text-purple-400">Network & Security</h3>"
               <ul className="space-y-2 text-gray-300">
                 <li>• Cloudflare for CDN</li>
                 <li>• AWS CloudFront for distribution</li>
@@ -876,8 +1010,9 @@ const Blueprint20250818123006: React.FC = () => {
           <Link 
 =======
 
-
+"
         <div className="flex flex-wrap gap-4 justify-center">
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
           <Link 
 
 <<<<<<< HEAD
@@ -906,9 +1041,21 @@ const Blueprint20250818123006: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             href="/reports/blueprints"
+=======
+          <Link;
+        {/* Navigation */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+"
+            href="/reports/blueprints""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
           >
-            All Blueprints
+            All Blueprints;
           </Link>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -919,12 +1066,17 @@ const Blueprint20250818123006: React.FC = () => {
 
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             href="/reports/blueprints/comprehensive-redundancy"
+=======
+"
+            href="/reports/blueprints/comprehensive-redundancy""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
-            Comprehensive Redundancy
+            Comprehensive Redundancy;
           </Link>
 <<<<<<< HEAD
           <Link
@@ -934,17 +1086,23 @@ const Blueprint20250818123006: React.FC = () => {
 
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             href="/reports/blueprints/ultimate-redundancy"
+=======
+"
+            href="/reports/blueprints/ultimate-redundancy""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
-            Ultimate Redundancy
+            Ultimate Redundancy;
           </Link>
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
 <<<<<<< HEAD
 }
 };
@@ -957,10 +1115,12 @@ export default Blueprint20250818123006;
 
 
 };
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx
 
 export default Blueprint20250818123006;
-=======
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-123006.tsx
                   </span>;
                 </div>;
                 <p className="text - gray - 300 text - sm mb - 2">{feature.description}</p>;
@@ -1063,3 +1223,6 @@ export default Blueprint20250818123006;
 export default Blueprint20250818123006;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-123006.tsx

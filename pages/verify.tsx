@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -241,25 +242,46 @@ const data = await res.json();
 =======
 =======
       method: 'POST'
+=======
+
+  const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);'
+  const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
+'
+  const [fullLegalName, setFullLegalName] = useState('');'
+  const [businessName, setBusinessName] = useState('');'
+  const [businessReg, setBusinessReg] = useState('');
+  const [busy, setBusy] = useState(false);
+
+  async function start() {}
+    setBusy(true);'
+    setMessage('');'
+    const res = await fetch('/api/kyc/start', {}
+'
+  async function upload(): any (kind: KycDocumentMeta['kind']) {;'
+    const filename = prompt(`Enter filename for ${kind}`) || '';
+'
+      method: 'POST''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({
-        userId
-        role
-        fullLegalName
-        businessName
-        businessRegistrationNumber: businessReg
+      body: JSON.stringify({}
+        userId;
+        role;
+        fullLegalName;
+        businessName;
+        businessRegistrationNumber: businessReg;
       })
     });    const data = await res.json();
-    if (data.ok) {
+    if (data.ok) {}
       setProfile(data.profile);
       setRequiredDocs(data.requiredDocuments);
       setOptionalDocs(data.optionalDocuments);
-    } else {
+    } else {'
       setMessage(data.error |'Failed to start');
     }
-    setBusy(false);  }
-  async function upload(kind: KycDocumentMeta['kind']) {
+    setBusy(false);  }'
+  async function upload() { return null; }`
     const filename = prompt(`Enter filename for ${kind}`) |'';
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -274,18 +296,28 @@ const data = await res.json();
     const res = await fetch('/api/kyc/upload', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  async function upload(): any (kind: KycDocumentMeta['kind']) {;
+
+    if (!filename) return;
+    setBusy(true);'
+    const res = await fetch('/api/kyc/upload', {;'
+      method: 'POST',;'
+      headers: { 'Content-Type': 'application/json' },;
+'
+  async function upload(): any (kind: KycDocumentMeta['kind']) {;'`
     const filename = prompt(`Enter filename for ${kind}`) || '';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!filename) return;
-    setBusy(true);
-    const res = await fetch('/api/kyc/upload', {;
-      method: 'POST',;
+    setBusy(true);'
+    const res = await fetch('/api/kyc/upload', {;'
+      method: 'POST',;'
       headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       body: JSON.stringify({ userId })}),;
@@ -298,27 +330,30 @@ const data = await res.json();
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } else {
+=======
+    } else {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setMessage(data.error |'Submit failed');
     }
     setBusy(false);  }
   const labels = getBadgeLabels(profile |undefined);
-    } else {;
+    } else {;'
       setMessage(data.error || 'Submit failed');
-    } else {;
+    } else {;'
       setMessage(data.error || 'Submit failed');
     }
     setBusy(false);  }
 
   const labels = getBadgeLabels(profile || undefined);
 
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     setBusy(false);
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -390,6 +425,7 @@ body: JSON.stringify({ userId }),
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Verify Identity - Zion</title>
 <<<<<<< HEAD
         <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
@@ -415,11 +451,25 @@ body: JSON.stringify({ userId }),
 <<<<<<< HEAD
       <main className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>
+=======
+        <title>Verify Identity - Zion</title>"
+        <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>'
+      <main className='max-w-3xl mx-auto px-4 py-8'>'
+        <h1 className='text-2xl font-bold mb-4'>Identity Verification</h1>'
+        <p className='text-sm text-gray-600 mb-6'>
+          Guided step-by-step KYC/AML verification with progress tracking.
+        </p>"
+      <main className="max-w-3xl mx-auto px-4 py-8">"
+        <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
 <<<<<<< HEAD
 =======
       body: JSON && JSON.stringify({ userId, kind, filename }),;
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -432,10 +482,13 @@ body: JSON.stringify({ userId }),
       body: JSON && JSON.stringify({ userId, kind, filename }),;
     });
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const data = await res && res.json();
     if (data && data.ok) {;
       setProfile(data && data.profile);
-    } else {;
+    } else {;'
       setMessage(data && data.error || 'Upload failed');
     }
     setBusy(false);  }
@@ -468,7 +521,7 @@ body: JSON.stringify({ userId }),
 =======
 
 
-    } else {;
+    } else {;'
       setMessage(data && data.error || 'Submit failed');
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -479,28 +532,29 @@ body: JSON.stringify({ userId }),
     <>;
       <Head>;
         <title>Verify Identity - Zion</title>;
-        <meta
-          name='description'
+        <meta'
+          name='description''
           content='Complete KYC/AML verification to secure marketplace trust'
 
-        />;
+        />;'
         <meta name='viewport' content='width=device-width, initial-scale=1' />;
-      </Head>;
-      <main className='max-w-3xl mx-auto px-4 py-8'>;
-        <h1 className='text-2xl font-bold mb-4'>Identity Verification</h1>;
+      </Head>;'
+      <main className='max-w-3xl mx-auto px-4 py-8'>;'
+        <h1 className='text-2xl font-bold mb-4'>Identity Verification</h1>;'
         <p className='text-sm text-gray-600 mb-6'>;
           Guided step-by-step KYC/AML verification with progress tracking.;
         </p>;
 
-        {labels && labels.length > 0 && (;
+        {labels && labels.length > 0 && (;'
           <div className='mb-4'>            <VerifiedBadge labels={labels} />;
           </div>;
         )}
-
+'
         <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>;
-          <div>;
+          <div>;'
             <label className='block text-sm font-medium'>User ID</label>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -516,38 +570,41 @@ body: JSON.stringify({ userId }),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <input
+=======
+            <input'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className='mt-1 w-full border rounded px-3 py-2'
               value={userId}
               onChange={e => setUserId(e && e.target.value)}
             />;
           </div>;
-          <div>;
+          <div>;'
             <label className='block text-sm font-medium'>Role</label>;
-            <select
+            <select'
               className='mt-1 w-full border rounded px-3 py-2'
               value={role}
-              onChange={e => setRole(e && e.target.value as KycRole)}
+              onChange={e => setRole(e && e.target.value as KycRole)}'
       set_message (data.error || 'Upload failed');
     }
     set_busy (false);  }
   async /**
- * submit - Function description
+ * submit - Function description;
  */
-function submit() {
-    set_busy (true);
-    const res = await fetch ('/api / kyc / submit', {
-      method: 'POST',
+function submit() {}
+    set_busy (true);'
+    const res = await fetch ('/api / kyc / submit', {'
+      method: 'POST','
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ user_id }),
     });
     const data = await res.json ();
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      set_profile (data.profile);
+      set_profile (data.profile);'
       set_message ('Submitted. AML check performed.');
-    } else {
+    } else {'
       set_message (data.error || 'Submit failed');
     }
     set_busy (false);  }
@@ -557,35 +614,36 @@ if ( {) {
     <>;
       <Head>;
         <title > Verify Identity - Zion</title>;
-        <meta;
-          name='description';
+        <meta;'
+          name='description';'
           content='Complete KYC / AML verification to secure marketplace trust';
-        />;
+        />;'
         <meta name='viewport' content='width = device - width, initial - scale = 1' />;
-      </Head>;
-      <main className='max - w-3xl mx - auto px - 4 py - 8'>;
-        <h1 className='text - 2xl font - bold mb - 4'>Identity Verification</h1>;
+      </Head>;'
+      <main className='max - w-3xl mx - auto px - 4 py - 8'>;'
+        <h1 className='text - 2xl font - bold mb - 4'>Identity Verification</h1>;'
         <p className='text - sm text - gray - 600 mb - 6'>;
           Guided step - by - step KYC / AML verification with progress tracking.;
         </p>;
-        {labels.length > 0 && (
+        {labels.length > 0 && ('
           <div className='mb - 4'>            <VerifiedBadge labels={labels} />;
-          </div>)}
+          </div>)}'
         <div className='mb - 6 grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-          <div>;
+          <div>;'
             <label className='block text - sm font - medium'>User ID</label>;
-            <input;
+            <input;'
               className='mt - 1 w - full border rounded px - 3 py - 2';
               value={user_id}
               on_change={e => setUserId (e.target.value)}
             />;
           </div>;
-          <div>;
+          <div>;'
             <label className='block text - sm font - medium'>Role</label>;
-            <select;
+            <select;'
               className='mt - 1 w - full border rounded px - 3 py - 2';
               value={role}
               on_change={e => set_role (e.target.value as KycRole)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -593,6 +651,11 @@ if ( {) {
             >;
               <option value='client'>Client</option>;
               <option value='talent'>Talent</option>;
+=======
+            >;'
+              <option value='client'>Client</option>;'
+              <option value='talent'>Talent</option>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <option value='enterprise'>Enterprise</option>;
             </select>;
           </div>;
@@ -608,10 +671,11 @@ if ( {) {
           )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-        {labels.length > 0 && (
+        {labels.length > 0 && ("
           <div className="mb-4">
             <VerifiedBadge labels={labels} />
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -626,10 +690,16 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         )  } catch (error) {
     console.error("Error:", error);
+=======
+
+        )  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
         <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -645,15 +715,21 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div>
             <label className="block text-sm font-medium">User ID</label>
+=======
+
+          <div>"
+            <label className="block text-sm font-medium">User ID</label>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <input className="mt-1 w-full border rounded px-3 py-2" value={userId} onChange={(e) => setUserId(e.target.value)} />
           </div>
-          <div>
-            <label className="block text-sm font-medium">Role</label>
-            <select className="mt-1 w-full border rounded px-3 py-2" value={role} onChange={(e) => setRole(e.target.value as KycRole)}>
-              <option value="client">Client</option>
-              <option value="talent">Talent</option>
+          <div>"
+            <label className="block text-sm font-medium">Role</label>"
+            <select className="mt-1 w-full border rounded px-3 py-2" value={role} onChange={(e) => setRole(e.target.value as KycRole)}>"
+              <option value="client">Client</option>"
+              <option value="talent">Talent</option>"
               <option value="enterprise">Enterprise</option>
             </select>
+<<<<<<< HEAD
           </div>
 <<<<<<< HEAD
           <div className="md:col-span-2">
@@ -705,23 +781,44 @@ if ( {) {
 <<<<<<< HEAD
           )}
         </div>
+=======
+          </div>"
+          <div className="md:col-span-2">"
+            <label className="block text-sm font-medium">Full legal name</label>"
+            <input className="mt-1 w-full border rounded px-3 py-2" value={fullLegalName} onChange={(e) => setFullLegalName(e.target.value)} />
+          </div>'
+          {role === 'enterprise' && (
+            <>
+              <div>"
+                <label className="block text-sm font-medium">Business name</label>"
+                <input className="mt-1 w-full border rounded px-3 py-2" value={businessName} onChange={(e) => setBusinessName(e.target.value)} />
+              </div>
+              <div>
+"
+                <label className="block text-sm font-medium">Registration number</label>"
+                <input className="mt-1 w-full border rounded px-3 py-2" value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />
+              </div>
+            </>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
-        </div>
+        </div>"
 <div className="mb-6">
-=======
-          )  } catch (error) {
-    console.error("Error:", error);
+
+          )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+"
         <div className="mb-6">
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <button disabled={busy} onClick={start} className="rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50">Start/Update</button>
 =======
                 <label className="block text-sm font-medium">Registration number</label>
@@ -767,11 +864,12 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         </div>
 
-        {profile && (
+        {profile && ("
           <div className="space-y-6">
-            <div>
-              <div className="flex items-center justify-between mb-2">
+            <div>"
+              <div className="flex items-center justify-between mb-2">"
                 <span className="text-sm text-gray-600">Progress</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <span className="text-sm font-medium">{progress}% {profile.status === 'submitted' && '→ Pending ID'} {profile.status === 'approved' && '→ Approved'}</span>
@@ -821,76 +919,81 @@ if ( {) {
               </div>
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
             <section>
 
-        </div>;
+        </div>;'
         <div className='mb-6'>;
-          <button
+          <button;
             disabled={busy}
-            onClick={start}
+            onClick={start}'
             className='rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50'>;
             Start/Update;
           </button>;
         </div>;
-        {profile && (;
+        {profile && (;'
           <div className='space-y-6'>;
-            <div>;
-              <div className='flex items-center justify-between mb-2'>;
-                <span className='text-sm text-gray-600'>Progress</span>;
-                <span className='text-sm font-medium'>;
-                  {progress}% {profile && profile.status === 'submitted' && '→ Pending ID'}{' '}
+            <div>;'
+              <div className='flex items-center justify-between mb-2'>;'
+                <span className='text-sm text-gray-600'>Progress</span>;'
+                <span className='text-sm font-medium'>;'
+                  {progress}% {profile && profile.status === 'submitted' && '→ Pending ID'}{' '}'
                   {profile && profile.status === 'approved' && '→ Approved'}
                 </span>;
-              </div>;
+              </div>;'
               <div className='w-full bg-gray-100 rounded h-3 overflow-hidden'>;
-                <div
-                  className='bg-blue-600 h-3'
+                <div'
+                  className='bg-blue-600 h-3'`
                   style={{ width: `${progress}%` }}
                 />              </div>;
             </div>;
-            <section>;
-              <h2 className='font-semibold mb-2'>Required documents</h2>;
+            <section>;'
+              <h2 className='font-semibold mb-2'>Required documents</h2>;'
               <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>;
                 {requiredDocs && requiredDocs.map(k => {;
                   const hasIt = (profile && profile.documents || []).some(;
                     d => d && d.kind === k;
                   );
                     >;
-                      <div>;
-                        <div className='text-sm font-medium'>{k}</div>;
+                      <div>;'
+                        <div className='text-sm font-medium'>{k}</div>;'
                         <div className='text-xs text-gray-500'>;
-
+'
                           {hasIt ? 'Uploaded' : 'Missing'}
                         </div>;
                       </div>;
-                      <button
+                      <button;
                         disabled={busy}
-                        onClick={() => upload(k)}
+                        onClick={() => upload(k)}'
                         className='text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50';
-                      >;
+                      >;'
                         {hasIt ? 'Replace' : 'Upload'}
                       </button>;
                     </div>;
                   );                })}
 
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h2 className="font-semibold mb-2">Required documents</h2>
+=======
+
+"
+              <h2 className="font-semibold mb-2">Required documents</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
-                {requiredDocs.map((k) => {
+                {requiredDocs.map((k) => {}
                   const hasIt = (profile.documents || []).some((d) => d.kind === k);
-                  return (
+                  return ("
                     <div key={k} className="flex items-center justify-between border rounded p-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -914,10 +1017,19 @@ if ( {) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+                      <div>"
+                        <div className="text-sm font-medium">{k}</div>'"
+                        <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>
+                      </div>
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled: opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                     </div>
                   )
                 })}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -933,6 +1045,10 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 })}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </section>
             {optionalDocs.length > 0 && (
@@ -944,9 +1060,10 @@ if ( {) {
                     );
 
                       >;
-                        <div>;
-                          <div className='text-sm font-medium'>{k}</div>;
+                        <div>;'
+                          <div className='text-sm font-medium'>{k}</div>;'
                           <div className='text-xs text-gray-500'>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -963,14 +1080,17 @@ if ( {) {
                           <div className='text-xs text-gray-500'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                             {hasIt ? 'Uploaded' : 'Optional'}
                           </div>;
                         </div>;
-                        <button
+                        <button;
                           disabled={busy}
-                          onClick={() => upload(k)}
+                          onClick={() => upload(k)}'
                           className='text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50';
-                        >;
+                        >;'
                           {hasIt ? 'Replace' : 'Upload'}
 <<<<<<< HEAD
 =======
@@ -985,6 +1105,7 @@ if ( {) {
             )}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1006,20 +1127,30 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <h2 className="font-semibold mb-2">Optional documents</h2>
+=======
+"
+                <h2 className="font-semibold mb-2">Optional documents</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
-                  {optionalDocs.map((k) => {
+                  {optionalDocs.map((k) => {}
                     const hasIt = (profile.documents || []).some((d) => d.kind === k),
-                    return (
+                    return ("
                       <div key={k} className="flex items-center justify-between border rounded p-3">
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <div>
                           <div className="text-sm font-medium">{k}</div>
+=======
+
+                        <div>"
+                          <div className="text-sm font-medium">{k}</div>'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
-                        </div>
+                        </div>'"
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
 <<<<<<< HEAD
@@ -1054,6 +1185,7 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 =======
@@ -1266,14 +1398,16 @@ if ( {) {
             )}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div>
-              <button
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                disabled={
-                  busy |
-                  profile.status === 'submitted' |
+              <button;
+                disabled={}
+                  busy |'
+                  profile.status === 'submitted' |'
                   profile.status === 'approved'
                 }
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onClick={submit}
                 className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'
@@ -1290,70 +1424,11 @@ if ( {) {
 );
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-                    )
-;
-  const labels = getBadgeLabels(profile || undefined);
-  return (;
-    <>;
-      <Head>;
-        <title>Verify Identity - Zion</title>;
-        <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />;
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;
-      </Head>;
-      <main className="max-w-3xl mx-auto px-4 py-8">;
-        <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>;
-        <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>;
-        {labels.length > 0 && (;
-          <div className="mb-4">;
-            <VerifiedBadge labels={labels} />;
-          </div>;
-        )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-        <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <div>;
-            <label className="block text-sm font-medium">User ID</label>;
-            <input className="mt-1 w-full border rounded px-3 py-2" value={userId} onChange={(e) => setUserId(e.target.value)} />;
-          </div>;
-          <div>;
-            <label className="block text-sm font-medium">Role</label>;
-            <select className="mt-1 w-full border rounded px-3 py-2" value={role} onChange={(e) => setRole(e.target.value as KycRole)}>;
-              <option value="client">Client</option>;
-              <option value="talent">Talent</option>;
-              <option value="enterprise">Enterprise</option>;
-            </select>;
-          </div>;
-          <div className="md:col-span-2">;
-            <label className="block text-sm font-medium">Full legal name</label>;
-            <input className="mt-1 w-full border rounded px-3 py-2" value={fullLegalName} onChange={(e) => setFullLegalName(e.target.value)} />;
-          </div>;
-          {role === 'enterprise' && (;
-            <>;
-              <div>;
-                <label className="block text-sm font-medium">Business name</label>;
-                <input className="mt-1 w-full border rounded px-3 py-2" value={businessName} onChange={(e) => setBusinessName(e.target.value)} />;
-              </div>;
-              <div>;
-                <label className="block text-sm font-medium">Registration number</label>;
-                <input className="mt-1 w-full border rounded px-3 py-2" value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />;
-              </div>;
-            </>;
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </div>;
-        <div className="mb-6">;
-          <button disabled={busy} onClick={start} className="rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50">Start/Update</button>;
-        </div>;
-        {profile && (;
-          <div className="space-y-6">;
 
+<<<<<<< HEAD
             <div>;
               <button
                 disabled={
@@ -1462,52 +1537,59 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <section>;
               <h2 className="font-semibold mb-2">Required documents</h2>;
+=======
+
+
+            <section>;"
+              <h2 className="font-semibold mb-2">Required documents</h2>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">;
                 {requiredDocs.map((k) => {;
                   const hasIt = (profile.documents || []).some((d) => d.kind === k);
-                  return (;
+                  return (;"
                     <div key={k} className="flex items-center justify-between border rounded p-3">;
-                      <div>;
-                        <div className="text-sm font-medium">{k}</div>;
+                      <div>;"
+                        <div className="text-sm font-medium">{k}</div>;'"
                         <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>;
-                      </div>;
+                      </div>;'"
                       <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>;
                     </div>;
                   );
-                })  } catch (error) {
-    console.error("Error:", error);
+                })  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </div>;
             </section>;
             {optionalDocs.length > 0 && (;
-              <section>;
-                <h2 className="font-semibold mb-2">Optional documents</h2>;
+              <section>;"
+                <h2 className="font-semibold mb-2">Optional documents</h2>;"
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">;
                   {optionalDocs.map((k) => {;
                     const hasIt = (profile.documents || []).some((d) => d.kind === k);
-                    return (;
+                    return (;"
                       <div key={k} className="flex items-center justify-between border rounded p-3">;
-                        <div>;
-                          <div className="text-sm font-medium">{k}</div>;
+                        <div>;"
+                          <div className="text-sm font-medium">{k}</div>;'"
                           <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>;
-                        </div>;
+                        </div>;'"
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>;
                       </div>;
                     );
-                  })  } catch (error) {
-    console.error("Error:", error);
+                  })  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                 </div>;
               </section>;
-            )  } catch (error) {
-    console.error("Error:", error);
+            )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1525,12 +1607,16 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-            <div>
+
+            <div>'"
               <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1538,23 +1624,29 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {
     console.error("Error:", error);
+=======
+"
+            {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </div>
-        )  } catch (error) {
-    console.error("Error:", error);
+        )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
       </main>;
     </>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1568,3 +1660,9 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -12,11 +12,10 @@ const TranslationPreview = dynamic(() => import('../../components/admin/Translat
 =======
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -29,10 +28,15 @@ const TranslationPreview = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function TranslationsAdminPage() {
+=======
+
+export default function TranslationsAdminPage() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div className="container mx-auto px-4 py-8">
       <TranslationPreview />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -111,3 +115,14 @@ function TranslationsAdminPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
@@ -19,21 +20,29 @@ export default async function handler(
       if (hasSupabase) {
         const { data, error } = await supabaseClient
           .from('talent_profiles')
+=======
+export default async function handler() { return null; }
+  if (req && req.method === 'GET') {}
+    try {}
+      if (hasSupabase) {}
+        const { data, error } = await supabaseClient'
+          .from('talent_profiles')'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           .order('created_at', { ascending: false });
         if (error) throw error;
         return res && res.status(200).json({ items: data as TalentProfile[] });
       }
       return res && res.status(200).json({ items: LOCAL });
-    } catch (e: any) {
+    } catch (e: any) {}
       return res && res.status(500).json({ error: e && e.message });
     }  }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method === 'GET') {
-    try {
+export default async function handler() { return null; }
+  if (req && req.method === 'GET') {}
+    try {};
         } as any);
-        // Check condition
-if (throw error) {
-  $2
+        // Check condition;
+if (throw error) {}
+  $2;
 }
         return res.status (201).json ({ slug: item.slug });
       return res.status(500).json({ error: e.message });
@@ -134,15 +143,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
       // Fallback: return the slug as if saved;
       return res.status (201).json ({ slug: item.slug });
-    } catch (e: any) {
+    } catch (e: any) {}
       return res.status (500).json ({ error: e.message });
-    }
+    }'
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 }
+<<<<<<< HEAD
   }
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

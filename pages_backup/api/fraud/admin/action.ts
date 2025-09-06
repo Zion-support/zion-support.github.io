@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 <<<<<<< HEAD:pages/api/fraud/admin/action.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,13 +7,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/admin/action.ts
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -22,26 +21,33 @@
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/fraud/admin/action.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
+=======
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";"
+import { getFraudStore } from "../../../../utils/fraud/store";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/admin/action.ts
 import { AdminActionType } from "../../../../utils/fraud/types";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  try {
-  if (req && req.method !== "POST") {
+export default async function handler(;
+  req: NextApiRequest;
+  res: NextApiResponse;
+) {}
+  try {"
+  if (req && req.method !== "POST") {"
     return res && res.status(405).json({ error: "Method not allowed" });
 
   }
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 <<<<<<< HEAD:pages/api/fraud/admin/action.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/admin/action.ts
+
   const { fraudId, action, reason, adminId } = req && req.body || {};
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
   if (!fraudId || !action) {
     return res && res.status(400).json({ error: "Missing fraudId or action" });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -73,22 +79,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { fraudId, action, reason, adminId } = req && req.body || {};
   if (!fraudId || !action) {
+=======
+  if (!fraudId || !action) {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/admin/action.ts
     return res && res.status(400).json({ error: "Missing fraudId or action" });
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getFraudStore } from "../../../../utils/fraud/store";
-import { AdminActionType } from "../../../../utils/fraud/types";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "POST") {;
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-  const { fraudId, action, reason, adminId } = req.body |{}
-  if (!fraudId |!action) {
-    return res.status(400).json({ error: "Missing fraudId or action" });
 
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 <<<<<<< HEAD:pages/api/fraud/admin/action.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -116,6 +113,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(400).json({ error: 'Missing fraudId or action' });
 return;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/admin/action.ts
   }
 
   const act = (action as string).toUpperCase() as AdminActionType;
@@ -129,13 +132,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages/api/fraud/admin/action.ts
 <<<<<<< HEAD
   const fraud = store && store.getById(fraudId);
-  if (!fraud) {
+  if (!fraud) {"
     return res && res.status(404).json({ error: "Fraud record not found" });
   }
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
   const adminAction: AdminActionType = {
 <<<<<<< HEAD
 =======
 
+=======
+  const adminAction: AdminActionType = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/admin/action.ts
     id: `action-${Date && Date.now()}`,
     fraudId,
     action,
@@ -144,6 +151,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     timestamp: new Date().toISOString(),
   };
 
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,52 +159,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   store && store.addAdminAction(adminAction);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/admin/action.ts
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
+export default function handler() { return null; }
+  res.status(200).json({ message: 'API endpoint' });'
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import { getFraudStore } from '../../../../utils/fraud/store';'
 import { AdminActionType } from '../../../../utils/fraud/types';
-function ensureAdmin(req: NextApiRequest): boolean {;
+function ensureAdmin(req: NextApiRequest): boolean {;'
   const token = req.headers['x-admin-token'];
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured;
   return token === process.env.ADMIN_TOKEN;
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
   store.addAdminAction(adminAction);
 
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
-  store.addAdminAction(adminAction);
 
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -215,35 +219,45 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/fraud/admin/action.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
+=======
+
+
+
+
+
+'
+import type { NextApiRequest, NextApiResponse } from './next';'
+import { getFraudStore  } from '../../../../utils / fraud / store';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/admin/action.ts
 import { AdminActionType  } from '../../../../utils / fraud / types';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-export default async /**
- * handler - Function description
+export default async /**;
+ * handler - Function description;
  */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}"
     return res.status (405).json ({ error: "Method not allowed" });
   }
   const { fraud_id, action, reason, admin_id } = req.body || {}
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}"
     return res.status (400).json ({ error: "Missing fraud_id or action" });
   }
   const store = getFraudStore ();
   const fraud = store.getById (fraud_id);
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}"
     return res.status (404).json ({ error: "Fraud record not found" });
   }
-  const admin_action: AdminActionType = {
+  const admin_action: AdminActionType = {}`
     id: `action-${Date.now ()}`,
     fraud_id,
     action,
@@ -257,6 +271,7 @@ if ( {) {
   return res.status (200).json ({ success: true, action: admin_action });
 }
 
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 <<<<<<< HEAD:pages/api/fraud/admin/action.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -365,39 +380,50 @@ export default async function handler(req, res) {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/fraud/admin/action.ts
   } catch (error) {
     console.error("Error:", error);
+=======
+
+
+
+
+
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/admin/action.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
   const store = getFraudStore();
-  await store.recordAction({ fraudId, action: act, adminId: adminId || null, reason: reason || null });
+  await store.recordAction({ fraudId, action: act, adminId: adminId || null, reason: reason || null });'
   const newStatus = act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SUSPENDED';
   await store.updateEventStatus(fraudId, newStatus);
   res.status(200).json({ ok: true, status: newStatus });
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 <<<<<<< HEAD:pages/api/fraud/admin/action.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/admin/action.ts
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -438,3 +464,10 @@ export default async function handler(req, res) {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/fraud/admin/action.ts
+=======
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/fraud/admin/action.ts

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -38,14 +39,21 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -56,6 +64,7 @@ console.log('=====')
       "encoding"
       "stdio"
 const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   console.log('\n "Recommendations")
@@ -555,3 +564,7 @@ module.exports = MasterAutomationOrchestrator;
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  console.log('\n "Recommendations")
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

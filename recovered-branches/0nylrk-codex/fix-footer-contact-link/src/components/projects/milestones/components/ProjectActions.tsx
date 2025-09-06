@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,9 +57,19 @@ import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Button} from '@/components/ui/button';
+=======
+
+
+  projectId: string;
+  isUnderDispute: boolean;
+  disputeId?: string;
+  isTalent: boolean;
+import {Button} from '@/components/ui/button';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Link} from 'react-router-dom';
-import {ShieldAlert} from "lucide-react";
+import {ShieldAlert} from "lucide-react";'
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -91,10 +102,20 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+
+
+'
+import React from 'react','
+import { Button } from '@/components/ui/button','
+import { Link } from 'react-router-dom',"
+import { ShieldAlert } from "lucide-react",'
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 <<<<<<< HEAD
-
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -109,26 +130,29 @@ interface ProjectActionsProps {
 
 =======
   onAddMilestone: () => void
+=======
+interface ProjectActionsProps {}
+  projectId: string,
+  isUnderDispute: boolean,
+  disputeId?: string,
+  isTalent: boolean,;
+  onAddMilestone: () => void;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 export function ProjectActions({;
   projectId;
   isUnderDispute;
   disputeId;
   isTalent;
-export function ProjectActions({
+export function ProjectActions({}
   projectId,
   isUnderDispute,
   disputeId,
   isTalent,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -182,6 +206,25 @@ import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
 import { ShieldAlert } from "lucide-react",;
+=======
+;
+  onAddMilestone;
+}: ProjectActionsProps) {}
+  return (
+
+
+        <RaiseDisputeButton;
+          projectId={projectId}"
+          variant="outline"
+        />
+
+
+'
+import React from 'react',;'
+import { Button } from '@/components/ui/button',;'
+import { Link } from 'react-router-dom',;"
+import { ShieldAlert } from "lucide-react",;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
 interface ProjectActionsProps {;
   projectId: string,;
@@ -191,6 +234,7 @@ interface ProjectActionsProps {;
   onAddMilestone: () => void;
 }
 ;
+<<<<<<< HEAD
 export function ProjectActions({;
   projectId,;
   isUnderDispute,;
@@ -235,10 +279,15 @@ export function ProjectActions({;
       {isUnderDispute && disputeId ? (;
         <Button variant="outline" asChild>;
           <Link to={`/dashboard/disputes/${disputeId}`}>;
+=======
+export function ProjectActions() { return null; }
+          <Link to={`/dashboard/disputes/${disputeId}`}>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <ShieldAlert className="h-4 w-4 mr-2" />;
             View Active Dispute;
           </Link>;
         </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ) : (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -252,6 +301,9 @@ export function ProjectActions({;
           projectId={projectId}
           variant="outline";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         />;
 <<<<<<< HEAD
 =======
@@ -264,6 +316,7 @@ export function ProjectActions({;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       ) : (;
         <RaiseDisputeButton;
@@ -274,12 +327,18 @@ export function ProjectActions({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
-          Add Milestone
+          Add Milestone;
         </Button>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -317,17 +376,27 @@ import {Button} from '@/components / ui / button';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Link} from 'react-router-dom';
 import { ShieldAlert } from './lucide-react';
+=======
+
+
+
+'
+import {Button} from '@/components / ui / button';'
+import {Link} from 'react-router-dom';'
+import { ShieldAlert } from './lucide-react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {RaiseDisputeButton} from '@/components / disputes / RaiseDisputeButton';
-interface ProjectActionsProps {
+interface ProjectActionsProps {}
   project_id: string,
   isUnderDispute: boolean,
   dispute_id?: string;
   is_talent: boolean,
   onAddMilestone: () => void;
 }
-export /**
- * ProjectActions - Function description
+export /**;
+ * ProjectActions - Function description;
  */
+<<<<<<< HEAD
 function ProjectActions() {
   return (
     <div className="flex gap-2">;
@@ -335,17 +404,27 @@ function ProjectActions() {
         <Button variant="outline" as_child>;
           <Link to={`/dashboard / disputes/${dispute_id}`}>;
             <ShieldAlert className="h - 4 w - 4 mr-2" />;
+=======
+function ProjectActions() {}
+  return ("
+    <div className="flex gap - 2">;
+      {isUnderDispute && dispute_id ? ("
+        <Button variant="outline" as_child>;`
+          <Link to={`/dashboard / disputes/${dispute_id}`}>;"
+            <ShieldAlert className="h - 4 w - 4 mr - 2" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             View Active Dispute;
           </Link>;
         </Button>) : (
         <RaiseDisputeButton;
-          project_id={project_id}
+          project_id={project_id}"
           variant="outline";
         />;
       )}
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
           Add Milestone;
+<<<<<<< HEAD
         </Button>)}
     </div>);
 }
@@ -390,3 +469,9 @@ onAddMilestone
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

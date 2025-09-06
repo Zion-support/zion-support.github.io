@@ -132,258 +132,257 @@ import { GradientHeading } from './GradientHeading'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> pr-12243
 import { FileText } from 'lucide-react'
-const faqs = [
-  {
+const faqs = []
+  {'
     question: 'How do I publish my AI product or service?'
-    answer:
+    answer:'
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."
   }
-  {
+  {'
     question: 'What types of AI jobs can I find or post?'
-    answer:
+    answer:'
       'You can hire or apply for roles such as machine learning engineer, data scientist, AI researcher, computer vision expert and more.'
   }
-  {
+  {'
     question: 'What IT equipment is available to rent or buy?'
-    answer:
+    answer:'
       'Servers, storage solutions, networking gear, power supplies and complete rack setups are offered with flexible purchase or rental options.'
   }
-  {
+  {'
     question: 'How does Zion ensure 24x7x365 availability?'
-    answer:
+    answer:'
       'We use distributed data centers with automated failover and a global support team working in rotating shifts.'
   }
-  {
+  {'"
     question: "What is Zion's Green IT program?"
-    answer:
+    answer:'
       'Obsolete hardware is recycled or reused in line with WEEE, RoHS and e-Stewards standards, and we provide disposal certificates when required.'
   }
-  {
+  {'
     question: 'Are there fees for listing my products or services?'
-    answer:
+    answer:'
       'No. Listing products, services, jobs or CVs is free, with optional paid promotion for extra visibility.'
   }
-  {
+  {'
     question: 'How do I track my order status?'
-    answer:
+    answer:'
       'Check the Orders page in your account or ask our chatbot with your order ID for a quick update.'
   }
-  {
+  {'
     question: 'How do I contact support?'
-    answer:
+    answer:'
       'Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime.'
   }
 ]
+<<<<<<< HEAD
 export function FaqSection() {
 <<<<<<< HEAD
+=======
+export function FaqSection() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { GradientHeading } from './GradientHeading';
   Accordion,;
   AccordionContent,;
   AccordionItem,;
-  AccordionTrigger,;
-} from '@/components/ui/accordion';
+  AccordionTrigger,;'
+} from '@/components/ui/accordion';'
 import { FileText } from 'lucide-react';
 const faqs = [;
-  {;
+  {;'
     question: 'How do I publish my AI product or service?',;
-    answer:;
+    answer:;'"
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check.",;
   },;
-  {;
+  {;'
     question: 'What types of AI jobs can I find or post?',;
-    answer:;
+    answer:;'
       'You can hire or apply for roles such as machine learning engineer, data scientist, AI researcher, computer vision expert and more.',;
   },;
-  {;
+  {;'
     question: 'What IT equipment is available to rent or buy?',;
-    answer:;
+    answer:;'
       'Servers, storage solutions, networking gear, power supplies and complete rack setups are offered with flexible purchase or rental options.',;
   },;
-  {;
+  {;'
     question: 'How does Zion ensure 24x7x365 availability?',;
-    answer:;
+    answer:;'
       'We use distributed data centers with automated failover and a global support team working in rotating shifts.',;
   },;
-  {;
+  {;'"
     question: "What is Zion's Green IT program?",;
-    answer:;
+    answer:;'
       'Obsolete hardware is recycled or reused in line with WEEE, RoHS and e-Stewards standards, and we provide disposal certificates when required.',;
   },;
-  {;
+  {;'
     question: 'Are there fees for listing my products or services?',;
-    answer:;
+    answer:;'
       'No. Listing products, services, jobs or CVs is free, with optional paid promotion for extra visibility.',;
   },;
-  {;
+  {;'
     question: 'How do I track my order status?',;
-    answer:;
+    answer:;'
       'Check the Orders page in your account or ask our chatbot with your order ID for a quick update.',;
   },;
-  {;
+  {;'
     question: 'How do I contact support?',;
-    answer:;
+    answer:;'
       'Reach us via the chat widget, email support@ziontechgroup && ziontechgroup.com or call +1 302 464 0950 anytime.',;
   },;
 ];
 
-export function FaqSection() {;
-  return (
-    <section className='py-20 bg-zion-blue' id='faq'>;
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>;
-        <div className='text-center mb-12'>;
-          <GradientHeading>Frequently Asked Questions</GradientHeading>;
-          <p className='mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto'>;
+export function FaqSection() { return null; }
 import { GradientHeading } from './GradientHeading';
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from '@/components / ui / accordion';
+  AccordionTrigger,'
+} from '@/components / ui / accordion';'
 import { FileText } from 'lucide-react';
 const faqs = [;
-  {
+  {'
     question: 'How do I publish my AI product or service?',
-    answer:;
+    answer:;'"
       "Create an account, choose 'Post Your Product / Service for Free, ' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check.",
   },
-  {
+  {'
     question: 'What types of AI jobs can I find or post?',
-    answer:;
+    answer:;'
       'You can hire or apply for roles such as machine learning engineer, data scientist, AI researcher, computer vision expert and more.',
   },
-  {
+  {'
     question: 'What IT equipment is available to rent or buy?',
-    answer:;
+    answer:;'
       'Servers, storage solutions, networking gear, power supplies and complete rack setups are offered with flexible purchase or rental options.',
   },
-  {
+  {'
     question: 'How does Zion ensure 24x7x365 availability?',
-    answer:;
+    answer:;'
       'We use distributed data centers with automated failover and a global support team working in rotating shifts.',
   },
-  {
+  {'"
     question: "What is Zion's Green IT program?",
-    answer:;
+    answer:;'
       'Obsolete hardware is recycled or reused in line with WEEE, RoHS and e - Stewards standards, and we provide disposal certificates when required.',
   },
-  {
+  {'
     question: 'Are there fees for listing my products or services?',
-    answer:;
+    answer:;'
       'No. Listing products, services, jobs or CVs is free, with optional paid promotion for extra visibility.',
   },
-  {
+  {'
     question: 'How do I track my order status?',
-    answer:;
+    answer:;'
       'Check the Orders page in your account or ask our chatbot with your order ID for a quick update.',
   },
-  {
+  {'
     question: 'How do I contact support?',
-    answer:;
+    answer:;'
       'Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime.',
   },
 ];
-export /**
- * FaqSection - Function description
+export /**;
+ * FaqSection - Function description;
  */
-function FaqSection() {
-  return (
-    <section className='py - 20 bg - zion - blue' id='faq'>;
-      <div className='container mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+function FaqSection() {}
+  return ('
+    <section className='py - 20 bg - zion - blue' id='faq'>;'
+      <div className='container mx - auto px - 4 sm:px - 6 lg:px - 8'>;'
         <div className='text - center mb - 12'>;
-          <GradientHeading > Frequently Asked Questions</GradientHeading>;
+          <GradientHeading > Frequently Asked Questions</GradientHeading>;'
           <p className='mt - 4 text - zion - slate - light text - xl max - w-2xl mx - auto'>;
             Find answers to common questions about AI product listings, IT;
             equipment rentals, and datacenter maintenance services;
           </p>;
         </div>;
 
-
+"
 import { GradientHeading } from "./GradientHeading";
-
-        <div className='max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6'>;
-          <div className='flex items - center mb - 6'>;
-            <FileText className='h - 6 w - 6 text - zion - cyan mr - 2' />;
+'
+        <div className='max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6'>;'
+          <div className='flex items - center mb - 6'>;'
+            <FileText className='h - 6 w - 6 text - zion - cyan mr - 2' />;'
             <h3 className='text - xl font - bold text - white'>Common Questions</h3>;
-          </div>;
+          </div>;'
           <Accordion type='single' collapsible className='w - full'>;
             {faqs.map ((faq, index) => (
               <AccordionItem;
                 key={index}
-                value={`item-${index}`}
+                value={`item-${index}`}'
                 className='border - zion - purple / 10';
-              >;
+              >;'
                 <AccordionTrigger className='text - white hover:text - zion - cyan'>                  {faq.question}
-                </AccordionTrigger>;
-                <AccordionContent className='text - zion - slate - light'>                  {faq.answer}
+                </AccordionTrigger>;'
+                <AccordionContent className='text - zion - slate - light'>                  {faq.answer}"
                 <AccordionContent className="text - zion - slate - light">;
-import {
+import {};
   Accordion;
   AccordionContent;
-  AccordionItem;
-  AccordionTrigger } from '@/components / ui / accordion';
+  AccordionItem;'
+  AccordionTrigger } from '@/components / ui / accordion';'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components / ui / accordion';
 const faqs = [;
-  {
-
-        <div className='max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6'>;
-          <div className='flex items-center mb-6'>;
-            <FileText className='h-6 w-6 text-zion-cyan mr-2' />;
+  {}
+'
+        <div className='max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6'>;'
+          <div className='flex items-center mb-6'>;'
+            <FileText className='h-6 w-6 text-zion-cyan mr-2' />;'
             <h3 className='text-xl font-bold text-white'>Common Questions</h3>;
           </div>;
-
+'
           <Accordion type='single' collapsible className='w-full'>;
             {faqs && faqs.map((faq, index) => (;
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className='border-zion-purple/10'>;
+              <AccordionItem;
+                key={index}`
+                value={`item-${index}`}'
+                className='border-zion-purple/10'>;'
                 <AccordionTrigger className='text-white hover:text-zion-cyan'>                  {faq && faq.question}
-                </AccordionTrigger>;
-                <AccordionContent className='text-zion-slate-light'>                  {faq && faq.answer}
+                </AccordionTrigger>;'
+                <AccordionContent className='text-zion-slate-light'>                  {faq && faq.answer}"
                 <AccordionContent className="text-zion-slate-light">;
 import {;
   Accordion;
   AccordionContent;
-  AccordionItem;
-  AccordionTrigger} from "@/components/ui/accordion";
-import { FileText } from 'lucide-react';
+  AccordionItem;"
+  AccordionTrigger} from "@/components/ui/accordion";'
+import { FileText } from 'lucide-react';'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const faqs = [;
-  {;
+  {;"
     question: "How do I publish my AI product or service?",;
-    answer:;
+    answer:;'"
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."};
-  {;
+  {;"
     question: "What types of AI jobs can I find or post?",;
-    answer:;
+    answer:;"
       "You can hire or apply for roles such as machine learning engineer, data scientist, AI researcher, computer vision expert and more."};
-  {;
+  {;"
     question: "What IT equipment is available to rent or buy?",;
-    answer:;
+    answer:;"
       "Servers, storage solutions, networking gear, power supplies and complete rack setups are offered with flexible purchase or rental options."};
-  {;
+  {;"
     question: "How does Zion ensure 24x7x365 availability?",;
-    answer:;
+    answer:;"
       "We use distributed data centers with automated failover and a global support team working in rotating shifts."};
-  {;
+  {;'"
     question: "What is Zion's Green IT program?",;
-    answer:;
+    answer:;"
       "Obsolete hardware is recycled or reused in line with WEEE, RoHS and e-Stewards standards, and we provide disposal certificates when required."};
-  {;
+  {;"
     question: "Are there fees for listing my products or services?",;
-    answer:;
+    answer:;"
       "No. Listing products, services, jobs or CVs is free, with optional paid promotion for extra visibility."};
-  {;
+  {;"
     question: "How do I track my order status?",;
-    answer:;
+    answer:;"
       "Check the Orders page in your account or ask our chatbot with your order ID for a quick update."};
-  {;
+  {;"
     question: "How do I contact support?",;
-    answer:;
+    answer:;"
       "Reach us via the chat widget, email support@ziontechgroup && ziontechgroup.com or call +1 302 464 0950 anytime."}];
 
 
+<<<<<<< HEAD
 export function FaqSection() {;
 
 
@@ -407,16 +406,20 @@ const faqs = [
                 <AccordionContent className='text-zion-slate-light'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function FaqSection() {
+=======
+export function FaqSection() { return null; }
+export function FaqSection() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
-
-        <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
-          <div className="flex items-center mb-6">
-            <FileText className="h-6 w-6 text-zion-cyan mr-2" />
+"
+        <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">"
+          <div className="flex items-center mb-6">"
+            <FileText className="h-6 w-6 text-zion-cyan mr-2" />"
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
 <<<<<<< HEAD
@@ -428,131 +431,116 @@ export function FaqSection() {
 
           
 
-
+"
           <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
-                <AccordionTrigger className="text-white hover:text-zion-cyan">
-    question: "How do I publish my AI product or service?",
-    answer:;
+            {faqs.map((faq, index) => ("`
+              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">"
+                <AccordionTrigger className="text-white hover:text-zion-cyan">"
+    question: "How do I publish my AI product or service?",;
+    answer:;'"
       "Create an account, choose 'Post Your Product / Service for Free, ' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."}
-  {
+  {"
     question: "What types of AI jobs can I find or post?",
-    answer:;
+    answer:;"
       "You can hire or apply for roles such as machine learning engineer, data scientist, AI researcher, computer vision expert and more."}
-  {
+  {"
     question: "What IT equipment is available to rent or buy?",
-    answer:;
+    answer:;"
       "Servers, storage solutions, networking gear, power supplies and complete rack setups are offered with flexible purchase or rental options."}
-  {
+  {"
     question: "How does Zion ensure 24x7x365 availability?",
-    answer:;
+    answer:;"
       "We use distributed data centers with automated failover and a global support team working in rotating shifts."}
-  {
+  {'"
     question: "What is Zion's Green IT program?",
-    answer:;
+    answer:;"
       "Obsolete hardware is recycled or reused in line with WEEE, RoHS and e - Stewards standards, and we provide disposal certificates when required."}
-  {
+  {"
     question: "Are there fees for listing my products or services?",
-    answer:;
+    answer:;"
       "No. Listing products, services, jobs or CVs is free, with optional paid promotion for extra visibility."}
-  {
+  {"
     question: "How do I track my order status?",
-    answer:;
+    answer:;"
       "Check the Orders page in your account or ask our chatbot with your order ID for a quick update."}
-  {
+  {"
     question: "How do I contact support?",
-    answer:;
+    answer:;"
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}];
-export /**
- * FaqSection - Function description
+export /**;
+ * FaqSection - Function description;
  */
-function FaqSection() {
-  return (
-    <section className="py - 20 bg - zion - blue" id="faq">;
-      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
+function FaqSection() {}
+  return ("
+    <section className="py - 20 bg - zion - blue" id="faq">;"
+      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;"
         <div className="text - center mb - 12">;
-          <GradientHeading > Frequently Asked Questions</GradientHeading>;
+          <GradientHeading > Frequently Asked Questions</GradientHeading>;"
           <p className="mt - 4 text - zion - slate - light text - xl max - w-2xl mx - auto">;
             Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services;
           </p>;
-        </div>;
-        <div className="max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6">;
-          <div className="flex items - center mb - 6">;
-            <FileText className="h - 6 w - 6 text - zion - cyan mr - 2" />;
+        </div>;"
+        <div className="max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6">;"
+          <div className="flex items - center mb - 6">;"
+            <FileText className="h - 6 w - 6 text - zion - cyan mr - 2" />;"
             <h3 className="text - xl font - bold text - white">Common Questions</h3>;
-          </div>;
+          </div>;"
           <Accordion type="single" collapsible className="w - full">;
-            {faqs.map ((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border - zion - purple / 10">;
+            {faqs.map ((faq, index) => ("`
+              <AccordionItem key={index} value={`item-${index}`} className="border - zion - purple / 10">;"
                 <AccordionTrigger className="text - white hover:text - zion - cyan">;
                   {faq.question}
 
-                </AccordionTrigger>
+                </AccordionTrigger>"
                 <AccordionContent className="text-zion-slate-light">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
   AccordionContent,;
-  AccordionItem,;
-  AccordionTrigger} from "@/components/ui/accordion",;
+  AccordionItem,;"
+  AccordionTrigger} from "@/components/ui/accordion",;'
 import { FileText } from 'lucide-react';
 const faqs = [;
-  {;
+  {;"
     question: "How do I publish my AI product or service?",;
-    answer:;
+    answer:;'"
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."},;
-  {;
+  {;"
     question: "What types of AI jobs can I find or post?",;
-    answer:;
+    answer:;"
       "You can hire or apply for roles such as machine learning engineer, data scientist, AI researcher, computer vision expert and more."},;
-  {;
+  {;"
     question: "What IT equipment is available to rent or buy?",;
-    answer:;
+    answer:;"
       "Servers, storage solutions, networking gear, power supplies and complete rack setups are offered with flexible purchase or rental options."},;
-  {;
+  {;"
     question: "How does Zion ensure 24x7x365 availability?",;
-    answer:;
+    answer:;"
       "We use distributed data centers with automated failover and a global support team working in rotating shifts."},;
-  {;
+  {;'"
     question: "What is Zion's Green IT program?",;
-    answer:;
+    answer:;"
       "Obsolete hardware is recycled or reused in line with WEEE, RoHS and e-Stewards standards, and we provide disposal certificates when required."},;
-  {;
+  {;"
     question: "Are there fees for listing my products or services?",;
-    answer:;
+    answer:;"
       "No. Listing products, services, jobs or CVs is free, with optional paid promotion for extra visibility."},;
-  {;
+  {;"
     question: "How do I track my order status?",;
-    answer:;
+    answer:;"
       "Check the Orders page in your account or ask our chatbot with your order ID for a quick update."},;
-  {;
+  {;"
     question: "How do I contact support?",;
-    answer:;
+    answer:;"
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}];
-export function FaqSection() {;
-  return (;
-
-    <section className="py-20 bg-zion-blue" id="faq">;
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="text-center mb-12">;
-          <GradientHeading>Frequently Asked Questions</GradientHeading>;
-          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;
-            Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services;
-          </p>;
-        </div>;
-
-        <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">;
-          <div className="flex items-center mb-6">;
-            <FileText className="h-6 w-6 text-zion-cyan mr-2" />;
-            <h3 className="text-xl font-bold text-white">Common Questions</h3>;
-          </div>;
-
-          <Accordion type="single" collapsible className="w-full">;
-            {faqs && faqs.map((faq, index) => (;
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
+export function FaqSection() { return null; }`
+              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;"
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -569,6 +557,7 @@ export default FaqSection;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -597,3 +586,6 @@ export default FaqSection;
 export default FaqSection;
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> pr-12243
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

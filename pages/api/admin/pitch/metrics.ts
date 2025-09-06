@@ -7,9 +7,10 @@ export default async function handler(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";"
 import { ensureAdminFromApi } from "../../../../utils/auth";
 export default async function handler(
+<<<<<<< HEAD
 <<<<<<< HEAD
   req: NextApiRequest,
   res: NextApiResponse,
@@ -24,6 +25,10 @@ export default async function handler(
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
@@ -32,12 +37,11 @@ export default async function handler(
 <<<<<<< HEAD
 =======
   res.status(200).json(data);
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 }
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -97,11 +101,27 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-}
 =======
-    ],
+
+  const data = {}
+    activeUsers30d: 12840;
+    gmv: 1450000;
+    mrr: 82000;
+    yoyGrowth: 1.85;
+    completedProjects: 3275"
+    globalReach: ["USEUAPACLATAM"]
 
 
+  try {}
+  const { allowed } = await ensureAdminFromApi(req);"
+  if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
+  // TODO: Replace with real data sources (e && e.g., Supabase, GA4, internal DB)
+  const data = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+}
+
+
+<<<<<<< HEAD
 =======
   }
 
@@ -127,3 +147,6 @@ export default async function handler(
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -6,7 +6,7 @@ import Button from '../components/ui/Button';
 import QuantumCard from '../components/ui/QuantumCard';
 import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
 import { expandedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/expanded-micro-saas-services';
-=======
+
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
@@ -172,6 +172,7 @@ export default function ServicesPage() {
       color: 'from-emerald-500 to-teal-600',
       marketPosition: 'Leading biotech AI platform. Competes with Insitro ($1000+/month), Atomwise ($800+/month), and BenevolentAI ($1200+/month).',
       marketData: '$8.5B biotech AI market, 420% annual growth',
+<<<<<<< HEAD
       savings: 'Save 40% vs. competitors'
     },
     {
@@ -206,6 +207,9 @@ export default function ServicesPage() {
       marketPosition: 'Competitive with Zendesk ($49/user/month), Intercom ($74/user/month), and Freshdesk ($29/user/month). Our advantage: AI-powered automation and higher accuracy.',
       marketData: '$3.2B customer service software market, 220% annual growth',
       savings: 'Save 60% vs. competitors'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -628,9 +632,12 @@ export default function ServicesPage() {
               )}
             </div>
 
+<<<<<<< HEAD
             {/* Services Grid */}
             <div className={`grid gap-8 ${
               viewMode === 'grid' 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
                 : 'grid-cols-1'
             }`}>
@@ -644,6 +651,7 @@ export default function ServicesPage() {
                   className="h-full cursor-pointer"
                   onClick={() => window.open(service.link, '_blank')}
                 >
+<<<<<<< HEAD
                   <div className="flex items-start justify-between mb-4">
                     <div className="text-3xl">{service.icon}</div>
                     {service.popular && (
@@ -757,6 +765,9 @@ export default function ServicesPage() {
                     </Button>
                   </div>
                 </QuantumCard>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </section>
@@ -807,6 +818,7 @@ export default function ServicesPage() {
                   className="h-full cursor-pointer"
                   onClick={() => window.open(service.link, '_blank')}
                 >
+<<<<<<< HEAD
                   <div className="flex items-start justify-between mb-4">
                     <div className="text-3xl">{service.icon}</div>
                     <div className="flex items-center text-yellow-400">
@@ -839,6 +851,9 @@ export default function ServicesPage() {
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </QuantumCard>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
@@ -884,7 +899,7 @@ export default function ServicesPage() {
     </UltraFuturisticBackground>
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -903,4 +918,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

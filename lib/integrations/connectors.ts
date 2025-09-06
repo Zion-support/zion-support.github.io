@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 // Integration connectors
 import { ProviderConnection, SyncLogEntry } from './types';
+=======
+
+import { ProviderConnection, SyncLogEntry } from './types';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { v4 as uuidv4 } from 'uuid';
-import { ProviderConnection, SyncLogEntry } from "./types";
-import { v4 as uuidv4 } from "uuid";
-import { ProviderConnection, SyncLogEntry } from './types';
+import { ProviderConnection, SyncLogEntry } from "./types";"
+import { v4 as uuidv4 } from "uuid";'
+import { ProviderConnection, SyncLogEntry } from './types';'
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
 pr-12243
 
 import { IntegrationConfig, IntegrationResponse, ApiEndpoint } from './types';
@@ -21,11 +27,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ProviderConnection, SyncLogEntry } from "./types";
+=======
+
+
+
+
+
+
+
+
+"
+import { ProviderConnection, SyncLogEntry } from "./types";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { v4 as uuidv4 } from "uuid";
 async function mockProviderCall<T>(
-  connection: ProviderConnection
-  action: string
+  connection: ProviderConnection;
+  action: string;
   details: Record<string, any>
+<<<<<<< HEAD
 ): Promise<{ log: SyncLogEntry; result: T }> {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -50,21 +69,25 @@ async function callProvider<T>(
 // CRM actions
 export const crm = {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+): Promise<{ log: SyncLogEntry; result: T }> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   async syncContact(
-    connection: ProviderConnection
+    connection: ProviderConnection;
     contact: Record<string, any>
-  ) {
+  ) {"
     return mockProviderCall(connection, "sync_contact", { contact });
   }
   async addEmailTouchpoint(
-    connection: ProviderConnection
+    connection: ProviderConnection;
     touchpoint: Record<string, any>
-  ) {
+  ) {"
     return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
   }
   async addProjectNote(
-    connection: ProviderConnection
+    connection: ProviderConnection;
     note: Record<string, any>
+<<<<<<< HEAD
   ) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
@@ -79,24 +102,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 // ATS actions
 export const ats = {
   const log: SyncLogEntry = {
+=======
+  ) {"
+    return mockProviderCall(connection, "add_project_note", { note });
+  }
+}
+// ATS actions;
+export const ats = {}
+  const log: SyncLogEntry = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     id: uuidv4(),
     timestamp: Date.now(),
-    providerId: connection.providerId,
+    providerId: connection.providerId,'
     level: 'info',
-    action,
-  return { log, result: { ok: true } as unknown as T };
-import { ProviderConnection, SyncLogEntry  } from './types';
+    action,;
+  return { log, result: { ok: true } as unknown as T };'
+import { ProviderConnection, SyncLogEntry  } from './types';'
 import { v4 as uuidv4  } from './uuid';
 ;
 async function mockProviderCall < T>(
   connection: ProviderConnection,
   action: string,
   details: Record < string, any>,
-): Promise<{ log: SyncLogEntry; result: T }> {
-  const log: SyncLogEntry = {
+): Promise<{ log: SyncLogEntry; result: T }> {}
+  const log: SyncLogEntry = {}
     id: uuidv4 (),
     timestamp: Date.now (),
-    provider_id: connection.provider_id,
+    provider_id: connection.provider_id,"
     level: "info",
     action,
     details,
@@ -106,18 +138,27 @@ async function mockProviderCall < T>(
   return { log, result: { ok: true } as unknown as T }
 }
 // CRM actions;
+<<<<<<< HEAD
 export const crm = {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
 pr-12243
+=======
+export const crm = {}
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {';
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 
   async connect(): Promise<IntegrationResponse> {
     throw new Error('Connect method must be implemented');
   }
 
+<<<<<<< HEAD
   async disconnect(): Promise<IntegrationResponse> {
     throw new Error('Disconnect method must be implemented');
   }
@@ -187,32 +228,43 @@ async pushApplicant(
 origin/cursor/automate-test-improve-and-merge-code-2533
   async updateStatus(
     connection: ProviderConnection
+=======
+// ATS actions;
+export const ats = {}
+  async updateStatus(;
+    connection: ProviderConnection;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     status: Record<string, any>
-  ) {
+  ) {}
     connection: ProviderConnection,
     status: Record<string, any>,
-  ) {;
+  ) {;"
     return mockProviderCall(connection, "update_status", { status });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   async sync_contact (
     connection: ProviderConnection,
     contact: Record < string, any>,
-  ) {
+  ) {"
     return mockProviderCall (connection, "sync_contact", { contact });
   },
   async addEmailTouchpoint (
     connection: ProviderConnection,
     touchpoint: Record < string, any>,
-  ) {
+  ) {"
     return mockProviderCall (connection, "add_email_touchpoint", { touchpoint });
   },
   async addProjectNote (
     connection: ProviderConnection,
     note: Record < string, any>,
-  ) {
+  ) {"
     return mockProviderCall (connection, "add_project_note", { note });
   },
+<<<<<<< HEAD
   const log: SyncLogEntry = {
     id: uuidv4()
     timestamp: Date.now()
@@ -230,18 +282,42 @@ pr-12243
   async test(): Promise<IntegrationResponse> {
     return this.connect();
   }
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
 // ATS actions;
-export const ats = {
+export const ats = {}
   async update_status (
     connection: ProviderConnection,
     status: Record < string, any>,
-  ) {
+  ) {";
+    return mockProviderCall (connection, "update_status", { status });
+  },
+}
+
+;
+
+
+
+
+
+}
+;
+// ATS actions;
+export const ats = {}
+  async update_status (
+    connection: ProviderConnection,
+    status: Record < string, any>,
+  ) {";
     return mockProviderCall (connection, "update_status", { status });
   },
 }
 ;
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12243
 
@@ -261,14 +337,32 @@ export class WebhookConnector extends BaseConnector {
 ursor/fix-website-loading-errors-and-merge-6662
 // Email actions
 export const email = {
+=======
+
+
+
+
+  async createCandidate(
+    connection: ProviderConnection,
+    candidate: Record<string, any>
+  ) {'
+    return executeProviderAction(connection, 'createCandidate', { candidate });
+  },
+};
+
+
+// Email actions;
+export const email = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   async sendNotification(
     connection: ProviderConnection,
     notification: Record<string, any>
-  ) {
+  ) {';
     return executeProviderAction(connection, 'sendNotification', { notification });
   },
 };
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
     return simulateAction(connection, 'ats.updateStatus', { change });
@@ -276,3 +370,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

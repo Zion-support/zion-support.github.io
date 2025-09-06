@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export default function HomePage() {
   return (
     <div className="py-8">
@@ -11,3 +12,6 @@ export default function HomePage() {
     </div>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

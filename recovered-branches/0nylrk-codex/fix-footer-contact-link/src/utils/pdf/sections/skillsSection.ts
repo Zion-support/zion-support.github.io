@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -41,6 +41,20 @@ export function addSkillsSection(;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { jsPDF  } from 'jspdf';'
+import { Skill  } from '@/types/resume';'
+import { PdfThemeColors } from '../themeConfig';
+export function addSkillsSection(
+';
+import {jsPDF} from 'jspdf';'
+import {Skill} from '@/types/resume';'
+import {PdfThemeColors} from '../themeConfig';
+export function addSkillsSection(;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   doc: jsPDF;
 =======
 import { jsPDF  } from 'jspdf';
@@ -57,6 +71,7 @@ export function addSkillsSection(  doc: jsPDF;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   skills: Skill[];
   colors: PdfThemeColors;
+<<<<<<< HEAD
   startY: number
 ): number {
 
@@ -124,33 +139,23 @@ export function addSkillsSection(;
       acc[category] = [];
     }
     acc[category].push(skill),;
-    return acc;
-  }, {} as Record<string typeof skills>),;
-  doc.setFontSize(11),;
-  doc.setTextColor(colors.text),;
-  for (const [category, categorySkills] of Object.entries(skillsByCategory)) {;
-    doc.setFont('helveticabold'),;
-    doc.text(category, 20, yPos),;
-    doc.setFont('helveticanormal'),;
-    const skillsText = categorySkills.map(skill => skill.name).join(', '),;
-    const skillLines = doc.splitTextToSize(skillsText, 160);
-    doc.text(skillLines, 30, yPos + 5);
-    yPos += (skillLines.length * 5) + 10;
-
-  doc && doc.setFontSize(11);
-  doc && doc.setTextColor(colors && colors.text);
-  for (const [category, categorySkills] of Object && Object.entries(skillsByCategory)) {
-    doc && doc.setFont('helveticabold');
-    doc && doc.text(category, 20, yPos);
-    doc && doc.setFont('helveticanormal');
-    const skillsText = categorySkills && categorySkills.map(skill => skill && skill.name).join(', ');
-    const skillLines = doc && doc.splitTextToSize(skillsText, 160);
-    doc && doc.text(skillLines, 30, yPos + 5);
-    yPos += (skillLines && skillLines.length * 5) + 10
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  startY: number;
+): number {}
+  yPos += 8;
+  // Group skills by category;
+    if (!acc[category]) {}
+      acc[category] = []
+    }
+    acc[category].push(skill);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    return acc;
+  }, {} as Record<string, typeof skills>);
+
+
+
   }
+<<<<<<< HEAD
 =======
   }, {} as Record<string, typeof skills>);  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -160,20 +165,25 @@ export function addSkillsSection(;
   return yPos + 5
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types / resume';
+=======
+  return yPos + 5'
+import {jsPDF} from 'jspdf';'
+import {Skill} from '@/types / resume';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {PdfThemeColors} from '../theme_config';
-export function addSkillsSection (
+export function addSkillsSection (;
   doc: jsPDF;
   skills: Skill[];
   colors: PdfThemeColors;
-  start_y: number): number {
-  // Check condition
-if (return start_y) {
-  $2
+  start_y: number): number {}
+  // Check condition;
+if (return start_y) {}
+  $2;
 }
   let y_pos = start_y;
 ;
   doc.setFontSize (16);
-  doc.setTextColor (colors.heading),
+  doc.setTextColor (colors.heading),'
   doc.text ('Skills', 20, y_pos);
   y_pos += 8;
 ;
@@ -182,11 +192,11 @@ if (return start_y) {
   y_pos += 8;
 ;
   // Group skills by category;
-  const skillsByCategory = skills.reduce ((acc, skill) => {
+  const skillsByCategory = skills.reduce ((acc, skill) => {'
     const category = skill.category || 'Other';
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       acc[category] = [];
     }
@@ -197,11 +207,11 @@ if ( {) {
   doc.setFontSize (11);
   doc.setTextColor (colors.text);
 ;
-  for (const [category, category_skills] of Object.entries (skillsByCategory)) {
+  for (const [category, category_skills] of Object.entries (skillsByCategory)) {'
     doc.set_font ('helveticabold');
-    doc.text (category, 20, y_pos);
+    doc.text (category, 20, y_pos);'
     doc.set_font ('helveticanormal');
-;
+;'
     const skills_text = category_skills.map (skill => skill.name).join (', ');
     const skill_lines = doc.splitTextToSize (skills_text, 160);
     doc.text (skill_lines, 30, y_pos + 5);
@@ -209,6 +219,7 @@ if ( {) {
     y_pos += (skill_lines.length * 5) + 10;
   }
   return y_pos + 5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -285,3 +296,10 @@ return yPos + 5
 =======
 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

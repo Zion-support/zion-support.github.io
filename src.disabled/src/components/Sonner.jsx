@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function Sonner({ position = \'bottom-right\',richColors = true,closeButton = true }) {}; return null} \'bottom - 4 right - 4\'} z - 50\"}> {} \"success\": (message) => error: (message) => Error: \',message),; \"info\": (message) => Info: \',message),; \"warning\": (message) => Warning: \',message),; \"loading\": (message) => Loading: \',message),; \"dismiss\": (toastId) => Dismiss:\',toastId); </div>)} export const toast = {}};}\'"
 <<<<<<< HEAD
 =======
@@ -8,9 +9,11 @@ export function Sonner({ position = \'bottom-right\',richColors = true,closeButt
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 module && module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) {}; return null} "bottom - 4 right - 4"} z - 50"}> {} success: (message) => error: (message) => Error: ",message),; info: (message) => Info: ",message),; warning: (message) => Warning: ",message),; loading: (message) => Loading: ",message),; dismiss: (toastId) => Dismiss:",toastId); </div>)} export const toast = {}};}""'"'"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export function Sonner({ position = 'bottom-right',richColors = true,closeButton = true }) {}; return null} 'bottom - 4 right - 4'} z - 50"}> {} "success": (message) => error: (message) => Error: ,message),; "info": (message) => Info:  ,message),; "warning": (message) => Warning:  ,message),; "loading": (message) => Loading:  ,message),; "dismiss": (toastId) => Dismiss:',toastId); </div>)} export const toast = {}};}'"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -45,3 +48,9 @@ export function Sonner({ position = 'bottom-right',richColors = true,closeButton
 =======
 export function Sonner({ position = 'bottom-right',richColors = true,closeButton = true }) {}; return null} 'bottom - 4 right - 4'} z - 50"}> {} "success": (message) => error: (message) => Error: ,message),; "info": (message) => Info:  ,message),; "warning": (message) => Warning:  ,message),; "loading": (message) => Loading:  ,message),; "dismiss": (toastId) => Dismiss:',toastId); </div>)} export const toast = {}};}'"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type WatchlistMatch = {
 export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
@@ -25,13 +26,11 @@ interface AmlMatch {
   name: string;
   score: number;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-interface AmlResult {
-  status: 'review' | 'clear';
-  matches: AmlMatch[];
-  checkedAt: string;
-  provider: string;
 }
+<<<<<<< HEAD
 
 interface AmlProvider {
   checkBusiness(businessName: string): Promise<AmlResult>;
@@ -696,3 +695,12 @@ export function getAmlProvider(): AmlProvider {
   return provider;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+export function getAmlProvider (): AmlProvider {};
+  return new MockAmlProvider ();
+}
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

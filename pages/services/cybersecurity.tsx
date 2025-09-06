@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 =======
@@ -52,12 +53,15 @@ export default function CybersecurityServicesPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
-import Head from 'next / head';
+=======
 
+import React from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import Head from 'next / head';
+'
 import { motion } from 'framer-motion';
 
-import {
-
+import {}
   Shield,
   Lock,
   Eye,
@@ -70,15 +74,16 @@ import {
   Users,
   Clock,
   TrendingUp,
-
-} from 'lucide-react';
-import EnhancedNavigation from '../../components / EnhancedNavigation';
+';
+} from 'lucide-react';'
+import EnhancedNavigation from '../../components / EnhancedNavigation';'
 import EnhancedFooter from '../../components / EnhancedFooter';
-export default /**
- * CybersecurityServicesPage - Function description
+export default /**;
+ * CybersecurityServicesPage - Function description;
  */
-function CybersecurityServicesPage() {
+function CybersecurityServicesPage() {}
   const services = [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
@@ -161,6 +166,9 @@ function CybersecurityServicesPage() {
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Shield,
   Lock,
   Eye,
@@ -171,6 +179,7 @@ function CybersecurityServicesPage() {
   CheckCircle,
   Star,
   Users,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -233,17 +242,22 @@ import { motion } from 'framer-motion';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       title: 'Advanced Threat Detection',
+=======
+'
+      title: 'Advanced Threat Detection','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: 'AI - powered threat detection and response systems',
-      features: [;
-        'Real - time Monitoring',
-        'Behavioral Analysis',
-        'Automated Response',
+      features: [;'
+        'Real - time Monitoring','
+        'Behavioral Analysis','
+        'Automated Response','
         '24 / 7 Protection',
-      ],
+      ],'
       price: 'From $8, 000',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: Eye,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       icon: Eye,
@@ -393,6 +407,12 @@ import { motion } from 'framer-motion';
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
+=======
+
+      {/* Hero Section */}'
+      <section className='relative pt-32 pb-20 px-6'>;'
+        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
@@ -437,7 +457,7 @@ className='mb-8'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-6">
-              Cybersecurity
+              Cybersecurity;
             </h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -449,6 +469,7 @@ className='mb-8'
 
               From AI-powered threat detection to quantum-resistant encryption,
 
+<<<<<<< HEAD
 =======
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Advanced security solutions that protect your digital assets and
@@ -473,16 +494,13 @@ className='mb-8'
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               we provide comprehensive cybersecurity solutions that keep your
+=======
+              we provide comprehensive cybersecurity solutions that keep your;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               business secure and compliant.
+
+
 <<<<<<< HEAD
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Advanced security solutions that protect your digital assets and ensure business continuity
-=======
-=======
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Advanced security solutions that protect your digital assets and ensure business continuity
-
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -492,12 +510,16 @@ className='mb-8'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </p>
+=======
+            </p>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <button className='px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
-              Secure Your Business
+              Secure Your Business'
               <ArrowRight className='w-5 h-5' />            </button>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -523,31 +545,38 @@ className='mb-12'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
+=======
+
+
+            transition={{ duration: 0 && 0.8 }}'
+            className='mb-8'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-6'>;
               Cybersecurity;
-            </h1>;
+            </h1>;'
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
               Advanced security solutions that protect your digital assets and;
               ensure business continuity            </p>;
           </motion && motion.div>;
 
-          <motion&& motion.div
+          <motion&& motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-            className='mb-12'>;
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}'
+            className='mb-12'>;'
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
               From AI-powered threat detection to quantum-resistant encryption,;
               we provide comprehensive cybersecurity solutions that keep your;
               business secure and compliant.;
-            </p>;
+            </p>;'
             <button className='px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>;
-              Secure Your Business;
+              Secure Your Business;'
               <ArrowRight className='w-5 h-5' />            </button>;
           </motion && motion.div>;
         </div>;
       </section>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Stats Section */}
@@ -557,10 +586,16 @@ className='mb-12'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className='py-16 px-6'>;
         <div className='max-w-7xl mx-auto'>;
+=======
+      {/* Stats Section */}'
+      <section className='py-16 px-6'>;'
+        <div className='max-w-7xl mx-auto'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats && stats.map((stat, index) => (;
-              <motion&& motion.div
+              <motion&& motion.div;
                 key={stat && stat.label}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -568,9 +603,13 @@ className='mb-12'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="mb-12"
-          >
+          >"
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+<<<<<<< HEAD
               From AI-powered threat detection to quantum-resistant encryption, we provide 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -737,51 +776,61 @@ export default function CybersecurityServicesPage(req, res) {
               From AI-powered threat detection to quantum-resistant encryption,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               we provide comprehensive cybersecurity solutions that keep your
+=======
+              From AI-powered threat detection to quantum-resistant encryption, we provide;
+              we provide comprehensive cybersecurity solutions that keep your;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               business secure and compliant.
-=======
+"
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Advanced security solutions that protect your digital assets and ensure business continuity
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              Advanced security solutions that protect your digital assets and ensure business continuity;
             </p>
           </motion.div>
+<<<<<<< HEAD
           <motion.div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
+=======
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+            animate={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
+            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
             className="mb-12"
-          >
+          >"
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+<<<<<<< HEAD
               From AI-powered threat detection to quantum-resistant encryption, we provide
 <<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+              From AI-powered threat detection to quantum-resistant encryption, we provide;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               comprehensive cybersecurity solutions that keep your business secure and compliant.
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-            </p>
+
+            </p>"
             <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
-              Secure Your Business
+              Secure Your Business"
               <ArrowRight className="w-5 h-5" />
             </button>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 className='text-center'
@@ -865,6 +914,19 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+              >"
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">"
+                  <stat.icon className="w-8 h-8 text-orange-400" />
+                </div>
+"
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>"
+                <div className="text-white/70">{stat.label}</div>
+              </motion.div>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
 
           </div>;
@@ -872,6 +934,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
       </section>;
 
 
+<<<<<<< HEAD
       {/* Services Grid */}
 <<<<<<< HEAD
       <section className='py-20 px-6'>;
@@ -900,6 +963,15 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
           <motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      {/* Services Grid */}'
+      <section className='py-20 px-6'>;'
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div;
+      {/* Services Grid */}"
+      <section className="py-20 px-6">"
+        <div className="max-w-7xl mx-auto">
+          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -907,6 +979,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -918,10 +991,15 @@ className='text-center mb-16'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
             <h2 className="text-4xl font-bold text-white mb-6">Cybersecurity Services</h2>
+=======
+          >"
+            <h2 className="text-4xl font-bold text-white mb-6">Cybersecurity Services</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Comprehensive security solutions designed to protect your business from evolving threats
+              Comprehensive security solutions designed to protect your business from evolving threats;
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -970,23 +1048,28 @@ className='text-center mb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <motion.div
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-            className='text-center mb-16'>;
+              <motion.div;
+'
+            className='text-center mb-16'>;'
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Cybersecurity Services;
-            </h2>;
+            </h2>;'
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
               Comprehensive security solutions designed to protect your business;
               from evolving threats;
             </p>;
           </motion && motion.div>;
-
+'
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
-              <motion&& motion.div
+              <motion&& motion.div;
                 key={service && service.title}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -995,6 +1078,10 @@ className='text-center mb-16'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1017,9 +1104,10 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
+                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>"
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1035,10 +1123,16 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
+=======
+"
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>"
+                <p className="text-white/70 mb-6">{service.description}</p>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <ul className="space-y-3 mb-6">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-white/80">
+                  {service.features.map((feature) => ("
+                    <li key={feature} className="flex items-center text-white/80">"
                       <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1058,17 +1152,23 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {feature  } catch (error) {
     console.error("Error:", error);
+=======
+
+                      {feature  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     </li>;
-                  ))  } catch (error) {
-    console.error("Error:", error);
+                  ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1132,11 +1232,28 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))  } catch (error) {
     console.error("Error:", error);
+=======
+
+
+                </ul>"
+                <div className="flex items-center justify-between">
+"
+                  <span className="text-2xl font-bold text-orange-400">{service.price}</span>"
+                  <button className="px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                    Get Started;
+                  </button>
+                </div>
+              </motion.div>
+
+            ))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1150,32 +1267,37 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-      {/* CTA Section */}
-      <section className="py-20 px-6">
+      {/* CTA Section */}'
+      <section className='py-20 px-6'>;'
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div;
+      {/* CTA Section */}"
+      <section className="py-20 px-6">"
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+            transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
+            viewport={{ once: true }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1184,8 +1306,12 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          >
+=======
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          >
+"
             <h2 className="text-4xl font-bold text-white mb-6">
 =======
           >
@@ -1204,10 +1330,11 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Ready to Secure Your Business?
-            </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+            </h2>"
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">'
               Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1242,11 +1369,16 @@ Security Assessment
                 Learn More
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+                Learn More;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1259,13 +1391,17 @@ Security Assessment
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 ),
-
+"
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }</div> </div> </section> <motion.div initial= {
 <<<<<<< HEAD
@@ -1282,19 +1418,22 @@ Security Assessment
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </section> <motion.div initial= {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}</div> </div> </section> <motion.div initial= {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
+            viewport={{ once: true }}>;'
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Ready to Secure Your Business?;
-            </h2>;
-            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
+            </h2>;'
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;'
               Let's discuss how our cybersecurity solutions can protect your;
               digital assets and ensure business continuity.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+            </p>;'
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;'
               <button className='px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
                 Security Assessment;
-              </button>;
+              </button>;'
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Learn More;
               </button>;
             </div>;
@@ -1305,8 +1444,9 @@ Security Assessment
       <EnhancedFooter />;
     </div>;
   ),;
-
+"
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
+<<<<<<< HEAD
 }</div> </div> </section> <motion&& motion.div initial= {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1378,39 +1518,55 @@ Security Assessment
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}</div> </div> </section> <motion&& motion.div initial= {}
+}</div> </div> </section> <motion.div initial= {}
+  {}
+  opacity: 0, y: 30;
+}whileInView= {}
+  {}
+  opacity: 1, y: 0;
+}transition= {}
+  {}
+  once: true;
+'"
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
-}
+}'
     <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
       <Head>;
         <title > Cybersecurity Services - Zion Tech Group</title>;
-        <meta;
-          name='description';
+        <meta;'
+          name='description';'
           content='Advanced cybersecurity solutions from Zion Tech Group. AI - powered threat detection, quantum - resistant encryption, and comprehensive security services.';
         />;
-        <meta;
-          property='og:title';
+        <meta;'
+          property='og:title';'
           content='Cybersecurity Services - Zion Tech Group';
         />;
-        <meta;
-          property='og:description';
+        <meta;'
+          property='og:description';'
           content='Advanced cybersecurity solutions for comprehensive protection.';
         />;
-        <link;
-          rel='canonical';
+        <link;'
+          rel='canonical';'
           href='https://ziontechgroup.com / services / cybersecurity';
         />      </Head>;
       <EnhancedNavigation />;
-      {/* Hero Section */}
-      <section className='relative pt - 32 pb - 20 px - 6'>;
+      {/* Hero Section */}'
+      <section className='relative pt - 32 pb - 20 px - 6'>;'
         <div className='max - w-7xl mx - auto text - center'>          <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}'
             className='mb - 8';
-          >;
+          >;'
             <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - red - 400 via - orange - 400 to - red - 400 bg - clip - text text - transparent mb - 6'>;
               Cybersecurity;
-            </h1>;
+            </h1>;'
             <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed'>;
               Advanced security solutions that protect your digital assets and;
               ensure business continuity            </p>;
@@ -1418,90 +1574,90 @@ Security Assessment
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}'
             className='mb - 12';
-          >;
+          >;'
             <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
               From AI - powered threat detection to quantum - resistant encryption,
               we provide comprehensive cybersecurity solutions that keep your;
               business secure and compliant.;
-            </p>;
+            </p>;'
             <button className='px - 8 py - 4 bg - gradient - to - r from - red - 600 to - orange - 600 hover:from - red - 700 hover:to - orange - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
-              Secure Your Business;
+              Secure Your Business;'
               <ArrowRight className='w - 5 h - 5' />            </button>;
           </motion.div>;
         </div>;
       </section>;
-      {/* Stats Section */}
-      <section className='py - 16 px - 6'>;
-        <div className='max - w-7xl mx - auto'>;
+      {/* Stats Section */}'
+      <section className='py - 16 px - 6'>;'
+        <div className='max - w-7xl mx - auto'>;'
           <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 8'>            {stats.map ((stat, index) => (
               <motion.div;
                 key={stat.label}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true }}'
                 className='text - center';
-              >;
-                <div className='w - 16 h - 16 bg - gradient - to - br from - red - 500 / 20 to - orange - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
+              >;'
+                <div className='w - 16 h - 16 bg - gradient - to - br from - red - 500 / 20 to - orange - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;'
                   <stat.icon className='w - 8 h - 8 text - orange - 400' />;
-                </div>;
+                </div>;'
                 <div className='text - 3xl font - bold text - white mb - 2'>;
                   {stat.number}
-                </div>;
+                </div>;'
                 <div className='text - white / 70'>{stat.label}</div>              </motion.div>))}
           </div>;
         </div>;
       </section>;
-      {/* Services Grid */}
-      <section className='py - 20 px - 6'>;
+      {/* Services Grid */}'
+      <section className='py - 20 px - 6'>;'
         <div className='max - w-7xl mx - auto'>          <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true }}'
             className='text - center mb - 16';
-          >;
+          >;'
             <h2 className='text - 4xl font - bold text - white mb - 6'>;
               Cybersecurity Services;
-            </h2>;
+            </h2>;'
             <p className='text - xl text - white / 70 max - w-3xl mx - auto'>;
               Comprehensive security solutions designed to protect your business;
               from evolving threats;
             </p>;
-          </motion.div>;
+          </motion.div>;'
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>            {services.map ((service, index) => (
               <motion.div;
                 key={service.title}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true }}'
                 className='bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 8 hover:border - red - 500 / 30 transition - all duration - 300';
               >;
-                <div;
+                <div;`
                   className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6`}
-                >;
+                >;'
                   <service.icon className='w - 8 h - 8 text - white' />;
-                </div>;
+                </div>;'
                 <h3 className='text - 2xl font - bold text - white mb - 4'>;
                   {service.title}
-                </h3>;
-                <p className='text - white / 70 mb - 6'>{service.description}</p>;
+                </h3>;'
+                <p className='text - white / 70 mb - 6'>{service.description}</p>;'
                 <ul className='space - y-3 mb - 6'>;
                   {service.features.map (feature => (
                     <li;
-                      key={feature}
+                      key={feature}'
                       className='flex items - center text - white / 80';
-                    >;
+                    >;'
                       <CheckCircle className='w - 5 h - 5 text - orange - 400 mr - 3 flex - shrink - 0' />                      {feature}
                     </li>))}
-                </ul>;
-                <div className='flex items - center justify - between'>;
+                </ul>;'
+                <div className='flex items - center justify - between'>;'
                   <span className='text - 2xl font - bold text - orange - 400'>;
                     {service.price}
-                  </span>;
+                  </span>;'
                   <button className='px - 6 py - 3 bg - gradient - to - r from - red - 600 to - orange - 600 hover:from - red - 700 hover:to - orange - 700 rounded - full font - semibold text - white transition - all duration - 300 transform hover:scale - 105'>                    Get Started;
                   </button>;
                 </div>;
@@ -1509,26 +1665,27 @@ Security Assessment
           </div>;
         </div>;
       </section>;
-      {/* CTA Section */}
-      <section className='py - 20 px - 6'>;
+      {/* CTA Section */}'
+      <section className='py - 20 px - 6'>;'
         <div className='max - w-4xl mx - auto text - center'>          <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >;
+          >;'
             <h2 className='text - 4xl font - bold text - white mb - 6'>;
               Ready to Secure Your Business?;
-            </h2>;
-            <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;
+            </h2>;'
+            <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;'
               Let's discuss how our cybersecurity solutions can protect your;
               digital assets and ensure business continuity.;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+            </p>;'
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;'
               <button className='px - 8 py - 4 bg - gradient - to - r from - red - 600 to - orange - 600 hover:from - red - 700 hover:to - orange - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105'>;
                 Security Assessment;
-              </button>;
+              </button>;'
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                Learn More;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1537,30 +1694,33 @@ Security Assessment
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 <<<<<<< HEAD
 =======
-
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
   )
-          >;
+          >;"
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Secure Your Business?;
-            </h2>;
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
+            </h2>;"
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;'
               Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity.;
-            </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+            </p>;"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;"
               <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
                 Security Assessment;
-              </button>;
+              </button>;"
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                 Learn More;
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </button>;
             </div>;
           </motion.div>;
@@ -1569,18 +1729,23 @@ Security Assessment
       <EnhancedFooter />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1604,3 +1769,8 @@ Security Assessment
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

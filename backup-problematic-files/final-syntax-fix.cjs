@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/final-syntax-fix.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/final-syntax-fix.cjs
 
@@ -78,6 +79,9 @@ for (const file of files) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:final-syntax-fix.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:final-syntax-fix.cjs
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -137,6 +141,7 @@ for (const file of files) {}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
+<<<<<<< HEAD:backup-problematic-files/final-syntax-fix.cjs
 <<<<<<< HEAD
 =======
 =======
@@ -148,6 +153,9 @@ console.log(`Fixed syntax errors in ${fixedCount} files.`);
 =======
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:final-syntax-fix.cjs
 const fs = require('fs');
 const path = require('path');
 
@@ -239,6 +247,7 @@ walkDir('/workspace/pages');
 walkDir('/workspace/src');
 
 console.log('Final syntax fix completed!');
+<<<<<<< HEAD:backup-problematic-files/final-syntax-fix.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -258,3 +267,7 @@ console.log(`Fixed syntax errors in ${fixedCount} files.`);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:final-syntax-fix.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:final-syntax-fix.cjs

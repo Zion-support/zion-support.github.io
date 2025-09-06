@@ -7,6 +7,7 @@ import {
   ShieldCheck, Star, Award, Target, Users, Globe
 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -25,6 +26,9 @@ export default function HomePage() {
     { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Brain className="w-6 h-6" /> },
     { value: '$50B+', label: 'Combined Market Value', color: 'text-yellow-400', icon: <TrendingUp className="w-6 h-6" /> },
     { value: '1000%+', label: 'Average ROI', color: 'text-purple-400', icon: <DollarSign className="w-6 h-6" /> },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const heroStats = marketStats;
@@ -39,6 +43,7 @@ export default function HomePage() {
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
     {
+<<<<<<< HEAD
       title: '🧠 Revolutionary Quantum AI Brain-Computer Interface',
       description: 'World\'s first quantum-enhanced BCI with direct neural communication. Achieve breakthrough discoveries with 500% ROI within 6 months.',
       price: 'Starting at $2,999/month',
@@ -206,5 +211,8 @@ export default function HomePage() {
                 </div>
               </div>
             </UltraFuturisticCard>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

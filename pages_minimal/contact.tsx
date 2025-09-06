@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -8,18 +9,25 @@ export default function Contact() {;
 
   return (
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from './react';
 ;
-export default /**
- * Contact - Function description
+export default /**;
+ * Contact - Function description;
  */
-function Contact() {
+function Contact() {}
   return (
     <div>;
       <main>;
@@ -28,3 +36,4 @@ function Contact() {
       </main>;
     </div>);
 }
+'

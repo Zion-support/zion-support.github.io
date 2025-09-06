@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { UserProfile } from "@/types/auth",
@@ -26,14 +27,17 @@ import type { UserProfile } from "@/types/auth",
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
-// in this file.
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export interface SupabaseUser {
 
+
+
+// We cannot rely on the Supabase SDK types here because the project;
+// declares `@supabase/supabase-js` as an untyped external module. Define;
+// a minimal user shape that includes only the properties we actually use;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+// in this file.
+
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -47,9 +51,17 @@ export interface SupabaseUser {
 export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile {
 
   return {
+=======
+export interface SupabaseUser {}
+  id: string,;
+  email?: string | null;
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /**
- * Maps Supabase profile data to our app's user model
+ * Maps Supabase profile data to our app's user model;
  */
+<<<<<<< HEAD
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
 <<<<<<< HEAD
   }
@@ -63,13 +75,17 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return {;
     id: user.id;
 import type { UserProfile } from "@/types / auth";
-// We cannot rely on the Supabase SDK types here because the project;
+// We cannot rely on the Supabase SDK types here because the project;`
 // declares `@supabase / supabase - js` as an untyped external module. Define;
 // a minimal user shape that includes only the properties we actually use;
 // in this file.;
+<<<<<<< HEAD
 export interface SupabaseUser {
   return {
     id: user && user.id;
@@ -109,3 +125,28 @@ export interface SupabaseUser {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface SupabaseUser {}
+  return {}
+";
+    email: user.email || "";"
+    display_name: profile.display_name || "";"
+    user_type: (profile.user_type as "creator" | "job_seeker" | "employer" | "buyer" | "admin" | null) || null;
+    profile_complete: Boolean (profile.profile_complete);
+    created_at: new Date (profile.created_at).toISOString ();
+    updated_at: new Date (profile.updated_at).toISOString ();
+    bio: profile.bio || undefined;
+    headline: profile.headline || undefined;
+    avatar_url: profile.avatar_url || undefined,
+
+    avatarUrl: profile.avatar_url || undefined, // Add for compatibility;
+    role: profile.user_type // Map user_type to role for backward compatibility;
+  }
+}
+  }
+}
+  }
+}
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/Sonner.js.jsx
 "export\": function Sonner ({ position = \'bottom - right\',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \'top - left\' ? \'top - 4 left - 4\' : \' \"position\": === \'top - right\' ? \'top - 4 right - 4\' :\' position: === \'bottom - left\' ? \'bottom - 4 left - 4\' :\'` \'bottom: - 4 right - 4\'} z - 50\"}> {} </div>) } export const toast = { \"success\": (message) =>\''\'"\"",;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -29,10 +30,20 @@ export: function Sonner ({ position = "bottom - right",richColors = true,closeBu
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"export\": function Sonner ({ position = \'bottom - right\',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \'top - left\' ? \'top - 4 left - 4\' : \' \"position\": === \'top - right\' ? \'top - 4 right - 4\' :\' position: === \'bottom - left\' ? \'bottom - 4 left - 4\' :\'` \'bottom: - 4 right - 4\'} z - 50\"}> {} </div>) } export const toast = { \"success\": (message) =>\''\'"\"",;'"`
 "export\": function Sonner ({ position = \'bottom - right\',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \'top - left\' ? \'top - 4 left - 4\' : \' \"position\": === \'top - right\' ? \'top - 4 right - 4\' :\' position: === \'bottom - left\' ? \'bottom - 4 left - 4\' :\'` \'bottom: - 4 right - 4\'} z - 50\"}> {} </div>) } export const toast = { \"success\": (message) =>\''\'"\"",;
+:src.disabled/components/Sonner.js.jsx'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 "export\": function Sonner ({ position = \'bottom - right\',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \'top - left\' ? \'top - 4 left - 4\' : \' \"position\": === \'top - right\' ? \'top - 4 right - 4\' :\' position: === \'bottom - left\' ? \'bottom - 4 left - 4\' :\'` \'bottom: - 4 right - 4\'} z - 50\"}> {} </div>) } export const toast = { \"success\": (message) =>\''\'"\"",;
-:src.disabled/components/Sonner.js.jsx
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"`
 "export\": function Sonner ({ position = \'bottom - right\',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \'top - left\' ? \'top - 4 left - 4\' : \' \"position\": === \'top - right\' ? \'top - 4 right - 4\' :\' position: === \'bottom - left\' ? \'bottom - 4 left - 4\' :\'` \'bottom: - 4 right - 4\'} z - 50\"}> {} </div>) } export const toast = { \"success\": (message) =>\''\'"\"",;
+:temp_exclude/src.disabled/components/Sonner.js.jsx;
+'"`
+"export\": function Sonner ({ position = \'bottom - right\',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \'top - left\' ? \'top - 4 left - 4\' : \' \"position\": === \'top - right\' ? \'top - 4 right - 4\' :\' position: === \'bottom - left\' ? \'bottom - 4 left - 4\' :\'` \'bottom: - 4 right - 4\'} z - 50\"}> {} </div>) } export const toast = { \"success\": (message) =>\''\'"\"",;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "export\": function Sonner ({ position = \'bottom - right\',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \'top - left\' ? \'top - 4 left - 4\' : \' \"position\": === \'top - right\' ? \'top - 4 right - 4\' :\' position: === \'bottom - left\' ? \'bottom - 4 left - 4\' :\'` \'bottom: - 4 right - 4\'} z - 50\"}> {} </div>) } export const toast = { \"success\": (message) =>\''\'"\"",;
 :temp_exclude/src.disabled/components/Sonner.js.jsx
@@ -51,3 +62,15 @@ export: function Sonner ({ position = "bottom - right",richColors = true,closeBu
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+'"`
+export: function Sonner ({ position = "bottom - right",richColors = true,closeButton = true }) { return (<div className={`fixed ${position === "top - left" ? "top - 4 left - 4" : " position: === "top - right" ? "top - 4 right - 4" :" position: === "bottom - left" ? "bottom - 4 left - 4" :"` "bottom: - 4 right - 4"} z - 50"}> {} </div>) } export const toast = { success: (message) =>"""""",;'"`'"`
+'"`
+export: function Sonner ({ position = "bottom - right",richColors = true,closeButton = true }) { return (<div className={`fixed ${position === "top - left" ? "top - 4 left - 4" : " position: === "top - right" ? "top - 4 right - 4" :" position: === "bottom - left" ? "bottom - 4 left - 4" :"` "bottom: - 4 right - 4"} z - 50"}> {} </div>) } export const toast = { success: (message) =>"""""",;'"`'"`
+'"`
+"export\": function Sonner ({ position = \'bottom - right\',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \'top - left\' ? \'top - 4 left - 4\' : \' \"position\": === \'top - right\' ? \'top - 4 right - 4\' :\' position: === \'bottom - left\' ? \'bottom - 4 left - 4\' :\'` \'bottom: - 4 right - 4\'} z - 50\"}> {} </div>) } export const toast = { \"success\": (message) =>\''\'"\"",;'"`
+export: function Sonner ({ position = "bottom - right",richColors = true,closeButton = true }) { return (<div className={`fixed ${position === "top - left" ? "top - 4 left - 4" : " position: === "top - right" ? "top - 4 right - 4" :" position: === "bottom - left" ? "bottom - 4 left - 4" :"` "bottom: - 4 right - 4"} z - 50"}> {} </div>) } export const toast = { success: (message) =>"""""",;'"`'"`
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

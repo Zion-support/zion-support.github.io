@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GetServerSideProps } from 'next';
 
 import { GetServerSideProps } from 'next',;
@@ -10,16 +11,17 @@ export const getServerSideProps: GetServerSideProps = async () => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       permanent: false}}
 
 export const getServerSideProps: GetServerSideProps = async () => {;
@@ -43,24 +45,19 @@ export default function ResumeIndex() { return null }
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
       destination: '/resume/preview',
       permanent: false}}
 }
-export default function ResumeIndex() { return null }
-import { GetServerSideProps } from 'next',
+export default function ResumeIndex() { return null }';
+import { GetServerSideProps } from 'next',';
 import { GetServerSideProps } from 'next';
-
+'
 import { GetServerSideProps } from 'next',;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -68,34 +65,46 @@ import { GetServerSideProps } from 'next',;
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
+=======
+
+
+export const getServerSideProps: GetServerSideProps = async () => {}
+  return {}
+    redirect: {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       destination: '/resume/preview'
       permanent: false}}
 }
 export default function ResumeIndex() { return null }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },
+=======
+},;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
-export default function ResumeIndex() { return null };
+export default function ResumeIndex() { return null };'
 import { GetServerSideProps } from 'next';
 export const getServerSideProps: GetServerSideProps = async () => {;
   return {;
-    redirect: {;
+    redirect: {;'
       destination: '/resume/preview';
-      permanent: false}  } catch (error) {
-    console.error("Error:", error);
+      permanent: false}  } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 };
-export default function ResumeIndex() { return null   } catch (error) {
-    console.error("Error:", error);
+export default function ResumeIndex() { return null   } catch (error) {";
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -104,14 +113,13 @@ export default function ResumeIndex() { return null   } catch (error) {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -124,3 +132,10 @@ export const getServerSideProps: GetServerSideProps;
 export default function ResumeIndex() { return null }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

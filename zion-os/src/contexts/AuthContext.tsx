@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -32,8 +33,12 @@ interface User {id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-interface AuthContextType {
+interface AuthContextType {}
   user: User | null,
   is_loading: boolean,
   is_authenticated: boolean,
@@ -43,102 +48,102 @@ interface AuthContextType {
   complete_onboarding: () => Promise < void>;
 }
 const AuthContext = create_context < AuthContextType | undefined>(undefined),
-export /**
- * AuthProvider - Function description
+export /**;
+ * AuthProvider - Function description;
  */
-function AuthProvider() {
+function AuthProvider() {}
   const { data: session, status } = use_session (),
   const [user, set_user] = useState < User | null>(null),
   const [is_loading, setIsLoading] = useState (true),
   const router = use_router (),
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
+  useEffect (() => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       setIsLoading (true),
       return;
     }
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      set_user ({
+      set_user ({}
         id: session.user.id,
         name: session.user.name || undefined,
         email: session.user.email!,
         role: session.user.role || "user",
         onboarding_completed: false, // This would come from the database;
       });
-    } else {
+    } else {}
       set_user (null);
     }
     setIsLoading (false);
   }, [session, status]),
-  const login = async (email: string, password: string) => {
-    try {
-      const result = await sign_in ("credentials", {
+  const login = async (email: string, password: string) => {}
+    try {"
+      const result = await sign_in ("credentials", {}
         email,
         password,
         redirect: false}),
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         throw new Error (result.error);
-      }
+      }"
       router.push ("/dashboard");
-    } catch (error) {
+    } catch (error) {}
       throw error;
     }
   },
-  const logout = async () => {
-    await sign_out ({ redirect: false }),
+  const logout = async () => {}
+    await sign_out ({ redirect: false }),"
     router.push ("/");
   },
-  const register = async (name: string, email: string, password: string) => {
-    try {
-      const response = await fetch ("/api / auth / register", {
+  const register = async (name: string, email: string, password: string) => {}
+    try {"
+      const response = await fetch ("/api / auth / register", {"
         method: "POST",
-        headers: {
+        headers: {"
           "Content - Type": "application / json"},
         body: JSON.stringify ({ name, email, password })}),
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         const error = await response.json (),
         throw new Error (error.message);
       }
       // Auto - login after successful registration;
       await login (email, password);
-    } catch (error) {
+    } catch (error) {}
       throw error;
     }
   },
-  const complete_onboarding = async () => {
-    try {
-      const response = await fetch ("/api / user / onboarding", {
+  const complete_onboarding = async () => {}
+    try {"
+      const response = await fetch ("/api / user / onboarding", {"
         method: "POST",
-        headers: {
+        headers: {"
           "Content - Type": "application / json"}}),
-      // Check condition
-if ( {) {
-  $2
-}
+      // Check condition;
+if ( {) {}
+  $2;
+}"
         throw new Error ("Failed to complete onboarding");
       }
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         set_user ({ ...user, onboarding_completed: true });
       }
-    } catch (error) {
+    } catch (error) {}
       throw error;
     }
   },
-  const value: AuthContextType = {
+  const value: AuthContextType = {}
     user,
     is_loading,
     is_authenticated: !!user,
@@ -148,18 +153,19 @@ if ( {) {
     complete_onboarding}
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
-export /**
- * use_auth - Function description
+export /**;
+ * use_auth - Function description;
  */
-function use_auth() {
+function use_auth() {}
   const context = useContext (AuthContext);
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}"
     throw new Error ("use_auth must be used within an AuthProvider");
 
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -177,6 +183,13 @@ if ( {) {
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
+=======
+
+"
+"use client",;"
+import { createContext, useContext, useEffect, useState } from "react",;"
+import { useSession, signIn, signOut } from "next-auth/react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useRouter } from "next/navigation",;
 interface User {;
   id: string,;
@@ -197,12 +210,12 @@ interface AuthContextType {;
 }
 ;
 const AuthContext = createContext<AuthContextType | undefined>(undefined),;
-export function AuthProvider({ children }: { children: React.ReactNode }) {;
+export function AuthProvider() { return null; }
   const { data: session, status } = useSession(),;
   const [user, setUser] = useState<User | null>(null),;
   const [isLoading, setIsLoading] = useState(true),;
   const router = useRouter(),;
-  useEffect(() => {;
+  useEffect(() => {;"
     if (status === "loading") {;
       setIsLoading(true),;
       return;
@@ -212,7 +225,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {;
       setUser({;
         id: session.user.id,;
         name: session.user.name || undefined,;
-        email: session.user.email!,;
+        email: session.user.email!,;"
         role: session.user.role || "user",;
         onboardingCompleted: false, // This would come from the database;
       });
@@ -223,7 +236,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {;
     setIsLoading(false);
   }, [session, status]),;
   const login = async (email: string, password: string) => {;
-    try {;
+    try {;"
       const result = await signIn("credentials", {;
         email,;
         password,;
@@ -231,21 +244,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {;
       if (result?.error) {;
         throw new Error(result.error);
       }
-;
+;"
       router.push("/dashboard");
     } catch (error) {;
       throw error;
     }
   },;
   const logout = async () => {;
-    await signOut({ redirect: false }),;
+    await signOut({ redirect: false }),;"
     router.push("/");
   },;
   const register = async (name: string, email: string, password: string) => {;
-    try {;
-      const response = await fetch("/api/auth/register", {;
+    try {;"
+      const response = await fetch("/api/auth/register", {;"
         method: "POST",;
-        headers: {;
+        headers: {;"
           "Content-Type": "application/json"},;
         body: JSON.stringify({ name, email, password })}),;
       if (!response.ok) {;
@@ -260,12 +273,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {;
     }
   },;
   const completeOnboarding = async () => {;
-    try {;
-      const response = await fetch("/api/user/onboarding", {;
+    try {;"
+      const response = await fetch("/api/user/onboarding", {;"
         method: "POST",;
-        headers: {;
+        headers: {;"
           "Content-Type": "application/json"}}),;
-      if (!response.ok) {;
+      if (!response.ok) {;"
         throw new Error("Failed to complete onboarding");
       }
 ;
@@ -287,11 +300,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {;
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 ;
-export function useAuth() {;
-  const context = useContext(AuthContext);
-  if (context === undefined) {;
-    throw new Error("useAuth must be used within an AuthProvider");
+export function useAuth() { return null; }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -302,12 +313,15 @@ export function useAuth() {;
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return context;
 <<<<<<< HEAD
 }
 =======
 }
+<<<<<<< HEAD
 ;
 interface AuthContextType {;
   user: User | null,;
@@ -427,3 +441,7 @@ export function useAuth() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

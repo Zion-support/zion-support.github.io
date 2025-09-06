@@ -5,7 +5,11 @@ import Features from '../components/sections/Features';
 import MicroSaasServices from '../components/sections/MicroSaasServices';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, TrendingUp, DollarSign, Users } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const heroStats = [
@@ -85,7 +89,7 @@ export default function HomePage() {
       price: 'Starting at $49/month',
       marketSize: '$50B+ global market',
       competitors: 'Stripe, PayPal, Square'
-=======
+
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Code Review Assistant',
       description: 'AI-powered code analysis with security, performance, and maintainability insights. Support for JavaScript, Python, and TypeScript.',
@@ -312,6 +316,7 @@ export default function HomePage() {
         columns={2}
       />
 
+<<<<<<< HEAD
       {/* Micro SaaS Services */}
       <MicroSaasServices
         title="Our Micro SaaS Portfolio"
@@ -605,6 +610,9 @@ export default function HomePage() {
                 Compare Pricing
               </Button>
             </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>

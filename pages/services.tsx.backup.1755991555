@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -24,6 +25,9 @@ import {
   Lock, Eye, Heart, Sparkles, Layers, Palette, Clock, DollarSign, ChevronUp, GraduationCap
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -42,6 +46,7 @@ import { realMicroSaas2025Expansion } from '../data/real-micro-saas-2025-expansi
 import { realITServices2025Expansion } from '../data/real-it-services-2025-expansion';
 import { realAIServices2025Expansion } from '../data/real-ai-services-2025-expansion';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -829,10 +834,14 @@ export default function ServicesPage() {
           <div className="relative z-10 container mx-auto px-4 text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -880,10 +889,14 @@ export default function ServicesPage() {
               </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1338,6 +1351,9 @@ export default function ServicesPage() {
                     )}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
@@ -1347,6 +1363,7 @@ export default function ServicesPage() {
 
         {/* Service Process */}
         <section className="py-20">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -1362,11 +1379,15 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1438,10 +1459,14 @@ export default function ServicesPage() {
                   icon: <TrendingUp className="w-8 h-8" />
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 }
               ].map((process, index) => (
                 <motion.div
                   key={process.step}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1550,6 +1575,9 @@ export default function ServicesPage() {
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -1557,6 +1585,7 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1569,12 +1598,16 @@ export default function ServicesPage() {
           <div className="container mx-auto px-4 text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1623,6 +1656,9 @@ export default function ServicesPage() {
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>

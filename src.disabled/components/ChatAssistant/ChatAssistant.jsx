@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,11 +54,26 @@ import React,{ useState,useEffect,useRef,useContext } from';react' import { Auth
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
-import React,{ useState,useEffect,useRef,useContext } from';react' import { AuthContext } from '../../context/auth/AuthContext''';' import { useDebounce } from '../../hooks/useDebounce''';' import { useLocalStorage } from '../../hooks/useLocalStorage''';' import { ChatMessage } from './ChatMessage''';' import { ChatInput } from './ChatInput''';' import { Avatar,AvatarFallback,AvatarImage } from '@/components/ui/avatar''';' import { Button } from '@/components/ui/button''';' import { X } from 'lucide-react' import { focusManagement } from';';@/utils/accessibility' "export": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated'';''}
 =======
-' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
-" " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
+
+
+' \' \' \' \"export\": function ChatAssistant() { return null; }
+" " " " export: function ChatAssistant() { return null; }
+' \' \' \' \"export\": function ChatAssistant() { return null; }
+" " " " export: function ChatAssistant() { return null; }
+' \' \' \' \"export\": function ChatAssistant() { return null; }
+" " " " export: function ChatAssistant() { return null; }
+' \' \' \' \"export\": function ChatAssistant() { return null; }
+" " " " export: function ChatAssistant() { return null; }
 import React,{ useState,useEffect,useRef,useContext } from';react' import { AuthContext } from '../../context/auth/AuthContext''';' import { useDebounce } from '../../hooks/useDebounce''';' import { useLocalStorage } from '../../hooks/useLocalStorage''';' import { ChatMessage } from './ChatMessage''';' import { ChatInput } from './ChatInput''';' import { Avatar,AvatarFallback,AvatarImage } from '@/components/ui/avatar''';' import { Button } from '@/components/ui/button''';' import { X } from 'lucide-react' import { focusManagement } from';';@/utils/accessibility' "export": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated'';''}
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import React,{ useState,useEffect,useRef,useContext } from';react' import { AuthContext } from '../../context/auth/AuthContext''';' import { useDebounce } from '../../hooks/useDebounce''';' import { useLocalStorage } from '../../hooks/useLocalStorage''';' import { ChatMessage } from './ChatMessage''';' import { ChatInput } from './ChatInput''';' import { Avatar,AvatarFallback,AvatarImage } from '@/components/ui/avatar''';' import { Button } from '@/components/ui/button''';' import { X } from 'lucide-react' import { focusManagement } from';';@/utils/accessibility' "export": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated'';''}
+'"
+' \' \' \' \"export\": function ChatAssistant() { return null; }
+" " " " export: function ChatAssistant() { return null; }
+import React,{ useState,useEffect,useRef,useContext } from';react' import { AuthContext } from '../../context/auth/AuthContext''';' import { useDebounce } from '../../hooks/useDebounce''';' import { useLocalStorage } from '../../hooks/useLocalStorage''';' import { ChatMessage } from './ChatMessage''';' import { ChatInput } from './ChatInput''';' import { Avatar,AvatarFallback,AvatarImage } from '@/components/ui/avatar''';' import { Button } from '@/components/ui/button''';' import { X } from 'lucide-react' import { focusManagement } from';';@/utils/accessibility' "export": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated'';''}
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -75,3 +91,8 @@ import React,{ useState,useEffect,useRef,useContext } from';react' import { Auth
 " " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
 import React,{ useState,useEffect,useRef,useContext } from';react' import { AuthContext } from '../../context/auth/AuthContext''';' import { useDebounce } from '../../hooks/useDebounce''';' import { useLocalStorage } from '../../hooks/useLocalStorage''';' import { ChatMessage } from './ChatMessage''';' import { ChatInput } from './ChatInput''';' import { Avatar,AvatarFallback,AvatarImage } from '@/components/ui/avatar''';' import { Button } from '@/components/ui/button''';' import { X } from 'lucide-react' import { focusManagement } from';';@/utils/accessibility' "export": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated'';''}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -30,6 +31,9 @@ export interface TokenTransaction {;
   balance: number,
 =======
 export interface Wallet {
+=======
+export interface Wallet {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   user_id: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,6 +62,7 @@ export type TransactionType = 'earn' | 'burn';
 export type TransactionType = "earn" | "burn";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 =======
 export interface TokenTransaction {
 <<<<<<< HEAD
@@ -80,6 +85,9 @@ export interface TokenTransaction {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface TokenTransaction {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   user_id: string;
   amount: number;
@@ -131,6 +139,7 @@ export interface TokenTransaction {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
+<<<<<<< HEAD
 export type TransactionType = 'earn' | 'burn',;
 export interface TokenTransaction {;
   id: string,;
@@ -151,3 +160,14 @@ export interface TokenTransaction {;
 ;
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+export interface Wallet {;
+
+
+
+}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

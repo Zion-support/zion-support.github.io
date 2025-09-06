@@ -1,19 +1,24 @@
 
+<<<<<<< HEAD
 // This file now re-exports from the refactored PDF export utility;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // This file now re - exports from the refactored PDF export utility;
-export { exportResumeToPDF } from './pdf / pdf_export',
+export { exportResumeToPDF } from './pdf / pdf_export',';
 export type { ExportOptions } from './pdf / pdf_export';
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
 
-export { exportResumeToPDF } from './pdf/pdfExport',;
+
+// This file now re-exports from the refactored PDF export utility;'
+export { exportResumeToPDF } from './pdf/pdfExport';'
+export type { ExportOptions } from './pdf/pdfExport';'
+export { exportResumeToPDF } from './pdf/pdfExport',;'
 export type { ExportOptions } from './pdf/pdfExport';
 
 
+<<<<<<< HEAD
 // This file now re-exports from the refactored PDF export utility;
 export { exportResumeToPDF } from './pdf/pdfExport',;
 export type { ExportOptions } from './pdf/pdfExport',; // This file now re-exports from the refactored PDF export utility 
@@ -39,3 +44,6 @@ export type { ExportOptions } from './pdf/pdfExport';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

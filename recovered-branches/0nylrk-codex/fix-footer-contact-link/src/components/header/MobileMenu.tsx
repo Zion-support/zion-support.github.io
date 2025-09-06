@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -9,6 +10,16 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
+=======
+import {Link} from "react-router-dom";"
+import {useLocation} from "react-router-dom";"
+import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from "lucide-react";"
+import {cn} from "@/lib/utils";"
+import {useAuth} from "@/hooks/useAuth";"
+import {Button} from "@/components/ui/button";
+export interface MobileMenuProps {;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   unreadCount?: number;
   onClose: () => void;
 }
@@ -16,6 +27,7 @@ export interface MobileMenuProps {;
 export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
+<<<<<<< HEAD
   const isAuthenticated = !!user;  unreadCount?: number,
   onClose: () => void
 }
@@ -35,11 +47,20 @@ import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+  const isAuthenticated = !!user;
+"
+import { Link } from "react-router-dom","
+import { useLocation } from "react-router-dom","
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react","
+import { cn } from "@/lib/utils",";
+import { useAuth } from "@/hooks/useAuth";"
+import { Button } from "@/components/ui/button";"
+import { useAuth } from "@/hooks/useAuth","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { Button } from "@/components/ui/button",
 
+<<<<<<< HEAD
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -66,10 +87,19 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+export interface MobileMenuProps {};
+  unreadCount?: number,;
+  onClose: () => void;
+}
+
+export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   const location = useLocation();
   const { user } = useAuth();
@@ -90,11 +120,17 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   const navItems = [
     {
       name: "Home"
-      href: "/"
-      icon: Home
-      matches: (path: string) => path === "/"
-<<<<<<< HEAD
+=======
 
+  const navItems = []
+    {"
+      name: "Home""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      href: "/"
+      icon: Home"
+      matches: (path: string) => path === "/"
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -115,10 +151,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
       {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "Browse"
+=======
+    {"
+      name: "Browse""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       href: "/talent"
-      icon: Search
+      icon: Search"
       matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
     }
+<<<<<<< HEAD
     {
       name: "Community"
       href: "/community"
@@ -187,9 +228,21 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
       authRequired: true    {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       name: "Messages"
+=======
+    {}
+    {"
+      name: "Post Job""
+      href: "/post-job"
+      icon: BriefcaseIcon"
+      matches: (path: string) => path.startsWith("/post-job");
+      authRequired: true;
+    {"
+      name: "Messages""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       href: "/messages"
-      icon: MessageSquare
+      icon: MessageSquare"
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
+<<<<<<< HEAD
       badge: unreadCount
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -216,86 +269,81 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       name: "Dashboard"
+=======
+      badge: unreadCount;
+      authRequired: true;
+    {"
+      name: "Dashboard""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       href: "/dashboard"
-      icon: User
+      icon: User"
       matches: (path: string) => path.startsWith("/dashboard")
-      authRequired: true
+      authRequired: true;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   ],
 
 
   const navItems = [;
-    {;
-      name: "Home",;
+    {;"
+      name: "Home",;"
       href: "/",;
-      icon: Home,;
+      icon: Home,;"
       matches: (path: string) => path === "/";
     };
-    {;
-      name: "Browse",;
+    {;"
+      name: "Browse",;"
       href: "/talent",;
-      icon: Search,;
+      icon: Search,;"
       matches: (path: string) => path && path.startsWith("/talent") || path && path.startsWith("/categories") || path && path.startsWith("/marketplace");
     };
-    {;
-      name: "Community",;
+    {;"
+      name: "Community",;"
       href: "/community",;
-      icon: MessageCircle,;
+      icon: MessageCircle,;"
       matches: (path: string) => path && path.startsWith("/community") || path && path.startsWith("/forum");
     };
-    {;
-      name: "Post Job",;
+    {;"
+      name: "Post Job",;"
       href: "/post-job",;
-      icon: BriefcaseIcon,;
+      icon: BriefcaseIcon,;"
       matches: (path: string) => path && path.startsWith("/post-job"),;
       authRequired: true;
     };
-    {;
-      name: "Messages",;
+    {;"
+      name: "Messages",;"
       href: "/messages",;
-      icon: MessageSquare,;
+      icon: MessageSquare,;"
       matches: (path: string) => path && path.startsWith("/messages") || path && path.startsWith("/inbox"),;
       badge: unreadCount,;
       authRequired: true;
     };
-    {;
-      name: "Dashboard",;
+    {;"
+      name: "Dashboard",;"
       href: "/dashboard",;
-      icon: User,;
+      icon: User,;"
       matches: (path: string) => path && path.startsWith("/dashboard"),;
       authRequired: true;
     }
   ];
-<<<<<<< HEAD
 
 
-=======
-  ];
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(item =>
-    !item.authRequired |(item.authRequired && isAuthenticated)
-  );
-  ],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-  // Filter items based on auth status
+  // Filter items based on auth status;
   const visibleItems = navItems.filter(item => 
     !item.authRequired || (item.authRequired && isAuthenticated)
   ),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -319,17 +367,24 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
 =======
       authRequired: true          <Link
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+          <Link;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             key={item.name}
             to={item.href}
             className={cn(
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               "flex items-center px-6 py-3 text-base font-medium",
-
 =======
-              "flex items-center px-6 py-3 text-base font-medium",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
               "flex items-center px-6 py-3 text-base font-medium";
 
               "flex items-center px-6 py-3 text-base font-medium",
@@ -373,54 +428,65 @@ import { useLocation } from "react-router-dom",;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { useAuth } from "@/hooks/useAuth",;
+=======
+              item.matches(location.pathname)"
+                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan""
+                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+            )}
+"
+import { Link } from "react-router-dom",;"
+import { useLocation } from "react-router-dom",;"
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",;"
+import { cn } from "@/lib/utils",;"
+import { useAuth } from "@/hooks/useAuth",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from "@/components/ui/button",;
 export interface MobileMenuProps {;
   unreadCount?: number,;
   onClose: () => void;
 }
 ;
-export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
-  const location = useLocation(),;
+export function MobileMenu() { return null; }
   const { user } = useAuth(),;
   const isAuthenticated = !!user,;
   const navItems = [;
-    {;
-      name: "Home",;
+    {;"
+      name: "Home",;"
       href: "/",;
-      icon: Home,;
+      icon: Home,;"
       matches: (path: string) => path === "/";
     },;
-    {;
-      name: "Browse",;
+    {;"
+      name: "Browse",;"
       href: "/talent",;
-      icon: Search,;
+      icon: Search,;"
       matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace");
     },;
-    {;
-      name: "Community",;
+    {;"
+      name: "Community",;"
       href: "/community",;
-      icon: MessageCircle,;
+      icon: MessageCircle,;"
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum");
     },;
-    {;
-      name: "Post Job",;
+    {;"
+      name: "Post Job",;"
       href: "/post-job",;
-      icon: BriefcaseIcon,;
+      icon: BriefcaseIcon,;"
       matches: (path: string) => path.startsWith("/post-job"),;
       authRequired: true;
     },;
-    {;
-      name: "Messages",;
+    {;"
+      name: "Messages",;"
       href: "/messages",;
-      icon: MessageSquare,;
+      icon: MessageSquare,;"
       matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),;
       badge: unreadCount,;
       authRequired: true;
     },;
-    {;
-      name: "Dashboard",;
+    {;"
+      name: "Dashboard",;"
       href: "/dashboard",;
-      icon: User,;
+      icon: User,;"
       matches: (path: string) => path.startsWith("/dashboard"),;
       authRequired: true;
     }
@@ -430,79 +496,16 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
     !item.authRequired || (item.authRequired && isAuthenticated);
   );
   return (;
-<<<<<<< HEAD
-
-=======
-;
-export interface MobileMenuProps {;
-  unreadCount?:number,;
-  onClose:() => void;
-}
-;
-export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
-  const location = useLocation(),;
-  const { user } = useAuth(),;
-  const isAuthenticated = !!user,;
-  ;
-  const navItems = [;
-    {;
-      name:"Home",;
-      href:"/",;
-      icon:Home,;
-      matches:(path:string) => path === "/";
-    },;
-    {;
-      name:"Browse",;
-      href:"/talent",;
-      icon:Search,;
-      matches:(path:string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace");
-    },;
-    {;
-      name:"Community",;
-      href:"/community",;
-      icon:MessageCircle,;
-      matches:(path:string) => path.startsWith("/community") || path.startsWith("/forum");
-    },;
-    {;
-      name:"Post Job",;
-      href:"/post-job",;
-      icon:BriefcaseIcon,;
-      matches:(path:string) => path.startsWith("/post-job"),;
-      authRequired:true;
-    },;
-    {;
-      name:"Messages",;
-      href:"/messages",;
-      icon:MessageSquare,;
-      matches:(path:string) => path.startsWith("/messages") || path.startsWith("/inbox"),;
-      badge:unreadCount,;
-      authRequired:true;
-    },;
-    {;
-      name:"Dashboard",;
-      href:"/dashboard",;
-      icon:User,;
-      matches:(path:string) => path.startsWith("/dashboard"),;
-      authRequired:true;
-    }
-  ],;
-;
-  // Filter items based on auth status;
-  const visibleItems = navItems.filter(item => ;
-    !item.authRequired || (item.authRequired && isAuthenticated);
-  ),;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    <div className="py-6">;
-      <div className="flex justify-between items-center px-6 mb-6">;
-        <h2 className="text-xl font-bold">Menu</h2>;
-        <Button variant="ghost" size="icon" onClick={onClose}>;
+"
+    <div className="py-6">;"
+      <div className="flex justify-between items-center px-6 mb-6">;"
+        <h2 className="text-xl font-bold">Menu</h2>;"
+        <Button variant="ghost" size="icon" onClick={onClose}>;"
           <X className="h-5 w-5" />;
         </Button>;
       </div>;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
       <nav className="space-y-1">;
 
               "flex items-center px-6 py-3 text-base font-medium"
@@ -524,24 +527,60 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
             key={item && item.name}
             to={item && item.href}
             className={cn(                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+=======
+          <Link;
+            key={item && item.name}
+            to={item && item.href}
+            className={cn(
+"
+                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan""
+                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             )}
-            onClick={onClose}>;
-            <div className="relative mr-4">;
+            onClick={onClose}>;"
+            <div className="relative mr-4">;"
               <item && item.icon className="h-5 w-5" />;
-              {item && item.badge && item && item.badge > 0 && (;
+              {item && item.badge && item && item.badge > 0 && (;"
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
+<<<<<<< HEAD
                 </span>;              )}
             </div>;
             {item && item.name}          </Link>;
+=======
+                </span>;
+
+
+
+        {visibleItems.map(item => (;
+          <Link;
+            key={item.name}
+            to={item.href}
+            className={cn(;"
+              "flex items-center px-6 py-3 text-base font-medium";
+              item.matches(location.pathname);"
+                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan";"
+                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+            )}
+            onClick={onClose}
+          >;"
+            <div className="relative mr-4">;"
+              <item.icon className="h-5 w-5" />;
+              {item.badge && item.badge > 0 && (;"
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;'
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>;
+
+          </Link>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         ))}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
       </nav>;
     </div>;
@@ -556,6 +595,9 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               )}
             </div>;
             {item && item.name}
@@ -587,25 +629,39 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
     </div>;
   );
 
+<<<<<<< HEAD
 }
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from './lucide-react';
 import { cn } from '@/lib / utils';
 import { use_auth } from '@/hooks / use_auth';
+=======
+
+
+
+
+}'
+import { Link } from './react-router-dom';'
+import { use_location } from './react-router-dom';'
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from './lucide-react';'
+import { cn } from '@/lib / utils';'
+import { use_auth } from '@/hooks / use_auth';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from '@/components / ui / button';
-export interface MobileMenuProps {
+export interface MobileMenuProps {};
   unread_count?: number;
   on_close: () => void;
 }
-export /**
- * MobileMenu - Function description
+export /**;
+ * MobileMenu - Function description;
  */
-function MobileMenu() {
+function MobileMenu() {}
   const location = use_location ();
   const { user } = use_auth ();
   const is_authenticated = !!user;
 ;
+<<<<<<< HEAD
   const nav_items = [;
     {
       name: "Home",
@@ -775,3 +831,9 @@ return ()
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

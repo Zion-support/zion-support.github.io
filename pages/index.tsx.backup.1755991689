@@ -283,6 +283,7 @@ export default function HomePage() {
   );
 
   return (
+<<<<<<< HEAD
     <EnhancedFuturisticBackground variant="neural-quantum" intensity="high">
       <div className="min-h-screen">
         <Head>
@@ -296,6 +297,9 @@ export default function HomePage() {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com" />
         </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <ServiceAds
         heading="Security & Compliance Automation"

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'KYC uploaded' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -41,10 +42,20 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
+=======
+'
+import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';'
+import fs from 'fs';'
+import path from 'path';'
+import crypto from 'crypto';
+'
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -82,25 +93,37 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function load(): Record<string, KycProfile> {
   try {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+'
+const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');'
+const DATA_DIR = path.join(process.cwd(), 'datakyc');'
+const FILE = path.join(DATA_DIR, 'profiles.json');
+
+
+
+function load(): Record<string, KycProfile> {}
+  try {}
   };
-  if (!userId || !kind || !filename)
+  if (!userId || !kind || !filename)'
     return res && res.status(400).json({ error: 'Missing userId, kind or filename' });
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
   const db = load();
   const profile = db[userId];
   if (!profile)
-    return res
-      .status(404)
+    return res;
+      .status(404)'
       .json({ error: 'Profile not found. Start KYC first.' });
 <<<<<<< HEAD
   const id = crypto && crypto.randomUUID();
-<<<<<<< HEAD
-=======
+
 
   const uploadedAt = new Date().toISOString();
+<<<<<<< HEAD
   const doc: KycDocumentMeta = {
 <<<<<<< HEAD
     id
@@ -128,6 +151,9 @@ const db = load();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
+=======
+  const doc: KycDocumentMeta = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     id,
     kind,
     filename,
@@ -135,6 +161,7 @@ const db = load();
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
     uploadedAt};
+<<<<<<< HEAD
 =======
 
   const id = crypto.randomUUID();
@@ -151,6 +178,12 @@ uploadedAt,
   profile.documents = [...withoutSameKind, doc];
   profile.lastUpdatedAt = uploadedAt;
 <<<<<<< HEAD
+=======
+  // Replace or add;
+  const withoutSameKind = (profile.documents || []).filter((d) => d.kind !== kind);
+  profile.documents = [...withoutSameKind, doc];
+  profile.lastUpdatedAt = uploadedAt;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   profile.auditTrail.push({ at: uploadedAt, by: userId, action: 'document_uploaded', details: { kind, filename } });
 =======
   profile.auditTrail.push({
@@ -167,45 +200,54 @@ uploadedAt,
 <<<<<<< HEAD
   res.status(200).json({ ok: true, profile })
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   res.status(200).json({ ok: true, profile });
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-;
+;'
 const DATA_DIR = path.join (process.cwd (), 'data', 'kyc');const FILE = path.join (DATA_DIR, 'profiles.json');
 ;
-function load (): Record < string, KycProfile> {
-  try {
+function load (): Record < string, KycProfile> {}
+  try {'
     const raw = fs.readFileSync (FILE, 'utf8');
     return JSON.parse (raw);
-  } catch {
+  } catch {}
     return {}
   }
 /**
- * save - Function description
+ * save - Function description;
  */
-function save() {
+function save() {}
   fs.mkdir_sync (DATA_DIR, { recursive: true });
   fs.writeFileSync (FILE, JSON.stringify (db, null, 2));
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -272,3 +314,8 @@ res.status(200).json({ ok: true, profile });
 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

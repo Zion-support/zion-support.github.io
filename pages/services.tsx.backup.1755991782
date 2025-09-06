@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, LinkIcon, Building2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Button from '../components/ui/Button';
@@ -9,6 +10,9 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -17,6 +21,7 @@ import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   const popularServices = enhancedRealMicroSaasServices.filter(service => service.popular).slice(0, 6);
 
   return (
@@ -31,6 +36,9 @@ import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory
         {/* Open Graph */}
         <meta property="og:title" content="Micro SaaS Services - Zion Tech Group | Revolutionary AI & Quantum Solutions" />
         <meta property="og:description" content="Explore 20+ revolutionary micro SaaS services powered by quantum computing and AI. From $199/month with 30-day free trials." />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/services" />
         <meta property="og:image" content="https://ziontechgroup.com/services-og-image.jpg" />
@@ -42,6 +50,7 @@ import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory
         <meta name="twitter:image" content="https://ziontechgroup.com/services-twitter-image.jpg" />
       </Head>
 
+<<<<<<< HEAD
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="max-w-7xl mx-auto text-center mb-16">
@@ -615,5 +624,8 @@ export default function Placeholder() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7c3d
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991782
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD:pages/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,12 +91,25 @@ import { Milestone } from '../../../../utils/types/milestones';
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/projects/[projectId]/milestones.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import { requireUser } from '../../../../utils/api/auth';'
+import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';'
+import { Milestone } from '../../../../utils/types/milestones';
+
+
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones.ts
   const user = requireUser(req, res);
   if (!user) return;
 
   const { projectId } = req && req.query as { projectId: string };
 
   const project = getProject(projectId);
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
   if (!project) {
 <<<<<<< HEAD:pages/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
@@ -126,15 +140,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+  if (!project) {}
+  }
+
+  if (req && req.method === "POST") {}
+    if (!isClient(project, user)) {}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones.ts
   const user = requireUser(req, res);
   if (!user) return;
   const { projectId } = req && req.query as { projectId: string };
   const project = getProject(projectId);
-  if (!project) {
-if (req && req.method === "GET") {
+  if (!project) {"
+if (req && req.method === "GET") {}
     res && res.status(200).json({ milestones: project && project.milestones });
-    return;
+    return;'
     res.status(404).json({ error: 'Project not found' });
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
     return
     res.status(404).json({ error: 'Project not found' });
 return;
@@ -147,11 +170,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     res.status(200).json({ milestones: project.milestones });
 return;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    return;
+  }
+    return;
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;'
+  if (req.method === 'GET') {}
+    res.status(200).json({ milestones: project.milestones });
+    return;
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones.ts
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD:pages/api/projects/[projectId]/milestones.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -161,23 +207,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/projects/[projectId]/milestones.ts
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones.ts
   }
 }
-;
-  if (req.method === 'GET') {
-    if (!isClient(project, user)) {;
+;'
+  if (req.method === 'GET') {}
+    if (!isClient(project, user)) {;'
       res.status( error: 'Only client (or admin) can add milestones' ).json({$2});
       return;
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
@@ -248,6 +298,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 
   if (req.method === 'POST') {
     if (!isClient(project, user)) {
@@ -341,6 +392,20 @@ if (
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/projects/[projectId]/milestones.ts
+=======
+'
+  if (req.method === 'POST') {}
+    if (!isClient(project, user)) {'
+      res.status(403).json({ error: 'Only client (or admin) can add milestones' });
+      return;
+    }
+    const body = req.body as Partial<Milestone>;
+
+
+'
+  if (req.method === 'POST') {}
+    if (!isClient(project, user)) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones.ts
     });
     res && res.status(201).json({ milestone: created });
     return;
@@ -351,6 +416,7 @@ if (
 }
 =======
 
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD:pages/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -370,10 +436,17 @@ if (
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/projects/[projectId]/milestones.ts
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones.ts
 }
 
 
 
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -405,25 +478,33 @@ res.status(403).json({ error: 'Only client (or admin) can add milestones' });
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import type { NextApiRequest, NextApiResponse } from './next';
+=======
+
+
+
+'
+import type { NextApiRequest, NextApiResponse } from './next';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones.ts
 import { require_user  } from '../../../../utils / api / auth';
-import {
+import {}
   add_milestone,
   get_project,
   assertParticipantOrAdmin,
-  is_client,
-} from '../../../../utils / api / projects';
+  is_client,';
+} from '../../../../utils / api / projects';'
 import { Milestone  } from '../../../../utils / types / milestones';
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
-function handler() {
+function handler() {}
   const user = require_user (req, res);
-  // Check condition
-if (return) {
-  $2
+  // Check condition;
+if (return) {}
+  $2;
 }
   const { project_id } = req.query as { project_id: string }
   const project = get_project (project_id);
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
   // Check condition
 if ( {) {
   $2
@@ -453,45 +534,58 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+=======
+  // Check condition;
+if ( {) {}
+  $2;
+'
+  res.setHeader('AllowGET, POST');'
+  res.status(405).end('Method Not Allowed')
+}
+
+
+
+}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones.ts
     res.status (404).json ({ error: "Project not found" });
     return;
   }
-  if () {) {
-  $2
-}
+  if () {) {}
+  $2;
+}"
     res.status (403).json ({ error: "Forbidden" });
     return;
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     res.status (200).json ({ milestones: project.milestones });
     return;
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    if () {) {
-  $2
+    if () {) {}
+  $2;
 }
       res;
-        .status (403);
+        .status (403);"
         .json ({ error: "Only client (or admin) can add milestones" });
       return;
     }
     const body = req.body as Partial < Milestone>;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       res;
-        .status (400);
+        .status (400);"
         .json ({ error: "Missing required fields: title, due_date, amount_usd" });
       return;
     }
-    const created = add_milestone (project, {
+    const created = add_milestone (project, {}
       title: body.title,
       description: body.description,
       due_date: body.due_date,
@@ -501,6 +595,7 @@ if ( {) {
     res.status (201).json ({ milestone: created });
     return;
   }
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD:pages/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -515,10 +610,14 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/projects/[projectId]/milestones.ts
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones.ts
 
-  res.setHeader("Allow", "GET, POST");
+"
+  res.setHeader("Allow", "GET, POST");"
   res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD:pages/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -551,3 +650,10 @@ if ( {) {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/projects/[projectId]/milestones.ts
+=======
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones.ts

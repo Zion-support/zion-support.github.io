@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react';
 
 interface UseApiOptions {
@@ -55,13 +56,10 @@ import { useState, useEffect } from 'react';
 =======
 <<<<<<< HEAD
 =======
-
-
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
       setLoading(false)};
 
   return { data, loading, error, execute }};
@@ -72,7 +70,18 @@ import { useState, useEffect } from 'react';
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
+<<<<<<< HEAD
       setLoading(false)};      setLoading(false)};
+=======
+};
+};
+
+
+
+
+      setLoading(false)};
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
   return { data, loading, error, execute }}
 }
@@ -80,9 +89,8 @@ import { useState, useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 
 
@@ -96,20 +104,16 @@ interface ApiState<T> {
 <<<<<<< HEAD
 =======
 =======
+=======
+interface ApiState<T> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }import { useState, useEffect } from 'react';
 ;
-interface ApiState < T> {
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+interface ApiState < T> {}
+'
 };import { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ApiState<T> {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -120,10 +124,14 @@ interface ApiState<T> {
 =======
 }interface ApiState<T> {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+interface ApiState<T> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   data: T | null;
   loading: boolean;
   error: string | null;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,24 +151,40 @@ interface ApiState<T> {
   });
 =======export function use_api < T>(url: string, options?: RequestInit) {
   const [state, set_state] = useState < ApiState < T>>({
+=======
+
+export function use_api < T>(url: string, options?: RequestInit) {}
+  const [state, set_state] = useState < ApiState < T>>({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     data: null,
     loading: true,
     error: null,
 
     data: null,
-    loading: true,
+    loading: true,;
     error: null,;
 
+<<<<<<< HEAD
   });
 ;
   useEffect (() => {
     const fetch_data = async () => {
       try {
+=======
+
+
+  });
+;
+  useEffect (() => {}
+    const fetch_data = async () => {}
+      try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           data: null,
-          loading: false,
+          loading: false,'
           error: error instanceof Error ? error && error.message : 'An error occurred',
         });
       }
+<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react';
 }
 interface UseApiProps {
@@ -225,6 +249,53 @@ import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions 
     }
 <<<<<<< HEAD
   };
+=======
+
+
+
+
+
+
+
+
+}
+interface UseApiProps {}
+  // Add props here as needed;
+}
+
+
+interface UseApiOptions {}
+  immediate?: boolean;
+  onSuccess?: (data: any) => void;
+  onError?: (error: any) => void}
+export const useApi = <T = any>(
+  apiFunction: (...args: any[]) => Promise<T>
+    };
+;
+    fetch_data ();
+  }, [url, JSON.stringify (options)]);
+;
+  return state;
+}
+}
+;
+interface UseApiProps {}
+  // Add props here as needed;
+}
+interface UseApiOptions {}
+  immediate?: boolean;
+  on_success?: (data: any) => void;
+  on_error?: (error: any) => void}
+export const use_api = <T = any>(
+  api_function: (...args: any[]) => Promise < T>,
+  options: UseApiOptions = {}
+';
+import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
+
+  }, [execute, options && options.immediate]);
+  return { data, loading, error, execute }};
+export default useApi;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
   useEffect(() => {
@@ -247,8 +318,10 @@ import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions 
 
 <<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+'
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
+<<<<<<< HEAD
 =======
   }, [execute, options && options.immediate]);
   return { data, loading, error, execute }};
@@ -270,17 +343,22 @@ import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState,useEffect,useCallback } from &apos;react&apos;; interface UseApiOptions<T = unknown> { immediate?: boolean; onSuccess?: (data: T) => void; onError?: (error: Error) => void} export const useApi = <T = unknown>( apiFunction: (...args: unknown[]) => Promise<T>,options: UseApiOptions<T> = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<Error | null>(null); const execute = useCallback(async (...args: unknown[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { const error = err instanceof Error ? err : new Error(String(err)); setError(error); options.onError?.(error); throw error} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
-import React from 'react';
-<<<<<<< HEAD
 =======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
-interface UseApiProps {
-  // Add props here as needed
+
+
+import { useState,useEffect,useCallback } from &apos;react&apos;; interface UseApiOptions<T = unknown> { immediate?: boolean; onSuccess?: (data: T) => void; onError?: (error: Error) => void} export const useApi = <T = unknown>( apiFunction: (...args: unknown[]) => Promise<T>,options: UseApiOptions<T> = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<Error | null>(null); const execute = useCallback(async (...args: unknown[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { const error = err instanceof Error ? err : new Error(String(err)); setError(error); options.onError?.(error); throw error} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import React from 'react';
+
+
+
+
+interface UseApiProps {}
+  // Add props here as needed;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface UseApiProps {
   // Add props here as needed
@@ -306,12 +384,19 @@ interface ApiState<T> {
 }
 
 interface UseApiOptions {
+=======
+
+
+
+interface UseApiOptions {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   immediate?: boolean;
 }
 
 export function useApi<T>(
   apiCall: () => Promise<T>,
   options: UseApiOptions = {}
+<<<<<<< HEAD
 ): ApiState<T> & { refetch: () => void } {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
@@ -333,15 +418,37 @@ export function useApi<T>(
 
   useEffect(() => {
     if (options.immediate) {
+=======
+) => {};
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<any>(null);
+  const execute = useCallback(async (...args: any[]) => {}
+    try {}
+      setLoading(true);
+      setError(null);
+      const result = await apiFunction(...args);
+      setData(result);
+      options.onSuccess?.(result);
+      return result} catch (err) {}
+      setError(err);
+      options.onError?.(err);
+      throw err} finally {}
+      setLoading(false)}
+  }, [apiFunction, options]);
+  useEffect(() => {}
+    if (options.immediate) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       execute()}
   }, [execute, options.immediate]);
   return { data, loading, error, execute }};
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default useApi;
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+'
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
+<<<<<<< HEAD
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 <<<<<<< HEAD
 =======
@@ -358,12 +465,18 @@ export default useApi;export default function UseApi({ }: UseApiProps) {
 =======
 export default useApi;export default function UseApi({ }: UseApiProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+export default function UseApi({ }: UseApiProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
       <h1>UseApi</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -387,31 +500,35 @@ origin/automation-improvements-final
 interface ApiState<T> {
   data: T | null, loading: boolean,
   error: string | null,
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 }
 export function useApi<T>(
   apiCall: () => Promise<T>,
   options: UseApiOptions = {}
-): ApiState<T> & { refetch: () => void } {
+): ApiState<T> & { refetch: () => void } {};
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-    try {
+    try {}
     const result = await apiCall(),
     setData(result)
-  } catch (err) {
+  } catch (err) {'
       setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
+    } finally {}
       setLoading(false);
     }
   }, [apiCall]);
-  useEffect(() => {
-    if (options.immediate !== false) {
+  useEffect(() => {}
+    if (options.immediate !== false) {}
       fetchData();
     }
   }, [fetchData, options.immediate]);
 
+<<<<<<< HEAD
 }
   }, [api_function, options]);
   useEffect (() => {
@@ -456,16 +573,31 @@ function UseApi() {
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+
+
 }
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+  }, [api_function, options]);
+  useEffect (() => {}
+    // Check condition;
+if ( {) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-=======
+
+
+
+
+
+
 }
+
+}
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -475,10 +607,18 @@ function UseApi() {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
-}
 =======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+
+
+
+
 }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+}
+
+}
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 }
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
@@ -522,3 +662,12 @@ function UseApi() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

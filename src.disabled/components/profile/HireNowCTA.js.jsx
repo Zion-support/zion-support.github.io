@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/profile/HireNowCTA.js.jsx
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -29,10 +30,20 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";'"
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
+:src.disabled/components/profile/HireNowCTA.js.jsx'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
-:src.disabled/components/profile/HireNowCTA.js.jsx
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
+:temp_exclude/src.disabled/components/profile/HireNowCTA.js.jsx;
+'"
+'\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
 :temp_exclude/src.disabled/components/profile/HireNowCTA.js.jsx
@@ -51,3 +62,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+"
+"export: function HireNowCTA({ talentName,hourlyRate,onHire }) {" const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ projectDescription: ",budget: ",",startDate: ",message: "})" const handleSubmit = e => {""";"""";"""
+"
+"export: function HireNowCTA({ talentName,hourlyRate,onHire }) {" const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ projectDescription: ",budget: ",",startDate: ",message: "})" const handleSubmit = e => {""";"""";"""
+'"
+'\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";"
+"export: function HireNowCTA({ talentName,hourlyRate,onHire }) {" const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ projectDescription: ",budget: ",",startDate: ",message: "})" const handleSubmit = e => {""";"""";"""
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

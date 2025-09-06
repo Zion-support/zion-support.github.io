@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,9 +26,11 @@ import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } fr
 import React from \'react\';\''\'; import { EnhancedInnovativeServicesShowcase } from \'@/components/services/EnhancedInnovativeServicesShowcase\';\''\'; import EnhancedSEO from \'@/components/EnhancedSEO\'; export {}; return null} return (); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const React from "react";"""; import { EnhancedInnovativeServicesShowcase } from "@/components/services/EnhancedInnovativeServicesShowcase";"""; import EnhancedSEO from "@/components/EnhancedSEO"; export {}; return null} return (); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };''"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return (); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,3 +80,13 @@ import React from \'react\';\''\'; import { EnhancedInnovativeServicesShowcase }
 const React from "react";"""; import { EnhancedInnovativeServicesShowcase } from "@/components/services/EnhancedInnovativeServicesShowcase";"""; import EnhancedSEO from "@/components/EnhancedSEO"; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };''"
 import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from \'react\';\''\'; import { EnhancedInnovativeServicesShowcase } from \'@/components/services/EnhancedInnovativeServicesShowcase\';\''\'; import EnhancedSEO from \'@/components/EnhancedSEO\'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };'
+const React from "react";"""; import { EnhancedInnovativeServicesShowcase } from "@/components/services/EnhancedInnovativeServicesShowcase";"""; import EnhancedSEO from "@/components/EnhancedSEO"; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };''"'
+import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -279,11 +280,15 @@ export default function InvestorsPage() {
           <div className="relative z-10 container mx-auto px-4 text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -331,11 +336,15 @@ export default function InvestorsPage() {
                 </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Investment Highlights */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
@@ -411,10 +420,9 @@ export default function InvestorsPage() {
             </div>
           </div>
         </section>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-        {/* Investment Highlights */}
-        <section className="py-20 bg-black/50">
-          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -422,6 +430,7 @@ export default function InvestorsPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-4">
                 Investment Highlights
               </h2>
@@ -433,11 +442,15 @@ export default function InvestorsPage() {
             <div className="grid lg:grid-cols-2 gap-8">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {investmentHighlights.map((highlight, index) => (
                 <motion.div
                   key={highlight.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -541,6 +554,9 @@ export default function InvestorsPage() {
                     </ul>
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -548,6 +564,7 @@ export default function InvestorsPage() {
         </section>
 
         {/* Investment Opportunities */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -679,10 +696,9 @@ export default function InvestorsPage() {
             </div>
           </div>
         </section>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-        {/* Competitive Advantages */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -690,6 +706,7 @@ export default function InvestorsPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-4">
                 Competitive Advantages
               </h2>
@@ -721,6 +738,9 @@ export default function InvestorsPage() {
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -728,6 +748,7 @@ export default function InvestorsPage() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -740,12 +761,16 @@ export default function InvestorsPage() {
           <div className="container mx-auto px-4 text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -791,11 +816,15 @@ export default function InvestorsPage() {
                   Learn More About Us
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </main>
 =======
@@ -805,6 +834,9 @@ export default function InvestorsPage() {
       </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Layout>
   );
 };

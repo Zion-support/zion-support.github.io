@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,9 @@ interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // add more env variables as needed;
 }
 interface ImportMeta {readonly env: ImportMetaEnv;
@@ -31,20 +35,21 @@ declare namespace React {type ReactNode = React.ReactNode;
 }
 // Type declarations for modules used in Vite configuration;
 declare module 'vitest/config' {export { defineConfig } from 'vite';
-}
+}'
 declare module '@vitejs/plugin-react-swc' {import { Plugin } from 'vite';
   export default function reactSWC(): Plugin;
-}
+}'
 declare module 'path' {export function resolve(...paths: string[]): string;
   export function join(...paths: string[]): string;
   export function dirname(path: string): string;
-}
+}'
 declare module 'lovable-tagger' {import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Add Node.js globals;
+<<<<<<< HEAD
 <<<<<<< HEAD
 declare let __dirname: string;
 declare let process: {env: {;
@@ -110,47 +115,42 @@ declare let process: {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     PORT?: string;
   }
 }
-// Badge component type fixes
-declare module '@/components/ui/badge' {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-interface ImportMetaEnv {
+// Badge component type fixes'
+declare module '@/components/ui/badge' {}
+interface ImportMetaEnv {}
   readonly VITE_APP_TITLE: string,
   // add more env variables as needed;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-interface ImportMeta {
+interface ImportMeta {}
   readonly env: ImportMetaEnv;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 }
 // Global type declarations;
-declare namespace React {
+declare namespace React {}
   type ReactNode = React.ReactNode,
   type FC < P = {}> = React.FC < P>,
   type FormEvent < T = Element> = React.FormEvent < T>,
   type KeyboardEvent < T = Element> = React.KeyboardEvent < T>,
   type ChangeEvent < T = Element> = React.ChangeEvent < T>;
 }
-// Type declarations for modules used in Vite configuration;
-declare module 'vitest / config' {
+// Type declarations for modules used in Vite configuration;'
+declare module 'vitest / config' {'
   export { define_config } from 'vite';
-}
-declare module '@vitejs/plugin-react - swc' {
-  import { Plugin } from 'vite',
+}'
+declare module '@vitejs/plugin-react - swc' {'
+  import { Plugin } from 'vite',;
   export default function reactSWC (): Plugin;
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -346,27 +346,37 @@ declare module '@/components/ui/badge' {;
   export interface BadgeProps {;
     className?: string,;
     variant?: "default" | "secondary" | "destructive" | "outline",;
+=======
+
+  export interface BadgeProps {}
+    className?: string,
+    variant?: "default" | "secondary" | "destructive" | "outline",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     children?: React.ReactNode,;
     key?: string | number;
+},;
+'
+declare module 'path' {}
+  export function resolve (...paths: string[]): string,
+  export function join (...paths: string[]): string,;
+  export function dirname (path: string): string;
+}'
+declare module 'lovable - tagger' {'
+  import { Plugin } from 'vite',;
+  export function component_tagger (): Plugin;
+
+// Badge component type fixes;'
+declare module '@/components / ui / badge' {}
+  export interface BadgeProps {}
   }
+
+
 ;
-  export const Badge: React.FC<BadgeProps>;
-}
-;
-// FeatureCard type fixes;
-declare module '@/components/FeatureCard' {;
-  export interface FeatureCardProps {;
-    title: string,;
-    description: string,;
-    icon: React.ReactNode,;
-    className?: string,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     key?: number | string;
   }
 }
 // ListingScoreCard type fixes;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -405,6 +415,9 @@ declare module '@/components / ChatAssistant / ChatMessage' {
     role: 'user' | 'assistant',
     message: string,
     timestamp?: Date,
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     key?: string | number;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -417,6 +430,7 @@ declare module '@/components / ChatAssistant / ChatMessage' {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 declare module '@/components/ListingScoreCard' {;
@@ -480,10 +494,16 @@ declare module '@/components/ChatAssistant/ChatMessage' {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -494,15 +514,19 @@ declare module '@/components/ProductListingCard' {;
   export interface ProductListingCardProps {;
     listing: any,;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-declare module '@/components / ProductListingCard' {
-  export interface ProductListingCardProps {
-    listing: any,
+'
+declare module '@/components / ProductListingCard' {}
+  export interface ProductListingCardProps {}
+    listing: any,;
     view?: any,  // Made optional to fix the errors;
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
   }
   export const ProductListingCard: React.FC < ProductListingCardProps>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -541,15 +565,25 @@ declare module '@/components/ProductListingCard' {;
 // Removed custom lucide-react stub;
 // Create a replacement stub for LiveKit components;
   export interface VideoCallProps {
+=======
+
+}
+// Removed custom lucide-react stub;
+// Create a replacement stub for LiveKit components;
+'
+declare module '@livekit / components - react' {}
+  export interface VideoCallProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     room?: string,
     token?: string,
-    server_url?: string,
+    server_url?: string,;
     on_disconnect?: () => void;
     class_name?: string;
   }
   export const VideoCall: React.FC < VideoCallProps>;
   export const LiveKitRoom: React.FC < any>;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -566,10 +600,15 @@ declare module '@/components/ProductListingCard' {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 declare module '@livekit / components - styles' {
 
+=======
+'
+declare module '@livekit / components - styles' {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
-
+'
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -630,10 +669,15 @@ declare module '@livekit/components-styles' {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+'
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -642,3 +686,7 @@ declare module '@livekit/components-styles' {;
 =======
 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

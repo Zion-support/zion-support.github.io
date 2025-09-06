@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -58,3 +59,9 @@ export const Index = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export * from "./PricingSuggestionBox";"
+export * from "./ClientBudgetRecommender";"
+export * from "./TalentRateRecommender";
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

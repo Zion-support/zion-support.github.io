@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -112,23 +113,31 @@ export interface SearchHighlight {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export interface SearchSuggestion {
+=======
+export interface SearchSuggestion {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   text: string;
   type: "product" | "category" | "tag" | "skill" | "person" | "recent";
   iconUrl?: string;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface SearchHighlight {
+=======
+export interface SearchHighlight {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   before: string;
   match: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   after: string;
 }
-export interface FilterOptions {
-  productTypes: {
+export interface FilterOptions {}
+  productTypes: {};
     label: string;
     value: string;
   }[];
+<<<<<<< HEAD
 <<<<<<< HEAD
   ratingOptions: number[];
 =======
@@ -147,20 +156,32 @@ export interface SearchHighlight {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   locations: {
+=======
+  locations: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     label: string;
     value: string;
   }[];
-  availabilityOptions: {
+  availabilityOptions: {}
     label: string;
     value: string;
   }[];
   ratingOptions: number[];
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface SearchSuggestion {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -174,13 +195,13 @@ export interface SearchSuggestion {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export interface SearchSuggestion {;
-  text:string,;
-  type:'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;
-  iconUrl?:string;
+
 }
 ;
+<<<<<<< HEAD
 export interface SearchHighlight {;
   before:string,;
   match:string,;
@@ -241,3 +262,10 @@ export interface SearchSuggestion {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface SearchSuggestion {};
+  text: string;
+}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

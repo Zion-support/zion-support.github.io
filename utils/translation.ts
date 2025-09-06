@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import i18n from './i18n';
 export type TranslationMap = Record<string, string | undefined>;
@@ -41,12 +42,16 @@ export function getWithFallback(map: TranslationMap, preferred: string): string 
 }
 ;
 export async function translateTextViaAI(text: string, targets: string[]): Promise<Record<string, string>> {;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import i18n from './i18n',
-export type TranslationMap = Record < string string | undefined>,
-export function getWithFallback (map: TranslationMap, preferred: string): string | undefined {
+export type TranslationMap = Record < string string | undefined>,;
+export function getWithFallback (map: TranslationMap, preferred: string): string | undefined {';
   return map[preferred] || map[preferred.split ('-')[0]] || map['en'] || map['en - US'];
 }
+<<<<<<< HEAD
 export async function translateTextViaAI (text: string, targets: string[]): Promise < Record < string string>> {
   const res = await fetch ('/api / translate', {
     method: 'POST',
@@ -55,9 +60,16 @@ export async function translateTextViaAI (text: string, targets: string[]): Prom
   if (throw new Error ('Translation API failed')) {
   $2  const res = await fetch('/api/translate', {;
     method: 'POST',;
+=======
+
+'
+  const res = await fetch('/api/translate', {;'
+    method: 'POST',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     headers: { 'Content-Type': 'application/json' },;
-    body: JSON.stringify({ text, targets })});
+    body: JSON.stringify({ text, targets })});'
   if (!res.ok) throw new Error('Translation API failed');
+<<<<<<< HEAD
   return res.json();  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -69,34 +81,41 @@ export async function translateTextViaAI (text: string, targets: string[]): Prom
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  return res.json();
+
+  } catch (error) {}
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
   return res.json ();
 }
-export function getSelectedLanguage (): string {
+export function getSelectedLanguage (): string {';
   return i18n.resolved_language || i18n.language || 'en';
 }
 
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  const res = await fetch('/api/translate', {;
-    method: 'POST',;
+'
+  const res = await fetch('/api/translate', {;'
+    method: 'POST',;'
     headers: { 'Content-Type': 'application/json' },;
-    body: JSON.stringify({ text, targets })});
+    body: JSON.stringify({ text, targets })});'
   if (!res.ok) throw new Error('Translation API failed');
   return res.json();
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
-export function getSelectedLanguage(): string {;
+export function getSelectedLanguage(): string {;'
   return i18n.resolvedLanguage || i18n.language || 'en';
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -116,3 +135,8 @@ export function getSelectedLanguage(): string {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

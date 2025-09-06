@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
@@ -48,31 +49,34 @@ export function ServiceDetailsSection({
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { CountryPricing } from "@/data/onsiteServicePricing";
+=======
+import { CountryPricing } from "@/data/onsiteServicePricing";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { CountryServiceSelector } from "../CountryServiceSelector";
-interface ServiceDetailsSectionProps {
+interface ServiceDetailsSectionProps {}
   selectedCountry: CountryPricing | null;
   setSelectedCountry: (country: CountryPricing | null) => void;
 }
 
-export function ServiceDetailsSection({
+export function ServiceDetailsSection({}
   selectedCountry,
   setSelectedCountry,
-}: ServiceDetailsSectionProps) {
-  return (
+}: ServiceDetailsSectionProps) {}
+  return ("
     <div id="service-details" className="mt-12">
-      {selectedCountry ? (
-        <CountryServiceSelector
+      {selectedCountry ? (;
+        <CountryServiceSelector;
           selectedCountry={selectedCountry}
           onCountryChange={setSelectedCountry}
         />
-      ) : (
-        <div className="text-center">
+      ) : ("
+        <div className="text-center">"
           <h2 className="text-2xl font-bold text-white mb-4">
-            Select a Country for Details
-          </h2>
+            Select a Country for Details;
+          </h2>"
           <p className="text-zion-slate-light mb-6">
-            Choose a country from the options above to see service details and
-            pricing
+            Choose a country from the options above to see service details and;
+            pricing;
           </p>
         </div>
 <<<<<<< HEAD
@@ -213,6 +217,7 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -257,3 +262,7 @@ setSelectedCountry: (country: CountryPricing | null) => void
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

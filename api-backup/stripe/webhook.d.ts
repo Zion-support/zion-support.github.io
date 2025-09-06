@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import * as React from 'react';
@@ -28,3 +29,12 @@ export default function handler(
 =======
 ): Promise<any>;
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+import * as React from "react";
+export declare const config: { api: { bodyParser: boolean } };
+export default function handler("
+  req: "NextApiRequest","
+  res: "NextApiResponse",;
+): Promise<any>;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

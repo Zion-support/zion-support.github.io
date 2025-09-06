@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pr-12243
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -285,9 +286,14 @@ return 'Other';
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
 const getServicePricing = (service: any) => {
+=======
+
+const getServicePricing = (service: any) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (service.price) return `${service.price}${service.period}`;
-  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.starter) return service.pricing.starter;`
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+<<<<<<< HEAD
 pr-12243
 const allServices = [;
   ...advancedEnterpriseServices2025,;
@@ -587,22 +593,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
+=======
+
+  const [selectedCategory, setSelectedCategory] = useState('all');'
+  const [searchTerm, setSearchTerm] = useState('');'
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [filteredServices, setFilteredServices] = useState(allServices);
+
+        <div className="mb-6">"
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {service.marketPosition}
           </p>
         </div>
+<<<<<<< HEAD
         
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex items-center justify-between">
-          <a
-            href={service.link}
+          <a;
+            href={service.link}"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
-            Learn More
+            Learn More"
             <ArrowRight className="w-4 h-4" />
           </a>
+<<<<<<< HEAD
           
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+=======
+
+          <a;`
+            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
         <div className='mb-6'>
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
@@ -625,11 +651,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
-            Contact
+            Contact;
           </a>
         </div>
       </div>
     </motion.div>
+<<<<<<< HEAD
   );
 
   const ServiceList = ({ service }: { service: any }) => (
@@ -1906,10 +1933,14 @@ viewMode === 'list'
                   <List className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </button>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 pr-12243
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
@@ -1996,21 +2027,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ursor/fix-netlify-build-and-merge-to-main-9571
 main
 pr-12243
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  {filteredServices.length} Services Found
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
+                  {filteredServices.length} Services Found;
+                </h2>"
+                <p className="text-gray-600 dark:text-gray-400">'`
+                  {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}"`
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
+<<<<<<< HEAD
               
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
+=======
+"
+              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">"
+                <div className="flex items-center gap-2">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <TrendingUp className="w-4 h-4 text-green-500" />
                   <span>Market Growth: 150%+ YoY</span>
-                </div>
-                <div className="flex items-center gap-2">
+                </div>"
+                <div className="flex items-center gap-2">"
                   <Award className="w-4 h-4 text-blue-500" />
                 </p>
               </div>
@@ -2028,6 +2068,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Services Grid/List */}
         <div className="space-y-6">
@@ -2233,9 +2274,13 @@ pr-12243
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               Get in touch today to discuss your specific needs and discover how we can drive your success.
-            </p>
+            </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<<<<<<< HEAD
               <a
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
@@ -2335,3 +2380,7 @@ main
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+              <a;
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

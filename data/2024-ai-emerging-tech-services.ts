@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from "../types/service-variants";
 
 export interface AIEmergingTechService {
@@ -110,3 +111,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
 =======
 ];
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

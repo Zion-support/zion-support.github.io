@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,19 +25,21 @@ async function fetchHtml(url) {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return resp.text();
-function extractLinks(html, base) {
+function extractLinks(html, base) {}
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
     m => m[1]
   );
-  const links = aTags
+  const links = aTags'
     .filter(h => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))
-    .map(h =>
+    .map(h =>'
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -67,14 +70,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 exports.handler = async function () {
   try {
+=======
+exports.handler = async function () {}
+  try {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const base = process.env.URL |process.env.DEPLOY_URL |'';
   return Array && Array.from(new Set(links));
-exports && exports.handler = async function () {
-  try {
-    const base = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+exports && exports.handler = async function () {}
+  try {'
+    const base = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -104,22 +112,25 @@ exports && exports.handler = async function () {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     ${p}`);
         const links = extract_links (html, base);
-        for (const l of links.slice (0, 50)) {
-          try {
+        for (const l of links.slice (0, 50)) {}
+          try {'
             const resp = await fetch (l, { method: 'HEAD' });
             checked.push ({ url: l, status: resp.status });
             if (
-              broken.push ({ url: l, status: resp.status })) {
-  $2
+              broken.push ({ url: l, status: resp.status })) {}
+  $2;
 }
-          } catch (e) {
+          } catch (e) {}
             broken.push ({ url: l, status: 0, error: String (e.message || e) });
           }
         }
-      } catch (e) {
-        broken.push ({
+      } catch (e) {}
+        broken.push ({}`
           url: `${base}${p}`,
           status: 0,
           error: String (e.message || e),
@@ -131,20 +142,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
-<<<<<<< HEAD
-=======
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      await upsert_file ({
-        owner,
-        repo,
-        path: 'data / reports / links / weekly - links.json',
-        content: JSON.stringify (report, null, 2),
-        message: 'chore (automation): weekly link check',
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -206,6 +205,15 @@ if ( {) {
   }
 };async function fetchHtml(url) {
   const resp = await fetch(url),
+=======
+        token,
+      });
+    }
+    return {}
+  }
+};async function fetchHtml(url) {}
+  const resp = await fetch(url),`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),
   return resp && resp.text()
 
@@ -220,14 +228,15 @@ async function fetchHtml(url) {
   return resp.text()
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-function extractLinks(html, base) {
-
+function extractLinks(html, base) {}
+'"
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
-  const links = aTags
-    .filter((h) => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))
+  const links = aTags'
+    .filter((h) => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))'`
     .map((h) => (h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`)),
   return Array && Array.from(new Set(links))
 }
+<<<<<<< HEAD
 exports && exports.handler = async function() {
   try {
 <<<<<<< HEAD
@@ -312,47 +321,58 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 =======
+=======
+exports && exports.handler = async function() {}
+  try {}
+'
+    const base = process.env.URL |process.env.DEPLOY_URL |'''
+    const pages = ['//learn/dao/certifications']
+    const checked = []
+    const broken = []
+    for (const p of pages) {}
+      try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 },
-},
+
+<<<<<<< HEAD
 =======
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
-};async function fetchHtml(url) {
-  const resp = await fetch(url),
+};async function fetchHtml(url) {}
+  const resp = await fetch(url),`
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
   return resp.text()
 }
 
-function extractLinks(html, base) {
-  const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
-  const links = aTags
-    .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
+function extractLinks() { return null; }`
     .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`)),
   return Array.from(new Set(links))
 }
 
-exports.handler = async function() {
-  try {
-    const base = process.env.URL || process.env.DEPLOY_URL || '',
+exports.handler = async function() {}
+  try {'
+    const base = process.env.URL || process.env.DEPLOY_URL || '','
     const pages = ['//learn/dao/certifications'],
     const checked = [],
     const broken = [],
 
-    for (const p of pages) {
-      try {
+    for (const p of pages) {}
+      try {}`
         const html = await fetchHtml(`${base}${p}`),
         const links = extractLinks(html, base),
-        for (const l of links.slice(0, 50)) {
-          try {
+        for (const l of links.slice(0, 50)) {}
+          try {'
             const resp = await fetch(l, { method: 'HEAD' }),
             checked.push({ url: l, status: resp.status }),
             if (resp.status >= 400) broken.push({ url: l, status: resp.status })
-          } catch (e) {
+          } catch (e) {}
             broken.push({ url: l, status: 0, error: String(e.message || e) })
           }
         }
-      } catch (e) {
+      } catch (e) {}`
         broken.push({ url: `${base}${p}`, status: 0, error: String(e.message || e) })
       }
     }
@@ -363,15 +383,16 @@ exports.handler = async function() {
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
 
-    if (owner && repo && token) {
+    if (owner && repo && token) {'
       await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
     }
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, broken: broken.length }) }
-  } catch (e) {
+  } catch (e) {}
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -462,15 +483,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
-  }
-};async function fetchHtml(url) {
-  const resp = await fetch(url),
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
-  return resp.text()
-}
 
+<<<<<<< HEAD
 function extractLinks(html, base) {
   const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
   const links = aTags
@@ -544,3 +561,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -16,7 +16,11 @@ export default function MicroSaasPage() {
       description: 'Get started in minutes, not weeks. Our services are designed for immediate value delivery with minimal configuration. Most services are operational within 1-2 hours.',
       color: 'from-yellow-500 to-orange-600',
       bgColor: 'from-yellow-500/10 to-orange-500/10',
+<<<<<<< HEAD
       examples: ['Quantum AI: 2 hours', 'Manufacturing AI: 1 day', 'Cybersecurity: 4 hours']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '💰',
@@ -24,7 +28,11 @@ export default function MicroSaasPage() {
       description: 'No hidden fees, no enterprise sales calls. Simple monthly pricing that scales with your business needs. 50-80% lower than enterprise alternatives.',
       color: 'from-green-500 to-emerald-600',
       bgColor: 'from-green-500/10 to-emerald-500/10',
+<<<<<<< HEAD
       examples: ['Quantum AI: $299 vs $2000+', 'Manufacturing: $199 vs $500+', 'Space Tech: $399 vs $1000+']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '🔒',
@@ -32,7 +40,11 @@ export default function MicroSaasPage() {
       description: 'Bank-level security, SOC 2 compliance, and 99.9% uptime guarantee for all services. Quantum-resistant encryption and AI-powered threat detection.',
       color: 'from-blue-500 to-indigo-600',
       bgColor: 'from-blue-500/10 to-blue-500/10',
+<<<<<<< HEAD
       examples: ['Quantum-resistant encryption', 'AI threat detection', 'Zero-trust architecture']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '📊',
@@ -40,7 +52,11 @@ export default function MicroSaasPage() {
       description: 'Each service delivers measurable ROI within months. Our customers report 200-1000% returns on investment through improved efficiency and breakthrough capabilities.',
       color: 'from-purple-500 to-violet-600',
       bgColor: 'from-purple-500/10 to-purple-500/10',
+<<<<<<< HEAD
       examples: ['Quantum AI: 1000% ROI', 'Manufacturing: 400% ROI', 'Cybersecurity: 300% ROI']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '🌐',
@@ -48,15 +64,23 @@ export default function MicroSaasPage() {
       description: 'Access all services through ziontechgroup.com with single sign-on and integrated billing. Seamless integration between different micro SAAS solutions.',
       color: 'from-teal-500 to-cyan-600',
       bgColor: 'from-teal-500/10 to-cyan-500/10',
+<<<<<<< HEAD
       examples: ['Single sign-on', 'Integrated billing', 'Cross-service integration']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '🎯',
       title: 'Focused Solutions',
       description: 'Specialized tools that do one thing exceptionally well, without enterprise complexity. Each service solves a specific business problem with precision.',
       color: 'from-rose-500 to-pink-600',
+<<<<<<< HEAD
       bgColor: 'from-rose-500/10 to-pink-500/10',
       examples: ['Quantum AI for research', 'Manufacturing for production', 'Space tech for satellites']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -97,6 +121,7 @@ export default function MicroSaasPage() {
     }
   });
 
+<<<<<<< HEAD
   // Enhanced revolutionary services with real implementation details
   const revolutionaryServices = enhancedRealMicroSaasServices.filter(service => 
     service.realImplementation && service.popular
@@ -106,6 +131,9 @@ export default function MicroSaasPage() {
     implementationBenefits: getImplementationBenefits(service),
     competitivePricing: getCompetitivePricing(service)
   }));
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   function getMarketAdvantage(service: any) {
     switch (service.category) {
@@ -739,9 +767,13 @@ export default function MicroSaasPage() {
                   {service.icon}
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 </div>
+<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{advantage.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{advantage.description}</p>
               </Card>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
           </div>
         </div>
@@ -767,8 +799,12 @@ export default function MicroSaasPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {revolutionaryServices.slice(0, 6).map((service, index) => (
               <motion.div
+<<<<<<< HEAD
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import { render, RenderOptions } from '@testing-library/react',
 import { ThemeProvider } from 'next-themes',
@@ -21,17 +22,22 @@ import React from 'react';
   defaultLocale: 'en'
   domainLocales: []
   isPreview: false
+=======
+import React from 'react';
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     on: jest.fn (),
     off: jest.fn (),
     emit: jest.fn ();
   },
   is_fallback: false,
   is_locale: false,
-  is_ready: true,
+  is_ready: true,'
   default_locale: 'en',
   domain_locales: [],
   is_preview: false;
 
+<<<<<<< HEAD
   },
   isFallback: false,
   isLocale: false,
@@ -129,6 +135,11 @@ export const mockNextRouter = () => ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 });
 export const createMockProps = (overrides = {}) => ({;
+=======
+});
+export const createMockProps = (overrides = {}) => ({;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ...overrides;
 <<<<<<< HEAD
 =======
@@ -144,5 +155,9 @@ export const createMockProps = (overrides = {}) => ({;
 export const createMockProps = (overrides = {}) => ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 });
+=======
+});'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

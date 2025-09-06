@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,29 +19,65 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ApplicationStatus } from "@/types/jobs";
+=======
+
+
+
+
+import { ApplicationStatus } from "@/types/jobs";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {;
   status: ApplicationStatus;
 }
 
+<<<<<<< HEAD
 export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
   switch (status) {;interface StatusBadgeProps {
+=======
+interface StatusBadgeProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   status: ApplicationStatus;
 }
-export function StatusBadge({ status }: StatusBadgeProps) {
-  switch (status) {
+export function StatusBadge({ status }: StatusBadgeProps) {}
+  switch (status) {";
     case "new": return <Badge variant;
+<<<<<<< HEAD
     default:      return <Badge variant="outline">{status}</Badge>;
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { ApplicationStatus } from "@/types/jobs",
+=======
+    default:
+"
+    case "new":;"
+      return <Badge variant="secondary">Submitted</Badge>;"
+    case "viewed":;"
+      return <Badge variant="outline">Viewed</Badge>;"
+    case "shortlisted":;"
+      return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;"
+    case "interview":;"
+      return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;"
+    case "hired":;"
+      return <Badge className="bg - green - 100 text - green - 800">Hired</Badge>;"
+    case "rejected":;"
+      return <Badge className="bg - red - 100 text - red - 800">Not Selected</Badge>;
+    default:;
+"
+      return <Badge variant="outline">{status}</Badge>;
+  }
+}
+"
+import { ApplicationStatus } from "@/types/jobs","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Badge } from "@/components/ui/badge",
-interface StatusBadgeProps {
-  status: ApplicationStatus
+interface StatusBadgeProps {};
+  status: ApplicationStatus;
 }
 
+<<<<<<< HEAD
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
 <<<<<<< HEAD
@@ -58,33 +95,34 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     case "hired":
       return <Badge className="bg-green-100 text-green-800">Hired</Badge>,
     case "rejected":
+=======
+export function StatusBadge({ status }: StatusBadgeProps) {}
+  switch (status) {"
+    case "viewed":"
+      return <Badge variant="outline">Viewed</Badge>,"
+    case "shortlisted":"
+      return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>,"
+    case "interview":"
+      return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>,"
+    case "hired":"
+      return <Badge className="bg-green-100 text-green-800">Hired</Badge>,"
+    case "rejected":"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>,
-    default:
-      return <Badge variant="outline">{status}</Badge>
-import { ApplicationStatus } from "@/types/jobs",;
+    default:"
+      return <Badge variant="outline">{status}</Badge>";
+import { ApplicationStatus } from "@/types/jobs",;"
 import { Badge } from "@/components/ui/badge",;
 interface StatusBadgeProps {;
   status: ApplicationStatus;
 }
 ;
-export function StatusBadge({ status }: StatusBadgeProps) {;
-  switch (status) {;
-    case "new": return <Badge variant="secondary">Submitted</Badge>,;
-    case "viewed":;
-      return <Badge variant="outline">Viewed</Badge>,;
-    case "shortlisted":;
-      return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>,;
-    case "interview":;
-      return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>,;
-    case "hired":;
-      return <Badge className="bg-green-100 text-green-800">Hired</Badge>;
-    case "rejected":;
-      return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>;
-    default:;
+export function StatusBadge() { return null; }
       return <Badge variant="outline">{status}</Badge>;
   }
 }
 ;
+<<<<<<< HEAD
       return <Badge variant="secondary">Submitted</Badge>;
     case "viewed":;
       return <Badge variant="outline">Viewed</Badge>;
@@ -101,12 +139,46 @@ export function StatusBadge({ status }: StatusBadgeProps) {;
     case "hired":;
       return <Badge className="bg - green - 100 text - green - 800">Hired</Badge>;
     case "rejected":;
+=======
+"
+    case "new":;"
+      return <Badge variant="secondary">Submitted</Badge>;"
+    case "viewed":;"
+      return <Badge variant="outline">Viewed</Badge>;"
+    case "shortlisted":;
+"
+      return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;"
+    case "interview":;"
+      return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;"
+    case "hired":;"
+      return <Badge className="bg - green - 100 text - green - 800">Hired</Badge>;"
+    case "rejected":;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return <Badge className="bg - red - 100 text - red - 800">Not Selected</Badge>;
     default:;
-<<<<<<< HEAD
 
+"
+import { ApplicationStatus } from "@/types/jobs","
+import { Badge } from "@/components/ui/badge",
+interface StatusBadgeProps {};
+  status: ApplicationStatus;
+}
+
+export function StatusBadge({ status }: StatusBadgeProps) {}
+  switch (status) {}
+"
+import { ApplicationStatus } from "@/types/jobs","
+import { Badge } from "@/components/ui/badge",;
+interface StatusBadgeProps {};
+  status: ApplicationStatus;
+}
+
+export function StatusBadge({ status }: StatusBadgeProps) {}
+  switch (status) {}
+";
       return <Badge variant="outline">{status}</Badge>;
   }
+<<<<<<< HEAD
 }
 =======
 =======
@@ -148,43 +220,35 @@ export function StatusBadge({ status }: StatusBadgeProps) {
   }
 
 import { ApplicationStatus } from "@/types/jobs",;
+=======
+"
+import { ApplicationStatus } from "@/types/jobs",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Badge } from "@/components/ui/badge",;
 ;
 interface StatusBadgeProps {;
   status:ApplicationStatus;
 }
 ;
-export function StatusBadge({ status } StatusBadgeProps) {;
-  switch (status) {;
-    case "new":return <Badge variant="secondary">Submitted</Badge>,;
-    case "viewed":;
-      return <Badge variant="outline">Viewed</Badge>,;
-    case "shortlisted":;
-      return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>,;
-    case "interview":;
-      return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>,;
-    case "hired":;
-      return <Badge className="bg-green-100 text-green-800">Hired</Badge>,;
-    case "rejected":;
-      return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>,;
-    default:;
+export function StatusBadge() { return null; }
       return <Badge variant="outline">{status}</Badge>,;  }
- interface StatusBadgeProps {
-  status: ApplicationStatus 
-}export function StatusBadge ({
-  status 
-}: StatusBadgeProps) {
-  switch (status) {
-  case "viewed": return <Badge variant="outline">Viewed</Badge>;
-case "shortlisted": return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>;
-case "interview": return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>;
-case "hired": return <Badge className="bg-green-100 text-green-800">Hired</Badge>;
-case "rejected": return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>;
-default: return <Badge variant="outline"> {
-  status 
+ interface StatusBadgeProps {}
+  status: ApplicationStatus;
+}export function StatusBadge ({};
+  status;
+}: StatusBadgeProps) {}
+  switch (status) {"
+  case "viewed": return <Badge variant="outline">Viewed</Badge>;"
+case "shortlisted": return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>;"
+case "interview": return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>;"
+case "hired": return <Badge className="bg-green-100 text-green-800">Hired</Badge>;"
+case "rejected": return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>;"
+default: return <Badge variant="outline"> {}
+  status;
 }</Badge> 
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -193,3 +257,9 @@ default: return <Badge variant="outline"> {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { Globe } from 'lucide-react'
@@ -487,3 +488,11 @@ function CountrySelector() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {}
+  onCountryChange: (country: CountryPricing | null,) => void;
+  selectedCountry: CountryPricing | null;
+}
+  // Set top/popular countries;
+  useEffect(() => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

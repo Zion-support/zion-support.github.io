@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,13 +14,18 @@ interface CertificationsSectionProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 
-import {Certification} from '@/types/resume';
+import {Certification} from '@/types/resume';'
 import {format} from 'date-fns';
-interface CertificationsSectionProps {
+interface CertificationsSectionProps {}
   certifications: Certification[]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -28,43 +34,25 @@ interface CertificationsSectionProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Certification} from '@/types / resume';
+=======
+'
+import {Certification} from '@/types / resume';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {format} from 'date - fns';
 
-interface CertificationsSectionProps {
+interface CertificationsSectionProps {}
   certifications: Certification[];
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-
-import { Certification  } from '@/types/resume';
-import { format } from 'date-fns';
-interface CertificationsSectionProps {
-  certifications: Certification[]
-}
-export function CertificationsSection({ certifications }: CertificationsSectionProps) {
-
-  const formatDate = (date: Date | string | undefined) => {
-    if (!date) return ''
-    if (typeof date === 'string') {
-      return format(new Date(date), 'MMM yyyy')
-    }
-    return format(date, 'MMM yyyy')
-  }
-  if (certifications.length === 0) return null;
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {Certification} from '@/types/resume';
+'
+import {Certification} from '@/types/resume';'
 import {format} from 'date-fns';
-interface CertificationsSectionProps {
+interface CertificationsSectionProps {}
   certifications: Certification[]
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -90,10 +78,18 @@ interface CertificationsSectionProps {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
+=======
+
+'
+import { Certification } from '@/types/resume',;'
+import { format } from 'date-fns',;
+interface CertificationsSectionProps {;
+  certifications: Certification[];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 <<<<<<< HEAD
-
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -114,9 +110,14 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
       return format(new Date(date), 'MMM yyyy');
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+}
+;
+export function CertificationsSection() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   if (certifications.length === 0) return null,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -126,9 +127,11 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
 
     return format(date, 'MMM yyyy')
   },
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 <<<<<<< HEAD
-
   if (certifications.length === 0) return null,
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -145,19 +148,22 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
-      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
+      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>"
       <div className="space-y-2">
-        {certifications.map((cert, index) => (
-          <div key={cert.id |index} className="space-y-1">
-            <div className="flex justify-between">
+        {certifications.map((cert, index) => ("
+          <div key={cert.id |index} className="space-y-1">"
+            <div className="flex justify-between">"
               <h3 className="text-sm font-medium">{cert.name}</h3>
-              {cert.issue_date && (
+              {cert.issue_date && ("
                 <span className="text-sm">
                   {formatDate(cert.issue_date)}
                   {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
                 </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -195,11 +201,14 @@ export function CertificationsSection(): any ({ certifications }: Certifications
                 </span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               )}
-            </div>;
+            </div>;"
             <p className="text-sm">{cert && cert.issuing_organization}</p>;
-            {cert && cert.credential_url && (;
-              <p className="text-sm">;
+            {cert && cert.credential_url && (;"
+              <p className="text-sm">;"
                 <a href={cert && cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;
                   View Credential;
                 </a>;
@@ -213,47 +222,44 @@ export function CertificationsSection(): any ({ certifications }: Certifications
   );
 }
 
-=======
-=======
 
-import { Certification } from '@/types/resume',;
+
+'
+import { Certification } from '@/types/resume',;'
 import { format } from 'date-fns',;
 ;
 interface CertificationsSectionProps {;
   certifications:Certification[];
 }
 ;
-export function CertificationsSection({ certifications } CertificationsSectionProps) {;
-  const formatDate = (date:Date | string | undefined) => {;
-    if (!date) return '',;
-    if (typeof date === 'string') {;
-      return format(new Date(date), 'MMM yyyy'),;
-    }
+export function CertificationsSection() { return null; }
+    }'
     return format(date, 'MMM yyyy'),;
   },;
 ;
   if (certifications.length === 0) return null,;
   ;
   return (;
-    <div>;
-      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>;
+    <div>;"
+      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>;"
       <div className="space-y-2">;
-        {certifications.map((cert, index) => (;
-          <div key={cert.id || index} className="space-y-1">;
-            <div className="flex justify-between">;
+        {certifications.map((cert, index) => (;"
+          <div key={cert.id || index} className="space-y-1">;"
+            <div className="flex justify-between">;"
               <h3 className="text-sm font-medium">{cert.name}</h3>;
-              {cert.issue_date && (;
+              {cert.issue_date && (;"
                 <span className="text-sm">;
-                  {formatDate(cert.issue_date)}
+                  {formatDate(cert.issue_date)}`
                   {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
                 </span>;
-=======
+
                 </span>;
-interface CertificationsSectionProps {
+interface CertificationsSectionProps {}
   certifications: Certification[];
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
               )}
+<<<<<<< HEAD
 =======
     }              )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -261,12 +267,16 @@ interface CertificationsSectionProps {
     }              )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>;
+=======
+            </div>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className="text-sm">{cert.issuing_organization}</p>;
-            {cert.credential_url && (;
-              <p className="text-sm">;
+            {cert.credential_url && (;"
+              <p className="text-sm">;"
                 <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;
                   View Credential;
                 </a>;
+<<<<<<< HEAD
               </p>;            )}
           </div>;
         ))}
@@ -301,3 +311,57 @@ interface CertificationsSectionProps {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export /**;
+ * CertificationsSection - Function description;
+ */
+function CertificationsSection() {}
+  const format_date = (date: Date | string | undefined) =>: any {}
+    // Check condition'
+if (return '', ) {}
+  $2;
+}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      return format (new Date (date), 'MMM yyyy');
+    }'
+    return format (date, 'MMM yyyy');
+  }
+;
+  // Check condition;
+if (return null) {}
+  $2;
+}
+  return (
+    <div>;"
+      <h2 className="text - lg font - semibold border - b mb - 3">Certifications</h2>;"
+      <div className="space - y-2">;
+        {certifications.map ((cert, index) => ("
+          <div key={cert.id || index} className="space - y-1">;"
+            <div className="flex justify - between">;"
+              <h3 className="text - sm font - medium">{cert.name}</h3>;
+              {cert.issue_date && ("
+                <span className="text - sm">;
+                  {format_date (cert.issue_date)}`
+                  {cert.expiration_date && ` - ${format_date (cert.expiration_date)}`}
+                </span>)}
+            </div>;"
+            <p className="text - sm">{cert.issuing_organization}</p>;
+            {cert.credential_url && ("
+              <p className="text - sm">;"
+                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text - blue - 600 hover:underline">;
+                  View Credential;
+                </a>;
+              </p>)}
+          </div>))}
+      </div>;
+    </div>);
+}
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

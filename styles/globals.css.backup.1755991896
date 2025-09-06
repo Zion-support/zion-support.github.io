@@ -47,6 +47,7 @@
   --quantum-ripple: 0 0 150px rgba(0, 255, 255, 0.08);
   --holographic-wave: 0 0 200px rgba(139, 92, 246, 0.12);
   --cyberpunk-pulse: 0 0 180px rgba(236, 73, 153, 0.1);
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -55,6 +56,15 @@
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   /* Revolutionary new effects */
@@ -65,9 +75,19 @@
   --ai-futuristic: 0 0 160px rgba(139, 92, 246, 0.2);
   --quantum-entanglement-advanced: 0 0 250px rgba(139, 92, 246, 0.1);
   --holographic-matrix-advanced: 0 0 300px rgba(139, 92, 246, 0.08);
+<<<<<<< HEAD
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 /* Base styles */
 @layer base {
@@ -171,13 +191,25 @@ h3 {
 /* Futuristic Grid Pattern */
 body::after {
   position: fixed;
+<<<<<<< HEAD
   background-image:
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
 >>>>>>> main
+=======
+  top: 0;
+
+
+
+
+  --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   left: 0;
   width: 100%;
   height: 100%;
   background-image: 
+<<<<<<< HEAD
 =======
 >>>>>>> main
     linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
@@ -216,14 +248,29 @@ body::after {
 .quantum-grid {
   position: fixed;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-image:
   background-image: 
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     radial-gradient(2px 2px at 20px 30px, #3b82f6, transparent),
     radial-gradient(2px 2px at 40px 70px, #8b5cf6, transparent),
     radial-gradient(1px 1px at 90px 40px, #06b6d4, transparent),
@@ -232,6 +279,7 @@ body::after {
   background-repeat: repeat;
   background-size: 200px 100px;
   animation: particle-float 20s linear infinite;
+<<<<<<< HEAD
 =======
 >>>>>>> main
   opacity: 0.3;
@@ -308,16 +356,34 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Animations */
 @keyframes backgroundFloat {
   opacity: 0.3;}
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+/* Enhanced Animations */
+@keyframes backgroundFloat {
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
@@ -665,6 +731,7 @@ h3 {
 /* Dark Mode Enhancements */
 @media (prefers-color-scheme: dark) {
   .futuristic-card {
+<<<<<<< HEAD
 =======
 >>>>>>> main
     background: rgba(0, 0, 0, 0.3);
@@ -847,11 +914,28 @@ h3 {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+  }
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     background: rgba(0, 0, 0, 0.3);  }
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+    background: rgba(0, 0, 0, 0.3);  }
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 /* High Contrast Mode */
@@ -873,10 +957,20 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 /* Enhanced Focus States */
 .quantum-button:focus,
@@ -910,8 +1004,18 @@ h3 {
     color: black;
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

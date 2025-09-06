@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
@@ -51,13 +52,17 @@ export function ReviewsList({
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Review } from "@/types/reviews";
+=======
+import { Review } from "@/types/reviews";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ReviewCard } from "./ReviewCard";
-interface ReviewsListProps {
+interface ReviewsListProps {}
   reviews: Review[];
   isLoading: boolean;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
 
+<<<<<<< HEAD
 export function ReviewsList({
   reviews,
   isLoading,
@@ -228,15 +233,19 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
       </div>;
 =======
           ))}
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     );
   }
 
-  if (reviews.length === 0) {
-    return (
-      <div className="text-center py-8 border rounded-lg bg-muted/20">
-        <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>
+  if (reviews.length === 0) {}
+    return ("
+      <div className="text-center py-8 border rounded-lg bg-muted/20">"
+        <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>"
         <p className="text-muted-foreground">
           Once reviews are submitted and approved, they will appear here.
         </p>
@@ -246,51 +255,28 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-=======
-=======
-          ))}
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      </div>
-    );
-  }
 
-  if (reviews.length === 0) {
-    return (
-      <div className="text-center py-8 border rounded-lg bg-muted/20">
-        <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>
-        <p className="text-muted-foreground">
-          Once reviews are submitted and approved, they will appear here.
-        </p>
-      </div>
-    );
-  }
-
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    return (
-      <div className="text - center py - 8 border rounded - lg bg - muted / 20">;
-        <h3 className="text - lg font - medium mb - 1">No Reviews Yet</h3>;
+    return ("
+      <div className="text - center py - 8 border rounded - lg bg - muted / 20">;"
+        <h3 className="text - lg font - medium mb - 1">No Reviews Yet</h3>;"
         <p className="text - muted - foreground">;
           Once reviews are submitted and approved, they will appear here.;
         </p>;
       </div>);
   }
-  return (
+  return ("
     <div className="space - y-4">;
       {reviews.map ((review) => (
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -306,14 +292,16 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
+
 }
 ;
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -326,3 +314,7 @@ if ( {) {
 ;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

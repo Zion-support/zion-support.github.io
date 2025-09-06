@@ -1,17 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
 import path from 'path';
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-
-
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {};
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
 
 
-  try {
-    if (fs.existsSync(dir)) {
-      for (const f of fs.readdirSync(dir)) {
-        if (f.endsWith(".json")) {
+  try {}
+    if (fs.existsSync(dir)) {}
+      for (const f of fs.readdirSync(dir)) {"
+        if (f.endsWith(".json")) {}
           const fp = path.join(dir, f);
           );
   const dir = null;
@@ -20,6 +18,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }
       }
     }
+<<<<<<< HEAD
   } catch (e) {
 
 
@@ -27,3 +26,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 res.status(200).json({ ok: true, data });
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  } catch (e) {}
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

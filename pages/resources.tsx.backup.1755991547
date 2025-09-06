@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -545,6 +546,9 @@ const ResourcesPage: React.FC = () => {
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
 
@@ -609,6 +613,7 @@ const ResourcesPage: React.FC = () => {
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -761,3 +766,6 @@ export default ResourcesPage;
 export default ResourcesPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

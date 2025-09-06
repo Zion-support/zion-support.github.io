@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -149,11 +150,15 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               </button>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -171,12 +176,16 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Applications Section */}
         <section className="py-20 px-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
           <div className="max-w-7xl mx-auto">
@@ -312,6 +321,9 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               </a>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>

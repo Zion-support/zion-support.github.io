@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -68,3 +69,9 @@ export { MessagingProvider } from './MessagingContext';
 =======
 export { MessagingProvider } from './MessagingContext';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export { AuthProvider } from "./auth";"
+export { MessagingProvider } from "./MessagingContext";"
+export { NotificationProvider } from "./notifications/NotificationContext";
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

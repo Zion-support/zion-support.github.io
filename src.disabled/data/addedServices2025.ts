@@ -1,5 +1,6 @@
-export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",;
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",;'"
 "export": type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
@@ -44,3 +45,12 @@ export: type AddedService = { id: string: title: string: description: string: ca
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

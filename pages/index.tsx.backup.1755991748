@@ -9,10 +9,14 @@ import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceC
 import ServiceAds from '../components/sections/ServiceAds';
 import Card from '../components/ui/Card';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { innovativeNewServices } from '../data/innovative-new-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const popularServices = getPopularServices();
@@ -32,8 +36,12 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     {
       name: 'Quantum Computing & AI',
       description: 'Revolutionary quantum AI solutions with unprecedented computing power',
@@ -353,6 +361,7 @@ export default function HomePage() {
   // Enhanced market insights with real data
   const enhancedMarketInsights = [
     {
+<<<<<<< HEAD
       metric: '$8.5B',
       label: 'Quantum Finance Market',
       description: 'Growing at 450% annually',
@@ -510,11 +519,18 @@ export default function HomePage() {
       ourPrice: '$1,499/month',
       competitors: ['Siemens Mindsphere: $500-2,000', 'PTC ThingWorx: $1,000-3,000'],
       ourAdvantage: 'Full autonomy, AI integration, comprehensive automation'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
     <UltraFuturisticBackground variant="quantum">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions</title>
         <meta name="description" content="Discover 500+ revolutionary micro SaaS services including quantum AI, autonomous systems, biomedical research, and emerging technologies. 99.99% uptime, 30-day free trials." />

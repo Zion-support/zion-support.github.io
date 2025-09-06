@@ -37,10 +37,14 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   // Get featured services for homepage
   const featuredServices = enhancedRealMicroSaasServices
     .filter(service => service.popular)
     .slice(0, 8);
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const revolutionaryServices = [
     {

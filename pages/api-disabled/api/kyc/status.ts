@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD:pages/api-disabled/api/kyc/status.ts
 =======
 
 <<<<<<< HEAD:pages/api/kyc/status.ts
@@ -15,14 +16,30 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import type { KycProfile } from "../../../utils/kyc";
 import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";
 import fs from "fs";
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";"
+import type { KycProfile } from "../../../utils/kyc";"
+import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";"
+import fs from "fs";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/status.ts
 import path from "path";
 ;
 
+<<<<<<< HEAD:pages/api-disabled/api/kyc/status.ts
 const DATA_DIR = path && path.join(process && process.cwd(), "data", "kyc");
+=======
+
+
+
+"
+const DATA_DIR = path && path.join(process && process.cwd(), "data", "kyc");"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/status.ts
 const FILE = path && path.join(DATA_DIR, "profiles && profiles.json");
 ;
 
 
+<<<<<<< HEAD:pages/api-disabled/api/kyc/status.ts
 function load(): Record<string, KycProfile> {;
   try {;
     const raw = fs.readFileSync(FILE, "utf8");
@@ -39,16 +56,49 @@ function handler() {;
   if (;
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
+=======
+
+function load(): Record<string, KycProfile> {}
+  try {}
+  } catch {}
+    return {}
+
+  }
 }
-  const { user_id } = req.query as { user_id?: string }
-  if (return res.status (400).json ({ error: "Missing user_id" })) {
-  $2
+
+
+  });
+
+}
+
+
+    ok: true, profile,
+    requiredDocuments: getRequiredDocuments(profile.role),
+    optionalDocuments: getOptionalDocuments(profile.role)})
+
+
+}
+
+
+export default /**;
+ * handler - Function description;
+ */
+function handler() {}
+  if ("
+    return res.status (405).json ({ error: "Method not allowed" })) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/status.ts
+}
+  const { user_id } = req.query as { user_id?: string }"
+  if (return res.status (400).json ({ error: "Missing user_id" })) {}
+  $2;
 }
   const db = load ();
-  const profile = db[user_id];
-  if (return res.status (404).json ({ error: "Profile not found" })) {
-  $2
+  const profile = db[user_id];"
+  if (return res.status (404).json ({ error: "Profile not found" })) {}
+  $2;
 }
+<<<<<<< HEAD:pages/api-disabled/api/kyc/status.ts
   res.status (200).json ({;
     ok: true;
     profile;
@@ -150,3 +200,16 @@ function load (): Record < string, KycProfile> {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/kyc/status.ts
+=======
+  res.status (200).json ({}
+    ok: true,
+    profile,
+
+
+
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/kyc/status.ts

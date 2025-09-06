@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React,{ createContext,useContext,useState } from 'react'; const Whitelab
 import _React,{ createContext,useContext,useState } from 'react'; const WhitelabelContext = createContext(); "export": function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState('#06b6d4') const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; "return": ( <WhitelabelContext.Provider value={value}> {children} </WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error('useWhitelabel must be used within a WhitelabelProvider')}'; "return": 'context'}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React,{ createContext,useContext,useState } from 'react'; const WhitelabelContext = createContext(); "export": function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState('#06b6d4') const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; "return": ( <WhitelabelContext.Provider value={value}> {children} </WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error('useWhitelabel must be used within a WhitelabelProvider')}'; "return": 'context'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import _React,{ createContext,useContext,useState } from 'react'; const Whitelab
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React,{ createContext,useContext,useState } from \'react\'; const WhitelabelContext = createContext(); \"export\": function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState(\'#06b6d4\') const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; \"return\": ( <WhitelabelContext && WhitelabelContext.Provider value={value}> {children} </WhitelabelContext && WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error(\'useWhitelabel must be used within a WhitelabelProvider\')}\'; \"return\": \'context\'}
 const React,{ createContext,useContext,useState } from "react"; const WhitelabelContext = createContext(); export: function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState("#06b6d4") const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; return: ( <WhitelabelContext && WhitelabelContext.Provider value={value}> {children} </WhitelabelContext && WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error("useWhitelabel must be used within a WhitelabelProvider")}"; return: "context"}"""
-import _React,{ createContext,useContext,useState } from 'react'; const WhitelabelContext = createContext(); "export": function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState('#06b6d4') const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; "return": ( <WhitelabelContext && WhitelabelContext.Provider value={value}> {children} </WhitelabelContext && WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error('useWhitelabel must be used within a WhitelabelProvider')}'; "return": 'context'}
-<<<<<<< HEAD
+=======
 
+
+'"
+import React,{ createContext,useContext,useState } from \'react\'; const WhitelabelContext = createContext(); \"export\": function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState(\'#06b6d4\') const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; \"return\": ( <WhitelabelContext && WhitelabelContext.Provider value={value}> {children} </WhitelabelContext && WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error(\'useWhitelabel must be used within a WhitelabelProvider\')}\'; \"return\": \'context\'}"
+const React,{ createContext,useContext,useState } from "react"; const WhitelabelContext = createContext(); export: function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState("#06b6d4") const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; return: ( <WhitelabelContext && WhitelabelContext.Provider value={value}> {children} </WhitelabelContext && WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error("useWhitelabel must be used within a WhitelabelProvider")}"; return: "context"}"""'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React,{ createContext,useContext,useState } from 'react'; const WhitelabelContext = createContext(); "export": function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState('#06b6d4') const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; "return": ( <WhitelabelContext && WhitelabelContext.Provider value={value}> {children} </WhitelabelContext && WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error('useWhitelabel must be used within a WhitelabelProvider')}'; "return": 'context'}
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import _React,{ createContext,useContext,useState } from 'react'; const Whitelab
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+import _React,{ createContext,useContext,useState } from 'react'; const WhitelabelContext = createContext(); "export": function WhitelabelProvider({ children }) { const [isWhitelabel,setIsWhitelabel] = useState(false); const [primaryColor,setPrimaryColor] = useState('#06b6d4') const [customTheme,setCustomTheme] = useState(null); const value = { isWhitelabel setIsWhitelabel primaryColor setPrimaryColor customTheme setCustomTheme} ; "return": ( <WhitelabelContext && WhitelabelContext.Provider value={value}> {children} </WhitelabelContext && WhitelabelContext.Provider> )} export function useWhitelabel() { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error('useWhitelabel must be used within a WhitelabelProvider')}'; "return": 'context'}
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

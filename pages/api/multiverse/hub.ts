@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
@@ -21,11 +22,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       scope: state.config.scope
       optIn: state.config.optIn
       paused: state.config.paused
+=======
+import type { NextApiRequest, NextApiResponse } from "next",;"
+import { readState } from "../../../utils/sync/storage",;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  const state = readState()"
+  if (req.method === "GET") {}
+    return res.status(200).json({"
+      route: "/multiverse/hub";
+      instanceId: state.config.instanceId;
+      peers: state.config.peers;
+      scope: state.config.scope;
+      optIn: state.config.optIn;
+      paused: state.config.paused;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 lastSyncedAt: state.lastSyncedAt})
 
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state  } from '../../../utils / sync / storage';,
@@ -47,20 +63,52 @@ if ( {) {
       instance_id: state.config.instance_id
 
 
+=======
+
+
+}
+
+
+
+import type { NextApiRequest, NextApiResponse } from './next';,'
+import { read_state  } from '../../../utils / sync / storage';,
+export default async /**;
+ * handler - Function description;
+ */
+function handler() {}
+  const state = read_state (),
+  // Check condition;
+if ( {) {}
+  $2;
+}
+    return res.status (200).json ({"
+      route: "/multiverse / hub",
+      instance_id: state.config.instance_id,
+
+
+
+
+
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  if (req.method === 'GET') {
-    return res.status(200).json({
-      hub: 'multiverse-hub'
+export default async function handler(req, res) {}
+  try {'
+  if (req.method === 'GET') {}
+    return res.status(200).json({'
+      hub: 'multiverse-hub';
     });
-  } else {
+  } else {'
     res.status(405).end('Method Not Allowed');
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 =======
   const state = null;
@@ -68,10 +116,11 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState } from "../../../utils/sync/storage"
@@ -86,6 +135,21 @@ export default async function handler(req, res) {
 
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
+=======
+}"
+import type { NextApiRequest, NextApiResponse } from "next","
+import { readState } from "../../../utils/sync/storage",
+export default async function handler(req, res) {}
+  try {}
+  const state = readState(),"
+  if (req.method === "GET") {}
+    return res.status(200).json({}
+"
+      route: "/multiverse/hub",
+      instanceId: state.config.instanceId,
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       peers: state.config.peers,
       scope: state.config.scope,
       opt_in: state.config.opt_in,
@@ -107,6 +171,7 @@ export default async function handler(req, res) {
 >>>>>>> pr-12243
       lastSyncedAt: state.lastSyncedAt})
   }
+<<<<<<< HEAD
 
   return res.status(405).json({ error: "Method not allowed" })
 <<<<<<< HEAD
@@ -160,3 +225,8 @@ export default async function handler(req, res) {
 =======
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+";
+  return res.status(405).json({ error: "Method not allowed" });
+};'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

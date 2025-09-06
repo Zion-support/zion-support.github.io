@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -335,6 +336,12 @@ import ContactForm from '../components/forms/ContactForm';
 };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+  return (
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Platform Capabilities */}
       <Features

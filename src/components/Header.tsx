@@ -37,6 +37,7 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
               <Link
@@ -59,10 +60,39 @@ const Header: React.FC = () => {
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
+=======
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="hover:text-blue-400 transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="hover:text-blue-400 transition-colors">
+              About
+            </Link>
+            <Link to="/services" className="hover:text-blue-400 transition-colors">
+              Services
+            </Link>
+            <Link to="/contact" className="hover:text-blue-400 transition-colors">
+              Contact
+            </Link>
+            <Button variant="primary" size="sm">
+              Get Started
+            </Button>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
+<<<<<<< HEAD
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm border-t border-slate-700">
               {navigation.map((item) => (
@@ -76,6 +106,42 @@ const Header: React.FC = () => {
                 </Link>
               ))}
             </div>
+=======
+          <div className="md:hidden py-4 border-t border-gray-700">
+            <nav className="flex flex-col space-y-4">
+              <Link 
+                to="/" 
+                className="hover:text-blue-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/about" 
+                className="hover:text-blue-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                About
+              </Link>
+              <Link 
+                to="/services" 
+                className="hover:text-blue-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                Services
+              </Link>
+              <Link 
+                to="/contact" 
+                className="hover:text-blue-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                Contact
+              </Link>
+              <Button variant="primary" size="sm" className="w-full">
+                Get Started
+              </Button>
+            </nav>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         )}
       </div>

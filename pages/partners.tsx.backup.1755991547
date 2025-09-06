@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -145,10 +146,14 @@ const PartnersPage: React.FC = () => {
           <div className="text-center max-w-4xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -187,11 +192,15 @@ const PartnersPage: React.FC = () => {
               </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>
 
         {/* Partnership Benefits */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -290,6 +299,9 @@ const PartnersPage: React.FC = () => {
                   <p className="text-gray-300">{benefit.description}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -297,6 +309,7 @@ const PartnersPage: React.FC = () => {
         </section>
 
         {/* Partnership Types */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -547,6 +560,9 @@ const PartnersPage: React.FC = () => {
                   </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -554,6 +570,7 @@ const PartnersPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -612,11 +629,15 @@ const PartnersPage: React.FC = () => {
                   Schedule Discussion
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
 =======
@@ -626,10 +647,14 @@ const PartnersPage: React.FC = () => {
       </main>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Layout>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default PartnersPage;
 =======
@@ -639,3 +664,6 @@ export default PartnersPage;
 export default PartnersPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

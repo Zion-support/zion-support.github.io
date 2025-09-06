@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -42,24 +43,28 @@ export default function Header() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const navigation = [;
-    { name: 'Home', href: '/' }
-    { name: 'About', href: '/about' }
-    { name: 'Services', href: '/services' }
-    { name: 'AI Solutions', href: '/ai-solutions' }
-    { name: 'Quantum Computing', href: '/quantum-computing' }
-    { name: 'Research & Development', href: '/research-development' }
-    { name: 'Case Studies', href: '/case-studies' }
-    { name: 'News', href: '/news' }
+    { name: 'Home', href: '/' }'
+    { name: 'About', href: '/about' }'
+    { name: 'Services', href: '/services' }'
+    { name: 'AI Solutions', href: '/ai-solutions' }'
+    { name: 'Quantum Computing', href: '/quantum-computing' }'
+    { name: 'Research & Development', href: '/research-development' }'
+    { name: 'Case Studies', href: '/case-studies' }'
+    { name: 'News', href: '/news' }'
     { name: 'Contact', href: '/contact' }];
-  const services = [;
+  const services = [;'
     { name: 'Research Automation', href: '/ai-autonomous-research-assistant' }];
   return (;
     <header;
-      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled;
-          ? 'bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl';
-          : 'bg-black/60 backdrop-blur-md border-b border-white/10';
+      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled;'
+          ? 'bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl';'
+          : 'bg-black/60 backdrop-blur-md border-b border-white/10';`
       }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,8 +76,11 @@ export default function Header() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="flex justify-between items-center py-4">
 
           {/* Logo */}
@@ -94,10 +102,11 @@ export default function Header() {;
               <Link;
                 key={item.name}
                 href={item.href}
-                className=&quot;text - gray - 300 hover:text - white transition - all duration - 200 font - medium relative group & quot;
+                className=&quot;text - gray - 300 hover:text - white transition - all duration - 200 font - medium relative group & quot;`
                 aria - label={`Navigate to ${item.name} page`}
               >;
                 {item.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,15 +124,19 @@ export default function Header() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Link>
             ))}
 ;
             {/* Services Dropdown */}
-              <button 
-                className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
-                aria-expanded="false"
-                aria-haspopup="true"
+              <button "
+                className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group""
+                aria-expanded="false""
+                aria-haspopup="true""
                 aria-label="Services menu"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -136,8 +149,13 @@ export default function Header() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >
-                Services
+                Services;
                 <svg className=&quot;ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;>
                   <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M19 9l-7 7-7-7&quot; />
                 </svg>
@@ -145,6 +163,7 @@ export default function Header() {;
               <div className=&quot;absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0&quot;>
                 <div className=&quot;p-6 grid grid-cols-1 gap-3&quot;>
                   {services.map((service) => (
+<<<<<<< HEAD
                     <Link
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -156,6 +175,9 @@ export default function Header() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                    <Link;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 <span className=&quot;absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - purple - 400 to - blue - 400 transition - all duration - 300 group - hover:w - full & quot;></span>;
               </Link>))}
             {/* Services Dropdown */}
@@ -187,7 +209,7 @@ export default function Header() {;
                     <Link;
                       key={service.name}
                       href={service.href}
-                      className=&quot;text - gray - 300 hover:text - white p - 3 rounded - lg hover:bg - white / 10 transition - all duration - 200 group / item & quot;
+                      className=&quot;text - gray - 300 hover:text - white p - 3 rounded - lg hover:bg - white / 10 transition - all duration - 200 group / item & quot;`
                       aria - label={`Navigate to ${service.name} service page`}
                     >;
                       <div className=&quot;flex items - center justify - between & quot;>;
@@ -199,6 +221,7 @@ export default function Header() {;
                         </svg>;
                       </div>;
                     </Link>))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -265,32 +288,45 @@ export default function Header() {;
       aria-label=&quot;Main navigation&quot;    >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+
+
+
+
+    >"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+          {/* Logo */}"
+          <div className="flex items-center">"
+            <Link href="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">"
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">"
                 <span className="text-white font-bold text-xl">Z</span>
-              </div>
+              </div>"
               <span className="text-xl font-bold gradient-text text-shadow">
-                Zion Tech Group
+                Zion Tech Group;
               </span>
             </Link>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Desktop Navigation */}
+=======
+          {/* Desktop Navigation */}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <nav className="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main menu">
             {navigation.map((item) => (
-              <Link
+              <Link;
                 key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-white transition-all duration-200 font-medium relative group"
+                href={item.href}"
+                className="text-gray-300 hover:text-white transition-all duration-200 font-medium relative group"`
                 aria-label={`Navigate to ${item.name} page`}
               >;
                 {item.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
@@ -325,29 +361,46 @@ export default function Header() {;
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Services menu"
+=======
+
+
+              </Link>
+            ))}
+;
+            {/* Services Dropdown */}
+
+
+              <button "
+                className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group""
+                aria-expanded="false""
+                aria-haspopup="true""
+                aria-label="Services menu"
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >
-                Services
-                <svg className="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                Services"
+                <svg className="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">"
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+              </button>"
+              <div className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">"
                 <div className="p-6 grid grid-cols-1 gap-3">
                   {services.map((service) => (
-                    <Link
+                    <Link;
                       key={service.name}
-                      href={service.href}
-                      className="text-gray-300 hover:text-white p-3 rounded-lg hover:bg-white/10 transition-all duration-200 group/item"
+                      href={service.href}"
+                      className="text-gray-300 hover:text-white p-3 rounded-lg hover:bg-white/10 transition-all duration-200 group/item"`
                       aria-label={`Navigate to ${service.name} service page`}
-                    >
+                    >"
                       <div className="flex items-center justify-between">
-                        <span>{service.name}</span>
-                        <svg className="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <span>{service.name}</span>"
+                        <svg className="w-4 h-4 opacity-0 group-hover/item:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
                     </Link>
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -359,6 +412,10 @@ export default function Header() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>;
               </div>;
             </div>;
@@ -367,6 +424,7 @@ export default function Header() {;
 <<<<<<< HEAD
           {/* CTA Button */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-4">
 =======
 <<<<<<< HEAD
@@ -408,37 +466,42 @@ export default function Header() {;
 className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;            aria-expanded={isMenuOpen}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+=======
+
+            aria-expanded={isMenuOpen}"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             aria-controls="mobile-menu"
-          >
+          >"
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {isMenuOpen ? (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
-=======
-<<<<<<< HEAD
-<div className=&quot;hidden lg:flex items-center space-x-4&quot;>
-=======
-          <div className="hidden lg:flex items-center space-x-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+
+
+
+
+
+
+            <Link"
+              href="/contact""
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl""
               aria-label="Get started with Zion Tech Group"
             >
-              Get Started
+              Get Started;
             </Link>
           </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+<<<<<<< HEAD
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
             aria-expanded={isMenuOpen}
 =======
@@ -448,10 +511,19 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;            aria-expanded={isMenuOpen}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+=======
+
+
+
+
+            aria-expanded={isMenuOpen}"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             aria-controls="mobile-menu"
-          >
+          >"
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               {isMenuOpen ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
@@ -498,10 +570,15 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </svg>;
           </button>;
         </div>;
         {/* Mobile Navigation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -522,9 +599,13 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
+<<<<<<< HEAD
                 <Link
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -565,13 +646,17 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                 <Link
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                <Link;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   key={item.name}
                   href={item.href}
                   className=&quot;block px - 3 py - 3 text - gray - 300 hover:text - white hover:bg - white / 5 rounded - lg transition - all duration - 200 & quot;
-                  on_click={() => setIsMenuOpen (false)}
+                  on_click={() => setIsMenuOpen (false)}`
                   aria - label={`Navigate to ${item.name} page`}
                 >;
                   {item.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -632,16 +717,32 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Link
                   href="/contact"
+=======
+
+                {services.map((service) => (
+                  <Link;
+                    key={service.name}
+                    href={service.href}
+                    className=&quot;block px - 3 py - 2 text - gray - 300 hover:text - white hover:bg - white / 5 rounded - lg transition - all duration - 200 & quot;
+                    on_click={() => setIsMenuOpen (false)}`
+                    aria - label={`Navigate to ${service.name} service page`}
+                  >;
+                    {service.name}
+
+                <Link"
+                  href="/contact""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)}"
                   aria-label="Get started with Zion Tech Group"
                 >
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             </div>
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -665,3 +766,11 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
     </header>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+      </div>;
+    </header>);
+}
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

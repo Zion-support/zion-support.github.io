@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/Accessibility.js.jsx
 import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -28,10 +29,20 @@ import React from\';react\' const AccessibilityContext = createContext(null) exp
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';'
 import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
+:src.disabled/components/Accessibility.js.jsx'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
-:src.disabled/components/Accessibility.js.jsx
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'
 import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
+:temp_exclude/src.disabled/components/Accessibility.js.jsx;
+'
+import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
 :temp_exclude/src.disabled/components/Accessibility.js.jsx
@@ -61,3 +72,14 @@ const React from";react" const AccessibilityContext = createContext(null) export
 =======
 const React from";react" const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ) } return context }"";";''"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'
+const React from";react" const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ) } return context }"";";''"
+'
+import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';'"
+const React from";react" const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ) } return context }"";";''"
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

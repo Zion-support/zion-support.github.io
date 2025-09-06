@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export * from './use_logout';
 ;
@@ -105,3 +106,10 @@ export * from './useEmailAuth';
 export * from './useProfileManagement';
 export * from './useSocialAuth';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export * from "./useEmailAuth";"
+export * from "./useProfileManagement";"
+export * from "./useSocialAuth";"
+export * from "./useLogout";
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/client/jobs/[id]/applicants.tsx
 import { useRouter  } from 'next/router';
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
@@ -320,3 +321,6 @@ function JobApplicantsPage() {
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/client/jobs/[id]/applicants.tsx
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/client/jobs/[id]/applicants.tsx

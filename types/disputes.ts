@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 =======
 <<<<<<< HEAD
@@ -131,6 +132,9 @@ export type UserSummary = {;
 export type DisputeAttachment = {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface Dispute {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
 <<<<<<< HEAD
   fileName: string;
@@ -235,12 +239,17 @@ export type DisputeAttachment = {  id: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface DisputeResolution {
+=======
+export interface DisputeResolution {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   disputeId: string;
   resolution: string;
   resolvedBy: string;
   resolvedAt: Date;
   refundAmount?: number;
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -259,3 +268,6 @@ export interface DisputeResolution {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

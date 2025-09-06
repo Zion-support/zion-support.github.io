@@ -78,6 +78,7 @@ export default function ServicesPage() {
   const popularServices = getPopularServices();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -255,6 +256,9 @@ export default function ServicesPage() {
     { name: 'Edge Computing & 5G', count: 4 }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   return (
@@ -278,7 +282,7 @@ export default function ServicesPage() {
             </h2>
             <div className="text-gray-400">
               Showing {filteredServices.length} of {enhancedRealMicroSaasServices.length} total services
-=======
+
     <EnhancedFuturisticBackground variant="quantum-holographic" intensity="high">
       <div className="min-h-screen">
         <Head>
@@ -293,6 +297,7 @@ export default function ServicesPage() {
         </Head>
 
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="mb-8">
@@ -399,6 +404,9 @@ export default function ServicesPage() {
               </div>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
@@ -406,7 +414,7 @@ export default function ServicesPage() {
     </QuantumNeuralBackground>
   );
 }
-=======
+
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -489,6 +497,7 @@ import Link from 'next/link';
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -707,6 +716,9 @@ import Link from 'next/link';
                 <div className="flex items-center gap-2">
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <button
                     onClick={() => setShowFilters(!showFilters)}
                     className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"
@@ -724,6 +736,7 @@ import Link from 'next/link';
                   <button
                     onClick={() => setViewMode('grid')}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className={`p-2 rounded-lg transition-colors ${
                       viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800/50 text-slate-400 hover:text-white'
                     }`}
@@ -736,11 +749,15 @@ import Link from 'next/link';
                     className={`p-2 rounded ${viewMode === 'grid' ? 'bg-blue-500 text-white' : 'text-gray-400 hover:text-white'}`}
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   >
                     <Grid className="w-5 h-5" />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className={`p-2 rounded-lg transition-colors ${
                       viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800/50 text-slate-400 hover:text-white'
@@ -754,6 +771,9 @@ import Link from 'next/link';
                     className={`p-2 rounded ${viewMode === 'list' ? 'bg-blue-500 text-white' : 'text-gray-400 hover:text-white'}`}
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   >
                     <List className="w-5 h-5" />
                   </button>
@@ -905,11 +925,15 @@ import Link from 'next/link';
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">200+</div>
                 <div className="text-slate-300">Revolutionary Services</div>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991946
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {/* Services Grid */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -969,6 +993,7 @@ import Link from 'next/link';
               </div>
             </div>
 
+<<<<<<< HEAD
               {/* Expanded Filters */}
               {showFilters && (
                 <div className="mt-6 p-6 bg-black/20 border border-gray-700/50 rounded-xl backdrop-blur-sm">
@@ -1186,6 +1211,13 @@ import Link from 'next/link';
                   Contact Sales
                   <MessageSquare className="ml-2 w-5 h-5" />
                 </Button>
+=======
+
+          </div>
+        )}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
 
               {/* Contact Information */}
@@ -1230,6 +1262,7 @@ import Link from 'next/link';
                 <div className="text-slate-300">Free Trial</div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1289,6 +1322,9 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991946
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

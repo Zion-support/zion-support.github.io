@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { this.scanDirectory(fullPath)} else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd());  this.issues.forEach(issue => )} } new CodeQualityChecker().run();
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -67,20 +68,36 @@ const fs = require('fs'); const path = require('path'); class CodeQualityChecker
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const fs = require('fs');
+=======
+
+
+
+
+
+
+
+
+
+
+const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { this.scanDirectory(fullPath)} else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd());  this.issues.forEach(issue => )} } new CodeQualityChecker().run();
+'
+const fs = require('fs');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const path = require('path');
-class CodeQualityChecker {
-  constructor() {
+class CodeQualityChecker {}
+  constructor() {}
     this.issues = [];
   }
-  checkFileSize(filePath) {
+  checkFileSize(filePath) {}
     const stats = fs.statSync(filePath);
-    if (stats.size > 100000) {
-      // 100KB;
+    if (stats.size > 100000) {}
+      // 100KB;`
       this.issues.push(`Large "file": ${filePath} (${stats.size} bytes)`);
     }
   }
-  scanDirectory(dir) {
+  scanDirectory(dir) {}
     const items = fs.readdirSync(dir);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,17 +149,22 @@ class CodeQualityChecker {
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
         stat.isFile() &&
+=======
+
+        stat.isFile() &&'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx'))
-      ) {
+      ) {}
         this.checkFileSize(fullPath);
       }
     }
   }
-  run() {
-    this.scanDirectory(process.cwd());
+  run() {}
+    this.scanDirectory(process.cwd());`
     console.log(`Found ${this.issues.length} code quality issues`);
     this.issues.forEach(issue => console.log(issue));
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,7 +205,23 @@ new CodeQualityChecker().run();
 
 const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { this.scanDirectory(fullPath)} else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd()); console.log(`Found ${this.issues.length} code quality issues`); this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run();
 
+=======
+'`
+const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir);  else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd()); console.log(`Found ${this.issues.length} code quality issues`); this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run();'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir);  else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd()); console.log(`Found ${this.issues.length} code quality issues`); this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run();
+'`
+const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { this.scanDirectory(fullPath)} else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd()); console.log(`Found ${this.issues.length} code quality issues`); this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run();'`
+const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { this.scanDirectory(fullPath)} else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd()); console.log(`Found ${this.issues.length} code quality issues`); this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run();
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+'`
+const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { this.scanDirectory(fullPath)} else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd()); console.log(`Found ${this.issues.length} code quality issues`); this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run();
+
+
+
+'`
+const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir);  else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd()); console.log(`Found ${this.issues.length} code quality issues`); this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run();'`
 const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir);  else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd()); console.log(`Found ${this.issues.length} code quality issues`); this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run();
 <<<<<<< HEAD
 =======
@@ -192,6 +230,7 @@ const fs = require('fs'); const path = require('path'); class CodeQualityChecker
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { this.scanDirectory(fullPath)} else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd()); console.log(`Found ${this.issues.length} code quality issues`); this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run();
 const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { this.scanDirectory(fullPath)} else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd()); console.log(`Found ${this.issues.length} code quality issues`); this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run();
 ursor/add-new-services-and-deploy-updates-0462
@@ -252,3 +291,21 @@ const fs = require('fs'); const path = require('path'); class CodeQualityChecker
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+}
+new CodeQualityChecker().run();
+
+
+
+'`
+const fs = require('fs'); const path = require('path'); class CodeQualityChecker { constructor() { this.issues = []} checkFileSize(filePath) { const stats = fs.statSync(filePath); if (stats.size > 100000) { this.issues.push(`Large file: ${filePath} (${stats.size} bytes)`)} } scanDirectory(dir) { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { this.scanDirectory(fullPath)} else if ( stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx')) ) { this.checkFileSize(fullPath)} } } run() { this.scanDirectory(process.cwd()); console.log(`Found ${this.issues.length} code quality issues`); this.issues.forEach(issue => console.log(issue))} } new CodeQualityChecker().run();
+
+
+
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

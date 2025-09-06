@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export * from "./BasicInfoForm";
 export * from "./BasicInfoForm",
@@ -8,9 +9,20 @@ export * from "./schema",
 export * from "./BasicInfoForm",;
 
 export * from "./BasicInfoForm";
+=======
+export * from "./BasicInfoForm";"
+export * from "./schema";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export * from "./schema";
+"
+export * from "./BasicInfoForm";
+"
+export * from "./BasicInfoForm","
+export * from "./schema",";
+export * from "./BasicInfoForm",;"
 export * from "./schema";
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export * from "./BasicInfoForm";
 export * from "./BasicInfoForm",
@@ -64,3 +76,8 @@ export * from "./schema";export * from "./BasicInfoForm",
 export * from "./schema",
 export * from "./BasicInfoForm",;
 export * from "./schema";
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

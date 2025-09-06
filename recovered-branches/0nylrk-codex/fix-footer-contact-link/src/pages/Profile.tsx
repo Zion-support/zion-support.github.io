@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -87,6 +88,16 @@ import { Button } from "@/components/ui/button",import { useNavigate } from "rea
 import { toast } from "sonner";
 export default function Profile() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+import React, { useEffect } from "react";"
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer";"
+import { useAuth } from "@/hooks/useAuth";"
+import { Button } from "@/components/ui/button";"
+import { useNavigate } from "react-router-dom";"
+import { toast } from "sonner";
+export default function Profile() {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user, isLoading, logout } = useAuth();
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
@@ -94,6 +105,7 @@ export default function Profile() {
   const { user, isLoading, logout } = useAuth(),
   const navigate = useNavigate(),
 
+<<<<<<< HEAD
   const { user, isLoading, logout } = useAuth();
 
     return (
@@ -374,15 +386,31 @@ import { Footer } from "@/components/Footer",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { useNavigate } from "react-router-dom",;
+=======
+  useEffect(() => {}
+    if (!isLoading && !user) {"
+      toast.error("Please log in to view your profile");"
+      navigate("/login?redirect=/profile");
+    }
+  }, [user, isLoading, navigate]);
+
+import React, { useEffect } from 'react',;"
+import { Header } from "@/components/Header",;"
+import { Footer } from "@/components/Footer",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { Button } from "@/components/ui/button",;"
+import { useNavigate } from "react-router-dom",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "sonner",;
-export default function Profile() {;
+export default function Profile() { return null; }
   const { user, isLoading, logout } = useAuth(),;
   const navigate = useNavigate(),;
   useEffect(() => {;
-    if (!isLoading && !user) {;
-      toast.error("Please log in to view your profile"),;
+    if (!isLoading && !user) {;"
+      toast.error("Please log in to view your profile"),;"
       navigate("/login?redirect=/profile");
 
+<<<<<<< HEAD
     }
   }, [user, is_loading, navigate]);
 ;
@@ -413,11 +441,15 @@ if ( {) {
             <Button;
               on_click={() => navigate ("/login?redirect=/profile")}
               className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text-white";            >;
+=======
+            >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               Go to Login;
             </Button>;
           </div>;
         </div>;
         <Footer />;
+<<<<<<< HEAD
       </>);
   }
   return (
@@ -485,6 +517,11 @@ if ( {) {
 =======
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text-white";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >;
                   Logout;
                 </Button>;
@@ -495,6 +532,7 @@ if ( {) {
       </div>;
       <Footer />;
 
+<<<<<<< HEAD
     </>);
 }
 <<<<<<< HEAD
@@ -514,27 +552,31 @@ if ( {) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>;
-  ); export default function Profile () {
-  const {
-  user, isLoading, logout 
+  ); export default function Profile () {}
+  const {};
+  user, isLoading, logout;
 }= useAuth ();
 const navigate = useNavigate ();
-useEffect ( () => {
-  if (!isLoading && !user) {
-  
+useEffect ( () => {}
+  if (!isLoading && !user) {}
 }
 ;
 
-}, [user, isLoading, navigate]);
-return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="animate-pulse text-white" >Loading profile...</div> </div> <Footer /> </> if (!user) {
-  return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md" > <h1 className="text-xl font-bold text-white mb-4" >Please log in</h1> <p className="text-zion-slate mb-4" >You need to be logged in to view your profile.</p> <Button > Go to Login </Button> </div> </div> <Footer /> </>) 
+}, [user, isLoading, navigate]);"
+return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="animate-pulse text-white" >Loading profile...</div> </div> <Footer /> </> if (!user) {"
+  return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md" > <h1 className="text-xl font-bold text-white mb-4" >Please log in</h1> <p className="text-zion-slate mb-4" >You need to be logged in to view your profile.</p> <Button > Go to Login </Button> </div> </div> <Footer /> </>) "
 }return (<> <Header /> variant="outline" className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white" 
 }
     </>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -545,3 +587,9 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

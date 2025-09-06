@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/AdvancedServicePortfolioDashboard.js.jsx
 import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -29,10 +30,20 @@ import React from\';react\' const AdvancedServicePortfolioDashboard = () => { co
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';'
 import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
+:src.disabled/components/AdvancedServicePortfolioDashboard.js.jsx'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
-:src.disabled/components/AdvancedServicePortfolioDashboard.js.jsx
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'
 import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
+:temp_exclude/src.disabled/components/AdvancedServicePortfolioDashboard.js.jsx;
+'
+import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
 :temp_exclude/src.disabled/components/AdvancedServicePortfolioDashboard.js.jsx
@@ -51,3 +62,15 @@ const React from";react" const AdvancedServicePortfolioDashboard = () => { const
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+'
+const React from";react" const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState("all") const [selectedStatus,setSelectedStatus] = useState("all") const [selectedComplexity,setSelectedComplexity] = useState("all") const [searchTerm,setSearchTerm] = useState(") const [viewMode,setViewMode] = useState("overview")"";";''"
+'"
+const React from";react" const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState("all") const [selectedStatus,setSelectedStatus] = useState("all") const [selectedComplexity,setSelectedComplexity] = useState("all") const [searchTerm,setSearchTerm] = useState(") const [viewMode,setViewMode] = useState("overview")"";";''"
+'
+import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';'"
+const React from";react" const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState("all") const [selectedStatus,setSelectedStatus] = useState("all") const [selectedComplexity,setSelectedComplexity] = useState("all") const [searchTerm,setSearchTerm] = useState(") const [viewMode,setViewMode] = useState("overview")"";";''"
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

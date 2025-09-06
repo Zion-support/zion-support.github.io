@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export * from './resume / useResumeBasic';
 ;
@@ -86,3 +87,9 @@ export * from './resume';
 =======
 export * from './resume';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// This file re-exports all resume hooks to maintain backward compatibility;
+export * from "./resume";"
+export * from "./resume/useResumeBasic";
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

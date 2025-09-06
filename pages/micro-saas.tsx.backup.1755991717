@@ -686,7 +686,11 @@ export default function MicroSaasPage() {
     : microSaasServices.filter(service => service.category === selectedCategory);
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>Real Micro SaaS Services - Zion Tech Group</title>
         <meta name="description" content="Discover 28+ real, fully functional micro SaaS services built with modern technology. AI-powered tools for content, marketing, development, and business automation." />

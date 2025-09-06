@@ -81,7 +81,7 @@ export default function ServicesPage() {
     ...innovativeAIServices,
     ...emergingTechAdvancedServices,
     ...itInfrastructureServices
-=======
+
     ...newOperationalServices2025,
     ...realServicesQ12025,
     ...realEnterpriseServices2025,
@@ -117,7 +117,7 @@ export default function ServicesPage() {
     { id: 'finance', name: 'Financial Technology', icon: <DollarSign className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'iot', name: 'IoT & Edge Computing', icon: <Wifi className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge')).length }
   ];
-=======
+
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -135,6 +135,7 @@ import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-servi
 import { advancedAIServices } from '../data/advanced-ai-services';
 import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech-services';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -292,6 +293,9 @@ export default function Services() {
   const [searchQuery, setSearchQuery] = useState('');
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
@@ -389,7 +393,7 @@ export default function Services() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
-=======
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Head>
@@ -551,7 +555,7 @@ export default function Services() {
 
       <EnhancedFooter />
     </>
-=======
+
       {/* Services Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -668,7 +672,7 @@ export default function Services() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-=======
+
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                 >

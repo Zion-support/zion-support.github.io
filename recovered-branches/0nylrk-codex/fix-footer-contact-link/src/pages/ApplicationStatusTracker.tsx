@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -61,8 +62,16 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 =======
 import { Briefcase, Inbox } from "lucide-react",import { ProtectedRoute } from "@/components/ProtectedRoute";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { AppLayout } from "@/layout/AppLayout";"
+import { SEO } from "@/components/SEO";"
+import { ApplicationsTracker } from "@/components/jobs/applications";"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";"
+import { Briefcase, Inbox } from "lucide-react";"
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useIsMobile } from "@/hooks/use-mobile";
-function ApplicationStatusTrackerContent() {
+function ApplicationStatusTrackerContent() {}
   const isMobile = useIsMobile();
 
 <<<<<<< HEAD
@@ -93,29 +102,29 @@ function ApplicationStatusTrackerContent() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return (
     <>
-      <SEO
-        title="Application Status Tracker | Zion AI Marketplace"
+      <SEO"
+        title="Application Status Tracker | Zion AI Marketplace""
         description="Track the status of your job applications in the Zion AI marketplace."
       />
-
-      <div className="container mx-auto px-4 py-8">
+"
+      <div className="container mx-auto px-4 py-8">"
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-          <div>
+          <div>"
             <h1 className={`text-${isMobile ? "2xl" : "3xl"} font-bold`}>
-              Application Status Tracker
-            </h1>
+              Application Status Tracker;
+            </h1>"
             <p className="text-muted-foreground mt-1">
-              Track where you stand in the hiring process
+              Track where you stand in the hiring process;
             </p>
           </div>
-        </div>
+        </div>"
         <div className="grid grid-cols-1 gap-6">
-          <Card>
-            <CardHeader className="border-b bg-muted/50">
-              <CardTitle className="flex items-center text-lg">
-                <Inbox className="mr-2 h-5 w-5" /> Your Applications
+          <Card>"
+            <CardHeader className="border-b bg-muted/50">"
+              <CardTitle className="flex items-center text-lg">"
+                <Inbox className="mr-2 h-5 w-5" /> Your Applications;
               </CardTitle>
-            </CardHeader>
+            </CardHeader>"`
             <CardContent className={`p-${isMobile ? "3" : "6"}`}>
               <ApplicationsTracker />
             </CardContent>
@@ -134,16 +143,8 @@ function ApplicationStatusTrackerContent() {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-<<<<<<< HEAD
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {ApplicationsTracker} from "@/components/jobs/applications";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Briefcase, Inbox} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {useIsMobile} from "@/hooks/use-mobile";
-=======
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -164,6 +165,10 @@ function ApplicationStatusTrackerContent() {
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ApplicationStatusTracker() {
+=======
+}
+export default function ApplicationStatusTracker() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <ProtectedRoute>
       <AppLayout>
@@ -172,6 +177,7 @@ export default function ApplicationStatusTracker() {
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -458,3 +464,24 @@ export default function ApplicationStatusTracker() {;
 }
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+";
+import { AppLayout } from "@/layout/AppLayout",;"
+import { SEO } from "@/components/SEO",;"
+import { ApplicationsTracker } from "@/components/jobs/applications",;"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;"
+import { Briefcase, Inbox } from "lucide-react",;"
+import { ProtectedRoute } from "@/components/ProtectedRoute",;"
+import { useIsMobile } from "@/hooks/use-mobile",;
+
+}
+;
+export default function ApplicationStatusTracker() { return null; }
+}
+
+
+    </ProtectedRoute>);
+}
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

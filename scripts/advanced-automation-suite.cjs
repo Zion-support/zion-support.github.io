@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/advanced-automation-suite.cjs
 <<<<<<< HEAD:backup-problematic-files/scripts/advanced-automation-suite.cjs
 =======
@@ -21,11 +22,18 @@
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/advanced-automation-suite.cjs
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');

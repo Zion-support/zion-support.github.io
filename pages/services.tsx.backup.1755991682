@@ -1,4 +1,4 @@
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -224,6 +224,7 @@ export default function ServicesPage() {
         <meta name="twitter:description" content="Discover 500+ cutting-edge micro SAAS services powered by quantum AI and autonomous systems" />
       </Head>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -280,6 +281,9 @@ export default function ServicesPage() {
                     </div>
                   </div>
                   <Button href={ad.link} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-5 py-3 rounded-lg font-semibold">View Details</Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <div className={`text-2xl font-bold ${stat.color} mb-1`}>{stat.number}</div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -288,6 +292,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 rounded-2xl p-6 backdrop-blur-sm border border-slate-700/50 max-w-2xl mx-auto mb-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -305,6 +310,9 @@ export default function ServicesPage() {
                 <MapPin className="w-5 h-5 text-green-400 mx-auto mb-2" />
                 <div className="text-sm text-gray-400">Address</div>
                 <div className="text-green-400 font-medium text-xs">{contactInfo.address}</div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
 
@@ -546,6 +554,7 @@ export default function ServicesPage() {
       </section>
 
         {/* Popular Services Section */}
+<<<<<<< HEAD
         {popularServices.length > 0 && (
           <motion.div 
             className="mt-20"
@@ -574,6 +583,9 @@ export default function ServicesPage() {
             </div>
           </motion.div>
         )}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         {/* Service Highlights Section */}
         <section className="py-20">
@@ -695,7 +707,7 @@ export default function ServicesPage() {
     </UltraFuturisticBackground>
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -714,4 +726,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

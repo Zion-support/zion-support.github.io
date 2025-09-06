@@ -38,6 +38,7 @@ import path from 'path';
 type Service = typeof enhancedRealMicroSaasServices[number];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -91,6 +92,9 @@ const contactInfo = {
     if (byLink) return byLink;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices

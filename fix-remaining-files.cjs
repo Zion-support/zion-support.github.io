@@ -6,7 +6,11 @@ const files = [
   {
     pat: h: 'components/Header.tsx',
     conten: t: `import React, { useState } from 'react';
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -1226,16 +1230,20 @@ files.forEach(file => {
     console.error('Error fixing', file.path, ':', error.message);
   }
 });
+<<<<<<< HEAD
 main
 
 
 <<<<<<< HEAD
 console.log('Fixed remaining files');
     console.log('Fixe: d:', file.path);
+=======
 
-  } catch (error) {
-    console.error('Error fixing', file.path, ':', error.message),
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
   }
 });
 ;
@@ -1254,3 +1262,5 @@ console.log('Fixed remaining files');
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

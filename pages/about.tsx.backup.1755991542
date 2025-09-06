@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function About() {
   return (
     <div className="space-y-2">
@@ -6,3 +7,6 @@ export default function About() {
     </div>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

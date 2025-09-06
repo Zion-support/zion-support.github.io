@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -183,11 +184,15 @@ export default function ContactPage() {
     }
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   return (
     <>
       <Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -207,12 +212,16 @@ export default function ContactPage() {
         <meta property="og:description" content="Get in touch with Zion Tech Group. Contact our experts for AI, quantum computing, cybersecurity, and space technology solutions." />
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/contact" />
       </Head>
 
       <EnhancedNavigation />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -770,10 +779,14 @@ export default function ContactPage() {
       <EnhancedContactForm />
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <EnhancedFooter />
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -783,3 +796,6 @@ export default function ContactPage() {
 }
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

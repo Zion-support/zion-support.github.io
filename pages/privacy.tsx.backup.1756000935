@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -85,10 +86,14 @@ export default function PrivacyPolicy() {
   ];
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -515,11 +520,15 @@ export default function PrivacyPolicy() {
                     <p className="text-gray-300">San Francisco, CA</p>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -537,6 +546,9 @@ export default function PrivacyPolicy() {
       </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 }

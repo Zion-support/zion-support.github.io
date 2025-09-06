@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/AnalyticsDashboard.js.jsx
 "export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -29,10 +30,20 @@ export: const AnalyticsDashboard = ({ className = ",showRealTime = true,refreshI
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";'"
 "export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";
+:src.disabled/components/AnalyticsDashboard.js.jsx'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 "export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";
-:src.disabled/components/AnalyticsDashboard.js.jsx
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
 "export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";
+:temp_exclude/src.disabled/components/AnalyticsDashboard.js.jsx;
+'"
+"export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";
 :temp_exclude/src.disabled/components/AnalyticsDashboard.js.jsx
@@ -51,3 +62,15 @@ export: const AnalyticsDashboard = ({ className = ",showRealTime = true,refreshI
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+"
+export: const AnalyticsDashboard = ({ className = ",showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ enableTracking: "tru",e,enablePerformanceTracking: "tru",e,enableUserBehaviorTracking: "tru",e,enableHeatmapTracking: "fals",e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState ("24h") const [analyticsSummary,setAnalyticsSummary] = useState (null) "";"";"""
+"
+export: const AnalyticsDashboard = ({ className = ",showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ enableTracking: "tru",e,enablePerformanceTracking: "tru",e,enableUserBehaviorTracking: "tru",e,enableHeatmapTracking: "fals",e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState ("24h") const [analyticsSummary,setAnalyticsSummary] = useState (null) "";"";"""
+'"
+"export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";"
+export: const AnalyticsDashboard = ({ className = ",showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ enableTracking: "tru",e,enablePerformanceTracking: "tru",e,enableUserBehaviorTracking: "tru",e,enableHeatmapTracking: "fals",e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState ("24h") const [analyticsSummary,setAnalyticsSummary] = useState (null) "";"";"""
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

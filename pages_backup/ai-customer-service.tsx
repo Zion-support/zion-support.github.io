@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/ai-customer-service.tsx
 <<<<<<< HEAD:pages/ai-customer-service.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,20 +27,28 @@ function AICustomerService() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-customer-service.tsx
     <>;
       <Head>;
         <title > AI Customer Service | Zion Tech Group</title>;
-        <meta name="description" content="AI - powered customer service automation: chat, voice, support workflows, and analytics." />;
+        <meta name="description" content="AI - powered customer service automation: chat, voice, support workflows, and analytics." />;"
         <link rel="canonical" href="https: //ziontechgroup.com / ai - customer - service" />;
-      </Head>;
-      <div className="min - h-screen bg - black text - white">;
-        <section className="container mx - auto px - 4 py - 20">;
-          <h1 className="text - 4xl font - bold mb - 6">AI Customer Service</h1>;
+      </Head>;"
+      <div className="min - h-screen bg - black text - white">;"
+        <section className="container mx - auto px - 4 py - 20">;"
+          <h1 className="text - 4xl font - bold mb - 6">AI Customer Service</h1>;"
           <p className="text - gray - 300">Automate and augment customer support experiences with AI agents and analytics.</p>;
         </section>;
       </div>;
     </>);
 }
+<<<<<<< HEAD:pages_backup/ai-customer-service.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -113,16 +122,20 @@ export default function AICustomerService(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
-;
-;
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-customer-service.tsx
+;
+;
+
+
+
+
+
+
+<<<<<<< HEAD:pages_backup/ai-customer-service.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -163,3 +176,9 @@ const AICustomerService: React.FC = () => {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-customer-service.tsx
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-customer-service.tsx

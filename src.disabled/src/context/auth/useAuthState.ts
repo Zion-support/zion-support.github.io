@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,16 +26,16 @@ import { useState, useEffect } from 'react'; interface User { "id": string; emai
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-import { useState, useEffect } from 'react'; ; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string  }; interface AuthTokens { accessToken: string | null; refreshToken: string | null  }; export const useAuthState[, React && React.Dispatch<React && React.SetStateAction<any>>] = () => {; const [user, setUser] = useState<any>(null); const [isLoading, setIsLoading] = useState(true); const [onboardingStep, setOnboardingStep] = useState(0); const [tokens, setTokens] = useState<any>({; accessToken: null, refreshToken: null}); ; useEffect(() => {}})
-import { useState,useEffect } from 'react'; ; interface User { id: 'string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string' }; interface AuthTokens { accessToken: 'string | null; refreshToken: string | null' }; export const useAuthState[,React && React.Dispatch<React && React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: 'null',; refreshToken: 'null;' }); ; useEffect(() => {}})
-import { useState, useEffect } from 'react'; interface User { "id": string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string  }; interface AuthTokens { "accessToken": string | null; refreshToken: string | null  }; export const useAuthState[, React && React.Dispatch<React && React.SetStateAction<any>>] = () => {; const [user, setUser] = useState<any>(null); const [isLoading, setIsLoading] = useState(true); const [onboardingStep, setOnboardingStep] = useState(0); const [tokens, setTokens] = useState<any>({; "accessToken": null, "refreshToken": null}); useEffect(() => {}})
-import { useState,useEffect } from 'react'; ; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string }; interface AuthTokens { accessToken: string | null; refreshToken: string | null }; export const useAuthState[,React && React.Dispatch<React && React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: null,refreshToken: null}); ; useEffect(() => {}})
-import { useState,useEffect } from 'react'; ; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string }; interface AuthTokens { accessToken: string | null; refreshToken: string | null }; export const useAuthState[,React && React.Dispatch<React && React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: null,refreshToken: null}); ; useEffect(() => {}})
 
 
+import { useState,useEffect } from 'react'; ; interface User { id: 'string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string' }; interface AuthTokens { accessToken: 'string | null; refreshToken: string | null' }; export const useAuthState[,React.Dispatch<React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: 'null',; refreshToken: 'null;' }); ; useEffect(() => {}})'
+import { useState, useEffect } from 'react'; interface User { "id": string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string  }; interface AuthTokens { "accessToken": string | null; refreshToken: string | null  }; export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {; const [user, setUser] = useState<any>(null); const [isLoading, setIsLoading] = useState(true); const [onboardingStep, setOnboardingStep] = useState(0); const [tokens, setTokens] = useState<any>({; "accessToken": null, "refreshToken": null}); useEffect(() => {}})'
 import { useState,useEffect } from 'react'; ; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string }; interface AuthTokens { accessToken: string | null; refreshToken: string | null }; export const useAuthState[,React.Dispatch<React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: null,refreshToken: null}); ; useEffect(() => {}})
+<<<<<<< HEAD
 import { useState,useEffect } from 'react'; ; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string }; interface AuthTokens { accessToken: string | null; refreshToken: string | null }; export const useAuthState[,React.Dispatch<React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: null,refreshToken: null}); ; useEffect(() => {}})
 import { useState,useEffect } from 'react'; ; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string }; interface AuthTokens { accessToken: string | null; refreshToken: string | null }; export const useAuthState[,React.Dispatch<React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: null,refreshToken: null}); ; useEffect(() => {}})
 ursor/add-new-services-and-deploy-updates-0462
@@ -68,3 +69,7 @@ import { useState, useEffect } from 'react'; interface User { "id": string; emai
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

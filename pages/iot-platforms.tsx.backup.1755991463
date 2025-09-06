@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 export default function IoTPlatformsPage() {
@@ -37,3 +38,6 @@ export default IotPlatforms;
 >>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/iot-platforms.tsx.backup.1755991463
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

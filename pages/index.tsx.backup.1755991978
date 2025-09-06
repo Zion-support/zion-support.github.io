@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { 
   Shield, Rocket, Clock, DollarSign, TrendingUp, Brain, Factory, Globe, 
   Zap, Link, Building2, FlaskConical, Leaf, Car, Truck, Microscope, 
@@ -17,6 +18,9 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import UltraAdvancedFuturisticCard from '../components/ui/UltraAdvancedFuturisticCard';
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices, serviceCategories } from '../data/enhanced-real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const heroStats = [
@@ -183,6 +187,7 @@ export default function HomePage() {
     },
     {
       icon: '🌐',
+<<<<<<< HEAD
       title: 'Unified Platform',
       description: 'Access all services through ziontechgroup.com with single sign-on and integrated billing.',
       color: 'from-teal-500 to-cyan-600'
@@ -192,10 +197,14 @@ export default function HomePage() {
       title: 'Focused Solutions',
       description: 'Specialized tools that do one thing exceptionally well, without enterprise complexity.',
       color: 'from-rose-500 to-pink-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground variant="quantum-entanglement">
       <Head>
         <title>Zion Tech Group - Revolutionary Micro SaaS Services | Quantum AI, Autonomous Systems, Blockchain</title>
@@ -208,6 +217,9 @@ export default function HomePage() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
@@ -349,6 +361,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {marketInsights.map((insight, index) => (
               <motion.div
@@ -357,6 +370,9 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="group"
               >
                 <div className={`p-8 rounded-2xl bg-gradient-to-br ${insight.color} bg-opacity-10 border border-white/10 backdrop-blur-sm group-hover:scale-105 transition-all duration-300`}>
@@ -607,9 +623,13 @@ export default function HomePage() {
                   <Phone className="w-4 h-4" />
                   <span>{contactInfo.mobile}</span>
                 </div>
+<<<<<<< HEAD
                 <div className="flex items-center justify-center gap-2 text-purple-400">
                   <Mail className="w-4 h-4" />
                   <span>{contactInfo.email}</span>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <div className="flex items-center justify-center gap-2 text-green-400">
                   <MapPin className="w-4 h-4" />
@@ -617,10 +637,14 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
       </UltraFuturisticBackground>
     </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

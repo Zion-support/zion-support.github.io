@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -7,10 +8,15 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function GovernanceTrustPage() {
+=======
+
+export default function GovernanceTrustPage() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Head>
         <title>Zion Governance & Trust</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -61,6 +67,9 @@ export default function GovernanceTrustPage() {
                 <div className="font-medium">{opt.title}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -80,6 +89,7 @@ import Link from 'next/link';
             ))}
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <section className='space-y-4'>
@@ -122,44 +132,55 @@ import Link from 'next/link';
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Core Stewards</div>
+=======
+
+        <section className="space-y-4">"
+          <h2 className="text-2xl font-semibold">Governance</h2>"
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">"
+              <div className="font-medium mb-1">Core Stewards</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="text-sm text-gray-600 dark:text-gray-400">Appointed via DAO ratification, accountable to publish roadmaps, risk registers, and post-mortems.</div>
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <div className='font-medium mb-1'>Delegated Voting</div>
-              <div className='text-sm text-gray-600 dark:text-gray-400'>
-                Nation/community DAOs receive delegated rights proportionally to
-                stake and contribution, with slashing/recall for inactivity or
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>'
+              <div className='font-medium mb-1'>Delegated Voting</div>'
+              <div className='text-sm text-gray-600 dark:text-gray-400'>;
+                Nation/community DAOs receive delegated rights proportionally to;
+                stake and contribution, with slashing/recall for inactivity or;
                 misconduct.
               </div>
-            </div>
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <div className='font-medium mb-1'>Quarterly Reports</div>
+            </div>'
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>'
+              <div className='font-medium mb-1'>Quarterly Reports</div>'
               <div className='text-sm text-gray-600 dark:text-gray-400'>
-                Financials, grants, impact metrics, and execution status are
+                Financials, grants, impact metrics, and execution status are;
                 published within 30 days of quarter-end.
               </div>
-            </div>
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <div className='font-medium mb-1'>Public Archives</div>
+            </div>'
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>'
+              <div className='font-medium mb-1'>Public Archives</div>'
               <div className='text-sm text-gray-600 dark:text-gray-400'>
-                Charter versions, MOUs, audits, and on-chain dashboards are
+                Charter versions, MOUs, audits, and on-chain dashboards are;
                 publicly accessible and time-stamped.
 <<<<<<< HEAD
               </div>            </div>
           </div>
         </section>
+
+
 <<<<<<< HEAD
-=======
-
-
 =======
 
         <section className="space-y-2">
@@ -214,95 +235,98 @@ export default function GovernanceTrustPage(req, res) {
         </section>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>;
             ))}
           </div>;
         </section>;
-
-        <section className='space-y-4'>;
-          <h2 className='text-2xl font-semibold'>Governance</h2>;
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>;
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
-              <div className='font-medium mb-1'>Core Stewards</div>;
+'
+        <section className='space-y-4'>;'
+          <h2 className='text-2xl font-semibold'>Governance</h2>;'
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>;'
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;'
+              <div className='font-medium mb-1'>Core Stewards</div>;'
               <div className='text-sm text-gray-600 dark:text-gray-400'>;
                 Appointed via DAO ratification, accountable to publish roadmaps,;
                 risk registers, and post-mortems.;
               </div>;
-            </div>;
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
-              <div className='font-medium mb-1'>Delegated Voting</div>;
+            </div>;'
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;'
+              <div className='font-medium mb-1'>Delegated Voting</div>;'
               <div className='text-sm text-gray-600 dark:text-gray-400'>;
                 Nation/community DAOs receive delegated rights proportionally to;
                 stake and contribution, with slashing/recall for inactivity or;
                 misconduct.;
               </div>;
-            </div>;
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
-              <div className='font-medium mb-1'>Quarterly Reports</div>;
+            </div>;'
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;'
+              <div className='font-medium mb-1'>Quarterly Reports</div>;'
               <div className='text-sm text-gray-600 dark:text-gray-400'>;
                 Financials, grants, impact metrics, and execution status are;
                 published within 30 days of quarter-end.;
               </div>;
-            </div>;
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
-              <div className='font-medium mb-1'>Public Archives</div>;
+            </div>;'
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;'
+              <div className='font-medium mb-1'>Public Archives</div>;'
               <div className='text-sm text-gray-600 dark:text-gray-400'>;
                 Charter versions, MOUs, audits, and on-chain dashboards are;
                 publicly accessible and time-stamped.;
               </div>            </div>;
           </div>;
         </section>;
-
-        <section className='space-y-2'>;
-          <h2 className='text-2xl font-semibold'>Operator Prompt</h2>;
+'
+        <section className='space-y-2'>;'
+          <h2 className='text-2xl font-semibold'>Operator Prompt</h2>;'
           <p className='text-sm text-gray-600 dark:text-gray-400'>;
-            Write a legal-neutral foundation charter for a decentralized AI;
-import Head from 'next / head';
+            Write a legal-neutral foundation charter for a decentralized AI;'
+import Head from 'next / head';'
 import Link from 'next / link';
               </div>))}
           </div>;
-        </section>;
-        <section className='space - y-4'>;
-          <h2 className='text - 2xl font - semibold'>Governance</h2>;
-          <div className='grid grid - cols - 1 md: grid - cols - 2 gap - 4'>;
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <div className='font - medium mb - 1'>Core Stewards</div>;
+        </section>;'
+        <section className='space - y-4'>;'
+          <h2 className='text - 2xl font - semibold'>Governance</h2>;'
+          <div className='grid grid - cols - 1 md: grid - cols - 2 gap - 4'>;'
+            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;'
+              <div className='font - medium mb - 1'>Core Stewards</div>;'
               <div className='text - sm text - gray - 600 dark:text - gray - 400'>;
                 Appointed via DAO ratification, accountable to publish roadmaps,
                 risk registers, and post - mortems.;
               </div>;
-            </div>;
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <div className='font - medium mb - 1'>Delegated Voting</div>;
+            </div>;'
+            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;'
+              <div className='font - medium mb - 1'>Delegated Voting</div>;'
               <div className='text - sm text - gray - 600 dark:text - gray - 400'>;
                 Nation / community DAOs receive delegated rights proportionally to;
                 stake and contribution, with slashing / recall for inactivity or;
                 misconduct.;
               </div>;
-            </div>;
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <div className='font - medium mb - 1'>Quarterly Reports</div>;
+            </div>;'
+            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;'
+              <div className='font - medium mb - 1'>Quarterly Reports</div>;'
               <div className='text - sm text - gray - 600 dark:text - gray - 400'>;
                 Financials, grants, impact metrics, and execution status are;
                 published within 30 days of quarter - end.;
               </div>;
-            </div>;
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <div className='font - medium mb - 1'>Public Archives</div>;
+            </div>;'
+            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;'
+              <div className='font - medium mb - 1'>Public Archives</div>;'
               <div className='text - sm text - gray - 600 dark:text - gray - 400'>;
                 Charter versions, MOUs, audits, and on - chain dashboards are;
                 publicly accessible and time - stamped.;
               </div>            </div>;
           </div>;
-        </section>;
-        <section className='space - y-2'>;
-          <h2 className='text - 2xl font - semibold'>Operator Prompt</h2>;
+        </section>;'
+        <section className='space - y-2'>;'
+          <h2 className='text - 2xl font - semibold'>Operator Prompt</h2>;'
           <p className='text - sm text - gray - 600 dark:text - gray - 400'>;
             Write a legal - neutral foundation charter for a decentralized AI;
             protocol committed to sovereignty, open knowledge, and trust.;
             Include DAO integration and multiverse grant rights.;
-          </p>;
+          </p>;'
           <Link href='/foundation#charter'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -343,6 +367,9 @@ import Link from 'next / link';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <a className='underline text - sm'>Open Charter Generator</a>;
           </Link>;
         </section>;
@@ -351,71 +378,65 @@ import Link from 'next / link';
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-              desc: 'LLC/wrapper (e.g., Otoco) for on-chain governance with minimized off-chain overhead.'
-            }].map((opt) => (
-              <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-                <div className="font-medium">{opt.title}</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+              desc: 'LLC/wrapper (e.g., Otoco) for on-chain governance with minimized off-chain overhead.'
+            }].map((opt) => ("
+              <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">"
+                <div className="font-medium">{opt.title}</div>"
+                <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
+
+
               </div>
+<<<<<<< HEAD
             ))  } catch (error) {
 =======
   } catch (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
+=======
+            ))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
           </div>
         </section>
-<<<<<<< HEAD
-        <section className='space-y-4'>
-          <h2 className='text-2xl font-semibold'>Governance</h2>
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <div className='font-medium mb-1'>Core Stewards</div>
-              <div className='text-sm text-gray-600 dark:text-gray-400'>
-<<<<<<< HEAD
-                Appointed via DAO ratification, accountable to publish roadmaps
-=======
-                Appointed via DAO ratification, accountable to publish roadmaps,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 risk registers, and post-mortems.
               </div>
-=======
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">Governance</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
-            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-              <div className="font-medium mb-1">Core Stewards</div>
+"
+        <section className="space-y-4">"
+          <h2 className="text-2xl font-semibold">Governance</h2>"
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">"
+              <div className="font-medium mb-1">Core Stewards</div>"
               <div className="text-sm text-gray-600 dark:text-gray-400">Appointed via DAO ratification, accountable to publish roadmaps, risk registers, and post-mortems.</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            </div>
-            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-              <div className="font-medium mb-1">Delegated Voting</div>
+
+
+            </div>"
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">"
+              <div className="font-medium mb-1">Delegated Voting</div>"
               <div className="text-sm text-gray-600 dark:text-gray-400">Nation/community DAOs receive delegated rights proportionally to stake and contribution, with slashing/recall for inactivity or misconduct.</div>
-            </div>
-            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-              <div className="font-medium mb-1">Quarterly Reports</div>
+            </div>"
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">"
+              <div className="font-medium mb-1">Quarterly Reports</div>"
               <div className="text-sm text-gray-600 dark:text-gray-400">Financials, grants, impact metrics, and execution status are published within 30 days of quarter-end.</div>
-            </div>
-            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-              <div className="font-medium mb-1">Public Archives</div>
+            </div>"
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">"
+              <div className="font-medium mb-1">Public Archives</div>"
               <div className="text-sm text-gray-600 dark:text-gray-400">Charter versions, MOUs, audits, and on-chain dashboards are publicly accessible and time-stamped.</div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className='space-y-2'>
 =======
@@ -580,3 +601,18 @@ export default function GovernanceTrustPage(req, res) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

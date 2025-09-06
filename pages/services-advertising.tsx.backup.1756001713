@@ -335,6 +335,7 @@ export default function ServicesAdvertisingPage() {
           </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -465,3 +466,6 @@ export default function ServicesAdvertisingPage() {
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e3a5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

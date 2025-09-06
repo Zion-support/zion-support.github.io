@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -32,6 +32,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Service {
+=======
+
+
+
+
+
+
+
+
+
+
+export interface Service {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   name: string,
   description: string;
@@ -39,7 +52,7 @@ export interface Service {
   price?: number;
   features: string[];
 }
-export const findService = (query: string, services: Service[]): Service[] => {
+export const findService = (query: string, services: Service[]): Service[] => {};
   const searchTerm = query.toLowerCase();
   return services.filter(service =>
     service.name.toLowerCase().includes(searchTerm) ||
@@ -47,15 +60,23 @@ export const findService = (query: string, services: Service[]): Service[] => {
     service.category.toLowerCase().includes(searchTerm)
   )
 };
+<<<<<<< HEAD
 export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
   return services.filter(service =>
     service.category.toLowerCase() === category.toLowerCase()
   )
+=======
+export const getServicesByCategory = (category: string, services: Service[]): Service[] => {}
+  return services.filter(service => 
+    service.category.toLowerCase() === category.toLowerCase();
+  );
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
-export default {
-  findService,
-  getServicesByCategory
+export default {}
+  findService,;
+  getServicesByCategory;
 };
+<<<<<<< HEAD
 // Service finder utility
 export const findService = ("_serviceName": string) => {
   // Implementation placeholder
@@ -73,26 +94,27 @@ export const findService = ("_serviceName": string) => {
 =======
 =======
 <<<<<<< HEAD
+=======
+// Service finder utility;
+export const findService = ("_serviceName": string) => {};
+  // Implementation placeholder;
+  return null;
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
 export const findService = (_serviceName: string) => { return null};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const findService = (_serviceName: string) => { return null};
 export const findService = (_serviceName: string) => { return null};
 export const findService = (_serviceName: string) => { return null};
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -131,3 +153,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   return null
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

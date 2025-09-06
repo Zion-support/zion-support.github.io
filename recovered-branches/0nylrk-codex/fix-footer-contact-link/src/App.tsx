@@ -1,53 +1,70 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { Suspense } from 'react';
 import { Routes, Route  } from 'react-router-dom';
+=======
+import React, { Suspense } from 'react';'
+import { Routes, Route  } from 'react-router-dom';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import './App.css',
-import { ThemeProvider } from "./components/ThemeProvider",
+import { ThemeProvider } from "./components/ThemeProvider","
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
+=======
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {'
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+=======
 
-import React, { Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
-import "./App ;
-import { ThemeProvider } from "./components/ThemeProvider";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+"
+import React, { Suspense } from "react";"
+import { Routes, Route } from "react-router-dom";"
+import "./App ;"
+import { ThemeProvider } from "./components/ThemeProvider";"
 import { WhitelabelProvider } from "./context/WhitelabelContext";
-import {
-  AuthRoutes
-  DashboardRoutes
-  MarketplaceRoutes
-  TalentRoutes
-  AdminRoutes
-  MobileAppRoutes
-  ContentRoutes
-  ErrorRoutes
-  EnterpriseRoutes
-  CommunityRoutes
-  DeveloperRoutes
-
+import {};
+  AuthRoutes;
+  DashboardRoutes;
+  MarketplaceRoutes;
+  TalentRoutes;
+  AdminRoutes;
+  MobileAppRoutes;
+  ContentRoutes;
+  ErrorRoutes;
+  EnterpriseRoutes;
+  CommunityRoutes;
+  DeveloperRoutes;
 import {;
   AuthRoutes,;
   DashboardRoutes,;
@@ -59,42 +76,43 @@ import {;
   ErrorRoutes,;
   EnterpriseRoutes,;
   CommunityRoutes,;
-  DeveloperRoutes,;
-} from "./routes";
-const Home = React && React.lazy(() => import("./pages/Home"));
-const AIMatcherPage = React && React.lazy(() => import("./pages/AIMatcher"));
-const TalentDirectory = React && React.lazy(() => import("./pages/TalentDirectory"));
-const TalentsPage = React && React.lazy(() => import("./pages/TalentsPage"));
-const ServicesPage = React && React.lazy(() => import("./pages/ServicesPage"));
-const EquipmentPage = React && React.lazy(() => import("./pages/EquipmentPage"));
-const Analytics = React && React.lazy(() => import("./pages/Analytics"));
-const MobileLaunchPage = React && React.lazy(() => import("./pages/MobileLaunchPage"));
-const CommunityPage = React && React.lazy(() => import("./pages/CommunityPage"));
-const Categories = React && React.lazy(() => import("./pages/Categories"));
-const Login = React && React.lazy(() => import("./pages/Login"));
+  DeveloperRoutes,;"
+} from "./routes";"
+const Home = React && React.lazy(() => import("./pages/Home"));"
+const AIMatcherPage = React && React.lazy(() => import("./pages/AIMatcher"));"
+const TalentDirectory = React && React.lazy(() => import("./pages/TalentDirectory"));"
+const TalentsPage = React && React.lazy(() => import("./pages/TalentsPage"));"
+const ServicesPage = React && React.lazy(() => import("./pages/ServicesPage"));"
+const EquipmentPage = React && React.lazy(() => import("./pages/EquipmentPage"));"
+const Analytics = React && React.lazy(() => import("./pages/Analytics"));"
+const MobileLaunchPage = React && React.lazy(() => import("./pages/MobileLaunchPage"));"
+const CommunityPage = React && React.lazy(() => import("./pages/CommunityPage"));"
+const Categories = React && React.lazy(() => import("./pages/Categories"));"
+const Login = React && React.lazy(() => import("./pages/Login"));"
 const Signup = React && React.lazy(() => import("./pages/Signup"));
-const ITOnsiteServicesPage = React && React.lazy(;
+const ITOnsiteServicesPage = React && React.lazy(;"
   () => import("./pages/ITOnsiteServicesPage"),;
-);
-const OpenAppRedirect = React && React.lazy(() => import("./pages/OpenAppRedirect"));
+);"
+const OpenAppRedirect = React && React.lazy(() => import("./pages/OpenAppRedirect"));"
 const ContactPage = React && React.lazy(() => import("./pages/Contact"));
 
-const baseRoutes = [;
-  { path: "/", element: <Home /> },;
-  { path: "/match", element: <AIMatcherPage /> },;
-  { path: "/login", element: <Login /> },;
-  { path: "/signup", element: <Signup /> },;
-  { path: "/talent", element: <TalentDirectory /> },;
-  { path: "/talents", element: <TalentsPage /> },;
-  { path: "/services", element: <ServicesPage /> },;
-  { path: "/it-onsite-services", element: <ITOnsiteServicesPage /> },;
-  { path: "/categories", element: <Categories /> },;
-  { path: "/equipment", element: <EquipmentPage /> },;
-  { path: "/analytics", element: <Analytics /> },;
-  { path: "/mobile-launch", element: <MobileLaunchPage /> },;
-  { path: "/open-app", element: <OpenAppRedirect /> },;
-  { path: "/community", element: <CommunityPage /> },;
+const baseRoutes = [;"
+  { path: "/", element: <Home /> },;"
+  { path: "/match", element: <AIMatcherPage /> },;"
+  { path: "/login", element: <Login /> },;"
+  { path: "/signup", element: <Signup /> },;"
+  { path: "/talent", element: <TalentDirectory /> },;"
+  { path: "/talents", element: <TalentsPage /> },;"
+  { path: "/services", element: <ServicesPage /> },;"
+  { path: "/it-onsite-services", element: <ITOnsiteServicesPage /> },;"
+  { path: "/categories", element: <Categories /> },;"
+  { path: "/equipment", element: <EquipmentPage /> },;"
+  { path: "/analytics", element: <Analytics /> },;"
+  { path: "/mobile-launch", element: <MobileLaunchPage /> },;"
+  { path: "/open-app", element: <OpenAppRedirect /> },;"
+  { path: "/community", element: <CommunityPage /> },;"
   { path: "/contact", element: <ContactPage /> },;
+<<<<<<< HEAD
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { Suspense } from 'react',
@@ -117,16 +135,28 @@ import { Toaster as SonnerToaster } from './components/ui/sonner';
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 
+=======
+];'
+import React, { Suspense } from 'react','
+import { Routes, Route } from 'react-router-dom','
+import './App.css',"
+import { ThemeProvider } from "./components/ThemeProvider","
+import { WhitelabelProvider } from "./context/WhitelabelContext","
+import { Toaster } from "./components/ui/toaster","
+import { Toaster as SonnerToaster } from "./components/ui/sonner",
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const App = () => {;
 
   return (
-    <WhitelabelProvider>;
-      <ThemeProvider defaultTheme="dark">;
+    <WhitelabelProvider>;"
+      <ThemeProvider defaultTheme="dark">;"
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>;
           <Routes>;
             {baseRoutes && baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
             ))}
+<<<<<<< HEAD
 import React, { Suspense } from './react';
 import { Routes, Route  } from './react-router-dom';
 import "./App.css";
@@ -215,6 +245,22 @@ import { Toaster as SonnerToaster } from "./components/ui/sonner",
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
+=======
+
+
+'
+import React, { Suspense } from './react';'
+import { Routes, Route  } from './react-router-dom';"
+import "./App.css";'
+import { ThemeProvider  } from './components / ThemeProvider';'
+import { WhitelabelProvider  } from './context / WhitelabelContext';'
+import { Toaster  } from './components / ui / toaster';'
+import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
+
+
+
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   AuthRoutes,
   DashboardRoutes,
   MarketplaceRoutes,
@@ -225,6 +271,7 @@ import {
   ErrorRoutes,
   EnterpriseRoutes,
   CommunityRoutes,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -296,28 +343,41 @@ const App = () =>: any {
             <Route path="/enterprise/*" element={<EnterpriseRoutes />} />;
             <Route path="/community/*" element={<CommunityRoutes />} />;
             <Route path="/developers/*" element={<DeveloperRoutes />} />;
+=======
+";
+            <Route path="/auth/*" element={<AuthRoutes />} />;"
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />;"
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;"
+            <Route path="/talent/*" element={<TalentRoutes />} />;"
+            <Route path="/admin/*" element={<AdminRoutes />} />;"
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />;"
+            <Route path="/content/*" element={<ContentRoutes />} />;"
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />;"
+            <Route path="/community/*" element={<CommunityRoutes />} />;"
+            <Route path="/developers/*" element={<DeveloperRoutes />} />;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Route path="*" element={<ErrorRoutes />} />;
           </Routes>;
         </Suspense>;
         <Toaster />;
 
-
+"
 import { Toaster } from "./components/ui/toaster";
-
+"
 import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
 
-
-import React, { Suspense } from 'react',
-import { Routes, Route } from 'react-router-dom',
-import './App.css',
-import { ThemeProvider } from "./components/ThemeProvider",
-import { WhitelabelProvider } from "./context/WhitelabelContext",
-import { Toaster } from "./components/ui/toaster",
+'
+import React, { Suspense } from 'react','
+import { Routes, Route } from 'react-router-dom','
+import './App.css',"
+import { ThemeProvider } from "./components/ThemeProvider","
+import { WhitelabelProvider } from "./context/WhitelabelContext","
+import { Toaster } from "./components/ui/toaster","
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
 
 
 
-import {
+import {}
   AuthRoutes,
   DashboardRoutes,
   MarketplaceRoutes,
@@ -329,6 +389,7 @@ import {
   EnterpriseRoutes,
   CommunityRoutes,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   DeveloperRoutes,;
@@ -420,36 +481,73 @@ const baseRoutes = [
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
 <<<<<<< HEAD
+=======
+
+  DeveloperRoutes'
+} from './routes','
+const Home = React.lazy(() => import('./pages/Home')),'
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),'
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory')),'
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage')),'
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage')),'
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage')),'
+const Analytics = React.lazy(() => import('./pages/Analytics')),'
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage')),'
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage')),'
+const Categories = React.lazy(() => import('./pages/Categories')),'
+const Login = React.lazy(() => import('./pages/Login')),'
+const Signup = React.lazy(() => import('./pages/Signup')),'
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),'
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),'
+const ContactPage = React.lazy(() => import('./pages/Contact')),
+
+
+const baseRoutes = ['
+  { path: '/', element: <Home /> },'
+  { path: '/match', element: <AIMatcherPage /> },'
+  { path: '/login', element: <Login /> },'
+  { path: '/signup', element: <Signup /> },'
+  { path: '/talent', element: <TalentDirectory /> },'
+  { path: '/talents', element: <TalentsPage /> },'
+  { path: '/services', element: <ServicesPage /> },'
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },'
+  { path: '/categories', element: <Categories /> },'
+  { path: '/equipment', element: <EquipmentPage /> },'
+  { path: '/analytics', element: <Analytics /> },'
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },'
+  { path: '/open-app', element: <OpenAppRedirect /> },'
+  { path: '/community', element: <CommunityPage /> },'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { path: '/contact', element: <ContactPage /> }],
 
-const App = () => {
+const App = () => {}
   return (
-    <WhitelabelProvider>
-      <ThemeProvider defaultTheme="dark">
+    <WhitelabelProvider>"
+      <ThemeProvider defaultTheme="dark">"
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
-            ))}
-            <Route path="/auth/*" element={<AuthRoutes />} />
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-            <Route path="/talent/*" element={<TalentRoutes />} />
-            <Route path="/admin/*" element={<AdminRoutes />} />
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />
-            <Route path="/content/*" element={<ContentRoutes />} />
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-            <Route path="/community/*" element={<CommunityRoutes />} />
-            <Route path="/developers/*" element={<DeveloperRoutes />} />
+            ))}"
+            <Route path="/auth/*" element={<AuthRoutes />} />"
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />"
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />"
+            <Route path="/talent/*" element={<TalentRoutes />} />"
+            <Route path="/admin/*" element={<AdminRoutes />} />"
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />"
+            <Route path="/content/*" element={<ContentRoutes />} />"
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />"
+            <Route path="/community/*" element={<CommunityRoutes />} />"
+            <Route path="/developers/*" element={<DeveloperRoutes />} />"
             <Route path="*" element={<ErrorRoutes />} />
           </Routes>
         </Suspense>
-        <Toaster />
+        <Toaster />"
         <SonnerToaster position="top-right" />
       </ThemeProvider>
     </WhitelabelProvider>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   );
 }
@@ -474,6 +572,15 @@ import './App.css',;
 import { ThemeProvider } from "./components/ThemeProvider",;
 import { WhitelabelProvider } from "./context/WhitelabelContext",;
 import { Toaster } from "./components/ui/toaster",;
+=======
+export default App,';
+import React, { Suspense } from 'react',;'
+import { Routes, Route } from 'react-router-dom',;'
+import './App.css',;"
+import { ThemeProvider } from "./components/ThemeProvider",;"
+import { WhitelabelProvider } from "./context/WhitelabelContext",;"
+import { Toaster } from "./components/ui/toaster",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Toaster as SonnerToaster } from "./components/ui/sonner",;
 import {;
   AuthRoutes,;
@@ -486,91 +593,98 @@ import {;
   ErrorRoutes,;
   EnterpriseRoutes,;
   CommunityRoutes,;
-  DeveloperRoutes;
-} from './routes',;
-const Home = React.lazy(() => import('./pages/Home')),;
-const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),;
-const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory')),;
-const TalentsPage = React.lazy(() => import('./pages/TalentsPage')),;
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage')),;
-const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage')),;
-const Analytics = React.lazy(() => import('./pages/Analytics')),;
-const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage')),;
-const CommunityPage = React.lazy(() => import('./pages/CommunityPage')),;
-const Categories = React.lazy(() => import('./pages/Categories')),;
-const Login = React.lazy(() => import('./pages/Login')),;
-const Signup = React.lazy(() => import('./pages/Signup')),;
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),;
-const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),;
+  DeveloperRoutes;'
+} from './routes',;'
+const Home = React.lazy(() => import('./pages/Home')),;'
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),;'
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory')),;'
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage')),;'
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage')),;'
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage')),;'
+const Analytics = React.lazy(() => import('./pages/Analytics')),;'
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage')),;'
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage')),;'
+const Categories = React.lazy(() => import('./pages/Categories')),;'
+const Login = React.lazy(() => import('./pages/Login')),;'
+const Signup = React.lazy(() => import('./pages/Signup')),;'
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),;'
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),;'
 const ContactPage = React.lazy(() => import('./pages/Contact')),;
-const baseRoutes = [;
-  { path: '/', element: <Home /> },;
-  { path: '/match', element: <AIMatcherPage /> },;
-  { path: '/login', element: <Login /> },;
-  { path: '/signup', element: <Signup /> },;
-  { path: '/talent', element: <TalentDirectory /> },;
-  { path: '/talents', element: <TalentsPage /> },;
-  { path: '/services', element: <ServicesPage /> },;
-  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },;
-  { path: '/categories', element: <Categories /> },;
-  { path: '/equipment', element: <EquipmentPage /> },;
-  { path: '/analytics', element: <Analytics /> },;
-  { path: '/mobile-launch', element: <MobileLaunchPage /> },;
-  { path: '/open-app', element: <OpenAppRedirect /> },;
-  { path: '/community', element: <CommunityPage /> },;
+const baseRoutes = [;'
+  { path: '/', element: <Home /> },;'
+  { path: '/match', element: <AIMatcherPage /> },;'
+  { path: '/login', element: <Login /> },;'
+  { path: '/signup', element: <Signup /> },;'
+  { path: '/talent', element: <TalentDirectory /> },;'
+  { path: '/talents', element: <TalentsPage /> },;'
+  { path: '/services', element: <ServicesPage /> },;'
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },;'
+  { path: '/categories', element: <Categories /> },;'
+  { path: '/equipment', element: <EquipmentPage /> },;'
+  { path: '/analytics', element: <Analytics /> },;'
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },;'
+  { path: '/open-app', element: <OpenAppRedirect /> },;'
+  { path: '/community', element: <CommunityPage /> },;'
   { path: '/contact', element: <ContactPage /> }],;
 const App = () => {;
   return (;
-    <WhitelabelProvider>;
-      <ThemeProvider defaultTheme="dark">;
+    <WhitelabelProvider>;"
+      <ThemeProvider defaultTheme="dark">;"
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>;
           <Routes>;
             {baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
-            ))}
-const OpenAppRedirect = React.lazy (() => import ("./pages / OpenAppRedirect"));
+            ))}"
+const OpenAppRedirect = React.lazy (() => import ("./pages / OpenAppRedirect"));"
 const ContactPage = React.lazy (() => import ("./pages / Contact"));
 ;
-const base_routes = [;
-  { path: "/", element: <Home /> },
-  { path: "/match", element: <AIMatcherPage /> },
-  { path: "/login", element: <Login /> },
-  { path: "/signup", element: <Signup /> },
-  { path: "/talent", element: <TalentDirectory /> },
-  { path: "/talents", element: <TalentsPage /> },
-  { path: "/services", element: <ServicesPage /> },
-  { path: "/it - onsite - services", element: <ITOnsiteServicesPage /> },
-  { path: "/categories", element: <Categories /> },
-  { path: "/equipment", element: <EquipmentPage /> },
-  { path: "/analytics", element: <Analytics /> },
-  { path: "/mobile - launch", element: <MobileLaunchPage /> },
-  { path: "/open - app", element: <OpenAppRedirect /> },
-  { path: "/community", element: <CommunityPage /> },
+const base_routes = [;"
+  { path: "/", element: <Home /> },"
+  { path: "/match", element: <AIMatcherPage /> },"
+  { path: "/login", element: <Login /> },"
+  { path: "/signup", element: <Signup /> },"
+  { path: "/talent", element: <TalentDirectory /> },"
+  { path: "/talents", element: <TalentsPage /> },"
+  { path: "/services", element: <ServicesPage /> },"
+  { path: "/it - onsite - services", element: <ITOnsiteServicesPage /> },"
+  { path: "/categories", element: <Categories /> },"
+  { path: "/equipment", element: <EquipmentPage /> },"
+  { path: "/analytics", element: <Analytics /> },"
+  { path: "/mobile - launch", element: <MobileLaunchPage /> },"
+  { path: "/open - app", element: <OpenAppRedirect /> },"
+  { path: "/community", element: <CommunityPage /> },"
   { path: "/contact", element: <ContactPage /> },
 ];
 ;
-const App = () =>: any {
+const App = () =>: any {}
   return (
+<<<<<<< HEAD
     <WhitelabelProvider>;
       <ThemeProvider default_theme="dark">;
         <Suspense fallback={<div className="p - 4 text-center">Loading...</div>}>;
+=======
+    <WhitelabelProvider>;"
+      <ThemeProvider default_theme="dark">;"
+        <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Routes>;
             {base_routes.map (({ path, element }) => (
-              <Route key={path} path={path} element={element} />))}
-            <Route path="/auth/*" element={<AuthRoutes />} />;
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />;
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;
-            <Route path="/talent/*" element={<TalentRoutes />} />;
-            <Route path="/admin/*" element={<AdminRoutes />} />;
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />;
-            <Route path="/content/*" element={<ContentRoutes />} />;
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />;
-            <Route path="/community/*" element={<CommunityRoutes />} />;
-            <Route path="/developers/*" element={<DeveloperRoutes />} />;
+              <Route key={path} path={path} element={element} />))}"
+            <Route path="/auth/*" element={<AuthRoutes />} />;"
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />;"
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;"
+            <Route path="/talent/*" element={<TalentRoutes />} />;"
+            <Route path="/admin/*" element={<AdminRoutes />} />;"
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />;"
+            <Route path="/content/*" element={<ContentRoutes />} />;"
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />;"
+            <Route path="/community/*" element={<CommunityRoutes />} />;"
+            <Route path="/developers/*" element={<DeveloperRoutes />} />;"
             <Route path="*" element={<ErrorRoutes />} />;
           </Routes>;
         </Suspense>;
         <Toaster />;
+<<<<<<< HEAD
 
 export default App;  )
 },
@@ -591,6 +705,18 @@ export default App;
 =======
   { path: '/contact', element: <ContactPage /> },
 ];
+=======
+"
+        <SonnerToaster position="top - right" />;
+      </ThemeProvider>;
+    </WhitelabelProvider>);
+}
+;
+export default App;
+;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 const App = () => {
@@ -802,9 +928,14 @@ export default App;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 export default App;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

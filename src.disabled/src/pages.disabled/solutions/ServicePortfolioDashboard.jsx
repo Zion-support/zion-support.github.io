@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/src/pages.disabled/solutions/ServicePortfolioDashboard.jsx
 =======
 <<<<<<< HEAD
@@ -103,3 +104,13 @@ import _React from "react"; import Link from "next/link"; import { ArrowRight,Ph
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Serviceportfoliodashboard() {}; return null} )}
+"
+import React from \"react\"; import Link from \"next/link\"; import { ArrowRight,Phone,Mail } from \"lucide-react\"; ); export default function Serviceportfoliodashboard() {}; return null} )}"
+const React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Serviceportfoliodashboard() { return; }; return null} )}"""
+import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Serviceportfoliodashboard() {}; return null} )}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

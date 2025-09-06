@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/integrations/oauth/[provider]/callback.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD:pages/api/integrations/oauth/[provider]/callback.ts
 <<<<<<< HEAD
@@ -10,10 +11,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' })
 }
 origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+
+    message:
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  res.status(200).json({};
+    ok: true;
+    message:
+      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
+  });
+
+  res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' })
+}
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/oauth/[provider]/callback.ts
 import type { NextApiRequest, NextApiResponse } from './next';
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
+<<<<<<< HEAD:pages_backup/api/integrations/oauth/[provider]/callback.ts
 function handler() {
   res.status (200).json ({
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/oauth/[provider]/callback.ts
@@ -32,25 +51,40 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/oauth/[provider]/callback.ts
-      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection.",;
+=======
+function handler() {}
+  res.status (200).json ({}
+    ok: true,
+    message:;"
+      "OAuth mock callback successful. Use /api / integrations / connect to finalize connection.",
   });
 }
+
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/oauth/[provider]/callback.ts
+      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection.",;
+  });
+}'
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler() { return null; }
   res.status(200).json({ message: 'API endpoint' });
-export default function handler(req, res) {
-  try {
+export default function handler(req, res) {}
+  try {';
   res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' });
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -59,6 +93,7 @@ export default function handler(req, res) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:pages_backup/api/integrations/oauth/[provider]/callback.ts
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
   });
@@ -76,10 +111,13 @@ function handler() {
       "OAuth mock callback successful. Use /api / integrations / connect to finalize connection."
   });
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/oauth/[provider]/callback.ts
 
 
 
 
+<<<<<<< HEAD:pages_backup/api/integrations/oauth/[provider]/callback.ts
 res.status(200).json({
     ok: true,
     message:
@@ -93,3 +131,8 @@ res.status(200).json({
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/integrations/oauth/[provider]/callback.ts
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/integrations/oauth/[provider]/callback.ts

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   id: string;
 export interface EmergingTechService {
 id: string;
@@ -75,20 +76,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
       'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
+=======
+
+    implementationDetails:
+      'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
-    useCases: [
-      'Drug discovery'
-      'Genetic analysis'
-      'Protein folding'
-      'Molecular dynamics'
-      'Biological optimization'
+    useCases: ['
+      'Drug discovery''
+      'Genetic analysis''
+      'Protein folding''
+      'Molecular dynamics''
+      'Biological optimization''
       'Research acceleration'
     ]
-    integrations: [
+    integrations: ['
       'Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'
     ]
-    support:
+    support:'
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
+<<<<<<< HEAD
     compliance: [
 
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
@@ -167,15 +174,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🧬',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    compliance: []
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from - green - 500 to - emerald - 600',
-    popular: true,
+    popular: true,'
     launch_date: '2024 - 02 - 01',
     customers: 280,
     rating: 4 && 4.8,
-    reviews: 85,
-    market_size: '$12B quantum bio - computing market',
+    reviews: 85,'
+    market_size: '$12B quantum bio - computing market','
     growth_rate: '65% annually',
   },
+<<<<<<< HEAD
   {
 
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
@@ -185,20 +197,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
       'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
+=======
+  {}
+    implementationDetails:'
+      'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
-    useCases: [
-      'Accessibility assistance'
-      'Gaming control'
-      'Medical research'
-      'Communication aids'
-      'Prosthetic control'
+    useCases: ['
+      'Accessibility assistance''
+      'Gaming control''
+      'Medical research''
+      'Communication aids''
+      'Prosthetic control''
       'Cognitive enhancement'
     ]
-    integrations: [
+    integrations: ['
       'Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'
     ]
-    support:
+    support:'
       '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
+<<<<<<< HEAD
     compliance: [
 
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
@@ -277,15 +295,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🧠',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    compliance: []
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from - blue - 500 to - indigo - 600',
-    popular: true,
+    popular: true,'
     launch_date: '2024 - 01 - 15',
     customers: 450,
     rating: 4 && 4.7,
-    reviews: 120,
-    market_size: '$18B BCI market',
+    reviews: 120,'
+    market_size: '$18B BCI market','
     growth_rate: '55% annually',
   },
+<<<<<<< HEAD
   {
 
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
@@ -295,20 +318,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
+=======
+  {}
+    implementationDetails:'
+      'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
-    useCases: [
-      'Energy system optimization'
-      'Fusion power simulation'
-      'Grid optimization'
-      'Energy storage optimization'
-      'Renewable integration'
+    useCases: ['
+      'Energy system optimization''
+      'Fusion power simulation''
+      'Grid optimization''
+      'Energy storage optimization''
+      'Renewable integration''
       'Energy research'
     ]
-    integrations: [
+    integrations: ['
       'Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'
     ]
-    support:
+    support:'
       '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
+<<<<<<< HEAD
     compliance: [
 
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
@@ -387,15 +416,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '⚡',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    compliance: []
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from - yellow - 500 to - orange - 600',
-    popular: true,
+    popular: true,'
     launch_date: '2024 - 02 - 10',
     customers: 320,
     rating: 4 && 4.8,
-    reviews: 95,
-    market_size: '$25B quantum energy market',
+    reviews: 95,'
+    market_size: '$25B quantum energy market','
     growth_rate: '45% annually',
   },
+<<<<<<< HEAD
   {
 
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
@@ -405,36 +439,50 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
       'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
+=======
+  {}
+    implementationDetails:'
+      'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
-    useCases: [
-      'Autonomous driving'
-      'Fleet management'
-      'Safety systems'
-      'Traffic optimization'
-      'Transportation logistics'
+    useCases: ['
+      'Autonomous driving''
+      'Fleet management''
+      'Safety systems''
+      'Traffic optimization''
+      'Transportation logistics''
       'Research and development'
     ]
-    integrations: [
+    integrations: ['
       'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'
     ]
-    support:
+    support:'
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
+<<<<<<< HEAD
     compliance: [
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    compliance: []
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
-    ],
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
-    icon: '🚗',
+    ],'
+    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform','
+    icon: '🚗','
     color: 'from-red-500 to-pink-600',
-    popular: true,
+    popular: true,'
     launchDate: '2024-01-25',
     customers: 180,
     rating: 4.9,
-    reviews: 65,
-    marketSize: '$35B autonomous vehicle market',
+    reviews: 65,'
+    marketSize: '$35B autonomous vehicle market','
     growthRate: '75% annually',
   },;
+<<<<<<< HEAD
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
   marketSize: string;
@@ -461,49 +509,55 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Risk assessmentRegulatory compliance tools'
 origin/cursor/automate-test-improve-and-merge-code-2533
     ];
-    benefits: [
+    benefits: ['
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
     ];
-    targetAudience: [
+    targetAudience: ['
       'Space agenciesMining companiesInvestment firmsResearch institutionsGovernment agenciesTechnology companies'
-    ];
-    marketPosition: 'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.',
-    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+'],
+    ];'
+    marketPosition: 'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.','
+    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+'],'
     techStack: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems'],
-    realImplementation: true;
-    implementationDetails: 'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.',
+    realImplementation: true;'
+    implementationDetails: 'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.','
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.';
-    useCases: [
+    useCases: ['
       'Asteroid miningResource extractionSpace logisticsResource processingMarket analysisRegulatory compliance'
-    ];
-    integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'],
-    support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.',
-    compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'],
-    link: 'https://ziontechgroup.com/space-mining-platform';
-    icon: '🚀';
+    ];'
+    integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'],'
+    support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.','
+    compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'],'
+    link: 'https://ziontechgroup.com/space-mining-platform';'
+    icon: '🚀';'
     color: 'from-purple-500 to-pink-600';
-    popular: true;
+    popular: true;'
     launchDate: '2024-01-05';
     customers: 120;
     rating: 4.9;
-    reviews: 45;
-    marketSize: '$3.5B space mining market';
+    reviews: 45;'
+    marketSize: '$3.5B space mining market';'
     growthRate: '85% annually'
   },
-  {
-    id: 'quantum-bio-computing-platform';
-    name: 'Quantum Bio-Computing Platform';
-    tagline: 'Quantum computing meets biological systems';
-    description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
+  {'
+    id: 'quantum-bio-computing-platform';'
+    name: 'Quantum Bio-Computing Platform';'
+    tagline: 'Quantum computing meets biological systems';'
+    description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.','
     category: 'Quantum & Emerging Tech';
+<<<<<<< HEAD
     price: {
+=======
+
+    price: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       monthly: 799,
-      yearly: 7990,
+      yearly: 7990,'
       currency: 'USD',
-      trial_days: 14,
+      trial_days: 14,'
       setup_time: '12 hours',
       enterprise: 2999,
     },
+<<<<<<< HEAD
     features: [;
       'Advanced computer vision',
       'Real - time decision making',
@@ -563,15 +617,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: '🚗',
+=======
+'
+    icon: '🚗','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from - red - 500 to - pink - 600',
-    popular: true,
+    popular: true,'
     launch_date: '2024 - 01 - 25',
     customers: 180,
     rating: 4 && 4.9,
-    reviews: 65,
-    market_size: '$35B autonomous vehicle market',
+    reviews: 65,'
+    market_size: '$35B autonomous vehicle market','
     growth_rate: '75% annually',
   },
+<<<<<<< HEAD
     ];
     ];
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
@@ -616,23 +675,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: '🚗';
+=======
+'
+    icon: '🚗';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from - red - 500 to - pink - 600';
-    popular: true;
+    popular: true;'
     launch_date: '2024 - 01 - 25';
     customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
+<<<<<<< HEAD
   }
   }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    market_size: '$35B autonomous vehicle market',
-    growth_rate: '75% annually';
 
+<<<<<<< HEAD
   }
 
 ];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string,;
   name: string,;
   tagline: string,;
@@ -672,6 +739,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
 
+<<<<<<< HEAD
 export interface EmergingTechService {;
   id: string,;
   name: string,;
@@ -715,11 +783,15 @@ export interface EmergingTechService {;
 ];
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export interface EmergingTechService {;
 
   }
 ];
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
     marketSize: '$35B autonomous vehicle market';
@@ -727,3 +799,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

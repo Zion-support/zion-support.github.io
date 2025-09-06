@@ -5,7 +5,11 @@ import Features from '../components/sections/Features';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+<<<<<<< HEAD
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, Star, Users, Globe, Lock, Rocket, Cpu, Database, TrendingUp, Clock, Target, Building, Award, DollarSign, ChartBar, Code, BookOpen, Activity, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, Settings, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Sparkles, Atom, Brain, Eye, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const heroStats = [
@@ -17,6 +21,7 @@ export default function HomePage() {
     { value: '1500%+', label: 'Average ROI', color: 'text-purple-400', icon: <TrendingUp className="w-5 h-5" /> },
   ];
 
+<<<<<<< HEAD
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -26,6 +31,9 @@ export default function HomePage() {
 
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     {
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: '100+ Real Micro SaaS Services',
@@ -90,6 +98,7 @@ export default function HomePage() {
       gradient: 'from-indigo-400 to-purple-500',
     },
     {
+<<<<<<< HEAD
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Transparent Pricing',
       description: 'No hidden fees, simple monthly pricing that scales with your business needs.',
@@ -256,6 +265,9 @@ export default function HomePage() {
       color: 'from-cyan-600 to-blue-600',
       link: 'https://ziontechgroup.com/autonomous-ai-agents',
       contactInfo: contactInfo
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -267,6 +279,7 @@ export default function HomePage() {
   };
 
   return (
+<<<<<<< HEAD
           <EnhancedFuturisticBackground variant="quantum-entanglement" intensity="high">
       <div className="min-h-screen">
         <Head>
@@ -324,6 +337,9 @@ export default function HomePage() {
                   <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                     +1 302 464 0950
                   </a>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-4 h-4 text-cyan-400" />
@@ -401,6 +417,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Revolutionary Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -478,11 +495,18 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Button
               href="/micro-saas"
               variant="primary"
               size="lg"
+<<<<<<< HEAD
               className="group"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >
               View All 150+ Services
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -508,6 +532,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -557,12 +582,16 @@ export default function HomePage() {
                     </div>
                   </div>
                 </UltraAdvancedFuturisticCard>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1004,6 +1033,9 @@ export default function HomePage() {
           </div>
         </section>
       </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </UltraFuturisticBackground>
   );
 }

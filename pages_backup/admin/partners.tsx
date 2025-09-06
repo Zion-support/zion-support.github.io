@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD:pages/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,9 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 
 =======
 
@@ -32,10 +36,11 @@ export default function AdminPartners() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
 import React, { useState, useEffect } from 'react';
-
+'
 import Head from 'next / head';
 ;
 
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 interface Partner {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,12 +68,21 @@ interface Partner {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+interface Partner {}
+'
+import React, { useState, useEffect } from 'react';'
+import Head from 'next/head';
+
+interface Partner {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 interface Partner {;
   id: string;
   code: string;
-  name: string;
+  name: string;'
   status: 'active' | 'inactive' | 'pending';
   commission: number;
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -120,9 +134,12 @@ const AdminPartnersPage: React.FC = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
   const [partners, setPartners] = useState<Partner[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [loading, setLoading] = useState(true);'
+  const [searchTerm, setSearchTerm] = useState('');'
   const [statusFilter, setStatusFilter] = useState('all');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,6 +170,7 @@ const AdminPartnersPage: React.FC = () => {;
 =======
     const json = await res.json();
     setFlags(json.flags |[]);
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 
 =======
@@ -169,12 +187,16 @@ const AdminPartnersPage: React.FC = () => {;
     setFlags(json.flags |[]);
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 import { useEffect, useState } from 'react';
 
-export default function AdminPartners() {
-  const [partners, setPartners] = useState<any[]>([]);
+export default function AdminPartners() {};
+  const [partners, setPartners] = useState<any[]>([]);'
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -401,6 +423,10 @@ onBlur={e =>
                     className='px - 2 py - 1 rounded border';
                     on_click={() =>;
                       update_partner (p.code, { status: 'approved' });
+=======
+
+  return (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 
                     }
                   >;
@@ -414,6 +440,7 @@ onBlur={e =>
                   </button>;
 
 
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 =======
 useEffect(() => {
@@ -555,49 +582,63 @@ useEffect(() => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+                  />
+                </td>
+                <td className="py-2 pr-4 space-x-2">'"
+                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>'"
+                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>"
+                  <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
+                </td>
+              </tr>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
             ))}
 
           </tbody>;
         </table>;
       </div>;
-      {selected && (;
-        <div className='p-4 rounded border'>;
-          <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>;
+      {selected && (;'
+        <div className='p-4 rounded border'>;'
+          <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>;'
           <ul className='list-disc pl-6'>;
             {flags && flags.map((f, idx) => (;
-              <li key={idx}>;
-                <span className='font-medium'>{f && f.type}</span> — {f && f.severity}{' '}
+              <li key={idx}>;'
+                <span className='font-medium'>{f && f.type}</span> — {f && f.severity}{' '}'
                 {f && f.note && <span className='text-gray-500'>({f && f.note})</span>}
               </li>;
 
             ))}
-            {flags && flags.length === 0 && (;
+            {flags && flags.length === 0 && (;'
               <li className='text-gray-500 list-none'>No flags</li>;
             )}
 
           </ul>;
         </div>;
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>;
+        {/* Stats Cards */}"
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;"
+          <div className="bg-white rounded-lg shadow p-4">;"
+            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>;"
             <p className="text-2xl font-bold">{totalPartners}</p>;
-          </div>;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>;
+          </div>;"
+          <div className="bg-white rounded-lg shadow p-4">;"
+            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>;"
             <p className="text-2xl font-bold text-green-600">{activePartners}</p>;
-          </div>;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>;
+          </div>;"
+          <div className="bg-white rounded-lg shadow p-4">;"
+            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>;"
             <p className="text-2xl font-bold">{totalReferrals}</p>;
-          </div>;
-          <div className="bg-white rounded-lg shadow p-4">;
-            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>;
+          </div>;"
+          <div className="bg-white rounded-lg shadow p-4">;"
+            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>;"
             <p className="text-2xl font-bold text-blue-600">${totalEarnings && totalEarnings.toLocaleString()}</p>;
           </div>;
         </div>;
 
 
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -677,19 +718,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
+=======
+
+        {/* Filters */}"
+        <div className="bg-white rounded-lg shadow p-6 mb-6">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-            <div>;
+            <div>;"
               <label className="block text-sm font-medium mb-2">Search Partners</label>;
-              <input
+              <input"
                 type="text"
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e && e.target.value)}
-                placeholder="Search by name, code, or email...";
+                onChange={(e) => setSearchTerm(e && e.target.value)}"
+                placeholder="Search by name, code, or email...";"
                 className="w-full p-2 border rounded-md";
               />;
             </div>;
-            <div>;
+            <div>;"
               <label className="block text-sm font-medium mb-2">Filter by Status</label>;
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
               <select
                 value={statusFilter}
 <<<<<<< HEAD
@@ -753,89 +800,81 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
             <div>;
               <label className="block text - sm font - medium mb - 2">Filter by Status</label>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
               <select;
-                value={status_filter}
-                on_change={(e) => setStatusFilter (e.target.value)}
-                className="w - full p - 2 border rounded - md";
-              >;
-                <option value="all">All Statuses</option>;
-                <option value="active">Active</option>;
-                <option value="inactive">Inactive</option>;
-                <option value="pending">Pending</option>;
-              </select>;
-            </div>;
-          </div>;
-        </div>;
-        {/* Partners Table */}
-        <div className="bg - white rounded - lg shadow overflow - hidden">;
-          <div className="px - 6 py - 4 border - b">;
-            <h2 className="text - lg font - semibold">Partners ({filtered_partners.length})</h2>;
-          </div>;
+                value={statusFilter}
 
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {loading ? (
             <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? (
+=======
+          {loading ? ("
+            <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
             <div className="text - center py - 8 text - gray - 500">;
               No partners found matching your criteria.;
-            </div>) : (
-            <div className="overflow - x-auto">;
-              <table className="min - w-full">;
+            </div>) : ("
+            <div className="overflow - x-auto">;"
+              <table className="min - w-full">;"
                 <thead className="bg - gray - 50">;
-                  <tr>;
+                  <tr>;"
                     <th className="px - 6 py - 3 text - left text - xs font - medium text - gray - 500 uppercase tracking - wider">;
                       Code;
-                    </th>;
+                    </th>;"
                     <th className="px - 6 py - 3 text - left text - xs font - medium text - gray - 500 uppercase tracking - wider">;
                       Name;
-                    </th>;
+                    </th>;"
                     <th className="px - 6 py - 3 text - left text - xs font - medium text - gray - 500 uppercase tracking - wider">;
                       Status;
-                    </th>;
+                    </th>;"
                     <th className="px - 6 py - 3 text - left text - xs font - medium text - gray - 500 uppercase tracking - wider">;
                       Commission;
-                    </th>;
+                    </th>;"
                     <th className="px - 6 py - 3 text - left text - xs font - medium text - gray - 500 uppercase tracking - wider">;
                       Referrals;
-                    </th>;
+                    </th>;"
                     <th className="px - 6 py - 3 text - left text - xs font - medium text - gray - 500 uppercase tracking - wider">;
                       Earnings;
-                    </th>;
+                    </th>;"
                     <th className="px - 6 py - 3 text - left text - xs font - medium text - gray - 500 uppercase tracking - wider">;
                       Actions;
                     </th>;
                   </tr>;
-                </thead>;
+                </thead>;"
                 <tbody className="bg - white divide - y divide - gray - 200">;
-                  {filtered_partners.map ((partner) => (
-                    <tr key={partner.id} className="hover:bg - gray - 50">;
+                  {filtered_partners.map ((partner) => ("
+                    <tr key={partner.id} className="hover:bg - gray - 50">;"
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium text - gray - 900">;
                         {partner.code}
-                      </td>;
+                      </td>;"
                       <td className="px - 6 py - 4 whitespace - nowrap">;
-                        <div>;
-                          <div className="text - sm font - medium text - gray - 900">{partner.name}</div>;
+                        <div>;"
+                          <div className="text - sm font - medium text - gray - 900">{partner.name}</div>;"
                           <div className="text - sm text - gray - 500">{partner.contact_email}</div>;
                         </div>;
-                      </td>;
+                      </td>;"
                       <td className="px - 6 py - 4 whitespace - nowrap">;
                         <span className={`px - 2 py - 1 rounded - full text - xs font - semibold ${getStatusColor (partner.status)}`}>;
                           {partner.status}
                         </span>;
-                      </td>;
+                      </td>;"
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm text - gray - 900">;
                         {partner.commission}%;
-                      </td>;
+                      </td>;"
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm text - gray - 900">;
                         {partner.total_referrals}
-                      </td>;
+                      </td>;"
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm text - gray - 900">;
                         ${partner.total_earnings.toLocaleString ()}
-                      </td>;
-                      <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium">;
-                        <div className="flex space - x-2">;
+                      </td>;"
+                      <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium">;"
+                        <div className="flex space - x-2">;'
                           {partner.status === 'pending' && (
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -926,34 +965,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                               <button
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}
+=======
+
+                              <button'
+                                onClick={() => handleStatusChange(partner && partner.id, 'active')}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
                                 className="text-green-600 hover:text-green-900";
                               >;
                                 Approve;
                               </button>;
-                              <button
-                                onClick={() => handleStatusChange(partner && partner.id, 'inactive')}
+                              <button'
+                                onClick={() => handleStatusChange(partner && partner.id, 'inactive')}"
                                 className="text-red-600 hover:text-red-900";
                               >;
                                 Reject;
                               </button>;
                             </>;
-                          )}
+                          )}'
                           {partner && partner.status === 'active' && (;
-                            <button
-                              onClick={() => handleStatusChange(partner && partner.id, 'inactive')}
+                            <button'
+                              onClick={() => handleStatusChange(partner && partner.id, 'inactive')}"
                               className="text-red-600 hover:text-red-900";
                             >;
                               Deactivate;
                             </button>;
-                          )}
+                          )}'
                           {partner && partner.status === 'inactive' && (;
-                            <button
-                              onClick={() => handleStatusChange(partner && partner.id, 'active')}
+                            <button'
+                              onClick={() => handleStatusChange(partner && partner.id, 'active')}"
                               className="text-green-600 hover:text-green-900";
                             >;
                               Activate;
                             </button>;
                           )}
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -967,48 +1012,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-
 =======
-                          <button className="text-blue-600 hover:text-blue-900">;
-                            <>;
-                              <button;
-                                on_click={() => handleStatusChange (partner.id, 'active')}
-                                className="text - green - 600 hover:text - green - 900";
-                              >;
-                                Approve;
-                              </button>;
-                              <button;
-                                on_click={() => handleStatusChange (partner.id, 'inactive')}
-                                className="text - red - 600 hover:text - red - 900";
-                              >;
-                                Reject;
-                              </button>;
-                            </>)}
-                          {partner.status === 'active' && (
-                            <button;
-                              on_click={() => handleStatusChange (partner.id, 'inactive')}
-                              className="text - red - 600 hover:text - red - 900";
-                            >;
-                              Deactivate;
-                            </button>)}
-                          {partner.status === 'inactive' && (
-                            <button;
-                              on_click={() => handleStatusChange (partner.id, 'active')}
-                              className="text - green - 600 hover:text - green - 900";
-                            >;
-                              Activate;
-                            </button>)}
-                          <button className="text - blue - 600 hover:text - blue - 900">;
-                            Edit;
-                          </button>;
-                        </div>;
-                      </td>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 
-        </div>;
-      </main>;
-    </>;
-  );
 
+
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 =======
                     </tr>))}
                 </tbody>;
@@ -1027,6 +1036,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
 
 }
 }
@@ -1039,6 +1052,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -1048,16 +1062,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )  } catch (error) {
     console.error("Error:", error);
+=======
+
+      )  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     </div>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/admin/partners.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1074,3 +1094,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/partners.tsx
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/partners.tsx

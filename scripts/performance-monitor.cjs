@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -65,6 +69,7 @@ const { execSync } = require('child_process')
     this.log(' Starting Performance Monitor', 'PERFORMANCE')
       this.log(`Error during performance monitoring: ${error.message}`, 'ERROR'`)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -102,10 +107,14 @@ main
 
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -278,6 +287,9 @@ monitor.run().catch(console.error);
 
 main
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 // Save report
 fs.writeFileSync('performance-metrics.json', JSON.stringify(performanceMetrics, null, 2));
@@ -287,6 +299,7 @@ console.log('\n📄 Performance report saved to performance-metrics.json');
 setTimeout(() => {
   process.exit(0);
 }, 1000);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
@@ -558,3 +571,7 @@ module.exports = PerformanceMonitor;
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

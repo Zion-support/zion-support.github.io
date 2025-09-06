@@ -23,7 +23,11 @@ export default function AuditLogVaultPage() {
   ];
 
   return (
+<<<<<<< HEAD
     <UltraFuturisticBackground variant="holographic" intensity="high">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>Audit Log Vault | Zion Tech Group</title>
         <meta name="description" content="Immutable, indexed, long-term audit trails for compliance and forensics with search, exports and cryptographic attestations." />

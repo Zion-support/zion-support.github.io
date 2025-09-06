@@ -4,7 +4,11 @@ import Hero from '../components/sections/Hero';
 import Features from '../components/sections/Features';
 import FuturisticCard, { ServiceCard, FeatureCard } from '../components/ui/FuturisticCard';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, Star, Users, Globe, Lock, Rocket, Cpu, Database, TrendingUp, Clock, Target, Building, Award, DollarSign, ChartBar, Code, BookOpen, Activity, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, Settings, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Sparkles, Atom, Brain, Eye, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Rocket as RocketIcon, Satellite, Dna, Leaf, Factory, Car, Microscope, Lightbulb } from 'lucide-react';
 
@@ -51,6 +55,7 @@ export default function HomePage() {
       gradient: 'from-green-400 to-emerald-500',
     },
     {
+<<<<<<< HEAD
       icon: <ZapIcon className="w-8 h-8 text-white" />,
       title: 'Lightning Fast Setup',
       description: 'Get started in minutes with our intuitive interfaces and automated onboarding processes.',
@@ -224,10 +229,14 @@ export default function HomePage() {
       content: 'The AI drug discovery platform has accelerated our research pipeline significantly. Game-changing technology.',
       rating: 5,
       avatar: '👩‍🔬'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
     <EnhancedFuturisticBackground variant="quantum" intensity="high">
       <div className="min-h-screen">
         <Head>
@@ -740,6 +749,9 @@ export default function HomePage() {
                 <p className="text-white/80">{insight.description}</p>
               </motion.div>
             ))}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
 
@@ -760,6 +772,7 @@ export default function HomePage() {
               </p>
             </motion.div>
 
+<<<<<<< HEAD
           {/* Revolutionary Services Grid */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -817,6 +830,9 @@ export default function HomePage() {
               </motion.div>
             ))}
           </motion.div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         {/* Contact Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -826,6 +842,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
               View All Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
@@ -841,5 +858,8 @@ export default function HomePage() {
         </div>
       </section>
     </>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

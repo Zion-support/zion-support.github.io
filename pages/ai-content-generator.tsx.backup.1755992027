@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -217,10 +218,14 @@ Zion Tech Group is a leading provider of innovative technology solutions that he
   const copyToClipboard = () => {
     navigator.clipboard.writeText(generatedContent);
   };
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>AI Content Generator - Zion Tech Group</title>
         <meta name="description" content="Generate high-quality, engaging content with our AI-powered content generator. Create blog posts, social media content, emails, and more in seconds." />
         <meta property="og:title" content="AI Content Generator - Zion Tech Group" />
@@ -492,3 +497,6 @@ Zion Tech Group is a leading provider of innovative technology solutions that he
     </>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

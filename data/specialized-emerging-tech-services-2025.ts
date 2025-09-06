@@ -1,9 +1,12 @@
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants';
 export interface SpecializedEmergingTechService {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   name: string;
   tagline: string;
@@ -30,10 +33,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: {
+  contact_info: {}
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   }
 
@@ -48,11 +52,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   implementationDetails: string;
   launchDate: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
     }
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
@@ -96,6 +104,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+    features: []
+      'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';'
+      'Advanced pattern recognitionCustom neuromorphic algorithms'
+    ];
+
+  }
+];
+;
+
+'
+    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth''
+    variant: 'ai-futuristic', contactInfo: contact'
+    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities''
+    launchDate: '2024-02-15', customers: 45;
+    rating: 4.8, reviews: 34'
+    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']'
+    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpecializedEmergingTechService {;
   id: string,;
@@ -140,34 +171,37 @@ export interface SpecializedEmergingTechService {;
   capabilities: string[],;
   marketAdvantage: string;
 }
-;
-    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
-    variant: 'ai-futuristic', contactInfo: contact
-    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'
-    launchDate: '2024-02-15', customers: 45
-    rating: 4.8, reviews: 34
-    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
+;'
+    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth''
+    variant: 'ai-futuristic', contactInfo: contact'
+    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities''
+    launchDate: '2024-02-15', customers: 45;
+    rating: 4.8, reviews: 34'
+    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']'
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-const contact = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+const contact = {;'
+  mobile: '+1 302 464 0950',;'
+  email: 'kleber@ziontechgroup.com',;'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;'
   website: 'https://ziontechgroup.com';
 },;
 export const specializedEmergingTechServices: SpecializedEmergingTechService[] = [;
   // AR/VR & Metaverse Services;
-  {;
-    id: 'ar-vr-metaverse-platform',;
-    name: 'AR/VR Metaverse Platform',;
-    tagline: 'Revolutionary AR/VR platform for immersive experiences and metaverse development',;
-    price: '$399',;
-    period: '/month',;
+  {;'
+    id: 'ar-vr-metaverse-platform',;'
+    name: 'AR/VR Metaverse Platform',;'
+    tagline: 'Revolutionary AR/VR platform for immersive experiences and metaverse development',;'
+    price: '$399',;'
+    period: '/month',;'
     description: 'Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.',;
     features: [;
+<<<<<<< HEAD
     ];
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    popular: true, icon: '🧠',
 
+<<<<<<< HEAD
       'AR/VR content creation and managementMetaverse development tools and SDKs3D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR, web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware',;
       'Custom avatar and environment creationE-commerce integration for virtual stores';
     ],;
@@ -459,3 +493,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },
   ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  }
+];
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

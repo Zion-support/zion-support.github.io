@@ -29,10 +29,14 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   // Get featured services from the enhanced data
   const revolutionaryServices = ultimateEnhancedServices
     .filter(service => service.realImplementation && service.popular)
     .slice(0, 8);
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const marketInsights = [
     {

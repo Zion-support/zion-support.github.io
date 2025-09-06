@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useAuth  } from './useAuth';
 import { getAccessibleRoutes  } from '@/config/sitemap';
@@ -19,9 +20,14 @@ import { getAccessibleRoutes  } from '@/config/sitemap';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useAuth} from './useAuth';
-import {getAccessibleRoutes} from '@/config/sitemap';
+=======
 
+import {useAuth} from './useAuth';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import {getAccessibleRoutes} from '@/config/sitemap';
+'
 import type { SitemapItem } from '@/config/sitemap';
+<<<<<<< HEAD
 // Define the allowed user types
 
 <<<<<<< HEAD
@@ -52,20 +58,26 @@ export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
 <<<<<<< HEAD
   const findRouteByPath = (path: string): SitemapItem | undefined => {
 
+=======
+// Define the allowed user types;
+export function useSitemap() { return null; }
+  const { user, isAuthenticated } = useAuth();
+  // Get routes that the current user can access;
+  // Cast userType to UserType or pass undefined if not valid;
+  const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
+  const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
+  // Helper function to find a route by path;
+  const findRouteByPath = (path: string): SitemapItem | undefined => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return accessibleRoutes && accessibleRoutes.find(route => route && route.path === path)
   };
   
 
-<<<<<<< HEAD
-=======
-
-import { useAuth  } from './useAuth';
-import { getAccessibleRoutes  } from '@/config/sitemap';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {useAuth} from './useAuth';
-import {getAccessibleRoutes} from '@/config/sitemap';
+'
+import {useAuth} from './useAuth';'
+import {getAccessibleRoutes} from '@/config/sitemap';'
 import type { SitemapItem } from '@/config/sitemap';
+<<<<<<< HEAD
 // Define the allowed user types
 
 =======
@@ -83,11 +95,49 @@ export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
   const findRouteByPath = (path: string): SitemapItem | undefined => {    }
     return true
   }  function isValidUserType(type: string): boolean {
+=======
+// Define the allowed user types;
+'
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+export function useSitemap() {};
+export function useSitemap() { return null; }
+  const { user, isAuthenticated } = useAuth();
+  // Get routes that the current user can access;
+  // Cast userType to UserType or pass undefined if not valid;
+  const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
+  const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
+  // Helper function to find a route by path;
+  const findRouteByPath = (path: string): SitemapItem | undefined => {}
+  // Helper function to check if a user can access a specific path;
+  const canAccessRoute = (path: string): boolean => {}
+    const route = findRouteByPath(path);
+    if (!route) return false;
+    // If route requires authentication and user is not authenticated;
+    if (route && route.requiredAuth && !isAuthenticated) return false;
+    '
+    // If route requires specific roles and user doesn't have one;
+    if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {}
+      if (!user || !user && user.userType) return false;
+      const userTypeEnum = isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined,
+      return userTypeEnum ? route && route.requiredRoles.includes(userTypeEnum) : false;
+    }
+    return true;
+  }
+
+
+    }
+    return true;
+  }
+
+  // Helper function to check if userType is valid;
+  function isValidUserType(type: string): boolean {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return ['employerbuyerjobSeekercreatoradmin'].includes(type)
   }
-  return {
+  return {}
     accessibleRoutes;
     findRouteByPath;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -112,12 +162,21 @@ import {use_auth} from './use_auth';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {getAccessibleRoutes} from '@/config / sitemap';
 import type { SitemapItem } from '@/config / sitemap';// Define the allowed user types;
+=======
+'
+import {use_auth} from './use_auth';'
+import {getAccessibleRoutes} from '@/config / sitemap';'
+import type { SitemapItem } from '@/config / sitemap';
+
+
+// Define the allowed user types;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
 ;
-export /**
- * use_sitemap - Function description
+export /**;
+ * use_sitemap - Function description;
  */
-function use_sitemap() {
+function use_sitemap() {}
   const { user, is_authenticated } = use_auth ();
 ;
   // Get routes that the current user can access;
@@ -126,31 +185,31 @@ function use_sitemap() {
   const accessible_routes = getAccessibleRoutes (is_authenticated, user_type);
 ;
   // Helper function to find a route by path;
-  const findRouteByPath = (path: string): SitemapItem | undefined => {
+  const findRouteByPath = (path: string): SitemapItem | undefined => {}
     return accessible_routes.find (route => route.path === path);
   }
 ;
   // Helper function to check if a user can access a specific path;
-  const canAccessRoute = (path: string): boolean => {
+  const canAccessRoute = (path: string): boolean => {}
     const route = findRouteByPath (path);
 ;
-    // Check condition
-if (return false) {
-  $2
+    // Check condition;
+if (return false) {}
+  $2;
 }
     // If route requires authentication and user is not authenticated;
-    // Check condition
-if (return false) {
-  $2
-}
+    // Check condition;
+if (return false) {}
+  $2;
+}'
     // If route requires specific roles and user doesn't have one;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      // Check condition
-if (return false) {
-  $2
+      // Check condition;
+if (return false) {}
+  $2;
 }
       const userTypeEnum = isValidUserType (user.user_type) ? user.user_type as UserType : undefined,
       return userTypeEnum ? route.required_roles.includes (userTypeEnum) : false;
@@ -159,10 +218,10 @@ if (return false) {
   }
 ;
   // Helper function to check if user_type is valid;
-  function isValidUserType (type: string): boolean {
+  function isValidUserType (type: string): boolean {'
     return ['employerbuyerjob_seekercreatoradmin'].includes (type);
   }
-  return {
+  return {}
     accessible_routes;
     findRouteByPath;
     canAccessRoute;
@@ -171,9 +230,8 @@ if (return false) {
 <<<<<<< HEAD
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -186,6 +244,8 @@ if (return false) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }
   ;
@@ -193,23 +253,23 @@ if (return false) {
     accessibleRoutes,;
     findRouteByPath,;
     canAccessRoute;
-  },;
+  },;'
 } // Define the allowed user types type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
 if (!route) return false;
-// If route requires authentication and user is not authenticated if (route.requiredAuth && !isAuthenticated) return false;
-// If route requires specific roles and user doesn't have one if (route.requiredRoles && route.requiredRoles.length > 0) {
-  return true 
+// If route requires authentication and user is not authenticated if (route.requiredAuth && !isAuthenticated) return false;'
+// If route requires specific roles and user doesn't have one if (route.requiredRoles && route.requiredRoles.length > 0) {}
+  return true;
 };
-// Helper function to check if userType is valid 
+// Helper function to check if userType is valid;
 }
 
-    canAccessRoute
-import { useAuth } from './useAuth',;
-import { getAccessibleRoutes } from '@/config/sitemap',;
+    canAccessRoute'
+import { useAuth } from './useAuth',;'
+import { getAccessibleRoutes } from '@/config/sitemap',;'
 import type { SitemapItem } from '@/config/sitemap',;
-// Define the allowed user types;
+// Define the allowed user types;'
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin',;
-export function useSitemap() {;
+export function useSitemap() { return null; }
   const { user, isAuthenticated } = useAuth(),;
   // Get routes that the current user can access;
   // Cast userType to UserType or pass undefined if not valid;
@@ -224,7 +284,7 @@ export function useSitemap() {;
     const route = findRouteByPath(path),;
     if (!route) return false,;
     // If route requires authentication and user is not authenticated;
-    if (route.requiredAuth && !isAuthenticated) return false,;
+    if (route.requiredAuth && !isAuthenticated) return false,;'
     // If route requires specific roles and user doesn't have one;
     if (route.requiredRoles && route.requiredRoles.length > 0) {;
       if (!user || !user.userType) return false,;
@@ -235,7 +295,7 @@ export function useSitemap() {;
     return true;
   },;
   // Helper function to check if userType is valid;
-  function isValidUserType(type: string): boolean {;
+  function isValidUserType(type: string): boolean {;'
     return ['employerbuyerjobSeekercreatoradmin'].includes(type);
   }
 ;
@@ -245,3 +305,8 @@ export function useSitemap() {;
     canAccessRoute;
   }
 }
+<<<<<<< HEAD
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

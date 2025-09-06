@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NotificationType  } from './types';
 import { createNotification } from './createNotification';
 import {NotificationType} from './types';
@@ -15,6 +16,12 @@ import {createNotification} from './createNotification';
 
 
 import {NotificationType} from './types';
+=======
+
+
+
+import {NotificationType} from './types';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {createNotification} from './createNotification';
 
 <<<<<<< HEAD
@@ -29,38 +36,21 @@ import {createNotification} from './createNotification';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**
- * Demo function to create test notifications for the current user
+ * Demo function to create test notifications for the current user;
  */
-export async function createTestNotification(userId: string) {
-  try {
+export async function createTestNotification(userId: string) {}
+  try {';
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-  const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
-  
 
-<<<<<<< HEAD
-=======
 
-import { NotificationType  } from './types';
-import { createNotification } from './createNotification';
-import {NotificationType} from './types';
-import {createNotification} from './createNotification';
-/**
- * Demo function to create test notifications for the current user
- */
-export async function createTestNotification(userId: string) {;
-  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
 
-  const randomType = types[Math.floor(Math.random() * types.length)]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const titles = {
+  const titles = {'
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
+<<<<<<< HEAD
   const messages = {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,24 +73,26 @@ export async function createTestNotification(userId: string) {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {NotificationType} from './types';
+=======
+  const messages = {}
+'
+import {NotificationType} from './types';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {create_notification} from './create_notification';
 /**;
 * Demo function to create test notifications for the current user;
 */;
-export async /**
- * createTestNotification - Function description
+export async /**;
+ * createTestNotification - Function description;
  */
-function createTestNotification() {
-  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-  const random_type = types[Math.floor (Math.random () * types.length)],
-  const titles = {
-    'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
+function createTestNotification() { return null; }
   }
 ;
-  const messages = {
+  const messages = {'
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';
   }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,10 +115,22 @@ function createTestNotification() {
     'booking_confirmation': { url: '/bookings', text: 'View Booking' }
     'hire_request': { url: '/dashboard', text: 'View Request' }
     'onboarding': { url: '/profile', text: 'Complete Profile' }
+=======
+
+
+
+  const actions = {'
+    'message': { url: '/messages', text: 'View Messages' }'
+    'quote_request': { url: '/quotes', text: 'View Quote' }'
+    'booking_confirmation': { url: '/bookings', text: 'View Booking' }'
+    'hire_request': { url: '/dashboard', text: 'View Request' }'
+    'onboarding': { url: '/profile', text: 'Complete Profile' }'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'system': { url: '/dashboard', text: 'Learn More' }
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -162,25 +166,27 @@ import { NotificationType } from './types',;
 =======
   }import { NotificationType } from './types',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'
+import { NotificationType } from './types',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { createNotification } from './createNotification',;
 /**;
  * Demo function to create test notifications for the current user;
  */;
-export async function createTestNotification(userId: string) {;
-  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'],;
-  const randomType = types[Math.floor(Math.random() * types.length)],;
-  const titles = {;
-    'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
+export async function createTestNotification() { return null; }
   },;
-  const messages = {;
+  const messages = {;'
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';
   },;
-  const actions = {;
-    'message': { url: '/messages', text: 'View Messages' },;
-    'quote_request': { url: '/quotes', text: 'View Quote' },;
-    'booking_confirmation': { url: '/bookings', text: 'View Booking' },;
-    'hire_request': { url: '/dashboard', text: 'View Request' },;
-    'onboarding': { url: '/profile', text: 'Complete Profile' },;
+  const actions = {;'
+    'message': { url: '/messages', text: 'View Messages' },;'
+    'quote_request': { url: '/quotes', text: 'View Quote' },;'
+    'booking_confirmation': { url: '/bookings', text: 'View Booking' },;'
+    'hire_request': { url: '/dashboard', text: 'View Request' },;'
+    'onboarding': { url: '/profile', text: 'Complete Profile' },;'
     'system': { url: '/dashboard', text: 'Learn More' }
   },;
   return createNotification({;
@@ -192,6 +198,7 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -237,6 +244,11 @@ export async function createTestNotification(userId: string) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
   return create_notification ({
+=======
+
+;
+  return create_notification ({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     user_id;
     title: titles[random_type];
     message: messages[random_type];
@@ -245,6 +257,7 @@ export async function createTestNotification(userId: string) {;
     action_url: actions[random_type].url,
     action_text: actions[random_type].text;
   });
+<<<<<<< HEAD
 }}
 ;
 <<<<<<< HEAD
@@ -298,3 +311,11 @@ export async function createTestNotification(userId:string) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+;
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -60,12 +61,16 @@ import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -338,6 +343,9 @@ export default function ServicesPage() {
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: enhancedRealMicroSaasServices.length + innovativeMicroSaasSolutions.length }
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   // Calculate category counts
@@ -346,6 +354,7 @@ export default function ServicesPage() {
     count: services.filter(service => cat.id === 'all' || service.category === cat.id).length
   }));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -433,6 +442,9 @@ export default function ServicesPage() {
   };
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const filteredServices = activeCategory === 'all' 
     ? allServices 
@@ -450,8 +462,9 @@ export default function ServicesPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
-=======
+
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -683,6 +696,9 @@ export default function ServicesPage() {
               <div className="text-sm text-gray-400">Total Services</div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
             <div className="bg-black/20 backdrop-blur-sm border border-purple-500/20 rounded-lg p-4">
               <div className="text-2xl font-bold text-purple-400 mb-1">{categories.length - 1}</div>
@@ -700,6 +716,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -808,10 +825,14 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1397,10 +1418,14 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1472,15 +1497,14 @@ export default function ServicesPage() {
               </Button>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
-      <SmartFooter />
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     </div>
   );
 };

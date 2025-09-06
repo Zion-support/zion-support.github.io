@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,10 +55,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> pr-12243
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
+export default async function handler() { return null; }
+  }
+
+  const { prompt } = req.body || {},'
+  if (!prompt) return res.status(400).json({ error: 'prompt required' }),
+
+  try {}
+    const apiKey = process.env.OPENAI_API_KEY,
+    if (apiKey) {'
+      const { OpenAI } = await import('openai'),
+      const openai = new OpenAI({ apiKey }),
+      const resp = await openai.chat.completions.create({'
+        model: 'gpt-4o-mini',
+        messages: ['
+          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           { role: 'user', content: String(prompt) }
         ]
-      })
+      })'
       const text = resp.choices?.[0]?.message?.content |'No response'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -88,10 +109,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> pr-12243
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return res.status(200).json({ text })
     }
-    // Fallback without API key
+    // Fallback without API key'
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -166,3 +196,30 @@ if ( {) {
   }
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+;
+  };
+};'
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler() { return null; }
+  res.status(200).json({ message: 'API endpoint' });'
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {}
+';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
+export default async /**;
+ * handler - Function description;
+ */
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}
+'
+    res.set_header ('AllowPOST'),'
+    return res.status (405).end ('Method Not Allowed');
+  }
+};'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

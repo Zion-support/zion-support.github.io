@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { slugify  } from '@/lib/slugify';
 import { unslugify  } from '@/lib/slugify';
 import { slugify } from '@/lib/slugify',;
@@ -69,10 +70,13 @@ it ('handles custom separator when unslugifying', () => {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
 
-import { slugify } from '@/lib/slugify',;
-import { unslugify } from '@/lib/slugify',;
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -90,42 +94,26 @@ import { unslugify } from '@/lib/slugify';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 it('removes accents from strings', () => {
+=======
+
+it('removes accents from strings', () => {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   expect(slugify('Crème Brûlée')).toBe('creme-brulee')
-});
-it('treats underscores as spaces', () => {
-  expect(slugify('AI_Tools')).toBe('ai-tools')
-it('removes special characters', () => {
-  expect(slugify('R&D Tools!')).toBe('rd-tools')
-it('allows custom separators', () => {
-  expect(slugify('Multi Word Title_')).toBe('multi_word_title')
-it('converts slug back to title', () => {
-  expect(unslugify('multi-word-title')).toBe('Multi Word Title')
-it('handles custom separator when unslugifying', () => {
+});'
+it('treats underscores as spaces', () => {'
+  expect(slugify('AI_Tools')).toBe('ai-tools')'
+it('removes special characters', () => {'
+  expect(slugify('R&D Tools!')).toBe('rd-tools')'
+it('allows custom separators', () => {'
+  expect(slugify('Multi Word Title_')).toBe('multi_word_title')'
+it('converts slug back to title', () => {'
+  expect(unslugify('multi-word-title')).toBe('Multi Word Title')'
+it('handles custom separator when unslugifying', () => {'
+  expect(unslugify('multi_word_title_')).toBe('Multi Word Title')
+
+'
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title')
 <<<<<<< HEAD
-}),
-=======
-it('removes accents from strings', () => {;
-  expect(slugify('Crème Brûlée')).toBe('creme-brulee');
-}),;
-it('treats underscores as spaces', () => {;
-  expect(slugify('AI_Tools')).toBe('ai-tools');
-}),;
-it('removes special characters', () => {;
-  expect(slugify('R&D Tools!')).toBe('rd-tools');
-}),;
-it('allows custom separators', () => {;
-  expect(slugify('Multi Word Title_')).toBe('multi_word_title');
-}),;
-it('converts slug back to title', () => {;
-  expect(unslugify('multi-word-title')).toBe('Multi Word Title');
-}),;
-it('handles custom separator when unslugifying', () => {;
-  expect(unslugify('multi_word_title_')).toBe('Multi Word Title');
-});
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-  expect(unslugify('multi_word_title_')).toBe('Multi Word Title')
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -137,3 +125,10 @@ it('handles custom separator when unslugifying', () => {;
 =======
   expect (unslugify ('multi_word_title_')).to_be ('Multi Word Title');>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

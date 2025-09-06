@@ -85,6 +85,7 @@ export default function ServicesAdvertisingPage() {
         { name: 'Vercel', href: 'https://vercel.com/pricing' }
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -175,6 +176,9 @@ export default function ServicesAdvertisingPage() {
       note: 'SMB budgets: $50–$2,000/mo.'
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0d1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -400,6 +404,7 @@ export default function ServicesAdvertisingPage() {
 
           <section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -426,11 +431,15 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0d1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -444,12 +453,15 @@ export default function ServicesAdvertisingPage() {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0d1
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               ))}
             </div>
           </section>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Benchmarks & Typical Budgets</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -470,6 +482,8 @@ export default function ServicesAdvertisingPage() {
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0d1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>

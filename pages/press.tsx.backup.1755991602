@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 =======
@@ -10,10 +11,14 @@ import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-4a15
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function PressPage() {
 	return (
 		<>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -45,3 +50,6 @@ export default function PressPage() {
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-4a15
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

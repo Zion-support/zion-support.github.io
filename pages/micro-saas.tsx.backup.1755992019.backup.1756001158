@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
+<<<<<<< HEAD
   Zap, 
   Shield, 
   BarChart3, 
@@ -231,18 +236,26 @@ export default function MicroSaasPage() {
   const filteredServices = selectedCategory === 'All' 
     ? microSaasServices 
     : microSaasServices.filter(service => service.category === selectedCategory);
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Micro SaaS Services | Zion Tech Group - Innovative Business Solutions</title>
         <meta name="description" content="Discover our curated collection of innovative micro SaaS services designed to solve real business problems. From AI automation to security compliance, find the perfect solution for your needs." />
         <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" />
         <meta property="og:description" content="Innovative micro SaaS services for modern businesses. AI automation, security, analytics, and more." />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.1),transparent_50%)]" />
@@ -273,11 +286,15 @@ export default function MicroSaasPage() {
                 {category}
               </button>
             ))}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
+<<<<<<< HEAD
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -294,17 +311,25 @@ export default function MicroSaasPage() {
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-blue-500/30 transition-all duration-300"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start space-x-6">
                   <div className="relative">
+<<<<<<< HEAD
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       {service.icon}
                     </div>
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${service.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
                   
                   <div className="flex-1">
+<<<<<<< HEAD
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
                         {service.title}
@@ -363,33 +388,24 @@ export default function MicroSaasPage() {
                         Try Demo
                       </Button>
                     </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
               </Card>
             ))}
           </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-          {/* No Results */}
-          {filteredServices.length === 0 && (
-            <div className="text-center py-12">
-              <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
-              <Button
-                onClick={() => {
-                  setSelectedCategory('all');
-                  setSearchQuery('');
-                }}
-                variant="outline"
-              >
-                Clear Filters
-              </Button>
-            </div>
-          )}
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-b762
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
@@ -399,12 +415,16 @@ export default function MicroSaasPage() {
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Choose from our curated selection of micro SaaS services or let us help you find the perfect solution for your specific needs.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
               href="/contact"
               variant="secondary"
               size="lg"
+<<<<<<< HEAD
               className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"
             >
               Get Personalized Recommendations
@@ -417,6 +437,9 @@ export default function MicroSaasPage() {
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
               View All Services
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>
           </div>
         </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/automation/global-bounties.tsx
 <<<<<<< HEAD:pages/automation/global-bounties.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5,12 +6,15 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/global-bounties.tsx
 
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">
 
+<<<<<<< HEAD:pages_backup/automation/global-bounties.tsx
 <<<<<<< HEAD
             </li>
           ))}
@@ -22,40 +26,37 @@
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/global-bounties.tsx
   );
 };
 
-=======
-<<<<<<< HEAD
-=======
-  );
-};
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                {it.title  } catch (error) {
-    console.error("Error:", error);
+
+
+
+                {it.title  } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              </Link>
+              </Link>"
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                {it.repo} · {it.language} · {new Date(it.created_at).toLocaleString()  } catch (error) {
-    console.error("Error:", error);
+                {it.repo} · {it.language} · {new Date(it.created_at).toLocaleString()  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              </div>
+              </div>"
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
             </li>
-          ))  } catch (error) {
-    console.error("Error:", error);
+          ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -63,13 +64,14 @@
       </div>;
     </EnhancedLayout>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
 
+<<<<<<< HEAD:pages_backup/automation/global-bounties.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -112,6 +114,9 @@ export default function GlobalBountiesPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/global-bounties.tsx
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -141,13 +146,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 };
 
+<<<<<<< HEAD:pages_backup/automation/global-bounties.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {it.title  } catch (error) {
     console.error("Error:", error);
+=======
+                {it.title  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/global-bounties.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              </Link>
+              </Link>"
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,10 +177,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </EnhancedLayout>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD:pages_backup/automation/global-bounties.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -198,3 +209,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/automation/global-bounties.tsx
+=======
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/global-bounties.tsx

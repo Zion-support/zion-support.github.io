@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -61,10 +62,15 @@ interface BundleanalyzerProps {
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -86,12 +92,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export default function Bundleanalyzer({ }: BundleanalyzerProps) {
+=======
+export default function Bundleanalyzer({ }: BundleanalyzerProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
       <h1>Bundleanalyzer</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,6 +124,9 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
 
@@ -125,6 +138,7 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -156,3 +170,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+}
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

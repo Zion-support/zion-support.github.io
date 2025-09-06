@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -57,45 +58,52 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
 }
-
-export function TalentCard({;
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+import {Button} from "@/components/ui/button";"
+import {Card} from "@/components/ui/card";"
+import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";"
+import {Link} from "react-router-dom";"
+import {TalentProfile} from "@/types/talent";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
-  isAuthenticated
-}: TalentCardProps) {
-
-  const handleViewProfile = () => {
-    if (onViewProfile) {
+  isAuthenticated;
+}: TalentCardProps) {}
+  const handleViewProfile = () => {}
+    if (onViewProfile) {}
       onViewProfile(talent.id)
     }
   }
-  const handleRequestHire = (e: React.MouseEvent) => {
+  const handleRequestHire = (e: React.MouseEvent) => {}
     e.preventDefault();
     e.stopPropagation()
-    if (onRequestHire) {
+    if (onRequestHire) {}
       onRequestHire(talent)
     }
   }
-  const handleToggleSave = (e: React.MouseEvent) => {
+  const handleToggleSave = (e: React.MouseEvent) => {}
     e.preventDefault();
     e.stopPropagation()
-    if (onToggleSave) {
+    if (onToggleSave) {}
       onToggleSave(talent.id, !isSaved)
     }
   }
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) |[];
-import { Link } from "react-router-dom",
+  // Extract skills - limit to 5 for display;
+  const skills = talent.skills?.slice(0, 5) |[];"
+import { Link } from "react-router-dom","
 import { TalentProfile } from "@/types/talent",
-export interface TalentCardProps {
+export interface TalentCardProps {}
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire: (talent: TalentProfile) => void,
+<<<<<<< HEAD
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
@@ -117,6 +125,18 @@ import { TalentProfile } from "@/types/talent",;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  isSaved: boolean,;
+  onToggleSave: (id: string, isSaved: boolean) => void,;
+  isAuthenticated: boolean;
+  };"
+import { Button } from "@/components/ui/button",;"
+import { Card } from "@/components/ui/card",;"
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;"
+import { Link } from "react-router-dom",;"
+import { TalentProfile } from "@/types/talent",;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface TalentCardProps {;
 =======
 
@@ -133,13 +153,29 @@ export interface TalentCardProps {;
   onToggleSave: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean;
 }
+<<<<<<< HEAD
 
 export function TalentCard(): any ({;
+=======
+
+
+
+export function TalentCard(): any ({;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   isAuthenticated;
 }: TalentCardProps) {;
   const handleViewProfile = () => {;
@@ -154,6 +190,7 @@ export function TalentCard(): any ({;
     if (onRequestHire) {;
       onRequestHire(talent);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,6 +217,10 @@ export function TalentCard(): any ({;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
@@ -191,6 +232,7 @@ export function TalentCard(): any ({;
 
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -209,121 +251,42 @@ export function TalentCard(): any ({;
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
       <div className="p-6">;
+=======
+
+
+  return ("
+    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;"
+      <div className="p-6">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="flex items-start">;
           {/* Avatar */}
               )}
             </div>;
-            {talent && talent.is_verified && (;
-              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;
+            {talent && talent.is_verified && (;"
+              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;"
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
               </div>;
             )}
+<<<<<<< HEAD
           {/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
 <<<<<<< HEAD
 <<<<<<< HEAD
-              <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
-<<<<<<< HEAD
 =======
-  return (
-
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
-import { Link } from "react-router-dom",;
-import { TalentProfile } from "@/types/talent",;
-;
-export interface TalentCardProps {;
-  talent:TalentProfile,;
-  onViewProfile:(id:string) => void,;
-  onRequestHire:(talent:TalentProfile) => void,;
-  isSaved:boolean,;
-  onToggleSave:(id:string, isSaved:boolean) => void,;
-  isAuthenticated:boolean;
-}
-;
-export function TalentCard({;
-  talent,;
-  onViewProfile,;
-  onRequestHire,;
-  isSaved,;
-  onToggleSave,;
-  isAuthenticated;
-}: TalentCardProps) {;
-  const handleViewProfile = () => {;
-    if (onViewProfile) {;
-      onViewProfile(talent.id);
-    }
-  },;
-  const handleRequestHire = (e: React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    if (onRequestHire) {;
-      onRequestHire(talent);
-    }
-  },;
-          <div className="relative mr-4">;
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
-              )}
-            </div>;
-            {talent && talent.is_verified && (;
-              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
-              </div>;
-            )}
-          </div>;
-          {/* Main Info */}
-          <div className="flex-1">;
-            <div className="flex justify-between items-start">;
+          {/* Main Info */}"
+          <div className="flex-1">;"
+            <div className="flex justify-between items-start">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
-  const handleToggleSave = (e: React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    if (onToggleSave) {;
-      onToggleSave(talent.id, !isSaved);
-    }
-  },
 
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [],
 
-  return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
-      <div className="p-6">
-        <div className="flex items-start">
-          {/* Avatar */}
-          <div className="relative mr-4">
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
-              {talent.profile_picture_url ? (
-                <img
-                  src={talent.profile_picture_url}
-                  alt={talent.full_name}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
-                  {talent.full_name?.charAt(0) |"T"}
-                </div>
-              )}
-            </div>
-            {talent.is_verified && (
-              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
-              </div>
-            )}
-          </div>
-          {/* Main Info */}
-          <div className="flex-1">
-            <div className="flex justify-between items-start">
-              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              <Button
-                variant="ghost"
-                size="sm"
+
+              <Button"
+                variant="ghost""
+                size="sm""
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -343,26 +306,25 @@ export function TalentCard({;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-                onClick={handleToggleSave}>;
-                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;
+
+                onClick={handleToggleSave}>;"
+                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;"
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>;
               </Button>;
-            </div>;
+            </div>;"
             <p className="text-zion-cyan font-medium">{talent && talent.professional_title}</p>;
+
+
+
+
+            
+
+
+
 <<<<<<< HEAD
-
-
-=======
-
-            
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-            
-
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -374,17 +336,22 @@ export function TalentCard({;
 =======
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;            {/* Location & Availability */}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+            {/* Location & Availability */}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
-              {talent && talent.location && (;
-                <div className="flex items-center text-zion-slate-light">;
+              {talent && talent.location && (;"
+                <div className="flex items-center text-zion-slate-light">;"
                   <MapPin className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.location}</span>;
                 </div>;
               )}
-              {talent && talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
+              {talent && talent.availability_type && (;"
+                <div className="flex items-center text-zion-slate-light">;"
                   <Clock className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.availability_type}</span>;
+<<<<<<< HEAD
                 </div>;
               )}
 
@@ -445,6 +412,9 @@ export function TalentCard({;
                 </div>;
               )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 =======
@@ -455,6 +425,7 @@ export function TalentCard({;
           </div>;
         </div>;
 
+<<<<<<< HEAD
         {/* Skills */}
         {skills && skills.length > 0 && (;
           <div className="mt-4">;
@@ -502,22 +473,29 @@ export function TalentCard({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+                <span;
+                  key={index}"
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
+                  {skill}
+                </span>;
+              ))}
+
+              {(talent && talent.skills?.length || 0) > 5 && (;"
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
+                  +{(talent && talent.skills?.length || 0) - 5} more;
+                </span>;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               )}
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-
-
-
-        {/* Hourly Rate & Actions */}
-        <div className="mt-5 flex items-center justify-between">;
-          <div>;
-<<<<<<< HEAD
-            {talent && talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
-                ${talent && talent.hourly_rate}
+"
                 <span className="text-zion-slate-light font-normal">/hr</span>;
+<<<<<<< HEAD
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
@@ -564,69 +542,85 @@ export function TalentCard({;
               variant="ghost"
               onClick={handleViewProfile}  );}
  export interface TalentCardProps {
+=======
+              </div>;"
+              className="text-zion-cyan hover:text-white hover:bg-zion-blue-light";
+            >;"
+              View <ArrowRight className="ml-1 h-4 w-4" />;
+
+            </Button>;
+          </div>;
+        </div>;
+      </div>;
+
+    </Card>;
+  );}
+ export interface TalentCardProps {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   talent: TalentProfile;
 onViewProfile: (id: string) => void;
 onRequestHire: (talent: TalentProfile) => void;
 isSaved: boolean;
 onToggleSave: (id: string, isSaved: boolean) => void;
-isAuthenticated: boolean 
-}talent, onViewProfile, onRequestHire, isSaved, onToggleSave, isAuthenticated 
-}: TalentCardProps) {
-  const handleViewProfile = () => {
-  if (onViewProfile) {
-  </div>) 
-}</div> </Button> </div> <p className="text-zion-cyan font-medium"> {
-  talent.professional title 
-}</p> {
-  /* Location & Availability */ 
-}<div className="mt-2 flex flex-wrap gap-3 text-sm"> {
-  talent.location && (<div className="flex items-center text-zion-slate-light"> <MapPin className="h-4 w-4 mr-1" /> <span> {
-  talent.location 
+isAuthenticated: boolean;
+}talent, onViewProfile, onRequestHire, isSaved, onToggleSave, isAuthenticated;
+}: TalentCardProps) {}
+  const handleViewProfile = () => {}
+  if (onViewProfile) {}
+  </div>) "
+}</div> </Button> </div> <p className="text-zion-cyan font-medium"> {}
+  talent.professional title;
+}</p> {}
+  /* Location & Availability */ "
+}<div className="mt-2 flex flex-wrap gap-3 text-sm"> {"
+  talent.location && (<div className="flex items-center text-zion-slate-light"> <MapPin className="h-4 w-4 mr-1" /> <span> {}
+  talent.location;
 }</span> </div>) 
-}{
-  talent.availability type && (<div className="flex items-center text-zion-slate-light"> <Clock className="h-4 w-4 mr-1" /> <span> {
-  talent.availability type 
+}{"
+  talent.availability type && (<div className="flex items-center text-zion-slate-light"> <Clock className="h-4 w-4 mr-1" /> <span> {}
+  talent.availability type;
 }</span> </div>) 
-}</div> </div> </div> {
+}</div> </div> </div> {}
   /* Skills */ 
-}{
-  skills.length > 0 && (<div className="mt-4"> <div className="flex flex-wrap gap-2"> {
-  skills.map ( (skill, index) => (<span key= {
-  index 
-}className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light" > {
-  skill 
+}{"
+  skills.length > 0 && (<div className="mt-4"> <div className="flex flex-wrap gap-2"> {}
+  skills.map ( (skill, index) => (<span key= {}
+  index "
+}className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light" > {}
+  skill;
 }</span>) ) 
-}{
-  (talent.skills?.length || 0) > 5 && (<span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan"> + {
-  (talent.skills?.length || 0) - 5 
+}{"
+  (talent.skills?.length || 0) > 5 && (<span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan"> + {}
+  (talent.skills?.length || 0) - 5;
 }more </span>) 
 }</div> </div>) 
-}{
-  /* Hourly Rate & Actions */ 
-}<div className="mt-5 flex items-center justify-between"> <div> {
-  talent.hourly rate ? (<div className="text-white font-bold"> $ {
-  talent.hourly rate 
-}<span className="text-zion-slate-light font-normal">/hr</span> </div>) : (<div className="text-zion-slate-light">Rate not specified</div>) 
-}</div> <Button size="sm" variant="secondary" onClick= {
-  handleRequestHire 
-}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) 
+}{}
+  /* Hourly Rate & Actions */ "
+}<div className="mt-5 flex items-center justify-between"> <div> {"
+  talent.hourly rate ? (<div className="text-white font-bold"> $ {}
+  talent.hourly rate "
+}<span className="text-zion-slate-light font-normal">/hr</span> </div>) : (<div className="text-zion-slate-light">Rate not specified</div>) "
+}</div> <Button size="sm" variant="secondary" onClick= {}
+  handleRequestHire "
+}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) "
 }<Button > View <ArrowRight className="ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) 
 }
-            ) : (;
+            ) : (;"
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}
-              <Button
-                size="sm"
+              <Button"
+                size="sm""
                 variant="secondary"
-                onClick={handleRequestHire}
+                onClick={handleRequestHire}"
                 className="bg-zion-purple hover:bg-zion-purple-light text-white">;
                 Hire;
               </Button>;
             )}
-            <Button
-              size="sm"
+            <Button"
+              size="sm""
               variant="ghost"
               onClick={handleViewProfile}
+<<<<<<< HEAD
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
               View <ArrowRight className="ml-1 h-4 w-4" />
@@ -638,3 +632,7 @@ isAuthenticated: boolean
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

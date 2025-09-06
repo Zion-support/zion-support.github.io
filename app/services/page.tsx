@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -48,6 +49,19 @@ export default function ServicesOverviewPage() {
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
+=======
+import Link from "next/link";
+
+};
+
+export default function ServicesOverviewPage() {}
+  return ("
+    <div className="animate-fade-in">"
+      <div className="text-center mb-16">"
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">;
+          Our Services;
+        </h1>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,9 +76,10 @@ export default function ServicesOverviewPage() {
         </p>
       </div>
 
-      {/* Statistics Section */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+      {/* Statistics Section */}"
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">"
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+<<<<<<< HEAD
           <StatCard
             number="500+"
             label="Successful Projects"
@@ -84,10 +99,32 @@ export default function ServicesOverviewPage() {
             number="300%"
             label="Average ROI"
             description="Client return on investment"
+=======
+          <StatCard "
+            number="500+" "
+            label="Successful Projects" "
+            description="Delivered worldwide" 
+          />
+          <StatCard "
+            number="$2B+" "
+            label="Combined Market Value" "
+            description="Generated for clients" 
+          />
+          <StatCard "
+            number="99.9%" "
+            label="Uptime Guarantee" "
+            description="Enterprise reliability" 
+          />
+          <StatCard "
+            number="300%" "
+            label="Average ROI" "
+            description="Client return on investment" 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           />
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -183,6 +220,17 @@ export default function ServicesOverviewPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           ]}
           icon="🚀"
+=======
+"
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <ServiceCard"
+          href="/services/micro-saas""
+          title="Micro SaaS Solutions""
+          description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
+          bullets={[]
+          ]}"
+          icon="🚀""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           pricing="From $2,999/month"
 =======
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -199,9 +247,10 @@ export default function ServicesOverviewPage() {
           icon="🚀"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
         />
-        <ServiceCard
-          href="/services/ai-services"
+        <ServiceCard"
+          href="/services/ai-services""
           title="AI Services"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -236,6 +285,10 @@ export default function ServicesOverviewPage() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           icon="🤖"
+=======
+"
+          icon="🤖""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           pricing="From $5,000/project"
 =======
           description="LLM applications, RAG systems, and MLOps pipelines"
@@ -243,9 +296,10 @@ export default function ServicesOverviewPage() {
           icon="🤖"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
         />
-        <ServiceCard
-          href="/services/it-services"
+        <ServiceCard"
+          href="/services/it-services""
           title="IT Services"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,10 +402,30 @@ export default function ServicesOverviewPage() {
           icon="⚡"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           pricing="From $2,500/month"
+=======
+
         />
-        <ServiceCard
-          href="/services/data-analytics"
+        <ServiceCard"
+          href="/services/blockchain-solutions""
+          title="Blockchain Solutions""
+          description="DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security""
+          bullets={["Smart contracts", "DeFi protocols", "Web3 apps"]}"
+          icon="⛓️""
+          pricing="From $15,000/project"
+        />
+        <ServiceCard"
+          href="/services/automation-solutions""
+          title="Automation Solutions""
+          description="RPA, workflow automation, and AI-powered automation for maximum efficiency""
+          bullets={["Process automation", "Workflow optimization", "AI automation"]}"
+          icon="⚡"
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        />
+        <ServiceCard"
+          href="/services/data-analytics""
           title="Data Analytics"
+<<<<<<< HEAD
           description="Business intelligence, predictive analytics, and data engineering for data-driven decisions"
           bullets={[
             "BI dashboards",
@@ -657,15 +731,19 @@ function ServiceCard({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>
   );
 }
 
-function ServiceCard({
+function ServiceCard({}
   href,
   title,
   description,
   bullets,
+<<<<<<< HEAD
   icon,
 <<<<<<< HEAD
   pricing
@@ -680,6 +758,10 @@ function ServiceCard({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+
+}: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   href: string;
   title: string;
   description: string;
@@ -692,6 +774,7 @@ function ServiceCard({
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
   pricing: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
@@ -755,13 +838,25 @@ function ServiceCard({
 <<<<<<< HEAD
 <<<<<<< HEAD
 function StatCard({ 
+=======
+}) {}
+  return (
+    <Link;
+      href={href}"
+      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+    >
+
+
+function StatCard({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   number, 
   label, 
-  description 
-}: { 
+  description;
+}: {}
   number: string; 
   label: string; 
   description: string; 
+<<<<<<< HEAD
 =======
 function StatCard({
   number,
@@ -787,10 +882,27 @@ function StatCard({
 function CTA() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+=======
+}) {}
+  return ("
+    <div className="text-center">"
+      <div className="text-4xl font-bold text-blue-600 mb-2">{number}</div>"
+      <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>"
+      <div className="text-sm text-gray-600">{description}</div>
+    </div>
+
+  );
+}
+
+function CTA() {}
+  return ("
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
         Ready to Get Started?
-      </h3>
+      </h3>"
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         Join 500+ successful businesses that trust Zion Tech Group for their technology needs. 
@@ -805,11 +917,15 @@ function CTA() {
         can drive 300% ROI and accelerate your growth.
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       </p>
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
+        <a"
+          href="tel:+13024640950""
           className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           {" "}
@@ -838,6 +954,15 @@ function CTA() {
       </div>{" "}
 =======
           Email Us
+=======
+          Call +1 302 464 0950;
+        </a>
+        <a"
+          href="mailto:kleber@ziontechgroup.com""
+          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+        >
+          Email Us;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </a>
       </div>
       <div className="mt-6 text-sm text-gray-600">
@@ -846,6 +971,7 @@ function CTA() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
           Email Us
@@ -1287,3 +1413,6 @@ export default function ServicesPage() {
   );
 }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

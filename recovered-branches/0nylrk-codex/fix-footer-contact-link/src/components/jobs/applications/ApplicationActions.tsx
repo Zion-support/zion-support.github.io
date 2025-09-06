@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from "react";
@@ -27,16 +27,30 @@ import {JobApplication, ApplicationStatus} from "@/types/jobs";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
-import { useState } from "react",
+
+import {useState} from "react";"
+import {Link} from "react-router-dom";"
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";"
+import {Button} from "@/components/ui/button";"
+import {Eye, ChevronDown, Loader2} from "lucide-react";"
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+"
+import { useState } from "react","
+import { Link } from "react-router-dom",
+"
+import { useState } from "react","
+import { Link } from "react-router-dom","
+import { useState } from "react","
 import { Link } from "react-router-dom",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import { useState } from "react",
+"
+import { useState } from "react","
 import { Link } from "react-router-dom",
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useState } from "react",
@@ -55,12 +69,16 @@ import { Link } from "react-router-dom",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+import {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu",
+  DropdownMenuTrigger"
+} from "@/components/ui/dropdown-menu","
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,11 +96,14 @@ import { Button } from "@/components/ui/button",
 
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -103,6 +124,11 @@ interface ApplicationActionsProps {
 
   application: JobApplication
   processingId: string | null
+=======
+interface ApplicationActionsProps {};
+  application: JobApplication;
+  processingId: string | null;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onViewApplication: (applicationId: string) => Promise<void>
 
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
@@ -110,6 +136,7 @@ interface ApplicationActionsProps {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -123,6 +150,14 @@ import {Link} from "react-router-dom";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
 import {Eye, ChevronDown, Loader2} from "lucide-react";
+=======
+"
+import {useState} from "react";"
+import {Link} from "react-router-dom";"
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";"
+import {Button} from "@/components/ui/button";"
+import {Eye, ChevronDown, Loader2} from "lucide-react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 
 interface ApplicationActionsProps {;
@@ -136,6 +171,7 @@ export function ApplicationActions(): any ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -143,20 +179,28 @@ export function ApplicationActions(): any ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export function ApplicationActions({;
   application;
   processingId;
   onViewApplication;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function ApplicationActions({
+=======
+export function ApplicationActions({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   application,
   processingId,
 <<<<<<< HEAD
 <<<<<<< HEAD
   onViewApplication,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -185,34 +229,37 @@ export function ApplicationActions({
 
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+;
+  onStatusChange;
+}: ApplicationActionsProps) {}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="flex items-center justify-end gap-2">;
-      <Button
-        variant="outline" 
+      <Button"
+        variant="outline" "
         size="sm" 
         onClick={() => onViewApplication(application && application.id)}
         disabled={!!application && application.viewed_at}
-      >;
+      >;"
         <Eye className="h-4 w-4" />;
       </Button>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <DropdownMenu>;
         <DropdownMenuTrigger asChild>;
-          <Button
+          <Button"
             variant="outline" 
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
   onStatusChange;
 }: ApplicationActionsProps) {;
-  onStatusChange
-}: ApplicationActionsProps) {
+  onStatusChange;
+}: ApplicationActionsProps) {}
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+"
             size="sm"
 =======
   onViewApplication,            size="sm"
@@ -221,12 +268,18 @@ export function ApplicationActions({
   onViewApplication,            size="sm"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             disabled={processingId === application && application.id}>;
-            {processingId === application && application.id ? (;
+            {processingId === application && application.id ? (;"
               <Loader2 className="h-4 w-4 animate-spin" />;
             ) : (;
+<<<<<<< HEAD
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -341,18 +394,22 @@ export function ApplicationActions({;
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-      <Button 
+
+      <Button "
         variant="default" 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -368,17 +425,23 @@ export function ApplicationActions({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         size="sm"
-        asChild
+        asChild;
       >
         <Link to={`/messages?talentId=${application.talent_id}`}>
-          Contact
+          Contact;
         </Link>
       </Button>
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -427,112 +490,46 @@ interface ApplicationActionsProps {
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from "react",;
+=======
+"
+import { useState } from "react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Link } from "react-router-dom",;
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
-  DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",;
-import { Button } from "@/components/ui/button",;
-import { Eye, ChevronDown, Loader2 } from "lucide-react",;
+  DropdownMenuTrigger;"
+} from "@/components/ui/dropdown-menu",;"
+import { Button } from "@/components/ui/button",;"
+import { Eye, ChevronDown, Loader2 } from "lucide-react",;"
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 interface ApplicationActionsProps {;
   application: JobApplication,;
   processingId: string | null,;
   onViewApplication: (applicationId: string) => Promise<void>,;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-<<<<<<< HEAD
 
-}
-export /**
- * ApplicationActions - Function description
- */
-function ApplicationActions() {
-  return (
-    <div className="flex items - center justify - end gap - 2">;
-      <Button;
-        variant="outline";
-        size="sm";
-        on_click={() => onViewApplication (application.id)}
-        disabled={!!application.viewed_at}
-      >;
-        <Eye className="h - 4 w - 4" />;
-      </Button>;
-      <DropdownMenu>;
-        <DropdownMenuTrigger as_child>;
-          <Button;
-            variant="outline";
-            size="sm";
-            disabled={processing_id === application.id}
-          >;
-            {processing_id === application.id ? (
-              <Loader2 className="h - 4 w - 4 animate - spin" />) : (
-              <>Status <ChevronDown className="h - 4 w - 4 ml - 1" /></>)}
-=======
-}
-;
-export function ApplicationActions({;
-  application,;
-  processingId;
-  onViewApplication;
-  onStatusChange;
-}: ApplicationActionsProps) {;
-  return (;
-    <div className="flex items-center justify-end gap-2">;
-      <Button;
-        variant="outline";
-        size="sm";
-        onClick={() => onViewApplication(application.id)}
-        disabled={!!application.viewed_at}
-      >;
-        <Eye className="h-4 w-4" />;
-      </Button>;
-      <DropdownMenu>;
-        <DropdownMenuTrigger asChild>;
-          <Button;
-            variant="outline";
-            size="sm";
-            disabled={processingId === application.id}
-          >;
-            {processingId === application.id ? (;
-              <Loader2 className="h-4 w-4 animate-spin" />;
-            ) : (;
-              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
-            )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </Button>;
-        </DropdownMenuTrigger>;
+        </DropdownMenuTrigger>;"
         <DropdownMenuContent align="end">;
           <DropdownMenuItem;
-<<<<<<< HEAD
-            on_click={() => onStatusChange (application.id, "shortlisted")}
-=======
-          <DropdownMenuItem ;
-            onClick={() => onStatusChange(application.id, "shortlisted")}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
           >;
             Shortlist;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-<<<<<<< HEAD
-            on_click={() => onStatusChange (application.id, "interview")}
-=======
-            onClick={() => onStatusChange(application.id, "interview")}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
           >;
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-<<<<<<< HEAD
-            on_click={() => onStatusChange (application.id, "hired")}
-=======
-            onClick={() => onStatusChange(application.id, "hired")}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
           >;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
 <<<<<<< HEAD
             on_click={() => onStatusChange (application.id, "rejected")}
             className="text - red - 600";
@@ -544,14 +541,18 @@ export function ApplicationActions({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           >;
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
       <Button;
         variant="default";
         size="sm";
@@ -569,13 +570,10 @@ export function ApplicationActions({;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
 =======
-;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
 ;
 =======
   );
@@ -585,14 +583,14 @@ export function ApplicationActions({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       ;
-      <Button ;
-        variant="default" ;
+      <Button ;"
+        variant="default" ;"
         size="sm";
-      <Button;
-        variant="default";
+      <Button;"
+        variant="default";"
         size="sm";
         asChild;
-      >;
+      >;`
         <Link to={`/messages?talentId=${application.talent_id}`}>;
           Contact;
         </Link>;
@@ -601,6 +599,7 @@ export function ApplicationActions({;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -613,3 +612,9 @@ export function ApplicationActions({;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

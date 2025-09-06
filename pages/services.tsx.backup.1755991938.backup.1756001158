@@ -130,6 +130,7 @@ export default function ServicesPage() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
           <UltraAdvancedFuturisticBackground variant="holographic" intensity="medium">
 =======
 <<<<<<<< HEAD:components/services.tsx.backup.1755991813.backup.1756001157
@@ -156,10 +157,14 @@ export default function ServicesPage() {
         <meta property="og:description" content="200+ revolutionary micro SaaS services powered by quantum computing and AI" />
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:url" content="https://ziontechgroup.com/services" />
         <meta property="og:type" content="website" />
       </Head>
 
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
@@ -2948,6 +2953,9 @@ export default function Services() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-c3e1
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991938.backup.1756001158
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

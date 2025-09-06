@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare module "date-fns" {;
 =======
 <<<<<<< HEAD
@@ -73,12 +74,16 @@ declare module "date-fns" {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 declare module 'date-fns' {
+=======
+declare module 'date-fns' {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   export function format(date: Date | number, formatStr: string): string;
   export function parseISO(dateString: string): Date;
   export function isValid(date: any): boolean;
   export function addDays(date: Date | number, amount: number): Date;
   export function subDays(date: Date | number, amount: number): Date;
   export function differenceInDays(dateLeft: Date | number, dateRight: Date | number): number;
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -96,3 +101,6 @@ declare module 'date-fns' {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

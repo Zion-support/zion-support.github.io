@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -387,3 +388,6 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
 export default SearchBar;
 main
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -20,6 +21,9 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -388,6 +392,7 @@ if (require.main === module) {
     process.exit(1);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   });
 }
@@ -598,3 +603,7 @@ module.exports = DeploymentAutomation;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

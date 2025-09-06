@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import * as React from &quot;react & quot;
 import { cn } from &quot;@/lib / utils & quot;
 <<<<<<< HEAD
@@ -22,9 +23,13 @@ import { badgeVariants } from &quot;@/components/ui/badge-variants&quot;
 import * as React from "react"
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import * as React from "react""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils"
-
+"
 import { badgeVariants } from "@/components/ui/badge-variants"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export interface BadgeProps
@@ -73,6 +78,19 @@ export interface BadgeProps
 
 }
 
+=======
+
+
+  variant?:"
+    | "default""
+    | "secondary""
+    | "destructive""
+    | "outline""
+    | "success""
+    | "warning""
+    | "info"
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 ;
 
@@ -82,6 +100,7 @@ export interface BadgeProps
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -110,3 +129,9 @@ export { Badge, badgeVariants }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

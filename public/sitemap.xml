@@ -3,9 +3,13 @@
   <url>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <loc>https://ziontechgroup.com/</loc>
 =======
     <loc>https://ziontechgroup.com/</loc>
@@ -329,6 +333,7 @@
   </url>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   <url>
     <loc>https://ziontechgroup.com/pricing</loc>
@@ -347,4 +352,8 @@
 =======
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 </urlset>

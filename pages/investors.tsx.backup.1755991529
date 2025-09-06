@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -91,11 +92,15 @@ const InvestorsPage: React.FC = () => {
       description: 'Patents and technologies'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const marketOpportunities = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -157,11 +162,15 @@ const InvestorsPage: React.FC = () => {
       icon: <Shield className="w-8 h-8 text-green-400" />
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const competitiveAdvantages = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -198,10 +207,14 @@ const InvestorsPage: React.FC = () => {
       icon: <Users className="w-8 h-8 text-green-400" />,
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       title: 'Expert Team',
       description: 'World-class researchers and engineers with deep expertise'
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -308,10 +321,14 @@ const InvestorsPage: React.FC = () => {
       description: 'Geographic growth'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -388,12 +405,16 @@ const InvestorsPage: React.FC = () => {
                   View Financials
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -477,12 +498,16 @@ const InvestorsPage: React.FC = () => {
                   <p className="text-gray-400 text-sm">{highlight.description}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -521,6 +546,9 @@ const InvestorsPage: React.FC = () => {
                 Massive addressable markets with strong growth trajectories
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>
 
@@ -528,6 +556,7 @@ const InvestorsPage: React.FC = () => {
               {marketOpportunities.map((opportunity, index) => (
                 <motion.div
                   key={opportunity.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -582,12 +611,16 @@ const InvestorsPage: React.FC = () => {
                   <p className="text-gray-300">{opportunity.description}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -626,6 +659,9 @@ const InvestorsPage: React.FC = () => {
                 Unique strengths that position us for market leadership
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>
 
@@ -636,6 +672,7 @@ const InvestorsPage: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -664,12 +701,16 @@ const InvestorsPage: React.FC = () => {
                   <p className="text-gray-300">{advantage.description}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -844,10 +885,14 @@ const InvestorsPage: React.FC = () => {
             {/* Financial Charts Placeholder */}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="grid md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -891,6 +936,9 @@ const InvestorsPage: React.FC = () => {
                     <p className="text-sm">300% YoY growth</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
               </motion.div>
@@ -898,6 +946,7 @@ const InvestorsPage: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -941,6 +990,9 @@ const InvestorsPage: React.FC = () => {
                     <p className="text-sm">Growing market share</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
               </motion.div>
@@ -948,6 +1000,7 @@ const InvestorsPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1066,12 +1119,16 @@ const InvestorsPage: React.FC = () => {
                 >
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Learn More About Us
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1093,3 +1150,6 @@ export default InvestorsPage;
 export default InvestorsPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/pm2/simple-monitor.js
 ========
 <<<<<<< HEAD:scripts/pm2/simple-monitor.js
@@ -47,6 +48,9 @@
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node,
 <<<<<<< HEAD
 =======
@@ -58,7 +62,7 @@
  * Simple PM2 Monitor Script;
  * A basic monitoring script that works reliably;
  */;
-const fs = require('fs');';
+const fs = require('fs');';'
 const path = require('path');';
 class SimpleMonitor {}
 <<<<<<< HEAD
@@ -67,6 +71,7 @@ class SimpleMonitor {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   constructor() {}
+<<<<<<< HEAD
 <<<<<<< HEAD
     this && this.processName = 'simple-monitor';',
     this && this.logFile = 'logs/pm2/simple-monitor && monitor.log';';,
@@ -91,20 +96,29 @@ class SimpleMonitor {}
 =======
   constructor() {}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
-  }
+  }'
   log(message, level = 'INFO') {'}
     const timestamp = new Date().toISOString();,
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
     );
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-    _console && _console.log(logMessage && logMessage.trim());
-
+<<<<<<< HEAD
 =======
-    _console.log(logMessage.trim());
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+
+
+
     
+<<<<<<< HEAD
     
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/simple-monitor.js
@@ -191,22 +205,28 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     
     
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+    
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
-    } catch (error) {}
+    } catch (error) {}'
       _console.error('Failed to write to log file:', error.message);',
     }
   }
-  error(message) {}
+  error(message) {}'
     this.log(message, 'ERROR');',
-    try {}
+    try {}`
       fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);,
-    } catch (err) {}
+    } catch (err) {}'
       _console.error('Failed to write to error file:', err.message);',
     }
   }
   async checkSystemHealth() {}
-    try {}
+    try {}'
       const os = require('os');',
       const health = {}
         timestamp: new Date().toISOString(),
@@ -217,31 +237,32 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         platform: os.platform(),
         nodeVersion: process.version,
 ;      };,
-      const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;
-      this.log(`System Health Check:`);
-      this.log(`  - Uptime: ${Math.floor(health.uptime / 3600)} hours`);,
-      this.log(`  - Memory Usage: ${memoryUsage.toFixed(1)}%`);,
-      this.log(`  - Load Average: ${health.loadAverage[0].toFixed(2)}`);,
-      this.log(`  - Platform: ${health.platform}`);,
+      const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;`
+      this.log(`System Health Check:`);`
+      this.log(`  - Uptime: ${Math.floor(health.uptime / 3600)} hours`);,`
+      this.log(`  - Memory Usage: ${memoryUsage.toFixed(1)}%`);,`
+      this.log(`  - Load Average: ${health.loadAverage[0].toFixed(2)}`);,`
+      this.log(`  - Platform: ${health.platform}`);,`
       this.log(`  - Node Version: ${health.nodeVersion}`);,
       return health;
-    } catch (error) {}
+    } catch (error) {}`
       this.error(`Health check failed: ${error.message}`);,
       return null;,
     }
   }
-  async start() {}
+  async start() {}`
     this.log(`Starting ${this.processName}...`);,
     // Run initial health check;
     await this.checkSystemHealth();
     // Set up periodic monitoring (every 5, minutes),
     const interval = 5 * 60 * 1000;,
-    setInterval(async () => {}
+    setInterval(async () => {}'
       this.log('Running scheduled health check...');',
       await this.checkSystemHealth();,
-    }, interval);,
+    }, interval);,`
     this.log(`${this.processName} started successfully`);,
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -276,6 +297,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Start the automation if this script is run directly;
 <<<<<<< HEAD
 =======
@@ -286,10 +314,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 if (require.main === module) {}
   const monitor = new SimpleMonitor();,
-  monitor.start().catch(error => {}),
+  monitor.start().catch(error => {}),'
     _console.error('Simple monitor failed to start:', error);',
     process.exit(1);,
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -360,10 +389,25 @@ module.exports = SimpleMonitor;
 module.exports = SimpleMonitor;
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/simple-monitor.js
 =======
+=======
+
+
+module && module.exports = SimpleMonitor;
+module && module.exports = SimpleMonitor;
+
+
+module.exports = SimpleMonitor;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 module && module.exports = SimpleMonitor;
 
 module && module.exports = SimpleMonitor;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 <<<<<<< HEAD
 =======
@@ -383,8 +427,13 @@ module.exports = SimpleMonitor;
 module.exports = SimpleMonitor;
 
 module.exports = SimpleMonitor;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+module.exports = SimpleMonitor;
+module.exports = SimpleMonitor;
+ursor/add-new-services-and-deploy-updates-0462;
+module.exports = SimpleMonitor;
 
+<<<<<<< HEAD
 module.exports = SimpleMonitor;
 module.exports = SimpleMonitor;
 ursor/add-new-services-and-deploy-updates-0462
@@ -407,15 +456,15 @@ module.exports = SimpleMonitor;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-module.exports = SimpleMonitor;
-=======
-module.exports = SimpleMonitor;
 =======
 
-module.exports = SimpleMonitor;
-=======
+}
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+<<<<<<< HEAD
 module.exports = SimpleMonitor;
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/simple-monitor.js
 >>>>>>> main:corrupted_backup/simple-monitor.js
@@ -431,3 +480,6 @@ module.exports = SimpleMonitor;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

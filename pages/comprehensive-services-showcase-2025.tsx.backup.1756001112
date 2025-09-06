@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -27,10 +28,14 @@ import {
   Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -433,10 +438,14 @@ export default function ComprehensiveServicesShowcase2025() {
               </div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -822,3 +831,6 @@ export default function ComprehensiveServicesShowcase2025() {
 export default ComprehensiveServicesShowcase2025;
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

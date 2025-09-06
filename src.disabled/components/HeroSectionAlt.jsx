@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,9 +26,11 @@
 ' \' \"export\": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},\"visible\": { opacity: 1,\"transition\": { staggerChildren: 0.,2,\"delayChildren\": \'0 && 0.1\'} const itemVariants = { \"hidden\": { y: 3,0,\"opacity\": \'0\'},\"visible\": { y: 0,\"opacity\": \'1\',\"transition\": { duration: 0.,8,\' \"ease\": \'easeOut\'} const floatingVariants = { \''\';\'"\";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 " " export: const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},visible: { opacity: 1,transition: { staggerChildren: 0.,2,delayChildren: "0 && 0.1"} const itemVariants = { hidden: { y: 3,0,opacity: "0"},visible: { y: 0,opacity: "1",transition: { duration: 0.,8," ease: "easeOut"} const floatingVariants = { """;""";"""
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-' ' "export": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.,2,"delayChildren": '0 && 0.1'} const itemVariants = { "hidden": { y: 3,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.,8,' "ease": 'easeOut'} const floatingVariants = { ''';'"";""}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,3 +80,13 @@
 " " export: const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},visible: { opacity: 1,transition: { staggerChildren: 0.,2,delayChildren: "0.1"} const itemVariants = { hidden: { y: 3,0,opacity: "0"},visible: { y: 0,opacity: "1",transition: { duration: 0.,8," ease: "easeOut"} const floatingVariants = { """;""";"""
 ' ' "export": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.,2,"delayChildren": '0.1'} const itemVariants = { "hidden": { y: 3,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.,8,' "ease": 'easeOut'} const floatingVariants = { ''';'"";""}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+' \' \"export\": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},\"visible\": { opacity: 1,\"transition\": { staggerChildren: 0.,2,\"delayChildren\": \'0.1\'} const itemVariants = { \"hidden\": { y: 3,0,\"opacity\": \'0\'},\"visible\": { y: 0,\"opacity\": \'1\',\"transition\": { duration: 0.,8,\' \"ease\": \'easeOut\'} const floatingVariants = { \''\';\'"\";"
+" " export: const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},visible: { opacity: 1,transition: { staggerChildren: 0.,2,delayChildren: "0.1"} const itemVariants = { hidden: { y: 3,0,opacity: "0"},visible: { y: 0,opacity: "1",transition: { duration: 0.,8," ease: "easeOut"} const floatingVariants = { """;""";"""'"
+' ' "export": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.,2,"delayChildren": '0.1'} const itemVariants = { "hidden": { y: 3,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.,8,' "ease": 'easeOut'} const floatingVariants = { ''';'"";""}
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

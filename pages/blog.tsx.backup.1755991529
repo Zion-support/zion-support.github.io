@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -209,10 +210,14 @@ const BlogPage: React.FC = () => {
     'Cybersecurity', 'AI Security', 'Space Tech', 'Future Tech'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   return (
     <Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
         {/* Hero Section */}
@@ -228,10 +233,14 @@ const BlogPage: React.FC = () => {
         <section className="py-20 px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -283,11 +292,15 @@ const BlogPage: React.FC = () => {
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -463,10 +476,14 @@ const BlogPage: React.FC = () => {
               </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Newsletter Signup */}
 =======
@@ -642,6 +659,9 @@ const BlogPage: React.FC = () => {
         {/* Popular Tags */}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -681,6 +701,7 @@ const BlogPage: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -706,10 +727,14 @@ const BlogPage: React.FC = () => {
                 Get the latest insights, breakthroughs, and technology trends delivered to your inbox
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -727,6 +752,9 @@ const BlogPage: React.FC = () => {
                 <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Subscribe
                 </button>
               </div>
@@ -741,6 +769,7 @@ const BlogPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -779,3 +808,6 @@ const BlogPage: React.FC = () => {
 export default BlogPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

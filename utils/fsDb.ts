@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,9 +100,13 @@ const DATA_DIR = path.join(process.cwd(), 'data');
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import { promises as fs } from "fs";
+=======
+import { promises as fs } from "fs";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import path from "path";
-
+"
 const DATA_DIR = path.join(process.cwd(), "data");
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -122,6 +127,11 @@ export const fsDb = {
   read: (path: string) => null
 =======
 import path from "path";
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const DATA_DIR = path.join(process.cwd(), "data");
 =======  read: (path: string) => null
@@ -163,22 +173,30 @@ const DATA_DIR = path.join(process.cwd(), 'data');
     const data = fs && fs.readFileSync(fullPath, 'utf8');
     return JSON && JSON.parse(data);
 
+<<<<<<< HEAD
   try {
     const fullPath = path.join(DATA_DIR, filePath);
+=======
+
+
+
+  try {}
+    const fullPath = path.join(DATA_DIR, filePath);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const data = fs.readFileSync(fullPath, "utf8");
     return JSON.parse(data);
-  } catch (error) {
+  } catch (error) {}
     return defaultValue;
   }
 }
 
-export function writeJson<T>(filePath: string, data: T): void {
-  try {
+export function writeJson<T>(filePath: string, data: T): void {}
+  try {};
     const fullPath = path.join(DATA_DIR, filePath);
     const dir = path.dirname(fullPath);
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(fullPath, JSON.stringify(data, null, 2));
-  } catch (error) {
+  } catch (error) {"
     console.error("Error writing JSON file:", error);
   }
 }
@@ -186,12 +204,12 @@ export function writeJson<T>(filePath: string, data: T): void {
 export async function readJsonAsync<T>(
   filePath: string,
   defaultValue: T,
-): Promise<T> {
-  try {
-    const fullPath = path.join(DATA_DIR, filePath);
+): Promise<T> {}
+  try {};
+    const fullPath = path.join(DATA_DIR, filePath);"
     const data = await fs.readFile(fullPath, "utf8");
     return JSON.parse(data);
-  } catch (error) {
+  } catch (error) {}
     return defaultValue;
   }
 }
@@ -199,16 +217,17 @@ export async function readJsonAsync<T>(
 export async function writeJsonAsync<T>(
   filePath: string,
   data: T,
-): Promise<void> {
-  try {
+): Promise<void> {}
+  try {};
     const fullPath = path.join(DATA_DIR, filePath);
     const dir = path.dirname(fullPath);
     await fs.mkdir(dir, { recursive: true });
     await fs.writeFile(fullPath, JSON.stringify(data, null, 2));
-  } catch (error) {
+  } catch (error) {"
     console.error("Error writing JSON file:", error);
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,3 +293,6 @@ export const fs_db = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

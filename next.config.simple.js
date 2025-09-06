@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import ('next').NextConfig} */;
 const next_config = {
 <<<<<<< HEAD
@@ -16,6 +17,12 @@ const next_config = {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
   reactStrictMode: true,
@@ -23,6 +30,7 @@ const next_config = {
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+<<<<<<< HEAD
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
   // Image optimization;
   images: {
@@ -49,21 +57,39 @@ const next_config = {
       "localhost",
       "ziontechgroup.com",
       "images.unsplash.com",
+=======
+
+
+
+
+
+  // Image optimization;
+  images: {}
+    domains: []
+      "localhost","
+      "ziontechgroup.com","
+      "images.unsplash.com","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "via.placeholder.com",
-    ],
+    ],"
     formats: ["image/webp", "image/avif"],
   },
+<<<<<<< HEAD
   // Output configuration
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   output: 'standalone',
 
-  // Trailing slash
+  // Trailing slash;
   trailingSlash: false,
-  // Base path
+  // Base path'
   basePath: '',
-  // Asset prefix
+  // Asset prefix'
   assetPrefix: '',
-  // Generate ETags
+  // Generate ETags;
   generateEtags: true,
+<<<<<<< HEAD
   // Dist directory
   distDir: '.next',
 };
@@ -74,27 +100,40 @@ module.exports = nextConfig;
 module.exports = nextConfig;
 =======
 
+=======
 
-  // Output configuration
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+  // Output configuration"
   output: "standalone",
 
-  // Trailing slash
+  // Trailing slash;
   trailingSlash: false,
 
-  // Base path
+  // Base path"
   basePath: "",
 
-  // Asset prefix
+  // Asset prefix"
   assetPrefix: "",
 
-  // Generate ETags
+  // Generate ETags;
   generateEtags: true,
 
+<<<<<<< HEAD
   // Dist directory
+=======
+
+
+
+
+  // Dist directory"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   distDir: ".next",
 };
 
 
+<<<<<<< HEAD
 module.exports = nextConfig;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +147,9 @@ module.exports = nextConfig;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 module.exports = nextConfig;
 module.exports = nextConfig;
@@ -115,6 +157,7 @@ module.exports = nextConfig;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -126,3 +169,8 @@ module.exports = nextConfig;
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

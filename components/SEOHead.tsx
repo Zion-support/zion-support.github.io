@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 pr-12243
   title?: string;
   description?: string;
@@ -38,3 +39,5 @@ pr-12243
 ;
 
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

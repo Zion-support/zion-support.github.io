@@ -1,8 +1,26 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { OnboardingNotificationParams } from './types';
 import {createNotification} from './createNotification';
+=======
+
+
+
+import {createNotification} from './createNotification';'
+import {OnboardingNotificationParams} from './types';
+
+
+/**
+ * Creates an onboarding notification for a user;
+ */
+export async function createOnboardingNotification({}
+';
+import { createNotification  } from './createNotification';'
+import { OnboardingNotificationParams } from './types';'
+import {createNotification} from './createNotification';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {OnboardingNotificationParams} from './types';
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -28,8 +46,9 @@ import {OnboardingNotificationParams} from './types';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**
- * Creates an onboarding notification for a user
+ * Creates an onboarding notification for a user;
  */
+<<<<<<< HEAD
 export async function createOnboardingNotification({  missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
@@ -76,56 +95,76 @@ if ( {) {
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
         action_url = '/profile';
+=======
+export async function createOnboardingNotification({;
+
+  userId;
+  missingMilestone;
+  userRole;
+}: OnboardingNotificationParams) {}
+'
+  let title = '';'
+  let message = '';'
+  let actionUrl = '';'
+  let actionText = '';'
+  if (userRole === 'talent') {}
+    switch (missingMilestone) {'
+      case 'profile_completed':
+
+
+'
+        title = 'Complete your profile';'
+        message = 'Complete your profile to get discovered by clients';'
+        action_url = '/profile';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         action_text = 'Complete Profile';
-        break;
-      case 'skills_added':;
-        title = 'Add your skills';
-        message = 'Add your skills to get better job matches';
-        action_url = '/profile / skills';
+        break;'
+      case 'skills_added':;'
+        title = 'Add your skills';'
+        message = 'Add your skills to get better job matches';'
+        action_url = '/profile / skills';'
         action_text = 'Add Skills';
-        break;
-      case 'availability_set':;
-        title = 'Set your availability';
-        message = 'Set your availability to help clients know when you can work';
-        action_url = '/profile / settings';
+        break;'
+      case 'availability_set':;'
+        title = 'Set your availability';'
+        message = 'Set your availability to help clients know when you can work';'
+        action_url = '/profile / settings';'
         action_text = 'Set Availability';
         break;
     }
-  } else {
-    switch (missing_milestone) {
-      case 'job_posted':;
-        title = 'Post your first job';
-        message = 'Post your first job to start finding talent';
-        action_url = '/post - job';
+  } else {}
+    switch (missing_milestone) {'
+      case 'job_posted':;'
+        title = 'Post your first job';'
+        message = 'Post your first job to start finding talent';'
+        action_url = '/post - job';'
         action_text = 'Post Job';
-        break;
-      case 'match_viewed':;
-        title = 'View your AI matches';
-        message = 'Check out your AI - matched talent suggestions';
-        action_url = '/client - dashboard';
+        break;'
+      case 'match_viewed':;'
+        title = 'View your AI matches';'
+        message = 'Check out your AI - matched talent suggestions';'
+        action_url = '/client - dashboard';'
         action_text = 'View Matches';
-        break;
-      case 'talent_invited':;
-        title = 'Invite talent';
-        message = 'Invite talent to speed up your hiring process';
-        action_url = '/talent';
+        break;'
+      case 'talent_invited':;'
+        title = 'Invite talent';'
+        message = 'Invite talent to speed up your hiring process';'
+        action_url = '/talent';'
         action_text = 'Find Talent';
         break;
     }
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  return create_notification ({
+  return create_notification ({}
     user_id;
     title;
-    message;
+    message;'
     type: 'onboarding';
     send_email: false;
     action_url,
     action_text;
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     actionText
@@ -219,10 +258,17 @@ import { createNotification } from './createNotification',;
 =======
       case 'profile_completed':import { createNotification } from './createNotification',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'
+import { createNotification } from './createNotification',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { OnboardingNotificationParams } from './types',;
 /**;
  * Creates an onboarding notification for a user;
  */;
+<<<<<<< HEAD
 export async function createOnboardingNotification({;
   userId,;
   missingMilestone,;
@@ -234,51 +280,71 @@ export async function createOnboardingNotification({;
   let actionUrl = '',;
   let actionText = '',;
   ;
+=======
+export async function createOnboardingNotification() { return null; }
+}: OnboardingNotificationParams) {;'
+  let title = '',;'
+  let message = '',;'
+  let actionUrl = '',;'
+  let actionText = '',;
+
+
+  ;
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (userRole === 'talent') {;
-    switch (missingMilestone) {;
-      case 'profile_completed':;
-        title = 'Complete your profile',;
-        message = 'Complete your profile to get discovered by clients',;
-        actionUrl = '/profile',;
+    switch (missingMilestone) {;'
+      case 'profile_completed':;'
+        title = 'Complete your profile',;'
+        message = 'Complete your profile to get discovered by clients',;'
+        actionUrl = '/profile',;'
         actionText = 'Complete Profile',;
-        break,;
-      case 'skills_added':;
-        title = 'Add your skills',;
-        message = 'Add your skills to get better job matches',;
-        actionUrl = '/profile/skills',;
+        break,;'
+      case 'skills_added':;'
+        title = 'Add your skills',;'
+        message = 'Add your skills to get better job matches',;'
+        actionUrl = '/profile/skills',;'
         actionText = 'Add Skills',;
-        break,;
-      case 'availability_set':;
-        title = 'Set your availability',;
-        message = 'Set your availability to help clients know when you can work',;
-        actionUrl = '/profile/settings',;
+        break,;'
+      case 'availability_set':;'
+        title = 'Set your availability',;'
+        message = 'Set your availability to help clients know when you can work',;'
+        actionUrl = '/profile/settings',;'
         actionText = 'Set Availability',;
+<<<<<<< HEAD
         break,;
+=======
+
+
+        break,;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         break;
     }
   } else {;
-    switch (missingMilestone) {;
-      case 'job_posted':;
-        title = 'Post your first job',;
-        message = 'Post your first job to start finding talent',;
-        actionUrl = '/post-job',;
+    switch (missingMilestone) {;'
+      case 'job_posted':;'
+        title = 'Post your first job',;'
+        message = 'Post your first job to start finding talent',;'
+        actionUrl = '/post-job',;'
         actionText = 'Post Job',;
-        break,;
-      case 'match_viewed':;
-        title = 'View your AI matches',;
-        message = 'Check out your AI-matched talent suggestions',;
-        actionUrl = '/client-dashboard',;
+        break,;'
+      case 'match_viewed':;'
+        title = 'View your AI matches',;'
+        message = 'Check out your AI-matched talent suggestions',;'
+        actionUrl = '/client-dashboard',;'
         actionText = 'View Matches',;
-        break,;
-      case 'talent_invited':;
-        title = 'Invite talent',;
-        message = 'Invite talent to speed up your hiring process',;
-        actionUrl = '/talent',;
+        break,;'
+      case 'talent_invited':;'
+        title = 'Invite talent',;'
+        message = 'Invite talent to speed up your hiring process',;'
+        actionUrl = '/talent',;'
         actionText = 'Find Talent',;
         break;
     }
   }
 ;
+<<<<<<< HEAD
     }
   }
   ;
@@ -340,3 +406,27 @@ case 'talent invited':
 ;
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+        break,;
+    }
+  }
+  ;
+
+  return createNotification({;
+    userId,;
+    title,;
+    message,;'
+    type: 'onboarding',;
+    sendEmail: false;
+    actionUrl;
+    actionText;
+  });
+
+
+}
+;
+}
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

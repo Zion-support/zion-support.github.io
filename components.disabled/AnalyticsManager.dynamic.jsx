@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,19 +17,38 @@
 ;,
 =======
 ;,
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 ;,
 
+<<<<<<< HEAD
 ;,
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import dynamic from 'next/dynamic';';,
+=======
+
+
+
+
+
+
+
+
+
+;,
+
+
+import dynamic from 'next/dynamic';';,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {',
-  "loading": () => null,",
+  "loading": () => null,",'"
 ;  "ssr": 'false'});',
 export default AnalyticsManager;,
 <<<<<<< HEAD
@@ -37,6 +57,7 @@ export default AnalyticsManager;,
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -177,3 +198,49 @@ import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => impor
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false,}); export default AnalyticsManager;','
+import dynamic from 'next/dynamic';'
+const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {"
+  "loading": () => null,'"
+  "ssr": 'false'});
+export default AnalyticsManager;
+
+
+
+
+'
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
+
+
+
+
+
+'
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
+
+'
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

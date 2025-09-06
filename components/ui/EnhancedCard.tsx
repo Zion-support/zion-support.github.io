@@ -7,22 +7,23 @@ export default function EnhancedCard(): any ({;
   children: React && React.ReactNode;
   className?: string;
 }) {;
-  return (
+  return ("
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
-  return (
+  return ("
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
-import React from 'react';
-export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
-  return (
+import React from 'react';'
+export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {}
+  return ('"
     <div className={["card-base p-4", className].join(' ')}>
       {children}
-  return (
+  return (";
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
-  return (
+  return ("
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
 }
+<<<<<<< HEAD
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
 export default function EnhancedCard({
@@ -36,3 +37,6 @@ export default function EnhancedCard({
     <div className={["card-base p-4", className].join(" ")}>{children}</div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -187,10 +187,20 @@ h3 {
   letter-spacing: 0.1em;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Enhanced futuristic effects */
 .neon-glow {
   text-shadow:
@@ -501,6 +511,7 @@ a:hover {
     inset 0 0 20px rgba(0, 212, 255, 0.1);
 }
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -509,6 +520,9 @@ a:hover {
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 .btn-futuristic::before {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   content: '';
@@ -518,8 +532,12 @@ a:hover {
 
 .btn-futuristic::before {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 .particles-bg::before {
   position: absolute;
   top: 0;
@@ -687,23 +705,19 @@ a:hover {
   @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg;
 .button::before {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   content: '';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-.btn-futuristic::before {
-=======
-.particles-bg::before {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+
+
   content: '';
 .btn-futuristic::before {  content: '';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
@@ -713,12 +727,21 @@ a:hover {
 .btn-futuristic::before {  content: '';
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+.btn-futuristic::before {  content: '';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+<<<<<<< HEAD
 }
   transition: left 0.5s ease;}
 =======
@@ -729,15 +752,38 @@ a:hover {
   transition: left 0.5s ease;}
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+}
+  transition: left 0.5s ease;}
+
+
+
+  transition: left 0.5s ease;}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 .button:hover::before {
   left: 100%;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 .btn-futuristic:hover {
   transform: translateY(-2px);
   box-shadow:
@@ -831,6 +877,7 @@ a:hover {
 @media (max-width: 768px) {
   .particles {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
     display: none;
@@ -912,13 +959,22 @@ a:hover {
 <<<<<<< HEAD
 =======
 =======
-    display: none;  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
+
+
+  }
+
+
+
+  }
     display: none;  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    display: none;  }
+
+
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   .cyber-grid {

@@ -1,36 +1,36 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold">Certifications</h1>
+      <div>"
+        <h1 className="text-2xl font-semibold">Certifications</h1>"
         <div className="text-gray-500 text-sm">Your achievements and top learners</div>
       </div>
 
-      <div>
-        <div className="font-medium mb-2">Your Certificates</div>
+      <div>"
+        <div className="font-medium mb-2">Your Certificates</div>"
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
 
-          {/* Demo: show a sample preview for one course to illustrate */  } catch (error) {
-    console.error("Error:", error);
+          {/* Demo: show a sample preview for one course to illustrate */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
+"
           <CertificatePreview courseId="ai-dev-foundations" />
         </div>
       </div>
@@ -41,39 +41,36 @@
       </div>;
 
       <div>;
-        <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>;
+        <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>;'
         <ol className='list-decimal pl-6 space-y-1 text-sm'>;
           {leaderboard && leaderboard.map(u => (;
             <li key={u && u.userId}>;
               {u && u.name} — {u && u.points} pts;
             </li>          ))}
-=======
 
-=======
 
-        <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
+
+"
+        <div className="font-medium mb-2">Leaderboard (Top Learners)</div>"
         <ol className="list-decimal pl-6 space-y-1 text-sm">
           {leaderboard.map((u) => (
             <li key={u.userId}>{u.name} — {u.points} pts</li>
-          ))  } catch (error) {
-    console.error("Error:", error);
+          ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
         </ol>;
       </div>;
     </div>;
   );
 
 
-=======
-        <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
+"
+        <div className="font-medium mb-2">Leaderboard (Top Learners)</div>"
         <ol className="list-decimal pl-6 space-y-1 text-sm">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
           {leaderboard.map((u) => (
             <li key={u.userId}>{u.name} — {u.points} pts</li>
           ))}
@@ -82,19 +79,17 @@
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import {useEffect, useState} from 'react';
+
+
+
+
+'
+import {useEffect, useState} from 'react';'
 import CertificatePreview from '../../components / learn / CertificatePreview';
         </div>;
       </div>;
-      <div>;
-        <div className='font - medium mb - 2'>Leaderboard (Top Learners)</div>;
+      <div>;'
+        <div className='font - medium mb - 2'>Leaderboard (Top Learners)</div>;'
         <ol className='list - decimal pl - 6 space - y-1 text - sm'>;
           {leaderboard.map (u => (
             <li key={u.user_id}>;
@@ -104,6 +99,7 @@ import CertificatePreview from '../../components / learn / CertificatePreview';
       </div>;
     </div>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -121,13 +117,20 @@ import CertificatePreview from '../../components/learn/CertificatePreview';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Certifications() {
+=======
+'
+import { useEffect, useState  } from 'react';'
+import CertificatePreview from '../../components/learn/CertificatePreview';
+export default function Certifications() {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [leaderboard, setLeaderboard] = useState<any[]>([]);
-  useEffect(() => {
-    fetch('/api/learn/leaderboard').then(r;
-import {useEffect, useState} from 'react';
+  useEffect(() => {'
+    fetch('/api/learn/leaderboard').then(r;'
+import {useEffect, useState} from 'react';'
 import CertificatePreview from '../../components/learn/CertificatePreview';
         </div>
       </div>
+<<<<<<< HEAD
       <div>
         <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>
 <<<<<<< HEAD
@@ -146,6 +149,14 @@ import CertificatePreview from '../../components/learn/CertificatePreview';
             <li key={u.userId}>
               {u.name} — {u.points} pts
 <<<<<<< HEAD
+=======
+      <div>'
+        <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>'
+        <ol className='list-decimal pl-6 space-y-1 text-sm'>
+          {leaderboard.map(u => (
+            <li key={u.userId}>
+              {u.name} — {u.points} pts;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </li>          ))}
 =======
             </li>
@@ -154,25 +165,31 @@ import CertificatePreview from '../../components/learn/CertificatePreview';
         </ol>
       </div>
     </div>
+<<<<<<< HEAD
 );
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect, useState } from 'react',
+=======
+);'
+import { useEffect, useState } from 'react','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import CertificatePreview from '../../components/learn/CertificatePreview'
-export default function Certifications() {
+export default function Certifications() {}
   const [leaderboard, setLeaderboard] = useState<any[]>([]),
-  useEffect(() => {
+  useEffect(() => {'
     fetch('/api/learn/leaderboard').then(r => r.json()).then(d => setLeaderboard(d.leaderboard || []))
   }, []),
-  return (
+  return ("
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold">Certifications</h1>
+      <div>"
+        <h1 className="text-2xl font-semibold">Certifications</h1>"
         <div className="text-gray-500 text-sm">Your achievements and top learners</div>
       </div>
 
+<<<<<<< HEAD
       <div>
         <div className="font-medium mb-2">Your Certificates</div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -191,30 +208,40 @@ export default function Certifications() {
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      <div>"
+        <div className="font-medium mb-2">Your Certificates</div>"
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <CertificatePreview courseId="ai-dev-foundations" />
         </div>
       </div>
       <div>
-
-
+;
+;
         </div>;
       </div>;
 
-      <div>;
-        <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>;
+      <div>;'
+        <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>;'
         <ol className='list-decimal pl-6 space-y-1 text-sm'>;
           {leaderboard && leaderboard.map(u => (;
+<<<<<<< HEAD
             <li key={u && u.userId}>;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
+=======
+            <li key={u && u.userId}>;"
+        <div className="font-medium mb-2">Leaderboard (Top Learners)</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <ol className="list-decimal pl-6 space-y-1 text-sm">
           {leaderboard.map((u) => (
             <li key={u.userId}>{u.name} — {u.points} pts</li>
-          ))  } catch (error) {
-    console.error("Error:", error);
+          ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -222,6 +249,7 @@ export default function Certifications() {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -268,18 +296,23 @@ import CertificatePreview from '../../components / learn / CertificatePreview';
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+
+
+
+
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -288,3 +321,11 @@ import CertificatePreview from '../../components / learn / CertificatePreview';
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

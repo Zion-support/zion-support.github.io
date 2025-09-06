@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
 <<<<<<< HEAD
 
 
@@ -33,6 +34,9 @@ function pingPreview() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -48,6 +52,7 @@ function pingPreview() {}
 	const ok = distOk && (await pingPreview());
 	if (!ok) {}
 		console.error('Healthcheck failed');
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -200,6 +205,11 @@ class HealthChecker {
   }
   calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
     let score = 100;
+=======
+		process.exit(1)};
+	console.log('Healthy')})();
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs
     // Check disk space
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
@@ -264,6 +274,7 @@ module.exports = HealthChecker;
 =======
 
 module.exports = HealthChecker;
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
 const http = require('http');
 const distOk = fs.existsSync('dist/index.html');
 function pingPreview() {}
@@ -282,3 +293,7 @@ function pingPreview() {}
 		process.exit(1)};
 	console.log('Healthy')})();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/healthcheck.cjs

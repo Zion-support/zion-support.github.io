@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/careers.tsx
 <<<<<<< HEAD:pages/careers.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -550,9 +551,11 @@ const Careers: React.FC<CareersProps> = ({ className }) => {
         {/* Hero Section */}
 <<<<<<< HEAD:pages/careers.tsx
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx
 import Head from 'next/head';
-import Layout from '../components/Layout';
 
+<<<<<<< HEAD:pages_backup/careers.tsx
 export default function CareersPage() {
   
     >
@@ -570,9 +573,50 @@ export default function CareersPage() {
 =======
 <<<<<<< HEAD
 =======
-
 =======
+export default function Careers() {
+  const openPositions = [
+    {
+      title: "Senior AI Engineer",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      description: "Lead the development of cutting-edge AI solutions and machine learning models."
+    },
+    {
+      title: "Full Stack Developer",
+      department: "Engineering", 
+      location: "New York, NY",
+      type: "Full-time",
+      description: "Build scalable web applications using modern technologies and frameworks."
+    },
+    {
+      title: "Product Manager",
+      department: "Product",
+      location: "San Francisco, CA",
+      type: "Full-time", 
+      description: "Drive product strategy and roadmap for our AI-powered platform."
+    },
+    {
+      title: "DevOps Engineer",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      description: "Manage cloud infrastructure and deployment pipelines for our services."
+    }
+  ];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx
 
+  const benefits = [
+    "Competitive salary and equity",
+    "Comprehensive health insurance",
+    "Flexible remote work options",
+    "Professional development budget",
+    "Unlimited PTO",
+    "Top-tier equipment and tools"
+  ];
+
+<<<<<<< HEAD:pages_backup/careers.tsx
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -1075,23 +1119,28 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 We're always looking for talented individuals. Send us your
                 resume and let us know how you'd like to contribute to our team.
+=======
+  return (
+    <>
+      <Head>
+        <title>Careers - Zion Tech Group</title>
+        <meta name="description" content="Join our team and help shape the future of AI and technology. Explore open positions at Zion Tech Group." />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-b border-gray-800">
+          <div className="max-w-7xl mx-auto px-4 py-16">
+            <div className="text-center">
+              <h1 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Join Our Team
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Help us build the future of AI and technology. We're looking for passionate individuals 
+                who want to make a real impact.
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                >
-                  Send Resume
-                </a>
-                <a
-                  href="/about"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Learn More About Us
-                </a>
-              </div>
-            </motion.div>
+            </div>
           </div>
+<<<<<<< HEAD:pages_backup/careers.tsx
         </section>
       </div>
 <<<<<<< HEAD
@@ -1128,12 +1177,11 @@ const Page = () => {
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Careers</h1>
           <p className="text-xl text-gray-600">Join our innovative team! Check back soon for exciting career opportunities.</p>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx
         </div>
-      </div>
-    </MainLayout>
-  );
-};
 
+<<<<<<< HEAD:pages_backup/careers.tsx
 export default Page;
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1147,3 +1195,62 @@ export default Page;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/careers.tsx
+=======
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Open Positions</h2>
+              <div className="space-y-6">
+                {openPositions.map((position, index) => (
+                  <div key={index} className="bg-gray-800/50 rounded-xl p-6 hover:bg-gray-800/70 transition-colors duration-200">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="text-xl font-bold">{position.title}</h3>
+                      <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">{position.type}</span>
+                    </div>
+                    <div className="flex items-center text-gray-400 text-sm mb-3">
+                      <span>{position.department}</span>
+                      <span className="mx-2">•</span>
+                      <span>{position.location}</span>
+                    </div>
+                    <p className="text-gray-300 mb-4">{position.description}</p>
+                    <button className="text-blue-400 hover:text-blue-300 font-medium">Apply Now →</button>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Why Work With Us?</h2>
+              <div className="space-y-6">
+                <div className="bg-gray-800/50 rounded-xl p-6">
+                  <h3 className="text-xl font-bold mb-3">Innovation First</h3>
+                  <p className="text-gray-300">Work on cutting-edge AI and technology projects that push the boundaries of what's possible.</p>
+                </div>
+                
+                <div className="bg-gray-800/50 rounded-xl p-6">
+                  <h3 className="text-xl font-bold mb-3">Growth Opportunities</h3>
+                  <p className="text-gray-300">Continuous learning and development opportunities to advance your career.</p>
+                </div>
+
+                <div className="bg-gray-800/50 rounded-xl p-6">
+                  <h3 className="text-xl font-bold mb-3">Great Benefits</h3>
+                  <ul className="text-gray-300 space-y-2">
+                    {benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-center">
+                        <svg className="w-4 h-4 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/careers.tsx

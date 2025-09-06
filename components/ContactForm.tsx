@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -428,3 +429,5 @@ pr-12243
 export default ContactForm;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

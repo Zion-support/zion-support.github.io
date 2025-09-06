@@ -43,6 +43,7 @@ export default function ServicesPage() {
         'Automated content suggestions',
         'Performance tracking & reporting'
       ],
+<<<<<<< HEAD
       pricing: {
         starter: '$39/month',
         professional: '$99/month',
@@ -54,6 +55,9 @@ export default function ServicesPage() {
       textColor: 'text-green-400',
       gradient: 'from-green-400 to-emerald-500',
       cta: 'Try for Free'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '📧',
@@ -115,6 +119,7 @@ export default function ServicesPage() {
         'Data visualization tools',
         'Mobile-responsive design'
       ],
+<<<<<<< HEAD
       pricing: {
         starter: '$79/month',
         professional: '$199/month',
@@ -306,6 +311,9 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-d4e7
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992043
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -408,7 +416,7 @@ export default function ServicesPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
-=======
+
   return (
     <>
       <Head>
@@ -728,7 +736,7 @@ export default function ServicesPage() {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
               Technology Stack
-=======
+
   return (
     <>
       <Head>
@@ -921,7 +929,7 @@ export default function ServicesPage() {
         </section>
       </div>
     </AdvancedFuturisticBackground>
-=======
+
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -93,11 +94,20 @@ import { ProjectMilestonesContent } from '@/components/projects/milestones/Proje
 =======
 import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',function ProjectMilestones() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";"
+import { SEO } from "@/components/SEO";"
+import { AppHeader } from "@/layout/AppHeader";"
+import { Footer } from "@/components/Footer";"
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+import { ProjectMilestonesContent } from "@/components/projects/milestones/ProjectMilestonesContent";
+function ProjectMilestones() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <ProtectedRoute>
       <>
-        <SEO
-          title="Payment Milestones | Zion AI Marketplace"
+        <SEO"
+          title="Payment Milestones | Zion AI Marketplace""
           description="Manage project payment milestones and deliverables"
         />
         <AppHeader />
@@ -108,8 +118,9 @@ import { ProjectMilestonesContent } from '@/components/projects/milestones/Proje
   );
 }
 
-        <SEO
+        <SEO"
           title="Payment Milestones | Zion AI Marketplace"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,22 +148,28 @@ function ProjectMilestones() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           description="Manage project payment milestones and deliverables"
-import React from 'react';
-import {SEO} from '@/components / SEO';
-import {AppHeader} from '@/layout / AppHeader';
-import {Footer} from '@/components / Footer';
-import {ProtectedRoute} from '@/components / ProtectedRoute';
+import React from 'react';'
+import {SEO} from '@/components / SEO';'
+import {AppHeader} from '@/layout / AppHeader';'
+import {Footer} from '@/components / Footer';'
+import {ProtectedRoute} from '@/components / ProtectedRoute';'
 import {ProjectMilestonesContent} from '@/components / projects / milestones / ProjectMilestonesContent';
 /**
- * ProjectMilestones - Function description
+ * ProjectMilestones - Function description;
  */
-function ProjectMilestones() {
+function ProjectMilestones() {}
   return (
     <ProtectedRoute>;
       <>;
-        <SEO;
+        <SEO;"
           title="Payment Milestones | Zion AI Marketplace";
+<<<<<<< HEAD
     </ProtectedRoute>);
 }
 <<<<<<< HEAD
@@ -166,13 +183,32 @@ export default ProjectMilestones;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+
+
+"
+          description="Manage project payment milestones and deliverables";
+        />;
+        <AppHeader />;
+        <ProjectMilestonesContent />;
+        <Footer />;
+      </>;
+
+;
+
+
+export default ProjectMilestones;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export default ProjectMilestones;
 ;
     </ProtectedRoute>;
   ),;
 }
-;
-export default ProjectMilestones,; <ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables" /> <AppHeader /> <ProjectMilestonesContent /> <Footer /> </> </ProtectedRoute> export default ProjectMilestones;
+;"
+export default ProjectMilestones,; <ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables" /> <AppHeader /> <ProjectMilestonesContent /> <Footer /> </> </ProtectedRoute> export default ProjectMilestones;"
           description="Manage project payment milestones and deliverables"
         />
         <AppHeader />
@@ -182,16 +218,20 @@ export default ProjectMilestones,; <ProtectedRoute> <> <SEO title="Payment Miles
     </ProtectedRoute>
   )
 }
-=======
+
 export default ProjectMilestones;
 
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -199,6 +239,7 @@ export default ProjectMilestones;
 
 ;
 export default ProjectMilestones;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,3 +254,7 @@ export default ProjectMilestones;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React from 'react';'''; import { useParams } from 'react-router-dom';'''
 import _React from 'react';'''; import { useParams } from 'react-router-dom';'''; import { useQuery } from '@tanstack/react-query';'''; import Skeleton from 'react-loading-skeleton';'''; import 'react-loading-skeleton/dist/skeleton.css';'''; import { Alert } from '@/components/ui/alert';'''; import PostCard from '@/components/community/PostCard';'''; import Empty from '@/components/community/Empty';'''; import { fetchPostsByCategory } from '@/api/community'; export {}; return null} const { slug } = useParams(); const {} "data": 'posts = []',; isLoading,'; error} = useQuery(['posts',slug],() => fetchPostsByCategory(slug),{} "enabled": '!!slug'}); if (isLoading) return <Skeleton count={5} /> if (error) return <Alert variant="destructive">Failed to load posts></div> return posts.length ? ("; <div className="space-y-4"> {}; <PostCard key={p.id} post={p} /> ))} ></div> ) : ("; <Empty message="Be the first to post!" /> );} '"; export { Category };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React from 'react';'''; import { useParams } from 'react-router-dom';'''; import { useQuery } from '@tanstack/react-query';'''; import Skeleton from 'react-loading-skeleton';'''; import 'react-loading-skeleton/dist/skeleton.css';'''; import { Alert } from '@/components/ui/alert';'''; import PostCard from '@/components/community/PostCard';'''; import Empty from '@/components/community/Empty';'''; import { fetchPostsByCategory } from '@/api/community'; export {}; return null} const { slug } = useParams(); const {} "data": 'posts = []',; isLoading,'; error} = useQuery(['posts',slug],() => fetchPostsByCategory(slug),{} "enabled": '!!slug'}); if (isLoading) return <Skeleton count={5} /> if (error) return <Alert variant="destructive">Failed to load posts></div> return posts.length ? ("; <div className="space-y-4"> {}; <PostCard key={p.id} post={p} /> ))} ></div> ) : ("; <Empty message="Be the first to post!" /> );} '"; export { Category };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import _React from 'react';'''; import { useParams } from 'react-router-dom';'''
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from \'react\';\''\'; import { useParams } from \'react-router-dom\';\''\'; import { useQuery } from \'@tanstack/react-query\';\''\'; import Skeleton from \'react-loading-skeleton\';\''\'; import \'react-loading-skeleton/dist/skeleton ;\''\'; import { Alert } from \'@/components/ui/alert\';\''\'; import PostCard from \'@/components/community/PostCard\';\''\'; import Empty from \'@/components/community/Empty\';\''\'; import { fetchPostsByCategory } from \'@/api/community\'; export {}; return null} const { slug } = useParams(); const {} \"data\": \'posts = []\',; isLoading,\'; error} = useQuery([\'posts\',slug],() => fetchPostsByCategory(slug),{} \"enabled\": \'!!slug\'}); if (isLoading) return <Skeleton count={5} /> if (error) return <Alert variant=\"destructive\">Failed to load posts></div> return posts && posts.length ? (\"; <div className=\"space-y-4\"> {}; <PostCard key={p && p.id} post={p} /> ))} ></div> ) : (\"; <Empty message=\"Be the first to post!\" /> );} \'"; export { Category };
 const React from "react";"""; import { useParams } from "react-router-dom";"""; import { useQuery } from "@tanstack/react-query";"""; import Skeleton from "react-loading-skeleton";"""; import "react-loading-skeleton/dist/skeleton ;"""; import { Alert } from "@/components/ui/alert";"""; import PostCard from "@/components/community/PostCard";"""; import Empty from "@/components/community/Empty";"""; import { fetchPostsByCategory } from "@/api/community"; export {}; return null} const { slug } = useParams(); const {} data: "posts = []",; isLoading,"; error} = useQuery(["posts",slug],() => fetchPostsByCategory(slug),{} enabled: "!slug"}); if (isLoading) return <Skeleton count={5} /> if (error) return <Alert variant="destructive">Failed to load posts></div> return posts && posts.length ? ("; <div className="space-y-4"> {}; <PostCard key={p && p.id} post={p} /> ))} ></div> ) : ("; <Empty message="Be the first to post!" /> );} ""; export { Category };'"'"
-import _React from 'react';'''; import { useParams } from 'react-router-dom';'''; import { useQuery } from '@tanstack/react-query';'''; import Skeleton from 'react-loading-skeleton';'''; import 'react-loading-skeleton/dist/skeleton ;'''; import { Alert } from '@/components/ui/alert';'''; import PostCard from '@/components/community/PostCard';'''; import Empty from '@/components/community/Empty';'''; import { fetchPostsByCategory } from '@/api/community'; export {}; return null} const { slug } = useParams(); const {} "data": 'posts = []',; isLoading,'; error} = useQuery(['posts',slug],() => fetchPostsByCategory(slug),{} "enabled": '!!slug'}); if (isLoading) return <Skeleton count={5} /> if (error) return <Alert variant="destructive">Failed to load posts></div> return posts && posts.length ? ("; <div className="space-y-4"> {}; <PostCard key={p && p.id} post={p} /> ))} ></div> ) : ("; <Empty message="Be the first to post!" /> );} '"; export { Category };
-<<<<<<< HEAD
+=======
 
+
+'"
+import React from \'react\';\''\'; import { useParams } from \'react-router-dom\';\''\'; import { useQuery } from \'@tanstack/react-query\';\''\'; import Skeleton from \'react-loading-skeleton\';\''\'; import \'react-loading-skeleton/dist/skeleton ;\''\'; import { Alert } from \'@/components/ui/alert\';\''\'; import PostCard from \'@/components/community/PostCard\';\''\'; import Empty from \'@/components/community/Empty\';\''\'; import { fetchPostsByCategory } from \'@/api/community\'; export {}; return null} const { slug } = useParams(); const {} \"data\": \'posts = []\',; isLoading,\'; error} = useQuery([\'posts\',slug],() => fetchPostsByCategory(slug),{} \"enabled\": \'!!slug\'}); if (isLoading) return <Skeleton count={5} /> if (error) return <Alert variant=\"destructive\">Failed to load posts></div> return posts && posts.length ? (\"; <div className=\"space-y-4\"> {}; <PostCard key={p && p.id} post={p} /> ))} ></div> ) : (\"; <Empty message=\"Be the first to post!\" /> );} \'"; export { Category };'"
+const React from "react";"""; import { useParams } from "react-router-dom";"""; import { useQuery } from "@tanstack/react-query";"""; import Skeleton from "react-loading-skeleton";"""; import "react-loading-skeleton/dist/skeleton ;"""; import { Alert } from "@/components/ui/alert";"""; import PostCard from "@/components/community/PostCard";"""; import Empty from "@/components/community/Empty";"""; import { fetchPostsByCategory } from "@/api/community"; export {}; return null} const { slug } = useParams(); const {} data: "posts = []",; isLoading,"; error} = useQuery(["posts",slug],() => fetchPostsByCategory(slug),{} enabled: "!slug"}); if (isLoading) return <Skeleton count={5} /> if (error) return <Alert variant="destructive">Failed to load posts></div> return posts && posts.length ? ("; <div className="space-y-4"> {}; <PostCard key={p && p.id} post={p} /> ))} ></div> ) : ("; <Empty message="Be the first to post!" /> );} ""; export { Category };'"'"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React from 'react';'''; import { useParams } from 'react-router-dom';'''; import { useQuery } from '@tanstack/react-query';'''; import Skeleton from 'react-loading-skeleton';'''; import 'react-loading-skeleton/dist/skeleton ;'''; import { Alert } from '@/components/ui/alert';'''; import PostCard from '@/components/community/PostCard';'''; import Empty from '@/components/community/Empty';'''; import { fetchPostsByCategory } from '@/api/community'; export {}; return null} const { slug } = useParams(); const {} "data": 'posts = []',; isLoading,'; error} = useQuery(['posts',slug],() => fetchPostsByCategory(slug),{} "enabled": '!!slug'}); if (isLoading) return <Skeleton count={5} /> if (error) return <Alert variant="destructive">Failed to load posts></div> return posts && posts.length ? ("; <div className="space-y-4"> {}; <PostCard key={p && p.id} post={p} /> ))} ></div> ) : ("; <Empty message="Be the first to post!" /> );} '"; export { Category };
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import _React from 'react';'''; import { useParams } from 'react-router-dom';'''
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+import _React from 'react';'''; import { useParams } from 'react-router-dom';'''; import { useQuery } from '@tanstack/react-query';'''; import Skeleton from 'react-loading-skeleton';'''; import 'react-loading-skeleton/dist/skeleton ;'''; import { Alert } from '@/components/ui/alert';'''; import PostCard from '@/components/community/PostCard';'''; import Empty from '@/components/community/Empty';'''; import { fetchPostsByCategory } from '@/api/community'; export {}; return null} const { slug } = useParams(); const {} "data": 'posts = []',; isLoading,'; error} = useQuery(['posts',slug],() => fetchPostsByCategory(slug),{} "enabled": '!!slug'}); if (isLoading) return <Skeleton count={5} /> if (error) return <Alert variant="destructive">Failed to load posts></div> return posts && posts.length ? ("; <div className="space-y-4"> {}; <PostCard key={p && p.id} post={p} /> ))} ></div> ) : ("; <Empty message="Be the first to post!" /> );} '"; export { Category };
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -28,25 +28,31 @@ import type { NextApiRequest, NextApiResponse } from "next";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const ip =
+=======
+
+export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {}
+  const ip ="
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
-    req.socket.remoteAddress ||
+    req.socket.remoteAddress ||";
     "unknown";
 
   const now = Date.now();
   const key = `rate_limit_${ip}`;
   const current = rateLimitMap.get(key);
 
-  if (!current || now > current.resetTime) {
-    // Reset or initialize
-    rateLimitMap.set(key, {
+  if (!current || now > current.resetTime) {}
+    // Reset or initialize;
+    rateLimitMap.set(key, {}
       count: 1,
       resetTime: now + RATE_LIMIT_WINDOW,
     });
     return true;
   }
 
-  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
+  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {"
     res.status(429).json({ error: "Too Many Requests" });
 =======    return false;
 =======
@@ -63,6 +69,7 @@ main
   return true;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -70,45 +77,52 @@ main
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
-// Rate limiting utilities
-export interface RateLimitConfig {
+
+
+
+
+// Rate limiting utilities;
+export interface RateLimitConfig {};
   windowMs: number;
   maxRequests: number;
   keyGenerator?: (req: any) => string;
   skipSuccessfulRequests?: boolean;
   skipFailedRequests?: boolean;
 }
-export interface RateLimitInfo {
+export interface RateLimitInfo {};
   limit: number;
   remaining: number;
   reset: number;
   retryAfter?: number;
 }
-class RateLimiter {
+class RateLimiter {}
   private requests: Map<string, number[]> = new Map();
   private config: RateLimitConfig;
-  constructor(config: RateLimitConfig) {
+  constructor(config: RateLimitConfig) {}
     this.config = config;
   }
-  private getKey(req: any): string {
-    if (this.config.keyGenerator) {
+  private getKey(req: any): string {}
+    if (this.config.keyGenerator) {}
       return this.config.keyGenerator(req);
     }
     return req.ip || req.connection.remoteAddress || 'unknown';
   }
-  private cleanupOldRequests(key: string): void {
+  private cleanupOldRequests(key: string): void {}
     const now = Date.now();
     const windowStart = now - this.config.windowMs;
-    if (this.requests.has(key)) {
+    if (this.requests.has(key)) {}
       const timestamps = this.requests.get(key)!.filter(timestamp => timestamp > windowStart);
       this.requests.set(key, timestamps);
     }
   }
-  isAllowed(req: any): RateLimitInfo {
+  isAllowed(req: any): RateLimitInfo {}
     const key = this.getKey(req);
     this.cleanupOldRequests(key);
     const now = Date.now();
@@ -116,47 +130,51 @@ class RateLimiter {
     const limit = this.config.maxRequests;
     const remaining = Math.max(0, limit - timestamps.length);
     const reset = now + this.config.windowMs;
-    if (timestamps.length < limit) {
+    if (timestamps.length < limit) {}
       timestamps.push(now);
       this.requests.set(key, timestamps);
     }
-    return {
+    return {}
       limit,
       remaining,
       reset,
-      retryAfter: timestamps.length >= limit ? Math.ceil(this.config.windowMs / 1000) : undefined
+      retryAfter: timestamps.length >= limit ? Math.ceil(this.config.windowMs / 1000) : undefined;
     };
   }
-  reset(key: string): void {
+  reset(key: string): void {}
     this.requests.delete(key);
   }
-  resetAll(): void {
+  resetAll(): void {}
     this.requests.clear();
   }
 }
-// Default rate limiter instance
-export const rateLimiter = new RateLimiter({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  maxRequests: 100,
+// Default rate limiter instance;
+export const rateLimiter = new RateLimiter({};
+  windowMs: 15 * 60 * 1000, // 15 minutes;
+  maxRequests: 100,'
   keyGenerator: (req) => req.ip || req.connection.remoteAddress || 'unknown'
 });
-// Express middleware for rate limiting
-export function rateLimit(config: RateLimitConfig) {
+// Express middleware for rate limiting;
+export function rateLimit(config: RateLimitConfig) {};
   const limiter = new RateLimiter(config);
+<<<<<<< HEAD
 export function rateLimit(options: { windowMs: number; max: number }) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (req: any, res: any, next: any) => {
+=======
+  return (req: any, res: any, next: any) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const info = limiter.isAllowed(req);
-    res.set({
-      'X-RateLimit-Limit': info.limit.toString(),
-      'X-RateLimit-Remaining': info.remaining.toString(),
+    res.set({'
+      'X-RateLimit-Limit': info.limit.toString(),'
+      'X-RateLimit-Remaining': info.remaining.toString(),'
       'X-RateLimit-Reset': new Date(info.reset).toISOString()
     });
-    if (info.retryAfter) {
+    if (info.retryAfter) {'
       res.set('Retry-After', info.retryAfter.toString());
-      return res.status(429).json({
+      return res.status(429).json({'
         error: 'Too Many Requests',
-        retryAfter: info.retryAfter
+        retryAfter: info.retryAfter;
       });
     }
     next();
@@ -165,6 +183,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -173,62 +192,67 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { NextApiRequest, NextApiResponse } from 'next';
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
-const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
-const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window
-export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
+const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes;
+const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window;
+export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {'
   const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() |
-             req.socket.remoteAddress |
+             req.socket.remoteAddress |';
              'unknown';
-  const now = Date.now();
+  const now = Date.now();`
   const key = `rate_limit_${ip}`;
   const current = rateLimitMap.get(key);
-  if (!current |now > current.resetTime) {
-    // Reset or initialize
-    rateLimitMap.set(key, {
-      count: 1
-      resetTime: now + RATE_LIMIT_WINDOW
+  if (!current |now > current.resetTime) {}
+    // Reset or initialize;
+    rateLimitMap.set(key, {}
+      count: 1;
+      resetTime: now + RATE_LIMIT_WINDOW;
     });
     return true;
   }
-  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
-    res.status(429).json({ error: 'Too Many Requests' });
+  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {'
+    res.status(429).json({ error: 'Too Many Requests' });'
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
 const rateLimitMap = new Map < string, { count: number; reset_time: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes;
 const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window;
-export function rate_limit (req: NextApiRequest, res: NextApiResponse): boolean {
+export function rate_limit (req: NextApiRequest, res: NextApiResponse): boolean {';
   const ip = (req.headers['x - forwarded - for'] as string)?.split (', ')[0]?.trim () ||;
-            req.socket.remote_address ||;
+            req.socket.remote_address ||;'
             'unknown';
 ;
-  const now = Date.now ();
+  const now = Date.now ();`
   const key = `rate_limit_${ip}`;
   const current = rateLimitMap.get (key);
 ;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     // Reset or initialize;
-    rateLimitMap.set (key, {
+    rateLimitMap.set (key, {}
       count: 1,
       reset_time: now + RATE_LIMIT_WINDOW;
     });
     return true;
   }
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
     res.status (429).json ({ error: 'Too Many Requests' });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return false;
   }
 ;
   return true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -239,9 +263,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 
 }
+=======
+'
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -258,12 +290,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

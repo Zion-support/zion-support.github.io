@@ -7,7 +7,7 @@ import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import AdvancedFuturisticCard from '../components/ui/AdvancedFuturisticCard';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-=======
+
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
@@ -139,6 +139,7 @@ export default function ServicesPage() {
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & AI' || s.category === 'Biotechnology & Quantum').length
     },
     {
+<<<<<<< HEAD
       name: 'Blockchain & Web3',
       description: 'Next-generation blockchain solutions and DeFi platforms',
       icon: <Globe2 className="w-6 h-6" />,
@@ -559,9 +560,12 @@ export default function ServicesPage() {
         </div>
       </QuantumHolographicBackground>
     </>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -580,4 +584,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

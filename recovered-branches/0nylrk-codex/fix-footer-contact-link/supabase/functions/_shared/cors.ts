@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -17,11 +18,12 @@ export const corsHeaders = {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
-
-<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 export const corsHeaders = {;
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -39,12 +41,19 @@ export const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
 export const cors_headers = {
 'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type_access - Control - Allow - Methods': 'GET, POST, PUT, DELETE, OPTIONS'}
+=======
+'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};'
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
+
+export const cors_headers = {'
+'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type_access - Control - Allow - Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 
 export const corsHeaders = {;
 
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-typeAccess-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,3 +68,7 @@ export const corsHeaders = {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

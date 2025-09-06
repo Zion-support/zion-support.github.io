@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function EnhancedHomePage() {
@@ -8,3 +9,6 @@ export default function EnhancedHomePage() {
     </div>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

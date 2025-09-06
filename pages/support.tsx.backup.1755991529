@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -367,11 +368,15 @@ const SupportPage: React.FC = () => {
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -572,11 +577,15 @@ const SupportPage: React.FC = () => {
               </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -860,10 +869,14 @@ const SupportPage: React.FC = () => {
                     </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1049,3 +1062,6 @@ export default Support;
 export default SupportPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

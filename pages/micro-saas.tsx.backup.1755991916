@@ -124,7 +124,11 @@ export default function MicroSaasPage() {
   const categoryStats = getCategoryStats();
 
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground variant="holographic" intensity="medium">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>Micro SaaS Services - Zion Tech Group | 200+ Revolutionary AI-Powered Solutions</title>
         <meta name="description" content="Explore 200+ revolutionary micro SaaS services powered by AI, quantum computing, space technology, and cutting-edge innovations. Transform your business with Zion Tech Group." />

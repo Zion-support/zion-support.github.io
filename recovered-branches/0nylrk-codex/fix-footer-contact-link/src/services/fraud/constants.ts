@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Common constants used across fraud detection modules
 // Phrases that might indicate fraud
 
@@ -9,15 +10,14 @@
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Common constants used across fraud detection modules;
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
 
-<<<<<<< HEAD
-=======
-// Common constants used across fraud detection modules
-// Phrases that might indicate fraud
 
+<<<<<<< HEAD
 export const suspiciousPhrases = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -107,30 +107,77 @@ export const suspiciousEmailDomains = [
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ],
+=======
+
+
+  "whatsapp me";"
+  "contact me outside";"
+  "cashapp only";"
+  "western union";"
+  "pay directly";"
+  "bypass";"
+  "telegram";"
+  "signal me";"
+  "avoid fees";"
+  "payment link";"
+  "urgent payment";
+
+export const suspiciousPhrases = ["
+  "whatsapp me","
+  "contact me outside","
+  "cashapp only","
+  "western union","
+  "pay directly","
+  "bypass","
+  "telegram","
+  "signal me","
+  "avoid fees","
+  "payment link","
+  "urgent payment","
+  "deal outside"";
+  "deal outside";
+];
+"
+  "tempmail";"
+  "throwaway";"
+  "fakeemail";"
+  "mailinator";"
+  "guerrillamail";
+
+export const suspiciousEmailDomains = ["
+  "tempmail","
+  "throwaway","
+  "fakeemail","
+  "mailinator","
+  "guerrillamail","
+  "10minutemail"
+],;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Common constants used across fraud detection modules;
 // Phrases that might indicate fraud;
-export const suspiciousPhrases = [;
-  "whatsapp me",;
-  "contact me outside",;
-  "cashapp only",;
-  "western union",;
-  "pay directly",;
-  "bypass",;
-  "telegram",;
-  "signal me",;
-  "avoid fees",;
-  "payment link",;
-  "urgent payment",;
+export const suspiciousPhrases = [;"
+  "whatsapp me",;"
+  "contact me outside",;"
+  "cashapp only",;"
+  "western union",;"
+  "pay directly",;"
+  "bypass",;"
+  "telegram",;"
+  "signal me",;"
+  "avoid fees",;"
+  "payment link",;"
+  "urgent payment",;"
   "deal outside";
 ],;
 // Email domains often used for throwaway accounts;
-export const suspiciousEmailDomains = [;
-  "tempmail",;
-  "throwaway",;
-  "fakeemail",;
-  "mailinator",;
-  "guerrillamail",;
+export const suspiciousEmailDomains = [;"
+  "tempmail",;"
+  "throwaway",;"
+  "fakeemail",;"
+  "mailinator",;"
+  "guerrillamail",;"
   "10minutemail";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -173,11 +220,16 @@ export const suspiciousEmailDomains = [;
   "fakeemail";
   "mailinator";
   "guerrillamail";
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   "10minutemail";
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 ;
 
 
@@ -213,3 +265,6 @@ export const suspiciousEmailDomains = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

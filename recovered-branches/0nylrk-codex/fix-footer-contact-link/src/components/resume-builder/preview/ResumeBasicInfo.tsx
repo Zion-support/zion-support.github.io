@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {ResumeBasicInfo} from '@/types/resume';
 interface ResumeBasicInfoSectionProps {
@@ -83,20 +84,40 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export function ResumeBasicInfoSection({
+=======
+import { ResumeBasicInfo } from "@/types/resume";
+interface ResumeBasicInfoSectionProps {}
+  basicInfo: ResumeBasicInfo;
+
+
+
+"
+import { ResumeBasicInfo } from "@/types/resume";
+interface ResumeBasicInfoSectionProps {}
+  basicInfo: ResumeBasicInfo;
+}
+
+export function ResumeBasicInfoSection({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   basicInfo,
-}: ResumeBasicInfoSectionProps) {
-  return (
-    <div className="space-y-2 border-b pb-4 mb-6">
+}: ResumeBasicInfoSectionProps) {}
+  return ("
+    <div className="space-y-2 border-b pb-4 mb-6">"
       <h1 className="text-2xl font-bold">
         {basicInfo.headline || basicInfo.title}
-      </h1>
+      </h1>"
       {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     </div>
+=======
+    </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -168,3 +189,7 @@ export function ResumeBasicInfoSection({
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

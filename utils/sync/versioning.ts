@@ -6,15 +6,19 @@ export function nextVersionFor(state: MultiverseState, entityKey: string): numbe
 }
 =======
 
+<<<<<<< HEAD
+=======
+export interface Version {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   major: number;
   minor: number;
   patch: number;
   build?: number;
 }
 
-export function parseVersion(versionString: string): Version {
+export function parseVersion(versionString: string): Version {};
   const parts = versionString.split(".").map(Number);
-  return {
+  return {}
     major: parts[0] || 0,
     minor: parts[1] || 0,
     patch: parts[2] || 0,
@@ -24,31 +28,58 @@ export function parseVersion(versionString: string): Version {
 
 =======}
 export function nextVersionFor(
-  state: MultiverseState,
-  entityKey: string
-): number {
+  state: MultiverseState,;
+  entityKey: string;
+): number {}
   const current = state.latestVersionByEntityId[entityKey] || 0;
   return current + 1;
 }
+<<<<<<< HEAD
 // Versioning utilities;
 export const versioning = {
   // Add versioning functionality here;
   get_version: () => '1.0.0',
   compare_versions: (v1: string, v2: string) => 0,
   increment_version: (version: string) => version;
+=======
+
+export function nextVersionFor(
+  currentVersion: string,"
+  type: "major" | "minor" | "patch" = "patch",
+): string {};
+  const version = parseVersion(currentVersion);
+
+  switch (type) {"
+    case "major":
+      return versionToString({ major: version.major + 1, minor: 0, patch: 0 });"
+    case "minor":
+      return versionToString({}
+        major: version.major,
+        minor: version.minor + 1,
+        patch: 0,
+      });"
+    case "patch":
+    default:
+      return versionToString({}
+        major: version.major,
+        minor: version.minor,
+        patch: version.patch + 1,
+      });
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-export function isVersionGreater(a: string, b: string): boolean {
+export function isVersionGreater(a: string, b: string): boolean {};
   return compareVersions(parseVersion(a), parseVersion(b)) > 0;
 }
 
-export function isVersionEqual(a: string, b: string): boolean {
+export function isVersionEqual(a: string, b: string): boolean {};
   return compareVersions(parseVersion(a), parseVersion(b)) === 0;
 }
 =======
-export interface Version {
+export interface Version {};
   major: number;
   minor: number;
   patch: number;
@@ -65,6 +96,7 @@ export interface Version {
 =======
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -84,3 +116,9 @@ export const versioning = {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b;
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

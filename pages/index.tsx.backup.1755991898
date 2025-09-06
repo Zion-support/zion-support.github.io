@@ -12,8 +12,12 @@ import {
   RocketIcon, GlobeIcon, CpuIcon as CpuIcon2
 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices, serviceCategories } from '../data/enhanced-real-micro-saas-services';
 
@@ -159,6 +163,7 @@ const HomePage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -450,6 +455,9 @@ const HomePage: React.FC = () => {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9dcb
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991898
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
@@ -473,6 +481,7 @@ const HomePage: React.FC = () => {
       </UltraAdvancedFuturisticBackground>
 
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -517,11 +526,15 @@ const HomePage: React.FC = () => {
                 variant="futuristic"
                 className="text-lg px-8 py-4"
               >
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 Get Started
               </Button>
             </div>
           </motion.div>
 
+<<<<<<< HEAD
           {/* Enhanced Contact Information Display */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -570,12 +583,15 @@ const HomePage: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9dcb
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
           >
             {heroStats.map((stat, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -831,6 +847,9 @@ const HomePage: React.FC = () => {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9dcb
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991898
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <div className="text-cyan-400 font-bold text-lg mb-2">{service.price}</div>
                 <div className="text-slate-400 text-sm mb-4">Market Size: {service.marketSize}</div>
@@ -841,14 +860,19 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Service Categories */}
       <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -887,12 +911,16 @@ const HomePage: React.FC = () => {
 
       {/* Testimonials */}
       <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -900,12 +928,16 @@ const HomePage: React.FC = () => {
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               See how our revolutionary services are transforming businesses across industries
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <motion.div
+<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -928,30 +960,17 @@ const HomePage: React.FC = () => {
                 <p className="text-slate-300 mb-3">{testimonial.content}</p>
                 <div className="text-sm text-cyan-400 font-medium">{testimonial.service}</div>
                 <p className="text-slate-400 mt-2">{testimonial.results}</p>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Competitive Advantages */}
-      <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="text-gradient-cyan">Why Choose</span> Zion Tech Group?
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover the competitive advantages that set us apart from traditional solutions
-            </p>
-          </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {competitiveAdvantages.map((advantage, index) => (
               <motion.div
@@ -977,6 +996,8 @@ const HomePage: React.FC = () => {
 
       {/* Contact Section */}
       <section id="contact" className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -984,6 +1005,7 @@ const HomePage: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to <span className="text-gradient-cyan">Transform</span> Your Business?
             </h2>
@@ -1227,10 +1249,14 @@ const HomePage: React.FC = () => {
               </div>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9dcb
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
 =======
@@ -1241,5 +1267,8 @@ const HomePage: React.FC = () => {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9dcb
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991898
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

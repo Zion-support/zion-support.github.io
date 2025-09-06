@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Pool, PoolClient } from 'pg';
 <<<<<<< HEAD
 let pool: Pool | null = null;
@@ -40,6 +41,12 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
 
   if (!pool) {;
   if (!pool) {;    pool = new Pool({ connectionString:process.env.DATABASE_URL });
+=======
+
+
+
+    pool = new Pool({ connectionString:process.env.DATABASE_URL });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     pool = new Pool({ connectionString:process && process.env.DATABASE_URL });
   }
   return pool;
@@ -66,12 +73,13 @@ export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promi
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const client = await getPool().connect();
-  try {
-    await client.query('BEGIN');
+  try {}
+    await client.query('BEGIN');'
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);
 <<<<<<< HEAD
 <<<<<<< HEAD
     const result = await fn(client);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -86,29 +94,31 @@ export function getPool(): Pool {;
   }
   return pool;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {;
   const client = await getPool().connect(),;
-  try {;
-    await client.query('BEGIN'),;
+  try {;'
+    await client.query('BEGIN'),;'`
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]),;
     const result = await fn(client),;
+
+
 <<<<<<< HEAD
-    await client.query('COMMIT');
-=======
-
-
 
     await client.query('COMMIT');
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return result;
-  } catch (err) {
+  } catch (err) {'
     await client.query('ROLLBACK');
     throw err;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -162,3 +172,13 @@ client.release();  }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+client.release ();  }
+
+}
+
+
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

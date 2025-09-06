@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { AppProps } from "next/app";
 import EnhancedLayout from "../components/layout/EnhancedLayout";
 import "../styles/enhanced-design-system.css";
@@ -9,4 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </EnhancedLayout>
   );
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

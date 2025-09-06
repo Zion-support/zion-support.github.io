@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -53,6 +54,9 @@ async function checkAutomationStatus() {
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   
   const statusReport = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -65,6 +69,7 @@ main
     // Check PM2 processes
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -97,11 +102,21 @@ origin/automation-improvements-final
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
       const runningProcesses = pm2Data.filter(
         proc => proc.pm2_env && proc.pm2_env.status === 'online'
       );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -199,9 +214,23 @@ main
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+      
+    } catch (error) {
+      
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       statusReport.pm2Processes = [];
     }
     // Check automation scripts
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -252,12 +281,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
       'automation/security-scanner.cjs',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -303,6 +339,16 @@ origin/automation-improvements-final
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+      'automation/master-orchestrator.cjs',
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'automation/health-check.cjs',
       'automation/security-scanner.cjs',
       'automation/code-quality-monitor.cjs',
@@ -312,6 +358,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -469,6 +516,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
 
     // Save report
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         name: script,
         exists,
@@ -489,6 +542,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (error) {
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
+<<<<<<< HEAD
     }
 
     return statusReport;
@@ -497,6 +551,41 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+
+    const systemHealth = {
+      memoryUsage: process.memoryUsage(),
+      uptime: process.uptime(),
+      nodeVersion: process.version,
+      platform: process.platform,
+    };
+
+
+
+
+        "name": script,
+        exists,
+        isExecutable,
+        "status": exists
+          ? isExecutable
+            ? 'ready'
+            : 'not_executable'
+          : 'missing'});
+
+    try {
+      const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
+      statusReport.systemHealth.healthCheck = 'passed';
+      console.log('✅ Health check passed');
+    } catch (error) {
+      statusReport.systemHealth.healthCheck = 'failed';
+      console.log('❌ Health check failed');
+
+
+
+    }
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
@@ -509,6 +598,7 @@ main
     
     
 
+<<<<<<< HEAD
 
     console.log('📋 Checking system health...');
     try {
@@ -563,6 +653,9 @@ main
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -578,6 +671,7 @@ main
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -591,11 +685,15 @@ main
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -614,13 +712,11 @@ main
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    
-    
-    
-    
-    
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
@@ -640,6 +736,13 @@ main
     console.error('❌ Error checking automation "status": ', error.message);
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+    return statusReport;
+  } catch (error) {
+    console.error('❌ Error checking automation "status": ', error.message);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -650,6 +753,7 @@ main
     }
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/automation-improvements-final
@@ -675,11 +779,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     statusReport.overallStatus = 'error';
   }
 
   return statusReport;
 }
+<<<<<<< HEAD
 
 
 // Run if called directly
@@ -719,6 +830,12 @@ module.exports = checkAutomationStatus;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+if (require.main === module) {
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   checkAutomationStatus()
     .then(() => {
       process.exit(0);
@@ -733,6 +850,7 @@ module.exports = checkAutomationStatus;
     });
 }
 module.exports = { checkAutomationStatus };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -768,6 +886,8 @@ module.exports = { checkAutomationStatus };
 =======
 main
 if (require.main === module) {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -775,9 +895,12 @@ if (require.main === module) {
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -787,6 +910,7 @@ const { execSync } = require('child_process')
       const pm2List = execSync('pm2 jlist', { "encoding"})
     console.log(' Status "Report")
     console.error(' Error checking automation "status")
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -834,3 +958,12 @@ main
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+      console.error('Fatal "error")
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

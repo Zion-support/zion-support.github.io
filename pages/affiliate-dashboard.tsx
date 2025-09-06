@@ -7,6 +7,7 @@ function getRefCode(): string {
 =======
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -51,10 +52,22 @@ const res = await fetch(
       if (!res.ok) throw new Error(json.error || 'Failed');
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  useEffect(() => {}
+    if (!code) return;
+    (async () => {}
+      try {}
+  async function requestPayout() {}
+    setMsg('')
+    try {'
+      const res = await fetch('/api/partners/request-payout', {}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setMsg('Payout requested')
-    } catch (e: any) {
+    } catch (e: any) {'
       setMsg(e?.message |'Error')
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -121,6 +134,9 @@ function getRefCode(): string {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 function getRefCode(): string {;
   if (typeof window === 'undefined') return '',;
@@ -135,11 +151,11 @@ function getRefCode(): string {;
   }
 }
 ;
-export default function AffiliateDashboard(req, res) {
-  try {
+export default function AffiliateDashboard(req, res) {}
+  try {';
   const [code, setCode] = useState<string>('');
-  const [metrics, setMetrics] = useState<any>(null);
-  const [amount, setAmount] = useState<string>('');
+  const [metrics, setMetrics] = useState<any>(null);'
+  const [amount, setAmount] = useState<string>('');'
   const [msg, setMsg] = useState<string>('');
   useEffect(() => {;
     const c = getRefCode();
@@ -148,40 +164,37 @@ export default function AffiliateDashboard(req, res) {
   useEffect(() => {;
     if (!code) return,;
     (async () => {;
-      try {
+      try {}
         const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`);
         const json = await res.json();
         setMetrics(json);
-      } catch {  } catch (error) {
-    console.error("Error:", error);
+      } catch {  } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     })();
   }, [code]),;
-  async function requestPayout() {;
-    setMsg('');
-    try {
-      const res = await fetch('/api/partners/request-payout', {;
-        method: 'POST',;
+  async function requestPayout() { return null; }
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),;
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error || 'Failed');
+      const json = await res.json();'
+      if (!res.ok) throw new Error(json.error || 'Failed');'
       setMsg('Payout requested');
-    } catch (error) {
+    } catch (error) {'
       setMsg(e?.message || 'Error');
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}'`
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -259,10 +272,20 @@ function Stat({ label, value }: { label: string; value: number | string }) {
     return (
       <div className="space-y-4">
         <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
+=======
+
+
+
+  if (!code) {}
+    return ("
+      <div className="space-y-4">"
+        <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-gray-600 dark: text-gray-300">No referral code found. Visit your referral link first or register on the Partners page.</p>
       </div>
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -282,12 +305,23 @@ function Stat({ label, value }: { label: string; value: number | string }) {
         <Stat label="Total Visits" value={metrics?.total_visits ?? '-'} />
         <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />
         <Stat label="Profile Completions" value={metrics?.total_profile_completions ?? '-'} />
+=======
+
+  return ("
+    <div className="space-y-6">"
+      <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>"
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">'"
+        <Stat label="Total Visits" value={metrics?.total_visits ?? '-'} />'"
+        <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />'"
+        <Stat label="Profile Completions" value={metrics?.total_profile_completions ?? '-'} />'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Stat label="Job Creations" value={metrics?.total_job_creations ?? '-'} />
-      </div>
-      <div className="p-4 rounded border border-gray-200 dark:border-gray-800">
+      </div>"
+      <div className="p-4 rounded border border-gray-200 dark:border-gray-800">"
         <div className="flex items-center justify-between">
-          <div>
+          <div>"
             <div className="text-sm text-gray-600 dark:text-gray-300">Estimated Payout</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -333,16 +367,26 @@ function Stat({ label, value }: { label: string; value: number | string }) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+          </div>"
+          <div className="flex gap-2">"
+            <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />"
+            <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={requestPayout}>Request Payout</button>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>
     </div>
   )
 }
-function Stat({ label, value }: { label: string, value: number | string }) {
-  return (
-    <div className="p-4 rounded border border-gray-200 dark:border-gray-800">
-      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
+function Stat({ label, value }: { label: string, value: number | string }) {}
+  return ("
+    <div className="p-4 rounded border border-gray-200 dark:border-gray-800">"
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>"
       <div className="text-2xl font-semibold">{value}</div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -375,10 +419,14 @@ function Stat({ label, value }: { label: string, value: number | string }) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -389,33 +437,33 @@ function Stat({ label, value }: { label: string, value: number | string }) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect, useMemo, useState } from 'react',
+=======
+'
+import { useEffect, useMemo, useState } from 'react',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
-function getRefCode (): string {
-  // Check condition
-if (return '', ) {
-  $2
-}
+function getRefCode (): string {}
+  // Check condition'
+if (return '', ) {}
+  $2;
+}'
   return local_storage.get_item ('ref_code') || '';
 }
-export default /**
- * AffiliateDashboard - Function description
+export default /**;
+ * AffiliateDashboard - Function description;
  */
-function AffiliateDashboard() {
-  const [code, set_code] = useState < string>(''),
-  const [metrics, set_metrics] = useState < any>(null),
-  const [amount, set_amount] = useState < string>(''),
-  const [msg, set_msg] = useState < string>(''),
-  useEffect (() => {
+function AffiliateDashboard() { return null; }
+  useEffect (() => {}
     const c = getRefCode (),
     set_code (c);
   }, []),
-  useEffect (() => {
-    // Check condition
-if (return, ) {
-  $2
+  useEffect (() => {}
+    // Check condition;
+if (return, ) {}
+  $2;
 }
-    (async () => {
-      try {
+    (async () => {}
+      try {}`
         const res = await fetch (`/api / partners / metrics?code=${encodeURIComponent (code)}`),
         const json = await res.json (),
         set_metrics (json);
@@ -423,39 +471,36 @@ if (return, ) {
     })();
   }, [code]),
   async /**
- * request_payout - Function description
+ * request_payout - Function description;
  */
-function request_payout() {
-    set_msg (''),
-    try {
-      const res = await fetch ('/api / partners / request - payout', {
-        method: 'POST',
+function request_payout() { return null; }
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({ code, amount: amount ? Number (amount) : undefined })}),
-      const json = await res.json (),
-      if (throw new Error (json.error || 'Failed'), ) {
-  $2
-}
+      const json = await res.json (),'
+      if (throw new Error (json.error || 'Failed'), ) {}
+  $2;
+}'
       set_msg ('Payout requested');
-    } catch (e: any) {
+    } catch (e: any) {'
       set_msg (e?.message || 'Error');
     }
-  }
+  }'`
   const export_url = useMemo (() => (code ? `/api / partners / export?code=${encodeURIComponent (code)}` : '#'), [code]),
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    return (
-      <div className="space - y-4">;
-        <h1 className="text - 2xl font - semibold">Affiliate Dashboard</h1>;
+    return ("
+      <div className="space - y-4">;"
+        <h1 className="text - 2xl font - semibold">Affiliate Dashboard</h1>;"
         <p className="text - gray - 600 dark: text - gray - 300">No referral code found. Visit your referral link first or register on the Partners page.</p>;
       </div>);
   }
-  return (
-    <div className="space - y-6">;
-      <h1 className="text - 2xl font - semibold">Affiliate Dashboard</h1>;
+  return ("
+    <div className="space - y-6">;"
+      <h1 className="text - 2xl font - semibold">Affiliate Dashboard</h1>;"
       <div className="grid sm:grid - cols - 2 lg:grid - cols - 4 gap - 4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -519,16 +564,26 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+        <Stat label="Total Visits" value={metrics?.total_visits ?? '-'} />;'"
+        <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />;'"
+        <Stat label="Profile Completions" value={metrics?.total_profile_completions ?? '-'} />;'"
+        <Stat label="Job Creations" value={metrics?.total_job_creations ?? '-'} />;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /**
- * Stat - Function description
+ * Stat - Function description;
  */
-function Stat() {
-  return (
-    <div className="p - 4 rounded border border - gray - 200 dark:border - gray - 800">;
-      <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
+function Stat() {}
+  return ("
+    <div className="p - 4 rounded border border - gray - 200 dark:border - gray - 800">;"
+      <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;"
       <div className="text - 2xl font - semibold">{value}</div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -554,3 +609,13 @@ function Stat() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,29 +19,39 @@ export function middleware(request: NextRequest) {const { pathname } = request.n
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { NextResponse } from 'next/server',;
+=======
+
+import { NextResponse } from 'next/server',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { NextRequest } from 'next/server',;
-export function middleware(request: NextRequest) {;
-  const { pathname } = request.nextUrl,;
-  if (pathname === '/dashboard' || pathname === '/dashboard/') {;
-    const role = request.cookies.get('userRole')?.value || 'talent',;
+export function middleware() { return null; }
+  const { pathname } = request.nextUrl,;'
+  if (pathname === '/dashboard' || pathname === '/dashboard/') {;'
+    const role = request.cookies.get('userRole')?.value || 'talent',;'
     const target = role === 'client' ? '/dashboard/client' : '/dashboard/talent';
     return NextResponse.redirect(new URL(target, request.url));
   }
   return NextResponse.next();
 }
+<<<<<<< HEAD
+=======
+'
+import { NextResponse } from 'next / server','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { NextRequest } from 'next / server',
-export /**
- * middleware - Function description
+export /**;
+ * middleware - Function description;
  */
-function middleware() {
+function middleware() {}
   const { pathname } = request.next_url,
-  // Check condition
-if ( {) {
-  $2
-}
-    const role = request.cookies.get ('user_role')?.value || 'talent',
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    const role = request.cookies.get ('user_role')?.value || 'talent','
     const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';
     return NextResponse.redirect (new URL (target, request.url));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,24 +66,37 @@ export const config = {matcher: ['/dashboard/dashboard/']}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { NextResponse } from 'next/server';
+=======
+'
+export const config = {matcher: ['/dashboard/dashboard/']}';
+import { NextResponse } from 'next/server';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { NextRequest } from 'next/server';
-export function middleware(request: NextRequest) {;
-  const { pathname } = request.nextUrl;
-  if (pathname === '/dashboard' || pathname === '/dashboard/') {;
-    const role = request.cookies.get('userRole')?.value || 'talent';
+export function middleware() { return null; }
+  const { pathname } = request.nextUrl;'
+  if (pathname === '/dashboard' || pathname === '/dashboard/') {;'
+    const role = request.cookies.get('userRole')?.value || 'talent';'
     const target = role === 'client' ? '/dashboard/client' : '/dashboard/talent';
     return NextResponse.redirect(new URL(target, request.url));
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 =======
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+    } catch (error) {}
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   return NextResponse.next ();
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -89,28 +113,36 @@ export const config = {;
   }
 }
 export const config = {
-  matcher: ['/dashboard / dashboard/']}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
-import { NextResponse } from 'next / server',
-import type { NextRequest } from 'next / server',
-export /**
- * middleware - Function description
- */
-function middleware() {
-  const { pathname } = request.next_url,
-  // Check condition
-if ( {) {
-  $2
+
+  }
 }
-    const role = request.cookies.get ('user_role')?.value || 'talent',
+export const config = {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  matcher: ['/dashboard / dashboard/']}
+
+
+
+'
+import { NextResponse } from 'next / server','
+import type { NextRequest } from 'next / server',;
+export /**;
+ * middleware - Function description;
+ */
+function middleware() {}
+  const { pathname } = request.next_url,
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    const role = request.cookies.get ('user_role')?.value || 'talent','
     const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';
     return NextResponse.redirect (new URL (target, request.url));
   }
   return NextResponse.next ();
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const config = {
 =======
@@ -120,8 +152,13 @@ export const config = {
 }export const config = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   matcher: ['/dashboard / dashboard/']}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+export const config = {'
+  matcher: ['/dashboard / dashboard/']}
 ;
+<<<<<<< HEAD
 export const config = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,9 +169,12 @@ export const config = {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
-export const config = {;
+export const config = {;'
   matcher: ['/dashboard/dashboard/']};
+<<<<<<< HEAD
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};
@@ -152,3 +192,13 @@ export const config = {;
 =======
   matcher: ['/dashboard/dashboard/']};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

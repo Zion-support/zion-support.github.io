@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -114,3 +115,61 @@ export const SORT_OPTIONS = null;
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+export const SORT_OPTIONS = []
+  { value: 'relevance', label: 'Relevance' }'
+  { value: 'rating', label: 'Highest Rating' }'
+  { value: 'experience', label: 'Most Experienced' }'
+  { value: 'price-low', label: 'Price: Low to High' }';
+  { value: 'price-high', label: 'Price: High to Low' },];  { value: 'relevance', label: 'Relevance' }'
+  { value: 'rating', label: 'Highest Rating' }'
+  { value: 'experience', label: 'Most Experienced' }'
+  { value: 'price-low', label: 'Price: Low to High' }
+
+
+// Sort options for talent directory;
+export const SORT_OPTIONS = [;
+
+'
+  { value: 'relevance', label: 'Relevance' },'
+  { value: 'rating', label: 'Highest Rating' },'
+  { value: 'experience', label: 'Most Experienced' },
+
+
+'
+  { value: 'price-high', label: 'Price: High to Low' }
+'
+  { value: 'relevance', label: 'Relevance' },'
+  { value: 'rating', label: 'Highest Rating' },'
+  { value: 'experience', label: 'Most Experienced' },'
+  { value: 'price-low', label: 'Price: Low to High' },;'
+  { value: 'price-high', label: 'Price: High to Low' },];  { value: 'relevance', label: 'Relevance' };'
+  { value: 'rating', label: 'Highest Rating' };'
+  { value: 'experience', label: 'Most Experienced' };'
+  { value: 'price-low', label: 'Price: Low to High' };'
+  { value: 'price-high', label: 'Price: High to Low' }
+
+
+
+
+// Sort options for talent directory;
+export const SORT_OPTIONS = [;'
+  { value: 'relevance', label: 'Relevance' },;'
+  { value: 'rating', label: 'Highest Rating' },;'
+  { value: 'experience', label: 'Most Experienced' },;'
+  { value: 'price-low', label: 'Price: Low to High' },;'
+  { value: 'price-high', label: 'Price: High to Low' }
+];
+
+'
+  { value: 'relevance', label: 'Relevance' },'
+  { value: 'rating', label: 'Highest Rating' },'
+  { value: 'experience', label: 'Most Experienced' },
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

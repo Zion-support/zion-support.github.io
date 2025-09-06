@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -25,10 +26,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button",
+=======
+
+import React from "react","
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",";
+import { Button } from "@/components/ui/button";"
+import { FileText, Plus, Users, Search, Calendar } from "lucide-react";"
+import { Button } from "@/components/ui/button","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -87,11 +97,25 @@ export function QuickActions() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+export function QuickActions() {}
+  const actions = []
+    {}
+"
+      id: "post-job","
+      label: "Post New Job","
+      icon: <FileText className="h-5 w-5 mr-2" />,"
+      description: "Create a new job posting",
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: "bg-blue-100 dark:bg-blue-900/20"
     }
     },
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
@@ -112,11 +136,19 @@ export function QuickActions() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
 
+    {"
+      id: "add-member""
+      label: "Add Team Member""
+      icon: <Plus className="h-5 w-5 mr-2" />"
+      description: "Invite someone to your team""
+      color: "bg-green-100 dark:bg-green-900/20"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -138,11 +170,18 @@ export function QuickActions() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {"
+      id: "find-talent""
+      label: "Find Talent""
+      icon: <Search className="h-5 w-5 mr-2" />"
+      description: "Search the talent pool""
+      color: "bg-purple-100 dark:bg-purple-900/20"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -256,162 +295,99 @@ import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
+=======
+    {"
+      id: "schedule""
+      label: "Schedule Interview""
+      icon: <Calendar className="h-5 w-5 mr-2" />"
+      description: "Set up candidate interviews""
+      color: "bg-amber-100 dark:bg-amber-900/20";
+";
+import React from "react",;"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Button } from "@/components/ui/button",;"
+import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;
+
+export function QuickActions() { return null; }
+    },;
+    {;"
+      id: "add-member",;"
+      label: "Add Team Member",;"
+      icon: <Plus className="h-5 w-5 mr-2" />,;"
+      description: "Invite someone to your team",;"
+      color: "bg-green-100 dark:bg-green-900/20";
+    },;
+    {;"
+      id: "find-talent",;"
+      label: "Find Talent",;"
+      icon: <Search className="h-5 w-5 mr-2" />,;"
+      description: "Search the talent pool",;"
+      color: "bg-purple-100 dark:bg-purple-900/20";
+    },;
+    {;"
+      id: "schedule",;"
+      label: "Schedule Interview",;"
+      icon: <Calendar className="h-5 w-5 mr-2" />,;"
+      description: "Set up candidate interviews";"
+      color: "bg-amber-100 dark:bg-amber-900/20";
+
+import React from './react';'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';'
+import { Button } from '@/components / ui / button';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { FileText, Plus, Users, Search, Calendar } from './lucide-react';
-export /**
- * QuickActions - Function description
+export /**;
+ * QuickActions - Function description;
  */
-function QuickActions() {
+function QuickActions() {}
   const actions = [;
-    {
-      id: "post - job",
-      label: "Post New Job",
-      icon: <FileText className="h - 5 w - 5 mr - 2" />,
-      description: "Create a new job posting",
+    {"
+      id: "post - job","
+      label: "Post New Job","
+      icon: <FileText className="h - 5 w - 5 mr - 2" />,"
+      description: "Create a new job posting","
       color: "bg - blue - 100 dark:bg - blue - 900 / 20";
     }
-    {
-      id: "add - member",
-      label: "Add Team Member",
-      icon: <Plus className="h - 5 w - 5 mr - 2" />,
-      description: "Invite someone to your team",
+    {"
+      id: "add - member","
+      label: "Add Team Member","
+      icon: <Plus className="h - 5 w - 5 mr - 2" />,"
+      description: "Invite someone to your team","
       color: "bg - green - 100 dark:bg - green - 900 / 20";
     }
-    {
-      id: "find - talent",
-      label: "Find Talent",
-      icon: <Search className="h - 5 w - 5 mr - 2" />,
-      description: "Search the talent pool",
+    {"
+      id: "find - talent","
+      label: "Find Talent","
+      icon: <Search className="h - 5 w - 5 mr - 2" />,"
+      description: "Search the talent pool","
       color: "bg - purple - 100 dark:bg - purple - 900 / 20";
     }
-    {
-      id: "schedule",
-      label: "Schedule Interview",
-      icon: <Calendar className="h - 5 w - 5 mr - 2" />,
-      description: "Set up candidate interviews",
+    {"
+      id: "schedule","
+      label: "Schedule Interview","
+      icon: <Calendar className="h - 5 w - 5 mr - 2" />,"
+      description: "Set up candidate interviews","
       color: "bg - amber - 100 dark:bg - amber - 900 / 20";
     }
   ];
 ;
   return (
-<<<<<<< HEAD
 
-=======
-
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;
-export function QuickActions() {;
-  const actions = [;
-    {;
-      id: "post-job",;
-      label: "Post New Job",;
-      icon: <FileText className="h-5 w-5 mr-2" />,;
-      description: "Create a new job posting",;
-      color: "bg-blue-100 dark:bg-blue-900/20";
-    },;
-    {;
-      id: "add-member",;
-      label: "Add Team Member",;
-      icon: <Plus className="h-5 w-5 mr-2" />,;
-      description: "Invite someone to your team",;
-      color: "bg-green-100 dark:bg-green-900/20";
-    },;
-    {;
-      id: "find-talent",;
-      label: "Find Talent",;
-      icon: <Search className="h-5 w-5 mr-2" />,;
-      description: "Search the talent pool",;
-      color: "bg-purple-100 dark:bg-purple-900/20";
-    },;
-    {;
-      id: "schedule",;
-      label: "Schedule Interview",;
-      icon: <Calendar className="h-5 w-5 mr-2" />,;
-      description: "Set up candidate interviews";
-      color: "bg-amber-100 dark:bg-amber-900/20";
-    }
-  ];
-  return (;
-
-=======
-    }
-  ];
-  return (;
-;
-export function QuickActions() {;
-  const actions = [;
-    {;
-      id:"post-job",;
-      label:"Post New Job",;
-      icon:<FileText className="h-5 w-5 mr-2" />,;
-      description:"Create a new job posting",;
-      color:"bg-blue-100 dark:bg-blue-900/20";
-    },;
-    {;
-      id:"add-member",;
-      label:"Add Team Member",;
-      icon:<Plus className="h-5 w-5 mr-2" />,;
-      description:"Invite someone to your team",;
-      color:"bg-green-100 dark:bg-green-900/20";
-    },;
-    {;
-      id:"find-talent",;
-      label:"Find Talent",;
-      icon:<Search className="h-5 w-5 mr-2" />,;
-      description:"Search the talent pool",;
-      color:"bg-purple-100 dark:bg-purple-900/20";
-    },;
-    {;
-      id:"schedule",;
-      label:"Schedule Interview",;
-      icon:<Calendar className="h-5 w-5 mr-2" />,;
-      description:"Set up candidate interviews",;
-      color:"bg-amber-100 dark:bg-amber-900/20";
-    }
-  ],;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Card>;
       <CardHeader>;
         <CardTitle>Quick Actions</CardTitle>;
         <CardDescription>Fast access to common tasks</CardDescription>;
       </CardHeader>;
-      <CardContent>;
+      <CardContent>;"
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
-<<<<<<< HEAD
-          {actions && actions.map(action => (;
-            <Button
-              key={action && action.id}
-              variant="outline" 
-              className={`h-auto justify-start p-4 ${action && action.color}`}>;
-              <div className="flex flex-col items-start text-left">;
-                <div className="flex items-center">;
-                  {action && action.icon}
-                  <span>{action && action.label}</span>;
-                </div>;
-                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
-=======
-          {actions.map(action => (;
-            <Button ;
-              key={action.id}
-              variant="outline" ;
-              className={`h-auto justify-start p-4 ${action.color}`}
-            >;
-              <div className="flex flex-col items-start text-left">;
-                <div className="flex items-center">;
-                  {action.icon}
-                  <span>{action.label}</span>;
-                </div>;
-                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
               </div>;
             </Button>;
           ))}
         </div>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -420,6 +396,9 @@ export function QuickActions() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Card>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -429,6 +408,7 @@ export function QuickActions() {;
         <CardTitle > Quick Actions</CardTitle>;
         <CardDescription > Fast access to common tasks</CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
       <CardContent>;
         <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-4">;
           {actions.map (action => (
@@ -438,17 +418,24 @@ export function QuickActions() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      <CardContent>;"
+        <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 4">;
+          {actions.map (action => (
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Button;
-              key={action.id}
+              key={action.id}"
               variant="outline";
               className={`h - auto justify - start p - 4 ${action.color}`}
-            >;
-              <div className="flex flex - col items - start text - left">;
+            >;"
+              <div className="flex flex - col items - start text - left">;"
                 <div className="flex items - center">;
                   {action.icon}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -462,14 +449,20 @@ export function QuickActions() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <span>{action.label}</span>
-                </div>
+                </div>"
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -480,21 +473,33 @@ export function QuickActions() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ))}
         </div>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
 }
+=======
+
+
+}
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

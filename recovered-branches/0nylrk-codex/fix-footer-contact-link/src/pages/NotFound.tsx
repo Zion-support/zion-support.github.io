@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -35,10 +36,16 @@ import {useEffect} from "react";
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const NotFound = () => {
+=======
+import { useLocation } from "react-router-dom";"
+import { useEffect } from "react";
+const NotFound = () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const location = useLocation();
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
 
+<<<<<<< HEAD
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
 import {useLocation} from "react-router-dom";
@@ -53,11 +60,22 @@ import { useEffect } from "react",
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+import { useLocation } from "react-router-dom","
+import { useEffect } from "react",";
+import {useLocation} from "react-router-dom";"
+import {useEffect} from "react";"
+import { useLocation } from "react-router-dom","
+import { useEffect } from "react",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-const NotFound = () => {
+const NotFound = () => {}
   const location = useLocation(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -115,12 +133,18 @@ const NotFound = () => {
 
 
 =======
+=======
+
+  useEffect(() => {}
+    console.error("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "404 Error: User attempted to access non-existent route:",
-      location.pathname,
+      location.pathname,;
     );
   }, [location.pathname]);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
   }, [location.pathname]);
   }, [location.pathname]),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -164,6 +188,18 @@ const NotFound = () => {;
 <<<<<<< HEAD
 =======
         </Link>
+=======
+
+
+
+  return ("
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">"
+      <div className="text-center">"
+        <h1 className="text-4xl font-bold mb-4">404</h1>"
+        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>"
+        <a href="/" className="text-blue-500 hover: text-blue-700 underline">
+          Return to Home;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>
     </div>
   )
@@ -172,6 +208,7 @@ export default NotFound;
 
 },
 
+<<<<<<< HEAD
 export default NotFound,
 import { useLocation } from "react-router-dom",;
 import { useEffect } from "react",;
@@ -246,22 +283,37 @@ export default NotFound;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { use_location } from './react-router-dom';
+=======
+
+
+
+import { use_location } from './react-router-dom';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useEffect } from './react';
-const NotFound = () =>: any {
+const NotFound = () =>: any {}
   const location = use_location ();
 ;
-  useEffect (() => {
-    console.error (
+  useEffect (() => {}
+    console.error ("
       "404 Error: User attempted to access non - existent route:",
       location.pathname);
   }, [location.pathname]);
 ;
+<<<<<<< HEAD
   return (
     <div className="min - h-screen flex items - center justify - center bg - gray-100">;
       <div className="text-center">;
         <h1 className="text - 4xl font - bold mb-4">404</h1>;
         <p className="text - xl text - gray - 600 mb-4">Oops! Page not found</p>;
         <a href="/" className="text - blue - 500 hover: text - blue-700 underline">;
+=======
+  return ("
+    <div className="min - h-screen flex items - center justify - center bg - gray - 100">;"
+      <div className="text - center">;"
+        <h1 className="text - 4xl font - bold mb - 4">404</h1>;"
+        <p className="text - xl text - gray - 600 mb - 4">Oops! Page not found</p>;"
+        <a href="/" className="text - blue - 500 hover: text - blue - 700 underline">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           Return to Home;
         </a>;
       </div>;
@@ -269,6 +321,7 @@ const NotFound = () =>: any {
 }
 ;
 export default NotFound;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -295,3 +348,9 @@ export default NotFound;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

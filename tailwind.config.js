@@ -69,5 +69,13 @@ module.exports = {
     extend: {},
 >>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
   },
+<<<<<<< HEAD
   plugins: [],
+=======
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio')
+  ]
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };

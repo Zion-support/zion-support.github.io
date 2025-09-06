@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
@@ -17,10 +18,16 @@ import { UseFormReturn } from "react-hook-form";
 import {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import React from "react";"
+import { UseFormReturn } from "react-hook-form";
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   FormField,
   FormItem,
   FormLabel,
   FormControl,
+<<<<<<< HEAD
   FormMessage,
 <<<<<<< HEAD
 } from '@/components / ui / form';
@@ -80,10 +87,13 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
-import { FormValues } from "./useHireRequestForm";
-interface ProjectDetailsFieldProps {
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  FormMessage,";
+} from "@/components/ui/form";"
+import { Textarea } from "@/components/ui/textarea";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { FormValues } from "./useHireRequestForm";
+interface ProjectDetailsFieldProps {}
   form: UseFormReturn<FormValues>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -116,17 +126,24 @@ import { Textarea } from "@/components/ui/textarea",;  form: UseFormReturn<FormV
 }
 
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
+<<<<<<< HEAD
   return (
     <FormField
       control={form && form.control}
       name="projectOverview"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export /**
- * ProjectDetailsField - Function description
- */
-function ProjectDetailsField() {
+
+  form: UseFormReturn<FormValues>;
+
+}
+export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
+
+
   return (
     <FormField;
+<<<<<<< HEAD
       control={form.control}
       name="project_overview";
 
@@ -181,10 +198,14 @@ export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) 
   return (
     <FormField
       control={form && form.control}
+=======
+      control={form && form.control}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       name="projectOverview"
 }
 ;
 
+<<<<<<< HEAD
   ),;}
  interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues> 
@@ -224,3 +245,7 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

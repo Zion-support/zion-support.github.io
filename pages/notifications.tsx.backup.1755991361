@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import NotificationList from '../components/ui/NotificationList';
@@ -16,3 +17,6 @@ export default function NotificationsPage() {
     </EnhancedLayout>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

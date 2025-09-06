@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
 =======
@@ -19,16 +20,20 @@ export function getSupabaseClient(): ZionSupabase {try {;
     if (typeof window !== 'undefined') {;
       if (!browserClient) {;
         browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
       return browser_client;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-=======
-=======
+
+
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '';
@@ -47,20 +52,41 @@ export function getSupabaseClient(): ZionSupabase {;
 =======
       } catch (error) {
     console.error("Error:", error);
+=======
+'
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '';'
+const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || '';
+let browserClient: SupabaseClient | undefined;
+export function getSupabaseClient(): ZionSupabase {;
+  try {'
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+        browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        } catch (error) {}
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      return browserClient;
+      } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
+
+
 <<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // Server-side: create a new client per call to avoid cross-request state;
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {;
@@ -75,26 +101,20 @@ export function getSupabaseClient(): ZionSupabase {;
 
 }
 
-=======
+
     // Server - side: create a new client per call to avoid cross - request state;
     return create_client (SUPABASE_URL, SUPABASE_ANON_KEY);
-  } catch {
+  } catch {}
     return undefined;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    } catch (error) {
-    console.error("Error:", error);
+
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 <<<<<<< HEAD
-  }
-}
-
-
   }
     // Server - side: create a new client per call to avoid cross - request state;
     return create_client (SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -112,3 +132,6 @@ export function getSupabaseClient(): ZionSupabase {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

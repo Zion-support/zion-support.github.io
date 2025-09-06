@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -20,6 +21,8 @@ module.exports = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -31,12 +34,15 @@ const customJestConfig = {
   testEnvironment: 'jsdom',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -56,6 +62,7 @@ const customJestConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -63,6 +70,8 @@ const customJestConfig = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   testMatch: [
     '<rootDir>/__tests__/**/*.(js|jsx|ts|tsx)',
     '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)'
@@ -78,6 +87,7 @@ const customJestConfig = {
     '<rootDir>/node_modules/',
     '<rootDir>/dist/',
     '<rootDir>/build/',
+<<<<<<< HEAD
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   verbose: true,
@@ -108,8 +118,9 @@ const customJestConfig = {
     '!**/*.d.ts',
   ],
   testPathIgnorePatterns: [
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
     '<rootDir>/out/',
     '<rootDir>/__tests__.disabled/',
     '<rootDir>/tests.disabled/',
@@ -146,6 +157,7 @@ const customJestConfig = {
     '<rootDir>/broken_files_backup/',
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -156,11 +168,16 @@ module.exports = createJestConfig(customJestConfig)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   verbose: true,
   collectCoverage: false,
   testTimeout: 10000,
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   coverageReporters: ['text', 'lcov'],
   coverageThreshold: {
     global: {
@@ -172,6 +189,7 @@ module.exports = createJestConfig(customJestConfig)
   }
 <<<<<<< HEAD
 };
+<<<<<<< HEAD
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -186,3 +204,7 @@ module.exports = createJestConfig(customJestConfig)
 
 module.exports = createJestConfig(customJestConfig)
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+module.exports = createJestConfig(customJestConfig);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

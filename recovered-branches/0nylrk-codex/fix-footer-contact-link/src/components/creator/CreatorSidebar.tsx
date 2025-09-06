@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
 =======
@@ -56,6 +56,10 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Bell,
 =======
   Settings,;  Bell,
@@ -69,6 +73,7 @@ import {
   Search,
   Settings,
 
+<<<<<<< HEAD
   Users,;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,6 +83,10 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Bell,
 =======
 } from "lucide-react";  Bell,
@@ -96,6 +105,10 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Users,;
 } from "lucide-react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {;
   Sidebar,;
   SidebarContent,;
@@ -104,6 +117,7 @@ import {;
   SidebarMenuItem,;
   SidebarMenuButton,;
   SidebarGroupLabel,;
+<<<<<<< HEAD
   SidebarGroupContent,;
 =======
 
@@ -213,14 +227,33 @@ import {
                     <FileText size={16} />
                     <span>My Content</span>
                   </Link>                  </Link>
+=======
+"
+} from "@/components/ui/sidebar";
+
+export function AppSidebar() { return null; }
+                    <FileText size={16} />
+                    <span>My Content</span>
+
+
+                  </Link>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild>"
                   <a href="/analytics">
                     <Search size={16} />
                     <span>Analytics</span>
+<<<<<<< HEAD
                   </Link>                  </Link>
+=======
+
+
+                  </Link>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -229,19 +262,21 @@ import {
 <<<<<<< HEAD
         </SidebarGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
         
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -251,24 +286,24 @@ import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild>"
                   <a href="/profile">
                     <Users size={16} />
                     <span>Profile</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </a>
-=======
+
+
                   </Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                  </Link>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
                 </SidebarMenuButton>
 =======
         </SidebarGroup>                </SidebarMenuButton>
@@ -278,17 +313,25 @@ import {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild>"
                   <a href="/settings">
                     <Settings size={16} />
                     <span>Settings</span>
+<<<<<<< HEAD
                   </Link>                  </Link>
+=======
+
+
+                  </Link>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -305,9 +348,12 @@ import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
-  )
+  )"
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
 import {;
   Sidebar,;
@@ -316,8 +362,9 @@ import {;
   SidebarMenu,;
   SidebarMenuItem,;
   SidebarMenuButton,;
-  SidebarGroupLabel,;
+  SidebarGroupLabel,;"
   SidebarGroupContent} from "@/components/ui/sidebar";
+<<<<<<< HEAD
 export function AppSidebar() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -548,24 +595,27 @@ function AppSidebar() {
 =======
     </Sidebar>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
 =======
+export function AppSidebar() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+}
+
     </Sidebar>);
 }
     </Sidebar>);
 }
     </Sidebar>;
   ),;}
- import {
+ import {};
   Sidebar;
 SidebarContent;
 SidebarGroup;
 SidebarMenu;
 SidebarMenuItem;
 SidebarMenuButton;
-SidebarGroupLabel;
-return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</SidebarGroupLabel> <SidebarGroupContent> <SidebarMenu> <SidebarMenuItem> <SidebarMenuButton asChild> <a href="/creator-dashboard" > <Home size= {
-  16 
+SidebarGroupLabel;"
+return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</SidebarGroupLabel> <SidebarGroupContent> <SidebarMenu> <SidebarMenuItem> <SidebarMenuButton asChild> <a href="/creator-dashboard" > <Home size= {}
+  16;
 }/> <span>Home</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Messages</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Notifications</span> </Link> </SidebarMenuButton> </SidebarMenuItem> </SidebarMenu> </SidebarGroupContent> </SidebarGroup> <SidebarGroup> <SidebarGroupLabel>Content</SidebarGroupLabel> <SidebarGroupContent> <SidebarMenu> <SidebarMenuItem> <SidebarMenuButton asChild> <span>My Content</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Analytics</span> </Link> </SidebarMenuButton> </SidebarMenuItem> </SidebarMenu> </SidebarGroupContent> </SidebarGroup> <SidebarGroup> <SidebarGroupLabel>Settings</SidebarGroupLabel> <SidebarGroupContent> <SidebarMenu> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Profile</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Settings</span> </Link> </SidebarMenuButton> </SidebarMenuItem> </SidebarMenu> </SidebarGroupContent> </SidebarGroup> </SidebarContent> </Sidebar>) 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -573,6 +623,7 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -599,3 +650,12 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
               </SidebarMenuItem>;
               <SidebarMenuItem>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  );
+}
+;
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -42,11 +43,18 @@ export interface PartnerProfile {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface PartnerProfile {};
+export interface PartnerProfile {;
+
+
+export interface PartnerProfile {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   user_id: string;
   name: string;
   website?: string;
-  social_media?: {
+  social_media?: {}
     twitter?: string;
     instagram?: string;
     youtube?: string;
@@ -84,6 +92,7 @@ export interface PartnerSettings {
 export interface PartnerSettings {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -92,12 +101,16 @@ export interface PartnerSettings {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   commission_rate: number;
   fraud_threshold: number;
   is_payouts_enabled: boolean;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -125,15 +138,18 @@ export interface PartnerReferralLink {
 export interface PartnerReferralLink {;
 
 export interface PartnerSettings {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+export interface PartnerSettings {};
 export interface PartnerSettings {;
-export interface PartnerSettings {
+export interface PartnerSettings {};
   id: string;
   commission_rate: number;
 }
-export interface PartnerReferralLink {
-
+export interface PartnerReferralLink {};
 export interface PartnerReferralLink {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -146,6 +162,9 @@ export interface PartnerReferralLink {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   name: string;
   url: string;
@@ -181,13 +200,16 @@ export interface PartnerPayout {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface PartnerPayout {;
+<<<<<<< HEAD
 export interface PartnerPayout {  conversions: number
+=======
 
-  created_at: string
-}
-export interface PartnerPayout {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+export interface PartnerPayout {};
 export interface PartnerPayout {;
+<<<<<<< HEAD
 export interface PartnerPayout {
 
 export interface PartnerPayout {;
@@ -200,9 +222,12 @@ export interface PartnerPayout {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface PartnerPayout {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   partner_id: string;
-  amount: number;
+  amount: number;"
   status: "pending" | "processing" | "completed" | "failed";
   method: string;
 <<<<<<< HEAD
@@ -278,6 +303,7 @@ export interface PartnerPayout {;
   created_at: string;
   completed_at?: string;
 }
+<<<<<<< HEAD
 ;
   created_at: string,
   completed_at?: string;
@@ -294,3 +320,6 @@ export interface PartnerPayout {;
   completed_at?: string;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

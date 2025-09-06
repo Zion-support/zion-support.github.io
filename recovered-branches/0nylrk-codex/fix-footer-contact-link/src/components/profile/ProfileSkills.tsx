@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Badge } from "@/components/ui/badge";
 import { ProfileSkill } from "@/types/profile";
@@ -44,35 +45,43 @@ import { ProfileSkill } from "@/types/profile",
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Badge } from "@/components/ui/badge";
+=======
+import { Badge } from "@/components/ui/badge";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ProfileSkill } from "@/types/profile";
-interface ProfileSkillsProps {
+interface ProfileSkillsProps {}
   skills: ProfileSkill[];
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ProfileSkillsProps {
+=======
+interface ProfileSkillsProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   skills: ProfileSkill[];
 }
-export function ProfileSkills({ skills }: ProfileSkillsProps) {
-  return (
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+export function ProfileSkills({ skills }: ProfileSkillsProps) {}
+  return ("
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">"
       <h3 className="text-xl font-bold text-white mb-4">Skills</h3>
-
+"
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {skills.map((skill, index) => (
-          <div key={index} className="flex flex-col">
-            <div className="flex justify-between items-center mb-1">
+        {skills.map((skill, index) => ("
+          <div key={index} className="flex flex-col">"
+            <div className="flex justify-between items-center mb-1">"
               <span className="text-zion-slate-light">{skill.name}</span>
-              {skill.endorsements && (
-                <span className="text-sm text-zion-slate">
-                  {skill.endorsements} endorsements
+              {skill.endorsements && ("
+                <span className="text-sm text-zion-slate">;
+                  {skill.endorsements} endorsements;
                 </span>
               )}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,8 +116,11 @@ interface ProfileSkillsProps {;
                 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
 =======
 
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
-              <div
+              <div"
                 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 style={{ width: `${(skill.level / 5) * 100}%` }}
@@ -170,6 +182,7 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
 <<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -233,11 +246,35 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
               <div
                 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
                 style={{ width: `${(skill && skill.level / 5) * 100}%` }}
+=======
+export /**;
+ * ProfileSkills - Function description;
+ */
+function ProfileSkills() {}
+  return ("
+    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;"
+      <h3 className="text - xl font - bold text - white mb - 4">Skills</h3>;"
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        {skills.map ((skill, index) => ("
+          <div key={index} className="flex flex - col">;"
+            <div className="flex justify - between items - center mb - 1">;"
+              <span className="text - zion - slate - light">{skill.name}</span>;
+              {skill.endorsements && ("
+                <span className="text - sm text - zion - slate">;
+                  {skill.endorsements} endorsements;
+                </span>)}
+            </div>;"
+            <div className="h - 2 w - full bg - zion - blue - light rounded - full overflow - hidden">;
+              <div;"
+                className="h - full bg - gradient - to - r from - zion - purple to - zion - cyan";`
+                style={{ width: `${(skill.level / 5) * 100}%` }}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               />;
             </div>;
           </div>;
         ))}
       </div>;
+<<<<<<< HEAD
     </div>;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -287,14 +324,19 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {;
         ))}
       </div>;
     </div>;
-
-  );
+=======
+    </div>);
 }
-}
-;
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
   );
 }
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

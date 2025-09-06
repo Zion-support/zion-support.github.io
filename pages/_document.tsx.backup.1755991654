@@ -149,6 +149,7 @@ export default function Document() {
   })();`;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -524,3 +525,6 @@ export default function Document() {
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-0d5e
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

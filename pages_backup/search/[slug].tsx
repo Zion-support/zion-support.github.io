@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { GetServerSideProps  } from 'next';
@@ -67,11 +68,20 @@ interface BaseSearchResult {
 
 interface BaseSearchResult {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import { GetServerSideProps } from 'next';'
+import { useRouter } from 'next/router';'
+import { useState, useEffect } from 'react';'
+import { useAuth } from '@/context/auth/AuthProvider';
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
   id: string;
   title: string;
   description?: string;
   slug: string;
   image?: string;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,11 +97,16 @@ interface BaseSearchResult {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
     avatar?: string;
   }
   tags?: string[];
   category?: string;
   date?: string;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -138,18 +153,26 @@ interface TalentSearchResult extends BaseSearchResult {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+interface ProductSearchResult extends BaseSearchResult {'
+  type: 'product' | 'equipment';
+  price?: number;
+  rating?: number;
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
   type: 'talent';
   rating?: number;
 
 ;
-interface BlogSearchResult extends BaseSearchResult {
+interface BlogSearchResult extends BaseSearchResult {'
   type: 'blog';
 ;
 
-interface CategorySearchResult extends BaseSearchResult {
-
-interface CategorySearchResult extends BaseSearchResult {;
+interface CategorySearchResult extends BaseSearchResult {}
+interface CategorySearchResult extends BaseSearchResult {;'
   type: 'category';
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -159,11 +182,15 @@ interface CategorySearchResult extends BaseSearchResult {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
 type SearchResult =;
   | ProductSearchResult;
   | TalentSearchResult;
   | BlogSearchResult;
   | CategorySearchResult;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Type guard functions
@@ -201,10 +228,15 @@ interface SearchResultsPageProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -311,16 +343,34 @@ const hasRating = (result: SearchResult): result is ProductSearchResult | Talent
 interface SearchResultsPageProps {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+'
+import { GetServerSideProps } from 'next';'
+import { useRouter } from 'next/router';'
+import { useState, useEffect } from 'react';'
+import { useAuth } from '@/context/auth/AuthProvider';
+'
+import { Search, Filter, Grid, List } from 'lucide-react';
 
-type SearchResult = ProductSearchResult | TalentSearchResult | BlogSearchResult | CategorySearchResult,
+'
+import { SEO } from '@/components/SEO';'
+import { Button } from '@/components/ui/button';'
+import { Input } from '@/components/ui/input';'
+import ProductCard from '@/components/ProductCard';'
+import { TalentCard } from '@/components/talent/TalentCard';'
+import { CategoryCard } from '@/components/CategoryCard';'
+import { SearchEmptyState } from '@/components/marketplace/EmptyState';'
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';'
+import { TALENT_PROFILES } from '@/data/talentData';'
+import { BLOG_POSTS } from '@/data/blog-posts';'
+import { useDebounce } from '@/hooks/useDebounce';'
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
 
-// Type guard functions
-const hasPrice = (result: SearchResult): result is ProductSearchResult => 
-  result.type === 'product' || result.type === 'equipment',
 
-const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
-  result.type === 'product' || result.type === 'equipment' || result.type === 'talent',
 
+
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 interface SearchResultsPageProps {
   initialResults: SearchResult[],
   query: string,
@@ -453,10 +503,14 @@ interface SearchResultsPageProps {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -478,10 +532,15 @@ interface OfflineFilters {
 interface OfflineFilters {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
   sortBy?: string;
   category?: string;
   minPrice?: number;
   maxPrice?: number;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -495,11 +554,14 @@ interface OfflineFilters {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
           return aPrice - bPrice;        });
-        break;
+        break;'
       case 'price_desc':;
-        all && all.sort((a, b) => {;
-          const aPrice = a && a.type === 'product' ? (a && a.price ?? 0) : 0;
+        all && all.sort((a, b) => {;'
+          const aPrice = a && a.type === 'product' ? (a && a.price ?? 0) : 0;'
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
@@ -514,13 +576,11 @@ interface OfflineFilters {
 =======
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+'
             b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -532,6 +592,11 @@ interface OfflineFilters {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console.error("Error:", error);
+=======
+
+  } catch (error) {}
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -542,18 +607,13 @@ interface OfflineFilters {;
   minPrice?: number,;
   maxPrice?: number,;
   minRating?: number;
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-function offlineSearch(;
-  query: string;
-  page = 1;
-  limit = 12;
-  filters: OfflineFilters = {  } catch (error) {
-    console.error("Error:", error);
+function offlineSearch() { return null; }
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -567,16 +627,16 @@ function offlineSearch(;
       match(p.category) ||;
       p.tags?.some((t) => match(t))).map((p) => ({;
     id: p.id;
-    title: p.title;
-    description: p.description || '';
+    title: p.title;'
+    description: p.description || '';'
     type: 'product' as const;
     slug: p.id,;
     image: p.images?.[0],;
     price: p.price ?? undefined,;
     rating: p.rating,;
     author: p.author;
-      ? { name: p.author.name, avatar: p.author.avatarUrl   } catch (error) {
-    console.error("Error:", error);
+      ? { name: p.author.name, avatar: p.author.avatarUrl   } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -591,8 +651,8 @@ function offlineSearch(;
       match(t.bio) ||;
       t.skills?.some((s) => match(s))).map((t) => ({;
     id: t.id;
-    title: t.full_name;
-    description: t.professional_title || '';
+    title: t.full_name;'
+    description: t.professional_title || '';'
     type: 'talent' as const;
     slug: t.id,;
     image: t.profile_picture_url,;
@@ -609,90 +669,91 @@ function offlineSearch(;
       b.tags?.some((t) => match(t))).map((b) => ({;
     id: b.slug;
     title: b.title;
-    description: b.excerpt;
+    description: b.excerpt;'
     type: 'blog' as const;
     slug: b.slug,;
     image: b.featuredImage,;
-    tags: b.tags,;
+    tags: b.tags,;'
     category: 'Blog',;
     date: b.publishedDate})),;
   let all = [...productResults, ...talentResults, ...blogResults],;
   if (filters.category) {;
     all = all.filter(r => r.category === filters.category);
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}'
   if (typeof filters.minPrice === 'number') {;
-    all = all.filter(r => {;
+    all = all.filter(r => {;'
       if (r.type === 'product') {;
         return (r.price ?? 0) >= filters.minPrice!;
-        } catch (error) {
-    console.error("Error:", error);
+        } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
       return true;
     });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}'
   if (typeof filters.maxPrice === 'number') {;
-    all = all.filter(r => {;
+    all = all.filter(r => {;'
       if (r.type === 'product') {;
         return (r.price ?? 0) <= filters.maxPrice!;
-        } catch (error) {
-    console.error("Error:", error);
+        } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
       return true;
     });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}'
   if (typeof filters.minRating === 'number') {;
-    all = all.filter(r => {;
+    all = all.filter(r => {;'
       if (r.type === 'product' || r.type === 'talent') {;
         return (r.rating ?? 0) >= filters.minRating!;
-        } catch (error) {
-    console.error("Error:", error);
+        } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
       return true;
     });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
+;'
   if (filters.sortBy && filters.sortBy !== 'relevance') {;
-    switch (filters.sortBy) {;
+    switch (filters.sortBy) {;'
       case 'price_asc':;
-        all.sort((a, b) => {;
-          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
+        all.sort((a, b) => {;'
+          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;'
           const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
           return aPrice - bPrice;
         });
-        break;
+        break;'
       case 'price_desc':;
-        all.sort((a, b) => {;
-          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
+        all.sort((a, b) => {;'
+          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;'
           const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
           return bPrice - aPrice;
         });
-        break;
+        break;'
       case 'rating':;
-        all.sort((a, b) => {;
-          const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
+        all.sort((a, b) => {;'
+          const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;'
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -831,6 +892,11 @@ const aRating =
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
           return bRating - aRating;
         });
         break;
@@ -856,11 +922,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } else {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return { results: paginated, totalCount: all.length }
-export default function SearchResultsPage({
-  initialResults
-  query
-  slug
-  totalCount
+export default function SearchResultsPage({};
+  initialResults;
+  query;
+  slug;
+  totalCount;
   return { results: paginated, totalCount: all.length };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -870,6 +936,7 @@ export default function SearchResultsPage({
 =======
     all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 =======
 =======
@@ -921,19 +988,27 @@ export default function SearchResultsPage({
     all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
 
           return aPrice - bPrice
+=======
+
+          return aPrice - bPrice;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
         });
-        break;
+        break;'
       case 'price_desc':
-        all.sort((a, b) => {
-          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
+        all.sort((a, b) => {'
+          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;'
           const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
-          return bPrice - aPrice
+          return bPrice - aPrice;
         });
-        break;
+        break;'
       case 'rating':
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
         all.sort((a, b) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+        all.sort((a, b) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
 export default function SearchResultsPage(): any ({;
   initialResults,;
   query,;
@@ -951,8 +1026,9 @@ export default function SearchResultsPage(): any ({;
   initialResults;
   query;
   slug;
-  totalCount}: SearchResultsPageProps) {
+  totalCount}: SearchResultsPageProps) {}
   const router = useRouter();
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -972,15 +1048,27 @@ export default function SearchResultsPage(): any ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
+=======
+
+
+
+
+}: SearchResultsPageProps) {  const router = useRouter();
+
+
+  return { results: paginated, totalCount: all.length   } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 export default function SearchResultsPage(req, res) {
   try {
 <<<<<<< HEAD
@@ -1015,19 +1103,28 @@ export default function SearchResultsPage({
 origin/cursor/automate-test-improve-and-merge-code-2533
   const router = useRouter();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default function SearchResultsPage(req, res) {}
+  try {};
+  const router = useRouter();
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState(query);
-  const debouncedQuery = useDebounce(searchQuery, 300);
+  const debouncedQuery = useDebounce(searchQuery, 300);'
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [sortBy, setSortBy] = useState('relevance');
-  const [categoryFilter, setCategoryFilter] = useState('all');
-  const [minPrice, setMinPrice] = useState('');
-  const [maxPrice, setMaxPrice] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);'
+  const [sortBy, setSortBy] = useState('relevance');'
+  const [categoryFilter, setCategoryFilter] = useState('all');'
+  const [minPrice, setMinPrice] = useState('');'
+  const [maxPrice, setMaxPrice] = useState('');'
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1197,16 +1294,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+      if (minPrice) params.append('minPrice', minPrice);'
+      if (maxPrice) params.append('maxPrice', maxPrice);'
+      if (minRating) params.append('minRating', minRating);
+      const response = await fetch(`/api/search?${params.toString()}`);
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
   // Handle search input change;
   const handleSearch = (newQuery: string) => {;
     setSearchQuery(newQuery),;
-    if (newQuery && newQuery.trim()) {;
+    if (newQuery && newQuery.trim()) {;`
       router && router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {;
         shallow: true,;
       });
       setCurrentPage(1);    }
   };
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1396,82 +1504,89 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       r && r.category !== categoryFilter;
     ) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+'
+      categoryFilter !== 'all' &&
+      categoryFilter &&
+      r.category !== categoryFilter;
+    ) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
       return false;
-
+'
     if (minRating && (r && r.type === 'product' || r && r.type === 'talent')) {;
       if ((r && r.rating ?? 0) < Number(minRating)) {;
 
-=======
+
     date: b.published_date,
   }));
   let all = [...product_results, ...talent_results, ...blog_results];
 ;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     all = all.filter (r => r.category === filters.category);  }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    all = all.filter (r => {
-      // Check condition
-if ( {) {
-  $2
+    all = all.filter (r => {}
+      // Check condition;
+if ( {) {}
+  $2;
 }
         return (r.price ?? 0) >= filters.min_price!;
       }
       return true;
     });  }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    all = all.filter (r => {
-      // Check condition
-if ( {) {
-  $2
+    all = all.filter (r => {}
+      // Check condition;
+if ( {) {}
+  $2;
 }
         return (r.price ?? 0) <= filters.max_price!;
       }
       return true;
     });  }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    all = all.filter (r => {
-      // Check condition
-if ( {) {
-  $2
+    all = all.filter (r => {}
+      // Check condition;
+if ( {) {}
+  $2;
 }
         return (r.rating ?? 0) >= filters.min_rating!;
       }
       return true;
     });  }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    switch (filters.sort_by) {
+    switch (filters.sort_by) {'
       case 'price_asc':;
-        all.sort ((a, b) => {
-          const a_price = a.type === 'product' ? (a.price ?? 0) : 0;
+        all.sort ((a, b) => {'
+          const a_price = a.type === 'product' ? (a.price ?? 0) : 0;'
           const b_price = b.type === 'product' ? (b.price ?? 0) : 0;
           return a_price - b_price;        });
-        break;
+        break;'
       case 'price_desc':;
-        all.sort ((a, b) => {
-          const a_price = a.type === 'product' ? (a.price ?? 0) : 0;
+        all.sort ((a, b) => {'
+          const a_price = a.type === 'product' ? (a.price ?? 0) : 0;'
           const b_price = b.type === 'product' ? (b.price ?? 0) : 0;
           return b_price - a_price;        });
-        break;
+        break;'
       case 'rating':;
-        all.sort ((a, b) => {
-          const a_rating =;
+        all.sort ((a, b) => {}
+          const a_rating =;'
             a.type === 'product' || a.type === 'talent' ? (a.rating ?? 0) : 0;
-          const b_rating =;
+          const b_rating =;'
             b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
           return b_rating - a_rating;
         });
@@ -1479,119 +1594,119 @@ if ( {) {
       default:;
         break;
     }
-  } else {
+  } else {}
     all.sort ((a, b) => a.title.locale_compare (b.title));
   }
   const start = (page - 1) * limit;
   const paginated = all.slice (start, start + limit);
   return { results: paginated, total_count: all.length }
 ;
-export default /**
- * SearchResultsPage - Function description
+export default /**;
+ * SearchResultsPage - Function description;
  */
-function SearchResultsPage() {  const router = use_router ();
+function SearchResultsPage() { return null; }
   const { is_authenticated } = use_auth ();
   const [results, set_results] = useState < SearchResult[]>(initial_results);
   const [loading, set_loading] = useState (false);
   const [search_query, setSearchQuery] = useState (query);
-  const debounced_query = use_debounce (search_query, 300);
+  const debounced_query = use_debounce (search_query, 300);'
   const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [current_page, setCurrentPage] = useState (1);
-  const [sort_by, setSortBy] = useState ('relevance');
-  const [category_filter, setCategoryFilter] = useState ('all');
-  const [min_price, setMinPrice] = useState ('');
-  const [max_price, setMaxPrice] = useState ('');
+  const [current_page, setCurrentPage] = useState (1);'
+  const [sort_by, setSortBy] = useState ('relevance');'
+  const [category_filter, setCategoryFilter] = useState ('all');'
+  const [min_price, setMinPrice] = useState ('');'
+  const [max_price, setMaxPrice] = useState ('');'
   const [min_rating, setMinRating] = useState ('');
   const [total_results, setTotalResults] = useState (total_count);
 ;
   // Fetch search results;
-  const fetch_results = async (search_term: string, page = 1) => {
-    try {
-      set_loading (true);
+  const fetch_results = async (search_term: string, page = 1) => {}
+    try {}
+      set_loading (true);`
       log_info (`Fetching search results for: ${search_term}, page: ${page}`);
-      const params = new URLSearchParams ({
+      const params = new URLSearchParams ({}
         query: search_term,
-        page: String (page),
+        page: String (page),'
         limit: '12',
-        sort: sort_by,
-      });      if (params.append ('category', category_filter)) {
-  $2
-}
-      if (params.append ('min_price', min_price)) {
-  $2
-}
-      if (params.append ('max_price', max_price)) {
-  $2
-}
-      if (params.append ('min_rating', min_rating)) {
-  $2
-}
+        sort: sort_by,'
+      });      if (params.append ('category', category_filter)) {}
+  $2;
+}'
+      if (params.append ('min_price', min_price)) {}
+  $2;
+}'
+      if (params.append ('max_price', max_price)) {}
+  $2;
+}'
+      if (params.append ('min_rating', min_rating)) {}
+  $2;
+}`
       const response = await fetch (`/api / search?${params.to_string ()}`);
 ;
-      // Check condition
-if ( {) {
-  $2
-}
+      // Check condition;
+if ( {) {}
+  $2;
+}`
         throw new Error (`Search API error: ${response.status}`);
       }
-      const data = await response.json ();
+      const data = await response.json ();'
       log_info ('Search results received:', { data: data });
       setTotalResults (data.total_count || data.results?.length || 0);
 ;
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         set_results (data.results || []);
-      } else {
+      } else {}
         set_results (prev => [...prev, ...(data.results || [])]);
       }
-    } catch (error) {
+    } catch (error) {'
       logErrorToProduction ('Error fetching search results:', { data: error });
-      const offline = offline_search (search_term, page, 12, {
-        sort_by,
+      const offline = offline_search (search_term, page, 12, {}
+        sort_by,'
         category: category_filter !== 'all' ? category_filter : undefined,
         min_price: min_price ? Number (min_price) : undefined,
         max_price: max_price ? Number (max_price) : undefined,
         min_rating: min_rating ? Number (min_rating) : undefined,
       });
       setTotalResults (offline.total_count);
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         set_results (offline.results);
-      } else {
+      } else {}
         set_results (prev => [...prev, ...offline.results]);
       }
-    } finally {
+    } finally {}
       set_loading (false);    }
   }
 ;
   // Handle search input change;
-  const handle_search = (new_query: string) =>: any {
+  const handle_search = (new_query: string) =>: any {}
     setSearchQuery (new_query),
-    if () {) {
-  $2
-}
-      router.push (`/search?q=${encodeURIComponent (new_query)}`, undefined, {
+    if () {) {}
+  $2;
+}`
+      router.push (`/search?q=${encodeURIComponent (new_query)}`, undefined, {}
         shallow: true,
       });
       setCurrentPage (1);    }
   }
 ;
-  useEffect (() => {
-    if () {) {
-  $2
+  useEffect (() => {}
+    if () {) {}
+  $2;
 }
       fetch_results (debounced_query, 1);
-    } else {
+    } else {}
       set_results ([]);
       setTotalResults (0);    }
   }, [debounced_query]);
 ;
   // Load more results;
-  const load_more = () =>: any {
+  const load_more = () =>: any {}
     const next_page = current_page + 1;
     setCurrentPage (next_page);
     fetch_results (search_query, next_page);
@@ -1600,56 +1715,56 @@ if ( {) {
   const categories = Array.from (
     new Set (results.map (r => r.category).filter (Boolean)));
 ;
-  const filtered_results = results.filter (r => {    // Check condition
-if ( {) {
-  $2
+  const filtered_results = results.filter (r => {    // Check condition;
+if ( {) {}
+  $2;
 }
       return false;
     }
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      if (< Number (min_price)) {) {
-  $2
-}
-        return false;      }
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      if (> Number (max_price)) {) {
-  $2
+      if (< Number (min_price)) {) {}
+  $2;
 }
         return false;      }
     }
-    if () {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      if (< Number (min_rating)) {) {
-  $2
+      if (> Number (max_price)) {) {}
+  $2;
 }
-=======
+        return false;      }
+    }
+    if () {) {}
+  $2;
+}
+      if (< Number (min_rating)) {) {}
+  $2;
+}
+
       return false;
-    }
-    if (minPrice && r.type === 'product') {
-      if ((r.price ?? 0) < Number(minPrice)) {
+    }'
+    if (minPrice && r.type === 'product') {}
+      if ((r.price ?? 0) < Number(minPrice)) {}
         return false;      }
-    }
-    if (maxPrice && r.type === 'product') {
-      if ((r.price ?? 0) > Number(maxPrice)) {
+    }'
+    if (maxPrice && r.type === 'product') {}
+      if ((r.price ?? 0) > Number(maxPrice)) {}
         return false;      }
-    }
-    if (minRating && (r.type === 'product' |r.type === 'talent')) {
-      if ((r.rating ?? 0) < Number(minRating)) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    }'
+    if (minRating && (r.type === 'product' |r.type === 'talent')) {}
+      if ((r.rating ?? 0) < Number(minRating)) {}
         return false;
       }
     }
     return true;  });
 
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
@@ -1804,18 +1919,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
+=======
+
+  // Group results by type for better display;
+  const groupedResults = filteredResults.reduce(
+    (acc, result) => {}
+      if (!acc[result.type]) acc[result.type] = [];
+      acc[result.type]!.push(result);
+
+  const renderResultCard = (result: SearchResult) => {}
+    switch (result.type) {'
+      case 'product':'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
       case 'equipment':
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
   // Group results by type for better display;
   const groupedResults = filteredResults && filteredResults.reduce(;
     (acc, result) => {;
@@ -1824,6 +1952,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       return acc;
     },;
     {} as Record<string, SearchResult[]>  );
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1832,10 +1961,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
   const renderResultCard = (result: SearchResult) => {;
-    switch (result && result.type) {;
-      case 'product':;
+    switch (result && result.type) {;'
+      case 'product':;'
       case 'equipment':;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
         return (
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -1878,35 +2011,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               product={{
 
+=======
+        return ('
+          <div key={result && result.id} data-testid='result-card'>            <ProductCard;
+              product={{}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                 id: result && result.id,
                 name: result && result.title,
-                title: result && result.title,
+                title: result && result.title,'
                 description: result && result.description || '',
                 price: result && result.price || 0,
                 images: result && result.image ? [result && result.image] : [],
                 rating: result && result.rating || 0,
                 reviewCount: 0,
-                tags: result && result.tags || [],
+                tags: result && result.tags || [],'
                 category: result && result.category || '',
 ;
   // Group results by type for better display;
   const grouped_results = filtered_results.reduce (
-    (acc, result) => {
-      // Check condition
-if (acc[result.type] = []) {
-  $2
+    (acc, result) => {}
+      // Check condition;
+if (acc[result.type] = []) {}
+  $2;
 }
       acc[result.type]!.push (result);
       return acc;
     },
     {} as Record < string, SearchResult[]>  );
 ;
-  const renderResultCard = (result: SearchResult) =>: any {
-    switch (result.type) {
-      case 'product':;
+  const renderResultCard = (result: SearchResult) =>: any {}
+    switch (result.type) {'
+      case 'product':;'
       case 'equipment':;
-        return (
+        return ('
           <div key={result.id} data - testid='result - card'>            <ProductCard;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
               product={{
 =======
 
@@ -1924,9 +2063,12 @@ if (acc[result.type] = []) {
               product={{
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+              product={{}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                 id: result.id,
                 name: result.title,
-                title: result.title,
+                title: result.title,'
                 description: result.description || '',
                 price: result.price || 0,
                 images: result.image ? [result.image] : [],
@@ -1937,12 +2079,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 review_count: 0,
-                tags: result.tags || [],
-                category: result.category || '',
+                tags: result.tags || [],'
+                category: result.category || '','
                 currency: '$',
                 created_at: new Date ().toISOString (),
                 updated_at: new Date ().toISOString (),
                 stock: (result as any).stock,
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2035,9 +2178,13 @@ in_stock: ((result as any).stock || 0) > 0,
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                 id: result.id,
                 user_id: result.id,
-                full_name: result.title,
+                full_name: result.title,'
                 professional_title: result.description || '',
                 profile_picture_url: result.image,
                 average_rating: result.rating,
@@ -2046,6 +2193,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2145,28 +2293,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <h3 className='font-semibold'>{result.title}</h3>
+=======
+
+          >'
+            <h3 className='font-semibold'>{result.title}</h3>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
             <p className='text-gray-600 dark:text-gray-200'>
               {result.description}
             </p>
           </div>
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
         )
     }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
 
-  };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-          >;
-            <h3 className='font-semibold'>{result && result.title}</h3>;
+          >;'
+            <h3 className='font-semibold'>{result && result.title}</h3>;'
             <p className='text-gray-600 dark:text-gray-200'>;
               {result && result.description}
             </p>;
           </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
         );    }
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -2316,25 +2471,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title={`Search Results for "${query}" - Zion Marketplace`  } catch (error) {
     console.error("Error:", error);
+=======
+
+  return (
+    <>;
+      <SEO;
+        <div"
+          className="container mx-auto px-4 py-8""
+          data-testid="search-results"
+        >
+          {/* Search Header */}
+
+"`
+        title={`Search Results for "${query}" - Zion Marketplace`  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`  } catch (error) {
-    console.error("Error:", error);
+}`
+        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-        keywords={`${query}, search, marketplace, products, talent, services`  } catch (error) {
-    console.error("Error:", error);
+}`
+        keywords={`${query}, search, marketplace, products, talent, services`  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-        canonical={`https://app.ziontechgroup.com/search/${slug}`  } catch (error) {
-    console.error("Error:", error);
+}`
+        canonical={`https://app.ziontechgroup.com/search/${slug}`  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
       />
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
@@ -2347,6 +2518,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         canonical={`https://app && app.ziontechgroup.com/search/${slug}`}
       />;
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
 
         <div
           className='container mx-auto px-4 py-8'
@@ -2364,6 +2537,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {filteredResults && filteredResults.length > 0;
                     ? `Found ${filteredResults && filteredResults.length} results for "${query}"`;
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 =======
 =======
@@ -2425,9 +2599,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="mb-8">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex-1">
+=======
+
+
+
+        <div"
+          className="container mx-auto px-4 py-8""
+          data-testid="search-results"
+        >
+
+"
+          <div className="mb-8">"
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">"
+              <div className="flex-1">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                  Search Results
+                  Search Results;
                 </h1>
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
                 <p
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -2435,10 +2624,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   className="text-gray-600 dark:text-gray-200"
+=======
+                <p"
+                  className="text-gray-600 dark:text-gray-200""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                   data-testid="results-count"
                 >
-                  {filteredResults.length > 0
+                  {filteredResults.length > 0"`
                     ? `Found ${filteredResults.length} results for "${query}"`
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2448,6 +2642,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                     : `No results found for "${query}"`}
 
                 </p>;
@@ -2457,10 +2655,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Search Input */}
 
 
-                <Input
+                <Input"
                   type="text"
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 =======
 =======
@@ -2472,12 +2671,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   value={searchQuery  } catch (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
+=======
+"`
+                    : `No results found for "${query}"`  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
                 </p>
               </div>
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
               {/* Search Input */}
               <div className='relative w-full lg:w-96'>
@@ -2544,24 +2749,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                   onChange={(e) => handleSearch(e.target.value)  } catch (error) {
     console.error("Error:", error);
+=======
+
+
+
+
+
+                <Input"
+                  type="text"
+                  value={searchQuery  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                  placeholder="Search marketplace..."
+                  onChange={(e) => handleSearch(e.target.value)  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+"
+                  placeholder="Search marketplace...""
                   className="pl-10"
                 />
-<<<<<<< HEAD
-              </div>
-            </div>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
               </div>
             </div>
 
 
-                  onChange={e => handleSearch(e && e.target.value)}
-                  placeholder='Search marketplace...';
+                  onChange={e => handleSearch(e && e.target.value)}'
+                  placeholder='Search marketplace...';'
                   className='pl-10'                />;
               </div>;
             </div>;
@@ -2571,6 +2788,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Controls */}
 
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -2679,11 +2897,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <select
+=======
+
+                <Button"
+                  variant="outline""
+                  size="sm""
+                  className="flex items-center gap-2""
+                  data-testid="filter-button"
+                >
+
+
+                </Button>
+                <select;
+'
+                  data-testid='filter-button'>;'
+                  <Filter className='h-4 w-4' />                  Filters;
+                </Button>;
+
+                <select;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                   value={sortBy}
-                  onChange={e => setSortBy(e && e.target.value)}
-                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';
+                  onChange={e => setSortBy(e && e.target.value)}'
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';'
                   data-testid='sort-select';
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2691,24 +2929,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                 router.push (`/talent/${id}`);
               }}
-              onRequestHire={talent => {
+              onRequestHire={talent => {}`
                 router.push (`/talent/${talent.id}?action = hire`);              }}
               is_authenticated={is_authenticated}
             />;
-          </div>);
+          </div>);'
       case 'category':;
-        return (
+        return ('
           <div key={result.id} data - testid='result - card'>            <CategoryCard;
-              title={result.title}
-              description={result.description || ''}
+              title={result.title}'
+              description={result.description || ''}'
               icon={result.image || '📁'}
             />;
           </div>);
       default:;
-          >;
-            <h3 className='font - semibold'>{result.title}</h3>;
+          >;'
+            <h3 className='font - semibold'>{result.title}</h3>;'
             <p className='text - gray - 600 dark:text - gray - 200'>;
               {result.description}
             </p>;
@@ -2717,60 +2958,61 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
   return (
     <>;
-      <SEO;
-        title={`Search Results for "${query}" - Zion Marketplace`}
-        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
-        keywords={`${query}, search, marketplace, products, talent, services`}
+      <SEO;"`
+        title={`Search Results for "${query}" - Zion Marketplace`}`
+        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}`
+        keywords={`${query}, search, marketplace, products, talent, services`}`
         canonical={`https://app.ziontechgroup.com / search/${slug}`}
-      />;
+      />;'
       <div className='min - h-screen bg - gray - 50 dark:bg - gray - 900'>;
-        <div;
-          className='container mx - auto px - 4 py - 8';
+        <div;'
+          className='container mx - auto px - 4 py - 8';'
           data - testid='search - results';
         >;
-          {/* Search Header */}
-          <div className='mb - 8'>;
-            <div className='flex flex - col lg:flex - row lg:items - center lg:justify - between gap - 4'>;
-              <div className='flex - 1'>;
+          {/* Search Header */}'
+          <div className='mb - 8'>;'
+            <div className='flex flex - col lg:flex - row lg:items - center lg:justify - between gap - 4'>;'
+              <div className='flex - 1'>;'
                 <h1 className='text - 3xl font - bold text - gray - 900 dark:text - white mb - 2'>;
                   Search Results;
                 </h1>;
-                <p;
-                  className='text - gray - 600 dark:text - gray - 200';
+                <p;'
+                  className='text - gray - 600 dark:text - gray - 200';'
                   data - testid='results - count'                >;
-                  {filtered_results.length > 0;
-                    ? `Found ${filtered_results.length} results for "${query}"`;
+                  {filtered_results.length > 0;"`
+                    ? `Found ${filtered_results.length} results for "${query}"`;"`
                     : `No results found for "${query}"`}
                 </p>;
               </div>;
-              {/* Search Input */}
-              <div className='relative w - full lg:w - 96'>;
+              {/* Search Input */}'
+              <div className='relative w - full lg:w - 96'>;'
                 <Search className='absolute left - 3 top - 1/2 -translate - y-1 / 2 h - 4 w - 4 text - gray - 200' />;
-                <Input;
+                <Input;'
                   type='text';
                   value={search_query}
-                  on_change={e => handle_search (e.target.value)}
-                  placeholder='Search marketplace...';
+                  on_change={e => handle_search (e.target.value)}'
+                  placeholder='Search marketplace...';'
                   className='pl - 10'                />;
               </div>;
             </div>;
-            {/* Controls */}
-            <div className='flex flex - wrap items - center justify - between gap - 4 mt - 6'>;
+            {/* Controls */}'
+            <div className='flex flex - wrap items - center justify - between gap - 4 mt - 6'>;'
               <div className='flex items - center gap - 2 flex - wrap'>;
-                <Button;
-                  variant='outline';
-                  size='sm';
-                  className='flex items - center gap - 2';
+                <Button;'
+                  variant='outline';'
+                  size='sm';'
+                  className='flex items - center gap - 2';'
                   data - testid='filter - button';
-                >;
+                >;'
                   <Filter className='h - 4 w - 4' />                  Filters;
                 </Button>;
                 <select;
                   value={sort_by}
-                  on_change={e => setSortBy (e.target.value)}
-                  className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
+                  on_change={e => setSortBy (e.target.value)}'
+                  className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';'
                   data - testid='sort - select';
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2848,24 +3090,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                <div className='flex items-center gap-1'>
 =======
+
+
+                >;'
+                  <option value='relevance'>Relevance</option>;'
+                  <option value='newest'>Newest</option>;'
+                  <option value='price_asc'>Price: Low to High</option>;'
+                  <option value='price_desc'>Price: High to Low</option>;'
+                  <option value='rating'>Highest Rated</option>                </select>;
+
+
+
+                  <input"
+                    type="number""
+                    placeholder="Min $"
+                    value={minPrice}
+                    onChange={(e) => setMinPrice(e.target.value)}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
+                <div className='flex items-center gap-1'>
+"
                   <option value="all">All Categories</option>
                   {categories.map((c) => (
                     <option key={c} value={c}>
-                      {c  } catch (error) {
-    console.error("Error:", error);
+                      {c  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     </option>;
-                  ))  } catch (error) {
-    console.error("Error:", error);
+                  ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                </select>
+                </select>"
                 <div className="flex items-center gap-1">
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -2940,27 +3202,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <input
                     type="number"
+=======
+
+
+
+                  <input"
+                    type="number""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                     placeholder="Min $"
-                    value={minPrice  } catch (error) {
-    console.error("Error:", error);
+                    value={minPrice  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    onChange={(e) => setMinPrice(e.target.value)  } catch (error) {
-    console.error("Error:", error);
+                    onChange={(e) => setMinPrice(e.target.value)  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
                   <span>-</span>
-                  <input
-                    type="number"
+                  <input"
+                    type="number""
                     placeholder="Max $"
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2969,29 +3243,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     value={maxPrice}
                     onChange={(e) => setMaxPrice(e.target.value)}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
-=======
-<<<<<<< HEAD
-                    value={maxPrice}
-                    onChange={(e) => setMaxPrice(e.target.value)}
-=======
-                    value={maxPrice  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onChange={(e) => setMaxPrice(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
-                  />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
                 </div>
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
                 <select
 
 <<<<<<< HEAD
@@ -3059,76 +3319,57 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-
-
-                <select
-                  value={minRating}
-                  onChange={e => setMinRating(e && e.target.value)}
-                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';
-
 =======
                 <select;
-                  value={category_filter}
-                  on_change={e => setCategoryFilter (e.target.value)}
-                  className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
-                >;
-                  <option value='all'>All Categories</option>;
-                  {categories.map (c => (                    <option key={c} value={c}>;
-                      {c}
-                    </option>))}
-                </select>;
-                <div className='flex items - center gap - 1'>;
-                  <input;
-                    type='number';
-                    placeholder='Min $';
-                    value={min_price}
-                    on_change={e => setMinPrice (e.target.value)}
-                    className='w - 20 px - 2 py - 1 border border - gray - 300 rounded - md text - sm';
-                  />;
-                  <span>-</span>;
-                  <input;
-                    type='number';
-                    placeholder='Max $';
-                    value={max_price}
-                    on_change={e => setMaxPrice (e.target.value)}
-                    className='w - 20 px - 2 py - 1 border border - gray - 300 rounded - md text - sm'                  />;
-                </div>;
-                <select;
-                  value={min_rating}
-                  on_change={e => setMinRating (e.target.value)}
-                  className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
+                  value={minRating}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                >;
-                  <option value=''>All Ratings</option>;
-                  <option value='4'>4★ & up</option>;
-                  <option value='3'>3★ & up</option>;
+                    onChange={e => setMaxPrice(e && e.target.value)}'
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />;
+                </div>;
+                  onChange={(e) => setMinRating(e.target.value)}
+
+"
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                >"
+                  <option value="">All Ratings</option>"
+                  <option value="4">4★ & up</option>"
+                  <option value="3">3★ & up</option>"
+                  <option value="2">2★ & up</option>
+                </select>
+              </div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
+
+                >;'
+                  <option value=''>All Ratings</option>;'
+                  <option value='4'>4★ & up</option>;'
+                  <option value='3'>3★ & up</option>;'
                   <option value='2'>2★ & up</option>;
                 </select>;
               </div>;
 
 
-                <Button
-                  variant={viewMode === 'grid' ? 'default' : 'outline'}
-                  size='sm'
-                  onClick={() => setViewMode('grid')}
-                  data-testid='view-mode-grid';
+                <Button'
+                  variant={viewMode === 'grid' ? 'default' : 'outline'}'
+                  size='sm''
+                  onClick={() => setViewMode('grid')}'
+                  data-testid='view-mode-grid';'
                   className={viewMode === 'grid' ? 'active' : ''}
-                >;
+                >;'
                   <Grid className='h-4 w-4' />;
                 </Button>;
-                <Button
-                  variant={viewMode === 'list' ? 'default' : 'outline'}
-                  size='sm'
-                  onClick={() => setViewMode('list')}
-                  data-testid='view-mode-list';
+                <Button'
+                  variant={viewMode === 'list' ? 'default' : 'outline'}'
+                  size='sm''
+                  onClick={() => setViewMode('list')}'
+                  data-testid='view-mode-list';'
                   className={viewMode === 'list' ? 'active' : ''}
 
 
-=======
 
+"
               <div className="flex items-center gap-2">
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -3136,24 +3377,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
+=======
+
+
+                <Button'
+                  variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                  size="sm"'
+                  onClick={() => setViewMode('grid')  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                  data-testid="view-mode-grid"'
+                  className={viewMode === 'grid' ? 'active' : ''  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  size="sm"
-                  onClick={() => setViewMode('grid')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  data-testid="view-mode-grid"
-                  className={viewMode === 'grid' ? 'active' : ''  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                >
+                >"
                   <Grid className="h-4 w-4" />
                 </Button>
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
                 <Button
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -3182,10 +3431,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >;
+=======
+                <Button;
+                >;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                   <List className='h-4 w-4' />                </Button>;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3214,53 +3468,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
 =======
-
-
-
 =======
-              <div className='flex items - center gap - 2'>;
-                <Button;
-                  variant={view_mode === 'grid' ? 'default' : 'outline'}
-                  size='sm';
-                  on_click={() => setViewMode ('grid')}
-                  data - testid='view - mode - grid';
-                  className={view_mode === 'grid' ? 'active' : ''}
-                >;
-                  <Grid className='h - 4 w - 4' />;
-                </Button>;
-                <Button;
-                  variant={view_mode === 'list' ? 'default' : 'outline'}
-                  size='sm';
-                  on_click={() => setViewMode ('list')}
-                  data - testid='view - mode - list';
-                  className={view_mode === 'list' ? 'active' : ''}
-                >;
-                  <List className='h - 4 w - 4' />                </Button>;
-              </div>;
-            </div>;
-          </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
+
           {/* Loading State */}
 
           {loading && results.length === 0 && (
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {!loading && filteredResults.length === 0 && (
+=======
+          {!loading && filteredResults.length === 0 && ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
 <<<<<<< HEAD
 
-          {filteredResults.length > 0 && (
+          {filteredResults.length > 0 && ("
             <div className="space-y-8">
               {Object.entries(groupedResults).map(([type, typeResults]) => (
-                <div key={type}>
+                <div key={type}>"
                   <h2 className="text-xl font-semibold text-gray-900 dark: text-white mb-4 capitalize">
                     {type}s ({typeResults.length})
 
                   </h2>
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -3484,6 +3720,64 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className={
                       viewMode === 'grid'
                         ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
+=======
+
+
+          {filteredResults && filteredResults.length > 0 && (;'
+            <div className='space-y-8'>;
+              {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
+                <div key={type}>;'
+                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
+                  </h2>;
+
+
+
+
+
+                <Button'
+                  variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                  size="sm"'
+                  onClick={() => setViewMode('grid')  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                  data-testid="view-mode-grid"'
+                  className={viewMode === 'grid' ? 'active' : ''  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >"
+                  <Grid className="h-4 w-4" />
+                </Button>
+                <Button;
+          {/* Loading State */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          {loading && results.length === 0 && (
+
+
+
+
+
+          {!loading && filteredResults.length === 0 && ("
+            <div data-testid="search-empty-state">
+              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
+            </div>
+
+
+                  <div;
+                    className={'
+                      viewMode === 'grid''
+                        ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                         : 'space-y-4'
                     }>;
                     {typeResults && typeResults.map(renderResultCard)}
@@ -3491,6 +3785,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               ))}
               {/* Load More Button */}
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 =======
@@ -3525,12 +3820,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
                     )}
                   </Button>;
                 </div>;
               )}
             </div>;
           )}
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3589,13 +3888,18 @@ export const getServerSideProps: GetServerSideProps<;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
+=======
+'
+      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`),
-    const response = await fetch(
+    const response = await fetch(`
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`;
     );
-<<<<<<< HEAD
+
     let results = [];
     let totalCount = 0;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
     if (response.ok) {
 =======
@@ -3616,22 +3920,26 @@ export const getServerSideProps: GetServerSideProps<;
     let totalCount = 0;
 
             <div className='flex justify - center py - 12'>;
+=======
+'
+            <div className='flex justify - center py - 12'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
               <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600'></div>            </div>)}
           {/* Empty State */}
-          {!loading && filtered_results.length === 0 && (
+          {!loading && filtered_results.length === 0 && ('
             <div data - testid='search - empty - state'>              <SearchEmptyState on_retry={() => fetch_results (search_query)} />;
             </div>)}
           {/* Results */}
-          {filtered_results.length > 0 && (
+          {filtered_results.length > 0 && ('
             <div className='space - y-8'>;
               {Object.entries (grouped_results).map (([type, type_results]) => (
-                <div key={type}>;
+                <div key={type}>;'
                   <h2 className='text - xl font - semibold text - gray - 900 dark:text - white mb - 4 capitalize'>                    {type}s ({type_results.length});
                   </h2>;
                   <div;
-                    className={
-                      view_mode === 'grid';
-                        ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6';
+                    className={'
+                      view_mode === 'grid';'
+                        ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6';'
                         : 'space - y-4';
                     }
                   >;
@@ -3639,17 +3947,17 @@ export const getServerSideProps: GetServerSideProps<;
                   </div>;
                 </div>))}
               {/* Load More Button */}
-              {results.length < total_results && (
+              {results.length < total_results && ('
                 <div className='flex justify - center py - 8'>;
                   <Button;
                     on_click={load_more}
-                    disabled={loading}
+                    disabled={loading}'
                     className='flex items - center gap - 2';
                   >;
                     {loading ? (
-                      <>;
+                      <>;'
                         <div className='animate - spin rounded - full h - 4 w - 4 border - b-2 border - white'></div>                        Loading...;
-                      </>) : (
+                      </>) : ('
                       'Load More Results')}
                   </Button>;
                 </div>)}
@@ -3659,33 +3967,34 @@ export const getServerSideProps: GetServerSideProps<;
     </>);
 export const getServerSideProps: GetServerSideProps<;
   SearchResultsPageProps;
-> = async (context: any) => {
+> = async (context: any) => {}
   const params = context.params;
   const slug = params?.slug as string,
-  // Convert slug back to query term;
+  // Convert slug back to query term;'
   const query = slug ? slug.replace (/-/g, ' ') : '';
 ;
-  try {
+  try {}
     // In production, replace with your actual API base URL;
-    const apiBaseUrl =;
-      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
+    const apiBaseUrl =;'
+      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',`
     log_info (`Fetching search results for slug: ${slug}, query: ${query}`);
 ;
-    const response = await fetch (
+    const response = await fetch (`
       `${apiBaseUrl}/api / search?query=${encodeURIComponent (query)}&limit = 12`    );
 ;
     let results = [];
     let total_count = 0;
 ;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       const data = await response.json ();
       results = data.results || [];
-      total_count = data.total_count || results.length;
+      total_count = data.total_count || results.length;`
       log_info (`Server - side fetch successful: ${results.length} results`);
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -3758,13 +4067,23 @@ logInfo(`Server-side fetch successful: ${results.length} results`);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+    } else {}
+      logErrorToProduction (`
+        `Search API error: ${response.status} ${response.status_text}`);'
+      const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
+      results = offline.results;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
       results = data.results || [];
-      totalCount = data.totalCount || results.length;
+      totalCount = data.totalCount || results.length;`
       logInfo(`Server-side fetch successful: ${results.length} results`)
-    } else {
-      logErrorToProduction(`Search API error: ${response.status} ${response.statusText}`),
+    } else {}`
+      logErrorToProduction(`Search API error: ${response.status} ${response.statusText}`),'
       const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
       results = offline.results;
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
       totalCount = offline.totalCount
 <<<<<<< HEAD
 =======
@@ -3776,10 +4095,13 @@ logInfo(`Server-side fetch successful: ${results.length} results`);
       totalCount = offline.totalCount;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+      totalCount = offline.totalCount;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
     }
 
-    return {
-      props: {
+    return {}
+      props: {}
         initialResults: results,
 <<<<<<< HEAD:pages/search/[slug].tsx
 <<<<<<< HEAD
@@ -3789,11 +4111,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         query;
         slug;
         totalCount}}
-  } catch (error) {
-    logErrorToProduction('Error fetching search results:', { data: error }),
+  } catch (error) {'
+    logErrorToProduction('Error fetching search results:', { data: error }),'
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
-    return {
-      props: {
+    return {}
+      props: {}
         initialResults: offline.results,
         query;
         slug;
@@ -3806,14 +4128,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       total_count = offline.total_count;    }
-    return {
-      props: {
+    return {}
+      props: {}
         initial_results: results,
         query,
         slug,
         total_count,
       },
     }
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 =======
 =======
@@ -3832,10 +4155,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
   } catch (error) {
     logErrorToProduction ('Error fetching search results:', { data: error });
+=======
+  } catch (error) {'
+    logErrorToProduction ('Error fetching search results:', { data: error });'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
     const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
 ;
-    return {
-      props: {
+    return {}
+      props: {}
         initial_results: offline.results,
         query,
         slug,
@@ -3846,6 +4173,7 @@ total_count: offline.total_count,
 ;
 
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3855,88 +4183,93 @@ total_count: offline.total_count,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           )  } catch (error) {
     console.error("Error:", error);
+=======
+
+          )  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-          {/* Results */  } catch (error) {
-    console.error("Error:", error);
+          {/* Results */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          {filteredResults.length > 0 && (;
+          {filteredResults.length > 0 && (;"
             <div className="space-y-8">;
               {Object.entries(groupedResults).map(([type, typeResults]) => (;
-                <div key={type}>;
+                <div key={type}>;"
                   <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize">;
                     {type}s ({typeResults.length});
                   </h2>;
                   <div;
-                    className={;
-                      viewMode === 'grid';
-                        ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';
+                    className={;'
+                      viewMode === 'grid';'
+                        ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6';'
                         : 'space-y-4';
-                      } catch (error) {
-    console.error("Error:", error);
+                      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   >;
-                    {typeResults.map(renderResultCard)  } catch (error) {
-    console.error("Error:", error);
+                    {typeResults.map(renderResultCard)  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </div>;
                 </div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
+              ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-              {/* Load More Button */  } catch (error) {
-    console.error("Error:", error);
+              {/* Load More Button */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              {results.length < totalResults && (;
+              {results.length < totalResults && (;"
                 <div className="flex justify-center py-8">;
                   <Button;
-                    onClick={loadMore  } catch (error) {
-    console.error("Error:", error);
+                    onClick={loadMore  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    disabled={loading  } catch (error) {
-    console.error("Error:", error);
+                    disabled={loading  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
                     className="flex items-center gap-2";
                   >;
                     {loading ? (;
-                      <>;
+                      <>;"
                         <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>;
                         Loading...;
                       </>;
-                    ) : (;
+                    ) : (;'
                       'Load More Results';
-                    )  } catch (error) {
-    console.error("Error:", error);
+                    )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </Button>;
                 </div>;
-              )  } catch (error) {
-    console.error("Error:", error);
+              )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             </div>;
-          )  } catch (error) {
-    console.error("Error:", error);
+          )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -3944,8 +4277,8 @@ total_count: offline.total_count,
       </div>;
     </>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -3955,22 +4288,21 @@ export const getServerSideProps: GetServerSideProps<;
 > = async (context: any) => {;
   const params = context.params;
   const slug = params?.slug as string;
-  // Convert slug back to query term;
+  // Convert slug back to query term;'
   const query = slug ? slug.replace(/-/g, ' ') : '',;
-  try {
+  try {}
     // In production, replace with your actual API base URL;
-    const apiBaseUrl =;
-      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',;
+    const apiBaseUrl =;'
+      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',;`
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`);
-    const response = await fetch(;
+    const response = await fetch(;`
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`);
     let results = [];
     let totalCount = 0;
     if (response.ok) {;
-<<<<<<< HEAD
-=======
 
 
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -3980,10 +4312,13 @@ export const getServerSideProps: GetServerSideProps<;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx
       const data = await response.json();
       results = data.results || [];
-      totalCount = data.totalCount || results.length;
+      totalCount = data.totalCount || results.length;`
       logInfo(`Server-side fetch successful: ${results.length} results`);
+<<<<<<< HEAD:pages_backup/search/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
     } else {
@@ -4100,3 +4435,8 @@ totalCount: offline.totalCount,
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/search/[slug].tsx
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/search/[slug].tsx

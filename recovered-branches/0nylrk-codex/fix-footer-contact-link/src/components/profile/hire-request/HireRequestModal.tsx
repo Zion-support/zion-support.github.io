@@ -67,27 +67,28 @@ import { UserProfile } from "@/types/auth",
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from "react";
-import {
+import {}
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { HireRequestForm } from "./HireRequestForm";
-import { TalentProfile } from "@/types/talent";
+  DialogTitle,";
+} from "@/components/ui/dialog";"
+import { HireRequestForm } from "./HireRequestForm";"
+import { TalentProfile } from "@/types/talent";"
 import { UserProfile } from "@/types/auth";
-interface HireRequestModalProps {
+interface HireRequestModalProps {}
   talent: TalentProfile | null;
   isOpen: boolean;
   onClose: () => void;
   userDetails?: UserProfile;
 }
 
-export function HireRequestModal({
+export function HireRequestModal({}
   talent,
   isOpen,
   onClose,
   userDetails,
+<<<<<<< HEAD
 }: HireRequestModalProps) {
   const handleClose = () => {
 <<<<<<< HEAD
@@ -108,6 +109,10 @@ export function HireRequestModal({
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+}: HireRequestModalProps) {}
+  const handleClose = () => {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     onClose();
   };
 
@@ -260,9 +265,9 @@ import {UserProfile} from "@/types/auth";
 
 <<<<<<< HEAD
   return (
-    <Dialog open={isOpen} onOpenChange={handleClose}>;
+    <Dialog open={isOpen} onOpenChange={handleClose}>;"
       <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">;
-        <DialogHeader>;
+        <DialogHeader>;"
           <DialogTitle className="text-xl font-bold text-white">;
 <<<<<<< HEAD
             Hire {talent.full_name}
@@ -271,11 +276,13 @@ import {UserProfile} from "@/types/auth";
         <HireRequestForm
 =======
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Hire {talent.full_name}
 =======
 import React from "react",
@@ -296,7 +303,7 @@ import { UserProfile } from "@/types/auth",            Hire {talent.full_name}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-        <HireRequestForm
+        <HireRequestForm;
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
@@ -306,6 +313,7 @@ import { UserProfile } from "@/types/auth",            Hire {talent.full_name}
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -355,6 +363,19 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails } HireRe
         <DialogHeader>;
           <DialogTitle className="text-xl font-bold text-white">;
             Hire {talent.full_name}
+=======
+
+
+            Hire {talent.full_name}
+          </DialogTitle>
+        </DialogHeader>
+
+        <HireRequestForm;
+          talent={talent}
+          onClose={handleClose}
+          userDetails={userDetails}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </DialogTitle>;
         </DialogHeader>;
         <HireRequestForm;
@@ -365,4 +386,8 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails } HireRe
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

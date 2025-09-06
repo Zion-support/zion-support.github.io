@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/admin/source-map.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 export { default } from "../dev/tree",
@@ -35,3 +36,14 @@ export { default } from "../dev/tree";
 =======
 export { default } from '../dev/tree';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/source-map.tsx

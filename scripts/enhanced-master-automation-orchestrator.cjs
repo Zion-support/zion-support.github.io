@@ -1,8 +1,11 @@
 
 
+<<<<<<< HEAD
 
 main
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -39,6 +42,7 @@ main
 }
 
 // Run the enhanced orchestrator
+<<<<<<< HEAD
 main();#!/usr/bin/env node;
 
 main();
@@ -48,6 +52,15 @@ main();
 main();#!/usr/bin/env node;
 
 main
+=======
+
+
+
+
+
+
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const fs = require('fs')
 const path = require('path')

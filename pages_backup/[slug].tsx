@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/[slug].tsx
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
@@ -103,40 +104,48 @@ return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
+=======
+
+
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
-import React, { useMemo } from 'react';
-import Head from 'next / head';
+}'
+import React, { useMemo } from 'react';'
+import Head from 'next / head';'
 import {GetStaticPaths, GetStaticProps} from 'next';
 
         return false;
       }
     });
-    // Check condition
-if (return by_link) {
-  $2
+    // Check condition;
+if (return by_link) {}
+  $2;
 }
-  }, [slug]);
-import React, { useMemo } from 'react';
+  }, [slug]);'
+import React, { useMemo } from 'react';'
 import Head from 'next/head';
+<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -144,17 +153,16 @@ import Head from 'next/head';
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 
-type Service = typeof enhancedRealMicroSaasServices[number];
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-function getAllServices(): Service[] {
-  return enhancedRealMicroSaasServices
+function getAllServices(): Service[] {}
+  return enhancedRealMicroSaasServices;
     .concat(extraServices as Service[], additionalEnhancedServices as Service[])
     .concat(newlyAddedServices as unknown as Service[])
     .concat(curatedMarketServices as Service[])
     .concat(new2025Services as unknown as Service[])
-=======
+
 
 function getAllServices(): any (): Service[] {;
   return enhancedRealMicroSaasServices;
@@ -167,14 +175,14 @@ function getAllServices(): any (): Service[] {;
 		.concat(verified2025Additions as unknown as Service[]);
 		.concat(realServicesQ12025 as unknown as Service[]);
 		.concat(realEnterpriseServices2025 as unknown as Service[]);
-=======
+
     if (byLink) return byLink;
   }, [slug]);
-=======
-import React, { useMemo } from 'react';
+'
+import React, { useMemo } from 'react';'
 import Head from 'next/head';
-=======
 
+<<<<<<< HEAD:pages_backup/[slug].tsx
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -205,14 +213,33 @@ type Service = typeof enhancedRealMicroSaasServices[number];
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+'
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';'
+import Button from '../components/ui/Button';'
+import Card from '../components/ui/Card';'
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';'
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';'
+import { extraServices } from '../data/extra-services';'
+import { additionalEnhancedServices } from '../data/additional-real-services';'
+import { newlyAddedServices } from '../data/newly-added-services';'
+import { new2025Services } from '../data/new-2025-services';'
+import { marketValidatedServices } from '../data/market-validated-services';'
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';'
+import { realServicesQ32025 } from '../data/real-services-q3-2025';'
+import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-additions';'
+import { real2026Q1Additions } from '../data/real-2026-q1-additions';'
+import fs from 'fs';'
+import path from 'path';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
+
+
+
 type Service = typeof enhancedRealMicroSaasServices[number];
+<<<<<<< HEAD:pages_backup/[slug].tsx
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -221,11 +248,17 @@ type Service = typeof enhancedRealMicroSaasServices[number];
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
+=======
+
+function getAllServices(): Service[] {}
+  return enhancedRealMicroSaasServices;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
     .concat(extraServices as Service[], additionalEnhancedServices as Service[])
     .concat(newlyAddedServices as unknown as Service[])
     .concat(curatedMarketServices as Service[])
     .concat(new2025Services as unknown as Service[])
 		.concat(marketValidatedServices as unknown as Service[]);
+<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -251,6 +284,10 @@ function getAllServices(): Service[] {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[]);
 		.concat(realMarketAugmentations2025 as unknown as Service[]);
 		.concat(additionalLiveServices2025 as unknown as Service[]);
@@ -260,6 +297,7 @@ function getAllServices(): Service[] {
 		.concat(realServicesQ32025 as unknown as Service[]);
 		.concat(realQ4Services2025 as unknown as Service[]);
 		.concat(real2025Q4Additions as unknown as Service[]);
+<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 		.concat(realMarketServicesExtended as unknown as Service[]);
@@ -272,6 +310,9 @@ function getAllServices(): Service[] {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 
 
 	const services = getAllServices(),
@@ -285,11 +326,12 @@ function getAllServices(): Service[] {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 		fallback: false;
 	}
-export async function getStaticProps() {
-	const services = getAllServices()
-	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')
+export async function getStaticProps() {}
+	const services = getAllServices()'
+	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')'
 	let service: Service | undefined = services.find((s) => toSlug(s.id |'') === incomingSlug |toSlug(s.name |'') === incomingSlug)
 	if (!service) {return { notFound: true }
+<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -583,11 +625,15 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
-				<title>{service.name} | Zion Tech Group</title>
-				<meta name="description" content={service.tagline |service.description} />
+				<title>{service.name} | Zion Tech Group</title>"
+				<meta name="description" content={service.tagline |service.description} />"
 				<link rel="canonical" href={canonical} />
+<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -599,15 +645,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 
 
-export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;
-	const canonical = `https://ziontechgroup && ziontechgroup.com/${toSlug(service && service.id || service && service.name || '')}`,	return (
+
+;
+export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;'
+	const canonical = `https://ziontechgroup && ziontechgroup.com/${toSlug(service && service.id || service && service.name || '')}`,	return ("
 		<UltraFuturisticBackground variant="quantum" intensity="high">;
 			<Head>;
-				<title>{service && service.name} | Zion Tech Group</title>;
-				<meta name="description" content={service && service.tagline || service && service.description} />;
+				<title>{service && service.name} | Zion Tech Group</title>;"
+				<meta name="description" content={service && service.tagline || service && service.description} />;"
 				<link rel="canonical" href={canonical} />;
+<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -618,9 +669,15 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 				<script
+=======
+
+
+				<script"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 					type="application/ld+json"
-					dangerouslySetInnerHTML={{
+					dangerouslySetInnerHTML={{}
 						__html: JSON && JSON.stringify(
+<<<<<<< HEAD:pages_backup/[slug].tsx
 							{
 <<<<<<< HEAD:pages/[slug].tsx
 <<<<<<< HEAD
@@ -854,17 +911,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 								))  } catch (error) {
     console.error("Error:", error);
+=======
+							{}
+"
+									<li key={f} className="flex items-start gap-2">"
+										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
+										<span>{f}</span>
+									</li>
+
+								))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -956,12 +1025,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 								<div className="flex items-start gap-2 text-gray-300">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
-								</div>
+=======
+
 							</div>
-							<div className="mt-6">
+						</Card>
+					</div>"
+					<div className="space-y-6">"
+						<Card className="p-6 bg-black/40 border border-gray-700/50">"
+							<div className="text-3xl font-bold text-white">{service.price} <span className="text-base text-gray-400">{service.period}</span></div>"
+							<p className="text-gray-400 text-sm mt-1">Transparent pricing with market references</p>"
+							<div className="mt-4 space-y-3">"
+								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">"
+									<Phone className="w-4 h-4" /> +1 302 464 0950;
+								</a>
+
+
+
+"
+								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">"
+									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com;
+								</a>"
+								<div className="flex items-start gap-2 text-gray-300">
+
+"
+									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
+								</div>
+							</div>"
+							<div className="mt-6">"
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
+<<<<<<< HEAD:pages_backup/[slug].tsx
 
 <<<<<<< HEAD
 
@@ -991,6 +1086,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -998,6 +1096,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD:pages/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1119,8 +1218,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 ;
-function getAllServices (): Service[] {
+function getAllServices (): Service[] {}
   return enhancedRealMicroSaasServices;
     .concat (extra_services as Service[], additionalEnhancedServices as Service[]);
     .concat (newlyAddedServices as unknown as Service[]);
@@ -1150,18 +1252,22 @@ function getAllServices (): Service[] {
   .concat (real2027Q1Additions as unknown as Service[]);
   .concat (newSaasItAiServices2025 as unknown as Service[]);
 ;
-function to_slug (value: string): string {
+function to_slug (value: string): string {'
 return value.toLowerCase ().replace (/[^a - z0 - 9]+/g, '-').replace (/(^-|-$)/g, '');
 ;
-function getExistingRootPageSlugs (): Set < string> {
+function getExistingRootPageSlugs (): Set < string> {'
 const pages_dir = path.join (process.cwd (), 'pages'),
-const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
+const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),'
 const reserved = new Set < string>(['apireportsservices']),
 const slugs = new Set < string>(),
+<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1180,55 +1286,64 @@ const slugs = new Set < string>(),
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD:pages_backup/[slug].tsx
 =======
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
 	);
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx
   }
   // Directories at root (folder routes);
-  if () {) {
-  $2
+  if () {) {}
+  $2;
 }
   slugs.add (entry.name);
 }
   return slugs;
 ;
 ;
-export async /**
- * getStaticPaths - Function description
+export async /**;
+ * getStaticPaths - Function description;
  */
-function getStaticPaths() {
+function getStaticPaths() {}
 const services = getAllServices (),
 const slugs = new Set < string>(),
   })),
   fallback: false;
 }
 ;
-export async /**
- * getStaticProps - Function description
+export async /**;
+ * getStaticProps - Function description;
  */
-function getStaticProps() {
-const services = getAllServices (),
-const incoming_slug = (params?.slug || '').replace (/^\/+|\/+$/g, ''),
+function getStaticProps() {}
+const services = getAllServices (),'
+const incoming_slug = (params?.slug || '').replace (/^\/+|\/+$/g, ''),'
 let service: Service | undefined = services.find ((s) => to_slug (s.id || '') === incoming_slug || to_slug (s.name || '') === incoming_slug),
-// Check condition
-if ( {) {
-  $2
+// Check condition;
+if ( {) {}
+  $2;
 }
   return { not_found: true }
   }
+<<<<<<< HEAD:pages_backup/[slug].tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1260,3 +1375,8 @@ if ( {) {
 ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/[slug].tsx
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/[slug].tsx

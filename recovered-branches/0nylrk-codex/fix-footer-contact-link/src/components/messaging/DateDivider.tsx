@@ -1,26 +1,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import React from "react";
+
+import React from "react";"
 import { format } from "date-fns";
-interface DateDividerProps {
-
-
-import React from 'react';
+interface DateDividerProps {}
+import React from 'react';'
 import { format } from 'date-fns';
 
   date: Date;
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -30,20 +30,30 @@ import { format } from 'date-fns';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
+=======
+"
+import React from "react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { format } from "date-fns";
 interface DateDividerProps {;
   date: Date;
 }
 
+<<<<<<< HEAD
 import React from './react';
+=======
+'
+import React from './react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { format  } from './date - fns';
-interface DateDividerProps {
+interface DateDividerProps {}
   date: Date;
 
 }
-export /**
- * DateDivider - Function description
+export /**;
+ * DateDivider - Function description;
  */
+<<<<<<< HEAD
 function DateDivider() {
   return (
     <div className="flex items - center my-4">;
@@ -86,6 +96,18 @@ interface DateDividerProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+function DateDivider() {}
+  return ("
+    <div className="flex items - center my - 4">;"
+      <div className="flex - 1 border - t border - zion - purple / 20"></div>;"
+      <div className="px - 3 text - xs text - zion - slate">;"
+        {format (date, "MMM d, yyyy")}
+      </div>;"
+      <div className="flex - 1 border - t border - zion - purple / 20"></div>;
+    </div>);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   date: Date;
 =======
 }  date: Date;
@@ -94,9 +116,10 @@ interface DateDividerProps {
 }  date: Date;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
-
-import React from 'react';
+'
+import React from 'react';'
 import { format } from 'date-fns';
+<<<<<<< HEAD
 
 }
 
@@ -123,14 +146,29 @@ function DateDivider() {
     <div className="flex items-center my-4">
       <div className="flex-1 border-t border-zion-purple/20"></div>
       <div className="px-3 text-xs text-zion-slate">
+=======
+interface DateDividerProps {}
+  date: Date;
+}
+export function DateDivider({ date }: DateDividerProps) {}
+  return ("
+    <div className="flex items-center my-4">"
+      <div className="flex-1 border-t border-zion-purple/20"></div>"
+      <div className="px-3 text-xs text-zion-slate">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {format(date, "MMM d, yyyy")}
-      </div>
-      <div className="flex-1 border-t border-zion-purple/20"></div>
+      </div>"
+      <div className="flex-1 border-t border-zion-purple/20"></div>;
     </div>;
   );
   date: Date;
 
+<<<<<<< HEAD
 import React from 'react';
+=======
+'
+import React from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { format } from 'date-fns';
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -138,6 +176,7 @@ import { format } from 'date-fns';
 interface DateDividerProps {;
   date: Date;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -145,13 +184,18 @@ interface DateDividerProps {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from './react';
+=======
+'
+import React from './react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { format  } from './date - fns';
-interface DateDividerProps {
+interface DateDividerProps {}
   date: Date;
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 }
@@ -169,3 +213,7 @@ interface DateDividerProps {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

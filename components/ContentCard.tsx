@@ -1,19 +1,19 @@
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
+}'
 import React from 'react';
   title: string;
   description: string;
@@ -52,7 +52,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
 origin/cursor/automate-test-improve-and-merge-code-2533
             {category}
           </span>;
-        )}
+        )}'
           <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>            {category}
 
             {category}
@@ -61,7 +61,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </div>
 
-      {/* Content */}
+      {/* Content */}'
       <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>;
         {title}
       {/* Footer */}
@@ -73,31 +73,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {description}
 origin/cursor/automate-test-improve-and-merge-code-2533
       </p>
+<<<<<<< HEAD
       {/* Footer */}
 <div className='flex items-center justify-between'>
+=======
+      {/* Footer */}'
+      <div className='flex items-center justify-between'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300'>
-          Read More
-
-
-
+          Read More;
           </span>
 
         {description}
       </p>
       {/* Footer */}
-      <div className="flex items-center justify-between">
-        <div className="inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300">
-      <div className='flex items-center justify-between'>;
+      <div className="flex items-center justify-between">"
+        <div className="inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300">'
+      <div className='flex items-center justify-between'>;'
         <div className='inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300'>;
-          Read More;
+          Read More;'
           <span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>;
-            →;
+            →;"
           </span>      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">;
         {title}
-          Read More
+          Read More"
           <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
         </div>
-        {date && (
+        {date && ('
       <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </Link>;
           <span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>
@@ -116,52 +118,52 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 };
 
-export default ContentCard;
+export default ContentCard;'
       <div className='flex items - start justify - between mb - 6'>;
         <div;
           className={`w - 12 h - 12 bg - gradient - to - br ${color} rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300`}
-        >;
+        >;'
           <span className='text - 2xl'>{icon}</span>;
         </div>;
-        {category && (
+        {category && ('"
           <span className='px - 3 py - 1 bg - white / 10 backdrop - blur - xl rounded - full text - xs text - white / 60 border border - white / 20'>            {category}          <span className="px - 3 py - 1 bg - white / 10 backdrop - blur - xl rounded - full text - xs text - white / 60 border border - white / 20">;
             {category}
           </span>)}
       </div>;
-      {/* Content */}
+      {/* Content */}'
       <h3 className='text - xl font - bold text - white mb - 4 group - hover:text - cyan - 400 transition - colors duration - 300 line - clamp - 2'>;
         {title}
-      </h3>;
+      </h3>;'
       <p className='text - white / 70 leading - relaxed mb - 6 line - clamp - 3'>        {description}
       </p>;
-      {/* Footer */}
-      <div className='flex items - center justify - between'>;
+      {/* Footer */}'
+      <div className='flex items - center justify - between'>;'
         <div className='inline - flex items - center text - cyan - 400 font - semibold group - hover:text - cyan - 300 transition - colors duration - 300'>;
-          Read More;
+          Read More;'
           <span className='ml - 2 group - hover:translate - x-1 transition - transform duration - 300'>;
-            →;
+            →;"
           </span>      <h3 className="text - xl font - bold text - white mb - 4 group - hover:text - cyan - 400 transition - colors duration - 300 line - clamp - 2">;
         {title}
-      </h3>;
+      </h3>;"
       <p className="text - white / 70 leading - relaxed mb - 6 line - clamp - 3">;
       </p>;
-      {/* Footer */}
-      <div className='flex items - center justify - between'>;
+      {/* Footer */}'
+      <div className='flex items - center justify - between'>;'
         <div className='inline - flex items - center text - cyan - 400 font - semibold group - hover:text - cyan - 300 transition - colors duration - 300'>;
-          Read More;
+          Read More;"
           <span className="ml - 2 group - hover:translate - x-1 transition - transform duration - 300">→</span>;
         </div>;
-        {date && (
+        {date && ('
           <span className='text - xs text - white / 50 font - mono'>{date}</span>        </div>;
-        {date && (
+        {date && ('
           <span className='text - xs text - white / 50 font - mono'>{date}</span>        )}
       </div>;
-      {/* Hover Effects */}
+      {/* Hover Effects */}'"
       <div className='absolute inset - 0 bg - gradient - to - br from - cyan - 500 / 5 to - blue - 600 / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500' />          <span className="text - xs text - white / 50 font - mono">;
             {date}
           </span>)}
       </div>;
-      {/* Hover Effects */}
+      {/* Hover Effects */}'
       <div className='absolute inset - 0 bg - gradient - to - br from - cyan - 500 / 5 to - blue - 600 / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500' />;
     </Link>);
 }
@@ -175,4 +177,8 @@ export default ContentCard;
         {description}
       </p>
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

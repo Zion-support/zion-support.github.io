@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -40,6 +41,9 @@ export default function InnovativeServicesPage() {
                            service.variant.toLowerCase().includes(selectedCategory.toLowerCase());
     
     return matchesSearch && matchesCategory;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   });
 
   const contactInfo = {
@@ -49,6 +53,7 @@ export default function InnovativeServicesPage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   return (
     <UltraAdvancedQuantumBackground variant="holographic" intensity="high">
       <Head>
@@ -270,10 +275,14 @@ export default function InnovativeServicesPage() {
                     <div>
                       <div className="text-sm text-gray-400">Address</div>
                       <div className="text-white font-semibold text-sm">{contactInfo.address}</div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </div>
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
@@ -300,5 +309,8 @@ export default function InnovativeServicesPage() {
         </section>
       </div>
     </UltraAdvancedQuantumBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

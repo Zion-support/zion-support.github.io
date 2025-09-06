@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface CardProps {
@@ -238,3 +239,6 @@ export {
 };
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

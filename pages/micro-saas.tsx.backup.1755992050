@@ -313,11 +313,15 @@ export default function MicroSaasPage() {
       icon: '👥',
       color: 'from-purple-500 to-pink-600',
       textColor: 'text-purple-400',
+<<<<<<< HEAD
       link: 'https://hr.zion.app',
       marketPosition: 'Competitive with BambooHR ($6.19-8.75), Gusto ($40-80), and Zenefits ($8-27)',
       targetAudience: 'HR professionals, small businesses, and growing companies',
       marketSize: '$15.8B HR software market',
       growthRate: '14.8% CAGR expected through 2030'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -452,8 +456,12 @@ export default function MicroSaasPage() {
                 Our Micro SaaS Portfolio
               </h2>
               <p className="text-xl text-gray-400 max-w-4xl mx-auto">
+<<<<<<< HEAD
                 Each solution is designed to solve a specific business problem with deep functionality and competitive pricing.
               </p>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -534,8 +542,12 @@ export default function MicroSaasPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Industry Trends */}
         <section className="py-24 bg-gray-900">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">

@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Message {
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -9,6 +13,7 @@ export interface Message {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -30,6 +35,9 @@ export interface Message {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface Message {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -46,18 +54,16 @@ export interface Message {;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
-  read?: boolean
+  read?: boolean;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
+
 
 <<<<<<< HEAD
-=======
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface Recipient {
   id: string;
@@ -72,12 +78,17 @@ export interface Recipient {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface Recipient {;
   id: string;
   name: string;
   avatarUrl?: string;
   role?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -89,13 +100,18 @@ export interface Recipient {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Message {;
-  id: string,;
+  id: string,;'
   role: 'user' | 'assistant',;
   message: string,;
   timestamp: Date,;
@@ -107,6 +123,7 @@ export interface Recipient {;
 <<<<<<< HEAD
 <<<<<<< HEAD
   name: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -152,3 +169,27 @@ export interface Recipient {
   id: string;
   name: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+  avatarUrl?: string;
+
+  role?: string;
+}
+
+
+
+
+;
+
+;
+;
+
+
+export interface Recipient {};
+  id: string;
+  name: string;
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

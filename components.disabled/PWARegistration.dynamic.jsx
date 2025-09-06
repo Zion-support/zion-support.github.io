@@ -5,6 +5,7 @@ const PWARegistration = dynamic(() => import("./PWARegistration"),{'; "loading":
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 </p>'
 </p>'
 ursor/add-new-services-and-deploy-updates-0462
@@ -29,19 +30,31 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
+=======
+
+'
+</p>'
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 </p>'
 </p>'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 </p>'
 
 
+<<<<<<< HEAD
 </p>'
 </p>'
 </p>'
@@ -84,3 +97,10 @@ ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+</p>'
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

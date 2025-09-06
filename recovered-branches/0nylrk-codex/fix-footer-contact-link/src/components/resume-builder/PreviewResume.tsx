@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 
 import { Resume } from "@/types/resume";
+<<<<<<< HEAD
 import {
   PreviewHeader
   ResumeBasicInfoSection
@@ -117,10 +118,53 @@ interface PreviewResumeProps {
 }
 
   return (
+=======
+import {}
+  PreviewHeader,
+  ResumeBasicInfoSection,
+  WorkExperienceSection,
+  EducationSection,
+  SkillsSection,
+  CertificationsSection,";
+} from "./preview";
+
+interface PreviewResumeProps {}
+  resume: Resume;
+  onBack: () => void;
+}
+
+
+
+
+
+
+
+"
+import { Resume } from "@/types/resume";
+import {}
+  PreviewHeader,
+  ResumeBasicInfoSection,
+  WorkExperienceSection,
+  EducationSection,
+  SkillsSection,
+  CertificationsSection,";
+} from "./preview";
+
+interface PreviewResumeProps {}
+  resume: Resume;
+  onBack: () => void;
+}
+
+}
+
+
+export function PreviewResume({ resume, onBack }: PreviewResumeProps) {}
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
 
-      {/* Resume Preview */}
+      {/* Resume Preview */}"
       <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
         <WorkExperienceSection workExperience={resume.work_experience} />
@@ -128,8 +172,18 @@ interface PreviewResumeProps {
         <SkillsSection skills={resume.skills} />
         <CertificationsSection certifications={resume.certifications} />
       </div>
+<<<<<<< HEAD
     </div>
 }  );
+=======
+    </div>;
+  );
+}
+
+
+
+  );
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
     </div>;
@@ -150,6 +204,7 @@ interface PreviewResumeProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -161,3 +216,10 @@ interface PreviewResumeProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

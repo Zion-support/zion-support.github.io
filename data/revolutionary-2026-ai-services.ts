@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   id: string;
 export interface Revolutionary2026AiService {
 id: string;
@@ -34,16 +35,24 @@ export interface Revolutionary2026AiService {;
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
+<<<<<<< HEAD
   contactInfo: {
 export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
   {
@@ -74,10 +83,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       "Transformative capabilities";
       "Advanced algorithms";
       "Innovation platform";
+=======
+  contactInfo: {}
+export const revolutionary2026AIServices: Revolutionary2026AiService[] = []
+  {}
+    features: [";
+      "Revolutionary AI";"
+      "Transformative capabilities";"
+      "Advanced algorithms";"
+      "Innovation platform";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "Future-ready AI"
-    ];
+    ];"
     link: "/services/2026-revolutionary-ai", category: "Revolutionary 2026 AI",
     realImplementation: true,
+<<<<<<< HEAD
     contactInfo: {
       "Innovation platform",
       "Future-ready AI"
@@ -89,15 +109,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    contactInfo: {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+];"
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
@@ -131,9 +159,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

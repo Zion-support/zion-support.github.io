@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { randomUUID } from "crypto";
 import { tokenStore } from "./storage";
 import { TokenTransaction, WalletSummary } from "./types";
@@ -156,13 +157,16 @@ export interface TokenTransaction {;
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   userId: string;
 
   id: string;
   user_id: string;
-export interface TokenTransaction {
+export interface TokenTransaction {};
   id: string;
   user_id: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -203,17 +207,26 @@ let transactions: TokenTransaction[] = [];    type: 'redeem',
 =======
 let transactions: TokenTransaction[] = [];
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+export function issueTokens(
+  userId: string,
+  amount: number,
+  reason: string,
+): TokenTransaction {}
+  const transaction: TokenTransaction = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
-    amount,
+    amount,"
     type: "issue",
     reason,
-    timestamp: Date.now(),
+    timestamp: Date.now(),;
   };
   
 
@@ -232,6 +245,7 @@ export function redeemTokens(
   userId: string,
   amount: number,
   reason: string,
+<<<<<<< HEAD
 ): TokenTransaction {
   const transaction: TokenTransaction = {
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -306,6 +320,13 @@ export function handleAction(userId: string, action: string, metadata?: Record<s
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+): TokenTransaction {}
+  const transaction: TokenTransaction = {}`
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    userId;
+    amount: -amount, // Negative for redemption"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     type: "redeem",
     reason,
     timestamp: Date.now(),
@@ -372,18 +393,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   transactions.push(transaction);
   return transaction;
-=======
+
 
   transactions.push(transaction);
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
   return transaction;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+  return transaction;
+
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
+<<<<<<< HEAD
 <<<<<<< HEAD
     timestamp: Date.now()
 };
@@ -669,3 +698,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   tokenStore.setConfig({ ...current, ...partial });
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

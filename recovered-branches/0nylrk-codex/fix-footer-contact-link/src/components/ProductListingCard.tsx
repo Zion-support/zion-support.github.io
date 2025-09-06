@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { useNavigate } from "react-router-dom",
@@ -26,30 +27,23 @@ import {Star, DollarSign} from "lucide-react";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-interface ProductListingCardProps {;
-  listing: ProductListing,;
-
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-}
-
-
-export function ProductListingCard(): any ({ ;
-  listing, ;
-
 =======
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-}
-export function ProductListingCard(): any ({ ;
-  listing, ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+import {useNavigate} from "react-router-dom";"
+import {Badge} from "@/components/ui/badge";"
+import {Button} from "@/components/ui/button";"
+import {ProductListing} from "@/types/listings";"
+import {Star, DollarSign} from "lucide-react";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   view = 'grid';
   onRequestQuote;
-}: ProductListingCardProps) {;
+}: ProductListingCardProps) {;'
   const isGrid = view === 'grid';
   const navigate = useNavigate();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -69,36 +63,41 @@ interface ProductListingCardProps {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+"
+import { useNavigate } from "react-router-dom","
+import { Badge } from "@/components/ui/badge","
+import { Button } from "@/components/ui/button",";
+import { ProductListing } from "@/types/listings";"
+import { Star, DollarSign } from "lucide-react";
+interface ProductListingCardProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface ProductListingCardProps {;
   listing: ProductListing,;
-
+'
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
-}
+}'
   view = 'grid';
   onRequestQuote;
-}: ProductListingCardProps) {;
+}: ProductListingCardProps) {;'
   const isGrid = view === 'grid';
   const navigate = useNavigate();
+
+
 <<<<<<< HEAD
-  // Get the first image or use a placeholder
-  const imageUrl = listing.images && listing.images.length > 0
-    ? listing.images[0]
-    : '/placeholder.svg';
-import { ProductListing } from "@/types/listings",
-import { Star, DollarSign } from "lucide-react",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ProductListingCardProps {
   listing: ProductListing,
+=======
+interface ProductListingCardProps {}
+  listing: ProductListing,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   view?: 'grid' | 'list',
-  onRequestQuote?: (id: string) => void
+  onRequestQuote?: (id: string) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ProductListingCard({
 
@@ -151,9 +150,12 @@ export function ProductListingCard({
   // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
+=======
+export function ProductListingCard() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return `${listing.currency}${listing.price.toLocaleString()}`
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -180,12 +182,17 @@ interface ProductListingCardProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+=======
+  // Handle image loading errors;
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     e.currentTarget.src = '/placeholder.svg'
   }
-  // Handle navigating to listing detail
-  const handleViewListing = () => {
+  // Handle navigating to listing detail;
+  const handleViewListing = () => {}`
     navigate(`/listing/${listing.id}`)
   }
+<<<<<<< HEAD
   // Handle request quote button click
   const handleRequestQuote = (e: React.MouseEvent) => {
 <<<<<<< HEAD
@@ -249,10 +256,16 @@ import {Star, DollarSign} from "lucide-react";  onRequestQuote
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (onRequestQuote) {
+=======
+  // Handle request quote button click;
+  const handleRequestQuote = (e: React.MouseEvent) => {}
+    if (onRequestQuote) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       onRequestQuote(listing.id)
-    } else {
-      // Default behavior if no handler provided
+    } else {}
+      // Default behavior if no handler provided;`
       navigate(`/request-quote?listing=${listing.id}`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -273,11 +286,19 @@ import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { ProductListing } from "@/types/listings",;
+=======
+"
+import { useNavigate } from "react-router-dom",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Button } from "@/components/ui/button",;"
+import { ProductListing } from "@/types/listings",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Star, DollarSign } from "lucide-react",;
 interface ProductListingCardProps {;
-  listing: ProductListing,;
+  listing: ProductListing,;'
   view?: 'grid' | 'list',;
 
+<<<<<<< HEAD
   onRequestQuote?: (id: string) => void;
 }
 export /**
@@ -321,10 +342,15 @@ if ( {) {
 }
       onRequestQuote (listing.id);
       // Default behavior if no handler provided;
+=======
+    } else {}
+      // Default behavior if no handler provided;`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       navigate (`/request - quote?listing=${listing.id}`);
     }
   }
 
+<<<<<<< HEAD
   // Format price display;
   const formatPrice = () => {;
     if (listing && listing.price === null) return "Custom pricing";
@@ -334,20 +360,52 @@ if ( {) {
   const handleViewListing = () => {;
     navigate(`/listing/${listing && listing.id}`)
 };
+=======
+  // Get the first image or use a placeholder;
+  const imageUrl = listing && listing.images && listing && listing.images.length > 0 ;
+    ? listing && listing.images[0] ;'
+    : '/placeholder && placeholder.svg';
+
+  // Format price display;
+  const formatPrice = () => {;"
+    if (listing && listing.price === null) return "Custom pricing";`
+    return `${listing && listing.currency}${listing && listing.price.toLocaleString()}`;
+  };
+
+  // Handle image loading errors;
+  const handleImageError = (e: React && React.SyntheticEvent<HTMLImageElement>) => {;'
+    e && e.currentTarget.src = '/placeholder && placeholder.svg';
+  };
+
+  // Handle navigating to listing detail;
+  const handleViewListing = () => {;`
+    navigate(`/listing/${listing && listing.id}`);
+  };
+
+  // Handle request quote button click;
+  const handleRequestQuote = (e: React && React.MouseEvent) => {;
+    e && e.preventDefault();
+    e && e.stopPropagation(),;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (onRequestQuote) {;
       onRequestQuote(listing && listing.id);
     } else {;
-      // Default behavior if no handler provided;
+      // Default behavior if no handler provided;`
       navigate(`/request-quote?listing=${listing && listing.id}`);
     }
   };
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
+=======
+  return ('`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
 <<<<<<< HEAD
 =======
@@ -361,6 +419,7 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Image */}
@@ -369,55 +428,47 @@ if ( {) {
       {/* Image */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
+=======
+'
+      <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>;
-          <img
+          <img;
             src={imageUrl} 
             alt={listing && listing.title}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
       {/* Image */}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+"
             className="w-full h-full object-cover"
             onError={handleImageError}
           />;
-          {listing && listing.featured && (;
+          {listing && listing.featured && (;"
             <Badge className="absolute top-2 right-2 bg-zion-purple text-white border-none">;
               Featured;
             </Badge>;
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        </div>;
-      </div>;
 
 
-=======
-        </div>;
-      </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      {/* Content */}
+
+      {/* Content */}'`
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
         <div>
-          {/* Category & Rating */}
-          <div className="flex justify-between items-center mb-2">;
+          {/* Category & Rating */}"
+          <div className="flex justify-between items-center mb-2">;"
             <Badge variant="outline" className="bg-zion-blue-light/20 text-zion-slate-light border-zion-blue-light">;
               {listing && listing.category}
             </Badge>;
-            {listing && listing.rating && (;
-              <div className="flex items-center text-zion-slate-light">;
+            {listing && listing.rating && (;"
+              <div className="flex items-center text-zion-slate-light">;"
                 <Star className="h-4 w-4 fill-zion-cyan text-zion-cyan mr-1" />;
                 <span>{listing && listing.rating}</span>;
-                {listing && listing.reviewCount && (;
+                {listing && listing.reviewCount && (;"
                   <span className="text-xs ml-1">({listing && listing.reviewCount})</span>;
                 )}
               </div>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -511,19 +562,24 @@ export function ProductListingCard({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
+=======
+
+          {/* Title & Description */}"
+          <div onClick={handleViewListing} className="block">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
               {listing.title}
             </h3>
-          </div>
+          </div>"
           <p className="text-sm text-zion-slate line-clamp-2 mb-4">
             {listing.description}
           </p>
           {/* Tags */}
-          {listing.tags && listing.tags.length > 0 && (
+          {listing.tags && listing.tags.length > 0 && ("
             <div className="flex flex-wrap gap-1 mb-4">
               {listing.tags.map((tag, idx) => (
-                <span
-                  key={idx}
+                <span;
+                  key={idx}"
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full"
                 >
                   {tag}
@@ -532,15 +588,15 @@ export function ProductListingCard({;
             </div>
           )}
         </div>
-        {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">
+        {/* Footer with price and button */}"
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">"
           <div className="text-sm font-medium">
-            {listing.price !== null ? (
-              <div className="flex items-center text-zion-purple">
+            {listing.price !== null ? ("
+              <div className="flex items-center text-zion-purple">"
                 <DollarSign className="h-4 w-4 mr-1" />
                 {formatPrice()}
               </div>
-            ) : (
+            ) : ("
               <span className="text-zion-slate-light">
                 {formatPrice()}
 <<<<<<< HEAD
@@ -548,10 +604,11 @@ export function ProductListingCard({;
               </span>
               </span>;
             )}
-          </div>
+          </div>"
           <div className="flex gap-2">
-            <Button
+            <Button"
               size="sm"
+<<<<<<< HEAD
               onClick={(e) => {
 ;
   return (
@@ -595,55 +652,79 @@ export function ProductListingCard({;
           </div>;
           <p className="text - sm text - zion - slate line - clamp - 2 mb-4">;
             {listing.description}
+=======
+              onClick={(e) => {}
+          </div>;
 
-          {/* Title & Description */}
-          <div onClick={handleViewListing} className="block">;
+
+
+                e.stopPropagation();
+
+
+          {/* Title & Description */}"
+          <div on_click={handleViewListing} className="block">;"
+            <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;
+              {listing.title}
+            </h3>;
+          </div>;"
+          <p className="text - sm text - zion - slate line - clamp - 2 mb - 4">;
+            {listing.description}
+
+          </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+          {/* Title & Description */}"
+          <div onClick={handleViewListing} className="block">;"
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">;
               {listing && listing.title}
             </h3>;
-          </div>;
+          </div>;"
           <p className="text-sm text-zion-slate line-clamp-2 mb-4">;
             {listing && listing.description}
           </p>;
 
           {/* Tags */}
-          {listing && listing.tags && listing && listing.tags.length > 0 && (;
+          {listing && listing.tags && listing && listing.tags.length > 0 && (;"
             <div className="flex flex-wrap gap-1 mb-4">;
               {listing && listing.tags.map((tag, idx) => (;
-                <span
-                  key={idx} 
+                <span;
+                  key={idx} "
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-=======
-        </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;
+
+        {/* Footer with price and button */}"
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;"
           <div className="text-sm font-medium">;
-            {listing && listing.price !== null ? (;
-              <div className="flex items-center text-zion-purple">;
+            {listing && listing.price !== null ? (;"
+              <div className="flex items-center text-zion-purple">;"
                 <DollarSign className="h-4 w-4 mr-1" />;
                 {formatPrice()}
               </div>;
-            ) : (;
+            ) : (;"
               <span className="text-zion-slate-light">;
                 {formatPrice()}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
+<<<<<<< HEAD
               </span>;
 
 
@@ -678,11 +759,20 @@ export function ProductListingCard({;
         </div>;                navigate(`/listing/${listing.id}`)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               }}
+=======
+
+
+                e.stopPropagation(),
+`
+                navigate(`/listing/${listing.id}`)
+              }}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
-              Buy Now
+              Buy Now;
             </Button>
             {onRequestQuote && (
+<<<<<<< HEAD
               <Button
                 size="sm"
                 variant="outline"
@@ -842,61 +932,85 @@ export function ProductListingCard({ ;
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
               >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+          </div>;
+
+
+"
+          <div className="flex gap-2">;
+            <Button"
+              size="sm" 
+              onClick={(e) => {;
+                e && e.stopPropagation();`
+                navigate(`/listing/${listing && listing.id}`);
+              }}"
+              className="bg-zion-purple hover:bg-zion-purple-dark text-white";
+            >;
+              Buy Now;
+            </Button>;
+            {onRequestQuote && (;
+
+
+
+              <Button"
+                size="sm""
+                variant="outline"
+                onClick={handleRequestQuote}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 Request Quote;
               </Button>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
             )}
           </div>;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   );
           </p>;
           {/* Tags */}
-          {listing.tags && listing.tags.length > 0 && (
+          {listing.tags && listing.tags.length > 0 && ("
             <div className="flex flex - wrap gap - 1 mb - 4">;
               {listing.tags.map ((tag, idx) => (
                 <span;
-                  key={idx}
+                  key={idx}"
                   className="text - xs text - zion - slate bg - zion - blue - light / 20 px - 2 py - 1 rounded - full";
                 >;
                   {tag}
                 </span>))}
             </div>)}
         </div>;
-        {/* Footer with price and button */}
-        <div className="flex items - center justify - between mt - auto pt - 3 border - t border - zion - blue - light">;
+        {/* Footer with price and button */}"
+        <div className="flex items - center justify - between mt - auto pt - 3 border - t border - zion - blue - light">;"
           <div className="text - sm font - medium">;
-            {listing.price !== null ? (
-              <div className="flex items - center text - zion - purple">;
+            {listing.price !== null ? ("
+              <div className="flex items - center text - zion - purple">;"
                 <DollarSign className="h - 4 w - 4 mr - 1" />;
                 {format_price ()}
-              </div>) : (
+              </div>) : ("
               <span className="text - zion - slate - light">;
                 {format_price ()}
               </span>)}
-          </div>;
+          </div>;"
           <div className="flex gap - 2">;
-            <Button;
+            <Button;"
               size="sm";
-              on_click={(e) => {
-                e.stop_propagation ();
+              on_click={(e) => {}
+                e.stop_propagation ();`
                 navigate (`/listing/${listing.id}`);
-              }}
+              }}"
               className="bg - zion - purple hover:bg - zion - purple - dark text - white";
             >;
               Buy Now;
             </Button>;
             {onRequestQuote && (
-              <Button;
-                size="sm";
+              <Button;"
+                size="sm";"
                 variant="outline";
-                on_click={handleRequestQuote}
+                on_click={handleRequestQuote}"
                 className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
               >;
                 Request Quote;
@@ -905,6 +1019,7 @@ export function ProductListingCard({ ;
         </div>;
       </div>;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -985,3 +1100,9 @@ return (<div className= {
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;                Request Quote;
               </Button>;}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+}'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

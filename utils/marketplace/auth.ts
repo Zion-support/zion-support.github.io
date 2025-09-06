@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest } from "next";
 type DemoUser = { id: string, role: "client" | "talent", talentSlug?: string };
 export function getDemoUser(req: NextApiRequest): DemoUser {;
@@ -53,10 +54,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   talentSlugHeader?: string
 ): DemoUser {
+=======
+
+  talentSlugHeader?: string;
+): DemoUser {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const u = getDemoUser(req);
   if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     u && u.role === 'talent' &&
@@ -64,9 +71,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
-    return u;
+    return u;'
   const err = new Error('Not authorized for this offer');
+<<<<<<< HEAD
   // @ts-ignore
 
 
@@ -133,53 +143,57 @@ export function getUserFromRequest (req: any): User | null {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  // @ts-ignore;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
     return null;
   }
   const token = auth_header.substring (7);
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    return {
-      id: 'user - 1',
-      email: 'user@example.com',
-      role: 'client',
+    return {'
+      id: 'user - 1','
+      email: 'user@example.com','
+      role: 'client','
       name: 'Test User';
     }
   }
   return null;
 }
 export function assertTalentOrClientForOffer (
-  req: NextApiRequest,
+  req: NextApiRequest,;
   offer: { client_id: string; talent_slug: string },
-  talentSlugHeader?: string): DemoUser {
+  talentSlugHeader?: string): DemoUser {}
   const u = getDemoUser (req);
-  // Check condition
-if (return u) {
-  $2
+  // Check condition;
+if (return u) {}
+  $2;
 }
-  // Check condition
-if (=== offer.talent_slug) {
-  $2
+  // Check condition;
+if (=== offer.talent_slug) {}
+  $2;
 }
   );
-    return u;
+    return u;'
   const err = new Error ('Not authorized for this offer');
   // @ts - ignore;
   err.status_code = 403;
-  throw err;export function require_auth (req: any): User {
+  throw err;export function require_auth (req: any): User {};
   const user = getUserFromRequest (req);
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
     throw new Error ('Authentication required'),
   }
   return user;
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -207,3 +221,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   throw err;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

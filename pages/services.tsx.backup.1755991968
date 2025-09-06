@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, Satellite, Dna, Leaf, Factory, Car, Microscope, Lightbulb } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import { expandedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/expanded-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -83,18 +87,27 @@ export default function ServicesPage() {
     {
       name: 'Quantum Computing & AI',
       description: 'Revolutionary quantum AI solutions with unprecedented computing power',
+<<<<<<< HEAD
       icon: <Brain className="w-6 h-6" />,
       count: enhancedMicroSaasServices.filter(s => s.category === 'Quantum Computing' || s.category === 'AI & Machine Learning').length
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Manufacturing & Industry 4.0',
       description: 'Next-generation autonomous manufacturing and robotics platforms',
+<<<<<<< HEAD
       icon: <Factory className="w-6 h-6" />,
       count: enhancedMicroSaasServices.filter(s => s.category === 'Manufacturing & Industry 4.0' || s.category === 'Robotics & Automation').length
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Healthcare & Biotechnology',
       description: 'AI-powered biomedical research and drug discovery platforms',
+<<<<<<< HEAD
       icon: <FlaskConical className="w-6 h-6" />,
       count: enhancedMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length
     },
@@ -199,6 +212,9 @@ export default function ServicesPage() {
       color: 'from-blue-500 to-indigo-600'
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -223,7 +239,7 @@ export default function ServicesPage() {
     'Research & Development': <Microscope className="w-6 h-6" />,
     'Government & Defense': <ShieldCheck className="w-6 h-6" />,
     'Education & Training': <GraduationCap className="w-6 h-6" />
-=======
+
   // Get variant for service category
   const getCategoryVariant = (category: string) => {
     switch (category) {
@@ -259,6 +275,7 @@ export default function ServicesPage() {
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1044,6 +1061,9 @@ export default function ServicesPage() {
                 <span className="text-white font-semibold text-center text-sm">{contactInfo.address}</span>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             )}
           </div>
@@ -1115,6 +1135,7 @@ export default function ServicesPage() {
               <h2 className="text-4xl font-bold text-white mb-4">Most Popular Services</h2>
               <p className="text-xl text-gray-300">Discover our most sought-after solutions</p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {popularServices.slice(0, 6).map((service, index) => (
@@ -1309,10 +1330,14 @@ export default function ServicesPage() {
               {filteredServices.map((service, index) => (
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
@@ -1875,6 +1900,9 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dbfe
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991968
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

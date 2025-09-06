@@ -9,6 +9,7 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
@@ -60,38 +61,25 @@ import Head from 'next / head',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown;
-} from 'lucide-react',
-import { comprehensiveMicroSaasServices } from '../data / comprehensive - 2025 - micro - saas - expansion',
-import { specializedEmergingTechServices } from '../data / specialized - emerging - tech - services - 2025',
-export default /**
- * ComprehensivePricingPage - Function description
- */
-function ComprehensivePricingPage() {
-  const [selected_category, setSelectedCategory] = useState ('all'),
-  const [billing_cycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-  const [expanded_service, setExpandedService] = useState < string | null>(null),
-  // Combine all services;
-  const all_services = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices],
-  const categories = [;
-
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠' },
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥' },
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰' },
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️' },
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️' },
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗' },
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️' },
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀' },
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖' },
-{ id: 'AR / VR & Metaverse', name: 'AR / VR', icon: '🥽' },
-    { id: '5G / 6G Networks', name: '5G / 6G', icon: '📡' },
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬' },
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡' },
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐' },
+} from 'lucide-react''
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';'
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
+'
+import React, { useState } from 'react',;'
+import Head from 'next/head',;'
+import { motion, AnimatePresence } from 'framer-motion',;
+import {}
+  Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
+  ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown';
+} from 'lucide-react',;'
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',;'
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',;
 
 
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -163,42 +151,53 @@ export default function ComprehensivePricingPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import Head from 'next/head';
+=======
+export default function ComprehensivePricingPage() { return null; }
+  const getCategoryIcon = (category: string) => {}
+    const categoryData = categories.find(cat => cat.id === category)'
+    return categoryData?.icon |'🚀'
+  }
+'
+import React, { useState } from 'react';'
+import Head from 'next/head';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,;
-  ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown;
-} from 'lucide-react',;
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+  ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown;'
+} from 'lucide-react',;'
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';'
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-export default function ComprehensivePricingPage(req, res) {
-  try {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+export default function ComprehensivePricingPage(req, res) {}
+  try {';
+  const [selectedCategory, setSelectedCategory] = useState('all');'
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [expandedService, setExpandedService] = useState<string | null>(null);
   // Combine all services;
   const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices],;
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀' },;
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠' },;
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥' },;
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰' },;
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️' },;
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️' },;
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗' },;
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️' },;
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀' },;
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖' },;
-    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽' },;
-    { id: '5G/6G Networks', name: '5G/6G', icon: '📡' },;
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬' },;
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡' },;
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐' },;
-    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' },;
-    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠'   } catch (error) {
-    console.error("Error:", error);
+  const categories = [;'
+    { id: 'all', name: 'All Services', icon: '🚀' },;'
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠' },;'
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥' },;'
+    { id: 'Fintech AI', name: 'Fintech', icon: '💰' },;'
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️' },;'
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️' },;'
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗' },;'
+    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️' },;'
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀' },;'
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖' },;'
+    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽' },;'
+    { id: '5G/6G Networks', name: '5G/6G', icon: '📡' },;'
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬' },;'
+    { id: 'Renewable Energy', name: 'Energy', icon: '⚡' },;'
+    { id: 'Edge Computing', name: 'Edge', icon: '🌐' },;'
+    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' },;'
+    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠'   } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -210,12 +209,18 @@ export default function ComprehensivePricingPage(req, res) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ],
+=======
+
+
+  ],'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
   const filteredServices = selectedCategory === 'all'
-    ? allServices
+    ? allServices;
     : allServices.filter(service => service.category === selectedCategory),
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category),
+  const getCategoryIcon = (category: string) => {}
+    const categoryData = categories.find(cat => cat.id === category),'
     return categoryData?.icon || '🚀'
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   },
@@ -227,25 +232,34 @@ export default function ComprehensivePricingPage(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const calculateYearlyPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', '').replace(, ''))
-    return `$${(price * 12 * 0.8).toFixed(0)}`, // 20% discount for yearly
+=======
 
+  const calculateYearlyPrice = (monthlyPrice: string) => {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
+    const price = parseFloat(monthlyPrice.replace('$', '').replace(, ''))
+    return `$${(price * 12 * 0.8).toFixed(0)}`, // 20% discount for yearly;
   },
-  const toggleServiceExpansion = (serviceId: string) => {
+  const toggleServiceExpansion = (serviceId: string) => {}
     setExpandedService(expandedService === serviceId ? null : serviceId)
   },
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
+
+
+
+
   },
-  const toggleServiceExpansion = (serviceId: string) => {
+  const toggleServiceExpansion = (serviceId: string) => {}
     setExpandedService(expandedService === serviceId ? null : serviceId)
   },
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
@@ -315,12 +329,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
         <meta name="description" content="Discover our revolutionary micro SAAS services pricing for 2025. AI, quantum computing, cybersecurity, and emerging technology solutions." />
         <meta name="keywords" content="micro SAAS pricing, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing-2025" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-<<<<<<< HEAD
 =======
 
+
+  return (
+    <>
+      <Head>
+        <title>Comprehensive Pricing 2025 - Zion Tech Group</title>"
+        <meta name="description" content="Discover our revolutionary micro SAAS services pricing for 2025. AI, quantum computing, cybersecurity, and emerging technology solutions." />"
+        <meta name="keywords" content="micro SAAS pricing, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group" />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
+        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing-2025" />
+      </Head>"
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Header */  } catch (error) {
@@ -433,39 +456,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
+=======
+        {/* Header */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+"
+        <section className="py-20 px-6">"
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-=======
-    { id: 'Quantum Internet', name: 'Q - Internet', icon: '🌍' },
+
+'
+    { id: 'Quantum Internet', name: 'Q - Internet', icon: '🌍' },'
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
-  ],
+  ],'
   const filtered_services = selected_category === 'all';
     ? all_services;
     : all_services.filter (service => service.category === selected_category),
-  const getCategoryIcon = (category: string) =>: any {
-    const category_data = categories.find (cat => cat.id === category),
+  const getCategoryIcon = (category: string) =>: any {}
+    const category_data = categories.find (cat => cat.id === category),'
     return category_data?.icon || '🚀';
   },
-  const calculateYearlyPrice = (monthly_price: string) =>: any {
-    const price = parse_float (monthly_price.replace ('$', '').replace (, '')),
+  const calculateYearlyPrice = (monthly_price: string) =>: any {'
+    const price = parse_float (monthly_price.replace ('$', '').replace (, '')),`
     return `$${(price * 12 * 0.8).to_fixed (0)}`, // 20% discount for yearly;
   },
-  const toggleServiceExpansion = (service_id: string) =>: any {
+  const toggleServiceExpansion = (service_id: string) =>: any {}
     setExpandedService (expanded_service === service_id ? null : service_id);
   },
   return (
     <>;
       <Head>;
-        <title > Comprehensive Pricing 2025 - Zion Tech Group</title>;
-        <meta name="description" content="Discover our revolutionary micro SAAS services pricing for 2025. AI, quantum computing, cybersecurity, and emerging technology solutions." />;
-        <meta name="keywords" content="micro SAAS pricing, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group" />;
+        <title > Comprehensive Pricing 2025 - Zion Tech Group</title>;"
+        <meta name="description" content="Discover our revolutionary micro SAAS services pricing for 2025. AI, quantum computing, cybersecurity, and emerging technology solutions." />;"
+        <meta name="keywords" content="micro SAAS pricing, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group" />;"
         <link rel="canonical" href="https://ziontechgroup.com / comprehensive - pricing - 2025" />;
-      </Head>;
+      </Head>;"
       <div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">;
-        {/* Header */}
-        <section className="py - 20 px - 6">;
+        {/* Header */}"
+        <section className="py - 20 px - 6">;"
           <div className="max - w-7xl mx - auto text - center">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
@@ -473,6 +507,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0.8 }}
 
 
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
@@ -562,35 +597,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              <div className="flex items-center justify-center gap-4 mb-12">
+              {/* Billing Toggle */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+"
+              <div className="flex items-center justify-center gap-4 mb-12">"
                 <span className="text-white/60">Monthly</span>
-                <button
-                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-                  className={`relative w-16 h-8 rounded-full transition-all duration-300 ${
-                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-white/20'
+                <button'
+                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}`
+                  className={`relative w-16 h-8 rounded-full transition-all duration-300 ${'
+                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-white/20'`
                   }`}
-=======
-=======
-            >;
+
+
+            >;"
               <h1 className="text - 5xl md:text - 6xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
                 Comprehensive Pricing 2025;
-              </h1>;
+              </h1>;"
               <p className="text - xl text - white / 70 max - w-3xl mx - auto mb - 8">;
                 Revolutionary micro SAAS services that transform businesses with cutting - edge AI, quantum computing, and emerging technologies;
               </p>;
-              {/* Billing Toggle */}
-              <div className="flex items - center justify - center gap - 4 mb - 12">;
+              {/* Billing Toggle */}"
+              <div className="flex items - center justify - center gap - 4 mb - 12">;"
                 <span className="text - white / 60">Monthly</span>;
-                <button;
-                  on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'yearly' : 'monthly')}
-                  className={`relative w - 16 h - 8 rounded - full transition - all duration - 300 ${
-                    billing_cycle === 'yearly' ? 'bg - blue - 600' : 'bg - white / 20';
+                <button;'
+                  on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'yearly' : 'monthly')}`
+                  className={`relative w - 16 h - 8 rounded - full transition - all duration - 300 ${'
+                    billing_cycle === 'yearly' ? 'bg - blue - 600' : 'bg - white / 20';`
                   }`}
 
 
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 )  } catch (error) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -650,14 +692,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
                   <div className="text-3xl font-bold text-green-400">99.9%</div>
+=======
+
+                )  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+"
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">"
+                <div className="bg-white/5 rounded-2xl p-6 border border-white/10">"
+                  <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>"
+                  <div className="text-white/60">Services Available</div>
+                </div>"
+                <div className="bg-white/5 rounded-2xl p-6 border border-white/10">"
+                  <div className="text-3xl font-bold text-green-400">99.9%</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                   <div className="text-white/60">Uptime Guarantee</div>
-                </div>
-                <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-                  <div className="text-3xl font-bold text-purple-400">24/7</div>
+                </div>"
+                <div className="bg-white/5 rounded-2xl p-6 border border-white/10">"
+                  <div className="text-3xl font-bold text-purple-400">24/7</div>"
                   <div className="text-white/60">Support Available</div>
-                </div>
-                <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-                  <div className="text-3xl font-bold text-orange-400">500%+</div>
+                </div>"
+                <div className="bg-white/5 rounded-2xl p-6 border border-white/10">"
+                  <div className="text-3xl font-bold text-orange-400">500%+</div>"
                   <div className="text-white/60">Average ROI</div>
 <<<<<<< HEAD
 
@@ -696,6 +760,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Category Filter */}
@@ -757,22 +822,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
+=======
+
+        {/* Category Filter */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-        <section className="px-6 mb-16">
+}"
+        <section className="px-6 mb-16">"
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+              animate={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+              transition={{ duration: 0.6 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
               transition={{ duration: 0.6 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -826,12 +902,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {categories.map(category => (
                 <button
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+              className="flex flex-wrap justify-center gap-3"
+            >
+              {categories.map((category) => (
+                <button;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                   key={category.id}
-                  on_click={() => setSelectedCategory (category.id)}
-                  className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
-                    selected_category === category.id;
-                      ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg';
-                      : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
+                  on_click={() => setSelectedCategory (category.id)}`
+                  className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${}
+                    selected_category === category.id;'
+                      ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg';'
+                      : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';`
                   }`}
                 >;
                   <span>{category.icon}</span>;
@@ -839,13 +923,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-                </button>))}
-            </motion.div>;
-          </div>;
-        </section>;
 
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
         {/* Services Grid */}
 
 
@@ -918,19 +997,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+=======
+"
+        <section className="px-6 pb-20">"
+          <div className="max-w-7xl mx-auto">"
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
               <AnimatePresence mode="wait">
 <<<<<<< HEAD
                 {filteredServices.map((service, index) => (
-                  <motion.div
-<<<<<<< HEAD
-=======
-
-        <section className="px - 6 pb - 20">;
-          <div className="max - w-7xl mx - auto">;
-            <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">;
-              <AnimatePresence mode="wait">;
-                {filtered_services.map ((service, index) => (
                   <motion.div;
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -951,11 +1028,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {filteredServices.map((service, index) => (
                   <motion.div
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                     key={service.id}
                     initial={{ opacity: 0, coordinate_y: 30 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     exit={{ opacity: 0, coordinate_y: -30 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -994,6 +1074,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
 =======
 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
@@ -1001,6 +1085,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                   >
                     {/* Popular Badge */}
                     {service.popular && (
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD:pages/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1017,15 +1102,21 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     )  } catch (error) {
     console.error("Error:", error);
+=======
+
+                    )  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-                    {/* Service Header */  } catch (error) {
-    console.error("Error:", error);
+                    {/* Service Header */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1056,10 +1147,22 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                             {billingCycle === 'yearly' ? calculateYearlyPrice(service.price) : service.price  } catch (error) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
+=======
+
+"
+                    <div className="p-6">"
+                      <div className="flex items-start justify-between mb-4">"
+                        <div className="text-4xl">{service.icon}</div>"
+                        <div className="text-right">"
+                          <div className="text-3xl font-bold text-white">
+"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                           </div>
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 =======
                           <div className="text-white/60">
@@ -1078,8 +1181,11 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                           </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
                         </div>
                       </div>
 
@@ -1089,11 +1195,8 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-<<<<<<< HEAD
-=======
-                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                      <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
 
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 
                       {/* Key Features */  } catch (error) {
     console.error("Error:", error);
@@ -1105,12 +1208,16 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                       <div className="space-y-2 mb-6">
-                        {service.features.slice(0, 4).map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
-                            <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        {service.features.slice(0, 4).map((feature, idx) => ("
+                          <div key={idx} className="flex items-center gap-2 text-sm text-white/60">"
+                            <Check className="w-4 h-4 text-green-400 flex-shrink-0" />"
                             <span className="line-clamp-2">{feature}</span>
                           </div>
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1137,20 +1244,25 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                       <div className="grid grid-cols-3 gap-4 mb-6 text-center">
-                        <div>
-                          <div className="text-lg font-bold text-blue-400">{service.rating}</div>
+                        <div>"
+                          <div className="text-lg font-bold text-blue-400">{service.rating}</div>"
                           <div className="text-xs text-white/60">Rating</div>
                         </div>
-                        <div>
-                          <div className="text-lg font-bold text-green-400">{service.customers}+</div>
+                        <div>"
+                          <div className="text-lg font-bold text-green-400">{service.customers}+</div>"
                           <div className="text-xs text-white/60">Customers</div>
                         </div>
-                        <div>
-                          <div className="text-lg font-bold text-purple-400">{service.trialDays}d</div>
+                        <div>"
+                          <div className="text-lg font-bold text-purple-400">{service.trialDays}d</div>"
                           <div className="text-xs text-white/60">Trial</div>
                         </div>
                       </div>
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1292,17 +1404,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                       <button;
-                        on_click={() => toggleServiceExpansion (service.id)}
+                        on_click={() => toggleServiceExpansion (service.id)}"
                         className="w - full bg - white / 10 text - white py - 3 px - 4 rounded - xl font - medium hover:bg - white / 20 transition - all duration - 300 flex items - center justify - center gap - 2 mb - 4";
-                      >;
-                        {expanded_service === service.id ? 'Show Less' : 'View Details'}
-                        <ChevronDown className={`w - 4 h - 4 transition - transform duration - 300 ${
-                          expanded_service === service.id ? 'rotate - 180' : '';
+                      >;'
+                        {expanded_service === service.id ? 'Show Less' : 'View Details'}`
+                        <ChevronDown className={`w - 4 h - 4 transition - transform duration - 300 ${'
+                          expanded_service === service.id ? 'rotate - 180' : '';`
                         }`} />;
                       </button>;
                       {/* CTA Button */}
                       <a;
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1315,10 +1431,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         target="_blank"
                         rel="noopener noreferrer"
+=======
+
+"
+                        target="_blank""
+                        rel="noopener noreferrer""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                         className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                       >
-                        Get Started
+                        Get Started"
                         <ExternalLink className="w-4 h-4" />
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1374,24 +1497,22 @@ target='_blank'
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-pricing-2025.tsx
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                     {/* Expanded Details */}
                     <AnimatePresence>;
                       {expanded_service === service.id && (
                         <motion.div;
-                          initial={{ height: 0, opacity: 0 }}
+                          initial={{ height: 0, opacity: 0 }}'
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3 }}
 <<<<<<< HEAD:pages/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-                          className="overflow - hidden border - t border - white / 10";
-                        >;
-                          <div className="p - 6 bg - white / 5">;
-                            {/* Market Position */}
 
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1460,9 +1581,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Technology Stack</h4>
+=======
+"
+                            <div className="mb-6">"
+                              <h4 className="text-lg font-semibold text-white mb-2">Market Position</h4>"
+                              <p className="text-white/70 text-sm">{service.marketPosition}</p>
+                            </div>
+
+                            {/* Technology Stack */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+"
+                            <div className="mb-6">"
+                              <h4 className="text-lg font-semibold text-white mb-2">Technology Stack</h4>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                               <div className="flex flex-wrap gap-2">
-                                {service.technology.map((tech, idx) => (
+                                {service.technology.map((tech, idx) => ("
                                   <span key={idx} className="bg-white/10 text-white/70 px-3 py-1 rounded-full text-xs">
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1514,22 +1653,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                     {tech  } catch (error) {
     console.error("Error:", error);
+=======
+
+                                    {tech  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                                   </span>;
-                                ))  } catch (error) {
-    console.error("Error:", error);
+                                ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                               </div>;
                             </div>;
-                            {/* Use Cases */  } catch (error) {
-    console.error("Error:", error);
+                            {/* Use Cases */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1542,10 +1687,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
+=======
+
+"
+                            <div className="mb-6">"
+                              <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                               <div className="space-y-1">
-                                {service.useCases.map((useCase, idx) => (
-                                  <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
+                                {service.useCases.map((useCase, idx) => ("
+                                  <div key={idx} className="flex items-center gap-2 text-sm text-white/60">"
                                     <Target className="w-3 h-3 text-blue-400" />
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1562,22 +1714,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                     {useCase  } catch (error) {
     console.error("Error:", error);
+=======
+
+                                    {useCase  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                                   </div>;
-                                ))  } catch (error) {
-    console.error("Error:", error);
+                                ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                               </div>;
                             </div>;
-                            {/* ROI and Benefits */  } catch (error) {
-    console.error("Error:", error);
+                            {/* ROI and Benefits */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1605,35 +1763,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                                     {benefit}
 =======
-
 =======
-                                  </span>))}
-                              </div>;
-                            </div>;
-                            {/* Use Cases */}
-                            <div className="mb - 6">;
-                              <h4 className="text - lg font - semibold text - white mb - 2">Use Cases</h4>;
-                              <div className="space - y-1">;
-                                {service.use_cases.map ((use_case, idx) => (
-                                  <div key={idx} className="flex items - center gap - 2 text - sm text - white / 60">;
-                                    <Target className="w - 3 h - 3 text - blue - 400" />;
-                                    {use_case}
-                                  </div>))}
-                              </div>;
-                            </div>;
 
-                            {/* ROI and Benefits */}
-                            <div className="mb - 6">;
-                              <h4 className="text - lg font - semibold text - white mb - 2">ROI & Benefits</h4>;
-                              <p className="text - white / 70 text - sm mb - 3">{service.roi}</p>;
-                              <div className="grid grid - cols - 2 gap - 2">;
-                                {service.benefits.map ((benefit, idx) => (
-                                  <div key={idx} className="flex items - center gap - 2 text - sm text - white / 60">;
-                                    <TrendingUp className="w - 3 h - 3 text - green - 400" />;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+"
+                            <div className="mb-6">"
+                              <h4 className="text-lg font-semibold text-white mb-2">ROI & Benefits</h4>"
+                              <p className="text-white/70 text-sm mb-3">{service.roi}</p>"
+                              <div className="grid grid-cols-2 gap-2">
+                                {service.benefits.map((benefit, idx) => ("
+                                  <div key={idx} className="flex items-center gap-2 text-sm text-white/60">"
+                                    <TrendingUp className="w-3 h-3 text-green-400" />
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
+
                                     {benefit}
 
 
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
@@ -1677,22 +1822,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                     {benefit  } catch (error) {
     console.error("Error:", error);
+=======
+
+                                    {benefit  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                                   </div>;
-                                ))  } catch (error) {
-    console.error("Error:", error);
+                                ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                               </div>;
                             </div>;
-                            {/* Contact Information */  } catch (error) {
-    console.error("Error:", error);
+                            {/* Contact Information */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1703,6 +1854,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             <div className="bg-white/5 rounded-xl p-4">
                               <h4 className="text-lg font-semibold text-white mb-3">Contact Information</h4>
+=======
+
+"
+                            <div className="bg-white/5 rounded-xl p-4">"
+                              <h4 className="text-lg font-semibold text-white mb-3">Contact Information</h4>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                               <div className="space-y-2 text-sm text-white/60">
 =======
                             <div className="bg-white/5 rounded-xl p-4">
@@ -1735,6 +1892,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </div>
                           </div>
                         </motion.div>
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD:pages/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1744,31 +1902,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
 =======
-
 =======
-                                  </div>))}
-                              </div>;
-                            </div>;
-                            {/* Contact Information */}
-                            <div className="bg - white / 5 rounded - xl p - 4">;
-                              <h4 className="text - lg font - semibold text - white mb - 3">Contact Information</h4>;
-                              <div className="space - y-2 text - sm text - white / 60">;
-                                <div>📱 {service.contact_info.mobile}</div>;
-                                <div>✉️ {service.contact_info.email}</div>;
-                                <div>📍 {service.contact_info.address}</div>;
-                                <div>🌐 {service.contact_info.website}</div>;
-                              </div>;
-                            </div>;
-                          </div>;
-                        </motion.div>)}
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
 
-                      )  } catch (error) {
-    console.error("Error:", error);
+              initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
                     </AnimatePresence>;
                   </motion.div>))}
               </AnimatePresence>;
@@ -1815,22 +1973,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
               className="text-center"
-            >
-              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
+            >"
+              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">"
                 <h2 className="text-3xl font-bold text-white mb-4">
                   Ready to Get Started?
-                </h2>
+                </h2>"
                 <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
                   Contact our sales team to discuss your specific needs and get a customized quote for our revolutionary micro SAAS services.
-                </p>
+                </p>"
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
+                  <a"
+                    href="mailto:kleber@ziontechgroup.com""
                     className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                   >
-                    Contact Sales Team
+                    Contact Sales Team"
                     <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 
                   </Link>
@@ -1848,9 +2010,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <a
                     href="tel:+13024640950"
+=======
+
+
+                  <a"
+                    href="tel:+13024640950""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                     className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
                   >
-                    Call +1 302 464 0950
+                    Call +1 302 464 0950;
                   </a>
 <<<<<<< HEAD
 
@@ -1915,16 +2083,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-}
-
-=======
-=======
-}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+"
               className="text - center";
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -1935,22 +2096,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >;
               <div className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 rounded - 3xl p - 12 border border - blue - 500 / 30">;
+=======
+            >;"
+              <div className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 rounded - 3xl p - 12 border border - blue - 500 / 30">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx
                 <h2 className="text - 3xl font - bold text - white mb - 4">;
                   Ready to Get Started?;
-                </h2>;
+                </h2>;"
                 <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto">;
                   Contact our sales team to discuss your specific needs and get a customized quote for our revolutionary micro SAAS services.;
-                </p>;
+                </p>;"
                 <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-                  <a;
-                    href="mailto:kleber@ziontechgroup.com";
+                  <a;"
+                    href="mailto:kleber@ziontechgroup.com";"
                     className="bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white py - 4 px - 8 rounded - xl font - medium hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300 flex items - center justify - center gap - 2";
                   >;
-                    Contact Sales Team;
+                    Contact Sales Team;"
                     <ArrowRight className="w - 5 h - 5" />;
                   </a>;
-                  <a;
-                    href="tel:+13024640950";
+                  <a;"
+                    href="tel:+13024640950";"
                     className="bg - white / 10 text - white py - 4 px - 8 rounded - xl font - medium hover:bg - white / 20 transition - all duration - 300 flex items - center justify - center gap - 2";
                   >;
                     Call +1 302 464 0950;
@@ -1961,6 +2126,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD:pages_backup/comprehensive-pricing-2025.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
     </>;
@@ -2024,3 +2190,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/comprehensive-pricing-2025.tsx
+=======
+
+
+
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/comprehensive-pricing-2025.tsx

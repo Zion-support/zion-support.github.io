@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   ArrowRight,
   Award,
@@ -67,6 +68,10 @@ export default Page;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   BookOpen,
   Brain,
   Building,
@@ -101,6 +106,7 @@ export default Page;
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -174,6 +180,9 @@ import {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Clock,
   DollarSign,
   Cpu,
@@ -215,6 +224,7 @@ import {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -226,12 +236,21 @@ import {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 } from 'lucide-react';
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -309,213 +328,290 @@ origin/main
 const navigationItems = [
   {
     title: "Services"
+=======
+  ArrowRight;
+  Award;
+  BarChart3;
+  BookOpen;
+  Brain;
+  Building;
+  Calculator;
+  Calendar;
+  Camera;
+  CheckCircle;
+  ChevronDown;
+  Clock;
+  Cloud;
+  Code;
+  CreditCard;
+  DollarSign;
+  Eye;
+  FileText;
+  Gamepad2;
+  Globe;
+  Heart;
+  Home;
+  Lock;
+  Mail;
+  MapPin;
+  Menu;
+  MessageSquare;
+  Music;
+  Network;
+  Phone;
+  Rocket;
+  Settings;
+  Shield;
+  ShoppingCart;
+  Star;
+  Target;
+  TrendingUp;
+  Truck;
+  Users;
+  X;
+  Zap;
+const navigationItems = []
+  {}
+    title: "Services""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     href: "/services"
-    icon: Settings
-    submenu: [
-      {
-        title: "AI Services"
+    icon: Settings;
+    submenu: []
+      {"
+        title: "AI Services""
         href: "/ai-services"
-        icon: Brain
+        icon: Brain"
         description: "30+ cutting-edge AI solutions"
-        popular: true
+        popular: true;
       }
-      {
-        title: "IT Services"
+      {"
+        title: "IT Services""
         href: "/it-services"
-        icon: Network
+        icon: Network"
         description: "25+ comprehensive IT services"
-        popular: true
+        popular: true;
       }
-      {
-        title: "Micro SaaS"
+      {"
+        title: "Micro SaaS""
         href: "/micro-saas"
-        icon: Cloud
+        icon: Cloud"
         description: "40+ innovative micro SaaS solutions"
-        popular: true
-      }
+        popular: true;
+      }'
 } from './lucide-react';
 ;
 const navigation_items = [;
-  {
-    title: "Services",
+  {"
+    title: "Services","
     href: "/services",
     icon: Settings,
     submenu: [;
-      {
-        title: "AI Services",
+      {"
+        title: "AI Services","
         href: "/ai - services",
-        icon: Brain,
+        icon: Brain,"
         description: "30+ cutting - edge AI solutions",
         popular: true,
       },
-      {
-        title: "IT Services",
+      {"
+        title: "IT Services","
         href: "/it - services",
-        icon: Network,
+        icon: Network,"
         description: "25+ comprehensive IT services",
         popular: true,
       },
-      {
-        title: "Micro SaaS",
+      {"
+        title: "Micro SaaS","
         href: "/micro - saas",
-        icon: Cloud,
+        icon: Cloud,"
         description: "40+ innovative micro SaaS solutions",
         popular: true,
       },
-      {
-        title: "Cybersecurity"
+      {"
+        title: "Cybersecurity""
         href: "/cybersecurity"
-        icon: Shield
+        icon: Shield"
         description: "Enterprise security solutions"
-        popular: false
+        popular: false;
       }
+<<<<<<< HEAD
       {
       {
         title: "Data Analytics",
+=======
+      {}
+      {"
+        title: "Data Analytics","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         href: "/data - analytics",
-        icon: BarChart3,
+        icon: BarChart3,"
         description: "Advanced analytics platform",
         popular: false,
       },
     ],
   },
-  {
-    title: "Solutions",
+  {"
+    title: "Solutions","
     href: "/solutions",
     icon: Target,
     submenu: [;
-      {
-        title: "Enterprise Solutions",
+      {"
+        title: "Enterprise Solutions","
         href: "/solutions / enterprise",
-        icon: Building,
+        icon: Building,"
         description: "Comprehensive enterprise solutions",
       },
-      {
-        title: "Startup Solutions",
+      {"
+        title: "Startup Solutions","
         href: "/solutions / startup",
-        icon: Rocket,
+        icon: Rocket,"
         description: "Rapid deployment for startups",
       },
-      {
-        title: "Industry Solutions",
+      {"
+        title: "Industry Solutions","
         href: "/solutions / industry",
-        icon: BarChart3,
+        icon: BarChart3,"
         description: "Industry - specific solutions",
       },
-      {
-        title: "Custom Solutions",
+      {"
+        title: "Custom Solutions","
         href: "/solutions / custom",
-        icon: Settings,
+        icon: Settings,"
         description: "Tailored custom solutions",
       },
     ],
   },
-  {
-    title: "Industries",
+  {"
+    title: "Industries","
     href: "/industries",
     icon: Building,
     submenu: [;
-      {
-        title: "Healthcare",
+      {"
+        title: "Healthcare","
         href: "/industries / healthcare",
-        icon: Heart,
+        icon: Heart,"
         description: "Medical AI and health tech",
       },
-      {
-        title: "Finance",
+      {"
+        title: "Finance","
         href: "/industries / finance",
-        icon: DollarSign,
+        icon: DollarSign,"
         description: "Fintech and financial services",
       },
-      {
-        title: "Manufacturing",
+      {"
+        title: "Manufacturing","
         href: "/industries / manufacturing",
-        icon: Settings,
+        icon: Settings,"
         description: "Industrial automation",
       },
-      {
-        title: "Retail",
+      {"
+        title: "Retail","
         href: "/industries / retail",
-        icon: ShoppingCart,
+        icon: ShoppingCart,"
         description: "E - commerce and retail tech",
       },
-      {
-        title: "Education",
+      {"
+        title: "Education","
         href: "/industries / education",
-        icon: BookOpen,
+        icon: BookOpen,"
         description: "EdTech solutions",
       },
-      {
-        title: "Real Estate",
+      {"
+        title: "Real Estate","
         href: "/industries / real - estate",
-        icon: Home,
+        icon: Home,"
         description: "PropTech innovations",
       },
     ],
   },
+<<<<<<< HEAD
   {
       {
         title: "Blog"
+=======
+  {}
+      {"
+        title: "Blog""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         href: "/blog"
-        icon: FileText
+        icon: FileText"
         description: "Latest insights and trends"
       }
+<<<<<<< HEAD
       {
       {
         title: "White Papers",
+=======
+      {}
+      {"
+        title: "White Papers","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         href: "/white - papers",
-        icon: FileText,
+        icon: FileText,"
         description: "In - depth research reports",
       },
+<<<<<<< HEAD
       {
       {
         title: "FileTextation"
+=======
+      {}
+      {"
+        title: "FileTextation""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         href: "/docs"
-        icon: FileText
+        icon: FileText"
         description: "Technical documentation"
       }
     ]
   }
+<<<<<<< HEAD
   {
       {
         title: "About Us"
+=======
+  {}
+      {"
+        title: "About Us""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         href: "/about"
-        icon: Building
+        icon: Building"
         description: "Our story and mission"
       }
-      {
-        title: "Team"
+      {"
+        title: "Team""
         href: "/team"
-        icon: Users
+        icon: Users"
         description: "Meet our experts"
       }
-      {
-        title: "Careers"
+      {"
+        title: "Careers""
         href: "/careers"
-        icon: Users
+        icon: Users"
         description: "Join our team"
       }
-      {
-        title: "Partners"
+      {"
+        title: "Partners""
         href: "/partners"
-        icon: Globe
+        icon: Globe"
         description: "Our partnerships"
       }
-      {
-        title: "News"
+      {"
+        title: "News""
         href: "/news"
-        icon: FileText
+        icon: FileText"
         description: "Company updates"
       }
-      {
-        title: "Press"
+      {"
+        title: "Press""
         href: "/press"
-        icon: FileText
+        icon: FileText"
         description: "Press releases and media"
       }
     ]
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -757,10 +853,13 @@ export default function Navigation() {;
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
 export default function Navigation() {;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
+<<<<<<< HEAD
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -775,29 +874,37 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   return (
+=======
+
+
+export default function Navigation() { return null; }
+const Navigation: React.FC<NavigationProps> = ({ className }) => {}
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
-      {/* Top Bar */}
-      <div className="bg-blue-600 text-white py-2">;
-        <div className="container mx-auto px-4">;
-          <div className="flex justify-between items-center text-sm">;
-            <div className="flex items-center space-x-6">;
-              <div className="flex items-center">;
+      {/* Top Bar */}"
+      <div className="bg-blue-600 text-white py-2">;"
+        <div className="container mx-auto px-4">;"
+          <div className="flex justify-between items-center text-sm">;"
+            <div className="flex items-center space-x-6">;"
+              <div className="flex items-center">;"
                 <Phone className="w-4 h-4 mr-2" />;
                 <span>+1 302 464 0950</span>;
-              </div>;
-              <div className="flex items-center">;
+              </div>;"
+              <div className="flex items-center">;"
                 <Mail className="w-4 h-4 mr-2" />;
                 <span>kleber@ziontechgroup && ziontechgroup.com</span>;
               </div>;
-            </div>;
+            </div>;"
             <div className="flex items-center space-x-4">;
-              <Link
-                href="/contact"
+              <Link"
+                href="/contact""
                 className="hover:text-blue-200 transition-colors">;
                 Get Free Consultation;
               </Link>;
-              <Link
+              <Link"
                 href="/pricing"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -854,49 +961,65 @@ function Navigation() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 View Pricing;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
       {/* Main Navigation */}
       <div className="container mx - auto px - 4">;
         <div className="flex justify - between items - center py - 4">;
           {/* Logo */}
+=======
+
+      {/* Main Navigation */}"
+      <div className="container mx - auto px - 4">;"
+        <div className="flex justify - between items - center py - 4">;
+          {/* Logo */}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 AI & Technology Solutions;
               </div>;
             </div>;
           </Link>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {/* Submenu */}
                 {activeSubmenu === item && item.title && (;
-                  <motion&& motion.div
+                  <motion&& motion.div;
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50">;
+                    exit={{ opacity: 0, y: 10 }}"
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50">;"
                     <div className="grid grid-cols-1 gap-2">;
                       {item && item.submenu.map((subItem) => (;
-                        <Link
+                        <Link;
                           key={subItem && subItem.title}
-                          href={subItem && subItem.href}
-                          className="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg transition-colors">;
-                          <subItem && subItem.icon className="w-5 h-5 text-blue-600 mt-0 && 0.5" />;
-                          <div className="flex-1">;
-                            <div className="flex items-center space-x-2">;
+                          href={subItem && subItem.href}"
+                          className="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg transition-colors">;"
+                          <subItem && subItem.icon className="w-5 h-5 text-blue-600 mt-0 && 0.5" />;"
+                          <div className="flex-1">;"
+                            <div className="flex items-center space-x-2">;"
                               <span className="font-medium text-gray-900">;
                                 {subItem && subItem.title}
                               </span>;
-                              {subItem && subItem.popular && (;
+                              {subItem && subItem.popular && (;"
                                 <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0 && 0.5 rounded-full">;
                                   Popular;
                                 </span>;
                               )}
-                            </div>;
+                            </div>;"
                             <p className="text-sm text-gray-500 mt-1">;
                               {subItem && subItem.description}
                             </p>;
-                          </div>;
+                          </div>;"
                           <ArrowRight className="w-4 h-4 text-gray-400" />;
                         </Link>;
                       ))}
@@ -905,52 +1028,60 @@ function Navigation() {
                 )}
               </div>;
             ))}
-            {/* Quick Links */}
+            {/* Quick Links */}"
             <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-200">;
               {quickLinks && quickLinks.map((link) => (;
-                <Link
+                <Link;
                   key={link && link.title}
-                  href={link && link.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">;
+                  href={link && link.href}"
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">;"
                   <link && link.icon className="w-4 h-4" />;
                   <span>{link && link.title}</span>;
                 </Link>;
               ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
+          <button;
+            onClick={() => setIsOpen(!isOpen)}"
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
-          >;
+          >;"
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {/* Mobile Navigation */}
         {isOpen && (;
-          <motion&& motion.div
-            initial={{ opacity: 0, height: 0 }}
+          <motion&& motion.div;
+            initial={{ opacity: 0, height: 0 }}"
             animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-gray-200 py-4">;
+            exit={{ opacity: 0, height: 0 }}"
+            className="lg:hidden border-t border-gray-200 py-4">;"
             <div className="space-y-4">;
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.title}>;
-                  <Link
-                    href={item && item.href}
+                  <Link;
+                    href={item && item.href}"
                     className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors py-2"
                     onClick={() => setIsOpen(false)}
-                  >;
-                    <item && item.icon className="w-5 h-5" />;
+                  >;"
+                    <item && item.icon className="w-5 h-5" />;"
                     <span className="font-medium">{item && item.title}</span>;
-                  </Link>;
+                  </Link>;"
                   <div className="ml-7 space-y-2 mt-2">;
                     {item && item.submenu.map((subItem) => (;
-                      <Link
+                      <Link;
                         key={subItem && subItem.title}
-                        href={subItem && subItem.href}
+                        href={subItem && subItem.href}"
                         className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600 transition-colors py-1"
                         onClick={() => setIsOpen(false)}
-                      >;
+                      >;"
                         <subItem && subItem.icon className="w-4 h-4" />;
                         <span>{subItem && subItem.title}</span>;
-                        {subItem && subItem.popular && (;
+                        {subItem && subItem.popular && (;"
                           <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0 && 0.5 rounded-full">;
                             Popular;
                           </span>;
@@ -960,16 +1091,16 @@ function Navigation() {
                   </div>;
                 </div>;
               ))}
-              {/* Mobile Quick Links */}
-              <div className="pt-4 border-t border-gray-200">;
+              {/* Mobile Quick Links */}"
+              <div className="pt-4 border-t border-gray-200">;"
                 <div className="grid grid-cols-2 gap-2">;
                   {quickLinks && quickLinks.map((link) => (;
-                    <Link
+                    <Link;
                       key={link && link.title}
-                      href={link && link.href}
+                      href={link && link.href}"
                       className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors py-2"
                       onClick={() => setIsOpen(false)}
-                    >;
+                    >;"
                       <link && link.icon className="w-4 h-4" />;
                       <span>{link && link.title}</span>;
                     </Link>;
@@ -982,21 +1113,21 @@ function Navigation() {
       </div>;
     </nav>;
   );
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation */}"
           <div className="hidden lg:flex items - center space - x-8">;
             {navigation_items.map ((item) => (
               <div;
-                key={item.title}
+                key={item.title}"
                 className="relative group";
                 onMouseEnter={() => setActiveSubmenu (item.title)}
                 onMouseLeave={() => setActiveSubmenu (null)}
               >;
                 <Link;
-                  href={item.href}
+                  href={item.href}"
                   className="flex items - center space - x-1 text - gray - 700 hover:text - blue - 600 transition - colors py - 2";
-                >;
+                >;"
                   <item.icon className="w - 5 h - 5" />;
-                  <span>{item.title}</span>;
+                  <span>{item.title}</span>;"
                   <ChevronDown className="w - 4 h - 4" />;
                 </Link>;
                 {/* Submenu */}
@@ -1004,44 +1135,44 @@ function Navigation() {
                   <motion.div;
                     initial={{ opacity: 0, coordinate_y: 10 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
-                    exit={{ opacity: 0, coordinate_y: 10 }}
+                    exit={{ opacity: 0, coordinate_y: 10 }}"
                     className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4 z - 50";
-                  >;
+                  >;"
                     <div className="grid grid - cols - 1 gap - 2">;
                       {item.submenu.map ((sub_item) => (
                         <Link;
                           key={sub_item.title}
-                          href={sub_item.href}
+                          href={sub_item.href}"
                           className="flex items - start space - x-3 p - 3 hover:bg - gray - 50 rounded - lg transition - colors";
-                        >;
-                          <sub_item.icon className="w - 5 h - 5 text - blue - 600 mt - 0.5" />;
-                          <div className="flex - 1">;
-                            <div className="flex items - center space - x-2">;
+                        >;"
+                          <sub_item.icon className="w - 5 h - 5 text - blue - 600 mt - 0.5" />;"
+                          <div className="flex - 1">;"
+                            <div className="flex items - center space - x-2">;"
                               <span className="font - medium text - gray - 900">;
                                 {sub_item.title}
                               </span>;
-                              {sub_item.popular && (
+                              {sub_item.popular && ("
                                 <span className="bg - blue - 100 text - blue - 800 text - xs font - medium px - 2 py - 0.5 rounded - full">;
                                   Popular;
                                 </span>)}
-                            </div>;
+                            </div>;"
                             <p className="text - sm text - gray - 500 mt - 1">;
                               {sub_item.description}
                             </p>;
-                          </div>;
+                          </div>;"
                           <ArrowRight className="w - 4 h - 4 text - gray - 400" />;
                         </Link>))}
                     </div>;
                   </motion.div>)}
               </div>))}
-            {/* Quick Links */}
+            {/* Quick Links */}"
             <div className="flex items - center space - x-4 ml - 8 pl - 8 border - l border - gray - 200">;
               {quick_links.map ((link) => (
                 <Link;
                   key={link.title}
-                  href={link.href}
+                  href={link.href}"
                   className="flex items - center space - x-1 text - gray - 700 hover:text - blue - 600 transition - colors";
-                >;
+                >;"
                   <link.icon className="w - 4 h - 4" />;
                   <span>{link.title}</span>;
                 </Link>))}
@@ -1049,58 +1180,58 @@ function Navigation() {
           </div>;
           {/* Mobile Menu Button */}
           <button;
-            on_click={() => setIsOpen (!is_open)}
+            on_click={() => setIsOpen (!is_open)}"
             className="lg:hidden p - 2 rounded - lg hover:bg - gray - 100 transition - colors";
-          >;
+          >;"
             {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
           </button>;
         </div>;
         {/* Mobile Navigation */}
         {is_open && (
           <motion.div;
-            initial={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0 }}"
             animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            exit={{ opacity: 0, height: 0 }}"
             className="lg:hidden border - t border - gray - 200 py - 4";
-          >;
+          >;"
             <div className="space - y-4">;
               {navigation_items.map ((item) => (
                 <div key={item.title}>;
                   <Link;
-                    href={item.href}
+                    href={item.href}"
                     className="flex items - center space - x-2 text - gray - 700 hover:text - blue - 600 transition - colors py - 2";
                     on_click={() => setIsOpen (false)}
-                  >;
-                    <item.icon className="w - 5 h - 5" />;
+                  >;"
+                    <item.icon className="w - 5 h - 5" />;"
                     <span className="font - medium">{item.title}</span>;
-                  </Link>;
+                  </Link>;"
                   <div className="ml - 7 space - y-2 mt - 2">;
                     {item.submenu.map ((sub_item) => (
                       <Link;
                         key={sub_item.title}
-                        href={sub_item.href}
+                        href={sub_item.href}"
                         className="flex items - center space - x-2 text - sm text - gray - 600 hover:text - blue - 600 transition - colors py - 1";
                         on_click={() => setIsOpen (false)}
-                      >;
+                      >;"
                         <sub_item.icon className="w - 4 h - 4" />;
                         <span>{sub_item.title}</span>;
-                        {sub_item.popular && (
+                        {sub_item.popular && ("
                           <span className="bg - blue - 100 text - blue - 800 text - xs font - medium px - 2 py - 0.5 rounded - full">;
                             Popular;
                           </span>)}
                       </Link>))}
                   </div>;
                 </div>))}
-              {/* Mobile Quick Links */}
-              <div className="pt - 4 border - t border - gray - 200">;
+              {/* Mobile Quick Links */}"
+              <div className="pt - 4 border - t border - gray - 200">;"
                 <div className="grid grid - cols - 2 gap - 2">;
                   {quick_links.map ((link) => (
                     <Link;
                       key={link.title}
-                      href={link.href}
+                      href={link.href}"
                       className="flex items - center space - x-2 text - gray - 700 hover:text - blue - 600 transition - colors py - 2";
                       on_click={() => setIsOpen (false)}
-                    >;
+                    >;"
                       <link.icon className="w - 4 h - 4" />;
                       <span>{link.title}</span>;
                     </Link>))}
@@ -1113,19 +1244,24 @@ function Navigation() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
+=======
+'
+import React from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import MainLayout from '../../src/components/layout/MainLayout';
 
-const Page = () => {
+const Page = () => {}
   return (
-    <MainLayout
-      title="Navigation - Zion Tech Group"
+    <MainLayout"
+      title="Navigation - Zion Tech Group""
       description="Navigation component"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Navigation</h1>
+    >"
+      <div className="min-h-screen bg-gray-50">"
+        <div className="container mx-auto px-4 py-16">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Navigation</h1>"
           <p className="text-xl text-gray-600">Navigation component page</p>
         </div>
       </div>
@@ -1134,6 +1270,7 @@ const Page = () => {
 };
 
 export default Page;
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1142,3 +1279,7 @@ export default Page;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

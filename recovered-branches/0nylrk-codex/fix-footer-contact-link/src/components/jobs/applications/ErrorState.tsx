@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Card, CardContent } from "@/components/ui/card";
@@ -46,9 +47,26 @@ export function ErrorState(): any ({ error }: ErrorStateProps) {;
   return (
     <Card className="border-red-200">;
       <CardContent className="p-6 text-center">;
+=======
+
+
+
+
+
+
+
+
+interface ErrorStateProps {}
+  error: string;
+}
+export function ErrorState({ error }: ErrorStateProps) {}
+  return (;
+    <Card className="border-red-200">;"
+      <CardContent className="p-6 text-center">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h3 className="text-lg font-medium text-red-600 mb-1">;
           Something went wrong;
-        </h3>;
+        </h3>;"
         <p className="text-muted-foreground">{error}</p>;
       </CardContent>;
     </Card>;
@@ -57,12 +75,13 @@ export function ErrorState(): any ({ error }: ErrorStateProps) {;
 }
 =======
 import { Card, CardContent  } from '@/components / ui / card';
-interface ErrorStateProps {
+interface ErrorStateProps {}
   error: string;
 }
-export /**
- * ErrorState - Function description
+export /**;
+ * ErrorState - Function description;
  */
+<<<<<<< HEAD
 function ErrorState() {
   return (
     <Card className="border - red-200">;
@@ -73,16 +92,35 @@ function ErrorState() {
         <p className="text - muted-foreground">{error}</p>;
       </CardContent>;
     </Card>);  )
+=======
+function ErrorState() {}
+  return ("
+    <Card className="border - red - 200">;"
+      <CardContent className="p - 6 text - center">;"
+        <h3 className="text - lg font - medium text - red - 600 mb - 1">;
+          Something went wrong;
+        </h3>;"
+        <p className="text - muted - foreground">{error}</p>;
+      </CardContent>;
+    </Card>);
+
+
+
+  return ("
+    <Card className="border-red-200">"
+      <CardContent className="p-6 text-center">"
+        <h3 className="text-lg font-medium text-red-600 mb-1">Something went wrong</h3>"
+        <p className="text-muted-foreground">{error}</p>
+      </CardContent>
+
+  )"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Card, CardContent } from "@/components/ui/card";
 interface ErrorStateProps {;
   error: string;
 }
 ;
-export function ErrorState({ error }: ErrorStateProps) {;
-  return (;
-    <Card className="border-red-200">;
-      <CardContent className="p-6 text-center">;
-        <h3 className="text-lg font-medium text-red-600 mb-1">Something went wrong</h3>;
+export function ErrorState() { return null; }
         <p className="text-muted-foreground">{error}</p>;
       </CardContent>;
     </Card>;
@@ -91,10 +129,8 @@ export function ErrorState({ error }: ErrorStateProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD
     </Card>;
   );
 }
@@ -109,3 +145,6 @@ export function ErrorState({ error }: ErrorStateProps) {;
 =======
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

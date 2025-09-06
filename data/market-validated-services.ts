@@ -1,8 +1,11 @@
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   name: string;
   tagline: string;
@@ -16,13 +19,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   customers?: number;
   trial_days?: number;
   setup_time?: string;
-  contact_info: {
+  contact_info: {}
     mobile: string;
     email: string;
     address: string;
     website?: string;
   }
 
+<<<<<<< HEAD
 ;
 const contact_info = {
 
@@ -49,20 +53,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'RAG over your docs with hybrid search',
       'Guardrails: PII / PHI redaction, jailbreak detection',
       'Human handoff + conversation analytics',
+=======
+      'RAG over your docs with hybrid search','
+      'Guardrails: PII / PHI redaction, jailbreak detection','
+      'Human handoff + conversation analytics','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Slack / Teams / Widget channels',
-    ],
+    ],'
     category: 'AI & Assistants',
 
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / ai - assistant',
     variant: 'ai - futuristic',
     rating: 4.8,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     customers: 1200,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '30 minutes',
     contact_info,
   },
+<<<<<<< HEAD
   {
 
       'Eval datasets/versioning',
@@ -80,20 +93,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Policy and toxicity checks',
       'Latency and cost KPIs',
+=======
+  {}
+'
+      'Policy and toxicity checks','
+      'Latency and cost KPIs','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Prompt / version diff and alerts',
-    ],
+    ],'
     category: 'AI & MLOps',
 
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / ai - evals',
     variant: 'quantum - holographic',
     rating: 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     customers: 600,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '1 hour',
     contact_info,
   },
+<<<<<<< HEAD
   {
 
       'Hybrid vector+BM25 + reranker',
@@ -110,20 +133,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Chunking strategies + citations',
       'Toolformer - style agents',
+=======
+  {}
+'
+      'Chunking strategies + citations','
+      'Toolformer - style agents','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Eval suite and drift monitoring',
-    ],
+    ],'
     category: 'AI & Search',
 
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / agentic - rag',
     variant: 'quantum - matrix',
     rating: 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     customers: 900,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '2 hours',
     contact_info,
   },
+<<<<<<< HEAD
 
       'Auth/Z misconfig checks',
   // Security and APIs;
@@ -141,20 +174,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'OWASP Top 10 tests',
       'CI gate',
+=======
+'
+      'OWASP Top 10 tests','
+      'CI gate','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Fix guidance',
-    ],
+    ],'
     category: 'Enterprise IT - Security',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / api - security - scanner',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: 'cyberpunk',
     rating: 4 && 4.6,
     customers: 750,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '20 minutes',
     contact_info,
   },
+<<<<<<< HEAD
   {
 
       'OTel traces/metrics/logs',
@@ -171,20 +214,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'SLOs & error budgets',
       'Alerting',
+=======
+  {}
+'
+      'SLOs & error budgets','
+      'Alerting','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Dashboards',
-    ],
+    ],'
     category: 'Enterprise IT - Observability',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / api - observability',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: 'holographic',
     rating: 4 && 4.6,
     customers: 640,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '40 minutes',
     contact_info,
   },
+<<<<<<< HEAD
 
   // Cloud and Infra;
   {
@@ -201,20 +255,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Auto rightsizing',
       'Idle cleanup',
       'Spot orchestration',
+=======
+'
+      'Auto rightsizing','
+      'Idle cleanup','
+      'Spot orchestration','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Anomaly detection',
-    ],
+    ],'
     category: 'Enterprise IT - FinOps',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / cloud - cost - optimizer',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: 'quantum',
     rating: 4 && 4.6,
     customers: 820,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '1 hour',
     contact_info,
   },
+<<<<<<< HEAD
   {
 
     id: 'database - performance - monitor',
@@ -230,20 +295,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Slow query ranking',
       'AI index advice',
       'Pool tuning',
+=======
+  {}
+'
+      'Slow query ranking','
+      'AI index advice','
+      'Pool tuning','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'SLA / SLO dashboards',
-    ],
+    ],'
     category: 'Enterprise IT - Data',
 
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / database - performance - monitor',
     variant: 'neural - quantum',
     rating: 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     customers: 560,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '45 minutes',
     contact_info,
   },
+<<<<<<< HEAD
   {
 
     id: 'managed - postgres - ha',
@@ -287,20 +363,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Global synthetic checks',
       'Error budgets & burn rates',
       'On - call & escalations',
+=======
+  {}
+'
+      'Global synthetic checks','
+      'Error budgets & burn rates','
+      'On - call & escalations','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Incident runbooks',
-    ],
+    ],'
     category: 'Enterprise IT - SRE',
 
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / uptime - slo - monitor',
     variant: 'quantum - cyberpunk',
     rating: 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     customers: 1100,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '25 minutes',
     contact_info,
   },
+<<<<<<< HEAD
   {
 
     id: 'tls - certificate - monitor',
@@ -316,20 +403,32 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expiry alerts',
       'Issuer checks',
       'Auto - renew validation',
+=======
+  {}
+'
+      'Expiry alerts','
+      'Issuer checks','
+      'Auto - renew validation','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Inventory export',
-    ],
+    ],'
     category: 'Enterprise IT - Security',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / tls - certificate - monitor',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: 'default',
     rating: 4 && 4.5,
     customers: 2200,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '10 minutes',
     contact_info,
   },
+<<<<<<< HEAD
   {
 
     id: 'domain - dns - monitor',
@@ -345,20 +444,32 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Change detection',
       'Misconfig alerts',
       'TTL insights',
+=======
+  {}
+'
+      'Change detection','
+      'Misconfig alerts','
+      'TTL insights','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Export & audit',
-    ],
+    ],'
     category: 'Enterprise IT - Networking',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / domain - dns - monitor',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     variant: 'default',
     rating: 4 && 4.4,
     customers: 980,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '15 minutes',
     contact_info,
   },
+<<<<<<< HEAD
 
       'HTML/Markdown to PDF',
       'Headers/footers',
@@ -377,20 +488,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Watermarks',
+=======
+'
+      'Watermarks','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Async webhooks',
-    ],
+    ],'
     category: 'Micro SaaS',
 
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / pdf - render - api',
     variant: 'holographic - matrix',
     rating: 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     customers: 1300,
-    trial_days: 7,
+    trial_days: 7,'
     setup_time: '10 minutes',
     contact_info,
   },
+<<<<<<< HEAD
   {
 
     id: 'browser - performance - monitor',
@@ -406,20 +525,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'RUM collection',
       'CWV dashboards',
       'Waterfall analysis',
+=======
+  {}
+'
+      'RUM collection','
+      'CWV dashboards','
+      'Waterfall analysis','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Alerts & webhooks',
-    ],
+    ],'
     category: 'Micro SaaS',
 
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / browser - performance - monitor',
     variant: 'quantum - holographic',
     rating: 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     customers: 760,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '20 minutes',
     contact_info,
   },
+<<<<<<< HEAD
   {
 
     id: 'feature - flags - edge',
@@ -435,20 +565,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Edge evaluation',
       'Targeting & segments',
       'Experiments',
+=======
+  {}
+'
+      'Edge evaluation','
+      'Targeting & segments','
+      'Experiments','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'SDKs & audit',
-    ],
+    ],'
     category: 'Micro SaaS',
 
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / feature - flags - edge',
     variant: 'quantum - holographic',
     rating: 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     customers: 430,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '30 minutes',
     contact_info,
   },
+<<<<<<< HEAD
   {
 
     id: 'serverless - cron - manager',
@@ -492,20 +633,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Control mapping',
       'Evidence collection',
       'Change tracking',
+=======
+  {}
+'
+      'Control mapping','
+      'Evidence collection','
+      'Change tracking','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Export & auditor access',
-    ],
+    ],'
     category: 'Enterprise IT - Compliance',
 
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / soc2 - evidence - automation',
     variant: 'holographic - neural',
     rating: 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     customers: 310,
-    trial_days: 7,
+    trial_days: 7,'
     setup_time: '1 day',
     contact_info,
   },
+<<<<<<< HEAD
   {
 
     id: 'vendor - risk - automation',
@@ -549,20 +701,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Capture & inspect',
       'Replay with backoff',
       'Signature verification',
+=======
+  {}
+'
+      'Capture & inspect','
+      'Replay with backoff','
+      'Signature verification','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Forwarding rules',
-    ],
+    ],'
     category: 'Micro SaaS',
 
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / webhook - relay - replay',
     variant: 'cyberpunk - holographic',
     rating: 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     customers: 1650,
-    trial_days: 14,
+    trial_days: 14,'
     setup_time: '10 minutes',
     contact_info,
   },
+<<<<<<< HEAD
   {
       'Managed vector DB'
       'Ingestion pipelines'
@@ -707,10 +870,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$89',
     period: '/month',
     description:;
+=======
+  {}
+'
+    id: 'vector - search - starter','
+    name: 'Vector Search Starter','
+    tagline: 'Deploy a production - grade vector database and APIs','
+    price: '$89','
+    period: '/month',
+    description:;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
     features: [;
 
 
+<<<<<<< HEAD
       'WORM retention',
       'Export APIs',
       'Fine - grained access',
@@ -733,10 +907,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
+=======
+'
+      'Managed vector DB','
+      'Ingestion pipelines','
+      'Metadata filters','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       'Access controls',
-    ],
+    ],'
     category: 'AI & Search',
 
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / vector - search - starter',
 
     variant: 'quantum',
@@ -754,6 +935,13 @@ export interface MarketValidatedService {;
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export interface MarketValidatedService {};
+export interface MarketValidatedService {;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	id: string;
 	name: string;
 	tagline: string;
@@ -767,6 +955,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 	rating?: number;
 	customers?: number;
 	trialDays?: number;
+<<<<<<< HEAD
 }}
 }}
 	setupTime?: string;
@@ -1568,3 +1757,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

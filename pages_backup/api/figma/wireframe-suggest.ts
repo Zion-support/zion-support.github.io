@@ -1,5 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD
 =======
@@ -23,16 +24,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/figma/wireframe-suggest.ts
   try {const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role |'Talent'}\n- Return a compact outline with bullets and short labels.`;
+=======
+'
+  try {const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role |'Talent'}\n- Return a compact outline with bullets and short labels.`;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
     const completion = await openai.chat.completions.create({model: 'gpt-4o-mini';
-      messages: [;
-        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' }
+      messages: [;'
+        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' }'
         { role: 'user', content: prompt }];
       temperature: 0.4;
-      max_tokens: 400});
+      max_tokens: 400});'
     const suggestion = completion.choices?.[0]?.message?.content |'No suggestion generated.';
-    res.status(200).json({ suggestion });
+    res.status(200).json({ suggestion });'
   } catch (e: any) {const message = process.env.OPENAI_API_KEY ? (e?.message |'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -45,11 +51,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/figma/wireframe-suggest.ts
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
 ;
-  try {;
+  try {;'`
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
-    const completion = await openai.chat.completions.create({;
+    const completion = await openai.chat.completions.create({;'
       model: 'gpt-4o-mini',;
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD
 =======
@@ -59,12 +69,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const openai = new OpenAI({
@@ -85,17 +94,43 @@ export default async function handler(req, res) {;
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {;
     console.error("Error:", error);
+=======
+
+
+
+const openai = new OpenAI({}
+  apiKey: process.env.OPENAI_API_KEY;
+});
+export default async function handler(req, res) {}
+  try {'
+  if (req.method !== 'POST') {}
+    res.status(405).json({'
+      error: 'Method not allowed';
+    });
+    return;
+    } catch (error) {}
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<<< HEAD:pages/api-disabled/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD
 }
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
   } catch (error) {;
     console.error("Error:", error);
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   const { screenName, role } = req.body || {};
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
   if (!screenName) {;
     res.status(400).json({;
       error: 'screenName is required'
@@ -166,12 +201,85 @@ export default async function handler(req, res) {;
 }
   } catch (error) {;
     console.error("Error:", error);
+=======
+  if (!screenName) {}
+    res.status(400).json({'
+      error: 'screenName is required'
+    });
+    return;
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  if (!screenName) {;
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  try {'`
+    const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
+    const completion = await openai.chat.completions.create({'
+      model: 'gpt-4o-mini',
+      messages: [{'
+        role: 'system','
+        content: 'You are a senior product designer. Respond with a compact wireframe outline.'
+      }, {'
+        role: 'user',
+        content: prompt;
+      }],
+      temperature: 0.4,
+      max_tokens: 400;
+    });'
+    const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
+    res.status(200).json({}
+      suggestion;
+    });
+  } catch (e: unknown) {'
+    const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
+    res.status(500).json({}
+      error: message;
+    });
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+export default async function handler(req, res) {}
+  try {'
+  if (req.method !== '$1') {';
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const { screenName, role } = req.body || {  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (!screenName) {;'
     res.status(400).json({ error: 'screenName is required' });
     return;
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
     } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -182,15 +290,32 @@ export default async function handler(req, res) {;
 }
   } catch (error) {;
     console.error("Error:", error);
+=======
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
   try {;
+=======
+  try {'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
-    const completion = await openai.chat.completions.create({;
+    const completion = await openai.chat.completions.create({;'
       model: 'gpt-4o-mini';
 
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD:pages/api-disabled/api/figma/wireframe-suggest.ts
 =======
 ========
@@ -220,11 +345,15 @@ if ( {) {
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/figma/wireframe-suggest.ts
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
 ;
-  try {;
+  try {;'`
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
-    const completion = await openai.chat.completions.create({;
+    const completion = await openai.chat.completions.create({;'
       model: 'gpt-4o-mini',;
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 const openai = new OpenAI({;
   apiKey: process.env.OPENAI_API_KEY
 });
@@ -245,10 +374,33 @@ export default async function handler(req, res) {;
 }
   } catch (error) {;
     console.error("Error:", error);
+=======
+const openai = new OpenAI({}
+  apiKey: process.env.OPENAI_API_KEY;
+});
+export default async function handler(req, res) {}
+  try {'
+  if (req.method !== 'POST') {}
+    res.status(405).json({'
+      error: 'Method not allowed';
+    });
+    return;
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   const { screenName, role } = req.body || {};
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
   if (!screenName) {;
     res.status(400).json({;
       error: 'screenName is required'
@@ -319,12 +471,85 @@ export default async function handler(req, res) {;
 }
   } catch (error) {;
     console.error("Error:", error);
+=======
+  if (!screenName) {}
+    res.status(400).json({'
+      error: 'screenName is required'
+    });
+    return;
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  if (!screenName) {;
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  try {'`
+    const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
+    const completion = await openai.chat.completions.create({'
+      model: 'gpt-4o-mini',
+      messages: [{'
+        role: 'system','
+        content: 'You are a senior product designer. Respond with a compact wireframe outline.'
+      }, {'
+        role: 'user',
+        content: prompt;
+      }],
+      temperature: 0.4,
+      max_tokens: 400;
+    });'
+    const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
+    res.status(200).json({}
+      suggestion;
+    });
+  } catch (e: unknown) {'
+    const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
+    res.status(500).json({}
+      error: message;
+    });
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+export default async function handler(req, res) {}
+  try {'
+  if (req.method !== '$1') {';
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const { screenName, role } = req.body || {  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (!screenName) {;'
     res.status(400).json({ error: 'screenName is required' });
     return;
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
     } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -335,14 +560,31 @@ export default async function handler(req, res) {;
 }
   } catch (error) {;
     console.error("Error:", error);
+=======
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
   try {;
+=======
+  try {'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
-    const completion = await openai.chat.completions.create({;
+    const completion = await openai.chat.completions.create({;'
       model: 'gpt-4o-mini';
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 =======
 <<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -493,10 +735,53 @@ export default async function handler(req, res) {;
 ========
 
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/figma/wireframe-suggest.ts
+=======
 
 
+
+
+
+      messages: [;'
+        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },;'
+        { role: 'user', content: prompt }];
+      temperature: 0.4;
+      max_tokens: 400});
+
+
+  } catch (error) {'
+    const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
+    res.status(500).json({ error: message });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts
 
+
+
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 
 <<<<<<<< HEAD:pages/api-disabled/api/figma/wireframe-suggest.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -526,3 +811,6 @@ export default async function handler(req, res) {;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/figma/wireframe-suggest.ts
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/figma/wireframe-suggest.ts

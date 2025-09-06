@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EmptyState from '../../components/ui/EmptyState'
 export default function RequestsPage() {
     <div>
@@ -16,32 +17,25 @@ export default /**
 function RequestsPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
   return (
     <div>;
       <h2 className=&quot;text - xl font - semibold mb - 2&quot;>Requests</h2>;
       <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Submit a quote or respond to invitations to see them here.&quot; cta_label=&quot;Submit a quote & quot; cta_href=&quot;/dashboard & quot; />;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
-import EmptyState from '../../components/ui/EmptyState'
-export default function RequestsPage() {
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
+
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -50,16 +44,17 @@ export default function RequestsPage() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export default function RequestsPage() {
+
+export default function RequestsPage() {};
   return (;
     <div>;
       <h2 className=&quot;text-xl font-semibold mb-2&quot;>Requests</h2>
       <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Submit a quote or respond to invitations to see them here.&quot; ctaLabel=&quot;Submit a quote&quot; ctaHref=&quot;/dashboard&quot; />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -109,3 +104,18 @@ export default function RequestsPage() {_return (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export default function RequestsPage() { return null; }
+  )  } catch (error) {";
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

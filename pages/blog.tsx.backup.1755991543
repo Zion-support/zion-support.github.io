@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -198,10 +199,14 @@ const featuredTags = [
 ];
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function Blog() {
   return (
     <Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -220,11 +225,15 @@ export default function Blog() {
           <div className="relative z-10 max-w-7xl mx-auto text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -244,6 +253,9 @@ export default function Blog() {
                 Stay updated with the latest insights, research, and developments in AI, quantum computing, and emerging technologies
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -315,6 +327,7 @@ export default function Blog() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -411,10 +424,14 @@ export default function Blog() {
               ))}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -650,6 +667,9 @@ export default function Blog() {
         {/* Newsletter Signup */}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -689,6 +709,7 @@ export default function Blog() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -713,10 +734,14 @@ export default function Blog() {
                 Get the latest insights and updates delivered directly to your inbox
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -734,6 +759,9 @@ export default function Blog() {
                 <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Subscribe
                 </button>
               </div>
@@ -746,9 +774,8 @@ export default function Blog() {
       </main>
     </Layout>
   );
-<<<<<<< HEAD
-};
 
+<<<<<<< HEAD
 export default BlogPage;
 =======
 <<<<<<< HEAD
@@ -759,3 +786,5 @@ export default BlogPage;
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

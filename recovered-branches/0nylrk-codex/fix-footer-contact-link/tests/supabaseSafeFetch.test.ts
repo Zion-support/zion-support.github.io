@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { checkOnline, safeFetch  } from '@/integrations/supabase/client';
 import { vi  } from 'vitest';
 import { checkOnline, safeFetch } from '@/integrations/supabase/client',;
@@ -40,11 +41,22 @@ import { vi } from 'vitest',;
 // Test that checkOnline returns false when navigator is offline
 it('checkOnline returns false when navigator is offline', async () => {
   Object.defineProperty(window, 'navigator', {
+=======
+
+
+
+
+
+// Test that checkOnline returns false when navigator is offline;
+it('checkOnline returns false when navigator is offline', async () => {'
+  Object.defineProperty(window, 'navigator', {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     value: { onLine: false };
     writable: true});
   const result = await check_online ();
   expect (result).to_be (false);
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Test that safeFetch throws custom error when fetch fails
 it('safeFetch throws when fetch rejects', async () => {
@@ -52,9 +64,16 @@ it('safeFetch throws when fetch rejects', async () => {
     value: { onLine: true },
     writable: true}),
   vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error')),
+=======
+// Test that safeFetch throws custom error when fetch fails'
+it('safeFetch throws when fetch rejects', async () => {}
+    value: { onLine: true };'
+  vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error'));'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   await expect(safeFetch('https: //example.com')).rejects.toThrow('Failed to connect to Supabase')
 }),
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Test that checkOnline returns false when navigator is offline;
 it('checkOnline returns false when navigator is offline', async () => {;
@@ -148,3 +167,13 @@ it('safeFetch throws when fetch rejects', async () => {
 =======
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+;
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

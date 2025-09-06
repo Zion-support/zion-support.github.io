@@ -43,6 +43,7 @@ export default function HomePage() {
 
   const marketInsights = [
     {
+<<<<<<< HEAD
       title: '🧠 Revolutionary Quantum AI Brain-Computer Interface',
       description: 'Breakthrough quantum AI-powered brain-computer interface enabling direct neural communication. Achieve unprecedented human-AI symbiosis with 99.9% accuracy.',
       price: 'Starting at $4,999/month',
@@ -266,6 +267,9 @@ export default function HomePage() {
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       id: 'quantum-cybersecurity',
@@ -278,6 +282,7 @@ export default function HomePage() {
       popular: true,
       icon: '🔒',
       color: 'from-red-500 to-pink-600',
+<<<<<<< HEAD
       marketData: '$6.8B quantum security market, 380% annual growth',
       competitors: 'CrowdStrike ($8.99/user/month), Palo Alto Networks ($50+/user/month)',
       savings: 'Save 70% vs. competitors',
@@ -286,6 +291,9 @@ export default function HomePage() {
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       id: 'space-technology',
@@ -298,6 +306,7 @@ export default function HomePage() {
       popular: true,
       icon: '🚀',
       color: 'from-blue-500 to-indigo-600',
+<<<<<<< HEAD
       marketData: '$4.2B space technology market, 280% annual growth',
       competitors: 'Maxar ($500+/month), Planet Labs ($400+/month)',
       savings: 'Save 20% vs. competitors',
@@ -334,6 +343,9 @@ export default function HomePage() {
       description: '280% annual growth rate',
       icon: <Cpu className="w-6 h-6" />,
       color: 'from-slate-500 to-gray-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -420,7 +432,11 @@ export default function HomePage() {
   };
 
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground variant="quantum" intensity="high">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions</title>
         <meta name="description" content="Discover 150+ revolutionary micro SaaS services powered by quantum computing, AI, and cutting-edge technology. Transform your business with our innovative solutions." />
@@ -432,6 +448,7 @@ export default function HomePage() {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-7xl mx-auto">
@@ -749,5 +766,8 @@ export default function HomePage() {
         </section>
       </div>
     </QuantumNeuralBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

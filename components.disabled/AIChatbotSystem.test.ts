@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -41,10 +42,23 @@ describe('AIChatbotSystem'
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+
+
+
+
+
+
+import AIChatbotSystem from ''
+describe('AIChatbotSystem''
+  it('renders without crashing'';
+    expect(screen ;'  });'
+  it('displays correct content''
+  it('handles user interactions'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
 =======
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem', () => {; it('renders without crashing', () => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbotSystem />); }); ; it('handles user interactions'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -70,14 +84,26 @@ import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem', ()
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import AIChatbotSystem from './AIChatbotSystem;
 describe('AIChatbotSystem', () => {;
+=======
+
+
+
+
+
+
+'
+import AIChatbotSystem from './AIChatbotSystem;'
+describe('AIChatbotSystem', () => {;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   it('renders without crashing', () => {;
-    render(<AIChatbotSystem />);
-    expect(screen.getByRole('main')).toBeInTheDocument();'  });';
+    render(<AIChatbotSystem />);'
+    expect(screen.getByRole('main')).toBeInTheDocument();'  });';'
   it('displays correct content', () => {;
     render(<AIChatbotSystem />);
-    // Add specific content checks based on component functionality});
+    // Add specific content checks based on component functionality});'
   it('handles user interactions', () => {;
     render(<AIChatbotSystem />);
+<<<<<<< HEAD
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />); }); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)});,});
 // Add interaction tests based on component functionality})});
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
@@ -86,14 +112,39 @@ import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() 
 <<<<<<< HEAD
 }),
 });
+=======
+
+
+'
+import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem', () => {; it('renders without crashing', () => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbotSystem />); }); ; it('handles user interactions''
+import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});'
+import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});'
+import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/integrate-build-improve-and-re-verify-8f7d'
+import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem', () => {; it('renders without crashing', () => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbotSystem />); }); ; it('handles user interactions'
+
+
+
+
+
+
+'
+import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem', () => {; it('renders without crashing', () => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbotSystem />); }); ; it('handles user interactions'
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />); }); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)});,});
 <<<<<<< HEAD
 // Add interaction tests based on component functionality})});
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+'
+import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
 
 
+<<<<<<< HEAD
 =======
 import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem', () => {; it('renders without crashing', () => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbotSystem />); }); ; it('handles user interactions'
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -136,3 +187,10 @@ import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,9 +31,11 @@ const React from "react"; return (); <div className={`${baseClasses} ${variantCl
 import React from \'react\'; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
 const React from "react"; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'`'"`
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import _React from 'react'; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,3 +85,13 @@ import React from \'react\'; return(); <div className={`${baseClasses} ${variant
 const React from "react"; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'`'"`
 import _React from 'react'; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from \'react\'; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'`
+const React from "react"; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'`'"`'`
+import _React from 'react'; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/health-monitor.cjs
 
 
@@ -385,13 +386,19 @@ monitor.run().catch(error => {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 /**
  * Health Monitor Script for PM2;
@@ -643,14 +650,19 @@ main().catch(error => {})
 <<<<<<< HEAD
 =======
 }
+<<<<<<< HEAD
 });});
 });});
 
 });
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 });
 
 
+<<<<<<< HEAD
 });});
 });});
 <<<<<<< HEAD
@@ -667,3 +679,6 @@ main().catch(error => {})
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

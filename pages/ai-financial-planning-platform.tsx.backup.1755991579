@@ -52,12 +52,16 @@ export default function AIFinancialPlanningPlatform() {
     'Gain professional-grade financial insights'
   ];
 
+<<<<<<< HEAD
   const useCases = [
     'Retirement Planning', 'Investment Management', 'Tax Optimization',
     'Estate Planning', 'Insurance Planning', 'Debt Management',
     'Cash Flow Analysis', 'Budget Planning', 'Emergency Fund Planning',
     'Education Funding', 'Real Estate Planning', 'Business Financial Planning'
   ];
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>

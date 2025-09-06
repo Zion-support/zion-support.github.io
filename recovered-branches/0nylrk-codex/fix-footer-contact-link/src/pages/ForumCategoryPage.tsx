@@ -7,6 +7,7 @@
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -47,9 +48,25 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     adminOnly: false
+=======
+import {useState} from "react";"
+import {useParams, Link} from "react-router-dom";"
+import {Button} from "@/components/ui/button";"
+import {Input} from "@/components/ui/input";"
+import {SEO} from "@/components/SEO";"
+import {AppLayout} from "@/layout/AppLayout";"
+import PostCard from "@/components/community/PostCard";"
+import {ForumPost, ForumCategoryInfo} from "@/types/community";"
+import {Badge} from "@/components/ui/badge";"
+import {useAuth} from "@/hooks/useAuth";"
+import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+    adminOnly: false;
+"
     icon: "Briefcase"
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -66,15 +83,28 @@ import { AppLayout } from "@/layout/AppLayout",
 import PostCard from "@/components/community/PostCard",
 import { ForumPost, ForumCategoryInfo } from "@/types/community",
 import { Badge } from "@/components/ui/badge",
+=======
+"
+import { useState } from "react","
+import { useParams, Link } from "react-router-dom","
+import { Button } from "@/components/ui/button","
+import { Input } from "@/components/ui/input","
+import { SEO } from "@/components/SEO","
+import { AppLayout } from "@/layout/AppLayout","
+import PostCard from "@/components/community/PostCard","
+import { ForumPost, ForumCategoryInfo } from "@/types/community","
+import { Badge } from "@/components/ui/badge","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useAuth } from "@/hooks/useAuth",
-import {
+import {}
   MessageSquare,
   Briefcase,
   Code,
   FileText,
   Megaphone,
-  Search
+  Search"
 } from "@/components/icons",
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Mock category data
@@ -227,95 +257,63 @@ import { ForumPost, ForumCategoryInfo } from '@/types / community';
 import { Badge } from '@/components / ui / badge';
 import { use_auth } from '@/hooks / use_auth';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from '@/components / icons';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 // Mock category data;
-const categories_info: Record < string, ForumCategoryInfo> = {
-  "getting - hired": {
-    id: "getting - hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.";
-    admin_only: false,
-    icon: "Briefcase";
+const categoriesInfo: Record<string, ForumCategoryInfo> = {"
+  "getting-hired": {}
+    adminOnly: false,"
+    icon: "Briefcase"
+  },
+"
+  "project-help": {}
+"
+    id: "project-help""
+    name: "Project Help""
+    description: "Get help with your ongoing projects and collaboration."
+    adminOnly: false;
+"
+    icon: "MessageSquare"
+
+  },
+
+"
+  "ai-tools": {"
+    id: "ai-tools","
+    name: "AI Tools Discussion","
+    description: "Discuss AI tools, frameworks, and best practices.",
+    adminOnly: false,"
+    icon: "Code"
+
+
+"
+  "feedback": {}
+"
+    id: "feedback""
+    name: "Feedback & Feature Requests""
+    description: "Share your feedback and suggest new features."
+    adminOnly: false;
+"
+    icon: "FileText"
+
+
+"
+  "announcements": {}
+"
+    id: "announcements""
+    name: "Announcements""
+    description: "Official announcements from the Zion team."
+    adminOnly: true;
+"
+    icon: "Megaphone"
   }
-  "project - help": {
-    id: "project - help",
-    name: "Project Help",
-    description: "Get help with your ongoing projects and collaboration.",
-    admin_only: false,
-    icon: "MessageSquare";
-  }
-  "ai - tools": {
-    id: "ai - tools",
-    name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.";
-    admin_only: false,
-    icon: "Code";
-  }
-  "feedback": {
-    id: "feedback",
-    name: "Feedback & Feature Requests",
-    description: "Share your feedback and suggest new features.",
-    admin_only: false,
-    icon: "FileText";
-  }
-  "announcements": {
-    id: "announcements",
-    name: "Announcements",
-    description: "Official announcements from the Zion team.",
-    admin_only: true,
-    icon: "Megaphone";
-  }
-}
-;
 // Mock data for posts by category;
-const postsByCategory: Record < string, ForumPost[]> = {
-  "getting - hired": [;
-    {
-      id: "2",
-      title: "How to build an effective AI talent profile?",
-      content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
-      author_id: "user2",
-      author_name: "Sarah Chen",
-      author_avatar: "https://i.pravatar.cc / 150?img = 5",
-      category_id: "getting - hired",
-      tags: ["profile", "tips", "hiring"];
-      created_at: "2025 - 04 - 03T09:15:00Z",
-      updated_at: "2025 - 04 - 03T09:15:00Z",
-      upvotes: 32,
-      downvotes: 0,
-      reply_count: 8,
-      is_pinned: true,
-      is_featured: true;
-<<<<<<< HEAD
-
-=======
-}
-},
-
-// Mock data for posts by category
-const postsByCategory: Record<string ForumPost[]> = {
-  "getting-hired": [
-    {
-
-      id: "2"
-      title: "How to build an effective AI talent profile?"
-      content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?"
-      authorId: "user2"
-      authorName: "Sarah Chen"
-      authorAvatar: "https://i.pravatar.cc/150?img=5"
-      categoryId: "getting-hired"
-      tags: ["profile", "tips", "hiring"];
-      createdAt: "2025-04-03T09:15:00Z"
-      updatedAt: "2025-04-03T09:15:00Z"
-      upvotes: 32
-      downvotes: 0
-      replyCount: 8
-      isPinned: true
-      isFeatured: true
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+const postsByCategory: Record<string, ForumPost[]> = {"
+  "getting-hired": []
+    {}
     }
+<<<<<<< HEAD
 =======
     icon: "MessageSquare"    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -335,26 +333,53 @@ const postsByCategory: Record<string ForumPost[]> = {
       categoryId: "getting-hired",
       tags: ["profile", "tips", "hiring"],
       createdAt: "2025-04-03T09:15:00Z",
+=======
+    {"
+      id: "6""
+      title: "Portfolio pieces that clients actually care about""
+      content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
+"
+      author_id: "user6","
+      author_name: "James Wilson","
+      category_id: "getting - hired","
+      tags: ["portfolio", "projects", "examples"];"
+      created_at: "2025 - 04 - 07T11:30:00Z","
+      updated_at: "2025 - 04 - 07T11:30:00Z",
+      upvotes: 19,
+      downvotes: 2,
+      reply_count: 6;
+"
+      id: "2","
+      title: "How to build an effective AI talent profile?",'"
+      content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?","
+      authorId: "user2","
+      authorName: "Sarah Chen","
+      authorAvatar: "https://i.pravatar.cc/150?img=5","
+      categoryId: "getting-hired","
+      tags: ["profile", "tips", "hiring"],"
+      createdAt: "2025-04-03T09:15:00Z","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       updatedAt: "2025-04-03T09:15:00Z",
       upvotes: 32,
       downvotes: 0,
       replyCount: 8,
       isPinned: true,
-      isFeatured: true
+      isFeatured: true;
     },
-    {
-      id: "6",
-      title: "Portfolio pieces that clients actually care about",
-      content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...",
-      authorId: "user6",
-      authorName: "James Wilson",
-      categoryId: "getting-hired",
-      tags: ["portfolio", "projects", "examples"],
-      createdAt: "2025-04-07T11:30:00Z",
+    {"
+      id: "6","
+      title: "Portfolio pieces that clients actually care about",'"
+      content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...","
+      authorId: "user6","
+      authorName: "James Wilson","
+      categoryId: "getting-hired","
+      tags: ["portfolio", "projects", "examples"],"
+      createdAt: "2025-04-07T11:30:00Z","
       updatedAt: "2025-04-07T11:30:00Z",
       upvotes: 19,
       downvotes: 2,
 
+<<<<<<< HEAD
       replyCount: 6
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -368,9 +393,14 @@ const postsByCategory: Record<string ForumPost[]> = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
-  ];
+  ];"
   "project - help": [;
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -394,79 +424,42 @@ const postsByCategory: Record<string ForumPost[]> = {
       category_id: "project - help",
       tags: ["testing", "automation", "ci - cd"];
       created_at: "2025 - 04 - 10T14:30:00Z",
+=======
+    {}
+"
+      id: "3","
+      title: "Looking for feedback on my automated testing approach",'"
+      content: "I've set up a CI / CD pipeline with the following testing strategy...","
+      author_id: "user3","
+      author_name: "Michael Wong","
+      category_id: "project - help","
+      tags: ["testing", "automation", "ci - cd"];"
+      created_at: "2025 - 04 - 10T14:30:00Z","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       updated_at: "2025 - 04 - 10T14:30:00Z",
       upvotes: 5,
       downvotes: 0,
       reply_count: 2;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      replyCount: 6
-    }
-  ],
-  "project-help": [
-    {
-      id: "3"
-      title: "Looking for feedback on my automated testing approach"
-      content: "I've set up a CI/CD pipeline with the following testing strategy..."
-      authorId: "user3"
-      authorName: "Michael Wong"
-      categoryId: "project-help"
-      tags: ["testing", "automation", "ci-cd"];
-      createdAt: "2025-04-10T14:30:00Z"
-      updatedAt: "2025-04-10T14:30:00Z"
-      upvotes: 5
-      downvotes: 0
-      replyCount: 2
-    }
-    {
-      id: "5"
-      title: "How to handle client scope creep?"
-      content: "I'm working on a project where the client keeps adding requirements..."
-      authorId: "user5"
-      authorName: "David Lin"
-      categoryId: "project-help"
-      tags: ["client-management", "scope", "projects"];
-      createdAt: "2025-04-08T10:20:00Z"
-      updatedAt: "2025-04-08T10:20:00Z"
-      upvotes: 24
-      downvotes: 0
-      replyCount: 7
-      id: "3",
-      title: "Looking for feedback on my automated testing approach",
-      content: "I've set up a CI/CD pipeline with the following testing strategy...",
-      authorId: "user3",
-      authorName: "Michael Wong",
-      categoryId: "project-help",
-      tags: ["testing", "automation", "ci-cd"],
-      createdAt: "2025-04-10T14:30:00Z",
-      updatedAt: "2025-04-10T14:30:00Z",
-      upvotes: 5,
-      downvotes: 0,
-      replyCount: 2
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    {
-      id: "5",
-      title: "How to handle client scope creep?",
+
+
+
+    {"
+      id: "5","
+      title: "How to handle client scope creep?",'"
       content: "I'm working on a project where the client keeps adding requirements...",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      author_id: "user5",
-      author_name: "David Lin",
-      category_id: "project - help",
-      tags: ["client - management", "scope", "projects"];
-      created_at: "2025 - 04 - 08T10:20:00Z",
+"
+      author_id: "user5","
+      author_name: "David Lin","
+      category_id: "project - help","
+      tags: ["client - management", "scope", "projects"];"
+      created_at: "2025 - 04 - 08T10:20:00Z","
       updated_at: "2025 - 04 - 08T10:20:00Z",
       upvotes: 24,
       downvotes: 0,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
       isAnswered: true
 
 <<<<<<< HEAD
@@ -476,9 +469,14 @@ const postsByCategory: Record<string ForumPost[]> = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      replyCount: 7,
+      isAnswered: true;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
-  ];
+  ];"
   "ai - tools": [;
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
 =======
@@ -500,6 +498,20 @@ const postsByCategory: Record<string ForumPost[]> = {
       category_id: "ai - tools",
       tags: ["machine - learning", "fine - tuning", "gpt"];
       created_at: "2025 - 04 - 01T12:00:00Z",
+=======
+    {}
+"
+      id: "1","
+      title: "Best practices for AI model fine - tuning",'"
+      content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me...","
+      author_id: "user1","
+      author_name: "Alex Johnson","
+      author_avatar: "https://i.pravatar.cc / 150?img = 3","
+      author_role: "Verified Talent","
+      category_id: "ai - tools","
+      tags: ["machine - learning", "fine - tuning", "gpt"];"
+      created_at: "2025 - 04 - 01T12:00:00Z","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       updated_at: "2025 - 04 - 01T12:00:00Z",
       upvotes: 48,
       downvotes: 2,
@@ -507,6 +519,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       is_answered: true,
       is_featured: true;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       authorId: "user5",
@@ -588,21 +601,23 @@ const postsByCategory: Record<string ForumPost[]> = {
       updated_at: "2025 - 04 - 05T16:40:00Z",
       upvotes: 31,
       downvotes: 0,
+=======
+
+    {"
+      id: "7","
+      title: "Comparing different vector embedding models",'"
+      content: "I've been experimenting with these different embedding models and here are my findings...",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-      replyCount: 9
 
-=======
-      reply_count: 9;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
-  ];
+  ];"
   "feedback": [;
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
 =======
@@ -622,11 +637,24 @@ const postsByCategory: Record<string ForumPost[]> = {
       category_id: "feedback",
       tags: ["feature - request", "teams", "collaboration"];
       created_at: "2025 - 04 - 09T18:45:00Z",
+=======
+    {}
+"
+      id: "4","
+      title: "Feature request: Team collaboration tools","
+      content: "It would be really helpful if we could have built - in tools for team collaboration...","
+      author_id: "user4","
+      author_name: "Emma Davis","
+      category_id: "feedback","
+      tags: ["feature - request", "teams", "collaboration"];"
+      created_at: "2025 - 04 - 09T18:45:00Z","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       updated_at: "2025 - 04 - 09T18:45:00Z",
       upvotes: 12,
       downvotes: 1,
       reply_count: 3;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       authorId: "user7",
@@ -699,21 +727,23 @@ const postsByCategory: Record<string ForumPost[]> = {
       updated_at: "2025 - 04 - 04T08:10:00Z",
       upvotes: 17,
       downvotes: 3,
+=======
+
+    {"
+      id: "8","
+      title: "Suggestion for improving the jobs matching algorithm","
+      content: "I think the job matching could be improved by considering these additional factors...",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-      replyCount: 5
 
-=======
-      reply_count: 5;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
-  ];
+  ];"
   "announcements": [;
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
 
@@ -947,49 +977,63 @@ const iconMap = {;
       category_id: "announcements",
       tags: ["update", "matching", "algorithm"];
       created_at: "2025 - 04 - 02T15:00:00Z",
+=======
+    {}
+"
+      id: "9","
+      title: "Platform Update: New AI Matching Algorithm",'"
+      content: "We're excited to announce the launch of our new and improved AI matching algorithm...","
+      author_id: "admin1","
+      author_name: "Zion Team","
+      author_role: "Admin","
+      category_id: "announcements","
+      tags: ["update", "matching", "algorithm"];"
+      created_at: "2025 - 04 - 02T15:00:00Z","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       updated_at: "2025 - 04 - 02T15:00:00Z",
       upvotes: 42,
       downvotes: 0,
       reply_count: 11,
       is_pinned: true;
     }
-    {
-      id: "10",
-      title: "Maintenance Scheduled: April 15th",
-      content: "We will be performing scheduled maintenance on April 15th from 2am - 4am UTC...",
-      author_id: "admin1",
-      author_name: "Zion Team",
-      author_role: "Admin",
-      category_id: "announcements",
-      tags: ["maintenance", "downtime"];
-      created_at: "2025 - 04 - 10T09:00:00Z",
+    {"
+      id: "10","
+      title: "Maintenance Scheduled: April 15th","
+      content: "We will be performing scheduled maintenance on April 15th from 2am - 4am UTC...","
+      author_id: "admin1","
+      author_name: "Zion Team","
+      author_role: "Admin","
+      category_id: "announcements","
+      tags: ["maintenance", "downtime"];"
+      created_at: "2025 - 04 - 10T09:00:00Z","
       updated_at: "2025 - 04 - 10T09:00:00Z",
       upvotes: 8,
       downvotes: 0,
       reply_count: 2,
       is_pinned: true;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  ];
-}
-;
-const icon_map = {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  "Briefcase": Briefcase;
-  "MessageSquare": MessageSquare;
-  "Code": Code;
+"
+  "Briefcase": Briefcase;"
+  "MessageSquare": MessageSquare;"
+  "Code": Code;"
   "FileText": FileText;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  "Megaphone": Megaphone;
-};
 
-export default function ForumCategoryPage() {;
+  ]
+},
+
+
+
+const iconMap = {"
+  "Briefcase": Briefcase,"
+  "MessageSquare": MessageSquare,"
+  "Code": Code,"
+  "FileText": FileText,"
+  "Megaphone": Megaphone;
+},
+
+export default function ForumCategoryPage() {};
   // useParams is typed as `any` in this environment due to missing type;
+<<<<<<< HEAD
   // definitions, so avoid passing a type argument to prevent TS2347.;
   const { categoryId } = useParams();
   const { user } = useAuth();
@@ -1118,266 +1162,20 @@ export default function ForumCategoryPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
 
-import { useState } from "react",;
-import { useParams, Link } from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { SEO } from "@/components/SEO",;
-import { AppLayout } from "@/layout/AppLayout",;
-import PostCard from "@/components/community/PostCard",;
-import { ForumPost, ForumCategoryInfo } from "@/types/community",;
-import { Badge } from "@/components/ui/badge",;
-import { useAuth } from "@/hooks/useAuth",;
-import {;
-  MessageSquare,;
-  Briefcase,;
-  Code,;
-  FileText,;
-  Megaphone,;
-  Search;
-} from "@/components/icons",;
-;
-// Mock category data;
-const categoriesInfo:Record<string ForumCategoryInfo> = {;
-  "getting-hired":{;
-    id:"getting-hired",;
-    name:"Getting Hired",;
-    description:"Tips, strategies, and questions about getting hired on the platform.",;
-    adminOnly:false,;
-    icon:"Briefcase";
-  },;
-  "project-help":{;
-    id:"project-help",;
-    name:"Project Help",;
-    description:"Get help with your ongoing projects and collaboration.",;
-    adminOnly:false,;
-    icon:"MessageSquare";
-  },;
-  "ai-tools":{;
-    id:"ai-tools",;
-    name:"AI Tools Discussion",;
-    description:"Discuss AI tools, frameworks, and best practices.",;
-    adminOnly:false,;
-    icon:"Code";
-  },;
-  "feedback":{;
-    id:"feedback",;
-    name:"Feedback & Feature Requests",;
-    description:"Share your feedback and suggest new features.",;
-    adminOnly:false,;
-    icon:"FileText";
-  },;
-  "announcements":{;
-    id:"announcements",;
-    name:"Announcements",;
-    description:"Official announcements from the Zion team.",;
-    adminOnly:true,;
-    icon:"Megaphone";
-  }
-},;
-;
-// Mock data for posts by category;
-const postsByCategory:Record<string ForumPost[]> = {;
-  "getting-hired":[;
-    {;
-      id:"2",;
-      title:"How to build an effective AI talent profile?",;
-      content:"I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",;
-      authorId:"user2",;
-      authorName:"Sarah Chen",;
-      authorAvatar:"https://i.pravatar.cc/150?img=5",;
-      categoryId:"getting-hired",;
-      tags:["profile", "tips", "hiring"],;
-      createdAt:"2025-04-03T09:15:00Z",;
-      updatedAt:"2025-04-03T09:15:00Z",;
-      upvotes:32,;
-      downvotes:0,;
-      replyCount:8,;
-      isPinned:true,;
-      isFeatured:true;
-    },;
-    {;
-      id:"6",;
-      title:"Portfolio pieces that clients actually care about",;
-      content:"After submitting dozens of applications, I've found that these types of projects tend to get the most attention...",;
-      authorId:"user6",;
-      authorName:"James Wilson",;
-      categoryId:"getting-hired",;
-      tags:["portfolio", "projects", "examples"],;
-      createdAt:"2025-04-07T11:30:00Z",;
-      updatedAt:"2025-04-07T11:30:00Z",;
-      upvotes:19,;
-      downvotes:2,;
-      replyCount:6;
-    }
-  ],;
-  "project-help":[;
-    {;
-      id:"3",;
-      title:"Looking for feedback on my automated testing approach",;
-      content:"I've set up a CI/CD pipeline with the following testing strategy...",;
-      authorId:"user3",;
-      authorName:"Michael Wong",;
-      categoryId:"project-help",;
-      tags:["testing", "automation", "ci-cd"],;
-      createdAt:"2025-04-10T14:30:00Z",;
-      updatedAt:"2025-04-10T14:30:00Z",;
-      upvotes:5,;
-      downvotes:0,;
-      replyCount:2;
-    },;
-    {;
-      id:"5",;
-      title:"How to handle client scope creep?",;
-      content:"I'm working on a project where the client keeps adding requirements...",;
-      authorId:"user5",;
-      authorName:"David Lin",;
-      categoryId:"project-help",;
-      tags:["client-management", "scope", "projects"],;
-      createdAt:"2025-04-08T10:20:00Z",;
-      updatedAt:"2025-04-08T10:20:00Z",;
-      upvotes:24,;
-      downvotes:0,;
-      replyCount:7,;
-      isAnswered:true;
-    }
-  ],;
-  "ai-tools":[;
-    {;
-      id:"1",;
-      title:"Best practices for AI model fine-tuning",;
-      content:"I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",;
-      authorId:"user1",;
-      authorName:"Alex Johnson",;
-      authorAvatar:"https://i.pravatar.cc/150?img=3",;
-      authorRole:"Verified Talent",;
-      categoryId:"ai-tools",;
-      tags:["machine-learning", "fine-tuning", "gpt"],;
-      createdAt:"2025-04-01T12:00:00Z",;
-      updatedAt:"2025-04-01T12:00:00Z",;
-      upvotes:48,;
-      downvotes:2,;
-      replyCount:12,;
-      isAnswered:true,;
-      isFeatured:true;
-    },;
-    {;
-      id:"7",;
-      title:"Comparing different vector embedding models",;
-      content:"I've been experimenting with these different embedding models and here are my findings...",;
-      authorId:"user7",;
-      authorName:"Lisa Park",;
-      categoryId:"ai-tools",;
-      tags:["embeddings", "vectors", "similarity-search"],;
-      createdAt:"2025-04-05T16:40:00Z",;
-      updatedAt:"2025-04-05T16:40:00Z",;
-      upvotes:31,;
-      downvotes:0,;
-      replyCount:9;
-    }
-  ],;
-  "feedback":[;
-    {;
-      id:"4",;
-      title:"Feature request:Team collaboration tools",;
-      content:"It would be really helpful if we could have built-in tools for team collaboration...",;
-      authorId:"user4",;
-      authorName:"Emma Davis",;
-      categoryId:"feedback",;
-      tags:["feature-request", "teams", "collaboration"],;
-      createdAt:"2025-04-09T18:45:00Z",;
-      updatedAt:"2025-04-09T18:45:00Z",;
-      upvotes:12,;
-      downvotes:1,;
-      replyCount:3;
-    },;
-    {;
-      id:"8",;
-      title:"Suggestion for improving the jobs matching algorithm",;
-      content:"I think the job matching could be improved by considering these additional factors...",;
-      authorId:"user8",;
-      authorName:"Ryan Mitchell",;
-      categoryId:"feedback",;
-      tags:["matching", "jobs", "algorithm"],;
-      createdAt:"2025-04-04T08:10:00Z",;
-      updatedAt:"2025-04-04T08:10:00Z",;
-      upvotes:17,;
-      downvotes:3,;
-      replyCount:5;
-    }
-  ],;
-  "announcements":[;
-    {;
-      id:"9",;
-      title:"Platform Update:New AI Matching Algorithm",;
-      content:"We're excited to announce the launch of our new and improved AI matching algorithm...",;
-      authorId:"admin1",;
-      authorName:"Zion Team",;
-      authorRole:"Admin",;
-      categoryId:"announcements",;
-      tags:["update", "matching", "algorithm"],;
-      createdAt:"2025-04-02T15:00:00Z",;
-      updatedAt:"2025-04-02T15:00:00Z",;
-      upvotes:42,;
-      downvotes:0,;
-      replyCount:11,;
-      isPinned:true;
-    },;
-    {;
-      id:"10",;
-      title:"Maintenance Scheduled:April 15th",;
-      content:"We will be performing scheduled maintenance on April 15th from 2am-4am UTC...",;
-      authorId:"admin1",;
-      authorName:"Zion Team",;
-      authorRole:"Admin",;
-      categoryId:"announcements",;
-      tags:["maintenance", "downtime"],;
-      createdAt:"2025-04-10T09:00:00Z",;
-      updatedAt:"2025-04-10T09:00:00Z",;
-      upvotes:8,;
-      downvotes:0,;
-      replyCount:2,;
-      isPinned:true;
-    }
-  ];
-},;
-;
-const iconMap = {;
-  "Briefcase":Briefcase,;
-  "MessageSquare":MessageSquare,;
-  "Code":Code,;
-  "FileText":FileText,;
-  "Megaphone":Megaphone;
-},;
-;
-export default function ForumCategoryPage() {;
-  // useParams is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
-  const { categoryId } = useParams(),;
-  const { user } = useAuth(),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  ;
-  if (!categoryId || !categoriesInfo[categoryId]) {;
-    return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <AppLayout>;
+      <AppLayout>;"
         <div className="container py-8">;
-          <h1>Category not found</h1>;
-          <Button asChild className="mt-4">;
+          <h1>Category not found</h1>;"
+          <Button asChild className="mt-4">;"
             <Link to="/community">Back to Community</Link>;
           </Button>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    );
-  }
 
+<<<<<<< HEAD
 
 =======
 
@@ -1411,14 +1209,16 @@ export default function ForumCategoryPage() {;
   const posts = postsByCategory[categoryId] |[];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   
   const category = categoriesInfo[categoryId],
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,
   const posts = postsByCategory[categoryId] || [],
   
+
+
 <<<<<<< HEAD
-
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -1427,74 +1227,73 @@ export default function ForumCategoryPage() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     );
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  // Filter posts based on search query
-  const filteredPosts = searchQuery
+
+  // Filter posts based on search query;
+  const filteredPosts = searchQuery;
     ? posts.filter(post =>
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-    : posts;
-  // For announcements, check if user is admin
-  const canCreatePost = categoryId !== "announcements" |(user?.userType === 'admin' |user?.role === 'admin');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     : posts,
   
-  // For announcements, check if user is admin
+  // For announcements, check if user is admin'"
   const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin'),
   
+
+
 <<<<<<< HEAD
-
-
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <AppLayout>
-      <SEO
+      <SEO;`
         title={`${category.name} | Community Forum | Zion AI Marketplace`}
-        description={category.description}
+        description={category.description}`
         keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`}
-      />
-      <div className="container py-8">
-        <div className="flex items-center gap-3 mb-6">
+      />"
+      <div className="container py-8">"
+        <div className="flex items-center gap-3 mb-6">"
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
-            Forum
-          </Link>
-          <span className="text-muted-foreground">/</span>
+            Forum;
+          </Link>"
+          <span className="text-muted-foreground">/</span>"
           <span className="font-medium">{category.name}</span>
-        </div>
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
-          <div className="flex items-center gap-4">
-            <div className="p-3 bg-zion-purple/10 rounded-full">
+        </div>"
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">"
+          <div className="flex items-center gap-4">"
+            <div className="p-3 bg-zion-purple/10 rounded-full">"
               <IconComponent className="h-8 w-8 text-zion-purple" />
             </div>
-            <div>
-              <h1 className="text-3xl font-bold">{category.name}</h1>
+            <div>"
+              <h1 className="text-3xl font-bold">{category.name}</h1>"
               <p className="text-muted-foreground mt-1">{category.description}</p>
             </div>
           </div>
           {canCreatePost && (
-            <Button asChild>
+            <Button asChild>`
               <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>
-                Create New Post
+                Create New Post;
               </Link>
             </Button>
           )}
-        </div>
-        <div className="mb-6">
-          <div className="relative">
+        </div>"
+        <div className="mb-6">"
+          <div className="relative">"
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1530,6 +1329,18 @@ import { AppLayout } from "@/layout/AppLayout",;
 import PostCard from "@/components/community/PostCard",;
 import { ForumPost, ForumCategoryInfo } from "@/types/community",;
 import { Badge } from "@/components/ui/badge",;
+=======
+"
+import { useState } from "react",;"
+import { useParams, Link } from "react-router-dom",;"
+import { Button } from "@/components/ui/button",;"
+import { Input } from "@/components/ui/input",;"
+import { SEO } from "@/components/SEO",;"
+import { AppLayout } from "@/layout/AppLayout",;"
+import PostCard from "@/components/community/PostCard",;"
+import { ForumPost, ForumCategoryInfo } from "@/types/community",;"
+import { Badge } from "@/components/ui/badge",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useAuth } from "@/hooks/useAuth",;
 import {;
   MessageSquare,;
@@ -1537,59 +1348,59 @@ import {;
   Code,;
   FileText,;
   Megaphone,;
-  Search;
+  Search;"
 } from "@/components/icons",;
 // Mock category data;
-const categoriesInfo: Record<string ForumCategoryInfo> = {;
-  "getting-hired": {;
-    id: "getting-hired",;
-    name: "Getting Hired",;
+const categoriesInfo: Record<string ForumCategoryInfo> = {;"
+  "getting-hired": {;"
+    id: "getting-hired",;"
+    name: "Getting Hired",;"
     description: "Tips, strategies, and questions about getting hired on the platform.",;
-    adminOnly: false,;
+    adminOnly: false,;"
     icon: "Briefcase";
-  },;
-  "project-help": {;
-    id: "project-help",;
-    name: "Project Help",;
+  },;"
+  "project-help": {;"
+    id: "project-help",;"
+    name: "Project Help",;"
     description: "Get help with your ongoing projects and collaboration.",;
-    adminOnly: false,;
+    adminOnly: false,;"
     icon: "MessageSquare";
-  },;
-  "ai-tools": {;
-    id: "ai-tools",;
-    name: "AI Tools Discussion",;
+  },;"
+  "ai-tools": {;"
+    id: "ai-tools",;"
+    name: "AI Tools Discussion",;"
     description: "Discuss AI tools, frameworks, and best practices.",;
-    adminOnly: false,;
+    adminOnly: false,;"
     icon: "Code";
-  },;
-  "feedback": {;
-    id: "feedback",;
-    name: "Feedback & Feature Requests",;
+  },;"
+  "feedback": {;"
+    id: "feedback",;"
+    name: "Feedback & Feature Requests",;"
     description: "Share your feedback and suggest new features.",;
-    adminOnly: false,;
+    adminOnly: false,;"
     icon: "FileText";
-  },;
-  "announcements": {;
-    id: "announcements",;
-    name: "Announcements",;
+  },;"
+  "announcements": {;"
+    id: "announcements",;"
+    name: "Announcements",;"
     description: "Official announcements from the Zion team.",;
-    adminOnly: true,;
+    adminOnly: true,;"
     icon: "Megaphone";
   }
 },;
 // Mock data for posts by category;
-const postsByCategory: Record<string ForumPost[]> = {;
+const postsByCategory: Record<string ForumPost[]> = {;"
   "getting-hired": [;
-    {;
-      id: "2",;
-      title: "How to build an effective AI talent profile?",;
-      content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",;
-      authorId: "user2",;
-      authorName: "Sarah Chen",;
-      authorAvatar: "https://i.pravatar.cc/150?img=5",;
-      categoryId: "getting-hired",;
-      tags: ["profile", "tips", "hiring"],;
-      createdAt: "2025-04-03T09:15:00Z",;
+    {;"
+      id: "2",;"
+      title: "How to build an effective AI talent profile?",;'"
+      content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",;"
+      authorId: "user2",;"
+      authorName: "Sarah Chen",;"
+      authorAvatar: "https://i.pravatar.cc/150?img=5",;"
+      categoryId: "getting-hired",;"
+      tags: ["profile", "tips", "hiring"],;"
+      createdAt: "2025-04-03T09:15:00Z",;"
       updatedAt: "2025-04-03T09:15:00Z",;
       upvotes: 32,;
       downvotes: 0,;
@@ -1597,64 +1408,64 @@ const postsByCategory: Record<string ForumPost[]> = {;
       isPinned: true,;
       isFeatured: true;
     },;
-    {;
-      id: "6",;
-      title: "Portfolio pieces that clients actually care about",;
-      content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...",;
-      authorId: "user6",;
-      authorName: "James Wilson",;
-      categoryId: "getting-hired",;
-      tags: ["portfolio", "projects", "examples"],;
-      createdAt: "2025-04-07T11:30:00Z",;
+    {;"
+      id: "6",;"
+      title: "Portfolio pieces that clients actually care about",;'"
+      content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...",;"
+      authorId: "user6",;"
+      authorName: "James Wilson",;"
+      categoryId: "getting-hired",;"
+      tags: ["portfolio", "projects", "examples"],;"
+      createdAt: "2025-04-07T11:30:00Z",;"
       updatedAt: "2025-04-07T11:30:00Z",;
       upvotes: 19,;
       downvotes: 2,;
       replyCount: 6;
     }
-  ],;
+  ],;"
   "project-help": [;
-    {;
-      id: "3",;
-      title: "Looking for feedback on my automated testing approach",;
-      content: "I've set up a CI/CD pipeline with the following testing strategy...",;
-      authorId: "user3",;
-      authorName: "Michael Wong",;
-      categoryId: "project-help",;
-      tags: ["testing", "automation", "ci-cd"],;
-      createdAt: "2025-04-10T14:30:00Z",;
+    {;"
+      id: "3",;"
+      title: "Looking for feedback on my automated testing approach",;'"
+      content: "I've set up a CI/CD pipeline with the following testing strategy...",;"
+      authorId: "user3",;"
+      authorName: "Michael Wong",;"
+      categoryId: "project-help",;"
+      tags: ["testing", "automation", "ci-cd"],;"
+      createdAt: "2025-04-10T14:30:00Z",;"
       updatedAt: "2025-04-10T14:30:00Z",;
       upvotes: 5,;
       downvotes: 0,;
       replyCount: 2;
     },;
-    {;
-      id: "5",;
-      title: "How to handle client scope creep?",;
-      content: "I'm working on a project where the client keeps adding requirements...",;
-      authorId: "user5",;
-      authorName: "David Lin",;
-      categoryId: "project-help",;
-      tags: ["client-management", "scope", "projects"],;
-      createdAt: "2025-04-08T10:20:00Z",;
+    {;"
+      id: "5",;"
+      title: "How to handle client scope creep?",;'"
+      content: "I'm working on a project where the client keeps adding requirements...",;"
+      authorId: "user5",;"
+      authorName: "David Lin",;"
+      categoryId: "project-help",;"
+      tags: ["client-management", "scope", "projects"],;"
+      createdAt: "2025-04-08T10:20:00Z",;"
       updatedAt: "2025-04-08T10:20:00Z",;
       upvotes: 24,;
       downvotes: 0,;
       replyCount: 7,;
       isAnswered: true;
     }
-  ],;
+  ],;"
   "ai-tools": [;
-    {;
-      id: "1",;
-      title: "Best practices for AI model fine-tuning",;
-      content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",;
-      authorId: "user1",;
-      authorName: "Alex Johnson",;
-      authorAvatar: "https://i.pravatar.cc/150?img=3",;
-      authorRole: "Verified Talent",;
-      categoryId: "ai-tools",;
-      tags: ["machine-learning", "fine-tuning", "gpt"],;
-      createdAt: "2025-04-01T12:00:00Z",;
+    {;"
+      id: "1",;"
+      title: "Best practices for AI model fine-tuning",;'"
+      content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",;"
+      authorId: "user1",;"
+      authorName: "Alex Johnson",;"
+      authorAvatar: "https://i.pravatar.cc/150?img=3",;"
+      authorRole: "Verified Talent",;"
+      categoryId: "ai-tools",;"
+      tags: ["machine-learning", "fine-tuning", "gpt"],;"
+      createdAt: "2025-04-01T12:00:00Z",;"
       updatedAt: "2025-04-01T12:00:00Z",;
       upvotes: 48,;
       downvotes: 2,;
@@ -1662,78 +1473,78 @@ const postsByCategory: Record<string ForumPost[]> = {;
       isAnswered: true,;
       isFeatured: true;
     },;
-    {;
-      id: "7",;
-      title: "Comparing different vector embedding models",;
-      content: "I've been experimenting with these different embedding models and here are my findings...",;
-      authorId: "user7",;
-      authorName: "Lisa Park",;
-      categoryId: "ai-tools",;
-      tags: ["embeddings", "vectors", "similarity-search"],;
-      createdAt: "2025-04-05T16:40:00Z",;
+    {;"
+      id: "7",;"
+      title: "Comparing different vector embedding models",;'"
+      content: "I've been experimenting with these different embedding models and here are my findings...",;"
+      authorId: "user7",;"
+      authorName: "Lisa Park",;"
+      categoryId: "ai-tools",;"
+      tags: ["embeddings", "vectors", "similarity-search"],;"
+      createdAt: "2025-04-05T16:40:00Z",;"
       updatedAt: "2025-04-05T16:40:00Z",;
       upvotes: 31,;
       downvotes: 0,;
       replyCount: 9;
     }
-  ],;
+  ],;"
   "feedback": [;
-    {;
-      id: "4",;
-      title: "Feature request: Team collaboration tools",;
-      content: "It would be really helpful if we could have built-in tools for team collaboration...",;
-      authorId: "user4",;
-      authorName: "Emma Davis",;
-      categoryId: "feedback",;
-      tags: ["feature-request", "teams", "collaboration"],;
-      createdAt: "2025-04-09T18:45:00Z",;
+    {;"
+      id: "4",;"
+      title: "Feature request: Team collaboration tools",;"
+      content: "It would be really helpful if we could have built-in tools for team collaboration...",;"
+      authorId: "user4",;"
+      authorName: "Emma Davis",;"
+      categoryId: "feedback",;"
+      tags: ["feature-request", "teams", "collaboration"],;"
+      createdAt: "2025-04-09T18:45:00Z",;"
       updatedAt: "2025-04-09T18:45:00Z",;
       upvotes: 12,;
       downvotes: 1,;
       replyCount: 3;
     },;
-    {;
-      id: "8",;
-      title: "Suggestion for improving the jobs matching algorithm",;
-      content: "I think the job matching could be improved by considering these additional factors...",;
-      authorId: "user8",;
-      authorName: "Ryan Mitchell",;
-      categoryId: "feedback",;
-      tags: ["matching", "jobs", "algorithm"],;
-      createdAt: "2025-04-04T08:10:00Z",;
+    {;"
+      id: "8",;"
+      title: "Suggestion for improving the jobs matching algorithm",;"
+      content: "I think the job matching could be improved by considering these additional factors...",;"
+      authorId: "user8",;"
+      authorName: "Ryan Mitchell",;"
+      categoryId: "feedback",;"
+      tags: ["matching", "jobs", "algorithm"],;"
+      createdAt: "2025-04-04T08:10:00Z",;"
       updatedAt: "2025-04-04T08:10:00Z",;
       upvotes: 17,;
       downvotes: 3,;
       replyCount: 5;
     }
-  ],;
+  ],;"
   "announcements": [;
-    {;
-      id: "9",;
-      title: "Platform Update: New AI Matching Algorithm",;
-      content: "We're excited to announce the launch of our new and improved AI matching algorithm...",;
-      authorId: "admin1",;
-      authorName: "Zion Team",;
-      authorRole: "Admin",;
-      categoryId: "announcements",;
-      tags: ["update", "matching", "algorithm"],;
-      createdAt: "2025-04-02T15:00:00Z",;
+    {;"
+      id: "9",;"
+      title: "Platform Update: New AI Matching Algorithm",;'"
+      content: "We're excited to announce the launch of our new and improved AI matching algorithm...",;"
+      authorId: "admin1",;"
+      authorName: "Zion Team",;"
+      authorRole: "Admin",;"
+      categoryId: "announcements",;"
+      tags: ["update", "matching", "algorithm"],;"
+      createdAt: "2025-04-02T15:00:00Z",;"
       updatedAt: "2025-04-02T15:00:00Z",;
       upvotes: 42,;
       downvotes: 0,;
       replyCount: 11,;
       isPinned: true;
     },;
-    {;
-      id: "10",;
-      title: "Maintenance Scheduled: April 15th",;
-      content: "We will be performing scheduled maintenance on April 15th from 2am-4am UTC...",;
-      authorId: "admin1",;
-      authorName: "Zion Team",;
-      authorRole: "Admin",;
-      categoryId: "announcements",;
-      tags: ["maintenance", "downtime"],;
-      createdAt: "2025-04-10T09:00:00Z",;
+    {;"
+      id: "10",;"
+      title: "Maintenance Scheduled: April 15th",;"
+      content: "We will be performing scheduled maintenance on April 15th from 2am-4am UTC...",;"
+      authorId: "admin1",;"
+      authorName: "Zion Team",;"
+      authorRole: "Admin",;"
+      categoryId: "announcements",;"
+      tags: ["maintenance", "downtime"],;"
+      createdAt: "2025-04-10T09:00:00Z",;"
       updatedAt: "2025-04-10T09:00:00Z",;
       upvotes: 8,;
       downvotes: 0,;
@@ -1742,25 +1553,23 @@ const postsByCategory: Record<string ForumPost[]> = {;
     }
   ];
 },;
-const iconMap = {;
-  "Briefcase": Briefcase,;
-  "MessageSquare": MessageSquare,;
-  "Code": Code,;
-  "FileText": FileText,;
+const iconMap = {;"
+  "Briefcase": Briefcase,;"
+  "MessageSquare": MessageSquare,;"
+  "Code": Code,;"
+  "FileText": FileText,;"
   "Megaphone": Megaphone;
 },;
-export default function ForumCategoryPage() {;
-  // useParams is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
+export default function ForumCategoryPage() { return null; }
   const { categoryId } = useParams(),;
-  const { user } = useAuth(),;
+  const { user } = useAuth(),;"
   const [searchQuery, setSearchQuery] = useState(""),;
   if (!categoryId || !categoriesInfo[categoryId]) {;
     return (;
-      <AppLayout>;
+      <AppLayout>;"
         <div className="container py-8">;
-          <h1>Category not found</h1>;
-          <Button asChild className="mt-4">;
+          <h1>Category not found</h1>;"
+          <Button asChild className="mt-4">;"
             <Link to="/community">Back to Community</Link>;
           </Button>;
         </div>;
@@ -1771,13 +1580,7 @@ export default function ForumCategoryPage() {;
   const category = categoriesInfo[categoryId],;
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,;
   const posts = postsByCategory[categoryId] || [],;
-<<<<<<< HEAD
 
-=======
-  const category = categoriesInfo[categoryId];
-  const IconComponent = iconMap[category && category.icon as keyof typeof iconMap] || MessageSquare;
-  const posts = postsByCategory[categoryId] || [];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Filter posts based on search query;
   const filteredPosts = searchQuery;
     ? posts && posts.filter(post => ;
@@ -1787,84 +1590,31 @@ export default function ForumCategoryPage() {;
       );
     : posts;
 
-  // For announcements, check if user is admin;
+  // For announcements, check if user is admin;'"
   const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin');
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <AppLayout>;
-      <SEO
+      <SEO;`
         title={`${category && category.name} | Community Forum | Zion AI Marketplace`}
-        description={category && category.description}
+        description={category && category.description}`
         keywords={`community, forum, ${category && category.id}, discussion, AI marketplace, questions, answers`}
       />;
-<<<<<<< HEAD
-
-      <div className="container py-8">;
-        <div className="flex items-center gap-3 mb-6">;
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
-            Forum;
-          </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <span className="font-medium">{category && category.name}</span>;
-        </div>;
-
-=======
-    ),;
-  }
-  ;
-  const category = categoriesInfo[categoryId],;
-  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,;
-  const posts = postsByCategory[categoryId] || [],;
-  ;
-  // Filter posts based on search query;
-  const filteredPosts = searchQuery;
-    ? posts.filter(post => ;
-  // Filter posts based on search query;
-  const filteredPosts = searchQuery;
-    ? posts.filter(post =>;
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      );
-          <span className="font-medium">{category.name}</span>;
-        </div>;
-        ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
-          <div className="flex items-center gap-4">;
-            <div className="p-3 bg-zion-purple/10 rounded-full">;
+"
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;"
+          <div className="flex items-center gap-4">;"
+            <div className="p-3 bg-zion-purple/10 rounded-full">;"
               <IconComponent className="h-8 w-8 text-zion-purple" />;
             </div>;
             <div>;
-<<<<<<< HEAD
-              <h1 className="text-3xl font-bold">{category && category.name}</h1>;
-              <p className="text-muted-foreground mt-1">{category && category.description}</p>;
-            </div>;
-          </div>;
 
-          {canCreatePost && (;
-            <Button asChild>;
-              <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>;
-=======
-              <h1 className="text-3xl font-bold">{category.name}</h1>;
-              <p className="text-muted-foreground mt-1">{category.description}</p>;
-            </div>;
-          </div>;
-          ;
-          {canCreatePost && (;
-            <Button asChild>;
-              <Link to={user ? `/community/create?category=${categoryId}` :`/login?next=/community/create?category=${categoryId}`}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 Create New Post;
               </Link>;
             </Button>;
           )}
         </div>;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
         <div className="mb-6">;
           <div className="relative">;
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />;
@@ -1883,51 +1633,32 @@ export default function ForumCategoryPage() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               placeholder="Search posts in this category..."
+=======
+            <Input"
+              placeholder="Search posts in this category...""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="pl-10"
               value={searchQuery}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-              onChange={(e) => setSearchQuery(e && e.target.value)}
-            />;
-          </div>;
-        </div>;
 
-        {posts && posts.length > 0 ? (;
-          <div className="space-y-4">;
-            {filteredPosts && filteredPosts.map((post) => (;
-              <PostCard key={post && post.id} post={post} />;
-            ))}
-          </div>;
-        ) : (;
-          <div className="text-center py-16">;
-            <h2 className="text-xl font-medium mb-2">No posts yet</h2>;
-            <p className="text-muted-foreground mb-6">Be the first to start a discussion in this category!</p>;
-
-            {canCreatePost && (;
-              <Button asChild>;
-                <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>;
-<<<<<<< HEAD
-                  Create New Post;
-                </Link>;
-              </Button>;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </div>;
+<<<<<<< HEAD
         )}
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+        )}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   "Megaphone": Megaphone;
 }
 ;
+
+
+
 <<<<<<< HEAD
-
-
-
 =======
         ;
         <div className="mb-6">;
@@ -2347,3 +2078,6 @@ return (<AppLayout> <div className="container py-8"> <h1>Category not found</h1>
               className="pl-10"
               value={searchQuery}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

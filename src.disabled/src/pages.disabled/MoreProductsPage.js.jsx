@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,9 +25,11 @@ const { useState } from "react"; import { DynamicListingPage } from "@/component
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from \"react\"; import { DynamicListingPage } from \"@/components/DynamicListingPage\"; import { MORE_PRODUCTS } from \"@/data/moreProductsData\"; const CATEGORY_FILTERS = Array && Array.from(new Set(MORE_PRODUCTS && MORE_PRODUCTS.map(p => p && p.category))).map(c => ({ \"label\": \'c\',\"value\": \'c\' })); export default function MoreProductsPage() {}; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { MORE_PRODUCTS } from "@/data/moreProductsData"; const CATEGORY_FILTERS = Array && Array.from(new Set(MORE_PRODUCTS && MORE_PRODUCTS.map(p => p && p.category))).map(c => ({ label: "c",value: "c" })); export default function MoreProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };'"'"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,3 +63,14 @@ const { useState } from "react"; import { DynamicListingPage } from "@/component
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { MORE_PRODUCTS } from "@/data/moreProductsData"; const CATEGORY_FILTERS = Array.from(new Set(MORE_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function MoreProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };'"'"
+'"
+import { useState } from \"react\"; import { DynamicListingPage } from \"@/components/DynamicListingPage\"; import { MORE_PRODUCTS } from \"@/data/moreProductsData\"; const CATEGORY_FILTERS = Array.from(new Set(MORE_PRODUCTS.map(p => p.category))).map(c => ({ \"label\": \'c\',\"value\": \'c\' })); export default function MoreProductsPage() {}; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };'"
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { MORE_PRODUCTS } from "@/data/moreProductsData"; const CATEGORY_FILTERS = Array.from(new Set(MORE_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function MoreProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };'"'"
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

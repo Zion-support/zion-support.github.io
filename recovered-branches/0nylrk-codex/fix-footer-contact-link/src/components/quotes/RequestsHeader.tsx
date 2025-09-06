@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,15 +26,19 @@ import type { QuoteStatus } from "@/types/quotes";
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
+=======
+import React from "react","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Badge } from "@/components/ui/badge",
-import { 
+import {}
   Select,
   SelectContent, 
   SelectItem, 
   SelectTrigger, 
-  SelectValue 
-} from "@/components/ui/select",
+  SelectValue "
+} from "@/components/ui/select","
 import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,15 +58,22 @@ import type { QuoteStatus } from "@/types/quotes",
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type RequestsHeaderProps = {
+=======
+
+
+
+type RequestsHeaderProps = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   unreadCount: number,
-  statusFilter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archiveFilter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
+  statusFilter: QuoteStatus | 'all','
+  setStatusFilter: (value: QuoteStatus | 'all') => void,'
+  archiveFilter: 'active' | 'archived' | 'all',';
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
 },
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 
@@ -107,43 +118,35 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-type RequestsHeaderProps = {
-  unreadCount: number
-  statusFilter: QuoteStatus | 'all'
-  setStatusFilter: (value: QuoteStatus | 'all') => void
-  archiveFilter: 'active' | 'archived' | 'all'
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  setArchiveFilter
-import React from './react';
-import { Badge } from '@/components / ui / badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+  setArchiveFilter'
+import React from './react';'
+import { Badge } from '@/components / ui / badge';'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';"
 import type { QuoteStatus } from "@/types / quotes";
-type RequestsHeaderProps = {
-  unread_count: number,
-  status_filter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archive_filter: 'active' | 'archived' | 'all',
+type RequestsHeaderProps = {}
+  unread_count: number,'
+  status_filter: QuoteStatus | 'all','
+  setStatusFilter: (value: QuoteStatus | 'all') => void,'
+  archive_filter: 'active' | 'archived' | 'all','
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
 }
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   unreadCount;
   statusFilter;
   setStatusFilter;
-}) => {
+}) => {}
 type RequestsHeaderProps = {;
-  unreadCount: number,;
-  statusFilter: QuoteStatus | 'all',;
-  setStatusFilter: (value: QuoteStatus | 'all') => void,;
-  archiveFilter: 'active' | 'archived' | 'all',;
+  unreadCount: number,;'
+  statusFilter: QuoteStatus | 'all',;'
+  setStatusFilter: (value: QuoteStatus | 'all') => void,;'
+  archiveFilter: 'active' | 'archived' | 'all',;'
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 type RequestsHeaderProps = {
@@ -157,10 +160,16 @@ type RequestsHeaderProps = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   unreadCount;
   statusFilter;
   setStatusFilter;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -168,13 +177,16 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
 =======
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   archiveFilter,;
   setArchiveFilter;
 }) => {;
   return (
+
+
 <<<<<<< HEAD
-
-
         <Select 
           value={archiveFilter} 
 
@@ -247,14 +259,17 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
-        >
-          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
+        >"
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">"
             <SelectValue placeholder="Active Only" />
           </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="active">Active Only</SelectItem>
-            <SelectItem value="archived">Archived Only</SelectItem>
+          <SelectContent>"
+            <SelectItem value="active">Active Only</SelectItem>"
+            <SelectItem value="archived">Archived Only</SelectItem>"
             <SelectItem value="all">All Requests</SelectItem>
           </SelectContent>
         </Select>
@@ -262,16 +277,17 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
 
 <<<<<<< HEAD
-=======
-
-};
-
 =======
 =======
 };
@@ -295,20 +311,24 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   return (},
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
+=======
+},"
+import React from "react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Badge } from "@/components/ui/badge",;
 import {;
   Select,;
   SelectContent,;
   SelectItem,;
   SelectTrigger,;
-  SelectValue;
-} from "@/components/ui/select",;
+  SelectValue;"
+} from "@/components/ui/select",;"
 import type { QuoteStatus } from "@/types/quotes",;
 type RequestsHeaderProps = {;
-  unreadCount: number,;
-  statusFilter: QuoteStatus | 'all',;
-  setStatusFilter: (value: QuoteStatus | 'all') => void,;
-  archiveFilter: 'active' | 'archived' | 'all',;
+  unreadCount: number,;'
+  statusFilter: QuoteStatus | 'all',;'
+  setStatusFilter: (value: QuoteStatus | 'all') => void,;'
+  archiveFilter: 'active' | 'archived' | 'all',;'
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
 },;
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
@@ -318,25 +338,32 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   archiveFilter;
   setArchiveFilter;
 }) => {;
-  return (;
+  return (;"
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;
-      <div>;
-        <div className="flex items-center gap-3">;
+      <div>;"
+        <div className="flex items-center gap-3">;"
           <h1 className="text-3xl font-bold text-white">Hire Requests</h1>;
-          {unreadCount > 0 && (;
+          {unreadCount > 0 && (;"
             <Badge className="bg-blue-500">;
               {unreadCount} New;
             </Badge>;
           )}
+<<<<<<< HEAD
         </div>;
+=======
+
+
+
+        </div>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-zion-slate-light mt-2">;
           Manage client requests to hire your services;
         </p>;
 <<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
       <div className="flex gap-3 mt-4 md:mt-0">;
 <<<<<<< HEAD
         <Select
@@ -371,32 +398,30 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <SelectValue placeholder="All Statuses" />;
           </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="all">All Statuses</SelectItem>;
-            <SelectItem value="new">New</SelectItem>;
-            <SelectItem value="in_review">In Review</SelectItem>;
-            <SelectItem value="responded">Responded</SelectItem>;
-            <SelectItem value="accepted">Accepted</SelectItem>;
+          <SelectContent>;"
+            <SelectItem value="all">All Statuses</SelectItem>;"
+            <SelectItem value="new">New</SelectItem>;"
+            <SelectItem value="in_review">In Review</SelectItem>;"
+            <SelectItem value="responded">Responded</SelectItem>;"
+            <SelectItem value="accepted">Accepted</SelectItem>;"
             <SelectItem value="closed">Closed</SelectItem>;
           </SelectContent>;
         </Select>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <Select;
-          value={archive_filter}
+          value={archive_filter}'
           onValueChange={(value) => setArchiveFilter (value as 'active' | 'archived' | 'all')}
-        >;
+        >;"
           <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+"
             <SelectValue placeholder="Active Only" />;
 =======
       </div>;            <SelectValue placeholder="Active Only" />;
@@ -405,27 +430,21 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
       </div>;            <SelectValue placeholder="Active Only" />;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="active">Active Only</SelectItem>;
-            <SelectItem value="archived">Archived Only</SelectItem>;
+          <SelectContent>;"
+            <SelectItem value="active">Active Only</SelectItem>;"
+            <SelectItem value="archived">Archived Only</SelectItem>;"
             <SelectItem value="all">All Requests</SelectItem>;
           </SelectContent>;
         </Select>;
 <<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-export default RequestsHeader;
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>);
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -444,21 +463,27 @@ export default RequestsHeader;
 =======
 =======
 import React from "react",;
+=======
+
+
+"
+import React from "react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Badge } from "@/components/ui/badge",;
 import { ;
   Select,;
   SelectContent, ;
   SelectItem, ;
   SelectTrigger, ;
-  SelectValue ;
-} from "@/components/ui/select",;
+  SelectValue ;"
+} from "@/components/ui/select",;"
 import type { QuoteStatus } from "@/types/quotes",;
 ;
 type RequestsHeaderProps = {;
-  unreadCount:number,;
-  statusFilter:QuoteStatus | 'all',;
-  setStatusFilter:(value:QuoteStatus | 'all') => void,;
-  archiveFilter:'active' | 'archived' | 'all',;
+  unreadCount:number,;'
+  statusFilter:QuoteStatus | 'all',;'
+  setStatusFilter:(value:QuoteStatus | 'all') => void,;'
+  archiveFilter:'active' | 'archived' | 'all',;'
   setArchiveFilter:(value:'active' | 'archived' | 'all') => void;
 },;
 ;
@@ -469,50 +494,50 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
   archiveFilter,;
   setArchiveFilter;
 }) => {;
-  return (;
+  return (;"
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;
-      <div>;
-        <div className="flex items-center gap-3">;
+      <div>;"
+        <div className="flex items-center gap-3">;"
           <h1 className="text-3xl font-bold text-white">Hire Requests</h1>;
-          {unreadCount > 0 && (;
+          {unreadCount > 0 && (;"
             <Badge className="bg-blue-500">;
               {unreadCount} New;
             </Badge>;
           )}
-        </div>;
+        </div>;"
         <p className="text-zion-slate-light mt-2">;
           Manage client requests to hire your services;
         </p>;
       </div>;
-      ;
+      ;"
       <div className="flex gap-3 mt-4 md:mt-0">;
         <Select ;
         <Select;
-          value={statusFilter} ;
+          value={statusFilter} ;'
           onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
-        >;
-          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
+        >;"
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;"
             <SelectValue placeholder="All Statuses" />;
           </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="all">All Statuses</SelectItem>;
-            <SelectItem value="new">New</SelectItem>;
-            <SelectItem value="in_review">In Review</SelectItem>;
-            <SelectItem value="responded">Responded</SelectItem>;
-            <SelectItem value="accepted">Accepted</SelectItem>;
+          <SelectContent>;"
+            <SelectItem value="all">All Statuses</SelectItem>;"
+            <SelectItem value="new">New</SelectItem>;"
+            <SelectItem value="in_review">In Review</SelectItem>;"
+            <SelectItem value="responded">Responded</SelectItem>;"
+            <SelectItem value="accepted">Accepted</SelectItem>;"
             <SelectItem value="closed">Closed</SelectItem>;
           </SelectContent>;
         </Select>;
         <Select;
-          value={archiveFilter} ;
+          value={archiveFilter} ;'
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
-        >;
-          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
+        >;"
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;"
             <SelectValue placeholder="Active Only" />;
           </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="active">Active Only</SelectItem>;
-            <SelectItem value="archived">Archived Only</SelectItem>;
+          <SelectContent>;"
+            <SelectItem value="active">Active Only</SelectItem>;"
+            <SelectItem value="archived">Archived Only</SelectItem>;"
             <SelectItem value="all">All Requests</SelectItem>;
           </SelectContent>;
         </Select>;
@@ -522,6 +547,7 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
 };
 
 export default RequestsHeader;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -532,3 +558,9 @@ export default RequestsHeader;
 =======
       </div>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

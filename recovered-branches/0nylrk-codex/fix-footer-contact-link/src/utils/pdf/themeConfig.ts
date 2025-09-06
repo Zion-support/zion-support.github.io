@@ -1,15 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ? {
+=======
+    ? {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return theme === 'light' 
-    ? { ;
-export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
+    ? { ;'
+export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {';
   return theme === 'light';
 
+<<<<<<< HEAD
     ? {
 
   return theme === 'light' 
@@ -29,11 +34,22 @@ export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         background: '#ffffff';
         text: '#000000';
-        heading: '#222222';
+=======
+    ? {}
+'
+  return theme === 'light' 
+    ? { ;
 
-        subheading: '#444444',
+'
+        background: '#ffffff';'
+        text: '#000000';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        heading: '#222222';
+'
+        subheading: '#444444','
         accent: '#9b87f5';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 /**
@@ -56,28 +72,26 @@ export interface PdfThemeColors {
         text: '#000000';
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+  background: string;
+  text: string;
+  heading: string;
+    ? {'
+        background: '#ffffff';'
+        text: '#000000';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         heading: '#222222';
-<<<<<<< HEAD
-        subheading: '#444444'
-        accent: '#9b87f5'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
       }
-    : {
-        background: '#1A1F2C';
-        text: '#ffffff';
+    : {'
+        background: '#1A1F2C';'
+        text: '#ffffff';'
         heading: '#ffffff';
+
+
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-        subheading: '#cccccc',
-        accent: '#9b87f5';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-        subheading: '#cccccc'
-
         accent: '#9b87f5'
 <<<<<<< HEAD
 
@@ -125,3 +139,7 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
         heading: '#222222';      }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
+=======
+      }
+}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

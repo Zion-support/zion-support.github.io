@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -14,6 +15,8 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
 <<<<<<< HEAD
@@ -36,14 +39,14 @@ function fixedCount = 0; for (const filePath = path.join(dir, file); const stat 
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase());
     .replace(/^(.)/, (match) => match.toUpperCase())};
       return true};
-    return false} catch (error) {;
+    return false} catch (error) {;"
     console.error("Error fixing ${filePath}:", error.message);
     return false};
 };
 function fixedCount = 0;
   for (const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {;
+    if (stat.isDirectory()) {;'
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {;
       if (fixFile(filePath)) {;
 <<<<<<< HEAD
@@ -62,9 +65,14 @@ function fixedCount = 0;
         fixedCount++};
     };
   };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 return fixedCount};
 const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
+=======
+return fixedCount};'"
+const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
 };
 };
@@ -73,6 +81,7 @@ const fs = require('fs'); const path = require('path'); function toCamelCase(str
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       return numberWords[match] || match}),;
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase()),;
+<<<<<<< HEAD
     .replace(/^(.)/, (match) => match.toUpperCase())},;
       return true},;
     return false} catch (error) {,;
@@ -81,6 +90,11 @@ const fs = require('fs'); const path = require('path'); function toCamelCase(str
     return false}
 },;
 =======
+=======
+    .replace(/^(.)/, (match) => match.toUpperCase())};
+      return true};
+    return false} catch (error) {,;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     console.error("Error fixing ${filePath} ", error.message),;
     return false};
 };
@@ -88,7 +102,7 @@ const fs = require('fs'); const path = require('path'); function toCamelCase(str
 function fixedCount = 0,;
   for (const filePath = path.join(dir, file),;
     const stat = fs.statSync(filePath),;
-    if (stat.isDirectory()) {,;
+    if (stat.isDirectory()) {,;'
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {,;
       if (fixFile(filePath)) {,;
 <<<<<<< HEAD
@@ -107,44 +121,56 @@ function fixedCount = 0,;
       return numberWords[match] || match});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase());
     .replace(/^(.)/, (match) => match.toUpperCase())}
-      return true}
+      return true}"
     return false} catch (error) {console.error("Error fixing ${filePath} ", error.message);
     return false}
 }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
-    if (stat.isDirectory()) {;
+
+    if (stat.isDirectory()) {;'
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
 
       return numberWords[match] || match}),;
     .replace(/[-_](.)/g, (match, group1) => group1 && group1.toUpperCase()),;
     .replace(/^(.)/, (match) => match && match.toUpperCase())};
       return true};
-    return false} catch (error) {,;
+    return false} catch (error) {,;"
     console && console.error("Error fixing ${filePath} ", error && error.message),;
     return false};
 };
 function fixedCount = 0,;
   for (const filePath = path && path.join(dir, file),;
     const stat = fs && fs.statSync(filePath),;
-    if (stat && stat.isDirectory()) {,;
+    if (stat && stat.isDirectory()) {,;'
       fixedCount += findAndFixFiles(filePath)} else if (file && file.endsWith('.tsx') && file && file.includes('-')) {,;
       if (fixFile(filePath)) {,;
 
@@ -153,7 +179,13 @@ function fixedCount = 0,;
   return fixedCount};
 
 };
+<<<<<<< HEAD
 ;
+=======
+
+;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return numberWords[match] || match});
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -162,11 +194,12 @@ function fixedCount = 0,;
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase());
     .replace(/^(.)/, (match) => match.toUpperCase())};
       return true};
-    return false} catch (error) {;
+    return false} catch (error) {;"
     console.error("Error fixing ${filePath}:", error.message);
     return false};
 };
 function fixedCount = 0;
+<<<<<<< HEAD
   for (const filePath = path && path.join(dir, file);
     const stat = fs && fs.statSync(filePath);
     if (stat && stat.isDirectory()) {;
@@ -179,6 +212,10 @@ function fixedCount = 0;
 =======
     if (stat.isDirectory()) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+    if (stat.isDirectory()) {;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {;
       if (fixFile(filePath)) {;
         fixedCount++};
@@ -186,14 +223,14 @@ function fixedCount = 0;
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase()),;
     .replace(/^(.)/, (match) => match.toUpperCase())};
       return true};
-    return false} catch (error) {,;
+    return false} catch (error) {,;"
     console.error("Error fixing ${filePath} ", error.message),;
     return false};
 };
 function fixedCount = 0,;
   for (const filePath = path.join(dir, file),;
     const stat = fs.statSync(filePath),;
-    if (stat.isDirectory()) {,;
+    if (stat.isDirectory()) {,;'
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {,;
       if (fixFile(filePath)) {,;
 ;
@@ -204,6 +241,7 @@ function fixedCount = 0,;
 };
       return numberWords[match] || match});
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase());
+<<<<<<< HEAD
     .replace(/^(.)/, (match) => match.toUpperCase())};
       return true};
     return false} catch (error) {;
@@ -228,23 +266,31 @@ function fixedCount = 0;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (stat.isDirectory()) {;
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       if (fixFile(filePath)) {;
 };
       return numberWords[match] || match}),
     .replace(/[-_](.)/g, (match, group1) => group1 && group1.toUpperCase()),
     .replace(/^(.)/, (match) => match && match.toUpperCase())};
       return true};
-    return false} catch (error) {,
+    return false} catch (error) {,"
     console && console.error("Error fixing ${filePath}:", error && error.message),
     return false};
 };
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (stat.isDirectory()) {;
+=======
+
+    if (stat.isDirectory()) {;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {;
       if (fixFile(filePath)) {;
 };
@@ -252,7 +298,7 @@ function fixedCount = 0;
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase()),
     .replace(/^(.)/, (match) => match.toUpperCase())};
       return true};
-    return false} catch (error) {,
+    return false} catch (error) {,"
     console.error("Error fixing ${filePath}:", error.message),
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -260,6 +306,7 @@ function fixedCount = 0;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return false};
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 function fixedCount = 0,
@@ -304,58 +351,66 @@ function toCamelCase(str) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return numberWords[match] || match})
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase())
     .replace(/^(.)/, (match) => match.toUpperCase())}
-function fixFile(filePath) {
-  try {
+function fixFile(filePath) {}
+  try {'
     const content = fs.readFileSync(filePath, 'utf8');
-    // Extract filename without extension
+    // Extract filename without extension;
     const filename = path.basename(filePath, path.extname(filePath));
     const camelCaseName = toCamelCase(filename);
-    // Replace the variable declaration
-    let newContent = content.replace(
-      new RegExp(`const\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`, 'g'),
+    // Replace the variable declaration;
+    let newContent = content.replace('`
+      new RegExp(`const\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`, 'g'),`
       `const ${camelCaseName}: NextPage = () => {`
     );
-    // Replace the export statement
-    newContent = newContent.replace(
-      new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&')};`, 'g'),
+    // Replace the export statement;
+    newContent = newContent.replace('`
+      new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, '\\$&')};`, 'g'),"
 export default ${camelCaseName};";
     );
-    // Update title and meta description
+    // Update title and meta description'
     const title = filename.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     newContent = newContent.replace(
-      /<title>.*?<\/title>/g,
+      /<title>.*?<\/title>/g,"
       "<title>${title} - Zion Tech Solutions</title>"
     );
-    newContent = newContent.replace(
-      /<meta name="description" content=".*?" \/>/g,
+    newContent = newContent.replace("
+      /<meta name="description" content=".*?" \/>/g,"
       "<meta name="description" content="${title} blog post" />"
     );
-    // Update h1 content
+    // Update h1 content;
     newContent = newContent.replace(
-      /<h1>.*?<\/h1>/g,
+      /<h1>.*?<\/h1>/g,"
       "<h1>${title}</h1>"
     );
-    if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent, 'utf8');
+    if (newContent !== content) {'
+      fs.writeFileSync(filePath, newContent, 'utf8');"
       // // // // // // // console.log(""Fixed": ${filePath}");
       return true;
-    return false} catch (error) {
+    return false} catch (error) {"
     // // // // // // // console.error("Error fixing ${filePath}:", error.message);
     return false;
-function findAndFixFiles(dir) {
+function findAndFixFiles(dir) {}
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
-  for (const file of files) {
-    const filePath = path.join(dir, file);
+  for (const file of files) {}
+    const filePath = path.join(dir, file);"
       console.log(""Fixed": ${filePath}");
       return true}
+<<<<<<< HEAD
     return false} catch (error) {
     console.error("Error fixing ${filePath}:", error.message);
 <<<<<<< HEAD
 =======
+=======
+    return false} catch (error) {"
+    console.error("Error fixing ${filePath}:", error.message);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (stat.isDirectory()) {fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {if (fixFile(filePath)) {;
         fixedCount++};}
 }
@@ -364,10 +419,14 @@ function findAndFixFiles(dir) {
       return numberWords[match] |match});
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase());
     .replace(/^(.)/, (match) => match.toUpperCase())}
-      return true}
-    return false} catch (error) {console.error("Error fixing ${filePath}:", error.message);
+      return true}"
+    return false} catch (error) {console.error("Error fixing ${filePath}:", error.message);'"`
+const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;'"`
 const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
+origin/main'"`
+const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;'"`
 const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
+<<<<<<< HEAD
 origin/main
 const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
 const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
@@ -385,6 +444,13 @@ const fs = require('fs'); const path = require('path'); function toCamelCase(str
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return false}
 }
     return false};
@@ -395,6 +461,7 @@ function fixedCount = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -402,27 +469,38 @@ function fixedCount = 0;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
+=======
+
+
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (stat.isDirectory()) {fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {if (fixFile(filePath)) {}
       return numberWords[match] |match})
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase())
     .replace(/^(.)/, (match) => match.toUpperCase())}
       return true}
-    return false} catch (error) {
+    return false} catch (error) {"
     console.error("Error fixing ${filePath}:", error.message)
     return false}
 }
-function fixedCount = 0
+function fixedCount = 0;
   for (const filePath = path.join(dir, file)
     const stat = fs.statSync(filePath)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -440,6 +518,14 @@ origin/main
     if (stat.isDirectory()) {
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {
       if (fixFile(filePath)) {
+=======
+
+
+
+    if (stat.isDirectory()) {'
+      fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {}
+      if (fixFile(filePath)) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         fixedCount++}
     }
   }
@@ -451,6 +537,7 @@ origin/main
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -460,20 +547,33 @@ origin/main
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 function fixedCount = 0,
   for (const filePath = path.join(dir, file),
     const stat = fs.statSync(filePath),
-    if (stat.isDirectory()) {,
+    if (stat.isDirectory()) {,'
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {,
       if (fixFile(filePath)) {,
         fixedCount++};
     };
   };
   return fixedCount};
-origin/main
+origin/main;
 },;
   return fixedCount},;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 return fixedCount}
@@ -494,35 +594,55 @@ const fs = require('fs'); const path = require('path'); function toCamelCase(str
 return fixedCount}
 const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] |match}) '0': 'Zero' }; return numberWords[match] |match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
 const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] |match}) '0': 'Zero' }; return numberWords[match] |match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
+=======
+
+
+
+
+
+
+return fixedCount}'"`
+const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] |match}) '0': 'Zero' }; return numberWords[match] |match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;'"`
+const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] |match}) '0': 'Zero' }; return numberWords[match] |match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
       return number_words[match] || match}),
     .replace (/[-_](.)/g, (match, group1) => group1.toUpperCase ()),
     .replace (/^(.)/, (match) => match.toUpperCase ())}
       return true}
-    return false} catch (error) {,
+    return false} catch (error) {,"
     console.error ("Error fixing ${file_path} ", error.message),
     return false}
 }
 function fixed_count = 0,
   for (const file_path = path.join (dir, file),
     const stat = fs.stat_sync (file_path),
-    if () {, ) {
-  $2
+    if () {, ) {}
+  $2;
+}'
+      fixed_count += findAndFixFiles (file_path)} else if (&& file.includes ('-')) {, ) {}
+  $2;
 }
-      fixed_count += findAndFixFiles (file_path)} else if (&& file.includes ('-')) {, ) {
-  $2
-}
-      if () {, ) {
-  $2
+      if () {, ) {}
+  $2;
 }
         fixed_count++}}
 }
@@ -533,76 +653,77 @@ function fixed_count = 0,
     .replace (/[-_](.)/g, (match, group1) => group1.toUpperCase ());
     .replace (/^(.)/, (match) => match.toUpperCase ())}
       return true}
-    return false} catch (error) {
+    return false} catch (error) {"
     console.error ("Error fixing ${file_path}:", error.message);
     return false}
 }
 function fixed_count = 0;
   for (const file_path = path.join (dir, file);
     const stat = fs.stat_sync (file_path);
-    if () {) {
-  $2
+    if () {) {}
+  $2;
+}'
+      fixed_count += findAndFixFiles (file_path)} else if (&& file.includes ('-')) {) {}
+  $2;
 }
-      fixed_count += findAndFixFiles (file_path)} else if (&& file.includes ('-')) {) {
-  $2
-}
-      if () {) {
-  $2
+      if () {) {}
+  $2;
 }
 }
       return number_words[match] || match}),
     .replace (/[-_](.)/g, (match, group1) => group1.toUpperCase ()),
     .replace (/^(.)/, (match) => match.toUpperCase ())}
       return true}
-    return false} catch (error) {,
+    return false} catch (error) {,"
     console.error ("Error fixing ${file_path}:", error.message),
     return false}
 }
 function fixed_count = 0,
   for (const file_path = path.join (dir, file),
     const stat = fs.stat_sync (file_path),
-    if () {, ) {
-  $2
+    if () {, ) {}
+  $2;
+}'
+      fixed_count += findAndFixFiles (file_path)} else if (&& file.includes ('-')) {, ) {}
+  $2;
 }
-      fixed_count += findAndFixFiles (file_path)} else if (&& file.includes ('-')) {, ) {
-  $2
-}
-      if () {, ) {
-  $2
+      if () {, ) {}
+  $2;
 }
         fixed_count++}
     }
   }
-return fixed_count}
+return fixed_count}'
 const fs = require ('fs'); const path = require ('path'); /**
- * toCamelCase - Function description
- */
+ * toCamelCase - Function description;
+ */'
 function toCamelCase() { return str .replace (/^[0 - 9]/, (match) => { const number_words = { '5': 'Five', '4': 'Four', '3': 'Three', '2': 'Two', '1': 'One', '0': 'Zero' } return number_words[match] || match}) '0': 'Zero' } return number_words[match] || match}) .replace (/[-_](.)/g, (match, group1) => group1.toUpperCase ()) .replace (/^(.)/, (match) => match.toUpperCase ())} /**
- * fix_file - Function description
- */
-function fix_file() { try { const content = fs.readFileSync (file_path, 'utf8'); const filename = path.basename (file_path, path.extname (file_path)); const camelCaseName = toCamelCase (filename); let new_content = content.replace ( new RegExp (`const\\s+${filename.replace (/[.*+?^${ }()|[\]\\]/g, '\\$&')}\\s*:\\s * NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`, 'g'), `const ${camelCaseName}: NextPage = () => {` ); new_content = new_content.replace ( new RegExp (`export\\s + default\\s+${filename.replace (/[.*+?^${ }()|[\]\\]/g, '\\$&')}`, 'g'), export default ${camelCaseName}`); const title = filename.replace (/-/g, ' ').replace (/\b\w / g, l => l.toUpperCase ()); new_content = new_content.replace ( /<title>.*?<\/title>/g, `<title>${title} - Zion Tech Solutions</title>` ); new_content = new_content.replace ( /<meta name="description" content=".*?" \/>/g, `<meta name="description" content="${title} blog post" />` ); new_content = new_content.replace ( /<h1>.*?<\/h1>/g, `<h1>${title}</h1>` ); if ( { fs.writeFileSync (file_path, new_content, 'utf8')) {
-  $2
+ * fix_file - Function description;
+ */'"`
+function fix_file() { try { const content = fs.readFileSync (file_path, 'utf8'); const filename = path.basename (file_path, path.extname (file_path)); const camelCaseName = toCamelCase (filename); let new_content = content.replace ( new RegExp (`const\\s+${filename.replace (/[.*+?^${ }()|[\]\\]/g, '\\$&')}\\s*:\\s * NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`, 'g'), `const ${camelCaseName}: NextPage = () => {` ); new_content = new_content.replace ( new RegExp (`export\\s + default\\s+${filename.replace (/[.*+?^${ }()|[\]\\]/g, '\\$&')}`, 'g'), export default ${camelCaseName}`); const title = filename.replace (/-/g, ' ').replace (/\b\w / g, l => l.toUpperCase ()); new_content = new_content.replace ( /<title>.*?<\/title>/g, `<title>${title} - Zion Tech Solutions</title>` ); new_content = new_content.replace ( /<meta name="description" content=".*?" \/>/g, `<meta name="description" content="${title} blog post" />` ); new_content = new_content.replace ( /<h1>.*?<\/h1>/g, `<h1>${title}</h1>` ); if ( { fs.writeFileSync (file_path, new_content, 'utf8')) {}
+  $2;
 } return true; return false} catch (error) { return false; /**
- * findAndFixFiles - Function description
- */
-function findAndFixFiles() { const files = fs.readdir_sync (dir); let fixed_count = 0; for (const file of files) { const file_path = path.join (dir, file); console.log (`Fixed: ${file_path}`); return true} return false} catch (error) { console.error (`Error fixing ${file_path}:`, error.message); return false} } function fixed_count = 0; for (const file_path = path.join (dir, file); const stat = fs.stat_sync (file_path); if () { fixed_count += findAndFixFiles (file_path)} else if (file.ends_with ('.tsx') && file.includes ('-')) { if (fix_file (file_path)) { fixed_count++} } } return fixed_count} const fixed_count = findAndFixFiles ('./pages')) {
-  $2
-} console.log (`Fixed ${fixed_count} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
+ * findAndFixFiles - Function description;
+ */'`
+function findAndFixFiles() { const files = fs.readdir_sync (dir); let fixed_count = 0; for (const file of files) { const file_path = path.join (dir, file); console.log (`Fixed: ${file_path}`); return true} return false} catch (error) { console.error (`Error fixing ${file_path}:`, error.message); return false} } function fixed_count = 0; for (const file_path = path.join (dir, file); const stat = fs.stat_sync (file_path); if () { fixed_count += findAndFixFiles (file_path)} else if (file.ends_with ('.tsx') && file.includes ('-')) { if (fix_file (file_path)) { fixed_count++} } } return fixed_count} const fixed_count = findAndFixFiles ('./pages')) {}
+  $2;`
+} console.log (`Fixed ${fixed_count} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;'
 const fs = require ('fs'); const path = require ('path'); /**
- * toCamelCase - Function description
- */
+ * toCamelCase - Function description;
+ */'
 function toCamelCase() { return str .replace (/^[0 - 9]/, (match) => { const number_words = { '5': 'Five', '4': 'Four', '3': 'Three', '2': 'Two', '1': 'One', '0': 'Zero' } return number_words[match] || match}) '0': 'Zero' } return number_words[match] || match}) .replace (/[-_](.)/g, (match, group1) => group1.toUpperCase ()) .replace (/^(.)/, (match) => match.toUpperCase ())} /**
- * fix_file - Function description
- */
-function fix_file() { try { const content = fs.readFileSync (file_path, 'utf8'); const filename = path.basename (file_path, path.extname (file_path)); const camelCaseName = toCamelCase (filename); let new_content = content.replace ( new RegExp (`const\\s+${filename.replace (/[.*+?^${ }()|[\]\\]/g, '\\$&')}\\s*:\\s * NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`, 'g'), `const ${camelCaseName}: NextPage = () => {` ); new_content = new_content.replace ( new RegExp (`export\\s + default\\s+${filename.replace (/[.*+?^${ }()|[\]\\]/g, '\\$&')}`, 'g'), export default ${camelCaseName}`); const title = filename.replace (/-/g, ' ').replace (/\b\w / g, l => l.toUpperCase ()); new_content = new_content.replace ( /<title>.*?<\/title>/g, `<title>${title} - Zion Tech Solutions</title>` ); new_content = new_content.replace ( /<meta name="description" content=".*?" \/>/g, `<meta name="description" content="${title} blog post" />` ); new_content = new_content.replace ( /<h1>.*?<\/h1>/g, `<h1>${title}</h1>` ); if ( { fs.writeFileSync (file_path, new_content, 'utf8')) {
-  $2
+ * fix_file - Function description;
+ */'"`
+function fix_file() { try { const content = fs.readFileSync (file_path, 'utf8'); const filename = path.basename (file_path, path.extname (file_path)); const camelCaseName = toCamelCase (filename); let new_content = content.replace ( new RegExp (`const\\s+${filename.replace (/[.*+?^${ }()|[\]\\]/g, '\\$&')}\\s*:\\s * NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`, 'g'), `const ${camelCaseName}: NextPage = () => {` ); new_content = new_content.replace ( new RegExp (`export\\s + default\\s+${filename.replace (/[.*+?^${ }()|[\]\\]/g, '\\$&')}`, 'g'), export default ${camelCaseName}`); const title = filename.replace (/-/g, ' ').replace (/\b\w / g, l => l.toUpperCase ()); new_content = new_content.replace ( /<title>.*?<\/title>/g, `<title>${title} - Zion Tech Solutions</title>` ); new_content = new_content.replace ( /<meta name="description" content=".*?" \/>/g, `<meta name="description" content="${title} blog post" />` ); new_content = new_content.replace ( /<h1>.*?<\/h1>/g, `<h1>${title}</h1>` ); if ( { fs.writeFileSync (file_path, new_content, 'utf8')) {}
+  $2;
 } return true; return false} catch (error) { return false; /**
- * findAndFixFiles - Function description
- */
-function findAndFixFiles() { const files = fs.readdir_sync (dir); let fixed_count = 0; for (const file of files) { const file_path = path.join (dir, file); console.log (`Fixed: ${file_path}`); return true} return false} catch (error) { console.error (`Error fixing ${file_path}:`, error.message); return false} } function fixed_count = 0; for (const file_path = path.join (dir, file); const stat = fs.stat_sync (file_path); if () { fixed_count += findAndFixFiles (file_path)} else if (file.ends_with ('.tsx') && file.includes ('-')) { if (fix_file (file_path)) { fixed_count++} } } return fixed_count} const fixed_count = findAndFixFiles ('./pages')) {
-  $2
+ * findAndFixFiles - Function description;
+ */'`
+function findAndFixFiles() { const files = fs.readdir_sync (dir); let fixed_count = 0; for (const file of files) { const file_path = path.join (dir, file); console.log (`Fixed: ${file_path}`); return true} return false} catch (error) { console.error (`Error fixing ${file_path}:`, error.message); return false} } function fixed_count = 0; for (const file_path = path.join (dir, file); const stat = fs.stat_sync (file_path); if () { fixed_count += findAndFixFiles (file_path)} else if (file.ends_with ('.tsx') && file.includes ('-')) { if (fix_file (file_path)) { fixed_count++} } } return fixed_count} const fixed_count = findAndFixFiles ('./pages')) {}
+  $2;`
 } console.log (`Fixed ${fixed_count} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -773,3 +894,25 @@ const fs = require('fs'); const path = require('path'); function toCamelCase(str
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+},;
+  return fixedCount},;
+
+
+
+
+
+
+'"`
+const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;'"`
+const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
+
+'"`
+const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;'"`
+const fs = require('fs'); const path = require('path'); function toCamelCase(str) { return str .replace(/^[0-9]/,(match) => { const numberWords = { '5': 'Five','4': 'Four','3': 'Three','2': 'Two','1': 'One','0': 'Zero' }; return numberWords[match] || match}) '0': 'Zero' }; return numberWords[match] || match}) .replace(/[-_](.)/g,(match,group1) => group1.toUpperCase()) .replace(/^(.)/,(match) => match.toUpperCase())} function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const filename = path.basename(filePath,path.extname(filePath)); const camelCaseName = toCamelCase(filename); let newContent = content.replace( new RegExp(`const\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,'g'),`const ${camelCaseName}: NextPage = () => {` ); newContent = newContent.replace( new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ }()|[\]\\]/g,'\\$&')};`,'g'),export default ${camelCaseName};`; ); const title = filename.replace(/-/g,' ').replace(/\b\w/g,l => l.toUpperCase()); newContent = newContent.replace( /<title>.*?<\/title>/g,`<title>${title} - Zion Tech Solutions</title>` ); newContent = newContent.replace( /<meta name="description" content=".*?" \/>/g,`<meta name="description" content="${title} blog post" />` ); newContent = newContent.replace( /<h1>.*?<\/h1>/g,`<h1>${title}</h1>` ); if (newContent !== content) { fs.writeFileSync(filePath,newContent,'utf8'); return true; return false} catch (error) { return false; function findAndFixFiles(dir) { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir,file); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } function fixedCount = 0; for (const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) { if (fixFile(filePath)) { fixedCount++} } } return fixedCount} const fixedCount = findAndFixFiles('./pages'); console.log(`Fixed ${fixedCount} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

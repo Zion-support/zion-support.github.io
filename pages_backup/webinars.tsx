@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/webinars.tsx
 <<<<<<< HEAD:pages/webinars.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,11 +33,15 @@ export default Page;
 
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/webinars.tsx
 import React from 'react';
 
 
 
 
+<<<<<<< HEAD:pages_backup/webinars.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -85,12 +90,23 @@ origin/automation-improvements-final
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/webinars.tsx
+=======
+
+
+
+const Page = () => {}
+  return (
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/webinars.tsx
 	return (
 		<>
-			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />
-			<div className="container mx-auto px-4 py-16">
-				<h1 className="text-4xl font-bold mb-4">Webinars</h1>
+			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />"
+			<div className="container mx-auto px-4 py-16">"
+				<h1 className="text-4xl font-bold mb-4">Webinars</h1>"
 				<p className="text-gray-300">No upcoming webinars at this time. Check back soon.</p>
+<<<<<<< HEAD:pages_backup/webinars.tsx
 <<<<<<< HEAD:pages/webinars.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,10 +126,16 @@ origin/automation-improvements-final
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/webinars.tsx
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/webinars.tsx
 			</div>
 		</>
 	)
 
+<<<<<<< HEAD:pages_backup/webinars.tsx
 }
 <<<<<<< HEAD:pages/webinars.tsx
 =======
@@ -121,21 +143,36 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/webinars.tsx
 
 import React from 'react',
+=======
+
+
+}
+
+
+
+
+
+
+
+'
+import React from 'react','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/webinars.tsx
 import SEO from '../components / SEO',
-export default /**
- * WebinarsPage - Function description
+export default /**;
+ * WebinarsPage - Function description;
  */
-function WebinarsPage() {
+function WebinarsPage() {}
 return (
-  <>;
-  <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on - demand sessions." canonical="/webinars" />;
-  <div className="container mx - auto px - 4 py - 16">;
-    <h1 className="text - 4xl font - bold mb - 4">Webinars</h1>;
+  <>;"
+  <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on - demand sessions." canonical="/webinars" />;"
+  <div className="container mx - auto px - 4 py - 16">;"
+    <h1 className="text - 4xl font - bold mb - 4">Webinars</h1>;"
     <p className="text - gray - 300">No upcoming webinars at this time. Check back soon.</p>;
   </div>;
   </>);
 }
 
+<<<<<<< HEAD:pages_backup/webinars.tsx
 <<<<<<< HEAD
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -161,11 +198,22 @@ origin/automation-improvements-final
 =======
     <MainLayout
       title="Webinars - Zion Tech Group"
+=======
+
+
+
+
+
+
+
+    <MainLayout"
+      title="Webinars - Zion Tech Group""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/webinars.tsx
       description="Upcoming webinars and events"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Webinars</h1>
+    >"
+      <div className="min-h-screen bg-gray-50">"
+        <div className="container mx-auto px-4 py-16">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Webinars</h1>"
           <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
       </div>
@@ -174,6 +222,7 @@ origin/automation-improvements-final
 };
 
 export default Page;
+<<<<<<< HEAD:pages_backup/webinars.tsx
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -196,3 +245,7 @@ export default Page;
  <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/webinars.tsx
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/webinars.tsx

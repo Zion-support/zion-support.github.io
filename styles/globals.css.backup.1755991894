@@ -191,11 +191,21 @@ h3 {
   position: absolute;
   top: 0;
   left: 0;
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 /* Custom scrollbar */
 ::-webkit-scrollbar {
@@ -248,6 +258,7 @@ h3 {
 .particle-bg {
   position: relative;
   overflow: hidden;
+<<<<<<< HEAD
 .particle-bg::before {
 <<<<<<< HEAD
 =======
@@ -290,14 +301,29 @@ body::after {
 =======
 body::after {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-98d9
+=======
+}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   content: '';
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+
+
   content: '';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 .particle-bg::before {  content: '';
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+
+
+.particle-bg::before {  content: '';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   position: absolute;
   top: 0;
   left: 0;
@@ -315,16 +341,27 @@ body::after {
   opacity: 0.3;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Futuristic Card Effects */
 .futuristic-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
+<<<<<<< HEAD
 <<<<<<< HEAD
   position: relative;
   transition: all 0.3s ease;  position: relative;
@@ -418,6 +455,19 @@ h3 {
 .btn-futuristic {
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  position: relative;
+  transition: all 0.3s ease;  position: relative;
+
+
+
+  transition: all 0.3s ease;  position: relative;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   overflow: hidden;
 }
 
@@ -497,11 +547,21 @@ h3 {
   position: relative;
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   border: none;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 /* Futuristic Utility Classes */
 .futuristic-glow {
@@ -536,10 +596,20 @@ h3 {
   color: white;
   padding: 12px 24px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   border-radius: 12px;
   padding: 12px 24px;
   color: white;

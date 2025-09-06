@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { Shield, Clock, DollarSign, TrendingUp, Brain, Rocket, ArrowRight, ExternalLink, Search, Filter, Grid, List, Phone, Mail, MapPin, Star, Check, Sparkles, Atom, Cpu, Globe, FlaskConical, Users } from 'lucide-react';
@@ -1566,5 +1567,8 @@ export default function MicroSaasPage() {
         </section>
       </div>
     </QuantumHolographicMatrixBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

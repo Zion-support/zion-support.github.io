@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }declare module 'url' {
   export function fileURLToPath (url: string | URL): string;
 }
@@ -32,3 +33,16 @@ declare module 'url' {
 ;
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+declare module "url" {}
+  export function fileURLToPath(url: string | URL): string;
+}
+
+}
+
+
+
+}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

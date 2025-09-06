@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -186,29 +187,47 @@ import { Button } from '@/components/ui/button'
 import { NotificationItem } from './NotificationItem'
 import { Notification } from '@/context/notifications'
 import { EmptyState } from '@/components/ui/empty-state'
+=======
+import React from 'react';'
+import { ScrollArea } from '@/components/ui/scroll-area';'
+import Skeleton from '@/components/ui/skeleton';'
+import { Button } from '@/components/ui/button';'
+import { NotificationItem } from './NotificationItem';'
+import { Notification } from '@/context/notifications';'
+import { EmptyState } from '@/components/ui/empty-state';'
 import { Bell } from 'lucide-react'
-interface NotificationListProps {
+interface NotificationListProps {';
+}; import React from 'react''
+import { ScrollArea } from '@/components/ui/scroll-area''
+import Skeleton from '@/components/ui/skeleton''
+import { Button } from '@/components/ui/button''
+import { NotificationItem } from './NotificationItem''
+import { Notification } from '@/context/notifications''
+import { EmptyState } from '@/components/ui/empty-state''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { Bell } from 'lucide-react'
+interface NotificationListProps {}
   loading: boolean,
   error: string | null,
   notifications: Notification[],
   onMarkAsRead: (id: string,) => Promise<void>,
-  onDismiss: (id: string,) => Promise<void>,
-  onRetry: () => void
+  onDismiss: (id: string,) => Promise<void>,;
+  onRetry: () => void;
 }
 
-export const NotificationList: React.FC<NotificationListProps> = ({
-  loading
-  error
-  notifications
-  onMarkAsRead
-
-import React from 'react',;
-import { ScrollArea } from '@/components/ui/scroll-area',;
-import Skeleton from '@/components/ui/skeleton',;
-import { Button } from '@/components/ui/button',;
-import { NotificationItem } from './NotificationItem',;
-import { Notification } from '@/context/notifications',;
-import { EmptyState } from '@/components/ui/empty-state',;
+export const NotificationList: React.FC<NotificationListProps> = ({};
+  loading;
+  error;
+  notifications;
+  onMarkAsRead;
+'
+import React from 'react',;'
+import { ScrollArea } from '@/components/ui/scroll-area',;'
+import Skeleton from '@/components/ui/skeleton',;'
+import { Button } from '@/components/ui/button',;'
+import { NotificationItem } from './NotificationItem',;'
+import { Notification } from '@/context/notifications',;'
+import { EmptyState } from '@/components/ui/empty-state',;'
 import { Bell } from 'lucide-react';
 interface NotificationListProps {;
   loading: boolean,;
@@ -220,18 +239,22 @@ interface NotificationListProps {;
 }
 
 
-onRetry
-},) => {
-} import React from 'react';
-import { ScrollArea } from '@/components / ui / scroll - area';
-import Skeleton from '@/components / ui / skeleton';
-import { Button } from '@/components / ui / button';
-import { NotificationItem } from './NotificationItem';
-import { Notification } from '@/context / notifications';
-import { EmptyState } from '@/components / ui / empty - state';
+onRetry;
+},) => {'
+} import React from 'react';'
+import { ScrollArea } from '@/components / ui / scroll - area';'
+import Skeleton from '@/components / ui / skeleton';'
+import { Button } from '@/components / ui / button';'
+import { NotificationItem } from './NotificationItem';'
+import { Notification } from '@/context / notifications';'
+import { EmptyState } from '@/components / ui / empty - state';'
 import { Bell } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface NotificationListProps {
+=======
+interface NotificationListProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -239,25 +262,25 @@ interface NotificationListProps {
   on_dismiss: (id: string, ) => Promise < void>,
   on_retry: () => void;
 }
-export const NotificationList: React.FC < NotificationListProps> = ({
+export const NotificationList: React.FC < NotificationListProps> = ({};
   loading;
   error;
   notifications;
   onMarkAsRead;
   on_dismiss,
   on_retry;
-}, ) => {
+}, ) => {}
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
-
-import React from 'react',;
-import { ScrollArea } from '@/components/ui/scroll-area',;
-import Skeleton from '@/components/ui/skeleton',;
-import { Button } from '@/components/ui/button',;
-import { NotificationItem } from './NotificationItem',;
-import { Notification } from '@/context/notifications',;
-import { EmptyState } from '@/components/ui/empty-state',;
+'
+import React from 'react',;'
+import { ScrollArea } from '@/components/ui/scroll-area',;'
+import Skeleton from '@/components/ui/skeleton',;'
+import { Button } from '@/components/ui/button',;'
+import { NotificationItem } from './NotificationItem',;'
+import { Notification } from '@/context/notifications',;'
+import { EmptyState } from '@/components/ui/empty-state',;'
 import { Bell } from 'lucide-react';
 interface NotificationListProps {;
   loading: boolean,;
@@ -268,75 +291,75 @@ interface NotificationListProps {;
   onRetry: () => void;
 }
 
-  loading: boolean
-  error: string | null
+  loading: boolean;
+  error: string | null;
   notifications: Notification[]
   onMarkAsRead: (id: string,) => Promise<void>
   onDismiss: (id: string,) => Promise<void>
 
-  onRetry: () => void
+  onRetry: () => void;
 }
-export const NotificationList: React.FC<NotificationListProps> = ({
-  onDismiss,
-  onRetry
-}) => {
-  return (
+export const NotificationList: React.FC<NotificationListProps> = ({}
+  onDismiss,;
+  onRetry;
+}) => {}
+  return ("
     <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
-      {error ? (
+      {error ? ("
         <div className="p-8 text-center text-amber-500">
           <p>{error}</p>
-          <Button
+          <Button"
             className="mt-2"
             onClick={onRetry}
           >
-            Try Again
+            Try Again;
           </Button>
         </div>
-      ) : loading ? (
-        <div className="p-4 space-y-4">
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+      ) : loading ? ("
+        <div className="p-4 space-y-4">"
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />"
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />"
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
         </div>
-      ) : notifications.length === 0 ? (
+      ) : notifications.length === 0 ? ("
         <div className="p-8">
-          <EmptyState
-            icon={<Bell className="h-8 w-8" />}
-            title="No Notifications"
-            description="You're all caught up."
-            action={{ text: 'Refresh', onClick: onRetry }}
+          <EmptyState"
+            icon={<Bell className="h-8 w-8" />}"
+            title="No Notifications"'"
+            description="You're all caught up."'
+            action={{ text: 'Refresh', onClick: onRetry }}"
             className="border-none bg-transparent"
           />
         </div>
       ) : (
         notifications.map((notification) => (
-          <NotificationItem
+          <NotificationItem;
   );
 };
 
-
+"
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
-          <Button;
-            variant="outline";
-            size="sm";
+          <Button;"
+            variant="outline";"
+            size="sm";"
             className="mt - 2";
             on_click = {on_retry, }
           >;
             Try Again;
           </Button>;
-        </div>) : loading ? (
-        <div className="p - 4 space - y-4">;
+        </div>) : loading ? ("
+        <div className="p - 4 space - y-4">;"
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;"
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;"
           <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
-        </div>) : notifications.length === 0 ? (
+        </div>) : notifications.length === 0 ? ("
         <div className="p - 8">;
-          <EmptyState;
-            icon = {<Bell className="h - 8 w - 8" />, }
-            title="No Notifications";
-            description="You're all caught up.";
-            action={{ text: 'Refresh', on_click: on_retry }}
+          <EmptyState;"
+            icon = {<Bell className="h - 8 w - 8" />, }"
+            title="No Notifications";'"
+            description="You're all caught up.";'
+            action={{ text: 'Refresh', on_click: on_retry }}"
             className="border - none bg - transparent";
           />;
         </div>) : (
@@ -348,11 +371,11 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             on_dismiss = {on_dismiss, }
           />)))}
     </ScrollArea>);
-}
+}"
 ";
 
   );
-};
+};"
 ";
             key={notification.id}
             notification={notification}
@@ -363,6 +386,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       )}
     </ScrollArea>;
   );
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 =======
@@ -388,9 +412,15 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
+=======
+};'
+import { NotificationItem } from './NotificationItem';'
+import { Notification } from '@/context/notifications';'
+import { EmptyState } from '@/components/ui/empty-state';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Bell } from 'lucide-react';
 
-interface NotificationListProps {
+interface NotificationListProps {}
   loading: boolean;
   error: string | null;
   notifications: Notification[];
@@ -399,22 +429,22 @@ interface NotificationListProps {
   onRetry: () => void;
 }
 
-export const NotificationList: React.FC<NotificationListProps> = ({
+export const NotificationList: React.FC<NotificationListProps> = ({}
   loading,
   error,
   notifications,
   onMarkAsRead,
-  onDismiss,
-  onRetry
-}) => {
-  if (loading) {
-    return (
+  onDismiss,;
+  onRetry;
+}) => {}
+  if (loading) {}
+    return ("
       <div className="space-y-3">
-        {[...Array(5)].map((_, i) => (
-          <div key={i} className="flex items-start space-x-3 p-3">
-            <Skeleton className="h-8 w-8 rounded-full" />
-            <div className="flex-1 space-y-2">
-              <Skeleton className="h-4 w-3/4" />
+        {[...Array(5)].map((_, i) => ("
+          <div key={i} className="flex items-start space-x-3 p-3">"
+            <Skeleton className="h-8 w-8 rounded-full" />"
+            <div className="flex-1 space-y-2">"
+              <Skeleton className="h-4 w-3/4" />"
               <Skeleton className="h-3 w-1/2" />
             </div>
           </div>
@@ -423,35 +453,35 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     );
   }
 
-  if (error) {
-    return (
-      <div className="text-center py-8">
-        <div className="text-red-500 mb-4">
-          <Bell className="h-12 w-12 mx-auto mb-2" />
+  if (error) {}
+    return ("
+      <div className="text-center py-8">"
+        <div className="text-red-500 mb-4">"
+          <Bell className="h-12 w-12 mx-auto mb-2" />"
           <p className="text-sm">Failed to load notifications</p>
-        </div>
+        </div>"
         <Button onClick={onRetry} variant="outline" size="sm">
-          Try Again
+          Try Again;
         </Button>
       </div>
     );
   }
 
-  if (notifications.length === 0) {
+  if (notifications.length === 0) {}
     return (
-      <EmptyState
-        icon={Bell}
-        title="No notifications"
+      <EmptyState;
+        icon={Bell}"
+        title="No notifications"'"
         description="You're all caught up! Check back later for updates."
       />
     );
   }
 
-  return (
-    <ScrollArea className="h-96">
+  return ("
+    <ScrollArea className="h-96">"
       <div className="space-y-1">
         {notifications.map((notification) => (
-          <NotificationItem
+          <NotificationItem;
             key={notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
@@ -462,6 +492,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </ScrollArea>
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -487,3 +518,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 export const NotificationList: React.FC<NotificationListProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> pr-12243
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Fragment} from "react";
@@ -54,8 +55,15 @@ import Unauthorized from "@/pages/Unauthorized";
 const ErrorRoutes = () => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { Fragment } from "react";"
+import { Route, Routes } from "react-router-dom";"
+import NotFound from "@/pages/NotFound";"
+import Unauthorized from "@/pages/Unauthorized";
+const ErrorRoutes = () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const ErrorRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
 =======
 const ErrorRoutes = () => {  return (
@@ -64,8 +72,8 @@ const ErrorRoutes = () => {  return (
 const ErrorRoutes = () => {  return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <Routes>;
-      {/* Error Routes */}
-      <Route path="/unauthorized" element={<Unauthorized />} />
+      {/* Error Routes */}"
+      <Route path="/unauthorized" element={<Unauthorized />} />"
       <Route path="*" element={<NotFound />} />
     </Routes>
 <<<<<<< HEAD
@@ -92,6 +100,7 @@ export default ErrorRoutes;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
+<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import NotFound from "@/pages/NotFound";
@@ -99,19 +108,34 @@ import Unauthorized from "@/pages/Unauthorized";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import NotFound from "@/pages/NotFound";
+=======
+
+
+"
+import {Fragment} from "react";"
+import {Route, Routes} from "react-router-dom";"
+import NotFound from "@/pages/NotFound";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Unauthorized from "@/pages/Unauthorized";
 
-import NotFound from "@/pages/NotFound",
+"
+import { Fragment } from "react","
+import { Route, Routes } from "react-router-dom",";
+import NotFound from "@/pages/NotFound";"
+import Unauthorized from "@/pages/Unauthorized";
+"
+import NotFound from "@/pages/NotFound","
 import Unauthorized from "@/pages/Unauthorized",
-const ErrorRoutes = () => {
+const ErrorRoutes = () => {};
 const ErrorRoutes = () => {;
   return (
-export default ErrorRoutes,
-import { Fragment } from "react",;
-import { Route, Routes } from "react-router-dom",;
-import NotFound from "@/pages/NotFound",;
+export default ErrorRoutes,";
+import { Fragment } from "react",;"
+import { Route, Routes } from "react-router-dom",;"
+import NotFound from "@/pages/NotFound",;"
 import Unauthorized from "@/pages/Unauthorized",;
 
+<<<<<<< HEAD
 const ErrorRoutes = () => {
 const ErrorRoutes = () => {;
   return (
@@ -122,12 +146,39 @@ const ErrorRoutes = () => {;
 };
 },
 
+=======
+
+
+const ErrorRoutes = () => {}
+const ErrorRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Error Routes */}"
+      <Route path="/unauthorized" element={<Unauthorized />} />;"
+      <Route path="*" element={<NotFound />} />;
+};
+
+
+},
+
+
+
+export default ErrorRoutes;
+
+
+import { Fragment } from './react';'
+import { Route, Routes } from './react-router-dom';"
+import NotFound from "@/pages / NotFound";"
+import Unauthorized from "@/pages / Unauthorized";
+const ErrorRoutes = () =>: any {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <Routes>;
       {/* Error Routes */}
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default ErrorRoutes;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -166,3 +217,9 @@ export default ErrorRoutes;
 =======
 export default ErrorRoutes;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -8,6 +8,7 @@ export default function MicroSaasPage() {
   const detailedServices = [
     {
       icon: '📊',
+<<<<<<< HEAD
       title: 'AI-Powered Social Media Analytics',
       description: 'Comprehensive social media performance tracking with AI-driven insights and automated reporting.',
       longDescription: 'Our social media analytics platform provides real-time monitoring across all major platforms, delivering actionable insights through advanced AI algorithms. Track engagement, sentiment, competitor performance, and ROI with automated reporting and custom dashboards.',
@@ -227,6 +228,9 @@ export default function MicroSaasPage() {
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       textColor: 'text-indigo-400',
       gradient: 'from-indigo-400 to-purple-500'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -400,12 +404,16 @@ export default function MicroSaasPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Market Trends */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Market Trends & Opportunities
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Understanding market dynamics helps us deliver better value and competitive positioning.

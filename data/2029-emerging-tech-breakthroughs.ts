@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   id: string;
 export interface EmergingTechBreakthrough2029 {
 id: string;
@@ -65,14 +66,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
 origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+      "Emerging tech breakthroughs";"
+      "Innovation platform";"
+      "Future capabilities";
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export interface EmergingTechBreakthrough2029 {;
-
+"
       "Expert insights"
-    ],
-    link: "/services/2029-emerging-tech-breakthrough",
+    ],"
+    link: "/services/2029-emerging-tech-breakthrough","
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
+<<<<<<< HEAD
     address: string
   }
 }
@@ -99,46 +110,64 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+    contactInfo: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
 
 ];
 
+<<<<<<< HEAD
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface EmergingTechBreakthrough2029 {;
+=======
+
+;
+
+
+
+export interface EmergingTechBreakthrough2029 {;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
-  [
-    {
-      id: '2029-emerging-tech-breakthrough',
-      name: '2029 Emerging Tech Breakthrough Platform',
-      tagline: 'Emerging tech breakthroughs for 2029',
+  []
+    {}
+      id: '2029-emerging-tech-breakthrough','
+      name: '2029 Emerging Tech Breakthrough Platform','
+      tagline: 'Emerging tech breakthroughs for 2029','
       price: '$899/month',
-      description:
+      description:'
         'Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.',
-      features: [
-        'Emerging tech breakthroughs',
-        'Innovation platform',
-        'Future capabilities',
-        'Advanced features',
+      features: ['
+        'Emerging tech breakthroughs','
+        'Innovation platform','
+        'Future capabilities','
+        'Advanced features','
         'Expert insights',
-      ],
-      link: '/services/2029-emerging-tech-breakthrough',
+      ],'
+      link: '/services/2029-emerging-tech-breakthrough','
       category: 'Emerging Tech Breakthroughs 2029',
       realImplementation: true,
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+      contactInfo: {'
+        mobile: '+1 302 464 0950','
+        email: 'kleber@ziontechgroup.com','
         address: '364 E Main St STE 1008 Middletown DE 19709',
-      },
+      },;
     },;
-  ];    features: [
-      "Emerging tech breakthroughs";
-      "Innovation platform";
-      "Future capabilities";
+  ];    features: ["
+      "Emerging tech breakthroughs";"
+      "Innovation platform";"
+      "Future capabilities";"
       "Advanced features";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string,;
   name: string,;
   tagline: string,;
@@ -157,23 +186,28 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 
 export interface EmergingTechBreakthrough2029 {;
 
-export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
-  {
-    id: "2029-emerging-tech-breakthrough",
-    name: "2029 Emerging Tech Breakthrough Platform",
-    tagline: "Emerging tech breakthroughs for 2029",
-    price: "$899/month",
+export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = []
+  {"
+    id: "2029-emerging-tech-breakthrough","
+    name: "2029 Emerging Tech Breakthrough Platform","
+    tagline: "Emerging tech breakthroughs for 2029","
+    price: "$899/month","
     description: "Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.",
-    features: [
-      "Emerging tech breakthroughs",
-      "Innovation platform",
-      "Future capabilities",
+    features: ["
+      "Emerging tech breakthroughs","
+      "Innovation platform","
+      "Future capabilities","
       "Advanced features",
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "Expert insights"
-    ],
-    link: "/services/2029-emerging-tech-breakthrough",
+    ],"
+    link: "/services/2029-emerging-tech-breakthrough","
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
+<<<<<<< HEAD
     contactInfo: {
     }
   }
@@ -194,3 +228,13 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    contactInfo: {}
+    }
+  };
+];
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

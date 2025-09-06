@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,8 +18,9 @@ interface FeatureCardProps {
   key?: string | number, // Added key prop
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -40,6 +42,7 @@ export function FeatureCard(): any ({;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
     <div
 <<<<<<< HEAD
       className={cn(
@@ -52,16 +55,14 @@ import React from "react",
 
     <div
 <<<<<<< HEAD
-      className={cn(
-<<<<<<< HEAD
-
-
 =======
-  key?: string | number; // Added key prop;
-}
+    <div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      className={cn(
 
 
 
+<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import React from "react";
 interface FeatureCardProps {
@@ -102,22 +103,26 @@ interface FeatureCardProps {
 =======
       className={cn(interface FeatureCardProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+interface FeatureCardProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string,
   description: string,
   icon: React.ReactNode,
   className?: string,
-  key?: string | number, // Added key prop
+  key?: string | number, // Added key prop;
 }
 
-export function FeatureCard({ title, description, icon, className }: FeatureCardProps) {
+export function FeatureCard({ title, description, icon, className }: FeatureCardProps) {}
   return (
     <div className={cn(
-      "flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300",
-      className
-    )}>
+      "flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300",;
+      className;
+    )}>"
       <div className="mr-4 text-zion-cyan p-2">
         {icon}
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,10 +146,46 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div>;
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;
+=======
+
+
+
+      <div>"
+        <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>"
+        <p className="text-zion-slate-light">{description}</p>
+      </div>
+
+  );
+}
+  )"
+import { cn } from "@/lib/utils",;"
+import React from "react",;
+interface FeatureCardProps {;
+  title: string,;
+  description: string,;
+  icon: React.ReactNode,;
+  className?: string,;
+  key?: string | number, // Added key prop;
+}
+;
+export function FeatureCard() { return null; }
+    )}>;"
+      <div className="mr-4 text-zion-cyan p-2">;
+        {icon}
+      </div>;
+"
+        "flex items-start p-6 rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300",
+        className,
+      )}>;"
+      <div className="mr-4 text-zion-cyan p-2">{icon}</div>;
+      <div>;"
+        <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-zion-slate-light">{description}</p>;
 <<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -159,13 +200,12 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
 <<<<<<< HEAD
 
     </div>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-    </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
+
 <<<<<<< HEAD
-
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -180,21 +220,28 @@ import { cn  } from '@/lib / utils';
 import React from './react';
 interface FeatureCardProps {
   title: string,
+=======
+import { cn  } from '@/lib / utils';'
+import React from './react';
+interface FeatureCardProps {}
+  title: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   description: string;
   icon: React.ReactNode;
   class_name?: string;
   key?: string | number; // Added key prop;
 }
-export /**
- * FeatureCard - Function description
+export /**;
+ * FeatureCard - Function description;
  */
-function FeatureCard() {
+function FeatureCard() {}
   return (
     <div;
-      className={cn (
+      className={cn ("
         "flex items - start p - 6 rounded - lg border border - zion - purple / 20 hover: border - zion - purple / 50 transition - all duration - 300",
         class_name,
       )}
+<<<<<<< HEAD
     >;
       <div className="mr - 4 text - zion - cyan p-2">{icon}</div>;
       <div>;
@@ -205,10 +252,23 @@ function FeatureCard() {
 
 }
 }
+=======
+    >;"
+      <div className="mr - 4 text - zion - cyan p - 2">{icon}</div>;
+      <div>;"
+        <h3 className="text - lg font - bold mb - 2 text - white">{title}</h3>;"
+        <p className="text - zion - slate - light">{description}</p>;
+      </div>;
+    </div>);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
 
-import { cn } from "@/lib/utils",;
+
+}
+"
+import { cn } from "@/lib/utils",;"
 import React from "react",;
 ;
 interface FeatureCardProps {;
@@ -219,36 +279,39 @@ interface FeatureCardProps {;
   key?:string | number, // Added key prop;
 }
 ;
-export function FeatureCard({ title, description, icon, className } FeatureCardProps) {;
-  return (;
-    <div className={cn(;
-      "flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300",;
-      className;
-    )}>;
+export function FeatureCard() { return null; }
+    )}>;"
       <div className="mr-4 text-zion-cyan p-2">;
         {icon}
       </div>;
-      <div>;
-        <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;
+      <div>;"
+        <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;"
         <p className="text-zion-slate-light">{description}</p>;
       </div>;
     </div>;
   ),;}
+<<<<<<< HEAD
  interface FeatureCardProps {
   title: string,
   description: string;
+=======
+ interface FeatureCardProps {}
+  title: string;
+description: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 icon: React.ReactNode;
 className?: string;
-key?: string | number, //Added key prop 
-}title, description, icon, className 
-}: FeatureCardProps) {
-  return (<div className= {
+key?: string | number, //Added key prop;
+}title, description, icon, className;
+}: FeatureCardProps) {}
+  return (<div className= {}
   cn (</div> </div>) 
 }
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -260,3 +323,10 @@ key?: string | number, //Added key prop
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

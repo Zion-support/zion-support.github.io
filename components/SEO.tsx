@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -149,3 +150,6 @@ const SEO: React.FC<SEOProps> = ({
 export default SEO;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

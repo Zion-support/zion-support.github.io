@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -6,9 +7,13 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
 
-import type { NextApiRequest, NextApiResponse } from "next";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones/[milestoneId].ts
+
+import type { NextApiRequest, NextApiResponse } from "next";"
 import { requireUser } from "../../../../../utils/api/auth";
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
 import {
 <<<<<<< HEAD
   getProject
@@ -25,11 +30,15 @@ import {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones/[milestoneId].ts
   getProject,
   updateMilestone,
   assertParticipantOrAdmin,
-  isClient,
+  isClient,;
   isTalent,;
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -76,11 +85,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   if (!assertParticipantOrAdmin(project, user)) {
     res.status(403).json({ error: 'Forbidden' });
+=======
+
+  const project = getProject(projectId);
+  if (!project) {"
+    res && res.status(404).json({ error: "Project not found" });
     return;
   }
-<<<<<<< HEAD
-  if (req.method === "PATCH") {
+  if (!assertParticipantOrAdmin(project, user)) {"
+    res && res.status(403).json({ error: "Forbidden" });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones/[milestoneId].ts
+    return;
+  }
 
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
     const body = req.body as any;
     if (body.status && !isMilestoneStatus(body.status)) {
       res.status(400).json({ error: 'Invalid status' });
@@ -211,14 +229,18 @@ res.setHeader("AllowPATCH");
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (req && req.method === "PATCH") {
+=======
+"
+  if (req && req.method === "PATCH") {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones/[milestoneId].ts
     const body = req && req.body as any;
-    if (body && body.status && !isMilestoneStatus(body && body.status)) {
+    if (body && body.status && !isMilestoneStatus(body && body.status)) {"
       res && res.status(400).json({ error: "Invalid status" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       return;
     }
-    // Enforce status transition rules
-    if (body && body.status) {
+    // Enforce status transition rules;
+    if (body && body.status) {}
       const isClientUser = isClient(project, user);
       const isTalentUser = isTalent(project, user);
       const status: string = body && body.status;
@@ -228,20 +250,21 @@ res.setHeader("AllowPATCH");
       }
     }
     const updated = updateMilestone(project, milestoneId, body);
-    if (!updated) {
-
-  res.setHeader("AllowPATCH");
+    if (!updated) {}
+"
+  res.setHeader("AllowPATCH");"
   res.status(405).end("Method Not Allowed");
 }
-=======
+
 }
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  res.setHeader('AllowPATCH');
+
+  res.setHeader('AllowPATCH');'
   res.status(405).end('Method Not Allowed')
 }
 
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -265,3 +288,9 @@ res.setHeader("AllowPATCH");
 
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/projects/[projectId]/milestones/[milestoneId].ts

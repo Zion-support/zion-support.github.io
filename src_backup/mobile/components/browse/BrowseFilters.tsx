@@ -5,131 +5,131 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 return (
-    <div className='space-y-3'>;
-      <div className='flex justify-between items-center px-4'>;
+    <div className='space-y-3'>;'
+      <div className='flex justify-between items-center px-4'>;'
         <div className='flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar'>;
           <Sheet>;
-            <SheetTrigger asChild>;
-              <Button variant='outline' size='sm' className='gap-1'>;
+            <SheetTrigger asChild>;'
+              <Button variant='outline' size='sm' className='gap-1'>;'
                 <Filter className='h-3 && 3.5 w-3 && 3.5' />;
                 Filter;
               </Button>;
-            </SheetTrigger>;
+            </SheetTrigger>;'
             <SheetContent side='bottom' className='h-[85vh] rounded-t-xl'>;
               <SheetHeader>;
-                <SheetTitle>;
+                <SheetTitle>;'
                   Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
 
                 </SheetTitle>;
               </SheetHeader>;
-
-              <div className='py-6 space-y-6'>;
+'
+              <div className='py-6 space-y-6'>;'
                 {type === 'jobs' ? (;
-                  <>;
+                  <>;'
                     <div className='space-y-2'>;
-                      <Label>Job Type</Label>;
+                      <Label>Job Type</Label>;'
                       <div className='flex gap-2 flex-wrap'>;
 
-                        <Badge
-                          variant='outline'
+                        <Badge'
+                          variant='outline''
                           className='cursor-pointer hover:bg-primary/5'>;
                           Full Time;
                         </Badge>;
-                        <Badge
-                          variant='outline'
+                        <Badge'
+                          variant='outline''
                           className='cursor-pointer hover:bg-primary/5'>;
                           Part Time;
                         </Badge>;
-                        <Badge
-                          variant='outline'
+                        <Badge'
+                          variant='outline''
                           className='cursor-pointer hover:bg-primary/5'>;
                           Contract;
                         </Badge>;
-                        <Badge
+                        <Badge'
                           variant='outline'
-
-                          className='cursor-pointer hover:bg-primary/5'>;
-import React, { useState } from 'react';
-import { Button } from '@/components / ui / button';
-import { Slider } from '@/components / ui / slider';
-import { Switch } from '@/components / ui / switch';
+'
+                          className='cursor-pointer hover:bg-primary/5'>;'
+import React, { useState } from 'react';'
+import { Button } from '@/components / ui / button';'
+import { Slider } from '@/components / ui / slider';'
+import { Switch } from '@/components / ui / switch';'
 import { Input } from '@/components / ui / input';
-import {
+import {}
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
+  SelectValue,';
+} from '@/components / ui / select';'
 import { X, Filter } from 'lucide-react';
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetFooter,
-  SheetTrigger,
-} from '@/components / ui / sheet';
-import { Badge } from '@/components / ui / badge';
+  SheetTrigger,'
+} from '@/components / ui / sheet';'
+import { Badge } from '@/components / ui / badge';'
 import { Label } from '@/components / ui / label';
-interface BrowseFiltersProps {
+interface BrowseFiltersProps {'
   type: 'jobs' | 'talents';
-export /**
- * BrowseFilters - Function description
+export /**;
+ * BrowseFilters - Function description;
  */
-function BrowseFilters() {
+function BrowseFilters() {}
   const [active_filters, setActiveFilters] = useState < string[]>([]);
-  const add_filter = (filter: string) =>: any {    if () {) {
-  $2
+  const add_filter = (filter: string) =>: any {    if () {) {}
+  $2;
 }
       setActiveFilters ([...active_filters, filter]);
     }
   }
-  const remove_filter = (filter: string) =>: any {
+  const remove_filter = (filter: string) =>: any {}
     setActiveFilters (active_filters.filter (function => f !== filter));
   }
-  return (
-    <div className='space - y-3'>;
-      <div className='flex justify - between items - center px - 4'>;
+  return ('
+    <div className='space - y-3'>;'
+      <div className='flex justify - between items - center px - 4'>;'
         <div className='flex items - center gap - 2 overflow - x-auto py - 1 hide - scrollbar'>;
           <Sheet>;
-            <SheetTrigger as_child>;
-              <Button variant='outline' size='sm' className='gap - 1'>;
+            <SheetTrigger as_child>;'
+              <Button variant='outline' size='sm' className='gap - 1'>;'
                 <Filter className='h - 3.5 w - 3.5' />;
                 Filter;
               </Button>;
-            </SheetTrigger>;
+            </SheetTrigger>;'
             <SheetContent side='bottom' className='h-[85vh] rounded - t-xl'>;
               <SheetHeader>;
-                <SheetTitle>;
+                <SheetTitle>;'
                   Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
                 </SheetTitle>;
-              </SheetHeader>;
-              <div className='py - 6 space - y-6'>;
+              </SheetHeader>;'
+              <div className='py - 6 space - y-6'>;'
                 {type === 'jobs' ? (
-                  <>;
+                  <>;'
                     <div className='space - y-2'>;
-                      <Label > Job Type</Label>;
+                      <Label > Job Type</Label>;'
                       <div className='flex gap - 2 flex - wrap'>;
-                        <Badge;
-                          variant='outline';
+                        <Badge;'
+                          variant='outline';'
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
                           Full Time;
                         </Badge>;
-                        <Badge;
-                          variant='outline';
+                        <Badge;'
+                          variant='outline';'
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
                           Part Time;
                         </Badge>;
-                        <Badge;
-                          variant='outline';
+                        <Badge;'
+                          variant='outline';'
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
                           Contract;
                         </Badge>;
-                        <Badge;
-                          variant='outline';
+                        <Badge;'
+                          variant='outline';'
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
 
@@ -137,24 +137,24 @@ function BrowseFilters() {
                         </Badge>;
                       </div>;
                     </div>;
-
+'
                     <div className='space - y-2'>;
-                      <Label > Experience Level</Label>;
+                      <Label > Experience Level</Label>;'
                       <div className='flex gap - 2 flex - wrap'>;
-                        <Badge;
-                          variant='outline';
+                        <Badge;'
+                          variant='outline';'
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
                           Entry Level;
                         </Badge>;
-                        <Badge;
-                          variant='outline';
+                        <Badge;'
+                          variant='outline';'
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
                           Mid Level;
                         </Badge>;
-                        <Badge;
-                          variant='outline';
+                        <Badge;'
+                          variant='outline';'
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
 
@@ -162,33 +162,33 @@ function BrowseFilters() {
                         </Badge>;
                       </div>;
                     </div>;
-
+'
                           className='cursor-pointer hover:bg-primary/5'>;
                   </>) : (
-                  <>;
+                  <>;'
                     <div className='space - y-2'>;
-                      <Label > Specialization</Label>;
+                      <Label > Specialization</Label>;'
                       <div className='flex gap - 2 flex - wrap'>;
-                        <Badge;
-                          variant='outline';
+                        <Badge;'
+                          variant='outline';'
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
                           Developer;
                         </Badge>;
-                        <Badge;
-                          variant='outline';
+                        <Badge;'
+                          variant='outline';'
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
                           Designer;
                         </Badge>;
-                        <Badge;
-                          variant='outline';
+                        <Badge;'
+                          variant='outline';'
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
                           Marketing;
                         </Badge>;
-                        <Badge;
-                          variant='outline';
+                        <Badge;'
+                          variant='outline';'
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
 
@@ -197,6 +197,7 @@ function BrowseFilters() {
                       </div>;
                     </div>;
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -261,21 +262,41 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
+=======
+import React, { useState } from "react","
+import { Button } from "@/components/ui/button","
+import { Slider } from "@/components/ui/slider","
+import { Switch } from "@/components/ui/switch","
+import { Input } from "@/components/ui/input","
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+
+
+'
+import { X, Filter } from 'lucide-react'"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet","
+import { Badge } from "@/components/ui/badge","
+import { Label } from "@/components/ui/label",
+interface BrowseFiltersProps {}
+  return ("
+    <div className="space-y-3">"
+      <div className="flex justify-between items-center px-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">
           <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="sm" className="gap-1">
-                <Filter className="h-3.5 w-3.5" /> 
-                Filter
+            <SheetTrigger asChild>"
+              <Button variant="outline" size="sm" className="gap-1">"
+                <Filter className="h-3.5 w-3.5" /> ;
+                Filter;
               </Button>
-            </SheetTrigger>
+            </SheetTrigger>"
             <SheetContent side="bottom" className="h-[85vh] rounded-t-xl">
-              <SheetHeader>
+              <SheetHeader>"
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -287,18 +308,26 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
                   <>
+=======
+              "
+              <div className="py-6 space-y-6">"
+                {type === "jobs" ? (
+
+                  <>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                     <div className="space-y-2">
-                      <Label>Job Type</Label>
-                      <div className="flex gap-2 flex-wrap">
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Full Time</Badge>
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Part Time</Badge>
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Contract</Badge>
+                      <Label>Job Type</Label>"
+                      <div className="flex gap-2 flex-wrap">"
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Full Time</Badge>"
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Part Time</Badge>"
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Contract</Badge>"
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -312,24 +341,34 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                       <div className="flex gap-2 flex-wrap">
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>
+=======
+                    "
+                    <div className="space-y-2">
+
+                      <Label>Experience Level</Label>"
+                      <div className="flex gap-2 flex-wrap">"
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>"
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Senior</Badge>
                       </div>
                     </div>
                   </>
                 ) : (
-                  <>
+                  <>"
                     <div className="space-y-2">
-                      <Label>Specialization</Label>
-                      <div className="flex gap-2 flex-wrap">
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Developer</Badge>
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Designer</Badge>
-                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Marketing</Badge>
+                      <Label>Specialization</Label>"
+                      <div className="flex gap-2 flex-wrap">"
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Developer</Badge>"
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Designer</Badge>"
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Marketing</Badge>"
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -338,15 +377,18 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                    "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
-                      <Slider
+                      <Slider"
                         aria-label="Years of experience"
                         defaultValue={[0, 10]}
                         max={20}
-                        step={1}
+                        step={1}"
                         className="my-4"
-                      />
+                      />"
                       <div className="flex justify-between text-xs text-muted-foreground">
                         <span>0+ years</span>
                         <span>20+ years</span>
@@ -357,6 +399,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -365,9 +408,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
                   <Label>Location</Label>
                   <Select>
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
                     <SelectTrigger>
                       <SelectValue placeholder='Select location' />
                     </SelectTrigger>
@@ -376,6 +423,16 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                       <SelectItem value='us'>United States</SelectItem>
                       <SelectItem value='europe'>Europe</SelectItem>
                       <SelectItem value='asia'>Asia</SelectItem>
+=======
+                    <SelectTrigger>"
+                      <SelectValue placeholder="Select location" />
+                    </SelectTrigger>
+                    <SelectContent>"
+                      <SelectItem value="remote">Remote</SelectItem>"
+                      <SelectItem value="us">United States</SelectItem>"
+                      <SelectItem value="europe">Europe</SelectItem>"
+                      <SelectItem value="asia">Asia</SelectItem>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                     </SelectContent>
                   </Select>
                 </div>
@@ -386,11 +443,15 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
                 <div className="space-y-2">
 =======
                 
+=======
+                "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -402,6 +463,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
                 <div className="space-y-2">
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
                   <Label>Salary Range</Label>
 <<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
 =======
@@ -409,8 +471,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD:src/mobile/components/browse/BrowseFilters.tsx
 =======
                   <div className="flex gap-4 items-center">
+=======
+                  <Label>Salary Range</Label>"
+                  <div className="flex gap-4 items-center">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                     <Input placeholder="Min" type="number" className="w-full" />
-                    <span>to</span>
+                    <span>to</span>"
                     <Input placeholder="Max" type="number" className="w-full" />
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/mobile/components/browse/BrowseFilters.tsx
 
@@ -420,6 +486,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
                   <Label>Salary Range</Label>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -438,12 +505,16 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 <div className="space-y-2">
 =======
                 
+=======
+                "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                 <div className="space-y-2">
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
                 <div className="space-y-2">
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
                 <div className="space-y-2">
@@ -461,34 +532,37 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                   </div>
                 </div>
 =======
+=======
+                  <Label>Skills</Label>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                   <div className='grid grid-cols-2 gap-2'>
-
+'
                 <div className='space-y-2'>;
-                  <Label>Location</Label>;
+                  <Label>Location</Label>;'
                     <div className='space - y-2'>;
                       <Label > Experience (years)</Label>;
-                      <Slider;
+                      <Slider;'
                         aria - label='Years of experience';
                         default_value={[0, 10]}
                         max={20}
-                        step={1}
-                        className='my - 4'                      />;
+                        step={1}'
+                        className='my - 4'                      />;'
                       <div className='flex justify - between text - xs text - muted - foreground'>;
                         <span > 0+ years</span>;
                         <span > 20+ years</span>;
                       </div>;
                     </div>;
-                  </>)}
+                  </>)}'
                 <div className='space - y-2'>;
                   <Label > Location</Label>;
                   <Select>;
-                    <SelectTrigger>;
+                    <SelectTrigger>;'
                       <SelectValue placeholder='Select location' />;
                     </SelectTrigger>;
-                    <SelectContent>;
-                      <SelectItem value='remote'>Remote</SelectItem>;
-                      <SelectItem value='us'>United States</SelectItem>;
-                      <SelectItem value='europe'>Europe</SelectItem>;
+                    <SelectContent>;'
+                      <SelectItem value='remote'>Remote</SelectItem>;'
+                      <SelectItem value='us'>United States</SelectItem>;'
+                      <SelectItem value='europe'>Europe</SelectItem>;'
                       <SelectItem value='asia'>Asia</SelectItem>;
                     </SelectContent>;
                   </Select>;
@@ -498,11 +572,15 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
                 <div className="flex items-center justify-between">
 =======
                 
+=======
+                "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                 <div className="flex items-center justify-between">
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -525,6 +603,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -540,6 +619,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 >
                   Apply Filters
                 </Button>
+=======
+
+              <SheetFooter>"
+                <Button variant="outline" className="w-full">Reset</Button>"
+                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
               </SheetFooter>
             </SheetContent>
           </Sheet>
@@ -550,6 +635,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -568,85 +654,99 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 <<<<<<< HEAD
 =======
 
+=======
+
+          <Select>"
+            <SelectTrigger className="w-[120px] h-8">"
+              <SelectValue placeholder="Sort By" />
+            </SelectTrigger>
+            <SelectContent>"
+              <SelectItem value="newest">Newest</SelectItem>"
+              <SelectItem value="relevance">Best Match</SelectItem>"
+              <SelectItem value="salary">Highest Pay</SelectItem>
+            </SelectContent>
+          </Select>
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx
                       className='cursor-pointer hover:bg-primary/5 justify-start'>;
                       Node && Node.js;
                     </Badge>;
                   </div>;
                 </div>;
-
+'
                 <div className='flex items-center justify-between'>;
                   <Label>Only show verified profiles</Label>;
                   <Switch />;
                 </div>;
               </div>;
 
-              <SheetFooter>;
+              <SheetFooter>;'
                 <Button variant='outline' className='w-full'>;
                   Reset;
                 </Button>;
-                <Button
-                  className='w-full'
-                  onClick={() => addFilter('Experience: 3+ years')}
+                <Button'
+                  className='w-full''
+                  onClick={() => addFilter('Experience: 3+ years')}'
                 <div className='space - y-2'>;
-                  <Label > Salary Range</Label>;
-                  <div className='flex gap - 4 items - center'>;
+                  <Label > Salary Range</Label>;'
+                  <div className='flex gap - 4 items - center'>;'
                     <Input placeholder='Min' type='number' className='w - full' />;
-                    <span > to</span>;
+                    <span > to</span>;'
                     <Input placeholder='Max' type='number' className='w - full' />;
                   </div>;
-                </div>;
+                </div>;'
                 <div className='space - y-2'>;
-                  <Label > Skills</Label>;
+                  <Label > Skills</Label>;'
                   <div className='grid grid - cols - 2 gap - 2'>;
-                    <Badge;
-                      variant='outline';
+                    <Badge;'
+                      variant='outline';'
                       className='cursor - pointer hover:bg - primary / 5 justify - start';
                     >;
                       JavaScript;
                     </Badge>;
-                    <Badge;
-                      variant='outline';
+                    <Badge;'
+                      variant='outline';'
                       className='cursor - pointer hover:bg - primary / 5 justify - start';
                     >;
                       React;
                     </Badge>;
-                    <Badge;
-                      variant='outline';
+                    <Badge;'
+                      variant='outline';'
                       className='cursor - pointer hover:bg - primary / 5 justify - start';
                     >;
                       Python;
                     </Badge>;
-                    <Badge;
-                      variant='outline';
+                    <Badge;'
+                      variant='outline';'
                       className='cursor - pointer hover:bg - primary / 5 justify - start';
                     >;
                       Figma;
                     </Badge>;
-                    <Badge;
-                      variant='outline';
+                    <Badge;'
+                      variant='outline';'
                       className='cursor - pointer hover:bg - primary / 5 justify - start';
                     >;
                       UI / UX;
                     </Badge>;
-                    <Badge;
-                      variant='outline';
+                    <Badge;'
+                      variant='outline';'
                       className='cursor - pointer hover:bg - primary / 5 justify - start';
                     >;
                       Node.js;
                     </Badge>;
                   </div>;
-                </div>;
+                </div>;'
                 <div className='flex items - center justify - between'>;
                   <Label > Only show verified profiles</Label>;
                   <Switch />;
                 </div>;
               </div>;
-              <SheetFooter>;
+              <SheetFooter>;'
                 <Button variant='outline' className='w - full'>;
                   Reset;
                 </Button>;
-                <Button;
-                  className='w - full';
+                <Button;'
+                  className='w - full';'
                   on_click={() => add_filter ('Experience: 3+ years')}
 
                 >;
@@ -656,14 +756,14 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
             </SheetContent>;
           </Sheet>;
 
-          <Select>;
+          <Select>;'
             <SelectTrigger className='w-[120px] h - 8'>;
-
+'
               <SelectValue placeholder='Sort By' />;
             </SelectTrigger>;
-            <SelectContent>;
-              <SelectItem value='newest'>Newest</SelectItem>;
-              <SelectItem value='relevance'>Best Match</SelectItem>;
+            <SelectContent>;'
+              <SelectItem value='newest'>Newest</SelectItem>;'
+              <SelectItem value='relevance'>Best Match</SelectItem>;'
               <SelectItem value='salary'>Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
@@ -682,13 +782,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           {activeFilters.map((filter) => (
-            <Badge 
-              key={filter} 
-              variant="secondary"
+            <Badge;
+              key={filter} "
+              variant="secondary""
               className="flex items-center gap-1"
             >
               {filter}
-              <X 
+              <X "
                 className="h-3 w-3 cursor-pointer" 
                 onClick={() => removeFilter(filter)} 
               />
@@ -716,12 +816,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 
           {active_filters.map (filter => (
             <Badge;
-              key={filter}
-              variant='secondary';
+              key={filter}'
+              variant='secondary';'
               className='flex items - center gap - 1';
             >;
               {filter}
-              <X;
+              <X;'
                 className='h - 3 w - 3 cursor - pointer';
                 on_click={() => remove_filter (filter)}              />;
             </Badge>))}
@@ -729,6 +829,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
@@ -747,3 +848,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/browse/BrowseFilters.tsx
+=======
+;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/browse/BrowseFilters.tsx

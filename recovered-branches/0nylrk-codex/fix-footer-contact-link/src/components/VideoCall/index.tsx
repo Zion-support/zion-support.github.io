@@ -1,6 +1,7 @@
-import React from "react";
+import React from "react";"
 export { VideoCallRoom } from "../video/VideoCallRoom";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,13 +53,18 @@ export const VideoCall: React.FC<{children?: React && React.ReactNode}> = ({chil
 =======
 // Stub implementation for any LiveKit exports that might be used
 export const VideoCall: React.FC<{ children?: React.ReactNode }> = ({
+=======
+// Stub implementation for any LiveKit exports that might be used;
+export const VideoCall: React.FC<{ children?: React.ReactNode }> = ({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   children,
-}) => {
+}) => {};
   return <div>{children}</div>;
 };
 
-export const LiveKitRoom: React.FC<{ children?: React.ReactNode }> = ({
+export const LiveKitRoom: React.FC<{ children?: React.ReactNode }> = ({}
   children,
+<<<<<<< HEAD
 }) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   return <div>{children}</div>;
@@ -84,45 +90,47 @@ export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export { VideoCallRoom } from '../video/VideoCallRoom',;
 
+=======
+}) => {};
+  return <div>{children}</div>;
+};
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export const LiveKitRoom: React.FC<{children?: React && React.ReactNode}> = ({children}) => {;
   return <div>{children}</div>
 };
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export { VideoCallRoom } from '../video / VideoCallRoom';
 ;
 // Stub implementation for any LiveKit exports that might be used;
-export const VideoCall: React.FC<{children?: React.ReactNode}> = ({children}) => {
+export const VideoCall: React.FC<{children?: React.ReactNode}> = ({children}) => {};
   return <div>{children}</div>;
 }
 ;
-export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {
+export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {};
   return <div>{children}</div>;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import React from 'react',;
-export { VideoCallRoom } from '../video/VideoCallRoom',;
-;
-// Stub implementation for any LiveKit exports that might be used;
-export const VideoCall:React.FC<{children?:React.ReactNode}> = ({children}) => {;
-  return <div>{children}</div>,;
-},;
-;
-export const LiveKitRoom:React.FC<{children?:React.ReactNode}> = ({children}) => {;
-  return <div>{children}</div>,;
-},; 
 
-import React from 'react';
-export { VideoCallRoom } from '../video/VideoCallRoom';
-// Stub implementation for any LiveKit exports that might be used
-export const VideoCall: React.FC<{children?: React.ReactNode}> = ({children}) => {
-  return <div>{children}</div>
 
+<<<<<<< HEAD
 }
 
 export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {
@@ -149,3 +157,6 @@ export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

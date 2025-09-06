@@ -1,23 +1,33 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { SORT_OPTIONS } from "@/data/sortOptions";
+import React from "react";"
+import { Button } from "@/components/ui/button";"
+import { SORT_OPTIONS } from "@/data/sortOptions";"
 import { SortDesc, ChevronDown } from "lucide-react";
-import {
+import {}
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger,";
 } from "@/components/ui/dropdown-menu";
 
+<<<<<<< HEAD
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { SORT_OPTIONS  } from '@/data / sort_options';
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { SortDesc, ChevronDown  } from './lucide-react';
 =======
-<<<<<<< HEAD
 
+
+
+
+
+import React from './react';'
+import { Button  } from '@/components / ui / button';'
+import { SORT_OPTIONS  } from '@/data / sort_options';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { SortDesc, ChevronDown  } from './lucide-react';
+
+<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {SORT_OPTIONS} from "@/data/sortOptions";
@@ -91,12 +101,26 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <DropdownMenuContent
         align="start"
+=======
+
+
+
+
+import {}
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+
+      <DropdownMenuContent"
+        align="start""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
       >
-        {SORT_OPTIONS.map((option) => (
-          <DropdownMenuItem
+        {SORT_OPTIONS.map((option) => (;
+          <DropdownMenuItem;
             key={option.value}
             onClick={() => setSortOption(option.value)}
+<<<<<<< HEAD
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +133,12 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
               sortOption === option.value
                 ? "bg-zion-purple/20 text-zion-purple"
                 : ""
+=======
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${}
+              sortOption === option.value"
+                ? "bg-zion-purple/20 text-zion-purple""
+                : ""`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             }`}
           >
             {option.label}
@@ -120,10 +150,11 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
   );
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
+
+
             key={option.value}
+<<<<<<< HEAD
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
 <<<<<<< HEAD
@@ -137,6 +168,10 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+            onClick={() => setSortOption(option.value)}`
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${}`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             }`}
 =======
       </DropdownMenuTrigger>            }`}
@@ -149,15 +184,15 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
-    </DropdownMenu>
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { SORT_OPTIONS } from "@/data/sortOptions",;
+    </DropdownMenu>"
+import React from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { SORT_OPTIONS } from "@/data/sortOptions",;"
 import { SortDesc, ChevronDown } from "lucide-react",;
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
-  DropdownMenuItem,;
+  DropdownMenuItem,;"
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
 interface SortDropdownProps {;
   sortOption: string;
@@ -166,6 +201,7 @@ interface SortDropdownProps {;
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,3 +219,7 @@ interface SortDropdownProps {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

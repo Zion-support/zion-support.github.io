@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'''
 =======
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ import React,{ useState,useEffect,useCallback } from';react' import { motion,Ani
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<<< HEAD:src.disabled/components/unused/BrokenLinkFixer.jsx
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 =======
@@ -27,11 +30,8 @@ import React,{ useState,useEffect,useCallback } from';react' import { motion,Ani
 <
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
-:src.disabled/components/unused/BrokenLinkFixer.jsx
-"export\": const BrokenLinkFixer = ({ className = \',autoCheck = true,showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState(\'overview\') const [stats,setStats] = useState({ \"total\": \'0\',\"healthy\": \'0\',\"broken\": \'0\',\"checking\": \'0\',\"unknown\": \'0\'})\'';\"";
-export: const BrokenLinkFixer = ({ className = ",autoCheck = true,showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState("overview") const [stats,setStats] = useState({ total: "0",healthy: "0",broken: "0",checking: "0",unknown: "0"})"";"";"""
-import React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'''
 
+<<<<<<< HEAD
 import React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview', ') const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'''
 import React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'''
 import React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'''
@@ -67,3 +67,6 @@ import React,{ useState,useEffect,useCallback } from';react' import { motion,Ani
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

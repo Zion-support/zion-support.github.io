@@ -53,8 +53,12 @@ export default function MicroSaasPage() {
     }
   ];
   
+<<<<<<< HEAD
   // Get all services and filter by category
   const allServices = realMicroSaasServices;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const filteredServices = selectedCategory === 'All' 
     ? allServices 
     : getServicesByCategory(selectedCategory);

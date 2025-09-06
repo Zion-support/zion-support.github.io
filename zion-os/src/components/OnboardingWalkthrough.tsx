@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -173,11 +174,37 @@ export function OnboardingWalkthrough() {;
               <div;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className="bg - blue - 500 h - 2 rounded - full transition - all duration-300";
+=======
+
+    <>;
+      {/* Overlay */}
+      <div className="fixed inset - 0 bg - black / 50 z - 40" on_click={handle_skip} />;
+      {/* Walkthrough Modal */}"
+      <div className="fixed z - 50 inset - 0 flex items - center justify - center p - 4">;"
+        <div className="bg - zinc - 800 rounded - xl border border - zinc - 700 max - w-md w - full p - 6 shadow - 2xl">;
+          {/* Progress Bar */}"
+          <div className="mb - 6">;"
+            <div className="flex justify - between items - center mb - 2">;"
+              <span className="text - sm text - zinc - 400">;
+                Step {current_step + 1} of {walkthrough_steps.length}
+              </span>;
+              <button;
+                on_click={handle_skip}"
+                className="text - zinc - 400 hover:text - zinc - 300 text - sm";
+              >;
+                Skip tour;
+              </button>;
+            </div>;"
+            <div className="w - full bg - zinc - 700 rounded - full h - 2">;
+              <div;"
+                className="bg - blue - 500 h - 2 rounded - full transition - all duration - 300";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 style={{ width: `${((current_step + 1) / walkthrough_steps.length) * 100}%` }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               />;
             </div>;
           </div>;
+<<<<<<< HEAD
           {/* Step Content */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,10 +250,28 @@ export function OnboardingWalkthrough() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          {/* Step Content */}"
+          <div className="text - center mb - 6">;"
+            <h3 className="text - xl font - semibold text - white mb - 3">;
+              {currentStepData.title}
+            </h3>;"
+            <p className="text - zinc - 300 leading - relaxed">;
+              {currentStepData.description}
+            </p>;
+          </div>;
+          {/* Navigation Buttons */}"
+          <div className="flex justify - between items - center">;
+            <button;
+              on_click={handle_previous}
+              disabled={current_step === 0}"
+              className="px - 4 py - 2 text - zinc - 400 hover:text - white disabled:opacity - 50 disabled:cursor - not - allowed transition - colors";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >;
               Previous;
             </button>;
             <button;
+<<<<<<< HEAD
 <<<<<<< HEAD
               onClick={handleNext}
               className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors";
@@ -236,6 +281,11 @@ export function OnboardingWalkthrough() {;
               on_click={handle_next}
               className="px - 6 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font - medium transition-colors";
             >;
+=======
+              on_click={handle_next}"
+              className="px - 6 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font - medium transition - colors";
+            >;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {current_step === walkthrough_steps.length - 1 ? "Complete" : "Next"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </button>;
@@ -246,6 +296,7 @@ export function OnboardingWalkthrough() {;
 <<<<<<< HEAD
       {currentStepData.target && (;
         <div;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           className="fixed z-30 pointer-events-none";
@@ -269,10 +320,14 @@ export function OnboardingWalkthrough() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             bottom: 0}}
         >;
-          <div;
+          <div;"
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -307,6 +362,11 @@ export function OnboardingWalkthrough() {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               width: "300px";
+=======
+
+"
+              width: "300px";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               height: "200px"}}
           />;
         </div>;
@@ -316,13 +376,16 @@ export function OnboardingWalkthrough() {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-    "data-walkthrough-target": id;
-// Hook to add data attributes for walkthrough targeting;
 =======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    "data-walkthrough-target": id;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 // Hook to add data attributes for walkthrough targeting;
@@ -366,5 +429,8 @@ export function useWalkthroughTarget(id: string) {;
     "data-walkthrough-target": id;
 // Hook to add data attributes for walkthrough targeting;    "data-walkthrough-target": id;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     id}
 }
+"`

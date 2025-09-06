@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -80,18 +81,45 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import { QuoteDetails } from '@/components / quotes / QuoteDetails';
 import { RequestsHeader, QuoteRequestsList } from '@/components / quotes';
 import type { QuoteRequest } from "@/types / quotes";
+=======
+
+
+import React, { useState } from "react";"
+import {Header} from "@/components/Header";"
+import {Footer} from "@/components/Footer";"
+import {useTalentQuotes} from "@/hooks/useTalentQuotes";"
+import {useAuth} from "@/hooks/useAuth";"
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";"
+import {QuoteDetails} from "@/components/quotes/QuoteDetails";"
+import {RequestsHeader, QuoteRequestsList} from "@/components/quotes";"
+import type { QuoteRequest } from "@/types/quotes";
+
+import React, { useState } from './react';'
+import { Header } from '@/components / Header';'
+import { Footer } from '@/components / Footer';'
+import { useTalentQuotes } from '@/hooks / useTalentQuotes';'
+import { use_auth } from '@/hooks / use_auth';'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';'
+import { QuoteDetails } from '@/components / quotes / QuoteDetails';'
+import { RequestsHeader, QuoteRequestsList } from '@/components / quotes';"
+import type { QuoteRequest } from "@/types / quotes";'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ProtectedRoute } from '@/components / ProtectedRoute';
-export default /**
- * RequestsPanel - Function description
+export default /**;
+ * RequestsPanel - Function description;
  */
-function RequestsPanel() {
-  const { user } = use_auth ();
+function RequestsPanel() {}
+  const { user } = use_auth ();'
   const is_talent = user?.user_type === 'creator' || user?.user_type === 'job_seeker';
 ;
   const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
   const [show_details, setShowDetails] = useState (false);
 ;
+<<<<<<< HEAD
   const {
+=======
+  const {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     quotes;
     unread_count;
     is_loading;
@@ -101,6 +129,7 @@ function RequestsPanel() {
     setArchiveFilter;
     markAsViewed;
     markAsResponded;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -135,14 +164,35 @@ import {
 
 =======
 import type { QuoteRequest } from "@/types/quotes";
+=======
+"
+import React, { useState } from "react","
+import { Header } from "@/components/Header","
+import { Footer } from "@/components/Footer","
+import { useTalentQuotes } from "@/hooks/useTalentQuotes","
+import { useAuth } from "@/hooks/useAuth",";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
+import { QuoteDetails } from "@/components/quotes/QuoteDetails";"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",
+import {};
+  RequestsHeader;
+  QuoteRequestsList "
+} from "@/components/quotes","
+import type { QuoteRequest } from "@/types/quotes";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-export default function RequestsPanel() {
+export default function RequestsPanel() {};
   const { user } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -150,17 +200,18 @@ export default function RequestsPanel() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
-import type { QuoteRequest } from "@/types/quotes",
+  const [showDetails, setShowDetails] = useState(false);"
+import type { QuoteRequest } from "@/types/quotes","
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-export default function RequestsPanel() {
-  const { user } = useAuth(),
+export default function RequestsPanel() {}
+  const { user } = useAuth(),'
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',
   
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,6 +230,12 @@ export default function RequestsPanel() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const {
+=======
+
+
+
+  const {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     quotes,
     unreadCount,
     isLoading,
@@ -186,6 +243,7 @@ export default function RequestsPanel() {
     setStatusFilter,
     archiveFilter,
     setArchiveFilter,
+<<<<<<< HEAD
     markAsViewed,
     markAsResponded,
     toggleArchive
@@ -209,9 +267,14 @@ export default function RequestsPanel() {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    markAsViewed,;
+    markAsResponded,;
+    toggleArchive;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   } = useTalentQuotes(),
 
-  const handleViewDetails = (quote: QuoteRequest) => {
+  const handleViewDetails = (quote: QuoteRequest) => {}
     setSelectedQuote(quote),
     setShowDetails(true),
     
@@ -219,6 +282,7 @@ export default function RequestsPanel() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -237,25 +301,21 @@ export default function RequestsPanel() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
 =======
 
-=======
+    // If status is new, mark as viewed'
+    if (quote.status === 'new') {}
+      markAsViewed(quote.id)
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  }
-  // Filter quotes by archive status
-  const activeQuotes = quotes.filter(q => !q.is_archived);
-  const archivedQuotes = quotes.filter(q => q.is_archived);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  // Filter quotes by archive status
+  // Filter quotes by archive status;
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -263,15 +323,17 @@ export default function RequestsPanel() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   return (
     <ProtectedRoute>
       <div>
-        <Header />
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
+        <Header />"
+        <div className="min-h-screen bg-zion-blue px-4 py-8">"
           <div className="container mx-auto">
+<<<<<<< HEAD
             <RequestsHeader
 <<<<<<< HEAD
 
@@ -291,15 +353,25 @@ import { Footer } from "@/components/Footer",;
 import { useTalentQuotes } from "@/hooks/useTalentQuotes",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+=======
+            <RequestsHeader;
+"
+import React, { useState } from "react",;"
+import { Header } from "@/components/Header",;"
+import { Footer } from "@/components/Footer",;"
+import { useTalentQuotes } from "@/hooks/useTalentQuotes",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",;
 import {;
   RequestsHeader,;
-  QuoteRequestsList;
-} from "@/components/quotes",;
-import type { QuoteRequest } from "@/types/quotes",;
+  QuoteRequestsList;"
+} from "@/components/quotes",;"
+import type { QuoteRequest } from "@/types/quotes",;"
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
-export default function RequestsPanel() {;
-  const { user } = useAuth(),;
+export default function RequestsPanel() { return null; }
+  const { user } = useAuth(),;'
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
@@ -315,11 +387,94 @@ export default function RequestsPanel() {;
     markAsResponded,;
     toggleArchive;
   } = useTalentQuotes(),;
+<<<<<<< HEAD
   return (    <ProtectedRoute>;
+=======
+
+  const handleViewDetails = (quote: QuoteRequest) => {;
+    setSelectedQuote(quote);
+    setShowDetails(true),;
+
+    // If status is new, mark as viewed;'
+    if (quote && quote.status === 'new') {;
+      markAsViewed(quote && quote.id);
+    }
+  };
+
+  // Filter quotes by archive status;
+  const activeQuotes = quotes && quotes.filter(q => !q && q.is_archived);
+  const archivedQuotes = quotes && quotes.filter(q => q && q.is_archived);
+"
+import React, { useState } from "react",;"
+import { Header } from "@/components/Header",;"
+import { Footer } from "@/components/Footer",;"
+import { useTalentQuotes } from "@/hooks/useTalentQuotes",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",;
+import { ;
+  RequestsHeader,;
+  QuoteRequestsList ;"
+} from "@/components/quotes",;"
+import type { QuoteRequest } from "@/types/quotes",;"
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+;
+export default function RequestsPanel() { return null; }
+  const { user } = useAuth(),;'
+  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',;
+  ;
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
+  const [showDetails, setShowDetails] = useState(false),;
+;
+  const {;
+    quotes,;
+    unreadCount,;
+    isLoading,;
+    statusFilter,;
+    setStatusFilter,;
+    archiveFilter,;
+    setArchiveFilter,;
+    markAsViewed,;
+    markAsResponded,;
+    toggleArchive;
+  } = useTalentQuotes(),;
+;
+  const handleViewDetails = (quote:QuoteRequest) => {;
+    setSelectedQuote(quote),;
+    setShowDetails(true),;
+    ;
+    // If status is new, mark as viewed;'
+    if (quote.status === 'new') {;
+      markAsViewed(quote.id),;
+    }
+  },;
+;
+  // Filter quotes by archive status;'
+import React, { useState } from './react';'
+import { Header } from '@/components / Header';'
+import { Footer } from '@/components / Footer';'
+import { useTalentQuotes } from '@/hooks / useTalentQuotes';'
+import { use_auth } from '@/hooks / use_auth';'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';'
+import { QuoteDetails } from '@/components / quotes / QuoteDetails';'
+import { RequestsHeader, QuoteRequestsList } from '@/components / quotes';"
+import type { QuoteRequest } from "@/types / quotes";'
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+export default /**;
+ * RequestsPanel - Function description;
+ */
+function RequestsPanel() {}
+  const { user } = use_auth ();'
+  const is_talent = user?.user_type === 'creator' || user?.user_type === 'job_seeker';
+;
+
+    <ProtectedRoute>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div>;
-        <Header />;
-        <div className="min-h-screen bg-zion-blue px-4 py-8">;
+        <Header />;"
+        <div className="min-h-screen bg-zion-blue px-4 py-8">;"
           <div className="container mx-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -342,12 +497,16 @@ export default function RequestsPanel() {;
 =======
             <RequestsHeader            <RequestsHeader
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
 
+<<<<<<< HEAD
             />;
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">;
@@ -357,6 +516,28 @@ export default function RequestsPanel() {;
               </TabsList>;
 
               <TabsContent value="active">;                <QuoteRequestsList
+=======
+            {/* Main Content */}"
+            <Tabs defaultValue="active" className="mb-6">;"
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;"
+                <TabsTrigger value="active">Active Requests</TabsTrigger>;"
+                <TabsTrigger value="archived">Archived</TabsTrigger>;
+              </TabsList>;
+
+
+
+                <QuoteRequestsList;
+                  quotes={activeQuotes}
+                  isLoading={isLoading}
+                  isArchived={false}
+                  onViewDetails={handleViewDetails}
+                  onMarkAsResponded={markAsResponded}
+                  onToggleArchive={toggleArchive}
+
+
+
+                <QuoteRequestsList;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   quotes={archivedQuotes}
                   isLoading={isLoading}
                   isArchived={true}
@@ -364,6 +545,7 @@ export default function RequestsPanel() {;
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
 
+<<<<<<< HEAD
                 />;
               </TabsContent>;
             </Tabs>;
@@ -392,25 +574,16 @@ export default function RequestsPanel() {;
           </div>;
         </div>;
         ;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {/* Quote Details Modal */}
         <QuoteDetails;
           quote={selectedQuote}
           isOpen={showDetails}
 
 
-          onClose={() => {;
-                />
-              </TabsContent>
-            </Tabs>
-          </div>
-        </div>
-        {/* Quote Details Modal */}
-        <QuoteDetails
-          quote={selectedQuote}
-          isOpen={showDetails}
-          onClose={() => {
-            setShowDetails(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -424,6 +597,8 @@ export default function RequestsPanel() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
         />
         <Footer />
@@ -431,25 +606,29 @@ export default function RequestsPanel() {;
     </ProtectedRoute>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
           onClose={() => {;
             setShowDetails(false);
     toggle_archive;
   } = useTalentQuotes ();
 ;
-  const handleViewDetails = (quote: QuoteRequest) =>: any {
+  const handleViewDetails = (quote: QuoteRequest) =>: any {}
     setSelectedQuote (quote);
     setShowDetails (true),
     // If status is new, mark as viewed;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       markAsViewed (quote.id);
     }
@@ -462,8 +641,8 @@ if ( {) {
   return (
     <ProtectedRoute>;
       <div>;
-        <Header />;
-        <div className="min - h-screen bg - zion - blue px - 4 py - 8">;
+        <Header />;"
+        <div className="min - h-screen bg - zion - blue px - 4 py - 8">;"
           <div className="container mx - auto">;
             <RequestsHeader;
               unread_count={unread_count}
@@ -472,12 +651,12 @@ if ( {) {
               archive_filter={archive_filter}
               setArchiveFilter={setArchiveFilter}
             />;
-            {/* Main Content */}
-            <Tabs default_value="active" className="mb - 6">;
-              <TabsList className="bg - zion - blue - dark border border - zion - blue - light">;
-                <TabsTrigger value="active">Active Requests</TabsTrigger>;
+            {/* Main Content */}"
+            <Tabs default_value="active" className="mb - 6">;"
+              <TabsList className="bg - zion - blue - dark border border - zion - blue - light">;"
+                <TabsTrigger value="active">Active Requests</TabsTrigger>;"
                 <TabsTrigger value="archived">Archived</TabsTrigger>;
-              </TabsList>;
+              </TabsList>;"
               <TabsContent value="active">;
                 <QuoteRequestsList;
                   quotes={active_quotes}
@@ -487,7 +666,7 @@ if ( {) {
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggle_archive}
                 />;
-              </TabsContent>;
+              </TabsContent>;"
               <TabsContent value="archived">;
                 <QuoteRequestsList;
                   quotes={archived_quotes}
@@ -505,7 +684,7 @@ if ( {) {
         <QuoteDetails;
           quote={selected_quote}
           is_open={show_details}
-          on_close={() => {
+          on_close={() => {}
             setShowDetails (false);
             setSelectedQuote (null);
           }}
@@ -514,6 +693,7 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -584,3 +764,9 @@ const [showDetails, setShowDetails] = useState (false);
 =======
           isOpen={showDetails}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

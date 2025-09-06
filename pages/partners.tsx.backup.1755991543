@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -308,11 +309,15 @@ export default function Partners() {
               </p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>
 
         {/* Partnership Types */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -392,6 +397,9 @@ export default function Partners() {
                         <Check className="w-5 h-5 text-green-400 mr-3" />
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {benefit}
                       </li>
                     ))}
@@ -402,6 +410,7 @@ export default function Partners() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -450,11 +459,15 @@ export default function Partners() {
               {existingPartners.map((partner, index) => (
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <motion.div
                   key={partner.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -487,12 +500,16 @@ export default function Partners() {
                   <div className="text-xs text-gray-500">Since {partner.year}</div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -692,6 +709,9 @@ export default function Partners() {
                     <p className="text-gray-300">{benefit.description}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
@@ -701,6 +721,7 @@ export default function Partners() {
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
 =======
 <<<<<<< HEAD
@@ -709,10 +730,14 @@ export default function Partners() {
         <section className="py-20 px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -737,10 +762,14 @@ export default function Partners() {
                 Let's discuss how we can create value together and shape the future of technology
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -769,11 +798,15 @@ export default function Partners() {
                   Download Partnership Guide
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </main>
 =======
@@ -783,6 +816,9 @@ export default function Partners() {
       </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Layout>
   );
 };

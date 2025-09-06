@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api.tsx
 <<<<<<< HEAD:pages/api.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -464,6 +465,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api.tsx
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
   Code,
   Check,
   Globe,
@@ -477,6 +481,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:pages_backup/api.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -486,45 +491,49 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
 } from "lucide-react";
-export default function APIPage() {
-  const apiEndpoints = [
-    {
-      id: "auth"
-      title: "Authentication"
-      description: "Secure authentication and authorization endpoints"
+export default function APIPage() {}
+  const apiEndpoints = []
+    {"
+      id: "auth""
+      title: "Authentication""
+      description: "Secure authentication and authorization endpoints""
       baseUrl: "/api/v1/auth"
-      methods: [
-        {
-          method: "POST"
-          endpoint: "/login"
+      methods: []
+        {"
+          method: "POST""
+          endpoint: "/login""
           description: "Authenticate user with email and password"
-          code: `curl -X POST https://api.ziontechgroup.com/v1/auth/login \\
+          code: `curl -X POST https://api.ziontechgroup.com/v1/auth/login \\"
   -H "Content-Type: application/json" \\
-  -d '{
-    "email": "user@example.com"
-    "password": "your_password"
+  -d '{"
+    "email": "user@example.com""
+    "password": "your_password"'`
   }'`
         }
-        {
-          method: "POST"
-          endpoint: "/register"
-          description: "Register a new user account"
-          code: `curl -X POST https://api.ziontechgroup.com/v1/auth/register \\
-  -H "Content-Type: application/json" \\
-  -d '{
-    "email": "user@example.com"
-    "password": "your_password"
-    "name": "John Doe"
+        {"
+          method: "POST""
+          endpoint: "/register""
+          description: "Register a new user account"`
+          code: `curl -X POST https://api.ziontechgroup.com/v1/auth/register \\"
+  -H "Content-Type: application/json" \\'
+  -d '{"
+    "email": "user@example.com""
+    "password": "your_password""
+    "name": "John Doe"'`
   }'`
         }
       ]
     }
-    {
-      id: "ai-services"
-      title: "AI Services"
-      description: "Access our AI-powered services and models"
+    {"
+      id: "ai-services""
+      title: "AI Services""
+      description: "Access our AI-powered services and models""
       baseUrl: "/api/v1/ai"
+<<<<<<< HEAD:pages_backup/api.tsx
       methods: [
         {
           method: "POST"
@@ -592,38 +601,62 @@ export default function APIPage() {
       title: "Authentication",
       description: "Secure authentication and authorization endpoints",
       base_url: "/api / v1 / auth",
+=======
+      methods: []
+        {"
+          method: "POST""
+          endpoint: "/chat""
+          description: "Send messages to our AI chat service"`
+          code: `curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\"
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\"
+  -H "Content-Type: application/json" \\'
+  -d '{"
+    "message": "Hello, how can you help me?""
+    "model": "gpt-4"";
+    "temperature": 0.7;
+"
+} from "lucide-react";
+export default function APIPage() {}
+  const apiEndpoints = []
+    {"
+      id: "auth","
+      title: "Authentication","
+      description: "Secure authentication and authorization endpoints","
+      base_url: "/api / v1 / auth",;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
       methods: [;
-        {
-          method: "POST",
-          endpoint: "/login",
-          description: "Authenticate user with email and password",
-          code: `curl -X POST https://api.ziontechgroup.com / v1 / auth / login \\;
-  -H "Content - Type: application / json" \\;
-  -d '{
-    "email": "user@example.com",
-    "password": "your_password";
+        {"
+          method: "POST","
+          endpoint: "/login","
+          description: "Authenticate user with email and password",`
+          code: `curl -X POST https://api.ziontechgroup.com / v1 / auth / login \\;"
+  -H "Content - Type: application / json" \\;'
+  -d '{"
+    "email": "user@example.com","
+    "password": "your_password";'`
   }'`,
         },
-        {
-          method: "POST",
-          endpoint: "/register",
-          description: "Register a new user account",
-          code: `curl -X POST https://api.ziontechgroup.com / v1 / auth / register \\;
-  -H "Content - Type: application / json" \\;
-  -d '{
-    "email": "user@example.com",
-    "password": "your_password",
-    "name": "John Doe";
+        {"
+          method: "POST","
+          endpoint: "/register","
+          description: "Register a new user account",`
+          code: `curl -X POST https://api.ziontechgroup.com / v1 / auth / register \\;"
+  -H "Content - Type: application / json" \\;'
+  -d '{"
+    "email": "user@example.com","
+    "password": "your_password","
+    "name": "John Doe";'`
   }'`,
         },
       ],
     },
-    {
-      id: "ai - services",
-      title: "AI Services",
-      description: "Access our AI - powered services and models",
+    {"
+      id: "ai - services","
+      title: "AI Services","
+      description: "Access our AI - powered services and models","
       base_url: "/api / v1 / ai",
       methods: [;
+<<<<<<< HEAD:pages_backup/api.tsx
         {
           method: "POST",
           endpoint: "/chat",
@@ -650,10 +683,22 @@ export default function APIPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        {"
+          method: "POST","
+          endpoint: "/chat","
+          description: "Send messages to our AI chat service",`
+          code: `curl -X POST https://api.ziontechgroup.com / v1 / ai / chat \\;"
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\;"
+  -H "Content - Type: application / json" \\;'
+  -d '{}
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
   }'`,
         },
       ],
     },;
+<<<<<<< HEAD:pages_backup/api.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -663,13 +708,17 @@ export default function APIPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
   ];
 ;
-  const response_examples = {
-    success: {
-      status: 200
-      data: {
+  const response_examples = {}
+    success: {}
+      status: 200;
+      data: {"
         message: "Request successful"
+<<<<<<< HEAD:pages_backup/api.tsx
         data: {
     error: {
       status: 400
@@ -677,20 +726,36 @@ export default function APIPage() {
         code: "VALIDATION_ERROR"
         message: "Invalid request parameters"
         details: {
+=======
+        data: {}
+    error: {}
+      status: 400;
+      error: {"
+        code: "VALIDATION_ERROR""
+        message: "Invalid request parameters"
+        details: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
   return (
-    <MainLayout
-      title="API Documentation - Zion Tech Group"
-      description="Comprehensive API documentation for Zion Tech Group services. Access our AI, cloud, and enterprise APIs with detailed examples and guides."
-      keywords="API documentation, REST API, AI API, cloud API, developer resources">;
+    <MainLayout"
+      title="API Documentation - Zion Tech Group""
+      description="Comprehensive API documentation for Zion Tech Group services. Access our AI, cloud, and enterprise APIs with detailed examples and guides.""
+      keywords="API documentation, REST API, AI API, cloud API, developer resources">;"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
+<<<<<<< HEAD:pages_backup/api.tsx
         {/* Quick Start */}
         <section className="py-20 bg-white">;
+=======
+
+        {/* Quick Start */}"
+        <section className="py-20 bg-white">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
           <div className="container mx-auto px-4">;
-            <motion&& motion.div
+            <motion&& motion.div"
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:pages_backup/api.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -838,54 +903,61 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
-                >;
-                  <div className="bg - indigo - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                >;"
+                  <div className="bg - indigo - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;"
                     <Shield className="w - 8 h - 8 text - indigo - 600" />;
-                  </div>;
+                  </div>;"
                   <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
                     1. Get API Key;
-                  </h3>;
+                  </h3>;"
                   <p className="text - gray - 600">;
                     Sign up and obtain your API key from the dashboard;
                   </p>;
                 </motion.div>;
-                <motion.div;
+                <motion.div;"
                   className="text - center";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: 0.1 }}
                   viewport={{ once: true }}
-                >;
-                  <div className="bg - purple - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                >;"
+                  <div className="bg - purple - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;"
                     <Code className="w - 8 h - 8 text - purple - 600" />;
-                  </div>;
+                  </div>;"
                   <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
                     2. Make Request;
-                  </h3>;
+                  </h3>;"
                   <p className="text - gray - 600">;
                     Use our RESTful APIs with your preferred language;
                   </p>;
                 </motion.div>;
-                <motion.div;
+                <motion.div;"
                   className="text - center";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD:pages_backup/api.tsx
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
                   className="bg-white border border-gray-200 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8 }}
-                  viewport={{ once: true }}>;
-                  <div className="flex items-center mb-4">;
-                    <Check className="w-6 h-6 text-green-500 mr-3" />;
+                  viewport={{ once: true }}>;"
+                  <div className="flex items-center mb-4">;"
+                    <Check className="w-6 h-6 text-green-500 mr-3" />;"
                     <h3 className="text-lg font-semibold text-gray-900">;
                       Success Response;
                     </h3>;
-                  </div>;
-                  <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">;
+                  </div>;"
+                  <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">;"
                     <pre className="text-green-400 text-sm font-mono">;
                       <code>;
                         {JSON && JSON.stringify(responseExamples && responseExamples.success, null, 2)}
@@ -894,19 +966,19 @@ origin/automation-improvements-final
                   </div>;
                 </motion && motion.div>;
 
-                <motion&& motion.div
+                <motion&& motion.div"
                   className="bg-white border border-gray-200 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-                  viewport={{ once: true }}>;
-                  <div className="flex items-center mb-4">;
-                    <XCircle className="w-6 h-6 text-red-500 mr-3" />;
+                  viewport={{ once: true }}>;"
+                  <div className="flex items-center mb-4">;"
+                    <XCircle className="w-6 h-6 text-red-500 mr-3" />;"
                     <h3 className="text-lg font-semibold text-gray-900">;
                       Error Response;
                     </h3>;
-                  </div>;
-                  <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">;
+                  </div>;"
+                  <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">;"
                     <pre className="text-red-400 text-sm font-mono">;
                       <code>;
                         {JSON && JSON.stringify(responseExamples && responseExamples.error, null, 2)}
@@ -914,40 +986,40 @@ origin/automation-improvements-final
                     </pre>;
                   </div>;
                 </motion && motion.div>;
-        {/* Response Examples */}
-        <section className="py - 20 bg - gray - 50">;
+        {/* Response Examples */}"
+        <section className="py - 20 bg - gray - 50">;"
           <div className="container mx - auto px - 4">;
-            <motion.div;
+            <motion.div;"
               className="text - center mb - 16";
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >;
+            >;"
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
                 Response Examples;
-              </h2>;
+              </h2>;"
               <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
                 Understand the structure of our API responses with these;
                 examples.;
               </p>;
-            </motion.div>;
-            <div className="max - w-4xl mx - auto">;
+            </motion.div>;"
+            <div className="max - w-4xl mx - auto">;"
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
-                <motion.div;
+                <motion.div;"
                   className="bg - white border border - gray - 200 rounded - lg p - 6";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
-                >;
-                  <div className="flex items - center mb - 4">;
-                    <Check className="w - 6 h - 6 text - green - 500 mr - 3" />;
+                >;"
+                  <div className="flex items - center mb - 4">;"
+                    <Check className="w - 6 h - 6 text - green - 500 mr - 3" />;"
                     <h3 className="text - lg font - semibold text - gray - 900">;
                       Success Response;
                     </h3>;
-                  </div>;
-                  <div className="bg - gray - 900 rounded - lg p - 4 overflow - x-auto">;
+                  </div>;"
+                  <div className="bg - gray - 900 rounded - lg p - 4 overflow - x-auto">;"
                     <pre className="text - green - 400 text - sm font - mono">;
                       <code>;
                         {JSON.stringify (response_examples.success, null, 2)}
@@ -955,12 +1027,13 @@ origin/automation-improvements-final
                     </pre>;
                   </div>;
                 </motion.div>;
-                <motion.div;
+                <motion.div;"
                   className="bg - white border border - gray - 200 rounded - lg p - 6";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD:pages_backup/api.tsx
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -977,6 +1050,115 @@ export default function APIPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Powerful, scalable API solutions for your applications
               </p>
+=======
+'
+import Head from 'next/head';
+'
+import { motion } from 'framer-motion';
+'
+import Layout from '../components/Layout';'
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+
+const apiFeatures = []
+  {}
+    icon: Code,'
+    title: 'RESTful API','
+    description: 'Clean, intuitive REST API endpoints for easy integration','
+    features: ['RESTful design', 'JSON responses', 'HTTP status codes', 'Error handling']
+  },
+  {}
+    icon: Shield,'
+    title: 'Security','
+    description: 'Enterprise-grade security with authentication and encryption','
+    features: ['JWT authentication', 'Rate limiting', 'HTTPS encryption', 'API key management']
+  },
+  {}
+    icon: Zap,'
+    title: 'Performance','
+    description: 'High-performance API with caching and optimization','
+    features: ['Response caching', 'CDN integration', 'Load balancing', 'Real-time updates']
+  },
+  {}
+    icon: Book,'
+    title: 'Documentation','
+    description: 'Comprehensive documentation with examples and guides','
+    features: ['Interactive docs', 'Code examples', 'SDK libraries', 'Developer support']
+  }
+];
+
+export default function APIPage() {}
+    >"
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">"
+        <div className="container mx-auto px-4 py-16">;
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}"
+            className="text-center mb-16"
+          >"
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              API Services;
+            </h1>"
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Powerful APIs for integrating with Zion Tech Group services. 
+              Build amazing applications with our developer-friendly APIs.
+            </p>
+          </motion.div>
+"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {apiFeatures.map((feature, index) => (
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}"
+                className="bg-white rounded-xl p-8 shadow-lg"
+              >"
+                <div className="flex items-center mb-4">"
+                  <feature.icon className="h-8 w-8 text-blue-600 mr-3" />"
+                  <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
+                </div>
+                "
+                <p className="text-gray-600 mb-6">{feature.description}</p>
+                "
+                <ul className="space-y-2">
+                  {feature.features.map((item, idx) => ("
+                    <li key={idx} className="flex items-center text-gray-700">"
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}"
+            className="bg-blue-600 rounded-xl p-8 text-center"
+          >"
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>"
+            <p className="text-xl text-blue-100 mb-8">
+              Contact us to learn more about our API services and get started with integration.
+            </p>"
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">"
+              <div className="flex items-center text-white">"
+                <Phone className="h-5 w-5 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>"
+              <div className="flex items-center text-white">"
+                <Mail className="h-5 w-5 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>"
+              <div className="flex items-center text-white">"
+                <MapPin className="h-5 w-5 mr-2" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+              </div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
             </div>
           </div>
         </section>
@@ -989,6 +1171,7 @@ export default function APIPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
     </Layout>
+<<<<<<< HEAD:pages_backup/api.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1005,51 +1188,58 @@ export default function APIPage() {
     </MainLayout>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  );
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
+
+
+
+
+
+
+
   );
+
+
+
+
+
+  );
+<<<<<<< HEAD:pages_backup/api.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
+=======
+
+        {/* CTA Section */}"
+        <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx
           <div className="container mx - auto px - 4">;
-            <motion.div;
+            <motion.div;"
               className="text - center";
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >;
+            >;"
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Ready to Get Started?;
-              </h2>;
+              </h2>;"
               <p className="text - xl text - indigo - 100 mb - 8 max - w-3xl mx - auto">;
                 Start building with our APIs today. Get your API key and begin;
                 integrating with our powerful services.;
-              </p>;
+              </p>;"
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
+                <a;"
+                  href="/contact";"
                   className="px - 8 py - 4 bg - white text - indigo - 600 rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
                 >;
                   Get API Key;
                 </a>;
-                <a;
-                  href="/docs";
+                <a;"
+                  href="/docs";"
                   className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - indigo - 600 transition - all duration - 300 font - semibold";
                 >;
                   View Documentation;
@@ -1061,6 +1251,7 @@ export default function APIPage() {
       </div>;
     </MainLayout>);
 }
+<<<<<<< HEAD:pages_backup/api.tsx
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api.tsx
@@ -1069,3 +1260,6 @@ export default function APIPage() {
   );
 }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api.tsx

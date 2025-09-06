@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -7,6 +8,9 @@ import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   if (!requireSuperadminApi(req, res)) return;
 
@@ -17,6 +21,7 @@ pr-12243
   res.status(200).json({ opens: u.opens |0 });
   res.status(200).json({ opens: u.opens |0 });
   const id = String(req && req.query.id || "");
+<<<<<<< HEAD
 
   if (!u) return res.status(404).json({ error: 'Not found' });
 
@@ -41,32 +46,49 @@ pr-12243
 
 }
   const id = String(req.query.id || '');
+=======
+
+
+
+
+  if (!u) return res.status(404).json({ error: 'Not found' });
+
+}'
+  const id = String(req.query.id || '');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const updates = readJsonFile('updates.json', [] as any[]);
-  const u = updates.find((x: any) => x.id === id),
+  const u = updates.find((x: any) => x.id === id),'
   if (!u) return res.status(404).json({ error: 'Not found' });
   res.status(200).json({ opens: u.opens || 0 })
 }
+<<<<<<< HEAD
 
 pr-12243
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
+=======
+'
+import type { NextApiRequest, NextApiResponse } from './next';'
+import { readJsonFile  } from '../../../../utils / api / storage';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
-function handler() {
-  if () return) {
-  $2
-}
-  const id = String (req.query.id || "");
+function handler() {}
+  if () return) {}
+  $2;
+}"
+  const id = String (req.query.id || "");"
   const updates = readJsonFile ("updates.json", [] as any[]);
-  const u = updates.find ((coordinate_x: any) => x.id === id);
-  if (return res.status (404).json ({ error: "Not found" })) {
-  $2
+  const u = updates.find ((coordinate_x: any) => x.id === id);"
+  if (return res.status (404).json ({ error: "Not found" })) {}
+  $2;
 }
   res.status (200).json ({ opens: u.opens || 0 });
   res.status (200).json ({ opens: u.opens || 0 });
 }
+<<<<<<< HEAD
   if (!u) return res.status(404).json({ error: 'Not found' });
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
@@ -75,58 +97,67 @@ import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
+=======
+"
+import type { NextApiRequest, NextApiResponse } from "next";"
+import { readJsonFile } from "../../../../utils/api/storage";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { requireSuperadminApi } from "../../../../utils/api/auth";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile } from '../../../../utils/api/storage';
+export default function handler() { return null; }
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import { readJsonFile } from '../../../../utils/api/storage';'
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {};
   if (!requireSuperadminApi(req, res)) return;
-
-  const id = String(req.query.id |"");
+"
+  const id = String(req.query.id |"");"
   const updates = readJsonFile("updates.json", [] as any[]);
-  const u = updates.find((x: any) => x.id === id);
+  const u = updates.find((x: any) => x.id === id);"
   if (!u) return res.status(404).json({ error: "Not found" });
   res.status(200).json({ opens: u.opens |0 });
   res.status(200).json({ opens: u.opens |0 });
 }
-
+'
   if (!u) return res.status(404).json({ error: 'Not found' });
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {};
   if (!requireSuperadminApi(req, res)) return;
 }
-
-  const id = String(req.query.id || '');
+'
+  const id = String(req.query.id || '');'
   const updates = readJsonFile('updates.json', [] as any[]);
-  const u = updates.find((x: any) => x.id === id),
+  const u = updates.find((x: any) => x.id === id),'
   if (!u) return res.status(404).json({ error: 'Not found' });
 }
-
-import type { NextApiRequest, NextApiResponse } from './next';
-import { readJsonFile  } from '../../../../utils / api / storage';
+'
+import type { NextApiRequest, NextApiResponse } from './next';'
+import { readJsonFile  } from '../../../../utils / api / storage';'
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
-function handler() {
-  if () return) {
-  $2
-}
-  const id = String (req.query.id || "");
+function handler() {}
+  if () return) {}
+  $2;
+}"
+  const id = String (req.query.id || "");"
   const updates = readJsonFile ("updates.json", [] as any[]);
-  const u = updates.find ((coordinate_x: any) => x.id === id);
-  if (return res.status (404).json ({ error: "Not found" })) {
-  $2
+  const u = updates.find ((coordinate_x: any) => x.id === id);"
+  if (return res.status (404).json ({ error: "Not found" })) {}
+  $2;
 }
   res.status (200).json ({ opens: u.opens || 0 });
   res.status (200).json ({ opens: u.opens || 0 });
-}
+}'
   if (!u) return res.status(404).json({ error: 'Not found' });
+<<<<<<< HEAD
   const id = null;
   res.status(200).json({ opens: u.opens || 0 })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

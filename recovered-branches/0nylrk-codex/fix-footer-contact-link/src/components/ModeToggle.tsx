@@ -1,15 +1,12 @@
 
-import {Moon, Sun} from "lucide-react"
-import {Button} from "@/components/ui/button"
-// Create a simplified theme hook for offline mode
-const useTheme = () => ({
-  theme: "dark",
-  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`),
+
+
+
 });
 
-export function ModeToggle() {;
-
+export function ModeToggle() { return null; }
   const { theme, setTheme } = useTheme();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,12 +50,19 @@ import { Button } from "@/components/ui/button"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Moon, Sun } from "lucide-react""
+import { Button } from "@/components/ui/button"
 
-const useTheme = () => ({
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+;
+// Create a simplified theme hook for offline mode;
+const useTheme = () => ({"
   theme: "dark"
   setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
-});
-  theme: "dark",
+});"
+  theme: "dark",`
   setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`)
 }),
 <<<<<<< HEAD
@@ -69,6 +73,7 @@ const useTheme = () => ({
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -91,11 +96,26 @@ export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
 
       {theme === "dark" ? (
+=======
+export function ModeToggle() {}
+  const { theme, setTheme } = useTheme(),
+
+
+  return (
+    <Button"
+      variant="ghost""
+      size="icon""
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+
+    >"
+      {theme === "dark" ? ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Sun className="h-5 w-5 text-yellow-300" />
-      ) : (
+      ) : ("
         <Moon className="h-5 w-5 text-slate-300" />
-      )}
+      )}"
       <span className="sr-only">Toggle theme</span>
+<<<<<<< HEAD
     </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,25 +150,36 @@ import { Button } from "@/components/ui/button";
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Moon, Sun  } from './lucide-react';
+=======
+    </Button>;
+  );
+}
+
+
+
+
+import { Moon, Sun  } from './lucide-react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button  } from '@/components / ui / button';
 // Create a simplified theme hook for offline mode;
-const use_theme = () =>: any ({
-  theme: "dark",
+const use_theme = () =>: any ({"
+  theme: "dark",`
   set_theme: (theme: string) => console.log (`Theme would change to: ${theme}`),
 });
 ;
-export /**
- * ModeToggle - Function description
+export /**;
+ * ModeToggle - Function description;
  */
-function ModeToggle() {
+function ModeToggle() {}
   const { theme, set_theme } = use_theme ();
 ;
   return (
-    <Button;
-      variant="ghost";
-      size="icon";
+    <Button;"
+      variant="ghost";"
+      size="icon";"
       on_click={() => set_theme (theme === "dark" ? "light" : "dark")}
     >;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,16 +221,29 @@ function ModeToggle() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
+=======
+"
+      {theme === "dark" ? ("
+        <Sun className="h - 5 w - 5 text - yellow - 300" />) : ("
+        <Moon className="h - 5 w - 5 text - slate - 300" />)}"
+      <span className="sr - only">Toggle theme</span>;
+    </Button>);
+}
+
+
+  );
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
   ),;}
- export function ModeToggle () {
-  const {
-  theme, setTheme 
-}= useTheme ();
-return (<Button variant="ghost" size="icon" onClick= {
+ export function ModeToggle () {}
+  const {};
+  theme, setTheme;
+}= useTheme ();"
+return (<Button variant="ghost" size="icon" onClick= {"
   () => setTheme (theme === "dark" ? "light" : "dark") 
-}> {
-  theme === "dark" ? (<Sun className="h-5 w-5 text-yellow-300" /> h-5 w-5 text-slate-300"/>) 
+}> {"
+  theme === "dark" ? (<Sun className="h-5 w-5 text-yellow-300" /> h-5 w-5 text-slate-300"/>) "
 }<span className=" sr-only" >Toggle theme</span> </Button>) 
 }
 );
@@ -210,3 +254,10 @@ return (<Button variant="ghost" size="icon" onClick= {
 
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

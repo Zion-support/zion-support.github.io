@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import {
   createSessionCookie,
   validateCredentials,;
@@ -6,41 +7,45 @@ import {
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
+=======
+export default function handler() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res && res.status(405).json({ error: 'Method not allowed' });
   }
   }
 
-  const result = validateCredentials(email, password, code);
+  const result = validateCredentials(email, password, code);'
   res.setHeader('Set-Cookie', cookie);
 
   return res.status(200).json({ ok: true })
 }
-}
+}'
     return res.status (405).json ({ error: 'Method not allowed' });
   }
   const { email, password, code } = req.body || {}
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
     return res.status (400).json ({ error: 'Missing credentials' });
   }
   const result = validate_credentials (email, password, code);
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
     return res.status (401).json ({ error: 'Invalid credentials' });
   }
-  const cookie = createSessionCookie ({
+  const cookie = createSessionCookie ({}
     email,
     role: result.role,
     twofa_verified: true,
-  });
+  });'
   res.set_header ('Set - Cookie', cookie);
-  return res.status (200).json ({ ok: true });  const cookie = createSessionCookie ({ email, role: result.role, twofa_verified: true });
+  return res.status (200).json ({ ok: true });  const cookie = createSessionCookie ({ email, role: result.role, twofa_verified: true });'
   res.set_header ('Set - Cookie', cookie);
   return res.status (200).json ({ ok: true });
+<<<<<<< HEAD
 const cookie = createSessionCookie({
     email,
     role: result.role,
@@ -51,3 +56,6 @@ const cookie = createSessionCookie({
   return res.status(200).json({ ok: true })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

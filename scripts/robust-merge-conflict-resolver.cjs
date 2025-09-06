@@ -1,5 +1,10 @@
 #!/usr/bin/env node;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       { "encoding": "utf8" }
     );
     return result;
@@ -88,6 +93,10 @@ module.exports = { resolveMergeConflict, findConflictedFiles }))
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

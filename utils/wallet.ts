@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type WalletProvider = any;
 export function getEthereumProvider(): WalletProvider | null {;
   if (typeof window === 'undefined') return null;
@@ -78,6 +79,14 @@ export async function connectMetaMask(): Promise<string[]> {
   try {
     const accounts = await window.ethereum.request({
 <<<<<<< HEAD
+=======
+export async function connectMetaMask(): Promise<string[]> {}
+  if (typeof window === "undefined" || !window.ethereum) {";
+    throw new Error("MetaMask is not installed");
+  }
+  try {}
+    const accounts = await window.ethereum.request({"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       method: "eth_requestAccounts",
 =======
 <<<<<<< HEAD
@@ -114,11 +123,12 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     });
     return accounts;
-  } catch (error) {
+  } catch (error) {"
     throw new Error("Failed to connect to MetaMask");
   }
 }
 
+<<<<<<< HEAD
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
   }
@@ -127,6 +137,15 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+export async function getAccounts(): Promise<string[]> {"
+  if (typeof window === "undefined" || !window.ethereum) {};
+    return [];
+  }
+  try {}
+    const accounts = await window.ethereum.request({"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       method: "eth_accounts",
 =======
 <<<<<<< HEAD
@@ -150,62 +169,119 @@ if ( {) {
       method: "eth_accounts",    });
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return accounts;
+<<<<<<< HEAD
   } catch (e) {;
     return null;
+=======
+  } catch (error) {}
+    return [];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (typeof window === "undefined" || !window.ethereum) {
+=======
+
+
+export async function getBalance(address: string): Promise<string> {"
+  if (typeof window === "undefined" || !window.ethereum) {";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     throw new Error("MetaMask is not installed");
   }
-  try {
-    const balance = await window.ethereum.request({
-      method: "eth_getBalance",
+  try {}
+    const balance = await window.ethereum.request({"
+      method: "eth_getBalance","
       params: [address, "latest"],
 =======
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
     });
     return balance;
-  } catch (error) {
+  } catch (error) {"
     throw new Error("Failed to get balance");
   }
 }
+<<<<<<< HEAD
+=======
+
+
+export async function signMessage(
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   message: string,
   address: string,
-): Promise<string> {
-  if (typeof window === "undefined" || !window.ethereum) {
+): Promise<string> {"
+  if (typeof window === "undefined" || !window.ethereum) {";
     throw new Error("MetaMask is not installed");
   }
-  try {
-    const signature = await window.ethereum.request({
+  try {}
+    const signature = await window.ethereum.request({"
       method: "personal_sign",
+<<<<<<< HEAD
 =======
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
+=======
+      params: [message, address],
+
+
+
+
+
+    const signature = await window && window.ethereum.request({}
+export async function sign_message (message: string, address: string): Promise < string> {};
+  // Check condition;
+if ( {) {}
+  $2;
+}
+    throw new Error ('MetaMask is not installed');
+  }
+  try {}
+    const signature = await window.ethereum.request ({}
+'
+      method: 'personal_sign',
+      params: [message, address],
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     });
     return signature;
-  } catch (error) {
+  } catch (error) {"
     throw new Error("Failed to sign message");
   }
 }
+<<<<<<< HEAD
 
 // Extend Window interface for TypeScript;
 
 declare global {
   interface Window {
     ethereum?: {
+=======
+
+
+
+
+
+// Extend Window interface for TypeScript;
+
+
+declare global {}
+  interface Window {}
+    ethereum?: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       request: (args: { method: string; params?: any[] }) => Promise < any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
     }      removeListener: (
         event: string,
         callback: (accounts: string[]) => void,
       ) => void;
+<<<<<<< HEAD
 =======
       remove_listener: (event: string, callback: (accounts: string[]) => void) => void;
 
@@ -213,12 +289,26 @@ declare global {
       removeListener: (event: string, callback: (accounts: string[]) => void) => void
 };
 
+=======
+    };
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
-    };
+
 
   }
 }
+<<<<<<< HEAD
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

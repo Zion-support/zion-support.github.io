@@ -47,9 +47,9 @@ interface ProjectViewProps {
     id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
     title: string;
-    client: {
+    client: {}
       name: string;
-      avatar?: string
+      avatar?: string;
     },
     startDate: string;
     endDate?: string;
@@ -59,21 +59,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:src/mobile/components/projects/MobileProjectView.tsx
 <<<<<<< HEAD
 
-import React from 'react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
+import React from 'react';'
+import { Card, CardContent } from '@/components / ui / card';'
+import { Button } from '@/components / ui / button';'
+import { Badge } from '@/components / ui / badge';'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-import {
+import {}
   CheckCircle,
   ChevronRight,
   FileText,
   MessageSquare,
-  Video,
-} from 'lucide-react';
-import { Progress } from '@/components / ui / progress';
-import { SeverityIndicator } from '../common / SeverityIndicator';
-import { use_router } from 'next / router';
+  Video,';
+} from 'lucide-react';'
+import { Progress } from '@/components / ui / progress';'
+import { SeverityIndicator } from '../common / SeverityIndicator';'
+import { use_router } from 'next / router';'
 import { toast } from 'sonner';
 
 <<<<<<< HEAD
@@ -82,6 +82,7 @@ import { toast } from 'sonner';
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React from "react",
@@ -96,27 +97,41 @@ import { useRouter } from 'next/router',
 import { toast } from "sonner",
 interface Milestone {
 =======
+=======
+import React from "react","
+import { Card, CardContent } from "@/components/ui/card","
+import { Button } from "@/components/ui/button","
+import { Badge } from "@/components/ui/badge","
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",'
+import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from 'lucide-react'"
+import { Progress } from "@/components/ui/progress","
+import { SeverityIndicator } from "../common/SeverityIndicator",'
+import { useRouter } from 'next/router',"
+import { toast } from "sonner",
+
+interface Milestone {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
   id: string,
   title: string,
-  dueDate: string,
-  status: "completed" | "in_progress" | "pending",
+  dueDate: string,"
+  status: "completed" | "in_progress" | "pending","
   paymentStatus: "paid" | "pending" | "overdue",
-  amount: string
-import React from "react",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
-import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from 'lucide-react';
-import { Progress } from "@/components/ui/progress",;
-import { SeverityIndicator } from "../common/SeverityIndicator",;
-import { useRouter } from 'next/router',;
+  amount: string";
+import React from "react",;"
+import { Card, CardContent } from "@/components/ui/card",;"
+import { Button } from "@/components/ui/button",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;'
+import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from 'lucide-react';"
+import { Progress } from "@/components/ui/progress",;"
+import { SeverityIndicator } from "../common/SeverityIndicator",;'
+import { useRouter } from 'next/router',;"
 import { toast } from "sonner",;
 interface Milestone {;
   id: string,;
   title: string,;
-  dueDate: string,;
-  status: "completed" | "in_progress" | "pending",;
+  dueDate: string,;"
+  status: "completed" | "in_progress" | "pending",;"
   paymentStatus: "paid" | "pending" | "overdue",;
   amount: string;
 }
@@ -150,16 +165,16 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
   const router = useRouter();
 
   const startProjectCall = () => {;
-    const roomId = `project-${project && project.id}`;
-    toast && toast.success('Starting project call', {;
+    const roomId = `project-${project && project.id}`;'
+    toast && toast.success('Starting project call', {;'
       description: 'Initializing video connection...',;
     });
-
+`
     router && router.push(`/call/${roomId}`);
   };
 
-  const messageClient = () => {;
-    toast && toast.info('Opening message thread with client', {;
+  const messageClient = () => {;'
+    toast && toast.info('Opening message thread with client', {;`
       description: `Messaging ${project && project.client.name}...`,;
     });
     // Navigate to messaging with this client;
@@ -168,23 +183,23 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {}
   const router = useRouter(),
   
-  const startProjectCall = () => {
-    const roomId = `project-${project.id}`,
-    toast.success("Starting project call", {
+  const startProjectCall = () => {}`
+    const roomId = `project-${project.id}`,"
+    toast.success("Starting project call", {"
       description: "Initializing video connection..."
     }),
-    
+    `
     router.push(`/call/${roomId}`)
   },
   
-  const messageClient = () => {
-    toast.info("Opening message thread with client", {
+  const messageClient = () => {"
+    toast.info("Opening message thread with client", {}`
       description: `Messaging ${project.client.name}...`
-    }),
-    // Navigate to messaging with this client
+    }),;
+    // Navigate to messaging with this client;
   },
 <<<<<<< HEAD
   
@@ -228,9 +243,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
             <div className="space-y-1">
+=======
+            "
+            <div className="space-y-1">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
               <div className="flex justify-between items-center text-sm">
 <<<<<<< HEAD:src/mobile/components/projects/MobileProjectView.tsx
 =======
@@ -242,9 +262,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
-                <span>Progress</span>
+                <span>Progress</span>"
                 <span className="font-medium">{project.progress}%</span>
-              </div>
+              </div>"
               <Progress value={project.progress} className="h-2" />
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/projects/MobileProjectView.tsx
 
@@ -254,30 +274,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
+=======
+            "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
             <div className="grid grid-cols-2 gap-3 text-sm">
 =======
             <div className="grid grid-cols-2 gap-3 text-sm">
 
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div>
                 <p className='text-muted-foreground'>Start Date</p>
                 <p className='font-medium'>{project.startDate}</p>
+=======
+
+              <div>"
+                <p className="text-muted-foreground">Start Date</p>"
+                <p className="font-medium">{project.startDate}</p>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
               </div>
               <div>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 <p className="text-muted-foreground">End Date</p>
+=======
+"
+                <p className="text-muted-foreground">End Date</p>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
                 <p className="font-medium">{project.endDate || "Not set"}</p>
 
               </div>
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
               <div>
                 <p className='text-muted-foreground'>Total Amount</p>
                 <p className='font-medium'>{project.totalAmount}</p>
@@ -285,6 +322,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div>
                 <p className='text-muted-foreground'>Status</p>
                 <p className='font-medium capitalize'>{project.status}</p>
+=======
+              <div>"
+                <p className="text-muted-foreground">Total Amount</p>"
+                <p className="font-medium">{project.totalAmount}</p>
+              </div>
+              <div>"
+                <p className="text-muted-foreground">Status</p>"
+                <p className="font-medium capitalize">{project.status}</p>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
               </div>
             </div>
 
@@ -298,8 +344,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
-            <div>
-              <p className="text-sm text-muted-foreground mb-1">Description</p>
+            <div>"
+              <p className="text-sm text-muted-foreground mb-1">Description</p>"
               <p className="text-sm">{project.description}</p>
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/projects/MobileProjectView.tsx
 
@@ -311,63 +357,64 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       alt={project && project.client.name}
                     />;
                     <AvatarFallback>{project && project.client.name[0]}</AvatarFallback>;
-                  </Avatar>;
+                  </Avatar>;'
                   <span className='text-sm'>{project && project.client.name}</span>;
                 </div>;
               </div>;
               <Badge>{project && project.status}</Badge>;
             </div>;
-
-            <div className='space-y-1'>;
+'
+            <div className='space-y-1'>;'
               <div className='flex justify-between items-center text-sm'>;
-                <span>Progress</span>;
+                <span>Progress</span>;'
                 <span className='font-medium'>{project && project.progress}%</span>;
-              </div>;
+              </div>;'
               <Progress value={project && project.progress} className='h-2' />;
             </div>;
-
+'
             <div className='grid grid-cols-2 gap-3 text-sm'>;
-              <div>;
-                <p className='text-muted-foreground'>Start Date</p>;
+              <div>;'
+                <p className='text-muted-foreground'>Start Date</p>;'
                 <p className='font-medium'>{project && project.startDate}</p>;
               </div>;
-              <div>;
-                <p className='text-muted-foreground'>End Date</p>;
+              <div>;'
+                <p className='text-muted-foreground'>End Date</p>;'
                 <p className='font-medium'>{project && project.endDate || 'Not set'}</p>;
               </div>;
-              <div>;
-                <p className='text-muted-foreground'>Total Amount</p>;
+              <div>;'
+                <p className='text-muted-foreground'>Total Amount</p>;'
                 <p className='font-medium'>{project && project.totalAmount}</p>;
               </div>;
-              <div>;
-                <p className='text-muted-foreground'>Status</p>;
+              <div>;'
+                <p className='text-muted-foreground'>Status</p>;'
                 <p className='font-medium capitalize'>{project && project.status}</p>;
               </div>;
             </div>;
 
-            <div>;
-              <p className='text-sm text-muted-foreground mb-1'>Description</p>;
+            <div>;'
+              <p className='text-sm text-muted-foreground mb-1'>Description</p>;'
               <p className='text-sm'>{project && project.description}</p>;
             </div>;
-
-            <div className='flex gap-2'>;
-              <Button size='sm' variant='outline' className='gap-1 flex-1'>;
+'
+            <div className='flex gap-2'>;'
+              <Button size='sm' variant='outline' className='gap-1 flex-1'>;'
                 <FileText className='h-4 w-4' /> Contract;
               </Button>;
 
-              <Button
-                size='sm'
-                variant='outline'
+              <Button'
+                size='sm''
+                variant='outline''
                 className='gap-1 flex-1'
-                onClick={messageClient}              >
-                <MessageSquare className='h-4 w-4' /> Message
+                onClick={messageClient}              >'
+                <MessageSquare className='h-4 w-4' /> Message;
               </Button>
-              <Button
-                size='sm'
+              <Button'
+                size='sm''
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
 =======
@@ -375,25 +422,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="gap-1 flex-1">
                 <FileText className="h-4 w-4" /> Contract
+=======
+            "
+            <div className="flex gap-2">"
+              <Button size="sm" variant="outline" className="gap-1 flex-1">"
+                <FileText className="h-4 w-4" /> Contract;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
               </Button>
-              <Button 
-                size="sm" 
-                variant="outline" 
+              <Button "
+                size="sm" "
+                variant="outline" "
                 className="gap-1 flex-1"
                 onClick={messageClient}
-              >
-                <MessageSquare className="h-4 w-4" /> Message
+              >"
+                <MessageSquare className="h-4 w-4" /> Message;
               </Button>
-              <Button 
-                size="sm" 
+              <Button "
+                size="sm" "
                 className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light"
                 onClick={startProjectCall}
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
               >
                 <Video className="h-4 w-4" /> Call
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+              >"
+                <Video className="h-4 w-4" /> Call;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
               </Button>
             </div>
           </div>
@@ -406,121 +464,207 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
+=======
+      <section>"
+        <h2 className="text-lg font-medium mb-4">Milestones</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
         <div className="space-y-3">
           {milestones.map((milestone) => (
-            <Card key={milestone.id}>
-              <CardContent className="p-4">
-                <div className="flex justify-between items-start mb-2">
-                  <div className="flex items-center gap-2">
-                    {milestone.status === "completed" ? (
+            <Card key={milestone.id}>"
+              <CardContent className="p-4">"
+                <div className="flex justify-between items-start mb-2">"
+                  <div className="flex items-center gap-2">"
+                    {milestone.status === "completed" ? ("
                       <CheckCircle className="h-5 w-5 text-green-500" />
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     ) : (
                       <div className="h-5 w-5 rounded-full border-2 border-muted-foreground"></div>
                     )}
+=======
+
+                    ) : ('
+                      <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>
+                onClick={startProjectCall}>;'
+                <Video className='h-4 w-4' /> Call;
+              </Button>;
+            </div>;
+          </div>;
+        </CardContent>;
+      </Card>;
+
+      <section>;'
+        <h2 className='text-lg font-medium mb-4'>Milestones</h2>;'
+        <div className='space-y-3'>;
+          {milestones && milestones.map(milestone => (            <Card key={milestone && milestone.id}>;'
+              <CardContent className='p-4'>;'
+                <div className='flex justify-between items-start mb-2'>;'
+                  <div className='flex items-center gap-2'>;'
+                    {milestone && milestone.status === 'completed' ? (;'
+                      <CheckCircle className='h-5 w-5 text-green-500' />;
+                    ) : (;'
+                      <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>;
+                    )}
+
+                    }>;
+                    {milestone && milestone.paymentStatus}
+                  </Badge>;
+                </div>;
+'
+                <div className='pl-7'>;'
+                  <div className='flex justify-between text-sm'>;'
+                    <span className='text-muted-foreground'>Due Date:</span>;
+                    <span>{milestone && milestone.dueDate}</span>;
+                  </div>;'
+                  <div className='flex justify-between text-sm'>;'
+                    <span className='text-muted-foreground'>Amount:</span>;
+                    <span>{milestone && milestone.amount}</span>;
+                  </div>;'
+                  <div className='flex justify-between text-sm'>;'
+                    <span className='text-muted-foreground'>Status:</span>;'
+                    <span className='capitalize'>;'
+                      {milestone && milestone.status.replace('_', ' ')}
+                    </span>;
+                  </div>;
+
+                  <Button'
+                    size='sm''
+                    variant='outline''
+                    className='w-full mt-3 gap-1'>;'
+                    View Details <ChevronRight className='h-4 w-4' />;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          ))}
+
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+'
+    <div className='space - y-6 px - 4 pb - 24'>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
                     <h3 className="font-medium">{milestone.title}</h3>
                   </div>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Badge 
                     variant={
                       milestone.paymentStatus === "paid" ? "default" : 
+=======
+                  <Badge;
+                    variant={"
+                      milestone.paymentStatus === "paid" ? "default" : "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline"
 ;
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
-  const router = useRouter(),;
-  const startProjectCall = () => {;
-    const roomId = `project-${project.id}`,;
-    toast.success("Starting project call", {;
+export function MobileProjectView() { return null; }`
+    const roomId = `project-${project.id}`,;"
+    toast.success("Starting project call", {;"
       description: "Initializing video connection...";
-    }),;
+    }),;`
     router.push(`/call/${roomId}`);
   },;
-  const messageClient = () => {;
-    toast.info("Opening message thread with client", {;
+  const messageClient = () => {;"
+    toast.info("Opening message thread with client", {;`
       description: `Messaging ${project.client.name}...`;
     });
     // Navigate to messaging with this client;
   };
-  return (;
+  return (;"
     <div className="space-y-6 px-4 pb-24">;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
       <Card>;
 <<<<<<< HEAD:src/mobile/components/projects/MobileProjectView.tsx
 =======
         <CardContent className="p-4">;
           <div className="space-y-4">;
+=======
+      <Card>;"
+        <CardContent className="p-4">;"
+          <div className="space-y-4">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
             <div className="flex items-center justify-between">;
-              <div>;
-                <h2 className="text-lg font-medium">{project.title}</h2>;
-                <div className="flex items-center gap-2 mt-1">;
+              <div>;"
+                <h2 className="text-lg font-medium">{project.title}</h2>;"
+                <div className="flex items-center gap-2 mt-1">;"
                   <Avatar className="h-6 w-6">;
                     <AvatarImage src={project.client.avatar} alt={project.client.name} />;
                     <AvatarFallback>{project.client.name[0]}</AvatarFallback>;
-                  </Avatar>;
+                  </Avatar>;"
                   <span className="text-sm">{project.client.name}</span>;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/projects/MobileProjectView.tsx
 
                 </div>;
               </div>;
               <Badge>{project.status}</Badge>;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
             </div>;
 <<<<<<< HEAD:src/mobile/components/projects/MobileProjectView.tsx
 =======
             <div className="space-y-1">;
+=======
+            </div>;"
+            <div className="space-y-1">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
               <div className="flex justify-between items-center text-sm">;
-                <span>Progress</span>;
+                <span>Progress</span>;"
                 <span className="font-medium">{project.progress}%</span>;
-              </div>;
+              </div>;"
               <Progress value={project.progress} className="h-2" />;
-            </div>;
+            </div>;"
             <div className="grid grid-cols-2 gap-3 text-sm">;
-              <div>;
-                <p className="text-muted-foreground">Start Date</p>;
+              <div>;"
+                <p className="text-muted-foreground">Start Date</p>;"
                 <p className="font-medium">{project.startDate}</p>;
               </div>;
-              <div>;
-                <p className="text-muted-foreground">End Date</p>;
+              <div>;"
+                <p className="text-muted-foreground">End Date</p>;"
                 <p className="font-medium">{project.endDate || "Not set"}</p>;
               </div>;
-              <div>;
-                <p className="text-muted-foreground">Total Amount</p>;
+              <div>;"
+                <p className="text-muted-foreground">Total Amount</p>;"
                 <p className="font-medium">{project.totalAmount}</p>;
               </div>;
-              <div>;
-                <p className="text-muted-foreground">Status</p>;
+              <div>;"
+                <p className="text-muted-foreground">Status</p>;"
                 <p className="font-medium capitalize">{project.status}</p>;
               </div>;
             </div>;
-            <div>;
-              <p className="text-sm text-muted-foreground mb-1">Description</p>;
+            <div>;"
+              <p className="text-sm text-muted-foreground mb-1">Description</p>;"
               <p className="text-sm">{project.description}</p>;
-            </div>;
-            <div className="flex gap-2">;
-              <Button size="sm" variant="outline" className="gap-1 flex-1">;
+            </div>;"
+            <div className="flex gap-2">;"
+              <Button size="sm" variant="outline" className="gap-1 flex-1">;"
                 <FileText className="h-4 w-4" /> Contract;
               </Button>;
-              <Button;
-                size="sm";
-                variant="outline";
+              <Button;"
+                size="sm";"
+                variant="outline";"
                 className="gap-1 flex-1";
                 onClick={messageClient}
-              >;
+              >;"
                 <MessageSquare className="h-4 w-4" /> Message;
               </Button>;
-              <Button;
-                size="sm";
+              <Button;"
+                size="sm";"
                 className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light";
                 onClick={startProjectCall}
-              >;
+              >;"
                 <Video className="h-4 w-4" /> Call;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/projects/MobileProjectView.tsx
 
@@ -529,54 +673,65 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
       <section>;
 <<<<<<< HEAD:src/mobile/components/projects/MobileProjectView.tsx
 =======
         <h2 className="text-lg font-medium mb-4">Milestones</h2>;
+=======
+      <section>;"
+        <h2 className="text-lg font-medium mb-4">Milestones</h2>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
         <div className="space-y-3">;
           {milestones.map((milestone) => (;
-            <Card key={milestone.id}>;
-              <CardContent className="p-4">;
-                <div className="flex justify-between items-start mb-2">;
-                  <div className="flex items-center gap-2">;
-                    {milestone.status === "completed" ? (;
+            <Card key={milestone.id}>;"
+              <CardContent className="p-4">;"
+                <div className="flex justify-between items-start mb-2">;"
+                  <div className="flex items-center gap-2">;"
+                    {milestone.status === "completed" ? (;"
                       <CheckCircle className="h-5 w-5 text-green-500" />;
-                    ) : (;
+                    ) : (;"
                       <div className="h-5 w-5 rounded-full border-2 border-muted-foreground"></div>;
-                    )}
+                    )}"
                     <h3 className="font-medium">{milestone.title}</h3>;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/projects/MobileProjectView.tsx
 
                   </div>;
                   <Badge;
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
                     variant={;
                       milestone.paymentStatus === "paid" ? "default" :;
+=======
+
+                    variant={;"
+                      milestone.paymentStatus === "paid" ? "default" :;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
                     }
                   >;
                     {milestone.paymentStatus}
                   </Badge>
                 </div>
-                
-                <div className="pl-7">
-                  <div className="flex justify-between text-sm">
+                "
+                <div className="pl-7">"
+                  <div className="flex justify-between text-sm">"
                     <span className="text-muted-foreground">Due Date:</span>
 
                     <span>{milestone.dueDate}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
+                  </div>"
+                  <div className="flex justify-between text-sm">"
                     <span className="text-muted-foreground">Amount:</span>
                     <span>{milestone.amount}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Status:</span>
+                  </div>"
+                  <div className="flex justify-between text-sm">"
+                    <span className="text-muted-foreground">Status:</span>'"
                     <span className="capitalize">{milestone.status.replace('_ ')}</span>
                   </div>
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
+                  <Button "
+                    size="sm" "
+                    variant="outline" "
                     className="w-full mt-3 gap-1"
-                  >
+                  >"
                     View Details <ChevronRight className="h-4 w-4" />
                   </Button>
                 </div>
@@ -584,25 +739,25 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
             </Card>
 <<<<<<< HEAD
                   </Badge>;
-                </div>;
-                <div className="pl-7">;
-                  <div className="flex justify-between text-sm">;
+                </div>;"
+                <div className="pl-7">;"
+                  <div className="flex justify-between text-sm">;"
                     <span className="text-muted-foreground">Due Date:</span>;
                     <span>{milestone.dueDate}</span>;
-                  </div>;
-                  <div className="flex justify-between text-sm">;
+                  </div>;"
+                  <div className="flex justify-between text-sm">;"
                     <span className="text-muted-foreground">Amount:</span>;
                     <span>{milestone.amount}</span>;
-                  </div>;
-                  <div className="flex justify-between text-sm">;
-                    <span className="text-muted-foreground">Status:</span>;
+                  </div>;"
+                  <div className="flex justify-between text-sm">;"
+                    <span className="text-muted-foreground">Status:</span>;'"
                     <span className="capitalize">{milestone.status.replace('_ ')}</span>;
                   </div>;
-                  <Button;
-                    size="sm";
-                    variant="outline";
+                  <Button;"
+                    size="sm";"
+                    variant="outline";"
                     className="w-full mt-3 gap-1";
-                  >;
+                  >;"
                     View Details <ChevronRight className="h-4 w-4" />;
                   </Button>;
                 </div>;
@@ -630,6 +785,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 }
 
 
+<<<<<<< HEAD:src_backup/mobile/components/projects/MobileProjectView.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -656,3 +812,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/mobile/components/projects/MobileProjectView.tsx
+=======
+;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/mobile/components/projects/MobileProjectView.tsx

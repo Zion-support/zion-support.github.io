@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:components/_app.tsx.backup.1755991384.backup.1756001148
 ========
@@ -25,10 +26,14 @@ export default function App({ Component, pageProps }: AppProps){
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/_app.tsx.backup.1755991471
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <EnhancedLayout>
       <Component {...pageProps} />
     </EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
@@ -42,4 +47,7 @@ export default function App({ Component, pageProps }: AppProps){
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/_app.tsx.backup.1755991471
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

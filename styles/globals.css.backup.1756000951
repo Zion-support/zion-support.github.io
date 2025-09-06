@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Import Inter font for modern typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
@@ -96,6 +106,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ::-webkit-scrollbar {
 /* Enhanced Scrollbar */::-webkit-scrollbar {
 =======
@@ -137,15 +148,38 @@ a {
 /* Enhanced scrollbar */
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+::-webkit-scrollbar {
+/* Enhanced Scrollbar */::-webkit-scrollbar {
+
+
+
+/* Enhanced Scrollbar */::-webkit-scrollbar {
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   background: rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   border: 1px solid rgba(0, 255, 255, 0.2);
@@ -161,6 +195,7 @@ a {
 ::selection {
   background: rgba(0, 255, 255, 0.35);
   color: white;
+<<<<<<< HEAD
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
   background: rgba(15, 23, 42, 0.3);
   backdrop-filter: blur(10px);
@@ -174,10 +209,27 @@ a {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);}
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+
+
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ::-moz-selection {
   background: rgba(0, 255, 255, 0.5);
@@ -350,11 +402,21 @@ a {
 
 /* Selection styles */
 ::selection {
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   background-color: var(--primary);
   color: var(--primary-foreground);
 }
@@ -621,11 +683,26 @@ h3 {
     animation: none;
   body::before,
   body::after {
+<<<<<<< HEAD
   }}
   background: linear-gradient(135deg, #06b6d4, #8b5cf6);
 =======
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    animation: none;
+
+
+
+}
+  }}
+
+
+
+  }}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 /* Loading states */
 .loading {

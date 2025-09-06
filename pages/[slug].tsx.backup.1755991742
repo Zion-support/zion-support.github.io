@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -42,10 +43,14 @@ export default function ServiceFallbackPage() {
       try {
         const url = new URL(s.link);
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       } catch {
         return false;
       }
     });
+<<<<<<< HEAD
     if (byLink) return byLink;
 
     const normalized = slug.toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -277,3 +282,6 @@ export default function DynamicPage({ title, slug, description }: PageProps) {
 		</>
 	);
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

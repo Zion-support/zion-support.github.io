@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 <<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
@@ -14,128 +15,122 @@ import Link from 'next/link';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
-import Head from 'next / head';
+
+
+'
+import Head from 'next / head';'
 import Link from 'next / link';
 ;
-const Blueprint20250818122901: React.FC = () => {
-  const blueprint_details = {
+const Blueprint20250818122901: React.FC = () => {}
+  const blueprint_details = {'
     id: 'blueprint - 2025 - 08 - 18 - 122901',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-const Blueprint20250818122901: React.FC = () => {
-  const blueprintDetails = {
 
+
+
+
+const Blueprint20250818122901: React.FC = () => {}
+  const blueprintDetails = {}
+'
     id: 'blueprint-2025-08-18-122901',
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-const Blueprint20250818122901: React.FC = () => {
-  const blueprintDetails = {
-    id: 'blueprint-2025-08-18-122901'
-    name: 'AI Content Factory Blueprint'
-    description: 'Automated content generation system with AI-powered optimization'
-    category: 'Content Automation'
-    status: 'deployed'
-    complexity: 'high'
-    lastUpdated: '2025-08-18 12:29:01'
+const Blueprint20250818122901: React.FC = () => {}
+  const blueprintDetails = {'
+    id: 'blueprint-2025-08-18-122901''
+    name: 'AI Content Factory Blueprint''
+    description: 'Automated content generation system with AI-powered optimization''
+    category: 'Content Automation''
+    status: 'deployed''
+    complexity: 'high''
+    lastUpdated: '2025-08-18 12:29:01''
     version: '2.1.0'
   }
-  const systemComponents = [
-    {
-      name: 'Content Generator'
-      description: 'AI-powered content creation engine'
-      status: 'active'
+  const systemComponents = []
+    {'
+      name: 'Content Generator''
+      description: 'AI-powered content creation engine''
+      status: 'active''
       health: 'excellent'
     }
-    {
-      name: 'SEO Optimizer'
-      description: 'Automated search engine optimization'
-      status: 'active'
+    {'
+      name: 'SEO Optimizer''
+      description: 'Automated search engine optimization''
+      status: 'active''
       health: 'excellent'
     }
-    {
-      name: 'Quality Controller'
-      description: 'Content quality assessment and improvement'
-      status: 'active'
+    {'
+      name: 'Quality Controller''
+      description: 'Content quality assessment and improvement''
+      status: 'active''
       health: 'excellent'
     }
-    {
-      name: 'Distribution Engine'
-      description: 'Automated content publishing and distribution'
-      status: 'active'
+    {'
+      name: 'Distribution Engine''
+      description: 'Automated content publishing and distribution''
+      status: 'active''
       health: 'excellent'
     }
   ];
-  const features = [
-    {
-      feature: 'Natural Language Generation'
-      description: 'Advanced NLP for human-like content creation'
-      benefit: 'High-quality, engaging content'
+  const features = []
+    {'
+      feature: 'Natural Language Generation''
+      description: 'Advanced NLP for human-like content creation''
+      benefit: 'High-quality, engaging content''
       status: 'implemented'
     }
-    {
-      feature: 'SEO Automation'
-      description: 'Intelligent keyword optimization and meta tag generation'
-      benefit: 'Improved search rankings'
+    {'
+      feature: 'SEO Automation''
+      description: 'Intelligent keyword optimization and meta tag generation''
+      benefit: 'Improved search rankings''
       status: 'implemented'
     }
-    {
-      feature: 'Content Personalization'
-      description: 'AI-driven content adaptation for different audiences'
-      benefit: 'Better user engagement'
+    {'
+      feature: 'Content Personalization''
+      description: 'AI-driven content adaptation for different audiences''
+      benefit: 'Better user engagement''
       status: 'implemented'
     }
-    {
-      feature: 'Multi-format Support'
-      description: 'Automatic conversion between content formats'
-      benefit: 'Versatile content delivery'
+    {'
+      feature: 'Multi-format Support''
+      description: 'Automatic conversion between content formats''
+      benefit: 'Versatile content delivery''
       status: 'implemented'
-    }
+    }'
     id: 'blueprint-2025-08-18-122901',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    name: 'AI Content Factory Blueprint',
-    description: 'Automated content generation system with AI - powered optimization',
-    category: 'Content Automation',
-    status: 'deployed',
+
+'
+    name: 'AI Content Factory Blueprint','
+    description: 'Automated content generation system with AI - powered optimization','
+    category: 'Content Automation','
+    status: 'deployed','
     complexity: 'high',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    lastUpdated: '2025-08-18 12:29:01',
+
+
+
+'
+    lastUpdated: '2025-08-18 12:29:01','
     version: '2.1.0'
   };
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -146,14 +141,22 @@ const Blueprint20250818122901: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+  const systemComponents = []
+    {'
+      name: 'Content Generator','
+      description: 'AI - powered content creation engine','
+      status: 'active',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+    },
+    {'
+      name: 'SEO Optimizer','
+      description: 'Automated search engine optimization','
+      status: 'active',
+
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       name: 'Content Generator',
@@ -164,26 +167,46 @@ const Blueprint20250818122901: React.FC = () => {
 
 =======
 <<<<<<< HEAD
-      health: 'excellent';
 =======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
+      health: 'excellent';
+
+'
+      health: 'excellent';
+'
       health: 'excellent'
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
     },
-    {
-      name: 'SEO Optimizer',
-      description: 'Automated search engine optimization',
+    {'
+      name: 'Quality Controller','
+      description: 'Content quality assessment and improvement','
       status: 'active',
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 <<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      health: 'excellent';
 =======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
+      health: 'excellent';
+
+'
+      health: 'excellent';
+'
       health: 'excellent'
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
       health: 'excellent';
@@ -195,11 +218,16 @@ const Blueprint20250818122901: React.FC = () => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
     },
-    {
-      name: 'Quality Controller',
-      description: 'Content quality assessment and improvement',
+    {'
+      name: 'Distribution Engine','
+      description: 'Automated content publishing and distribution','
       status: 'active',
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 <<<<<<< HEAD
 
 =======
@@ -239,25 +267,36 @@ const Blueprint20250818122901: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
     }
   ];
 
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ];
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
+
+
+'
       health: 'excellent'
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const features = [
 
@@ -281,58 +320,59 @@ const Blueprint20250818122901: React.FC = () => {
 <<<<<<< HEAD
     }
   ];
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      } catch (error) {
-    console.error("Error:", error);
+  const features = []
+    {'
+      feature: 'Natural Language Generation','
+      description: 'Advanced NLP for human - like content creation','
+      benefit: 'High - quality, engaging content','
+      status: 'implemented';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
+
+'
+      health: 'excellent'
+
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const features = [
-    {
-      feature: 'Natural Language Generation',
-      description: 'Advanced NLP for human-like content creation',
-      benefit: 'High-quality, engaging content',
+
+
+  const features = []
+    {'
+      feature: 'Natural Language Generation','
+      description: 'Advanced NLP for human-like content creation','
+      benefit: 'High-quality, engaging content','
       status: 'implemented'
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
     },
-    {
-      feature: 'SEO Automation',
-      description: 'Intelligent keyword optimization and meta tag generation',
+    {'
+      feature: 'SEO Automation','
+      description: 'Intelligent keyword optimization and meta tag generation','
       benefit: 'Improved search rankings',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      status: 'implemented';
-    },
-    {
-      feature: 'Content Personalization',
-      description: 'AI - driven content adaptation for different audiences',
-      benefit: 'Better user engagement',
-      status: 'implemented';
-    },
-    {
-      feature: 'Multi - format Support',
-      description: 'Automatic conversion between content formats',
-      benefit: 'Versatile content delivery',
 
+
+'
+      status: 'implemented';
+    },
+    {'
+      feature: 'Content Personalization','
+      description: 'AI - driven content adaptation for different audiences','
+      benefit: 'Better user engagement','
+      status: 'implemented';
+    },
+    {'
+      feature: 'Multi - format Support','
+      description: 'Automatic conversion between content formats','
+      benefit: 'Versatile content delivery',
+'
       status: 'implemented'
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -341,16 +381,28 @@ const Blueprint20250818122901: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       } catch (error) {
     console.error("Error:", error);
+=======
+
+
+      } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ];
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
   const features = [
     {
@@ -373,12 +425,20 @@ const Blueprint20250818122901: React.FC = () => {
 =======
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
       case 'implemented': return 'text-green-400';
       case 'deployed': return 'text-blue-400';
+=======
+  const getStatusColor = (status: string) => {}
+    switch (status) {'
+      case 'active': return 'text-green-400';'
+      case 'implemented': return 'text-green-400';'
+      case 'deployed': return 'text-blue-400';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
       default: return 'text-gray-400';
 <<<<<<< HEAD
     }
@@ -390,6 +450,7 @@ const Blueprint20250818122901: React.FC = () => {
   };
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       } catch (error) {
@@ -459,6 +520,11 @@ const Blueprint20250818122901: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       } catch (error) {
     console.error("Error:", error);
+=======
+
+      } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -470,19 +536,41 @@ const Blueprint20250818122901: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
+
+
+
+
+
+  const getHealthColor = (health: string) => {}
+;
+  const getHealthColor = (health: string) =>: any {}
+    switch (health) {}
+  };
+
+
+
+      } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+
+
+
+
+  return ("
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
-        <title>AI Content Factory Blueprint - bolt.new.zion.app</title>
-        <meta name="description" content="Automated content generation system with AI-powered optimization" />
+        <title>AI Content Factory Blueprint - bolt.new.zion.app</title>"
+        <meta name="description" content="Automated content generation system with AI-powered optimization" />"
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      </Head>"
       <div className="container mx-auto px-4 py-8">
 
 
-        {/* Header */  } catch (error) {
-    console.error("Error:", error);
+        {/* Header */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -491,31 +579,36 @@ const Blueprint20250818122901: React.FC = () => {
 =======
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-8">
+=======
+"
+        <div className="mb-8">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            ← Back to Blueprints
-          </Link>
+            ← Back to Blueprints;
+          </Link>"
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
 
 
-            {blueprintDetails.name  } catch (error) {
-    console.error("Error:", error);
+            {blueprintDetails.name  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          </h1>
+          </h1>"
           <p className="text-gray-300 text-lg">
-            {blueprintDetails.description  } catch (error) {
-    console.error("Error:", error);
+            {blueprintDetails.description  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </p>
         </div>
-        {/* Blueprint Overview */  } catch (error) {
-    console.error("Error:", error);
+        {/* Blueprint Overview */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -524,175 +617,162 @@ const Blueprint20250818122901: React.FC = () => {
 =======
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-blue-400">Status</h3>
             <div className="text-2xl font-bold text-green-400">{blueprintDetails.status}</div>
+=======
+"
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-blue-400">Status</h3>"
+            <div className="text-2xl font-bold text-green-400">{blueprintDetails.status}</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
             <p className="text-gray-300 text-sm mt-2">Production ready</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">Complexity</h3>
-            <div className="text-2xl font-bold text-orange-400">{blueprintDetails.complexity}</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-blue-400">Complexity</h3>"
+            <div className="text-2xl font-bold text-orange-400">{blueprintDetails.complexity}</div>"
             <p className="text-gray-300 text-sm mt-2">Advanced system</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">Version</h3>
-            <div className="text-2xl font-bold text-cyan-400">{blueprintDetails.version}</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-blue-400">Version</h3>"
+            <div className="text-2xl font-bold text-cyan-400">{blueprintDetails.version}</div>"
             <p className="text-gray-300 text-sm mt-2">Latest release</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">Last Updated</h3>
-            <div className="text-2xl font-bold text-blue-400">{blueprintDetails.lastUpdated}</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-blue-400">Last Updated</h3>"
+            <div className="text-2xl font-bold text-blue-400">{blueprintDetails.lastUpdated}</div>"
             <p className="text-gray-300 text-sm mt-2">Recently deployed</p>
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
-      case 'good': return 'bg - yellow - 500 / 20 text - yellow - 400';
-      case 'warning': return 'bg - orange - 500 / 20 text - orange - 400';
-      case 'critical': return 'bg - red - 500 / 20 text - red - 400';
-      default: return 'bg - gray - 500 / 20 text - gray - 400';
-    }
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 ;
-  return (
+  return ("
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - gray - 900 text - white">;
       <Head>;
-        <title > AI Content Factory Blueprint - bolt.new.zion.app</title>;
-        <meta name="description" content="Automated content generation system with AI - powered optimization" />;
+        <title > AI Content Factory Blueprint - bolt.new.zion.app</title>;"
+        <meta name="description" content="Automated content generation system with AI - powered optimization" />;"
         <meta name="viewport" content="width = device - width, initial - scale = 1" />;
-      </Head>;
+      </Head>;"
       <div className="container mx - auto px - 4 py - 8">;
-        {/* Header */}
-        <div className="mb - 8">;
+        {/* Header */}"
+        <div className="mb - 8">;"
           <Link href="/reports / blueprints" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
             ← Back to Blueprints;
-          </Link>;
+          </Link>;"
           <h1 className="text - 4xl font - bold mt - 4 mb - 2 bg - gradient - to - r from - blue - 400 to - cyan - 400 bg - clip - text text - transparent">;
             {blueprint_details.name}
-          </h1>;
+          </h1>;"
           <p className="text - gray - 300 text - lg">;
             {blueprint_details.description}
           </p>;
         </div>;
-        {/* Blueprint Overview */}
-        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6 mb - 8">;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - blue - 400">Status</h3>;
-            <div className="text - 2xl font - bold text - green - 400">{blueprint_details.status}</div>;
+        {/* Blueprint Overview */}"
+        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6 mb - 8">;"
+          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+            <h3 className="text - xl font - semibold mb - 4 text - blue - 400">Status</h3>;"
+            <div className="text - 2xl font - bold text - green - 400">{blueprint_details.status}</div>;"
             <p className="text - gray - 300 text - sm mt - 2">Production ready</p>;
-          </div>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - blue - 400">Complexity</h3>;
-            <div className="text - 2xl font - bold text - orange - 400">{blueprint_details.complexity}</div>;
+          </div>;"
+          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+            <h3 className="text - xl font - semibold mb - 4 text - blue - 400">Complexity</h3>;"
+            <div className="text - 2xl font - bold text - orange - 400">{blueprint_details.complexity}</div>;"
             <p className="text - gray - 300 text - sm mt - 2">Advanced system</p>;
-          </div>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - blue - 400">Version</h3>;
-            <div className="text - 2xl font - bold text - cyan - 400">{blueprint_details.version}</div>;
+          </div>;"
+          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+            <h3 className="text - xl font - semibold mb - 4 text - blue - 400">Version</h3>;"
+            <div className="text - 2xl font - bold text - cyan - 400">{blueprint_details.version}</div>;"
             <p className="text - gray - 300 text - sm mt - 2">Latest release</p>;
-          </div>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - blue - 400">Last Updated</h3>;
-            <div className="text - 2xl font - bold text - blue - 400">{blueprint_details.last_updated}</div>;
+          </div>;"
+          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+            <h3 className="text - xl font - semibold mb - 4 text - blue - 400">Last Updated</h3>;"
+            <div className="text - 2xl font - bold text - blue - 400">{blueprint_details.last_updated}</div>;"
             <p className="text - gray - 300 text - sm mt - 2">Recently deployed</p>;
           </div>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-        {/* System Components */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">System Components</h2>;
+
+
+        {/* System Components */}"
+        <div className="mb - 8">;"
+          <h2 className="text - 2xl font - bold mb - 6 text - white">System Components</h2>;"
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
-            {system_components.map ((component, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
+            {system_components.map ((component, index) => ("
+              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+                <div className="flex justify - between items - start mb - 4">;"
                   <h3 className="text - lg font - semibold text - white">{component.name}</h3>;
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getHealthColor (component.health)}`}>;
                     {component.health}
                   </span>;
-                </div>;
-                <p className="text - gray - 300 text - sm mb - 4">{component.description}</p>;
-                <div className="flex justify - between items - center">;
+                </div>;"
+                <p className="text - gray - 300 text - sm mb - 4">{component.description}</p>;"
+                <div className="flex justify - between items - center">;`
                   <span className={`text - xs ${getStatusColor (component.status)}`}>;
                     ● {component.status}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
                   </span>;
                 </div>;
               </div>))}
           </div>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-        {/* Features */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Key Features</h2>;
+
+
+        {/* Features */}"
+        <div className="mb - 8">;"
+          <h2 className="text - 2xl font - bold mb - 6 text - white">Key Features</h2>;"
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
-            {features.map ((feature, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;
+            {features.map ((feature, index) => ("
+              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+                <div className="flex justify - between items - start mb - 4">;"
+                  <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;`
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (feature.status)}`}>;
                     {feature.status}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-        {/* System Components */  } catch (error) {
-    console.error("Error:", error);
+
+        {/* System Components */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">System Components</h2>
+=======
+"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">System Components</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {systemComponents.map((component, index) => (
-              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{component.name}</h3>
+            {systemComponents.map((component, index) => ("
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">"
+                <div className="flex justify-between items-start mb-4">"
+                  <h3 className="text-lg font-semibold text-white">{component.name}</h3>`
                   <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(component.health)}`}>
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                    {component.health  } catch (error) {
-    console.error("Error:", error);
+
+
+
+                    {component.health  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -700,31 +780,35 @@ const Blueprint20250818122901: React.FC = () => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
                   </span>
-                </div>
-                <p className="text-gray-300 text-sm mb-4">{component.description}</p>
-                <div className="flex justify-between items-center">
+                </div>"
+                <p className="text-gray-300 text-sm mb-4">{component.description}</p>"
+                <div className="flex justify-between items-center">`
                   <span className={`text-xs ${getStatusColor(component.status)}`}>
 
-                    ● {component.status  } catch (error) {
-    console.error("Error:", error);
+                    ● {component.status  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </span>
                 </div>
               </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
+            ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </div>
         </div>
-        {/* Features */  } catch (error) {
-    console.error("Error:", error);
+        {/* Features */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -732,44 +816,55 @@ const Blueprint20250818122901: React.FC = () => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>
+=======
+"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
+            {features.map((feature, index) => ("
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">"
+                <div className="flex justify-between items-start mb-4">"
+                  <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>`
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
 
-                    {feature.status  } catch (error) {
-    console.error("Error:", error);
+                    {feature.status  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
                   </span>
-                </div>
-                <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
+                </div>"
+                <p className="text-gray-300 text-sm mb-2">{feature.description}</p>"
                 <p className="text-blue-400 text-sm font-medium">Benefit: {feature.benefit}</p>
               </div>
 
 
-            ))  } catch (error) {
-    console.error("Error:", error);
+            ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </div>
         </div>
-        {/* Content Generation Pipeline */  } catch (error) {
-    console.error("Error:", error);
+        {/* Content Generation Pipeline */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -778,6 +873,7 @@ const Blueprint20250818122901: React.FC = () => {
 =======
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-8">
@@ -786,6 +882,15 @@ const Blueprint20250818122901: React.FC = () => {
             <div className="text-center">
               <div className="text-6xl font-bold text-blue-400 mb-4">📝</div>
               <h3 className="text-xl font-semibold mb-2 text-white">AI-Powered Content Creation</h3>
+=======
+"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Content Generation Pipeline</h2>"
+          <div className="bg-white/10 rounded-xl p-8 border border-white/20">"
+            <div className="text-center">"
+              <div className="text-6xl font-bold text-blue-400 mb-4">📝</div>"
+              <h3 className="text-xl font-semibold mb-2 text-white">AI-Powered Content Creation</h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
               <p className="text-gray-300 mb-6">
 <<<<<<< HEAD
                 Our AI Content Factory automates the entire content creation process, from
@@ -801,22 +906,22 @@ const Blueprint20250818122901: React.FC = () => {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 content that engages your audience.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-                <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400/30">
-                  <div className="text-lg font-bold text-blue-400">Research</div>
+              </p>"
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">"
+                <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400/30">"
+                  <div className="text-lg font-bold text-blue-400">Research</div>"
                   <div className="text-xs text-gray-300">Topic Analysis</div>
-                </div>
-                <div className="bg-cyan-500/20 rounded-lg p-4 border border-cyan-400/30">
-                  <div className="text-lg font-bold text-cyan-400">Generate</div>
+                </div>"
+                <div className="bg-cyan-500/20 rounded-lg p-4 border border-cyan-400/30">"
+                  <div className="text-lg font-bold text-cyan-400">Generate</div>"
                   <div className="text-xs text-gray-300">AI Creation</div>
-                </div>
-                <div className="bg-green-500/20 rounded-lg p-4 border border-green-400/30">
-                  <div className="text-lg font-bold text-green-400">Optimize</div>
+                </div>"
+                <div className="bg-green-500/20 rounded-lg p-4 border border-green-400/30">"
+                  <div className="text-lg font-bold text-green-400">Optimize</div>"
                   <div className="text-xs text-gray-300">SEO & Quality</div>
-                </div>
-                <div className="bg-purple-500/20 rounded-lg p-4 border border-purple-400/30">
-                  <div className="text-lg font-bold text-purple-400">Publish</div>
+                </div>"
+                <div className="bg-purple-500/20 rounded-lg p-4 border border-purple-400/30">"
+                  <div className="text-lg font-bold text-purple-400">Publish</div>"
                   <div className="text-xs text-gray-300">Distribution</div>
                 </div>
               </div>
@@ -825,8 +930,8 @@ const Blueprint20250818122901: React.FC = () => {
         </div>
 
 
-        {/* Technology Stack */  } catch (error) {
-    console.error("Error:", error);
+        {/* Technology Stack */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -835,6 +940,7 @@ const Blueprint20250818122901: React.FC = () => {
 =======
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-8">
@@ -842,6 +948,14 @@ const Blueprint20250818122901: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-white/10 rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-blue-400">AI & ML Technologies</h3>
+=======
+"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">AI & ML Technologies</h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
               <ul className="space-y-2 text-gray-300">
                 <li>• GPT-4 for content generation</li>
                 <li>• BERT for content understanding</li>
@@ -850,9 +964,9 @@ const Blueprint20250818122901: React.FC = () => {
                 <li>• Hugging Face Transformers</li>
                 <li>• OpenAI API integration</li>
               </ul>
-            </div>
-            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Content Management</h3>
+            </div>"
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Content Management</h3>"
               <ul className="space-y-2 text-gray-300">
                 <li>• Headless CMS integration</li>
                 <li>• Markdown processing</li>
@@ -870,19 +984,26 @@ const Blueprint20250818122901: React.FC = () => {
           <Link 
 =======
 
-
+"
         <div className="flex flex-wrap gap-4 justify-center">
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
           <Link 
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
+=======
+          <Link;
+        {/* Navigation */  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
+"
         <div className="flex flex-wrap gap-4 justify-center">
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
           <Link
 <<<<<<< HEAD
 =======
@@ -892,9 +1013,14 @@ const Blueprint20250818122901: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             href="/reports/blueprints"
+=======
+          <Link;
+"
+            href="/reports/blueprints""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
-            All Blueprints
+            All Blueprints;
           </Link>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -905,12 +1031,17 @@ const Blueprint20250818122901: React.FC = () => {
 
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             href="/reports/blueprints/comprehensive-redundancy"
+=======
+"
+            href="/reports/blueprints/comprehensive-redundancy""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
-            Comprehensive Redundancy
+            Comprehensive Redundancy;
           </Link>
 <<<<<<< HEAD
           <Link
@@ -920,12 +1051,17 @@ const Blueprint20250818122901: React.FC = () => {
 
 
 
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             href="/reports/blueprints/ultimate-redundancy"
+=======
+"
+            href="/reports/blueprints/ultimate-redundancy""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
-            Ultimate Redundancy
+            Ultimate Redundancy;
           </Link>
         </div>
       </div>
@@ -940,51 +1076,51 @@ export default Blueprint20250818122901;
 =======
 
                   </span>;
-                </div>;
-                <p className="text - gray - 300 text - sm mb - 2">{feature.description}</p>;
+                </div>;"
+                <p className="text - gray - 300 text - sm mb - 2">{feature.description}</p>;"
                 <p className="text - blue - 400 text - sm font - medium">Benefit: {feature.benefit}</p>;
               </div>))}
           </div>;
         </div>;
-        {/* Content Generation Pipeline */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Content Generation Pipeline</h2>;
-          <div className="bg - white / 10 rounded - xl p - 8 border border - white / 20">;
-            <div className="text - center">;
-              <div className="text - 6xl font - bold text - blue - 400 mb - 4">📝</div>;
-              <h3 className="text - xl font - semibold mb - 2 text - white">AI - Powered Content Creation</h3>;
+        {/* Content Generation Pipeline */}"
+        <div className="mb - 8">;"
+          <h2 className="text - 2xl font - bold mb - 6 text - white">Content Generation Pipeline</h2>;"
+          <div className="bg - white / 10 rounded - xl p - 8 border border - white / 20">;"
+            <div className="text - center">;"
+              <div className="text - 6xl font - bold text - blue - 400 mb - 4">📝</div>;"
+              <h3 className="text - xl font - semibold mb - 2 text - white">AI - Powered Content Creation</h3>;"
               <p className="text - gray - 300 mb - 6">;
                 Our AI Content Factory automates the entire content creation process, from;
                 initial concept to final publication, ensuring high - quality, SEO - optimized;
                 content that engages your audience.;
-              </p>;
-              <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4 text - center">;
-                <div className="bg - blue - 500 / 20 rounded - lg p - 4 border border - blue - 400 / 30">;
-                  <div className="text - lg font - bold text - blue - 400">Research</div>;
+              </p>;"
+              <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4 text - center">;"
+                <div className="bg - blue - 500 / 20 rounded - lg p - 4 border border - blue - 400 / 30">;"
+                  <div className="text - lg font - bold text - blue - 400">Research</div>;"
                   <div className="text - xs text - gray - 300">Topic Analysis</div>;
-                </div>;
-                <div className="bg - cyan - 500 / 20 rounded - lg p - 4 border border - cyan - 400 / 30">;
-                  <div className="text - lg font - bold text - cyan - 400">Generate</div>;
+                </div>;"
+                <div className="bg - cyan - 500 / 20 rounded - lg p - 4 border border - cyan - 400 / 30">;"
+                  <div className="text - lg font - bold text - cyan - 400">Generate</div>;"
                   <div className="text - xs text - gray - 300">AI Creation</div>;
-                </div>;
-                <div className="bg - green - 500 / 20 rounded - lg p - 4 border border - green - 400 / 30">;
-                  <div className="text - lg font - bold text - green - 400">Optimize</div>;
+                </div>;"
+                <div className="bg - green - 500 / 20 rounded - lg p - 4 border border - green - 400 / 30">;"
+                  <div className="text - lg font - bold text - green - 400">Optimize</div>;"
                   <div className="text - xs text - gray - 300">SEO & Quality</div>;
-                </div>;
-                <div className="bg - purple - 500 / 20 rounded - lg p - 4 border border - purple - 400 / 30">;
-                  <div className="text - lg font - bold text - purple - 400">Publish</div>;
+                </div>;"
+                <div className="bg - purple - 500 / 20 rounded - lg p - 4 border border - purple - 400 / 30">;"
+                  <div className="text - lg font - bold text - purple - 400">Publish</div>;"
                   <div className="text - xs text - gray - 300">Distribution</div>;
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
-        {/* Technology Stack */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Technology Stack</h2>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
-            <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-              <h3 className="text - xl font - semibold mb - 4 text - blue - 400">AI & ML Technologies</h3>;
+        {/* Technology Stack */}"
+        <div className="mb - 8">;"
+          <h2 className="text - 2xl font - bold mb - 6 text - white">Technology Stack</h2>;"
+          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;"
+            <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+              <h3 className="text - xl font - semibold mb - 4 text - blue - 400">AI & ML Technologies</h3>;"
               <ul className="space - y-2 text - gray - 300">;
                 <li>• GPT - 4 for content generation</li>;
                 <li>• BERT for content understanding</li>;
@@ -993,9 +1129,9 @@ export default Blueprint20250818122901;
                 <li>• Hugging Face Transformers</li>;
                 <li>• OpenAI API integration</li>;
               </ul>;
-            </div>;
-            <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-              <h3 className="text - xl font - semibold mb - 4 text - blue - 400">Content Management</h3>;
+            </div>;"
+            <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+              <h3 className="text - xl font - semibold mb - 4 text - blue - 400">Content Management</h3>;"
               <ul className="space - y-2 text - gray - 300">;
                 <li>• Headless CMS integration</li>;
                 <li>• Markdown processing</li>;
@@ -1007,22 +1143,22 @@ export default Blueprint20250818122901;
             </div>;
           </div>;
         </div>;
-        {/* Navigation */}
+        {/* Navigation */}"
         <div className="flex flex - wrap gap - 4 justify - center">;
-          <Link;
-            href="/reports / blueprints";
+          <Link;"
+            href="/reports / blueprints";"
             className="px - 6 py - 3 bg - white / 10 hover:bg - white / 20 border border - white / 20 rounded - lg text - white transition - all duration - 200 hover:border - blue - 400 / 50";
           >;
             All Blueprints;
           </Link>;
-          <Link;
-            href="/reports / blueprints / comprehensive - redundancy";
+          <Link;"
+            href="/reports / blueprints / comprehensive - redundancy";"
             className="px - 6 py - 3 bg - white / 10 hover:bg - white / 20 border border - white / 20 rounded - lg text - white transition - all duration - 200 hover:border - indigo - 400 / 50";
           >;
             Comprehensive Redundancy;
           </Link>;
-          <Link;
-            href="/reports / blueprints / ultimate - redundancy";
+          <Link;"
+            href="/reports / blueprints / ultimate - redundancy";"
             className="px - 6 py - 3 bg - white / 10 hover:bg - white / 20 border border - white / 20 rounded - lg text - white transition - all duration - 200 hover:border - red - 400 / 50";
           >;
             Ultimate Redundancy;
@@ -1033,212 +1169,158 @@ export default Blueprint20250818122901;
 }
 ;
 
-<<<<<<< HEAD
-=======
 
-};
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-};
-
-      status: 'implemented'
-    },
-    {
-      feature: 'Content Personalization',
-      description: 'AI-driven content adaptation for different audiences',
-      benefit: 'Better user engagement',
-      status: 'implemented'
-    },
-    {
-      feature: 'Multi-format Support',
-      description: 'Automatic conversion between content formats',
-      benefit: 'Versatile content delivery',
-      status: 'implemented'
-    }
-  ];
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'active': return 'text-green-400';
-      case 'implemented': return 'text-green-400';
-      case 'deployed': return 'text-blue-400';
-      default: return 'text-gray-400';
-    }
-  }
-  };
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  };
-  const getHealthColor = (health: string) => {
-    switch (health) {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      case 'excellent': return 'bg-green-500/20 text-green-400';
-      case 'good': return 'bg-yellow-500/20 text-yellow-400';
-      case 'warning': return 'bg-orange-500/20 text-orange-400';
-      case 'critical': return 'bg-red-500/20 text-red-400';
+'
+      case 'excellent': return 'bg-green-500/20 text-green-400';'
+      case 'good': return 'bg-yellow-500/20 text-yellow-400';'
+      case 'warning': return 'bg-orange-500/20 text-orange-400';'
+      case 'critical': return 'bg-red-500/20 text-red-400';'
       default: return 'bg-gray-500/20 text-gray-400';
 
   };
 
 
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
-  return (
+  return ("
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
-        <title>AI Content Factory Blueprint - bolt.new.zion.app</title>
-        <meta name="description" content="Automated content generation system with AI-powered optimization" />
+        <title>AI Content Factory Blueprint - bolt.new.zion.app</title>"
+        <meta name="description" content="Automated content generation system with AI-powered optimization" />"
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
+      </Head>"
+      <div className="container mx-auto px-4 py-8">"
+        <div className="mb-8">"
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            ← Back to Blueprints
-          </Link>
+            ← Back to Blueprints;
+          </Link>"
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-          </h1>
+          </h1>"
           <p className="text-gray-300 text-lg">
             {blueprintDetails.description}
           </p>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">Status</h3>
-            <div className="text-2xl font-bold text-green-400">{blueprintDetails.status}</div>
+        </div>"
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-blue-400">Status</h3>"
+            <div className="text-2xl font-bold text-green-400">{blueprintDetails.status}</div>"
             <p className="text-gray-300 text-sm mt-2">Production ready</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">Complexity</h3>
-            <div className="text-2xl font-bold text-orange-400">{blueprintDetails.complexity}</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-blue-400">Complexity</h3>"
+            <div className="text-2xl font-bold text-orange-400">{blueprintDetails.complexity}</div>"
             <p className="text-gray-300 text-sm mt-2">Advanced system</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">Version</h3>
-            <div className="text-2xl font-bold text-cyan-400">{blueprintDetails.version}</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-blue-400">Version</h3>"
+            <div className="text-2xl font-bold text-cyan-400">{blueprintDetails.version}</div>"
             <p className="text-gray-300 text-sm mt-2">Latest release</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-blue-400">Last Updated</h3>
-            <div className="text-2xl font-bold text-blue-400">{blueprintDetails.lastUpdated}</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-blue-400">Last Updated</h3>"
+            <div className="text-2xl font-bold text-blue-400">{blueprintDetails.lastUpdated}</div>"
             <p className="text-gray-300 text-sm mt-2">Recently deployed</p>
           </div>
-        </div>
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">System Components</h2>
+        </div>"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">System Components</h2>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {systemComponents.map((component, index) => (
-              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{component.name}</h3>
+            {systemComponents.map((component, index) => ("
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">"
+                <div className="flex justify-between items-start mb-4">"
+                  <h3 className="text-lg font-semibold text-white">{component.name}</h3>`
                   <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(component.health)}`}>
-                    {component.health  } catch (error) {
-    console.error("Error:", error);
+                    {component.health  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </span>
-                </div>
-                <p className="text-gray-300 text-sm mb-4">{component.description}</p>
-                <div className="flex justify-between items-center">
+                </div>"
+                <p className="text-gray-300 text-sm mb-4">{component.description}</p>"
+                <div className="flex justify-between items-center">`
                   <span className={`text-xs ${getStatusColor(component.status)}`}>
-                    ● {component.status  } catch (error) {
-    console.error("Error:", error);
+                    ● {component.status  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </span>
                 </div>
               </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
+            ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </div>
         </div>
-        {/* Features */  } catch (error) {
-    console.error("Error:", error);
+        {/* Features */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>
+}"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
+            {features.map((feature, index) => ("
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">"
+                <div className="flex justify-between items-start mb-4">"
+                  <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>`
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
-                    {feature.status  } catch (error) {
-    console.error("Error:", error);
+                    {feature.status  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </span>
-                </div>
-                <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
+                </div>"
+                <p className="text-gray-300 text-sm mb-2">{feature.description}</p>"
                 <p className="text-blue-400 text-sm font-medium">Benefit: {feature.benefit}</p>
-              </div>
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Content Generation Pipeline</h2>
-          <div className="bg-white/10 rounded-xl p-8 border border-white/20">
-            <div className="text-center">
-              <div className="text-6xl font-bold text-blue-400 mb-4">📝</div>
-              <h3 className="text-xl font-semibold mb-2 text-white">AI-Powered Content Creation</h3>
+              </div>"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Content Generation Pipeline</h2>"
+          <div className="bg-white/10 rounded-xl p-8 border border-white/20">"
+            <div className="text-center">"
+              <div className="text-6xl font-bold text-blue-400 mb-4">📝</div>"
+              <h3 className="text-xl font-semibold mb-2 text-white">AI-Powered Content Creation</h3>"
               <p className="text-gray-300 mb-6">
-                Our AI Content Factory automates the entire content creation process, from 
-                initial concept to final publication, ensuring high-quality, SEO-optimized 
-                Our AI Content Factory automates the entire content creation process, from
-                initial concept to final publication, ensuring high-quality, SEO-optimized
-
-
-
-
+                Our AI Content Factory automates the entire content creation process, from;
+                initial concept to final publication, ensuring high-quality, SEO-optimized;
+                Our AI Content Factory automates the entire content creation process, from;
+                initial concept to final publication, ensuring high-quality, SEO-optimized;
                 content that engages your audience.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-                <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400/30">
-                  <div className="text-lg font-bold text-blue-400">Research</div>
+              </p>"
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">"
+                <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400/30">"
+                  <div className="text-lg font-bold text-blue-400">Research</div>"
                   <div className="text-xs text-gray-300">Topic Analysis</div>
-                </div>
-                <div className="bg-cyan-500/20 rounded-lg p-4 border border-cyan-400/30">
-                  <div className="text-lg font-bold text-cyan-400">Generate</div>
+                </div>"
+                <div className="bg-cyan-500/20 rounded-lg p-4 border border-cyan-400/30">"
+                  <div className="text-lg font-bold text-cyan-400">Generate</div>"
                   <div className="text-xs text-gray-300">AI Creation</div>
-                </div>
-                <div className="bg-green-500/20 rounded-lg p-4 border border-green-400/30">
-                  <div className="text-lg font-bold text-green-400">Optimize</div>
+                </div>"
+                <div className="bg-green-500/20 rounded-lg p-4 border border-green-400/30">"
+                  <div className="text-lg font-bold text-green-400">Optimize</div>"
                   <div className="text-xs text-gray-300">SEO & Quality</div>
-                </div>
-                <div className="bg-purple-500/20 rounded-lg p-4 border border-purple-400/30">
-                  <div className="text-lg font-bold text-purple-400">Publish</div>
+                </div>"
+                <div className="bg-purple-500/20 rounded-lg p-4 border border-purple-400/30">"
+                  <div className="text-lg font-bold text-purple-400">Publish</div>"
                   <div className="text-xs text-gray-300">Distribution</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">AI & ML Technologies</h3>
+        </div>"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">AI & ML Technologies</h3>"
               <ul className="space-y-2 text-gray-300">
                 <li>• GPT-4 for content generation</li>
                 <li>• BERT for content understanding</li>
@@ -1247,9 +1329,9 @@ export default Blueprint20250818122901;
                 <li>• Hugging Face Transformers</li>
                 <li>• OpenAI API integration</li>
               </ul>
-            </div>
-            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Content Management</h3>
+            </div>"
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+              <h3 className="text-xl font-semibold mb-4 text-blue-400">Content Management</h3>"
               <ul className="space-y-2 text-gray-300">
                 <li>• Headless CMS integration</li>
                 <li>• Markdown processing</li>
@@ -1262,37 +1344,36 @@ export default Blueprint20250818122901;
           </div>
         </div>
 
-
+"
         <div className="flex flex-wrap gap-4 justify-center">
-          <Link 
-
-        {/* Navigation */  } catch (error) {
-    console.error("Error:", error);
+          <Link;
+        {/* Navigation */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-            href="/reports/blueprints"
+}"
+            href="/reports/blueprints""
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
-            All Blueprints
+            All Blueprints;
           </Link>
 
 
 
-
-            href="/reports/blueprints/comprehensive-redundancy"
+"
+            href="/reports/blueprints/comprehensive-redundancy""
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
-            Comprehensive Redundancy
+            Comprehensive Redundancy;
           </Link>
 
 
 
-
-            href="/reports/blueprints/ultimate-redundancy"
+"
+            href="/reports/blueprints/ultimate-redundancy""
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
-            Ultimate Redundancy
+            Ultimate Redundancy;
           </Link>
         </div>
       </div>
@@ -1303,9 +1384,10 @@ export default Blueprint20250818122901;
 
 };
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
 export default Blueprint20250818122901;
+<<<<<<< HEAD:pages_backup/reports/blueprints/blueprint-2025-08-18-122901.tsx
 =======
 export default Blueprint20250818122901;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1313,3 +1395,7 @@ export default Blueprint20250818122901;
 export default Blueprint20250818122901;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
 <<<<<<< HEAD
+<<<<<<< HEAD
   Brain, Shield, Rocket, Cpu, Database, Users, Award, 
   Globe, Target, Star, CheckCircle, TrendingUp
 =======
@@ -14,11 +15,15 @@ import {
   Globe, Code, Server, Network, CheckCircle, TrendingUp
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
 export default function AboutPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -83,11 +88,15 @@ export default function AboutPage() {
       color: 'from-green-500 to-teal-500'
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const team = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -190,10 +199,14 @@ export default function AboutPage() {
         <link rel="canonical" href="https://ziontechgroup.com/about" />
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </Head>
 
       <EnhancedNavigation />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -474,10 +487,14 @@ export default function AboutPage() {
               </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -684,6 +701,9 @@ export default function AboutPage() {
       </main>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <EnhancedFooter />
     </>

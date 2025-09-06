@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -52,29 +53,33 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+import React, { useState } from "react";"
+import {Header} from "@/components/Header";"
+import {Footer} from "@/components/Footer";"
+import {useAdminQuotes} from "@/hooks/useAdminQuotes";"
+import {useAuth} from "@/hooks/useAuth";"
+import {Card, CardContent} from "@/components/ui/card";"
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Navigate} from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+"
 import type { QuoteRequest } from "@/types/quotes";
-
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {QuoteDetails} from "@/components/quotes/QuoteDetails";
-import {ExportToCSV} from "@/components/quotes/ExportToCSV";
+"
+import {ProtectedRoute} from "@/components/ProtectedRoute";"
+import {QuoteDetails} from "@/components/quotes/QuoteDetails";"
+import {ExportToCSV} from "@/components/quotes/ExportToCSV";"
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-export default function QuoteManager() {;
+export default function QuoteManager() { return null; }
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -152,30 +157,55 @@ import type { QuoteRequest } from "@/types/quotes";
 import type { QuoteRequest } from "@/types/quotes",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",
+=======
+"
+import React, { useState } from "react","
+import { Header } from "@/components/Header","
+import { Footer } from "@/components/Footer",";
+import { useAdminQuotes } from "@/hooks/useAdminQuotes";"
+import { useAuth } from "@/hooks/useAuth";
+import {};
+  Card;
+  CardContent"
+} from "@/components/ui/card","
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
+import { Navigate } from "react-router-dom",";
+import type { QuoteRequest } from "@/types/quotes";
+
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
+"
+import type { QuoteRequest } from "@/types/quotes","
+import { ProtectedRoute } from "@/components/ProtectedRoute","
+import { QuoteDetails } from "@/components/quotes/QuoteDetails","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ExportToCSV } from "@/components/quotes/ExportToCSV",
-import {
+import {}
   QuoteStatusCards,
   QuotesFilter,
-  QuotesTable
+  QuotesTable"
 } from "@/components/admin/quotes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export default function QuoteManager() {
-  const { user } = useAuth(),
+
+export default function QuoteManager() {}
+  const { user } = useAuth(),'
   const isAdmin = user?.userType === 'admin',
   
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -185,6 +215,11 @@ export default function QuoteManager() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const {
+=======
+
+
+  const {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     quotes,
     isLoading,
     error,
@@ -196,6 +231,7 @@ export default function QuoteManager() {
     setSearchQuery,
     dateRange,
     setDateRange,
+<<<<<<< HEAD
     updateStatus,
     toggleArchive,
 <<<<<<< HEAD
@@ -244,14 +280,32 @@ export default function QuoteManager() {
     return <Navigate to="/unauthorized" replace />
 =======
   if (!isAdmin) {
+=======
+    updateStatus,;
+    toggleArchive,;
+    deleteQuote;
+  // Count quotes by status;
+  const statusCounts = {'
+    new: quotes.filter(q => q.status === 'new').length'
+    in_review: quotes.filter(q => q.status === 'in_review').length'
+    accepted: quotes.filter(q => q.status === 'accepted').length'
+    responded: quotes.filter(q => q.status === 'responded').length'
+    closed: quotes.filter(q => q.status === 'closed').length;
+  const handleResetFilters = () => {'
+    setStatusFilter('all');'
+    setArchiveFilter('all');'
+    setSearchQuery('');
+    setDateRange({ from: undefined, to: undefined })
+  if (!isAdmin) {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return <Navigate to="/unauthorized" replace />
 
   // Count quotes by status;
-  const statusCounts = {;
-    new: quotes && quotes.filter(q => q && q.status === 'new').length,;
-    in_review: quotes && quotes.filter(q => q && q.status === 'in_review').length,;
-    accepted: quotes && quotes.filter(q => q && q.status === 'accepted').length,;
-    responded: quotes && quotes.filter(q => q && q.status === 'responded').length,;
+  const statusCounts = {;'
+    new: quotes && quotes.filter(q => q && q.status === 'new').length,;'
+    in_review: quotes && quotes.filter(q => q && q.status === 'in_review').length,;'
+    accepted: quotes && quotes.filter(q => q && q.status === 'accepted').length,;'
+    responded: quotes && quotes.filter(q => q && q.status === 'responded').length,;'
     closed: quotes && quotes.filter(q => q && q.status === 'closed').length;
   };
 
@@ -260,23 +314,19 @@ export default function QuoteManager() {
     setShowDetails(true);
   };
 
-  const handleResetFilters = () => {;
-    setStatusFilter('all');
-    setArchiveFilter('all');
+  const handleResetFilters = () => {;'
+    setStatusFilter('all');'
+    setArchiveFilter('all');'
     setSearchQuery('');
     setDateRange({ from: undefined, to: undefined });
   };
 
-  if (!isAdmin) {;
+  if (!isAdmin) {;"
     return <Navigate to="/unauthorized" replace />;
   }
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  }
-  },
 
+<<<<<<< HEAD
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote)
     setShowDetails(true)
@@ -315,13 +365,15 @@ export default function QuoteManager() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+            
 
 
             
 <<<<<<< HEAD
-=======
-
-            
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
             
@@ -338,39 +390,92 @@ import { Footer } from "@/components/Footer",;
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
 import { useAuth } from "@/hooks/useAuth",;
 import { ;
+=======
+"
+import React, { useState } from "react",;"
+import { Header } from "@/components/Header",;"
+import { Footer } from "@/components/Footer",;"
+import { useAdminQuotes } from "@/hooks/useAdminQuotes",;"
+import { useAuth } from "@/hooks/useAuth",;
+
+
+import { ;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {;
   Card,;
-  CardContent;
-} from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Navigate } from "react-router-dom",;
-import type { QuoteRequest } from "@/types/quotes",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { QuoteDetails } from "@/components/quotes/QuoteDetails",;
+  CardContent;"
+} from "@/components/ui/card",;"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import { Navigate } from "react-router-dom",;"
+import type { QuoteRequest } from "@/types/quotes",;"
+import { ProtectedRoute } from "@/components/ProtectedRoute",;"
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",;"
 import { ExportToCSV } from "@/components/quotes/ExportToCSV",;
 import {;
   QuoteStatusCards,;
   QuotesFilter,;
-  QuotesTable;
+  QuotesTable;"
 } from "@/components/admin/quotes",;
-export default function QuoteManager() {;
-  const { user } = useAuth(),;
+export default function QuoteManager() { return null; }
+  const { user } = useAuth(),;'
   const isAdmin = user?.userType === 'admin',;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
+<<<<<<< HEAD
 export default function QuoteManager() {;
   const { user } = useAuth(),;
+=======
+
+;
+export default function QuoteManager() { return null; }
+  const { user } = useAuth(),;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const isAdmin = user?.userType === 'admin',;
   ;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
 ;
+<<<<<<< HEAD
+=======
+
+  const {;
+    quotes,;
+    isLoading,;
+    error,;
+    statusFilter,;
+    setStatusFilter,;
+    archiveFilter,;
+    setArchiveFilter,;
+    searchQuery,;
+    setSearchQuery,;
+    dateRange,;
+    setDateRange,;
+    updateStatus,;
+    toggleArchive,;
+    deleteQuote;
+  } = useAdminQuotes(),;
   // Count quotes by status;
-  const statusCounts = {;
-    new:quotes.filter(q => q.status === 'new').length,;
-    in_review:quotes.filter(q => q.status === 'in_review').length,;
-    accepted:quotes.filter(q => q.status === 'accepted').length,;
-    responded:quotes.filter(q => q.status === 'responded').length,;
+  const statusCounts = {;'
+    new: quotes.filter(q => q.status === 'new').length,;'
+    in_review: quotes.filter(q => q.status === 'in_review').length,;'
+    accepted: quotes.filter(q => q.status === 'accepted').length,;'
+    responded: quotes.filter(q => q.status === 'responded').length,;'
+    closed: quotes.filter(q => q.status === 'closed').length;
+  },;
+  const handleViewDetails = (quote: QuoteRequest) => {;
+    setSelectedQuote(quote),;
+    setShowDetails(true);
+  },;
+
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  // Count quotes by status;
+  const statusCounts = {;'
+    new:quotes.filter(q => q.status === 'new').length,;'
+    in_review:quotes.filter(q => q.status === 'in_review').length,;'
+    accepted:quotes.filter(q => q.status === 'accepted').length,;'
+    responded:quotes.filter(q => q.status === 'responded').length,;'
     closed:quotes.filter(q => q.status === 'closed').length;
   },;
 ;
@@ -379,22 +484,41 @@ export default function QuoteManager() {;
     setShowDetails(true);
   },;
 ;
+<<<<<<< HEAD
+=======
+
+  const handleResetFilters = () => {;'
+    setStatusFilter('all'),;'
+    setArchiveFilter('all'),;'
+    setSearchQuery(''),;
+    setDateRange({ from: undefined, to: undefined });
+  };
+  if (!isAdmin) {;"
+    return <Navigate to="/unauthorized" replace />;
+  }
+;
+  return (;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <ProtectedRoute adminOnly>;
       <div>;
-        <Header />;
-        <div className="min-h-screen bg-zion-blue px-4 py-8">;
-          <div className="container mx-auto">;
+        <Header />;"
+        <div className="min-h-screen bg-zion-blue px-4 py-8">;"
+          <div className="container mx-auto">;"
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;
-              <div>;
-                <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>;
+              <div>;"
+                <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>;"
                 <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>;
-              </div>;
+              </div>;"
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -420,19 +544,36 @@ import type { QuoteRequest } from "@/types / quotes";
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { QuoteDetails } from '@/components / quotes / QuoteDetails';
 import { ExportToCSV } from '@/components / quotes / ExportToCSV';
+=======
+            {/* Status Summary Cards */}
+            <QuoteStatusCards statusCounts={statusCounts} />;
+'
+import React, { useState } from './react';'
+import { Header } from '@/components / Header';'
+import { Footer } from '@/components / Footer';'
+import { useAdminQuotes } from '@/hooks / useAdminQuotes';'
+import { use_auth } from '@/hooks / use_auth';'
+import { Card, CardContent } from '@/components / ui / card';'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';'
+import { Navigate } from './react-router-dom';"
+import type { QuoteRequest } from "@/types / quotes";'
+import { ProtectedRoute } from '@/components / ProtectedRoute';'
+import { QuoteDetails } from '@/components / quotes / QuoteDetails';'
+import { ExportToCSV } from '@/components / quotes / ExportToCSV';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { QuoteStatusCards, QuotesFilter, QuotesTable } from '@/components / admin / quotes';
 ;
-export default /**
- * QuoteManager - Function description
+export default /**;
+ * QuoteManager - Function description;
  */
-function QuoteManager() {
-  const { user } = use_auth ();
+function QuoteManager() {}
+  const { user } = use_auth ();'
   const is_admin = user?.user_type === 'admin';
 ;
   const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
   const [show_details, setShowDetails] = useState (false);
 ;
-  const {
+  const {}
     quotes;
     is_loading;
     error;
@@ -445,6 +586,7 @@ function QuoteManager() {
     date_range;
     setDateRange;
   }
+<<<<<<< HEAD
   return (                    isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -475,14 +617,43 @@ function QuoteManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  return (
+
+            {/* Filters */}
+            <QuotesFilter;
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              statusFilter={statusFilter}
+              setStatusFilter={setStatusFilter}
+              archiveFilter={archiveFilter}
+              setArchiveFilter={setArchiveFilter}
+              dateRange={dateRange}
+              setDateRange={setDateRange}
+              onReset={handleResetFilters}
+
+            {/* Tabs for Active/Archived */}"
+            <Tabs defaultValue="active" className="mb-6">;"
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;"
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>;"
+                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
+              </TabsList>;
+
+                {/* Quotes Table */}"
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+                  <QuotesTable;
+                    quotes={quotes && quotes.filter(quote => !quote && quote.is_archived)}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
                   />;
                 </Card>;
               </TabsContent>;
@@ -505,6 +676,8 @@ function QuoteManager() {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
                   />;
                 </Card>;
@@ -514,25 +687,21 @@ function QuoteManager() {
         </div>;
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
                   />;
                 </Card>;
               </TabsContent>;
-                  <QuotesTable
+                  <QuotesTable;
                     quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
                     isArchived={true}
                   />
                 </Card>
-              </TabsContent>
-              <TabsContent value="archived">
+              </TabsContent>"
+              <TabsContent value="archived">"
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
-                  <QuotesTable
+                  <QuotesTable;
                     quotes={quotes.filter(quote => quote.is_archived)}
                     isArchived={true}
                     isLoading={isLoading}
@@ -560,6 +729,7 @@ function QuoteManager() {
             </Tabs>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -604,9 +774,19 @@ function QuoteManager() {
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
+=======
+
+
+
+        {/* Quote Details Modal */}
+        <QuoteDetails;
+          quote={selectedQuote}
+          isOpen={showDetails}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
             setSelectedQuote(null)
@@ -621,6 +801,9 @@ function QuoteManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }}
         />
         <Footer />
@@ -630,12 +813,16 @@ function QuoteManager() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
           onClose={() => {;
             setShowDetails(false);
@@ -645,43 +832,43 @@ function QuoteManager() {
   } = useAdminQuotes ();
 ;
   // Count quotes by status;
-  const status_counts = {
-    new: quotes.filter (q => q.status === 'new').length,
-    in_review: quotes.filter (q => q.status === 'in_review').length,
-    accepted: quotes.filter (q => q.status === 'accepted').length,
-    responded: quotes.filter (q => q.status === 'responded').length,
+  const status_counts = {'
+    new: quotes.filter (q => q.status === 'new').length,'
+    in_review: quotes.filter (q => q.status === 'in_review').length,'
+    accepted: quotes.filter (q => q.status === 'accepted').length,'
+    responded: quotes.filter (q => q.status === 'responded').length,'
     closed: quotes.filter (q => q.status === 'closed').length;
   }
 ;
-  const handleViewDetails = (quote: QuoteRequest) =>: any {
+  const handleViewDetails = (quote: QuoteRequest) =>: any {}
     setSelectedQuote (quote),
     setShowDetails (true);
   }
 ;
-  const handleResetFilters = () =>: any {
-    setStatusFilter ('all');
-    setArchiveFilter ('all');
+  const handleResetFilters = () =>: any {'
+    setStatusFilter ('all');'
+    setArchiveFilter ('all');'
     setSearchQuery ('');
     setDateRange ({ from: undefined, to: undefined });
   }
 ;
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}"
     return <Navigate to="/unauthorized" replace />;
   }
   return (
     <ProtectedRoute admin_only>;
       <div>;
-        <Header />;
-        <div className="min - h-screen bg - zion - blue px - 4 py - 8">;
-          <div className="container mx - auto">;
+        <Header />;"
+        <div className="min - h-screen bg - zion - blue px - 4 py - 8">;"
+          <div className="container mx - auto">;"
             <div className="flex flex - col md:flex - row justify - between items - start md:items - center mb - 8">;
-              <div>;
-                <h1 className="text - 3xl font - bold text - white mb - 2">Quote Request Manager</h1>;
+              <div>;"
+                <h1 className="text - 3xl font - bold text - white mb - 2">Quote Request Manager</h1>;"
                 <p className="text - zion - slate - light">Manage and respond to all talent hire requests</p>;
-              </div>;
+              </div>;"
               <ExportToCSV quotes={quotes} filename="zion - quote - requests" />;
             </div>;
             {/* Status Summary Cards */}
@@ -698,14 +885,14 @@ if ( {) {
               setDateRange={setDateRange}
               on_reset={handleResetFilters}
             />;
-            {/* Tabs for Active / Archived */}
-            <Tabs default_value="active" className="mb - 6">;
-              <TabsList className="bg - zion - blue - dark border border - zion - blue - light">;
-                <TabsTrigger value="active">Active Quotes</TabsTrigger>;
+            {/* Tabs for Active / Archived */}"
+            <Tabs default_value="active" className="mb - 6">;"
+              <TabsList className="bg - zion - blue - dark border border - zion - blue - light">;"
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>;"
                 <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
-              </TabsList>;
+              </TabsList>;"
               <TabsContent value="active">;
-                {/* Quotes Table */}
+                {/* Quotes Table */}"
                 <Card className="bg - zion - blue - dark border border - zion - blue - light overflow - hidden">;
                   <QuotesTable;
                     quotes={quotes.filter (quote => !quote.is_archived)}
@@ -716,8 +903,8 @@ if ( {) {
                     onViewDetails={handleViewDetails}
                   />;
                 </Card>;
-              </TabsContent>;
-              <TabsContent value="archived">;
+              </TabsContent>;"
+              <TabsContent value="archived">;"
                 <Card className="bg - zion - blue - dark border border - zion - blue - light overflow - hidden">;
                   <QuotesTable;
                     quotes={quotes.filter (quote => quote.is_archived)}
@@ -737,7 +924,7 @@ if ( {) {
         <QuoteDetails;
           quote={selected_quote}
           is_open={show_details}
-          on_close={() => {
+          on_close={() => {}
             setShowDetails (false);
             setSelectedQuote (null);
           }}
@@ -746,6 +933,7 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -838,3 +1026,9 @@ const [showDetails, setShowDetails] = useState (false);
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

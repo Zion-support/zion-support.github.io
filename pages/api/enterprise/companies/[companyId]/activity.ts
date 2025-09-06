@@ -1,35 +1,62 @@
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
+=======
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { store } from "../../../../../utils/data/enterpriseStore";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+export default function handler() { return null; }
   const { companyId } = req.query;
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
-  const company = store && store.getCompanyById(companyId);
+  const company = store && store.getCompanyById(companyId);"
   if (!company) return res && res.status(404).json({ error: "company_not_found" });
   return res && res.status(200).json(company && company.activity);
 }
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
+=======
+
+
+
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from './next';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { store  } from '../../../../../utils / data / enterprise_store';
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
-function handler() {
+function handler() {}
   const { company_id } = req.query;
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}"
     return res.status (400).json ({ error: "company_id required" });
   }
-  const company = store.getCompanyById (company_id);
-  if (return res.status (404).json ({ error: "company_not_found" })) {
-  $2
+  const company = store.getCompanyById (company_id);"
+  if (return res.status (404).json ({ error: "company_not_found" })) {}
+  $2;
 }
   return res.status (200).json (company.activity);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -48,25 +75,42 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
   } catch (error) {
     console.error("Error:", error);
+=======
+
+
+
+
+
+
+
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   const company = store.getCompanyById(companyId);
 
+
+
+
+
+'
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -87,3 +131,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

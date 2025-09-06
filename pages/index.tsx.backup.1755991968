@@ -1,8 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Hero from '../components/sections/Hero';
 import Features from '../components/sections/Features';
 import FuturisticCard, { ServiceCard, FeatureCard } from '../components/ui/FuturisticCard';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Button from '../components/ui/Button';
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
@@ -10,12 +14,16 @@ import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, Exter
 
 export default function HomePage() {
   const heroStats = [
+<<<<<<< HEAD
     { value: '200+', label: 'Real Micro SaaS Services', color: 'text-cyan-400' },
     { value: '99.9%', label: 'Uptime Guarantee', color: 'text-fuchsia-400' },
     { value: '21', label: 'Day Free Trials', color: 'text-blue-400' },
     { value: '24/7', label: 'AI Support', color: 'text-green-400' },
     { value: '$100M+', label: 'Market Value', color: 'text-yellow-400' },
     { value: '800%+', label: 'Average ROI', color: 'text-purple-400' },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const heroStats = marketStats;
@@ -27,8 +35,12 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     {
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: '200+ Real Micro SaaS Services',
@@ -62,6 +74,7 @@ export default function HomePage() {
       savings: 'Save 20% vs. competitors'
     },
     {
+<<<<<<< HEAD
       title: '🧬 Biotech AI Platform',
       description: 'AI-powered drug discovery and biotech research. Accelerate research with 800% ROI within 12 months.',
       price: 'Starting at $599/month',
@@ -93,11 +106,15 @@ export default function HomePage() {
         <meta name="keywords" content="zion tech group, micro saas, quantum AI, autonomous manufacturing, space technology, biotech AI, quantum cybersecurity, metaverse platform" />
         <meta property="og:title" content="Zion Tech Group - Revolutionary Micro SAAS Services & AI Solutions" />
         <meta property="og:description" content="150+ revolutionary micro SAAS services with quantum AI and cutting-edge technology. Achieve 500%+ ROI." />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -238,6 +255,9 @@ export default function HomePage() {
                     >
                       Learn More
                       <ExternalLink className="w-4 h-4 ml-2" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </Button>
                   </div>
                 </motion.div>
@@ -246,6 +266,7 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Contact Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -686,5 +707,8 @@ export default function HomePage() {
         </section>
       </div>
     </QuantumHolographicMatrixBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

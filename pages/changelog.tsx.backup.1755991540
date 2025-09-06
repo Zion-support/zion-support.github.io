@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 import type { GetServerSideProps } from 'next';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
@@ -23,4 +24,7 @@ export default function ChangelogPage({ content }: { content: string }) {
       </div>
     </EnhancedLayout>
   );
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

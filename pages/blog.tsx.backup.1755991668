@@ -5,6 +5,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 export default function BlogPage() {
 	return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -47,5 +48,12 @@ export default function BlogPage() {
 		</div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+				<link rel="canonical" href="https://ziontechgroup.com/blog" />
+				<meta name="description" content="Insights on AI, micro SaaS, IT, and quantum innovation." />
+			</Head>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	);
 }

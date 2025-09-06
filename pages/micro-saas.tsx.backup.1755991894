@@ -57,6 +57,7 @@ export default function MicroSaasPage() {
       bgColor: 'from-rose-500/10 to-rose-500/10'
     }
   ];
+<<<<<<< HEAD
   
   const microSaasServices = [
     {
@@ -987,6 +988,9 @@ export default function MicroSaasPage() {
       category: 'Energy & Utilities',
       realImplementation: true,
       techStack: ['OpenAI API', 'React', 'Node.js', 'Energy APIs', 'PostgreSQL']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   });
 
@@ -1007,6 +1011,7 @@ export default function MicroSaasPage() {
           <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
         </Head>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -1046,6 +1051,9 @@ export default function MicroSaasPage() {
             >
               View Pricing
             </Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
 
           {/* Quick Stats */}

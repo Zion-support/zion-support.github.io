@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -30,6 +31,9 @@ import {
   Target as TargetIcon, Atom as AtomIcon, Brain as BrainIcon, ArrowRight
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 
 // Import all service data
@@ -67,6 +71,7 @@ interface Service {
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   const serviceCategories = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -532,11 +537,15 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -602,6 +611,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
 };
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         {/* CTA Section */}
         <section className="px-4 py-16">

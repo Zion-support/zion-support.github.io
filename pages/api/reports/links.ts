@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
       const report = {
@@ -14,28 +15,38 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const p = path.join(
-  process.cwd()
-  'data'
-  'reports'
+  process.cwd()'
+  'data''
+  'reports''
   'links.json'
 );
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    try {;
+export default function handler() { return null; }
+  if (req.method === 'GET') {};
+    try {;'
       const data = fs.readFileSync(p, 'utf8');
       const links = JSON.parse(data);
       return res.status(200).json(links);
+<<<<<<< HEAD
     } catch (error) {
+=======
+
+    } catch (error) {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return res.status(500).json({ error: 'Failed to read links report' });
     }
-
+'
 const p = path.join(process.cwd(), 'datareportslinksweekly-links.json');
 
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (!fs.existsSync(p)) return res.status(200).json({});
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {}
+  try {};
+    if (!fs.existsSync(p)) return res.status(200).json({});'
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
+<<<<<<< HEAD
 =======
 import fs from 'fs';
 import path from 'path';
@@ -49,10 +60,22 @@ if (req.method === 'POST') {
     try {
       const { broken, external, internal } = req.body;
       const report = {
+=======
+  } catch (e: any) {'
+    res.status(500).json({ error: e?.message || 'Failed to read links' });
+  }'
+if (req.method === 'POST') {}
+    try {}
+      const { broken, external, internal } = req && req.body;
+      
+
+      const report = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         broken: broken |[]
         external: external |[]
         internal: internal |[]
         generatedAt: new Date().toISOString()
+<<<<<<< HEAD
       }
       fs.writeFileSync(p, JSON.stringify(report, null, 2));
       return res.status(201).json(report);
@@ -61,18 +84,26 @@ if (req.method === 'POST') {
     }
   }
 <<<<<<< HEAD
+=======
+    } catch (error) {'
+      return res && res.status(500).json({ error: 'Failed to update links report' });
+    }
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
-  res && res.setHeader('Allow', 'GET, POST');
+'
+  res && res.setHeader('Allow', 'GET, POST');'
   res && res.status(405).end('Method Not Allowed');
 
-    } catch (error) {
-    console.error("Error:", error);
+
+    } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -81,8 +112,16 @@ if (req.method === 'POST') {
 
 
 
+<<<<<<< HEAD
 =======
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 }
 >>>>>>> pr-12243
+=======
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

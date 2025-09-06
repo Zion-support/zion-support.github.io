@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 =======
 <<<<<<< HEAD
@@ -22,6 +23,20 @@ export function extractClientIp(req: NextApiRequest): string | null {;
   const ip = xff.split()[0]?.trim() || (req.headers['x-real-ip'] as string) || (req.socket?.remoteAddress ?? null);
   if (!ip) return null;
   if (ip.startsWith('::ffff: ')) return ip.substring(7);
+=======
+
+export function extractClientIp(req: NextApiRequest): string | null {};
+  const xff = (req.headers['x-forwarded-for'] as string) |'';
+
+export function extractClientIp(req: NextApiRequest): string | null {;'
+  const xff = (req.headers['x-forwarded-for'] as string) || '';
+  const ip ='
+    xff.split(',')[0]?.trim() |'
+    (req.headers['x-real-ip'] as string) |
+    (req.socket?.remoteAddress ?? null);
+  if (!ip) return null;'
+  if (ip.startsWith('::ffff:')) return ip.substring(7);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return ip;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,9 +46,9 @@ export function extractClientIp(req: NextApiRequest): string | null {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
-export function getClientIp(req: any): string {
-
+export function getClientIp(req: any): string {};
 export function getClientIp(req: any): string {;
+<<<<<<< HEAD
 
 =======
 
@@ -52,13 +67,21 @@ export function getClientIp(req: any): string {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
-  if (forwarded) {
+  if (forwarded) {'
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,6 +91,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -75,6 +103,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
   return remoteAddress |'unknown';
 <<<<<<< HEAD
@@ -84,34 +113,38 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
-  // Check IP reputation
-  async getIpReputation(ip: string): Promise<IpReputation | null> {
-    if (!this.isValidIp(ip)) {
+  // Check IP reputation;
+  async getIpReputation(ip: string): Promise<IpReputation | null> {}
+    if (!this.isValidIp(ip)) {}
       return null;
     }
 
-    // Check cache first
+    // Check cache first;
     const cached = this.cache.get(`reputation_${ip}`);
-    if (cached && Date.now() - cached.timestamp < this.cacheTimeout) {
+    if (cached && Date.now() - cached.timestamp < this.cacheTimeout) {}
       return cached.data;
     }
 
-    try {
-      // Mock reputation check - in production, integrate with real reputation services
+    try {}
+      // Mock reputation check - in production, integrate with real reputation services;
       const reputation = await this.checkMockReputation(ip);
       
-      // Cache the result
+      // Cache the result;`
       this.cache.set(`reputation_${ip}`, { data: reputation, timestamp: Date.now() });
       
       return reputation;
-    } catch (error) {
+    } catch (error) {'
       console.error('Error checking IP reputation:', error);
       return null;
     }
   }
 
+<<<<<<< HEAD
   private async checkMockReputation(ip: string): Promise<IpReputation> {
     // Mock reputation data - in production, integrate with real services
     const mockData = {
@@ -144,32 +177,12 @@ ursor/fix-website-loading-errors-and-merge-6662
         }
       }
     };
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    const data = mockData[ip as keyof typeof mockData] || {
-      reputation: 'neutral' as const,
-      score: 50,
-      sources: ['unknown'],
-      details: {
-        isProxy: Math.random() > 0.8,
-        isVpn: Math.random() > 0.9,
-        isTor: Math.random() > 0.95,
-        isBot: Math.random() > 0.7,
-        isSpam: Math.random() > 0.85,
-        isMalicious: Math.random() > 0.95,
-        isBlacklisted: Math.random() > 0.9
-      }
-    };
 
-    return {
-      ip,
-      reputation: data.reputation,
-      score: data.score,
-      sources: data.sources,
-      lastUpdated: new Date().toISOString(),
-      details: data.details
-    };
-  }
 
+<<<<<<< HEAD
   // Validate IP address
   isValidIp(ip: string): boolean {
     if (!ip || ip === 'unknown') return false;
@@ -307,3 +320,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -82,10 +82,11 @@ interface MobileChatViewProps {;
     id: string;
     name: string;
     avatar?: string;
-    status?: string
+    status?: string;
   },
   messages: Message[];
   onBack: () => void;
+<<<<<<< HEAD
   onSendMessage: (content: string) => void
 <<<<<<< HEAD
 =======
@@ -95,28 +96,35 @@ interface MobileChatViewProps {;
 import React, { useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
+=======
+  onSendMessage: (content: string) => void;
+'
+import React, { useState } from 'react';'
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';'
+import { Button } from '@/components / ui / button';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Input } from '@/components / ui / input';
-import {
+import {}
   Send,
   PaperclipIcon,
   ChevronLeft,
   MoreVertical,
   Video,
-  Phone,
-} from 'lucide-react';
-import { cn } from '@/lib / utils';
-import { use_router } from 'next / router';
+  Phone,';
+} from 'lucide-react';'
+import { cn } from '@/lib / utils';'
+import { use_router } from 'next / router';'
 import { toast } from 'sonner';
-interface Message {
+interface Message {}
   id: string;
   content: string;
   timestamp: string;
   is_me: boolean;
   sender?: string;
-  avatar?: string;
+  avatar?: string;'
   status?: 'sent' | 'delivered' | 'read';
-interface MobileChatViewProps {
-  contact: {
+interface MobileChatViewProps {}
+  contact: {}
     id: string;
     name: string;
     avatar?: string;
@@ -126,6 +134,7 @@ interface MobileChatViewProps {
   messages: Message[],;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -145,33 +154,45 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 =======
 =======
       onSendMessage (new_message);
+=======
+export /**;
+ * MobileChatView - Function description;
+ */
+function MobileChatView() { return null; }
+  const handle_send = () =>: any {}
+    // Check condition'
+if (!== '') {) {}
+  $2;
+}
+      onSendMessage (new_message);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setNewMessage ('');
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   }
-  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition
-if ( {) {
-  $2
+  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition;
+if ( {) {}
+  $2;
 }
       e.prevent_default ();
       handle_send ();
     }
 
-  const startVideoCall = () =>: any {
-    const room_id = `mobile-${contact.id}`;
-    toast.success ('Starting video call', {
+  const startVideoCall = () =>: any {}
+    const room_id = `mobile-${contact.id}`;'
+    toast.success ('Starting video call', {}`
       description: `Connecting with ${contact.name}...`,
     });
-    // Navigate to video call page;
+    // Navigate to video call page;`
     router.push (`/call/${room_id}`);
   }
-  const startAudioCall = () =>: any {
-    const room_id = `mobile - audio-${contact.id}`;
-    toast.success ('Starting audio call', {
+  const startAudioCall = () =>: any {}`
+    const room_id = `mobile - audio-${contact.id}`;'
+    toast.success ('Starting audio call', {}`
       description: `Connecting with ${contact.name}...`,
     });
-    // Navigate to video call page with audio - only flag;
+    // Navigate to video call page with audio - only flag;`
     router.push (`/call/${room_id}?audio_only = true`);
 
   }
@@ -180,13 +201,17 @@ export function MobileChatView(): any ({;
   messages,;
   onBack,;
   onSendMessage,;
-}: MobileChatViewProps) {;
+}: MobileChatViewProps) {;'
   const [newMessage, setNewMessage] = useState('');
   const router = useRouter();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const handleSend = () => {;
+=======
+  const handleSend = () => {;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (newMessage && newMessage.trim() !== '') {;
-      onSendMessage(newMessage);
+      onSendMessage(newMessage);'
       setNewMessage('');
     }
 <<<<<<< HEAD
@@ -196,7 +221,7 @@ export function MobileChatView(): any ({;
       e.preventDefault(),;
 =======
   };
-
+'
   const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
       e && e.preventDefault();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -206,6 +231,7 @@ export function MobileChatView(): any ({;
 =======
   };
 
+<<<<<<< HEAD
   const startVideoCall = () => {;
     const roomId = `mobile-${contact && contact.id}`;
     toast && toast.success('Starting video call', {,
@@ -225,6 +251,27 @@ export function MobileChatView(): any ({;
     // Navigate to video call page with audio-only flag;
     router && router.push(`/call/${roomId}?audioOnly=true`)
 };
+=======
+  const startVideoCall = () => {;`
+    const roomId = `mobile-${contact && contact.id}`;'
+    toast && toast.success('Starting video call', {;`
+      description: `Connecting with ${contact && contact.name}...`,;
+    });
+
+    // Navigate to video call page;`
+    router && router.push(`/call/${roomId}`);
+  };
+
+  const startAudioCall = () => {;`
+    const roomId = `mobile-audio-${contact && contact.id}`;'
+    toast && toast.success('Starting audio call', {;`
+      description: `Connecting with ${contact && contact.name}...`,;
+    });
+
+    // Navigate to video call page with audio-only flag;`
+    router && router.push(`/call/${roomId}?audioOnly=true`);
+  };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
 
@@ -234,27 +281,28 @@ export function MobileChatView(): any ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
   
-  const startVideoCall = () => {
+  const startVideoCall = () => {}`
     const roomId = `mobile-${contact.id}`,
-    toast.success("Starting video call", {
+    toast.success("Starting video call", {}`
       description: `Connecting with ${contact.name}...`
     }),
     
-    // Navigate to video call page
+    // Navigate to video call page;`
     router.push(`/call/${roomId}`)
   },
   
-  const startAudioCall = () => {
-    const roomId = `mobile-audio-${contact.id}`,
-    toast.success("Starting audio call", {
+  const startAudioCall = () => {}`
+    const roomId = `mobile-audio-${contact.id}`,"
+    toast.success("Starting audio call", {}`
       description: `Connecting with ${contact.name}...`
     }),
     
-    // Navigate to video call page with audio-only flag
+    // Navigate to video call page with audio-only flag;`
     router.push(`/call/${roomId}?audioOnly=true`)
   },
   
 
+<<<<<<< HEAD
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -265,13 +313,23 @@ export function MobileChatView(): any ({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             variant="ghost"
+=======
+
+  return ("
+    <div className="flex flex-col h-full pb-safe">"
+      <header className="sticky top-0 z-10 bg-background border-b border-border">"
+        <div className="flex items-center h-14 px-4">
+          <Button;
+"
+            variant="ghost""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             size="icon"
-            onClick={onBack}
+            onClick={onBack}"
             aria-label="Go back"
-          >
+          >"
             <ChevronLeft className="h-5 w-5" />
           </Button>
-          
+          "
           <div className="flex items-center flex-1 gap-3 mx-2">
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
@@ -281,12 +339,17 @@ export function MobileChatView(): any ({;
             </Avatar>
             <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
             aria-label='Go back'>;
+=======
+'
+            aria-label='Go back'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <ChevronLeft className='h-5 w-5' />;
           </Button>;
-
+'
           <div className='flex items-center flex-1 gap-3 mx-2'>;
             <Avatar>;
               <AvatarImage src={contact && contact.avatar} alt={contact && contact.name} />;
@@ -294,25 +357,26 @@ export function MobileChatView(): any ({;
                 {contact && contact.name.charAt(0).toUpperCase()}
               </AvatarFallback>;
             </Avatar>;
-            <div>;
-              <h3 className='font-medium'>{contact && contact.name}</h3>;
-              <p className='text-xs text-muted-foreground'>;
+            <div>;'
+              <h3 className='font-medium'>{contact && contact.name}</h3>;'
+              <p className='text-xs text-muted-foreground'>;'
                 {contact && contact.status || 'Online'}
               </p>;
             </div>;
           </div>;
-
+'
           <div className='flex'>;
 
-            <Button
-              variant='ghost'
+            <Button'
+              variant='ghost''
               size='icon'
               onClick={startAudioCall}
-
-              aria-label='Start audio call'>;
+'
+              aria-label='Start audio call'>;'
               <Phone className='h-5 w-5' />;
             </Button>;
 
+<<<<<<< HEAD
             <Button
               variant='ghost'
               size='icon'
@@ -328,6 +392,17 @@ export function MobileChatView(): any ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground">
+=======
+
+            <Button'
+              variant='ghost''
+              size='icon'
+              onClick={startVideoCall}
+
+"
+              <h3 className="font-medium">{contact.name}</h3>"
+              <p className="text-xs text-muted-foreground">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {contact.status || "Online"}
               </p>
             </div>
@@ -370,6 +445,7 @@ export function MobileChatView(): any ({;
         </div>
       </header>
 <<<<<<< HEAD
+<<<<<<< HEAD
       
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (
@@ -384,21 +460,25 @@ export function MobileChatView(): any ({;
 =======
 
               aria-label='Start video call'>;
+=======
+'
+              aria-label='Start video call'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Video className='h-5 w-5' />;
             </Button>;
-
-            <Button variant='ghost' size='icon' aria-label='More options'>;
-              <MoreVertical className='h-5 w-5' />;
-    <div className='flex flex - col h - full pb - safe'>;
-      <header className='sticky top - 0 z - 10 bg - background border - b border - border'>;
+'
+            <Button variant='ghost' size='icon' aria-label='More options'>;'
+              <MoreVertical className='h-5 w-5' />;'
+    <div className='flex flex - col h - full pb - safe'>;'
+      <header className='sticky top - 0 z - 10 bg - background border - b border - border'>;'
         <div className='flex items - center h - 14 px - 4'>;
-          <Button;
-            variant='ghost';
+          <Button;'
+            variant='ghost';'
             size='icon';
-            on_click={on_back}
-            aria - label='Go back'          >;
+            on_click={on_back}'
+            aria - label='Go back'          >;'
             <ChevronLeft className='h - 5 w - 5' />;
-          </Button>;
+          </Button>;'
           <div className='flex items - center flex - 1 gap - 3 mx - 2'>;
             <Avatar>;
               <AvatarImage src={contact.avatar} alt={contact.name} />;
@@ -406,39 +486,40 @@ export function MobileChatView(): any ({;
                 {contact.name.char_at (0).toUpperCase ()}
               </AvatarFallback>;
             </Avatar>;
-            <div>;
-              <h3 className='font - medium'>{contact.name}</h3>;
-              <p className='text - xs text - muted - foreground'>;
+            <div>;'
+              <h3 className='font - medium'>{contact.name}</h3>;'
+              <p className='text - xs text - muted - foreground'>;'
                 {contact.status || 'Online'}
               </p>;
             </div>;
-          </div>;
+          </div>;'
           <div className='flex'>;
-            <Button;
-              variant='ghost';
+            <Button;'
+              variant='ghost';'
               size='icon';
-              on_click={startAudioCall}
-              aria - label='Start audio call'            >;
+              on_click={startAudioCall}'
+              aria - label='Start audio call'            >;'
               <Phone className='h - 5 w - 5' />;
             </Button>;
-            <Button;
-              variant='ghost';
+            <Button;'
+              variant='ghost';'
               size='icon';
-              on_click={startVideoCall}
-              aria - label='Start video call'            >;
+              on_click={startVideoCall}'
+              aria - label='Start video call'            >;'
               <Video className='h - 5 w - 5' />;
-            </Button>;
-            <Button variant='ghost' size='icon' aria - label='More options'>;
+            </Button>;'
+            <Button variant='ghost' size='icon' aria - label='More options'>;'
               <MoreVertical className='h - 5 w - 5' />;
 
             </Button>;
           </div>;
         </div>;
       </header>;
-
-              'flex',
+'
+              'flex','
               message && message.isMe ? 'justify-end' : 'justify-start'
             )}>;
+<<<<<<< HEAD
             <div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className={cn(
@@ -452,37 +533,50 @@ export function MobileChatView(): any ({;
 <<<<<<< HEAD
 =======
               <div
+=======
+            <div;
+              className={cn('
+                'max-w-[80%] rounded-2xl px-4 py-2',
+                message && message.isMe;
+'
+                  ? 'bg-primary text-primary-foreground rounded-tr-none''
+                  : 'bg-muted rounded-tl-none'
+              )}            >
+              <p>{message.content}</p>
+              <div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className={cn(
-
+'
                   'text-xs mt-1 flex justify-end',
-                  message && message.isMe
-
-                    ? 'text-primary-foreground/80'
+                  message && message.isMe;
+'
+                    ? 'text-primary-foreground/80''
                     : 'text-muted-foreground'
                 )}
-
+'
       <div className='flex - 1 overflow - y-auto p - 4 space - y-4'>;
         {messages.map (message => (
 
-      
+      "
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (
-          <div 
+          <div;
             key={message.id} 
-            className={cn(
-              "flex",
+            className={cn("
+              "flex","
               message.isMe ? "justify-end" : "justify-start"
             )}
           >
-            <div 
-              className={cn(
+            <div;
+              className={cn("
                 "max-w-[80%] rounded-2xl px-4 py-2",
-                message.isMe 
-                  ? "bg-primary text-primary-foreground rounded-tr-none" 
+                message.isMe "
+                  ? "bg-primary text-primary-foreground rounded-tr-none" "
                   : "bg-muted rounded-tl-none"
               )}
             >
               <p>{message.content}</p>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className={cn(
                 "text-xs mt-1 flex justify-end",
@@ -493,65 +587,83 @@ export function MobileChatView(): any ({;
     const roomId = `mobile-${contact.id}`,;
     toast.success("Starting video call", {,
   description: `Connecting with ${contact.name}...`;
+=======
+              <div className={cn("
+                "text-xs mt-1 flex justify-end","
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
+  },;
+  const startVideoCall = () => {;`
+    const roomId = `mobile-${contact.id}`,;"
+    toast.success("Starting video call", {;`
+      description: `Connecting with ${contact.name}...`;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }),;
-    // Navigate to video call page;
+    // Navigate to video call page;`
     router.push(`/call/${roomId}`);
   },;
+<<<<<<< HEAD
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact.id}`,;
     toast.success("Starting audio call", {,
   description: `Connecting with ${contact.name}...`;
+=======
+  const startAudioCall = () => {;`
+    const roomId = `mobile-audio-${contact.id}`,;"
+    toast.success("Starting audio call", {;`
+      description: `Connecting with ${contact.name}...`;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }),;
-    // Navigate to video call page with audio-only flag;
+    // Navigate to video call page with audio-only flag;`
     router.push(`/call/${roomId}?audioOnly=true`);
   },;
-  return (;
-    <div className="flex flex-col h-full pb-safe">;
-      <header className="sticky top-0 z-10 bg-background border-b border-border">;
+  return (;"
+    <div className="flex flex-col h-full pb-safe">;"
+      <header className="sticky top-0 z-10 bg-background border-b border-border">;"
         <div className="flex items-center h-14 px-4">;
-          <Button;
-            variant="ghost";
+          <Button;"
+            variant="ghost";"
             size="icon";
-            onClick={onBack}
+            onClick={onBack}"
             aria-label="Go back";
-          >;
+          >;"
             <ChevronLeft className="h-5 w-5" />;
-          </Button>;
+          </Button>;"
           <div className="flex items-center flex-1 gap-3 mx-2">;
             <Avatar>;
               <AvatarImage src={contact.avatar} alt={contact.name} />;
               <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>;
             </Avatar>;
-            <div>;
-              <h3 className="font-medium">{contact.name}</h3>;
-              <p className="text-xs text-muted-foreground">;
+            <div>;"
+              <h3 className="font-medium">{contact.name}</h3>;"
+              <p className="text-xs text-muted-foreground">;"
                 {contact.status || "Online"}
               </p>;
             </div>;
-          </div>;
+          </div>;"
           <div className="flex">;
-            <Button;
-              variant="ghost";
+            <Button;"
+              variant="ghost";"
               size="icon";
-              onClick={startAudioCall}
+              onClick={startAudioCall}"
               aria-label="Start audio call";
-            >;
+            >;"
               <Phone className="h-5 w-5" />;
             </Button>;
-            <Button;
-              variant="ghost";
+            <Button;"
+              variant="ghost";"
               size="icon";
-              onClick={startVideoCall}
+              onClick={startVideoCall}"
               aria-label="Start video call";
-            >;
+            >;"
               <Video className="h-5 w-5" />;
-            </Button>;
-            <Button variant="ghost" size="icon" aria-label="More options">;
+            </Button>;"
+            <Button variant="ghost" size="icon" aria-label="More options">;"
               <MoreVertical className="h-5 w-5" />;
             </Button>;
           </div>;
         </div>;
-      </header>;
+      </header>;"
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
         {messages.map((message) => (;
 <<<<<<< HEAD
@@ -559,6 +671,7 @@ export function MobileChatView(): any ({;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div;
+<<<<<<< HEAD
             key={message.id}
             className={cn (
               'flex',
@@ -570,6 +683,22 @@ export function MobileChatView(): any ({;
                 message.is_me;
                   ? 'bg - primary text - primary - foreground rounded - tr - none';
                   : 'bg - muted rounded - tl - none')}            >;
+=======
+            key={message.id} ;
+            className={cn(;"
+              "flex",;"
+              message.isMe ? "justify-end" : "justify-start";
+            )}
+          >;
+            <div;
+              className={cn(;"
+                "max-w-[80%] rounded-2xl px-4 py-2";
+                message.isMe;"
+                  ? "bg-primary text-primary-foreground rounded-tr-none";"
+                  : "bg-muted rounded-tl-none";
+              )}
+            >;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p>{message.content}</p>;
 <<<<<<< HEAD
               <div className={cn(;
@@ -581,10 +710,10 @@ export function MobileChatView(): any ({;
                   <span className="ml-1">;
 =======
               <div;
-                className={cn (
+                className={cn ('
                   'text - xs mt - 1 flex justify - end',
-                  message.is_me;
-                    ? 'text - primary - foreground / 80';
+                  message.is_me;'
+                    ? 'text - primary - foreground / 80';'
                     : 'text - muted - foreground')}
               >;
 =======
@@ -598,9 +727,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 {message.timestamp}
 
-                {message.isMe && message.status && (;
+                {message.isMe && message.status && (;"
                   <span className="ml-1">;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -609,6 +739,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>;
                 )}
@@ -620,47 +753,47 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       </div>
 =======
 
-      
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" aria-label="Attach file">
+      "
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">"
+        <div className="flex items-center gap-2">"
+          <Button variant="ghost" size="icon" aria-label="Attach file">"
             <PaperclipIcon className="h-5 w-5" />
 
           </Button>
-          <Input
+          <Input;
             value={newMessage}
 
             onChange={e => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder='Type a message...'
+            onKeyDown={handleKeyDown}'
+            placeholder='Type a message...''
             className='flex-1'          />
 
-          <Button
+          <Button'
             size='icon'
             onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'          >
+            disabled={!newMessage.trim()}'
+            className={!newMessage.trim() ? 'opacity-50' : ''}'
+            aria-label='Send message'          >'
             <Send className='h-5 w-5' />
-      
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" aria-label="Attach file">
+      "
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">"
+        <div className="flex items-center gap-2">"
+          <Button variant="ghost" size="icon" aria-label="Attach file">"
             <PaperclipIcon className="h-5 w-5" />
           </Button>
-          <Input
+          <Input;
             value={newMessage}
             onChange={e => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder='Type a message...'
+            onKeyDown={handleKeyDown}'
+            placeholder='Type a message...''
             className='flex-1'          />
 
-          <Button
+          <Button'
             size='icon'
             onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'          >
+            disabled={!newMessage.trim()}'
+            className={!newMessage.trim() ? 'opacity-50' : ''}'
+            aria-label='Send message'          >'
             <Send className='h-5 w-5' />
           </Button>
         </div>
@@ -670,29 +803,36 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 };
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" aria-label="Attach file">
+=======
+      "
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">"
+        <div className="flex items-center gap-2">"
+          <Button variant="ghost" size="icon" aria-label="Attach file">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <PaperclipIcon className="h-5 w-5" />
           </Button>
           
-          <Input
+          <Input;
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Type a message..."
+            onKeyDown={handleKeyDown}"
+            placeholder="Type a message...""
             className="flex-1"
           />
           
-          <Button
+          <Button"
             size="icon"
             onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? "opacity-50" : ""}
+            disabled={!newMessage.trim()}"
+            className={!newMessage.trim() ? "opacity-50" : ""}"
             aria-label="Send message"
-          >
+          >"
             <Send className="h-5 w-5" />
           </Button>
         </div>
@@ -700,23 +840,23 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 =======
 
       </div>;
-
-      <div className='sticky bottom-0 bg-background border-t border-border p-2'>;
-        <div className='flex items-center gap-2'>;
-          <Button variant='ghost' size='icon' aria-label='Attach file'>;
+'
+      <div className='sticky bottom-0 bg-background border-t border-border p-2'>;'
+        <div className='flex items-center gap-2'>;'
+          <Button variant='ghost' size='icon' aria-label='Attach file'>;'
             <PaperclipIcon className='h-5 w-5' />;
           </Button>;
 
-          <Input
+          <Input;
             value={newMessage}
 
             onChange={(e) => setNewMessage(e.target.value)}
 
             onKeyDown={handleKeyDown}
-
-            className={!newMessage.trim() ? "opacity-50" : ""}
+"
+            className={!newMessage.trim() ? "opacity-50" : ""}"
             aria-label="Send message"
-          >
+          >"
             <Send className="h-5 w-5" />
 
           </Button>
@@ -726,16 +866,16 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     </div>
 <<<<<<< HEAD
   )
-
-            placeholder='Type a message...';
+'
+            placeholder='Type a message...';'
             className='flex-1'          />;
 
-          <Button
+          <Button'
             size='icon'
             onClick={handleSend}
-            disabled={!newMessage && newMessage.trim()}
-            className={!newMessage && newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'>;
+            disabled={!newMessage && newMessage.trim()}'
+            className={!newMessage && newMessage.trim() ? 'opacity-50' : ''}'
+            aria-label='Send message'>;'
             <Send className='h-5 w-5' />;
           </Button>;
         </div>;
@@ -750,24 +890,24 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               </div>;
             </div>;
           </div>))}
-      </div>;
-      <div className='sticky bottom - 0 bg - background border - t border - border p - 2'>;
-        <div className='flex items - center gap - 2'>;
-          <Button variant='ghost' size='icon' aria - label='Attach file'>;
+      </div>;'
+      <div className='sticky bottom - 0 bg - background border - t border - border p - 2'>;'
+        <div className='flex items - center gap - 2'>;'
+          <Button variant='ghost' size='icon' aria - label='Attach file'>;'
             <PaperclipIcon className='h - 5 w - 5' />;
           </Button>;
           <Input;
             value={new_message}
             on_change={e => setNewMessage (e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder='Type a message...';
+            onKeyDown={handleKeyDown}'
+            placeholder='Type a message...';'
             className='flex - 1'          />;
-          <Button;
+          <Button;'
             size='icon';
             on_click={handle_send}
-            disabled={!new_message.trim ()}
-            className={!new_message.trim () ? 'opacity - 50' : ''}
-            aria - label='Send message'          >;
+            disabled={!new_message.trim ()}'
+            className={!new_message.trim () ? 'opacity - 50' : ''}'
+            aria - label='Send message'          >;'
             <Send className='h - 5 w - 5' />;
           </Button>;
         </div>;
@@ -777,6 +917,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 =======
@@ -785,3 +926,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

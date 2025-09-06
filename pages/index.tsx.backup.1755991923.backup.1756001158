@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { 
   Shield, Rocket, Clock, DollarSign, TrendingUp, Brain, Factory, Globe, 
   Zap, Link, Building2, FlaskConical, Leaf, Car, Truck, Microscope, 
@@ -102,6 +103,9 @@ export default function HomePage() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b289
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991923.backup.1756001158
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   // Get featured services from the enhanced data
   const revolutionaryServices = enhancedRealMicroSaasServices
@@ -299,6 +303,7 @@ export default function HomePage() {
       rating: 4.8,
       reviews: 89
     },
+<<<<<<< HEAD
     {
       id: 'quantum-financial-trading',
       name: '💰 Quantum Financial Trading Platform',
@@ -337,6 +342,9 @@ export default function HomePage() {
       rating: 4.9,
       reviews: 56
     }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const testimonials = [
@@ -434,6 +442,7 @@ export default function HomePage() {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-black/90 text-white relative">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -450,6 +459,9 @@ export default function HomePage() {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 1, delay: 0.2 }}
                   className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-full mb-4"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   <Atom className="w-12 h-12 text-white" />
                 </motion.div>
@@ -710,6 +722,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/30 rounded-3xl p-12 relative overflow-hidden"
             >
+<<<<<<< HEAD
               {/* Animated background elements */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-cyan-500/5 animate-pulse" />
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-400" />
@@ -721,6 +734,9 @@ export default function HomePage() {
                   transition={{ duration: 1 }}
                   viewport={{ once: true }}
                   className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   <Rocket className="w-10 h-10 text-white" />
                 </motion.div>
@@ -752,8 +768,12 @@ export default function HomePage() {
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

@@ -105,6 +105,7 @@ export default PerformanceMonitor;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React from 'react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -167,3 +168,9 @@ import React from 'react';
 
 export default PerformanceMonitor;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+import React from 'react';
+;
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

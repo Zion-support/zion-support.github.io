@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -89,17 +90,21 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Education } from "@/types/resume";
+=======
+import { Education } from "@/types/resume";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { EducationItem } from "./EducationItem";
-interface EducationListProps {
+interface EducationListProps {}
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
 }
 
-export function EducationList({
+export function EducationList({}
   educationEntries,
   onEdit,
   onDelete,
+<<<<<<< HEAD
 }: EducationListProps) {
   if (!educationEntries || educationEntries.length === 0) {
 <<<<<<< HEAD
@@ -107,6 +112,10 @@ export function EducationList({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+}: EducationListProps) {}
+  if (!educationEntries || educationEntries.length === 0) {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return null;
   }
 
@@ -114,10 +123,11 @@ export function EducationList({
 
 
 
-  return (
-    <div className="space-y-4">
+  return ("
+    <div className="space-y-4">"
       <h3 className="text-md font-medium">Added Education</h3>
       {educationEntries.map((edu) => (
+<<<<<<< HEAD
         <EducationItem
 <<<<<<< HEAD
           key={edu && edu.id} 
@@ -192,6 +202,9 @@ if ( {) {
       <h3 className="text-md font-medium">Added Education</h3>
       {educationEntries.map((edu) => (
         <EducationItem
+=======
+        <EducationItem;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           key={edu.id}
           education={edu}
           onEdit={onEdit}
@@ -204,6 +217,7 @@ if ( {) {
 ;
 
 
+<<<<<<< HEAD
 =======
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
@@ -256,3 +270,8 @@ if ( {) {
 }
 ;
 
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { SkillsForm as SkillsFormComponent  } from './skills';
 import { SkillsFormProps } from './skills/types';
@@ -58,11 +59,15 @@ export function SkillsForm(props: SkillsFormProps) {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { SkillsForm, as, SkillsFormComponent } from "./skills";
+=======
+import { SkillsForm, as, SkillsFormComponent } from "./skills";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { SkillsFormProps } from "./skills/types";
-export function SkillsForm(props: SkillsFormProps) {
+export function SkillsForm(props: SkillsFormProps) {};
   return <SkillsFormComponent {...props} />;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { SkillsForm as SkillsFormComponent } from './skills',;
@@ -103,10 +108,16 @@ export function SkillsForm(props: SkillsFormProps) {;
   return <SkillsFormComponent {...props} />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 }
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -139,3 +150,9 @@ export function SkillsForm(props: SkillsFormProps) {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

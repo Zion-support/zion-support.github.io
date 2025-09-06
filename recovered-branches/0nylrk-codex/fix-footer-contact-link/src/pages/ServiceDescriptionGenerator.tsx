@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -91,14 +92,41 @@ import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceDescriptionGenerator() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+import React, { useState } from "react";"
+import {Header} from "@/components/Header";"
+import {Footer} from "@/components/Footer";"
+import {ServiceDescriptionForm} from "@/components/services/ServiceDescriptionForm";"
+import {GeneratedDescriptionDisplay} from "@/components/services/GeneratedDescriptionDisplay";"
+import {SEO} from "@/components/SEO";"
+import {useAuth} from "@/hooks/useAuth";"
+import {Navigate} from "react-router-dom";
+export default function ServiceDescriptionGenerator() { return null; }
   const { isAuthenticated, isLoading } = useAuth();
 
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
-import { useAuth } from "@/hooks/useAuth",
+"
+import React, { useState } from "react","
+import { Header } from "@/components/Header","
+import { Footer } from "@/components/Footer","
+import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm","
+import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay","
+import { SEO } from "@/components/SEO",";
+import { useAuth } from "@/hooks/useAuth";"
+import { Navigate } from "react-router-dom";
+export default function ServiceDescriptionGenerator() {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  const { isAuthenticated, isLoading } = useAuth();
+
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);"
+import { useAuth } from "@/hooks/useAuth","
 import { Navigate } from "react-router-dom",
-export default function ServiceDescriptionGenerator() {
+export default function ServiceDescriptionGenerator() {}
   const { isAuthenticated, isLoading } = useAuth(),
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -118,18 +146,27 @@ export default function ServiceDescriptionGenerator() {;  if (isLoading) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
+=======
+  ;
+;
+  // Show loading while checking authentication;
+  if (isLoading) {}
+    return ("
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="animate-pulse text-zion-purple text-lg">
           Loading...
         </div>
       </div>
     )
   }
-  // Redirect to login if not authenticated
-  if (!isAuthenticated) {
+  // Redirect to login if not authenticated;
+  if (!isAuthenticated) {"
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />
   }
-  const handleDescriptionSave = (editedDescription: string) => {
+  const handleDescriptionSave = (editedDescription: string) => {}
     setGeneratedDescription(editedDescription)
+<<<<<<< HEAD
     // Here you could also save to database if needed
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,22 +188,27 @@ export default function ServiceDescriptionGenerator() {;  if (isLoading) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
+=======
+    // Here you could also save to database if needed;
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="min-h-screen flex flex-col bg-zion-blue">
-      <SEO
-        title="Service Description Generator"
-        description="Generate professional service descriptions using AI"
+      <SEO"
+        title="Service Description Generator""
+        description="Generate professional service descriptions using AI""
         keywords="service description, AI content, professional description generator"
       />
-      <Header />
-      <main className="flex-1 p-6 md:p-10">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-white mb-2">Service Description Generator</h1>
+      <Header />"
+      <main className="flex-1 p-6 md:p-10">"
+        <div className="max-w-4xl mx-auto">"
+          <h1 className="text-3xl font-bold text-white mb-2">Service Description Generator</h1>"
           <p className="text-zion-slate mb-8">
             Create professional service descriptions with the help of AI. Just provide basic details about your service.
-          </p>
+          </p>"
           <div className="space-y-8">
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -185,10 +227,21 @@ import { ServiceDescriptionForm } from "@/components/services/ServiceDescription
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",;
 import { SEO } from "@/components/SEO",;
 import { useAuth } from "@/hooks/useAuth",;
+=======
+"
+import React, { useState } from "react",;"
+import { Header } from "@/components/Header",;"
+import { Footer } from "@/components/Footer",;"
+import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",;"
+import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",;"
+import { SEO } from "@/components/SEO",;"
+import { useAuth } from "@/hooks/useAuth",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Navigate } from "react-router-dom",;
-export default function ServiceDescriptionGenerator() {;
+export default function ServiceDescriptionGenerator() { return null; }
   const { isAuthenticated, isLoading } = useAuth(),;
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -207,11 +260,21 @@ export default function ServiceDescriptionGenerator() {;
   if (isLoading) {;
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+=======
+
+
+  // Show loading while checking authentication;
+  if (isLoading) {;
+    return (
+"
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="animate-pulse text-zion-purple text-lg">;
           Loading...;
         </div>;
       </div>;
     );
+<<<<<<< HEAD
   }  // Redirect to login if not authenticated;
   if (!isAuthenticated) {;
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
@@ -232,10 +295,29 @@ export default function ServiceDescriptionGenerator() {;
       <main className="flex-1 p-6 md:p-10">;
         <div className="max-w-4xl mx-auto">;
           <h1 className="text-3xl font-bold text-white mb-2">Service Description Generator</h1>;
+=======
+  }
+
+
+
+  // Redirect to login if not authenticated;
+  if (!isAuthenticated) {;'"
+    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
+  }
+
+
+
+      />;
+      <Header />;"
+      <main className="flex-1 p-6 md:p-10">;"
+        <div className="max-w-4xl mx-auto">;"
+          <h1 className="text-3xl font-bold text-white mb-2">Service Description Generator</h1>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <p className="text-zion-slate mb-8">;
             Create professional service descriptions with the help of AI. Just provide basic details about your service.;
           </p>;
 
+<<<<<<< HEAD
           <div className="space-y-8">;
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
 
@@ -252,111 +334,43 @@ export default function ServiceDescriptionGenerator() {;
 =======
   const { isAuthenticated, isLoading } = useAuth();
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
-              <GeneratedDescriptionDisplay
-<<<<<<< HEAD
-=======
-
-              <GeneratedDescriptionDisplay 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-              <GeneratedDescriptionDisplay
-
-              <GeneratedDescriptionDisplay 
-
-              <GeneratedDescriptionDisplay
-          ;
+              <GeneratedDescriptionDisplay;
+              <GeneratedDescriptionDisplay;
+              <GeneratedDescriptionDisplay;
+              <GeneratedDescriptionDisplay;
+          ;"
           <div className="space-y-8">;
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
             ;
             {generatedDescription && (;
               <GeneratedDescriptionDisplay ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
               />;
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-import React, { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { ServiceDescriptionForm } from '@/components / services / ServiceDescriptionForm';
-import { GeneratedDescriptionDisplay } from '@/components / services / GeneratedDescriptionDisplay';
-import { SEO } from '@/components / SEO';
-import { use_auth } from '@/hooks / use_auth';
-import { Navigate } from './react-router-dom';
-export default /**
- * ServiceDescriptionGenerator - Function description
- */
-function ServiceDescriptionGenerator() {
-  const { is_authenticated, is_loading } = use_auth ();
-  const [generated_description, setGeneratedDescription] = useState < string | null>(null);
-;
-  // Show loading while checking authentication;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="flex justify - center items - center min - h-screen bg - zion - blue">;
-        <div className="animate - pulse text - zion - purple text - lg">;
-          Loading...;
-        </div>;
-      </div>);
-  }
-  // Redirect to login if not authenticated;
-  // Check condition
-if ( {) {
-  $2
-}
-    return <Navigate to="/login" state={{ from: '/service - description - generator' }} replace />;
-  }
-  const handleDescriptionSave = (edited_description: string) =>: any {
-    setGeneratedDescription (edited_description),
-    // Here you could also save to database if needed;
-  }
-;
-  return (
-    <div className="min - h-screen flex flex - col bg - zion - blue">;
-      <SEO;
-        title="Service Description Generator";
-        description="Generate professional service descriptions using AI";
-        keywords="service description, AI content, professional description generator";
-      />;
-      <Header />;
-      <main className="flex - 1 p - 6 md:p - 10">;
-        <div className="max - w-4xl mx - auto">;
-          <h1 className="text - 3xl font - bold text - white mb - 2">Service Description Generator</h1>;
-          <p className="text - zion - slate mb - 8">;
-            Create professional service descriptions with the help of AI. Just provide basic details about your service.;
-          </p>;
-          <div className="space - y-8">;
-            <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
-            {generated_description && (
-              <GeneratedDescriptionDisplay;
-                description={generated_description}
-                on_save={handleDescriptionSave}
-              />)}
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
         </div>;
       </main>;
       <Footer />;
+
+
 <<<<<<< HEAD
-
-    </div>);
-}
-
 =======
     </div>;
   ),;}
@@ -407,3 +421,7 @@ min-h-screen flex flex-col bg-zion-blue"> <SEO title=" Service Description Gener
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
               <GeneratedDescriptionDisplay
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

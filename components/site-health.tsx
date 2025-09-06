@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 export default function SiteHealth() {
 
   return (
@@ -30,6 +31,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <a
               href='/site-health'
               target='_blank'
+=======
+
+export default function SiteHealth() {}
+  return (
+          <div className="hidden gap-6 md:flex text-white/80">"
+            <Link href="/"><a>Home</a></Link>"
+            <Link href="/automation"><a>Automations</a></Link>"
+            <Link href="/reports/seo"><a>SEO Audit</a></Link>"
+            <Link href="/reports/ai-trends"><a>AI Trends</a></Link>;
+            <a;
+              href='/site-health''
+              target='_blank''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               rel='noopener'
               className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
             >
@@ -78,6 +92,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>
         </section>
+<<<<<<< HEAD
 
 <section className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -120,25 +135,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 rel='noopener'
         <section className='mx - auto max - w-7xl px - 6 pb - 24'>;
           <div className='animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl'>;
+=======
+              <a'
+                href='/site-health''
+                target='_blank''
+                rel='noopener''
+        <section className='mx - auto max - w-7xl px - 6 pb - 24'>;'
+          <div className='animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h3 className='text - 2xl font - bold'>;
               Keep quality high — continuously;
-            </h3>;
+            </h3>;'
             <p className='mx - auto mt - 2 max - w-2xl text - white / 80'>;
               Automations enforce guardrails and publish transparent artifacts;
               for every run.;
-            </p>;
-            <div className='mt - 6 flex flex - wrap justify - center gap - 3'>;
-              <Link href='/automation'>;
+            </p>;'
+            <div className='mt - 6 flex flex - wrap justify - center gap - 3'>;'
+              <Link href='/automation'>;'
                 <a className='rounded - xl bg - white / 90 px - 6 py - 3 font - semibold text - slate - 900 hover:bg - white'>;
                   Get Started;
                 </a>;
               </Link>;
-              <a;
-                href='/site - health';
-                target='_blank';
-                rel='noopener';
+              <a;'
+                href='/site - health';'
+                target='_blank';'
+                rel='noopener';'
                 className='rounded - xl border border - white / 20 bg - white / 5 px - 6 py - 3 font - semibold backdrop - blur - md hover:bg - white / 10';
               >;
+<<<<<<< HEAD
                 View Pipelines;
               </a>            </div>        <section className="mx - auto max - w-7xl px-6 pb-24">;
           <div className="animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop-blur-xl">;
@@ -147,6 +171,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="mt - 6 flex flex - wrap justify-center gap-3">;
               <Link href="/automation"><a className="rounded - xl bg - white / 90 px - 6 py - 3 font - semibold text - slate-900 hover:bg-white">Get Started</a></Link>;
               <a href="/site - health" target="_blank" rel="noopener" className="rounded - xl border border - white / 20 bg - white / 5 px - 6 py - 3 font - semibold backdrop - blur-md hover:bg-white / 10">View Pipelines</a>;
+=======
+                View Pipelines;"
+              </a>            </div>        <section className="mx - auto max - w-7xl px - 6 pb - 24">;"
+          <div className="animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl">;"
+            <h3 className="text - 2xl font - bold">Keep quality high — continuously</h3>;"
+            <p className="mx - auto mt - 2 max - w-2xl text - white / 80">Automations enforce guardrails and publish transparent artifacts for every run.</p>;"
+            <div className="mt - 6 flex flex - wrap justify - center gap - 3">;"
+              <Link href="/automation"><a className="rounded - xl bg - white / 90 px - 6 py - 3 font - semibold text - slate - 900 hover:bg - white">Get Started</a></Link>;"
+              <a href="/site - health" target="_blank" rel="noopener" className="rounded - xl border border - white / 20 bg - white / 5 px - 6 py - 3 font - semibold backdrop - blur - md hover:bg - white / 10">View Pipelines</a>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>;
         </section>;
       </main>;
@@ -163,3 +197,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
+'"

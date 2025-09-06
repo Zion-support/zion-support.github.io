@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -176,28 +177,41 @@ import { ChatMessage } from './ChatMessage'
 import { ChatInput } from './ChatInput'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
+=======
+useState;
+  useEffect;
+  useRef;
+  ReactNode;
+  useContext} from 'react''
+import { AuthContext } from '../../context/auth/AuthContext''
+import { useDebounce } from '../../hooks/useDebounce''
+import { useLocalStorage } from '../../hooks/useLocalStorage''
+import { ChatMessage } from './ChatMessage''
+import { ChatInput } from './ChatInput''
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar''
+import { Button } from '@/components/ui/button''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
 import { X } from 'lucide-react'
-export interface Message {
-  id: string
-  role: 'user' | 'assistant'
-  message: string
-  timestamp: Date
-
-  read?: boolean
+export interface Message {}
+  id: string';
+  role: 'user' | 'assistant';
+  message: string;
+  timestamp: Date;
+  read?: boolean;
 }
-export interface ChatAssistantProps {
-
-  isOpen: boolean
-  onClose: () => void
-  recipient: {
-    id: string
-    name: string
-    avatarUrl?: string
-    role?: string
+export interface ChatAssistantProps {};
+  isOpen: boolean;
+  onClose: () => void;
+  recipient: {}
+    id: string;
+    name: string;
+    avatarUrl?: string;
+    role?: string;
   }
-  conversationId?: string
+  conversationId?: string;
   initialMessages?: Message[]
   onSendMessage: (message: string, conversationId?: string,) => Promise<void>
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
   contextHeader?: ReactNode
 
 import React, {
@@ -246,71 +260,86 @@ export function ChatAssistant({
   onClose
   recipient
   conversationId
+=======
+  contextHeader?: ReactNode;
+  /** Optional canned questions shown when the chat is empty */
+  starterQuestions?: string[]
+}
+export function ChatAssistant({};
+  isOpen;
+  onClose;
+  recipient;
+  conversationId;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
   initialMessages = []
-  onSendMessage
-  contextHeader
-  starterQuestions = []}: ChatAssistantProps) {
+  onSendMessage;
+  contextHeader;
+  starterQuestions = []}: ChatAssistantProps) {}
   const auth = useContext(AuthContext)
-  const isGuest = !auth?.isAuthenticated
-  // Hooks called unconditionally at the top
-  const localStorageKey = `chatHistory-${recipient.id}`, // Key is always generated
+  const isGuest = !auth?.isAuthenticated;
+  // Hooks called unconditionally at the top;
+  const localStorageKey = `chatHistory-${recipient.id}`, // Key is always generated;
   const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<
-    Message[]
-  >(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users
+    Message[]'
+  >(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users;
     [])
   const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>([])
   const [loggedInMessages, setLoggedInMessages] =
     useState<Message[]>(initialMessages)
   const messagesEndRef = useRef<HTMLDivElement | null>(null)
-  const [pendingApiCallParams, setPendingApiCallParams] = useState<{
-    message: string
-    conversationId?: string
+  const [pendingApiCallParams, setPendingApiCallParams] = useState<{}
+    message: string;
+    conversationId?: string;
   } | null>(null)
   const [showGuestModal, setShowGuestModal] = useState(false)
   const [guestMessage, setGuestMessage] = useState<string | null>(null)
-  // Effect for guest user messages
-  useEffect((,) => {
-    if (isGuest) {
-      // Priority: initialMessages prop > localStorage > empty array
-      if (initialMessages && initialMessages.length > 0) {
+  // Effect for guest user messages;
+  useEffect((,) => {}
+    if (isGuest) {}
+      // Priority: initialMessages prop > localStorage > empty array;
+      if (initialMessages && initialMessages.length > 0) {}
         setDisplayGuestMessages(initialMessages)
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
 <<<<<<< HEAD
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
+=======
+        setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
   const is_guest = !auth?.is_authenticated;
-  const handleSendMessage = async (message_content: string) => {
-    if () return) {
-  $2
+  const handleSendMessage = async (message_content: string) => {}
+    if () return) {}
+  $2;
 }
-import React, {
+import React, {}
   useState,
   useEffect,
   useRef,
-  ReactNode,
-  useContext} from 'react',
-import { AuthContext } from '../../context / auth / AuthContext';
-import { use_debounce } from '../../hooks / use_debounce';
-import { useLocalStorage } from '../../hooks / useLocalStorage';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Button } from '@/components / ui / button';
+  ReactNode,'
+  useContext} from 'react',';
+import { AuthContext } from '../../context / auth / AuthContext';'
+import { use_debounce } from '../../hooks / use_debounce';'
+import { useLocalStorage } from '../../hooks / useLocalStorage';'
+import { ChatMessage } from './ChatMessage';'
+import { ChatInput } from './ChatInput';'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';'
+import { Button } from '@/components / ui / button';'
 import { X } from 'lucide-react';
-export interface Message {
-  id: string,
+export interface Message {}
+  id: string,'
   role: 'user' | 'assistant',
   message: string,
-  timestamp: Date,
+  timestamp: Date,;
   read?: boolean;
 }
-export interface ChatAssistantProps {
+export interface ChatAssistantProps {}
   is_open: boolean,
   on_close: () => void,
-  recipient: {
+  recipient: {}
     id: string,
     name: string,
-    avatar_url?: string,
+    avatar_url?: string,;
     role?: string;
   },
   conversation_id?: string,
@@ -320,41 +349,42 @@ export interface ChatAssistantProps {
   /** Optional canned questions shown when the chat is empty */;
   starter_questions?: string[];
 }
-export /**
- * ChatAssistant - Function description
+export /**;
+ * ChatAssistant - Function description;
  */
-function ChatAssistant() {
+function ChatAssistant() {}
   const auth = useContext (AuthContext),
   const is_guest = !auth?.is_authenticated,
-  // Hooks called unconditionally at the top;
+  // Hooks called unconditionally at the top;`
   const localStorageKey = `chat_history-${recipient.id}`, // Key is always generated;
   const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<;
-    Message[];
+    Message[];'
   >(is_guest ? localStorageKey : 'dummy - guest - key', // Use a dummy key if not guest to prevent LS write for logged - in users;
     []),
   const [displayGuestMessages, setDisplayGuestMessages] = useState < Message[]>([]),
   const [loggedInMessages, setLoggedInMessages] =;
     useState < Message[]>(initial_messages),
   const messagesEndRef = useRef < HTMLDivElement | null>(null),
-  const [pendingApiCallParams, setPendingApiCallParams] = useState<{
+  const [pendingApiCallParams, setPendingApiCallParams] = useState<{}
     message: string,
     conversation_id?: string;
   } | null>(null),
   const [showGuestModal, setShowGuestModal] = useState (false),
   const [guest_message, setGuestMessage] = useState < string | null>(null),
   // Effect for guest user messages;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
+  useEffect ((, ) => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       // Priority: initial_messages prop > local_storage > empty array;
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         setDisplayGuestMessages (initial_messages),
         setStoredGuestMessages (initial_messages), // Persist if initial_messages are provided;
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 =======
 
@@ -363,6 +393,9 @@ if ( {) {
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
       } else {
+=======
+      } else {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
@@ -410,68 +443,72 @@ if ( {) {
     }
   }
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000)
-  useEffect((,) => {
-    if (debouncedApiCallParams) {
-      onSendMessage(debouncedApiCallParams.message
+  useEffect((,) => {}
+    if (debouncedApiCallParams) {}
+      onSendMessage(debouncedApiCallParams.message;
         debouncedApiCallParams.conversationId)
     }
   }, [debouncedApiCallParams, onSendMessage])
-  useEffect((,) => {
+  useEffect((,) => {}
     scrollToBottom()
-  }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state
-  const scrollToBottom = () => {
+  }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state;
+  const scrollToBottom = () => {'
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
-  const handleSendMessage = async (messageContent: string,) => {
-    if (!messageContent.trim()) return
-    if (!isGuest) {
-      // Logged-in user
-      const newMessage: Message = {
-        id: Date.now().toString()
+  const handleSendMessage = async (messageContent: string,) => {}
+    if (!messageContent.trim()) return;
+    if (!isGuest) {}
+      // Logged-in user;
+      const newMessage: Message = {}
+        id: Date.now().toString()'
         role: 'user'
-        message: messageContent
+        message: messageContent;
         timestamp: new Date()}
       setCurrentMessages((prev: Message[],) => [...prev, newMessage])
       setPendingApiCallParams({ message: messageContent, conversationId })
-    } else {
-      // Guest user
+    } else {}
+      // Guest user;
       setGuestMessage(messageContent)
       setShowGuestModal(true)
     }
   }
-  const handleModalSendConfirm = () => {
-    if (!guestMessage) return
-    const newMessage: Message = {
-      id: Date.now().toString()
+  const handleModalSendConfirm = () => {}
+    if (!guestMessage) return;
+    const newMessage: Message = {}
+      id: Date.now().toString()'
       role: 'user'
-      message: guestMessage
+      message: guestMessage;
       timestamp: new Date()}
-    setCurrentMessages((prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages
+    setCurrentMessages((prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages;
     setPendingApiCallParams({ message: guestMessage, conversationId })
     setShowGuestModal(false)
     setGuestMessage(null)
   }
-  const handleModalCancel = () => {
+  const handleModalCancel = () => {}
     setShowGuestModal(false)
     setGuestMessage(null)
   }
-  useEffect((,) => {
-    if (!isOpen) return
-    const handleKeyDown = (e: KeyboardEvent,) => {
-      if (e.key === 'Escape') {
+  useEffect((,) => {}
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent,) => {'
+      if (e.key === 'Escape') {}
         e.preventDefault()
         onClose()
       }
-    }
-    document.addEventListener('keydown', handleKeyDown)
+    }'
+    document.addEventListener('keydown', handleKeyDown)'
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
   if (!isOpen) return null
+=======
+  if (!isOpen) return null;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
   const isGuest = !auth?.isAuthenticated;
 
   const handleSendMessage = async (messageContent: string) => {;
@@ -481,18 +518,18 @@ import React, {;
   useState,;
   useEffect,;
   useRef,;
-  ReactNode,;
-  useContext} from 'react',;
-import { AuthContext } from '../../context/auth/AuthContext';
-import { useDebounce } from '../../hooks/useDebounce';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
+  ReactNode,;'
+  useContext} from 'react',;'
+import { AuthContext } from '../../context/auth/AuthContext';'
+import { useDebounce } from '../../hooks/useDebounce';'
+import { useLocalStorage } from '../../hooks/useLocalStorage';'
+import { ChatMessage } from './ChatMessage';'
+import { ChatInput } from './ChatInput';'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';'
+import { Button } from '@/components/ui/button';'
 import { X } from 'lucide-react';
 export interface Message {;
-  id: string,;
+  id: string,;'
   role: 'user' | 'assistant',;
   message: string,;
   timestamp: Date,;
@@ -527,6 +564,7 @@ export function ChatAssistant({;
   starterQuestions = []}: ChatAssistantProps) {;
   const auth = useContext(AuthContext),;
   const isGuest = !auth?.isAuthenticated,;
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
   // Hooks called unconditionally at the top;
   const localStorageKey = `chatHistory-${recipient.id}`, // Key is always generated;
   const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<;
@@ -535,6 +573,14 @@ export function ChatAssistant({;
     isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users;
     []),;
   const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>(;
+=======
+
+  // Hooks called unconditionally at the top;`
+  const localStorageKey = `chatHistory-${recipient && recipient.id}`, // Key is always generated;
+  const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<;
+    Message[];'
+  >(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
     []),;
   const [loggedInMessages, setLoggedInMessages] =;
     useState<Message[]>(initialMessages),;
@@ -597,15 +643,25 @@ export function ChatAssistant({;
   useEffect(() => {;
     scrollToBottom();
   }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state;
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
   const scrollToBottom = () => {;
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+=======
+
+  const scrollToBottom = () => {;'
+    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
   },;
   const handleSendMessage = async (messageContent: string) => {;
     if (!messageContent.trim()) return,;
     if (!isGuest) {;
       // Logged-in user;
       const newMessage: Message = {;
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
         id: Date.now().toString(),;
+=======
+        id: Date && Date.now().toString(),;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
         role: 'user',;
         message: messageContent,;
         timestamp: new Date()},;
@@ -620,7 +676,11 @@ export function ChatAssistant({;
   const handleModalSendConfirm = () => {;
     if (!guestMessage) return,;
     const newMessage: Message = {;
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
       id: Date.now().toString(),;
+=======
+      id: Date && Date.now().toString(),;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
       role: 'user',;
       message: guestMessage,;
       timestamp: new Date()},;
@@ -635,6 +695,7 @@ export function ChatAssistant({;
   },;
   useEffect(() => {;
     if (!isOpen) return,;
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === 'Escape') {;
         e.preventDefault(),;
@@ -644,6 +705,17 @@ export function ChatAssistant({;
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose]),
+=======
+    const handleKeyDown = (e: KeyboardEvent,) => {;'
+      if (e && e.key === 'Escape') {;
+        e && e.preventDefault(),;
+        onClose();
+      }
+    },;'
+    document && document.addEventListener('keydown', handleKeyDown),;'
+    return () => document && document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]),;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
 
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
   if (!isOpen) return null,
@@ -662,6 +734,7 @@ export function ChatAssistant({;
   initialMessages;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
     <div
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
@@ -694,6 +767,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h2>
               {recipient.role && (
                 <div className="text-xs text-zion-slate">{recipient.role}</div>
+=======
+    <div;
+      className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4""
+      role="dialog""
+      aria-modal="true""
+      aria-labelledby="chat-assistant-title">;"
+      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
+        {/* Header */}"
+        <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;"
+          <div className="flex items-center space-x-3">;"
+            <Avatar className="h-10 w-10 border border-zion-purple/20">;
+              <AvatarImage src={recipient && recipient.avatarUrl} alt={recipient && recipient.name} />;"
+              <AvatarFallback className="bg-zion-purple/20 text-white">;
+                {recipient && recipient.name.charAt(0).toUpperCase()}
+              </AvatarFallback>;
+            </Avatar>;
+            <div>;"
+              <h2 id="chat-assistant-title" className="font-medium text-white">;
+                {recipient && recipient.name}
+              </h2>;
+              {recipient && recipient.role && (;"
+                <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
               )}
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD
@@ -705,11 +801,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
             </div>;
           </div>;
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
           <Button
             variant="ghost"
             size="icon"
+=======
+          <Button"
+            variant="ghost""
+            size="icon""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
             className="text-white hover:bg-zion-purple/10 rounded-full"
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD
@@ -729,6 +831,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
             aria-label="Close chat"
@@ -747,6 +850,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
             aria-label="Close chat">;
+=======
+"
+            aria-label="Close chat"
+          >"
+            <X className="h-5 w-5" />
+          </Button>
+        </div>"
+            aria-label="Close chat">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
             <X className="h-5 w-5" />;
           </Button>;
         </div>;
@@ -754,8 +866,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
         {/* Context Header (Optional) */}
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
         {contextHeader && (
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
+=======
+        {contextHeader && (;"
+          <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
             {contextHeader}
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD
@@ -770,28 +887,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
 ;
         {/* Messages */}
-        <div
+        <div"
           className="flex-1 overflow-y-auto p-4 space-y-4"
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
           aria-live="polite"
         >
-          {currentMessages.length === 0 ? (
+          {currentMessages.length === 0 ? ("
             <div className="text-center text-zion-slate py-8 space-y-4">
               <p>Start a conversation with {recipient.name}</p>
-              {starterQuestions.length > 0 && (
+              {starterQuestions.length > 0 && ("
                 <div className="flex flex-wrap justify-center gap-2">
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {starterQuestions.map((q, idx) => (
-                    <Button
-                      key={idx}
-                      variant="outline"
+                    <Button;
+                      key={idx}"
+                      variant="outline""
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
@@ -819,15 +940,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
           <div ref={messagesEndRef} />;
         </div>;
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
         </div>
       </div>
+=======
+
+        {/* Input */}"
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
+          <ChatInput onSend={handleSendMessage} />;
+        </div>;
+      </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
 
       {showGuestModal && guestMessage && (
 =======
 
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -870,17 +1001,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
           aria-labelledby="confirm-message-title">;
+=======
+        <div"
+          className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4""
+          role="dialog""
+          aria-modal="true""
+          aria-labelledby="confirm-message-title">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
           <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">;
-            <h3
-              id="confirm-message-title"
+            <h3"
+              id="confirm-message-title""
               className="text-lg font-semibold text-white mb-4">;
               Confirm Message;
-            </h3>;
+            </h3>;"
             <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">;
               {guestMessage}
-            </p>;
+            </p>;"
             <div className="flex justify-end space-x-3">;
-              <Button
+              <Button"
                 variant="outline"
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
 
@@ -891,10 +1029,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setStoredGuestMessages,
     recipient.id]),
   // Effect for logged - in user messages;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
+  useEffect ((, ) => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       // Update state if initial_messages prop changes (e.g. new conversation loaded);
       setLoggedInMessages (initial_messages);
@@ -904,10 +1042,10 @@ if ( {) {
   const current_messages = is_guest ? displayGuestMessages : loggedInMessages,
   const setCurrentMessages = (
     valueOrFn: Message[] | ((val: Message[], ) =>: any Message[]),
-  ) => {
-    // Check condition
-if ( {) {
-  $2
+  ) => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       const new_messages =;
         valueOrFn instanceof Function;
@@ -915,57 +1053,57 @@ if ( {) {
           : valueOrFn,
       setDisplayGuestMessages (new_messages),
       setStoredGuestMessages (new_messages), // Always update local_storage for guests;
-    } else {
+    } else {}
       const new_messages =;
         valueOrFn instanceof Function ? valueOrFn (loggedInMessages) : valueOrFn,
       setLoggedInMessages (new_messages);
     }
   },
   const debouncedApiCallParams = use_debounce (pendingApiCallParams, 3000),
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
+  useEffect ((, ) => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       onSendMessage (debouncedApiCallParams.message,
         debouncedApiCallParams.conversation_id);
     }
   }, [debouncedApiCallParams, onSendMessage]),
-  useEffect ((, ) => {
+  useEffect ((, ) => {}
     scrollToBottom ();
   }, [current_messages]), // current_messages will correctly refer to either guest or logged - in state;
-  const scrollToBottom = () =>: any {
+  const scrollToBottom = () =>: any {'
     messagesEndRef.current?.scrollIntoView ({ behavior: 'smooth' });
   },
-  const handleSendMessage = async (message_content: string, ) => {
-    if () return, ) {
-  $2
+  const handleSendMessage = async (message_content: string, ) => {}
+    if () return, ) {}
+  $2;
 }
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       // Logged - in user;
-      const new_message: Message = {
-        id: Date.now ().to_string (),
+      const new_message: Message = {}
+        id: Date.now ().to_string (),'
         role: 'user',
         message: message_content,
         timestamp: new Date ()},
       setCurrentMessages ((prev: Message[], ) => [...prev, new_message]),
       setPendingApiCallParams ({ message: message_content, conversation_id });
-    } else {
+    } else {}
       // Guest user;
       setGuestMessage (message_content),
       setShowGuestModal (true);
     }
   },
-  const handleModalSendConfirm = () =>: any {
-    // Check condition
-if (return, ) {
-  $2
+  const handleModalSendConfirm = () =>: any {}
+    // Check condition;
+if (return, ) {}
+  $2;
 }
-    const new_message: Message = {
-      id: Date.now ().to_string (),
+    const new_message: Message = {}
+      id: Date.now ().to_string (),'
       role: 'user',
       message: guest_message,
       timestamp: new Date ()},
@@ -974,85 +1112,85 @@ if (return, ) {
     setShowGuestModal (false),
     setGuestMessage (null);
   },
-  const handleModalCancel = () =>: any {
+  const handleModalCancel = () =>: any {}
     setShowGuestModal (false),
     setGuestMessage (null);
   },
-  useEffect ((, ) => {
-    // Check condition
-if (return, ) {
-  $2
+  useEffect ((, ) => {}
+    // Check condition;
+if (return, ) {}
+  $2;
 }
-    const handleKeyDown = (e: KeyboardEvent, ) =>: any {
-      // Check condition
-if ( {) {
-  $2
+    const handleKeyDown = (e: KeyboardEvent, ) =>: any {}
+      // Check condition;
+if ( {) {}
+  $2;
 }
         e.prevent_default (),
         on_close ();
       }
-    },
-    document.addEventListener ('keydown', handleKeyDown),
+    },'
+    document.addEventListener ('keydown', handleKeyDown),'
     return () => document.removeEventListener ('keydown', handleKeyDown);
   }, [is_open, on_close]),
-  // Check condition
-if (return null, ) {
-  $2
+  // Check condition;
+if (return null, ) {}
+  $2;
 }
   return (
-    <div;
-      className="fixed inset - 0 bg - black / 50 z - 50 flex items - center justify - center p - 4";
-      role="dialog";
-      aria - modal="true";
+    <div;"
+      className="fixed inset - 0 bg - black / 50 z - 50 flex items - center justify - center p - 4";"
+      role="dialog";"
+      aria - modal="true";"
       aria - labelledby="chat - assistant - title";
-    >;
+    >;"
       <div className="w - full max - w-xl bg - zion - blue rounded - lg shadow - xl overflow - hidden flex flex - col max - h-[80vh]">;
-        {/* Header */}
-        <div className="bg - zion - blue - dark p - 3 flex items - center justify - between border - b border - zion - purple / 20">;
-          <div className="flex items - center space - x-3">;
+        {/* Header */}"
+        <div className="bg - zion - blue - dark p - 3 flex items - center justify - between border - b border - zion - purple / 20">;"
+          <div className="flex items - center space - x-3">;"
             <Avatar className="h - 10 w - 10 border border - zion - purple / 20">;
-              <AvatarImage src={recipient.avatar_url} alt={recipient.name} />;
+              <AvatarImage src={recipient.avatar_url} alt={recipient.name} />;"
               <AvatarFallback className="bg - zion - purple / 20 text - white">;
                 {recipient.name.char_at (0).toUpperCase ()}
               </AvatarFallback>;
             </Avatar>;
-            <div>;
+            <div>;"
               <h2 id="chat - assistant - title" className="font - medium text - white">;
                 {recipient.name}
               </h2>;
-              {recipient.role && (
+              {recipient.role && ("
                 <div className="text - xs text - zion - slate">{recipient.role}</div>)}
             </div>;
           </div>;
-          <Button;
-            variant="ghost";
-            size="icon";
+          <Button;"
+            variant="ghost";"
+            size="icon";"
             className="text - white hover:bg - zion - purple / 10 rounded - full";
-            on_click = {on_close, }
+            on_click = {on_close, }"
             aria - label="Close chat";
-          >;
+          >;"
             <X className="h - 5 w - 5" />;
           </Button>;
         </div>;
         {/* Context Header (Optional) */}
-        {context_header && (
+        {context_header && ("
           <div className="border - b border - zion - purple / 20 bg - zion - blue - dark / 50 p - 3">;
             {context_header}
           </div>)}
         {/* Messages */}
-        <div;
-          className="flex - 1 overflow - y-auto p - 4 space - y-4";
+        <div;"
+          className="flex - 1 overflow - y-auto p - 4 space - y-4";"
           aria - live="polite";
         >;
-          {current_messages.length === 0 ? (
+          {current_messages.length === 0 ? ("
             <div className="text - center text - zion - slate py - 8 space - y-4">;
               <p > Start a conversation with {recipient.name}</p>;
-              {starter_questions.length > 0 && (
+              {starter_questions.length > 0 && ("
                 <div className="flex flex - wrap justify - center gap - 2">;
                   {starter_questions.map ((q, idx, ) => (
                     <Button;
-                      key = {idx, }
-                      variant="outline";
+                      key = {idx, }"
+                      variant="outline";"
                       className="text - xs";
                       on_click = {(, ) => handleSendMessage (q), }
                     >;
@@ -1064,38 +1202,38 @@ if (return null, ) {
               <ChatMessage key={msg.id} role={msg.role} message={msg.message} />)))}
           <div ref={messagesEndRef} />;
         </div>;
-        {/* Input */}
+        {/* Input */}"
         <div className="p - 3 border - t border - zion - purple / 20 bg - zion - blue - dark / 30">;
           <ChatInput on_send={handleSendMessage} />;
         </div>;
       </div>;
       {showGuestModal && guest_message && (
-        <div;
-          className="fixed inset - 0 bg - black / 60 z-[100] flex items - center justify - center p - 4";
-          role="dialog";
-          aria - modal="true";
+        <div;"
+          className="fixed inset - 0 bg - black / 60 z-[100] flex items - center justify - center p - 4";"
+          role="dialog";"
+          aria - modal="true";"
           aria - labelledby="confirm - message - title";
-        >;
+        >;"
           <div className="bg - zion - blue - darker p - 6 rounded - lg shadow - xl w - full max - w-md">;
-            <h3;
-              id="confirm - message - title";
+            <h3;"
+              id="confirm - message - title";"
               className="text - lg font - semibold text - white mb - 4";
             >;
               Confirm Message;
-            </h3>;
+            </h3>;"
             <p className="text - zion - slate mb - 6 whitespace - pre - wrap break - words">;
               {guest_message}
-            </p>;
+            </p>;"
             <div className="flex justify - end space - x-3">;
-              <Button;
+              <Button;"
                 variant="outline";
-                on_click = {handleModalCancel, }
+                on_click = {handleModalCancel, }"
                 className="text - white border - zion - purple hover:bg - zion - purple / 10";
               >;
                 Cancel;
               </Button>;
               <Button;
-                on_click = {handleModalSendConfirm, }
+                on_click = {handleModalSendConfirm, }"
                 className="bg - zion - purple hover:bg - zion - purple - dark text - white";
               >;
 
@@ -1108,6 +1246,7 @@ if (return null, ) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={handleModalCancel}
 
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
 
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 =======
@@ -1116,13 +1255,17 @@ if (return null, ) {
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
 =======
                 variant="outline"                className="text-white border-zion-purple hover:bg-zion-purple/10"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >
-                Cancel
+                Cancel;
               </Button>
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
               <Button
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD
@@ -1140,9 +1283,14 @@ if (return null, ) {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
+=======
+              <Button;
+                onClick={handleModalSendConfirm}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
-                Send
+                Send;
               </Button>
             </div>
           </div>
@@ -1168,6 +1316,7 @@ if (return null, ) {
 }
 }
 
+<<<<<<< HEAD:src_backup/components/ChatAssistant/ChatAssistant.tsx
 }
 <<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD
@@ -1236,3 +1385,6 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ChatAssistant/ChatAssistant.tsx
+=======
+}'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ChatAssistant/ChatAssistant.tsx

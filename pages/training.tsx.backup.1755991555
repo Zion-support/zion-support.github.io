@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -650,6 +651,9 @@ export default function TrainingPage() {
           <div className="container mx-auto px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -657,6 +661,7 @@ export default function TrainingPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -666,40 +671,22 @@ export default function TrainingPage() {
                 Our most popular and highly-rated courses taught by industry experts.
               </p>
             </motion.div>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {featuredCourses.map((course, index) => (
-                <motion.div
-                  key={course.id}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group"
-                >
-                  <div className="p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 hover:border-cyan-500/30 transition-all duration-300">
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center space-x-3">
-                        <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-semibold rounded-full">
-                          Featured
-                        </span>
-                        <span className="inline-block px-3 py-1 bg-white/10 text-white/70 text-xs rounded-full">
-                          {categories.find(cat => cat.id === course.category)?.name}
-                        </span>
-                        <span className={`inline-block px-3 py-1 text-xs rounded-full ${
-                          course.level === 'beginner' ? 'bg-green-500/20 text-green-400' :
-                          course.level === 'intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                          'bg-red-500/20 text-red-400'
-                        }`}>
-                          {course.level.charAt(0).toUpperCase() + course.level.slice(1)}
-                        </span>
-                      </div>
-                      <div className="flex items-center space-x-2 text-yellow-400">
-                        <Star className="w-5 h-5 fill-current" />
-                        <span className="text-white font-semibold">{course.rating}</span>
-                      </div>
-                    </div>
 
+<<<<<<< HEAD
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                       {course.title}
                     </h3>
@@ -834,10 +821,13 @@ export default function TrainingPage() {
                     </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
           </div>
         </section>
 <<<<<<< HEAD
@@ -1455,6 +1445,9 @@ export default function TrainingPage() {
     </Layout>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

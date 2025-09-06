@@ -11,6 +11,7 @@
 import {Notification, as, BaseNotification} from '@/types/notifications';
 =======
 import { Notification, as, BaseNotification } from "@/types/notifications";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 =======
@@ -23,12 +24,24 @@ export type NotificationType =
   | 'quote_request'
   | 'booking_confirmation'
   | 'hire_request'
+=======
+export type NotificationType ="
+  | "message""
+  | "quote_request""
+  | "booking_confirmation""
+  | "hire_request""
+  | "onboarding"";
+  | "system";
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export interface Notification extends BaseNotification {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -49,10 +62,16 @@ export interface Notification extends BaseNotification {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   type: NotificationType;
   action_url?: string;
   action_text?: string;
 }
+<<<<<<< HEAD
 export type FilterType =
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,27 +95,29 @@ export interface NotificationContextType {;
   | "unread"
   | "messages"
   | "onboarding"
+=======
+export type FilterType ="
+  | "all""
+  | "unread""
+  | "messages""
+  | "onboarding"";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | "system";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 import {Notification, as, BaseNotification} from '@/types / notifications';
-=======
-=======
+
+'
 import {Notification, as, BaseNotification} from '@/types / notifications';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
 
 
 export interface NotificationContextType {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  | 'onboarding';
-  | 'system';
-export interface NotificationContextType {
 
+<<<<<<< HEAD
 export interface NotificationContextType {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -121,6 +142,10 @@ export interface NotificationContextType {;
 
 export interface NotificationContextType {export interface NotificationContextType {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export interface NotificationContextType {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   notifications: Notification[];
   filtered_notifications: Notification[];
   unread_count: number;
@@ -129,6 +154,10 @@ export interface NotificationContextType {export interface NotificationContextTy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   markAsRead: (id: string) => Promise<void>;
   markAllAsRead: () => Promise<void>;
   dismissNotification: (id: string) => Promise<void>;
@@ -223,6 +252,7 @@ export interface NotificationContextType {;
   fetchNotifications: () => Promise<void>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -271,3 +301,6 @@ export type FilterType = | 'all' | 'unread' | 'messages' | 'onboarding' | 'syste
   fetchNotifications: () => Promise<void>;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

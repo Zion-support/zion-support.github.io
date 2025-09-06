@@ -2,23 +2,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 },
 
-export const getPricingMetrics = async () => {
+export const getPricingMetrics = async () => {};
   // Placeholder implementation;
   return { metrics: {}, success: true }
 }
@@ -26,37 +31,31 @@ export const getPricingMetrics = async () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 <<<<<<< HEAD
 =======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+
+
+
+
 
 export const trackPricingRequest = async (data: any) => {;
   // Placeholder implementation;
 
-  return { success: true   } catch (error) {
-    console.error("Error:", error);
+  return { success: true   } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export const trackPricingRequest = async (data: any) => {
-  // Placeholder implementation;
-  return { success: true }
-},
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export const getPricingMetrics = async () => {
+
+export const getPricingMetrics = async () => {};
   // Placeholder implementation;
   return { metrics: {}, success: true }
 }
@@ -68,6 +67,7 @@ export const trackPricingRequest = async (data: any) => {;
 export const getPricingMetrics = async () => {;
   // Placeholder implementation;
 <<<<<<< HEAD
+<<<<<<< HEAD
   return { metrics: {}, success: true }
 <<<<<<< HEAD
 };
@@ -80,34 +80,29 @@ export const getPricingMetrics = async () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
 export const getPricingMetrics = async () => {;
   // Placeholder implementation;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return { metrics: {}, success: true   } catch (error) {
-    console.error("Error:", error);
+
+
+  return { metrics: {}, success: true   } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-};
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 export const trackPricingRequest = async (data: any) => {;
   // Placeholder implementation;
 };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
 
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -119,3 +114,8 @@ export const trackPricingRequest = async (data: any) => {;
 
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -36,6 +36,7 @@ module.exports = {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -106,6 +107,9 @@ module.exports = {}
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         AI_ANALYSIS_MODE: 'comprehensive',
         AUTO_FIX: 'true'
@@ -117,6 +121,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +195,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         OPTIMIZATION_LEVEL: 'aggressive',
         PERFORMANCE_MONITORING: 'true'
@@ -201,6 +209,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,6 +283,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         AUTO_UPDATE: 'true',
         SECURITY_FIRST: 'true',
@@ -286,6 +298,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -359,6 +372,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         AUTO_DEPLOY: 'false', // Set to true for automatic deployment
         ROLLBACK_ENABLED: 'true',
@@ -371,6 +387,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,6 +461,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         AUTO_MERGE: 'false', // Set to true for automatic merging
         CONFLICT_RESOLUTION: 'intelligent',
@@ -456,6 +476,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -529,6 +550,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         WORKFLOW_MODE: 'continuous',
         QUALITY_GATES: 'enabled'
@@ -540,6 +564,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -613,6 +638,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         PIPELINE_MODE: 'intelligent',
         AUTO_DEPLOYMENT: 'false'
@@ -624,6 +652,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -697,6 +726,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         QUALITY_GATES: 'strict',
         PARALLEL_JOBS: '4'
@@ -708,6 +740,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -781,6 +814,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         TEST_STRATEGY: 'comprehensive',
         PARALLEL_TESTS: 'true'
@@ -792,6 +828,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -865,6 +902,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         SECURITY_LEVEL: 'maximum',
         VULNERABILITY_SCANNING: 'true'
@@ -876,6 +916,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -949,6 +990,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         HEALTH_CHECKS: 'comprehensive',
         MONITORING_INTERVAL: '300000'
@@ -960,6 +1004,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1033,6 +1078,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         SYNC_MODE: 'continuous',
         PROCESS_MONITORING: 'true'
@@ -1044,6 +1092,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1117,6 +1166,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         CHECK_DEPTH: 'deep',
         EXTERNAL_LINKS: 'true'
@@ -1128,6 +1180,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1201,6 +1254,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         AUTO_FIX: 'true',
         STRICT_MODE: 'true'
@@ -1212,6 +1268,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1285,6 +1342,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         ERROR_DETECTION: 'real-time',
         AUTO_FIX: 'true'
@@ -1296,6 +1356,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1369,6 +1430,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         QUALITY_STANDARDS: 'high',
         COVERAGE_THRESHOLD: '80'
@@ -1380,6 +1444,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1453,6 +1518,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         AUDIT_LEVEL: 'comprehensive',
         VULNERABILITY_ALERTS: 'true'
@@ -1464,6 +1532,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1537,6 +1606,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         IMPROVEMENT_MODE: 'automatic',
         LEARNING_ENABLED: 'true'
@@ -1548,6 +1620,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1621,6 +1694,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         BUILD_STRATEGY: 'comprehensive',
         NOTIFICATION_ENABLED: 'true'
@@ -1632,6 +1708,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1705,6 +1782,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         HEALTH_CHECK_INTERVAL: '120000',
         ALERT_THRESHOLD: 'medium'
@@ -1716,6 +1796,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1789,6 +1870,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         SCAN_DEPTH: 'comprehensive',
         REAL_TIME_SCANNING: 'true'
@@ -1800,6 +1884,7 @@ main
       time: true
     },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1873,6 +1958,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
         MONITORING_INTERVAL: '180000',
         PERFORMANCE_ALERTS: 'true'
@@ -1885,6 +1973,7 @@ main
     }
   ],
 
+<<<<<<< HEAD
   // PM2 Deploy configuration
   deploy: {
     production: {
@@ -1915,6 +2004,9 @@ main
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       user: 'node',
       host: 'your-production-server.com',
       ref: 'origin/main',

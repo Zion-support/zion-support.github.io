@@ -1,9 +1,25 @@
-<<<<<<< HEAD
+
+export default function AddToCart.test({ }: AddToCart.testProps) {}
+<
+
+
+
+
+export default function FiveGSolutions({ }: FiveGSolutionsProps) {}
+=;
 import React from 'react';
+<<<<<<< HEAD:src.pages.disabled/FiveGSolutions.jsx
 interface FiveGSolutionsProps {
   // Add props here as needed
+=======
+interface AddToCart.testProps {}
+  // Add props here as needed;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/AddToCart.test.tsx
 }
+export default function AddToCart.test({ }: AddToCart.testProps) {}
+>
 
+<<<<<<< HEAD:src.pages.disabled/FiveGSolutions.jsx
 =======
 
 
@@ -52,12 +68,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function FiveGSolutions({ }: FiveGSolutionsProps) {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/AddToCart.test.tsx
   return (
     <div>
       <h1>FiveGSolutions</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+<<<<<<< HEAD:src.pages.disabled/FiveGSolutions.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,11 +115,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 :src.pages.disabled/FiveGSolutions.jsx
+=======
+
+
+
+:src.pages.disabled/FiveGSolutions.jsx;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/AddToCart.test.tsx
 }
 }
 }
 }
 }
+<<<<<<< HEAD:src.pages.disabled/FiveGSolutions.jsx
 <<<<<<< HEAD
 :temp_exclude/src.pages.disabled/FiveGSolutions.jsx
 <<<<<<< HEAD
@@ -114,8 +140,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
+=======
 
 
+=
+>
+}
+
+
+
+=
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/AddToCart.test.tsx
+
+>
+
+<<<<<<< HEAD:src.pages.disabled/FiveGSolutions.jsx
 
 :src.pages.disabled/FiveGSolutions.jsx
 }
@@ -130,3 +169,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 :temp_exclude/src.pages.disabled/FiveGSolutions.jsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:tests/AddToCart.test.tsx

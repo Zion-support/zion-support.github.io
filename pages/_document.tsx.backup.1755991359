@@ -10,7 +10,11 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
+<<<<<<< HEAD
         <body className="bg-white dark:bg-black">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Main />
           <NextScript />
         </body>
@@ -19,4 +23,8 @@ class MyDocument extends Document {
   }
 }
 
+<<<<<<< HEAD
 export default MyDocument;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

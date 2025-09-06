@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD:pages/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,6 +63,9 @@ const InitPage: NextPage = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
 
 
   marketplace: true,
@@ -70,12 +74,13 @@ const InitPage: NextPage = () => {
   token: true,
   dao: true,
 
-    setState((prev) => ({
+    setState((prev) => ({}
       ...prev;
       [group]: { ...prev[group], [key]: !prev[group][key] }}))
   };
 
 
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -101,10 +106,14 @@ setState(prev => ({
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
   const handleSubmit = async (e: React.FormEvent) => {
+=======
+  const handleSubmit = async (e: React.FormEvent) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
     e.preventDefault();
     setSubmitting(true);
     setError(null);
     setResult(null)
+<<<<<<< HEAD:pages_backup/zion/init.tsx
     try {
       const res = await fetch('/api/deploy/genesis', {
 <<<<<<< HEAD:pages/zion/init.tsx
@@ -180,39 +189,44 @@ import React from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    try {}
+      const res = await fetch('/api/deploy/genesis', {}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
 const defaultModules: DeployFormState['modules'] = {;
   marketplace: true,;
   gpt: true,;
   academy: true,;
   token: true,;
-  dao: true,;
-  'nation-builder': true,;
-  'launch-kit': true,;
-  'book-builder': true,;
-  'roadmap-whitepaper': true,;
-  'api-docs-wiki': true,;
+  dao: true,;'
+  'nation-builder': true,;'
+  'launch-kit': true,;'
+  'book-builder': true,;'
+  'roadmap-whitepaper': true,;'
+  'api-docs-wiki': true,;'
   'zion-brain': true,;
 };
-
-const defaultBonus: DeployFormState['bonusModules'] = {;
-  'global-map': false,;
-  'franchise-onboarding': false,;
-  'referral-ambassadors': false,;
+'
+const defaultBonus: DeployFormState['bonusModules'] = {;'
+  'global-map': false,;'
+  'franchise-onboarding': false,;'
+  'referral-ambassadors': false,;'
   'grant-portal': false,;
-  trailer: false,;
+  trailer: false,;'
   'book-store': false,;
 };
 const InitPage: NextPage = () => {;
-  const [state, setState] = useState<DeployFormState>({;
-    instanceName: '',;
-    defaultLanguage: 'en',;
+  const [state, setState] = useState<DeployFormState>({;'
+    instanceName: '',;'
+    defaultLanguage: 'en',;'
     deploymentRegion: 'us-east-1',;
-    tokenActivation: true,;
+    tokenActivation: true,;'
     governanceMode: 'Hybrid',;
-    branding: {;
-      logoUrl: '',;
-      primaryColor: '#4f46e5',;
-      secondaryColor: '#0ea5e9',;
+    branding: {;'
+      logoUrl: '',;'
+      primaryColor: '#4f46e5',;'
+      secondaryColor: '#0ea5e9',;'
       subdomain: '',;
     },;
     modules: defaultModules,;
@@ -220,7 +234,7 @@ const InitPage: NextPage = () => {;
   });  const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
-
+'
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {;
     setState(prev => ({;
       ...prev,;
@@ -232,10 +246,11 @@ const InitPage: NextPage = () => {;
     setSubmitting(true);
     setError(null);
     setResult(null),;
-    try {;
-      const res = await fetch('/api/deploy/genesis', {;
-        method: 'POST',;
+    try {;'
+      const res = await fetch('/api/deploy/genesis', {;'
+        method: 'POST',;'
         headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
         body: JSON && JSON.stringify(state),;
@@ -282,26 +297,28 @@ const InitPage: NextPage = () => {;
 =======
         body: JSON.stringify(state)}),;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-      const json = await res.json();
+
+      const json = await res.json();'
       if (!res.ok) throw new Error(json?.error |'Deployment failed');
       setResult(json);
 
-    } catch (error) {
+    } catch (error) {'
       setError(err.message || 'Unexpected error');
-    } catch (error) {
+    } catch (error) {'
       setError(err.message || 'Unexpected error');
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/zion/init.tsx
     <div className='space-y-8'>;
       <div>;
         <h1 className='text-2xl font-bold'>Genesis Deploy</h1>;
@@ -348,13 +365,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <form
         onSubmit={handleSubmit}
         className='grid grid-cols-1 gap-6 max-w-4xl'>;
+=======
+      <form;
+        onSubmit={handleSubmit}'
+        className='grid grid-cols-1 gap-6 max-w-4xl'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-          <div>;
+          <div>;'
             <label className='block text-sm font-medium'>Instance Name</label>;
-            <input
+            <input'
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
               value={state && state.instanceName}
               onChange={e =>;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
                 setState({ ...state, instanceName: e && e.target.value });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -366,28 +389,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   'book - builder': true,
   'roadmap - whitepaper': true,
   'api - docs - wiki': true,
+=======
+                setState({ ...state, instanceName: e && e.target.value });'
+  'nation - builder': true,'
+  'launch - kit': true,'
+  'book - builder': true,'
+  'roadmap - whitepaper': true,'
+  'api - docs - wiki': true,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
   'zion - brain': true,
 }
-;
-const default_bonus: DeployFormState['bonus_modules'] = {
-  'global - map': false,
-  'franchise - onboarding': false,
-  'referral - ambassadors': false,
+;'
+const default_bonus: DeployFormState['bonus_modules'] = {'
+  'global - map': false,'
+  'franchise - onboarding': false,'
+  'referral - ambassadors': false,'
   'grant - portal': false,
-  trailer: false,
+  trailer: false,'
   'book - store': false,
 }
-const InitPage: NextPage = () => {
-  const [state, set_state] = useState < DeployFormState>({
-    instance_name: '',
-    default_language: 'en',
+const InitPage: NextPage = () => {}
+  const [state, set_state] = useState < DeployFormState>({'
+    instance_name: '','
+    default_language: 'en','
     deployment_region: 'us - east - 1',
-    token_activation: true,
+    token_activation: true,'
     governance_mode: 'Hybrid',
-    branding: {
-      logo_url: '',
-      primary_color: '#4f46e5',
-      secondary_color: '#0ea5e9',
+    branding: {'
+      logo_url: '','
+      primary_color: '#4f46e5','
+      secondary_color: '#0ea5e9','
       subdomain: '',
     },
     modules: default_modules,
@@ -395,51 +426,51 @@ const InitPage: NextPage = () => {
   });  const [submitting, set_submitting] = useState (false);
   const [result, set_result] = useState < any>(null);
   const [error, set_error] = useState < string | null>(null);
-;
-  const handle_toggle = (group: 'modules' | 'bonus_modules', key: string) =>: any {
-    set_state (prev => ({
+;'
+  const handle_toggle = (group: 'modules' | 'bonus_modules', key: string) =>: any {}
+    set_state (prev => ({}
       ...prev,
       [group]: { ...prev[group], [key]: !prev[group][key] },
     }));  }
 ;
-  const handle_submit = async (e: React.FormEvent) => {
+  const handle_submit = async (e: React.FormEvent) => {}
     e.prevent_default ();
     set_submitting (true);
     set_error (null);
     set_result (null),
-    try {
-      const res = await fetch ('/api / deploy / genesis', {
-        method: 'POST',
+    try {'
+      const res = await fetch ('/api / deploy / genesis', {'
+        method: 'POST','
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify (state),
       });
-      const json = await res.json ();
-      if (throw new Error (json?.error || 'Deployment failed')) {
-  $2
+      const json = await res.json ();'
+      if (throw new Error (json?.error || 'Deployment failed')) {}
+  $2;
 }
       set_result (json);
-    } catch (err: any) {
+    } catch (err: any) {'
       set_error (err.message || 'Unexpected error');
-    } finally {
+    } finally {}
       set_submitting (false);    }
   }
 ;
-  return (
+  return ('
     <div className='space - y-8'>;
-      <div>;
-        <h1 className='text - 2xl font - bold'>Genesis Deploy</h1>;
+      <div>;'
+        <h1 className='text - 2xl font - bold'>Genesis Deploy</h1>;'
         <p className='text - sm text - gray - 600 dark:text - gray - 400'>;
           Initialize a full Zion OS instance from a single control panel.;
         </p>;
       </div>;
       <form;
-        on_submit={handle_submit}
+        on_submit={handle_submit}'
         className='grid grid - cols - 1 gap - 6 max - w-4xl';
-      >;
+      >;'
         <section className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-          <div>;
+          <div>;'
             <label className='block text - sm font - medium'>Instance Name</label>;
-            <input;
+            <input;'
               className='mt - 1 w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white / 60 dark:bg - black / 40 px - 3 py - 2';
               value={state.instance_name}
               on_change={e =>;
@@ -453,6 +484,7 @@ const InitPage: NextPage = () => {
             />;
           </div>;
           <div>;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -469,10 +501,14 @@ const InitPage: NextPage = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -489,10 +525,14 @@ const InitPage: NextPage = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -507,30 +547,34 @@ const InitPage: NextPage = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
                 }
-              />;
-              <label htmlFor='token' className='text-sm'>;
+              />;'
+              <label htmlFor='token' className='text-sm'>;'
             <label className='block text - sm font - medium'>;
               Token Activation;
-            </label>;
+            </label>;'
             <div className='mt - 2 flex items - center gap - 3'>;
-              <input;
-                id='token';
+              <input;'
+                id='token';'
                 type='checkbox';
                 checked={state.token_activation}
                 on_change={() =>;
-                  set_state ({
+                  set_state ({}
                     ...state,
                     token_activation: !state.token_activation,
                   });
                 }
-              />;
+              />;'
               <label html_for='token' className='text - sm'>;
                 Enable ZION$ token;
               </label>;
             </div>;
           </div>;
           <div>;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -540,9 +584,12 @@ const InitPage: NextPage = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
     <div className="space-y-8">
-      <div>
-        <h1 className="text-2xl font-bold">Genesis Deploy</h1>
+      <div>"
+        <h1 className="text-2xl font-bold">Genesis Deploy</h1>"
         <p className="text-sm text-gray-600 dark:text-gray-400">Initialize a full Zion OS instance from a single control panel.</p>
       </div>
 <<<<<<< HEAD
@@ -556,6 +603,7 @@ const InitPage: NextPage = () => {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
 =======
 
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
@@ -565,16 +613,21 @@ const InitPage: NextPage = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div>
             <label className="block text-sm font-medium">Instance Name</label>
+=======
+          <div>"
+            <label className="block text-sm font-medium">Instance Name</label>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.instanceName} onChange={(e) => setState({ ...state, instanceName: e.target.value })} required />
           </div>
-          <div>
-            <label className="block text-sm font-medium">Default Language</label>
+          <div>"
+            <label className="block text-sm font-medium">Default Language</label>"
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.defaultLanguage} onChange={(e) => setState({ ...state, defaultLanguage: e.target.value })} />
           </div>
-          <div>
-            <label className="block text-sm font-medium">Deployment Region</label>
+          <div>"
+            <label className="block text-sm font-medium">Deployment Region</label>"
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.deploymentRegion} onChange={(e) => setState({ ...state, deploymentRegion: e.target.value })} />
           </div>
+<<<<<<< HEAD:pages_backup/zion/init.tsx
           <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -586,10 +639,17 @@ const InitPage: NextPage = () => {
             <label className="block text-sm font-medium">Token Activation</label>
             <div className="mt-2 flex items-center gap-3">
               <input id="token" type="checkbox" checked={state.tokenActivation} onChange={() => setState({ ...state, tokenActivation: !state.tokenActivation })} />
+=======
+          <div>"
+            <label className="block text-sm font-medium">Token Activation</label>"
+            <div className="mt-2 flex items-center gap-3">"
+              <input id="token" type="checkbox" checked={state.tokenActivation} onChange={() => setState({ ...state, tokenActivation: !state.tokenActivation })} />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
               <label htmlFor="token" className="text-sm">Enable ZION$ token</label>
             </div>
           </div>
           <div>
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD:pages/zion/init.tsx
 <<<<<<< HEAD
 =======
@@ -625,6 +685,9 @@ const InitPage: NextPage = () => {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
               <option>DAO</option>
               <option>Hybrid</option>
             </select>
@@ -634,14 +697,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+            >              <option>Admin</option>;
+              <option>DAO</option>;
+              <option>Hybrid</option>;
+            </select>;
+          </div>;
+        </section>;
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-          <div>;
+          <div>;'
             <label className='block text-sm font-medium'>Logo URL</label>;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -665,6 +739,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
             <input
+=======
+
+
+            <input'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
               value={state && state.branding.logoUrl}
               onChange={e =>;
@@ -672,6 +751,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ...state,;
                   branding: { ...state && state.branding, logoUrl: e && e.target.value },;
                 });
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -681,14 +761,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
               }
             />;
           </div>;
-          <div>;
+          <div>;'
             <label className='block text-sm font-medium'>Primary Color</label>;
-            <input
-              type='color'
+            <input'
+              type='color''
               className='mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40'
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -697,10 +782,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -719,10 +808,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -732,10 +825,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -745,8 +843,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <input
+=======
+
+                  <input'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
                     type='checkbox'
-                    checked={state && state.modules[key]}
+                    checked={state && state.modules[key]}'
                     onChange={() => handleToggle('modules', key)}
 <<<<<<< HEAD:pages/zion/init.tsx
 <<<<<<< HEAD
@@ -760,12 +862,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </label>;
               ))}
             </div>;
-          </div>;
-          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
-            <h3 className='font-semibold mb-3'>Bonus Modules</h3>;
+          </div>;'
+          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;'
+            <h3 className='font-semibold mb-3'>Bonus Modules</h3>;'
             <div className='space-y-2'>;
-              {Object && Object.keys(state && state.bonusModules).map(key => (;
+              {Object && Object.keys(state && state.bonusModules).map(key => (;'
                 <label key={key} className='flex items-center gap-3 text-sm'>;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -789,14 +892,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
                   <input
+=======
+                  <input'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
                     type='checkbox'
-                    checked={state && state.bonusModules[key]}
+                    checked={state && state.bonusModules[key]}'
                     onChange={() => handleToggle('bonusModules', key)}
 <<<<<<< HEAD:pages/zion/init.tsx
 <<<<<<< HEAD
                   />                  <span>/{key}</span>;
                 </label>;
 
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -815,25 +922,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
+
+
+"
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-sm font-medium">Logo URL</label>
+          <div>"
+            <label className="block text-sm font-medium">Logo URL</label>"
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.logoUrl} onChange={(e) => setState({ ...state, branding: { ...state.branding, logoUrl: e.target.value } })} />
           </div>
-          <div>
-            <label className="block text-sm font-medium">Primary Color</label>
+          <div>"
+            <label className="block text-sm font-medium">Primary Color</label>"
             <input type="color" className="mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40" value={state.branding.primaryColor} onChange={(e) => setState({ ...state, branding: { ...state.branding, primaryColor: e.target.value } })} />
           </div>
-          <div>
-            <label className="block text-sm font-medium">Secondary Color</label>
+          <div>"
+            <label className="block text-sm font-medium">Secondary Color</label>"
             <input type="color" className="mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40" value={state.branding.secondaryColor} onChange={(e) => setState({ ...state, branding: { ...state.branding, secondaryColor: e.target.value } })} />
           </div>
-          <div>
-            <label className="block text-sm font-medium">Subdomain</label>
+          <div>"
+            <label className="block text-sm font-medium">Subdomain</label>"
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.subdomain} onChange={(e) => setState({ ...state, branding: { ...state.branding, subdomain: e.target.value } })} />
           </div>
         </section>
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -853,25 +968,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-          <div>
-            <label className="block text-sm font-medium">Logo URL</label>
+
+          <div>"
+            <label className="block text-sm font-medium">Logo URL</label>"
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.logoUrl} onChange={(e) => setState({ ...state, branding: { ...state.branding, logoUrl: e.target.value } })} />
           </div>
-          <div>
-            <label className="block text-sm font-medium">Primary Color</label>
+          <div>"
+            <label className="block text-sm font-medium">Primary Color</label>"
             <input type="color" className="mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40" value={state.branding.primaryColor} onChange={(e) => setState({ ...state, branding: { ...state.branding, primaryColor: e.target.value } })} />
           </div>
-          <div>
-            <label className="block text-sm font-medium">Secondary Color</label>
+          <div>"
+            <label className="block text-sm font-medium">Secondary Color</label>"
             <input type="color" className="mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40" value={state.branding.secondaryColor} onChange={(e) => setState({ ...state, branding: { ...state.branding, secondaryColor: e.target.value } })} />
           </div>
-          <div>
-            <label className="block text-sm font-medium">Subdomain</label>
+          <div>"
+            <label className="block text-sm font-medium">Subdomain</label>"
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.subdomain} onChange={(e) => setState({ ...state, branding: { ...state.branding, subdomain: e.target.value } })} />
           </div>
         </section>
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
@@ -892,10 +1012,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-semibold mb-3">Auto-Deploy Modules</h3>
+=======
+
+"
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-4">"
+          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">"
+            <h3 className="font-semibold mb-3">Auto-Deploy Modules</h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
             <div className="space-y-2">
-              {Object.keys(state.modules).map((key) => (
-                <label key={key} className="flex items-center gap-3 text-sm">
+              {Object.keys(state.modules).map((key) => ("
+                <label key={key} className="flex items-center gap-3 text-sm">'"
                   <input type="checkbox" checked={state.modules[key]} onChange={() => handleToggle('modules', key)} />
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
                   <span>/{key}</span>
 =======
@@ -928,12 +1056,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-semibold mb-3">Bonus Modules</h3>
+=======
+                  <span>/{key}</span>
+
+
+                </label>
+              ))}
+            </div>
+          </div>"
+          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">"
+            <h3 className="font-semibold mb-3">Bonus Modules</h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
             <div className="space-y-2">
-              {Object.keys(state.bonusModules).map((key) => (
-                <label key={key} className="flex items-center gap-3 text-sm">
+              {Object.keys(state.bonusModules).map((key) => ("
+                <label key={key} className="flex items-center gap-3 text-sm">'"
                   <input type="checkbox" checked={state.bonusModules[key]} onChange={() => handleToggle('bonusModules', key)} />
                   <span>/{key}</span>
                 </label>
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               ))  } catch (error) {
@@ -953,13 +1093,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
               ))}
 
             </div>;
           </div>;
-        </section>;
+        </section>;'
         <div className='flex items-center gap-3'>;
 
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -980,6 +1125,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <button
             disabled={submitting}
             className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60'>;
+=======
+
+          <button;
+            disabled={submitting}'
+            className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
             {submitting ? 'Deploying…' : 'Deploy Genesis'}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1007,9 +1158,10 @@ export default InitPage;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-          </button>;
+          </button>;'
           {error && <span className='text-sm text-red-500'>{error}</span>}        </div>;
       </form>;
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1089,15 +1241,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {result && (;
         <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
           <h3 className='font-semibold'>Deployment Result</h3>;
+=======
+
+
+      {result && (;'
+        <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;'
+          <h3 className='font-semibold'>Deployment Result</h3>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx
           <pre className='mt-2 text-xs whitespace-pre-wrap'>;
             {JSON && JSON.stringify(result, null, 2)}
           </pre>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       )}
     </div>;
   );
-<<<<<<< HEAD
+
 }
 export default InitPage;
 <<<<<<< HEAD
@@ -1106,70 +1265,9 @@ export default InitPage;
 =======
 
 
-=======
-            <label className='block text - sm font - medium'>Subdomain</label>;
-            <input;
-              className='mt - 1 w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white / 60 dark:bg - black / 40 px - 3 py - 2';
-              value={state.branding.subdomain}
-              on_change={e =>;
-                set_state ({
-                  ...state,
-                  branding: { ...state.branding, subdomain: e.target.value },
-                });
-              }
-            />;
-          </div>;
-        </section>;
-        <section className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-          <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-            <h3 className='font - semibold mb - 3'>Auto - Deploy Modules</h3>;
-            <div className='space - y-2'>;
-              {Object.keys (state.modules).map (key => (
-                <label key={key} className='flex items - center gap - 3 text - sm'>;
-                  <input;
-                    type='checkbox';
-                    checked={state.modules[key]}
-                    on_change={() => handle_toggle ('modules', key)}
-                  />                  <span>/{key}</span>;
-                </label>))}
-            </div>;
-          </div>;
-          <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-            <h3 className='font - semibold mb - 3'>Bonus Modules</h3>;
-            <div className='space - y-2'>;
-              {Object.keys (state.bonus_modules).map (key => (
-                <label key={key} className='flex items - center gap - 3 text - sm'>;
-                  <input;
-                    type='checkbox';
-                    checked={state.bonus_modules[key]}
-                    on_change={() => handle_toggle ('bonus_modules', key)}
-                  />                  <span>/{key}</span>;
-                </label>))}
-            </div>;
-          </div>;
-        </section>;
-        <div className='flex items - center gap - 3'>;
-          <button;
-            disabled={submitting}
-            className='inline - flex items - center px - 4 py - 2 rounded - md bg - indigo - 600 text - white hover:bg - indigo - 700 disabled:opacity - 60';
-          >;
-            {submitting ? 'Deploying…' : 'Deploy Genesis'}
-          </button>;
-          {error && <span className='text - sm text - red - 500'>{error}</span>}        </div>;
-      </form>;
-      {result && (
-        <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-          <h3 className='font - semibold'>Deployment Result</h3>;
-          <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
-            {JSON.stringify (result, null, 2)}
-          </pre>;
-        </div>)}
-    </div>);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}
-export default InitPage;
 
 
+<<<<<<< HEAD:pages_backup/zion/init.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1189,3 +1287,7 @@ export default InitPage;
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/zion/init.tsx
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/zion/init.tsx

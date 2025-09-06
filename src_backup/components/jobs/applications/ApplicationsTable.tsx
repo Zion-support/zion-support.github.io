@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 <<<<<<< HEAD:src/components/jobs/applications/ApplicationsTable.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,10 +75,18 @@ import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { 
   Table;
+=======
+import { format } from 'date-fns''
+import { JobApplication } from '@/types/jobs'';
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed'
+import { ClickableBadge } from '@/components/ui/clickable-badge';
+import {  Table;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   TableRow
 } from "@/components/ui/table",
@@ -158,22 +167,37 @@ import Image from 'next/image'; // Import next/image
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;
+=======
+  TableRow'
+} from '@/components/ui/table''
+import { ApplicationActions } from './ApplicationActions''
+import { StatusBadge } from './StatusBadge''
+import { Briefcase, User } from 'lucide-react''
+import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal'';
+import React, { useState } from 'react'; // Import React and useState'
+import { toast } from '@/hooks/use-toast'';
+import Image from 'next/image'; // Import next/image'
+import { format } from 'date-fns';'
+import { JobApplication } from '@/types/jobs';'
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
 import { ClickableBadge } from '@/components/ui/clickable-badge';
 import {  Table,;
   TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { ApplicationActions } from './ApplicationActions';
-import { StatusBadge } from './StatusBadge';
-import { Briefcase, User } from 'lucide-react';
-import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal';
-import React, { useState } from 'react'; // Import React and useState;
-import { toast } from '@/hooks/use-toast';
+  TableRow,;'
+} from '@/components/ui/table';'
+import { ApplicationActions } from './ApplicationActions';'
+import { StatusBadge } from './StatusBadge';'
+import { Briefcase, User } from 'lucide-react';'
+import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal';'
+import React, { useState } from 'react'; // Import React and useState;'
+import { toast } from '@/hooks/use-toast';'
 import Image from 'next/image'; // Import next/image;
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ApplicationsTableProps {
 <<<<<<< HEAD:src/components/jobs/applications/ApplicationsTable.tsx
@@ -182,10 +206,14 @@ interface ApplicationsTableProps {
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
+=======
+interface ApplicationsTableProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
   applications: JobApplication[];
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
   onViewScore: (application: JobApplication) => void
 <<<<<<< HEAD:src/components/jobs/applications/ApplicationsTable.tsx
 <<<<<<< HEAD
@@ -194,22 +222,29 @@ interface ApplicationsTableProps {
 import { format } from 'date - fns';
 import { JobApplication } from '@/types / jobs';
 import { Avatar as AvatarPrimitive } from '@/components / ui / avatar'; // Renamed;
+=======
+  onViewScore: (application: JobApplication) => void;
+'
+import { format } from 'date - fns';'
+import { JobApplication } from '@/types / jobs';'
+import { Avatar as AvatarPrimitive } from '@/components / ui / avatar'; // Renamed;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import {  Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from '@/components / ui / table';
-import { ApplicationActions } from './ApplicationActions';
-import { StatusBadge } from './StatusBadge';
-import { Briefcase, User } from 'lucide-react';
-import { HireConfirmationModal } from '@/components / hiring - tracker / HireConfirmationModal';
-import React, { useState } from 'react'; // Import React and useState;
-import { toast } from '@/hooks / use - toast';
+  TableRow,';
+} from '@/components / ui / table';'
+import { ApplicationActions } from './ApplicationActions';'
+import { StatusBadge } from './StatusBadge';'
+import { Briefcase, User } from 'lucide-react';'
+import { HireConfirmationModal } from '@/components / hiring - tracker / HireConfirmationModal';'
+import React, { useState } from 'react'; // Import React and useState;'
+import { toast } from '@/hooks / use - toast';'
 import Image from 'next / image'; // Import next / image;
-interface ApplicationsTableProps {
+interface ApplicationsTableProps {}
   applications: JobApplication[];
   processing_id: string | null;
   onViewApplication: (application_id: string) => Promise < void>;
@@ -217,17 +252,16 @@ interface ApplicationsTableProps {
   onViewScore: (application: JobApplication) => void;
 // Sub - component for avatar to handle its own error state;
 
-const ApplicationAvatar = ({
-  application
-}: {
-
+const ApplicationAvatar = ({}
+  application;
+}: {}
 // Sub-component for avatar to handle its own error state;
 const ApplicationAvatar = ({;
   application,;
 }: {;
   application: JobApplication;
 }) => {;
-  const [avatarError, setAvatarError] = useState(false);
+  const [avatarError, setAvatarError] = useState(false);'
   const talentName = application && application.talent_profile?.full_name || 'Candidate';
 interface ApplicationsTableProps {;
   applications: JobApplication[],;
@@ -243,6 +277,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
   const talentName = application && application.talent_profile?.full_name || "Candidate",;
 
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
 
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
@@ -253,21 +288,27 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
+=======
+const ApplicationAvatar = ({ application }: { application: JobApplication },) => {}
+  const [avatarError, setAvatarError] = useState(false)"
+  const talentName = application.talent_profile?.full_name |"Candidate"
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
     <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (
-        <Image
+        <Image;
           src={application.talent_profile.profile_picture_url}
           alt={talentName}
-          width={32} // for h-8 w-8
-          height={32} // for h-8 w-8
-
-
+          width={32} // for h-8 w-8;
+          height={32} // for h-8 w-8;
+"
           className="rounded-full object-cover"
           onError={() => setAvatarError(true)}
           priority={false}
         />
 
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
       ) : (
@@ -277,6 +318,9 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
   const talentName = application.talent_profile?.full_name |"Candidate"
   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      ) : ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
         <User className="h-4 w-4" />
       )}
 <<<<<<< HEAD
@@ -285,10 +329,10 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
 =======
 
   application: JobApplication;
-}) =>: any {
-  const [avatar_error, setAvatarError] = useState (false);
+}) =>: any {}
+  const [avatar_error, setAvatarError] = useState (false);'
   const talent_name = application.talent_profile?.full_name || 'Candidate';
-interface ApplicationsTableProps {
+interface ApplicationsTableProps {}
   applications: JobApplication[],
   processing_id: string | null,
   onViewApplication: (application_id: string, ) => Promise < void>,
@@ -296,11 +340,11 @@ interface ApplicationsTableProps {
   onViewScore: (application: JobApplication, ) => void;
 }
 // Sub - component for avatar to handle its own error state;
-const ApplicationAvatar = ({ application }: { application: JobApplication }, ) =>: any {
-  const [avatar_error, setAvatarError] = useState (false),
+const ApplicationAvatar = ({ application }: { application: JobApplication }, ) =>: any {}
+  const [avatar_error, setAvatarError] = useState (false),"
   const talent_name = application.talent_profile?.full_name || "Candidate",
-  return (
-    <AvatarPrimitive className='h - 8 w - 8'>;
+  return ('
+    <AvatarPrimitive className='h - 8 w - 8'>;'
       {' '}
       {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatar_error ? (
@@ -308,27 +352,27 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }, ) =
           src = {application.talent_profile.profile_picture_url, }
           alt = {talent_name, }
           width={32} // for h - 8 w - 8;
-          height={32} // for h - 8 w - 8;
+          height={32} // for h - 8 w - 8;'
           className='rounded - full object - cover';
           on_error={() => setAvatarError (true)}
-          priority={false}        />) : (
+          priority={false}        />) : ('
         <User className='h - 4 w - 4' />)}
     </AvatarPrimitive>);
 }
-export /**
- * ApplicationsTable - Function description
+export /**;
+ * ApplicationsTable - Function description;
  */
-function ApplicationsTable() {
+function ApplicationsTable() {}
   const [hireModalOpen, setHireModalOpen] = useState (false);
   const [selected_application, setSelectedApplication] =;
     useState < JobApplication | null>(null);
-  const handleHireClick = (application: JobApplication) =>: any {
+  const handleHireClick = (application: JobApplication) =>: any {}
     setSelectedApplication (application);
     setHireModalOpen (true);
   }
-  const handleHireConfirmed = () =>: any {
-    toast ({
-      title: 'Hiring process initiated',
+  const handleHireConfirmed = () =>: any {}
+    toast ({'
+      title: 'Hiring process initiated','
       description: 'Offer has been sent to the talent.',
     });
 
@@ -367,32 +411,38 @@ export function ApplicationsTable(): any ({;
     setHireModalOpen(true);
   };
   const handleHireConfirmed = () => {;
-    toast({;
-      title: 'Hiring process initiated',;
+    toast({;'
+      title: 'Hiring process initiated',;'
       description: 'Offer has been sent to the talent.',;
     });
   };
 
-export function ApplicationsTable({ 
+export function ApplicationsTable({}
   applications, 
   processingId, 
   onViewApplication, 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
+=======
+  onStatusChange,;
+  onViewScore;
+}: ApplicationsTableProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
-  const handleHireClick = (application: JobApplication) => {
+  const handleHireClick = (application: JobApplication) => {}
     setSelectedApplication(application),
     setHireModalOpen(true)
   },
   
-  const handleHireConfirmed = () => {
-    toast({
-      title: "Hiring process initiated",
+  const handleHireConfirmed = () => {}
+    toast({"
+      title: "Hiring process initiated","
       description: "Offer has been sent to the talent."
     })
   },
@@ -419,38 +469,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
 
-                    <div>;
-                      <div className='font-medium'>;
+                    <div>;'
+                      <div className='font-medium'>;'
                         {application && application.talent_profile?.full_name || 'Candidate'}
-                      </div>;
+                      </div>;'
                       <div className='text-xs text-muted-foreground mt-0 && 0.5'>;
                         {application && application.talent_profile?.professional_title ||;
-
+'
       <div className='rounded - md border'>;
         <Table>;
           <TableHeader>;
             <TableRow>;
-              <TableHead > Candidate</TableHead>;
-              <TableHead className='hidden md:table - cell'>Applied</TableHead>;
-              <TableHead className='hidden md:table - cell'>Status</TableHead>;
+              <TableHead > Candidate</TableHead>;'
+              <TableHead className='hidden md:table - cell'>Applied</TableHead>;'
+              <TableHead className='hidden md:table - cell'>Status</TableHead>;'
               <TableHead className='hidden lg:table - cell'>;
                 Match Score;
-              </TableHead>;
+              </TableHead>;'
               <TableHead className='text - right'>Actions</TableHead>;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
             {applications.map (application => (              <TableRow key={application.id}>;
-                <TableCell>;
-                  <div className='flex items - center gap - 3'>;
+                <TableCell>;'
+                  <div className='flex items - center gap - 3'>;'
                     <ApplicationAvatar application={application} />{' '}
                     {/* Use sub - component */}
-                    <div>;
-                      <div className='font - medium'>;
+                    <div>;'
+                      <div className='font - medium'>;'
                         {application.talent_profile?.full_name || 'Candidate'}
-                      </div>;
+                      </div>;'
                       <div className='text - xs text - muted - foreground mt - 0.5'>;
-                        {application.talent_profile?.professional_title ||;
+                        {application.talent_profile?.professional_title ||;'
                           'Applicant'}
                       </div>;
                     </div>;
@@ -462,7 +512,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Table>;
       </div>;
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
       <HireConfirmationModal
+=======
+
+      <HireConfirmationModal;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
         isOpen = {hireModalOpen,}
         onClose = {() => setHireModalOpen(false),}
         application = {selectedApplication |undefined,}
@@ -478,39 +533,51 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
 
-export function ApplicationsTable({ 
+export function ApplicationsTable({}
   applications, 
   processingId, 
   onViewApplication, 
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
 <<<<<<< HEAD
 =======
 
+=======
+  onStatusChange,;
+  onViewScore;
+}: ApplicationsTableProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
 },
 
-export function ApplicationsTable({ 
+export function ApplicationsTable({}
   applications, 
   processingId, 
   onViewApplication, 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  onStatusChange,;
+  onViewScore;
+}: ApplicationsTableProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
-  const handleHireClick = (application: JobApplication) => {
+  const handleHireClick = (application: JobApplication) => {}
     setSelectedApplication(application),
     setHireModalOpen(true)
   },
   
-  const handleHireConfirmed = () => {
-    toast({
-      title: "Hiring process initiated",
+  const handleHireConfirmed = () => {}
+    toast({"
+      title: "Hiring process initiated","
       description: "Offer has been sent to the talent."
     })
   },
@@ -520,15 +587,15 @@ export function ApplicationsTable({
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   return (
-    <>
+    <>"
       <div className="rounded-md border">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Candidate</TableHead>
-              <TableHead className="hidden md:table-cell">Applied</TableHead>
-              <TableHead className="hidden md:table-cell">Status</TableHead>
-              <TableHead className="hidden lg:table-cell">Match Score</TableHead>
+              <TableHead>Candidate</TableHead>"
+              <TableHead className="hidden md:table-cell">Applied</TableHead>"
+              <TableHead className="hidden md:table-cell">Status</TableHead>"
+              <TableHead className="hidden lg:table-cell">Match Score</TableHead>"
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -543,6 +610,7 @@ export function ApplicationsTable({
             {applications.map((application) => (
               <TableRow key={application.id}>
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -563,38 +631,51 @@ export function ApplicationsTable({
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <div className="font-medium">
+=======
+                <TableCell>"
+                  <div className="flex items-center gap-3">
+                    <ApplicationAvatar application={application} /> {/* Use sub-component */}
+                    <div>
+"
+                      <div className="font-medium">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
                         {application.talent_profile?.full_name || "Candidate"}
-                      </div>
-                      <div className="text-xs text-muted-foreground mt-0.5">
+                      </div>"
+                      <div className="text-xs text-muted-foreground mt-0.5">"
                         {application.talent_profile?.professional_title || "Applicant"}
 
                       </div>
                     </div>
                   </div>
-                </TableCell>
-                <TableCell className="hidden md:table-cell">
+                </TableCell>"
+                <TableCell className="hidden md:table-cell">"
                   {format(new Date(application.created_at), "PP")}
-                </TableCell>
+                </TableCell>"
                 <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />
                 </TableCell>
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
-                    <ClickableBadge 
-                      variant="outline"
+                    <ClickableBadge "
+                      variant="outline""
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >
                       {application.match_score}%
                     </ClickableBadge>
-                  ) : (
+                  ) : ("
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 <<<<<<< HEAD
                 <TableCell className="text-right">
                   <div className="flex items-center justify-end gap-2">
@@ -662,28 +743,39 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   applications.map ( (application) => (<TableRow key= {
   application.id
 }> <TableCell> </div> </div> </div> </TableCell> onClick={
+=======
+"
+}h-4 w-4"/>) ;
+}</AvatarPrimitive>) ;
+"
+};""
+return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {}
+  applications.map ( (application) => (<TableRow key= {}
+  application.id;
+}> <TableCell> </div> </div> </div> </TableCell> onClick={}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
   () => onViewScore (application)
-}> {
-  application.match score "
-}% </ClickableBadge>) : (<span className="text-muted-foreground text-sm" >Not scored</span>) "
-}</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {
-  application
-}processingId= {
-  processingId
-}onViewApplication= {
-  onViewApplication
-}onStatusChange= {
-  onStatusChange
+}> {"
+  application.match score ""
+}% </ClickableBadge>) : (<span className="text-muted-foreground text-sm" >Not scored</span>) ""
+}</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {}
+  application;
+}processingId= {}
+  processingId;
+}onViewApplication= {}
+  onViewApplication;
+}onStatusChange= {}
+  onStatusChange;
 }/> </div> </TableCell> </TableRow>) )
-}</TableBody> </Table> </div> <HireConfirmationModal isOpen= {
-  hireModalOpen
-}onClose= {
+}</TableBody> </Table> </div> <HireConfirmationModal isOpen= {}
+  hireModalOpen;
+}onClose= {}
   () => setHireModalOpen (false)
-}application= {
-  selectedApplication |undefined
-}onConfirm= {
-  handleHireConfirmed
-}/> </>)
+}application= {}
+  selectedApplication |undefined;
+}onConfirm= {}
+  handleHireConfirmed;
+}/> </>)'"
 }'"}
 <<<<<<< HEAD:src/components/jobs/applications/ApplicationsTable.tsx
 <<<<<<< HEAD
@@ -753,6 +845,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   /* Using Renamed AvatarPrimitive */ ;
 }{;
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 <<<<<<< HEAD:src/components/jobs/applications/ApplicationsTable.tsx
 <<<<<<< HEAD
   application && application.talent profile?.profile picture url && !avatarError ? (<Imagesrc= {
@@ -762,31 +855,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </TableCell>;
                 <TableCell className="hidden md:table-cell">;
+=======
+  application && application.talent profile?.profile picture url && !avatarError ? (<Imagesrc= {}
+  application && application.talent profile && profile.profile picture url '
+                <TableCell className='hidden md:table - cell'>;'
+                  {format (new Date (application.created_at), 'PP')}
+                </TableCell>;"
+                <TableCell className="hidden md:table-cell">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
                   {format(new Date(application.created_at), "PP")}
-                </TableCell>;
+                </TableCell>;"
                 <TableCell className="hidden md:table-cell">;
                   <StatusBadge status={application.status} />;
-                </TableCell>;
+                </TableCell>;"
                 <TableCell className="hidden lg:table-cell">;
                   {application.match_score !== undefined && application.match_score !== null ? (;
-                    <ClickableBadge;
-                      variant="outline";
+                    <ClickableBadge;"
+                      variant="outline";"
                       className="cursor-pointer";
                       onClick={() => onViewScore(application)}
                     >;
                       {application.match_score}%;
                     </ClickableBadge>;
-                  ) : (;
+                  ) : (;"
                     <span className="text-muted-foreground text-sm">Not scored</span>;
                   )}
-                </TableCell>;
-                <TableCell className="text-right">;
+                </TableCell>;"
+                <TableCell className="text-right">;"
                   <div className="flex items-center justify-end gap-2">;
-                    <ClickableBadge;
-                      variant="outline";
+                    <ClickableBadge;"
+                      variant="outline";"
                       className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700";
                       onClick={() => handleHireClick(application)}
-                    >;
+                    >;"
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
                     <ApplicationActions;
@@ -812,48 +913,73 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
   32;
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 }//for h - 8 w - 8 height= {
   32 ";
 }//for h - 8 w - 8 className="rounded - full object-cover" on_error= {
+=======
+}//for h - 8 w - 8 height= {"
+  32 ";"
+}//for h - 8 w - 8 className="rounded - full object - cover" on_error= {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
   () => setAvatarError (true);
-}priority= {
-  false ";
+}priority= {"
+  false ";"
 }h - 4 w - 4"/>);
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 }</AvatarPrimitive>);
 }";
 return (<> <div className=" rounded-md border"> hidden md:table - cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
+=======
+}</AvatarPrimitive>);"
+}";"
+return (<> <div className=" rounded - md border"> hidden md:table - cell" >Applied</TableHead> <TableHead className="hidden md:table - cell" >Status</TableHead> <TableHead className="hidden lg:table - cell" >Match Score</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {}
+  applications.map ( (application) => (<TableRow key= {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
   application.id;
-}> <TableCell> </div> </div> </div> </TableCell> on_click={
+}> <TableCell> </div> </div> </div> </TableCell> on_click={}
   () => onViewScore (application);
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 }> {
   application.match score ";
 }% </ClickableBadge>) : (<span className="text - muted - foreground text-sm" >Not scored</span>) ";
 }</TableCell> <TableCell className="text-right" > <div className="flex items - center justify - end gap-2" > <ClickableBadge > <Briefcase className="h - 3 w - 3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {
+=======
+}> {"
+  application.match score ";"
+}% </ClickableBadge>) : (<span className="text - muted - foreground text - sm" >Not scored</span>) ";"
+}</TableCell> <TableCell className="text - right" > <div className="flex items - center justify - end gap - 2" > <ClickableBadge > <Briefcase className="h - 3 w - 3 mr - 1" /> Hire </ClickableBadge> <ApplicationActions application= {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
   application;
-}processing_id= {
+}processing_id= {}
   processing_id;
 
-}onViewApplication= {
+}onViewApplication= {}
   onViewApplication;
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 }onStatusChange= {
 
+=======
+}onStatusChange= {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx
   onStatusChange;
 }/> </div> </TableCell> </TableRow>) );
-}</TableBody> </Table> </div> <HireConfirmationModal is_open= {
+}</TableBody> </Table> </div> <HireConfirmationModal is_open= {}
   hireModalOpen;
-}on_close= {
+}on_close= {}
   () => setHireModalOpen (false);
-}application= {
+}application= {}
   selected_application || undefined;
-}on_confirm= {
+}on_confirm= {}
   handleHireConfirmed;
-}/> </>);
+}/> </>);'"
 }'"}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </>;
   );
 }
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationsTable.tsx
 ;
 <<<<<<< HEAD
 =======
@@ -912,3 +1038,6 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationsTable.tsx
+=======
+;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationsTable.tsx

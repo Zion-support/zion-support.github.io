@@ -894,10 +894,20 @@ body::after {
   animation: quantumSpin 2s linear infinite;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 .quantum-loader::before {
   top: 0;
   left: 0;
@@ -914,6 +924,7 @@ body::after {
   bottom: 10px;
   border-bottom-color: rgba(147, 51, 234, 0.8);
   animation-duration: 2s;
+<<<<<<< HEAD
 =======
 >>>>>>> main
   animation-direction: reverse;
@@ -1006,21 +1017,48 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   animation-direction: reverse;}
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  animation-direction: reverse;}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 @keyframes quantumSpin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Enhanced Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -1087,6 +1125,7 @@ body::after {
 @keyframes cyberMove {
   0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
   100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
+<<<<<<< HEAD
 }
 =======
 .biomedical-pulse {
@@ -1160,3 +1199,15 @@ body::after {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+}
+}
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

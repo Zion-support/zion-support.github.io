@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -15,24 +16,27 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+<<<<<<< HEAD
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
     this.ensureLogsDir();
   }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  ensureLogsDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
-    }
-  }
 
+<<<<<<< HEAD
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -360,6 +364,15 @@ console.log('✅ Accessibility check completed');
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+#!/usr/bin/env node
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         
       }
     }},
@@ -482,6 +495,7 @@ if (!fs.existsSync(reportsDir)) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 <<<<<<< HEAD
@@ -493,6 +507,10 @@ if (!fs.existsSync(reportsDir)) {
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -616,6 +634,7 @@ if (require.main === module) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -694,6 +713,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -702,6 +724,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+<<<<<<< HEAD
 main
 
 
@@ -720,6 +743,18 @@ main
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -729,6 +764,7 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "name"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -791,3 +827,13 @@ main
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+    "status"
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

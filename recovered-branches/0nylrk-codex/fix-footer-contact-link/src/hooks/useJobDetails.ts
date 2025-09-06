@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,19 +46,28 @@ export function useJobDetails(jobId: string | undefined) {;
   const [error, setError] = useState(null);
   async function loadJobDetails() {
     if (!jobId) {
+=======
+
+import {useState, useEffect} from 'react';'
+import {supabase} from '@/integrations/supabase/client';
+export function useJobDetails() { return null; }
+  async function loadJobDetails() {}
+    if (!jobId) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setIsLoading(false);
-      return
+      return;
     }
-    try {
+    try {}
       setIsLoading(true);
-      const { data, error } = await supabase
-        .from('jobs')
-        .select('*')
+      const { data, error } = await supabase'
+        .from('jobs')'
+        .select('*')'
         .eq('id', jobId)
         .single();
       if (error) throw error;
       setJob(data);
       setError(null)
+<<<<<<< HEAD
     } catch (err) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,27 +119,23 @@ if (throw error) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
+=======
+    } catch (err) {}
+    } finally {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Load job details when component mounts or job_id changes;
-  useEffect (() => {
+  useEffect (() => {}
     loadJobDetails ();
   }, [job_id]);
 ;
+
+
+
 <<<<<<< HEAD
-
-  return {
-    job;
-
-=======
-  return {
-    job;
-
       console.error('Error loading job details:', err);
       setError(err.message)
     } finally {
@@ -149,13 +155,16 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     isLoading;
     error;
-    loadJobDetails
+    loadJobDetails;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default useJobDetails;
 
@@ -180,28 +189,27 @@ export default useJobDetails;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from 'react',;
+=======
+
+
+'
+import { useState, useEffect } from 'react',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from '@/integrations/supabase/client',;
-export function useJobDetails(jobId: string | undefined) {;
-  const [job, setJob] = useState(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [error, setError] = useState(null),;
-  async function loadJobDetails() {;
-    if (!jobId) {;
-      setIsLoading(false),;
-      return;
+export function useJobDetails() { return null; }
     }
 ;
     try {;
       setIsLoading(true),;
-      const { data, error } = await supabase;
-        .from('jobs');
-        .select('*');
+      const { data, error } = await supabase;'
+        .from('jobs');'
+        .select('*');'
         .eq('id', jobId);
         .single(),;
       if (error) throw error,;
       setJob(data),;
       setError(null);
-    } catch (err) {;
+    } catch (err) {;'
       console.error('Error loading job details:', err),;
       setError(err.message);
     } finally {;
@@ -216,26 +224,19 @@ export function useJobDetails(jobId: string | undefined) {;
   return {;
     job,;
     isLoading,;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
     error;
     loadJobDetails;
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 
 
 export default useJobDetails;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default useJobDetails;
@@ -245,39 +246,35 @@ export default useJobDetails;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default useJobDetails;
 export default useJobDetails;
 ;
 export default useJobDetails;
 ;
-
-import { useState, useEffect } from 'react',;
+'
+import { useState, useEffect } from 'react',;'
 import { supabase } from '@/integrations/supabase/client',;
 ;
-export function useJobDetails(jobId:string | undefined) {;
-  const [job, setJob] = useState(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [error, setError] = useState(null),;
-;
-  async function loadJobDetails() {;
-    if (!jobId) {;
-      setIsLoading(false),;
-      return,;
+export function useJobDetails() { return null; }
     }
     ;
     try {;
       setIsLoading(true),;
-      const { data, error } = await supabase;
-        .from('jobs');
-        .select('*');
+      const { data, error } = await supabase;'
+        .from('jobs');'
+        .select('*');'
         .eq('id', jobId);
         .single(),;
         ;
       if (error) throw error,;
       setJob(data),;
       setError(null),;
-    } catch (err) {;
+    } catch (err) {;'
       console.error('Error loading job details:', err),;
       setError(err.message),;
     } finally {;
@@ -297,11 +294,12 @@ export function useJobDetails(jobId:string | undefined) {;
     loadJobDetails;
   },;
 }
-;
+;'
 export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
 }export default useJobDetails;
 ;
 export default useJobDetails;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -312,3 +310,9 @@ export default useJobDetails;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

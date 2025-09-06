@@ -7,6 +7,7 @@
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -38,31 +39,45 @@ import {DeploymentOptions} from "@/types/smart-contracts";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import {useState, useEffect} from "react";"
+import {useForm} from "react-hook-form";"
+import {zodResolver} from "@hookform/resolvers/zod";"
+import {z} from "zod";"
+import {Loader2} from "lucide-react";"
+import {Button} from "@/components/ui/button";"
+import {Form} from "@/components/ui/form";"
+import {DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";"
+import {useToast} from "@/hooks/use-toast";"
+import {TalentProfile} from "@/types/talent";"
+import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";"
+import {generateContract} from "../utils/contractUtils";"
+import {ProjectDetailsFields} from "./ProjectDetailsFields";"
+import {PaymentTermsFields} from "./PaymentTermsFields";"
+import {AdditionalClausesFields} from "./AdditionalClausesFields";"
+import {DeploymentOptions} from "@/types/smart-contracts";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { useState, useEffect } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Loader2 } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Form } from "@/components/ui/form",
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { useToast } from "@/hooks/use-toast",
-import { TalentProfile } from "@/types/talent",
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
-import { generateContract } from "../utils/contractUtils",
-import { ProjectDetailsFields } from "./ProjectDetailsFields",
-import { PaymentTermsFields } from "./PaymentTermsFields",
-import { AdditionalClausesFields } from "./AdditionalClausesFields",
+
+"
+import { useState, useEffect } from "react","
+import { useForm } from "react-hook-form","
+import { zodResolver } from "@hookform/resolvers/zod","
+import { z } from "zod","
+import { Loader2 } from "lucide-react","
+import { Button } from "@/components/ui/button","
+import { Form } from "@/components/ui/form","
+import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog","
+import { useToast } from "@/hooks/use-toast","
+import { TalentProfile } from "@/types/talent","
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator","
+import { generateContract } from "../utils/contractUtils","
+import { ProjectDetailsFields } from "./ProjectDetailsFields","
+import { PaymentTermsFields } from "./PaymentTermsFields","
+import { AdditionalClausesFields } from "./AdditionalClausesFields","
 import { DeploymentOptions } from "@/types/smart-contracts",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -125,6 +140,13 @@ const formSchema = z && z.object({;
   paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
   paymentAmount: z && z.string().min(1, "Payment amount is required");
   additionalClauses: z && z.array(z && z.string()).default([])}),;  talent;
+=======
+const formSchema = z.object({";
+  projectName: z.string().min(1, "Project name is required");"
+  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
+  startDate: z.date({}
+  talent;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   clientName;
   initialValues;
   onFormValuesChange;
@@ -139,19 +161,23 @@ const formSchema = z && z.object({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export type ContractFormValues = z.infer<typeof formSchema>,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-interface ContractFormProps {
+
+interface ContractFormProps {}
   talent: TalentProfile,
   clientName: string,
   initialValues?: ContractFormValues,
   onFormValuesChange?: (values: ContractFormValues) => void,
   onContractGenerated: (contractContent: string) => void,
   deployOptions?: DeploymentOptions,
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
 
@@ -166,6 +192,8 @@ interface ContractFormProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export function ContractForm({;
   talent;
@@ -174,34 +202,37 @@ export function ContractForm({;
   onFormValuesChange;
   onContractGenerated;
   deployOptions;
-export function ContractForm({
+export function ContractForm({}
   talent,
   clientName,
   initialValues,
   onFormValuesChange,
   onContractGenerated,
+<<<<<<< HEAD
   deployOptions,
   onDeployOptionsChange
 }: ContractFormProps) {
 <<<<<<< HEAD
 
 =======
+=======
+  deployOptions,;
+  onDeployOptionsChange;
+}: ContractFormProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
-  const form = useForm<ContractFormValues>({
+  const form = useForm<ContractFormValues>({}
     resolver: zodResolver(formSchema)
-    defaultValues: initialValues |{
-      projectName: ""
+    defaultValues: initialValues |{"
+      projectName: """
       scopeSummary: ""
-      startDate: new Date()
-      paymentTerms: talent.hourly_rate ? "hourly" : "fixed"
-      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : ""
+      startDate: new Date()"
+      paymentTerms: talent.hourly_rate ? "hourly" : "fixed""
+      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : """
       additionalClauses: ["nda", "ip"]}});
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   const [isGenerating, setIsGenerating] = useState(false),
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
 =======
@@ -210,20 +241,21 @@ export function ContractForm({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { toast } = useToast(),
 
-  const form = useForm<ContractFormValues>({
+  const form = useForm<ContractFormValues>({}
     resolver: zodResolver(formSchema),
-    defaultValues: initialValues || {
-      projectName: "",
+    defaultValues: initialValues || {"
+      projectName: "","
       scopeSummary: "",
-      startDate: new Date(),
-      paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
-      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
+      startDate: new Date(),"
+      paymentTerms: talent.hourly_rate ? "hourly" : "fixed","`
+      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "","
       additionalClauses: ["nda", "ip"]}}),
   
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -249,50 +281,41 @@ export function ContractForm({
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  // Update form when initialValues change;
+  useEffect(() => {}
+    if (initialValues) {}
+      Object.keys(initialValues).forEach((key) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         const typedKey = key as keyof ContractFormValues,
         form.setValue(typedKey, initialValues[typedKey])
       })
 
-<<<<<<< HEAD
-=======
-        const typedKey = key as keyof ContractFormValues,
-        form.setValue(typedKey, initialValues[typedKey])
-      })
-    }
-  }, [initialValues, form]);
-  // Track form values for template saving
-  useEffect(() => {
-    if (onFormValuesChange) {
-      const subscription = form.watch((value) => {
-        onFormValuesChange(value as ContractFormValues)
-      });
-      return () => subscription.unsubscribe()
-    }
-  }, [form, onFormValuesChange]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { useState, useEffect } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { Loader2 } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { Form } from "@/components/ui/form",;
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
-import { useToast } from "@/hooks/use-toast",;
-import { TalentProfile } from "@/types/talent",;
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
-import { generateContract } from "../utils/contractUtils",;
-import { ProjectDetailsFields } from "./ProjectDetailsFields",;
-import { PaymentTermsFields } from "./PaymentTermsFields",;
-import { AdditionalClausesFields } from "./AdditionalClausesFields",;
+"
+import { useState, useEffect } from "react",;"
+import { useForm } from "react-hook-form",;"
+import { zodResolver } from "@hookform/resolvers/zod",;"
+import { z } from "zod",;"
+import { Loader2 } from "lucide-react",;"
+import { Button } from "@/components/ui/button",;"
+import { Form } from "@/components/ui/form",;"
+import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",;"
+import { useToast } from "@/hooks/use-toast",;"
+import { TalentProfile } from "@/types/talent",;"
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;"
+import { generateContract } from "../utils/contractUtils",;"
+import { ProjectDetailsFields } from "./ProjectDetailsFields",;"
+import { PaymentTermsFields } from "./PaymentTermsFields",;"
+import { AdditionalClausesFields } from "./AdditionalClausesFields",;"
 import { DeploymentOptions } from "@/types/smart-contracts",;
-const formSchema = z.object({;
-  projectName: z.string().min(1, "Project name is required"),;
+const formSchema = z.object({;"
+  projectName: z.string().min(1, "Project name is required"),;"
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),;
-  startDate: z.date({;
+  startDate: z.date({;"
     required_error: "Start date is required"}),;
-  endDate: z.date().optional(),;
-  paymentTerms: z.enum(["hourly", "fixed", "milestone"]),;
+  endDate: z.date().optional(),;"
+  paymentTerms: z.enum(["hourly", "fixed", "milestone"]),;"
   paymentAmount: z.string().min(1, "Payment amount is required"),;
   additionalClauses: z.array(z.string()).default([])}),;
 export type ContractFormValues = z.infer<typeof formSchema>,;
@@ -306,34 +329,18 @@ interface ContractFormProps {;
   onDeployOptionsChange?: (options: DeploymentOptions) => void;
 }
 ;
-export function ContractForm({;
-  talent,;
-  clientName,;
-  initialValues,;
-  onFormValuesChange,;
-  onContractGenerated,;
-  deployOptions,;
-  onDeployOptionsChange;
-}: ContractFormProps) {;
-  const [isGenerating, setIsGenerating] = useState(false),;
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),;
+export function ContractForm() { return null; }
   const { toast } = useToast(),;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const form = useForm<ContractFormValues>({;
     resolver: zodResolver(formSchema),;
-    defaultValues: initialValues || {;
-      projectName: "",;
+    defaultValues: initialValues || {;"
+      projectName: "",;"
       scopeSummary: "",;
       startDate: new Date(),;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      paymentTerms: talent.hourly_rate ? "hourly" : "fixed",;
-      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",;
+"
+      paymentTerms: talent.hourly_rate ? "hourly" : "fixed",;"`
+      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",;"
       additionalClauses: ["nda", "ip"]}}),;
   // Update form when initialValues change;
   useEffect(() => {;
@@ -353,10 +360,12 @@ export function ContractForm({;
       return () => subscription.unsubscribe();
     }
   }, [form, onFormValuesChange]),
-<<<<<<< HEAD
+
+
 
   
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   
@@ -368,16 +377,19 @@ export function ContractForm({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
+=======
+  const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setGeneratedMilestones(milestones)
-    // If payment terms isn't already set to milestone, update it
-    if (form.getValues("paymentTerms") !== "milestone") {
+    // If payment terms isn't already set to milestone, update it"
+    if (form.getValues("paymentTerms") !== "milestone") {"
       form.setValue("paymentTerms", "milestone")
     }
-    toast({
-      title: "Milestones Generated"
+    toast({"
+      title: "Milestones Generated"`
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -385,10 +397,13 @@ export function ContractForm({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
   
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -410,9 +425,16 @@ export function ContractForm({;
       })
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const onSubmit = async (values: ContractFormValues) => {
+=======
+
+
+
+  const onSubmit = async (values: ContractFormValues) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setIsGenerating(true)
-    try {
+    try {}
       const contract = await generateContract(
+<<<<<<< HEAD
         values
         talent
         clientName
@@ -428,20 +450,20 @@ export function ContractForm({;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+        values;
+        talent;
+        clientName;
+        generatedMilestones;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       ),
       
 
 
       onContractGenerated(contract)
-    } catch (error) {
+    } catch (error) {"
       console.error("Error generating contract:", error);
-<<<<<<< HEAD
-=======
-=======
-      onContractGenerated(contract)
-    } catch (error) {
-      console.error("Error generating contract:", error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
       );
 =======
         generatedMilestones      );
@@ -453,32 +475,28 @@ export function ContractForm({;
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       onContractGenerated(contract)
+<<<<<<< HEAD
     } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    } catch (error) {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       console.error("Error generating contract:", error),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      toast({
-        title: "Contract Generation Failed"
-        description: error instanceof Error ? error.message : "Something went wrong. Please try again."
+
+      toast({"
+        title: "Contract Generation Failed""
+        description: error instanceof Error ? error.message : "Something went wrong. Please try again.""
         variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    } finally {
+
+    } finally {}
       setIsGenerating(false)
 
   }, [form, onFormValuesChange]),;
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {;
-    setGeneratedMilestones(milestones),;
-    // If payment terms isn't already set to milestone, update it;
-    if (form.getValues("paymentTerms") !== "milestone") {;
+    setGeneratedMilestones(milestones),;'
+    // If payment terms isn't already set to milestone, update it;"
+    if (form.getValues("paymentTerms") !== "milestone") {;"
       form.setValue("paymentTerms", "milestone");
         const typedKey = key as keyof ContractFormValues;
         form && form.setValue(typedKey, initialValues[typedKey]);
@@ -491,7 +509,7 @@ export function ContractForm({;
 =======
   return (
     <>;
-      <DialogHeader>;
+      <DialogHeader>;"
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
   // Track form values for template saving;
@@ -504,13 +522,13 @@ export function ContractForm({;
     }
   }, [form, onFormValuesChange]);
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {;
-    setGeneratedMilestones(milestones),;
-    // If payment terms isn't already set to milestone, update it;
-    if (form && form.getValues("paymentTerms") !== "milestone") {;
+    setGeneratedMilestones(milestones),;'
+    // If payment terms isn't already set to milestone, update it;"
+    if (form && form.getValues("paymentTerms") !== "milestone") {;"
       form && form.setValue("paymentTerms", "milestone");
     }
-    toast({;
-      title: "Milestones Generated",;
+    toast({;"
+      title: "Milestones Generated",;`
       description: `${milestones && milestones.length} milestones have been generated and will be included in the contract.`});
   };
   const onSubmit = async (values: ContractFormValues) => {;
@@ -523,11 +541,11 @@ export function ContractForm({;
         generatedMilestones;
       );
       onContractGenerated(contract);
-    } catch (error) {;
+    } catch (error) {;"
       console && console.error("Error generating contract:", error);
-      toast({;
-        title: "Contract Generation Failed",;
-        description: error instanceof Error ? error && error.message : "Something went wrong. Please try again.",;
+      toast({;"
+        title: "Contract Generation Failed",;"
+        description: error instanceof Error ? error && error.message : "Something went wrong. Please try again.",;"
         variant: "destructive"});
     } finally {;
       setIsGenerating(false);
@@ -535,18 +553,19 @@ export function ContractForm({;
   };
   return (
     <>;
-      <DialogHeader>;
+      <DialogHeader>;"
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
-      <Form {...form}>
+      <Form {...form}>"
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <ProjectDetailsFields
+          <ProjectDetailsFields;
             form={form}
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
     } finally {
 
@@ -679,43 +698,37 @@ if (!== "milestone") {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       setIsGenerating(false)
 
   }, [form, onFormValuesChange]),;
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {;
-    setGeneratedMilestones(milestones),;
-    // If payment terms isn't already set to milestone, update it;
-    if (form.getValues("paymentTerms") !== "milestone") {;
+    setGeneratedMilestones(milestones),;'
+    // If payment terms isn't already set to milestone, update it;"
+    if (form.getValues("paymentTerms") !== "milestone") {;"
       form.setValue("paymentTerms", "milestone");
     }
 
-<<<<<<< HEAD
-=======
-      setIsGenerating (false);
-    }
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>;
-      <DialogHeader>;
+      <DialogHeader>;"
         <DialogTitle className="text - xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
 
 
 
           Create a professional contract for your project with {talent.full_name}
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Track form values for template saving;
   useEffect(() => {;
     if (onFormValuesChange) {;
@@ -729,20 +742,17 @@ if (!== "milestone") {) {
 
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {;
     setGeneratedMilestones(milestones),;
-
-    // If payment terms isn't already set to milestone, update it;
-    if (form && form.getValues("paymentTerms") !== "milestone") {;
+'
+    // If payment terms isn't already set to milestone, update it;"
+    if (form && form.getValues("paymentTerms") !== "milestone") {;"
       form && form.setValue("paymentTerms", "milestone");
     }
 
-    toast({;
-      title: "Milestones Generated",;
+    toast({;"
+      title: "Milestones Generated",;`
       description: `${milestones && milestones.length} milestones have been generated and will be included in the contract.`});
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const onSubmit = async (values: ContractFormValues) => {;
     setIsGenerating(true),;
     try {;
@@ -754,23 +764,20 @@ if (!== "milestone") {) {
       );
 
       onContractGenerated(contract);
-    } catch (error) {;
+    } catch (error) {;"
       console && console.error("Error generating contract:", error);
-      toast({;
-        title: "Contract Generation Failed",;
-        description: error instanceof Error ? error && error.message : "Something went wrong. Please try again.",;
+      toast({;"
+        title: "Contract Generation Failed",;"
+        description: error instanceof Error ? error && error.message : "Something went wrong. Please try again.",;"
         variant: "destructive"});
     } finally {;
       setIsGenerating(false);
     }
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <>;
-      <DialogHeader>;
+      <DialogHeader>;"
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
 <<<<<<< HEAD
@@ -787,18 +794,21 @@ if (!== "milestone") {) {
         </DialogDescription>;
       </DialogHeader>;
 
-      <Form {...form}>;
+      <Form {...form}>;"
         <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
-          <ProjectDetailsFields
+          <ProjectDetailsFields;
             form={form} 
           />;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <PaymentTermsFields
+=======
+          <PaymentTermsFields;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             form={form}
 =======
       console.error("Error generating contract:", error),            form={form}
@@ -806,6 +816,7 @@ if (!== "milestone") {) {
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           />;
 
@@ -959,15 +970,19 @@ export function ContractForm({;
             handleMilestonesGenerated={handleMilestonesGenerated}
           />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           
 
-<<<<<<< HEAD
-=======
-          <PaymentTermsFields
+
+
+
+          <PaymentTermsFields;
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1003,20 +1018,23 @@ export function ContractForm({;
             handleMilestonesGenerated={handleMilestonesGenerated}
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
-              <>;
+              <>;"
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                 Generating Contract...;
               </>;
-            ) : (;
+            ) : (;"
               "Generate Contract";
 <<<<<<< HEAD
 <<<<<<< HEAD
             )}
-<<<<<<< HEAD
 
+<<<<<<< HEAD
           </Button>;
         </form>;
       </Form>;
@@ -1097,14 +1115,18 @@ export function ContractForm({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         <Button 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+        <Button;
+"
           variant="outline" 
           onClick={() => form && form.reset()}
           disabled={isGenerating}
-=======
+
         </DialogDescription>;
       </DialogHeader>;
-      <Form {...form}>;
+      <Form {...form}>;"
         <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
           <ProjectDetailsFields;
             form={form}
@@ -1117,25 +1139,26 @@ export function ContractForm({;
           <AdditionalClausesFields;
             form={form}
           />;
-          <Button;
-            type="submit";
+          <Button;"
+            type="submit";"
             className="w - full bg - zion - purple hover:bg - zion - purple - dark";
             disabled={is_generating}
           >;
             {is_generating ? (
-              <>;
+              <>;"
                 <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
                 Generating Contract...;
-              </>) : (
+              </>) : ("
               "Generate Contract")}
           </Button>;
         </form>;
-      </Form>;
+      </Form>;"
       <DialogFooter className="gap - 2 flex - wrap mt - 4">;
-        <Button;
+        <Button;"
           variant="outline";
           on_click={() => form.reset ()}
           disabled={is_generating}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1164,6 +1187,11 @@ export function ContractForm({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         >;
 =======
             )}        >;
@@ -1175,6 +1203,7 @@ export function ContractForm({;
         </Button>;
       </DialogFooter>;
 
+<<<<<<< HEAD
     </>);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1189,17 +1218,20 @@ export function ContractForm({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>;
-  ),; const formSchema = z.object ({
-  projectName: z.string () .min (1, "Project name is required");
+  ),; const formSchema = z.object ({"
+  projectName: z.string () .min (1, "Project name is required");"
 scopeSummary: z.string () .min (10, "Scope summary should be at least 10 characters");
-startDate: z.date ({
+startDate: z.date ({"
   required error: "Start date is required" 
 });
 export type ContractFormValues = z.infer<typeof formSchema>;
-//Update form when initialValues change useEffect ( () => {
-  if (initialValues) {
-  Object.keys (initialValues) .forEach ( (key) => {
+//Update form when initialValues change useEffect ( () => {}
+  if (initialValues) {}
+  Object.keys (initialValues) .forEach ( (key) => {}
   const typedKey = key as keyof ContractFormValues;
 form.setValue (typedKey, initialValues[typedKey]) 
 }) 
@@ -1211,31 +1243,32 @@ form.setValue (typedKey, initialValues[typedKey])
 }
 }, [form, onFormValuesChange]);
 };
-}finally {
+}finally {}
   setIsGenerating (false) 
 }
 };
-talent.full name 
-}</DialogDescription> </DialogHeader> <ProjectDetailsFields form= {
-  form 
-}/> <PaymentTermsFields form= {
-  form 
-}talent= {
-  talent 
-}handleMilestonesGenerated= {
-  handleMilestonesGenerated 
-}/> <AdditionalClausesFields form= {
-  form 
-}/> <Button type="submit" className="w-full bg-zion-purple hover:bg-zion-purple-dark" disabled= {
-  isGenerating 
-}> {
-  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating Contract... </>) : ("Generate Contract") 
+talent.full name;
+}</DialogDescription> </DialogHeader> <ProjectDetailsFields form= {}
+  form;
+}/> <PaymentTermsFields form= {}
+  form;
+}talent= {}
+  talent;
+}handleMilestonesGenerated= {}
+  handleMilestonesGenerated;
+}/> <AdditionalClausesFields form= {}
+  form "
+}/> <Button type="submit" className="w-full bg-zion-purple hover:bg-zion-purple-dark" disabled= {}
+  isGenerating;
+}> {"
+  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating Contract... </>) : ("Generate Contract") "
 }</Button> </form> </Form> <DialogFooter className="gap-2 flex-wrap mt-4" > <Button > Reset Form </Button> </DialogFooter> </>) 
 }
     </>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1246,3 +1279,9 @@ talent.full name
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

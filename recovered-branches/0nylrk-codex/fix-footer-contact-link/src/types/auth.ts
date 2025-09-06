@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,9 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface UserDetails {
+=======
+export interface UserDetails {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
   name?: string;
   email?: string;
@@ -30,6 +34,7 @@ export interface UserDetails {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -39,6 +44,12 @@ export interface UserDetails {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface UserDetails {
+=======
+
+
+
+export interface UserDetails {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface UserDetails {;
   id?: string;
   name?: string;
@@ -53,7 +64,7 @@ export interface UserDetails {;
   companyId?: string;
   bio?: string;
   createdAt?: string;
-  updatedAt?: string
+  updatedAt?: string;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +76,11 @@ export interface UserProfile {;
 
   permissions?: string[];
   company_id?: string;
+<<<<<<< HEAD
+=======
+
+  bio?: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   created_at?: string;
   updated_at?: string;
 }
@@ -89,15 +105,14 @@ export interface UserProfile {;
 <<<<<<< HEAD
 <<<<<<< HEAD
   company_id?: string;
-=======
+
   permissions?: string[],
   companyId?: string;
   bio?: string;
   createdAt?: string;
-  updatedAt?: string
+  updatedAt?: string;
 }
-export interface UserProfile {
-
+export interface UserProfile {};
 export interface UserProfile {;
   id?: string;
   displayName?: string;
@@ -114,14 +129,14 @@ export interface UserProfile {;
 
   permissions?: string[]
 
-  companyId?: string
+  companyId?: string;
 }
-// Update AuthContextType definition to match implementation
+// Update AuthContextType definition to match implementation;
 export interface AuthContextType {;
   user: UserDetails | null;
   isLoading: boolean;
 
-  isAuthenticated: boolean
+  isAuthenticated: boolean;
   login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
   signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
   logout: () => Promise<void>
@@ -136,10 +151,15 @@ export interface AuthContextType {;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 =======
   company_id?: string;}
@@ -183,9 +203,13 @@ export interface UserProfile {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
 // Update AuthContextType definition to match implementation;
@@ -208,7 +232,7 @@ export interface AuthContextType {;
 <<<<<<< HEAD
 =======
 // Update AuthContextType definition to match implementation;
-export interface AuthContextType {
+export interface AuthContextType {};
   user: UserDetails | null;
   isLoading: boolean;
   isAuthenticated: boolean;
@@ -236,13 +260,14 @@ export interface AuthContextType {
     userData?: Partial<UserDetails>,
   ) => Promise<{ error: any }>;
 }
-=======
+
 
 export interface UserDetails {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -257,6 +282,11 @@ export interface UserDetails {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface UserDetails {;
 
 }
@@ -313,10 +343,16 @@ export interface AuthContextType {;
   signOut?:() => Promise<void>,;
   signUp?:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
 } 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 }
 ;
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -330,3 +366,6 @@ export interface AuthContextType {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

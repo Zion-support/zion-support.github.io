@@ -1,12 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Button from '../components/ui/Button';
 import QuantumCard from '../components/ui/QuantumCard';
 import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
 import { expandedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/expanded-micro-saas-services';
-=======
+
 import Card from '../components/ui/Card';
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices, serviceCategories } from '../data/enhanced-real-micro-saas-services';
@@ -377,9 +381,13 @@ export default function ServicesPage() {
       "💰 Quantum Financial Optimization",
       "🚀 Space Exploration AI Platform"
     ],
+<<<<<<< HEAD
     marketPosition: "Zion Tech Group leads the global micro SaaS revolution with patent-pending quantum AI and autonomous systems.",
     pricing: "Services range from $49/month to $5,999/month with 30-day free trials and comprehensive support.",
     contactCTA: "Ready to revolutionize your business? Contact our expert team today!"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 
   const getVariantForCategory = (category: string) => {
@@ -400,6 +408,7 @@ export default function ServicesPage() {
   };
 
   return (
+<<<<<<< HEAD
     <UltraFuturisticBackground variant="neural" intensity="high">
       <div className="min-h-screen">
         <Head>
@@ -435,6 +444,9 @@ export default function ServicesPage() {
                     {expandedMicroSaasServices.length}+
                   </div>
                   <div className="text-gray-400 text-sm md:text-base">Total Services</div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
@@ -614,6 +626,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Innovative Services Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -626,6 +639,9 @@ export default function ServicesPage() {
           >
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               🚀 Revolutionary Innovative Services
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of technology with our cutting-edge quantum AI, neural interfaces, and revolutionary solutions.
@@ -724,9 +740,13 @@ export default function ServicesPage() {
           {viewMode === 'grid' ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => (
+<<<<<<< HEAD
                 <motion.div key={service.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.05 }} viewport={{ once: true }}>
                   <UltraFuturisticServiceCard service={service} />
                 </motion.div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           ) : (
@@ -738,12 +758,16 @@ export default function ServicesPage() {
               {filteredServices.map((service) => (
                 <QuantumCard
                   key={service.id}
+<<<<<<< HEAD
                   variant={service.category.includes('Quantum') ? 'quantum' : 
                           service.category.includes('AI') ? 'neural' : 
                           service.category.includes('Blockchain') ? 'holographic' : 'cyberpunk'}
                   intensity="medium"
                   className="h-full cursor-pointer"
                   onClick={() => window.open(service.link, '_blank')}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   <Card
                     variant="futuristic"
@@ -1119,14 +1143,18 @@ export default function ServicesPage() {
               <div className="mt-8 text-sm text-gray-400">
                 <p>No credit card required • 24/7 support • Cancel anytime</p>
               </div>
+<<<<<<< HEAD
             </QuantumCard>
           </div>
         </section>
       </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </UltraFuturisticBackground>
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -1145,4 +1173,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

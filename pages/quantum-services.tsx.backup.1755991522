@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -179,11 +180,19 @@ export default function QuantumServices() {
           <div className="max-w-6xl mx-auto text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+export default function QuantumServices() {
+  return (
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -227,12 +236,16 @@ export default function QuantumServices() {
                 </button>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* Services Grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -269,10 +282,14 @@ export default function QuantumServices() {
                 Comprehensive quantum solutions designed for enterprise-scale applications
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -297,10 +314,14 @@ export default function QuantumServices() {
                   className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-8 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   <div className="mb-6">
                     {service.icon}
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -326,10 +347,14 @@ export default function QuantumServices() {
                         <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {feature}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -347,12 +372,16 @@ export default function QuantumServices() {
                   <div className="text-blue-400 font-semibold text-lg">{service.price}</div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -391,10 +420,14 @@ export default function QuantumServices() {
                 Discover how quantum technology is transforming industries across the globe
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -456,12 +489,16 @@ export default function QuantumServices() {
                   <p className="text-gray-400">{application.description}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -561,11 +598,15 @@ export default function QuantumServices() {
                 </button>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -585,3 +626,6 @@ export default QuantumServices;
 export default QuantumServices;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

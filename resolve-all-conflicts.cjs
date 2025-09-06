@@ -10,6 +10,7 @@ const { execSync } = require('child_process');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('🔧 Starting comprehensive conflict resolution...');
 
 // Function to resolve modify/delete conflicts by accepting deletion
@@ -139,21 +140,27 @@ console.log('🔧 Starting comprehensive merge conflict resolution...');
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 console.log('🔧 Resolving all merge conflicts...');
 main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
+<<<<<<< HEAD
       console.log(`⚠️  File not found: ${filePath}`);
 
       console.log(`⚠️  File not found: ${filePath}`);
 main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       return false;
     }
 
     const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
       return false;
     }
 
@@ -201,6 +208,19 @@ main
         if (parts.length === 2) {
         const parts = match.split('=======');
         if (parts.length === 2) {
+=======
+
+        const parts = match.split('');
+        if (parts.length === 2) {
+          const headPart = parts[0].replace('
+        const parts = match.split('');
+        if (parts.length === 2) {
+          const headPart = parts[0].replace('
+        const parts = match.split('');
+        if (parts.length === 2) {
+          const headPart = parts[0].replace('
+    resolvedContent = resolvedContent.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     // Write the resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
@@ -209,6 +229,7 @@ main
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
 
+<<<<<<< HEAD
     // Check if file has merge conflicts
         conflictType = 'separator';
         continue;
@@ -236,11 +257,17 @@ main
     console.error(`Error resolving ${filePath}:`, error.message);
 main
 
+=======
+
+    // Check if file has merge conflicts
+    if (!content.includes('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return false;
   }
 }
 
 // Function to find all files with merge conflicts
+<<<<<<< HEAD
 function findConflictedFiles() {
   try {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
@@ -261,6 +288,8 @@ function findConflictedFiles() {
     return result.trim().split('\n').filter(file => file.length > 0);
 
 main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   } catch (error) {
     console.error('Error finding conflicted files:', error.message);
@@ -268,6 +297,7 @@ main
   }
 }
 
+<<<<<<< HEAD
 
 // Main resolution process
 function main() {
@@ -363,3 +393,6 @@ try {
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

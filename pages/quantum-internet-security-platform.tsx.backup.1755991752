@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Shield, Zap, Target, Lock, TrendingUp, Globe, 
@@ -265,6 +266,9 @@ export default function QuantumInternetSecurityPlatform() {
         </section>
       </div>
     </>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
 

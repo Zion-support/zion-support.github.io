@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/summit/SpeakersSection.js.jsx
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -29,10 +30,20 @@ const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;'"
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
+:src.disabled/components/summit/SpeakersSection.js.jsx'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
-:src.disabled/components/summit/SpeakersSection.js.jsx
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
+:temp_exclude/src.disabled/components/summit/SpeakersSection.js.jsx;
+'"
+const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
 :temp_exclude/src.disabled/components/summit/SpeakersSection.js.jsx
@@ -51,3 +62,15 @@ const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+'"
+const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
+'"
+const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
+'"
+const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;'"
+const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

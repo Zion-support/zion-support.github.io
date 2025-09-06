@@ -68,8 +68,8 @@ function HiringTrackerContent() {
 =======
 return (
     <>;
-      <SEO
-        title='Hiring Tracker | Zion AI Marketplace'
+      <SEO;
+        title='Hiring Tracker | Zion AI Marketplace''
         description='Manage your candidate pipeline in the Zion AI Marketplace.'
 
 
@@ -81,7 +81,7 @@ return (
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <p className="text-muted-foreground mt-1">
-              Track and manage your candidates through the hiring process
+              Track and manage your candidates through the hiring process;
             </p>
           </div>
         </div>
@@ -96,8 +96,12 @@ return (
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
 =======
 
@@ -105,6 +109,7 @@ return (
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 <Tabs
@@ -116,6 +121,10 @@ return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
+=======
+          <TabsList>"
+            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
 <<<<<<< HEAD
@@ -130,30 +139,43 @@ return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
+"
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
           <TabsList>
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
+=======
+"
+            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
-          </TabsList>
+          </TabsList>"
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           
+=======
+          "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
           
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsContent value="analytics" className="mt-6">
 =======
           <TabsContent value='kanban' className='mt-6'>
@@ -179,9 +201,10 @@ return (
 }
 
 
-export default function HiringTracker() {
+export default function HiringTracker() {}
   return (
     <ProtectedRoute>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <HiringTrackerContent />
@@ -399,3 +422,6 @@ export default function HiringTracker() {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

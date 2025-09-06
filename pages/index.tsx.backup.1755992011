@@ -489,7 +489,7 @@ export default function HomePage() {
         </div>
       </footer>
     </UltraFuturisticBackground>
-=======
+
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: 'Real Micro SaaS Services',
       description: '48+ fully functional micro SaaS tools with real implementations, not just mockups.',
@@ -912,6 +912,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Micro SaaS Services CTA */}
       <section className="py-24 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
@@ -970,6 +971,9 @@ export default function HomePage() {
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
               <p className="text-gray-400">Bank-level security, SOC 2 compliance, and 99.9% uptime guarantee</p>
             </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>

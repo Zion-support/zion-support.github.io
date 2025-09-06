@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -81,6 +82,21 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
   return (
     <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">
       <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">
+=======
+import React from "react";"
+import { Badge } from "@/components/ui/badge";"
+import { Award } from "lucide-react";
+interface TalentCardBadgesProps {}
+  featured: boolean | undefined;
+}
+
+export function TalentCardBadges({ featured }: TalentCardBadgesProps) {};
+  if (!featured) return null;
+
+  return ("
+    <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">"
+      <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Award className="h-3 w-3" />
         <span>Featured</span>
       </Badge>
@@ -144,9 +160,9 @@ interface TalentCardBadgesProps {;
 export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
   if (!featured) return null;
 
-  return (
-    <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">;
-      <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">;
+  return ("
+    <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">;"
+      <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">;"
         <Award className="h-3 w-3" />;
         <span>Featured</span>;
       </Badge>;
@@ -159,24 +175,31 @@ export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
 
 =======
 
-import React from './react';
-import { Badge  } from '@/components / ui / badge';
+import React from './react';'
+import { Badge  } from '@/components / ui / badge';'
 import { Award  } from './lucide-react';
-interface TalentCardBadgesProps {
+interface TalentCardBadgesProps {}
   featured: boolean | undefined;
 }
-export /**
- * TalentCardBadges - Function description
+export /**;
+ * TalentCardBadges - Function description;
  */
-function TalentCardBadges() {
-  // Check condition
-if (return null) {
-  $2
+function TalentCardBadges() {}
+  // Check condition;
+if (return null) {}
+  $2;
 }
+<<<<<<< HEAD
   return (
     <div className="absolute top - 0 left - 0 bg - gradient - to - r from - zion - purple to - zion - cyan p - 2 rounded - tl - lg rounded - br - lg z-10">;
       <Badge className="bg - transparent border - 0 flex items - center gap - 1 text - white px-0">;
         <Award className="h - 3 w-3" />;
+=======
+  return ("
+    <div className="absolute top - 0 left - 0 bg - gradient - to - r from - zion - purple to - zion - cyan p - 2 rounded - tl - lg rounded - br - lg z - 10">;"
+      <Badge className="bg - transparent border - 0 flex items - center gap - 1 text - white px - 0">;"
+        <Award className="h - 3 w - 3" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <span > Featured</span>;
       </Badge>;
     </div>);
@@ -185,11 +208,19 @@ if (return null) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
+<<<<<<< HEAD
 =======
   )
 
@@ -206,10 +237,20 @@ import React from "react",;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Badge } from "@/components/ui/badge",;
+=======
+  )"
+import React from "react",;"
+import { Badge } from "@/components/ui/badge",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Award } from "lucide-react",;
 interface TalentCardBadgesProps {;
   featured: boolean | undefined;
 }
 
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

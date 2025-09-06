@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -116,10 +117,25 @@ export default function DashboardPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+      <div className="min-h-screen flex items-center justify-center">;"
+        <div className="text-center">;"
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;"
+          <p className="text-zinc-400">Loading...</p>;
+
+"
+      <div className="min-h-screen flex items-center justify-center">;"
+        <div className="text-center">;"
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;"
+          <p className="text-zinc-400">Loading...</p>;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,21 +148,21 @@ export default function DashboardPage() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
   if (!isAuthenticated) {;
     return null;
   }
 ;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  return (;
+  return (;"
     <div className="space-y-8">;
-      {/* Welcome Header */}
-      <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">;
+      {/* Welcome Header */}"
+      <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">;"
         <h1 className="text-3xl font-bold text-white mb-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -227,10 +243,32 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+        </h1>;"
+        <p className="text - zinc - 300 text - lg">;
+          Ready to continue building your digital economy? Here's what you can do next.;
+        </p>;
+      </div>;
+      {/* Quick Actions */}"
+      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+        <Link;"
+          href="/multiverse / launch";"
+          className="group p - 6 bg - zinc - 800 / 50 rounded - xl border border - zinc - 700 / 50 hover:border - blue - 500 / 50 hover:bg - zinc - 800 / 70 transition - all duration - 200";
+        >;"
+          <div className="text - center space - y-3">;"
+            <div className="w - 16 h - 16 bg - blue - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;"
+              <span className="text - 3xl">🚀</span>;
+            </div>;"
+            <h3 className="font - semibold text - white text - lg">Launch New Instance</h3>;"
+            <p className="text - zinc - 400 text - sm">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               Create a new digital economy with marketplace and governance tools;
             </p>;
           </div>;
         </Link>;
+<<<<<<< HEAD
         <Link;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -265,10 +303,23 @@ if ( {) {
             <h3 className="font - semibold text - white text-lg">Manage Instances</h3>;
             <p className="text - zinc - 400 text-sm">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <Link;"
+          href="/admin / instances";"
+          className="group p - 6 bg - zinc - 800 / 50 rounded - xl border border - zinc - 700 / 50 hover:border - purple - 500 / 50 hover:bg - zinc - 800 / 70 transition - all duration - 200";
+        >;"
+          <div className="text - center space - y-3">;"
+            <div className="w - 16 h - 16 bg - purple - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;"
+              <span className="text - 3xl">⚙️</span>;
+            </div>;"
+            <h3 className="font - semibold text - white text - lg">Manage Instances</h3>;"
+            <p className="text - zinc - 400 text - sm">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               Monitor and configure your deployed instances and settings;
             </p>;
           </div>;
         </Link>;
+<<<<<<< HEAD
         <Link;
           href="/docs";
 <<<<<<< HEAD
@@ -301,11 +352,24 @@ if ( {) {
             <h3 className="font - semibold text - white text-lg">Documentation</h3>;
             <p className="text - zinc - 400 text-sm">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <Link;"
+          href="/docs";"
+          className="group p - 6 bg - zinc - 800 / 50 rounded - xl border border - zinc - 700 / 50 hover:border - green - 500 / 50 hover:bg - zinc - 800 / 70 transition - all duration - 200";
+        >;"
+          <div className="text - center space - y-3">;"
+            <div className="w - 16 h - 16 bg - green - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition - transform">;"
+              <span className="text - 3xl">📚</span>;
+            </div>;"
+            <h3 className="font - semibold text - white text - lg">Documentation</h3>;"
+            <p className="text - zinc - 400 text - sm">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               Learn more about features and best practices;
             </p>;
           </div>;
         </Link>;
       </div>;
+<<<<<<< HEAD
       {/* Recent Activity */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -357,13 +421,32 @@ if ( {) {
       <div className="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/30">;
         <h2 className="text-xl font-semibold text-white mb-4">Account Information</h2>;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <div>;
-<<<<<<< HEAD
 =======
+      {/* Recent Activity */}"
+      <div className="bg - zinc - 800 / 30 rounded - xl p - 6 border border - zinc - 700 / 30">;"
+        <h2 className="text - xl font - semibold text - white mb - 4">Recent Activity</h2>;"
+        <div className="space - y-3">;"
+          <div className="flex items - center gap - 3 text - sm text - zinc - 400">;"
+            <div className="w - 2 h - 2 bg - blue - 500 rounded - full"></div>;
+            <span > Welcome to Zion OS! Your account has been created successfully.</span>;"
+            <span className="text - zinc - 500">Just now</span>;
+          </div>;"
+          <div className="flex items - center gap - 3 text - sm text - zinc - 400">;"
+            <div className="w - 2 h - 2 bg - green - 500 rounded - full"></div>;'
+            <span > Onboarding completed. You're ready to start building!</span>;"
+            <span className="text - zinc - 500">Just now</span>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Account Info */}"
+      <div className="bg - zinc - 800 / 30 rounded - xl p - 6 border border - zinc - 700 / 30">;"
+        <h2 className="text - xl font - semibold text - white mb - 4">Account Information</h2>;"
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          <div>;
 
-            <label className="block text - sm font - medium text - zinc - 400 mb - 1">Name</label>;
-            <p className="text - white">{user?.name || "Not provided"}</p>;
 
+<<<<<<< HEAD
 =======
             <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>;
 <<<<<<< HEAD
@@ -420,6 +503,20 @@ if ( {) {
             <label className="block text - sm font - medium text - zinc - 400 mb-1">Member Since</label>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <p className="text-white">Today</p>;
+=======
+          </div>;
+          <div>;"
+            <label className="block text - sm font - medium text - zinc - 400 mb - 1">Email</label>;"
+            <p className="text - white">{user?.email}</p>;
+          </div>;
+          <div>;"
+            <label className="block text - sm font - medium text - zinc - 400 mb - 1">Role</label>;"
+            <p className="text - white capitalize">{user?.role}</p>;
+          </div>;
+          <div>;"
+            <label className="block text - sm font - medium text - zinc - 400 mb - 1">Member Since</label>;"
+            <p className="text - white">Today</p>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>;
         </div>;
       </div>;
@@ -431,8 +528,12 @@ if ( {) {
 =======
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     </div>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }return pool 
 import { Pool, PoolClient } from 'pg';
 let pool: Pool | null;
@@ -5,9 +6,15 @@ let pool: Pool | null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 export async function withUser<T>(
   userId: string
+=======
+}return pool;
+export async function withUser<T>(;
+  userId: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   fn: (client: PoolClient) => Promise<T>
-): Promise<T> {
+): Promise<T> {}
   const client = await getPool().connect();
+<<<<<<< HEAD
   try {
 
     await client.query('BEGIN');
@@ -22,6 +29,10 @@ export async function withUser<T>(
     throw err;
 origin/cursor/automate-test-improve-and-merge-code-2533
   } finally {
+=======
+  try {}
+  } finally {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     client.release ();
   }
 }

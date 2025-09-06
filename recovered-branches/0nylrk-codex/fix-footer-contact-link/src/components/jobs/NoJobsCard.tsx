@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -13,31 +14,47 @@
   return (
     <Card className="bg-muted/30 border border-dashed">;
       <CardContent className="p-6 text-center">;
+=======
+import { Card, CardContent } from "@/components/ui/card";"
+import { Button } from "@/components/ui/button";
+interface NoJobsCardProps {;
+  onUpdateProfile?: () => void;
+}
+
+
+export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
+
+
+  return ("
+    <Card className="bg-muted/30 border border-dashed">;"
+      <CardContent className="p-6 text-center">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-muted-foreground">;
           No job suggestions available yet. Complete your profile to get;
           AI-matched jobs.;
         </p>;
-        {onUpdateProfile && (;
-          <Button variant="outline" className="mt-4" asChild>;
+        {onUpdateProfile && (;"
+          <Button variant="outline" className="mt-4" asChild>;"
             <a href="/profile">Update Profile</a>;
           </Button>;
         )}
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 import { Card, CardContent  } from '@/components / ui / card';
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { Button  } from '@/components / ui / button';
-<<<<<<< HEAD
 =======
+import { Card, CardContent  } from '@/components / ui / card';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { Button  } from '@/components / ui / button';
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-interface NoJobsCardProps {
+interface NoJobsCardProps {}
   onUpdateProfile?: () => void;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -83,11 +100,15 @@ interface NoJobsCardProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * NoJobsCard - Function description
+=======
+export /**;
+ * NoJobsCard - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
-function NoJobsCard() {
-  return (
-    <Card className="bg - muted / 30 border border - dashed">;
-      <CardContent className="p - 6 text - center">;
+function NoJobsCard() {}
+  return ("
+    <Card className="bg - muted / 30 border border - dashed">;"
+      <CardContent className="p - 6 text - center">;"
         <p className="text - muted - foreground">;
           No job suggestions available yet. Complete your profile to get;
           AI - matched jobs.;
@@ -101,6 +122,7 @@ function NoJobsCard() {
 
 
 
+<<<<<<< HEAD
     </Card>;
 <<<<<<< HEAD
 =======
@@ -110,12 +132,17 @@ function NoJobsCard() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Card, CardContent } from "@/components/ui/card",
+=======
+    </Card>;"
+import { Card, CardContent } from "@/components/ui/card","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from "@/components/ui/button",
-interface NoJobsCardProps {
-  onUpdateProfile?: () => void
+interface NoJobsCardProps {};
+  onUpdateProfile?: () => void;
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -124,11 +151,12 @@ interface NoJobsCardProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
 }
 
@@ -175,3 +203,6 @@ import { Button  } from '@/components / ui / button';
 =======
 import { Button  } from '@/components / ui / button';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

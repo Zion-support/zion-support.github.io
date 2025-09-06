@@ -2,39 +2,32 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import React from "react";
-import { Button } from "@/components/ui/button";
+
+import React from "react";"
+import { Button } from "@/components/ui/button";"
 import { Badge } from "@/components/ui/badge";
 
-
+"
 import { ArrowRight } from "lucide-react";
 
-<<<<<<< HEAD
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+"
 } from "@/components/ui/card";
 
 interface GeneratedContent {;
   description: string;
   tags: string[];
   suggestedPrice: {;
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
+import React from './react';'
+import { Button  } from '@/components / ui / button';'
+import { Badge  } from '@/components / ui / badge';'
 import { ArrowRight  } from './lucide-react';
+<<<<<<< HEAD
 import {
 <<<<<<< HEAD
 
@@ -65,10 +58,14 @@ import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Card,
   CardContent,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,12 +100,24 @@ interface GeneratedContentDisplayProps {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+
+;
+    min: number;
+
+
+}
+interface GeneratedContentDisplayProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface GeneratedContentDisplayProps {;
 
+  CardTitle,;
+"
 } from "@/components/ui/card";
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -119,13 +128,21 @@ interface GeneratedContentDisplayProps {;
   CardTitle,;
 } from "@/components/ui/card";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { ArrowRight } from "lucide-react",
+
+  CardTitle,;"
+} from "@/components/ui/card";
+
+"
+import React from "react","
+import { Button } from "@/components/ui/button","
+import { Badge } from "@/components/ui/badge","
+import { ArrowRight } from "lucide-react","
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -171,12 +188,23 @@ interface GeneratedContentDisplayProps {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     min: number,
     max: number
+=======
+
+
+
+interface GeneratedContent {}
+  description: string,
+  tags: string[],
+  suggestedPrice: {}
+    min: number,;
+    max: number;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
-  keyPoints: string[]
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ArrowRight } from "lucide-react",;
+  keyPoints: string[]"
+import React from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { Badge } from "@/components/ui/badge",;"
+import { ArrowRight } from "lucide-react",;"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 interface GeneratedContent {;
   description: string,;
@@ -189,6 +217,7 @@ interface GeneratedContent {;
 }
 ;
 interface GeneratedContentDisplayProps {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -229,28 +258,32 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  content: GeneratedContent;
+  onApply: () => void;
+}
+export function GeneratedContentDisplay({};
+  content;
+  onApply;
+}: GeneratedContentDisplayProps) {}
+export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {}
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
-      <CardHeader>
+      <CardHeader>"
         <CardTitle className="text-white">Generated Content</CardTitle>
-      </CardHeader>
+      </CardHeader>"
       <CardContent className="space-y-4">
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">
-            Description
-          </h3>
-          <p className="text-white">{content.description}</p>
-        </div>
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -258,10 +291,18 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
           </h3>
+=======
+
+
+        <div>"
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
+            Tags;
+          </h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -275,38 +316,16 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 =======
   content: GeneratedContent;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export function GeneratedContentDisplay(): any ({;
   content,;
   onApply,;
 }: GeneratedContentDisplayProps) {;
   return (
-<<<<<<< HEAD
-=======
-
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ArrowRight } from "lucide-react",;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-;
-interface GeneratedContent {;
-  description:string,;
-  tags:string[],;
-  suggestedPrice:{;
-    min:number,;
-    max:number;
-  },;
-  keyPoints:string[];}
-;
-interface GeneratedContentDisplayProps {;
-  content:GeneratedContent,;
-  onApply:() => void;
-}
-;
-export function GeneratedContentDisplay({ content, onApply } GeneratedContentDisplayProps) {;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+<<<<<<< HEAD
 =======
         <div>    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -314,44 +333,53 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
         <div>    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <CardHeader>;
+=======
+      <CardHeader>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <CardTitle className="text-white">Generated Content</CardTitle>;
-      </CardHeader>;
+      </CardHeader>;"
       <CardContent className="space-y-4">;
         <div>;
+<<<<<<< HEAD
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
             Description;
           </h3>;
           <p className="text-white">{content && content.description}</p>;
         </div>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-        <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
-            Tags;
-          </h3>;
-          <div className="flex flex-wrap gap-2">;
-            {content && content.tags.map((tag, index) => (;
 
+<<<<<<< HEAD
               <Badge
                 key={index}
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;                {tag}
+=======
+                {tag}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Badge>;
 <<<<<<< HEAD
 <<<<<<< HEAD
             ))}
-=======
-              <Badge
-                key={index}
+
+              <Badge;
+                key={index}"
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {tag}
               </Badge>;
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -368,14 +396,20 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
             ))}        
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div>
+=======
+
+        
+        <div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
-            Suggested Price Range
-          </h3>
+            Suggested Price Range;
+          </h3>"
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - $
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -384,12 +418,16 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div>
+=======
+        <div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
-            Key Selling Points
-          </h3>
+            Key Selling Points;
+          </h3>"
           <ul className="list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -400,17 +438,11 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
 =======
           </div>;
         </div>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-        <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
-            Suggested Price Range;
-          </h3>;
-          <p className="text-white">;
-            ${content && content.suggestedPrice.min && min.toFixed(2)} - $;
-            {content && content.suggestedPrice.max && max.toFixed(2)}
-          </p>;
-        </div>;
 
+<<<<<<< HEAD
         <div>;
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
             Key Selling Points;
@@ -424,19 +456,26 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   content: GeneratedContent;
-              <Badge
-                key={index}
+              <Badge;
+                key={index}"
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
                 {tag}
               </Badge>;
             ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
   on_apply: () => void;
 }
-export /**
- * GeneratedContentDisplay - Function description
+export /**;
+ * GeneratedContentDisplay - Function description;
  */
+<<<<<<< HEAD
 function GeneratedContentDisplay() {
   return (
     <Card className="border border - zion - blue - light bg - zion - blue-dark">;
@@ -473,10 +512,49 @@ function GeneratedContentDisplay() {
             Suggested Price Range;
           </h3>;
           <p className="text-white">;
+=======
+function GeneratedContentDisplay() {}
+  return ("
+    <Card className="border border - zion - blue - light bg - zion - blue - dark">;
+      <CardHeader>;"
+        <CardTitle className="text - white">Generated Content</CardTitle>;
+      </CardHeader>;"
+      <CardContent className="space - y-4">;
+        <div>;"
+          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+            Description;
+          </h3>;"
+          <p className="text - white">{content.description}</p>;
+        </div>;
+        <div>;"
+          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+            Tags;
+          </h3>;"
+          <div className="flex flex - wrap gap - 2">;
+            {content.tags.map ((tag, index) => (
+              <Badge;
+                key={index}"
+                className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30";
+              >;
+
+
+
+                {tag}
+              </Badge>))}
+          </div>;
+        </div>;
+
+        <div>;"
+          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+            Suggested Price Range;
+          </h3>;"
+          <p className="text - white">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ${content.suggested_price.min.to_fixed (2)} - $;
             {content.suggested_price.max.to_fixed (2)}
           </p>;
         </div>;
+<<<<<<< HEAD
         <div>;
           <h3 className="text - sm font - medium text - zion - slate - light mb-2">;
             Key Selling Points;
@@ -511,19 +589,38 @@ function GeneratedContentDisplay() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <div>;"
+          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+            Key Selling Points;
+          </h3>;"
+          <ul className="list - disc pl - 5 text - white space - y-1">;
+            {content.key_points.map ((point, index) => (
+              <li key={index}>{point}</li>))}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </ul>;
         </div>;
       </CardContent>;
       <CardFooter>;
 
+<<<<<<< HEAD
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
-          Apply to My Listing
+          Apply to My Listing"
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
       </CardFooter>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -538,12 +635,17 @@ function GeneratedContentDisplay() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
+=======
+
+  )"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
-          Apply to My Listing;
+          Apply to My Listing;"
           <ArrowRight className="ml-2 h-4 w-4" />;
         </Button>;
       </CardFooter>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -566,6 +668,9 @@ function GeneratedContentDisplay() {
     </Card>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
       </CardFooter>    </Card>
@@ -576,38 +681,43 @@ function GeneratedContentDisplay() {
 
     </Card>;
   );
+<<<<<<< HEAD
 }}
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Button;
 }
-          onClick={onApply}
+          onClick={onApply}"
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
-          Apply to My Listing;
+          Apply to My Listing;"
           <ArrowRight className="ml-2 h-4 w-4" />;
         </Button>;
       </CardFooter>;
     </Card>;
   );}
- interface GeneratedContent {
+ interface GeneratedContent {}
   description: string;
 tags: string[];
-suggestedPrice: {
+suggestedPrice: {}
   min: number;
-max: number 
+max: number;
 };
 keyPoints: string[] 
-}interface GeneratedContentDisplayProps {
+}interface GeneratedContentDisplayProps {}
   content: GeneratedContent;
-onApply: () => void 
-}export function GeneratedContentDisplay ({
-  content, onApply 
-}: GeneratedContentDisplayProps) {
-  return (<Card className="border border-zion-blue-light bg-zion-blue-dark" > text-white">Generated Content</CardTitle> </CardHeader> <CardContent className=" space-y-4"> <div> <h3 className=" text-sm font-medium text-zion-slate-light mb-2">Description</h3> <p className=" text-white"> {
-  content.description 
+onApply: () => void;
+}export function GeneratedContentDisplay() { return null; }
+  return (<Card className="border border-zion-blue-light bg-zion-blue-dark" > text-white">Generated Content</CardTitle> </CardHeader> <CardContent className=" space-y-4"> <div> <h3 className=" text-sm font-medium text-zion-slate-light mb-2">Description</h3> <p className=" text-white"> {}
+  content.description;
 }</p> </div> <div> </Badge>) ) 
-}</div> </div> <div> </p> </div> <div>) ) 
+}</div> </div> <div> </p> </div> <div>) ) "
 }</ul> </div> </CardContent> <CardFooter> <Button ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>) 
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -617,3 +727,10 @@ onApply: () => void
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

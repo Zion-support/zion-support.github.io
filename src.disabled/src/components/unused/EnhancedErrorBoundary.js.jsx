@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,9 +26,11 @@ import _React,{ Component } from 'react'; import { motion } from 'framer-motion'
 import React,{ Component } from \'react\'; import { motion } from \'framer-motion\'; import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from \'@heroicons/react/24/outline\'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this && this.state = {; \"hasError\": \'false\',; \"error\": \'null\',; \"errorInfo\": \'null\',; \"errorId\": \'null\',; \"showStackTrace\": \'false;\' }}; static getDerivedStateFromError(error) {; return {; \"hasError\": \'true\',; error,; \"errorId\": this && this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this && this.setState({ errorInfo }); render() { return <div>Component></div> } } }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const React,{ Component } from "react"; import { motion } from "framer-motion"; import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from "@heroicons/react/24/outline"; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this && this.state = {; hasError: "false",; error: "null",; errorInfo: "null",; errorId: "null",; showStackTrace: "false;" }}; static getDerivedStateFromError(error) {; return {; hasError: "true",; error,; errorId: this && this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this && this.setState({ errorInfo }); render() { return <div>Component></div> } } }}'"'"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import _React,{ Component } from 'react'; import { motion } from 'framer-motion'; import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from '@heroicons/react/24/outline'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this && this.state = {; "hasError": 'false',; "error": 'null',; "errorInfo": 'null',; "errorId": 'null',; "showStackTrace": 'false;' }}; static getDerivedStateFromError(error) {; return {; "hasError": 'true',; error,; "errorId": this && this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this && this.setState({ errorInfo }); render() { return <div>Component></div> } } }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,3 +80,13 @@ import React,{ Component } from \'react\'; import { motion } from \'framer-motio
 const React,{ Component } from "react"; import { motion } from "framer-motion"; import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from "@heroicons/react/24/outline"; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; hasError: "false",; error: "null",; errorInfo: "null",; errorId: "null",; showStackTrace: "false;" }}; static getDerivedStateFromError(error) {; return {; hasError: "true",; error,; errorId: this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }); render() { return <div>Component></div> } } }}'"'"
 import _React,{ Component } from 'react'; import { motion } from 'framer-motion'; import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from '@heroicons/react/24/outline'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; "hasError": 'false',; "error": 'null',; "errorInfo": 'null',; "errorId": 'null',; "showStackTrace": 'false;' }}; static getDerivedStateFromError(error) {; return {; "hasError": 'true',; error,; "errorId": this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }); render() { return <div>Component></div> } } }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React,{ Component } from \'react\'; import { motion } from \'framer-motion\'; import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from \'@heroicons/react/24/outline\'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; \"hasError\": \'false\',; \"error\": \'null\',; \"errorInfo\": \'null\',; \"errorId\": \'null\',; \"showStackTrace\": \'false;\' }}; static getDerivedStateFromError(error) {; return {; \"hasError\": \'true\',; error,; \"errorId\": this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }); render() { return <div>Component></div> } } }}'"
+const React,{ Component } from "react"; import { motion } from "framer-motion"; import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from "@heroicons/react/24/outline"; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; hasError: "false",; error: "null",; errorInfo: "null",; errorId: "null",; showStackTrace: "false;" }}; static getDerivedStateFromError(error) {; return {; hasError: "true",; error,; errorId: this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }); render() { return <div>Component></div> } } }}'"'"'"
+import _React,{ Component } from 'react'; import { motion } from 'framer-motion'; import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from '@heroicons/react/24/outline'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; "hasError": 'false',; "error": 'null',; "errorInfo": 'null',; "errorId": 'null',; "showStackTrace": 'false;' }}; static getDerivedStateFromError(error) {; return {; "hasError": 'true',; error,; "errorId": this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }); render() { return <div>Component></div> } } }}
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

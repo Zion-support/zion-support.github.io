@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -13,16 +14,25 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
-const AIAssistant: React.FC = () => {
-import React from 'react',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
+
+
+const AIAssistant: React.FC = () => {}
+import React from 'react',';
 import Head from 'next/head';
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD:pages/ai-assistant.tsx
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 
 =======
 <<<<<<< HEAD
@@ -44,6 +54,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <Layout>;
       <Head>;
 
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,14 +66,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />;
+=======
+
+
+
+        />;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-assistant' />;
-      </Head>;
-      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white'>;
-        <div className='max-w-6xl mx-auto space-y-10'>;
-          <header className='text-center'>;
+      </Head>;'
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white'>;'
+        <div className='max-w-6xl mx-auto space-y-10'>;'
+          <header className='text-center'>;'
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4'>;
               AI Assistant;
-            </h1>;
+            </h1>;'
             <p className='text-gray-300 text-lg'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,20 +90,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <title > AI Assistant | Zion Tech Group</title>;
-        <meta;
-          name='description';
+        <meta;'
+          name='description';'
           content='AI Assistant that automates research, drafting, scheduling, and customer responses.';
-        />;
+        />;'
         <link rel='canonical' href='https://ziontechgroup.com / ai - assistant' />;
-      </Head>;
-      <div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8 bg - black text - white'>;
-        <div className='max - w-6xl mx - auto space - y-10'>;
-          <header className='text - center'>;
+      </Head>;'
+      <div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8 bg - black text - white'>;'
+        <div className='max - w-6xl mx - auto space - y-10'>;'
+          <header className='text - center'>;'
             <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 4'>;
               AI Assistant;
-            </h1>;
+            </h1>;'
             <p className='text - gray - 300 text - lg'>;
 
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,110 +116,140 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
               Automate research, summarization, drafting, scheduling, and inbox;
               triage.;
             </p>;
           </header>;
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
+=======
+
+
+
+'
+              className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
           <section className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
-            {[;
-              'Research and summarize documents and web sources',
-              'Draft emails, posts, briefs, and reports',
-              'Auto - schedule meetings and follow - ups',
-              'Integrations: Gmail, Google Drive, Slack, Calendar',
-              'Team approvals and audit trail',
+            {[;'
+              'Research and summarize documents and web sources','
+              'Draft emails, posts, briefs, and reports','
+              'Auto - schedule meetings and follow - ups','
+              'Integrations: Gmail, Google Drive, Slack, Calendar','
+              'Team approvals and audit trail','
               'Starting at $99 / mo',
             ].map (function => (
               <div;
-                key={f}
+                key={f}'
                 className='p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60 text - gray - 200';
               >;
                 {f}
               </div>))}
-          </section>;
+          </section>;'
           <div className='text - center'>;
-            <Button;
-              href='/contact';
+            <Button;'
+              href='/contact';'
               className='px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white';
             >;
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
               Request a Demo;
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="bg - blue - 50 rounded - lg p - 8 text - center">;
           <h2 className="text - 2xl font - bold mb - 4">Ready to Get Started?</h2>;
+=======
+
+
+
+
+        <div className="bg - blue - 50 rounded - lg p - 8 text - center">;"
+          <h2 className="text - 2xl font - bold mb - 4">Ready to Get Started?</h2>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
           <p className="text - lg text - gray - 700 mb - 6">;
             Experience the power of AI assistance for your business operations.;
-          </p>;
-          <div className="flex justify - center gap - 4">;
+          </p>;"
+          <div className="flex justify - center gap - 4">;"
             <a href="/contact" className="bg - blue - 600 text - white px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white rounded - lg hover: bg - blue - 700">;
               Request a Demo;
-            </a>;
+            </a>;"
             <a href="/about" className="border border - blue - 600 text - blue - 600 px - 6 py - 3 rounded - lg hover:bg - blue - 50">;
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
               Learn More;
             </a>;
           </div>;
@@ -209,6 +257,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>;
 
 
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -216,15 +265,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
 
 
+
+
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -233,31 +280,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
   return (
     <>
       <Head>
-        <title>AI Assistant | Zion Tech Group</title>
-        <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
+        <title>AI Assistant | Zion Tech Group</title>"
+        <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />"
         <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
-        <div className="max-w-6xl mx-auto space-y-10">
-          <header className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>
+      </Head>"
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">"
+        <div className="max-w-6xl mx-auto space-y-10">"
+          <header className="text-center">"
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>"
             <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
-          </header>
+          </header>"
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
+            {['
               'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
-            ].map((f) => (
+            ].map((f) => ("
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
-            ))  } catch (error) {
-    console.error("Error:", error);
+            ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          </section>
-          <div className="text-center">
+          </section>"
+          <div className="text-center">"
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
           </div>
         </div>
@@ -334,43 +391,17 @@ export default function AIAssistantPage() {
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import Button from '../components/ui/Button';
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import Button from '../components/ui/Button';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 
-const AIAssistant: React.FC = () => {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+'
+import Button from '../components/ui/Button';
+
+'
 import React from 'react',
-<<<<<<< HEAD
-import Head from 'next/head';
 
-import Layout from '../components/layout/Layout';
-const AIAssistant: React.FC = () => {
-
-=======
-import Head from 'next/head',
-import Button from '../components/ui/Button',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -382,10 +413,18 @@ export default function AIAssistantPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+export default function AIAssistantPage() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
   return (
     <>
       <Head>
         <title>AI Assistant | Zion Tech Group</title>
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD
 
 =======
@@ -395,12 +434,16 @@ export default function AIAssistantPage() {
         <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
         <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
-        <div className="max-w-6xl mx-auto space-y-10">
-          <header className="text-center">
+      </Head>"
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">"
+        <div className="max-w-6xl mx-auto space-y-10">"
+          <header className="text-center">"
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 <<<<<<< HEAD
 
 =======
@@ -456,24 +499,28 @@ export default function AIAssistantPage() {
 =======
     </Layout>);
 ;
-
-
-
-    </Layout>);
-;
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
+
+
+
+"
             <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
-          </header>
+          </header>"
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
+            {['
               'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
-            ].map((f) => (
+            ].map((f) => ("
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
             ))}
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </section>
           <div className="text-center">
+=======
+          </section>"
+          <div className="text-center">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
           </div>
         </div>
@@ -488,12 +535,10 @@ export default function AIAssistantPage() {
     </>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
 
+<<<<<<< HEAD:pages_backup/ai-assistant.tsx
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -505,3 +550,6 @@ export default function AIAssistantPage() {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-assistant.tsx
+=======
+'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-assistant.tsx

@@ -18,6 +18,11 @@ const suite = new ComprehensiveTestDeploy();
 suite.runComprehensiveSuite().catch(console.error);
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

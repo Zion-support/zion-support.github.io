@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -76,10 +77,14 @@ const AutonomousBusinessOperationsPlatform = () => {
       color: "from-red-500 to-orange-500"
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const capabilities = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -124,10 +129,14 @@ const AutonomousBusinessOperationsPlatform = () => {
     }
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const benefits = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -173,6 +182,9 @@ const AutonomousBusinessOperationsPlatform = () => {
       description: "Increase in team productivity"
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -180,6 +192,7 @@ const AutonomousBusinessOperationsPlatform = () => {
     <>
       <Head>
         <title>Autonomous Business Operations Platform - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -266,10 +279,14 @@ const AutonomousBusinessOperationsPlatform = () => {
             </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -326,12 +343,16 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
         {/* Capabilities Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -384,12 +405,16 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -485,12 +510,16 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -546,11 +575,15 @@ const AutonomousBusinessOperationsPlatform = () => {
             </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
       </div>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -562,3 +595,6 @@ const AutonomousBusinessOperationsPlatform = () => {
 export default AutonomousBusinessOperationsPlatform;
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

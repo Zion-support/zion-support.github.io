@@ -1,6 +1,7 @@
-export { AuthContext } from "./AuthContext";
+export { AuthContext } from "./AuthContext";"
 export { AuthProvider } from "./AuthProvider";
 
+<<<<<<< HEAD
 // Re-export the context type for convenience
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,3 +82,8 @@ export { AuthProvider } from './AuthProvider',;
 // Re-export the context type for convenience;
 export type { AuthContextType } from '@/types/auth';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// Re-export the context type for convenience";
+export type { AuthContextType } from "@/types/auth";
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

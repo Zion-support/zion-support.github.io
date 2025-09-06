@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,10 +10,13 @@
 =======
 <<<<<<<< HEAD:automation/error-fixer-automation.js
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -62,11 +66,20 @@
 #!/usr/bin/env node
 const fs = // // require('fs');
 const path = // // require('path');
+=======
+#!/usr/bin/env node;
+=
+
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class ErrorFixerAutomation { constructor() { this.projectRoot = process.cwd(); this.errorReport = { timestamp: new Date().toISOString(),duration: 0,fixesApplied: [],errorsFound: [],warnings: [],}; this.startTime = Date.now()} async run() {  try { await this.checkAndFixTypeScriptErrors(); await this.checkAndFixESLintErrors(); await this.checkAndFixImportErrors(); await this.checkAndFixMissingFiles(); await this.checkAndFixPackageJsonIssues(); await this.generateReport(); const duration = Date.now() - this.startTime; this.errorReport.duration = duration;   } catch (error) { console.error('❌ Error in automation:',error); this.errorReport.errorsFound.push({ type: 'automation_error',message: error.message,stack: error.stack,})} } async checkAndFixTypeScriptErrors() {  try { const result = execSync('npx tsc --noEmit --pretty false',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseTypeScriptErrors(result); await this.fixTypeScriptErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseTypeScriptErrors(error.stdout); await this.fixTypeScriptErrors(errors)} } } parseTypeScriptErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { if (line.includes('error TS')) { const match = line.match( /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/ ); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'typescript',})} } } return errors} async fixTypeScriptErrors(errors) { for (const error of errors) { try { if ( error.message.includes('Property') && error.message.includes('does not exist') ) { await this.fixPropertyAccessError(error)} else if (error.message.includes('Cannot find module')) { await this.fixModuleImportError(error)} else if ( error.message.includes('Type') && error.message.includes('is not assignable') ) { await this.fixTypeAssignmentError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixPropertyAccessError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const propertyMatch = error.message.match( /Property '(.+)' does not exist/ ); if (propertyMatch) { const propertyName = propertyMatch[1]; const moduleMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (moduleMatch) { const modulePath = moduleMatch[1]; const newLine = line.replace( new RegExp(`\\{.*${propertyName}.*\\}`),'{ default }' ); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'property_access',file: error.file,description: `Fixed property access for ${propertyName}`,line: error.line,})} } } } async fixModuleImportError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; const moduleMatch = error.message.match(/Cannot find module '(.+)'/); if (moduleMatch && modulePath.includes(moduleMatch[1])) { const possiblePaths = this.findPossibleModulePaths(moduleMatch[1]); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'module_import',file: error.file,description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } findPossibleModulePaths(moduleName) { const possiblePaths = []; const extensions = ['.ts','.tsx','.js','.jsx']; if (moduleName.startsWith('./') || moduleName.startsWith('../')) { for (const ext of extensions) { const fullPath = path.resolve(this.projectRoot,moduleName + ext); if (fs.existsSync(fullPath)) { possiblePaths.push(moduleName + ext)} } } const srcPath = path.join(this.projectRoot,'src',moduleName); for (const ext of extensions) { const fullPath = srcPath + ext; if (fs.existsSync(fullPath)) { possiblePaths.push('./' + path.relative(this.projectRoot,fullPath))} } return possiblePaths} async fixTypeAssignmentError(error) { this.errorReport.warnings.push({ type: 'type_assignment',file: error.file,message: error.message,line: error.line,description: 'Type assignment error requires manual review',})} async checkAndFixESLintErrors() {  try { const result = execSync('npx eslint . --format=compact --no-eslintrc',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseESLintErrors(result); await this.fixESLintErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseESLintErrors(error.stdout); await this.fixESLintErrors(errors)} } } parseESLintErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'eslint',})} } return errors} async fixESLintErrors(errors) { for (const error of errors) { try { if (error.message.includes('no-unused-vars')) { await this.fixUnusedVariableError(error)} else if (error.message.includes('no-console')) { await this.fixConsoleError(error)} else if (error.message.includes('prefer-const')) { await this.fixPreferConstError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixUnusedVariableError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const variableMatch = error.message.match( /'(.+)' is assigned a value but never used/ ); if (variableMatch) { const variableName = variableMatch[1]; const newLine = line.replace( new RegExp(`(const|let|var)\\s+${variableName}\\b`),`const _${variableName}` ); if (newLine !== line) { lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'unused_variable',file: error.file,description: `Prefixed unused variable ${variableName} with underscore`,line: error.line,})} } } } async fixConsoleError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('console.')) { const newLine = ' lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'console_statement',file: error.file,description: 'Commented out console statement',line: error.line,})} } } async fixPreferConstError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('let ')) { const newLine = line.replace(/\blet\b/,'const'); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'prefer_const',file: error.file,description: 'Changed let to const',line: error.line,})} } } async checkAndFixImportErrors() {  const srcDir = path.join(this.projectRoot,'src'); if (!fs.existsSync(srcDir)) return; const files = this.getAllFiles(srcDir,['.ts','.tsx','.js','.jsx']); for (const file of files) { await this.fixImportErrorsInFile(file)} } getAllFiles(dir,extensions) { const files = []; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { files.push(...this.getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files} async fixImportErrorsInFile(filePath) { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let modified = false; for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; if (modulePath.startsWith('./') || modulePath.startsWith('../')) { const resolvedPath = path.resolve( path.dirname(filePath),modulePath ); if (!fs.existsSync(resolvedPath)) { const possiblePaths = this.findPossibleModulePaths(modulePath); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; modified = true; this.errorReport.fixesApplied.push({ type: 'import_path',file: path.relative(this.projectRoot,filePath),description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } if (modified) { fs.writeFileSync(filePath,lines.join('\n'))} } async checkAndFixMissingFiles() {  const missingFiles = [ 'src/pages/HomePage.tsx','src/pages/SolutionsPage.tsx','src/pages/AboutPage.tsx','src/pages/ContactPage.tsx','src/pages/BlogPage.tsx','src/pages/NotFoundPage.tsx',]; for (const missingFile of missingFiles) { const fullPath = path.join(this.projectRoot,missingFile); if (!fs.existsSync(fullPath)) { await this.createMissingFile(missingFile)} } } async createMissingFile(filePath) { const fullPath = path.join(this.projectRoot,filePath); const dir = path.dirname(fullPath); if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} const componentName = path.basename(filePath,path.extname(filePath)); const content = this.generateComponentContent(componentName); fs.writeFileSync(fullPath,content); this.errorReport.fixesApplied.push({ type: 'missing_file',file: filePath,description: `Created missing ${componentName} component`,})} generateComponentContent(componentName) { return `import React from 'react'; export default function ${componentName}() { return ( <div className="min-h-screen bg-gray-900 text-white"> <div className="container mx-auto px-4 py-8"> <h1 className="text-4xl font-bold mb-8">${componentName}</h1> <p className="text-gray-300"> This is the ${componentName} page. Content will be added here. </p> </div> </div> )} `} async checkAndFixPackageJsonIssues() {  const packageJsonPath = path.join(this.projectRoot,'package.json'); if (!fs.existsSync(packageJsonPath)) return; const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); let modified = false; const requiredScripts = { 'type-check': 'tsc --noEmit',lint: 'next lint',build: 'next build',dev: 'next dev',start: 'next start',}; for (const [script,command] of Object.entries(requiredScripts)) { if (!packageJson.scripts[script]) { packageJson.scripts[script] = command; modified = true; this.errorReport.fixesApplied.push({ type: 'package_json_script',file: 'package.json',description: `Added missing script: ${script}`,})} } if (modified) { fs.writeFileSync(packageJsonPath,JSON.stringify(packageJson,null,2))} } async generateReport() { const reportPath = path.join( this.projectRoot,'error-reports',`error-fixer-report-${Date.now()}.json` ); const reportDir = path.dirname(reportPath); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.errorReport,null,2)); } }; if (require.main === module) { const automation = new ErrorFixerAutomation(); automation.run().catch(console.error)} module.exports = ErrorFixerAutomation;
+#!/usr/bin/env node'
+const fs = // // require('fs');'
+const path = // // require('path');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const { execSync } = // // require('child_process');
-class ErrorFixerAutomation {
-  constructor() {
+class ErrorFixerAutomation {}
+  constructor() {}
     this.projectRoot = process.cwd();
-    this.errorReport = {
+    this.errorReport = {}
       timestamp: new Date().toISOString(),
       duration: 0,
       fixesApplied: [],
@@ -75,6 +88,7 @@ class ErrorFixerAutomation {
     };
     this.startTime = Date.now();
   }
+<<<<<<< HEAD
   async run() {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,6 +103,10 @@ class ErrorFixerAutomation {
     console.log('🚀 Starting Error Fixer Automation...');
     try {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  async run() {}
+    try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       await this.checkAndFixTypeScriptErrors();
       await this.checkAndFixESLintErrors();
       await this.checkAndFixImportErrors();
@@ -97,6 +115,7 @@ class ErrorFixerAutomation {
       await this.generateReport();
       const duration = Date.now() - this.startTime;
       this.errorReport.duration = duration;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -110,12 +129,17 @@ class ErrorFixerAutomation {
 <<<<<<< HEAD
       console.error('❌ Error in automation:', error);
       this.errorReport.errorsFound.push({
+=======
+
+      this.errorReport.errorsFound.push({'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         type: 'automation_error',
         message: error.message,
-        stack: error.stack
+        stack: error.stack;
       });
     }
   }
+<<<<<<< HEAD
   async checkAndFixTypeScriptErrors() {
     console.log('🔍 Checking TypeScript errors...');
     console.log('🔍 Checking TypeScript errors...');
@@ -123,31 +147,38 @@ class ErrorFixerAutomation {
       const result = execSync('npx tsc --noEmit --pretty false', {
         encoding: 'utf8',
         cwd: this.projectRoot,
+=======
+  async checkAndFixTypeScriptErrors() {}
+    try {'
+      const result = execSync('npx tsc --noEmit --pretty false', { '
+        encoding: 'utf8', 
+        cwd: this.projectRoot,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         stdio: ['pipe', 'pipe', 'pipe']
       });
-      if (result) {
+      if (result) {}
         const errors = this.parseTypeScriptErrors(result);
         await this.fixTypeScriptErrors(errors);
       }
-    } catch (error) {
-      if (error.stdout) {
+    } catch (error) {}
+      if (error.stdout) {}
         const errors = this.parseTypeScriptErrors(error.stdout);
         await this.fixTypeScriptErrors(errors);
       }
     }
   }
-  parseTypeScriptErrors(output) {
-    const errors = [];
+  parseTypeScriptErrors(output) {}
+    const errors = [];'
     const lines = output.split('\n');
-    for (const line of lines) {
-      if (line.includes('error TS')) {
+    for (const line of lines) {'
+      if (line.includes('error TS')) {}
         const match = line.match(/(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/);
-        if (match) {
-          errors.push({
+        if (match) {}
+          errors.push({}
             file: match[1].trim(),
             line: parseInt(match[2]),
             column: parseInt(match[3]),
-            message: match[4].trim(),
+            message: match[4].trim(),'
             type: 'typescript'
           });
         }
@@ -155,288 +186,296 @@ class ErrorFixerAutomation {
     }
     return errors;
   }
-  async fixTypeScriptErrors(errors) {
-    for (const error of errors) {
-      try {
-        if (error.message.includes('Property') && error.message.includes('does not exist')) {
-          await this.fixPropertyAccessError(error);
-        } else if (error.message.includes('Cannot find module')) {
-          await this.fixModuleImportError(error);
-        } else if (error.message.includes('Type') && error.message.includes('is not assignable')) {
+  async fixTypeScriptErrors(errors) {}
+    for (const error of errors) {}
+      try {'
+        if (error.message.includes('Property') && error.message.includes('does not exist')) {}
+          await this.fixPropertyAccessError(error);'
+        } else if (error.message.includes('Cannot find module')) {}
+          await this.fixModuleImportError(error);'
+        } else if (error.message.includes('Type') && error.message.includes('is not assignable')) {}
           await this.fixTypeAssignmentError(error);
         }
-      } catch (fixError) {
-        this.errorReport.errorsFound.push({
+      } catch (fixError) {}
+        this.errorReport.errorsFound.push({}
           ...error,
-          fixError: fixError.message
+          fixError: fixError.message;
         });
       }
     }
   }
-  async fixPropertyAccessError(error) {
+  async fixPropertyAccessError(error) {}
     const filePath = path.resolve(this.projectRoot, error.file);
-    if (!fs.existsSync(filePath)) return;
-    const content = fs.readFileSync(filePath, 'utf8');
+    if (!fs.existsSync(filePath)) return;'
+    const content = fs.readFileSync(filePath, 'utf8');'
     const lines = content.split('\n');
-    if (error.line <= lines.length) {
-      const line = lines[error.line - 1];
+    if (error.line <= lines.length) {}
+      const line = lines[error.line - 1];'
       const propertyMatch = error.message.match(/Property '(.+)' does not exist/);
-      if (propertyMatch) {
-        const propertyName = propertyMatch[1];
+      if (propertyMatch) {}
+        const propertyName = propertyMatch[1];'"
         const moduleMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/);
-        if (moduleMatch) {
+        if (moduleMatch) {}
           const modulePath = moduleMatch[1];
-          const newLine = line.replace(
-            new RegExp(`\\{.*${propertyName}.*\\}`),
+          const newLine = line.replace(`
+            new RegExp(`\\{.*${propertyName}.*\\}`),'
             '{ default }'
           );
-          lines[error.line - 1] = newLine;
+          lines[error.line - 1] = newLine;'
           fs.writeFileSync(filePath, lines.join('\n'));
-          this.errorReport.fixesApplied.push({
+          this.errorReport.fixesApplied.push({'
             type: 'property_access',
-            file: error.file,
+            file: error.file,`
             description: `Fixed property access for ${propertyName}`,
-            line: error.line
+            line: error.line;
           });
         }
       }
     }
   }
-  async fixModuleImportError(error) {
+  async fixModuleImportError(error) {}
     const filePath = path.resolve(this.projectRoot, error.file);
-    if (!fs.existsSync(filePath)) return;
-    const content = fs.readFileSync(filePath, 'utf8');
+    if (!fs.existsSync(filePath)) return;'
+    const content = fs.readFileSync(filePath, 'utf8');'
     const lines = content.split('\n');
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+    for (let i = 0; i < lines.length; i++) {}
+      const line = lines[i];'"
       const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/);
-      if (importMatch) {
-        const modulePath = importMatch[1];
+      if (importMatch) {}
+        const modulePath = importMatch[1];'
         const moduleMatch = error.message.match(/Cannot find module '(.+)'/);
-        if (moduleMatch && modulePath.includes(moduleMatch[1])) {
-          // Try to find the correct module path
+        if (moduleMatch && modulePath.includes(moduleMatch[1])) {}
+          // Try to find the correct module path;
           const possiblePaths = this.findPossibleModulePaths(moduleMatch[1]);
-          if (possiblePaths.length > 0) {
+          if (possiblePaths.length > 0) {}
             const newPath = possiblePaths[0];
             const newLine = line.replace(modulePath, newPath);
-            lines[i] = newLine;
+            lines[i] = newLine;'
             fs.writeFileSync(filePath, lines.join('\n'));
-            this.errorReport.fixesApplied.push({
+            this.errorReport.fixesApplied.push({'
               type: 'module_import',
-              file: error.file,
-              description: `Fixed import path from ${modulePath} to ${newPath}`,
-              line: i + 1
+              file: error.file,`
+              description: `Fixed import path from ${modulePath} to ${newPath}`,;
+              line: i + 1;
             });
           }
         }
       }
     }
   }
-  findPossibleModulePaths(moduleName) {
-    const possiblePaths = [];
-    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
-    // Check if it's a relative path
-    if (moduleName.startsWith('./') || moduleName.startsWith('../')) {
-      for (const ext of extensions) {
+  findPossibleModulePaths(moduleName) {}
+    const possiblePaths = [];'
+    const extensions = ['.ts', '.tsx', '.js', '.jsx'];'
+    // Check if it's a relative path'
+    if (moduleName.startsWith('./') || moduleName.startsWith('../')) {}
+      for (const ext of extensions) {}
         const fullPath = path.resolve(this.projectRoot, moduleName + ext);
-        if (fs.existsSync(fullPath)) {
+        if (fs.existsSync(fullPath)) {}
           possiblePaths.push(moduleName + ext);
         }
       }
-    }
-    // Check if it's an absolute path from src
+    }'
+    // Check if it's an absolute path from src'
     const srcPath = path.join(this.projectRoot, 'src', moduleName);
-    for (const ext of extensions) {
+    for (const ext of extensions) {}
       const fullPath = srcPath + ext;
-      if (fs.existsSync(fullPath)) {
+      if (fs.existsSync(fullPath)) {'
         possiblePaths.push('./' + path.relative(this.projectRoot, fullPath));
       }
     }
     return possiblePaths;
   }
-  async fixTypeAssignmentError(error) {
-    // This is a complex error that might need manual intervention
-    this.errorReport.warnings.push({
+  async fixTypeAssignmentError(error) {}
+    // This is a complex error that might need manual intervention;
+    this.errorReport.warnings.push({'
       type: 'type_assignment',
       file: error.file,
       message: error.message,
-      line: error.line,
+      line: error.line,'
       description: 'Type assignment error requires manual review'
     });
   }
-  async checkAndFixESLintErrors() {
+  async checkAndFixESLintErrors() {'
     console.log('🔍 Checking ESLint errors...');
+<<<<<<< HEAD
     try {
       const result = execSync('npx eslint . --format=compact --no-eslintrc', {
         encoding: 'utf8',
         cwd: this.projectRoot,
+=======
+    try {'
+      const result = execSync('npx eslint . --format=compact --no-eslintrc', { '
+        encoding: 'utf8', 
+        cwd: this.projectRoot,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         stdio: ['pipe', 'pipe', 'pipe']
       });
-      if (result) {
+      if (result) {}
         const errors = this.parseESLintErrors(result);
         await this.fixESLintErrors(errors);
       }
-    } catch (error) {
-      if (error.stdout) {
+    } catch (error) {}
+      if (error.stdout) {}
         const errors = this.parseESLintErrors(error.stdout);
         await this.fixESLintErrors(errors);
       }
     }
   }
-  parseESLintErrors(output) {
-    const errors = [];
+  parseESLintErrors(output) {}
+    const errors = [];'
     const lines = output.split('\n');
-    for (const line of lines) {
+    for (const line of lines) {}
       const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
-      if (match) {
-        errors.push({
+      if (match) {}
+        errors.push({}
           file: match[1].trim(),
           line: parseInt(match[2]),
           column: parseInt(match[3]),
-          message: match[4].trim(),
+          message: match[4].trim(),'
           type: 'eslint'
         });
       }
     }
     return errors;
   }
-  async fixESLintErrors(errors) {
-    for (const error of errors) {
-      try {
-        if (error.message.includes('no-unused-vars')) {
-          await this.fixUnusedVariableError(error);
-        } else if (error.message.includes('no-console')) {
-          await this.fixConsoleError(error);
-        } else if (error.message.includes('prefer-const')) {
+  async fixESLintErrors(errors) {}
+    for (const error of errors) {}
+      try {'
+        if (error.message.includes('no-unused-vars')) {}
+          await this.fixUnusedVariableError(error);'
+        } else if (error.message.includes('no-console')) {}
+          await this.fixConsoleError(error);'
+        } else if (error.message.includes('prefer-const')) {}
           await this.fixPreferConstError(error);
         }
-      } catch (fixError) {
-        this.errorReport.errorsFound.push({
+      } catch (fixError) {}
+        this.errorReport.errorsFound.push({}
           ...error,
-          fixError: fixError.message
+          fixError: fixError.message;
         });
       }
     }
   }
-  async fixUnusedVariableError(error) {
+  async fixUnusedVariableError(error) {}
     const filePath = path.resolve(this.projectRoot, error.file);
-    if (!fs.existsSync(filePath)) return;
-    const content = fs.readFileSync(filePath, 'utf8');
+    if (!fs.existsSync(filePath)) return;'
+    const content = fs.readFileSync(filePath, 'utf8');'
     const lines = content.split('\n');
-    if (error.line <= lines.length) {
-      const line = lines[error.line - 1];
+    if (error.line <= lines.length) {}
+      const line = lines[error.line - 1];'
       const variableMatch = error.message.match(/'(.+)' is assigned a value but never used/);
-      if (variableMatch) {
+      if (variableMatch) {}
         const variableName = variableMatch[1];
-        // Remove the variable declaration or add underscore prefix
-        const newLine = line.replace(
-          new RegExp(`(const|let|var)\\s+${variableName}\\b`),
+        // Remove the variable declaration or add underscore prefix;
+        const newLine = line.replace(`
+          new RegExp(`(const|let|var)\\s+${variableName}\\b`),`
           `const _${variableName}`
         );
-        if (newLine !== line) {
-          lines[error.line - 1] = newLine;
+        if (newLine !== line) {}
+          lines[error.line - 1] = newLine;'
           fs.writeFileSync(filePath, lines.join('\n'));
-          this.errorReport.fixesApplied.push({
+          this.errorReport.fixesApplied.push({'
             type: 'unused_variable',
-            file: error.file,
+            file: error.file,`
             description: `Prefixed unused variable ${variableName} with underscore`,
-            line: error.line
+            line: error.line;
           });
         }
       }
     }
   }
-  async fixConsoleError(error) {
+  async fixConsoleError(error) {}
     const filePath = path.resolve(this.projectRoot, error.file);
-    if (!fs.existsSync(filePath)) return;
-    const content = fs.readFileSync(filePath, 'utf8');
+    if (!fs.existsSync(filePath)) return;'
+    const content = fs.readFileSync(filePath, 'utf8');'
     const lines = content.split('\n');
-    if (error.line <= lines.length) {
+    if (error.line <= lines.length) {}
       const line = lines[error.line - 1];
-      // Comment out console statements
-      if (line.includes('console.')) {
+      // Comment out console statements'
+      if (line.includes('console.')) {'
         const newLine = '// ' + line;
-        lines[error.line - 1] = newLine;
+        lines[error.line - 1] = newLine;'
         fs.writeFileSync(filePath, lines.join('\n'));
-        this.errorReport.fixesApplied.push({
+        this.errorReport.fixesApplied.push({'
           type: 'console_statement',
-          file: error.file,
+          file: error.file,'
           description: 'Commented out console statement',
-          line: error.line
+          line: error.line;
         });
       }
     }
   }
-  async fixPreferConstError(error) {
+  async fixPreferConstError(error) {}
     const filePath = path.resolve(this.projectRoot, error.file);
-    if (!fs.existsSync(filePath)) return;
-    const content = fs.readFileSync(filePath, 'utf8');
+    if (!fs.existsSync(filePath)) return;'
+    const content = fs.readFileSync(filePath, 'utf8');'
     const lines = content.split('\n');
-    if (error.line <= lines.length) {
+    if (error.line <= lines.length) {}
       const line = lines[error.line - 1];
-      // Replace let with const
-      if (line.includes('let ')) {
+      // Replace let with const'
+      if (line.includes('let ')) {'
         const newLine = line.replace(/\blet\b/, 'const');
-        lines[error.line - 1] = newLine;
+        lines[error.line - 1] = newLine;'
         fs.writeFileSync(filePath, lines.join('\n'));
-        this.errorReport.fixesApplied.push({
+        this.errorReport.fixesApplied.push({'
           type: 'prefer_const',
-          file: error.file,
+          file: error.file,'
           description: 'Changed let to const',
-          line: error.line
+          line: error.line;
         });
       }
     }
   }
-  async checkAndFixImportErrors() {
-    console.log('🔍 Checking import errors...');
+  async checkAndFixImportErrors() {'
+    console.log('🔍 Checking import errors...');'
     const srcDir = path.join(this.projectRoot, 'src');
-    if (!fs.existsSync(srcDir)) return;
+    if (!fs.existsSync(srcDir)) return;'
     const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
-    for (const file of files) {
+    for (const file of files) {}
       await this.fixImportErrorsInFile(file);
     }
   }
-  getAllFiles(dir, extensions) {
+  getAllFiles(dir, extensions) {}
     const files = [];
     const items = fs.readdirSync(dir);
-    for (const item of items) {
+    for (const item of items) {}
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
+      if (stat.isDirectory()) {}
         files.push(...this.getAllFiles(fullPath, extensions));
-      } else if (extensions.some(ext => item.endsWith(ext))) {
+      } else if (extensions.some(ext => item.endsWith(ext))) {}
         files.push(fullPath);
       }
     }
     return files;
   }
-  async fixImportErrorsInFile(filePath) {
-    const content = fs.readFileSync(filePath, 'utf8');
+  async fixImportErrorsInFile(filePath) {'
+    const content = fs.readFileSync(filePath, 'utf8');'
     const lines = content.split('\n');
     let modified = false;
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+    for (let i = 0; i < lines.length; i++) {}
+      const line = lines[i];'"
       const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/);
-      if (importMatch) {
-        const modulePath = importMatch[1];
-        // Fix relative imports that don't have proper extensions
-        if (modulePath.startsWith('./') || modulePath.startsWith('../')) {
+      if (importMatch) {}
+        const modulePath = importMatch[1];'
+        // Fix relative imports that don't have proper extensions'
+        if (modulePath.startsWith('./') || modulePath.startsWith('../')) {}
           const resolvedPath = path.resolve(path.dirname(filePath), modulePath);
-          if (!fs.existsSync(resolvedPath)) {
+          if (!fs.existsSync(resolvedPath)) {}
             const possiblePaths = this.findPossibleModulePaths(modulePath);
-            if (possiblePaths.length > 0) {
+            if (possiblePaths.length > 0) {}
               const newPath = possiblePaths[0];
               const newLine = line.replace(modulePath, newPath);
               lines[i] = newLine;
               modified = true;
-              this.errorReport.fixesApplied.push({
+              this.errorReport.fixesApplied.push({'
                 type: 'import_path',
-                file: path.relative(this.projectRoot, filePath),
-                description: `Fixed import path from ${modulePath} to ${newPath}`,
-                line: i + 1
+                file: path.relative(this.projectRoot, filePath),`
+                description: `Fixed import path from ${modulePath} to ${newPath}`,;
+                line: i + 1;
               });
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -505,23 +544,40 @@ const fs = require('fs');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+=
+
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+>
+
+
+
+
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+'
+const fs = require('fs');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const path = require('path');
-const {
+const {'
   execSync} = // // require('child_process');
-  class ErrorFixerAutomation {
-    constructor() {
+  class ErrorFixerAutomation {}
+    constructor() {}
       this.projectRoot = process.cwd();
-      this.errorReport = {
-        "timestamp": new Date().toISOString(),
-        "duration": 0,
-        "fixesApplied": [],
-        "errorsFound": [],
+      this.errorReport = {"
+        "timestamp": new Date().toISOString(),"
+        "duration": 0,"
+        "fixesApplied": [],"
+        "errorsFound": [],"
         "warnings": []};
       this.startTime = Date.now();
     }
-    async run() {
+    async run() {'
       console.log('🚀 Starting Error Fixer Automation...');
-      try {
+      try {}
         await this.checkAndFixTypeScriptErrors();
         await this.checkAndFixESLintErrors();
         await this.checkAndFixImportErrors();
@@ -529,111 +585,112 @@ const {
         await this.checkAndFixPackageJsonIssues();
         await this.generateReport();
         const duration = Date.now() - this.startTime;
-        this.errorReport.duration = duration;
-        console.log(`✅ Error fixing completed in ${duration}ms`);
+        this.errorReport.duration = duration;`
+        console.log(`✅ Error fixing completed in ${duration}ms`);`
         console.log(`📊 Applied ${this.errorReport.fixesApplied.length} fixes`);
-        console.log(
+        console.log(`
           `⚠️  Found ${this.errorReport.errorsFound.length} remaining errors`
         );
-      } catch (error) {
+      } catch (error) {'"
         console.error('❌ Error in "automation": ', error);
-        this.errorReport.errorsFound.push({
-          "type": 'automation_error',
-          "message": error.message,
+        this.errorReport.errorsFound.push({'"
+          "type": 'automation_error',"
+          "message": error.message,"
           "stack": error.stack});
       }
     }
-    async checkAndFixTypeScriptErrors() {
+    async checkAndFixTypeScriptErrors() {'
       console.log('🔍 Checking TypeScript errors...');
-      try {
-        const result = execSync('npx tsc --noEmit --pretty false', {
-          "encoding": 'utf8',
-          "cwd": this.projectRoot,
+      try {'
+        const result = execSync('npx tsc --noEmit --pretty false', {'"
+          "encoding": 'utf8',"
+          "cwd": this.projectRoot,'"
           "stdio": ['pipe', 'pipe', 'pipe']});
-        if (result) {
+        if (result) {}
           const errors = this.parseTypeScriptErrors(result);
           await this.fixTypeScriptErrors(errors);
         }
-      } catch (error) {
-        if (error.stdout) {
+      } catch (error) {}
+        if (error.stdout) {}
           const errors = this.parseTypeScriptErrors(error.stdout);
           await this.fixTypeScriptErrors(errors);
         }
       }
     }
-    parseTypeScriptErrors(output) {
-      const errors = [];
+    parseTypeScriptErrors(output) {}
+      const errors = [];'
       const lines = output.split('\n');
-      for (const line of lines) {
-        if (line.includes('error TS')) {
+      for (const line of lines) {'
+        if (line.includes('error TS')) {}
           const match = line.match(
             /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/
           );
-          if (match) {
-            errors.push({
-              "file": match[1].trim(),
-              "line": parseInt(match[2]),
-              "column": parseInt(match[3]),
-              "message": match[4].trim(),
+          if (match) {}
+            errors.push({"
+              "file": match[1].trim(),"
+              "line": parseInt(match[2]),"
+              "column": parseInt(match[3]),"
+              "message": match[4].trim(),'"
               "type": 'typescript'});
           }
         }
       }
       return errors;
     }
-    async fixTypeScriptErrors(errors) {
-      for (const error of errors) {
-        try {
-          if (
-            error.message.includes('Property') &&
+    async fixTypeScriptErrors(errors) {}
+      for (const error of errors) {}
+        try {}
+          if ('
+            error.message.includes('Property') &&'
             error.message.includes('does not exist')
-          ) {
-            await this.fixPropertyAccessError(error);
-          } else if (error.message.includes('Cannot find module')) {
+          ) {}
+            await this.fixPropertyAccessError(error);'
+          } else if (error.message.includes('Cannot find module')) {}
             await this.fixModuleImportError(error);
-          } else if (
-            error.message.includes('Type') &&
+          } else if ('
+            error.message.includes('Type') &&'
             error.message.includes('is not assignable')
-          ) {
+          ) {}
             await this.fixTypeAssignmentError(error);
           }
-        } catch (fixError) {
-          this.errorReport.errorsFound.push({
-            ...error,
+        } catch (fixError) {}
+          this.errorReport.errorsFound.push({}
+            ...error,"
             "fixError": fixError.message});
         }
       }
     }
-    async fixPropertyAccessError(error) {
+    async fixPropertyAccessError(error) {}
       const filePath = path.resolve(this.projectRoot, error.file);
-      if (!fs.existsSync(filePath)) return;
-      const content = fs.readFileSync(filePath, 'utf8');
+      if (!fs.existsSync(filePath)) return;'
+      const content = fs.readFileSync(filePath, 'utf8');'
       const lines = content.split('\n');
-      if (error.line <= lines.length) {
+      if (error.line <= lines.length) {}
         const line = lines[error.line - 1];
-        const propertyMatch = error.message.match(
+        const propertyMatch = error.message.match('
           /Property '(.+)' does not exist/
         );
-        if (propertyMatch) {
-          const propertyName = propertyMatch[1];
+        if (propertyMatch) {}
+          const propertyName = propertyMatch[1];'"
           const moduleMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/);
-          if (moduleMatch) {
+          if (moduleMatch) {}
             const modulePath = moduleMatch[1];
-            const newLine = line.replace(
-              new RegExp(`\\{.*${propertyName}.*\\}`),
+            const newLine = line.replace(`
+              new RegExp(`\\{.*${propertyName}.*\\}`),'
               '{ default }'
             );
-            lines[error.line - 1] = newLine;
+            lines[error.line - 1] = newLine;'
             fs.writeFileSync(filePath, lines.join('\n'));
-            this.errorReport.fixesApplied.push({
-              "type": 'property_access',
-              "file": error.file,
-              "description": `Fixed property access for ${propertyName}`,
+            this.errorReport.fixesApplied.push({'"
+              "type": 'property_access',"
+              "file": error.file,"`
+              "description": `Fixed property access for ${propertyName}`,"
               "line": error.line});
           }
         }
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -656,10 +713,14 @@ const {
 =======
 <<<<<<<< HEAD:automation/error-fixer-automation.js
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
+=
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -695,23 +756,27 @@ const {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    if (modified) {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       fs.writeFileSync(filePath, lines.join('\n'));
     }
   }
-  async checkAndFixMissingFiles() {
+  async checkAndFixMissingFiles() {'
     console.log('🔍 Checking for missing files...');
-    const missingFiles = [
-      'src/pages/HomePage.tsx',
-      'src/pages/SolutionsPage.tsx',
-      'src/pages/AboutPage.tsx',
-      'src/pages/ContactPage.tsx',
-      'src/pages/BlogPage.tsx',
+    const missingFiles = ['
+      'src/pages/HomePage.tsx','
+      'src/pages/SolutionsPage.tsx','
+      'src/pages/AboutPage.tsx','
+      'src/pages/ContactPage.tsx','
+      'src/pages/BlogPage.tsx','
       'src/pages/NotFoundPage.tsx'
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -737,10 +802,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+    for (const missingFile of missingFiles) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const fullPath = path.join(this.projectRoot, missingFile);
-      if (!fs.existsSync(fullPath)) {
+      if (!fs.existsSync(fullPath)) {}
         await this.createMissingFile(missingFile);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -761,14 +833,18 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     
 =======
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
     
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -790,6 +866,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     
     
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 <<<<<<< HEAD
 =======
@@ -798,23 +880,24 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
-  async createMissingFile(filePath) {
+  async createMissingFile(filePath) {}
     const fullPath = path.join(this.projectRoot, filePath);
     const dir = path.dirname(fullPath);
-    if (!fs.existsSync(dir)) {
+    if (!fs.existsSync(dir)) {}
       fs.mkdirSync(dir, { recursive: true });
     }
     const componentName = path.basename(filePath, path.extname(filePath));
     const content = this.generateComponentContent(componentName);
     fs.writeFileSync(fullPath, content);
-    this.errorReport.fixesApplied.push({
+    this.errorReport.fixesApplied.push({'
       type: 'missing_file',
-      file: filePath,
+      file: filePath,`
       description: `Created missing ${componentName} component`
     });
   }
-  generateComponentContent(componentName) {
+  generateComponentContent(componentName) {'`
     return `import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -831,14 +914,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<<< HEAD:automation/error-fixer-automation.js
 <<<<<<< HEAD
 =======
-
-
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+
+
+
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
@@ -888,272 +972,328 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+=
+
+
+>
+
+
+
+
+
+
+
+
+
+    async fixModuleImportError(error) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const filePath = path.resolve(this.projectRoot, error.file);
-      if (!fs.existsSync(filePath)) return;
-      const content = fs.readFileSync(filePath, 'utf8');
+      if (!fs.existsSync(filePath)) return;'
+      const content = fs.readFileSync(filePath, 'utf8');'
       const lines = content.split('\n');
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
+      for (let i = 0; i < lines.length; i++) {}
+        const line = lines[i];'"
         const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/);
-        if (importMatch) {
-          const modulePath = importMatch[1];
+        if (importMatch) {}
+          const modulePath = importMatch[1];'
           const moduleMatch = error.message.match(/Cannot find module '(.+)'/);
-          if (moduleMatch && modulePath.includes(moduleMatch[1])) {
-            // Try to find the correct module path
+          if (moduleMatch && modulePath.includes(moduleMatch[1])) {}
+            // Try to find the correct module path;
             const possiblePaths = this.findPossibleModulePaths(moduleMatch[1]);
-            if (possiblePaths.length > 0) {
+            if (possiblePaths.length > 0) {}
               const newPath = possiblePaths[0];
               const newLine = line.replace(modulePath, newPath);
-              lines[i] = newLine;
+              lines[i] = newLine;'
               fs.writeFileSync(filePath, lines.join('\n'));
-              this.errorReport.fixesApplied.push({
-                "type": 'module_import',
-                "file": error.file,
-                "description": `Fixed import path from ${modulePath} to ${newPath}`,
+              this.errorReport.fixesApplied.push({'"
+                "type": 'module_import',"
+                "file": error.file,"`
+                "description": `Fixed import path from ${modulePath} to ${newPath}`,";
                 "line": i + 1});
             }
           }
         }
       }
     }
+<<<<<<< HEAD
     findPossibleModulePaths(moduleName) {
       const possiblePaths = [];
       const extensions = ['.ts', '.tsx', '.js', '.jsx'];
       // Check if it's a relative path
       if (moduleName.startsWith('./') || moduleName.startsWith('../')) {
 
+=======
+    findPossibleModulePaths(moduleName) {}
+      const possiblePaths = [];'
+      const extensions = ['.ts', '.tsx', '.js', '.jsx'];'
+      // Check if it's a relative path'
+      if (moduleName.startsWith('./') || moduleName.startsWith('../')) {}
+        for (const ext of extensions) {}
+          const fullPath = path.resolve(this.projectRoot, moduleName + ext);
+          if (fs.existsSync(fullPath)) {}
+            possiblePaths.push(moduleName + ext);
+          }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
-      }
-      // Check if it's an absolute path from src
+      }'
+      // Check if it's an absolute path from src'
       const srcPath = path.join(this.projectRoot, 'src', moduleName);
+<<<<<<< HEAD
 
+=======
+      for (const ext of extensions) {}
+        const fullPath = srcPath + ext;
+        if (fs.existsSync(fullPath)) {'
+          possiblePaths.push('./' + path.relative(this.projectRoot, fullPath));
+        }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
       return possiblePaths;
     }
-    async fixTypeAssignmentError(error) {
-      // This is a complex error that might need manual intervention
-      this.errorReport.warnings.push({
-        "type": 'type_assignment',
-        "file": error.file,
-        "message": error.message,
-        "line": error.line,
+    async fixTypeAssignmentError(error) {}
+      // This is a complex error that might need manual intervention;
+      this.errorReport.warnings.push({'"
+        "type": 'type_assignment',"
+        "file": error.file,"
+        "message": error.message,"
+        "line": error.line,'"
         "description": 'Type assignment error requires manual review'});
     }
-    async checkAndFixESLintErrors() {
+    async checkAndFixESLintErrors() {'
       console.log('🔍 Checking ESLint errors...');
-      try {
-        const result = execSync('npx eslint . --format=compact --no-eslintrc', {
-          "encoding": 'utf8',
-          "cwd": this.projectRoot,
+      try {'
+        const result = execSync('npx eslint . --format=compact --no-eslintrc', {'"
+          "encoding": 'utf8',"
+          "cwd": this.projectRoot,'"
           "stdio": ['pipe', 'pipe', 'pipe']});
-        if (result) {
+        if (result) {}
           const errors = this.parseESLintErrors(result);
           await this.fixESLintErrors(errors);
         }
-      } catch (error) {
-        if (error.stdout) {
+      } catch (error) {}
+        if (error.stdout) {}
           const errors = this.parseESLintErrors(error.stdout);
           await this.fixESLintErrors(errors);
         }
       }
     }
-    parseESLintErrors(output) {
-      const errors = [];
+    parseESLintErrors(output) {}
+      const errors = [];'
       const lines = output.split('\n');
-      for (const line of lines) {
+      for (const line of lines) {}
         const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
-        if (match) {
-          errors.push({
-            "file": match[1].trim(),
-            "line": parseInt(match[2]),
-            "column": parseInt(match[3]),
-            "message": match[4].trim(),
+        if (match) {}
+          errors.push({"
+            "file": match[1].trim(),"
+            "line": parseInt(match[2]),"
+            "column": parseInt(match[3]),"
+            "message": match[4].trim(),'"
             "type": 'eslint'});
         }
       }
       return errors;
     }
-    async fixESLintErrors(errors) {
-      for (const error of errors) {
-        try {
-          if (error.message.includes('no-unused-vars')) {
-            await this.fixUnusedVariableError(error);
-          } else if (error.message.includes('no-console')) {
-            await this.fixConsoleError(error);
-          } else if (error.message.includes('prefer-const')) {
+    async fixESLintErrors(errors) {}
+      for (const error of errors) {}
+        try {'
+          if (error.message.includes('no-unused-vars')) {}
+            await this.fixUnusedVariableError(error);'
+          } else if (error.message.includes('no-console')) {}
+            await this.fixConsoleError(error);'
+          } else if (error.message.includes('prefer-const')) {}
             await this.fixPreferConstError(error);
           }
-        } catch (fixError) {
-          this.errorReport.errorsFound.push({
-            ...error,
+        } catch (fixError) {}
+          this.errorReport.errorsFound.push({}
+            ...error,"
             "fixError": fixError.message});
         }
       }
     }
-    async fixUnusedVariableError(error) {
+    async fixUnusedVariableError(error) {}
       const filePath = path.resolve(this.projectRoot, error.file);
-      if (!fs.existsSync(filePath)) return;
-      const content = fs.readFileSync(filePath, 'utf8');
+      if (!fs.existsSync(filePath)) return;'
+      const content = fs.readFileSync(filePath, 'utf8');'
       const lines = content.split('\n');
-      if (error.line <= lines.length) {
+      if (error.line <= lines.length) {}
         const line = lines[error.line - 1];
-        const variableMatch = error.message.match(
+        const variableMatch = error.message.match('
           /'(.+)' is assigned a value but never used/
         );
-        if (variableMatch) {
+        if (variableMatch) {}
           const variableName = variableMatch[1];
-          // Remove the variable declaration or add underscore prefix
-          const newLine = line.replace(
-            new RegExp(`(const|let|var)\\s+${variableName}\\b`),
+          // Remove the variable declaration or add underscore prefix;
+          const newLine = line.replace(`
+            new RegExp(`(const|let|var)\\s+${variableName}\\b`),`
             `const _${variableName}`
           );
-          if (newLine !== line) {
-            lines[error.line - 1] = newLine;
+          if (newLine !== line) {}
+            lines[error.line - 1] = newLine;'
             fs.writeFileSync(filePath, lines.join('\n'));
-            this.errorReport.fixesApplied.push({
-              "type": 'unused_variable',
-              "file": error.file,
-              "description": `Prefixed unused variable ${variableName} with underscore`,
+            this.errorReport.fixesApplied.push({'"
+              "type": 'unused_variable',"
+              "file": error.file,"`
+              "description": `Prefixed unused variable ${variableName} with underscore`,"
               "line": error.line});
           }
         }
       }
     }
-    async fixConsoleError(error) {
+    async fixConsoleError(error) {}
       const filePath = path.resolve(this.projectRoot, error.file);
-      if (!fs.existsSync(filePath)) return;
-      const content = fs.readFileSync(filePath, 'utf8');
+      if (!fs.existsSync(filePath)) return;'
+      const content = fs.readFileSync(filePath, 'utf8');'
       const lines = content.split('\n');
-      if (error.line <= lines.length) {
+      if (error.line <= lines.length) {}
         const line = lines[error.line - 1];
-        // Comment out console statements
-        if (line.includes('console.')) {
+        // Comment out console statements'
+        if (line.includes('console.')) {'
           const newLine = '// ' + line;
-          lines[error.line - 1] = newLine;
+          lines[error.line - 1] = newLine;'
           fs.writeFileSync(filePath, lines.join('\n'));
-          this.errorReport.fixesApplied.push({
-            "type": 'console_statement',
-            "file": error.file,
-            "description": 'Commented out console statement',
+          this.errorReport.fixesApplied.push({'"
+            "type": 'console_statement',"
+            "file": error.file,'"
+            "description": 'Commented out console statement',"
             "line": error.line});
         }
       }
     }
-    async fixPreferConstError(error) {
+    async fixPreferConstError(error) {}
       const filePath = path.resolve(this.projectRoot, error.file);
-      if (!fs.existsSync(filePath)) return;
-      const content = fs.readFileSync(filePath, 'utf8');
+      if (!fs.existsSync(filePath)) return;'
+      const content = fs.readFileSync(filePath, 'utf8');'
       const lines = content.split('\n');
-      if (error.line <= lines.length) {
+      if (error.line <= lines.length) {}
         const line = lines[error.line - 1];
-        // Replace let with const
-        if (line.includes('let ')) {
+        // Replace let with const'
+        if (line.includes('let ')) {'
           const newLine = line.replace(/\blet\b/, 'const');
-          lines[error.line - 1] = newLine;
+          lines[error.line - 1] = newLine;'
           fs.writeFileSync(filePath, lines.join('\n'));
-          this.errorReport.fixesApplied.push({
-            "type": 'prefer_const',
-            "file": error.file,
-            "description": 'Changed let to const',
+          this.errorReport.fixesApplied.push({'"
+            "type": 'prefer_const',"
+            "file": error.file,'"
+            "description": 'Changed let to const',"
             "line": error.line});
         }
       }
     }
-    async checkAndFixImportErrors() {
-      console.log('🔍 Checking import errors...');
+    async checkAndFixImportErrors() {'
+      console.log('🔍 Checking import errors...');'
       const srcDir = path.join(this.projectRoot, 'src');
-      if (!fs.existsSync(srcDir)) return;
+      if (!fs.existsSync(srcDir)) return;'
       const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
+<<<<<<< HEAD
 
+=======
+      for (const file of files) {}
+        await this.fixImportErrorsInFile(file);
+      }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
-    getAllFiles(dir, extensions) {
+    getAllFiles(dir, extensions) {}
       const files = [];
       const items = fs.readdirSync(dir);
-      for (const item of items) {
+      for (const item of items) {}
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {
+        if (stat.isDirectory()) {}
           files.push(...this.getAllFiles(fullPath, extensions));
-        } else if (extensions.some(ext => item.endsWith(ext))) {
+        } else if (extensions.some(ext => item.endsWith(ext))) {}
           files.push(fullPath);
         }
       }
       return files;
     }
-    async fixImportErrorsInFile(filePath) {
-      const content = fs.readFileSync(filePath, 'utf8');
+    async fixImportErrorsInFile(filePath) {'
+      const content = fs.readFileSync(filePath, 'utf8');'
       const lines = content.split('\n');
       let modified = false;
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
+      for (let i = 0; i < lines.length; i++) {}
+        const line = lines[i];'"
         const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/);
-        if (importMatch) {
-          const modulePath = importMatch[1];
-          // Fix relative imports that don't have proper extensions
-          if (modulePath.startsWith('./') || modulePath.startsWith('../')) {
+        if (importMatch) {}
+          const modulePath = importMatch[1];'
+          // Fix relative imports that don't have proper extensions'
+          if (modulePath.startsWith('./') || modulePath.startsWith('../')) {}
             const resolvedPath = path.resolve(
               path.dirname(filePath),
-              modulePath
+              modulePath;
             );
-            if (!fs.existsSync(resolvedPath)) {
+            if (!fs.existsSync(resolvedPath)) {}
               const possiblePaths = this.findPossibleModulePaths(modulePath);
-              if (possiblePaths.length > 0) {
+              if (possiblePaths.length > 0) {}
                 const newPath = possiblePaths[0];
                 const newLine = line.replace(modulePath, newPath);
                 lines[i] = newLine;
                 modified = true;
-                this.errorReport.fixesApplied.push({
-                  "type": 'import_path',
-                  "file": path.relative(this.projectRoot, filePath),
-                  "description": `Fixed import path from ${modulePath} to ${newPath}`,
+                this.errorReport.fixesApplied.push({'"
+                  "type": 'import_path',"
+                  "file": path.relative(this.projectRoot, filePath),"`
+                  "description": `Fixed import path from ${modulePath} to ${newPath}`,";
                   "line": i + 1});
               }
             }
           }
         }
       }
-      if (modified) {
+      if (modified) {'
         fs.writeFileSync(filePath, lines.join('\n'));
       }
     }
-    async checkAndFixMissingFiles() {
-      console.log('🔍 Checking for missing files...');
-      const missingFiles = ['src/pages/HomePage.tsx',
-        'src/pages/SolutionsPage.tsx',
-        'src/pages/AboutPage.tsx',
-        'src/pages/ContactPage.tsx',
-        'src/pages/BlogPage.tsx',
+    async checkAndFixMissingFiles() {'
+      console.log('🔍 Checking for missing files...');'
+      const missingFiles = ['src/pages/HomePage.tsx','
+        'src/pages/SolutionsPage.tsx','
+        'src/pages/AboutPage.tsx','
+        'src/pages/ContactPage.tsx','
+        'src/pages/BlogPage.tsx','
         'src/pages/NotFoundPage.tsx',
       ];
+<<<<<<< HEAD
 
+=======
+      for (const missingFile of missingFiles) {}
+        const fullPath = path.join(this.projectRoot, missingFile);
+        if (!fs.existsSync(fullPath)) {}
+          await this.createMissingFile(missingFile);
+        }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
     }
-    async createMissingFile(filePath) {
+    async createMissingFile(filePath) {}
       const fullPath = path.join(this.projectRoot, filePath);
       const dir = path.dirname(fullPath);
-      if (!fs.existsSync(dir)) {
+      if (!fs.existsSync(dir)) {"
         fs.mkdirSync(dir, { "recursive": true });
       }
       const componentName = path.basename(filePath, path.extname(filePath));
       const content = this.generateComponentContent(componentName);
       fs.writeFileSync(fullPath, content);
-      this.errorReport.fixesApplied.push({
-        "type": 'missing_file',
-        "file": filePath,
+      this.errorReport.fixesApplied.push({'"
+        "type": 'missing_file',"
+        "file": filePath,"`
         "description": `Created missing ${componentName} component`});
     }
-    generateComponentContent(componentName) {
+    generateComponentContent(componentName) {'`
       return `import React from 'react';
-export default function ${componentName}() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8">${componentName}</h1>
+export default function ${componentName}() {}
+  return ("
+    <div className="min-h-screen bg-gray-900 text-white">"
+      <div className="container mx-auto px-4 py-8">"
+        <h1 className="text-4xl font-bold mb-8">${componentName}</h1>"
         <p className="text-gray-300">
           This is the ${componentName} page. Content will be added here.
         </p>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1166,10 +1306,12 @@ export default function ${componentName}() {
 <<<<<<< HEAD
 >>>>>>>> main:corrupted_backup/error-fixer-automation.js
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
   );
-=======
 
 <<<<<<< HEAD
   );
@@ -1180,8 +1322,8 @@ export default function ${componentName}() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
@@ -1241,46 +1383,53 @@ export default function ${componentName}() {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 `;
   }
-  async checkAndFixPackageJsonIssues() {
-    console.log('🔍 Checking package.json issues...');
+  async checkAndFixPackageJsonIssues() {'
+    console.log('🔍 Checking package.json issues...');'
     const packageJsonPath = path.join(this.projectRoot, 'package.json');
-    if (!fs.existsSync(packageJsonPath)) return;
+    if (!fs.existsSync(packageJsonPath)) return;'
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
     let modified = false;
-    // Check for missing scripts
-    const requiredScripts = {
-      'type-check': 'tsc --noEmit',
-      'lint': 'next lint',
-      'build': 'next build',
-      'dev': 'next dev',
+    // Check for missing scripts;
+    const requiredScripts = {'
+      'type-check': 'tsc --noEmit','
+      'lint': 'next lint','
+      'build': 'next build','
+      'dev': 'next dev','
       'start': 'next start'
     };
-    for (const [script, command] of Object.entries(requiredScripts)) {
-      if (!packageJson.scripts[script]) {
+    for (const [script, command] of Object.entries(requiredScripts)) {}
+      if (!packageJson.scripts[script]) {}
         packageJson.scripts[script] = command;
         modified = true;
-        this.errorReport.fixesApplied.push({
-          type: 'package_json_script',
-          file: 'package.json',
+        this.errorReport.fixesApplied.push({'
+          type: 'package_json_script','
+          file: 'package.json',`
           description: `Added missing script: ${script}`
         });
       }
     }
-    if (modified) {
+    if (modified) {}
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
     }
   }
-  async generateReport() {
+  async generateReport() {'`
     const reportPath = path.join(this.projectRoot, 'error-reports', `error-fixer-report-${Date.now()}.json`);
     const reportDir = path.dirname(reportPath);
-    if (!fs.existsSync(reportDir)) {
+    if (!fs.existsSync(reportDir)) {}
       fs.mkdirSync(reportDir, { recursive: true });
     }
-    fs.writeFileSync(reportPath, JSON.stringify(this.errorReport, null, 2));
+    fs.writeFileSync(reportPath, JSON.stringify(this.errorReport, null, 2));`
     console.log(`📄 Report saved to: ${reportPath}`);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1295,17 +1444,36 @@ export default function ${componentName}() {
 <<<<<<<< HEAD:automation/error-fixer-automation.js
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+
+<<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+
+
+
+
+
+
+=
+
+
+>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -1361,53 +1529,61 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+  )}`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 `;
     }
-    async checkAndFixPackageJsonIssues() {
-      console.log('🔍 Checking package.json issues...');
+    async checkAndFixPackageJsonIssues() {'
+      console.log('🔍 Checking package.json issues...');'
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
-      if (!fs.existsSync(packageJsonPath)) return;
+      if (!fs.existsSync(packageJsonPath)) return;'
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       let modified = false;
-      // Check for missing scripts
-      const requiredScripts = {
-        'type-check': 'tsc --noEmit',
-        "lint": 'next lint',
-        "build": 'next build',
-        "dev": 'next dev',
+      // Check for missing scripts;
+      const requiredScripts = {'
+        'type-check': 'tsc --noEmit','"
+        "lint": 'next lint','"
+        "build": 'next build','"
+        "dev": 'next dev','"
         "start": 'next start'};
-      for (const [script, command] of Object.entries(requiredScripts)) {
-        if (!packageJson.scripts[script]) {
+      for (const [script, command] of Object.entries(requiredScripts)) {}
+        if (!packageJson.scripts[script]) {}
           packageJson.scripts[script] = command;
           modified = true;
-          this.errorReport.fixesApplied.push({
-            "type": 'package_json_script',
-            "file": 'package.json',
+          this.errorReport.fixesApplied.push({'"
+            "type": 'package_json_script','"
+            "file": 'package.json',"`
             "description": `Added missing script: ${script}`});
         }
       }
-      if (modified) {
+      if (modified) {}
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       }
     }
-    async generateReport() {
+    async generateReport() {}
       const reportPath = path.join(
-        this.projectRoot,
-        'error-reports',
+        this.projectRoot,'
+        'error-reports',`
         `error-fixer-report-${Date.now()}.json`
       );
       const reportDir = path.dirname(reportPath);
-      if (!fs.existsSync(reportDir)) {
+      if (!fs.existsSync(reportDir)) {"
         fs.mkdirSync(reportDir, { "recursive": true });
       }
-      fs.writeFileSync(reportPath, JSON.stringify(this.errorReport, null, 2));
+      fs.writeFileSync(reportPath, JSON.stringify(this.errorReport, null, 2));"`
       console.log(`📄 Report saved "to": ${reportPath}`);
     }
   };
-// Run the automation
-if (require.main === module) {
+// Run the automation;
+if (require.main === module) {}
   const automation = new ErrorFixerAutomation();
   automation.run().catch(console.error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1448,9 +1624,17 @@ module.exports = ErrorFixerAutomation;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 module.exports = ErrorFixerAutomation;
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 module.exports = ErrorFixerAutomation;
+module.exports = ErrorFixerAutomation;'"`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class ErrorFixerAutomation { constructor() { this.projectRoot = process.cwd(); this.errorReport = { timestamp: new Date().toISOString(),duration: 0,fixesApplied: [],errorsFound: [],warnings: [],}; this.startTime = Date.now()} async run() { console.log('🚀 Starting Error Fixer Automation...'); try { await this.checkAndFixTypeScriptErrors(); await this.checkAndFixESLintErrors(); await this.checkAndFixImportErrors(); await this.checkAndFixMissingFiles(); await this.checkAndFixPackageJsonIssues(); await this.generateReport(); const duration = Date.now() - this.startTime; this.errorReport.duration = duration; console.log(`✅ Error fixing completed in ${duration}ms`); console.log(`📊 Applied ${this.errorReport.fixesApplied.length} fixes`); console.log( `⚠️ Found ${this.errorReport.errorsFound.length} remaining errors` )} catch (error) { console.error('❌ Error in automation:',error); this.errorReport.errorsFound.push({ type: 'automation_error',message: error.message,stack: error.stack,})} } async checkAndFixTypeScriptErrors() { console.log('🔍 Checking TypeScript errors...'); try { const result = execSync('npx tsc --noEmit --pretty false',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseTypeScriptErrors(result); await this.fixTypeScriptErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseTypeScriptErrors(error.stdout); await this.fixTypeScriptErrors(errors)} } } parseTypeScriptErrors(output) { const errors = []; const lines = output.split('\n'); )} } } return errors} async fixTypeScriptErrors(errors) {  else if (error.message.includes('Cannot find module')) { await this.fixModuleImportError(error)} else if ( error.message.includes('Type') && error.message.includes('is not assignable') ) { await this.fixTypeAssignmentError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixPropertyAccessError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const propertyMatch = error.message.match( /Property '(.+)' does not exist/ ); if (propertyMatch) { const propertyName = propertyMatch[1]; const moduleMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (moduleMatch) { const modulePath = moduleMatch[1]; const newLine = line.replace( new RegExp(`\\{.*${propertyName}.*\\}`),'{ default }' ); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'property_access',file: error.file,description: `Fixed property access for ${propertyName}`,line: error.line,})} } } } async fixModuleImportError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; const moduleMatch = error.message.match(/Cannot find module '(.+)'/); if (moduleMatch && modulePath.includes(moduleMatch[1])) { const possiblePaths = this.findPossibleModulePaths(moduleMatch[1]); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'module_import',file: error.file,description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } findPossibleModulePaths(moduleName) { const possiblePaths = []; const extensions = ['.ts','.tsx','.js','.jsx']; if (moduleName.startsWith('./') || moduleName.startsWith('../')) {  } } const srcPath = path.join(this.projectRoot,'src',moduleName);  } return possiblePaths} async fixTypeAssignmentError(error) { this.errorReport.warnings.push({ type: 'type_assignment',file: error.file,message: error.message,line: error.line,description: 'Type assignment error requires manual review',})} async checkAndFixESLintErrors() { console.log('🔍 Checking ESLint errors...'); try { const result = execSync('npx eslint . --format=compact --no-eslintrc',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseESLintErrors(result); await this.fixESLintErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseESLintErrors(error.stdout); await this.fixESLintErrors(errors)} } } parseESLintErrors(output) { const errors = []; const lines = output.split('\n'); )} } return errors} async fixESLintErrors(errors) {  else if (error.message.includes('no-console')) { await this.fixConsoleError(error)} else if (error.message.includes('prefer-const')) { await this.fixPreferConstError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixUnusedVariableError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const variableMatch = error.message.match( /'(.+)' is assigned a value but never used/ ); if (variableMatch) { const variableName = variableMatch[1]; const newLine = line.replace( new RegExp(`(const|let|var)\\s+${variableName}\\b`),`const _${variableName}` ); if (newLine !== line) { lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'unused_variable',file: error.file,description: `Prefixed unused variable ${variableName} with underscore`,line: error.line,})} } } } async fixConsoleError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('console.')) { const newLine = ' lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'console_statement',file: error.file,description: 'Commented out console statement',line: error.line,})} } } async fixPreferConstError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('let ')) { const newLine = line.replace(/\blet\b/,'const'); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'prefer_const',file: error.file,description: 'Changed let to const',line: error.line,})} } } async checkAndFixImportErrors() { console.log('🔍 Checking import errors...'); const srcDir = path.join(this.projectRoot,'src'); if (!fs.existsSync(srcDir)) return; const files = this.getAllFiles(srcDir,['.ts','.tsx','.js','.jsx']);  } getAllFiles(dir,extensions) { const files = []; const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files} async fixImportErrorsInFile(filePath) { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let modified = false; for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; if (modulePath.startsWith('./') || modulePath.startsWith('../')) { const resolvedPath = path.resolve( path.dirname(filePath),modulePath ); if (!fs.existsSync(resolvedPath)) { const possiblePaths = this.findPossibleModulePaths(modulePath); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; modified = true; this.errorReport.fixesApplied.push({ type: 'import_path',file: path.relative(this.projectRoot,filePath),description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } if (modified) { fs.writeFileSync(filePath,lines.join('\n'))} } async checkAndFixMissingFiles() { console.log('🔍 Checking for missing files...'); const missingFiles = [ 'src/pages/HomePage.tsx','src/pages/SolutionsPage.tsx','src/pages/AboutPage.tsx','src/pages/ContactPage.tsx','src/pages/BlogPage.tsx','src/pages/NotFoundPage.tsx',];  } } async createMissingFile(filePath) { const fullPath = path.join(this.projectRoot,filePath); const dir = path.dirname(fullPath); if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} const componentName = path.basename(filePath,path.extname(filePath)); const content = this.generateComponentContent(componentName); fs.writeFileSync(fullPath,content); this.errorReport.fixesApplied.push({ type: 'missing_file',file: filePath,description: `Created missing ${componentName} component`,})} generateComponentContent(componentName) { return `import React from 'react'; export default function ${componentName}() { return ( <div className="min-h-screen bg-gray-900 text-white"> <div className="container mx-auto px-4 py-8"> <h1 className="text-4xl font-bold mb-8">${componentName}</h1> <p className="text-gray-300"> This is the ${componentName} page. Content will be added here. </p> </div> </div> )} `} async checkAndFixPackageJsonIssues() { console.log('🔍 Checking package.json issues...'); const packageJsonPath = path.join(this.projectRoot,'package.json'); if (!fs.existsSync(packageJsonPath)) return; const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); let modified = false; const requiredScripts = { 'type-check': 'tsc --noEmit',lint: 'next lint',build: 'next build',dev: 'next dev',start: 'next start',}; for (const [script,command] of Object.entries(requiredScripts)) { if (!packageJson.scripts[script]) { packageJson.scripts[script] = command; modified = true; this.errorReport.fixesApplied.push({ type: 'package_json_script',file: 'package.json',description: `Added missing script: ${script}`,})} } if (modified) { fs.writeFileSync(packageJsonPath,JSON.stringify(packageJson,null,2))} } async generateReport() { const reportPath = path.join( this.projectRoot,'error-reports',`error-fixer-report-${Date.now()}.json` ); const reportDir = path.dirname(reportPath); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.errorReport,null,2)); console.log(`📄 Report saved to: ${reportPath}`)} }; if (require.main === module) { const automation = new ErrorFixerAutomation(); automation.run().catch(console.error)} module.exports = ErrorFixerAutomation;
+module.exports = ErrorFixerAutomation;'"`
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class ErrorFixerAutomation { constructor() { this.projectRoot = process.cwd(); this.errorReport = { timestamp: new Date().toISOString(),duration: 0,fixesApplied: [],errorsFound: [],warnings: [],}; this.startTime = Date.now()} async run() { console.log('🚀 Starting Error Fixer Automation...'); try { await this.checkAndFixTypeScriptErrors(); await this.checkAndFixESLintErrors(); await this.checkAndFixImportErrors(); await this.checkAndFixMissingFiles(); await this.checkAndFixPackageJsonIssues(); await this.generateReport(); const duration = Date.now() - this.startTime; this.errorReport.duration = duration; console.log(`✅ Error fixing completed in ${duration}ms`); console.log(`📊 Applied ${this.errorReport.fixesApplied.length} fixes`); console.log( `⚠️ Found ${this.errorReport.errorsFound.length} remaining errors` )} catch (error) { console.error('❌ Error in automation:',error); this.errorReport.errorsFound.push({ type: 'automation_error',message: error.message,stack: error.stack,})} } async checkAndFixTypeScriptErrors() { console.log('🔍 Checking TypeScript errors...'); try { const result = execSync('npx tsc --noEmit --pretty false',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseTypeScriptErrors(result); await this.fixTypeScriptErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseTypeScriptErrors(error.stdout); await this.fixTypeScriptErrors(errors)} } } parseTypeScriptErrors(output) { const errors = []; const lines = output.split('\n'); )} } } return errors} async fixTypeScriptErrors(errors) {  else if (error.message.includes('Cannot find module')) { await this.fixModuleImportError(error)} else if ( error.message.includes('Type') && error.message.includes('is not assignable') ) { await this.fixTypeAssignmentError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixPropertyAccessError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const propertyMatch = error.message.match( /Property '(.+)' does not exist/ ); if (propertyMatch) { const propertyName = propertyMatch[1]; const moduleMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (moduleMatch) { const modulePath = moduleMatch[1]; const newLine = line.replace( new RegExp(`\\{.*${propertyName}.*\\}`),'{ default }' ); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'property_access',file: error.file,description: `Fixed property access for ${propertyName}`,line: error.line,})} } } } async fixModuleImportError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; const moduleMatch = error.message.match(/Cannot find module '(.+)'/); if (moduleMatch && modulePath.includes(moduleMatch[1])) { const possiblePaths = this.findPossibleModulePaths(moduleMatch[1]); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'module_import',file: error.file,description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } findPossibleModulePaths(moduleName) { const possiblePaths = []; const extensions = ['.ts','.tsx','.js','.jsx']; if (moduleName.startsWith('./') || moduleName.startsWith('../')) {  } } const srcPath = path.join(this.projectRoot,'src',moduleName);  } return possiblePaths} async fixTypeAssignmentError(error) { this.errorReport.warnings.push({ type: 'type_assignment',file: error.file,message: error.message,line: error.line,description: 'Type assignment error requires manual review',})} async checkAndFixESLintErrors() { console.log('🔍 Checking ESLint errors...'); try { const result = execSync('npx eslint . --format=compact --no-eslintrc',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseESLintErrors(result); await this.fixESLintErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseESLintErrors(error.stdout); await this.fixESLintErrors(errors)} } } parseESLintErrors(output) { const errors = []; const lines = output.split('\n'); )} } return errors} async fixESLintErrors(errors) {  else if (error.message.includes('no-console')) { await this.fixConsoleError(error)} else if (error.message.includes('prefer-const')) { await this.fixPreferConstError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixUnusedVariableError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const variableMatch = error.message.match( /'(.+)' is assigned a value but never used/ ); if (variableMatch) { const variableName = variableMatch[1]; const newLine = line.replace( new RegExp(`(const|let|var)\\s+${variableName}\\b`),`const _${variableName}` ); if (newLine !== line) { lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'unused_variable',file: error.file,description: `Prefixed unused variable ${variableName} with underscore`,line: error.line,})} } } } async fixConsoleError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('console.')) { const newLine = ' lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'console_statement',file: error.file,description: 'Commented out console statement',line: error.line,})} } } async fixPreferConstError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('let ')) { const newLine = line.replace(/\blet\b/,'const'); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'prefer_const',file: error.file,description: 'Changed let to const',line: error.line,})} } } async checkAndFixImportErrors() { console.log('🔍 Checking import errors...'); const srcDir = path.join(this.projectRoot,'src'); if (!fs.existsSync(srcDir)) return; const files = this.getAllFiles(srcDir,['.ts','.tsx','.js','.jsx']);  } getAllFiles(dir,extensions) { const files = []; const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files} async fixImportErrorsInFile(filePath) { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let modified = false; for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; if (modulePath.startsWith('./') || modulePath.startsWith('../')) { const resolvedPath = path.resolve( path.dirname(filePath),modulePath ); if (!fs.existsSync(resolvedPath)) { const possiblePaths = this.findPossibleModulePaths(modulePath); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; modified = true; this.errorReport.fixesApplied.push({ type: 'import_path',file: path.relative(this.projectRoot,filePath),description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } if (modified) { fs.writeFileSync(filePath,lines.join('\n'))} } async checkAndFixMissingFiles() { console.log('🔍 Checking for missing files...'); const missingFiles = [ 'src/pages/HomePage.tsx','src/pages/SolutionsPage.tsx','src/pages/AboutPage.tsx','src/pages/ContactPage.tsx','src/pages/BlogPage.tsx','src/pages/NotFoundPage.tsx',];  } } async createMissingFile(filePath) { const fullPath = path.join(this.projectRoot,filePath); const dir = path.dirname(fullPath); if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} const componentName = path.basename(filePath,path.extname(filePath)); const content = this.generateComponentContent(componentName); fs.writeFileSync(fullPath,content); this.errorReport.fixesApplied.push({ type: 'missing_file',file: filePath,description: `Created missing ${componentName} component`,})} generateComponentContent(componentName) { return `import React from 'react'; export default function ${componentName}() { return ( <div className="min-h-screen bg-gray-900 text-white"> <div className="container mx-auto px-4 py-8"> <h1 className="text-4xl font-bold mb-8">${componentName}</h1> <p className="text-gray-300"> This is the ${componentName} page. Content will be added here. </p> </div> </div> )} `} async checkAndFixPackageJsonIssues() { console.log('🔍 Checking package.json issues...'); const packageJsonPath = path.join(this.projectRoot,'package.json'); if (!fs.existsSync(packageJsonPath)) return; const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); let modified = false; const requiredScripts = { 'type-check': 'tsc --noEmit',lint: 'next lint',build: 'next build',dev: 'next dev',start: 'next start',}; for (const [script,command] of Object.entries(requiredScripts)) { if (!packageJson.scripts[script]) { packageJson.scripts[script] = command; modified = true; this.errorReport.fixesApplied.push({ type: 'package_json_script',file: 'package.json',description: `Added missing script: ${script}`,})} } if (modified) { fs.writeFileSync(packageJsonPath,JSON.stringify(packageJson,null,2))} } async generateReport() { const reportPath = path.join( this.projectRoot,'error-reports',`error-fixer-report-${Date.now()}.json` ); const reportDir = path.dirname(reportPath); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.errorReport,null,2)); console.log(`📄 Report saved to: ${reportPath}`)} }; if (require.main === module) { const automation = new ErrorFixerAutomation(); automation.run().catch(console.error)} module.exports = ErrorFixerAutomation;
 module.exports = ErrorFixerAutomation;
+<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class ErrorFixerAutomation { constructor() { this.projectRoot = process.cwd(); this.errorReport = { timestamp: new Date().toISOString(),duration: 0,fixesApplied: [],errorsFound: [],warnings: [],}; this.startTime = Date.now()} async run() { console.log('🚀 Starting Error Fixer Automation...'); try { await this.checkAndFixTypeScriptErrors(); await this.checkAndFixESLintErrors(); await this.checkAndFixImportErrors(); await this.checkAndFixMissingFiles(); await this.checkAndFixPackageJsonIssues(); await this.generateReport(); const duration = Date.now() - this.startTime; this.errorReport.duration = duration; console.log(`✅ Error fixing completed in ${duration}ms`); console.log(`📊 Applied ${this.errorReport.fixesApplied.length} fixes`); console.log( `⚠️ Found ${this.errorReport.errorsFound.length} remaining errors` )} catch (error) { console.error('❌ Error in automation:',error); this.errorReport.errorsFound.push({ type: 'automation_error',message: error.message,stack: error.stack,})} } async checkAndFixTypeScriptErrors() { console.log('🔍 Checking TypeScript errors...'); try { const result = execSync('npx tsc --noEmit --pretty false',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseTypeScriptErrors(result); await this.fixTypeScriptErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseTypeScriptErrors(error.stdout); await this.fixTypeScriptErrors(errors)} } } parseTypeScriptErrors(output) { const errors = []; const lines = output.split('\n'); )} } } return errors} async fixTypeScriptErrors(errors) {  else if (error.message.includes('Cannot find module')) { await this.fixModuleImportError(error)} else if ( error.message.includes('Type') && error.message.includes('is not assignable') ) { await this.fixTypeAssignmentError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixPropertyAccessError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const propertyMatch = error.message.match( /Property '(.+)' does not exist/ ); if (propertyMatch) { const propertyName = propertyMatch[1]; const moduleMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (moduleMatch) { const modulePath = moduleMatch[1]; const newLine = line.replace( new RegExp(`\\{.*${propertyName}.*\\}`),'{ default }' ); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'property_access',file: error.file,description: `Fixed property access for ${propertyName}`,line: error.line,})} } } } async fixModuleImportError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; const moduleMatch = error.message.match(/Cannot find module '(.+)'/); if (moduleMatch && modulePath.includes(moduleMatch[1])) { const possiblePaths = this.findPossibleModulePaths(moduleMatch[1]); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'module_import',file: error.file,description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } findPossibleModulePaths(moduleName) { const possiblePaths = []; const extensions = ['.ts','.tsx','.js','.jsx']; if (moduleName.startsWith('./') || moduleName.startsWith('../')) {  } } const srcPath = path.join(this.projectRoot,'src',moduleName);  } return possiblePaths} async fixTypeAssignmentError(error) { this.errorReport.warnings.push({ type: 'type_assignment',file: error.file,message: error.message,line: error.line,description: 'Type assignment error requires manual review',})} async checkAndFixESLintErrors() { console.log('🔍 Checking ESLint errors...'); try { const result = execSync('npx eslint . --format=compact --no-eslintrc',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseESLintErrors(result); await this.fixESLintErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseESLintErrors(error.stdout); await this.fixESLintErrors(errors)} } } parseESLintErrors(output) { const errors = []; const lines = output.split('\n'); )} } return errors} async fixESLintErrors(errors) {  else if (error.message.includes('no-console')) { await this.fixConsoleError(error)} else if (error.message.includes('prefer-const')) { await this.fixPreferConstError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixUnusedVariableError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const variableMatch = error.message.match( /'(.+)' is assigned a value but never used/ ); if (variableMatch) { const variableName = variableMatch[1]; const newLine = line.replace( new RegExp(`(const|let|var)\\s+${variableName}\\b`),`const _${variableName}` ); if (newLine !== line) { lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'unused_variable',file: error.file,description: `Prefixed unused variable ${variableName} with underscore`,line: error.line,})} } } } async fixConsoleError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('console.')) { const newLine = ' lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'console_statement',file: error.file,description: 'Commented out console statement',line: error.line,})} } } async fixPreferConstError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('let ')) { const newLine = line.replace(/\blet\b/,'const'); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'prefer_const',file: error.file,description: 'Changed let to const',line: error.line,})} } } async checkAndFixImportErrors() { console.log('🔍 Checking import errors...'); const srcDir = path.join(this.projectRoot,'src'); if (!fs.existsSync(srcDir)) return; const files = this.getAllFiles(srcDir,['.ts','.tsx','.js','.jsx']);  } getAllFiles(dir,extensions) { const files = []; const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files} async fixImportErrorsInFile(filePath) { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let modified = false; for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; if (modulePath.startsWith('./') || modulePath.startsWith('../')) { const resolvedPath = path.resolve( path.dirname(filePath),modulePath ); if (!fs.existsSync(resolvedPath)) { const possiblePaths = this.findPossibleModulePaths(modulePath); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; modified = true; this.errorReport.fixesApplied.push({ type: 'import_path',file: path.relative(this.projectRoot,filePath),description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } if (modified) { fs.writeFileSync(filePath,lines.join('\n'))} } async checkAndFixMissingFiles() { console.log('🔍 Checking for missing files...'); const missingFiles = [ 'src/pages/HomePage.tsx','src/pages/SolutionsPage.tsx','src/pages/AboutPage.tsx','src/pages/ContactPage.tsx','src/pages/BlogPage.tsx','src/pages/NotFoundPage.tsx',];  } } async createMissingFile(filePath) { const fullPath = path.join(this.projectRoot,filePath); const dir = path.dirname(fullPath); if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} const componentName = path.basename(filePath,path.extname(filePath)); const content = this.generateComponentContent(componentName); fs.writeFileSync(fullPath,content); this.errorReport.fixesApplied.push({ type: 'missing_file',file: filePath,description: `Created missing ${componentName} component`,})} generateComponentContent(componentName) { return `import React from 'react'; export default function ${componentName}() { return ( <div className="min-h-screen bg-gray-900 text-white"> <div className="container mx-auto px-4 py-8"> <h1 className="text-4xl font-bold mb-8">${componentName}</h1> <p className="text-gray-300"> This is the ${componentName} page. Content will be added here. </p> </div> </div> )} `} async checkAndFixPackageJsonIssues() { console.log('🔍 Checking package.json issues...'); const packageJsonPath = path.join(this.projectRoot,'package.json'); if (!fs.existsSync(packageJsonPath)) return; const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); let modified = false; const requiredScripts = { 'type-check': 'tsc --noEmit',lint: 'next lint',build: 'next build',dev: 'next dev',start: 'next start',}; for (const [script,command] of Object.entries(requiredScripts)) { if (!packageJson.scripts[script]) { packageJson.scripts[script] = command; modified = true; this.errorReport.fixesApplied.push({ type: 'package_json_script',file: 'package.json',description: `Added missing script: ${script}`,})} } if (modified) { fs.writeFileSync(packageJsonPath,JSON.stringify(packageJson,null,2))} } async generateReport() { const reportPath = path.join( this.projectRoot,'error-reports',`error-fixer-report-${Date.now()}.json` ); const reportDir = path.dirname(reportPath); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.errorReport,null,2)); console.log(`📄 Report saved to: ${reportPath}`)} }; if (require.main === module) { const automation = new ErrorFixerAutomation(); automation.run().catch(console.error)} module.exports = ErrorFixerAutomation;
 module.exports = ErrorFixerAutomation;
 <<<<<<< HEAD
@@ -1492,10 +1676,28 @@ module.exports = ErrorFixerAutomation;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class ErrorFixerAutomation { constructor() { this.projectRoot = process.cwd(); this.errorReport = { timestamp: new Date().toISOString(),duration: 0,fixesApplied: [],errorsFound: [],warnings: [],}; this.startTime = Date.now()} async run() { console.log('🚀 Starting Error Fixer Automation...'); try { await this.checkAndFixTypeScriptErrors(); await this.checkAndFixESLintErrors(); await this.checkAndFixImportErrors(); await this.checkAndFixMissingFiles(); await this.checkAndFixPackageJsonIssues(); await this.generateReport(); const duration = Date.now() - this.startTime; this.errorReport.duration = duration; console.log(`✅ Error fixing completed in ${duration}ms`); console.log(`📊 Applied ${this.errorReport.fixesApplied.length} fixes`); console.log( `⚠️ Found ${this.errorReport.errorsFound.length} remaining errors` )} catch (error) { console.error('❌ Error in automation:',error); this.errorReport.errorsFound.push({ type: 'automation_error',message: error.message,stack: error.stack,})} } async checkAndFixTypeScriptErrors() { console.log('🔍 Checking TypeScript errors...'); try { const result = execSync('npx tsc --noEmit --pretty false',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseTypeScriptErrors(result); await this.fixTypeScriptErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseTypeScriptErrors(error.stdout); await this.fixTypeScriptErrors(errors)} } } parseTypeScriptErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { if (line.includes('error TS')) { const match = line.match( /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/ ); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'typescript',})} } } return errors} async fixTypeScriptErrors(errors) { for (const error of errors) { try { if ( error.message.includes('Property') && error.message.includes('does not exist') ) { await this.fixPropertyAccessError(error)} else if (error.message.includes('Cannot find module')) { await this.fixModuleImportError(error)} else if ( error.message.includes('Type') && error.message.includes('is not assignable') ) { await this.fixTypeAssignmentError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixPropertyAccessError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const propertyMatch = error.message.match( /Property '(.+)' does not exist/ ); if (propertyMatch) { const propertyName = propertyMatch[1]; const moduleMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (moduleMatch) { const modulePath = moduleMatch[1]; const newLine = line.replace( new RegExp(`\\{.*${propertyName}.*\\}`),'{ default }' ); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'property_access',file: error.file,description: `Fixed property access for ${propertyName}`,line: error.line,})} } } } async fixModuleImportError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; const moduleMatch = error.message.match(/Cannot find module '(.+)'/); if (moduleMatch && modulePath.includes(moduleMatch[1])) { const possiblePaths = this.findPossibleModulePaths(moduleMatch[1]); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'module_import',file: error.file,description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } findPossibleModulePaths(moduleName) { const possiblePaths = []; const extensions = ['.ts','.tsx','.js','.jsx']; if (moduleName.startsWith('./') || moduleName.startsWith('../')) { for (const ext of extensions) { const fullPath = path.resolve(this.projectRoot,moduleName + ext); if (fs.existsSync(fullPath)) { possiblePaths.push(moduleName + ext)} } } const srcPath = path.join(this.projectRoot,'src',moduleName); for (const ext of extensions) { const fullPath = srcPath + ext; if (fs.existsSync(fullPath)) { possiblePaths.push('./' + path.relative(this.projectRoot,fullPath))} } return possiblePaths} async fixTypeAssignmentError(error) { this.errorReport.warnings.push({ type: 'type_assignment',file: error.file,message: error.message,line: error.line,description: 'Type assignment error requires manual review',})} async checkAndFixESLintErrors() { console.log('🔍 Checking ESLint errors...'); try { const result = execSync('npx eslint . --format=compact --no-eslintrc',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseESLintErrors(result); await this.fixESLintErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseESLintErrors(error.stdout); await this.fixESLintErrors(errors)} } } parseESLintErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'eslint',})} } return errors} async fixESLintErrors(errors) { for (const error of errors) { try { if (error.message.includes('no-unused-vars')) { await this.fixUnusedVariableError(error)} else if (error.message.includes('no-console')) { await this.fixConsoleError(error)} else if (error.message.includes('prefer-const')) { await this.fixPreferConstError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixUnusedVariableError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const variableMatch = error.message.match( /'(.+)' is assigned a value but never used/ ); if (variableMatch) { const variableName = variableMatch[1]; const newLine = line.replace( new RegExp(`(const|let|var)\\s+${variableName}\\b`),`const _${variableName}` ); if (newLine !== line) { lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'unused_variable',file: error.file,description: `Prefixed unused variable ${variableName} with underscore`,line: error.line,})} } } } async fixConsoleError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('console.')) { const newLine = ' lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'console_statement',file: error.file,description: 'Commented out console statement',line: error.line,})} } } async fixPreferConstError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('let ')) { const newLine = line.replace(/\blet\b/,'const'); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'prefer_const',file: error.file,description: 'Changed let to const',line: error.line,})} } } async checkAndFixImportErrors() { console.log('🔍 Checking import errors...'); const srcDir = path.join(this.projectRoot,'src'); if (!fs.existsSync(srcDir)) return; const files = this.getAllFiles(srcDir,['.ts','.tsx','.js','.jsx']); for (const file of files) { await this.fixImportErrorsInFile(file)} } getAllFiles(dir,extensions) { const files = []; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { files.push(...this.getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files} async fixImportErrorsInFile(filePath) { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let modified = false; for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; if (modulePath.startsWith('./') || modulePath.startsWith('../')) { const resolvedPath = path.resolve( path.dirname(filePath),modulePath ); if (!fs.existsSync(resolvedPath)) { const possiblePaths = this.findPossibleModulePaths(modulePath); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; modified = true; this.errorReport.fixesApplied.push({ type: 'import_path',file: path.relative(this.projectRoot,filePath),description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } if (modified) { fs.writeFileSync(filePath,lines.join('\n'))} } async checkAndFixMissingFiles() { console.log('🔍 Checking for missing files...'); const missingFiles = [ 'src/pages/HomePage.tsx','src/pages/SolutionsPage.tsx','src/pages/AboutPage.tsx','src/pages/ContactPage.tsx','src/pages/BlogPage.tsx','src/pages/NotFoundPage.tsx',]; for (const missingFile of missingFiles) { const fullPath = path.join(this.projectRoot,missingFile); if (!fs.existsSync(fullPath)) { await this.createMissingFile(missingFile)} } } async createMissingFile(filePath) { const fullPath = path.join(this.projectRoot,filePath); const dir = path.dirname(fullPath); if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} const componentName = path.basename(filePath,path.extname(filePath)); const content = this.generateComponentContent(componentName); fs.writeFileSync(fullPath,content); this.errorReport.fixesApplied.push({ type: 'missing_file',file: filePath,description: `Created missing ${componentName} component`,})} generateComponentContent(componentName) { return `import React from 'react'; export default function ${componentName}() { return ( <div className="min-h-screen bg-gray-900 text-white"> <div className="container mx-auto px-4 py-8"> <h1 className="text-4xl font-bold mb-8">${componentName}</h1> <p className="text-gray-300"> This is the ${componentName} page. Content will be added here. </p> </div> </div> )} `} async checkAndFixPackageJsonIssues() { console.log('🔍 Checking package.json issues...'); const packageJsonPath = path.join(this.projectRoot,'package.json'); if (!fs.existsSync(packageJsonPath)) return; const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); let modified = false; const requiredScripts = { 'type-check': 'tsc --noEmit',lint: 'next lint',build: 'next build',dev: 'next dev',start: 'next start',}; for (const [script,command] of Object.entries(requiredScripts)) { if (!packageJson.scripts[script]) { packageJson.scripts[script] = command; modified = true; this.errorReport.fixesApplied.push({ type: 'package_json_script',file: 'package.json',description: `Added missing script: ${script}`,})} } if (modified) { fs.writeFileSync(packageJsonPath,JSON.stringify(packageJson,null,2))} } async generateReport() { const reportPath = path.join( this.projectRoot,'error-reports',`error-fixer-report-${Date.now()}.json` ); const reportDir = path.dirname(reportPath); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.errorReport,null,2)); console.log(`📄 Report saved to: ${reportPath}`)} }; if (require.main === module) { const automation = new ErrorFixerAutomation(); automation.run().catch(console.error)} module.exports = ErrorFixerAutomation;
 =======
-module.exports = ErrorFixerAutomation;
+
+
+
+
+=
+
+module.exports = ErrorFixerAutomation;'"`
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class ErrorFixerAutomation { constructor() { this.projectRoot = process.cwd(); this.errorReport = { timestamp: new Date().toISOString(),duration: 0,fixesApplied: [],errorsFound: [],warnings: [],}; this.startTime = Date.now()} async run() { console.log('🚀 Starting Error Fixer Automation...'); try { await this.checkAndFixTypeScriptErrors(); await this.checkAndFixESLintErrors(); await this.checkAndFixImportErrors(); await this.checkAndFixMissingFiles(); await this.checkAndFixPackageJsonIssues(); await this.generateReport(); const duration = Date.now() - this.startTime; this.errorReport.duration = duration; console.log(`✅ Error fixing completed in ${duration}ms`); console.log(`📊 Applied ${this.errorReport.fixesApplied.length} fixes`); console.log( `⚠️ Found ${this.errorReport.errorsFound.length} remaining errors` )} catch (error) { console.error('❌ Error in automation:',error); this.errorReport.errorsFound.push({ type: 'automation_error',message: error.message,stack: error.stack,})} } async checkAndFixTypeScriptErrors() { console.log('🔍 Checking TypeScript errors...'); try { const result = execSync('npx tsc --noEmit --pretty false',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseTypeScriptErrors(result); await this.fixTypeScriptErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseTypeScriptErrors(error.stdout); await this.fixTypeScriptErrors(errors)} } } parseTypeScriptErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { if (line.includes('error TS')) { const match = line.match( /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/ ); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'typescript',})} } } return errors} async fixTypeScriptErrors(errors) { for (const error of errors) { try { if ( error.message.includes('Property') && error.message.includes('does not exist') ) { await this.fixPropertyAccessError(error)} else if (error.message.includes('Cannot find module')) { await this.fixModuleImportError(error)} else if ( error.message.includes('Type') && error.message.includes('is not assignable') ) { await this.fixTypeAssignmentError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixPropertyAccessError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const propertyMatch = error.message.match( /Property '(.+)' does not exist/ ); if (propertyMatch) { const propertyName = propertyMatch[1]; const moduleMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (moduleMatch) { const modulePath = moduleMatch[1]; const newLine = line.replace( new RegExp(`\\{.*${propertyName}.*\\}`),'{ default }' ); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'property_access',file: error.file,description: `Fixed property access for ${propertyName}`,line: error.line,})} } } } async fixModuleImportError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; const moduleMatch = error.message.match(/Cannot find module '(.+)'/); if (moduleMatch && modulePath.includes(moduleMatch[1])) { const possiblePaths = this.findPossibleModulePaths(moduleMatch[1]); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'module_import',file: error.file,description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } findPossibleModulePaths(moduleName) { const possiblePaths = []; const extensions = ['.ts','.tsx','.js','.jsx']; if (moduleName.startsWith('./') || moduleName.startsWith('../')) { for (const ext of extensions) { const fullPath = path.resolve(this.projectRoot,moduleName + ext); if (fs.existsSync(fullPath)) { possiblePaths.push(moduleName + ext)} } } const srcPath = path.join(this.projectRoot,'src',moduleName); for (const ext of extensions) { const fullPath = srcPath + ext; if (fs.existsSync(fullPath)) { possiblePaths.push('./' + path.relative(this.projectRoot,fullPath))} } return possiblePaths} async fixTypeAssignmentError(error) { this.errorReport.warnings.push({ type: 'type_assignment',file: error.file,message: error.message,line: error.line,description: 'Type assignment error requires manual review',})} async checkAndFixESLintErrors() { console.log('🔍 Checking ESLint errors...'); try { const result = execSync('npx eslint . --format=compact --no-eslintrc',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseESLintErrors(result); await this.fixESLintErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseESLintErrors(error.stdout); await this.fixESLintErrors(errors)} } } parseESLintErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'eslint',})} } return errors} async fixESLintErrors(errors) { for (const error of errors) { try { if (error.message.includes('no-unused-vars')) { await this.fixUnusedVariableError(error)} else if (error.message.includes('no-console')) { await this.fixConsoleError(error)} else if (error.message.includes('prefer-const')) { await this.fixPreferConstError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixUnusedVariableError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const variableMatch = error.message.match( /'(.+)' is assigned a value but never used/ ); if (variableMatch) { const variableName = variableMatch[1]; const newLine = line.replace( new RegExp(`(const|let|var)\\s+${variableName}\\b`),`const _${variableName}` ); if (newLine !== line) { lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'unused_variable',file: error.file,description: `Prefixed unused variable ${variableName} with underscore`,line: error.line,})} } } } async fixConsoleError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('console.')) { const newLine = ' lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'console_statement',file: error.file,description: 'Commented out console statement',line: error.line,})} } } async fixPreferConstError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('let ')) { const newLine = line.replace(/\blet\b/,'const'); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'prefer_const',file: error.file,description: 'Changed let to const',line: error.line,})} } } async checkAndFixImportErrors() { console.log('🔍 Checking import errors...'); const srcDir = path.join(this.projectRoot,'src'); if (!fs.existsSync(srcDir)) return; const files = this.getAllFiles(srcDir,['.ts','.tsx','.js','.jsx']); for (const file of files) { await this.fixImportErrorsInFile(file)} } getAllFiles(dir,extensions) { const files = []; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { files.push(...this.getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files} async fixImportErrorsInFile(filePath) { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let modified = false; for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; if (modulePath.startsWith('./') || modulePath.startsWith('../')) { const resolvedPath = path.resolve( path.dirname(filePath),modulePath ); if (!fs.existsSync(resolvedPath)) { const possiblePaths = this.findPossibleModulePaths(modulePath); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; modified = true; this.errorReport.fixesApplied.push({ type: 'import_path',file: path.relative(this.projectRoot,filePath),description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } if (modified) { fs.writeFileSync(filePath,lines.join('\n'))} } async checkAndFixMissingFiles() { console.log('🔍 Checking for missing files...'); const missingFiles = [ 'src/pages/HomePage.tsx','src/pages/SolutionsPage.tsx','src/pages/AboutPage.tsx','src/pages/ContactPage.tsx','src/pages/BlogPage.tsx','src/pages/NotFoundPage.tsx',]; for (const missingFile of missingFiles) { const fullPath = path.join(this.projectRoot,missingFile); if (!fs.existsSync(fullPath)) { await this.createMissingFile(missingFile)} } } async createMissingFile(filePath) { const fullPath = path.join(this.projectRoot,filePath); const dir = path.dirname(fullPath); if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} const componentName = path.basename(filePath,path.extname(filePath)); const content = this.generateComponentContent(componentName); fs.writeFileSync(fullPath,content); this.errorReport.fixesApplied.push({ type: 'missing_file',file: filePath,description: `Created missing ${componentName} component`,})} generateComponentContent(componentName) { return `import React from 'react'; export default function ${componentName}() { return ( <div className="min-h-screen bg-gray-900 text-white"> <div className="container mx-auto px-4 py-8"> <h1 className="text-4xl font-bold mb-8">${componentName}</h1> <p className="text-gray-300"> This is the ${componentName} page. Content will be added here. </p> </div> </div> )} `} async checkAndFixPackageJsonIssues() { console.log('🔍 Checking package.json issues...'); const packageJsonPath = path.join(this.projectRoot,'package.json'); if (!fs.existsSync(packageJsonPath)) return; const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); let modified = false; const requiredScripts = { 'type-check': 'tsc --noEmit',lint: 'next lint',build: 'next build',dev: 'next dev',start: 'next start',}; for (const [script,command] of Object.entries(requiredScripts)) { if (!packageJson.scripts[script]) { packageJson.scripts[script] = command; modified = true; this.errorReport.fixesApplied.push({ type: 'package_json_script',file: 'package.json',description: `Added missing script: ${script}`,})} } if (modified) { fs.writeFileSync(packageJsonPath,JSON.stringify(packageJson,null,2))} } async generateReport() { const reportPath = path.join( this.projectRoot,'error-reports',`error-fixer-report-${Date.now()}.json` ); const reportDir = path.dirname(reportPath); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.errorReport,null,2)); console.log(`📄 Report saved to: ${reportPath}`)} }; if (require.main === module) { const automation = new ErrorFixerAutomation(); automation.run().catch(console.error)} module.exports = ErrorFixerAutomation;
+
+module.exports = ErrorFixerAutomation;
+
+
+module.exports = ErrorFixerAutomation;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class ErrorFixerAutomation { constructor() { this.projectRoot = process.cwd(); this.errorReport = { timestamp: new Date().toISOString(),duration: 0,fixesApplied: [],errorsFound: [],warnings: [],}; this.startTime = Date.now()} async run() { console.log('🚀 Starting Error Fixer Automation...'); try { await this.checkAndFixTypeScriptErrors(); await this.checkAndFixESLintErrors(); await this.checkAndFixImportErrors(); await this.checkAndFixMissingFiles(); await this.checkAndFixPackageJsonIssues(); await this.generateReport(); const duration = Date.now() - this.startTime; this.errorReport.duration = duration; console.log(`✅ Error fixing completed in ${duration}ms`); console.log(`📊 Applied ${this.errorReport.fixesApplied.length} fixes`); console.log( `⚠️ Found ${this.errorReport.errorsFound.length} remaining errors` )} catch (error) { console.error('❌ Error in automation:',error); this.errorReport.errorsFound.push({ type: 'automation_error',message: error.message,stack: error.stack,})} } async checkAndFixTypeScriptErrors() { console.log('🔍 Checking TypeScript errors...'); try { const result = execSync('npx tsc --noEmit --pretty false',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseTypeScriptErrors(result); await this.fixTypeScriptErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseTypeScriptErrors(error.stdout); await this.fixTypeScriptErrors(errors)} } } parseTypeScriptErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { if (line.includes('error TS')) { const match = line.match( /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/ ); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'typescript',})} } } return errors} async fixTypeScriptErrors(errors) { for (const error of errors) { try { if ( error.message.includes('Property') && error.message.includes('does not exist') ) { await this.fixPropertyAccessError(error)} else if (error.message.includes('Cannot find module')) { await this.fixModuleImportError(error)} else if ( error.message.includes('Type') && error.message.includes('is not assignable') ) { await this.fixTypeAssignmentError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixPropertyAccessError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const propertyMatch = error.message.match( /Property '(.+)' does not exist/ ); if (propertyMatch) { const propertyName = propertyMatch[1]; const moduleMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (moduleMatch) { const modulePath = moduleMatch[1]; const newLine = line.replace( new RegExp(`\\{.*${propertyName}.*\\}`),'{ default }' ); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'property_access',file: error.file,description: `Fixed property access for ${propertyName}`,line: error.line,})} } } } async fixModuleImportError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; const moduleMatch = error.message.match(/Cannot find module '(.+)'/); if (moduleMatch && modulePath.includes(moduleMatch[1])) { const possiblePaths = this.findPossibleModulePaths(moduleMatch[1]); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'module_import',file: error.file,description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } findPossibleModulePaths(moduleName) { const possiblePaths = []; const extensions = ['.ts','.tsx','.js','.jsx']; if (moduleName.startsWith('./') || moduleName.startsWith('../')) { for (const ext of extensions) { const fullPath = path.resolve(this.projectRoot,moduleName + ext); if (fs.existsSync(fullPath)) { possiblePaths.push(moduleName + ext)} } } const srcPath = path.join(this.projectRoot,'src',moduleName); for (const ext of extensions) { const fullPath = srcPath + ext; if (fs.existsSync(fullPath)) { possiblePaths.push('./' + path.relative(this.projectRoot,fullPath))} } return possiblePaths} async fixTypeAssignmentError(error) { this.errorReport.warnings.push({ type: 'type_assignment',file: error.file,message: error.message,line: error.line,description: 'Type assignment error requires manual review',})} async checkAndFixESLintErrors() { console.log('🔍 Checking ESLint errors...'); try { const result = execSync('npx eslint . --format=compact --no-eslintrc',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseESLintErrors(result); await this.fixESLintErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseESLintErrors(error.stdout); await this.fixESLintErrors(errors)} } } parseESLintErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'eslint',})} } return errors} async fixESLintErrors(errors) { for (const error of errors) { try { if (error.message.includes('no-unused-vars')) { await this.fixUnusedVariableError(error)} else if (error.message.includes('no-console')) { await this.fixConsoleError(error)} else if (error.message.includes('prefer-const')) { await this.fixPreferConstError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixUnusedVariableError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const variableMatch = error.message.match( /'(.+)' is assigned a value but never used/ ); if (variableMatch) { const variableName = variableMatch[1]; const newLine = line.replace( new RegExp(`(const|let|var)\\s+${variableName}\\b`),`const _${variableName}` ); if (newLine !== line) { lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'unused_variable',file: error.file,description: `Prefixed unused variable ${variableName} with underscore`,line: error.line,})} } } } async fixConsoleError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('console.')) { const newLine = ' lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'console_statement',file: error.file,description: 'Commented out console statement',line: error.line,})} } } async fixPreferConstError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('let ')) { const newLine = line.replace(/\blet\b/,'const'); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'prefer_const',file: error.file,description: 'Changed let to const',line: error.line,})} } } async checkAndFixImportErrors() { console.log('🔍 Checking import errors...'); const srcDir = path.join(this.projectRoot,'src'); if (!fs.existsSync(srcDir)) return; const files = this.getAllFiles(srcDir,['.ts','.tsx','.js','.jsx']); for (const file of files) { await this.fixImportErrorsInFile(file)} } getAllFiles(dir,extensions) { const files = []; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { files.push(...this.getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files} async fixImportErrorsInFile(filePath) { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let modified = false; for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; if (modulePath.startsWith('./') || modulePath.startsWith('../')) { const resolvedPath = path.resolve( path.dirname(filePath),modulePath ); if (!fs.existsSync(resolvedPath)) { const possiblePaths = this.findPossibleModulePaths(modulePath); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; modified = true; this.errorReport.fixesApplied.push({ type: 'import_path',file: path.relative(this.projectRoot,filePath),description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } if (modified) { fs.writeFileSync(filePath,lines.join('\n'))} } async checkAndFixMissingFiles() { console.log('🔍 Checking for missing files...'); const missingFiles = [ 'src/pages/HomePage.tsx','src/pages/SolutionsPage.tsx','src/pages/AboutPage.tsx','src/pages/ContactPage.tsx','src/pages/BlogPage.tsx','src/pages/NotFoundPage.tsx',]; for (const missingFile of missingFiles) { const fullPath = path.join(this.projectRoot,missingFile); if (!fs.existsSync(fullPath)) { await this.createMissingFile(missingFile)} } } async createMissingFile(filePath) { const fullPath = path.join(this.projectRoot,filePath); const dir = path.dirname(fullPath); if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} const componentName = path.basename(filePath,path.extname(filePath)); const content = this.generateComponentContent(componentName); fs.writeFileSync(fullPath,content); this.errorReport.fixesApplied.push({ type: 'missing_file',file: filePath,description: `Created missing ${componentName} component`,})} generateComponentContent(componentName) { return `import React from 'react'; export default function ${componentName}() { return ( <div className="min-h-screen bg-gray-900 text-white"> <div className="container mx-auto px-4 py-8"> <h1 className="text-4xl font-bold mb-8">${componentName}</h1> <p className="text-gray-300"> This is the ${componentName} page. Content will be added here. </p> </div> </div> )} `} async checkAndFixPackageJsonIssues() { console.log('🔍 Checking package.json issues...'); const packageJsonPath = path.join(this.projectRoot,'package.json'); if (!fs.existsSync(packageJsonPath)) return; const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); let modified = false; const requiredScripts = { 'type-check': 'tsc --noEmit',lint: 'next lint',build: 'next build',dev: 'next dev',start: 'next start',}; for (const [script,command] of Object.entries(requiredScripts)) { if (!packageJson.scripts[script]) { packageJson.scripts[script] = command; modified = true; this.errorReport.fixesApplied.push({ type: 'package_json_script',file: 'package.json',description: `Added missing script: ${script}`,})} } if (modified) { fs.writeFileSync(packageJsonPath,JSON.stringify(packageJson,null,2))} } async generateReport() { const reportPath = path.join( this.projectRoot,'error-reports',`error-fixer-report-${Date.now()}.json` ); const reportDir = path.dirname(reportPath); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.errorReport,null,2)); console.log(`📄 Report saved to: ${reportPath}`)} }; if (require.main === module) { const automation = new ErrorFixerAutomation(); automation.run().catch(console.error)} module.exports = ErrorFixerAutomation;
+
+
+
+module.exports = ErrorFixerAutomation;'"`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class ErrorFixerAutomation { constructor() { this.projectRoot = process.cwd(); this.errorReport = { timestamp: new Date().toISOString(),duration: 0,fixesApplied: [],errorsFound: [],warnings: [],}; this.startTime = Date.now()} async run() { console.log('🚀 Starting Error Fixer Automation...'); try { await this.checkAndFixTypeScriptErrors(); await this.checkAndFixESLintErrors(); await this.checkAndFixImportErrors(); await this.checkAndFixMissingFiles(); await this.checkAndFixPackageJsonIssues(); await this.generateReport(); const duration = Date.now() - this.startTime; this.errorReport.duration = duration; console.log(`✅ Error fixing completed in ${duration}ms`); console.log(`📊 Applied ${this.errorReport.fixesApplied.length} fixes`); console.log( `⚠️ Found ${this.errorReport.errorsFound.length} remaining errors` )} catch (error) { console.error('❌ Error in automation:',error); this.errorReport.errorsFound.push({ type: 'automation_error',message: error.message,stack: error.stack,})} } async checkAndFixTypeScriptErrors() { console.log('🔍 Checking TypeScript errors...'); try { const result = execSync('npx tsc --noEmit --pretty false',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseTypeScriptErrors(result); await this.fixTypeScriptErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseTypeScriptErrors(error.stdout); await this.fixTypeScriptErrors(errors)} } } parseTypeScriptErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { if (line.includes('error TS')) { const match = line.match( /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/ ); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'typescript',})} } } return errors} async fixTypeScriptErrors(errors) { for (const error of errors) { try { if ( error.message.includes('Property') && error.message.includes('does not exist') ) { await this.fixPropertyAccessError(error)} else if (error.message.includes('Cannot find module')) { await this.fixModuleImportError(error)} else if ( error.message.includes('Type') && error.message.includes('is not assignable') ) { await this.fixTypeAssignmentError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixPropertyAccessError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const propertyMatch = error.message.match( /Property '(.+)' does not exist/ ); if (propertyMatch) { const propertyName = propertyMatch[1]; const moduleMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (moduleMatch) { const modulePath = moduleMatch[1]; const newLine = line.replace( new RegExp(`\\{.*${propertyName}.*\\}`),'{ default }' ); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'property_access',file: error.file,description: `Fixed property access for ${propertyName}`,line: error.line,})} } } } async fixModuleImportError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; const moduleMatch = error.message.match(/Cannot find module '(.+)'/); if (moduleMatch && modulePath.includes(moduleMatch[1])) { const possiblePaths = this.findPossibleModulePaths(moduleMatch[1]); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'module_import',file: error.file,description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } findPossibleModulePaths(moduleName) { const possiblePaths = []; const extensions = ['.ts','.tsx','.js','.jsx']; if (moduleName.startsWith('./') || moduleName.startsWith('../')) { for (const ext of extensions) { const fullPath = path.resolve(this.projectRoot,moduleName + ext); if (fs.existsSync(fullPath)) { possiblePaths.push(moduleName + ext)} } } const srcPath = path.join(this.projectRoot,'src',moduleName); for (const ext of extensions) { const fullPath = srcPath + ext; if (fs.existsSync(fullPath)) { possiblePaths.push('./' + path.relative(this.projectRoot,fullPath))} } return possiblePaths} async fixTypeAssignmentError(error) { this.errorReport.warnings.push({ type: 'type_assignment',file: error.file,message: error.message,line: error.line,description: 'Type assignment error requires manual review',})} async checkAndFixESLintErrors() { console.log('🔍 Checking ESLint errors...'); try { const result = execSync('npx eslint . --format=compact --no-eslintrc',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseESLintErrors(result); await this.fixESLintErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseESLintErrors(error.stdout); await this.fixESLintErrors(errors)} } } parseESLintErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'eslint',})} } return errors} async fixESLintErrors(errors) { for (const error of errors) { try { if (error.message.includes('no-unused-vars')) { await this.fixUnusedVariableError(error)} else if (error.message.includes('no-console')) { await this.fixConsoleError(error)} else if (error.message.includes('prefer-const')) { await this.fixPreferConstError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixUnusedVariableError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const variableMatch = error.message.match( /'(.+)' is assigned a value but never used/ ); if (variableMatch) { const variableName = variableMatch[1]; const newLine = line.replace( new RegExp(`(const|let|var)\\s+${variableName}\\b`),`const _${variableName}` ); if (newLine !== line) { lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'unused_variable',file: error.file,description: `Prefixed unused variable ${variableName} with underscore`,line: error.line,})} } } } async fixConsoleError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('console.')) { const newLine = ' lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'console_statement',file: error.file,description: 'Commented out console statement',line: error.line,})} } } async fixPreferConstError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('let ')) { const newLine = line.replace(/\blet\b/,'const'); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'prefer_const',file: error.file,description: 'Changed let to const',line: error.line,})} } } async checkAndFixImportErrors() { console.log('🔍 Checking import errors...'); const srcDir = path.join(this.projectRoot,'src'); if (!fs.existsSync(srcDir)) return; const files = this.getAllFiles(srcDir,['.ts','.tsx','.js','.jsx']); for (const file of files) { await this.fixImportErrorsInFile(file)} } getAllFiles(dir,extensions) { const files = []; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { files.push(...this.getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files} async fixImportErrorsInFile(filePath) { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let modified = false; for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; if (modulePath.startsWith('./') || modulePath.startsWith('../')) { const resolvedPath = path.resolve( path.dirname(filePath),modulePath ); if (!fs.existsSync(resolvedPath)) { const possiblePaths = this.findPossibleModulePaths(modulePath); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; modified = true; this.errorReport.fixesApplied.push({ type: 'import_path',file: path.relative(this.projectRoot,filePath),description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } if (modified) { fs.writeFileSync(filePath,lines.join('\n'))} } async checkAndFixMissingFiles() { console.log('🔍 Checking for missing files...'); const missingFiles = [ 'src/pages/HomePage.tsx','src/pages/SolutionsPage.tsx','src/pages/AboutPage.tsx','src/pages/ContactPage.tsx','src/pages/BlogPage.tsx','src/pages/NotFoundPage.tsx',]; for (const missingFile of missingFiles) { const fullPath = path.join(this.projectRoot,missingFile); if (!fs.existsSync(fullPath)) { await this.createMissingFile(missingFile)} } } async createMissingFile(filePath) { const fullPath = path.join(this.projectRoot,filePath); const dir = path.dirname(fullPath); if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} const componentName = path.basename(filePath,path.extname(filePath)); const content = this.generateComponentContent(componentName); fs.writeFileSync(fullPath,content); this.errorReport.fixesApplied.push({ type: 'missing_file',file: filePath,description: `Created missing ${componentName} component`,})} generateComponentContent(componentName) { return `import React from 'react'; export default function ${componentName}() { return ( <div className="min-h-screen bg-gray-900 text-white"> <div className="container mx-auto px-4 py-8"> <h1 className="text-4xl font-bold mb-8">${componentName}</h1> <p className="text-gray-300"> This is the ${componentName} page. Content will be added here. </p> </div> </div> )} `} async checkAndFixPackageJsonIssues() { console.log('🔍 Checking package.json issues...'); const packageJsonPath = path.join(this.projectRoot,'package.json'); if (!fs.existsSync(packageJsonPath)) return; const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); let modified = false; const requiredScripts = { 'type-check': 'tsc --noEmit',lint: 'next lint',build: 'next build',dev: 'next dev',start: 'next start',}; for (const [script,command] of Object.entries(requiredScripts)) { if (!packageJson.scripts[script]) { packageJson.scripts[script] = command; modified = true; this.errorReport.fixesApplied.push({ type: 'package_json_script',file: 'package.json',description: `Added missing script: ${script}`,})} } if (modified) { fs.writeFileSync(packageJsonPath,JSON.stringify(packageJson,null,2))} } async generateReport() { const reportPath = path.join( this.projectRoot,'error-reports',`error-fixer-report-${Date.now()}.json` ); const reportDir = path.dirname(reportPath); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.errorReport,null,2)); console.log(`📄 Report saved to: ${reportPath}`)} }; if (require.main === module) { const automation = new ErrorFixerAutomation(); automation.run().catch(console.error)} module.exports = ErrorFixerAutomation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>>> main:corrupted_backup/error-fixer-automation.js
@@ -1570,3 +1772,13 @@ module.exports = ErrorFixerAutomation;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+module.exports = ErrorFixerAutomation;'"`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class ErrorFixerAutomation { constructor() { this.projectRoot = process.cwd(); this.errorReport = { timestamp: new Date().toISOString(),duration: 0,fixesApplied: [],errorsFound: [],warnings: [],}; this.startTime = Date.now()} async run() { console.log('🚀 Starting Error Fixer Automation...'); try { await this.checkAndFixTypeScriptErrors(); await this.checkAndFixESLintErrors(); await this.checkAndFixImportErrors(); await this.checkAndFixMissingFiles(); await this.checkAndFixPackageJsonIssues(); await this.generateReport(); const duration = Date.now() - this.startTime; this.errorReport.duration = duration; console.log(`✅ Error fixing completed in ${duration}ms`); console.log(`📊 Applied ${this.errorReport.fixesApplied.length} fixes`); console.log( `⚠️ Found ${this.errorReport.errorsFound.length} remaining errors` )} catch (error) { console.error('❌ Error in automation:',error); this.errorReport.errorsFound.push({ type: 'automation_error',message: error.message,stack: error.stack,})} } async checkAndFixTypeScriptErrors() { console.log('🔍 Checking TypeScript errors...'); try { const result = execSync('npx tsc --noEmit --pretty false',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseTypeScriptErrors(result); await this.fixTypeScriptErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseTypeScriptErrors(error.stdout); await this.fixTypeScriptErrors(errors)} } } parseTypeScriptErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { if (line.includes('error TS')) { const match = line.match( /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/ ); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'typescript',})} } } return errors} async fixTypeScriptErrors(errors) { for (const error of errors) { try { if ( error.message.includes('Property') && error.message.includes('does not exist') ) { await this.fixPropertyAccessError(error)} else if (error.message.includes('Cannot find module')) { await this.fixModuleImportError(error)} else if ( error.message.includes('Type') && error.message.includes('is not assignable') ) { await this.fixTypeAssignmentError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixPropertyAccessError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const propertyMatch = error.message.match( /Property '(.+)' does not exist/ ); if (propertyMatch) { const propertyName = propertyMatch[1]; const moduleMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (moduleMatch) { const modulePath = moduleMatch[1]; const newLine = line.replace( new RegExp(`\\{.*${propertyName}.*\\}`),'{ default }' ); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'property_access',file: error.file,description: `Fixed property access for ${propertyName}`,line: error.line,})} } } } async fixModuleImportError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; const moduleMatch = error.message.match(/Cannot find module '(.+)'/); if (moduleMatch && modulePath.includes(moduleMatch[1])) { const possiblePaths = this.findPossibleModulePaths(moduleMatch[1]); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'module_import',file: error.file,description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } findPossibleModulePaths(moduleName) { const possiblePaths = []; const extensions = ['.ts','.tsx','.js','.jsx']; if (moduleName.startsWith('./') || moduleName.startsWith('../')) { for (const ext of extensions) { const fullPath = path.resolve(this.projectRoot,moduleName + ext); if (fs.existsSync(fullPath)) { possiblePaths.push(moduleName + ext)} } } const srcPath = path.join(this.projectRoot,'src',moduleName); for (const ext of extensions) { const fullPath = srcPath + ext; if (fs.existsSync(fullPath)) { possiblePaths.push('./' + path.relative(this.projectRoot,fullPath))} } return possiblePaths} async fixTypeAssignmentError(error) { this.errorReport.warnings.push({ type: 'type_assignment',file: error.file,message: error.message,line: error.line,description: 'Type assignment error requires manual review',})} async checkAndFixESLintErrors() { console.log('🔍 Checking ESLint errors...'); try { const result = execSync('npx eslint . --format=compact --no-eslintrc',{ encoding: 'utf8',cwd: this.projectRoot,stdio: ['pipe','pipe','pipe'],}); if (result) { const errors = this.parseESLintErrors(result); await this.fixESLintErrors(errors)} } catch (error) { if (error.stdout) { const errors = this.parseESLintErrors(error.stdout); await this.fixESLintErrors(errors)} } } parseESLintErrors(output) { const errors = []; const lines = output.split('\n'); for (const line of lines) { const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/); if (match) { errors.push({ file: match[1].trim(),line: parseInt(match[2]),column: parseInt(match[3]),message: match[4].trim(),type: 'eslint',})} } return errors} async fixESLintErrors(errors) { for (const error of errors) { try { if (error.message.includes('no-unused-vars')) { await this.fixUnusedVariableError(error)} else if (error.message.includes('no-console')) { await this.fixConsoleError(error)} else if (error.message.includes('prefer-const')) { await this.fixPreferConstError(error)} } catch (fixError) { this.errorReport.errorsFound.push({ ...error,fixError: fixError.message,})} } } async fixUnusedVariableError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; const variableMatch = error.message.match( /'(.+)' is assigned a value but never used/ ); if (variableMatch) { const variableName = variableMatch[1]; const newLine = line.replace( new RegExp(`(const|let|var)\\s+${variableName}\\b`),`const _${variableName}` ); if (newLine !== line) { lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'unused_variable',file: error.file,description: `Prefixed unused variable ${variableName} with underscore`,line: error.line,})} } } } async fixConsoleError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('console.')) { const newLine = ' lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'console_statement',file: error.file,description: 'Commented out console statement',line: error.line,})} } } async fixPreferConstError(error) { const filePath = path.resolve(this.projectRoot,error.file); if (!fs.existsSync(filePath)) return; const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); if (error.line <= lines.length) { const line = lines[error.line - 1]; if (line.includes('let ')) { const newLine = line.replace(/\blet\b/,'const'); lines[error.line - 1] = newLine; fs.writeFileSync(filePath,lines.join('\n')); this.errorReport.fixesApplied.push({ type: 'prefer_const',file: error.file,description: 'Changed let to const',line: error.line,})} } } async checkAndFixImportErrors() { console.log('🔍 Checking import errors...'); const srcDir = path.join(this.projectRoot,'src'); if (!fs.existsSync(srcDir)) return; const files = this.getAllFiles(srcDir,['.ts','.tsx','.js','.jsx']); for (const file of files) { await this.fixImportErrorsInFile(file)} } getAllFiles(dir,extensions) { const files = []; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) { files.push(...this.getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files} async fixImportErrorsInFile(filePath) { const content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); let modified = false; for (let i = 0; i < lines.length; i++) { const line = lines[i]; const importMatch = line.match(/import\s+.*\s+from\s+['"](.+)['"]/); if (importMatch) { const modulePath = importMatch[1]; if (modulePath.startsWith('./') || modulePath.startsWith('../')) { const resolvedPath = path.resolve( path.dirname(filePath),modulePath ); if (!fs.existsSync(resolvedPath)) { const possiblePaths = this.findPossibleModulePaths(modulePath); if (possiblePaths.length > 0) { const newPath = possiblePaths[0]; const newLine = line.replace(modulePath,newPath); lines[i] = newLine; modified = true; this.errorReport.fixesApplied.push({ type: 'import_path',file: path.relative(this.projectRoot,filePath),description: `Fixed import path from ${modulePath} to ${newPath}`,line: i + 1,})} } } } } if (modified) { fs.writeFileSync(filePath,lines.join('\n'))} } async checkAndFixMissingFiles() { console.log('🔍 Checking for missing files...'); const missingFiles = [ 'src/pages/HomePage.tsx','src/pages/SolutionsPage.tsx','src/pages/AboutPage.tsx','src/pages/ContactPage.tsx','src/pages/BlogPage.tsx','src/pages/NotFoundPage.tsx',]; for (const missingFile of missingFiles) { const fullPath = path.join(this.projectRoot,missingFile); if (!fs.existsSync(fullPath)) { await this.createMissingFile(missingFile)} } } async createMissingFile(filePath) { const fullPath = path.join(this.projectRoot,filePath); const dir = path.dirname(fullPath); if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} const componentName = path.basename(filePath,path.extname(filePath)); const content = this.generateComponentContent(componentName); fs.writeFileSync(fullPath,content); this.errorReport.fixesApplied.push({ type: 'missing_file',file: filePath,description: `Created missing ${componentName} component`,})} generateComponentContent(componentName) { return `import React from 'react'; export default function ${componentName}() { return ( <div className="min-h-screen bg-gray-900 text-white"> <div className="container mx-auto px-4 py-8"> <h1 className="text-4xl font-bold mb-8">${componentName}</h1> <p className="text-gray-300"> This is the ${componentName} page. Content will be added here. </p> </div> </div> )} `} async checkAndFixPackageJsonIssues() { console.log('🔍 Checking package.json issues...'); const packageJsonPath = path.join(this.projectRoot,'package.json'); if (!fs.existsSync(packageJsonPath)) return; const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,'utf8')); let modified = false; const requiredScripts = { 'type-check': 'tsc --noEmit',lint: 'next lint',build: 'next build',dev: 'next dev',start: 'next start',}; for (const [script,command] of Object.entries(requiredScripts)) { if (!packageJson.scripts[script]) { packageJson.scripts[script] = command; modified = true; this.errorReport.fixesApplied.push({ type: 'package_json_script',file: 'package.json',description: `Added missing script: ${script}`,})} } if (modified) { fs.writeFileSync(packageJsonPath,JSON.stringify(packageJson,null,2))} } async generateReport() { const reportPath = path.join( this.projectRoot,'error-reports',`error-fixer-report-${Date.now()}.json` ); const reportDir = path.dirname(reportPath); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir,{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.errorReport,null,2)); console.log(`📄 Report saved to: ${reportPath}`)} }; if (require.main === module) { const automation = new ErrorFixerAutomation(); automation.run().catch(console.error)} module.exports = ErrorFixerAutomation;
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

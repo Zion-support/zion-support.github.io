@@ -138,6 +138,7 @@ export default function Careers() {
     : jobOpenings.filter(job => job.department === selectedDepartment);
 
   return (
+<<<<<<< HEAD
     <Layout>
       <Head>
         <title>Careers - Zion Tech Group | Join Our Team</title>
@@ -148,6 +149,9 @@ export default function Careers() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/careers" />
       </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}

@@ -11,6 +11,7 @@ import {
 import Link from 'next/link';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -26,6 +27,9 @@ import { newServices2026 } from '../data/2026-new-services';
 import { realMarketServices } from '../data/real-market-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5350
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
@@ -68,12 +72,16 @@ const getServiceDescription = (service: any) => {
 // Create unified services array with new 2035 services
 const allServices = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   ...realMarketServices,
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5350
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ...realMicroSaasServices,
   ...innovativeAIServices,
   ...enterpriseITServices,
@@ -82,6 +90,7 @@ const allServices = [
   ...realOperationalServices,
   ...marketReadyServices,
   ...marketValidatedServices,
+<<<<<<< HEAD
 <<<<<<< HEAD
   ...industryRealServices,
   ...real2025Q4AugmentedBatch,
@@ -93,6 +102,9 @@ const allServices = [
   ...industryRealServices
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5350
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ];
 
 const categories = [

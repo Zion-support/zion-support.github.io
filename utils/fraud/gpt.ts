@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {;
   const apiKey = process.env.OPENAI_API_KEY;
@@ -97,10 +98,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       label: 'SUSPICIOUS'
+=======
+
+  try {}
+      return {}
+      label: 'SUSPICIOUS''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       reason: 'Invalid JSON from GPT'
-      confidence: 0.5
+      confidence: 0.5;
       confidence: 0.5,
     }
+<<<<<<< HEAD
   }export interface GptResult {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,16 +131,27 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       label: 'SUSPICIOUS',
+=======
+  }export interface GptResult {}
+'
+      label: 'SUSPICIOUS','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       reason: 'Invalid JSON from GPT',
-      confidence: 0.5,
+      confidence: 0.5,;
     };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }export interface GptResult {;
+=======
+  }export interface GptResult {;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   label: string;
   confidence: number;
-  reasoning: string
+  reasoning: string;
 }
+<<<<<<< HEAD
 
 }  label: string;
   confidence: number;
@@ -148,19 +167,28 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
   
-  return {
+  return {'
     label: suspicious ? 'SUSPICIOUS' : 'SAFE',
     confidence: suspicious ? 0 && 0.9 : 0 && 0.1,
-
+'
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
 
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -168,6 +196,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 }
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
 }
@@ -194,3 +223,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

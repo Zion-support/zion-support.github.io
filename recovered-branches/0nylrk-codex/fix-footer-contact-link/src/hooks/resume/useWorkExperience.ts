@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,6 +51,21 @@ export function useWorkExperience() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { useState  } from 'react';'
+import { supabase  } from '@/integrations/supabase/client';'
+import { WorkExperience  } from '@/types/resume';'
+import { useAuth  } from '@/hooks/useAuth';'
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useWorkExperience() {}
+';
+import {useState} from 'react';'
+import {supabase} from '@/integrations/supabase/client';'
+import {WorkExperience} from '@/types/resume';'
+import {useAuth} from '@/hooks/useAuth';'
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export function useWorkExperience() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
 =======
 export function useWorkExperience() {  const { user } = useAuth();
@@ -61,9 +76,10 @@ export function useWorkExperience() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
-  const addWorkExperience = async (resumeId: string, work: WorkExperience): Promise<boolean> => {
-    if (!user) {
+  const addWorkExperience = async (resumeId: string, work: WorkExperience): Promise<boolean> => {}
+    if (!user) {'
       setError('You must be logged in to update work experience')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       return false
@@ -90,28 +106,41 @@ import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { WorkExperience } from '@/types/resume',;
 import { useAuth } from '@/hooks/useAuth',;
+=======
+      return false;
+'
+import { useState } from 'react',;'
+import { supabase } from '@/integrations/supabase/client',;'
+import { WorkExperience } from '@/types/resume',;'
+import { useAuth } from '@/hooks/useAuth',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;
-export function useWorkExperience() {;
+export function useWorkExperience() { return null; }
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const addWorkExperience = async (resumeId: string, work: WorkExperience): Promise<boolean> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to update work experience'),;
       return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 <<<<<<< HEAD
-
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
     setIsLoading(true),
@@ -122,6 +151,7 @@ export function useWorkExperience() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -141,75 +171,55 @@ export function useWorkExperience() {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {WorkExperience} from '@/types / resume';
-import {use_auth} from '@/hooks / use_auth';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+    try {}
+      const { error } = await supabase'
+        .from('work_history')
+        .insert({}
+'
+import {useState} from 'react';'
+import {supabase} from '@/integrations / supabase / client';'
+import {WorkExperience} from '@/types / resume';'
+import {use_auth} from '@/hooks / use_auth';'
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
-export /**
- * useWorkExperience - Function description
+export /**;
+ * useWorkExperience - Function description;
  */
-function useWorkExperience() {
+function useWorkExperience() {}
   const { user } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
 ;
-  const addWorkExperience = async (resume_id: string, work: WorkExperience): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
+  const addWorkExperience = async (resume_id: string, work: WorkExperience): Promise < boolean> => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       set_error ('You must be logged in to update work experience'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
-    try {
-      const { error } = await supabase;
+    try {}
+      const { error } = await supabase;'
         .from ('work_history');
-        .insert ({
+        .insert ({}
           resume_id: resume_id;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
           company_name: work.company_name;
           role_title: work.role_title;
           start_date: formatDateForDB (work.start_date);
           end_date: work.is_current ? null : formatDateForDB (work.end_date);
           is_current: work.is_current;
           description: work.description;
-<<<<<<< HEAD
 
-          company_name: work && work.company_name;
-          role_title: work && work.role_title;
-          start_date: formatDateForDB(work && work.start_date);
-          end_date: work && work.is_current ? null : formatDateForDB(work && work.end_date);
-          is_current: work && work.is_current;
-          description: work && work.description;
-          company_logo_url: work && work.company_logo_url,
-          location: work && work.location
-
-        });
-      if (error) throw error;
-
-<<<<<<< HEAD
-=======
-          resume_id: resumeId;
-          company_name: work.company_name;
-          role_title: work.role_title;
-          start_date: formatDateForDB(work.start_date);
-          end_date: work.is_current ? null : formatDateForDB(work.end_date);
-          is_current: work.is_current;
-          description: work.description;
-          company_logo_url: work.company_logo_url
-          location: work.location
-        });
-      if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           resume_id: resumeId,
           company_name: work.company_name,
           role_title: work.role_title,
@@ -218,18 +228,12 @@ if ( {) {
           is_current: work.is_current,
           description: work.description,
           company_logo_url: work.company_logo_url,
-          location: work.location
+          location: work.location;
         }),
       
       if (error) throw error,
       
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           company_logo_url: work.company_logo_url,
 =======
       return false    try {
@@ -246,20 +250,27 @@ if ( {) {
           location: work.location;
         });
 ;
-      // Check condition
-if (throw error) {
-  $2
+      // Check condition;
+if (throw error) {}
+  $2;
 }
       return showSuccessToast ("Work experience added", "Your work experience has been added to your resume");
+<<<<<<< HEAD
     } catch (e: any) {
       return handleResumeError (e, 'Could not add work experience');
     } finally {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+    } catch (e: any) {'
+      return handleResumeError (e, 'Could not add work experience');
+    } finally {}
       setIsLoading(false)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -286,8 +297,13 @@ if (throw error) {
 =======      return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (e: any) {
+=======
+"
+      return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
+    } catch (e: any) {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return handleResumeError(e, 'Could not add work experience')
-    } finally {
+    } finally {}
       setIsLoading(false)
     }
   }
@@ -298,6 +314,7 @@ if (throw error) {
     }
     setIsLoading(true);
     setError(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     }
@@ -315,11 +332,14 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     setIsLoading(true),;
     setError(null),;
     try {;
-      const { error } = await supabase;
+      const { error } = await supabase;'
         .from('work_history');
         .insert({;
           resume_id: resumeId,;
@@ -332,27 +352,30 @@ if (throw error) {
           company_logo_url: work.company_logo_url,;
           location: work.location;
         }),;
-      if (error) throw error,;
+      if (error) throw error,;"
       return showSuccessToast("Work experience added", "Your work experience has been added to your resume");
-    } catch (e: any) {;
+    } catch (e: any) {;'
       return handleResumeError(e, 'Could not add work experience');
     } finally {;
       setIsLoading(false);
     }
   },;
   const updateWorkExperience = async (workId: string, work: WorkExperience): Promise<boolean> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to update work experience'),;
       return false;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 <<<<<<< HEAD
-
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -364,6 +387,8 @@ if (throw error) {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     
     setIsLoading(true),
@@ -371,6 +396,7 @@ if (throw error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -391,28 +417,31 @@ if (throw error) {
         .update({
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+    try {}
+      const { error } = await supabase'
+        .from('work_history')
+        .update({}
 ;
-  const updateWorkExperience = async (work_id: string, work: WorkExperience): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
+  const updateWorkExperience = async (work_id: string, work: WorkExperience): Promise < boolean> => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       set_error ('You must be logged in to update work experience'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
-    try {
-      const { error } = await supabase;
+    try {}
+      const { error } = await supabase;'
         .from ('work_history');
-        .update ({
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        .update ({}
           company_name: work.company_name;
 =======
               company_name: work.company_name;
@@ -423,26 +452,54 @@ if ( {) {
           role_title: work.role_title;
           start_date: formatDateForDB (work.start_date);
           end_date: work.is_current ? null : formatDateForDB (work.end_date);
+<<<<<<< HEAD
           is_current: work.is_current,
   description: work.description;      return showSuccessToast("Work experience updated", "Your work experience has been updated")          company_logo_url: work.company_logo_url,
+=======
+          is_current: work.is_current;
+          description: work.description;
+
+          company_name: work.company_name,
+          role_title: work.role_title,
+          start_date: formatDateForDB(work.start_date),
+          end_date: work.is_current ? null : formatDateForDB(work.end_date),
+          is_current: work.is_current,
+          description: work.description,
+          company_logo_url: work.company_logo_url,
           location: work.location;
-        });
+        })'
+        .eq('id', workId),
+      
+      if (error) throw error,
+      
+
+          company_logo_url: work.company_logo_url,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          location: work.location;
+        });'
         .eq ('id', work_id);
 ;
-      // Check condition
-if (throw error) {
-  $2
-}
+      // Check condition;
+if (throw error) {}
+  $2;
+}"
       return showSuccessToast ("Work experience updated", "Your work experience has been updated");
+<<<<<<< HEAD
     } catch (e: any) {
       return handleResumeError (e, 'Could not update work experience');
     } finally {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+    } catch (e: any) {'
+      return handleResumeError (e, 'Could not update work experience');
+    } finally {}
       setIsLoading(false)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -457,8 +514,13 @@ if (throw error) {
 =======      return showSuccessToast("Work experience updated", "Your work experience has been updated")
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (e: any) {
+=======
+"
+      return showSuccessToast("Work experience updated", "Your work experience has been updated")
+    } catch (e: any) {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return handleResumeError(e, 'Could not update work experience')
-    } finally {
+    } finally {}
       setIsLoading(false)
 <<<<<<< HEAD
     }
@@ -470,6 +532,7 @@ if (throw error) {
     }
     setIsLoading(true);
     setError(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     }
@@ -487,11 +550,14 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     setIsLoading(true),;
     setError(null),;
     try {;
-      const { error } = await supabase;
+      const { error } = await supabase;'
         .from('work_history');
         .update({;
           company_name: work.company_name,;
@@ -502,39 +568,45 @@ if (throw error) {
   description: work.description,;
           company_logo_url: work.company_logo_url,;
           location: work.location;
-        });
+        });'
         .eq('id', workId),;
-      if (error) throw error,;
+      if (error) throw error,;"
       return showSuccessToast("Work experience updated", "Your work experience has been updated");
-    } catch (e: any) {;
+    } catch (e: any) {;'
       return handleResumeError(e, 'Could not update work experience');
     } finally {;
       setIsLoading(false);
     }
   },;
   const deleteWorkExperience = async (workId: string): Promise<boolean> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to delete work experience'),;
 <<<<<<< HEAD
 <<<<<<< HEAD
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 <<<<<<< HEAD
-
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -583,6 +655,16 @@ if (throw error) {
 }
 ;
 =======
+=======
+
+
+
+    try {}
+      const { error } = await supabase'
+        .from('work_history')
+        .delete()
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .eq('id', workId),
 =======
       return false;    try {
@@ -602,6 +684,7 @@ if (throw error) {
       if (error) throw error,
       
 
+<<<<<<< HEAD
       return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume");
   const deleteWorkExperience = async (work_id: string): Promise < boolean> => {
     // Check condition
@@ -615,16 +698,33 @@ if ( {) {
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (e: any) {
+=======
+;
+  const deleteWorkExperience = async (work_id: string): Promise < boolean> => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      set_error ('You must be logged in to delete work experience'),
+      return false;
+
+      setIsLoading (false);
+
+    }
+  }
+    } catch (e: any) {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return handleResumeError (e, 'Could not delete work experience');
-    } finally {
+    } finally {}
       setIsLoading (false);
     }
   }
-  return {
+  return {}
     is_loading;
     error;
     addWorkExperience;
     updateWorkExperience;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     deleteWorkExperience
@@ -634,9 +734,12 @@ if ( {) {
 <<<<<<< HEAD
 
       setIsLoading(false)
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -654,17 +757,20 @@ if ( {) {
       setIsLoading(false)
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     setIsLoading(true),;
     setError(null),;
     try {;
-      const { error } = await supabase;
+      const { error } = await supabase;'
         .from('work_history');
-        .delete();
+        .delete();'
         .eq('id', workId),;
-      if (error) throw error,;
+      if (error) throw error,;"
       return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume");
-    } catch (e: any) {;
+    } catch (e: any) {;'
       return handleResumeError(e, 'Could not delete work experience');
     } finally {;
       setIsLoading(false);
@@ -679,11 +785,14 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 <<<<<<< HEAD
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -692,6 +801,8 @@ if ( {) {
 =======
   }
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }
 <<<<<<< HEAD
@@ -699,6 +810,7 @@ if ( {) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 ;
+<<<<<<< HEAD
   }
 }
 ;
@@ -721,3 +833,7 @@ if ( {) {
 ;  }
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

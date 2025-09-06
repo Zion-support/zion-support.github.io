@@ -4,9 +4,13 @@ import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, Trend
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+<<<<<<< HEAD
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-real-micro-saas-services';
 import { motion } from 'framer-motion';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -141,7 +145,7 @@ export default function ServicesPage() {
       default:
         return 'neural';
     }
-=======
+
       icon: <FlaskConical className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length,
       color: 'from-green-500 to-emerald-600'
@@ -245,6 +249,7 @@ export default function ServicesPage() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-black text-white overflow-hidden">
 =======
 <<<<<<<< HEAD:components/services.tsx.backup.1755991851.backup.1756001157
@@ -264,6 +269,9 @@ export default function ServicesPage() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <UltraFuturisticBackground>
         {/* Hero Section */}
@@ -364,7 +372,7 @@ export default function ServicesPage() {
             </motion.div>
           ))}
         </div>
-=======
+
     <UltraAdvancedFuturisticBackground variant="holographic-matrix">
       <Head>
         <title>Micro SaaS Services - Zion Tech Group | 200+ Revolutionary Solutions</title>
@@ -581,6 +589,7 @@ export default function ServicesPage() {
                   </select>
                 </div>
 
+<<<<<<< HEAD
                 {/* Sort By Filter */}
                 <div>
                   <label className="block text-sm font-medium text-white mb-2">Sort By</label>
@@ -588,6 +597,9 @@ export default function ServicesPage() {
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
                     className="w-full px-3 py-2 bg-black/30 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   >
                     {sortOptions.map(option => (
                       <option key={option.value} value={option.value}>{option.label}</option>
@@ -925,7 +937,7 @@ export default function ServicesPage() {
                 variant="secondary" 
                 size="lg"
                 className="group relative overflow-hidden"
-=======
+
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Transform</span> Your Business?
             </h2>
@@ -969,10 +981,14 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
     </UltraAdvancedFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

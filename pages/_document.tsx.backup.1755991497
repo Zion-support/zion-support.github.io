@@ -19,4 +19,8 @@ class MyDocument extends Document {
   }
 }
 
+<<<<<<< HEAD
 export default MyDocument;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

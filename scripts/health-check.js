@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,12 +28,24 @@ const express = const app = express() app.get("/health",(req,res) => { res.statu
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const app = express()
 app.get("/health", (req, res) => {
+=======
+
+
+
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+"
+const express = // // require("child_process");
+const app = express()"
+app.get("/health", (req, res) => {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime();
-    memory: process.memoryUsage();
-    version: process.env.npm_package_version || "1.0.0"})})
-app.get("/ready", (req, res) => {
-  // Add readiness checks here
+    memory: process.memoryUsage();"
+    version: process.env.npm_package_version || "1.0.0"})})"
+app.get("/ready", (req, res) => {}
+  // Add readiness checks here"
   res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})
+<<<<<<< HEAD
 module.exports = app
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,68 +99,78 @@ class HealthChecker {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+module.exports = app;
+#!/usr/bin/env node;
+const fs = require('fs');'
+const path = require('path');'
+const { execSync } = require('child_process');
+
+class HealthChecker {}
+  constructor() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 
-  async checkBuildFiles() {
+  async checkBuildFiles() {'
     const buildDir = path && path.join(process && process.cwd(), '.next');
     const exists = fs && fs.existsSync(buildDir);
-    this && this.results.push({
-      check: 'Build Files',
-      status: exists ? 'PASS' : 'FAIL',
+    this && this.results.push({'
+      check: 'Build Files','
+      status: exists ? 'PASS' : 'FAIL','
       message: exists ? 'Build directory exists' : 'Build directory missing'
     });
     return exists;
   }
 
-  async checkDependencies() {
-    const packageJsonPath = path && path.join(process && process.cwd(), 'package && package.json');
+  async checkDependencies() {'
+    const packageJsonPath = path && path.join(process && process.cwd(), 'package && package.json');'
     const nodeModulesPath = path && path.join(process && process.cwd(), 'node_modules');
     
     const packageExists = fs && fs.existsSync(packageJsonPath);
     const nodeModulesExists = fs && fs.existsSync(nodeModulesPath);
     
-    this && this.results.push({
-      check: 'Dependencies',
-      status: packageExists && nodeModulesExists ? 'PASS' : 'FAIL',
+    this && this.results.push({'
+      check: 'Dependencies','
+      status: packageExists && nodeModulesExists ? 'PASS' : 'FAIL','
       message: packageExists && nodeModulesExists ? 'Dependencies installed' : 'Missing dependencies'
     });
     
     return packageExists && nodeModulesExists;
   }
 
-  async checkEnvironmentVariables() {
+  async checkEnvironmentVariables() {'
     const envFile = path && path.join(process && process.cwd(), '.env && env.local');
     const envExists = fs && fs.existsSync(envFile);
     
-    this && this.results.push({
-      check: 'Environment Variables',
-      status: envExists ? 'PASS' : 'WARN',
+    this && this.results.push({'
+      check: 'Environment Variables','
+      status: envExists ? 'PASS' : 'WARN','
       message: envExists ? 'Environment file exists' : 'No environment file found'
     });
     
     return envExists;
   }
 
-  async runAllChecks() {
+  async runAllChecks() {'
     console && console.log('🏥 Running Health Checks...');
     
     await this && this.checkBuildFiles();
     await this && this.checkDependencies();
     await this && this.checkEnvironmentVariables();
-    
-    const passed = this && this.results.filter(r => r && r.status === 'PASS').length;
-    const failed = this && this.results.filter(r => r && r.status === 'FAIL').length;
+    '
+    const passed = this && this.results.filter(r => r && r.status === 'PASS').length;'
+    const failed = this && this.results.filter(r => r && r.status === 'FAIL').length;'
     const warnings = this && this.results.filter(r => r && r.status === 'WARN').length;
     
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    console && console.log('\n📊 Health Check Results: '),
-    this && this.results.forEach(result => {
-      const icon = result && result.status === 'PASS' ? '✅' : result && result.status === 'FAIL' ? '❌' : '⚠️';
-      console && console.log(`${icon} ${result && result.check}: ${result && result.message}`);
 
+<<<<<<< HEAD
 =======
     console.log('\n📊 Health Check Results:');
     this.results.forEach(result => {
@@ -161,6 +181,9 @@ class HealthChecker {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     });
 <<<<<<< HEAD
 =======
@@ -171,11 +194,11 @@ const express = const app = express() app.get("/health",(req,res) => { res.statu
     
     console && console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
     
-    return {
+    return {}
       passed,
       failed,
       warnings,
-      results: this && this.results
+      results: this && this.results;
     };
   }
 <<<<<<< HEAD
@@ -186,6 +209,7 @@ const express = const app = express() app.get("/health",(req,res) => { res.statu
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 if (require.main === module) {
   const checker = new HealthChecker();
@@ -194,23 +218,27 @@ if (require.main === module) {
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-if (require && require.main === module) {
+
+if (require && require.main === module) {}
     const checker = new HealthChecker(),
     checker && checker.runAllChecks().catch(console && console.error)
   }
 
-module && module.exports = HealthChecker;
-const express = const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process && process.uptime(); memory: process && process.memoryUsage(); version: process && process.env.npm_package_version || "1 && 1.0.0"})}) app && app.get("/ready",(req,res) => { res && res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module && module.exports = app
+module && module.exports = HealthChecker;"
+const express = const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process && process.uptime(); memory: process && process.memoryUsage(); version: process && process.env.npm_package_version || "1 && 1.0.0"})}) app && app.get("/ready",(req,res) => { res && res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module && module.exports = app"
 const express = // // require("child_process");
-const app = express()
-app && app.get("/health", (req, res) => {
+const app = express()"
+app && app.get("/health", (req, res) => {"
   res && res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process && process.uptime();
-    memory: process && process.memoryUsage();
-    version: process && process.env.npm_package_version || "1 && 1.0.0"})})
-app && app.get("/ready", (req, res) => {
-  // Add readiness checks here
+    memory: process && process.memoryUsage();"
+    version: process && process.env.npm_package_version || "1 && 1.0.0"})})"
+app && app.get("/ready", (req, res) => {}
+  // Add readiness checks here"
   res && res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})
+<<<<<<< HEAD
 module && module.exports = app
 const express = const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process && process.uptime(); memory: process && process.memoryUsage(); version: process && process.env.npm_package_version || "1 && 1.0.0"})}) app && app.get("/ready",(req,res) => { res && res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module && module.exports = app
 
@@ -246,3 +274,12 @@ const express = const app = express() app.get("/health",(req,res) => { res.statu
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+module && module.exports = app"
+const express = const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process && process.uptime(); memory: process && process.memoryUsage(); version: process && process.env.npm_package_version || "1 && 1.0.0"})}) app && app.get("/ready",(req,res) => { res && res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module && module.exports = app;
+"
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app;
+"
+const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process.uptime(); memory: process.memoryUsage(); version: process.env.npm_package_version || "1.0.0"})}) app.get("/ready",(req,res) => { res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module.exports = app;
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

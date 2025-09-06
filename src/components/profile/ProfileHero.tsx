@@ -32,57 +32,57 @@ avatarUrl?: string;
 <<<<<<< HEAD
 
   return (
-    <div className='w-full overflow-hidden'>;
-      <div className='relative'>;
+    <div className='w-full overflow-hidden'>;'
+      <div className='relative'>;'
         <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>          {coverImageUrl ? (;
-            <img
+            <img;
               src={coverImageUrl}
-              alt={`${name} cover`}
-              className='w-full h-full object-cover'
+              alt={`${name} cover`}'
+              className='w-full h-full object-cover''
               loading='lazy'
 
-export function ProfileHero(): any ({
-
-  name
-  title
-  avatarUrl
-  coverImageUrl
-  location
-  rating
-  reviewCount
-  aiScore
-  profileType
-}: ProfileHeroProps) {
+export function ProfileHero(): any ({};
+  name;
+  title;
+  avatarUrl;
+  coverImageUrl;
+  location;
+  rating;
+  reviewCount;
+  aiScore;
+  profileType;
+}: ProfileHeroProps) {}
   return (
-    <div className="w-full overflow-hidden">;
-      <div className="relative">;
+    <div className="w-full overflow-hidden">;"
+      <div className="relative">;"
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">;
           {coverImageUrl ? (;
-            <img
-              src = {coverImageUrl,}
-              alt={`${name} cover`}
-              className='w-full h-full object-cover'
+            <img;
+              src = {coverImageUrl,}`
+              alt={`${name} cover`}'
+              className='w-full h-full object-cover''
               loading='lazy'
             />;
-          ) : (;
+          ) : (;'
             <div className='w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark' />;
           )}
 
         </AspectRatio>;
-
-        <div className='container px-4 md:px-6'>;
-          <div className='flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10'>;
+'
+        <div className='container px-4 md:px-6'>;'
+          <div className='flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10'>;'
             <Avatar className='h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30'>;
               {avatarUrl ? (;
                 <AvatarImage src={avatarUrl} alt={name} />;
-              ) : (;
+              ) : (;'
                 <AvatarFallback className='bg-zion-purple/20 text-zion-cyan text-xl'>                  {name && name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>;
 
               )}
             </Avatar>            />;
-          ) : (;
+          ) : (;"
             <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   profileType: 'service' | 'talent'
@@ -91,6 +91,13 @@ export function ProfileHero(): any ({
 export function ProfileHero({
 <<<<<<< HEAD
 =======
+=======
+'
+  profileType: 'service' | 'talent'
+}
+
+export function ProfileHero({};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   name;
   title;
   avatarUrl;
@@ -100,6 +107,7 @@ export function ProfileHero({
   reviewCount;
   aiScore;
 
+<<<<<<< HEAD
 export function ProfileHero({
 
 <<<<<<< HEAD
@@ -111,6 +119,10 @@ profileType: 'service' | 'talent';
 export function ProfileHero({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export function ProfileHero({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   name,
   title,
   avatarUrl,
@@ -127,6 +139,7 @@ export function ProfileHero({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -138,6 +151,14 @@ export function ProfileHero({
   return (
     <div className="w-full overflow-hidden">
       <div className="relative">
+=======
+;
+  profileType;
+}: ProfileHeroProps) {}
+  return ("
+    <div className="w-full overflow-hidden">"
+      <div className="relative">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">
 =======
   profileType,
@@ -148,8 +169,8 @@ export function ProfileHero({
         <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           {coverImageUrl ? (
-            <img
-              src={coverImageUrl}
+            <img;
+              src={coverImageUrl}`
               alt={`${name} cover`}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +181,7 @@ export function ProfileHero({
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -167,9 +189,13 @@ export function ProfileHero({
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               className="w-full h-full object-cover"
+=======
+"
+              className="w-full h-full object-cover""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               loading="lazy"
             />
-          ) : (
+          ) : ("
             <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
           )}
         </AspectRatio>
@@ -178,16 +204,22 @@ export function ProfileHero({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
+=======
+"
+        <div className="container px-4 md:px-6">"
+          <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">
               {avatarUrl ? (
                 <AvatarImage src={avatarUrl} alt={name} />
-              ) : (
+              ) : ("
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
 <<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
@@ -243,12 +275,18 @@ export function ProfileHero({;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </AspectRatio>;
+<<<<<<< HEAD
         <div className="container px-4 md:px-6">;
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">;
+=======
+"
+        <div className="container px-4 md:px-6">;"
+          <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">;
               {avatarUrl ? (;
                 <AvatarImage src={avatarUrl} alt={name} />;
-              ) : (;
+              ) : (;"
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>;
@@ -262,9 +300,9 @@ export function ProfileHero({;
                 <Badge 
 =======
             </Avatar>;
-
-            <div className='mt-4 md:mt-0 md:ml-6 md:mb-1'>;
-              <div className='flex flex-wrap items-center gap-2 mb-1'>;
+'
+            <div className='mt-4 md:mt-0 md:ml-6 md:mb-1'>;'
+              <div className='flex flex-wrap items-center gap-2 mb-1'>;'
                 <h1 className='text-2xl md:text-3xl font-bold text-white'>;
 
 <<<<<<< HEAD
@@ -296,13 +334,14 @@ className='w-full h-full object-cover'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {name}
                 </h1>
-                <Badge
+                <Badge'
                   variant='outline'
                   className={cn(
-
-                    'ml-2 border-zion-purple/50 text-zion-cyan'
-                    profileType === 'service'
+'
+                    'ml-2 border-zion-purple/50 text-zion-cyan''
+                    profileType === 'service''
                       ? 'bg-zion-purple/10'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -313,11 +352,22 @@ className='w-full h-full object-cover'
 =======
                       : 'bg-zion-cyan/10'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+"
+                  variant="outline" 
+                  className={cn("
+                    "ml-2 border-zion-purple/50 text-zion-cyan",'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
 <<<<<<< HEAD
                   )}
+<<<<<<< HEAD
                 >;
 =======
+=======
+                >;'
+                  {profileType === 'service' ? 'Service Provider' : 'Talent'}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
@@ -328,14 +378,19 @@ className='w-full h-full object-cover'
                 </Badge>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               
+=======
+              "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
-              
+              "
               <div className="flex flex-wrap items-center gap-3 mt-2">
 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 =======
 <h2 className='text-lg md:text-xl text-zion-slate-light mb-1'>
                 {title}
@@ -344,12 +399,16 @@ className='w-full h-full object-cover'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {location && (
+=======
+                {location && ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
 <<<<<<< HEAD
                 
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -360,6 +419,31 @@ className='w-full h-full object-cover'
                     <span className="text-white font-medium">{rating.toFixed(1)}</span>
                     {reviewCount && (
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>
+=======
+
+
+                {rating && ('
+                  <div className='flex items-center gap-1'>'
+                    <Star className='w-4 h-4 fill-zion-cyan text-zion-cyan' />'
+                    <span className='text-white font-medium'>
+                      {rating.toFixed(1)}
+                    </span>
+                    {reviewCount && ('
+                      <span className='text-zion-slate-light text-sm'>
+                        ({reviewCount})
+                      </span>
+
+                {rating && (;'
+                  <div className='flex items-center gap-1'>;'
+                    <Star className='w-4 h-4 fill-zion-cyan text-zion-cyan' />;'
+                    <span className='text-white font-medium'>;
+                      {rating && rating.toFixed(1)}
+                    </span>;
+                    {reviewCount && (;'
+                      <span className='text-zion-slate-light text-sm'>;
+                        ({reviewCount});
+                      </span>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     )}
                   </div>;
                 )}
@@ -388,16 +472,16 @@ className='w-full h-full object-cover'
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-                {aiScore && (;
-                  <div className='px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (;
+                {aiScore && (;'
+                  <div className='px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (;"
                   <span className="text-sm text-zion-slate-light">{location}</span>;
                 )}
 
-                {rating && (;
-                  <div className="flex items-center gap-1">;
-                    <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />;
+                {rating && (;"
+                  <div className="flex items-center gap-1">;"
+                    <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />;"
                     <span className="text-white font-medium">{rating && rating.toFixed(1)}</span>;
-                    {reviewCount && (;
+                    {reviewCount && (;"
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
                     )}
                   </div>
@@ -406,6 +490,7 @@ className='w-full h-full object-cover'
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -431,3 +516,6 @@ className='w-full h-full object-cover'
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

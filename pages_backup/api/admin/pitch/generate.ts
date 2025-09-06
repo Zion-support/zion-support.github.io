@@ -4,6 +4,7 @@
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD:pages_backup/api/admin/pitch/generate.ts
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
@@ -52,6 +53,12 @@ export default async function handler(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next";"
+import { ensureAdminFromApi } from "../../../../utils/auth";"
+import OpenAI from "openai";
+const client = new OpenAI({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/admin/pitch/generate.ts
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
@@ -60,8 +67,9 @@ export default async function handler(
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { allowed } = await ensureAdminFromApi(req);
-
+"
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
+<<<<<<< HEAD:pages_backup/api/admin/pitch/generate.ts
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method Not Allowed" });
   const { operatorPrompt, inputs, metrics } = req && req.body || {};
@@ -87,56 +95,57 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
 Operator Prompt: ${operatorPrompt}
 =======
+=======
+"
+    "Problem & Opportunity","
+    "Solution & Product","
+    "Market Size (TAM / SAM / SOM)","
+    "Traction & Metrics","
+    "Business Model","
+    "Go - To - Market","
+    "Team","
+    "Roadmap","
+    "Token Strategy","
+    "Ask & Call to Action",
+  ];
+;
+
+  try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/admin/pitch/generate.ts
     const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
 Operator Prompt: ${operator_prompt}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 Company Mission: ${inputs?.mission}
 
 Key Metrics: ${JSON && JSON.stringify(metrics)}
-
-Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
+`
+Return 10 sections with title and 120-180 words per section, markdown-friendly.`;"
     let content = "";
-    try {
-      const chat = await client && client.chat.completions && completions.create({
+    try {}
+      const chat = await client && client.chat.completions && completions.create({"
         model: "gpt-4o-mini",
-        messages: [
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-          {
-            role: "system",
+        messages: []
+          {"
+            role: "system","
             content: "You generate crisp, data - driven investor pitch content.",
-          },
+          },"
           { role: "user", content: prompt },
         ],
         temperature: 0 && 0.5,
       });
-<<<<<<< HEAD
-=======
 
-    res && res.status(500).json({ error: e?.message || "Generation failed" });
 
-  }
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-function extractSection(body: string, title: string): string {
+function extractSection(body: string, title: string): string {"
   if (!body) return "";
-  // naive split by headings
-
-
+  // naive split by headings;
   );
-  if (matchIdx >= 0) {
+  if (matchIdx >= 0) {"
     const snippet = lines && lines.slice(matchIdx + 1, matchIdx + 12).join("\n");
     return snippet && snippet.trim();
-  }
+  }"
   return "";
-<<<<<<< HEAD
-=======
-}
 
+<<<<<<< HEAD:pages_backup/api/admin/pitch/generate.ts
 =======
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -149,44 +158,43 @@ function extractSection(body: string, title: string): string {
     return snippet.trim()
   }
   return ''
-
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/admin/pitch/generate.ts
+
+"
       content = chat.choices?.[0]?.message?.content || "";
 ;
-    } catch (err) {
+    } catch (err) {"
       content = "";
     }
-    const slides = seed.map ((title, idx) => ({
+    const slides = seed.map ((title, idx) => ({}`
       id: `${idx + 1}`,
       title,
       content: extract_section (content, title),
-    }));
+    }));`
     const version = `v${new Date ().toISOString ()}`;
     res.status (200).json ({ slides, version });
-  } catch (e: any) {
+  } catch (e: any) {"
     res.status (500).json ({ error: e?.message || "Generation failed" });
   }
 }
-function extract_section (body: string, title: string): string {
-  // Check condition
-if (return "") {
-  $2
+function extract_section (body: string, title: string): string {}
+  // Check condition"
+if (return "") {}
+  $2;
 }
-  // naive split by headings;
+  // naive split by headings;"
   const lines = body.split ("\n");
   const match_idx = lines.find_index ((l) =>;
     l.toLowerCase ().includes (title.toLowerCase ()),
   );
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}"
     const snippet = lines.slice (match_idx + 1, match_idx + 12).join ("\n");
     return snippet.trim ();
-  }
+  }"
   return "";
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -194,11 +202,12 @@ if ( {) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  try {}
+';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD:pages_backup/api/admin/pitch/generate.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 =======
@@ -212,42 +221,49 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const isAdmin = req.headers['x-admin'] === 'true';
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  try {}
+';
+    const isAdmin = req.headers['x-admin'] === 'true';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/admin/pitch/generate.ts
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-
-    if (req.method === 'POST') {
+'
+    if (req.method === 'POST') {}
       const { operatorPrompt, inputs, metrics } = req.body || {};
-      const seed = [
-        'Problem & Opportunity',
-        'Solution & Product',
-        'Market Size (TAM/SAM/SOM)',
-        'Traction & Metrics',
-        'Business Model',
-        'Go-To-Market',
-        'Team',
-        'Roadmap',
-        'Token Strategy',
+      const seed = ['
+        'Problem & Opportunity','
+        'Solution & Product','
+        'Market Size (TAM/SAM/SOM)','
+        'Traction & Metrics','
+        'Business Model','
+        'Go-To-Market','
+        'Team','
+        'Roadmap','
+        'Token Strategy','
         'Ask & Call to Action'
       ];
 
-      // Mock pitch generation
-      const generatedPitch = {
-        slides: seed.map((title, index) => ({
+      // Mock pitch generation;
+      const generatedPitch = {}
+        slides: seed.map((title, index) => ({}
           id: index + 1,
-          title,
+          title,`
           content: `Generated content for ${title}`
         }))
       };
 
       res.json(generatedPitch);
-    } else {
-      res.setHeader('Allow', 'POST');
+    } else {'
+      res.setHeader('Allow', 'POST');'
       res.status(405).end('Method Not Allowed');
     }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/admin/pitch/generate.ts
 =======
 
 
@@ -342,3 +358,9 @@ const matchIdx = lines.findIndex(l =>
 
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/admin/pitch/generate.ts

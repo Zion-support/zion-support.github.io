@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,10 +72,19 @@ const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;'
+import { Octokit } from '@octokit/rest',;'
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '','
+const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
+
+export default async function handler() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(405).json({ error: 'Method not allowed' })
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 
+<<<<<<< HEAD
   try {
     const { app, severity, message, stack, metadata } = req.body || {}
     const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`
@@ -84,11 +94,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const body = `Auto-healing alert
 
+=======
+  try {}
+    const { app, severity, message, stack, metadata } = req.body || {},'
+    const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,
+
+    const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined }),'
+    const [owner, repo] = REPO.split('/'),
+;`
+    const body = `Auto-healing alert;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 App: ${app}
 Severity: ${severity}
 Message: ${message}
-
+'
 Stack:\n\n${stack || 'n/a'}
+<<<<<<< HEAD
 
 Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
 `
@@ -99,9 +120,20 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
     try {
       await octokit.actions.createWorkflowDispatch({
 <<<<<<< HEAD
+=======
+'`
+Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}`
+`,
+'
+    const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] }),
+
+    // trigger workflow dispatch;
+    try {}
+      await octokit.actions.createWorkflowDispatch({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         owner,
-        repo,
-        workflow_id: 'autoheal.yml',
+        repo,'
+        workflow_id: 'autoheal.yml','
         ref: 'dev',
 inputs: { issue_number: String(issue.data.number) }} as any)
     } catch (e) {
@@ -165,8 +197,12 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
         workflow_id: 'autoheal.yml'
         ref: 'dev'
         inputs: { issue_number: String(issue.data.number) }} as any)
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (e) {
+=======
+    } catch (e) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       // ignore if missing;
     }
 
@@ -190,6 +226,7 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
 
 =======
     return res.status(200).json({ ok: true, issue: issue.data.number })
+<<<<<<< HEAD
   } catch (e) {
     console.error(e)
 =======
@@ -202,3 +239,10 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
   }
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  } catch (e) {}
+    console.error(e),'
+    return res.status(500).json({ error: 'Failed to process webhook' })
+  }
+};'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

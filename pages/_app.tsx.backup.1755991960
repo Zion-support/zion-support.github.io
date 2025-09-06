@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 import Navigation from '../components/layout/Navigation';
+<<<<<<< HEAD
 import Footer from '../components/layout/Footer';
 <<<<<<< HEAD
 =======
@@ -8,6 +9,9 @@ import Footer from '../components/layout/Footer';
 ========
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d7ba
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -15,11 +19,15 @@ export default function App({ Component, pageProps }: AppProps) {
       <Navigation />
       <Component {...pageProps} />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Footer />
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d7ba
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/_app.tsx.backup.1755991960
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 }

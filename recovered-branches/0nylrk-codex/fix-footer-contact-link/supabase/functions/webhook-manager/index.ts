@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -22,11 +23,19 @@ import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 
 interface CreateWebhookRequest {
+=======
+
+
+
+
+interface CreateWebhookRequest {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   name: string;
   url: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
   eventTypes: string[]
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
@@ -39,11 +48,15 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+<<<<<<< HEAD
 =======
   eventTypes: string[]import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -86,12 +99,30 @@ interface CreateWebhookRequest {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+=======
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',";
+import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;'
+import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';"
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",'
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+
+
+
+interface CreateWebhookRequest {}
+  name: string,
+  url: string,
+  eventTypes: string[],;
+  secret?: string;
+"
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateWebhookRequest {;
   name: string,;
   url: string,;
   eventTypes: string[],;
   secret?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -104,6 +135,9 @@ interface CreateWebhookRequest {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
 =======
@@ -119,6 +153,7 @@ interface WebhookTestRequest {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -126,13 +161,19 @@ interface WebhookTestRequest {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  secret?: string
+
+
+
+  secret?: string;
 }
-interface WebhookTestRequest {
-  webhookId: string
-  eventType: string
+interface WebhookTestRequest {}
+  webhookId: string;
+  eventType: string;
 }
+<<<<<<< HEAD
 // Create a Supabase client
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
@@ -180,10 +221,16 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
+=======
+// Create a Supabase client;
+const supabase = createClient(supabaseUrl, supabaseKey);"
+const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -194,24 +241,33 @@ serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
+=======
+
+serve(async (req) => {}
+  // Handle CORS for browser requests'
+  if (req && req.method === 'OPTIONS') {'
+    return new Response('ok', {'
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
-interface CreateWebhookRequest {
+interface CreateWebhookRequest {}
   name: string;
   url: string;
   event_types: string[],
   secret?: string;
 }
-interface WebhookTestRequest {
+interface WebhookTestRequest {}
   webhook_id: string,
   event_type: string;
 }
-// Create a Supabase client;
-const supabase_url = Deno.env.get ("SUPABASE_URL") as string;
+// Create a Supabase client;"
+const supabase_url = Deno.env.get ("SUPABASE_URL") as string;"
 const supabase_key = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY") as string;
 const supabase = create_client (supabase_url, supabase_key);
 ;
-serve (async (req) => {
+serve (async (req) => {}
   // Handle CORS for browser requests;
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -228,36 +284,28 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
-        status: 401,
-
-        headers: { 'Content-Type': 'application/json' }})
-    }
-    // Verify the token with Supabase auth
-
-<<<<<<< HEAD
-    const token = authHeader && authHeader.replace('Bearer ', '');
-    const { data: { user }, error: authError } = await supabase && supabase.auth.getUser(token);
-    
-    if (authError || !user) {
-      return new Response(JSON && JSON.stringify({ error: 'Unauthorized' }), {
-        status: 401,
-
-        headers: { 'Content-Type': 'application/json' }})
-    }
-    // Parse URL to determine action
-
-    const url = new URL(req && req.url);
-    const path = url && url.pathname.split('/').pop();
-
-
 =======
-        'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'POST, GET, OPTIONSAccess - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}});
-  }
-  try {
-      return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    return new Response ('ok', {}
+      headers: {}
+'
+      return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         status: 401,
+'
         headers: { 'Content-Type': 'application/json' }})
     }
+    // Verify the token with Supabase auth;
+'
+        headers: { 'Content-Type': 'application/json' }})
+    }
+    // Verify the token with Supabase auth'
+        headers: { 'Content-Type': 'application/json' }})
+    }
+<<<<<<< HEAD
     // Verify the token with Supabase auth
     const token = authHeader && authHeader.replace('Bearer ', '');
     const { data: { user }, error: authError } = await supabase && supabase.auth.getUser(token);
@@ -287,59 +335,73 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (req && req.method === 'POST') {
       if (path === 'create') {
+=======
+    // Parse URL to determine action;
+    // Handle different actions'
+    if (req && req.method === 'POST') {'
+      if (path === 'create') {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         const { name, url, eventTypes, secret } = await req && req.json() as CreateWebhookRequest;
-        return await createWebhook(user && user.id, name, url, eventTypes, secret)
-      } else if (path === 'toggle') {
+        return await createWebhook(user && user.id, name, url, eventTypes, secret)'
+      } else if (path === 'toggle') {}
         const { webhookId, isActive } = await req && req.json();
-        return await toggleWebhook(user && user.id, webhookId, isActive)
-      } else if (path === 'test') {
+        return await toggleWebhook(user && user.id, webhookId, isActive)'
+      } else if (path === 'test') {}
         const { webhookId, eventType } = await req && req.json() as WebhookTestRequest;
+<<<<<<< HEAD
         return await testWebhook(user && user.id, webhookId, eventType)
       } else if (path === 'delete') {
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
+=======
+        return await testWebhook(user && user.id, webhookId, eventType)'
+      } else if (path === 'delete') {}
+;
+// Create a Supabase client;"
+const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,;
 const supabase = createClient(supabaseUrl, supabaseKey),;
 serve(async (req) => {;
-  // Handle CORS for browser requests;
-  if (req.method === 'OPTIONS') {;
+  // Handle CORS for browser requests;'
+  if (req.method === 'OPTIONS') {;'
     return new Response('ok', {;
-      headers: {;
+      headers: {;'
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}});
   }
 ;
   try {;
-    // Extract auth token from request;
+    // Extract auth token from request;'
     const authHeader = req.headers.get('Authorization'),;
-    if (!authHeader) {;
+    if (!authHeader) {;'
       return new Response(JSON.stringify({ error: 'Missing authorization header' }), {;
-        status: 401,;
+        status: 401,;'
         headers: { 'Content-Type': 'application/json' }});
     }
 ;
-    // Verify the token with Supabase auth;
+    // Verify the token with Supabase auth;'
     const token = authHeader.replace('Bearer ', ''),;
     const { data: { user }, error: authError } = await supabase.auth.getUser(token),;
-    if (authError || !user) {;
+    if (authError || !user) {;'
       return new Response(JSON.stringify({ error: 'Unauthorized' }), {;
-        status: 401,;
+        status: 401,;'
         headers: { 'Content-Type': 'application/json' }});
     }
 ;
     // Parse URL to determine action;
-    const url = new URL(req.url),;
+    const url = new URL(req.url),;'
     const path = url.pathname.split('/').pop(),;
-    // Handle different actions;
-    if (req.method === 'POST') {;
+    // Handle different actions;'
+    if (req.method === 'POST') {;'
       if (path === 'create') {;
         const { name, url, eventTypes, secret } = await req.json() as CreateWebhookRequest,;
-        return await createWebhook(user.id, name, url, eventTypes, secret);
+        return await createWebhook(user.id, name, url, eventTypes, secret);'
       } else if (path === 'toggle') {;
         const { webhookId, isActive } = await req.json(),;
-        return await toggleWebhook(user.id, webhookId, isActive);
+        return await toggleWebhook(user.id, webhookId, isActive);'
       } else if (path === 'test') {;
         const { webhookId, eventType } = await req.json() as WebhookTestRequest,;
-        return await testWebhook(user.id, webhookId, eventType);
+        return await testWebhook(user.id, webhookId, eventType);'
       } else if (path === 'delete') {;
         const { webhookId } = await req.json(),;
         return await deleteWebhook(user.id, webhookId);
@@ -347,6 +409,7 @@ serve(async (req) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -359,10 +422,15 @@ serve(async (req) => {;
       }
     } else if (req.method === 'GET') {
       if (path === 'webhooks') {
+=======
+
+      }'
+    } else if (req.method === 'GET') {'
+      if (path === 'webhooks') {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return await getUserWebhooks(user.id)
       }
     }
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -370,6 +438,7 @@ serve(async (req) => {;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -405,19 +474,29 @@ serve(async (req) => {;
 
     return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
+=======
+'
+    return new Response(JSON.stringify({ error: 'Invalid action' }), {}
+      status: 400'
       headers: { 'Content-Type': 'application/json' }})
-  } catch (error) {
-    console && console.error('Error processing request:', error);
-    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
+  } catch (error) {'
+    console.error('Error processing request:', error);'
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {}
+      status: 500;
+'
+    return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), {}
+      status: 400,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      headers: { 'Content-Type': 'application/json' }})
+  } catch (error) {'
+    console && console.error('Error processing request:', error);'
+    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {}
       status: 500,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
         const { webhookId } = await req && req.json();
         return await deleteWebhook(user && user.id, webhookId)
+<<<<<<< HEAD
 =======
       status: 500        return await deleteWebhook(user && user.id, webhookId)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -427,11 +506,17 @@ serve(async (req) => {;
       }
     } else if (req && req.method === 'GET') {
       if (path === 'webhooks') {
+=======
+      }'
+    } else if (req && req.method === 'GET') {'
+      if (path === 'webhooks') {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return await getUserWebhooks(user && user.id)
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
     }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       headers: { 'Content-Type': 'application/json' }})
@@ -466,18 +551,36 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
     const { data, error } = await supabase;
+=======
+'
+      headers: { 'Content-Type': 'application/json' }})
+  }
+});
+async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {}
+    // Check condition;
+if ( {) {}
+  $2;
+}
+  try {}
+    const { data, error } = await supabase;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       .from ('webhook_configs');
-      .insert ({
+      .insert ({}
         user_id: user_id;
         name;
         url;
 
+<<<<<<< HEAD
       console && console.error('Error creating webhook:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to create webhook' }), {        event_types: event_types,
+=======
+        event_types: event_types,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         secret;
-      });
+      });'
       .select ('id, name, url, event_types, is_active, created_at');
 ;
+<<<<<<< HEAD
     // Check condition
 if ( {) {
   $2
@@ -488,157 +591,157 @@ if ( {) {
         status: 500,
         headers: { 'Content - Type': 'application / json' }});
     }
+=======
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      console.error ('Error creating webhook:', error);'
+      return new Response (JSON.stringify ({ error: 'Failed to create webhook' }), {}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       message: 'Webhook created successfully'
-    }), {
-      status: 201
+    }), {}
+      status: 201'
       headers: { 'Content-Type': 'application/json' }})
+<<<<<<< HEAD
   } catch (error) {
     console.error('Error in createWebhook:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch webhooks' }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json' }})
-    }
-
-    return new Response(JSON && JSON.stringify({ webhooks: data }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' }})
-  } catch (error) {
-    console && console.error('Error in getUserWebhooks:', error);
-    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
-      status: 500,
+=======
+  } catch (error) {}
+'
       headers: { 'Content-Type': 'application/json' }})
   }
 }
-async function toggleWebhook(userId: string, webhookId: string, isActive: boolean) {
-  try {
-    const { data, error } = await supabase
+async function getUserWebhooks(userId: string) {}
+  try {}
+    const { data, error } = await supabase'
+      .from('webhook_configs')'
+      .select('id, name, url, event_types, is_active, created_at, last_triggered_at')'
+      .eq('user_id', userId)'
+      .order('created_at', { ascending: false });
+    if (error) {}
+'
+      console && console.error('Error fetching webhooks:', error);'
+      return new Response(JSON && JSON.stringify({ error: 'Failed to fetch webhooks' }), {}
+        status: 500,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        headers: { 'Content-Type': 'application/json' }})
+    }
+
+    return new Response(JSON && JSON.stringify({ webhooks: data }), {}
+      status: 200,'
+      headers: { 'Content-Type': 'application/json' }})
+  } catch (error) {'
+    console && console.error('Error in getUserWebhooks:', error);'
+    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {}
+      status: 500,
+<<<<<<< HEAD
+=======
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      headers: { 'Content-Type': 'application/json' }})
+  }
+}
+async function toggleWebhook(userId: string, webhookId: string, isActive: boolean) {}
+  try {}
+    const { data, error } = await supabase'
       .from('webhook_configs')
-      .update({ is_active: isActive })
-      .eq('id', webhookId)
-      .eq('user_id', userId)
+      .update({ is_active: isActive })'
+      .eq('id', webhookId)'
+      .eq('user_id', userId)'
       .select('id, name, is_active');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
+<<<<<<< HEAD
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    if (error || !data || data && data.length === 0) {
-      console && console.error('Error toggling webhook:', error);
-      return new Response(JSON && JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {
-=======
-    return new Response (JSON.stringify ({
-      webhook: data[0],
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+    if (error || !data || data && data.length === 0) {'
+      console && console.error('Error toggling webhook:', error);'
+      return new Response(JSON && JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {}
+    return new Response (JSON.stringify ({}
+      webhook: data[0],'
       message: 'Webhook created successfully';
-    }), {
-      status: 201,
+    }), {}
+      status: 201,'
       headers: { 'Content - Type': 'application / json' }});
-  } catch (error) {
-    console.error ('Error in create_webhook:', error);
-    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
-      status: 500,
+  } catch (error) {'
+    console.error ('Error in create_webhook:', error);'
+    return new Response (JSON.stringify ({ error: 'Internal server error' }), {}
+      status: 500,'
       headers: { 'Content - Type': 'application / json' }});
   }
 }
 async /**
- * getUserWebhooks - Function description
+ * getUserWebhooks - Function description;
  */
-function getUserWebhooks() {
-  try {
-    const { data, error } = await supabase;
-      .from ('webhook_configs');
-      .select ('id, name, url, event_types, is_active, created_at, last_triggered_at');
-      .eq ('user_id', user_id);
+function getUserWebhooks() {}
+  try {}
+    const { data, error } = await supabase;'
+      .from ('webhook_configs');'
+      .select ('id, name, url, event_types, is_active, created_at, last_triggered_at');'
+      .eq ('user_id', user_id);'
       .order ('created_at', { ascending: false });
 ;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ('Error fetching webhooks:', error);
-      return new Response (JSON.stringify ({ error: 'Failed to fetch webhooks' }), {
-        status: 500,
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      console.error ('Error fetching webhooks:', error);'
+      return new Response (JSON.stringify ({ error: 'Failed to fetch webhooks' }), {}
+        status: 500,'
         headers: { 'Content - Type': 'application / json' }});
     }
-    return new Response (JSON.stringify ({ webhooks: data }), {
-      status: 200,
+    return new Response (JSON.stringify ({ webhooks: data }), {}
+      status: 200,'
       headers: { 'Content - Type': 'application / json' }});
-  } catch (error) {
-    console.error ('Error in getUserWebhooks:', error);
-    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
-      status: 500,
+  } catch (error) {'
+    console.error ('Error in getUserWebhooks:', error);'
+    return new Response (JSON.stringify ({ error: 'Internal server error' }), {}
+      status: 500,'
       headers: { 'Content - Type': 'application / json' }});
   }
 }
 async /**
- * toggle_webhook - Function description
+ * toggle_webhook - Function description;
  */
-function toggle_webhook() {
-  try {
-    const { data, error } = await supabase;
+function toggle_webhook() {}
+  try {}
+    const { data, error } = await supabase;'
       .from ('webhook_configs');
-      .update ({ is_active: is_active });
-      .eq ('id', webhook_id);
-      .eq ('user_id', user_id);
+      .update ({ is_active: is_active });'
+      .eq ('id', webhook_id);'
+      .eq ('user_id', user_id);'
       .select ('id, name, is_active');
 ;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.error ('Error toggling webhook:', error);
-      return new Response (JSON.stringify ({ error: 'Failed to update webhook or webhook not found' }), {
-<<<<<<< HEAD
-
-        status: error ? 500 : 404,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-
-    console && console.error('Error in toggleWebhook:', error);
-    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
-      status: 500,
-
-=======
-        status: error ? 500 : 404,
-        headers: { 'Content - Type': 'application / json' }});
-    }
-    console && console.error('Error in toggleWebhook:', error);
-    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
-      status: 500,
-    if (error |!data |data.length === 0) {
-      console.error('Error toggling webhook:', error);
-      return new Response(JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {
-        status: error ? 500 : 404
-        headers: { 'Content-Type': 'application/json' }})
-    }
-    return new Response(JSON.stringify({
-      message: `Webhook ${isActive ? 'activated' : 'deactivated'} successfully`;
-      webhook: data[0]
-    }), {
-      status: 200
-      headers: { 'Content-Type': 'application/json' }})
-  } catch (error) {
-    console.error('Error in toggleWebhook:', error);
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
-      status: 500
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      console.error ('Error toggling webhook:', error);'
+      return new Response (JSON.stringify ({ error: 'Failed to update webhook or webhook not found' }), {}
+'
       headers: { 'Content-Type': 'application/json' }})
   }
 }
-async function deleteWebhook(userId: string, webhookId: string) {
-  try {
-    const { data, error } = await supabase
+async function deleteWebhook(userId: string, webhookId: string) {}
+  try {}
+    const { data, error } = await supabase'
       .from('webhook_configs')
-      .delete()
-      .eq('id', webhookId)
-      .eq('user_id', userId)
+      .delete()'
+      .eq('id', webhookId)'
+      .eq('user_id', userId)'
       .select('id');
+<<<<<<< HEAD
     if (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -664,19 +767,22 @@ async function deleteWebhook(userId: string, webhookId: string) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
+=======
+    if (error) {}
+;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return new Response(JSON.stringify({ error: 'Invalid action' }), {;
-      status: 400,;
+      status: 400,;'
       headers: { 'Content-Type': 'application/json' }});
-  } catch (error) {;
-    console.error('Error processing request:', error),;
+  } catch (error) {;'
+    console.error('Error processing request:', error),;'
     return new Response(JSON.stringify({ error: 'Internal server error' }), {;
-      status: 500,;
+      status: 500,;'
       headers: { 'Content-Type': 'application/json' }});
   }
 }),;
-async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {;
-  try {;
-    const { data, error } = await supabase;
+async function createWebhook() { return null; }
+    const { data, error } = await supabase;'
       .from('webhook_configs');
       .insert({;
         user_id: userId,;
@@ -684,103 +790,103 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
         url,;
         event_types: eventTypes,;
         secret;
-      });
+      });'
       .select('id, name, url, event_types, is_active, created_at'),;
-    if (error) {;
-      console.error('Error creating webhook:', error),;
+    if (error) {;'
+      console.error('Error creating webhook:', error),;'
       return new Response(JSON.stringify({ error: 'Failed to create webhook' }), {;
-        status: 500,;
+        status: 500,;'
         headers: { 'Content-Type': 'application/json' }});
     }
 ;
     return new Response(JSON.stringify({;
-      webhook: data[0],;
+      webhook: data[0],;'
       message: 'Webhook created successfully';
     }), {;
-      status: 201,;
+      status: 201,;'
       headers: { 'Content-Type': 'application/json' }});
-  } catch (error) {;
-    console.error('Error in createWebhook:', error),;
+  } catch (error) {;'
+    console.error('Error in createWebhook:', error),;'
     return new Response(JSON.stringify({ error: 'Internal server error' }), {;
-      status: 500,;
+      status: 500,;'
       headers: { 'Content-Type': 'application/json' }});
   }
 }
 ;
-async function getUserWebhooks(userId: string) {;
-  try {;
-    const { data, error } = await supabase;
-      .from('webhook_configs');
-      .select('id, name, url, event_types, is_active, created_at, last_triggered_at');
-      .eq('user_id', userId);
+async function getUserWebhooks() { return null; }
+    const { data, error } = await supabase;'
+      .from('webhook_configs');'
+      .select('id, name, url, event_types, is_active, created_at, last_triggered_at');'
+      .eq('user_id', userId);'
       .order('created_at', { ascending: false }),;
-    if (error) {;
-      console.error('Error fetching webhooks:', error),;
+    if (error) {;'
+      console.error('Error fetching webhooks:', error),;'
       return new Response(JSON.stringify({ error: 'Failed to fetch webhooks' }), {;
-        status: 500,;
+        status: 500,;'
         headers: { 'Content-Type': 'application/json' }});
     }
 ;
     return new Response(JSON.stringify({ webhooks: data }), {;
-      status: 200,;
+      status: 200,;'
       headers: { 'Content-Type': 'application/json' }});
-  } catch (error) {;
-    console.error('Error in getUserWebhooks:', error),;
+  } catch (error) {;'
+    console.error('Error in getUserWebhooks:', error),;'
     return new Response(JSON.stringify({ error: 'Internal server error' }), {;
-      status: 500,;
+      status: 500,;'
       headers: { 'Content-Type': 'application/json' }});
   }
 }
 ;
-async function toggleWebhook(userId: string, webhookId: string, isActive: boolean) {;
-  try {;
-    const { data, error } = await supabase;
+async function toggleWebhook() { return null; }
+    const { data, error } = await supabase;'
       .from('webhook_configs');
-      .update({ is_active: isActive });
-      .eq('id', webhookId);
-      .eq('user_id', userId);
+      .update({ is_active: isActive });'
+      .eq('id', webhookId);'
+      .eq('user_id', userId);'
       .select('id, name, is_active'),;
-    if (error || !data || data.length === 0) {;
-      console.error('Error toggling webhook:', error),;
+    if (error || !data || data.length === 0) {;'
+      console.error('Error toggling webhook:', error),;'
       return new Response(JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {;
-        status: error ? 500 : 404,;
+        status: error ? 500 : 404,;'
         headers: { 'Content-Type': 'application/json' }});
     }
 ;
-    return new Response(JSON.stringify({;
+    return new Response(JSON.stringify({;'
       message: `Webhook ${isActive ? 'activated' : 'deactivated'} successfully`,;
       webhook: data[0];
     }), {;
-      status: 200,;
+      status: 200,;'
       headers: { 'Content-Type': 'application/json' }});
-  } catch (error) {;
-    console.error('Error in toggleWebhook:', error),;
+  } catch (error) {;'
+    console.error('Error in toggleWebhook:', error),;'
     return new Response(JSON.stringify({ error: 'Internal server error' }), {;
-      status: 500,;
+      status: 500,;'
       headers: { 'Content-Type': 'application/json' }});
   }
 }
 ;
-async function deleteWebhook(userId: string, webhookId: string) {;
-  try {;
-    const { data, error } = await supabase;
+async function deleteWebhook() { return null; }
+    const { data, error } = await supabase;'
       .from('webhook_configs');
-      .delete();
-      .eq('id', webhookId);
-      .eq('user_id', userId);
+      .delete();'
+      .eq('id', webhookId);'
+      .eq('user_id', userId);'
       .select('id'),;
-    if (error) {;
-      console.error('Error deleting webhook:', error),;
+    if (error) {;'
+      console.error('Error deleting webhook:', error),;'
       return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {;
+<<<<<<< HEAD
         status: 500,;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+        status: 500,;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         headers: { 'Content-Type': 'application/json' }});
+
+
+
 <<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -811,6 +917,14 @@ async function deleteWebhook(userId: string, webhookId: string) {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    }
+    if (!data |data.length === 0) {'
+      return new Response(JSON.stringify({ error: 'Webhook not found' }), {}
+        status: 404'
+        headers: { 'Content-Type': 'application/json' }})
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -820,6 +934,7 @@ async function deleteWebhook(userId: string, webhookId: string) {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully'
@@ -841,30 +956,45 @@ async function deleteWebhook(userId: string, webhookId: string) {;
       console && console.error('Error deleting webhook:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to delete webhook' }), {
     return new Response (JSON.stringify ({
+=======
+
+
+
+
+    return new Response(JSON.stringify({'
+      message: 'Webhook deleted successfully'
+
+
+'
+      console && console.error('Error deleting webhook:', error);'
+      return new Response(JSON && JSON.stringify({ error: 'Failed to delete webhook' }), {}
+    return new Response (JSON.stringify ({'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       message: `Webhook ${is_active ? 'activated' : 'deactivated'} successfully`;
       webhook: data[0];
-    }), {
-      status: 200,
+    }), {}
+      status: 200,'
       headers: { 'Content - Type': 'application / json' }});
-  } catch (error) {
-    console.error ('Error in toggle_webhook:', error);
-    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
-      status: 500,
+  } catch (error) {'
+    console.error ('Error in toggle_webhook:', error);'
+    return new Response (JSON.stringify ({ error: 'Internal server error' }), {}
+      status: 500,'
       headers: { 'Content - Type': 'application / json' }});
   }
 }
 async /**
- * delete_webhook - Function description
+ * delete_webhook - Function description;
  */
-function delete_webhook() {
-  try {
-    const { data, error } = await supabase;
+function delete_webhook() {}
+  try {}
+    const { data, error } = await supabase;'
       .from ('webhook_configs');
-      .delete ();
-      .eq ('id', webhook_id);
-      .eq ('user_id', user_id);
+      .delete ();'
+      .eq ('id', webhook_id);'
+      .eq ('user_id', user_id);'
       .select ('id');
 ;
+<<<<<<< HEAD
     // Check condition
 if ( {) {
   $2
@@ -880,203 +1010,301 @@ if ( {) {
       status: 200
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {        headers: { 'Content-Type': 'application/json' }})
+=======
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      console.error ('Error deleting webhook:', error);'
+      return new Response (JSON.stringify ({ error: 'Failed to delete webhook' }), {}
+        status: 500,'
+        headers: { 'Content - Type': 'application / json' }});
     }
-    // Create test payload based on event type
+
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      return new Response (JSON.stringify ({ error: 'Webhook not found' }), {}
+      id: webhookId;
+    }), {}
+      status: 200'
+      headers: { 'Content-Type': 'application/json' }})
+  } catch (error) {}
+'
+      headers: { 'Content-Type': 'application/json' }})
+  }
+}
+async function testWebhook(userId: string, webhookId: string, eventType: string) {}
+  try {}
+    // Verify webhook exists and belongs to user;
+    const { data: webhook, error: webhookError } = await supabase'
+      .from('webhook_configs')'
+      .select('url, secret')'
+      .eq('id', webhookId)'
+      .eq('user_id', userId)
+      .single();
+
+
+'
+        headers: { 'Content-Type': 'application/json' }})
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    }
+    // Create test payload based on event type;
     const testPayload = createTestPayload(eventType);
+<<<<<<< HEAD
     // Add signature if secret is provided
     const headers: Record<string, string> = {    .join('')
+=======
+    // Add signature if secret is provided;
+    const headers: Record<string, string> = {}
+'
+      'Content-Type': 'application/json'};
+    
+    if (webhook && webhook.secret) {}
+      const signature = await createWebhookSignature(JSON && JSON.stringify(testPayload), webhook && webhook.secret);
+
+
+'
+      headers['X-Zion-Signature'] = signature;
+    }
+    // Make the request to the webhook URL;
+    try {}
+      });
+      // Update last triggered timestamp;
+      await supabase'
+        .from('webhook_configs')
+        .update({ last_triggered_at: new Date().toISOString() })'
+        .eq('id', webhookId);
+      // Return the response status and body;
+      }), {}
+        status: 200'
+        headers: { 'Content-Type': 'application/json' }})
+    } catch (fetchError) {}
+'
+      console && console.error('Error sending test webhook:', fetchError);
+      return new Response(JSON && JSON.stringify({ '
+        error: 'Failed to send test webhook', 
+        details: fetchError && fetchError.message;
+      }), {}
+        status: 500'
+        headers: { 'Content-Type': 'application/json' }})
+    }
+  } catch (error) {}
+'
+      headers: { 'Content-Type': 'application/json' }})
+  }
 }
-function createTestPayload(eventType: string) {
+async function createWebhookSignature(payload: string, secret: string) {}
+  // Create HMAC signature using SHA-256;
+  const encoder = new TextEncoder();
+
+    encoder && encoder.encode(secret),'
+    { name: 'HMAC', hash: 'SHA-256' };
+    false;'
+    ['sign']
+  );
+
+
+'
+    'HMAC';
+    key;
+    encoder && encoder.encode(payload)
+  );
+  // Convert to hex string;
+  return Array && Array.from(new Uint8Array(signature))'
+    .map(b => b && b.toString(16).padStart(2, '0'))
+
+
+'
+    .join('')
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+}
+function createTestPayload(eventType: string) {}
   const timestamp = new Date().toISOString();
 
+<<<<<<< HEAD
   const eventId = crypto && crypto.randomUUID();
 <<<<<<< HEAD
 <<<<<<< HEAD
   
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
-  const eventId = crypto && crypto.randomUUID();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  // Create different test payload based on event type
-  switch (eventType) {
+
+  // Create different test payload based on event type;
+  switch (eventType) {'
     case 'new_application':
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     return new Response (JSON.stringify ({
+=======
+    return new Response (JSON.stringify ({'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       message: 'Webhook deleted successfully',
       id: webhook_id;
-    }), {
-      status: 200,
+    }), {}
+      status: 200,'
       headers: { 'Content - Type': 'application / json' }});
-  } catch (error) {
-    console.error ('Error in delete_webhook:', error);
-    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
-      status: 500,
+  } catch (error) {'
+    console.error ('Error in delete_webhook:', error);'
+    return new Response (JSON.stringify ({ error: 'Internal server error' }), {}
+      status: 500,'
       headers: { 'Content - Type': 'application / json' }});
   }
 }
 async /**
- * test_webhook - Function description
+ * test_webhook - Function description;
  */
-function test_webhook() {
-  try {
+function test_webhook() {}
+  try {}
     // Verify webhook exists and belongs to user;
-    const { data: webhook, error: webhook_error } = await supabase;
-      .from ('webhook_configs');
-      .select ('url, secret');
-      .eq ('id', webhook_id);
+    const { data: webhook, error: webhook_error } = await supabase;'
+      .from ('webhook_configs');'
+      .select ('url, secret');'
+      .eq ('id', webhook_id);'
       .eq ('user_id', user_id);
       .single ();
 ;
-    // Check condition
-if ( {) {
-  $2
-}
-      return new Response (JSON.stringify ({ error: 'Webhook not found or access denied' }), {
-        status: 404,
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      return new Response (JSON.stringify ({ error: 'Webhook not found or access denied' }), {}
+        status: 404,'
         headers: { 'Content - Type': 'application / json' }});
     }
     // Create test payload based on event type;
     const test_payload = createTestPayload (event_type);
 ;
     // Add signature if secret is provided;
-    const headers: Record < string, string> = {
+    const headers: Record < string, string> = {'
       'Content - Type': 'application / json'}
 ;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      const signature = await createWebhookSignature (JSON.stringify (test_payload), webhook.secret);
+      const signature = await createWebhookSignature (JSON.stringify (test_payload), webhook.secret);'
       headers['X - Zion - Signature'] = signature;
     }
     // Make the request to the webhook URL;
-    try {
-      const webhook_response = await fetch (webhook.url, {
+    try {}
+      const webhook_response = await fetch (webhook.url, {'
         method: 'POST';
         headers,
         body: JSON.stringify (test_payload);
       });
 ;
       // Update last triggered timestamp;
-      await supabase;
+      await supabase;'
         .from ('webhook_configs');
-        .update ({ last_triggered_at: new Date ().toISOString () });
+        .update ({ last_triggered_at: new Date ().toISOString () });'
         .eq ('id', webhook_id);
 ;
       // Return the response status and body;
       const response_text = await webhook_response.text ();
-      return new Response (JSON.stringify ({
+      return new Response (JSON.stringify ({'
         message: 'Test webhook sent';
         status: webhook_response.status;
         status_text: webhook_response.status_text,
         response_body: response_text.substring (0, 500) // Limit response body size;
-      }), {
-        status: 200,
+      }), {}
+        status: 200,'
         headers: { 'Content - Type': 'application / json' }});
-    } catch (fetch_error) {
+    } catch (fetch_error) {'
       console.error ('Error sending test webhook:', fetch_error);
-      return new Response (JSON.stringify ({
+      return new Response (JSON.stringify ({'
         error: 'Failed to send test webhook',
         details: fetch_error.message;
-      }), {
-        status: 500,
+      }), {}
+        status: 500,'
         headers: { 'Content - Type': 'application / json' }});
     }
-  } catch (error) {
-    console.error ('Error in test_webhook:', error);
-    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
-      status: 500,
+  } catch (error) {'
+    console.error ('Error in test_webhook:', error);'
+    return new Response (JSON.stringify ({ error: 'Internal server error' }), {}
+      status: 500,'
       headers: { 'Content - Type': 'application / json' }});
   }
 }
 async /**
- * createWebhookSignature - Function description
+ * createWebhookSignature - Function description;
  */
-function createWebhookSignature() {
+function createWebhookSignature() {}
   // Create HMAC signature using SHA - 256;
   const encoder = new TextEncoder ();
-  const key = await crypto.subtle.import_key (
+  const key = await crypto.subtle.import_key ('
     'raw';
-    encoder.encode (secret),
+    encoder.encode (secret),'
     { name: 'HMAC', hash: 'SHA - 256' }
-    false;
+    false;'
     ['sign']);
 ;
-  const signature = await crypto.subtle.sign (
+  const signature = await crypto.subtle.sign ('
     'HMAC';
     key;
     encoder.encode (payload));
 ;
   // Convert to hex string;
-  return Array.from (new Uint8Array (signature));
-    .map (boolean => b.to_string (16).pad_start (2, '0'));
+  return Array.from (new Uint8Array (signature));'
+    .map (boolean => b.to_string (16).pad_start (2, '0'));'
     .join ('');
 }
 /**
- * createTestPayload - Function description
+ * createTestPayload - Function description;
  */
-function createTestPayload() {
+function createTestPayload() {}
   const timestamp = new Date ().toISOString ();
   const event_id = crypto.randomUUID ();
 ;
   // Create different test payload based on event type;
-  switch (event_type) {
+  switch (event_type) {'
     case 'new_application':;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return {
+=======
+      return {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         event_type: 'new_application';
         event_id: event_id;
         timestamp;
-        data: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        data: {}
           application_id: crypto.randomUUID ();
           job_id: crypto.randomUUID ();
           talent_id: crypto.randomUUID ();
-          applied_at: timestamp;
+          applied_at: timestamp;'
           status: 'new',
           match_score: 85;
         }
       }
-;
+;'
     case 'quote_received':;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      return {
+
+
+      return {'
         event_type: 'quote_received';
         event_id: event_id;
         timestamp;
-        data: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        data: {}
           quote_id: crypto.randomUUID ();
           talent_id: crypto.randomUUID ();
           client_id: crypto.randomUUID ();
-          amount: {
+          amount: {}
             min: 1000;
-            max: 2000,
+            max: 2000,'
             currency: 'USD';
           }
           created_at: timestamp;
         }
       }
-;
+;'
     case 'milestone_approved':;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1092,22 +1320,65 @@ function createTestPayload() {
         event_id: event_id;
         timestamp;
         data: {          project_id: crypto.randomUUID ();
+=======
+
+
+      return {'
+        event_type: 'milestone_approved';
+        event_id: event_id;
+        timestamp;
+        data: {}
+          milestone_id: crypto.randomUUID ();
+          project_id: crypto.randomUUID ();'
+          title: 'Test Milestone';
+          amount: 500,
+          approved_at: timestamp;
+        }
+      }
+;'
+    case 'talent_hired':;
+
+
+
+      return {'
+        event_type: 'talent_hired';
+        event_id: event_id;
+        timestamp;
+        data: {}
+          project_id: crypto && crypto.randomUUID();
+          talent_id: crypto && crypto.randomUUID();
+          client_id: crypto && crypto.randomUUID();
+          job_id: crypto && crypto.randomUUID();
+          created_at: timestamp,
+
+
+'
+          status: 'offer_accepted'
+        }
+      }
+    default: return {'
+        event_type: 'test_event';
+        event_id: eventId;
+        timestamp;
+          project_id: crypto.randomUUID ();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           talent_id: crypto.randomUUID ();
           client_id: crypto.randomUUID ();
           job_id: crypto.randomUUID ();
           created_at: timestamp,
+<<<<<<< HEAD
         data: {
           message: 'This is a test webhook event'
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 =======
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
         data: {
           message: 'This is a test webhook event'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1125,127 +1396,106 @@ function createTestPayload() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
-    return new Response(JSON.stringify({;
+    return new Response(JSON.stringify({;'
       message: 'Webhook deleted successfully',;
       id: webhookId;
     }), {;
-      status: 200,;
+      status: 200,;'
       headers: { 'Content-Type': 'application/json' }});
-  } catch (error) {;
-    console.error('Error in deleteWebhook:', error),;
+  } catch (error) {;'
+    console.error('Error in deleteWebhook:', error),;'
     return new Response(JSON.stringify({ error: 'Internal server error' }), {;
-      status: 500,;
+      status: 500,;'
       headers: { 'Content-Type': 'application/json' }});
   }
 }
 ;
-async function testWebhook(userId: string, webhookId: string, eventType: string) {;
-  try {;
-    // Verify webhook exists and belongs to user;
-    const { data: webhook, error: webhookError } = await supabase;
-      .from('webhook_configs');
-      .select('url, secret');
-      .eq('id', webhookId);
+async function testWebhook() { return null; }
+    const { data: webhook, error: webhookError } = await supabase;'
+      .from('webhook_configs');'
+      .select('url, secret');'
+      .eq('id', webhookId);'
       .eq('user_id', userId);
       .single(),;
-    if (webhookError || !webhook) {;
+    if (webhookError || !webhook) {;'
       return new Response(JSON.stringify({ error: 'Webhook not found or access denied' }), {;
-        status: 404,;
+        status: 404,;'
         headers: { 'Content-Type': 'application/json' }});
     }
 ;
     // Create test payload based on event type;
     const testPayload = createTestPayload(eventType),;
     // Add signature if secret is provided;
-    const headers: Record<string string> = {;
+    const headers: Record<string string> = {;'
       'Content-Type': 'application/json'},;
     if (webhook.secret) {;
-      const signature = await createWebhookSignature(JSON.stringify(testPayload), webhook.secret),;
+      const signature = await createWebhookSignature(JSON.stringify(testPayload), webhook.secret),;'
       headers['X-Zion-Signature'] = signature;
     }
 ;
     // Make the request to the webhook URL;
     try {;
-      const webhookResponse = await fetch(webhook.url, {;
+      const webhookResponse = await fetch(webhook.url, {;'
         method: 'POST',;
         headers,;
         body: JSON.stringify(testPayload);
       }),;
       // Update last triggered timestamp;
-      await supabase;
+      await supabase;'
         .from('webhook_configs');
-        .update({ last_triggered_at: new Date().toISOString() });
+        .update({ last_triggered_at: new Date().toISOString() });'
         .eq('id', webhookId),;
       // Return the response status and body;
       const responseText = await webhookResponse.text(),;
-      return new Response(JSON.stringify({;
+      return new Response(JSON.stringify({;'
         message: 'Test webhook sent',;
         status: webhookResponse.status,;
         statusText: webhookResponse.statusText,;
         responseBody: responseText.substring(0, 500) // Limit response body size;
       }), {;
-        status: 200,;
+        status: 200,;'
         headers: { 'Content-Type': 'application/json' }});
-    } catch (fetchError) {;
+    } catch (fetchError) {;'
       console.error('Error sending test webhook:', fetchError),;
-      return new Response(JSON.stringify({;
+      return new Response(JSON.stringify({;'
         error: 'Failed to send test webhook',;
         details: fetchError.message;
       }), {;
-        status: 500,;
+        status: 500,;'
         headers: { 'Content-Type': 'application/json' }});
     }
-  } catch (error) {;
-    console.error('Error in testWebhook:', error),;
+  } catch (error) {;'
+    console.error('Error in testWebhook:', error),;'
     return new Response(JSON.stringify({ error: 'Internal server error' }), {;
-      status: 500,;
+      status: 500,;'
       headers: { 'Content-Type': 'application/json' }});
   }
 }
 ;
-async function createWebhookSignature(payload: string, secret: string) {;
-  // Create HMAC signature using SHA-256;
-  const encoder = new TextEncoder(),;
-  const key = await crypto.subtle.importKey(;
-    'raw',;
-    encoder.encode(secret),;
+async function createWebhookSignature() { return null; }
     { name: 'HMAC', hash: 'SHA-256' },;
-    false,;
+    false,;'
     ['sign'];
   ),;
-  const signature = await crypto.subtle.sign(;
+  const signature = await crypto.subtle.sign(;'
     'HMAC',;
     key,;
     encoder.encode(payload);
   ),;
   // Convert to hex string;
-  return Array.from(new Uint8Array(signature));
-    .map(b => b.toString(16).padStart(2, '0'));
+  return Array.from(new Uint8Array(signature));'
+    .map(b => b.toString(16).padStart(2, '0'));'
     .join('');
 }
 ;
-function createTestPayload(eventType: string) {;
-  const timestamp = new Date().toISOString(),;
-  const eventId = crypto.randomUUID(),;
-  // Create different test payload based on event type;
-  switch (eventType) {;
-    case 'new_application':;
-      return {;
-        event_type: 'new_application',;
-        event_id: eventId,;
-        timestamp,;
-        data: {;
-          application_id: crypto.randomUUID(),;
-          job_id: crypto.randomUUID(),;
-          talent_id: crypto.randomUUID(),;
-          applied_at: timestamp,;
-          status: 'new',;
-          match_score: 85;
+function createTestPayload() { return null; }
         }
-      },;
+      },;'
     case 'quote_received':;
-      return {;
+      return {;'
         event_type: 'quote_received',;
         event_id: eventId,;
         timestamp,;
@@ -1255,27 +1505,27 @@ function createTestPayload(eventType: string) {;
           client_id: crypto.randomUUID(),;
           amount: {;
             min: 1000,;
-            max: 2000,;
+            max: 2000,;'
             currency: 'USD';
           },;
           created_at: timestamp;
         }
-      },;
+      },;'
     case 'milestone_approved':;
-      return {;
+      return {;'
         event_type: 'milestone_approved',;
         event_id: eventId,;
         timestamp,;
         data: {;
           milestone_id: crypto.randomUUID(),;
-          project_id: crypto.randomUUID(),;
+          project_id: crypto.randomUUID(),;'
           title: 'Test Milestone',;
           amount: 500,;
           approved_at: timestamp;
         }
-      },;
+      },;'
     case 'talent_hired':;
-      return {;
+      return {;'
         event_type: 'talent_hired',;
         event_id: eventId,;
         timestamp,;
@@ -1290,8 +1540,12 @@ function createTestPayload(eventType: string) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           status: 'offer_accepted';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
@@ -1300,14 +1554,18 @@ function createTestPayload(eventType: string) {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
         data: {
           message: 'This is a test webhook event';
 =======
     default: return {
+=======
+    default: return {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         event_type: 'test_event';
         event_id: event_id;
         timestamp,
-        data: {
+        data: {'
           message: 'This is a test webhook event';
 
 
@@ -1317,6 +1575,7 @@ function createTestPayload(eventType: string) {;
       }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1799,3 +2058,9 @@ case 'milestone approved':
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

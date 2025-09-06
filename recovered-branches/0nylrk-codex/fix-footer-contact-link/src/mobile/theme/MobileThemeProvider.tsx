@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -24,15 +25,18 @@ import React from './react';
 import { use_theme } from '@/hooks / use_theme';
 
 interface MobileThemeProviderProps {
+=======
+import React from "react";"
+import { useTheme } from "@/hooks/useTheme";
+interface MobileThemeProviderProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   children: React.ReactNode;
 }
 
 
 
 
-export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
-
-
+export function MobileThemeProvider() { return null; }
   const { theme } = useTheme();
 <<<<<<< HEAD
   return (;
@@ -73,7 +77,7 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 
   const { theme } = useTheme();
 
-  return (
+  return ("
     <div className={`mobile-app ${theme === "dark" ? "dark" : "light"}`}>
       {children}
     </div>
@@ -83,6 +87,7 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 export function MobileThemeProvider(): any ({ children }: MobileThemeProviderProps) {;
   const { theme } = useTheme();
 
+<<<<<<< HEAD
   return (
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
 
@@ -100,10 +105,23 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
+=======
+
+  return (
+
+`
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
+
+
+
+
+  return ('`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {children}
 
+<<<<<<< HEAD
     </div>;
   );
 <<<<<<< HEAD
@@ -122,20 +140,23 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * MobileThemeProvider - Function description
+=======
+
+
+export /**;
+ * MobileThemeProvider - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
-function MobileThemeProvider() {
+function MobileThemeProvider() {}
   const { theme } = use_theme ();
 ;
-  return (
+  return ('`
     <div className={`mobile - app ${theme === 'dark' ? 'dark' : 'light'}`}>;
       {children}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
+<<<<<<< HEAD
 import React from "react",;
 import { useTheme } from "@/hooks/useTheme",;
 ;
@@ -187,3 +208,8 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

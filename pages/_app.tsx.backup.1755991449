@@ -5,10 +5,14 @@ import '../styles/modern-design-system.css';
 import '../styles/globals.css';
 import Layout from '../components/Layout';
 
+<<<<<<< HEAD
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <EnhancedLayout>
       <Component {...pageProps} />
     </EnhancedLayout>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

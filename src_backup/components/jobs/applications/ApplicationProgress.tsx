@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
 <<<<<<< HEAD:src/components/jobs/applications/ApplicationProgress.tsx
 <<<<<<< HEAD
 interface ApplicationProgressProps {
@@ -42,9 +43,23 @@ import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ApplicationProgressProps {
+=======
+interface ApplicationProgressProps {}
+  status: ApplicationStatus;
+  className?: string;
+}
+export function ApplicationProgress({ status, className }: ApplicationProgressProps) {};
+  // Define the progress value based on status;
+  const getProgressValue = () => {}
+import { ApplicationStatus  } from '@/types / jobs';'
+import { Progress  } from '@/components / ui / progress';'
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
+interface ApplicationProgressProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
   status: ApplicationStatus,
   className?: string
 }
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
 
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
   // Define the progress value based on status
@@ -60,19 +75,34 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
       case "shortlisted": return 60,
       case "interview": return 80,
       case "hired": return 100,
+=======
+export /**;
+ * ApplicationProgress - Function description;
+ */
+function ApplicationProgress() {}
+  // Define the progress value based on status;
+  const getProgressValue = () =>: any {}
+    switch (status) {}
+      case "new": return 20,"
+      case "viewed": return 40,"
+      case "shortlisted": return 60,"
+      case "interview": return 80,"
+      case "hired": return 100,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
       case "rejected": return 100,
-      default: return 0
+      default: return 0;
     }
   },
 
   const progressValue = getProgressValue(),
   
-  return (
-    <div className={cn("w-full space-y-2", className)}>
+  return ("
+    <div className={cn("w-full space-y-2", className)}>"
       <Progress value={progressValue} className="h-2" />
       
 =======
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
@@ -84,28 +114,35 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
+=======
+"
+      <div className="flex justify-between text-xs text-muted-foreground">"
+        <div className="flex flex-col items-center">"
+          <StatusIcon status={status} current="new" />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
           <span className="mt-1">Submitted</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <StatusIcon status={status} current="viewed" />
+        </div>"
+        <div className="flex flex-col items-center">"
+          <StatusIcon status={status} current="viewed" />"
           <span className="mt-1">Viewed</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <StatusIcon status={status} current="shortlisted" />
+        </div>"
+        <div className="flex flex-col items-center">"
+          <StatusIcon status={status} current="shortlisted" />"
           <span className="mt-1">Shortlisted</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <StatusIcon status={status} current="interview" />
+        </div>"
+        <div className="flex flex-col items-center">"
+          <StatusIcon status={status} current="interview" />"
           <span className="mt-1">Interview</span>
-        </div>
-        <div className="flex flex-col items-center">
-          <StatusIcon status={status} current="hired" />
+        </div>"
+        <div className="flex flex-col items-center">"
+          <StatusIcon status={status} current="hired" />"
           <span className="mt-1">Decision</span>
         </div>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
 
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
@@ -121,6 +158,11 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationProgress.tsx
   const statusRank: Record<ApplicationStatus number> = {
+=======
+function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {}
+  // Helper to determine if this step is active, completed, or inactive;
+  const statusRank: Record<ApplicationStatus number> = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
     new: 1,
     viewed: 2,
     shortlisted: 3,
@@ -157,15 +199,21 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
   const statusRank_ = statusRank[status],
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
   const getProgressValue = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationProgress.tsx
   if (currentRank < statusRank_) {
     // This step is complete
+=======
+  if (currentRank < statusRank_) {}
+    // This step is complete"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
-  } else if (currentRank === statusRank_) {
-    // This is the current step
+  } else if (currentRank === statusRank_) {}
+    // This is the current step"
     return <CircleDot className="h-4 w-4 text-blue-500" />
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
   } else {
 <<<<<<< HEAD:src/components/jobs/applications/ApplicationProgress.tsx
 <<<<<<< HEAD
@@ -179,6 +227,10 @@ import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 =======
 
+=======
+  } else {}
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -204,42 +256,32 @@ import { cn } from "@/lib/utils",;interface ApplicationProgressProps {;
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationProgress.tsx
 ;
-export function ApplicationProgress({ status, className }: ApplicationProgressProps) {;
-  // Define the progress value based on status;
-  const getProgressValue = () => {;
-    switch (status) {;
-      case "new": return 20,;
-      case "viewed": return 40,;
-      case "shortlisted": return 60,;
-      case "interview": return 80,;
-      case "hired": return 100,;
-      case "rejected": return 100,;
-      default: return 0;
+export function ApplicationProgress() { return null; }
     }
   },;
   const progressValue = getProgressValue(),;
-  return (;
-    <div className={cn("w-full space-y-2", className)}>;
-      <Progress value={progressValue} className="h-2" />;
-      <div className="flex justify-between text-xs text-muted-foreground">;
-        <div className="flex flex-col items-center">;
-          <StatusIcon status={status} current="new" />;
+  return (;"
+    <div className={cn("w-full space-y-2", className)}>;"
+      <Progress value={progressValue} className="h-2" />;"
+      <div className="flex justify-between text-xs text-muted-foreground">;"
+        <div className="flex flex-col items-center">;"
+          <StatusIcon status={status} current="new" />;"
           <span className="mt-1">Submitted</span>;
-        </div>;
-        <div className="flex flex-col items-center">;
-          <StatusIcon status={status} current="viewed" />;
+        </div>;"
+        <div className="flex flex-col items-center">;"
+          <StatusIcon status={status} current="viewed" />;"
           <span className="mt-1">Viewed</span>;
-        </div>;
-        <div className="flex flex-col items-center">;
-          <StatusIcon status={status} current="shortlisted" />;
+        </div>;"
+        <div className="flex flex-col items-center">;"
+          <StatusIcon status={status} current="shortlisted" />;"
           <span className="mt-1">Shortlisted</span>;
-        </div>;
-        <div className="flex flex-col items-center">;
-          <StatusIcon status={status} current="interview" />;
+        </div>;"
+        <div className="flex flex-col items-center">;"
+          <StatusIcon status={status} current="interview" />;"
           <span className="mt-1">Interview</span>;
-        </div>;
-        <div className="flex flex-col items-center">;
-          <StatusIcon status={status} current="hired" />;
+        </div>;"
+        <div className="flex flex-col items-center">;"
+          <StatusIcon status={status} current="hired" />;"
           <span className="mt-1">Decision</span>;
         </div>;
       </div>;
@@ -247,31 +289,29 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   );
 }
 ;
-function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {;
-  // Helper to determine if this step is active, completed, or inactive;
-  const statusRank: Record<ApplicationStatus number> = {;
-    new: 1,;
-    viewed: 2,;
-    shortlisted: 3,;
-    interview: 4,;
-    hired: 5,;
+function StatusIcon() { return null; }
     rejected: 5},;
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
   if (currentRank < statusRank_) {;
-    // This step is complete;
+    // This step is complete;"
     return <CheckCircle2 className="h-4 w-4 text-green-500" />;
   } else if (currentRank === statusRank_) {;
-    // This is the current step;
+    // This is the current step;"
     return <CircleDot className="h-4 w-4 text-blue-500" />;
   } else {;
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
     // This step is upcoming;
 <<<<<<< HEAD
+=======
+    // This step is upcoming;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
 =======
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 };
 }
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
 
     <div className={cn ("w - full space - y-2", class_name)}>;
       <Progress value={progress_value} className="h-2" />;
@@ -295,16 +335,41 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
         <div className="flex flex - col items-center">;
           <StatusIcon status={status} current="hired" />;
           <span className="mt-1">Decision</span>;
+=======
+"
+    <div className={cn ("w - full space - y-2", class_name)}>;"
+      <Progress value={progress_value} className="h - 2" />;"
+      <div className="flex justify - between text - xs text - muted - foreground">;"
+        <div className="flex flex - col items - center">;"
+          <StatusIcon status={status} current="new" />;"
+          <span className="mt - 1">Submitted</span>;
+        </div>;"
+        <div className="flex flex - col items - center">;"
+          <StatusIcon status={status} current="viewed" />;"
+          <span className="mt - 1">Viewed</span>;
+        </div>;"
+        <div className="flex flex - col items - center">;"
+          <StatusIcon status={status} current="shortlisted" />;"
+          <span className="mt - 1">Shortlisted</span>;
+        </div>;"
+        <div className="flex flex - col items - center">;"
+          <StatusIcon status={status} current="interview" />;"
+          <span className="mt - 1">Interview</span>;
+        </div>;"
+        <div className="flex flex - col items - center">;"
+          <StatusIcon status={status} current="hired" />;"
+          <span className="mt - 1">Decision</span>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
         </div>;
       </div>;
     </div>);
 }
 /**
- * StatusIcon - Function description
+ * StatusIcon - Function description;
  */
-function StatusIcon() {
+function StatusIcon() {}
   // Helper to determine if this step is active, completed, or inactive;
-  const status_rank: Record < ApplicationStatus, number> = {
+  const status_rank: Record < ApplicationStatus, number> = {}
     new: 1,
     viewed: 2,
     shortlisted: 3,
@@ -315,10 +380,11 @@ function StatusIcon() {
   const statusRank_ = status_rank[status];
   const current_rank = status_rank[current];
   const statusRank_ = status_rank[status];
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
     // This step is complete;
     return <CheckCircle2 className="h - 4 w - 4 text - green-500" />;
   } else // Check condition
@@ -331,12 +397,26 @@ if ( {) {
     // This step is upcoming;
     return <Circle className="h - 4 w - 4 text - muted-foreground / 50" />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    // This step is complete;"
+    return <CheckCircle2 className="h - 4 w - 4 text - green - 500" />;
+  } else // Check condition;
+if ( {) {}
+  $2;
+}
+    // This is the current step;"
+    return <CircleDot className="h - 4 w - 4 text - blue - 500" />;
+  } else {}
+    // This step is upcoming;"
+    return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx
   }
 }
 <<<<<<< HEAD
 ;
 =======
 
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 <<<<<<< HEAD:src/components/jobs/applications/ApplicationProgress.tsx
@@ -362,3 +442,7 @@ if ( {) {
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/jobs/applications/ApplicationProgress.tsx
+=======
+    // This step is upcoming"
+    return <Circle className="h-4 w-4 text-muted-foreground/50" />'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/jobs/applications/ApplicationProgress.tsx

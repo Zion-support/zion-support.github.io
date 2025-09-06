@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,3 +101,15 @@ import React,{ useState } from \'react\'; import { motion,AnimatePresence } from
 const React,{ useState } from "react"; import { motion,AnimatePresence } from "framer-motion"; export default function Page() {; ,"; { icon: <Star className="w-6 h-6"/>,value: "4.8/5",label: "Global Rating" },"; { icon: <TrendingUp className="w-6 h-6"/>,value: "98%",label: "Client Satisfaction" } ]; const partnerships = [{}; export {};'"'"
 import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ,"; { "icon": <Star className="w-6 h-6"/>,"value": "4.8/5","label": "Global Rating" },"; { "icon": <TrendingUp className="w-6 h-6"/>,"value": "98%","label": "Client Satisfaction" } ]; const partnerships = [{}; export {};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React,{ useState } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; export default function Page() {; ,\"; { \"icon\": <Star className=\"w-6 h-6\"/>,\"value\": \"4.8/5\",\"label\": \"Global Rating\" },\"; { \"icon\": <TrendingUp className=\"w-6 h-6\"/>,\"value\": \"98%\",\"label\": \"Client Satisfaction\" } ]; const partnerships = [{}; export {};'"
+const React,{ useState } from "react"; import { motion,AnimatePresence } from "framer-motion"; export default function Page() {; ,"; { icon: <Star className="w-6 h-6"/>,value: "4.8/5",label: "Global Rating" },"; { icon: <TrendingUp className="w-6 h-6"/>,value: "98%",label: "Client Satisfaction" } ]; const partnerships = [{}; export {};'"'"'"
+import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ,"; { "icon": <Star className="w-6 h-6"/>,"value": "4.8/5","label": "Global Rating" },"; { "icon": <TrendingUp className="w-6 h-6"/>,"value": "98%","label": "Client Satisfaction" } ]; const partnerships = [{}; export {};
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

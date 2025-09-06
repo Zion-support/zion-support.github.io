@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -246,10 +247,14 @@ const SpaceTechnologyPage: React.FC = () => {
       icon: <Heart className="w-6 h-6" />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -377,10 +382,14 @@ const SpaceTechnologyPage: React.FC = () => {
             </motion.div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -788,3 +797,6 @@ export default SpaceTechnologyPage;
 
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 import type { AuthContextType } from "@/types/auth";
 import { createContext } from "react",
+=======
+import { createContext } from "react";"
+import type { AuthContextType } from "@/types/auth";
+"
+import { createContext } from "react","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { AuthContextType } from "@/types/auth",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { createContext } from "react";
 import {createContext} from "react";
@@ -100,11 +108,20 @@ export const AuthContext = createContext<AuthContextType | undefined>(undefined)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+";
+import type { AuthContextType } from "@/types/auth";"
+import { createContext } from "react","
+import type { AuthContextType } from "@/types/auth",
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Create the AuthContext and export it. We avoid providing a generic;
 // parameter to `createContext` because in environments where the React;
 // type definitions are unavailable, calling an untyped function with type;
 // arguments causes a TypeScript error (TS2347). Instead, we cast the;
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+<<<<<<< HEAD
 // default value so consumers still get some level of type safety.
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,12 +160,30 @@ export const AuthContext = createContext<AuthContextType | undefined>(undefined)
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+
+export const AuthContext = createContext<AuthContextType | undefined>(undefined),";
+import { createContext } from "react",;"
+import type { AuthContextType } from "@/types/auth",;
+
+// Create the AuthContext and export it. We avoid providing a generic;`
+// parameter to `createContext` because in environments where the React;
+// type definitions are unavailable, calling an untyped function with type;
+// arguments causes a TypeScript error (TS2347). Instead, we cast the;
+
+
+// default value so consumers still get some level of type safety.
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export const AuthContext = createContext<AuthContextType | undefined>(
-  undefined,
+  undefined,;
 );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 export const AuthContext = createContext<AuthContextType | undefined>(
   undefined,
 );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

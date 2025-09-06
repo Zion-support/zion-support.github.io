@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React from 'react'; import SEO from '../components/SEO'; import { Footer
 import _React from 'react'; import SEO from '../components/SEO'; import { Footer } from '../components/Footer'; import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase.jsx'; import { AppTestimonials } from '../components/mobile-app/AppTestimonials.jsx'; import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture.jsx'; import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner.jsx'; import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload.jsx'; import { CommunityTrust } from '../components/mobile-app/CommunityTrust.jsx'; export {}; return <div>Component></div> }; return(); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};'"; '"'"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React from 'react'; import SEO from '../components/SEO'; import { Footer } from '../components/Footer'; import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase.jsx'; import { AppTestimonials } from '../components/mobile-app/AppTestimonials.jsx'; import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture.jsx'; import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner.jsx'; import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload.jsx'; import { CommunityTrust } from '../components/mobile-app/CommunityTrust.jsx'; export {}; return <div>Component></div> }; return(); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};'"; '"'"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import _React from 'react'; import SEO from '../components/SEO'; import { Footer
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from \'react\'; import SEO from \'../components/SEO\'; import { Footer } from \'../components/Footer\'; import { MobileFeatureShowcase } from \'../components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from \'../components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from \'../components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from \'../components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from \'../components/mobile-app/QrCodeDownload ; import { CommunityTrust } from \'../components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};\'"; \'"\'"
 const React from "react"; import SEO from "./components/SEO"; import { Footer } from "./components/Footer"; import { MobileFeatureShowcase } from "./components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from "./components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from "./components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from "./components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from "./components/mobile-app/QrCodeDownload ; import { CommunityTrust } from "./components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};""; """""""
-import _React from 'react'; import SEO from '../components/SEO'; import { Footer } from '../components/Footer'; import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from '../components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload ; import { CommunityTrust } from '../components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};'"; '"'"
-<<<<<<< HEAD
+=======
 
+
+'"
+import React from \'react\'; import SEO from \'../components/SEO\'; import { Footer } from \'../components/Footer\'; import { MobileFeatureShowcase } from \'../components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from \'../components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from \'../components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from \'../components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from \'../components/mobile-app/QrCodeDownload ; import { CommunityTrust } from \'../components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};\'"; \'"\'""
+const React from "react"; import SEO from "./components/SEO"; import { Footer } from "./components/Footer"; import { MobileFeatureShowcase } from "./components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from "./components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from "./components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from "./components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from "./components/mobile-app/QrCodeDownload ; import { CommunityTrust } from "./components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};""; """""""'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React from 'react'; import SEO from '../components/SEO'; import { Footer } from '../components/Footer'; import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from '../components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload ; import { CommunityTrust } from '../components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};'"; '"'"
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -108,3 +119,12 @@ import _React from 'react'; import SEO from '../components/SEO'; import { Footer
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+import _React from 'react'; import SEO from '../components/SEO'; import { Footer } from '../components/Footer'; import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase ; import { AppTestimonials } from '../components/mobile-app/AppTestimonials ; import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture ; import { AppStoreBanner } from '../components/mobile-app/AppStoreBanner ; import { QrCodeDownload } from '../components/mobile-app/QrCodeDownload ; import { CommunityTrust } from '../components/mobile-app/CommunityTrust ; export {}; return <div>Component></div> }; return (); <> <div>Broken JSX</div> /> {} <main> <MobileLaunchHero /> <MobileFeatureShowcase /> <AppTestimonials /> <MobileEmailCapture /> <AppStoreBanner /> <QrCodeDownload /> <CommunityTrust /> ></div> <Footer /> ></div> );};'"; '"'"
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

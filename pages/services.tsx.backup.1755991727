@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -21,6 +22,9 @@ import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -36,8 +40,12 @@ export default function ServicesPage() {
   }, []);
 
   // Filter and sort services
+<<<<<<< HEAD
   const filteredServices = useMemo(() => {
     let filtered = enhancedRealMicroSaasServices;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     // Apply search filter
     if (searchTerm) {
@@ -323,7 +331,11 @@ export default function ServicesPage() {
   };
 
   return (
+<<<<<<< HEAD
     <QuantumNeuralBackground variant="neural" intensity="medium">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="min-h-screen">
         <Head>
           <title>Complete Services Portfolio | Zion Tech Group - AI, Quantum, Blockchain & More</title>
@@ -562,6 +574,7 @@ export default function ServicesPage() {
 
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
 
+<<<<<<< HEAD
                   {/* Features Preview */}
                   <div className="mb-4">
                     <div className="text-sm text-gray-400 mb-2">Key Features:</div>
@@ -579,6 +592,9 @@ export default function ServicesPage() {
                           +{service.features.length - 3} more
                         </span>
                       )}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </div>
                   </div>
 
@@ -733,10 +749,14 @@ export default function ServicesPage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </QuantumNeuralBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -755,4 +775,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

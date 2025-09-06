@@ -7,6 +7,7 @@ import {
   ShieldCheck, Star, Users, Globe, Target
 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 import UltraFuturisticNavigation from '../components/layout/UltraFuturisticNavigation';
@@ -16,6 +17,9 @@ import { motion } from 'framer-motion';
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const heroStats = [
@@ -294,8 +298,12 @@ export default function HomePage() {
     },
   ];
 
+<<<<<<< HEAD
   // Get popular services for showcase
   const popularServices = enhancedMicroSaasServices.filter(service => service.popular).slice(0, 6);
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <EnhancedFuturisticBackground>
@@ -485,6 +493,7 @@ export default function HomePage() {
         ]}
       />
 
+<<<<<<< HEAD
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -493,6 +502,9 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">

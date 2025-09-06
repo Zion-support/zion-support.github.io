@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
@@ -57,6 +58,9 @@ export type ReferralStatus = 'pending' | 'completed' | 'expired';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface ReferralCode {
 
+=======
+export interface ReferralCode {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface ReferralCode {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -66,6 +70,7 @@ export interface ReferralCode {;
 <<<<<<< HEAD
   created_at: string;
   updated_at: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -95,8 +100,18 @@ export interface Referral {
 
 export interface Referral {;
 export interface Referral {
+=======
+}
+
 
 export interface Referral {;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+export interface Referral {};
+export interface Referral {;
+<<<<<<< HEAD
 export interface Referral {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +121,9 @@ export interface Referral {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface Referral {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -144,6 +162,7 @@ export interface ReferralReward {
 export interface ReferralReward {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -176,9 +195,18 @@ export interface ReferralReward {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  reward_issued: boolean;
+  reward_issued_at: string | null;
+}
+export interface ReferralReward {};
+export interface ReferralReward {;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   user_id: string;
-  referral_id: string;
+  referral_id: string;"
   reward_type: "credit" | "visibility";
   amount: number | null;
 <<<<<<< HEAD
@@ -200,14 +228,8 @@ export interface ReferralStats {;
 
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  created_at: string
-  expires_at: string | null
-}
-export interface ReferralStats {
 
+<<<<<<< HEAD
 export interface ReferralStats {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -220,11 +242,16 @@ export interface ReferralStats {;
 export interface ReferralStats {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   totalReferrals: number;
   pendingReferrals: number;
 <<<<<<< HEAD
   completedReferrals: number
 
+<<<<<<< HEAD
   totalRewards: number
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -271,6 +298,10 @@ export interface ReferralReward {;
   created_at: string,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   created_at: string,
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   expires_at: string | null;
 =======
   completedReferrals: number;
@@ -281,6 +312,10 @@ export interface ReferralReward {;
   totalRewards: number  expires_at: string | null;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 export interface ReferralStats {;
   totalReferrals: number,;
@@ -292,15 +327,13 @@ export interface ReferralStats {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -309,3 +342,7 @@ export interface ReferralStats {;
 =======
 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

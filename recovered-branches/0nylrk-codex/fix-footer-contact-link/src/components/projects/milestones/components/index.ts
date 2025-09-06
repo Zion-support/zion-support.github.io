@@ -1,8 +1,9 @@
-export { MilestoneActivities } from "./MilestoneActivities";
-export { MilestoneManager } from "./MilestoneManager";
-export { MilestoneCreator } from "./MilestoneCreator";
-export { ProjectActions } from "./ProjectActions";
+export { MilestoneActivities } from "./MilestoneActivities";"
+export { MilestoneManager } from "./MilestoneManager";"
+export { MilestoneCreator } from "./MilestoneCreator";"
+export { ProjectActions } from "./ProjectActions";"
 export { ProjectHeader } from "./ProjectHeader";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,3 +27,6 @@ export { ProjectHeader } from './ProjectHeader';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

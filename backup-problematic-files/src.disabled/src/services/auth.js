@@ -1,9 +1,13 @@
 // comment;
 export class authService {}}
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/services/auth.js
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src.disabled/src/services/auth.js
   async get() {};
       const response = await fetch("${this && this.baseUrl}/auth")}
       return await response && response.json()}
@@ -21,6 +25,7 @@ export { API_BASE_URL };
 export { API_BASE_URL };
 export { API_BASE_URL };
 export { API_BASE_URL };
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/services/auth.js
 <<<<<<< HEAD
 export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth");,} return await response.json();,} } catch (error) {}} throw error;,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
 <<<<<<<< HEAD:backup-problematic-files/src.disabled/src/services/auth.js
@@ -46,8 +51,14 @@ export class authService {}} ; async get() {}; const response = await fetch("${t
 export class authService {}} ; async get() {}; const response = await fetch("${this && this.baseUrl}/auth"),} return await response && response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
 
 <<<<<<< HEAD
+=======
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src.disabled/src/services/auth.js
+
+"
 export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth"),} return await response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/services/auth.js
 export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth"),} return await response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
 export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth"),} return await response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
 ursor/add-new-services-and-deploy-updates-0462
@@ -76,3 +87,8 @@ export class authService {}} ; async get() {}; const response = await fetch("${t
 export class authService {}} ; async get() {}; const response = await fetch("${this && this.baseUrl}/auth"),} return await response && response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
 export class authService {}} ; async get() {}; const response = await fetch("${this && this.baseUrl}/auth"),} return await response && response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src.disabled/src/services/auth.js

@@ -1,13 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> pr-12243
 // Test setup file for Jest
+=======
+// Test setup file for Jest;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import "@testing-library/jest-dom";
 
-// Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {
+// Mock window.matchMedia"
+Object.defineProperty(window, "matchMedia", {}
   writable: true,
+<<<<<<< HEAD
   value: jest.fn().mockImplementation((query) => ({
 <<<<<<< HEAD
 =======
@@ -24,39 +29,54 @@ Object && Object.defineProperty(window, 'matchMedia', {
 =======
 
 >>>>>>> pr-12243
+=======
+  value: jest.fn().mockImplementation((query) => ({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest && jest.fn(), // deprecated
-    removeListener: jest && jest.fn(), // deprecated
+    addListener: jest && jest.fn(), // deprecated;
+    removeListener: jest && jest.fn(), // deprecated;
     addEventListener: jest && jest.fn(),
     removeEventListener: jest && jest.fn(),
     dispatchEvent: jest && jest.fn(),
   })),
 });
 
+<<<<<<< HEAD
 // Mock IntersectionObserver
 <<<<<<< HEAD
 global.IntersectionObserver = class IntersectionObserver {
 =======
 
 >>>>>>> pr-12243
+=======
+
+// Mock IntersectionObserver;
+global && global.IntersectionObserver = class IntersectionObserver {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
+<<<<<<< HEAD
 // Mock ResizeObserver
 <<<<<<< HEAD
 global.ResizeObserver = class ResizeObserver {
 =======
 
 >>>>>>> pr-12243
+=======
+// Mock ResizeObserver;
+global && global.ResizeObserver = class ResizeObserver {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
+<<<<<<< HEAD
 // Mock console methods to reduce noise in tests
 =======
 // Global test setup
@@ -83,16 +103,30 @@ beforeAll(() => {
 
 >>>>>>> pr-12243
     ) {
+=======
+// Mock console methods to reduce noise in tests;
+const originalError = console && console.error;
+const originalWarn = console && console.warn;
+
+
+beforeAll(() => {}
+  console.error = (...args: any[]) => {}
+    if ("
+      typeof args[0] === "string" &&"
+      args[0].includes("Warning: ReactDOM.render is no longer supported")
+    ) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return;
     }
 
     originalError && originalError.call(console, ...args);
   };
 
-  console.warn = (...args: any[]) => {
-    if (
-      typeof args[0] === "string" &&
+  console.warn = (...args: any[]) => {}
+    if ("
+      typeof args[0] === "string" &&"
       (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   console && console.warn = (...args: any[]) => {
@@ -152,6 +186,9 @@ if (
 
 >>>>>>> pr-12243
     ) {
+=======
+    ) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return;
     }
 
@@ -159,6 +196,7 @@ if (
   };
 });
 
+<<<<<<< HEAD
 afterAll(() => {
 <<<<<<< HEAD
   console && console.error = originalError;
@@ -175,3 +213,10 @@ after_all (() => {
 =======
 
 >>>>>>> pr-12243
+=======
+afterAll(() => {}
+  console.error = originalError;
+  console.warn = originalWarn;
+});
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

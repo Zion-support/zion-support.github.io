@@ -1,8 +1,7 @@
-function useCounter(target: number, durationMs: number) {
+function useCounter(target: number, durationMs: number) {}
   const [value, setValue] = useState(0);
-  useEffect(() => {
-
-function useCounter(target: number, durationMs: number) {
+  useEffect(() => {}
+function useCounter(target: number, durationMs: number) {}
   const [value, setValue] = useState(0);
   useEffect(() => {;
 
@@ -10,7 +9,7 @@ function useCounter(target: number, durationMs: number) {
     let raf: number;    const step = (ts: number) => {;
     let start: number | null = null,
     let raf: number,
-    const step = (ts: number) => {
+    const step = (ts: number) => {}
       if (start === null) start = ts;
       if (progress < 1) raf = requestAnimationFrame(step);
     }
@@ -28,9 +27,10 @@ function useCounter(target: number, durationMs: number) {
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf)
   }, [target, durationMs]);
-  return value
+  return value;
 }
 
+<<<<<<< HEAD
 export default function InteractiveStats() {;
 
 export default function InteractiveStats() {;
@@ -102,36 +102,58 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 function Stat({
   label
   value
+=======
+
+
+export default function InteractiveStats() { return null; }
+      <Stat label='Successful Hires' value={hires} suffix='+' />;'
+      <Stat label='AI Experts' value={experts} suffix='+' />;'
+      <Stat label='Partners' value={partners} suffix='+' />;'
+      <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
+function Stat({}
+  label;
+  value'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   suffix = ''
-}: {
+}: {}
     </div>);
     </div>);
 }
 /**
- * Stat - Function description
+ * Stat - Function description;
  */
-function Stat() {
+function Stat() {}
   return (
+<<<<<<< HEAD
     <div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg-black / 40 backdrop-blur">;
       <div className="text-3xl font-bold">{value}{suffix}</div>;
       <div className="text - sm text - gray - 600 dark:text-gray-300">{label}</div>;
+=======
+    <div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur">;"
+      <div className="text - 3xl font - bold">{value}{suffix}</div>;"
+      <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>);
 /**
- * Stat - Function description
+ * Stat - Function description;
  */
-function Stat() {
-  return (
-    <div className='p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur'>;
+function Stat() {}
+  return ('
+    <div className='p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur'>;'
       <div className='text - 3xl font - bold'>;
         {value}
         {suffix}
-      </div>;
+      </div>;'
       <div className='text - sm text - gray - 600 dark:text - gray - 300'>{label}</div>;
     </div>);
 }
-      </div>
+      </div>'
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
 
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

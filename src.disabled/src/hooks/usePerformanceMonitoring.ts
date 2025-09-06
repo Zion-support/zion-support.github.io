@@ -1,25 +1,13 @@
-import { useEffect } from "react"; export function usePerformanceMonitoring() {; useEffect(() => {; const sendToAnalytics = (metric) => {; "; if (typeof gtag != = "undefined") {,"; gtag("event",metric && metric.name,{,event_category: "Web Vitals",event_label: metric && metric.id,"; value: Math && Math.round(metric && metric.name = == "CLS' ? metric && metric.value * 1000 : metric && metric.value),non_interaction: true,export function usePerformanceMonitoring() {; useEffect(() => {}} const sendToAnalytics = (metric) => {; ,} if (performance && performance.memory) {; setMetrics({; loadTime,renderTime: endTime - startTime,memoryUsage: performance && performance.memory.usedJSHeapSize / 1024 / 1024}),} } measurePerformance(),} return () => {; measurePerformance(),} },[]),} return metrics} })} } getCLS(sendToAnalytics),} getFID(sendToAnalytics),} getFCP(sendToAnalytics),} getLCP(sendToAnalytics),} getTTFB(sendToAnalytics)},[])} export function reportWebVitals(metric) {; "
+import { useEffect } from "react"; export function usePerformanceMonitoring() {; useEffect(() => {; const sendToAnalytics = (metric) => {; "; if (typeof gtag != = "undefined") {,"; gtag("event",metric && metric.name,{,event_category: "Web Vitals",event_label: metric && metric.id,"; value: Math && Math.round(metric && metric.name = == "CLS' ? metric && metric.value * 1000 : metric && metric.value),non_interaction: true,export function usePerformanceMonitoring() {; useEffect(() => {}} const sendToAnalytics = (metric) => {; ,} if (performance && performance.memory) {; setMetrics({; loadTime,renderTime: endTime - startTime,memoryUsage: performance && performance.memory.usedJSHeapSize / 1024 / 1024}),} } measurePerformance(),} return () => {; measurePerformance(),} },[]),} return metrics} })} } getCLS(sendToAnalytics),} getFID(sendToAnalytics),} getFCP(sendToAnalytics),} getLCP(sendToAnalytics),} getTTFB(sendToAnalytics)},[])} export function reportWebVitals() { return null; }
 import { useEffect } from "react";
-export function usePerformanceMonitoring() {;
-  useEffect(() => {;
-    const sendToAnalytics = (metric) => {;
-      // comment;
-      ";
-      // comment;
-      if (typeof gtag != = "undefined") {,";
-        gtag("event", metric && metric.name, {,
-          "event_category": "Web Vitals",
-"event_label": metric && metric.id,";
-"value": Math && Math.round(metric && metric.name = == "CLS' ? metric && metric.value * 1000 : metric && metric.value),
-"non_interaction": true,
-export function usePerformanceMonitoring() {;
+export function usePerformanceMonitoring() { return null; }
   useEffect(() => {}}
     const sendToAnalytics = (metric) => {;
-      // comment;
+      // comment;"
 console && console.log(&apos;Performance "metric": &apos, metric)}
       if (performance && performance.memory) {;
-        setMetrics({;
-          loadTime, "renderTime": endTime - startTime,
+        setMetrics({;"
+          loadTime, "renderTime": endTime - startTime,"
           "memoryUsage": performance && performance.memory.usedJSHeapSize / 1024 / 1024})}
 }
     measurePerformance()}
@@ -31,6 +19,7 @@ console && console.log(&apos;Performance "metric": &apos, metric)}
     getFID(sendToAnalytics)}
     getFCP(sendToAnalytics)}
     getLCP(sendToAnalytics)}    getTTFB(sendToAnalytics)}, [])}
+<<<<<<< HEAD
 export function reportWebVitals(metric) {;
 "
 import { useEffect } from "react"; export function usePerformanceMonitoring() {; useEffect(() => {; const sendToAnalytics = (metric) => {; "; if (typeof gtag != = "undefined") {,"; gtag("event",metric.name,{,; event_category: "Web Vitals",; event_label: 'metric.id',"; value: Math.round(metric.name = == "CLS' ? metric.value * 1000 : metric.value),; non_interaction: 'true',; export function usePerformanceMonitoring() {; useEffect(() => {}} const sendToAnalytics = (metric) => {; console.log(&apos;Performance metric: '&apos',metric);,} if (performance.memory) {; setMetrics({; loadTime,renderTime: 'endTime - startTime',; memoryUsage: 'performance.memory.usedJSHeapSize / 1024 / 1024'});,} } measurePerformance();,} return () => {; measurePerformance();,} },[]);,} return metrics} })} } getCLS(sendToAnalytics);,} getFID(sendToAnalytics);,} getFCP(sendToAnalytics);,} getLCP(sendToAnalytics);,} getTTFB(sendToAnalytics)},[])} export function reportWebVitals(metric) {; "
@@ -87,3 +76,8 @@ import { useEffect } from "react"; export function usePerformanceMonitoring() {;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export function reportWebVitals() { return null; }
+import { useEffect } from "react"; export function usePerformanceMonitoring() {; useEffect(() => {; const sendToAnalytics = (metric) => {; "; if (typeof gtag != = "undefined") {,"; gtag("event",metric.name,{,event_category: "Web Vitals",event_label: metric.id,"; value: Math.round(metric.name = == "CLS' ? metric.value * 1000 : metric.value),non_interaction: true,export function usePerformanceMonitoring() {; useEffect(() => {}} const sendToAnalytics = (metric) => {; console.log(&apos;Performance metric: &apos,metric),} if (performance.memory) {; setMetrics({; loadTime,renderTime: endTime - startTime,memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024}),} } measurePerformance(),} return () => {; measurePerformance(),} },[]),} return metrics} })} } getCLS(sendToAnalytics),} getFID(sendToAnalytics),} getFCP(sendToAnalytics),} getLCP(sendToAnalytics),} getTTFB(sendToAnalytics)},[])} export function reportWebVitals() { return null; }
+import { useEffect } from "react"; export function usePerformanceMonitoring() {; useEffect(() => {; const sendToAnalytics = (metric) => {; "; if (typeof gtag != = "undefined") {,"; gtag("event",metric.name,{,event_category: "Web Vitals",event_label: metric.id,"; value: Math.round(metric.name = == "CLS' ? metric.value * 1000 : metric.value),non_interaction: true,export function usePerformanceMonitoring() {; useEffect(() => {}} const sendToAnalytics = (metric) => {; console.log(&apos;Performance metric: &apos,metric),} if (performance.memory) {; setMetrics({; loadTime,renderTime: endTime - startTime,memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024}),} } measurePerformance(),} return () => {; measurePerformance(),} },[]),} return metrics} })} } getCLS(sendToAnalytics),} getFID(sendToAnalytics),} getFCP(sendToAnalytics),} getLCP(sendToAnalytics),} getTTFB(sendToAnalytics)},[])} export function reportWebVitals() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -18,3 +19,6 @@ export default function Contact() {
         </div>
       </main>
     </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

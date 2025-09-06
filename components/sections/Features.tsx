@@ -1,4 +1,4 @@
-import Card from '../ui/Card';
+import Card from '../ui/Card';'
 import { Zap } from 'lucide-react';
 
 
@@ -6,30 +6,30 @@ interface Feature {
 origin/cursor/automate-test-improve-and-merge-code-2533
   icon: React.ReactNode;
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {'
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
-import React from 'react';
-import Card from '../ui/Card';
+}'
+import React from 'react';'
+import Card from '../ui/Card';'
 import { Zap } from 'lucide-react';
 
   title: string;
@@ -38,19 +38,19 @@ import { Zap } from 'lucide-react';
   gradient: string;
 
   delay?: number;
-  return (
-    <section className='py-24 bg-black relative overflow-hidden'>;
-      <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
+  return ('
+    <section className='py-24 bg-black relative overflow-hidden'>;'
+      <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;'
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
-        {/* Section Header */}
-        <div className='text-center mb-20 animate-fade-in'>;
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>;
+        {/* Section Header */}'
+        <div className='text-center mb-20 animate-fade-in'>;'
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>;'
             <Zap className='w-4 h-4 mr-2' />;
             Platform Features;
-          </div>;
+          </div>;'
           <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
             {title}
-          </h2>;
+          </h2>;'
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
   delay?: number
 }
@@ -69,7 +69,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
           {features && features.map((feature, index) => (;
-            <Card
+            <Card;
               key={index}
 };
 
@@ -89,6 +89,7 @@ export default Features);
 ;
 export default Features;
 ;
+<<<<<<< HEAD
 className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
               style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
             >
@@ -116,3 +117,6 @@ className='text-center group bg-gray-900/50 border border-gray-800 hover:border-
 
 export default Features;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -7,6 +7,7 @@
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -17,6 +18,13 @@ import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
 import {toast} from "sonner";
 import {useAuth} from "./useAuth";
+=======
+import {useState, useEffect} from "react";"
+import {supabase} from "@/integrations/supabase/client";"
+import {Job, JobStatus} from "@/types/jobs";"
+import {toast} from "sonner";"
+import {useAuth} from "./useAuth";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {createJob, updateJob, getJobById} from "@/services/jobService";
 <<<<<<< HEAD
 export const useJobs = (userId?: string, status?: JobStatus) => {
@@ -28,17 +36,19 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export const useJobs = (userId?: string, status?: JobStatus) => {;
+
+
 
 
 <<<<<<< HEAD
-=======
-export const useJobs = (userId?: string, status?: JobStatus) => {;
-
-
 export const useJobs = (userId?: string, status?: JobStatus) => {
 export const useJobs = (userId?: string, status?: JobStatus) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -49,10 +59,14 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,16 +95,25 @@ import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
 import { toast } from "sonner",
 import { useAuth } from "./useAuth",
+=======
+
+
+"
+import { useState, useEffect } from "react","
+import { supabase } from "@/integrations/supabase/client","
+import { Job, JobStatus } from "@/types/jobs","
+import { toast } from "sonner","
+import { useAuth } from "./useAuth","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { createJob, updateJob, getJobById } from "@/services/jobService",
 
-export const useJobs = (userId?: string, status?: JobStatus) => {
+export const useJobs = (userId?: string, status?: JobStatus) => {}
   const { user } = useAuth(),
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   
   const clientId = userId || user?.id,
 
@@ -122,6 +145,8 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   const clientId = userId || user?.id,
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -130,6 +155,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       setIsLoading(true),
       
 
+<<<<<<< HEAD
   
   const clientId = userId || user?.id,
   const fetchJobs = async () => {
@@ -156,16 +182,28 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import { useState, useEffect } from './react';
-import { supabase } from '@/integrations / supabase / client';
-import { Job, JobStatus } from '@/types / jobs';
-import { toast } from './sonner';
-import { use_auth } from './use_auth';
+
+
+  const fetchJobs = async () => {}
+    if (!clientId) {};
+      setIsLoading(false),;
+      return;
+    }
+    try {}
+      let query = supabase"
+        .from("jobs")"
+        .select("*")"
+        .eq("client_id", clientId)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+import { useState, useEffect } from './react';'
+import { supabase } from '@/integrations / supabase / client';'
+import { Job, JobStatus } from '@/types / jobs';'
+import { toast } from './sonner';'
+import { use_auth } from './use_auth';'
 import { create_job, update_job, getJobById } from '@/services / job_service';
-export const use_jobs = (user_id?: string, status?: JobStatus) =>: any {
+export const use_jobs = (user_id?: string, status?: JobStatus) =>: any {};
   const { user } = use_auth ();
   const [jobs, set_jobs] = useState < Job[]>([]);
   const [is_loading, setIsLoading] = useState (true);
@@ -173,61 +211,52 @@ export const use_jobs = (user_id?: string, status?: JobStatus) =>: any {
 ;
   const client_id = user_id || user?.id;
 ;
-  const fetch_jobs = async () => {
-    // Check condition
-if ( {) {
-  $2
+  const fetch_jobs = async () => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       setIsLoading (false);
       return;
     }
-    try {
+    try {}
       setIsLoading (true);
 ;
-      let query = supabase;
-        .from ("jobs");
-        .select ("*");
-        .eq ("client_id", client_id);
+      let query = supabase;"
+        .from ("jobs");"
+        .select ("*");"
+        .eq ("client_id", client_id);"
         .order ("created_at", { ascending: false });
 ;
-      // Check condition
-if ( {) {
-  $2
-}
+      // Check condition;
+if ( {) {}
+  $2;
+}"
         query = query.eq ("status", status);
       }
       const { data, error: fetch_error } = await query;
 ;
-      // Check condition
-if (throw fetch_error) {
-  $2
+      // Check condition;
+if (throw fetch_error) {}
+  $2;
 }
       set_jobs (data as Job[]);
       set_error (null);
-    } catch (err: any) {
-      console.error ("Error fetching jobs:", err);
-      set_error ("Failed to fetch jobs. Please try again.");
+    } catch (err: any) {"
+      console.error ("Error fetching jobs:", err);"
+      set_error ("Failed to fetch jobs. Please try again.");"
       toast.error ("Failed to fetch jobs");
 
-    } finally {
+    } finally {}
       setIsLoading (false);
     }
   }
 
 
-<<<<<<< HEAD
-=======
-        .order("created_at", { ascending: false });
-      if (status) {
-        query = query.eq("status", status)
-      }
-      const { data, error: fetchError } = await query;
-      if (fetchError) throw fetchError;
-      setJobs(data as Job[]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"
         .order("created_at", { ascending: false }),
       
-      if (status) {
+      if (status) {"
         query = query.eq("status", status)
       }
       
@@ -236,30 +265,35 @@ if (throw fetch_error) {
       if (fetchError) throw fetchError,
       
       setJobs(data as Job[]),
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setError(null)
-    } catch (err: any) {
-      console.error("Error fetching jobs:", err),
-      setError("Failed to fetch jobs. Please try again."),
+    } catch (err: any) {"
+      console.error("Error fetching jobs:", err),"
+      setError("Failed to fetch jobs. Please try again."),"
       toast.error("Failed to fetch jobs")
-    } finally {
+    } finally {}
       setIsLoading(false)
     }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
   
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -298,10 +332,23 @@ if (throw fetch_error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       
+=======
+
+
+
+  const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {}
+    try {}
+      const { error: updateError } = await supabase"
+        .from("jobs")
+        .update({ status: newStatus })"
+        .eq("id", jobId)"
+        .eq("client_id", clientId), // Ensure user can only update their own jobs;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       if (updateError) throw updateError,
       
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -311,24 +358,32 @@ if (throw fetch_error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       // Update local state
       setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
+=======
+
+
+      // Update local state;
+      setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       toast && toast.success("Job status updated successfully");
-      return true
-    } catch (err: any) {
-      console && console.error("Error updating job status:", err);
+      return true;
+    } catch (err: any) {"
+      console && console.error("Error updating job status:", err);"
       toast && toast.error("Failed to update job status");
+<<<<<<< HEAD
       return false
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      return false;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
-<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
 
-  },
-  
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -369,10 +424,20 @@ if (throw fetch_error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         
+=======
+  const deleteJob = async (jobId: string) => {}
+    try {}
+      const { error: deleteError } = await supabase"
+        .from("jobs")
+        .delete()"
+        .eq("id", jobId)"
+        .eq("client_id", clientId), // Ensure user can only delete their own jobs;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       if (deleteError) throw deleteError,
       
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -384,11 +449,18 @@ if (throw fetch_error) {
     }      // Update local state
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
+=======
+
+
+      // Update local state;
+      setJobs(jobs && jobs.filter(job => job && job.id !== jobId));"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       toast && toast.success("Job deleted successfully");
-      return true
-    } catch (err: any) {
-      console && console.error("Error deleting job:", err);
+      return true;
+    } catch (err: any) {"
+      console && console.error("Error deleting job:", err);"
       toast && toast.error("Failed to delete job");
+<<<<<<< HEAD
       return false
 <<<<<<< HEAD
 
@@ -400,9 +472,12 @@ if (throw fetch_error) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+      return false;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
-  return {
+  return {}
     jobs;
     is_loading;
     error;
@@ -417,41 +492,8 @@ if (throw fetch_error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      if (deleteError) throw deleteError;
-        
-      if (deleteError) throw deleteError,
-      
-      // Update local state
-      setJobs(jobs.filter(job => job.id !== jobId)),
-      toast.success("Job deleted successfully"),
-      return true
-    } catch (err: any) {
-      console.error("Error deleting job:", err),
-      toast.error("Failed to delete job"),
-      return false
-    }
-  }
-  // Fetch jobs when component mounts or dependencies change
-  useEffect(() => {
-    fetchJobs()
-  }, [clientId, status]);
-  return {
-    jobs;
-    isLoading;
-    error;
-    refetch: fetchJobs;
-    updateJobStatus;
-    deleteJob;
-    createJob;
-    updateJob
-    getJobById
-  }
-}
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -465,6 +507,15 @@ import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
 import { toast } from "sonner",;
 import { useAuth } from "./useAuth",;
+=======
+
+"
+import { useState, useEffect } from "react",;"
+import { supabase } from "@/integrations/supabase/client",;"
+import { Job, JobStatus } from "@/types/jobs",;"
+import { toast } from "sonner",;"
+import { useAuth } from "./useAuth",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { createJob, updateJob, getJobById } from "@/services/jobService",;
 export const useJobs = (userId?: string, status?: JobStatus) => {;
   const { user } = useAuth(),;
@@ -480,12 +531,12 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 ;
     try {;
       setIsLoading(true),;
-      let query = supabase;
-        .from("jobs");
-        .select("*");
-        .eq("client_id", clientId);
+      let query = supabase;"
+        .from("jobs");"
+        .select("*");"
+        .eq("client_id", clientId);"
         .order("created_at", { ascending: false }),;
-      if (status) {;
+      if (status) {;"
         query = query.eq("status", status);
       }
 ;
@@ -493,9 +544,9 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
       if (fetchError) throw fetchError,;
       setJobs(data as Job[]),;
       setError(null);
-    } catch (err: any) {;
-      console.error("Error fetching jobs:", err),;
-      setError("Failed to fetch jobs. Please try again."),;
+    } catch (err: any) {;"
+      console.error("Error fetching jobs:", err),;"
+      setError("Failed to fetch jobs. Please try again."),;"
       toast.error("Failed to fetch jobs");
     } finally {;
       setIsLoading(false);
@@ -503,36 +554,36 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   },;
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {;
     try {;
-      const { error: updateError } = await supabase;
+      const { error: updateError } = await supabase;"
         .from("jobs");
-        .update({ status: newStatus });
-        .eq("id", jobId);
+        .update({ status: newStatus });"
+        .eq("id", jobId);"
         .eq("client_id", clientId), // Ensure user can only update their own jobs;
       if (updateError) throw updateError,;
       // Update local state;
-      setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job)),;
+      setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job)),;"
       toast.success("Job status updated successfully"),;
       return true;
-    } catch (err: any) {;
-      console.error("Error updating job status:", err),;
+    } catch (err: any) {;"
+      console.error("Error updating job status:", err),;"
       toast.error("Failed to update job status"),;
       return false;
     }
   },;
   const deleteJob = async (jobId: string) => {;
     try {;
-      const { error: deleteError } = await supabase;
+      const { error: deleteError } = await supabase;"
         .from("jobs");
-        .delete();
-        .eq("id", jobId);
+        .delete();"
+        .eq("id", jobId);"
         .eq("client_id", clientId), // Ensure user can only delete their own jobs;
       if (deleteError) throw deleteError,;
       // Update local state;
-      setJobs(jobs.filter(job => job.id !== jobId)),;
+      setJobs(jobs.filter(job => job.id !== jobId)),;"
       toast.success("Job deleted successfully"),;
       return true;
-    } catch (err: any) {;
-      console.error("Error deleting job:", err),;
+    } catch (err: any) {;"
+      console.error("Error deleting job:", err),;"
       toast.error("Failed to delete job"),;
       return false;
     }
@@ -551,6 +602,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     createJob,;
     updateJob;
     getJobById;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -589,3 +641,11 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  }
+};
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

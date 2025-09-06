@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,30 +32,35 @@ import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; con
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from \'react\';\''\'; import { Helmet } from \'react-helmet-async\'; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>\"; <div className=\"min-h-screen bg-gray-50 py-12\"> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\"> <div className=\"text-center mb-12\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-4\"> Developer Portal\"; </h1> <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>\"; <div className=\"bg-white rounded-lg shadow-lg p-8\"> <p className=\"text-gray-600 text-center\">\'; Developer portal coming soon. We\'re building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };
+=======
+
+import React from \'react\';\''\'; import { Helmet } from \'react-helmet-async\'; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>\"; <div className=\"min-h-screen bg-gray-50 py-12\"> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\"> <div className=\"text-center mb-12\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-4\"> Developer Portal\"; </h1> <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>\"; <div className=\"bg-white rounded-lg shadow-lg p-8\"> <p className=\"text-gray-600 text-center\">\'; Developer portal coming soon. We\'re building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const React from "react";"""; import { Helmet } from "react-helmet-async"; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">"; Developer portal coming soon. We"re building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };"""
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {'
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
+}'"
 import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; Developer portal coming soon. We're building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -118,3 +124,23 @@ import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; con
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+import React from \'react\';\''\'; import { Helmet } from \'react-helmet-async\'; const Developer = () => {} return <div>Component></div> }; return (); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>\"; <div className=\"min-h-screen bg-gray-50 py-12\"> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\"> <div className=\"text-center mb-12\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-4\"> Developer Portal\"; </h1> <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>\"; <div className=\"bg-white rounded-lg shadow-lg p-8\"> <p className=\"text-gray-600 text-center\">\'; Developer portal coming soon. We\'re building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };"
+const React from "react";"""; import { Helmet } from "react-helmet-async"; const Developer = () => {} return <div>Component></div> }; return (); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">"; Developer portal coming soon. We"re building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };"""'"
+import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const Developer = () => {} return <div>Component></div> }; return (); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; Developer portal coming soon. We're building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };
+
+
+
+'"
+import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; Developer portal coming soon. We're building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };
+'"
+import React from \'react\';\''\'; import { Helmet } from \'react-helmet-async\'; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>\"; <div className=\"min-h-screen bg-gray-50 py-12\"> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\"> <div className=\"text-center mb-12\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-4\"> Developer Portal\"; </h1> <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>\"; <div className=\"bg-white rounded-lg shadow-lg p-8\"> <p className=\"text-gray-600 text-center\">\'; Developer portal coming soon. We\'re building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };"
+const React from "react";"""; import { Helmet } from "react-helmet-async"; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">"; Developer portal coming soon. We"re building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };"""'"
+import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const Developer = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Developer Portal - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Developer Portal"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tools,SDKs,and resources for developers building with Zion Tech; Group services.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; Developer portal coming soon. We're building comprehensive; development resources.; ></div> ></div> ></div> ></div> </>)}; export default Developer; export { Developer }; export { Developer }; export { Developer }; export { Developer }; export { Developer };
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

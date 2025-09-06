@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<<< HEAD:pages.disabled_full/services/it/platform-engineering.tsx
@@ -19,10 +20,12 @@
 =======
 <<<<<<< HEAD
 =======
-
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -51,18 +54,20 @@ interface PlatformengineeringProps {
 =======
 <<<<<<< HEAD
 =======
+=======
+export default function PlatformEngineering() {}; return null} } ; function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) {}; return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {}; return null} } ;'"
+module.exports = default function PlatformEngineering() { return; }; return null} } ; function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) {}; return null} <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() { return; }; return null} } ;'"'"'
+import React from 'react';
+interface PlatformengineeringProps {}
+  // Add props here as needed;
+<
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-export default function Platformengineering({ }: PlatformengineeringProps) {
-  return (
-    <div>
-      <h1>Platformengineering</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -94,3 +99,7 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
 =======
 =>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

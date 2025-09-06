@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -513,11 +514,15 @@ const Solutions: NextPage = () => {
               </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-79f3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -607,11 +612,15 @@ const Solutions: NextPage = () => {
                         {tech}
 >>>>>>> origin/cursor/website-audit-and-enhancement-79f3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       </span>
                     ))}
                   </div>
                 </div>
                 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -629,11 +638,15 @@ const Solutions: NextPage = () => {
               </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-79f3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -938,3 +951,6 @@ const Solutions: NextPage = () => {
 export default Solutions;
 >>>>>>> origin/cursor/website-audit-and-enhancement-79f3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

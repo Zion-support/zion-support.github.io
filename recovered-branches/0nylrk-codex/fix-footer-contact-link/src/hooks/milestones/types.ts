@@ -28,16 +28,17 @@ export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'complet
 ;
 =======
 import { supabase } from "@/integrations/supabase/client";
-export type MilestoneStatus =
-  | "pending"
-  | "in_progress"
-  | "submitted"
-  | "completed"
-  | "rejected"
-  | "paid"
+export type MilestoneStatus ="
+  | "pending""
+  | "in_progress""
+  | "submitted""
+  | "completed""
+  | "rejected""
+  | "paid"";
   | "approved";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import {supabase} from '@/integrations / supabase / client';
@@ -76,6 +77,16 @@ export interface Milestone {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface Milestone {};
+import {supabase} from '@/integrations/supabase/client';'
+export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
+
+export interface Milestone {;
+
+
+export interface Milestone {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   project_id: string;
   title: string;
@@ -112,6 +123,7 @@ export interface MilestoneActivity {
 export interface MilestoneActivity {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -146,6 +158,15 @@ export interface MilestoneActivity {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  created_by: string;
+  deliverables?: any[]
+}
+export interface MilestoneActivity {};
+export interface MilestoneActivity {;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   milestone_id: string;
   user_id: string;
@@ -154,6 +175,7 @@ export interface MilestoneActivity {
   new_status: string;
   comment?: string;
   created_at: string;
+<<<<<<< HEAD
   created_by_profile?: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,10 +235,14 @@ export interface MilestoneActivity {;
   }
 }
 =======
+=======
+  created_by_profile?: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     display_name: string;
     avatar_url?: string;
   };
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
   }
@@ -226,3 +252,6 @@ export interface MilestoneActivity {;
   }
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

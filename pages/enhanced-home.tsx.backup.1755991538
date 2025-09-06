@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function EnhancedHome() {
@@ -9,3 +10,6 @@ export default function EnhancedHome() {
     </div>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

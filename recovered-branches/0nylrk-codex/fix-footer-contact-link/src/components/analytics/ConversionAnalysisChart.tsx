@@ -11,14 +11,14 @@ import {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
-import {
+import {}
   Card,
   CardContent,
   CardDescription,
-  CardHeader,
+  CardHeader,;
   CardTitle,;
-
-} from "@/components/ui/card";
+"
+} from "@/components/ui/card";"
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 <<<<<<< HEAD
 =======
@@ -27,8 +27,12 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import {;
   Card,;
@@ -36,15 +40,19 @@ import {;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-
+"
 } from "@/components/ui/card";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {;
   data: Array<Record<string, any>>;
   timeRange: string;
-  onTimeRangeChange: (range: string) => void
+  onTimeRangeChange: (range: string) => void;
 }
 
 <<<<<<< HEAD
@@ -71,17 +79,11 @@ export function ConversionAnalysisChart(): any ({;
   onTimeRangeChange,;
 }: ConversionAnalysisProps) {;
   const dataKeys =;
-    data && data.length > 0;
+    data && data.length > 0;"
       ? Object && Object.keys(data[0]).filter((key) => key !== "date");
 
-<<<<<<< HEAD
-=======
-import React from './react';
-=======
-} from "@/components/ui/card";
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-interface ConversionAnalysisProps {;
 
+<<<<<<< HEAD
 import React from "react";
 import {
   Card
@@ -97,30 +99,40 @@ import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Card,
   CardContent,
   CardDescription,
   CardHeader,
+<<<<<<< HEAD
   CardTitle,
 } from '@/components / ui / card';
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';  CardTitle,;
 } from "@/components/ui/card";
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+=======
 
+;
+  CardTitle,;"
+} from "@/components/ui/card";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-interface ConversionAnalysisProps {
+"
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+interface ConversionAnalysisProps {}
   data: Array<Record<string, any>>;
   timeRange: string;
-  onTimeRangeChange: (range: string) => void
+  onTimeRangeChange: (range: string) => void;
 }
 
-export function ConversionAnalysisChart({
-  data
-  timeRange
-  onTimeRangeChange
-}: ConversionAnalysisProps) {
+export function ConversionAnalysisChart({};
+  data;
+  timeRange;
+  onTimeRangeChange;
+}: ConversionAnalysisProps) {}
   const dataKeys =
-    data && data.length > 0
+    data && data.length > 0"
       ? Object.keys(data[0]).filter((key) => key !== "date")
       : [];
 
@@ -130,18 +142,24 @@ export function ConversionAnalysisChart(): any ({;
   onTimeRangeChange,;
 }: ConversionAnalysisProps) {;
   const dataKeys =;
-    data && data.length > 0;
+    data && data.length > 0;"
       ? Object && Object.keys(data[0]).filter((key) => key !== "date");
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from './react';
-import {
+import {}
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle,';
+} from '@/components / ui / card';'
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -149,13 +167,15 @@ import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ConversionAnalysisProps {
+=======
+interface ConversionAnalysisProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   data: Array < Record < string, any>>;
   time_range: string;
   onTimeRangeChange: (range: string) => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 =======
@@ -245,6 +265,32 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+=======
+export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {}
+  const dataKeys = data && data.length > 0'
+    ? Object.keys(data[0]).filter(key => key !== 'date')
+    : [],
+
+
+
+
+  return (
+
+";
+    <Card className="bg - zion - blue - dark border - zion - blue - light">;
+      <CardHeader>;"
+        <CardTitle className="text - white text - lg">;
+          Conversion Analysis;
+        </CardTitle>;"
+        <CardDescription className="text - zion - slate - light">;
+
+
+
+
+"
+import React from "react",;"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
 interface ConversionAnalysisProps {;
   data: Array<Record<string any>>,;
@@ -252,6 +298,7 @@ interface ConversionAnalysisProps {;
   onTimeRangeChange: (range: string) => void;
 }
 ;
+<<<<<<< HEAD
 export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {;
   const dataKeys = data && data.length > 0;
     ? Object.keys(data[0]).filter(key => key !== 'date');
@@ -268,11 +315,15 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           data={data || []}
           dataKeys={dataKeys}
           type="bar"
+=======
+export function ConversionAnalysisChart() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,6 +333,9 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -293,22 +347,22 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 }
 =======
   );
-        <AnalyticsChart;
+        <AnalyticsChart;"
           title="";
           data={data || []}
-          data_keys={data_keys}
+          data_keys={data_keys}"
           type="bar";
           time_range={time_range}
           onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
     </Card>);
-export /**
- * ConversionAnalysisChart - Function description
+export /**;
+ * ConversionAnalysisChart - Function description;
  */
-function ConversionAnalysisChart() {
+function ConversionAnalysisChart() {}
   const data_keys =;
-    data && data.length > 0;
+    data && data.length > 0;"
       ? Object.keys (data[0]).filter ((key) => key !== "date");
       : [];
 ;
@@ -318,6 +372,7 @@ function ConversionAnalysisChart() {
       </CardHeader>;
       <CardContent>;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         <AnalyticsChart;
@@ -352,3 +407,9 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

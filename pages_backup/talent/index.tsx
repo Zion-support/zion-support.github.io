@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -15,17 +16,30 @@ import {TrustBadge, MicroTestimonial} from '../../components / ui / Badges';
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-interface Talent {
-import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
-
-interface Talent {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+'
+import Head from 'next / head';'
+import {useMemo, useState} from 'react';'
+import Pagination from '../../components / ui / Pagination';'
+import {TrustBadge, MicroTestimonial} from '../../components / ui / Badges';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
+
+
+interface Talent {'
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 
 interface Talent {;
+
+
+
+
+
+interface Talent {}
+'
+import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
+
+interface Talent {;
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 interface Talent {
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 interface Talent {;
@@ -63,9 +77,13 @@ import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 
 interface Talent {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
   id: string;
   name: string;
-  title: string;
+  title: string;'
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +108,7 @@ interface Talent {;
 }
 =======
 
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,32 +184,36 @@ import Pagination from '../../components/ui/Pagination';
 =======
   testimonial?: { quote: string; author: string };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
 interface Talent {;
   id: string;
   name: string;
-  title: string;
+  title: string;'
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>,;
-  testimonial?: { quote: string, author: string   } catch (error) {
-    console.error("Error:", error);
+  testimonial?: { quote: string, author: string   } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
+const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({}
   id: String(i + 1),
-  name: `Talent ${i + 1}`,
-  title: 'Full-Stack Developer',
-  badges: (i % 3 === 0 ? ['Verified'] : i % 3 === 1 ? ['Pro'] : ['Top Rated']) as Talent['badges'],
+  name: `Talent ${i + 1}`,'
+  title: 'Full-Stack Developer','
+  badges: (i % 3 === 0 ? ['Verified'] : i % 3 === 1 ? ['Pro'] : ['Top Rated']) as Talent['badges'],'
   testimonial: i % 5 === 0 ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' } : undefined})),
-const TalentDirectory: NextPage = () => {
+const TalentDirectory: NextPage = () => {}
   const [page, setPage] = useState(1),
   const pageSize = 10,
   const total = mockTalent.length,
+<<<<<<< HEAD:pages_backup/talent/index.tsx
   const pageItems = useMemo(() => {
 <<<<<<< HEAD:pages/talent/index.tsx
 <<<<<<< HEAD
@@ -204,58 +227,54 @@ const TalentDirectory: NextPage = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  const pageItems = useMemo(() => {}
+    const start = (page - 1) * pageSize,
+    return mockTalent.slice(start, start + pageSize)
+  }, [page]),
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
   testimonial?: { quote: string; author: string }
-const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
-  id: String (i + 1),
-  name: `Talent ${i + 1}`,
+const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({}
+  id: String (i + 1),`
+  name: `Talent ${i + 1}`,'
   title: 'Full - Stack Developer',
-  badges: (i % 3 === 0;
+  badges: (i % 3 === 0;'
     ? ['Verified'];
-    : i % 3 === 1;
-      ? ['Pro'];
+    : i % 3 === 1;'
+      ? ['Pro'];'
       : ['Top Rated']) as Talent['badges'],
   testimonial:;
     i % 5 === 0;
-
+'
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
-      : undefined
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      : undefined;
   testimonial?: { quote: string; author: string };
 const mockTalent: Talent[] = Array && Array.from({ length: 47 }).map((_, i) => ({;
-  id: String(i + 1),;
-  name: `Talent ${i + 1}`,;
+  id: String(i + 1),;`
+  name: `Talent ${i + 1}`,;'
   title: 'Full-Stack Developer',;
-  badges: (i % 3 === 0;
+  badges: (i % 3 === 0;'
     ? ['Verified'];
-    : i % 3 === 1;
-      ? ['Pro'];
+    : i % 3 === 1;'
+      ? ['Pro'];'
       : ['Top Rated']) as Talent['badges'],;
   testimonial:;
-    i % 5 === 0;
+    i % 5 === 0;'
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
       : undefined,;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
 }));
 const TalentDirectory: NextPage = () => {;
 
   const [page, setPage] = useState(1);
   const pageSize = 10;
-=======
+
   return (
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
@@ -264,6 +283,9 @@ const TalentDirectory: NextPage = () => {;
   }, [page]),
   return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
 
         page={page}
         page_size={page_size}
@@ -271,6 +293,7 @@ const TalentDirectory: NextPage = () => {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -284,10 +307,18 @@ const TalentDirectory: NextPage = () => {;
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
     <div className="space-y-6 pb-16">
       <Head>
         <title>Talent - Zion</title>
       </Head>
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -301,11 +332,18 @@ const TalentDirectory: NextPage = () => {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
 
 
+
+
+
+"
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
-
+"
       <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -354,8 +392,14 @@ return mockTalent.slice(start, start + pageSize);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
 
+"
+      <h1 className="text-2xl font-semibold">Explore Talent</h1>
+"
       <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -376,68 +420,60 @@ return mockTalent.slice(start, start + pageSize);
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+        {pageItems.map((t) => ("
+          <article key={t.id} className="border rounded-md p-4 space-y-2">"
+            <div className="flex items-center justify-between">"
+              <h3 className="font-semibold">{t.name}</h3>"
+              <div className="flex gap-1">
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
                 {t.badges.map((b) => (
                   <TrustBadge key={b} type={b} />
 
-                ))  } catch (error) {
-    console.error("Error:", error);
+                ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
               </div>
-            </div>
+            </div>"
             <div className="text-sm opacity-80">{t.title}</div>
             {t.testimonial && (
     </div>
   )
 
 };
-<<<<<<< HEAD
+
+
 
 export default TalentDirectory;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD
-=======
 
-      <Pagination page={page} pageSize={pageSize} total={total} onChange={setPage} />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-export default TalentDirectory;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
         on_change={set_page}
       />;
     </div>);
 }
-<<<<<<< HEAD
-;
-export default TalentDirectory;
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
 
 export default TalentDirectory;
 
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 <<<<<<< HEAD
                 {t.badges.map((b) => (
                   <TrustBadge key={b} type={b} />
@@ -508,9 +544,11 @@ export default TalentDirectory;
     </div>);
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
 
-export default TalentDirectory;
 
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -526,15 +564,20 @@ export default TalentDirectory;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
               <MicroTestimonial quote={t.testimonial.quote} author={t.testimonial.author} />
-            )  } catch (error) {
-    console.error("Error:", error);
+            )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </article>;
-        ))  } catch (error) {
-    console.error("Error:", error);
+        ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -544,16 +587,18 @@ export default TalentDirectory;
   );
 },;
 export default TalentDirectory;
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/talent/index.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -572,3 +617,12 @@ export default TalentDirectory;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/talent/index.tsx

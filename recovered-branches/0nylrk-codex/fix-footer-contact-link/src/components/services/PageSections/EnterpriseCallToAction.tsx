@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -43,15 +44,18 @@ import { Button } from "@/components/ui/button",
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { Link } from "react-router-dom";
+=======
+import { Link } from "react-router-dom";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from "@/components/ui/button";
-export function EnterpriseCallToAction() {
-  return (
-    <div className="mt-12 text-center">
-      <Link to="/request-quote">
-        <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
-          Get Custom Enterprise Quote
+export function EnterpriseCallToAction() {}
+  return ("
+    <div className="mt-12 text-center">"
+      <Link to="/request-quote">"
+        <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
+          Get Custom Enterprise Quote;
         </Button>
-      </Link>
+      </Link>"
       <p className="mt-4 text-zion-slate-light">
         Need volume pricing or custom SLAs? Contact our enterprise sales team.
       </p>
@@ -104,10 +108,8 @@ export function EnterpriseCallToAction() {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 
+<<<<<<< HEAD
 =======
 import { Link  } from './react-router-dom';
 import { Button  } from '@/components / ui / button';
@@ -144,6 +146,28 @@ import { Button } from "@/components/ui/button",  return (
 }
 ;
 
+=======
+
+
+  )
+
+  )
+
+
+
+
+  );
+
+
+
+  );
+
+}
+;
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } <div className="mt-12 text-center"> <Link to="/request-quote"> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8"> mt-4 text-zion-slate-light" > Need volume pricing or custom SLAs? Contact our enterprise sales team. </p> </div> 
   );
 }
@@ -152,4 +176,9 @@ import { Button } from "@/components/ui/button",  return (
 
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

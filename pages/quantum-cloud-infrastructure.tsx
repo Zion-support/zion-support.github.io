@@ -2,16 +2,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
+<<<<<<< HEAD
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
               </div>
             </div>
           </div>
@@ -19,11 +19,9 @@
       </div>
     </Layout>
   )
+
+
 <<<<<<< HEAD
-
-}
-
-
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -32,10 +30,12 @@
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-import React from 'react';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -116,21 +116,24 @@ import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
-
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+
+
+  } catch (error) {}
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
 ;
 ;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -143,3 +146,10 @@ import Layout from '../components/layout/Layout';
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

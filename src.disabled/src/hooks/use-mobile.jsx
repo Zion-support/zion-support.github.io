@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,3 +101,15 @@ import React from \"react\"; import { useState,useEffect } from \"react\" export
 const React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("resize",checkIsMobile) return () => window.removeEventListener("resize",checkIsMobile)},[]) return isMobile}"; ); export default Component;""
 import _React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("resize",checkIsMobile) return () => window.removeEventListener("resize",checkIsMobile)},[]) return isMobile}"; ); export default Component;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import React from \"react\"; import { useState,useEffect } from \"react\" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener(\"resize\",checkIsMobile) return () => window.removeEventListener(\"resize\",checkIsMobile)},[]) return isMobile}\"; ); export default Component;"
+const React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("resize",checkIsMobile) return () => window.removeEventListener("resize",checkIsMobile)},[]) return isMobile}"; ); export default Component;"""
+import _React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("resize",checkIsMobile) return () => window.removeEventListener("resize",checkIsMobile)},[]) return isMobile}"; ); export default Component;
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

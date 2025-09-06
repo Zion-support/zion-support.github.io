@@ -94,6 +94,7 @@ export default function HomePage() {
   // Revolutionary services showcase
   const revolutionaryServices = [
     {
+<<<<<<< HEAD
       name: 'Quantum AI Cognitive Platform',
       description: 'Revolutionary quantum AI platform combining quantum computing with advanced cognitive AI for unprecedented problem-solving capabilities. First-to-market solution with 99.99% accuracy.',
       icon: <BrainIcon className="w-8 h-8" />,
@@ -394,6 +395,9 @@ export default function HomePage() {
       icon: <DollarSign className="w-8 h-8" />,
       count: ultimateEnhancedServices.filter(s => s.category.includes('Finance')).length,
       color: 'from-emerald-500 to-teal-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -722,6 +726,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* New Revolutionary Services */}
       <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -732,6 +737,9 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="text-gradient-cyan">New</span> Revolutionary Services
             </h2>

@@ -15,6 +15,7 @@ import Link from 'next/link';
 import { real2025Q4AugmentedBatch } from '../data/real-2025-q4-augmented-batch';
 import { real2029Q3Additions } from '../data/real-2029-q3-additions';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { validatedServices2025Q4 } from '../data/real-validated-2025-q4-additions';
 import { real2035Q2Additions } from '../data/real-2035-q2-additions';
 import { real2036ServiceExpansions } from '../data/real-2036-service-expansions';
@@ -29,6 +30,9 @@ import { newServices2026 } from '../data/2026-new-services';
 // Import existing service data
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-13fb
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
@@ -80,6 +84,7 @@ const allServices = [
   ...real2025Q4AugmentedBatch,
   ...real2029Q3Additions,
 <<<<<<< HEAD
+<<<<<<< HEAD
   ...validatedServices2025Q4,
   ...real2035Q2Additions,
   ...real2036ServiceExpansions
@@ -92,6 +97,9 @@ const allServices = [
   ...newServices2026
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-13fb
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ];
 
 const categories = [

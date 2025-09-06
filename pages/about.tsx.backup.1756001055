@@ -1,21 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award, 
-  Target, Star, Globe, Code, Server, Zap, Heart, Eye, Lightbulb
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
 
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
@@ -208,11 +207,14 @@ export default function AboutPage() {
       color: 'from-red-500 to-orange-500'
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const milestones = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -317,10 +319,14 @@ export default function AboutPage() {
       description: 'Continuing to push boundaries with autonomous AI systems and consciousness technology.'
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -932,6 +938,9 @@ export default function AboutPage() {
     </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

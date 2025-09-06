@@ -3,8 +3,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
 <<<<<<< HEAD
@@ -15,30 +19,9 @@ export interface CompanyUsageLimits {;
   budgetCapUsd: number;
 
 
+
+
 <<<<<<< HEAD
-=======
-export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
-export interface CompanyUsageLimits {monthlyJobPosts: number;
-  budgetCapUsd: number;
-}
-export interface CompanyPlan {tier: 'teams' | 'business' | 'enterprise-custom';
-  seatsPurchased: number;
-  seatsUsed: number;
-  usageLimits: CompanyUsageLimits;
-}
-export interface CompanyMember {id: string;
-  email: string;
-  name: string;
-  role: EnterpriseRole;
-
-}
-;
-export interface CompanyActivityEvent {;
-  id: string;
-  timestampIso: string;
-  actorEmail: string;
-  action: string;
-
 }
 export interface InvoiceRecord {id: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -79,12 +62,18 @@ export interface InvoiceRecord {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   companyId: string;
   number: string;
   amountUsd: number;
   periodStartIso: string;
-  periodEndIso: string;
+  periodEndIso: string;'
   status: 'paid' | 'open' | 'void' | 'past_due';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -146,18 +135,113 @@ export interface CompanyRecord {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   invoices: InvoiceRecord[];  logoUrl?: string,;
+=======
+
+
+}
+export interface CompanyRecord {id: string;
+  name: string;
+  slug: string, // e.g. acme;
+  logoUrl?: string;
+  brandColor?: string;
+  plan: CompanyPlan;
+  members: CompanyMember[];
+  activity: CompanyActivityEvent[];
+  invoices: InvoiceRecord[];
+
+
+
+
+'
+export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
+export interface CompanyUsageLimits {}
+  monthlyJobPosts: number,;
+  budgetCapUsd: number;
+
+
+
+
+
+
+
+
+
+  } catch (error) {}
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+
+
+
+
+}
+export interface CompanyPlan {'
+  tier: 'teams' | 'business' | 'enterprise - custom',
+  seats_purchased: number,
+  seats_used: number,;
+  usage_limits: CompanyUsageLimits;
+}
+export interface CompanyMember {}
+  id: string,
+  email: string,
+  name: string,;
+  role: EnterpriseRole;
+}
+export interface CompanyActivityEvent {}
+  id: string,
+  timestamp_iso: string,
+  actor_email: string,
+  action: string,;
+  meta?: Record < string unknown>;
+}
+export interface InvoiceRecord {}
+  id: string,
+  company_id: string,
+  number: string,
+  amount_usd: number,
+  periodStartIso: string,
+  periodEndIso: string,';
+  status: 'paid' | 'open' | 'void' | 'past_due';
+}
+export interface CompanyRecord {}
+  id: string,
+  name: string,;
+  slug: string, // e.g. acme;
+
+
+
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+
+}
+
+
+  logoUrl?: string,;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   brandColor?: string,;
   plan: CompanyPlan,;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -171,3 +255,9 @@ export interface CompanyRecord {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

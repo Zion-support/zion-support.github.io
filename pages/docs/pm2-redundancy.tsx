@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -22,11 +23,19 @@ function Pm2RedundancyRedirect() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <>;
       <Head>;
         <meta http_equiv="refresh" content="0, url=/README_PM2_REDUNDANCY_COMPLETE.md" />;
       </Head>;
       <main style={{ padding: 24 }}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <p > Redirecting to PM2 Redundancy docs…</p>;
@@ -94,16 +103,20 @@ export default function Pm2RedundancyRedirect(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
-;
-;
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+;
+;
+
+
+
+
+
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -117,3 +130,9 @@ import Head from 'next/head';
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -227,10 +228,14 @@ const BlogPage: React.FC = () => {
   ];
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function Blog() {
   return (
     <Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -357,10 +362,14 @@ export default function Blog() {
               </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Featured Posts */}
         <section className="py-20 px-4">
@@ -376,6 +385,9 @@ export default function Blog() {
           <div className="max-w-6xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -383,6 +395,7 @@ export default function Blog() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -416,10 +429,14 @@ export default function Blog() {
                   key={category.id}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -471,11 +488,15 @@ export default function Blog() {
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* All Posts */}
         <section className="py-20 px-4 bg-black/30">
@@ -491,6 +512,9 @@ export default function Blog() {
           <div className="max-w-6xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -498,6 +522,7 @@ export default function Blog() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -527,12 +552,16 @@ export default function Blog() {
               {featuredPosts.map((post, index) => (
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <motion.article
                   key={post.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -595,6 +624,9 @@ export default function Blog() {
                     </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.article>
               ))}
@@ -602,6 +634,7 @@ export default function Blog() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Newsletter Signup */}
 =======
@@ -666,6 +699,9 @@ export default function Blog() {
         {/* CTA Section */}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -706,6 +742,7 @@ export default function Blog() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -752,6 +789,9 @@ export default function Blog() {
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
               <p className="text-gray-400 text-sm mt-4">
                 No spam, unsubscribe at any time. We respect your privacy.
@@ -763,6 +803,7 @@ export default function Blog() {
     </Layout>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -773,3 +814,6 @@ export default function Blog() {
 export default BlogPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

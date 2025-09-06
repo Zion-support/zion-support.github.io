@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -145,12 +146,25 @@ import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",const Mo
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";"
+import { SEO } from "@/components/SEO";"
+import { AppLayout } from "@/layout/AppLayout";"
+import { MobileLaunchHero } from "@/components/mobile-app/MobileLaunchHero";"
+import { MobileFeatureShowcase } from "@/components/mobile-app/MobileFeatureShowcase";"
+import { AppTestimonials } from "@/components/mobile-app/AppTestimonials";"
+import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture";"
+import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner";"
+import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload";"
+import { CommunityTrust } from "@/components/mobile-app/CommunityTrust";
+const MobileLaunchPage: React.FC = () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <AppLayout>
-      <SEO
-        title="Get the Zion App - AI Marketplace in Your Pocket"
-        description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go."
-        keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app"
+      <SEO"
+        title="Get the Zion App - AI Marketplace in Your Pocket""
+        description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go.""
+        keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app""
         canonical="/mobile-launch"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -229,33 +243,29 @@ const MobileLaunchPage: React.FC = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 };
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default MobileLaunchPage;
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from './react';
-import { SEO } from '@/components / SEO';
-import { AppLayout } from '@/layout / AppLayout';
-import { MobileLaunchHero } from '@/components / mobile - app / MobileLaunchHero';
-import { MobileFeatureShowcase } from '@/components / mobile - app / MobileFeatureShowcase';
-import { AppTestimonials } from '@/components / mobile - app / AppTestimonials';
-import { MobileEmailCapture } from '@/components / mobile - app / MobileEmailCapture';
-import { AppStoreBanner } from '@/components / mobile - app / AppStoreBanner';
-import { QrCodeDownload } from '@/components / mobile - app / QrCodeDownload';
+
+
+
+import React from './react';'
+import { SEO } from '@/components / SEO';'
+import { AppLayout } from '@/layout / AppLayout';'
+import { MobileLaunchHero } from '@/components / mobile - app / MobileLaunchHero';'
+import { MobileFeatureShowcase } from '@/components / mobile - app / MobileFeatureShowcase';'
+import { AppTestimonials } from '@/components / mobile - app / AppTestimonials';'
+import { MobileEmailCapture } from '@/components / mobile - app / MobileEmailCapture';'
+import { AppStoreBanner } from '@/components / mobile - app / AppStoreBanner';'
+import { QrCodeDownload } from '@/components / mobile - app / QrCodeDownload';'
 import { CommunityTrust } from '@/components / mobile - app / CommunityTrust';
-const MobileLaunchPage: React.FC = () => {
+const MobileLaunchPage: React.FC = () => {}
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <AppLayout>;
-      <SEO;
-        title="Get the Zion App - AI Marketplace in Your Pocket";
-        description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go.";
+      <SEO;"
+        title="Get the Zion App - AI Marketplace in Your Pocket";"
+        description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go.";"
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app";
       />;
       <MobileLaunchHero />;
@@ -284,12 +294,8 @@ export default MobileLaunchPage;
 
 
 export default MobileLaunchPage;
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
+<<<<<<< HEAD
 =======
 export default MobileLaunchPage;
 
@@ -351,3 +357,8 @@ const MobileLaunchPage: React.FC = () => {;
 =======
   return (;export default MobileLaunchPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

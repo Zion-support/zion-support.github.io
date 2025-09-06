@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -82,6 +83,31 @@ interface InterviewRequestFormProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+interface InterviewRequestFormProps {}
+  talent: TalentProfile;
+  onClose: () => void;
+  userDetails?: UserProfile;
+import React, { useState } from "react";"
+import {Button} from "@/components/ui/button";"
+import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";"
+import {Input} from "@/components/ui/input";"
+import {Textarea} from "@/components/ui/textarea";"
+import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from "@/components/ui/select";"
+import {Calendar} from "@/components/ui/calendar";"
+import {Popover, PopoverTrigger, PopoverContent} from "@/components/ui/popover";"
+import {TalentProfile} from "@/types/talent";"
+import {UserProfile} from "@/types/auth";"
+import {cn} from "@/lib/utils";"
+import {zodResolver} from "@hookform/resolvers/zod";"
+import {useForm} from "react-hook-form";"
+import {z} from "zod";"
+import {format, addDays} from "date-fns";"
+import {CalendarIcon, Check, Clock} from "lucide-react";"
+import {toast} from "@/components/ui/use-toast";"
+import {useInterviews} from "@/hooks/useInterviews";
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface InterviewRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
@@ -89,14 +115,14 @@ interface InterviewRequestFormProps {;
 }
 
 const formSchema = z && z.object({;
-  date: z && z.date({;
-    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;
+  date: z && z.date({;"
+    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;"
     message: "Interview date must be in the future";
-  });
-  time: z && z.string().min(1, "Please select a time for the interview.");
-  duration: z && z.string().min(1, "Please select the interview duration.");
+  });"
+  time: z && z.string().min(1, "Please select a time for the interview.");"
+  duration: z && z.string().min(1, "Please select the interview duration.");"
   platform: z && z.string().min(1, "Please select a meeting platform.");
-  meetingLink: z && z.string().optional(),;
+  meetingLink: z && z.string().optional(),;"
   title: z && z.string().min(3, "Please provide a brief title for the interview.");
   notes: z && z.string().optional()}),;
 
@@ -107,17 +133,23 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
   const form = useForm<z && z.infer<typeof formSchema>>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
-      title: `Interview with ${talent && talent.full_name}`,;
-      duration: "30",;
-      platform: "zoom",;
-      notes: "",;
+      title: `Interview with ${talent && talent.full_name}`,;"
+      duration: "30",;"
+      platform: "zoom",;"
+      notes: "",;"
       meetingLink: ""}}),;
 
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
+<<<<<<< HEAD
       toast({;
         title: "Authentication required",,
   description: "Please log in to schedule an interview",;
+=======
+      toast({;"
+        title: "Authentication required",;"
+        description: "Please log in to schedule an interview",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"}),;
       return;
 
@@ -127,41 +159,15 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-=======
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",
-import { TalentProfile } from "@/types/talent",
-import { UserProfile } from "@/types/auth",
-import { cn } from "@/lib/utils",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { format, addDays } from "date-fns",
-import { CalendarIcon, Check, Clock } from "lucide-react",
-import { toast } from "@/components/ui/use-toast";
-import { useInterviews } from "@/hooks/useInterviews";
-import { toast } from "@/components/ui/use-toast",
-import { useInterviews } from "@/hooks/useInterviews",
-interface InterviewRequestFormProps {
 
-  talent: TalentProfile
-  onClose: () => void
-  userDetails?: UserProfile
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 }
-const formSchema = z.object({
-  date: z.date({
-    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
+const formSchema = z.object({}
+  date: z.date({"
+    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {"
     message: "Interview date must be in the future"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -183,11 +189,18 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   }),
   time: z.string().min(1, "Please select a time for the interview."),
   duration: z.string().min(1, "Please select the interview duration."),
+=======
+
+  }),"
+  time: z.string().min(1, "Please select a time for the interview."),"
+  duration: z.string().min(1, "Please select the interview duration."),"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   platform: z.string().min(1, "Please select a meeting platform."),
-  meetingLink: z.string().optional(),
+  meetingLink: z.string().optional(),"
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
@@ -209,21 +222,29 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const form = useForm<z.infer<typeof formSchema>>({
+=======
+
+
+
+
+  const form = useForm<z.infer<typeof formSchema>>({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(formSchema)
-    defaultValues: {
-      title: `Interview with ${talent.full_name}`
-      duration: "30"
-      platform: "zoom"
-      notes: ""
+    defaultValues: {}`
+      title: `Interview with ${talent.full_name}`"
+      duration: "30""
+      platform: "zoom""
+      notes: """
       meetingLink: ""}})
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    if (!userDetails?.id) {
-      toast({
-        title: "Authentication required"
-        description: "Please log in to schedule an interview"
+  async function onSubmit(values: z.infer<typeof formSchema>) {}
+    if (!userDetails?.id) {}
+      toast({"
+        title: "Authentication required""
+        description: "Please log in to schedule an interview""
         variant: "destructive"})
-      return
+      return;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -266,12 +287,24 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       await requestInterview({
         talent_id: talent.id
         client_id: userDetails.id
+=======
+
+    try {}
+      // Combine date and time;`
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
+      const scheduledDate = new Date(dateTimeString);
+      // Calculate end time based on duration;
+      await requestInterview({}
+        talent_id: talent.id;
+        client_id: userDetails.id;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         scheduled_date: scheduledDate.toISOString()
-        duration_minutes: durationMinutes
-        notes: values.notes
-        meeting_platform: values.platform as any
-        meeting_link: values.meetingLink
+        duration_minutes: durationMinutes;
+        notes: values.notes;
+        meeting_platform: values.platform as any;
+        meeting_link: values.meetingLink"
         interview_type: "video"
+<<<<<<< HEAD
         title: values.title
 <<<<<<< HEAD
 =======
@@ -341,86 +374,122 @@ import { z } from './zod';
 import { format, add_days } from './date - fns';
 import { CalendarIcon, Check, Clock } from './lucide-react';
 import { toast } from '@/components / ui / use - toast';
+=======
+        title: values.title;
+      toast({"
+        title: "Interview requested"`
+        description: `Your interview request with ${talent.full_name} has been sent.`})
+      onClose()
+    } catch (error) {}
+"
+      console.error("Failed to schedule interview:", error),
+
+      toast({"
+        title: "Failed to schedule interview""
+        description: "An error occurred while scheduling the interview. Please try again.""
+        variant: "destructive"})
+
+
+'
+import React, { useState } from './react';'
+import { Button } from '@/components / ui / button';'
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components / ui / form';'
+import { Input } from '@/components / ui / input';'
+import { Textarea } from '@/components / ui / textarea';'
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components / ui / select';'
+import { Calendar } from '@/components / ui / calendar';'
+import { Popover, PopoverTrigger, PopoverContent } from '@/components / ui / popover';'
+import { TalentProfile } from '@/types / talent';'
+import { UserProfile } from '@/types / auth';'
+import { cn } from '@/lib / utils';'
+import { zod_resolver } from '@hookform / resolvers / zod';'
+import { use_form } from './react - hook - form';'
+import { z } from './zod';'
+import { format, add_days } from './date - fns';'
+import { CalendarIcon, Check, Clock } from './lucide-react';'
+import { toast } from '@/components / ui / use - toast';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { use_interviews } from '@/hooks / use_interviews';
-interface InterviewRequestFormProps {
+interface InterviewRequestFormProps {}
   talent: TalentProfile,
   on_close: () => void,
   user_details?: UserProfile;
 }
-const form_schema = z.object ({
-  date: z.date ({
-    required_error: "Please select a date for the interview."}).refine (date => date > new Date (), {
+const form_schema = z.object ({}
+  date: z.date ({"
+    required_error: "Please select a date for the interview."}).refine (date => date > new Date (), {"
     message: "Interview date must be in the future";
-  });
-  time: z.string ().min (1, "Please select a time for the interview.");
-  duration: z.string ().min (1, "Please select the interview duration.");
+  });"
+  time: z.string ().min (1, "Please select a time for the interview.");"
+  duration: z.string ().min (1, "Please select the interview duration.");"
   platform: z.string ().min (1, "Please select a meeting platform.");
-  meeting_link: z.string ().optional (),
+  meeting_link: z.string ().optional (),"
   title: z.string ().min (3, "Please provide a brief title for the interview.");
   notes: z.string ().optional ()}),
-export /**
- * InterviewRequestForm - Function description
+export /**;
+ * InterviewRequestForm - Function description;
  */
-function InterviewRequestForm() {
+function InterviewRequestForm() {}
   const { request_interview } = use_interviews ();
   const [is_submitting, setIsSubmitting] = useState (false);
 ;
-  const form = use_form < z.infer < typeof form_schema>>({
+  const form = use_form < z.infer < typeof form_schema>>({}
     resolver: zod_resolver (form_schema),
-    default_values: {
-      title: `Interview with ${talent.full_name}`,
-      duration: "30",
-      platform: "zoom",
-      notes: "",
+    default_values: {}`
+      title: `Interview with ${talent.full_name}`,"
+      duration: "30","
+      platform: "zoom","
+      notes: "","
       meeting_link: ""}}),
   async /**
- * on_submit - Function description
+ * on_submit - Function description;
  */
-function on_submit() {
-    // Check condition
-if ( {) {
-  $2
+function on_submit() {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      toast ({
-        title: "Authentication required",
-        description: "Please log in to schedule an interview",
+      toast ({"
+        title: "Authentication required","
+        description: "Please log in to schedule an interview","
         variant: "destructive"}),
       return;
     }
     setIsSubmitting (true);
 ;
-    try {
-      // Combine date and time;
+    try {}
+      // Combine date and time;'`
       const dateTimeString = `${format (values.date, 'yyyy - MM - dd')}T${values.time}:00`;
       const scheduled_date = new Date (dateTimeString);
 ;
       // Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration);
 ;
-      await request_interview ({
+      await request_interview ({}
         talent_id: talent.id,
         client_id: user_details.id,
         scheduled_date: scheduled_date.toISOString (),
         duration_minutes: duration_minutes,
         notes: values.notes,
         meeting_platform: values.platform as any,
-        meeting_link: values.meeting_link,
+        meeting_link: values.meeting_link,"
         interview_type: "video",
         title: values.title;
       });
 ;
-      toast ({
-        title: "Interview requested",
+      toast ({"
+        title: "Interview requested",`
         description: `Your interview request with ${talent.full_name} has been sent.`}),
       on_close ();
-    } catch (error) {
+    } catch (error) {"
       console.error ("Failed to schedule interview:", error);
-      toast ({
-        title: "Failed to schedule interview",
-        description: "An error occurred while scheduling the interview. Please try again.",
+      toast ({"
+        title: "Failed to schedule interview","
+        description: "An error occurred while scheduling the interview. Please try again.","
         variant: "destructive"});
     }
     setIsSubmitting(true);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
       setIsSubmitting (false);
@@ -460,24 +529,45 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    } finally {}
+      setIsSubmitting (false);
+    }
+  }
+
+  const timeSlots = ["
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30""
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30""
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30""
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30","
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30","
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30","
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30","
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30","
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ]
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-        <div className="flex items-center mb-6">
+    <Form {...form}>"
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">"
+        <div className="flex items-center mb-6">"
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
-            <img
+            <img"
               src={talent.profile_picture_url |"/placeholder.svg"}
-              alt={talent.full_name}
+              alt={talent.full_name}"
               className="h-full w-full object-cover"
             />
           </div>
-          <div>
-            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
+          <div>"
+            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>"
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -487,13 +577,18 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {;
-      // Combine date and time;
+      // Combine date and time;'`
       const dateTimeString = `${format(values && values.date, 'yyyy-MM-dd')}T${values && values.time}:00`;
       const scheduledDate = new Date(dateTimeString);
       // Calculate end time based on duration;
@@ -505,60 +600,78 @@ if ( {) {
         duration_minutes: durationMinutes,;
         notes: values && values.notes,;
         meeting_platform: values && values.platform as any,;
-        meeting_link: values && values.meetingLink,;
+        meeting_link: values && values.meetingLink,;"
         interview_type: "video",;
         title: values && values.title;
       });
+<<<<<<< HEAD
       toast({;
         title: "Interview requested",,
   description: `Your interview request with ${talent && talent.full_name} has been sent.`}),;
+=======
+      toast({;"
+        title: "Interview requested",;`
+        description: `Your interview request with ${talent && talent.full_name} has been sent.`}),;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       onClose();
-    } catch (error) {;
+    } catch (error) {;"
       console && console.error("Failed to schedule interview:", error);
+<<<<<<< HEAD
       toast({;
         title: "Failed to schedule interview",,
   description: "An error occurred while scheduling the interview. Please try again.",;
+=======
+      toast({;"
+        title: "Failed to schedule interview",;"
+        description: "An error occurred while scheduling the interview. Please try again.",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
     }
   }
-  const timeSlots = [;
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30",;
-    "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30",;
-    "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30",;
+  const timeSlots = [;"
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30",;"
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30",;"
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30",;"
     "18:00", "18:30", "19:00", "19:30", "20: 00";
   ],;
   return (
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-5">;
-        <div className="flex items-center mb-6">;
+    <Form {...form}>;"
+      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-5">;"
+        <div className="flex items-center mb-6">;"
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">;
-            <img
+            <img"
               src={talent && talent.profile_picture_url || "/placeholder && placeholder.svg"} 
-              alt={talent && talent.full_name} 
+              alt={talent && talent.full_name} "
               className="h-full w-full object-cover"
             />;
           </div>;
-          <div>;
-            <h3 className="text-lg font-medium text-white">{talent && talent.full_name}</h3>;
+          <div>;"
+            <h3 className="text-lg font-medium text-white">{talent && talent.full_name}</h3>;"
             <p className="text-sm text-zion-slate-light">{talent && talent.professional_title}</p>;
           </div>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <FormField
           control={form && form.control}
+=======
+        <FormField;
+          control={form && form.control}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           name="title"
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
-  const time_slots = [;
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30",
-    "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30",
-    "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30",
+  const time_slots = [;"
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30","
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30","
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30","
     "18:00", "18:30", "19:00", "19:30", "20: 00";
   ],
   return (
+<<<<<<< HEAD
     <Form {...form}>;
       <form on_submit={form.handle_submit (on_submit)} className="space-y-5">;
         <div className="flex items - center mb-6">;
@@ -572,54 +685,55 @@ if ( {) {
           <div>;
             <h3 className="text - lg font - medium text-white">{talent.full_name}</h3>;
             <p className="text - sm text - zion - slate-light">{talent.professional_title}</p>;
+=======
+    <Form {...form}>;"
+      <form on_submit={form.handle_submit (on_submit)} className="space - y-5">;"
+        <div className="flex items - center mb - 6">;"
+          <div className="flex - shrink - 0 h - 12 w - 12 rounded - full overflow - hidden mr - 4">;
+            <img;"
+              src={talent.profile_picture_url || "/placeholder.svg"}
+              alt={talent.full_name}"
+              className="h - full w - full object - cover";
+            />;
+          </div>;
+          <div>;"
+            <h3 className="text - lg font - medium text - white">{talent.full_name}</h3>;"
+            <p className="text - sm text - zion - slate - light">{talent.professional_title}</p>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>;
         </div>;
         <FormField;
-          control={form.control}
+          control={form.control}"
           name="title";
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Interview Title</FormLabel>;
+<<<<<<< HEAD
               <FormControl>;
+=======
+
+
+
+              <FormControl>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Input placeholder="Brief title for the interview" {...field} />;
               </FormControl>;
 <<<<<<< HEAD
 <<<<<<< HEAD
               <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        />;
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
-          <FormField
-            control={form && form.control}
-            name="date"
-=======
-          <FormField
-            control={form && form.control}
-            name="date"
-            </FormItem>;
-          )}
-        />;
-;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
-            control={form.control}
-            name="date";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          <FormField
-            control={form && form.control}
+            control={form && form.control}"
             name="date"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            render={({ field }) => (;
+
+            render={({ field }) => (;"
               <FormItem className="flex flex-col">;
                 <FormLabel>Date</FormLabel>;
                 <Popover>;
                   <PopoverTrigger asChild>;
                     <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       <Button
@@ -635,20 +749,21 @@ if ( {) {
                           !field.value && "text-muted-foreground"
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+"
                           "w-full pl-3 text-left font-normal",
 
+"
+                          !field.value && "text-muted-foreground"
 
+
+                      <Button"
+                        variant="outline"
+                        className={cn("
                           !field.value && "text-muted-foreground"
 <<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                      <Button
-                        variant="outline"
-                        className={cn(
-                          !field.value && "text-muted-foreground"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           "w-full pl-3 text-left font-normal"
 =======
@@ -657,19 +772,30 @@ if ( {) {
 =======
               <FormMessage />;                          "w-full pl-3 text-left font-normal"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+                          "w-full pl-3 text-left font-normal""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           !field && field.value && "text-muted-foreground"
                         )}>;
-                        {field && field.value ? (;
+                        {field && field.value ? (;"
                           format(field && field.value, "PPP");
                         ) : (;
                           <span>Pick a date</span>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         )}
+<<<<<<< HEAD
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                       </Button>;
                     </FormControl>;
-                  </PopoverTrigger>;
+                  </PopoverTrigger>;"
                   <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
                     <Calendar
                       mode="single"
 <<<<<<< HEAD
@@ -731,6 +857,9 @@ if ( {) {
                 <FormMessage />
               </FormItem>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -738,24 +867,24 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       selected={field && field.value}
                       onSelect={field && field.onChange}
-
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",;
-import { Calendar } from "@/components/ui/calendar",;
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",;
-import { TalentProfile } from "@/types/talent",;
-import { UserProfile } from "@/types/auth",;
-import { cn } from "@/lib/utils",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { useForm } from "react-hook-form",;
-import { z } from "zod",;
-import { format, addDays } from "date-fns",;
-import { CalendarIcon, Check, Clock } from "lucide-react",;
-import { toast } from "@/components/ui/use-toast",;
+"
+import React, { useState } from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;"
+import { Input } from "@/components/ui/input",;"
+import { Textarea } from "@/components/ui/textarea",;"
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",;"
+import { Calendar } from "@/components/ui/calendar",;"
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",;"
+import { TalentProfile } from "@/types/talent",;"
+import { UserProfile } from "@/types/auth",;"
+import { cn } from "@/lib/utils",;"
+import { zodResolver } from "@hookform/resolvers/zod",;"
+import { useForm } from "react-hook-form",;"
+import { z } from "zod",;"
+import { format, addDays } from "date-fns",;"
+import { CalendarIcon, Check, Clock } from "lucide-react",;"
+import { toast } from "@/components/ui/use-toast",;"
 import { useInterviews } from "@/hooks/useInterviews",;
 interface InterviewRequestFormProps {;
   talent: TalentProfile,;
@@ -764,39 +893,43 @@ interface InterviewRequestFormProps {;
 }
 ;
 const formSchema = z.object({;
-  date: z.date({;
-    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;
+  date: z.date({;"
+    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;"
     message: "Interview date must be in the future";
-  }),;
-  time: z.string().min(1, "Please select a time for the interview."),;
-  duration: z.string().min(1, "Please select the interview duration."),;
+  }),;"
+  time: z.string().min(1, "Please select a time for the interview."),;"
+  duration: z.string().min(1, "Please select the interview duration."),;"
   platform: z.string().min(1, "Please select a meeting platform."),;
-  meetingLink: z.string().optional(),;
+  meetingLink: z.string().optional(),;"
   title: z.string().min(3, "Please provide a brief title for the interview."),;
   notes: z.string().optional()}),;
-export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
+export function InterviewRequestForm() { return null; }
   const { requestInterview } = useInterviews(),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const form = useForm<z.infer<typeof formSchema>>({;
     resolver: zodResolver(formSchema),;
-    defaultValues: {;
-      title: `Interview with ${talent.full_name}`,;
-      duration: "30",;
-      platform: "zoom",;
-      notes: "",;
+    defaultValues: {;`
+      title: `Interview with ${talent.full_name}`,;"
+      duration: "30",;"
+      platform: "zoom",;"
+      notes: "",;"
       meetingLink: ""}}),;
+<<<<<<< HEAD
   async function onSubmit(values: z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
         title: "Authentication required",,
   description: "Please log in to schedule an interview",;
+=======
+  async function onSubmit() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"}),;
       return;
     }
 ;
     setIsSubmitting(true),;
     try {;
-      // Combine date and time;
+      // Combine date and time;'`
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`,;
       const scheduledDate = new Date(dateTimeString),;
       // Calculate end time based on duration;
@@ -808,92 +941,105 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         duration_minutes: durationMinutes,;
         notes: values.notes,;
         meeting_platform: values.platform as any,;
-        meeting_link: values.meetingLink,;
+        meeting_link: values.meetingLink,;"
         interview_type: "video",;
         title: values.title;
       }),;
+<<<<<<< HEAD
       toast({;
         title: "Interview requested",,
   description: `Your interview request with ${talent.full_name} has been sent.`}),;
+=======
+      toast({;"
+        title: "Interview requested",;`
+        description: `Your interview request with ${talent.full_name} has been sent.`}),;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       onClose();
-    } catch (error) {;
+    } catch (error) {;"
       console.error("Failed to schedule interview:", error),;
+<<<<<<< HEAD
       toast({;
         title: "Failed to schedule interview",,
   description: "An error occurred while scheduling the interview. Please try again.",;
+=======
+      toast({;"
+        title: "Failed to schedule interview",;"
+        description: "An error occurred while scheduling the interview. Please try again.",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
     }
   }
 ;
-  const timeSlots = [;
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",;
-    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",;
-    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",;
+  const timeSlots = [;"
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",;"
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",;"
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",;"
     "18:00", "18:30", "19:00", "19:30", "20: 00";
   ];
   return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">;
-        <div className="flex items-center mb-6">;
+    <Form {...form}>;"
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">;"
+        <div className="flex items-center mb-6">;"
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">;
-            <img;
+            <img;"
               src={talent.profile_picture_url || "/placeholder.svg"} ;
-              alt={talent.full_name} ;
+              alt={talent.full_name} ;"
               className="h-full w-full object-cover";
             />;
           </div>;
-          <div>;
-            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>;
+          <div>;"
+            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>;"
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>;
           </div>;
         </div>;
         <FormField;
-          control={form.control}
+          control={form.control}"
           name="title"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Interview Title</FormLabel>
-              <FormControl>
+              <FormControl>"
                 <Input placeholder="Brief title for the interview" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-        />;
+        />;"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
-            control={form.control}
+            control={form.control}"
             name="date";
-            render={({ field }) => (;
+            render={({ field }) => (;"
               <FormItem className="flex flex-col">;
                 <FormLabel>Date</FormLabel>;
                 <Popover>;
                   <PopoverTrigger asChild>;
                     <FormControl>;
-                      <Button;
+                      <Button;"
                         variant="outline";
-                        className={cn(;
-                          "w-full pl-3 text-left font-normal";
+                        className={cn(;"
+                          "w-full pl-3 text-left font-normal";"
                           !field.value && "text-muted-foreground";
                         )}
                       >;
-                        {field.value ? (;
+                        {field.value ? (;"
                           format(field.value, "PPP");
                         ) : (;
                           <span>Pick a date</span>;
-                        )}
+                        )}"
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                       </Button>
                     </FormControl>
-                  </PopoverTrigger>
+                  </PopoverTrigger>"
                   <PopoverContent className="w-auto p-0" align="start">
-                    <Calendar
+                    <Calendar"
                       mode="single"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       selected={field.value}
                       onSelect={field.onChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -916,15 +1062,21 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";                    <Calendar;
+=======
+
+
+                    <Calendar;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       mode="single";
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
-                      initialFocus;
+                      initialFocus;"
                       className="p-3 pointer-events-auto";
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
-                      initialFocus;
+                      initialFocus;"
                       className="p-3 pointer-events-auto";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -933,13 +1085,19 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       mode="single"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+                    <Calendar"
+                      mode="single"
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
               </FormItem>;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -950,6 +1108,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             )}
           />;
 =======
@@ -957,8 +1117,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-          <FormField
-            control={form && form.control}
+          <FormField;
+            control={form && form.control}"
             name="time"
             render={({ field }) => (;
               <FormItem>;
@@ -969,9 +1129,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               </FormItem>)}
           />;
           <FormField;
-            control={form.control}
+            control={form.control}"
             name="time";
             render={({ field }) => (
+<<<<<<< HEAD
               <FormItem>;
                 <FormLabel > Time</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
@@ -997,24 +1158,40 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <FormControl>;
-                    <SelectTrigger>;
+                    <SelectTrigger>;"
                       <SelectValue placeholder="Select time" />;
                     </SelectTrigger>;
                   </FormControl>;
 
-          />;
-        </div>;
 
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField
             control={form && form.control}
+=======
+
+          <FormField;
+            control={form && form.control}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             name="duration"
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Duration</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+<<<<<<< HEAD
                   <SelectContent className="max-h-[300px]">;
+=======
+
+
+"
+                  <SelectContent className="max - h-[300px]">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     {time_slots.map ((time) => (
                       <SelectItem key={time} value={time}>;
                         {time}
@@ -1024,33 +1201,92 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormMessage />;
               </FormItem>)}
           />;
+<<<<<<< HEAD
         </div>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+=======
+        </div>;"
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <FormField;
-            control={form.control}
+            control={form.control}"
             name="duration";
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Duration</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
+<<<<<<< HEAD
                     <SelectTrigger>;
+=======
+
+
+
+                  <FormControl>;
+                    <SelectTrigger>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <SelectValue placeholder="Select duration" />;
                     </SelectTrigger>;
                   </FormControl>;
-                  <SelectContent>;
-                    <SelectItem value="15">15 minutes</SelectItem>;
-                    <SelectItem value="30">30 minutes</SelectItem>;
-                    <SelectItem value="45">45 minutes</SelectItem>;
+                  <SelectContent>;"
+                    <SelectItem value="15">15 minutes</SelectItem>;"
+                    <SelectItem value="30">30 minutes</SelectItem>;"
+                    <SelectItem value="45">45 minutes</SelectItem>;"
                     <SelectItem value="60">60 minutes</SelectItem>;
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
 
+<<<<<<< HEAD
           />;
+=======
+
+
+          <FormField;
+            control={form && form.control}"
+            name="platform"
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Platform</FormLabel>;
+                <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+
+
+
+              </FormItem>)}
+          />;
+          <FormField;
+            control={form.control}"
+            name="platform";
+            render={({ field }) => (
+
+
+
+                  <FormControl>;
+                    <SelectTrigger>;"
+                      <SelectValue placeholder="Select platform" />;
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent>;"
+                    <SelectItem value="zoom">Zoom</SelectItem>;
+
+
+"
+                    <SelectItem value="teams">Microsoft Teams</SelectItem>;"
+                    <SelectItem value="other">Other</SelectItem>;
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+
+
+          <FormField;
+            control={form && form.control}"
+            name="meetingLink"
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
                   <Input;
                     placeholder={`Add your ${form.watch('platform')} link here`}
 <<<<<<< HEAD
@@ -1058,100 +1294,40 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+                  <Input'`
+                    placeholder={`Add your ${form && form.watch('platform')} link here`}
+              </FormItem>)}
+          />;
+        </div>;'
+        {form.watch ('platform') !== 'in - app' && (
+          <FormField;
+            control={form.control}"
+            name="meeting_link";
+            render={({ field }) => (
+              <FormItem>;
+                <FormLabel > Meeting Link (Optional)</FormLabel>;
+                <FormControl>;
+                  <Input;'`
+                    placeholder={`Add your ${form.watch ('platform')} link here`}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-              </FormItem>;
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="time"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Time</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select time" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent className="max-h-[300px]">
-                    {timeSlots.map((time) => (
-                      <SelectItem key={time} value={time}>
-                        {time}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-            name="duration"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Duration</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select duration" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="15">15 minutes</SelectItem>
-                    <SelectItem value="30">30 minutes</SelectItem>
-                    <SelectItem value="45">45 minutes</SelectItem>
-                    <SelectItem value="60">60 minutes</SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="platform"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Platform</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select platform" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="zoom">Zoom</SelectItem>
-                    <SelectItem value="google-meet">Google Meet</SelectItem>
-                    <SelectItem value="teams">Microsoft Teams</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
-        {form.watch('platform') !== 'in-app' && (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          <FormField
-            control={form.control}
+          <FormField;
+            control={form.control}"
             name="meetingLink"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
-                  <Input
+                  <Input'`
                     placeholder={`Add your ${form.watch('platform')} link here`}
                     {...field}
                   />
@@ -1171,8 +1347,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <FormField
@@ -1216,45 +1392,37 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />;
         )}
 ;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <FormField;
-          control={form.control}
-          name="notes";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          control={form && form.control}"
+          name="notes"
+
+
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Notes (Optional)</FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
 
-                <Textarea
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-                <Textarea 
-
-                  placeholder="Share what you'd like to discuss in this interview"
+                <Textarea;
+'"
+                  placeholder="Share what you'd like to discuss in this interview""
                   className="h-20"
-=======
+
               </FormItem>)}
           />)}
         <FormField;
-          control={form.control}
+          control={form.control}"
           name="notes";
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Notes (Optional)</FormLabel>;
               <FormControl>;
-                <Textarea;
-                  placeholder="Share what you'd like to discuss in this interview";
+                <Textarea;'"
+                  placeholder="Share what you'd like to discuss in this interview";"
                   className="h - 20";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-                <Textarea ;
-                  placeholder="Share what you'd like to discuss in this interview";
-                  className="h-20";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
                   {...field}
                 />;
 =======
@@ -1263,99 +1431,127 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
 
         />;
         <div className="flex justify-end gap-4 pt-4">;
+=======
+"
+        <div className="flex justify-end gap-4 pt-4">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Button variant="outline" onClick={onClose} type="button">;
             Cancel;
-          </Button>;
+          </Button>;"
           <Button type="submit" disabled={isSubmitting}>;
+<<<<<<< HEAD
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}          </Button>;
         </div>;
       </form>;
     </Form>;
   );
 }
+=======
+
+          </Button>;
+        </div>;
+      </form>;
+    </Form>;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             )}
           />
-        )}
-                  placeholder="Share what you'd like to discuss in this interview"
+        )}'"
+                  placeholder="Share what you'd like to discuss in this interview""
                   className="h-20"
                   {...field}
+<<<<<<< HEAD
             </FormItem>)}
         />;
         <div className="flex justify - end gap - 4 pt-4">;
+=======
+
+            </FormItem>)}
+        />;"
+        <div className="flex justify - end gap - 4 pt - 4">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Button variant="outline" on_click={on_close} type="button">;
             Cancel;
-          </Button>;
-          <Button type="submit" disabled={is_submitting}>;
+          </Button>;"
+          <Button type="submit" disabled={is_submitting}>;"
             {is_submitting ? "Scheduling..." : "Schedule Interview"}
           </Button>;
         </div>;
       </form>;
     </Form>);
+<<<<<<< HEAD
 }
   ),; interface InterviewRequestFormProps {
+=======
+
+
+  ),; interface InterviewRequestFormProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   talent: TalentProfile;
 onClose: () => void;
-userDetails?: UserProfile 
-}const formSchema = z.object ({
-  date: z.date ({
+userDetails?: UserProfile;
+}const formSchema = z.object ({}
+  date: z.date ({"
   required error: "Please select a date for the interview." 
-}) .refine (date => date > new Date (), {
+}) .refine (date => date > new Date (), {"
   message: "Interview date must be in the future" 
-});
-time: z.string () .min (1, "Please select a time for the interview.");
-duration: z.string () .min (1, "Please select the interview duration.");
+});"
+time: z.string () .min (1, "Please select a time for the interview.");"
+duration: z.string () .min (1, "Please select the interview duration.");"
 platform: z.string () .min (1, "Please select a meeting platform.");
-const form = useForm<z.infer<typeof formSchema>> ({
-  resolver: zodResolver (formSchema), defaultValues: {
-  title: `Interview with $ {
-  talent.full name 
+const form = useForm<z.infer<typeof formSchema>> ({}
+  resolver: zodResolver (formSchema), defaultValues: {}`
+  title: `Interview with $ {}
+  talent.full name;`
 }`;
-async function onSubmit (values: z.infer<typeof formSchema>) {
-  if (!userDetails?.id) {
-  toast ({
+async function onSubmit (values: z.infer<typeof formSchema>) {}
+  if (!userDetails?.id) {}
+  toast ({}
   return;
 }setIsSubmitting (true);
-}finally {
+}finally {}
   setIsSubmitting (false) 
 }
 
 }
 ;
-
-}const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";
-"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";
-"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";
-"18:00", "18:30", "19:00", "19:30", "20: 00" ];
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
+"
+}const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
+"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
+"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"
+"18:00", "18:30", "19:00", "19:30", "20: 00" ];"
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) "
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
-}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {
-  field.onChange 
-}defaultValue= {
-  field.value 
+}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {}
+  field.onChange;
+}defaultValue= {}
+  field.value "
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) ) 
-}</SelectContent> </Select> <FormMessage /> </FormItem>) 
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {
-  field.onChange 
-}defaultValue= {
-  field.value 
+}</SelectContent> </Select> <FormMessage /> </FormItem>) "
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {}
+  field.onChange;
+}defaultValue= {}
+  field.value "
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {
-  field.onChange 
-}defaultValue= {
-  field.value 
+}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {}
+  field.onChange;
+}defaultValue= {}
+  field.value "
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
-}/> </div> {
-  form.watch ('platform') !== 'in-app' && (<FormField control= {
-  form.control 
-}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
-  `Add your $ {
-  form.watch ('platform') 
+}/> </div> {'
+  form.watch ('platform') !== 'in-app' && (<FormField control= {}
+  form.control;
+}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {}`
+  `Add your $ {'
+  form.watch ('platform') `
 }link here` 
-}{
-  ...field 
+}{}
+  ...field;
 }/> </FormControl> <FormMessage /> </FormItem>) 
 }/>) 
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
@@ -1364,6 +1560,7 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1383,3 +1580,10 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
   {
@@ -27,18 +28,24 @@ export const PROJECTS: Project[] = [
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-    job: {
-      title: 'AI Dashboard Development'
+
+
+
+    job: {}
+      title: 'AI Dashboard Development''
       description: 'Develop dashboards using React and integrate ML models'
     }
-    talent_profile: {
-      full_name: 'Alexandra Chen'
+    talent_profile: {'
+      full_name: 'Alexandra Chen''
       professional_title: 'Senior AI Engineer'
     }
   }
 ];
+<<<<<<< HEAD
     id: "project-1";
     client_id: "client-1";
     talent_id: "t-001";
@@ -69,11 +76,19 @@ export const PROJECTS: Project[] = [
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+    talent_profile: {}
+      full_name: "Alexandra Chen";
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       professional_title: "Senior AI Engineer"
     }
   }
 <<<<<<< HEAD
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -82,10 +97,15 @@ export const PROJECTS: Project[] = [
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Project } from "@/types/projects",
-export const PROJECTS: Project[] = [
-import { Project } from '@/types/projects';
+export const PROJECTS: Project[] = [';
+import { Project } from '@/types/projects';"
 import { Project } from "@/types/projects",
+<<<<<<< HEAD
 export const PROJECTS: Project[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,11 +126,25 @@ export const PROJECTS: Project[] = [
     payment_terms: "fixed",
     status: "in_progress",
     created_at: "2024-05-15",
+=======
+export const PROJECTS: Project[] = []
+  {"
+    id: "project-1","
+    client_id: "client-1","
+    talent_id: "t-001","
+    job_id: "job-1","
+    start_date: "2024-05-15","
+    scope_summary: "Build an AI powered dashboard for sales metrics","
+    payment_terms: "fixed","
+    status: "in_progress","
+    created_at: "2024-05-15","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     updated_at: "2024-05-20",
-    job: {
-      title: "AI Dashboard Development",
+    job: {"
+      title: "AI Dashboard Development","
       description: "Develop dashboards using React and integrate ML models"
     },
+<<<<<<< HEAD
     talent_profile: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,26 +172,33 @@ export const PROJECTS: Project[] = [
 
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
+=======
+    talent_profile: {}
+"
+      full_name: "Alexandra Chen",";
+      professional_title: "Senior AI Engineer"";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Project } from "@/types/projects",;
 export const PROJECTS: Project[] = [;
-  {;
-    id: "project-1",;
-    client_id: "client-1",;
-    talent_id: "t-001",;
-    job_id: "job-1",;
-    start_date: "2024-05-15",;
-    scope_summary: "Build an AI powered dashboard for sales metrics",;
-    payment_terms: "fixed",;
-    status: "in_progress",;
-    created_at: "2024-05-15",;
+  {;"
+    id: "project-1",;"
+    client_id: "client-1",;"
+    talent_id: "t-001",;"
+    job_id: "job-1",;"
+    start_date: "2024-05-15",;"
+    scope_summary: "Build an AI powered dashboard for sales metrics",;"
+    payment_terms: "fixed",;"
+    status: "in_progress",;"
+    created_at: "2024-05-15",;"
     updated_at: "2024-05-20",;
-    job: {;
-      title: "AI Dashboard Development",;
+    job: {;"
+      title: "AI Dashboard Development",;"
       description: "Develop dashboards using React and integrate ML models";
     },;
-    talent_profile: {;
-      full_name: "Alexandra Chen";
+    talent_profile: {;"
+      full_name: "Alexandra Chen";"
       professional_title: "Senior AI Engineer";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -177,10 +218,15 @@ export const PROJECTS: Project[] = [;
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -189,14 +235,19 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
-];
+];"
       professional_title: "Senior AI Engineer";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -210,3 +261,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

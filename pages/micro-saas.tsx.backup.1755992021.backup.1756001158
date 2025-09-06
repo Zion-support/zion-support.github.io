@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
+<<<<<<< HEAD
   Shield, 
   Mail, 
   Lock, 
@@ -311,6 +316,9 @@ export default function MicroSaasPage() {
         <meta name="description" content="Discover our comprehensive suite of micro SaaS services including API rate limiting, email validation, password strength analysis, URL shortening, file compression, encryption, and more. Professional tools for developers and businesses." />
         <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" />
         <meta property="og:description" content="Professional micro SaaS services for developers and businesses. API rate limiting, email validation, password analysis, and more." />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -326,6 +334,7 @@ export default function MicroSaasPage() {
             Micro SaaS Services
           </div>
           <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
+<<<<<<< HEAD
             Professional Developer Tools & APIs
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
@@ -350,11 +359,15 @@ export default function MicroSaasPage() {
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">24/7</div>
               <div className="text-gray-400 text-sm">Support</div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Filters and Search */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
@@ -388,6 +401,9 @@ export default function MicroSaasPage() {
                 className="pl-10 pr-4 py-2 bg-gray-800 border border-gray-600 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cursor-blue focus:ring-2 focus:ring-cursor-blue/20"
               />
             </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
@@ -396,6 +412,7 @@ export default function MicroSaasPage() {
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<<<<<<< HEAD
             {filteredServices.map((service, index) => (
               <Card
                 key={service.id}
@@ -488,12 +505,16 @@ export default function MicroSaasPage() {
                       Get Started
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
               </Card>
             ))}
           </div>
 
+<<<<<<< HEAD
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
@@ -509,6 +530,8 @@ export default function MicroSaasPage() {
               </Button>
             </div>
           )}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>
       </section>
 
@@ -517,10 +540,14 @@ export default function MicroSaasPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
+<<<<<<< HEAD
             Ready to Transform Your Development?
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join thousands of developers who trust our micro SaaS services to build better, faster, and more secure applications.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
@@ -529,16 +556,24 @@ export default function MicroSaasPage() {
               size="lg"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
             >
+<<<<<<< HEAD
               Start Building Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
               href="/pricing"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
             >
+<<<<<<< HEAD
               View Pricing Plans
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>
           </div>
         </div>

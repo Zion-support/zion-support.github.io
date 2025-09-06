@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
@@ -19,21 +20,12 @@ export interface DeployConfig {
     [key: string]: boolean
 };
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export interface DeployResult {
-  success: boolean;
-  instanceId: string;
-  configPath: string;
-  message?: string;
-}
 
-export function toSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-}
 
+<<<<<<< HEAD
 export async function deployInstance(config: DeployConfig): Promise<DeployResult> {
   try {
     const instanceSlug = toSlug(config.instanceName);
@@ -69,27 +61,19 @@ export async function deployInstance(config: DeployConfig): Promise<DeployResult
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 function toSlug(name: string): string {;
   return name;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-function toSlug(name: string): string {;
-  return name;
 
-import fs from "fs";
-import path from "path";
-import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
-function toSlug(name: string): string {return name;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import fs from "fs",;
-import path from "path",;
-import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",;
-import fs from "fs";
-import path from "path";
+
+import fs from "fs",;"
+import path from "path",;"
+import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",;"
+import fs from "fs";"
+import path from "path";"
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
 
 
@@ -97,6 +81,7 @@ import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../ty
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function toSlug(name: string): string {;
   return name;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -123,6 +108,19 @@ function toSlug(name: string): string {;
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+    .toLowerCase();"
+    .replace(/[^a-z0-9]+/g, "-");"
+    .replace(/(^-|-$)+/g, "");
+    .slice(0, 64);
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -133,31 +131,36 @@ function toSlug(name: string): string {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-=======
-  } catch (error) {
-    console.error("Error:", error);
+
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
-function ensureDir(dirPath: string) {;
-  if (!fs.existsSync(dirPath)) {;
+function ensureDir() { return null; }
     fs.mkdirSync(dirPath, { recursive: true });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     } catch (error) {
     console.error("Error:", error);
+=======
+    } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 ;
+<<<<<<< HEAD
 function writeTextFile(filePath: string, content: string) {;
 <<<<<<< HEAD
   ensureDir(path.dirname(filePath));
@@ -167,6 +170,11 @@ function writeTextFile(filePath: string, content: string) {;
   fs.writeFileSync(filePath, content, "utf8");
   } catch (error) {
     console.error("Error:", error);
+=======
+function writeTextFile() { return null; }
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -175,18 +183,24 @@ function writeTextFile(filePath: string, content: string) {;
 function nowIso(): string {;
   return new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   } catch (error) {
     console.error("Error:", error);
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
-export async function performDeploy(input: DeployInput): Promise<DeployResult> {;
+export async function performDeploy(input: DeployInput): Promise<DeployResult> {;"
   const version = "Zion OS v1.0";
   const logs: DeployLogEntry[] = [];
   const assets: GeneratedAsset[] = [];
+<<<<<<< HEAD
   const instanceSlug = toSlug(input.instanceName);
 <<<<<<< HEAD
 =======
@@ -245,10 +259,30 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     logs.push({ timestamp: nowIso(), level: "info", action: "zion_gpt_initialized" });
   }
 =======
+=======
+  const instanceSlug = toSlug(input.instanceName);"
+  const baseDir = path.join(process.cwd(), "data", "deployments", instanceSlug),;"
+  const docsDir = path.join(process.cwd(), "docs"),;"
+  const eventsDir = path.join(process.cwd(), "data", "events"),;"
+  const gptDir = path.join(process.cwd(), "data", "zion-gpt"),;"
+  const daoDir = path.join(process.cwd(), "data", "dao"),;"
+  const tokenDir = path.join(process.cwd(), "data", "token"),;
+
+  ensureDir(baseDir);"
+  const configPath = path.join(baseDir, "config.json");
+  writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2)),;"
+  logs.push({ timestamp: nowIso(), level: "info", action: "save_config", details: { configPath } }),;"
+  assets.push({ kind: "config", path: configPath, description: "Deployment config" });
+  // 1. Initialize ZionGPT;
+  if (input.modules.gpt) {;
+    ensureDir(gptDir);`
+    const promptBasePath = path.join(gptDir, `${instanceSlug}-prompt-base.md`);`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const promptBase = `# ZionGPT Prompt Base\n\nInstance: ${input.instanceName}\nLanguage: ${input.defaultLanguage}\nGovernance: ${input.governanceMode}\n\nBehaviors:\n- Assist with proposals, resumes, and marketplace tasks.\n- Route to domain experts per module.\n`,;
-    writeTextFile(promptBasePath, promptBase);
-    assets.push({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" });
+    writeTextFile(promptBasePath, promptBase);"
+    assets.push({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" });"
     logs.push({ timestamp: nowIso(), level: "info", action: "zion_gpt_initialized" });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     } catch (error) {
@@ -259,13 +293,16 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   // 2. Deploy DAO + Token Logic;
   if (input.modules.dao) {;
-    ensureDir(daoDir);
+    ensureDir(daoDir);`
     const daoConfigPath = path.join(daoDir, `${instanceSlug}-dao.json`);
     writeTextFile(;
 <<<<<<< HEAD
@@ -276,6 +313,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 =======
       daoConfigPath,;
       JSON.stringify(;
+<<<<<<< HEAD
         {treasury: `${instanceSlug}-treasury`;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           governanceMode: input.governanceMode;
@@ -300,22 +338,152 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 =======
 =======
         {;
+=======
+
+  }
+}
+;
+  if (input.modules.token || input.tokenActivation) {;
+    ensureDir(tokenDir);`
+    const tokenConfigPath = path.join(tokenDir, `${instanceSlug}-token.json`);
+    writeTextFile(;
+      tokenConfigPath,;
+      JSON.stringify(;
+
+  }
+}
+;
+
+  // 3. Publish Assets;`
+  const wpPath = path.join(docsDir, `whitepaper-${instanceSlug}.md`);`
+  const roadmapPath = path.join(docsDir, `roadmap-${instanceSlug}.md`);`
+  const changelogPath = path.join(docsDir, `changelog-${instanceSlug}.md`);`
+  const bookPath = path.join(docsDir, `zion-book-${instanceSlug}.md`);`
+  const trailerScriptPath = path.join(docsDir, `trailer-script-${instanceSlug}.md`);
+
+  if (input.modules.roadmapWhitepaper) {;
+    ensureDir(docsDir);
+    writeTextFile(;
+      wpPath,;"`
+      `# Zion Protocol Whitepaper (v1.0)\n\nInstance: ${input.instanceName}\nRegion: ${input.deploymentRegion}\nToken: ${input.tokenActivation ? "Enabled" : "Disabled"}\n\n## Abstract\nZion OS unifies marketplace, AI, DAO, and media into a programmable nation-state.\n`;
+    ),;"
+    assets.push({ kind: "file", path: wpPath, description: "Whitepaper v1.0" });"
+    logs.push({ timestamp: nowIso(), level: "info", action: "whitepaper_generated" }),;
+    writeTextFile(;
+      roadmapPath,;
+`
+      `# Public Roadmap\n\n- Q1: Launch core modules\n- Q2: DAO consolidation\n- Q3: Nation builder\n`;
+    );"
+    assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
+    writeTextFile(;
+
+      changelogPath,;`
+      `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
+    ),;"
+    assets.push({ kind: "file", path: changelogPath, description: "Changelog" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+
+;
+  // Schedule launch stream (/summit);
+  ensureDir(eventsDir),;`
+  const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function ensureDir() { return null; }
+    fs.mkdirSync(dirPath, { recursive: true });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function writeTextFile() { return null; }
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+  // Check condition;
+if ( {) {}
+  $2;
+}
+;
+function nowIso(): string {;
+  return new Date().toISOString();
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export async function performDeploy(input: DeployInput): Promise<DeployResult> {;"
+  const version = "Zion OS v1.0";
+  const logs: DeployLogEntry[] = [];
+  const assets: GeneratedAsset[] = [];
+  const instanceSlug = toSlug(input.instanceName);"
+  const baseDir = path.join(process.cwd(), "data", "deployments", instanceSlug),;"
+  const docsDir = path.join(process.cwd(), "docs"),;"
+  const eventsDir = path.join(process.cwd(), "data", "events"),;"
+  const gptDir = path.join(process.cwd(), "data", "zion-gpt"),;"
+  const daoDir = path.join(process.cwd(), "data", "dao"),;"
+  const tokenDir = path.join(process.cwd(), "data", "token"),;
+
+  ensureDir(baseDir);"
+  const configPath = path.join(baseDir, "config.json");
+  writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2)),;"
+  logs.push({ timestamp: nowIso(), level: "info", action: "save_config", details: { configPath } }),;"
+  assets.push({ kind: "config", path: configPath, description: "Deployment config" });
+  // 1. Initialize ZionGPT;
+  if (input.modules.gpt) {;
+    ensureDir(gptDir);`
+    const promptBasePath = path.join(gptDir, `${instanceSlug}-prompt-base.md`);`
+    const promptBase = `# ZionGPT Prompt Base\n\nInstance: ${input.instanceName}\nLanguage: ${input.defaultLanguage}\nGovernance: ${input.governanceMode}\n\nBehaviors:\n- Assist with proposals, resumes, and marketplace tasks.\n- Route to domain experts per module.\n`,;
+    writeTextFile(promptBasePath, promptBase);"
+    assets.push({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" });"
+    logs.push({ timestamp: nowIso(), level: "info", action: "zion_gpt_initialized" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // 2. Deploy DAO + Token Logic;
+  if (input.modules.dao) {;
+    ensureDir(daoDir);`
+    const daoConfigPath = path.join(daoDir, `${instanceSlug}-dao.json`);
+    writeTextFile(;
+      daoConfigPath,;
+      JSON.stringify(;
+        {;`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           treasury: `${instanceSlug}-treasury`,;
           governanceMode: input.governanceMode,;
           quorum: 0.6,;
-          votingPeriodDays: 7,;
+          votingPeriodDays: 7,;`
           constitutionDoc: `/constitution`,;
           createdAt: nowIso()},;
         null,;
         2;
       );
-    ),;
-    assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" });
+    ),;"
+    assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" });"
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 =======
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });  }
@@ -327,7 +495,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   if (input.modules.token || input.tokenActivation) {;
-    ensureDir(tokenDir);
+    ensureDir(tokenDir);`
     const tokenConfigPath = path.join(tokenDir, `${instanceSlug}-token.json`);
     writeTextFile(;
 <<<<<<< HEAD
@@ -338,6 +506,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 =======
       tokenConfigPath,;
       JSON.stringify(;
+<<<<<<< HEAD
         {symbol: "ZION$";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           decimals: 18;
@@ -363,6 +532,9 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 =======
 =======
         {;
+=======
+        {;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           symbol: "ZION$",;
           decimals: 18,;
           enabled: input.tokenActivation,;
@@ -372,13 +544,12 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
         null,;
         2;
       );
-    ),;
-    assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" });
+    ),;"
+    assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" });"
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 =======
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });  }
@@ -389,12 +560,20 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
 }
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // 3. Publish Assets;
   const wpPath = path.join(docsDir, `whitepaper-${instanceSlug}.md`);
   const roadmapPath = path.join(docsDir, `roadmap-${instanceSlug}.md`);
   const changelogPath = path.join(docsDir, `changelog-${instanceSlug}.md`);
   const bookPath = path.join(docsDir, `zion-book-${instanceSlug}.md`);
+=======
+  // 3. Publish Assets;`
+  const wpPath = path.join(docsDir, `whitepaper-${instanceSlug}.md`);`
+  const roadmapPath = path.join(docsDir, `roadmap-${instanceSlug}.md`);`
+  const changelogPath = path.join(docsDir, `changelog-${instanceSlug}.md`);`
+  const bookPath = path.join(docsDir, `zion-book-${instanceSlug}.md`);`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const trailerScriptPath = path.join(docsDir, `trailer-script-${instanceSlug}.md`);
 <<<<<<< HEAD
   if (input.modules.roadmapWhitepaper) {;
@@ -412,21 +591,26 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   if (input.modules.roadmapWhitepaper) {;
     ensureDir(docsDir);
     writeTextFile(;
-      wpPath,;
+      wpPath,;"`
       `# Zion Protocol Whitepaper (v1.0)\n\nInstance: ${input.instanceName}\nRegion: ${input.deploymentRegion}\nToken: ${input.tokenActivation ? "Enabled" : "Disabled"}\n\n## Abstract\nZion OS unifies marketplace, AI, DAO, and media into a programmable nation-state.\n`;
-    ),;
-    assets.push({ kind: "file", path: wpPath, description: "Whitepaper v1.0" });
+    ),;"
+    assets.push({ kind: "file", path: wpPath, description: "Whitepaper v1.0" });"
     logs.push({ timestamp: nowIso(), level: "info", action: "whitepaper_generated" }),;
     writeTextFile(;
       roadmapPath,;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       `# Public Roadmap\n\n- Q1: Launch core modules\n- Q2: DAO consolidation\n- Q3: Nation builder\n`;
-    );
+    );"
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
 <<<<<<< HEAD
 <<<<<<< HEAD
     writeTextFile(;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -632,17 +816,21 @@ if ( {) {
     instance_slug,
     config_path,
     assets,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     logs;
     summary;
     version}
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      changelogPath,;
+
+
+
+      changelogPath,;`
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
-    ),;
+    ),;"
     assets.push({ kind: "file", path: changelogPath, description: "Changelog" });
+<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1132,6 +1320,11 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
+=======
+    } catch (error) {}
+"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1139,12 +1332,12 @@ if ( {) {
   if (input.modules.bookBuilder) {;
     ensureDir(docsDir);
     writeTextFile(;
-      bookPath,;
+      bookPath,;`
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`;
-    );
+    );"
     assets.push({ kind: "file", path: bookPath, description: "Zion Book (markdown source)" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1152,12 +1345,12 @@ if ( {) {
   if (input.modules.launchKit) {;
     ensureDir(docsDir);
     writeTextFile(;
-      trailerScriptPath,;
+      trailerScriptPath,;`
       `# Launch Trailer Script\n\nVoiceover: Welcome to ${input.instanceName}, a sovereign digital nation built on Zion OS.\n`;
-    );
+    );"
     assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1165,26 +1358,36 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   writeTextFile(;
     summitEventPath;
+<<<<<<< HEAD
     JSON.stringify(;
       {;
         name: `${input.instanceName} Summit`;
+=======
+    JSON.stringify(;`
+      {name: `${input.instanceName} Summit`;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         route: "/summit";
         scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()};
       null;
       2;
+<<<<<<< HEAD
     );
 <<<<<<< HEAD
   );
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    );"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" });
-  // 4. Activate Public Pages (record intent);
-  const pagesActivationPath = path.join(baseDir, "pages.json");
+  // 4. Activate Public Pages (record intent);"
+  const pagesActivationPath = path.join(baseDir, "pages.json");"`
   const defaultNationRoute = `/nation/${toSlug(input.defaultLanguage || "default")}`;
   writeTextFile(;
     pagesActivationPath;
     JSON.stringify(;
       {;
+<<<<<<< HEAD
         activate: [;
           "/about";
           "/manifesto";
@@ -1204,22 +1407,37 @@ if ( {) {
           "/partners",;
           "/academy",;
           "/marketplace",;
+=======
+        activate: [;"
+          "/about";"
+          "/manifesto";"
+          "/constitution",;"
+          "/partners",;"
+          "/academy",;"
+          "/marketplace",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           "/dao",;
           defaultNationRoute]},;
       null,;
       2;
     );
+<<<<<<< HEAD
   ),;
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" }),;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  ),;"
+  assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" }),;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
   // Optional modules markers;
-  const optionalModules = Object.entries(input.modules);
+  const optionalModules = Object.entries(input.modules);"
     .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key));
 <<<<<<< HEAD
     .map(([key]) => key);
 =======
     .map(([key]) => key),;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (optionalModules.length > 0) {;
     const optionalPath = path.join(baseDir, "optional-modules.json");
@@ -1227,10 +1445,17 @@ if ( {) {
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
   }
 ;
+=======
+  if (optionalModules.length > 0) {;"
+    const optionalPath = path.join(baseDir, "optional-modules.json"),;
+    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;"
+    assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
+  }`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules);
     .filter(([ v]) => v);
-    .map(([k]) => k);
-    .join(", ")}.`;
+    .map(([k]) => k);"`
+    .join(", ")}.`;"
   logs.push({ timestamp: nowIso(), level: "info", action: "deploy_complete", details: { instanceSlug } });
   return {;
     success: true;
@@ -1244,20 +1469,20 @@ if ( {) {
 }
 =======
     .map(([key]) => key),;
-  if (optionalModules.length > 0) {;
+  if (optionalModules.length > 0) {;"
     const optionalPath = path.join(baseDir, "optional-modules.json");
-    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;
+    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;"
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
+;`
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules);
     .filter(([ v]) => v);
-    .map(([k]) => k);
-    .join(", ")}.`,;
+    .map(([k]) => k);"`
+    .join(", ")}.`,;"
   logs.push({ timestamp: nowIso(), level: "info", action: "deploy_complete", details: { instanceSlug } }),;
   return {;
     success: true,;
@@ -1266,29 +1491,22 @@ if ( {) {
     assets,;
     logs;
     summary;
-    version  } catch (error) {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    console.error("Error:", error);
+    version  } catch (error) {}
+"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
   if (input.modules.bookBuilder) {;
     ensureDir(docsDir);
     writeTextFile(;
-      bookPath,;
+      bookPath,;`
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`;
-    );
+    );"
     assets.push({ kind: "file", path: bookPath, description: "Zion Book (markdown source)" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1296,40 +1514,40 @@ if ( {) {
   if (input.modules.launchKit) {;
     ensureDir(docsDir);
     writeTextFile(;
-      trailerScriptPath,;
+      trailerScriptPath,;`
       `# Launch Trailer Script\n\nVoiceover: Welcome to ${input.instanceName}, a sovereign digital nation built on Zion OS.\n`;
-    );
+    );"
     assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
 
   // Schedule launch stream (/summit);
-  ensureDir(eventsDir);
+  ensureDir(eventsDir);`
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   writeTextFile(;
 
     summitEventPath,;
     JSON.stringify(;
-      {;
-        name: `${input.instanceName} Summit`,;
+      {;`
+        name: `${input.instanceName} Summit`,;"
         route: "/summit",;
         scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()},;
       null,;
       2;
     );
   ),;
-
-          "/constitution",;
-          "/partners",;
-          "/academy",;
-          "/marketplace",;
+"
+          "/constitution",;"
+          "/partners",;"
+          "/academy",;"
+          "/marketplace",;"
           "/dao",;
           defaultNationRoute]},;
       null,;
@@ -1339,16 +1557,14 @@ if ( {) {
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  } catch (error) {
-    console.error("Error:", error);
+
+
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -1370,3 +1586,10 @@ if ( {) {
 }
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-interface ShortUrl {
-  for (let i = 0, i < length, i++) {
+interface ShortUrl {}
+  for (let i = 0, i < length, i++) {}
     result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
   error?: string;  error?: string;
 }
@@ -8,6 +8,7 @@ interface ShortUrl {
 const url_storage = new Map < string, ShortUrl>();
 ;
 // Generate a random short code;
+<<<<<<< HEAD
 function generateShortCode (length: number = 6): string {
   const chars =;
 id: string;
@@ -33,15 +34,21 @@ interface UrlShortenerResponse {
 const chars =
 origin/cursor/automate-test-improve-and-merge-code-2533
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+=======
+function generateShortCode (length: number = 6): string {}
+  const chars =;'
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   let result = '';
-  for (let index = 0; i < length; i++) {
+  for (let index = 0; i < length; i++) {}
     result += chars.char_at (Math.floor (Math.random () * chars.length));
-  }
+  }'
   return result;  let result = '';
-  for (let index = 0, i < length, i++) {
+  for (let index = 0, i < length, i++) {}
     result += chars.char_at (Math.floor (Math.random () * chars.length));
   }
   return result;
+<<<<<<< HEAD
   return result;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -58,19 +65,32 @@ return true;
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
+=======
+// Validate URL format;
+function isValidUrl(url: string): boolean {}
+  try {}
+    new URL(url);
+    return true;
+  } catch {}
+    return false;
+  }  } catch {}
+export default async function handler(;
+  req: NextApiRequest;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   res: NextApiResponse<UrlShortenerResponse>
-) {
-    } catch (error) {
+) {}
+    } catch (error) {'
       console.error ('URL shortening error:', error);
-      res.status (500).json ({
+      res.status (500).json ({}
         success: false,
-      success: false,
+      success: false,'
       error: 'Method not allowed',
     });
   }
   params,
 }: {;
   params: { shortCode: string };
+<<<<<<< HEAD
 }) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
   if (req.method === 'POST') {
     // Create short URL
@@ -148,61 +168,69 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
+=======
+}) {  const shortCode = params.shortCode;export async function getServerSideProps() { return null; }
+  if (!shortUrl |!shortUrl.isActive) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   params: { shortCode: string };
-}) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+}) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {};
   const shortCode = params && params.shortCode;
   const shortUrl = urlStorage && urlStorage.get(shortCode);
 
-      data: urls as any
+      data: urls as any;
     })
-  } else {
-    res.status(405).json({
-      success: false,
+  } else {}
+    res.status(405).json({}
+      success: false,'
       error: 'Method not allowed'
     })
   }
 }
 
-// Handle redirects for short URLs
-export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+// Handle redirects for short URLs;
+export async function getServerSideProps({ params }: { params: { shortCode: string } }) {};
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
 
-  if (!shortUrl || !shortUrl.isActive) {
-    return {
-      notFound: true
-
+  if (!shortUrl || !shortUrl.isActive) {}
+    return {}
+      notFound: true;
     };
   }
 
+<<<<<<< HEAD
   if (!shortUrl || !shortUrl && shortUrl.isActive) {
     return {
 notFound: true,
     };
+=======
+  if (!shortUrl || !shortUrl && shortUrl.isActive) {}
+    return {}
+      notFound: true,    };      notFound: true;
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
-  // Increment click count
-      permanent: false
+  // Increment click count;
+      permanent: false;
     }
 }
-      permanent: false
+      permanent: false;
     }
 }
 // Handle redirects for short URLs;
-export async /**
- * getServerSideProps - Function description
+export async /**;
+ * getServerSideProps - Function description;
  */
-function getServerSideProps() {  const short_code = params.short_code;export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {
+function getServerSideProps() { return null; }
+function getServerSideProps() {}
   const short_code = params.short_code;
   const short_url = url_storage.get (short_code);
 ;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    return {
+    return {}
       not_found: true,    }      not_found: true;
     }
   }
@@ -211,18 +239,18 @@ if ( {) {
   url_storage.set (short_code, short_url);
 ;
   // Redirect to original URL;
-  return {
-
+  return {}
       destination: shortUrl.originalUrl,
       permanent: false,
     },
   };      destination: shortUrl.originalUrl;
-      permanent: false
+      permanent: false;
     }
 };
 }
   };
 
+<<<<<<< HEAD
   shortUrl.clicks++;
   urlStorage.set(shortCode, shortUrl);
   // Redirect to original URL
@@ -237,3 +265,6 @@ permanent: false,
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

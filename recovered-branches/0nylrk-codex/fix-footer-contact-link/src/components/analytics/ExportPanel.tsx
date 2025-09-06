@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import {;
   Card,;
   CardContent,;
@@ -35,11 +36,21 @@ import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from "react";
+import {};
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -49,42 +60,31 @@ import {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+"
 } from "@/components/ui/card";
-
-import { Button } from "@/components/ui/button";
+"
+import { Button } from "@/components/ui/button";"
 import { useToast } from "@/hooks/use-toast";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-export function ExportPanel() {;
-  const { toast } = useToast();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"
   const handleExport = (format: "csv" | "json") => {;
     // Placeholder for actual export functionality;
     (toast({;
-      title: `Exporting as ${format && format.toUpperCase()}`,;
+      title: `Exporting as ${format && format.toUpperCase()}`,;"
       description: "Your export is being prepared and will download shortly.",;
     }),;
       // In a real implementation, this would trigger an API call to generate and download the export;
       setTimeout(() => {;
-        toast({;
-          title: `${format && format.toUpperCase()} Export Ready`,;
+        toast({;`
+          title: `${format && format.toUpperCase()} Export Ready`,;"
           description: "Your export has been downloaded.",;
+
+
+
 <<<<<<< HEAD
-
-        });
-      }, 1500));
-  }
-
-=======
-
 export function ExportPanel() {
 
 =======
@@ -128,9 +128,17 @@ import { useToast } from "@/hooks/use-toast";  const { toast } = useToast();
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
+=======
+  const { toast } = useToast();
+"
+import React from "react","
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
+import { Button } from "@/components/ui/button","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useToast } from "@/hooks/use-toast",
-export function ExportPanel() {
+export function ExportPanel() {}
   const { toast } = useToast(),
+<<<<<<< HEAD
 
   const handleExport = (format: 'csv' | 'json') => {
     // Placeholder for actual export functionality
@@ -138,75 +146,83 @@ export function ExportPanel() {
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
 
+=======
+  ;
+  const handleExport = (format: 'csv' | 'json') => {};
+    // Placeholder for actual export functionality;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         });
       }, 1500));
   }
 
+<<<<<<< HEAD
   return (
+=======
+
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
-      <CardHeader>;
-        <CardTitle className="text-white text-lg">Export Data</CardTitle>;
+      <CardHeader>;"
+        <CardTitle className="text-white text-lg">Export Data</CardTitle>;"
         <CardDescription className="text-zion-slate-light">;
           Download analytics data for further analysis;
         </CardDescription>;
-      </CardHeader>;
-      <CardContent className="space-y-4">;
+      </CardHeader>;"
+      <CardContent className="space-y-4">;"
         <p className="text-zion-slate">;
           Export your analytics data in CSV or JSON format for deeper analysis;
           in your preferred tools.;
-        </p>;
+        </p>;"
         <div className="flex flex-wrap gap-4">;
-          <Button
-            variant="default"
+          <Button"
+            variant="default""
             className="bg-zion-purple hover:bg-zion-purple-dark"
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             onClick={() => handleExport("csv")}
           >;
             Export as CSV;
           </Button>;
-          <Button
-            variant="outline"
-            className="border-zion-blue-light text-zion-slate-light"
+          <Button"
+            variant="outline""
+            className="border-zion-blue-light text-zion-slate-light""
             onClick={() => handleExport("json")}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from './react';
-import {
+import {}
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
+  CardTitle,';
+} from '@/components / ui / card';'
+import { Button  } from '@/components / ui / button';'
 import { use_toast  } from '@/hooks / use - toast';
-export /**
- * ExportPanel - Function description
+export /**;
+ * ExportPanel - Function description;
  */
-function ExportPanel() {
+function ExportPanel() {}
   const { toast } = use_toast ();
-;
-  const handle_export = (format: "csv" | "json") =>: any {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    (toast({
-      title: `Exporting as ${format.toUpperCase()}`
-      description: "Your export is being prepared and will download shortly."
-    })
-      // In a real implementation, this would trigger an API call to generate and download the export
-      setTimeout(() => {
-        toast({
-          title: `${format.toUpperCase()} Export Ready`
-          description: "Your export has been downloaded."
-        });
-      }, 1500));
-  }
+;"
+  const handle_export = (format: "csv" | "json") =>: any {}
+'
+            onClick={() => handleExport('csv')}
+          >;
+            Export as CSV;
+          </Button>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -261,15 +277,33 @@ function ExportPanel() {
 =======
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
+=======
+          <Button "
+            variant="outline" "
+            className="border-zion-blue-light text-zion-slate-light""
+import React from "react",;"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Button } from "@/components/ui/button",;"
+import { useToast } from "@/hooks/use-toast",;
+export function ExportPanel() { return null; }
+  const { toast } = useToast(),;'
+  const handleExport = (format: 'csv' | 'json') => {;
+
+
+    // Placeholder for actual export functionality;
+    (toast ({}`
+      title: `Exporting as ${format.toUpperCase ()}`,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: "Your export is being prepared and will download shortly.",
-    }),
-      // In a real implementation, this would trigger an API call to generate and download the export
-      setTimeout(() => {
-        toast({
-          title: `${format.toUpperCase()} Export Ready`,
+    }),;
+      // In a real implementation, this would trigger an API call to generate and download the export;
+      set_timeout (() => {}
+        toast ({}`
+          title: `${format.toUpperCase ()} Export Ready`,"
           description: "Your export has been downloaded.",;
         });
       }, 1500));
+<<<<<<< HEAD
   };
 
       description: "Your export is being prepared and will download shortly."}),
@@ -333,84 +367,37 @@ export function ExportPanel() {;
           description: "Your export has been downloaded.",
         });
       }, 1500));
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 ;
-  return (
+  return ("
     <Card className="bg - zion - blue - dark border - zion - blue - light">;
-      <CardHeader>;
-        <CardTitle className="text - white text - lg">Export Data</CardTitle>;
+      <CardHeader>;"
+        <CardTitle className="text - white text - lg">Export Data</CardTitle>;"
         <CardDescription className="text - zion - slate - light">;
           Download analytics data for further analysis;
         </CardDescription>;
-      </CardHeader>;
-      <CardContent className="space - y-4">;
+      </CardHeader>;"
+      <CardContent className="space - y-4">;"
         <p className="text - zion - slate">;
           Export your analytics data in CSV or JSON format for deeper analysis;
           in your preferred tools.;
-        </p>;
+        </p>;"
         <div className="flex flex - wrap gap - 4">;
-          <Button;
-            variant="default";
-            className="bg - zion - purple hover:bg - zion - purple - dark";
+          <Button;"
+            variant="default";"
+            className="bg - zion - purple hover:bg - zion - purple - dark";"
             on_click={() => handle_export ("csv")}
-<<<<<<< HEAD
-=======
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { useToast } from "@/hooks/use-toast",;
+
+
 ;
-export function ExportPanel() {;
-  const { toast } = useToast(),;
-  ;
-  const handleExport = (format:'csv' | 'json') => {;
-    // Placeholder for actual export functionality;
-    toast({;
-      title:`Exporting as ${format.toUpperCase()}`,;
-      description:"Your export is being prepared and will download shortly."}),;
-    ;
-    // In a real implementation, this would trigger an API call to generate and download the export;
-    setTimeout(() => {;
-      toast({;
-        title:`${format.toUpperCase()} Export Ready`,;
-        description:"Your export has been downloaded."}),;
-    }, 1500),;
-  },;
-  ;
-    // Placeholder for actual export functionality;
-    toast({;
-      title: `Exporting as ${format.toUpperCase()}`,;
-      description: "Your export is being prepared and will download shortly."}),;
-    // In a real implementation, this would trigger an API call to generate and download the export;
-    setTimeout(() => {;
-      toast({;
-        title: `${format.toUpperCase()} Export Ready`;
-        description: "Your export has been downloaded."});
-    }, 1500);
-  };
-  return (;
-    <Card className="bg-zion-blue-dark border-zion-blue-light">;
-      <CardHeader>;
-        <CardTitle className="text-white text-lg">Export Data</CardTitle>;
-        <CardDescription className="text-zion-slate-light">Download analytics data for further analysis</CardDescription>;
-      </CardHeader>;
-      <CardContent className="space-y-4">;
-        <p className="text-zion-slate">;
-          Export your analytics data in CSV or JSON format for deeper analysis in your preferred tools.;
-        </p>;
-        <div className="flex flex-wrap gap-4">;
-          <Button;
-            variant="default";
-            className="bg-zion-purple hover:bg-zion-purple-dark";
-            onClick={() => handleExport('csv')}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
             Export as CSV;
           </Button>;
-          <Button;
+          <Button;"
             variant="outline";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             className="border - zion - blue - light text - zion - slate - light";
@@ -427,11 +414,17 @@ export function ExportPanel() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           >;
             Export as JSON;
           </Button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -457,6 +450,9 @@ export function ExportPanel() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   );
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
     </Card>);
 }  );
@@ -465,6 +461,7 @@ export function ExportPanel() {;
 }  );
     </Card>);
 }
+<<<<<<< HEAD
     </Card>;
   ),;}
  export function ExportPanel () {
@@ -497,3 +494,9 @@ export function ExportPanel() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

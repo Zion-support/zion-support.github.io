@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -22,23 +23,27 @@ import { cn } from "@/lib/utils",
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
+=======
+import React from "react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils";
-interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
+interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {}
   className?: string;
   children?: React.ReactNode;
 }
 
-export function SidebarMenu({
+export function SidebarMenu({}
   className,
-  children,
-  ...props
-}: SidebarMenuProps) {
-  return (
+  children,;
+  ...props;
+}: SidebarMenuProps) {}
+  return ("
     <ul className={cn("space-y-1", className)} {...props}>
       {children}
     </ul>
   );
 }
+<<<<<<< HEAD
 import React from "react",;
 import { cn } from "@/lib/utils",;
 ;
@@ -50,25 +55,33 @@ interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
 export function SidebarMenu({ className, children, ...props } SidebarMenuProps) {;
   return (;
     <ul ;
+=======
+
+
+    </ul>);
+}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <ul className={cn("space-y-1", className)} {...props}>
       {children}
     </ul>
-    <ul 
+    <ul "
       className={cn("space-y-1", className)} 
-    <ul 
+    <ul "
       className={cn("space-y-1", className)} 
       {...props}
     >
       {children}
     </ul>
-  )
-import React from "react",;
+  )"
+import React from "react",;"
 import { cn } from "@/lib/utils",;
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
 <<<<<<< HEAD
 =======
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -80,6 +93,13 @@ interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
 import React from "react",
 import { cn } from "@/lib/utils",
 
+=======
+"
+import React from "react","
+import { cn } from "@/lib/utils",
+
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {cn} from "@/lib/utils";
 interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElement> {;
 <<<<<<< HEAD
@@ -91,9 +111,10 @@ interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElemen
   className?: string;
   children?: React && React.ReactNode;
 }
-  return (
+  return ("
     <ul className={cn ("space - y-1", class_name)} {...props}>;
       {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -136,3 +157,9 @@ export function SidebarMenu(): any ({ className, children, ...props }: SidebarMe
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </ul>);
+}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

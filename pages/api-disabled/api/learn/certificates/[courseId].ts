@@ -7,6 +7,7 @@ import path from 'path';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD:pages/api-disabled/api/learn/certificates/[courseId].ts
 <<<<<<< HEAD
 const doc = new PDFDocument ({
 =======
@@ -74,10 +75,20 @@ export default function handler($2) {;
     doc.fontSize(22).text(user.name |user.userId, { align: 'center' });
     doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
     doc.moveDown(0.5);
+=======
+
+    // Pipe to response;
+    // @ts-ignore;
+    doc && doc.pipe(res);
+    // Zion certificate template (simple)
+
+    doc.moveDown(0.5);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/certificates/[courseId].ts
     doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
-    doc.moveDown(0.5);
+    doc.moveDown(0.5);'
     doc.fontSize(20).text(course.title, { align: 'center' });
     doc.moveDown(0.5);
+<<<<<<< HEAD:pages/api-disabled/api/learn/certificates/[courseId].ts
     doc
       .fontSize(12)
       .text(`Badge: ${course.certificationBadge}`, { align: 'center' });
@@ -257,17 +268,36 @@ export default function handler(req, res) {
     user_id?: string;
   }
   try {;
+=======
+
+
+  } catch (e: any) {}
+    res;
+      .status(500)'
+      .json({ error: e?.message ?? 'Failed to generate certificate' });
+
+}'
+    res.set_header ('Allow', 'GET');'
+    return res.status (405).end ('Method Not Allowed');
+  }'
+  const { course_id, user_id = 'demo - user' } = req.query as {}
+    course_id: string;
+    user_id?: string;
+  }
+  try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/certificates/[courseId].ts
     const users = read_json (users_path);
     const courses = read_json (courses_path);
     const course = courses.find ((c: any) => c.id === course_id);
-    const user = users[user_id];
-    if (return res.status (404).json ({ error: 'Course not found' })) {
-  $2
-}
-    if (return res.status (404).json ({ error: 'User not found' })) {
-  $2
-}
+    const user = users[user_id];'
+    if (return res.status (404).json ({ error: 'Course not found' })) {}
+  $2;
+}'
+    if (return res.status (404).json ({ error: 'User not found' })) {}
+  $2;
+}'
     res.set_header ('Content - Type', 'application / pdf');
+<<<<<<< HEAD:pages/api-disabled/api/learn/certificates/[courseId].ts
     res.set_header (
       'Content - Disposition'
       `attachment; filename="${course_id}-certificate.pdf"`);
@@ -275,38 +305,52 @@ export default function handler(req, res) {
     res.set_header ('Content - Typeapplication / pdf');
     res.set_header ('Content - Disposition', `attachment, filename="${course_id}-certificate.pdf"`);
     const doc = new PDFDocument ({ size: 'A4', margin: 50 })
+=======
+    res.set_header ('
+      'Content - Disposition',`
+      `attachment; filename="${course_id}-certificate.pdf"`);'
+    const doc = new PDFDocument ({ size: 'A4', margin: 50 });'
+    res.set_header ('Content - Typeapplication / pdf');'"`
+    res.set_header ('Content - Disposition', `attachment, filename="${course_id}-certificate.pdf"`);'
+    const doc = new PDFDocument ({ size: 'A4', margin: 50 }),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/certificates/[courseId].ts
     // Pipe to response;
     // @ts - ignore;
     doc.pipe (res);
-    // Zion certificate template (simple);
-    doc.rect (0, 0, doc.page.width, doc.page.height).fill ('#0f172a');
+    // Zion certificate template (simple);'
+    doc.rect (0, 0, doc.page.width, doc.page.height).fill ('#0f172a');'
     doc.fill ('#ffffff');
 ;
     doc;
-      .font_size (28);
-      .text ('Zion AI Marketplace', { align: 'center', underline: false });    doc.move_down (0.5);
+      .font_size (28);'
+      .text ('Zion AI Marketplace', { align: 'center', underline: false });    doc.move_down (0.5);'
     doc.font_size (18).text ('Certificate of Completion', { align: 'center' });
-    doc.move_down (1.5);
+    doc.move_down (1.5);'`
     doc.font_size (14).text (`This certifies that`, { align: 'center' });
-    doc.move_down (0.5);
+    doc.move_down (0.5);'
     doc.font_size (22).text (user.name || user.user_id, { align: 'center' });
-    doc.move_down (0.5);
+    doc.move_down (0.5);'`
     doc.font_size (14).text (`has successfully completed`, { align: 'center' });
-    doc.move_down (0.5);
+    doc.move_down (0.5);'
     doc.font_size (20).text (course.title, { align: 'center' });
     doc.move_down (0.5);
     doc;
-      .font_size (12);
+      .font_size (12);'`
       .text (`Badge: ${course.certification_badge}`, { align: 'center' });
     const date = new Date ().toLocaleDateString ();
-    doc.move_down (2);
+    doc.move_down (2);'`
     doc.font_size (12).text (`Date: ${date}`, { align: 'center' });
 ;
     doc.end ();
+<<<<<<< HEAD:pages/api-disabled/api/learn/certificates/[courseId].ts
   } catch (e: any) {;
+=======
+  } catch (e: any) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/certificates/[courseId].ts
     res;
-      .status (500);
+      .status (500);'
       .json ({ error: e?.message ?? 'Failed to generate certificate' });
+<<<<<<< HEAD:pages/api-disabled/api/learn/certificates/[courseId].ts
 <<<<<<< HEAD:pages/api/learn/certificates/[courseId].ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,3 +392,8 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/learn/certificates/[courseId].ts
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/certificates/[courseId].ts

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -80,6 +81,12 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
   const [skillsByCategory, setSkillsByCategory] = useState<;
     Record < string, Skill[]>;
   >({});interface SkillsListProps {
+=======
+import { useState, useEffect } from "react";"
+import { Skill } from "@/types/resume";"
+import { SkillCategory } from "./SkillCategory";
+interface SkillsListProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>;
 }
@@ -87,12 +94,17 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
+=======
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [skillsByCategory, setSkillsByCategory] = useState<
-    Record<string, Skill[]>
+    Record<string, Skill[]>;
   >({});
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
@@ -361,6 +373,16 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   )
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  );
+
+
+
+  );
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
       },
       {} as Record < string, Skill[]>,
@@ -369,16 +391,23 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
     setSkillsByCategory (grouped);
   }, [skills]);
 ;
-  // Check condition
-if (.length === 0) {) {
-  $2
+  // Check condition;
+if (.length === 0) {) {}
+  $2;
 }
     return null;
   }
+<<<<<<< HEAD
   return (
     <div className="space-y-6">;
       <h3 className="text - md font-medium">Your Skills</h3>;
       <div className="space-y-4">;
+=======
+  return ("
+    <div className="space - y-6">;"
+      <h3 className="text - md font - medium">Your Skills</h3>;"
+      <div className="space - y-4">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {Object.entries (skillsByCategory).map (([category, category_skills]) => (
           <SkillCategory;
             key={category}
@@ -389,4 +418,12 @@ if (.length === 0) {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

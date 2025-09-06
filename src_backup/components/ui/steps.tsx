@@ -31,16 +31,17 @@ status;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-import React from "react",
+import React from "react","
 import { cn } from "@/lib/utils",
 import { CheckIcon } from 'lucide-react'
 
-interface StepProps {
+interface StepProps {"
   status: "incomplete" | "current" | "complete",
   label: string,
-  description?: string,
-  className?: string
+  description?: string,;
+  className?: string;
 }
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 
 export function Step({
 <<<<<<< HEAD
@@ -72,6 +73,12 @@ export function Step({  className}: StepProps) {
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export function Step({}
+  className}: StepProps) {}
+  return (;
+    <li;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
       className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,14 +87,19 @@ export function Step({  className}: StepProps) {
           "opacity-60": status === "incomplete"},
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
         "relative flex items-center",
-        {
+        {"
           "opacity-60": status === "incomplete"},
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 <<<<<<< HEAD:src/components/ui/steps.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -99,10 +111,14 @@ export function Step({  className}: StepProps) {
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
         className
+=======
+        className;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
       )}
     >
-      <div
+      <div;
         className={cn(
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 <<<<<<< HEAD:src/components/ui/steps.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,15 +157,32 @@ export function Step({  className}: StepProps) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
+=======
+"
+          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {}
+"
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":"
+              status === "incomplete""
+            "bg-zion-blue border-zion-cyan text-white":"
+              status === "current""
+          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
+          {"
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":"
+              status === "incomplete","
+            "bg-zion-blue border-zion-cyan text-white":"
+              status === "current","
+            "bg-zion-purple border-zion-purple text-white":"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
               status === "complete",}
         )}>;
-
+"
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
-          {
-            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
-              status === "incomplete",
-            "bg-zion-blue border-zion-cyan text-white":
+          {"
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":"
+              status === "incomplete","
+            "bg-zion-blue border-zion-cyan text-white":"
               status === "current",
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 
 <<<<<<< HEAD:src/components/ui/steps.tsx
 =======
@@ -162,13 +195,18 @@ export function Step({  className}: StepProps) {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
             "bg-zion-purple border-zion-purple text-white":
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+            "bg-zion-purple border-zion-purple text-white":"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
               status === "complete"}
         )}
-      >
-        {status === "complete" ? (
+      >"
+        {status === "complete" ? ("
           <CheckIcon className="h-5 w-5" />
         ) : (
           <span>
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 
 <<<<<<< HEAD:src/components/ui/steps.tsx
 =======
@@ -176,39 +214,36 @@ export function Step({  className}: StepProps) {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 import React from "react",;
 import { cn } from "@/lib/utils",;
+=======
+"
+import React from "react",;"
+import { cn } from "@/lib/utils",;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
 import { CheckIcon } from 'lucide-react';
-interface StepProps {;
+interface StepProps {;"
   status: "incomplete" | "current" | "complete",;
   label: string,;
   description?: string,;
   className?: string;
 }
 ;
-export function Step({;
-  status,;
-  label,;
-  description,;
-  className}: StepProps) {;
-  return (;
-    <li;
-      className={cn(;
-        "relative flex items-center",;
-        {;
+export function Step() { return null; }
           "opacity-60": status === "incomplete"},;
         className;
       )}
     >;
       <div;
-        className={cn(;
+        className={cn(;"
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",;
-          {;
-            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":;
-              status === "incomplete",;
-            "bg-zion-blue border-zion-cyan text-white":;
-              status === "current",;
-            "bg-zion-purple border-zion-purple text-white":;
+          {;"
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":;"
+              status === "incomplete",;"
+            "bg-zion-blue border-zion-cyan text-white":;"
+              status === "current",;"
+            "bg-zion-purple border-zion-purple text-white":;"
               status === "complete"}
         )}
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
       >;
 <<<<<<< HEAD:src/components/ui/steps.tsx
 <<<<<<< HEAD
@@ -216,6 +251,10 @@ export function Step({;
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
         {status === "complete" ? (;
+=======
+      >;"
+        {status === "complete" ? (;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
@@ -226,6 +265,7 @@ export function Step({;
       </div>
 =======
 
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 
@@ -267,14 +307,21 @@ export function Step({;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
+=======
+"
+            "text-zion-slate-light": status === "incomplete","
+            "text-zion-slate-light": status === "incomplete",
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
             "text-white": status === "current" || status === "complete"})}
         >
       </div>;
-
+"
       <div className="ml-4 min-w-0">;
-        <h3
-          className={cn("text-sm font-medium", {
-            "text-zion-slate-light": status === "incomplete"
+        <h3"
+          className={cn("text-sm font-medium", {"
+            "text-zion-slate-light": status === "incomplete""
             "text-white": status === "current" || status === "complete"})}>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {label}
@@ -283,7 +330,7 @@ export function Step({;
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
         </h3>
-        {description && (
+        {description && ("
           <p className="text-sm text-zion-slate-light">{description}</p>
         )}
 <<<<<<< HEAD
@@ -300,6 +347,7 @@ export function Step({;
 
 
 
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 <<<<<<< HEAD:src/components/ui/steps.tsx
 =======
 
@@ -320,6 +368,16 @@ export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children)
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
+=======
+interface StepsProps {}
+  currentStep: number;
+  className?: string;
+  children: React.ReactNode;
+}
+export function Steps({ currentStep, className, children }: StepsProps) {}
+  const childrenArray = React.Children.toArray(children)
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
 ;
 interface StepsProps {;
   currentStep: number,;
@@ -327,7 +385,7 @@ interface StepsProps {;
   children: React.ReactNode;
 }
 
-export function Steps({ currentStep, className, children }: StepsProps) {
+export function Steps({ currentStep, className, children }: StepsProps) {}
   const childrenArray = React.Children.toArray(children),
   
 <<<<<<< HEAD:src/components/ui/steps.tsx
@@ -340,6 +398,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 
 
 
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -354,10 +413,16 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  return ("
+    <div className={cn("w-full", className)}>"
+      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
+        {React.Children.map(childrenArray, (child, index) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
           if (!React.isValidElement(child)) return null,
-          
-          let status: "incomplete" | "current" | "complete" = "incomplete",
-          if (index < currentStep) status = "complete",
+          "
+          let status: "incomplete" | "current" | "complete" = "incomplete","
+          if (index < currentStep) status = "complete","
           if (index === currentStep) status = "current",
 <<<<<<< HEAD:src/components/ui/steps.tsx
 <<<<<<< HEAD
@@ -372,6 +437,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
           if (!React.isValidElement(child)) return null,
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
@@ -381,6 +447,14 @@ export function Steps({ currentStep, className, children }: StepsProps) {
       className;
 origin/cursor/automate-test-improve-and-merge-code-2533
           return React.cloneElement(child as React.ReactElement<StepProps>, {
+=======
+          "
+          let status: "incomplete" | "current" | "complete" = "incomplete","
+          if (index < currentStep) status = "complete","
+          if (index === currentStep) status = "current",
+          
+          return React.cloneElement(child as React.ReactElement<StepProps>, {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
             status})
         })}
       </ol>
@@ -398,13 +472,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       
 
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
       <div className="hidden md:flex md:mt-4">
+=======
+"
+      <div className="hidden md:flex md:mt-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
-          <div
+          <div"
             className="h-full bg-zion-purple transition-all"
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
             style={{
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -412,6 +492,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+=======
+            style={{};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
 interface StepsProps {;
   currentStep: number,;
   className?: string;
@@ -423,7 +506,7 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 
   return (
 
-}/> </div> </div> </div>) 
+}/> </div> </div> </div>) "
 }"};
 ;
 <<<<<<< HEAD:src/components/ui/steps.tsx
@@ -439,6 +522,7 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
 ;
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export function Steps({ currentStep, className, children }: StepsProps) {;
@@ -451,19 +535,23 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
     <div className={cn("w-full", className)}>;
+=======
+export function Steps() { return null; }
+    <div className={cn("w-full", className)}>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
         {React.Children.map(childrenArray, (child, index) => {;
-          if (!React.isValidElement(child)) return null,;
-          let status: "incomplete" | "current" | "complete" = "incomplete",;
-          if (index < currentStep) status = "complete";
+          if (!React.isValidElement(child)) return null,;"
+          let status: "incomplete" | "current" | "complete" = "incomplete",;"
+          if (index < currentStep) status = "complete";"
           if (index === currentStep) status = "current";
           return React.cloneElement(child as React.ReactElement<StepProps>, {;
             status});
         })}
-      </ol>;
-      <div className="hidden md:flex md:mt-4">;
+      </ol>;"
+      <div className="hidden md:flex md:mt-4">;"
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
-          <div;
+          <div;"
             className="h-full bg-zion-purple transition-all";
             style={{;
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
@@ -483,108 +571,115 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
 
 
 
-          // Check condition
-if (status = "complete") {
-  $2
+          // Check condition"
+if (status = "complete") {}
+  $2;
 }
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
           // Check condition
 if (status = "current") {
   $2
+=======
+          // Check condition"
+if (status = "current") {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx
 }
-interface StepProps {
+interface StepProps {"
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string;
   class_name?: string;
 }
-export /**
- * Step - Function description
+export /**;
+ * Step - Function description;
  */
-function Step() {
+function Step() {}
   return (
     <li;
-      className={cn (
+      className={cn ("
         "relative flex items - center";
-        {
+        {"
           "opacity - 60": status === "incomplete"}
         class_name)}
     >;
       <div;
-        className={cn (
-          "shrink - 0 h - 9 w - 9 rounded - full border flex items - center justify - center text - center font - medium" {
-            "bg - zion - blue - dark border - zion - blue - light text - zion - slate - light":;
-              status === "incomplete";
-            "bg - zion - blue border - zion - cyan text - white":;
-              status === "current";
-            "bg - zion - purple border - zion - purple text - white":;
+        className={cn ("
+          "shrink - 0 h - 9 w - 9 rounded - full border flex items - center justify - center text - center font - medium" {"
+            "bg - zion - blue - dark border - zion - blue - light text - zion - slate - light":;"
+              status === "incomplete";"
+            "bg - zion - blue border - zion - cyan text - white":;"
+              status === "current";"
+            "bg - zion - purple border - zion - purple text - white":;"
               status === "complete", }
         )}
-      >;
-        {status === "complete" ? (
+      >;"
+        {status === "complete" ? ("
           <CheckIcon className="h - 5 w - 5" />) : (
           <span>;
             {/* Step number would go here */}
           </span>)}
-      </div>;
+      </div>;"
       <div className="ml - 4 min - w-0">;
-        <h3;
-          className={cn ("text - sm font - medium", {
-            "text - zion - slate - light": status === "incomplete";
+        <h3;"
+          className={cn ("text - sm font - medium", {"
+            "text - zion - slate - light": status === "incomplete";"
             "text - white": status === "current" || status === "complete"})}
         >;
           {label}
         </h3>;
-        {description && (
+        {description && ("
           <p className="text - sm text - zion - slate - light">{description}</p>)}
       </div>;
     </li>);
 }
-interface StepsProps {
+interface StepsProps {}
   current_step: number,
   class_name?: string;
   children: React.ReactNode;
 }
-export /**
- * Steps - Function description
+export /**;
+ * Steps - Function description;
  */
-function Steps() {
+function Steps() {}
   const children_array = React.Children.to_array (children);
-  return (
-    <div className={cn ("w - full", class_name)}>;
+  return ("
+    <div className={cn ("w - full", class_name)}>;"
       <ol className="space - y-6 md:flex md:space - y-0 md:space - x-16">;
-        {React.Children.map (children_array, (child, index) => {
-          if () return null) {
-  $2
-}
+        {React.Children.map (children_array, (child, index) => {}
+          if () return null) {}
+  $2;
+}"
           let status: "incomplete" | "current" | "complete" = "incomplete",
-          // Check condition
-if (status = "complete") {
-  $2
+          // Check condition"
+if (status = "complete") {}
+  $2;
 }
-          // Check condition
-if (status = "current") {
-  $2
+          // Check condition"
+if (status = "current") {}
+  $2;
 }
-          return React.clone_element (child as React.ReactElement < StepProps>, {
+          return React.clone_element (child as React.ReactElement < StepProps>, {}
             status});
         })}
-      </ol>;
-      <div className="hidden md:flex md:mt - 4">;
+      </ol>;"
+      <div className="hidden md:flex md:mt - 4">;"
         <div className="ml-[18px] w-[calc (100%-36px)] h - 0.5 bg - zion - blue - light">;
-          <div;
+          <div;"
             className="h - full bg - zion - purple transition - all";
-            style={{
+            style={{}`
               width: `${(current_step / (children_array.length - 1)) * 100}%`}}
           />;
         </div>;
       </div>;
     </div>);
-}/> </div> </div> </div>);
+}/> </div> </div> </div>);"
 }"}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+<<<<<<< HEAD:src_backup/components/ui/steps.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 <<<<<<< HEAD:src/components/ui/steps.tsx
@@ -612,3 +707,6 @@ if (status = "current") {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/ui/steps.tsx
+=======
+;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/ui/steps.tsx

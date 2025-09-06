@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 <<<<<<< HEAD
-
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import * as React from 'react';
@@ -41,7 +44,16 @@ import * as SeparatorPrimitive from "@radix-ui/react-separator"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {cn} from '@/lib/utils';
 
+import * as React from "react""
+import * as SeparatorPrimitive from "@radix-ui/react-separator""
+import * as React from "react""
+import * as SeparatorPrimitive from "@radix-ui/react-separator"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+"
 import { cn } from "@/lib/utils"
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -52,6 +64,7 @@ const Separator = React.forwardRef<
 <<<<<<< HEAD
 <<<<<<< HEAD
   (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -69,10 +82,14 @@ const Separator = React.forwardRef<
 import { cn } from "@/lib/utils"
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+"
     { className, orientation = "horizontal", decorative = true, ...props },
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ref
@@ -96,30 +113,72 @@ import * as React from 'react';
         "shrink-0 bg-border",;
         orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
         className;
-export { Separator };
-import * as SeparatorPrimitive from '@radix - ui / react - separator';
+=======
+
 ;
+    ref;
+  ) => (
+    <SeparatorPrimitive.Root;
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(
+
+"
+        "shrink-0 bg-border","
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+
+
+        className;
+      className={cn(;"
+        "shrink-0 bg-border",;"
+        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
+        className;
+
+      )}
+      {...props}
+    />;
+  );
+);
+export { Separator }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+export { Separator };
+;
+
+
+Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
+
+export { Separator };
+;
+
+
+
+
+export { Separator };'
+import * as SeparatorPrimitive from '@radix - ui / react - separator';
+;'
 import {cn} from '@/lib / utils';
 ;
 const Separator = React.forward_ref<;
   React.ElementRef < typeof SeparatorPrimitive.Root>,
   React.ComponentPropsWithoutRef < typeof SeparatorPrimitive.Root>;
 ></typeof>(
-  (
+  ('
     { class_name, orientation = 'horizontal', decorative = true, ...props },
     ref) => (
     <SeparatorPrimitive.Root;
       ref={ref}
       decorative={decorative}
       orientation={orientation}
-      className={cn (
-        'shrink - 0 bg - border',
+      className={cn ('
+        'shrink - 0 bg - border','
         orientation === 'horizontal' ? 'h-[1px] w - full' : 'h - full w-[1px]',
         class_name)}
       {...props}
     />));
 Separator.display_name = SeparatorPrimitive.Root.display_name;
 ;
+<<<<<<< HEAD
 export { Separator }
 ;
 <<<<<<< HEAD
@@ -177,9 +236,11 @@ export { Separator }
 ;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export { Separator };
-export { Separator }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -193,3 +254,9 @@ export { Separator }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

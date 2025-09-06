@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -58,13 +58,18 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / too
 import { Badge } from "@/components/ui/badge",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface DisputeStatusBadgeProps {
+=======
+interface DisputeStatusBadgeProps {}
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {}
+interface DisputeStatusBadgeProps {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
+}
+
+
 <<<<<<< HEAD
-
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
-
-
   let message = "This item has an open dispute";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   switch (status) {
@@ -170,11 +175,21 @@ function DisputeStatusBadge() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     default:
       break
+=======
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {};
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;"
+  let message = "This item has an open dispute";
+
+export /**;
+ * DisputeStatusBadge - Function description;
+ */
+function DisputeStatusBadge() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   return (
     <Tooltip>
-      <TooltipTrigger asChild>
-        <Badge variant={variant} className="flex items-center gap-1">
+      <TooltipTrigger asChild>"
+        <Badge variant={variant} className="flex items-center gap-1">"
           <ShieldAlert className="h-3 w-3" />
           <span>Under Dispute</span>
         </Badge>
@@ -184,12 +199,9 @@ function DisputeStatusBadge() {
       </TooltipContent>
     </Tooltip>
   )
+
+
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-
 =======
 =======
 
@@ -204,11 +216,17 @@ function DisputeStatusBadge() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
+=======
+"
+import { Badge } from "@/components/ui/badge",;"
+import { ShieldAlert } from "lucide-react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
-interface DisputeStatusBadgeProps {;
+interface DisputeStatusBadgeProps {;'
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -231,13 +249,23 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       variant = "outline",;
       message = "This dispute has been closed";
       break;
+=======
+
+    default:;
+      break;
+  }
+
+  return (
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Tooltip>;
-      <TooltipTrigger asChild>;
-        <Badge variant={variant} className="flex items-center gap-1">;
+      <TooltipTrigger asChild>;"
+        <Badge variant={variant} className="flex items-center gap-1">;"
           <ShieldAlert className="h-3 w-3" />;
 <<<<<<< HEAD
 <<<<<<< HEAD
           <span>Under Dispute</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     default:;
@@ -255,6 +283,13 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
@@ -272,16 +307,8 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Tooltip>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+
+
 }
     </Tooltip>);
 }
@@ -289,34 +316,35 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 }
     </Tooltip>;
   ),;}
- interface DisputeStatusBadgeProps {
+ interface DisputeStatusBadgeProps {'
   status: 'open' | 'under review' | 'resolved' | 'closed' 
-}export function DisputeStatusBadge ({
-  status 
-}: DisputeStatusBadgeProps) {
-  switch (status) {
-  case 'under review': variant = "secondary";
+}export function DisputeStatusBadge ({};
+  status;
+}: DisputeStatusBadgeProps) {}
+  switch (status) {'"
+  case 'under review': variant = "secondary";"
 message = "This dispute is under review by our team";
-break;
-case 'resolved': variant = "outline";
+break;'"
+case 'resolved': variant = "outline";"
 message = "This dispute has been resolved";
-break;
-case 'closed': variant = "outline";
+break;'"
+case 'closed': variant = "outline";"
 message = "This dispute has been closed";
 break;
-message 
+message;
 }</p> </TooltipContent> </Tooltip>) 
 }
     </Tooltip>;
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
 }
 ;
     </Tooltip>);
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -325,3 +353,7 @@ message
 =======
           <span>Under Dispute</span>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -100,8 +100,12 @@ export default function ServicesPage() {
       description: 'Revolutionary quantum AI solutions with unprecedented computing power',
       icon: <Brain className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI' || s.category === 'AI & Machine Learning').length,
+<<<<<<< HEAD
       marketSize: '$12.5B+',
       growthRate: '400%'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Space Technology & Mining',
@@ -116,8 +120,12 @@ export default function ServicesPage() {
       description: 'Next-generation autonomous manufacturing and robotics platforms',
       icon: <Factory className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Manufacturing & Industry 4.0' || s.category === 'Robotics & Automation').length,
+<<<<<<< HEAD
       marketSize: '$45B+',
       growthRate: '350%'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Healthcare & Biotechnology',
@@ -154,9 +162,10 @@ export default function ServicesPage() {
       default:
         return 'neural';
     }
-=======
+
       icon: <FlaskConical className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length,
+<<<<<<< HEAD
       marketSize: '$200B+',
       growthRate: '400%'
     },
@@ -218,6 +227,9 @@ export default function ServicesPage() {
       color: 'from-purple-500 to-pink-600'
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-de06
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -296,6 +308,7 @@ export default function ServicesPage() {
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -904,6 +917,9 @@ export default function ServicesPage() {
       </section>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-de06
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Final CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
@@ -914,6 +930,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1433,12 +1450,16 @@ export default function ServicesPage() {
                 size="lg"
                 className="group relative overflow-hidden"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >
                 View Pricing
                 <DollarSign className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
               </Button>
             </div>
 
+<<<<<<< HEAD
             {/* Enhanced Contact Information */}
             <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
@@ -1460,14 +1481,21 @@ export default function ServicesPage() {
                   <span className="text-sm text-gray-400 mb-1">Address</span>
                   <span className="text-white font-semibold text-center text-sm leading-relaxed">{contactInfo.address}</span>
                   <span className="text-xs text-gray-500 mt-1">Global operations</span>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
       </UltraFuturisticBackground>
     </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

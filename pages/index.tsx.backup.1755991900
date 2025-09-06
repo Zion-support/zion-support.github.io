@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:components/index.tsx.backup.1755991777
 import Hero from '../components/sections/Hero';
@@ -44,6 +45,9 @@ import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, Exter
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991900
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const HomePage: React.FC = () => {
   const seoConfig = {
@@ -122,6 +126,7 @@ const HomePage: React.FC = () => {
       }
     },
     {
+<<<<<<< HEAD
       title: '🧬 Biotech AI Platform',
       description: 'AI-powered drug discovery and biotech research. Accelerate research with 800% ROI within 12 months.',
       price: 'Starting at $599/month',
@@ -136,6 +141,9 @@ const HomePage: React.FC = () => {
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       title: '💰 Quantum Financial Trading Platform',
@@ -176,6 +184,7 @@ const HomePage: React.FC = () => {
       features: ['Quantum-secured device communication', 'AI-powered device management', 'Real-time data analytics', 'Edge computing optimization'],
       link: 'https://ziontechgroup.com/quantum-iot',
       color: 'from-teal-500 to-cyan-600',
+<<<<<<< HEAD
       marketData: '$1.1T IoT market, 250% annual growth',
       competitors: 'AWS IoT ($0.50/device/month), Azure IoT ($0.40/device/month)',
       savings: 'Save 60% vs. competitors',
@@ -345,10 +354,14 @@ const HomePage: React.FC = () => {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9ec4
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991900
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
     <QuantumMatrixBackground variant="quantum" intensity="high">
       <Head>
         <title>Zion Tech Group - Revolutionary Micro SAAS Services & AI Solutions</title>
@@ -367,6 +380,9 @@ const HomePage: React.FC = () => {
         <meta name="twitter:description" content="150+ revolutionary micro SAAS services with 500%+ ROI. Quantum AI, cybersecurity, manufacturing, and more." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
       </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Enhanced Futuristic Backgrounds */}
       <UltraAdvancedFuturisticBackground variant="quantum-holographic">
@@ -456,6 +472,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -524,6 +541,9 @@ const HomePage: React.FC = () => {
                 <UltraAdvancedFuturisticCard
                   variant="quantum-holographic"
                   className="h-full hover:scale-105 transition-transform duration-300"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   <div className="p-8 text-center">
                     <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r ${insight.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
@@ -539,9 +559,13 @@ const HomePage: React.FC = () => {
                       {insight.description}
                     </div>
                   </div>
+<<<<<<< HEAD
                 </UltraAdvancedFuturisticCard>
               </motion.div>
             ))}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
@@ -564,6 +588,7 @@ const HomePage: React.FC = () => {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {revolutionaryServices.map((service, index) => (
               <motion.div
@@ -577,6 +602,9 @@ const HomePage: React.FC = () => {
                 <UltraAdvancedFuturisticCard
                   variant={service.variant as any}
                   className="h-full hover:scale-105 transition-transform duration-300"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   <div className="p-8">
                     <div className="text-4xl mb-4">{service.icon}</div>
@@ -617,10 +645,14 @@ const HomePage: React.FC = () => {
                       <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>
+<<<<<<< HEAD
                 </UltraAdvancedFuturisticCard>
               </motion.div>
             ))}
           </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -744,11 +776,15 @@ const HomePage: React.FC = () => {
                     +1 302 464 0950
                   </a>
                 </div>
+<<<<<<< HEAD
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-4 h-4 text-cyan-400" />
                   <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                     kleber@ziontechgroup.com
                   </a>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <div className="flex items-start space-x-3 text-gray-300 md:col-span-2">
                   <MapPin className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />
@@ -764,9 +800,13 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
     </QuantumMatrixBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

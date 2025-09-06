@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = ["]"
 =======
 <<<<<<< HEAD
@@ -27,3 +28,6 @@ export: const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [""
 =======
 "export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = ["]"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

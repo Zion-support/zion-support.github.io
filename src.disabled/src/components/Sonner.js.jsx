@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,9 +25,11 @@ module.exports = function Sonner({ position = "bottom-right",richColors = true,c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function Sonner({ position = \"bottom-right\",richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \"top-left\" ? \"top-4 left-4\" :\" position === \"top-right\" ? \"top-4 right-4\" :\" position === \"bottom-left\" ? \"bottom-4 left-4\" :\"` \"bottom-4 right-4\"} z-50`}> {} </div>)} export const toast = {}}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-module && module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return (<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,3 +62,14 @@ module.exports = function Sonner({ position = "bottom-right",richColors = true,c
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`
+"`
+export function Sonner({ position = \"bottom-right\",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === \"top-left\" ? \"top-4 left-4\" :\" position === \"top-right\" ? \"top-4 right-4\" :\" position === \"bottom-left\" ? \"bottom-4 left-4\" :\"` \"bottom-4 right-4\"} z-50`}> {} </div>)} export const toast = {}}"`
+module.exports = function Sonner({ position = "bottom-right",richColors = true,closeButton = true }) { return(<div className={`fixed ${position === "top-left" ? "top-4 left-4" :" position === "top-right" ? "top-4 right-4" :" position === "bottom-left" ? "bottom-4 left-4" :"` "bottom-4 right-4"} z-50`}> {} </div>)} export const toast = {}}"`"`
+
+
+";`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

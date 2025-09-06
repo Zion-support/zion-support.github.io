@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-classname-syntax.cjs
 
 
@@ -100,6 +101,10 @@ class ClassNameSyntaxFixer {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.log(`Fixes Applied: ${this.fixes.length}`);
 
     this.log(`Errors Found: ${this.errors.length}`);
@@ -121,6 +126,7 @@ class ClassNameSyntaxFixer {
 // Run the fixer
 const fixer = new ClassNameSyntaxFixer();
 fixer.run().catch(console.error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-classname-syntax.cjs
 
@@ -152,12 +158,22 @@ fixer.run().catch(console.error);
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
 =======
   log(message, type = 'INFO')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-classname-syntax.cjs
 =======
@@ -180,3 +196,10 @@ const glob = require('glob')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+      const fixedQuoted = quoted.replace(/"([a-z]+)"
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

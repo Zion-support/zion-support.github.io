@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React,{ createContext,useContext,useState } from';react' const Messaging
 import _React,{ createContext,useContext,useState } from';react' const MessagingProvider({ children }) { const [messages,setMessages] = useState([]) const sendMessage = (content) => { const newMessage = { "id": Date.now().toString(),content,"timestamp": new: Date(),"isRead": 'fals',e} setMessages("prev": '=> [...prev',newMessage])} const markAsRead = (id) => { setMessages(prev => prev.map(msg => msg.id === id ? { ...msg,"isRead": 'true'} : msg))} const unreadCount = messages.filter(msg => !msg.isRead).length return (<MessagingContext.Provider value = { { messages,unreadCount,sendMessage,markAsRead}}> {children} </MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error('';"useMessaging": must be used within a MessagingProvider')} return context}'';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React,{ createContext,useContext,useState } from';react' const MessagingProvider({ children }) { const [messages,setMessages] = useState([]) const sendMessage = (content) => { const newMessage = { "id": Date.now().toString(),content,"timestamp": new: Date(),"isRead": 'fals',e} setMessages("prev": '=> [...prev',newMessage])} const markAsRead = (id) => { setMessages(prev => prev.map(msg => msg.id === id ? { ...msg,"isRead": 'true'} : msg))} const unreadCount = messages.filter(msg => !msg.isRead).length return (<MessagingContext.Provider value = { { messages,unreadCount,sendMessage,markAsRead}}> {children} </MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error('';"useMessaging": must be used within a MessagingProvider')} return context}'';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import _React,{ createContext,useContext,useState } from';react' const Messaging
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React,{ createContext,useContext,useState } from\';react\' const MessagingProvider({ children }) { const [messages,setMessages] = useState([]) const sendMessage = (content) => { const newMessage = { \"id\": Date && Date.now().toString(),content,\"timestamp\": new: Date(),\"isRead\": \'fals\',e} setMessages(\"prev\": \'=> [...prev\',newMessage])} const markAsRead = (id) => { setMessages(prev => prev && prev.map(msg => msg && msg.id === id ? { ...msg,\"isRead\": \'true\'} : msg))} const unreadCount = messages && messages.filter(msg => !msg && msg.isRead).length return (<MessagingContext && MessagingContext.Provider value = { { messages,unreadCount,sendMessage,markAsRead}}> {children} </MessagingContext && MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error(\'';\"useMessaging\": must be used within a MessagingProvider\')} return context}\'';
 const React,{ createContext,useContext,useState } from";react" const MessagingProvider({ children }) { const [messages,setMessages] = useState([]) const sendMessage = (content) => { const newMessage = { id: Date && Date.now().toString(),content,timestamp: new: Date(),isRead: "fals",e} setMessages(prev: "=> [.prev",newMessage])} const markAsRead = (id) => { setMessages(prev => prev && prev.map(msg => msg && msg.id === id ? { .msg,isRead: "true"} : msg))} const unreadCount = messages && messages.filter(msg => !msg && msg.isRead).length return (<MessagingContext && MessagingContext.Provider value = { { messages,unreadCount,sendMessage,markAsRead}}> {children} </MessagingContext && MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error("";useMessaging: must be used within a MessagingProvider")} return context}"";"""
-import _React,{ createContext,useContext,useState } from';react' const MessagingProvider({ children }) { const [messages,setMessages] = useState([]) const sendMessage = (content) => { const newMessage = { "id": Date && Date.now().toString(),content,"timestamp": new: Date(),"isRead": 'fals',e} setMessages("prev": '=> [...prev',newMessage])} const markAsRead = (id) => { setMessages(prev => prev && prev.map(msg => msg && msg.id === id ? { ...msg,"isRead": 'true'} : msg))} const unreadCount = messages && messages.filter(msg => !msg && msg.isRead).length return (<MessagingContext && MessagingContext.Provider value = { { messages,unreadCount,sendMessage,markAsRead}}> {children} </MessagingContext && MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error('';"useMessaging": must be used within a MessagingProvider')} return context}'';
-<<<<<<< HEAD
+=======
 
+
+'"
+import React,{ createContext,useContext,useState } from\';react\' const MessagingProvider({ children }) { const [messages,setMessages] = useState([]) const sendMessage = (content) => { const newMessage = { \"id\": Date && Date.now().toString(),content,\"timestamp\": new: Date(),\"isRead\": \'fals\',e} setMessages(\"prev\": \'=> [...prev\',newMessage])} const markAsRead = (id) => { setMessages(prev => prev && prev.map(msg => msg && msg.id === id ? { ...msg,\"isRead\": \'true\'} : msg))} const unreadCount = messages && messages.filter(msg => !msg && msg.isRead).length return (<MessagingContext && MessagingContext.Provider value = { { messages,unreadCount,sendMessage,markAsRead}}> {children} </MessagingContext && MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error(\'';\"useMessaging\": must be used within a MessagingProvider\')} return context}\'';"
+const React,{ createContext,useContext,useState } from";react" const MessagingProvider({ children }) { const [messages,setMessages] = useState([]) const sendMessage = (content) => { const newMessage = { id: Date && Date.now().toString(),content,timestamp: new: Date(),isRead: "fals",e} setMessages(prev: "=> [.prev",newMessage])} const markAsRead = (id) => { setMessages(prev => prev && prev.map(msg => msg && msg.id === id ? { .msg,isRead: "true"} : msg))} const unreadCount = messages && messages.filter(msg => !msg && msg.isRead).length return (<MessagingContext && MessagingContext.Provider value = { { messages,unreadCount,sendMessage,markAsRead}}> {children} </MessagingContext && MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error("";useMessaging: must be used within a MessagingProvider")} return context}"";"""'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React,{ createContext,useContext,useState } from';react' const MessagingProvider({ children }) { const [messages,setMessages] = useState([]) const sendMessage = (content) => { const newMessage = { "id": Date && Date.now().toString(),content,"timestamp": new: Date(),"isRead": 'fals',e} setMessages("prev": '=> [...prev',newMessage])} const markAsRead = (id) => { setMessages(prev => prev && prev.map(msg => msg && msg.id === id ? { ...msg,"isRead": 'true'} : msg))} const unreadCount = messages && messages.filter(msg => !msg && msg.isRead).length return (<MessagingContext && MessagingContext.Provider value = { { messages,unreadCount,sendMessage,markAsRead}}> {children} </MessagingContext && MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error('';"useMessaging": must be used within a MessagingProvider')} return context}'';
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import _React,{ createContext,useContext,useState } from';react' const Messaging
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+import _React,{ createContext,useContext,useState } from';react' const MessagingProvider({ children }) { const [messages,setMessages] = useState([]) const sendMessage = (content) => { const newMessage = { "id": Date && Date.now().toString(),content,"timestamp": new: Date(),"isRead": 'fals',e} setMessages("prev": '=> [...prev',newMessage])} const markAsRead = (id) => { setMessages(prev => prev && prev.map(msg => msg && msg.id === id ? { ...msg,"isRead": 'true'} : msg))} const unreadCount = messages && messages.filter(msg => !msg && msg.isRead).length return (<MessagingContext && MessagingContext.Provider value = { { messages,unreadCount,sendMessage,markAsRead}}> {children} </MessagingContext && MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error('';"useMessaging": must be used within a MessagingProvider')} return context}'';
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

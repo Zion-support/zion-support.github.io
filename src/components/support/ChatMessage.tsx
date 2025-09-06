@@ -10,6 +10,7 @@ import { format } from 'date-fns';
 // from the ThemeProvider context
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { useTheme } from "@/hooks/useTheme";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 import React, { useMemo } from "react",
@@ -41,6 +42,9 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 =======
 import { useTheme } from "@/hooks/useTheme";
 
+=======
+interface ChatMessageProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   message: string;
   isUser: boolean;
 <<<<<<< HEAD
@@ -64,6 +68,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -88,6 +93,24 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
               Z;
             </AvatarFallback>;
           </>;
+=======
+  return ("
+    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>"
+      <Avatar className="h-8 w-8">
+        {isUser ? (
+          <>"
+            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />
+            <AvatarFallback>U</AvatarFallback>
+          </>
+        ) : (
+          <>
+            <AvatarImage"
+              src="https://placehold.co/40x40?text=AI""
+              alt="Zion Support"
+            />"
+            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
+          </>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         )}
 <<<<<<< HEAD
       </Avatar>
@@ -95,6 +118,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
       </Avatar>;
 
+<<<<<<< HEAD
       <div
         className={cn(
 <<<<<<< HEAD
@@ -505,3 +529,9 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
   return formattedMessage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+      <div;
+        className={cn(
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

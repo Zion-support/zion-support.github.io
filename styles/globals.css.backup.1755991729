@@ -36,11 +36,19 @@
   --quantum-glow: 0 0 20px rgba(0, 255, 255, 0.5);
   --holographic-glow: 0 0 30px rgba(139, 92, 246, 0.6);
   --cyberpunk-glow: 0 0 25px rgba(236, 73, 153, 0.7);
+<<<<<<< HEAD
   --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
   --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
   --cyberpunk-shadow: 0 0 45px rgba(236, 73, 153, 0.5);
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
   --cyberpunk-shadow: 0 0 45px rgba(236, 73, 153, 0.5);}
+<<<<<<< HEAD
   --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
   --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
   --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
@@ -60,6 +68,16 @@
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+  --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
+  --cyberpunk-shadow: 0 0 45px rgba(236, 73, 153, 0.5);}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 /* Base styles */
 @layer base {
@@ -152,10 +170,20 @@
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Utility styles */
 @layer utilities {
   /* Gradient text */
@@ -183,6 +211,7 @@
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
+<<<<<<< HEAD
 =======
 >>>>>>> main
   letter-spacing: -0.025em;
@@ -201,11 +230,28 @@ h1, h2, h3, h4, h5, h6 {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   letter-spacing: -0.025em;}
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  letter-spacing: -0.025em;}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 h1 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -486,6 +532,7 @@ h3 {
   height: 100%;
   background:
   background: 
+<<<<<<< HEAD
 =======
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -493,19 +540,26 @@ h3 {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
     radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 30%);
   animation: entanglementPulse 15s ease-in-out infinite;
-=======
+
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 60% 60%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 10% 90%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4aaf
+
   pointer-events: none;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
 
@@ -518,25 +572,38 @@ h3 {
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 30%);
   animation: entanglementPulse 15s ease-in-out infinite;
-=======
+
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 60% 60%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 10% 90%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4aaf
+
   pointer-events: none;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 @keyframes entanglementPulse {
   0%, 100% {
     opacity: 0.3;
@@ -652,6 +719,7 @@ h3 {
 /* Enhanced Button Hover Effects */
 .btn-quantum {
   position: relative;
+<<<<<<< HEAD
 =======
 >>>>>>> main
   overflow: hidden;
@@ -747,11 +815,28 @@ h3 {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+  transition: all 0.3s ease;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   transition: all 0.3s ease;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   overflow: hidden;  transition: all 0.3s ease;
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  overflow: hidden;  transition: all 0.3s ease;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 .btn-futuristic::before {
@@ -774,10 +859,20 @@ h3 {
   box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Quantum Card Hover Effects */
 .quantum-card {
   position: relative;
@@ -835,6 +930,7 @@ h3 {
 }
 
 /* Quantum Particle System */
+<<<<<<< HEAD
 =======
 >>>>>>> main
 .quantum-particles {
@@ -908,10 +1004,15 @@ h3 {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4aaf
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   content: '';
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+
+
   position: relative;
   overflow: hidden;
 }
@@ -921,6 +1022,7 @@ h3 {
 .quantum-particles {  position: relative;
 .quantum-particles::before {  content: '';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -929,11 +1031,15 @@ h3 {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 .quantum-particles {  position: relative;
   overflow: hidden;
 }
 
 .quantum-particles::before {  content: '';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -941,6 +1047,10 @@ h3 {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   position: absolute;
   top: 0;
   left: 0;
@@ -948,11 +1058,21 @@ h3 {
   height: 100%;
   background-image:
   background-image: 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.3) 0%, transparent 20%),
     radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 20%),
     radial-gradient(circle at 40% 60%, rgba(236, 73, 153, 0.3) 0%, transparent 20%),
@@ -1049,6 +1169,7 @@ h3 {
       transparent 1px,
       rgba(139, 92, 246, 0.1) 1px,
       rgba(139, 92, 246, 0.1) 2px
+<<<<<<< HEAD
     );
 <<<<<<< HEAD
 =======
@@ -1228,10 +1349,27 @@ h3 {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+  }
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     );  }
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+
+
+    );  }
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 /* High Performance Mode */

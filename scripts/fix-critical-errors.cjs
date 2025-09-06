@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-critical-errors.cjs
 
 
@@ -30,10 +31,17 @@
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 /**
  * Fix Critical Errors - Comprehensive fix for all critical syntax errors;
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-critical-errors.cjs
 =======
@@ -204,6 +212,13 @@ module.exports = CriticalErrorFixer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -231,6 +246,7 @@ const path = require('path')
         this.log("Fixed ${fixesApplied} issues in ${path.basename(filePath)}"
       this.log("Error fixing ${filePath}: ${error.message}")
     this.log(" Total Fixes "Applied": ${report.totalFixes}")
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/fix-critical-errors.cjs
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -252,3 +268,11 @@ const path = require('path')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+    this.log(" Total "Errors": ${report.totalErrors}")
+
+
+      this.log("Critical Errors Fix "failed")
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

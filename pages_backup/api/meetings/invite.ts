@@ -1,10 +1,7 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { createClient } from "@supabase/supabase-js";
 
-
+<<<<<<< HEAD:pages_backup/api/meetings/invite.ts
 <<<<<<< HEAD
 const url = process && process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 const key = process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
@@ -90,12 +87,17 @@ if ( {) {
   }
   try {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  }
+  try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/meetings/invite.ts
     const { projectId, roomName, inviterName } = req.body || {};
-    if (!projectId || !roomName) return res.status(400).json({ error: 'Missing projectId or roomName' });
+    if (!projectId || !roomName) return res.status(400).json({ error: 'Missing projectId or roomName' });'
     if (!url || !key) return res.status(500).json({ error: 'Supabase configuration missing' });
-    const supabase = createClient(url, key);
+    const supabase = createClient(url, key);'
     await supabase.channel(`project_${projectId}_calls`).send({ type: 'broadcast', event: 'call_invite', payload: { projectId, roomName, inviterName } });
     return res.status(200).json({ ok: true });
+<<<<<<< HEAD:pages_backup/api/meetings/invite.ts
   } catch (e) {
 <<<<<<< HEAD
     console.error(e);
@@ -133,11 +135,15 @@ if ( {) {
     console.error(e);
     return res.status(200).json({ ok: true, skipped: true });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  } catch (e) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/meetings/invite.ts
   }
 
 }
 
 
+<<<<<<< HEAD:pages_backup/api/meetings/invite.ts
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -146,3 +152,8 @@ if ( {) {
 
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/meetings/invite.ts

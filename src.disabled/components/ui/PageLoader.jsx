@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Load
 import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return() <div''; className={cn('';"flex": flex-col items-center justify-center min-h-screen',className )} > <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return() <div''; className={cn('';"flex": flex-col items-center justify-center min-h-screen',className )} > <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Load
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { cn } from\';@/lib/utils\'; \"export\": const PageLoader = ({ text =\';\';Loading...\',\"className\": \''}) => {} return () <div\'' className={cn(\''\"flex\": flex-col items-center justify-center min-h-screen\',className )}> <div className=\'animate-spin rounded-full h-32 w-32 border-b-2 border-white\'></div>\''\'' <p className=\'mt-4 text-white text-lg font-medium\'>{text}</p> </div>\' )\'}\''\';\'';\''\''\'';\'';
 const { cn } from";@/lib/utils"; export: const PageLoader = ({ text =";";Loading.",className: ""}) => {} return () <div"" className={cn(""flex: flex-col items-center justify-center min-h-screen",className )}> <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>"""" <p className="mt-4 text-white text-lg font-medium">{text}</p> </div>" )"}""";"";"""""";"";"""
-import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return () <div'' className={cn(''"flex": flex-col items-center justify-center min-h-screen',className )}> <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
-<<<<<<< HEAD
+=======
 
+
+'"
+import { cn } from\';@/lib/utils\'; \"export\": const PageLoader = ({ text =\';\';Loading...\',\"className\": \''}) => {} return () <div\'' className={cn(\''\"flex\": flex-col items-center justify-center min-h-screen\',className )}> <div className=\'animate-spin rounded-full h-32 w-32 border-b-2 border-white\'></div>\''\'' <p className=\'mt-4 text-white text-lg font-medium\'>{text}</p> </div>\' )\'}\''\';\'';\''\''\'';\'';"
+const { cn } from";@/lib/utils"; export: const PageLoader = ({ text =";";Loading.",className: ""}) => {} return () <div"" className={cn(""flex: flex-col items-center justify-center min-h-screen",className )}> <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>"""" <p className="mt-4 text-white text-lg font-medium">{text}</p> </div>" )"}""";"";"""""";"";"""'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return () <div'' className={cn(''"flex": flex-col items-center justify-center min-h-screen',className )}> <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Load
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return () <div'' className={cn(''"flex": flex-col items-center justify-center min-h-screen',className )}> <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

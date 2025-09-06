@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ' ' ' ' ' ' const listingsSchema = z.array(listingSchema) export function ServiceTypeStep({ formData,updateFormData }) { ' const [searchQuery,setSearchQuery] = useState(') const debouncedQuery = useDebounce(searchQuery,300) const [listings,setListings] = useState([]) const [loading,setLoading] = useState(false) const [error,setError] = useState(null)';";";""}
 =======
 <<<<<<< HEAD
@@ -61,3 +62,7 @@
 =======
 ' ' ' ' ' ' const listingsSchema = z.array(listingSchema) export function ServiceTypeStep({ formData,updateFormData }) { ' const [searchQuery,setSearchQuery] = useState(') const debouncedQuery = useDebounce(searchQuery,300) const [listings,setListings] = useState([]) const [loading,setLoading] = useState(false) const [error,setError] = useState(null)';";";""}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -43,6 +44,12 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import * as React from 'react''
+import Link from 'next/link''
+import { motion } from 'framer-motion'
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Heart,
   DollarSign,
   Settings,
@@ -54,6 +61,7 @@ import {
   Globe,
   Database,
   Shield,
+<<<<<<< HEAD
   Cloud,
 <<<<<<< HEAD
 
@@ -88,11 +96,19 @@ const industries = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     href: '/industries/healthcare,',
     features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',
+=======
+  Cloud,;
+  Brain;'
+} from 'lucide-react';'
+    href: '/industries/healthcare,','
+    features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from-red-500 to-pink-500'';
   },
-  {
-    name: 'Finance',
+  {'
+    name: 'Finance','
     description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',
+<<<<<<< HEAD
     icon: DollarSign,
 <<<<<<< HEAD
 
@@ -119,11 +135,17 @@ import Layout from '../../components/Layout';';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',
+=======
+    icon: DollarSign,'
+    href: '/industries/finance,','
+    features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from-green-500 to-emerald-500'';
   },
-  {
-    name: 'Manufacturing',
+  {'
+    name: 'Manufacturing','
     description: 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',
+<<<<<<< HEAD
     icon: Settings,
 <<<<<<< HEAD
 
@@ -145,11 +167,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     href: '/industries/manufacturing,',
     features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',
+=======
+    icon: Settings,'
+    href: '/industries/manufacturing,','
+    features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from-blue-500 to-cyan-500'';
   },
-  {
-    name: 'Retail',
+  {'
+    name: 'Retail','
     description: 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',
+<<<<<<< HEAD
     icon: ShoppingCart,
 <<<<<<< HEAD
 
@@ -171,11 +199,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     href: '/industries/retail,',
     features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',
+=======
+    icon: ShoppingCart,'
+    href: '/industries/retail,','
+    features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from-purple-500 to-violet-500'';
   },
-  {
-    name: 'Education',
+  {'
+    name: 'Education','
     description: 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',
+<<<<<<< HEAD
     icon: BookOpen,
 <<<<<<< HEAD
 
@@ -197,11 +231,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     href: '/industries/education,',
     features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',
+=======
+    icon: BookOpen,'
+    href: '/industries/education,','
+    features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from-orange-500 to-yellow-500'';
   },
-  {
-    name: 'Government',
+  {'
+    name: 'Government','
     description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',
+<<<<<<< HEAD
     icon: Building,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,6 +268,11 @@ const stats = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
+=======
+    icon: Building,'
+    href: '/industries/government,','
+    features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     color: 'from-gray-500 to-slate-500'';
 =======
 =======
@@ -330,6 +375,7 @@ const industries = [;
     color: 'from-gray-500 to-slate-500';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
+<<<<<<< HEAD
 ];
 const stats = [;
 <<<<<<< HEAD
@@ -371,58 +417,75 @@ export default function IndustriesPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;];
+
+const stats = [;'
+  { number: '500+, label: 'Industry Projects' },','
+  { number: '50+, label: 'Fortune 500 Clients' },','
+  { number: '99.9%, label: 'Uptime Guarantee' },','
+  { number: '24/7, label: 'Industry Support' }',
+;];
+
+export default function IndustriesPage() {};
+  return (;
+    <Layout);
+      title="Industry Solutions - Zion Tech Group"";"
+      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services""
-    >;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+    >;"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";'
 import Layout from '../../components/Layout';
 
-const industries = [
-  {
-    title: 'Healthcare',
+const industries = []
+  {'
+    title: 'Healthcare','
     description: 'Transform healthcare delivery with innovative technology solutions',
-    icon: Heart,
-    href: '/industries/healthcare',
+    icon: Heart,'
+    href: '/industries/healthcare','
     features: ['Electronic Health Records', 'Telemedicine Platforms', 'AI Diagnostics']
   },
-  {
-    title: 'Finance',
+  {'
+    title: 'Finance','
     description: 'Secure and scalable financial technology solutions',
-    icon: DollarSign,
-    href: '/industries/finance',
+    icon: DollarSign,'
+    href: '/industries/finance','
     features: ['Digital Banking', 'Payment Processing', 'Risk Management']
   },
-  {
-    title: 'Manufacturing',
+  {'
+    title: 'Manufacturing','
     description: 'Smart manufacturing solutions for Industry 4.0',
-    icon: Settings,
-    href: '/industries/manufacturing',
+    icon: Settings,'
+    href: '/industries/manufacturing','
     features: ['IoT Integration', 'Predictive Maintenance', 'Quality Control']
   },
-  {
-    title: 'Retail',
+  {'
+    title: 'Retail','
     description: 'Enhance customer experience with retail technology',
-    icon: ShoppingCart,
-    href: '/industries/retail',
+    icon: ShoppingCart,'
+    href: '/industries/retail','
     features: ['E-commerce Platforms', 'Inventory Management', 'Customer Analytics']
   },
-  {
-    title: 'Education',
+  {'
+    title: 'Education','
     description: 'Modernize education with technology solutions',
-    icon: Users,
-    href: '/industries/education',
+    icon: Users,'
+    href: '/industries/education','
     features: ['Learning Management Systems', 'Virtual Classrooms', 'Student Analytics']
   },
-  {
-    title: 'Government',
+  {'
+    title: 'Government','
     description: 'Secure government technology solutions',
-    icon: Globe,
-    href: '/industries/government',
+    icon: Globe,'
+    href: '/industries/government','
     features: ['Citizen Services', 'Data Security', 'Digital Transformation']
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
 ]
 
+<<<<<<< HEAD
 export default function Industries() {
 <<<<<<< HEAD
 
@@ -449,13 +512,17 @@ export default function Industries() {
 <<<<<<< HEAD
           </div>
 =======
+=======
+export default function Industries() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
-    <Layout
-      title="Industry Solutions - Zion Tech Group"
-      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
+    <Layout"
+      title="Industry Solutions - Zion Tech Group""
+      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors.""
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"
-    >
+    >"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -487,10 +554,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        {/* Hero Section */}"
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"";
+          <div className="absolute inset-0">";"
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";"
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";"
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
+          </div>;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 
@@ -499,13 +577,21 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              transition={{ duration: 0.8 }}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="text-center"
-            >
+            >"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 Industry Solutions
               </h1>
+=======
+                Industry Solutions;
+              </h1>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
 <<<<<<< HEAD
                 We understand the unique challenges and requirements of different industries. Our specialized solutions
@@ -596,6 +682,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             <motion.div;
               className="text-center mb-16"";
 
+<<<<<<< HEAD
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -703,8 +790,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Industries Grid */}
         <section className="py-20">
+=======
+        {/* Industries Grid */}"
+        <section className="py-20">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">
-            <motion.div
+            <motion.div"
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -712,6 +803,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             >
@@ -798,13 +890,17 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 and drive measurable business outcomes.;
               </p>;
             </motion.div>;            >
+=======
+            >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Industries We Serve
-              </h2>
+                Industries We Serve;
+              </h2>"
               <p className="text-lg text-gray-300 max-w-3xl mx-auto">
                 We provide specialized technology solutions across various industries, helping organizations leverage technology to achieve their goals.
               </p>
             </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -814,11 +910,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {industries.map((industry, index) => {}
                 const IconComponent = industry.icon;
                 return (;
                   <motion.div);
+<<<<<<< HEAD
                     key={index}
 <<<<<<< HEAD
 
@@ -832,11 +932,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                    key={index}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
+<<<<<<< HEAD
                     whileHover={{ y: -5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -858,16 +962,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                    whileHover={{ y: -5 }}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <p className="text-gray-600 mb-6 leading-relaxed">";
-                  >
-                    <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">
+                  >"
+                    <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">"
                       <IconComponent className="w-12 h-12" />
                     </div>
-                    
+                    "
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">
                       {industry.title}
                     </h3>
-                    
+                    "
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {industry.description}
                     </p>
@@ -881,6 +988,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                       </div>,
                     </div>;
                     
+<<<<<<< HEAD
                     <Link
                       href={industry.href}
 <<<<<<< HEAD
@@ -952,11 +1060,16 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                    <Link;
+                      href={industry.href}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
                     >;
-                      <span>Learn More</span>;
+                      <span>Learn More</span>;"
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />";
                     </Link>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </motion && motion.div>;
                 ),;
@@ -993,18 +1106,21 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
                   </motion.div>;
+=======
+                  </motion.div>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className="space-y-2 mb-6">
-                      {industry.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {industry.features.map((feature, idx) => ("
+                        <div key={idx} className="flex items-center text-gray-300">"
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />"
                           <span className="text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
                     
-                    <Link href={industry.href}>
+                    <Link href={industry.href}>"
                       <a className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:text-blue-200 transition-colors">
-                        Learn More
+                        Learn More"
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </a>
                     </Link>
@@ -1014,6 +1130,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>,
           </div>;
         </section>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 bg-white">"
@@ -1023,8 +1140,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
               className="text-center mb-16"        <section className="py-20 bg-white">"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+        <section className="py-20 bg-white">""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="container mx-auto px-4">";
-            <motion.div;
+            <motion.div;"
               className="text-center mb-16"";
               initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
@@ -1032,6 +1153,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             >
@@ -1046,13 +1168,17 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >,
+=======
+            >,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
                 Why Choose Our Industry Solutions?;
-              </h2>;
+              </h2>;"
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">";
                 We combine deep industry knowledge with cutting-edge technology to deliver solutions that truly understand your business.;
               </p>;
             </motion.div>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1060,13 +1186,17 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
+              <motion.div"
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1089,21 +1219,26 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >,
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">";
+=======
+              >,"
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Users className="w-8 h-8 text-blue-600" />";
-                </div>;
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Expertise</h3>";
+                </div>;"
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Expertise</h3>";"
                 <p className="text-gray-600">";
                   Our team includes specialists with deep experience in each industry we serve,
                   ensuring solutions that address real-world challenges.
                 </p>
               </motion.div>
 
-              <motion.div
+              <motion.div"
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               >
@@ -1121,15 +1256,20 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >,
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">";
+=======
+              >,"
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Shield className="w-8 h-8 text-green-600" />";
-                </div>;
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Security</h3>";
+                </div>;"
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Security</h3>";"
                 <p className="text-gray-600">";
                   We ensure all solutions meet industry-specific regulatory requirements and;
                   maintain the highest security standards.;
                 </p>;
               </motion.div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ursor/add-new-services-and-deploy-updates-0462
@@ -1146,11 +1286,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
               whileInView={{ opacity: 1, y: 0 }}              <motion.div
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              <motion.div"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1186,9 +1330,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>;
                 <p className="text-gray-600">;
               >,;                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">";
+=======
+              >,"
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Cloud className="w-8 h-8 text-purple-600" />";
-                </div>;
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>";
+                </div>;"
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>";"
                 <p className="text-gray-600">";
                   Our solutions are designed to grow with your business, from startup to enterprise scale,
                   with flexible deployment options.
@@ -1198,6 +1346,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Stats Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1233,12 +1382,22 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   key={index}
                   className="text-center"                  key={index}
+=======
+        {/* Stats Section */}"
+        <section className="py-20 bg-gray-50">""
+          <div className="container mx-auto px-4">";"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
+              {stats.map((stat, index) => (,
+                <motion.div}),
+                  key={index}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="text-center""
                   initial={{ opacity: 0, y: 30 }}
 <<<<<<< HEAD
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 >
@@ -1268,9 +1427,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}                >,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                >,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">";
                     {stat.number}
-                  </div>,
+                  </div>,"
                   <div className="text-gray-600 font-medium">{stat.label}</div>"
                 </motion.div>;
               ))}
@@ -1280,18 +1442,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           </div>;
         </section>;
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
+        {/* CTA Section */}"
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">""
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        {/* CTA Section */}"
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
           <div className="container mx-auto px-4 text-center">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             >
@@ -1370,14 +1533,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+=======
+            >"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 Don't See Your Industry?
-              </h2>
+              </h2>"
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 We work with organizations across all sectors. Contact us to discuss your specific industry needs.
-              </p>
-              <Link href="/contact">
+              </p>"
+              <Link href="/contact">"
                 <a className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Contact Us
+                  Contact Us"
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </Link>
@@ -1394,6 +1561,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </Layout>
   );
+<<<<<<< HEAD
                 Ready to Transform Your Industry?;
               </h2>;
               <p className="text-xl mb-8 max-w-2xl mx-auto">";
@@ -1452,3 +1620,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
             </div>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

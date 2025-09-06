@@ -1,25 +1,37 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 /** @type {import ('next').NextConfig} */;
-const next_config = {
+const next_config = {}
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
+  typescript: { ignoreBuildErrors: true },'
   page_extensions: ['tsxtsjsxjs'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /** @type {import('next').NextConfig} */;
 
 const nextConfig = {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,11 +64,22 @@ const nextConfig = {;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
-  typescript: { ignoreBuildErrors: true },;
+  typescript: { ignoreBuildErrors: true },;'
   pageExtensions: ['tsxtsjsxjs'],;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,22 +88,26 @@ const nextConfig = {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   // Image optimization;
-  images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+  images: {}
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],'
     formats: ['image / webpimage / avif'];
   },
-  // Output configuration;
+  // Output configuration;'
   output: 'standalone',
   // Trailing slash;
   trailing_slash: false,
-  // Base path;
+  // Base path;'
   base_path: '',
-  // Asset prefix;
+  // Asset prefix;'
   asset_prefix: '',
   // Generate ETags;
   generate_etags: true,
+<<<<<<< HEAD
   // Dist directory;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,3 +197,16 @@ module.exports = nextConfig,;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  // Dist directory;'
+  dist_dir: '.next';
+},
+module.exports = next_config,
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

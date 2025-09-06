@@ -64,8 +64,9 @@ const team = [
     bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',
     image: '/images/team/james-kim.jpg'}]
 
-export default function AboutPage() {
+export default function AboutPage() {}
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-black text-white pt-20">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -725,20 +726,47 @@ export default function AboutPage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
             <ul className="space-y-3">
               <li className="flex items-center">
+=======
+    <div className="min-h-screen bg-white">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
+        <div className="text-center mb-16">"
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;
+            About Zion Tech Group;
+          </h1>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We are a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.
+          </p>
+        </div>
+        "
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>"
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>"
+            <p className="text-lg text-gray-600 mb-6">
+              To transform businesses through cutting-edge AI and technology solutions that drive innovation, efficiency, and growth.
+            </p>"
+            <p className="text-lg text-gray-600">
+              We believe in the power of technology to solve complex problems and create opportunities for our clients to thrive in the digital age.
+            </p>
+          </div>"
+          <div className="bg-gray-50 p-8 rounded-lg">"
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>"
+            <ul className="space-y-3">"
+              <li className="flex items-center">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <span className="text-blue-600 mr-3">✓</span>
-                Innovation and Excellence
-              </li>
-              <li className="flex items-center">
+                Innovation and Excellence;
+              </li>"
+              <li className="flex items-center">"
                 <span className="text-blue-600 mr-3">✓</span>
-                Client Success
-              </li>
-              <li className="flex items-center">
+                Client Success;
+              </li>"
+              <li className="flex items-center">"
                 <span className="text-blue-600 mr-3">✓</span>
-                Ethical Technology
-              </li>
-              <li className="flex items-center">
+                Ethical Technology;
+              </li>"
+              <li className="flex items-center">"
                 <span className="text-blue-600 mr-3">✓</span>
-                Continuous Learning
+                Continuous Learning;
               </li>
             </ul>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -841,6 +869,7 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
             Meet Our Team
@@ -904,3 +933,7 @@ export default function AboutPage() {
 };
 
 export default Page;
+=======
+  );
+}'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

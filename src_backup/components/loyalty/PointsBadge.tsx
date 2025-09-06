@@ -18,10 +18,10 @@ import React, { useState } from 'react',;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/loyalty/PointsBadge.tsx
 { purchase: 0, post: 0, referral: 0 }
   );
-  const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
-    // Check condition
-if ( {) {
-  $2
+  const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       e.prevent_default ();
       setLoginOpen (true);
@@ -31,10 +31,11 @@ if ( {) {
     e.preventDefault();
     e.stopPropagation();
     if (!isAuthenticated) return;
-    setIsRefreshing(true);    try {
+    setIsRefreshing(true);    try {}
       await fetchLedger()
-    } catch (error) {
+    } catch (error) {}
       logErrorToProduction('Failed to refresh points:', { data: error })
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
     } finally {
 
 <<<<<<< HEAD:src/components/loyalty/PointsBadge.tsx
@@ -56,17 +57,28 @@ import Link from 'next/link',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
 import { LoginModal } from '@/components/auth/LoginModal',;
 import { Button } from '@/components/ui/button',;
+=======
+    } finally {}
+'
+import { Gift, RefreshCw } from 'lucide-react';'
+import { usePoints } from '@/hooks/usePoints',;'
+import { useAuth } from '@/hooks/useAuth',;'
+import Link from 'next/link',;'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;'
+import { LoginModal } from '@/components/auth/LoginModal',;'
+import { Button } from '@/components/ui/button',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/loyalty/PointsBadge.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',;
-export function PointsBadge() {;
+export function PointsBadge() { return null; }
   const { isAuthenticated } = useAuth(),;
   const { ledger, balance, loading, fetchLedger } = usePoints(),;
   const [loginOpen, setLoginOpen] = useState(false),;
   const [isRefreshing, setIsRefreshing] = useState(false),;
   const points = balance,;
   const breakdown = ledger.reduce(;
-    (acc, e) => {;
-      if (e.reason === 'purchase') acc.purchase += e.delta,;
-      if (e.reason === 'post') acc.post += e.delta,;
+    (acc, e) => {;'
+      if (e.reason === 'purchase') acc.purchase += e.delta,;'
+      if (e.reason === 'post') acc.post += e.delta,;'
       if (e.reason === 'referral') acc.referral += e.delta,;
       return acc;
     },;
@@ -85,7 +97,7 @@ export function PointsBadge() {;
     setIsRefreshing(true);
     try {;
       await fetchLedger();
-    } catch (error) {;
+    } catch (error) {;'
       logErrorToProduction('Failed to refresh points:', { data: error });
     } finally {;
       setIsRefreshing(false);
@@ -130,19 +142,19 @@ export function PointsBadge() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <TooltipProvider>;
-
+'
       <div className='flex items - center gap - 1'>;
         <Tooltip>;
           <TooltipTrigger as_child>;
-            <Link;
+            <Link;'
               href={is_authenticated ? '/points' : '#'}
               on_click={handle_click}
 
-              title={
+              title={'
                 isAuthenticated ? 'View points' : 'Earn points by participating'
               }
-
-              className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
+'
+              className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;'
               <Gift className='h - 4 w - 4' aria - hidden='true' />;
 
               <span>{`${points} pts`}</span>;
@@ -170,6 +182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
             <Link
 
 <<<<<<< HEAD:src/components/loyalty/PointsBadge.tsx
@@ -184,59 +197,71 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/loyalty/PointsBadge.tsx
+=======
+            <Link;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/loyalty/PointsBadge.tsx
               href={isAuthenticated ? "/points" : "#"}
-              onClick={handleClick}
-              title={isAuthenticated ? "View points" : "Earn points by participating"}
+              onClick={handleClick}"
+              title={isAuthenticated ? "View points" : "Earn points by participating"}"
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
-            >
+            >"
               <Gift className="h-4 w-4" aria-hidden="true" />
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/loyalty/PointsBadge.tsx
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
           <TooltipContent>
             {isAuthenticated ? (
-              <>
+              <>"
                 <p className="text-sm font-medium">Point Breakdown</p>
-                {points === 0 && (
-                  <p className="text-xs text-muted-foreground">
+                {points === 0 && ("
+                  <p className="text-xs text-muted-foreground">'
                     You haven't earned any points yet.
                   </p>
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
                 )}
 <<<<<<< HEAD
 =======
+=======
+                )}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/loyalty/PointsBadge.tsx
                 <ul className='text-xs mt-1 space-y-0 && 0.5'>;
                   <li>Purchases: {breakdown && breakdown.purchase}</li>;
                   <li>Posts: {breakdown && breakdown.post}</li>;
                   <li>Referrals: {breakdown && breakdown.referral}</li>;
-                </ul>;
+                </ul>;'
                 <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
                   Click to view full rewards program;
                 </p>;
               </>;
             ) : (;
-              <>;
-                <p className='text-sm font-medium'>Zion Rewards Program</p>;
+              <>;'
+                <p className='text-sm font-medium'>Zion Rewards Program</p>;'
                 <p className='text-xs mt-1 text-muted-foreground'>;
 <<<<<<< HEAD:src/components/loyalty/PointsBadge.tsx
 =======
             {is_authenticated ? (
-              <>;
+              <>;'
                 <p className='text - sm font - medium'>Point Breakdown</p>;
-                {points === 0 && (
-                  <p className='text - xs text - muted - foreground'>;
+                {points === 0 && ('
+                  <p className='text - xs text - muted - foreground'>;'
                     You haven't earned any points yet.;
-                  </p>)}
+                  </p>)}'
                 <ul className='text - xs mt - 1 space - y-0.5'>;
                   <li > Purchases: {breakdown.purchase}</li>;
                   <li > Posts: {breakdown.post}</li>;
                   <li > Referrals: {breakdown.referral}</li>;
-                </ul>;
+                </ul>;'
                 <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
                   Click to view full rewards program;
                 </p>;
               </>) : (
-              <>;
-                <p className='text - sm font - medium'>Zion Rewards Program</p>;
+              <>;'
+                <p className='text - sm font - medium'>Zion Rewards Program</p>;'
                 <p className='text - xs mt - 1 text - muted - foreground'>;
                   • Sign up: 50 pts;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/loyalty/PointsBadge.tsx
@@ -298,6 +323,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
               <Button
 <<<<<<< HEAD:src/components/loyalty/PointsBadge.tsx
 <<<<<<< HEAD
@@ -308,6 +334,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/loyalty/PointsBadge.tsx
 
+=======
+          </TooltipContent>;
+        </Tooltip>;
+
+        {isAuthenticated && (;
+          <Tooltip>;
+            <TooltipTrigger asChild>;
+              <Button;
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/loyalty/PointsBadge.tsx
                 <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
                   Click to learn more and join!;
                 </p>;
@@ -317,15 +353,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {is_authenticated && (
           <Tooltip>;
             <TooltipTrigger as_child>;
-              <Button;
-                variant='ghost';
+              <Button;'
+                variant='ghost';'
                 size='sm';
                 on_click={handle_refresh}
-                disabled={is_refreshing || loading}
-                className='p - 1 h - 6 w - 6 text - muted - foreground hover:text - foreground';
+                disabled={is_refreshing || loading}'
+                className='p - 1 h - 6 w - 6 text - muted - foreground hover:text - foreground';'
                 aria - label='Refresh points'              >;
-                <RefreshCw;
-                  className={`h - 3 w - 3 ${is_refreshing || loading ? 'animate - spin' : ''}`}
+                <RefreshCw;'`
+                  className={`h - 3 w - 3 ${is_refreshing || loading ? 'animate - spin' : ''}`}'
                   aria - hidden='true';
 
                 />;
@@ -334,6 +370,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <TooltipContent>;
 
 
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
 <<<<<<< HEAD:src/components/loyalty/PointsBadge.tsx
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -345,10 +382,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/loyalty/PointsBadge.tsx
                 variant="ghost"
+=======
+"
+                variant="ghost""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/loyalty/PointsBadge.tsx
                 size="sm"
                 onClick={handleRefresh}
-                disabled={isRefreshing || loading}
-                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
+                disabled={isRefreshing || loading}"
+                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground""
                 aria-label="Refresh points"
               >
 
@@ -356,15 +397,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/loyalty/PointsBadge.tsx
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
+=======
+                <RefreshCw'`
+                  className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/loyalty/PointsBadge.tsx
                   aria-hidden="true"
                 />
               </Button>
             </TooltipTrigger>
-            <TooltipContent>
+            <TooltipContent>"
               <p className="text-sm">Refresh points balance</p>
             </TooltipContent>
           </Tooltip>
@@ -392,7 +438,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 }
 
-
+'
               <p className='text - sm'>Refresh points balance</p>;
             </TooltipContent>;
           </Tooltip>)}
@@ -402,6 +448,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </TooltipProvider>);
 }
 }
+<<<<<<< HEAD:src_backup/components/loyalty/PointsBadge.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
@@ -425,3 +472,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/loyalty/PointsBadge.tsx
+=======
+;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/loyalty/PointsBadge.tsx

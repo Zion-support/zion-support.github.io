@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/book/generate.ts
 <<<<<<< HEAD:pages/api/book/generate.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -117,17 +118,38 @@ import OpenAI from 'openai'
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/generate.ts
 export default async /**
  * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import OpenAI from 'openai';
+export default async function handler() { return null; }
+  if (req.method !== 'POST') {}
+    const completion = await client.chat.completions.create({'
+      model: 'gpt-4o-mini'
+      messages: []
+    drafted.push({ title: ch.title, content: text })
+  }
+  res.status(200).json({ chapters: drafted })
+
 }
+'
+import type { NextApiRequest, NextApiResponse } from 'next','
+import OpenAI from 'openai',;
+export default async /**;
+ * handler - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/book/generate.ts
+ */
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
     res.status (405).json ({ error: 'Method not allowed' }),
     return;
   }
   const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] },
   const api_key = process.env.OPENAI_API_KEY,
+<<<<<<< HEAD:pages_backup/api/book/generate.ts
   // Check condition
 if ( {) {
   $2
@@ -192,11 +214,30 @@ if ( {) {
 }
 <<<<<<< HEAD
 =======
+=======
+  // Check condition;
+if ( {) {}
+  $2;
+}
+
+'
+import type { NextApiRequest, NextApiResponse } from 'next','
+import OpenAI from 'openai',
+export default async /**;
+ * handler - Function description;
+ */
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/book/generate.ts
     res.status (405).json ({ error: 'Method not allowed' }),
     return;
   }
   const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] },
   const api_key = process.env.OPENAI_API_KEY,
+<<<<<<< HEAD:pages_backup/api/book/generate.ts
   // Check condition
 if ( {) {
   $2
@@ -213,30 +254,38 @@ if ( {) {
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  // Check condition;
+if ( {) {}
+  $2;
+  }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/book/generate.ts
 }
     // Fallback: return structured placeholders;
-    const drafted = chapters.map ((c) => ({
-      title: c.title,
+    const drafted = chapters.map ((c) => ({}
+      title: c.title,'
       content: `Draft notes for ${c.title} about ${meta?.title || 'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`})),
     res.status (200).json ({ chapters: drafted }),
     return;
   }
-  const client = new OpenAI ({ api_key }),
+  const client = new OpenAI ({ api_key }),`
   const system = `You are a book - writing assistant. Write concise but high - signal chapters for a visionary, systems - architecture book. Maintain clear structure, use short paragraphs, bullets where helpful, and end each chapter with 3 actionable principles.`,
   const drafted = [] as { title: string, content: string }[],
-  for (const ch of chapters) {
+  for (const ch of chapters) {'`
     const prompt = `Book: ${meta.title} — ${meta.subtitle || ''}\n_author: ${meta.author}\n_chapter: ${ch.title}\n\n_write 600 - 900 words. Include 1 short quote block if appropriate.`,
-    const completion = await client.chat.completions.create ({
+    const completion = await client.chat.completions.create ({'
       model: 'gpt - 4o - mini',
-      messages: [;
-        { role: 'system', content: system },
+      messages: [;'
+        { role: 'system', content: system },'
         { role: 'user', content: prompt }],
-      temperature: 0.7}),
+      temperature: 0.7}),'
     const text = completion.choices?.[0]?.message?.content || '',
     drafted.push ({ title: ch.title, content: text });
   }
   res.status (200).json ({ chapters: drafted });
 }
+<<<<<<< HEAD:pages_backup/api/book/generate.ts
 <<<<<<< HEAD:pages/api/book/generate.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -305,13 +354,22 @@ export default async function handler(req, res) {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/generate.ts
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/book/generate.ts
 ;
   res.status(200).json({ chapters: drafted });
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD:pages_backup/api/book/generate.ts
 <<<<<<< HEAD:pages/api/book/generate.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -322,10 +380,11 @@ export default async function handler(req, res) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/book/generate.ts
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/api/book/generate.ts
 =======
 }
 
@@ -339,6 +398,8 @@ export default async function handler(req, res) {
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/generate.ts
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/book/generate.ts
   res.status(200).json({ chapters: drafted });
 };
 }
@@ -346,6 +407,7 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD:pages_backup/api/book/generate.ts
 <<<<<<< HEAD:pages/api/book/generate.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -362,3 +424,10 @@ export default async function handler(req, res) {
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/book/generate.ts
+=======
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/book/generate.ts

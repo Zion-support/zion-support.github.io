@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,9 +26,11 @@
 '\"export\": function FooterNewsletter () {\' const [email,setEmail] = useState (\') \' const [isSubscribed,setIsSubscribed] = useState (false) \' const handleSubmit = e => { e && e.preventDefault () \'';\"";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 "export: function FooterNewsletter () {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = e => { e && e.preventDefault () "";"";"""
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-'"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e && e.preventDefault () '';"";""}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,3 +80,12 @@
 "export: function FooterNewsletter () {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = e => { e.preventDefault () "";"";"""
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'\"export\": function FooterNewsletter() { return null; }
+'"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

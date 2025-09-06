@@ -892,6 +892,7 @@ export default function MicroSaasPage() {
       setupTime: '35 minutes',
       category: 'Real Estate & Property',
       realService: true
+<<<<<<< HEAD
     }
   });
 
@@ -1038,6 +1039,9 @@ export default function MicroSaasPage() {
                 >
                   Get Started
                 </Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/auto-commit-fixes.cjs
 <<<<<<< HEAD
 
@@ -220,6 +221,12 @@ autoCommit.run().catch(error => {
 
 :scripts/pm2/auto-commit-fixes.cjs
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node,"}),"
 ,"}),"
 const fs = require(,"}),"
@@ -250,6 +257,7 @@ const fs = require(,"}),"
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/auto-commit-fixes.cjs
 =======
       const commitMessage = ` ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}``)
+<<<<<<< HEAD
         "stdio"
 
         "stdio"
@@ -282,3 +290,10 @@ const fs = require(,"}),"
 
 :scripts/pm2/auto-commit-fixes.cjs
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+        "stdio"
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

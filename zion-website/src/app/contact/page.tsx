@@ -15,6 +15,7 @@ const contactMethods = [
 
 import React from 'react';
 
+<<<<<<< HEAD
 
 
 const contactMethods = [
@@ -286,17 +287,21 @@ export default function ContactPage() {
 =======
                   {method.name}export default function ContactPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default function ContactPage() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Contact Us
-          </h1>
+    <div className="min-h-screen bg-white">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
+        <div className="text-center mb-16">"
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;
+            Contact Us;
+          </h1>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to transform your business with cutting-edge technology? Get in touch with our team.
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
@@ -358,10 +363,14 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
 =======
         
+=======
+        "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+          <div>"
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>"
             <div className="space-y-6">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
@@ -510,18 +519,27 @@ export default function ContactPage() {
                 </div>
 =======
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+=======
+              <div>"
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>"
+                <p className="text-gray-600">info@ziontechgroup.com</p>
+              </div>
+              <div>"
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <p className="text-gray-600">+1 (555) 123-4567</p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+              <div>"
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>"
                 <p className="text-gray-600">
                   123 Technology Drive<br />
-                  Innovation City, IC 12345
+                  Innovation City, IC 12345;
                 </p>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </div>
       {/* Contact methods */}
@@ -561,48 +579,60 @@ export default function ContactPage() {
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <form className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">              <div>
+=======
+          "
+          <div className="bg-gray-50 rounded-lg p-8">"
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>"
+            <form className="space-y-6">
+              <div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Name
+                  Name;
                 </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
+                <input"
+                  type="text""
+                  id="name""
+                  name="name""
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
+                  required;
                 />
               </div>
-              <div>
+              <div>"
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
+                  Email;
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
+                <input"
+                  type="email""
+                  id="email""
+                  name="email""
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
+                  required;
                 />
               </div>
-              <div>
+              <div>"
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
+                  Message;
                 </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <textarea
                   id="message"
+=======
+                <textarea"
+                  id="message""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   name="message"
-                  rows={4}
+                  rows={4}"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
+                  required;
                 ></textarea>
               </div>
-              <button
-                type="submit"
+              <button"
+                type="submit""
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
               >
-                Send Message
+                Send Message;
               </button>
 <<<<<<< HEAD
             </div>
@@ -848,6 +878,7 @@ export default function ContactPage() {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -882,3 +913,6 @@ export default Page;
 
 export default Page;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

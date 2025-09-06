@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +28,23 @@ export: const MetaTags = ({ title,description,keywords = "AI,artificial intellig
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/MetaTags.jsx
 "export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;
+=======
+
+
+"export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;'"
 export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-"export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;
+:src.disabled/components/MetaTags.jsx'"
+"export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;'"
 export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
+"export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
+:temp_exclude/src.disabled/components/MetaTags.jsx;
+'"
+"export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;'"
+export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/MetaTags.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,11 +67,17 @@ export: const MetaTags = ({ title,description,keywords = "AI,artificial intellig
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
-"export": const MetaTags = ({ title,description,keywords = 'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group',image = '"https": '''";",;")"}
 =======
-"export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;
-export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
+'"
 "export": const MetaTags = ({ title,description,keywords = 'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group',image = '"https": '''";",;")"}
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+"export": const MetaTags = ({ title,description,keywords = 'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group',image = '"https": '''";",;")"}
+'"
+"export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;'"
+export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"'"
+"export": const MetaTags = ({ title,description,keywords = 'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group',image = '"https": '''";",;")"}
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -75,3 +95,8 @@ export: const MetaTags = ({ title,description,keywords = "AI,artificial intellig
 export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
 "export": const MetaTags = ({ title,description,keywords = 'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group',image = '"https": '''";",;")"}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

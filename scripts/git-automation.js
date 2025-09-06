@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/git-automation.js
 ========
 <<<<<<< HEAD
@@ -32,42 +33,49 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node const { execSync } = const fs = const path = class GitAutomation { constructor() { this.projectRoot = process.cwd()} log(message) { const timestamp = new Date().toISOString(); } async runCommand(command,description) { this.log(`🚀 ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',stdio: 'pipe' }); this.log(`✅ Completed: ${description}`); return { success: true,output: result.trim() }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`); return { success: false,error: error.message }} } async commitChanges() { this.log('📝 Starting git operations'); const statusResult = await this.runCommand('git status --porcelain','Check git status'); if (!statusResult.success) { throw new Error('Failed to check git status')} if (!statusResult.output) { this.log('No changes to commit'); return} this.log(`📋 Changes detected:\\n${statusResult.output}`); await this.runCommand('git add .','Stage all changes'); const commitMessage = `feat: comprehensive automation improvements and security fixes - Fixed XSS vulnerability in SEOEnhancer.tsx by improving dangerouslySetInnerHTML usage - Enhanced performance monitoring with development-only console logging - Updated ESLint configuration for Next.js v15 compatibility - Created comprehensive automation scripts: * scripts/remove-console-logs-production.js - Removes console statements from production * scripts/performance-optimizer.js - Optimizes performance issues * scripts/final-automation-suite.js - Comprehensive automation runner * scripts/git-automation.js - Automated git operations - Improved code quality and security across the application - Added proper development/production environment checks - Enhanced automation reports and monitoring Security improvements: - Fixed potential XSS vulnerabilities - Added proper sanitization for dynamic content - Wrapped debug statements in environment checks Performance improvements: - Added React.memo optimization hints - Enhanced performance monitoring - Created automated performance audit scripts Automation improvements: - Created comprehensive test and improvement scripts - Added automated security auditing - Enhanced error detection and reporting - Improved build and deployment automation`; await this.runCommand(`git commit -m "${commitMessage}"`,'Commit changes'); this.log('✅ All changes committed successfully')} async pushChanges() { this.log('🚀 Pushing changes to repository'); const branchResult = await this.runCommand('git branch --show-current','Get current branch'); if (!branchResult.success) { throw new Error('Failed to get current branch')} const currentBranch = branchResult.output; this.log(`📌 Current branch: ${currentBranch}`); await this.runCommand(`git push origin ${currentBranch}`,`Push to origin/${currentBranch}`); this.log('✅ Changes pushed successfully')} async mergeToMain() { this.log('🔄 Merging to main branch'); const branchResult = await this.runCommand('git branch --show-current','Get current branch'); const currentBranch = branchResult.output; if (currentBranch === 'main' || currentBranch === 'master') { this.log('Already on main branch,no merge needed'); return} await this.runCommand('git checkout main','Switch to main branch'); await this.runCommand('git pull origin main','Pull latest main'); await this.runCommand(`git merge ${currentBranch}`,`Merge ${currentBranch} into main`); await this.runCommand('git push origin main','Push merged changes to main'); this.log('✅ Successfully merged to main branch')} async runFullGitWorkflow() { try { await this.commitChanges(); await this.pushChanges(); await this.mergeToMain(); this.log('🎉 Full git workflow completed successfully')} catch (error) { this.log(`❌ Git workflow failed: ${error.message}`); throw error} } } if (require.main === module) { const gitAutomation = new GitAutomation(); gitAutomation.runFullGitWorkflow() .then(() => {  process.exit(0)}) .catch((error) => { console.error('❌ Git automation failed:',error); process.exit(1)})} module.exports = GitAutomation;
-#!/usr/bin/env node
-const { execSync } = // // require('child_process');
-const fs = // // require('fs');
+#!/usr/bin/env node'
+const { execSync } = // // require('child_process');'
+const fs = // // require('fs');'
 const path = // // require('path');
-class GitAutomation {
-  constructor() {
+class GitAutomation {}
+  constructor() {}
     this.projectRoot = process.cwd()}
-  log(message) {
-    const timestamp = new Date().toISOString();
+  log(message) {}
+    const timestamp = new Date().toISOString();`
     console.log(`[${timestamp}] ${message}`)}
-  async runCommand(command, description) {
+  async runCommand(command, description) {}`
     this.log(`🚀 ${description}`);
-    try {
-      const result = execSync(command, {
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
+    try {}
+      const result = execSync(command, {"
+        "cwd": this.projectRoot,'"
+        "encoding": 'utf8','"
         "stdio": 'pipe'
-      });
-      this.log(`✅ "Completed": ${description}`);
-      return { "success": true, "output": result.trim() }} catch (error) {
-      this.log(`❌ "Failed": ${description} - ${error.message}`);
+      });"`
+      this.log(`✅ "Completed": ${description}`);"
+      return { "success": true, "output": result.trim() }} catch (error) {"`
+      this.log(`❌ "Failed": ${description} - ${error.message}`);"
       return { "success": false, "error": error.message }}
   }
-  async commitChanges() {
+  async commitChanges() {'
     this.log('📝 Starting git operations');
-    // Check git status
+    // Check git status'
     const statusResult = await this.runCommand('git status --porcelain', 'Check git status');
-    if (!statusResult.success) {
+    if (!statusResult.success) {'
       throw new Error('Failed to check git status')}
-    if (!statusResult.output) {
+    if (!statusResult.output) {'
       this.log('No changes to commit');
-      return}
+      return}"`
     this.log(`📋 Changes "detected": \\n${statusResult.output}`);
-    // Add all changes
+    // Add all changes'
     await this.runCommand('git add .', 'Stage all changes');
+<<<<<<< HEAD
     // Create comprehensive commit message
     const commitMessage = ""feat": comprehensive automation improvements and security fixes
 - Fixed XSS vulnerability in SEOEnhancer.tsx by improving dangerouslySetInnerHTML usage
@@ -102,59 +110,69 @@ class GitAutomation {
 - Improved code quality and security across the application
 - Added proper development/production environment checks
 - Enhanced automation reports and monitoring
+=======
+    // Create comprehensive commit message"
+    const commitMessage = ""feat": comprehensive automation improvements and security fixes;
+- Fixed XSS vulnerability in SEOEnhancer.tsx by improving dangerouslySetInnerHTML usage;
+- Enhanced performance monitoring with development-only console logging;
+- Improved code quality and security across the application;
+- Added proper development/production environment checks;
+- Enhanced automation reports and monitoring;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 Security improvements:
-- Fixed potential XSS vulnerabilities
-- Added proper sanitization for dynamic content
-- Wrapped debug statements in environment checks
+- Fixed potential XSS vulnerabilities;
+- Added proper sanitization for dynamic content;
+- Wrapped debug statements in environment checks;
 Performance improvements:
-- Added React.memo optimization hints
-- Enhanced performance monitoring
-- Created automated performance audit scripts
+- Added React.memo optimization hints;
+- Enhanced performance monitoring;
+- Created automated performance audit scripts;
 Automation improvements:
-- Created comprehensive test and improvement scripts
-- Added automated security auditing
-- Enhanced error detection and reporting
+- Created comprehensive test and improvement scripts;
+- Added automated security auditing;
+- Enhanced error detection and reporting"
 - Improved build and deployment automation";
-    // Commit changes
-    await this.runCommand(`git commit -m "${commitMessage}"`, 'Commit changes');
+    // Commit changes'"`
+    await this.runCommand(`git commit -m "${commitMessage}"`, 'Commit changes');'
     this.log('✅ All changes committed successfully')}
-  async pushChanges() {
+  async pushChanges() {'
     this.log('🚀 Pushing changes to repository');
-    // Get current branch
+    // Get current branch'
     const branchResult = await this.runCommand('git branch --show-current', 'Get current branch');
-    if (!branchResult.success) {
+    if (!branchResult.success) {'
       throw new Error('Failed to get current branch')}
-    const currentBranch = branchResult.output;
+    const currentBranch = branchResult.output;"`
     this.log(`📌 Current "branch": ${currentBranch}`);
-    // Push to origin
-    await this.runCommand(`git push origin ${currentBranch}`, `Push to origin/${currentBranch}`);
+    // Push to origin;`
+    await this.runCommand(`git push origin ${currentBranch}`, `Push to origin/${currentBranch}`);'
     this.log('✅ Changes pushed successfully')}
-  async mergeToMain() {
+  async mergeToMain() {'
     this.log('🔄 Merging to main branch');
-    // Get current branch
+    // Get current branch'
     const branchResult = await this.runCommand('git branch --show-current', 'Get current branch');
-    const currentBranch = branchResult.output;
-    if (currentBranch === 'main' || currentBranch === 'master') {
+    const currentBranch = branchResult.output;'
+    if (currentBranch === 'main' || currentBranch === 'master') {'
       this.log('Already on main branch, no merge needed');
       return}
-    // Switch to main
+    // Switch to main'
     await this.runCommand('git checkout main', 'Switch to main branch');
-    // Pull latest changes
+    // Pull latest changes'
     await this.runCommand('git pull origin main', 'Pull latest main');
-    // Merge the feature branch
+    // Merge the feature branch;`
     await this.runCommand(`git merge ${currentBranch}`, `Merge ${currentBranch} into main`);
-    // Push merged changes
-    await this.runCommand('git push origin main', 'Push merged changes to main');
+    // Push merged changes'
+    await this.runCommand('git push origin main', 'Push merged changes to main');'
     this.log('✅ Successfully merged to main branch')}
-  async runFullGitWorkflow() {
-    try {
+  async runFullGitWorkflow() {}
+    try {}
       await this.commitChanges();
       await this.pushChanges();
-      await this.mergeToMain();
-      this.log('🎉 Full git workflow completed successfully')} catch (error) {
+      await this.mergeToMain();'
+      this.log('🎉 Full git workflow completed successfully')} catch (error) {"`
       this.log(`❌ Git workflow "failed": ${error.message}`);
       throw error}
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -169,16 +187,21 @@ Automation improvements:
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-}
 
+<<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -191,11 +214,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 if (require.main === module) {
+=======
+
+
+if (require.main === module) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const gitAutomation = new GitAutomation();
   gitAutomation.runFullGitWorkflow()
-    .then(() => {
+    .then(() => {'
       console.log('🎉 Git automation completed successfully');
       process.exit(0)})
+<<<<<<< HEAD
     .catch((error) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -266,3 +295,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+    .catch((error) => {}
+'"
+      console.error('❌ Git automation "failed": ', error);
+      process.exit(1)})}
+module.exports = GitAutomation;'"`
+#!/usr/bin/env node const { execSync } = const fs = const path = class GitAutomation { constructor() { this.projectRoot = process.cwd()} log(message) { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] ${message}`)} async runCommand(command,description) { this.log(`🚀 ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',stdio: 'pipe' }); this.log(`✅ Completed: ${description}`); return { success: true,output: result.trim() }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`); return { success: false,error: error.message }} } async commitChanges() { this.log('📝 Starting git operations'); const statusResult = await this.runCommand('git status --porcelain','Check git status'); if (!statusResult.success) { throw new Error('Failed to check git status')} if (!statusResult.output) { this.log('No changes to commit'); return} this.log(`📋 Changes detected:\\n${statusResult.output}`); await this.runCommand('git add .','Stage all changes'); const commitMessage = `feat: comprehensive automation improvements and security fixes - Fixed XSS vulnerability in SEOEnhancer.tsx by improving dangerouslySetInnerHTML usage - Enhanced performance monitoring with development-only console logging - Updated ESLint configuration for Next.js v15 compatibility - Created comprehensive automation scripts: * scripts/remove-console-logs-production.js - Removes console statements from production * scripts/performance-optimizer.js - Optimizes performance issues * scripts/final-automation-suite.js - Comprehensive automation runner * scripts/git-automation.js - Automated git operations - Improved code quality and security across the application - Added proper development/production environment checks - Enhanced automation reports and monitoring Security improvements: - Fixed potential XSS vulnerabilities - Added proper sanitization for dynamic content - Wrapped debug statements in environment checks Performance improvements: - Added React.memo optimization hints - Enhanced performance monitoring - Created automated performance audit scripts Automation improvements: - Created comprehensive test and improvement scripts - Added automated security auditing - Enhanced error detection and reporting - Improved build and deployment automation`; await this.runCommand(`git commit -m "${commitMessage}"`,'Commit changes'); this.log('✅ All changes committed successfully')} async pushChanges() { this.log('🚀 Pushing changes to repository'); const branchResult = await this.runCommand('git branch --show-current','Get current branch'); if (!branchResult.success) { throw new Error('Failed to get current branch')} const currentBranch = branchResult.output; this.log(`📌 Current branch: ${currentBranch}`); await this.runCommand(`git push origin ${currentBranch}`,`Push to origin/${currentBranch}`); this.log('✅ Changes pushed successfully')} async mergeToMain() { this.log('🔄 Merging to main branch'); const branchResult = await this.runCommand('git branch --show-current','Get current branch'); const currentBranch = branchResult.output; if (currentBranch === 'main' || currentBranch === 'master') { this.log('Already on main branch,no merge needed'); return} await this.runCommand('git checkout main','Switch to main branch'); await this.runCommand('git pull origin main','Pull latest main'); await this.runCommand(`git merge ${currentBranch}`,`Merge ${currentBranch} into main`); await this.runCommand('git push origin main','Push merged changes to main'); this.log('✅ Successfully merged to main branch')} async runFullGitWorkflow() { try { await this.commitChanges(); await this.pushChanges(); await this.mergeToMain(); this.log('🎉 Full git workflow completed successfully')} catch (error) { this.log(`❌ Git workflow failed: ${error.message}`); throw error} } } if (require.main === module) { const gitAutomation = new GitAutomation(); gitAutomation.runFullGitWorkflow() .then(() => { console.log('🎉 Git automation completed successfully'); process.exit(0)}) .catch((error) => { console.error('❌ Git automation failed:',error); process.exit(1)})} module.exports = GitAutomation;'"`
+#!/usr/bin/env node const { execSync } = const fs = const path = class GitAutomation { constructor() { this.projectRoot = process.cwd()} log(message) { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] ${message}`)} async runCommand(command,description) { this.log(`🚀 ${description}`); try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',stdio: 'pipe' }); this.log(`✅ Completed: ${description}`); return { success: true,output: result.trim() }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`); return { success: false,error: error.message }} } async commitChanges() { this.log('📝 Starting git operations'); const statusResult = await this.runCommand('git status --porcelain','Check git status'); if (!statusResult.success) { throw new Error('Failed to check git status')} if (!statusResult.output) { this.log('No changes to commit'); return} this.log(`📋 Changes detected:\\n${statusResult.output}`); await this.runCommand('git add .','Stage all changes'); const commitMessage = `feat: comprehensive automation improvements and security fixes - Fixed XSS vulnerability in SEOEnhancer.tsx by improving dangerouslySetInnerHTML usage - Enhanced performance monitoring with development-only console logging - Updated ESLint configuration for Next.js v15 compatibility - Created comprehensive automation scripts: * scripts/remove-console-logs-production.js - Removes console statements from production * scripts/performance-optimizer.js - Optimizes performance issues * scripts/final-automation-suite.js - Comprehensive automation runner * scripts/git-automation.js - Automated git operations - Improved code quality and security across the application - Added proper development/production environment checks - Enhanced automation reports and monitoring Security improvements: - Fixed potential XSS vulnerabilities - Added proper sanitization for dynamic content - Wrapped debug statements in environment checks Performance improvements: - Added React.memo optimization hints - Enhanced performance monitoring - Created automated performance audit scripts Automation improvements: - Created comprehensive test and improvement scripts - Added automated security auditing - Enhanced error detection and reporting - Improved build and deployment automation`; await this.runCommand(`git commit -m "${commitMessage}"`,'Commit changes'); this.log('✅ All changes committed successfully')} async pushChanges() { this.log('🚀 Pushing changes to repository'); const branchResult = await this.runCommand('git branch --show-current','Get current branch'); if (!branchResult.success) { throw new Error('Failed to get current branch')} const currentBranch = branchResult.output; this.log(`📌 Current branch: ${currentBranch}`); await this.runCommand(`git push origin ${currentBranch}`,`Push to origin/${currentBranch}`); this.log('✅ Changes pushed successfully')} async mergeToMain() { this.log('🔄 Merging to main branch'); const branchResult = await this.runCommand('git branch --show-current','Get current branch'); const currentBranch = branchResult.output; if (currentBranch === 'main' || currentBranch === 'master') { this.log('Already on main branch,no merge needed'); return} await this.runCommand('git checkout main','Switch to main branch'); await this.runCommand('git pull origin main','Pull latest main'); await this.runCommand(`git merge ${currentBranch}`,`Merge ${currentBranch} into main`); await this.runCommand('git push origin main','Push merged changes to main'); this.log('✅ Successfully merged to main branch')} async runFullGitWorkflow() { try { await this.commitChanges(); await this.pushChanges(); await this.mergeToMain(); this.log('🎉 Full git workflow completed successfully')} catch (error) { this.log(`❌ Git workflow failed: ${error.message}`); throw error} } } if (require.main === module) { const gitAutomation = new GitAutomation(); gitAutomation.runFullGitWorkflow() .then(() => { console.log('🎉 Git automation completed successfully'); process.exit(0)}) .catch((error) => { console.error('❌ Git automation failed:',error); process.exit(1)})} module.exports = GitAutomation;
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

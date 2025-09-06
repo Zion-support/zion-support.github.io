@@ -35,10 +35,17 @@ function resolveMergeConflictsInFile(filePath) {
     // Remove conflict markers
     const originalContent = content;
     content = content
+<<<<<<< HEAD
       .replace(/[^\n]+\n/g, '')
       .replace(/<<<<<<< [^\n]+\n/g, '')
       .replace(/=======\n/g, '')
       .replace(/[^\n]+\n/g, '');
+=======
+      .replace(/
+      .replace(/<<<<<<< [^\n]+\n/g, '')
+      .replace(/\n/g, '')
+      .replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);

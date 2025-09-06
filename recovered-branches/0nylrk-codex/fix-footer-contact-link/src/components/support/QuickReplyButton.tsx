@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {Button} from "@/components/ui/button";
@@ -69,20 +70,33 @@ import { cn } from "@/lib/utils",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import { Button } from "@/components/ui/button";
+=======
+import React from "react";"
+import { Button } from "@/components/ui/button";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils";
-interface QuickReplyButtonProps {
+interface QuickReplyButtonProps {}
   text: string;
   onClick: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 =======
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {  return (
     <Button
+=======
 
-      variant="outline"
+export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+  return (
+    <Button;
+"
+      variant="outline""
       size="sm"
       className={cn(
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
@@ -126,6 +140,11 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+"
+        "border-zion-purple/30 hover: bg-zion-purple hover:text-white","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         "transition-colors duration-200",
       )}
       onClick={onClick}>;
@@ -135,15 +154,22 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
   );
 }
   return (
+<<<<<<< HEAD
     <Button
 
 import React from './react';
 import { Button  } from '@/components / ui / button';
+=======
+    <Button;
+import React from './react';'
+import { Button  } from '@/components / ui / button';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn  } from '@/lib / utils';
-interface QuickReplyButtonProps {
+interface QuickReplyButtonProps {}
   text: string;
   on_click: () => void;
 }
+<<<<<<< HEAD
 export /**
  * QuickReplyButton - Function description
  */
@@ -169,20 +195,32 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 interface QuickReplyButtonProps {
+=======
+
+
+interface QuickReplyButtonProps {}
+  text: string;
+  onClick: () => void;
+"
+import React from "react";"
+import { Button } from "@/components/ui/button";"
+import { cn } from "@/lib/utils";
+interface QuickReplyButtonProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   text: string;
   onClick: () => void;
 
 }
-export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
-  return (
-    <Button
-
-      variant="outline"
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {}
+  return (;
+    <Button;
+"
+      variant="outline""
       size="sm"
-      className={cn(
-"border-zion-purple/30 hover: bg-zion-purple hover:text-white"
+      className={cn("
+"border-zion-purple/30 hover: bg-zion-purple hover:text-white""
         "transition-colors duration-200"
-
+"
         "transition-colors duration-200",
 
       )}
@@ -195,6 +233,7 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
   )
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,3 +253,9 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,4 +1,4 @@
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -337,6 +337,7 @@ export default function ServicesPage() {
                     size="lg"
                     className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
                   >
+<<<<<<< HEAD
                     <MessageSquare className="w-5 h-5 mr-2" />
                     Contact Sales Team
                   </Button>
@@ -345,6 +346,9 @@ export default function ServicesPage() {
                     variant="secondary" 
                     size="lg"
                     className="border-purple-500/30 text-purple-400 hover:bg-purple-500/20"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   >
                     <DollarSign className="w-5 h-5 mr-2" />
                     View Pricing
@@ -866,7 +870,7 @@ export default function ServicesPage() {
     </UltraFuturisticBackground>
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -885,4 +889,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

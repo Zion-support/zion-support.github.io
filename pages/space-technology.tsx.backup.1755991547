@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -200,11 +201,19 @@ export default function SpaceTechnology() {
           <div className="text-center max-w-4xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+export default function SpaceTechnology() {
+  return (
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -254,11 +263,15 @@ export default function SpaceTechnology() {
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -353,12 +366,16 @@ export default function SpaceTechnology() {
                   <p className="text-gray-300">{capability.description}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -491,6 +508,9 @@ export default function SpaceTechnology() {
                   </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -498,6 +518,7 @@ export default function SpaceTechnology() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -562,10 +583,14 @@ export default function SpaceTechnology() {
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
     </>
@@ -578,6 +603,9 @@ export default function SpaceTechnology() {
     </Layout>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

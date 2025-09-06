@@ -1,15 +1,16 @@
-"export": interface ComprehensiveNewService {
+"export": interface ComprehensiveNewService {}
    id: string;
    title: string;
    description: string;
    category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';
-   pricing: {
+   pricing: {}
    monthly: string;
    yearly: string;
    enterprise: string;
-   setup: string;
-export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string} marketPrice: 'strin',g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: 'string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]'} competitors?: string[] marketSize?: string: 'implementationTime?: string: trainingRequired?: string: compliance?: string[]' } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['';,;
+   setup: string;'
+export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string} marketPrice: 'strin',g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: 'string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]'} competitors?: string[] marketSize?: string: 'implementationTime?: string: trainingRequired?: string: compliance?: string[]' } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['';,;'"
    marketPrice: strin,g} "features": string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: "string": implementationTime?: string: trainingRequired?: string: compliance?: string[] } "export": const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,3 +59,12 @@ export: interface ComprehensiveNewService { id: string; title: string,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'
+export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: strin,g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string: implementationTime?: string: trainingRequired?: string: compliance?: string[] } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

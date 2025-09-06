@@ -1,12 +1,16 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
@@ -37,23 +41,21 @@ import {SearchSuggestion} from "@/types/search";
 interface EnhancedSearchInputProps {;
   value: string,;
   onChange: (value: string) => void,;
-
-  placeholder?: string;
-  searchSuggestions: SearchSuggestion[];
-}
-
-
 =======
-  placeholder?: string;
-  searchSuggestions: SearchSuggestion[];
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import React, { useState, useEffect, useRef } from "react";"
+import {Search, X} from "lucide-react";"
+import {Input} from "@/components/ui/input";"
+import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";"
+import {SearchSuggestion} from "@/types/search";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 export function EnhancedSearchInput(): any ({ ;
   value;
-  onChange, ;
+  onChange, ;"
   placeholder = "Search...", ;
   searchSuggestions ;
 }: EnhancedSearchInputProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -64,30 +66,26 @@ import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
+=======
+"
+import React, { useState, useEffect, useRef } from "react","
+import { Search, X } from "lucide-react","
+import { Input } from "@/components/ui/input",";
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { SearchSuggestion } from "@/types/search";
-interface EnhancedSearchInputProps {
-
-  value: string
-  onChange: (value: string) => void
-
+interface EnhancedSearchInputProps {}
+  value: string;
+  onChange: (value: string) => void;
   placeholder?: string;
   searchSuggestions: SearchSuggestion[];
 }
-<<<<<<< HEAD
-export function EnhancedSearchInput({
-  value;
 
-  onChange
-  placeholder = "Search..."
-  searchSuggestions
-}: EnhancedSearchInputProps) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
@@ -105,6 +103,12 @@ import { SearchSuggestion } from "@/types/search",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface EnhancedSearchInputProps {
+=======
+
+
+
+interface EnhancedSearchInputProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   value: string,
   onChange: (value: string) => void,
   placeholder?: string,
@@ -112,34 +116,33 @@ interface EnhancedSearchInputProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   onChange,
   placeholder = "Search...",
   searchSuggestions
 =======
 <<<<<<< HEAD
-
-export function EnhancedSearchInput({ 
-  value,
-
-<<<<<<< HEAD
 =======
-export function EnhancedSearchInput({ ;
-  value;
-export function EnhancedSearchInput({ 
-  value,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  onChange, 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+  onChange, "
   placeholder = "Search...", 
+<<<<<<< HEAD
   searchSuggestions 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }: EnhancedSearchInputProps) {
+=======
+  searchSuggestions;
+}: EnhancedSearchInputProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [isFocused, setIsFocused] = useState(false),
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
   const inputRef = useRef<HTMLInputElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -159,28 +162,29 @@ export function EnhancedSearchInput({
 <<<<<<< HEAD
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
       return
-
-
-
 =======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+
+  // Filter suggestions based on input value;
+  useEffect(() => {}
+    if (!value) {}
+      // Show recent searches when input is empty;
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
-      return
+      return;
       }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
+    }"
+    document.addEventListener("mousedown", handleClickOutside);"
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, []);
-  const handleSelectSuggestion = (suggestion: string) => {
+  const handleSelectSuggestion = (suggestion: string) => {}
     onChange(suggestion);
     setIsFocused(false)
     inputRef.current?.blur()
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -206,6 +210,13 @@ import {SearchSuggestion} from "@/types/search";  const [filteredSuggestions, se
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Input } from "@/components/ui/input",;
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",;
+=======
+"
+import React, { useState, useEffect, useRef } from "react",;"
+import { Search, X } from "lucide-react",;"
+import { Input } from "@/components/ui/input",;"
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { SearchSuggestion } from "@/types/search",;
 interface EnhancedSearchInputProps {;
   value: string,;
@@ -214,22 +225,7 @@ interface EnhancedSearchInputProps {;
   searchSuggestions: SearchSuggestion[];
 }
 ;
-export function EnhancedSearchInput({;
-  value,;
-  onChange,;
-  placeholder = "Search...",;
-  searchSuggestions;
-}: EnhancedSearchInputProps) {;
-  const [isFocused, setIsFocused] = useState(false),;
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),;
-  const inputRef = useRef<HTMLInputElement>(null),;
-  const containerRef = useRef<HTMLDivElement>(null),;
-  // Filter suggestions based on input value;
-  useEffect(() => {;
-    if (!value) {;
-      // Show recent searches when input is empty;
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),;
-      return;
+export function EnhancedSearchInput() { return null; }
     }
 ;
     const filtered = searchSuggestions.filter(suggestion =>;
@@ -245,6 +241,7 @@ export function EnhancedSearchInput({;
   }, [value, searchSuggestions]),;
   // Handle clicks outside the component to close suggestions;
   useEffect(() => {;
+<<<<<<< HEAD
     function handleClickOutside(event: MouseEvent) {;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
@@ -272,14 +269,21 @@ export function EnhancedSearchInput({;
     }
     document.addEventListener("mousedown", handleClickOutside);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    function handleClickOutside() { return null; }
+      }
+    }"
+    document.addEventListener("mousedown", handleClickOutside);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, []);
-  const handleSelectSuggestion = (suggestion: string) => {
+  const handleSelectSuggestion = (suggestion: string) => {}
     onChange(suggestion);
     setIsFocused(false)
 <<<<<<< HEAD
 <<<<<<< HEAD
     inputRef.current?.blur()
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
 <<<<<<< HEAD
@@ -299,46 +303,29 @@ export function EnhancedSearchInput({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="relative w-full" ref={containerRef}>
+=======
+
+
+
+  return ("
+    <div className="relative w-full" ref={containerRef}>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="relative">
-        <Search
+        <Search"
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import React, { useState, useEffect, useRef } from "react",;
-import { Search, X } from "lucide-react",;
-import { Input } from "@/components/ui/input",;
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions", ;
-import { SearchSuggestion } from "@/types/search",;
-;
-interface EnhancedSearchInputProps {;
-  value:string,;
-  onChange:(value:string) => void,;
-  placeholder?:string,;
-  searchSuggestions:SearchSuggestion[];
-}
-;
-export function EnhancedSearchInput({ ;
-  value,;
-  onChange, ;
-  placeholder = "Search...", ;
-  searchSuggestions ;
-} EnhancedSearchInputProps) {;
-  const [isFocused, setIsFocused] = useState(false),;
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),;
-  const inputRef = useRef<HTMLInputElement>(null),;
-  const containerRef = useRef<HTMLDivElement>(null),;
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   // Filter suggestions based on input value;
 =======
     inputRef.current?.blur()  // Filter suggestions based on input value;
@@ -349,14 +336,15 @@ export function EnhancedSearchInput({ ;
   useEffect(() => {;
     if (!value) {;
       // Show recent searches when input is empty;
+<<<<<<< HEAD
       setFilteredSuggestions(searchSuggestions && searchSuggestions.filter(s => s && s.type === 'recent'));
       return;
     }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    const filtered = searchSuggestions && searchSuggestions.filter(suggestion => ;
-      suggestion && suggestion.text.toLowerCase().includes(value && value.toLowerCase());
-    );
 
+<<<<<<< HEAD
     // Sort suggestions to prioritize those that start with the search term;
     filtered && filtered.sort((a, b) => {;
       const aStartsWith = a && a.text.toLowerCase().startsWith(value && value.toLowerCase()) ? -1 : 0;
@@ -432,22 +420,38 @@ export function EnhancedSearchInput({ ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
     document.addEventListener("mousedown", handleClickOutside),;
+=======
+        <Input;
+          ref={inputRef}"
+          type="text"
+
+;"
+    document.addEventListener("mousedown", handleClickOutside),;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []),;
   const handleSelectSuggestion = (suggestion: string) => {;
     onChange(suggestion),;
     setIsFocused(false);
+<<<<<<< HEAD
     inputRef.current?.blur()
 };
   return (;
     <div className="relative w-full" ref={containerRef}>;
+=======
+    inputRef.current?.blur();
+  };
+  return (;"
+    <div className="relative w-full" ref={containerRef}>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="relative">;
-        <Search;
+        <Search;"
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate";
         />;
         <Input;
-          ref={inputRef}
+          ref={inputRef}"
           type="text";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -479,118 +483,40 @@ export function EnhancedSearchInput({ ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
+<<<<<<< HEAD
           <button
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+          <button"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-<<<<<<< HEAD
-=======
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),;
-      return,;
-    }
-    ;
-    const filtered = searchSuggestions.filter(suggestion => ;
-      suggestion.text.toLowerCase().includes(value.toLowerCase());
-    ),;
-    ;
-    // Sort suggestions to prioritize those that start with the search term;
-    filtered.sort((a, b) => {;
-      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 :0,;
-      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 :0,;
-      return aStartsWith - bStartsWith,;
-    }),;
-    ;
-    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions;
-  }, [value, searchSuggestions]),;
-;
-  // Handle clicks outside the component to close suggestions;
-  useEffect(() => {;
-    function handleClickOutside(event:MouseEvent) {;
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
-        setIsFocused(false);
-      }
-    }
-    ;
-    document.addEventListener("mousedown", handleClickOutside),;
-    return () => document.removeEventListener("mousedown", handleClickOutside),;
-  }, []),;
-;
-  const handleSelectSuggestion = (suggestion:string) => {;
-    onChange(suggestion),;
-    setIsFocused(false),;
-    inputRef.current?.blur();
-  },;
-  ;
-  return (;
-    <div className="relative w-full" ref={containerRef}>;
-      <div className="relative">;
-        <Search ;
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" ;
-        />;
-        <Input;
-          ref={inputRef}
-          type="text";          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          onFocus={() => setIsFocused(true)}
-          placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
-        />;
-        {value && (;
-          <button ;
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+'
             onClick={() => onChange('')}
-          >;
+          >;"
             <X className="h-4 w-4" />;
           </button>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      </div>;
 
 
-=======
-      </div>;
-      ;
+
       <AutocompleteSuggestions;
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          onFocus={() => setIsFocused(true)}
-          placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-        />
-        {value && (
-          <button
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
-      </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <AutocompleteSuggestions
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      />;
-    </div>;
-  );
-}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -610,29 +536,36 @@ import React, { useState, useEffect, useRef } from './react';
 import { Search, X } from './lucide-react';
 import { Input } from '@/components / ui / input';
 import { AutocompleteSuggestions } from '@/components / search / AutocompleteSuggestions';
+=======
+'
+import React, { useState, useEffect, useRef } from './react';'
+import { Search, X } from './lucide-react';'
+import { Input } from '@/components / ui / input';'
+import { AutocompleteSuggestions } from '@/components / search / AutocompleteSuggestions';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { SearchSuggestion } from '@/types / search';
-interface EnhancedSearchInputProps {
+interface EnhancedSearchInputProps {}
   value: string,
   on_change: (value: string) => void,
   placeholder?: string;
   search_suggestions: SearchSuggestion[];
 }
-export /**
- * EnhancedSearchInput - Function description
+export /**;
+ * EnhancedSearchInput - Function description;
  */
-function EnhancedSearchInput() {
+function EnhancedSearchInput() {}
   const [is_focused, setIsFocused] = useState (false);
   const [filtered_suggestions, setFilteredSuggestions] = useState < SearchSuggestion[]>([]);
   const input_ref = useRef < HTMLInputElement>(null);
   const container_ref = useRef < HTMLDivElement>(null);
 ;
   // Filter suggestions based on input value;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
+  useEffect (() => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      // Show recent searches when input is empty;
+      // Show recent searches when input is empty;'
       setFilteredSuggestions (search_suggestions.filter (string => s.type === 'recent'));
       return;
     }
@@ -640,7 +573,7 @@ if ( {) {
       suggestion.text.toLowerCase ().includes (value.toLowerCase ()));
 ;
     // Sort suggestions to prioritize those that start with the search term;
-    filtered.sort ((a, b) => {
+    filtered.sort ((a, b) => {}
       const aStartsWith = a.text.toLowerCase ().starts_with (value.toLowerCase ()) ? -1 : 0;
       const bStartsWith = b.text.toLowerCase ().starts_with (value.toLowerCase ()) ? -1 : 0;
       return aStartsWith - bStartsWith;
@@ -650,39 +583,48 @@ if ( {) {
   }, [value, search_suggestions]);
 ;
   // Handle clicks outside the component to close suggestions;
-  useEffect (() => {
+  useEffect (() => {}
     /**
- * handleClickOutside - Function description
+ * handleClickOutside - Function description;
  */
-function handleClickOutside() {
-      if () {) {
-  $2
+function handleClickOutside() {}
+      if () {) {}
+  $2;
 }
         setIsFocused (false);
       }
-    }
-    document.addEventListener ("mousedown", handleClickOutside);
+    }"
+    document.addEventListener ("mousedown", handleClickOutside);"
     return () => document.removeEventListener ("mousedown", handleClickOutside);
   }, []);
 ;
-  const handleSelectSuggestion = (suggestion: string) =>: any {
+  const handleSelectSuggestion = (suggestion: string) =>: any {}
     on_change (suggestion);
     setIsFocused (false),
     input_ref.current?.blur ();
   }
 ;
+<<<<<<< HEAD
   return (
     <div className="relative w-full" ref={container_ref}>;
       <div className="relative">;
         <Search;
           className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion-slate";
+=======
+  return ("
+    <div className="relative w - full" ref={container_ref}>;"
+      <div className="relative">;
+        <Search;"
+          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         />;
         <Input;
-          ref={input_ref}
+          ref={input_ref}"
           type="text";
           value={value}
           on_change={(e) => on_change (e.target.value)}
           on_focus={() => setIsFocused (true)}
+<<<<<<< HEAD
           placeholder={placeholder}
           className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion-slate";
         />;
@@ -692,6 +634,17 @@ function handleClickOutside() {
             on_click={() => on_change ('')}
           >;
             <X className="h - 4 w-4" />;
+=======
+          placeholder={placeholder}"
+          className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion - slate";
+        />;
+        {value && (
+          <button;"
+            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";'
+            on_click={() => on_change ('')}
+          >;"
+            <X className="h - 4 w - 4" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </button>)}
       </div>;
       <AutocompleteSuggestions;
@@ -704,6 +657,7 @@ function handleClickOutside() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -759,3 +713,9 @@ if (!value) {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

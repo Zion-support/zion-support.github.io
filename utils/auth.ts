@@ -24,6 +24,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from "next";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 // Authentication utilities
 
 =======
@@ -41,10 +42,16 @@ export interface User {
   id: string;
   email: string;
 <<<<<<< HEAD
+=======
+// Authentication utilities;
+export interface User {};
+  id: string;
+  email: string;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   role: "admin" | "user" | "guest";
 }
 
-export function parseUserFromRequest(req: NextApiRequest): User {
+export function parseUserFromRequest(req: NextApiRequest): User {};
   // Mock implementation - replace with actual auth logic;
 =======
   role: string;
@@ -133,48 +140,69 @@ export function parseUserFromRequest(req: NextApiRequest): User {
 
 main
   const authHeader = req.headers.authorization;
-  if (!authHeader) {
+  if (!authHeader) {"
     return { id: "guest", email: "guest@example.com", role: "guest" };
   }
 
-  // Simple mock for admin users
-  if (authHeader.includes("admin")) {
+  // Simple mock for admin users"
+  if (authHeader.includes("admin")) {"
     return { id: "admin-1", email: "admin@zion.os", role: "admin" };
   }
+<<<<<<< HEAD
   
   return { id: 'user-1', email: 'user@zion.os', role: 'user' };
 
 
 main
+=======
+"
+  return { id: "user-1", email: "user@zion.os", role: "user" };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
-export function ensureAdmin(user: User): void {
-  if (user.role !== "admin") {
+export function ensureAdmin(user: User): void {"
+  if (user.role !== "admin") {";
     const error = new Error("Forbidden");
     (error as any).statusCode = 403;
     throw error;
   }
 }
+<<<<<<< HEAD
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
   try {;
     const user = parseUserFromRequest(req);
+=======
+
+export async function ensureAdminFromApi(
+  req: NextApiRequest,
+): Promise<{ allowed: boolean }> {}
+  try {};
+    const user = parseUserFromRequest (req);
+    ensure_admin (user);
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     ensureAdmin(user);
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     return { allowed: true }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch {
+=======
+
+    return { allowed: true }
+  } catch {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return { allowed: false }
   }
 }
+
+
 <<<<<<< HEAD
-=======
-
-// Additional auth utilities for login;
-
 export interface DemoUser {
 // Additional auth utilities for login
 export interface DemoUser {;
@@ -182,57 +210,65 @@ export interface DemoUser {;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
-  name: string;
+  name: string;"
   role: "admin" | "user" | "guest";
   email: string;
 }
 
+<<<<<<< HEAD
 export function ensureDemoUsers(): void {
   if (demoUsers.length === 0) {
+=======
+
+export function ensureDemoUsers(): void {}
+  if (demoUsers.length === 0) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     demoUsers.push(
-      {
-        id: "admin-1",
-        name: "Admin User",
-        role: "admin",
+      {"
+        id: "admin-1","
+        name: "Admin User","
+        role: "admin","
         email: "admin@zion.os",
       },
-      {
-        id: "user-1",
-        name: "Regular User",
-        role: "user",
+      {"
+        id: "user-1","
+        name: "Regular User","
+        role: "user","
         email: "user@zion.os",
-      },
+      },;
     );
   }
 }
 
 export function generateUser(
-  name: string,
+  name: string,"
   role: "admin" | "user" | "guest",
-): DemoUser {
-  return {
+): DemoUser {}
+  return {}
     id: `user-${Date.now()}`,
     name,
-    role,
-    email: `${name.toLowerCase().replace(/\s+/g, ".")}@zion.os`,
+    role,"`
+    email: `${name.toLowerCase().replace(/\s+/g, ".")}@zion.os`,;
   };
 }
 
-export function upsertUser(user: DemoUser): void {
+export function upsertUser(user: DemoUser): void {};
   const index = demoUsers.findIndex((u) => u.id === user.id);
-  if (index >= 0) {
+  if (index >= 0) {}
     demoUsers[index] = user;
-  } else {
+  } else {}
     demoUsers.push(user);
   }
 }
 
-export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
+export function setUserCookie(res: NextApiResponse, user: DemoUser): void {";`
   res.setHeader("Set-Cookie", `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
 }
 
-export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
+export function getUserFromRequest(req: NextApiRequest): DemoUser | null {";
   const cookieHeader = req.headers.cookie || "";
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
@@ -240,6 +276,7 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const demo_users: DemoUser[] = [];
 ;
@@ -289,8 +326,11 @@ if (return null) {
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   try {
+=======
+  try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return JSON.parse (decodeURIComponent (match[1]));
-  } catch {
+  } catch {}
     return null;
 <<<<<<< HEAD
   }
@@ -323,6 +363,7 @@ main
 
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -448,3 +489,6 @@ export function getUserFromRequest(req: NextApiRequest): User | null {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,16 +2,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import {Button} from "@/components/ui/button";
 import {Star} from "lucide-react";
 import React from 'react',
 import { Button } from "@/components/ui/button";
+=======
+import React from "react";"
+import { Button } from "@/components/ui/button";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Star } from "lucide-react";
-interface SaveTalentButtonProps {
+interface SaveTalentButtonProps {}
   talentId: string;
   onSave: (talentId: string) => void;
+<<<<<<< HEAD
   isSaved: boolean
 import { Button } from "@/components/ui/button",
 import { Star } from "lucide-react",
@@ -90,6 +96,29 @@ export function SaveTalentButton({
 }: SaveTalentButtonProps) {
 =======import React from 'react';
 import {Button} from "@/components/ui/button";
+=======
+  isSaved: boolean;
+
+"
+import React from "react";"
+import { Button } from "@/components/ui/button";"
+import { Star } from "lucide-react";
+interface SaveTalentButtonProps {}
+  talentId: string;
+  onSave: (talentId: string) => void;
+  isSaved: boolean;
+
+}
+
+
+export function SaveTalentButton({}
+  talentId,
+  onSave,
+  isSaved,
+}: SaveTalentButtonProps) {};
+import React from 'react';"
+import {Button} from "@/components/ui/button";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Star} from "lucide-react";
 interface SaveTalentButtonProps {;
   talentId: string,;
@@ -97,22 +126,22 @@ interface SaveTalentButtonProps {;
   isSaved: boolean;
 }
 
-export function SaveTalentButton({
+export function SaveTalentButton({}
   talentId,
   onSave,
   isSaved,
-}: SaveTalentButtonProps) {
-  return (
-    <Button
-      onClick={() => onSave(talentId)}
+}: SaveTalentButtonProps) {}
+  return (;
+    <Button;
+      onClick={() => onSave(talentId)}"
       variant={isSaved ? "default" : "outline"}
-      className={
-        is_saved;
-          ? "bg - yellow - 500 hover:bg - yellow - 600 text - white";
-          : "text - yellow - 500 border - yellow - 500 hover:bg - yellow - 500 / 10";
+      className={}
+        is_saved;"
+          ? "bg - yellow - 500 hover:bg - yellow - 600 text - white";"
+          : "text - yellow - 500 border - yellow - 500 hover:bg - yellow - 500 / 10";"
       className={isSaved ? "bg-yellow-500 hover:bg-yellow-600 text-white" : "text-yellow-500 border-yellow-500 hover:bg-yellow-500/10"}
-    >
-      <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
+    >'
+      <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />'
       {isSaved ? 'Saved' : 'Save'}
 <<<<<<< HEAD
     </Button>;
@@ -127,23 +156,28 @@ export function SaveTalentButton({
     </Button>
   )
 }
-    >;
-      <Star className={`h - 4 w - 4 ${is_saved ? "fill - current" : ""} mr - 1`} />;
+    >;"`
+      <Star className={`h - 4 w - 4 ${is_saved ? "fill - current" : ""} mr - 1`} />;"
       {is_saved ? "Saved" : "Save"}
     </Button>);
 }
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       size="sm"
-      className={
-        isSaved
-          ? "bg-yellow-500 hover:bg-yellow-600 text-white"
+      className={}
+        isSaved"
+          ? "bg-yellow-500 hover:bg-yellow-600 text-white""
           : "text-yellow-500 border-yellow-500 hover:bg-yellow-500/10"
       }
-    >
-      <Star className={`h-4 w-4 ${isSaved ? "fill-current" : ""} mr-1`} />
+    >"`
+      <Star className={`h-4 w-4 ${isSaved ? "fill-current" : ""} mr-1`} />"
       {isSaved ? "Saved" : "Save"}
     </Button>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -155,3 +189,6 @@ export function SaveTalentButton({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/api/media/generate.ts
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -45,44 +46,22 @@ function handler() {
     } = req.body || {};
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    if (req.method !== "POST") {
-      res.setHeader("Allow", "POST");
-      return res.status(405).json({ error: "Method not allowed" });
-<<<<<<< HEAD
-      type = "launch",
-      company_name = "Zion",
-      date = new Date ().toISOString ().substring (0, 10),
-      raise_amount,
-      description = "Innovative technology company",
-
-
-    return res && res.status(200).json({
-      ok: true,
-      pressRelease,
-      downloadUrl: `/api/media/download/${pressRelease && pressRelease.id}`,
 =======
-    }
-    const pressRelease = await buildPressRelease({
-      type
-      companyName
-      date
-      raiseAmount
-      description
-      contactEmail
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/media/generate.ts
+
+
+    if (req.method !== "POST") {"
+      res.setHeader("Allow", "POST");"
+      return res.status(405).json({ error: "Method not allowed" });
+
     });
-    return res.status(200).json({
-      ok: true
-      pressRelease
-      downloadUrl: `/api/media/download/${pressRelease.id}`
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    });
-  } catch (error: any) {
+  } catch (error: any) {"
     console.error("Press release generation error:", error);
-    return res.status(500).json({
-      ok: false
+    return res.status(500).json({}
+      ok: false"
       error: "Failed to generate press release"
     });
+<<<<<<< HEAD:pages_backup/api/media/generate.ts
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
@@ -156,24 +135,28 @@ const text = buildPressRelease(type, {
 }
   } catch (error) {
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
 =======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/media/generate.ts
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+  }
+
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages_backup/api/media/generate.ts
 <<<<<<< HEAD
   }
 }
@@ -197,3 +180,11 @@ const text = buildPressRelease(type, {
   }
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/media/generate.ts

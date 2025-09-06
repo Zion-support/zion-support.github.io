@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Stub talent data - placeholder for missing functionality
 
 export const TALENT_PROFILES = [
@@ -35,11 +36,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export const TALENT_PROFILES = [;
 
   {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-];
 
 
+<<<<<<< HEAD
     id: '1', slug: 'sample-talent',
     name: 'Sample Talent', title: 'Full Stack Developer',
     category: 'Development', location: 'Remote',
@@ -79,3 +82,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

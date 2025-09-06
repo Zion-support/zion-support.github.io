@@ -1,60 +1,70 @@
 // Supabase utilities;
-export const supabase = {
+export const supabase = {};
   // Add supabase functionality here;
-  auth: {
-
+  auth: {}
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
     signOut: () => Promise<any>
 };
 }
+<<<<<<< HEAD
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
     from: (table: string) => ({
       select: (columns: string = "*") => ({
         eq: (column: string, value: any) => ({
+=======
+
+// Mock Supabase client for development;
+export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {}
+  return {}
+    from: (table: string) => ({}
+      select: (columns: string = "*") => ({}
+        eq: (column: string, value: any) => ({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           single: () => Promise.resolve({ data: null, error: null }),
           then: (callback: (result: any) => any) =>
             callback({ data: [], error: null }),
         }),
-        insert: (data: any) => ({
-          select: (columns: string = "*") => ({
+        insert: (data: any) => ({"
+          select: (columns: string = "*") => ({}
             single: () => Promise.resolve({ data: data, error: null }),
           }),
         }),
-        update: (data: any) => ({
-          eq: (column: string, value: any) => ({
-            select: (columns: string = "*") => ({
+        update: (data: any) => ({}
+          eq: (column: string, value: any) => ({"
+            select: (columns: string = "*") => ({}
               single: () => Promise.resolve({ data: data, error: null }),
             }),
           }),
         }),
-        delete: () => ({
-          eq: (column: string, value: any) => ({
+        delete: () => ({}
+          eq: (column: string, value: any) => ({}
             then: (callback: (result: any) => any) =>
               callback({ data: null, error: null }),
           }),
         }),
       }),
     }),
-    auth: {
+    auth: {}
       getUser: () => Promise.resolve({ data: { user: null }, error: null }),
       signIn: (credentials: any) =>
         Promise.resolve({ data: { user: null }, error: null }),
       signOut: () => Promise.resolve({ error: null }),
-    },
+    },;
   };
 }
 
-// Default configuration
-const supabaseConfig: SupabaseConfig = {
-  url:
-    process.env.NEXT_PUBLIC_SUPABASE_URL || "https://your-project.supabase.co",
+// Default configuration;
+const supabaseConfig: SupabaseConfig = {}
+  url:"
+    process.env.NEXT_PUBLIC_SUPABASE_URL || "https://your-project.supabase.co","
   anonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "your-anon-key",
 };
 
 export const supabase = createSupabaseClient(supabaseConfig);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -178,3 +188,6 @@ export const supabase = createSupabaseClient(supabaseConfig);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from 'react',
@@ -806,53 +807,79 @@ export default function ExplorePage(req, res) {
 }
   ],;
 =======
+=======
+
+
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  render() {}
+    if (this.state.hasError) {}
+      return <div>Something went wrong.</div>;
+    }
+
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+'
+  const [searchTerm, setSearchTerm] = useState('');'
+  const [selectedCategory, setSelectedCategory] = useState('all');'
+  const [sortBy, setSortBy] = useState('popularity');
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const featuredServices = [;
-    {;
-      id: 'ai-consciousness-evolution',;
-      title: 'AI Consciousness Evolution',;
+    {;'
+      id: 'ai-consciousness-evolution',;'
+      title: 'AI Consciousness Evolution',;'
       category: 'ai',;
-      description:;
-        'Revolutionary AI consciousness platform with emotional intelligence',;
-      status: 'beta',;
+      description:;'
+        'Revolutionary AI consciousness platform with emotional intelligence',;'
+      status: 'beta',;'
       price: '$1,999/month',;
-      icon: Brain,;
+      icon: Brain,;'
       color: 'from-purple-500 to-pink-500',;
-    },    {;
-      id: 'quantum-neural-networks',;
-      title: 'Quantum Neural Networks',;
+    },    {;'
+      id: 'quantum-neural-networks',;'
+      title: 'Quantum Neural Networks',;'
       category: 'quantum',;
-      description:;
-        'Quantum-powered AI with advanced consciousness capabilities',;
-      status: 'beta',;
+      description:;'
+        'Quantum-powered AI with advanced consciousness capabilities',;'
+      status: 'beta',;'
       price: '$1,299/month',;
-      icon: Atom,;
+      icon: Atom,;'
       color: 'from-blue-500 to-cyan-500',;
-    },    {;
-      id: 'quantum-cybersecurity',;
-      title: 'Quantum Cybersecurity',;
-      category: 'cybersecurity',;
-      description: 'Future-proof security with quantum-resistant encryption',;
-      status: 'active',;
+    },    {;'
+      id: 'quantum-cybersecurity',;'
+      title: 'Quantum Cybersecurity',;'
+      category: 'cybersecurity',;'
+      description: 'Future-proof security with quantum-resistant encryption',;'
+      status: 'active',;'
       price: '$799/month',;
-      icon: Shield,;
+      icon: Shield,;'
       color: 'from-red-500 to-orange-500',;
-    },    {;
-      id: 'space-technology',;
-      title: 'Space Technology Innovation',;
-      category: 'space',;
-      description: 'AI-powered space exploration and resource optimization',;
-      status: 'beta',;
+    },    {;'
+      id: 'space-technology',;'
+      title: 'Space Technology Innovation',;'
+      category: 'space',;'
+      description: 'AI-powered space exploration and resource optimization',;'
+      status: 'beta',;'
       price: '$2,499/month',;
       icon: Rocket,;
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
         return 0;    }
@@ -926,19 +953,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
   return (
 
-        />;
+        />;'
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/explore' />      </Head>;
-
-        <meta name="description" content="Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business." />
-        <meta property="og:title" content="Explore Technology Categories | Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive technology categories and innovative solutions." />
+"
+        <meta name="description" content="Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business." />"
+        <meta property="og:title" content="Explore Technology Categories | Zion Tech Group" />"
+        <meta property="og:description" content="Comprehensive technology categories and innovative solutions." />"
         <link rel="canonical" href="https://ziontechgroup.com/explore" />
       </Head>
+<<<<<<< HEAD:pages_backup/explore.tsx
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
 
 =======
         <link rel='canonical' href='https://ziontechgroup.com/explore' />
@@ -953,9 +991,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <SmartHeader />
 
       {/* Hero Section */}
-
-      <section className="pt-32 pb-20 px-6">
+"
+      <section className="pt-32 pb-20 px-6">"
         <div className="max-w-7xl mx-auto text-center">
+<<<<<<< HEAD:pages_backup/explore.tsx
           <motion.div
 
 <<<<<<< HEAD
@@ -972,24 +1011,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+            animate={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+            transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1001,9 +1044,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          >
+=======
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
+          >
+"
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+<<<<<<< HEAD:pages_backup/explore.tsx
 =======
           >
 <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
@@ -1015,15 +1063,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
               Explore Technology Categories
             </h1>
+=======
+              Explore Technology Categories;
+            </h1>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
               Discover our comprehensive range of cutting-edge technology solutions across AI,
-              quantum computing, cybersecurity, space technology, and more
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              quantum computing, cybersecurity, space technology, and more;
+            </p>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-                Start Exploring
+                Start Exploring"
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 =======
@@ -1046,11 +1099,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 View All Services
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+
+                View All Services;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1135,11 +1193,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
                   <input
                     type="text"
+=======
+
+
+
+
+
+
+                  <input"
+                    type="text""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                     placeholder="Search categories..."
                     value={searchTerm}
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
                     onChange={(e) => setSearchTerm(e.target.value)}
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -1167,17 +1236,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <input
                     type="text"
+=======
+
+
+
+
+
+                  <input"
+                    type="text""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                     placeholder="Search categories..."
-                    value={searchTerm  } catch (error) {
-    console.error("Error:", error);
+                    value={searchTerm  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
-    console.error("Error:", error);
+                    onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1186,17 +1265,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                   />
-<<<<<<< HEAD
-                </div>
-              </div>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                 </div>
               </div>
 
-                    onChange={e => setSearchTerm(e && e.target.value)}
+                    onChange={e => setSearchTerm(e && e.target.value)}'
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'                  />;
                 </div>;
               </div>;
@@ -1206,11 +1284,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Sort Options */}
 
 
-              {/* Sort Options */  } catch (error) {
-    console.error("Error:", error);
+              {/* Sort Options */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
               <div className="flex items-center gap-4">
 <<<<<<< HEAD
 =======
@@ -1218,14 +1296,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                <select
-                  value={sortBy}
 
+                <select;
+                  value={sortBy}
+"
               <div className="flex items-center gap-4">
-                <select
+                <select;
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -1312,6 +1391,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <option value="popularity">Sort by Popularity</option>
                   <option value="name">Sort by Name</option>
+=======
+
+
+
+
+
+                <select;
+                  value={sortBy  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+"
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                >"
+                  <option value="popularity">Sort by Popularity</option>"
+                  <option value="name">Sort by Name</option>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                   <option value="featured">Sort by Featured</option>
                 </select>
 
@@ -1335,6 +1438,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 =======
@@ -1534,10 +1638,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+          >"
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Featured Services;
+            </h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             <p className="text-white/60">
-              Explore our most innovative and cutting-edge technology solutions
+              Explore our most innovative and cutting-edge technology solutions;
             </p>
           </motion.div>
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1555,19 +1668,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <motion.div
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
 
-            transition={{ duration: 0 && 0.6 }}
-            className='mb-12'>;
+
+              <motion.div;
+            transition={{ duration: 0 && 0.6 }}'
+            className='mb-12'>;'
             <h2 className='text-3xl font-bold text-white mb-4'>;
               Featured Services;
-            </h2>;
+            </h2>;'
             <p className='text-white/60'>              Explore our most innovative and cutting-edge technology solutions;
             </p>;
           </motion && motion.div>;
-
+'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
-              <motion&& motion.div
+              <motion&& motion.div;
                 key={service && service.id}
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1672,12 +1790,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+                    <span;
+                      className={`px-2 py-1 rounded-full text-xs font-medium ${'
+                        service && service.status === 'active''
+                          ? 'bg-green-500/20 text-green-300''
+                          : service && service.status === 'beta''
+                            ? 'bg-yellow-500/20 text-yellow-300''
+                            : 'bg-blue-500/20 text-blue-300'
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                       }`}
                     >;
                       {service.status}
-                    </span>;
+                    </span>;'
                     <span className='text - xs text - white / 40'>;
                       {service.category}
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1779,13 +1909,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       service.status === 'active' ? 'bg-green-500/20 text-green-300' :
                       service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
                       'bg-blue-500/20 text-blue-300'
+=======
+
+
+              >"
+                <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />"
+                <div className="relative z-10">`
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-4 flex items-center justify-center`}>"
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+"
+                  <div className="flex items-center justify-between mb-3">`
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${'
+                      service.status === 'active' ? 'bg-green-500/20 text-green-300' :'
+                      service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :'
+                      'bg-blue-500/20 text-blue-300'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                     }`}>
 
-                      {service.status  } catch (error) {
-    console.error("Error:", error);
+                      {service.status  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
                     </span>
@@ -1833,6 +1980,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>
                   <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>
                   <div className="mb-4">
+=======
+
+"
+                  <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>"
+                  <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>"
+                  <div className="mb-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                     <span className="text-xl font-bold text-cyan-400">{service.price}</span>
 
 
@@ -1843,8 +1997,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>
                   
-                  <a
+                  <a;`
                     href={`/services#${service.id}`}
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1860,26 +2015,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                   </div>
-                  <a
-                    href={`/services#${service.id}`  } catch (error) {
-    console.error("Error:", error);
+                  <a;`
+                    href={`/services#${service.id}`  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+"
                     className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
                   >
-                    Learn More
+                    Learn More"
                     <ChevronRight className="w-4 h-4 ml-1" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  </a>
-                </div>
-              </motion.div>
 
+<<<<<<< HEAD:pages_backup/explore.tsx
 =======
 
             ))  } catch (error) {
@@ -1907,13 +2063,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Categories Grid */}
       <section className='px-6 pb-20'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+=======
+      {/* Categories Grid */}'
+      <section className='px-6 pb-20'>;'
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
 
 
-      {/* Categories Grid */}
-      <section className="px-6 pb-20">
+      {/* Categories Grid */}"
+      <section className="px-6 pb-20">"
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -2012,10 +2174,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+
+          >"
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Technology Categories;
+            </h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             <p className="text-white/60">
-              {sortedCategories.length} categories available for exploration
+              {sortedCategories.length} categories available for exploration;
             </p>
           </motion.div>
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2053,17 +2227,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
             transition={{ duration: 0 && 0.6 }}
             className='mb-12'>;
+=======
+
+
+              <motion.div;
+            transition={{ duration: 0 && 0.6 }}'
+            className='mb-12'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             <h2 className='text-3xl font-bold text-white mb-4'>;
               Technology Categories;
-            </h2>;
+            </h2>;'
             <p className='text-white/60'>              {sortedCategories && sortedCategories.length} categories available for exploration;
             </p>;
           </motion && motion.div>;
-
+'
           <AnimatePresence mode='wait'>            {sortedCategories && sortedCategories.length === 0 ? (;
+<<<<<<< HEAD:pages_backup/explore.tsx
               <motion&& motion.div
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              <motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -2075,69 +2260,70 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-                  </p>;
-                  <div className='mb - 4'>;
+                  </p>;'
+                  <div className='mb - 4'>;'
                     <span className='text - xl font - bold text - cyan - 400'>;
                       {service.price}
                     </span>;
                   </div>;
-                  <a;
-                    href={`/services#${service.id}`}
+                  <a;`
+                    href={`/services#${service.id}`}'
                     className='inline - flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 300 text - sm font - medium';
                   >;
-                    Learn More;
+                    Learn More;'
                     <ChevronRight className='w - 4 h - 4 ml - 1' />                  </a>;
                 </div>;
               </motion.div>))}
           </div>;
         </div>;
       </section>;
-      {/* Categories Grid */}
-      <section className='px - 6 pb - 20'>;
+      {/* Categories Grid */}'
+      <section className='px - 6 pb - 20'>;'
         <div className='max - w-7xl mx - auto'>          <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6 }}'
             className='mb - 12';
-          >;
+          >;'
             <h2 className='text - 3xl font - bold text - white mb - 4'>;
               Technology Categories;
-            </h2>;
+            </h2>;'
             <p className='text - white / 60'>              {sorted_categories.length} categories available for exploration;
             </p>;
-          </motion.div>;
+          </motion.div>;'
           <AnimatePresence mode='wait'>            {sorted_categories.length === 0 ? (
               <motion.div;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                exit={{ opacity: 0 }}'
                 className='text - center py - 20';
-              >;
-                <div className='w - 24 h - 24 mx - auto mb - 6 rounded - full bg - white / 10 flex items - center justify - center'>;
+              >;'
+                <div className='w - 24 h - 24 mx - auto mb - 6 rounded - full bg - white / 10 flex items - center justify - center'>;'
                   <Search className='w - 12 h - 12 text - white / 40' />;
-                </div>;
+                </div>;'
                 <h3 className='text - 2xl font - semibold text - white mb - 2'>;
                   No categories found;
-                </h3>;
+                </h3>;'
                 <p className='text - white / 60 mb - 6'>                  Try adjusting your search terms;
                 </p>;
-                <button;
-                  on_click={() => setSearchTerm ('')}
+                <button;'
+                  on_click={() => setSearchTerm ('')}'
                   className='px - 6 py - 3 bg - cyan - 500 hover:bg - cyan - 600 rounded - lg font - medium transition - colors'                >;
                   Clear Search;
                 </button>;
                     }
-                  >;
-                    <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />;
+                  >;'
+                    <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />;'
                     <div className='relative z-10'>;
                       {/* Featured Badge */}
-                      {category && category.featured && (;
-                        <div className='absolute top-4 right-4'>;
+                      {category && category.featured && (;'
+                        <div className='absolute top-4 right-4'>;'
                           <span className='px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white'>                             Featured;
                           </span>;
                         </div>;
                       )}
                       {/* Category Icon */}
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2151,11 +2337,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {/* Category Info */}
+=======
+
+                      {/* Category Info */}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                       <h3 className='text - 2xl font - bold mb - 3 text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
                         {category.name}
-                      </h3>;
+                      </h3>;'
                       <p className='text - white / 70 leading - relaxed mb - 6'>;
                         {category.description}
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2168,13 +2359,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {/* Stats */}
                       <div className='flex items - center justify - between mb - 6'>;
                         <div className='text - center'>;
+=======
+
+                      {/* Stats */}'
+                      <div className='flex items - center justify - between mb - 6'>;'
+                        <div className='text - center'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                           <div className='text - 2xl font - bold text - cyan - 400'>;
                             {category.service_count}
-                          </div>;
+                          </div>;'
                           <div className='text - xs text - white / 60'>Services</div>;
-                        </div>;
-                        <div className='text - center'>;
+                        </div>;'
+                        <div className='text - center'>;'
                           <div className='text - 2xl font - bold text - purple - 400'>;
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2213,12 +2411,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {/* CTA */}
                       <div className='flex items-center justify-between'>;
+=======
+
+                      {/* CTA */}'
+                      <div className='flex items-center justify-between'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                         <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>;
                           Explore Category;
-                        </span>;
+                        </span>;'
                         <ChevronRight className='w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1' />                      </div>;
                     </div>;
                   </motion && motion.div>;
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2245,19 +2449,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
                 initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
+=======
+
+
+
+
+
+              <motion.div;
+                initial={{ opacity: 0 }  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                animate={{ opacity: 1 }  } catch (error) {
-    console.error("Error:", error);
+                animate={{ opacity: 1 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                exit={{ opacity: 0 }  } catch (error) {
-    console.error("Error:", error);
+                exit={{ opacity: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2287,9 +2502,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <h3 className="text-2xl font-semibold text-white mb-2">No categories found</h3>
+=======
+"
+                className="text-center py-20"
+              >"
+                <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">"
+                  <Search className="w-12 h-12 text-white/40" />
+                </div>"
+                <h3 className="text-2xl font-semibold text-white mb-2">No categories found</h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                 <p className="text-white/60 mb-6">
-                  Try adjusting your search terms
+                  Try adjusting your search terms;
                 </p>
+<<<<<<< HEAD:pages_backup/explore.tsx
                 <button
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2329,11 +2554,15 @@ className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+                <button;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                 >
-                  Clear Search
+                  Clear Search;
                 </button>
               </motion.div>
             ) : (
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2382,18 +2611,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {sortedCategories.map((category, index) => (
                   <motion.div
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
 
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                {sortedCategories.map((category, index) => (
+                  <motion.div;
+                  >"
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />"
                     <div className="relative z-10">
                       {/* Featured Badge */}
+<<<<<<< HEAD:pages_backup/explore.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                     className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
-                    onClick={() =>
+                    onClick={() =>`
                       (window.location.href = `/category/${category.id}`)
                     }
+<<<<<<< HEAD:pages_backup/explore.tsx
 =======
 =======
 className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
@@ -2469,10 +2708,56 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <div className="absolute top-4 right-4">
+=======
+
+                    key={category.id  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    initial={{ opacity: 0, y: 20 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    animate={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                    className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"`
+                    onClick={() => window.location.href = `/category/${category.id}`  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+
+                  >"
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />"
+                    <div className="relative z-10">
+                      {/* Featured Badge */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+                      {category.featured && ("
+                        <div className="absolute top-4 right-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                           <span className="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
-                            ⭐ Featured
+                            ⭐ Featured;
                           </span>
                         </div>
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2486,15 +2771,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       )  } catch (error) {
     console.error("Error:", error);
+=======
+
+                      )  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-                      {/* Category Icon */  } catch (error) {
-    console.error("Error:", error);
+                      {/* Category Icon */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2613,6 +2904,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="flex items-center justify-between mb-6">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
+=======
+
+"
+                      <div className="flex items-center justify-between mb-6">"
+                        <div className="text-center">"
+                          <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                           <div className="text-xs text-white/60">Services</div>
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -2620,6 +2918,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD:pages_backup/explore.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -2643,6 +2942,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {category.featured ? 'Featured' : 'Active'  } catch (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
+=======
+                        </div>"
+                        <div className="text-center">"
+                          <div className="text-2xl font-bold text-purple-400">'
+                            {category.featured ? '⭐' : '🚀'}
+                          </div>"
+                          <div className="text-xs text-white/60">'
+                            {category.featured ? 'Featured' : 'Active'  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -2692,15 +3001,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>;
                         </div>;
                       </div>;
-                      {/* CTA */  } catch (error) {
-    console.error("Error:", error);
+                      {/* CTA */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-                      <div className="flex items-center justify-between">
+}"
+                      <div className="flex items-center justify-between">"
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
+<<<<<<< HEAD:pages_backup/explore.tsx
                           Explore Category
                         </span>
+=======
+
+
+                          Explore Category;
+                        </span>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
 =======
 =======
@@ -2720,13 +3036,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </motion.div>
+<<<<<<< HEAD:pages_backup/explore.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 ))  } catch (error) {
     console.error("Error:", error);
+=======
+
+                ))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </div>;
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2776,6 +3099,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+
+      {/* Technology Trends */}'
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;'
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div;
+      {/* Technology Trends */}"
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">"
+        <div className="max-w-7xl mx-auto">
+          <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2813,6 +3146,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2831,13 +3165,19 @@ className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
           >
+=======
+
+
+          >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Emerging Technology Trends
-            </h2>
+              Emerging Technology Trends;
+            </h2>"
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
-              Stay ahead of the curve with our insights into the latest technology developments
+              Stay ahead of the curve with our insights into the latest technology developments;
             </p>
           </motion.div>
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2974,66 +3314,72 @@ description:
                 key={trend.title}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             className='text-center mb-16'>;
+=======
+
+'
+            className='text-center mb-16'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Emerging Technology Trends;
-            </h2>;
+            </h2>;'
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
               Stay ahead of the curve with our insights into the latest;
               technology developments;
             </p>;
           </motion && motion.div>;
-
+'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {[;
               {;
-                icon: Brain,;
+                icon: Brain,;'
                 title: 'AI Consciousness',;
-                description:;
-                  'The evolution of AI towards true consciousness and emotional intelligence',;
-                trend: 'Rising',;
+                description:;'
+                  'The evolution of AI towards true consciousness and emotional intelligence',;'
+                trend: 'Rising',;'
                 color: 'from-purple-500 to-pink-500',;
               },;
               {;
-                icon: Atom,;
+                icon: Atom,;'
                 title: 'Quantum Supremacy',;
-                description:;
-                  'Breakthroughs in quantum computing and quantum AI applications',;
-                trend: 'Breakthrough',;
+                description:;'
+                  'Breakthroughs in quantum computing and quantum AI applications',;'
+                trend: 'Breakthrough',;'
                 color: 'from-blue-500 to-cyan-500',;
               },;
               {;
-                icon: Shield,;
+                icon: Shield,;'
                 title: 'Quantum Security',;
-                description:;
-                  'Quantum-resistant cryptography and AI-powered threat detection',;
-                trend: 'Critical',;
+                description:;'
+                  'Quantum-resistant cryptography and AI-powered threat detection',;'
+                trend: 'Critical',;'
                 color: 'from-red-500 to-orange-500',;
               },;
               {;
-                icon: Rocket,;
+                icon: Rocket,;'
                 title: 'Space Innovation',;
-                description:;
-                  'AI-powered space exploration and resource optimization',;
-                trend: 'Emerging',;
+                description:;'
+                  'AI-powered space exploration and resource optimization',;'
+                trend: 'Emerging',;'
                 color: 'from-indigo-500 to-purple-500',;
               },;
               {;
-                icon: ZapIcon,;
+                icon: ZapIcon,;'
                 title: 'Neural Interfaces',;
-                description:;
-                  'Brain-computer interfaces and neural augmentation',;
-                trend: 'Experimental',;
+                description:;'
+                  'Brain-computer interfaces and neural augmentation',;'
+                trend: 'Experimental',;'
                 color: 'from-pink-500 to-rose-500',;
               },;
               {;
-                icon: TrendingUp,;
+                icon: TrendingUp,;'
                 title: 'Autonomous Systems',;
-                description:;
-                  'Self-improving AI systems and autonomous business operations',;
-                trend: 'Growing',;
+                description:;'
+                  'Self-improving AI systems and autonomous business operations',;'
+                trend: 'Growing',;'
                 color: 'from-emerald-500 to-green-500',;
               },            ].map((trend, index) => (;
-              <motion&& motion.div
+              <motion&& motion.div;
                 key={trend && trend.title}
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3044,10 +3390,15 @@ description:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
                   className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend && trend.color} p-4 mb-4 flex items-center justify-center`}>;
@@ -3290,10 +3641,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </motion.div>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3330,12 +3686,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                     }`}>;
                     {trend && trend.trend}
                   </span>;
                 </div>;
 
-
+'
                 <p className='text-white/70 leading-relaxed'>;
                   {trend && trend.description}
                 </p>              </motion && motion.div>;
@@ -3343,6 +3703,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* CTA Section */  } catch (error) {
@@ -3403,29 +3764,54 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               <a
                 href='/services'
+=======
+      {/* CTA Section */}'
+      <section className='py-20 px-6'>;'
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;'
+            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
+              Ready to Explore?;
+            </h2>;'
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
+              Dive deep into our technology categories and discover the perfect;
+              solutions for your business needs.;
+            </p>;'
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <a'
+                href='/services''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
-                View All Services;
+                View All Services;'
                 <ArrowRight className='w-5 h-5 ml-2' />;
               </a>;
+<<<<<<< HEAD:pages_backup/explore.tsx
               <a
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
           >
+=======
+              <a;
+          >"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?
-            </h2>
+            </h2>"
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Dive deep into our technology categories and discover the perfect solutions for your business needs.
-            </p>
+            </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/services"
+              <a"
+                href="/services""
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
-                View All Services
+                View All Services"
                 <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3458,10 +3844,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Expert Guidance
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+              <a"
+                href="mailto:kleber@ziontechgroup.com""
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+              >
+
+                Get Expert Guidance;
+              </a>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD:pages/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3474,8 +3872,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
 
-                href='mailto:kleber@ziontechgroup && ziontechgroup.com'
+'
+                href='mailto:kleber@ziontechgroup && ziontechgroup.com''
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;
                 Get Expert Guidance;
               </a>;
@@ -3488,6 +3889,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );
 
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3495,10 +3897,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
 
 
 }
 
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3508,42 +3914,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
   )
 }
                   </span>;
-                </div>;
+                </div>;'
                 <p className='text - white / 70 leading - relaxed'>;
                   {trend.description}
                 </p>              </motion.div>))}
           </div>;
         </div>;
       </section>;
-      {/* CTA Section */}
-      <section className='py - 20 px - 6'>;
+      {/* CTA Section */}'
+      <section className='py - 20 px - 6'>;'
         <div className='max - w-4xl mx - auto text - center'>          <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >;
+          >;'
             <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
               Ready to Explore?;
-            </h2>;
+            </h2>;'
             <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;
               Dive deep into our technology categories and discover the perfect;
               solutions for your business needs.;
-            </p>;
+            </p>;'
             <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <a;
-                href='/services';
+              <a;'
+                href='/services';'
                 className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
               >;
-                View All Services;
+                View All Services;'
                 <ArrowRight className='w - 5 h - 5 ml - 2' />;
               </a>;
-              <a;
-                href='mailto:kleber@ziontechgroup.com';
+              <a;'
+                href='mailto:kleber@ziontechgroup.com';'
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'              >;
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3564,34 +3976,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 <<<<<<< HEAD
 =======
-
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
+
+
   )
-          >;
+          >;"
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
               Ready to Explore?;
-            </h2>;
+            </h2>;"
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
               Dive deep into our technology categories and discover the perfect solutions for your business needs.;
-            </p>;
+            </p>;"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <a;
-                href="/services";
+              <a;"
+                href="/services";"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
               >;
-                View All Services;
+                View All Services;"
                 <ArrowRight className="w-5 h-5 ml-2" />;
               </a>;
-              <a;
-                href="mailto:kleber@ziontechgroup.com";
+              <a;"
+                href="mailto:kleber@ziontechgroup.com";"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
               >;
+<<<<<<< HEAD:pages_backup/explore.tsx
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
                 Get Expert Guidance;
               </a>;
             </div>;
@@ -3599,6 +4016,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
       <SmartFooter />;
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3606,13 +4024,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx
     </div>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/explore.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3635,3 +4057,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/explore.tsx
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/explore.tsx

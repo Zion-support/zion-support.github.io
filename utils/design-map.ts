@@ -514,13 +514,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   typography: Record<string, any>;
   spacing: Record<string, number>;
 }
-export interface UIKit {
-
+export interface UIKit {};
 export interface UIKit {;
   components: Record<string, any>;
   tokens: TokenSet;
 }
 
+<<<<<<< HEAD
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
@@ -989,14 +989,24 @@ main
       secondary: "#5856D6",
       success: "#34C759",
       warning: "#FF9500",
+=======
+export async function buildTokenSet(fileId: string): Promise<TokenSet> {};
+  // Placeholder implementation;
+  return {}
+    colors: {"
+      primary: "#007AFF","
+      secondary: "#5856D6","
+      success: "#34C759","
+      warning: "#FF9500","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       error: "#FF3B30",
     },
-    typography: {
-      heading1: { fontSize: 32, fontWeight: "bold" },
-      heading2: { fontSize: 24, fontWeight: "bold" },
+    typography: {"
+      heading1: { fontSize: 32, fontWeight: "bold" },"
+      heading2: { fontSize: 24, fontWeight: "bold" },"
       body: { fontSize: 16, fontWeight: "normal" },
     },
-    spacing: {
+    spacing: {}
       xs: 4,
       sm: 8,
       md: 16,
@@ -1059,15 +1069,22 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {;
 export async function buildUIKit(
   fileId: string,
   kind: UIKitKind,
-): Promise<UIKit> {
+): Promise<UIKit> {};
   const tokens = await buildTokenSet(fileId);
 
+<<<<<<< HEAD
   return {
     components: {
       button: {
         primary: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  return {}
+    components: {}
+      button: {}
+        primary: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           backgroundColor: tokens.colors.primary,
           padding: tokens.spacing.md,
         },
@@ -1077,6 +1094,7 @@ export async function buildUIKit(
   };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1158,3 +1176,9 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

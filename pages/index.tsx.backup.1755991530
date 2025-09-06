@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Homepage2037 from '../components/Homepage2037';
 =======
 <<<<<<< HEAD
@@ -8,6 +9,9 @@ import Homepage2037 from '../components/Homepage2037';
 import Homepage2036 from '../components/Homepage2036';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917e
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -28,6 +32,7 @@ const HomePage: React.FC = () => {
 
 export default function Home() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -803,6 +808,9 @@ export default function Home() {
     </ErrorBoundary>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917e
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

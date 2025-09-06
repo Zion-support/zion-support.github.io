@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 
+<<<<<<< HEAD
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
 import UltraAdvancedServiceCard from '../components/ui/UltraAdvancedServiceCard';
@@ -22,6 +23,8 @@ import { additionalEnhancedServices } from '../data/additional-real-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 
 export default function HomePage() {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <UltraAdvancedQuantumBackground>
       <Head>
@@ -519,9 +522,13 @@ export default function HomePage() {
                 Explore Services
               </Button>
             </div>
+<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
     </UltraAdvancedQuantumBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

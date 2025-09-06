@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
@@ -6,30 +7,49 @@ import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
 
 
   if (req.method === "GET") {
+=======
 
+import type { NextApiRequest, NextApiResponse } from "next",;"
+import { readState, writeState } from "../../../utils/sync/storage",;"
+import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
+;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+"
+  if (req.method === "GET") {}
     return res.status(200).json({ config: state.config })
   }
 
+<<<<<<< HEAD
+=======
+
+
+
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+export default function handler() { return null; }
+  if (req.method === 'GET') {};
+    res.status(200).json({ config: {} });'
+  } else if (req.method === 'POST') {}
     res.status(200).json({ config: {} });
-  } else if (req.method === 'POST') {
-    res.status(200).json({ config: {} });
-  } else {
+  } else {'
     res.status(405).end('Method Not Allowed');
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, writeState } from "../../../utils/sync/storage"
@@ -59,39 +79,74 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   } catch (error) {
     console.error("Error:", error);
+=======
+}"
+import type { NextApiRequest, NextApiResponse } from "next","
+import { readState, writeState } from "../../../utils/sync/storage","
+import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  const state = readState(),
+
+"
+  if (req.method === "GET") {}
+    return res.status(200).json({ config: state.config })
+  }
+
+
+
+
+
+};
+  } catch (error) {";
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
+<<<<<<< HEAD
 
   if (req.method === "POST") {
     const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+"
+  if (req.method === "POST") {}
+    const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       peers?: Peer[],
       scope?: SyncScope,
-      instanceId?: string
+      instanceId?: string;
     },
 
-
-    if (typeof optIn === "boolean") state.config.optIn = optIn,
+"
+    if (typeof optIn === "boolean") state.config.optIn = optIn,"
     if (typeof paused === "boolean") state.config.paused = paused,
-    if (scope) state.config.scope = scope,
+    if (scope) state.config.scope = scope,"
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId,
 
 
     writeState(state),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(200).json({ config: state.config })
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
   if (req.method === "POST") {
     const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
       peers?: Peer[]
@@ -223,3 +278,8 @@ if (state.config.instance_id = instance_id, ) {
   return res.status(405).json({ error: "Method not allowed" })
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+"
+  return res.status(405).json({ error: "Method not allowed" })
+};'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

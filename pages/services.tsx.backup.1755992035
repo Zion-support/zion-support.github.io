@@ -171,7 +171,11 @@ export default function ServicesPage() {
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       gradient: 'from-green-400 to-emerald-500',
+<<<<<<< HEAD
       href: '/cloud-monitoring'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '🔍',
@@ -184,10 +188,14 @@ export default function ServicesPage() {
         'Ranking Analytics',
         'Local SEO Tools'
       ],
+<<<<<<< HEAD
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       textColor: 'text-blue-400',
       gradient: 'from-blue-400 to-cyan-500',
       href: '/ai-seo-suite'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       id: 'qr-generator',
@@ -203,6 +211,7 @@ export default function ServicesPage() {
         'High-resolution output',
         'Analytics tracking'
       ],
+<<<<<<< HEAD
       pricing: {
         free: {
           price: 'Free',
@@ -387,6 +396,13 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-832b
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992035
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+    },
+    // Micro SaaS Services - Productivity & Collaboration
+    {
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -418,6 +434,7 @@ export default function ServicesPage() {
     }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1621,6 +1638,9 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-832b
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992035
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
               Comprehensive
@@ -1709,6 +1729,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1731,6 +1752,9 @@ export default function ServicesPage() {
         </div>
       </section>
     </UltraFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

@@ -13,6 +13,7 @@ const RAGEvaluationLab: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -212,3 +213,6 @@ const RAGEvaluationLab: React.FC = () => {
 export default RAGEvaluationLab;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

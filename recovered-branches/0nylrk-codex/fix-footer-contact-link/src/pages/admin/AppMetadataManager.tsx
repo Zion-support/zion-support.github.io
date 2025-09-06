@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -115,19 +116,26 @@ import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";"
+import { AppLayout } from "@/layout/AppLayout";"
+import { SEO } from "@/components/SEO";"
+import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
+const AppMetadataManager: React.FC = () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <AppLayout>
-      <SEO
-        title="App Metadata Manager"
+      <SEO"
+        title="App Metadata Manager""
         description="Manage app store metadata for the Zion mobile application"
         noindex={true}
 <<<<<<< HEAD
 <<<<<<< HEAD
       />
-
-      <div className="container py-8">
+"
+      <div className="container py-8">"
         <h1 className="text-3xl font-bold text-zion-cyan mb-8">
-          App Metadata Manager
+          App Metadata Manager;
         </h1>
 
         <MetadataManager />
@@ -178,26 +186,22 @@ const AppMetadataManager: React.FC = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
 };
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default AppMetadataManager;
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from './react';
-import { AppLayout } from '@/layout / AppLayout';
-import { SEO } from '@/components / SEO';
+
+
+
+import React from './react';'
+import { AppLayout } from '@/layout / AppLayout';'
+import { SEO } from '@/components / SEO';'
 import { MetadataManager } from '@/components / mobile - app / admin / MetadataManager';
-const AppMetadataManager: React.FC = () => {
+const AppMetadataManager: React.FC = () => {}
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <AppLayout>;
-      <SEO;
-        title="App Metadata Manager";
+      <SEO;"
+        title="App Metadata Manager";"
         description="Manage app store metadata for the Zion mobile application";
         noindex={true}
       />;
@@ -224,12 +228,8 @@ export default AppMetadataManager;
 
 
 export default AppMetadataManager;
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
+<<<<<<< HEAD
 =======
 export default AppMetadataManager;
 
@@ -284,3 +284,8 @@ const AppMetadataManager: React.FC = () => {;
 =======
   return (;export default AppMetadataManager;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

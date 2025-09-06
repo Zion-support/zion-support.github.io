@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SyncScope = "full" | "dao" | "marketplace";
 =======
 <<<<<<< HEAD
@@ -32,30 +33,31 @@ export interface InstanceConfig {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export type SyncScope = "full" | "dao" | "marketplace",
-export interface Peer {
-  id: string,
+export interface Peer {}
+  id: string,;
   base_url: string, // e.g., https: //zion - latam.example.org;
   scope?: SyncScope,
   paused?: boolean;
 }
-export interface InstanceConfig {
+export interface InstanceConfig {}
   instance_id: string,
   opt_in: boolean,
   paused: boolean,
   scope: SyncScope,
-  peers: Peer[],
+  peers: Peer[],;
   secret_configured: boolean;
 
 
 
-<<<<<<< HEAD
-}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -116,6 +118,17 @@ export interface BaseEventPayload {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+export type SyncEventType =;"
+  | "proposal";"
+  | "token_transfer";"
+  | "talent_mobility";"
+  | "dao_endorsement";
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   token: string;
@@ -123,6 +136,7 @@ export interface BaseEventPayload {;
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,11 +161,15 @@ export interface TalentMobilityPayload extends BaseEventPayload {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,22 +202,36 @@ export interface BaseEventPayload {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
 export interface DaoEndorsementPayload extends BaseEventPayload {;
   fromDAO: string;
   toDAO: string;
+<<<<<<< HEAD
   resolutionId: string;
   decision: "endorse" | "reject";
+=======
+  resolutionId: string;"
+  decision: "endorse" | "reject",;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   timestamp: number;
 <<<<<<< HEAD
 =======
 
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -208,10 +240,13 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -244,9 +279,16 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;}
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
@@ -254,6 +296,7 @@ export type SyncEventPayload =;
 <<<<<<< HEAD
 <<<<<<< HEAD
   | DaoEndorsementPayload;
+<<<<<<< HEAD
 <<<<<<< HEAD
   | LeaderboardEntryPayload;
 export interface SyncEvent {;
@@ -271,13 +314,15 @@ export interface SyncEvent {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   originInstanceId: string;
   version: number;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
   | LeaderboardEntryPayload,
 export interface SyncEvent {
   event_id: string,
@@ -305,26 +350,26 @@ export interface MultiverseState {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-  } catch (error) {
-    console.error("Error:", error);
+
+}
+
+
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
 export interface MultiverseState {;
   config: InstanceConfig,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   lastSyncedAt: number;
@@ -352,3 +397,8 @@ export interface MultiverseState {;
 =======
   | DaoEndorsementPayload;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

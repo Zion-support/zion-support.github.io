@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -19,6 +20,21 @@ import { BasicInfoFormData } from "./schema";
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import {}
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,;
+} from "@/components/ui/form";"
+import { Input } from "@/components/ui/input";"
+import { Control } from "react-hook-form";"
+import { BasicInfoFormData } from "./schema";
+interface PersonalInfoFieldsProps {}
+  control: Control<BasicInfoFormData>;
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -65,6 +81,7 @@ import {BasicInfoFormData} from "./schema";
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -81,19 +98,36 @@ import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
 
 import {
+=======
+
+
+
+
+"
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form","
+import { Input } from "@/components/ui/input","
+import { Control } from "react-hook-form","
+import { BasicInfoFormData } from "./schema",
+
+
+
+
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
+  FormMessage,";
+} from "@/components/ui/form";"
+import { Input } from "@/components/ui/input";"
+import { Control } from "react-hook-form";"
 import { BasicInfoFormData } from "./schema";
-interface PersonalInfoFieldsProps {
+interface PersonalInfoFieldsProps {}
   control: Control<BasicInfoFormData>;
 }
 
+<<<<<<< HEAD
 interface PersonalInfoFieldsProps {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -149,24 +183,47 @@ interface PersonalInfoFieldsProps {;
 }
 ;
 export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
+=======
+
+
+
+interface PersonalInfoFieldsProps {}
+  control: Control<BasicInfoFormData>;
+}
+export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (;
+interface PersonalInfoFieldsProps {;
+  control: Control<BasicInfoFormData>;
+}
+
+export function PersonalInfoFields(): any ({ control }: PersonalInfoFieldsProps) {;
+  return ("
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
       <FormField;
-        control={control}
-        name="fullName";
-        render={({ field }) => (;
+        control={control}"
+        name="fullName"
+export /**;
+ * PersonalInfoFields - Function description;
+ */
+function PersonalInfoFields() {}
+  return ("
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+      <FormField;
+        control={control}"
+        name="full_name";
+        render={({ field }) => (
           <FormItem>;
-            <FormLabel>Full Name</FormLabel>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            <FormControl>;
+            <FormLabel > Full Name</FormLabel>;
+
+
+
+            <FormControl>;"
               <Input placeholder="John Doe" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
         render={({ field }) => (
           <FormItem>
             <FormLabel>Full Name</FormLabel>
@@ -184,11 +241,14 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         )}
 
       />;
 
 
+<<<<<<< HEAD
       <FormField
         control={control}
         name="title"
@@ -213,16 +273,24 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      <FormField;
+        control={control}"
+        name="title"
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </FormItem>;
         )}
       />;
 ;
       <FormField;
-        control={control}
+        control={control}"
         name="title";
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Professional Title</FormLabel>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -232,10 +300,15 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <FormControl>;
+=======
+
+            <FormControl>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Input placeholder="Senior Software Engineer" {...field} />;
             </FormControl>;
             <FormMessage />;
 
+<<<<<<< HEAD
       />;
 
       <FormField
@@ -304,37 +377,55 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
       />
       <FormField
         control={control}
+=======
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Email</FormLabel>;
+            <FormControl>;
+
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;
+        )}
+
+
+      />;
+        )}
+      />
+      <FormField;
+        control={control}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         name="title"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Professional Title</FormLabel>
-            <FormControl>
+            <FormControl>"
               <Input placeholder="Senior Software Engineer" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
-      <FormField
-        control={control}
+      <FormField;
+        control={control}"
         name="email"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Email</FormLabel>
-            <FormControl>
+            <FormControl>"
               <Input type="email" placeholder="john@example.com" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
-      <FormField
-        control={control}
+      <FormField;
+        control={control}"
         name="phone"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Phone</FormLabel>
-            <FormControl>
+            <FormControl>"
               <Input placeholder="+1 234 567 8900" {...field} />
             </FormControl>
             <FormMessage />
@@ -351,18 +442,16 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
       />;
     </div>;
   ),;}
- interface PersonalInfoFieldsProps {
+ interface PersonalInfoFieldsProps {}
   control: Control<BasicInfoFormData> 
-}export function PersonalInfoFields ({
-  control 
-}: PersonalInfoFieldsProps) {
-  return (<div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {
-  control 
-}name="fullName" render= {
-  ({
-  field 
-}) => (<FormItem> <FormLabel>Full Name</FormLabel> <FormControl> <Input placeholder="John Doe" {
-  ...field 
+}export function PersonalInfoFields() { return null; }
+  return (<div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {}
+  control "
+}name="fullName" render= {}
+  ({}
+  field "
+}) => (<FormItem> <FormLabel>Full Name</FormLabel> <FormControl> <Input placeholder="John Doe" {}
+  ...field;
 }/> 
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
@@ -379,3 +468,10 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
   )
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

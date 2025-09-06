@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -76,20 +77,31 @@ interface BrowseItem {
   title: string
   subtitle: string
   description: string
+=======
+import React, { useState } from "react";"
+import {Card, CardContent} from "@/components/ui/card";"
+import {Button} from "@/components/ui/button";"
+import {Badge} from "@/components/ui/badge";"
+import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";"
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+"
+import React, { useState } from "react","
+import { Card, CardContent } from "@/components/ui/card","
+import { Button } from "@/components/ui/button","
+import { Badge } from "@/components/ui/badge",
+interface BrowseItem {};
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   location?: string;
   badges: string[]
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-  price?: string;
-  image?: string;
-  match?: number;
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD
 interface BrowseItem {;
   id: string,;
   title: string,;
@@ -103,8 +115,10 @@ import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-interface BrowseItem {
+interface BrowseItem {}
   id: string;
   title: string;
   subtitle: string;
@@ -138,15 +152,16 @@ interface BrowseItem {
   timePosted?: string;
 }
 
-interface BrowseCardsProps {
-  items: BrowseItem[];
+interface BrowseCardsProps {}
+  items: BrowseItem[];"
   type: "jobs" | "talents";
   onViewDetails: (id: string) => void;
 }
 
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
+export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {};
   const [savedItems, setSavedItems] = useState<string[]>([]);
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   timePosted?: string
@@ -160,17 +175,23 @@ interface BrowseCardsProps {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
   items: BrowseItem[]
+=======
+
+  timePosted?: string;
+}
+interface BrowseCardsProps {}
+  items: BrowseItem[]"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   type: "jobs" | "talents"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-  onViewDetails: (id: string) => void
+  onViewDetails: (id: string) => void;
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
-  const [savedItems, setSavedItems] = useState<string[]>([]);
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
+
+
+export function BrowseCards() { return null; }
+export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {};
   const [savedItems, setSavedItems] = useState<string[]>([]);
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -181,11 +202,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
   const [savedItems, setSavedItems] = useState<string[]>([]),
   
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const toggleSaved = (id: string) => {
+
+  const toggleSaved = (id: string) => {}
     setSavedItems((prev) =>
       prev.includes(id)
         ? prev.filter((itemId) => itemId !== id)
@@ -193,34 +211,35 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     );
   };
 
-  return (
+  return ("
     <div className="space-y-4 pb-24">
-      {items.map((item) => (
-        <Card key={item.id} className="overflow-hidden">
-          <CardContent className="p-0">
-            <div className="p-4">
-              <div className="flex justify-between">
-                <div className="flex items-center gap-3">
-                  {type === "talents" ? (
+      {items.map((item) => ("
+        <Card key={item.id} className="overflow-hidden">"
+          <CardContent className="p-0">"
+            <div className="p-4">"
+              <div className="flex justify-between">"
+                <div className="flex items-center gap-3">"
+                  {type === "talents" ? ("
                     <Avatar className="h-12 w-12">
                       <AvatarImage src={item.image} />
                       <AvatarFallback>
                         {item.title.charAt(0).toUpperCase()}
                       </AvatarFallback>
                     </Avatar>
-                  ) : (
-                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
+                  ) : ("
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">"
                       <span className="text-primary font-semibold">JOB</span>
                     </div>
                   )}
-                  <div>
-                    <h3 className="font-medium">{item.title}</h3>
+                  <div>"
+                    <h3 className="font-medium">{item.title}</h3>"
                     <p className="text-sm text-muted-foreground">
                       {item.subtitle}
                     </p>
                   </div>
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -233,67 +252,70 @@ interface BrowseCardsProps {;
   onViewDetails: (id: string) => void;
 =======
                 <button
+=======
+                <button"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item.id)}
                 >
-                  {savedItems.includes(item.id) ? (
+                  {savedItems.includes(item.id) ? ("
                     <BookmarkCheck className="h-5 w-5 text-primary" />
-                  ) : (
+                  ) : ("
                     <Bookmark className="h-5 w-5 text-muted-foreground" />
                   )}
                 </button>
               </div>
-
+"
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
-                  <Badge
-                    key={index}
-                    variant="outline"
+                  <Badge;
+                    key={index}"
+                    variant="outline""
                     className="text-xs font-normal"
                   >
                     {badge}
                   </Badge>
                 ))}
               </div>
-
+"
               <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
-
+"
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
-                {item.location && (
-                  <div className="flex items-center gap-1">
+                {item.location && ("
+                  <div className="flex items-center gap-1">"
                     <MapPin className="h-3 w-3" />
                     <span>{item.location}</span>
                   </div>
                 )}
 
-                {item.price && (
-                  <div className="flex items-center gap-1">
+                {item.price && ("
+                  <div className="flex items-center gap-1">"
                     <DollarSign className="h-3 w-3" />
                     <span>{item.price}</span>
                   </div>
                 )}
 
-                {item.timePosted && (
-                  <div className="flex items-center gap-1">
+                {item.timePosted && ("
+                  <div className="flex items-center gap-1">"
                     <Clock className="h-3 w-3" />
                     <span>{item.timePosted}</span>
                   </div>
                 )}
 
-                {item.match && (
+                {item.match && ("
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
-                    {item.match}% match
+                    {item.match}% match;
                   </div>
                 )}
               </div>
             </div>
-
+"
             <div className="border-t border-border p-3 flex justify-end">
-              <Button
+              <Button"
                 size="sm"
-                onClick={() => onViewDetails(item.id)}
+                onClick={() => onViewDetails(item.id)}"
                 className="gap-1"
-              >
+              >"
                 View Details <ChevronRight className="h-4 w-4" />
               </Button>
             </div>
@@ -315,20 +337,16 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
         : [...prev, id];
     );
   };
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   },
   
-=======
+
   price?: string;
   image?: string;
   match?: number;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     setSavedItems((prev) =>
@@ -355,9 +373,14 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
   
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
+=======
+
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="space-y-4 pb-24">;
-      {items && items.map((item) => (;
+      {items && items.map((item) => (;"
         <Card key={item && item.id} className="overflow-hidden">;
+<<<<<<< HEAD
           <CardContent className="p-0">;
             <div className="p-4">;
               <div className="flex justify-between">;
@@ -388,11 +411,33 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                 </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
-  }
 
+
+"
+          <CardContent className="p-0">;"
+            <div className="p-4">;"
+              <div className="flex justify-between">;"
+                <div className="flex items-center gap-3">;"
+                  {type === "talents" ? (;"
+                    <Avatar className="h-12 w-12">;
+
+                      <AvatarImage src={item && item.image} />;
+                      <AvatarFallback>{item && item.title.charAt(0).toUpperCase()}</AvatarFallback>;
+                    </Avatar>;
+                  ) : (;
+
+
+"
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;"
+                      <span className="text-primary font-semibold">JOB</span>;
+                    </div>;
+                  )}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+<<<<<<< HEAD
   },
   
   return (
@@ -428,12 +473,18 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                 <button 
                 <button
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                <button;
+                <button;
+                <button"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
-                  {savedItems && savedItems.includes(item && item.id) ? (;
+                  {savedItems && savedItems.includes(item && item.id) ? (;"
                     <BookmarkCheck className="h-5 w-5 text-primary" />;
                   ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
@@ -480,11 +531,15 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+"
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -496,6 +551,14 @@ import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",;
+=======
+"
+import React, { useState } from "react",;"
+import { Card, CardContent } from "@/components/ui/card",;"
+import { Button } from "@/components/ui/button",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 interface BrowseItem {;
   id: string,;
@@ -511,11 +574,12 @@ interface BrowseItem {;
 }
 ;
 interface BrowseCardsProps {;
-  items: BrowseItem[],;
+  items: BrowseItem[],;"
   type: "jobs" | "talents",;
   onViewDetails: (id: string) => void;
 }
 ;
+<<<<<<< HEAD
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
   const [savedItems, setSavedItems] = useState<string[]>([]);
   const toggleSaved = (id: string) => {;
@@ -526,65 +590,66 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
     )
 };
   return (;
+=======
+export function BrowseCards() { return null; }
+  };
+  return (;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="space-y-4 pb-24">;
-      {items.map((item) => (;
-        <Card key={item.id} className="overflow-hidden">;
-          <CardContent className="p-0">;
-            <div className="p-4">;
-              <div className="flex justify-between">;
-                <div className="flex items-center gap-3">;
-                  {type === "talents" ? (;
+      {items.map((item) => (;"
+        <Card key={item.id} className="overflow-hidden">;"
+          <CardContent className="p-0">;"
+            <div className="p-4">;"
+              <div className="flex justify-between">;"
+                <div className="flex items-center gap-3">;"
+                  {type === "talents" ? (;"
                     <Avatar className="h-12 w-12">;
                       <AvatarImage src={item.image} />;
                       <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>;
                     </Avatar>;
-                  ) : (;
-                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
+                  ) : (;"
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;"
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
                   )}
-                  <div>;
-                    <h3 className="font-medium">{item.title}</h3>;
+                  <div>;"
+                    <h3 className="font-medium">{item.title}</h3>;"
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>;
                   </div>;
                 </div>;
-                <button;
+                <button;"
                   className="h-8 w-8 flex items-center justify-center";
                   onClick={() => toggleSaved(item.id)}
                 >;
-                  {savedItems.includes(item.id) ? (;
+                  {savedItems.includes(item.id) ? (;"
                     <BookmarkCheck className="h-5 w-5 text-primary" />;
-                  ) : (;
+                  ) : (;"
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
+<<<<<<< HEAD
 
                 </button>;
               </div>;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-              <div className="mt-3 flex flex-wrap gap-1">;
-
-=======
-                </button>;
-              </div>;
-                </button>;
-              </div>;
-              <div className="mt-3 flex flex-wrap gap-1">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+
+
                 </button>;
-              </div>;
+              </div>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="mt-3 flex flex-wrap gap-1">;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
                 {item.badges.map((badge, index) => (;
                   <Badge;
-                    key={index} ;
-                    variant="outline";
+                    key={index} ;"
+                    variant="outline";"
                     className="text-xs font-normal";
                   >;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -634,22 +699,33 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 {item && item.match && (;
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;
                     {item && item.match}% match;                  </div>;
+=======
+
+                  </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 )}
               </div>;
             </div>;
 
-            <div className="border-t border-border p-3 flex justify-end">;
 
+<<<<<<< HEAD
               <Button
                 size="sm"
                 onClick={() => onViewDetails(item && item.id)}                    {badge}
+=======
+                    {badge}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </Badge>;
                 ))}
-              <Button
+              <Button"
                 size="sm"
                 onClick={() => onViewDetails(item && item.id)}
+<<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="gap-1";
-              >;
+              >;"
                 View Details <ChevronRight className="h-4 w-4" />;
               </Button>;
             </div>;
@@ -657,6 +733,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
         </Card>;
       ))}
 
+<<<<<<< HEAD
     </div>;
   );
 <<<<<<< HEAD
@@ -671,95 +748,99 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   time_posted?: string;
 }
-interface BrowseCardsProps {
-  items: BrowseItem[],
+interface BrowseCardsProps {}
+  items: BrowseItem[],"
   type: "jobs" | "talents",
   onViewDetails: (id: string) => void;
 }
-export /**
- * BrowseCards - Function description
+export /**;
+ * BrowseCards - Function description;
  */
-function BrowseCards() {
+function BrowseCards() {}
   const [saved_items, setSavedItems] = useState < string[]>([]);
 ;
-  const toggle_saved = (id: string) =>: any {
+  const toggle_saved = (id: string) =>: any {}
     setSavedItems (prev =>;
       prev.includes (id);
         ? prev.filter (item_id => item_id !== id);
         : [...prev, id]);
   }
 ;
-  return (
+  return ("
     <div className="space - y-4 pb - 24">;
-      {items.map ((item) => (
-        <Card key={item.id} className="overflow - hidden">;
-          <CardContent className="p - 0">;
-            <div className="p - 4">;
-              <div className="flex justify - between">;
-                <div className="flex items - center gap - 3">;
-                  {type === "talents" ? (
+      {items.map ((item) => ("
+        <Card key={item.id} className="overflow - hidden">;"
+          <CardContent className="p - 0">;"
+            <div className="p - 4">;"
+              <div className="flex justify - between">;"
+                <div className="flex items - center gap - 3">;"
+                  {type === "talents" ? ("
                     <Avatar className="h - 12 w - 12">;
                       <AvatarImage src={item.image} />;
                       <AvatarFallback>{item.title.char_at (0).toUpperCase ()}</AvatarFallback>;
-                    </Avatar>) : (
-                    <div className="h - 12 w - 12 rounded - md bg - primary / 10 flex items - center justify - center">;
+                    </Avatar>) : ("
+                    <div className="h - 12 w - 12 rounded - md bg - primary / 10 flex items - center justify - center">;"
                       <span className="text - primary font - semibold">JOB</span>;
                     </div>)}
-                  <div>;
-                    <h3 className="font - medium">{item.title}</h3>;
+                  <div>;"
+                    <h3 className="font - medium">{item.title}</h3>;"
                     <p className="text - sm text - muted - foreground">{item.subtitle}</p>;
                   </div>;
                 </div>;
-                <button;
+                <button;"
                   className="h - 8 w - 8 flex items - center justify - center";
                   on_click={() => toggle_saved (item.id)}
                 >;
-                  {saved_items.includes (item.id) ? (
-                    <BookmarkCheck className="h - 5 w - 5 text - primary" />) : (
+                  {saved_items.includes (item.id) ? ("
+                    <BookmarkCheck className="h - 5 w - 5 text - primary" />) : ("
                     <Bookmark className="h - 5 w - 5 text - muted - foreground" />)}
                 </button>;
-              </div>;
+              </div>;"
               <div className="mt - 3 flex flex - wrap gap - 1">;
                 {item.badges.map ((badge, index) => (
                   <Badge;
-                    key={index}
-                    variant="outline";
+                    key={index}"
+                    variant="outline";"
                     className="text - xs font - normal";
                   >;
                     {badge}
                   </Badge>))}
-              </div>;
-              <p className="mt - 3 text - sm line - clamp - 2">{item.description}</p>;
+              </div>;"
+              <p className="mt - 3 text - sm line - clamp - 2">{item.description}</p>;"
               <div className="mt - 3 flex flex - wrap gap - 3 text - xs text - muted - foreground">;
-                {item.location && (
-                  <div className="flex items - center gap - 1">;
+                {item.location && ("
+                  <div className="flex items - center gap - 1">;"
                     <MapPin className="h - 3 w - 3" />;
                     <span>{item.location}</span>;
                   </div>)}
-                {item.price && (
-                  <div className="flex items - center gap - 1">;
+                {item.price && ("
+                  <div className="flex items - center gap - 1">;"
                     <DollarSign className="h - 3 w - 3" />;
                     <span>{item.price}</span>;
                   </div>)}
-                {item.time_posted && (
-                  <div className="flex items - center gap - 1">;
+                {item.time_posted && ("
+                  <div className="flex items - center gap - 1">;"
                     <Clock className="h - 3 w - 3" />;
                     <span>{item.time_posted}</span>;
                   </div>)}
-                {item.match && (
+                {item.match && ("
                   <div className="ml - auto bg - primary / 10 text - primary rounded - full px - 2 py - 0.5">;
                     {item.match}% match;
                   </div>)}
               </div>;
-            </div>;
+            </div>;"
             <div className="border - t border - border p - 3 flex justify - end">;
-              <Button;
+              <Button;"
                 size="sm";
-                on_click={() => onViewDetails (item.id)}
+                on_click={() => onViewDetails (item.id)}"
                 className="gap - 1";
-              >;
+              >;"
                 View Details <ChevronRight className="h - 4 w - 4" />;
               </Button>;
             </div>;
@@ -767,6 +848,7 @@ function BrowseCards() {
         </Card>))}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -871,3 +953,9 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

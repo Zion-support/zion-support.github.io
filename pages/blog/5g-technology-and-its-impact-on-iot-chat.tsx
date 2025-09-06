@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -22,6 +23,16 @@ import Link from 'next/link';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
+=======
+
+
+
+
+
+
+
+const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
       <Head>
@@ -33,37 +44,31 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
         <p>Blog content coming soon...</p>
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-        <Link href="/blog"><a>Back to Blog</Link></Link>
-=======
-=======
-        <Link href="/blog"><a>Back to Blog</Link></Link>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 =======
-        <Link href="/blog"><a>Back to Blog</Link></Link>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+"
         <Link href="/blog"><a>Back to Blog</Link></Link>
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+"
+        <Link href="/blog"><a>Back to Blog</Link></Link>
+
+
+
+
+
       </main>
     </div>
   )
 },
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -74,6 +79,9 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </main>
     </div>
   )
@@ -91,7 +99,7 @@ export default Chat5gTechnologyAndItsImpactOnIotChat;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-
+"
         <Link href="/blog"><a>Back to Blog</Link></Link>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -108,6 +116,7 @@ export default Chat5gTechnologyAndItsImpactOnIotChat;
 
 export default Chat5gTechnologyAndItsImpactOnIotChat,;
 export default Chat5gTechnologyAndItsImpactOnIotChat,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -135,3 +144,10 @@ import Link from 'next/link';
 const Chat5gTechnologyAndItsImpactOnIotChat: NextPage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

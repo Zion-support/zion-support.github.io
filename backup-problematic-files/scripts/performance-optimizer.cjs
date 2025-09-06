@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
 <<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
@@ -301,6 +302,10 @@ module.exports = PerformanceOptimizer;
 =======
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/performance-optimizer.cjs
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -309,9 +314,13 @@ const path = require('path')
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
         const content = fs.readFileSync(file, 'utf8')
     optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
+<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
 =======
 ========
 >>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:scripts/performance-optimizer.cjs
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/performance-optimizer.cjs
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -320,8 +329,21 @@ const path = require('path');
 
 class PerformanceOptimizer {
   constructor() {
+<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
     this.projectRoot = process.cwd();
     this.optimizations = [];
+=======
+    this.reportFile = path.join(__dirname, '..', 'performance-optimization-report.json');
+    this.results = {
+      timestamp: new Date().toISOString(),
+      bundleAnalysis: null,
+      imageOptimization: null,
+      codeSplitting: null,
+      caching: null,
+      overall: { status: 'unknown', score: 0 }
+    };
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/performance-optimizer.cjs
   }
 
   log(message, type = 'INFO') {
@@ -650,6 +672,7 @@ class PerformanceOptimizer {
 }
 // Run the optimizer
 const optimizer = new PerformanceOptimizer();
+<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
 =======
@@ -759,31 +782,11 @@ module.exports = {
 const { execSync } = require("fs")
 const fs = require("fs")
 const path = require("path")
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/performance-optimizer.cjs
 
-class PerformanceMonitor {
-  constructor() {
-    this.reportsDir = path.join(process.cwd(), "performance-reports")
-    this.ensureDirectories(),,
-}
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),,
-}
-  }
-  async runLighthouse() {
-    console.log("🔍 Running Lighthouse audit...")
-    try {
-      execSync("npm run build", {
-        cwd: this.projectRoot,
-        encoding: "utf8",
-        stdio: "pipe",,
-})
-      this.metrics.buildTime = Date.now() - startTime;
-      this.log(`✅ Build completed in ${this.metrics.buildTime}ms`, "SUCCESS")
-      const command = "npx lighthouse http: //localhost:3000 --output=html --output-path=./performance-reports/lighthouse-report.html --chrome-flags="--headless;
-      execSync(command, { stdio: "inherit" })
-      console.log("✅ Lighthouse audit completed")
 
+<<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
 } catch (error) {
       console.log("❌ Lighthouse audit failed: ", error.message),,
 }
@@ -1074,3 +1077,5 @@ module.exports = PerformanceOptimizer;
 const optimizer = new PerformanceOptimizer()
 optimizer.run().catch(console.error)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/performance-optimizer.cjs

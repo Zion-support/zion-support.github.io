@@ -5,8 +5,8 @@
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -19,14 +19,21 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import Head from 'next/head';
+=======
+
+
+import React, { useState } from 'react';'
+import Head from 'next/head';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
-import {
-  ArrowRight, Check, Star, Users, Zap, Shield, Globe
-  TrendingUp, Award, Clock, CheckCircle, ExternalLink
-} from 'lucide-react'
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+import {};
+  ArrowRight, Check, Star, Users, Zap, Shield, Globe;
+  TrendingUp, Award, Clock, CheckCircle, ExternalLink'
+} from 'lucide-react''
+import EnhancedNavigation from '../components/EnhancedNavigation';'
+import EnhancedFooter from '../components/EnhancedFooter';'
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -49,14 +56,24 @@ import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micr
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react',;
 import Head from 'next/head',;
+=======
+
+
+
+
+'
+import React, { useState } from 'react',;'
+import Head from 'next/head',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion',;
-import { 
+import {}
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
-  TrendingUp, Award, Clock, CheckCircle, ExternalLink
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+  TrendingUp, Award, Clock, CheckCircle, ExternalLink';
+} from 'lucide-react',;'
+import EnhancedNavigation from '../components/EnhancedNavigation',;'
+import EnhancedFooter from '../components/EnhancedFooter',;'
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -65,14 +82,11 @@ import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micr
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -87,15 +101,29 @@ export default function Pricing2025() {
     { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '🔒' }
     { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' }
     { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' }
+=======
+
+
+
+
+
+export default function Pricing2025() { return null; }
+    { id: 'all', name: 'All Services', icon: '🚀' }'
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🧠' }'
+    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '🔒' }'
+    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' }'
+    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' }'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬' }
   ]
-  const filteredServices = innovative2025MicroSaasExpansionV3.filter(service =>
+  const filteredServices = innovative2025MicroSaasExpansionV3.filter(service =>'
     selectedCategory === 'all' |service.category.includes(selectedCategory)
   )
-  const getAnnualPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', ''))
-    const annualPrice = price * 12 * 0.8, // 20% discount for annual
+  const getAnnualPrice = (monthlyPrice: string) => {'
+    const price = parseFloat(monthlyPrice.replace('$', ''));
+    const annualPrice = price * 12 * 0.8, // 20% discount for annual;
     return `$${Math.round(annualPrice)}`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -110,32 +138,33 @@ export default function Pricing2025() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import React, { useState } from 'react',
-import Head from 'next / head',
+'
+import React, { useState } from 'react','
+import Head from 'next / head','
 import { motion } from 'framer-motion',
-import {
-  ArrowRight, Check, Star, Users, Zap, Shield, Globe,
-  TrendingUp, Award, Clock, CheckCircle, ExternalLink;
-} from 'lucide-react',
-import EnhancedNavigation from '../components / EnhancedNavigation',
-import EnhancedFooter from '../components / EnhancedFooter',
+import {}
+  ArrowRight, Check, Star, Users, Zap, Shield, Globe,;
+  TrendingUp, Award, Clock, CheckCircle, ExternalLink;'
+} from 'lucide-react','
+import EnhancedNavigation from '../components / EnhancedNavigation','
+import EnhancedFooter from '../components / EnhancedFooter','
 import { innovative2025MicroSaasExpansionV3 } from '../data / 2025 - innovative - micro - saas - expansion - v3',
-export default /**
- * Pricing2025 - Function description
+export default /**;
+ * Pricing2025 - Function description;
  */
-function Pricing2025() {
-  const [selected_category, setSelectedCategory] = useState ('all'),
-  const [billing_cycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🧠' },
-    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '🔒' },
-    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' },
-    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' },
+function Pricing2025() { return null; }
+    { id: 'all', name: 'All Services', icon: '🚀' },'
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🧠' },'
+    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '🔒' },'
+    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' },'
+    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' },'
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬' }
   ],
   const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
@@ -146,25 +175,31 @@ const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     selected_category === 'all' || service.category.includes (selected_category)),
-  const getAnnualPrice = (monthly_price: string) =>: any {
+  const getAnnualPrice = (monthly_price: string) =>: any {'
     const price = parse_float (monthly_price.replace ('$', '')),
-    const annual_price = price * 12 * 0.8, // 20% discount for annual;
+    const annual_price = price * 12 * 0.8, // 20% discount for annual;`
     return `$${Math.round (annual_price)}`;
   },
-  const container_variants = {
+  const container_variants = {}
     hidden: { opacity: 0 },
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -178,27 +213,31 @@ const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+    visible: {}
+      opacity: 1;
+      transition: {}
+        stagger_children: 0.1;
+      }
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
   },
-  const item_variants = {
+  const item_variants = {}
     hidden: { opacity: 0, coordinate_y: 20 },
-    visible: {
+    visible: {}
       opacity: 1,
       coordinate_y: 0,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -212,49 +251,58 @@ const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import React, { useState } from 'react';
-import Head from 'next/head';
+
+      transition: {}
+        duration: 0.5;
+      }
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+
+
+
+
+
+'
+import React, { useState } from 'react';'
+import Head from 'next/head';'
 import { motion } from 'framer-motion';
 import {;
   ArrowRight, Check, Star, Users, Zap, Shield, Globe,;
-  TrendingUp, Award, Clock, CheckCircle, ExternalLink;
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+  TrendingUp, Award, Clock, CheckCircle, ExternalLink;'
+} from 'lucide-react',;'
+import EnhancedNavigation from '../components/EnhancedNavigation';'
+import EnhancedFooter from '../components/EnhancedFooter';'
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
-export default function Pricing2025(req, res) {
-  try {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+export default function Pricing2025(req, res) {}
+  try {';
+  const [selectedCategory, setSelectedCategory] = useState('all');'
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀' },;
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🧠' },;
-    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '🔒' },;
-    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' },;
-    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' },;
-    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬'   } catch (error) {
-    console.error("Error:", error);
+  const categories = [;'
+    { id: 'all', name: 'All Services', icon: '🚀' },;'
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🧠' },;'
+    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '🔒' },;'
+    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' },;'
+    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' },;'
+    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬'   } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ],;
-  const filteredServices = innovative2025MicroSaasExpansionV3.filter(service =>;
+  const filteredServices = innovative2025MicroSaasExpansionV3.filter(service =>;'
     selectedCategory === 'all' || service.category.includes(selectedCategory);
   );
-  const getAnnualPrice = (monthlyPrice: string) => {;
+  const getAnnualPrice = (monthlyPrice: string) => {;'
     const price = parseFloat(monthlyPrice.replace('$', '')),;
-    const annualPrice = price * 12 * 0.8, // 20% discount for annual;
+    const annualPrice = price * 12 * 0.8, // 20% discount for annual;`
     return `$${Math.round(annualPrice)}`;
   },;
   const containerVariants = {;
@@ -263,13 +311,13 @@ export default function Pricing2025(req, res) {
       opacity: 1;
       transition: {;
         staggerChildren: 0.1;
-        } catch (error) {
-    console.error("Error:", error);
+        } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -281,33 +329,39 @@ export default function Pricing2025(req, res) {
       y: 0,;
       transition: {;
         duration: 0.5;
-        } catch (error) {
-    console.error("Error:", error);
+        } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+
+
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
-        <title>2025 Pricing & Services — Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transparent pricing with flexible plans." />
-        <meta property="og:title" content="2025 Pricing & Services — Zion Tech Group" />
-        <meta property="og:description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
-        <meta name="keywords" content="pricing, micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing-2025" />
+        <title>2025 Pricing & Services — Zion Tech Group</title>"
+        <meta name="description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transparent pricing with flexible plans." />"
+        <meta property="og:title" content="2025 Pricing & Services — Zion Tech Group" />"
+        <meta property="og:description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />"
+        <meta name="keywords" content="pricing, micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />"
+        <link rel="canonical" href="https://ziontechgroup.com/pricing-2025" />"
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services — Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
       <EnhancedNavigation />
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -326,71 +380,70 @@ export default function Pricing2025(req, res) {
       <EnhancedNavigation />;
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      {/* Hero Section */}
-      <section className="relative py - 20 px - 6">;
+
+
+      {/* Hero Section */}"
+      <section className="relative py - 20 px - 6">;"
         <div className="max - w-7xl mx - auto text - center">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
+
+      {/* Hero Section */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section className="relative py-20 px-6">
+=======
+
+"
+      <section className="relative py-20 px-6">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+            animate={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+            transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          >
+          >"
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
-              2025 Pricing & Services
-            </h1>
+              2025 Pricing & Services;
+            </h1>"
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
 <<<<<<< HEAD
               Transparent pricing for our comprehensive collection of innovative micro SAAS services
               Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
 
               Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
 
@@ -398,37 +451,28 @@ export default function Pricing2025(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-          >;
+
+
+
+
+          >;"
             <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent">;
               2025 Pricing & Services;
-            </h1>;
+            </h1>;"
             <p className="text - xl md:text - 2xl text - white / 80 max - w-4xl mx - auto leading - relaxed mb - 8">;
               Transparent pricing for our comprehensive collection of innovative micro SAAS services,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            {/* Billing Toggle */}
-              Transparent pricing for our comprehensive collection of innovative micro SAAS services,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
-            {/* Billing Toggle */  } catch (error) {
-    console.error("Error:", error);
+            {/* Billing Toggle */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -447,18 +491,48 @@ export default function Pricing2025(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="flex items-center justify-center gap-4 mb-12">
 
+=======
+
+
+
+
+
+
+"
+            <div className="flex items-center justify-center gap-4 mb-12">'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-white/60'}`}>
-                Monthly
+                Monthly;
               </span>
+<<<<<<< HEAD
               <button
 
               >
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
                   billingCycle === 'annual' ? 'right-1' : 'left-1'
+=======
+              <button'
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}`
+                className={`relative w-16 h-8 rounded-full transition-all duration-300 ${;'
+                  billingCycle === 'annual' ? 'bg-cyan-500' : 'bg-white/20';`
+                }`  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+              >`
+                <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${'
+                  billingCycle === 'annual' ? 'right-1' : 'left-1'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 }`} />
-              </button>
+              </button>'`
               <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-white/60'}`}>
-                Annual
+                Annual"
                 <span className="ml-2 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   Save 20%
@@ -468,8 +542,8 @@ export default function Pricing2025(req, res) {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -497,10 +571,17 @@ export default function Pricing2025(req, res) {
               >;
                 <div className={`absolute top - 1 w - 6 h - 6 bg - white rounded - full transition - all duration - 300 ${
                   billing_cycle === 'annual' ? 'right - 1' : 'left - 1';
+=======
+
+
+              >;`
+                <div className={`absolute top - 1 w - 6 h - 6 bg - white rounded - full transition - all duration - 300 ${'
+                  billing_cycle === 'annual' ? 'right - 1' : 'left - 1';`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 }`} />;
-              </button>;
+              </button>;'`
               <span className={`text - lg ${billing_cycle === 'annual' ? 'text - white' : 'text - white / 60'}`}>;
-                Annual;
+                Annual;"
                 <span className="ml - 2 px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full">;
                   Save 20%;
                 </span>;
@@ -509,538 +590,477 @@ export default function Pricing2025(req, res) {
           </motion.div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      {/* Category Filter */}
-      <section className="py - 8 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
-        <div className="max - w-7xl mx - auto">;
+
+
+      {/* Category Filter */}"
+      <section className="py - 8 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;"
+        <div className="max - w-7xl mx - auto">;"
           <div className="flex flex - wrap justify - center gap - 4">;
             {categories.map ((category) => (
               <button;
                 key={category.id}
-                on_click={() => setSelectedCategory (category.id)}
-                className={`px - 6 py - 3 rounded - lg text - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
-                  selected_category === category.id;
-                    ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
-                    : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
+                on_click={() => setSelectedCategory (category.id)}`
+                className={`px - 6 py - 3 rounded - lg text - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${}
+                  selected_category === category.id;'
+                    ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';'
+                    : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';`
                 }`}
               >;
                 <span>{category.icon}</span>;
                 {category.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
               </button>))}
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      {/* Pricing Grid */}
-      <section className="py - 16 px - 6">;
+
+
+      {/* Pricing Grid */}"
+      <section className="py - 16 px - 6">;"
         <div className="max - w-7xl mx - auto">;
           <motion.div;
-            variants={container_variants}
-            initial="hidden";
-            animate="visible";
+            variants={container_variants}"
+            initial="hidden";"
+            animate="visible";"
             className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
           >;
             {filtered_services.map ((service, index) => (
               <motion.div;
                 key={service.id}
-                variants={item_variants}
-                className={`group relative p - 8 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl ${
-                  service.popular ? 'ring - 2 ring - cyan - 400 / 50' : '';
+                variants={item_variants}`
+                className={`group relative p - 8 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl ${'
+                  service.popular ? 'ring - 2 ring - cyan - 400 / 50' : '';`
                 }`}
-=======
 
-=======
+
+
       {/* Category Filter */}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      {/* Category Filter */  } catch (error) {
-    console.error("Error:", error);
+
+      {/* Category Filter */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
+"
+      <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">"
+        <div className="max-w-7xl mx-auto">"
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-              <button
-                key={category.id  } catch (error) {
-    console.error("Error:", error);
+              <button;
+                key={category.id  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                onClick={() => setSelectedCategory(category.id)  } catch (error) {
-    console.error("Error:", error);
+                onClick={() => setSelectedCategory(category.id)  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}`
                 className={`px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 flex items-center gap-2 ${;
-                  selectedCategory === category.id;
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white';
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white';
-                }`  } catch (error) {
-    console.error("Error:", error);
+                  selectedCategory === category.id;'
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white';'
+                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white';`
+                }`  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               >;
                 <span>{category.icon}</span>;
-                {category.name  } catch (error) {
-    console.error("Error:", error);
+                {category.name  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </button>;
-            ))  } catch (error) {
-    console.error("Error:", error);
+            ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </div>;
         </div>;
       </section>;
-      {/* Pricing Grid */  } catch (error) {
-    console.error("Error:", error);
+      {/* Pricing Grid */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-      <section className="py-16 px-6">
+}"
+      <section className="py-16 px-6">"
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            variants={containerVariants  } catch (error) {
-    console.error("Error:", error);
+          <motion.div;
+            variants={containerVariants  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-            initial="hidden"
-            animate="visible"
+"
+            initial="hidden""
+            animate="visible""
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredServices.map((service, index) => (
-              <motion.div
-                key={service.id  } catch (error) {
-    console.error("Error:", error);
+              <motion.div;
+                key={service.id  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                variants={itemVariants  } catch (error) {
-    console.error("Error:", error);
+                variants={itemVariants  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}`
+                className={`group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${;'
+                  service.popular ? 'ring-2 ring-cyan-400/50' : '';`
+                }`  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                className={`group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${;
-                  service.popular ? 'ring-2 ring-cyan-400/50' : '';
-                }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
               >;
                 {/* Popular Badge */}
                 {service.popular && (
-<<<<<<< HEAD
 
-                  <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2 px - 6 py - 2 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - sm font - bold rounded - full">;
-                    MOST POPULAR;
-                  </div>)}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2 px - 6 py - 2 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - sm font - bold rounded - full">;
-                    MOST POPULAR;
-                  </div>)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                {/* Service Header */}
-                <div className="text - center mb - 8">;
+
+                {/* Service Header */}"
+                <div className="text - center mb - 8">;`
                   <div className={`w - 20 h - 20 rounded - 2xl bg - gradient - to - br ${service.color} p - 5 mx - auto mb - 4 flex items - center justify - center text - 3xl`}>;
                     {service.icon}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-                )  } catch (error) {
-    console.error("Error:", error);
+
+                )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-                {/* Service Header */  } catch (error) {
-    console.error("Error:", error);
+                {/* Service Header */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
-                <div className="text-center mb-8">
+"
+                <div className="text-center mb-8">`
                   <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} p-5 mx-auto mb-4 flex items-center justify-center text-3xl`}>
-                    {service.icon  } catch (error) {
-    console.error("Error:", error);
+                    {service.icon  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+
+                  </div>"
+                  <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>"
                   <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
                 </div>
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-                {/* Pricing */  } catch (error) {
-    console.error("Error:", error);
+
+
+
+                {/* Pricing */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                <div className="text-center mb-8">"
+                  <div className="mb-2">"
+                    <span className="text-4xl font-bold text-cyan-400">'
+                      {billingCycle === 'monthly' ? service.price : getAnnualPrice(service.price)  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                <div className="text-center mb-8">
-                  <div className="mb-2">
-                    <span className="text-4xl font-bold text-cyan-400">
-                      {billingCycle === 'monthly' ? service.price : getAnnualPrice(service.price)  } catch (error) {
-    console.error("Error:", error);
+                    </span>"
+                    <span className="text-white/60 ml-2">'
+                      {billingCycle === 'monthly' ? service.period : '/year'  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
                     </span>
-                    <span className="text-white/60 ml-2">
-                      {billingCycle === 'monthly' ? service.period : '/year'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                    </span>
-                  </div>
-                  {billingCycle === 'annual' && (
-                    <p className="text-green-400 text-sm">
-                      Save ${Math.round(parseFloat(service.price.replace('$', '')) * 12 * 0.2)} annually
+                  </div>'
+                  {billingCycle === 'annual' && ("
+                    <p className="text-green-400 text-sm">'
+                      Save ${Math.round(parseFloat(service.price.replace('$', '')) * 12 * 0.2)} annually;
                     </p>
 
-                  </div>;
-                  <h3 className="text - 2xl font - bold text - white mb - 2">{service.name}</h3>;
+                  </div>;"
+                  <h3 className="text - 2xl font - bold text - white mb - 2">{service.name}</h3>;"
                   <p className="text - white / 70 text - sm leading - relaxed">{service.tagline}</p>;
                 </div>;
-                {/* Pricing */}
-                <div className="text - center mb - 8">;
-                  <div className="mb - 2">;
-                    <span className="text - 4xl font - bold text - cyan - 400">;
+                {/* Pricing */}"
+                <div className="text - center mb - 8">;"
+                  <div className="mb - 2">;"
+                    <span className="text - 4xl font - bold text - cyan - 400">;'
                       {billing_cycle === 'monthly' ? service.price : getAnnualPrice (service.price)}
-                    </span>;
-                    <span className="text - white / 60 ml - 2">;
+                    </span>;"
+                    <span className="text - white / 60 ml - 2">;'
                       {billing_cycle === 'monthly' ? service.period : '/year'}
                     </span>;
-                  </div>;
-                  {billing_cycle === 'annual' && (
-                    <p className="text - green - 400 text - sm">;
+                  </div>;'
+                  {billing_cycle === 'annual' && ("
+                    <p className="text - green - 400 text - sm">;'
                       Save ${Math.round (parse_float (service.price.replace ('$', '')) * 12 * 0.2)} annually;
                     </p>)}
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                {/* Rating */}
-                <div className="flex items - center justify - center gap - 2 mb - 6">;
+
+
+                {/* Rating */}"
+                <div className="flex items - center justify - center gap - 2 mb - 6">;"
                   <div className="flex items - center gap - 1">;
                     {[...Array (5)].map ((_, i) => (
                       <Star;
-                        key={i}
-                        className={`w - 4 h - 4 ${
-                          i < Math.floor (service.rating) ? 'text - yellow - 400 fill - current' : 'text - white / 20';
+                        key={i}`
+                        className={`w - 4 h - 4 ${'
+                          i < Math.floor (service.rating) ? 'text - yellow - 400 fill - current' : 'text - white / 20';`
                         }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-                  )  } catch (error) {
-    console.error("Error:", error);
+
+                  )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                 </div>;
-                {/* Rating */  } catch (error) {
-    console.error("Error:", error);
+                {/* Rating */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
-                <div className="flex items-center justify-center gap-2 mb-6">
+"
+                <div className="flex items-center justify-center gap-2 mb-6">"
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i  } catch (error) {
-    console.error("Error:", error);
+                      <Star;
+                        key={i  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-                        className={`w-4 h-4 ${;
-                          i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-white/20';
-                        }`  } catch (error) {
-    console.error("Error:", error);
+}`
+                        className={`w-4 h-4 ${;'
+                          i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-white/20';`
+                        }`  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                       />;
-                    ))  } catch (error) {
-    console.error("Error:", error);
+                    ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  </div>
+
+                  </div>"
                   <span className="text-white/60 text-sm">
                     {service.rating} ({service.reviews} reviews)
                   </span>
                 </div>
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
                       />))}
-                  </div>;
+                  </div>;"
                   <span className="text - white / 60 text - sm">;
                     {service.rating} ({service.reviews} reviews);
                   </span>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                {/* Features */}
-                <div className="mb - 8">;
-                  <h4 className="text - white font - semibold mb - 4 text - center">Key Features:</h4>;
+
+
+                {/* Features */}"
+                <div className="mb - 8">;"
+                  <h4 className="text - white font - semibold mb - 4 text - center">Key Features:</h4>;"
                   <div className="space - y-3">;
-                    {service.features.slice (0, 5).map ((feature, idx) => (
-                      <div key={idx} className="flex items - center gap - 3 text - sm text - white / 80">;
+                    {service.features.slice (0, 5).map ((feature, idx) => ("
+                      <div key={idx} className="flex items - center gap - 3 text - sm text - white / 80">;"
                         <CheckCircle className="w - 4 h - 4 text - cyan - 400 flex - shrink - 0" />;
                         <span>{feature}</span>;
                       </div>))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-                {/* Features */  } catch (error) {
-    console.error("Error:", error);
+
+
+
+
+                {/* Features */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                <div className="mb-8">
-                  <h4 className="text-white font-semibold mb-4 text-center">Key Features:</h4>
+"
+                <div className="mb-8">"
+                  <h4 className="text-white font-semibold mb-4 text-center">Key Features:</h4>"
                   <div className="space-y-3">
-                    {service.features.slice(0, 5).map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-3 text-sm text-white/80">
+                    {service.features.slice(0, 5).map((feature, idx) => ("
+                      <div key={idx} className="flex items-center gap-3 text-sm text-white/80">"
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                         <span>{feature}</span>
                       </div>
-                    ))  } catch (error) {
-    console.error("Error:", error);
+                    ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                     {service.features.length > 5 && (
 
 
-                {/* ROI and Setup */  } catch (error) {
-    console.error("Error:", error);
+                {/* ROI and Setup */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                <div className="mb-8 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
-                  <div className="text-cyan-400 font-semibold mb-2 text-center">🚀 Expected ROI:</div>
-                  <p className="text-white/80 text-sm text-center">{service.roi}</p>
+"
+                <div className="mb-8 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">"
+                  <div className="text-cyan-400 font-semibold mb-2 text-center">🚀 Expected ROI:</div>"
+                  <p className="text-white/80 text-sm text-center">{service.roi}</p>"
                   <div className="mt-3 grid grid-cols-2 gap-4 text-center text-sm">
-                    <div>
-                      <div className="text-white/60">Setup Time</div>
+                    <div>"
+                      <div className="text-white/60">Setup Time</div>"
                       <div className="text-white font-medium">{service.setupTime}</div>
                     </div>
-                    <div>
-                      <div className="text-white/60">Trial Period</div>
+                    <div>"
+                      <div className="text-white/60">Trial Period</div>"
                       <div className="text-white font-medium">{service.trialDays} days</div>
                     </div>
                   </div>
                 </div>
-
+"
                       <div className="text - cyan - 400 text - sm font - medium text - center">;
                         +{service.features.length - 5} more features;
                       </div>)}
                   </div>;
                 </div>;
-                {/* Market Info */}
-                <div className="grid grid - cols - 2 gap - 4 mb - 6 text - sm">;
-                  <div className="text - center p - 3 bg - white / 5 rounded - lg">;
-                    <div className="text - white / 60 mb - 1">Market Size</div>;
+                {/* Market Info */}"
+                <div className="grid grid - cols - 2 gap - 4 mb - 6 text - sm">;"
+                  <div className="text - center p - 3 bg - white / 5 rounded - lg">;"
+                    <div className="text - white / 60 mb - 1">Market Size</div>;"
                     <div className="text - white font - medium">{service.market_size}</div>;
-                  </div>;
-                  <div className="text - center p - 3 bg - white / 5 rounded - lg">;
-                    <div className="text - white / 60 mb - 1">Growth Rate</div>;
+                  </div>;"
+                  <div className="text - center p - 3 bg - white / 5 rounded - lg">;"
+                    <div className="text - white / 60 mb - 1">Growth Rate</div>;"
                     <div className="text - white font - medium">{service.growth_rate}</div>;
                   </div>;
                 </div>;
-                {/* ROI and Setup */}
-                <div className="mb - 8 p - 4 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - lg border border - cyan - 400 / 20">;
-                  <div className="text - cyan - 400 font - semibold mb - 2 text - center">🚀 Expected ROI:</div>;
-                  <p className="text - white / 80 text - sm text - center">{service.roi}</p>;
+                {/* ROI and Setup */}"
+                <div className="mb - 8 p - 4 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - lg border border - cyan - 400 / 20">;"
+                  <div className="text - cyan - 400 font - semibold mb - 2 text - center">🚀 Expected ROI:</div>;"
+                  <p className="text - white / 80 text - sm text - center">{service.roi}</p>;"
                   <div className="mt - 3 grid grid - cols - 2 gap - 4 text - center text - sm">;
-                    <div>;
-                      <div className="text - white / 60">Setup Time</div>;
+                    <div>;"
+                      <div className="text - white / 60">Setup Time</div>;"
                       <div className="text - white font - medium">{service.setup_time}</div>;
                     </div>;
-                    <div>;
-                      <div className="text - white / 60">Trial Period</div>;
+                    <div>;"
+                      <div className="text - white / 60">Trial Period</div>;"
                       <div className="text - white font - medium">{service.trial_days} days</div>;
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                {/* Action Buttons */}
+
+
+                {/* Action Buttons */}"
                 <div className="space - y-3">;
                   <a;
                     href={service.link}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-                {/* Action Buttons */  } catch (error) {
-    console.error("Error:", error);
+
+                {/* Action Buttons */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
                 <div className="space-y-3">
-                  <a
-                    href={service.link  } catch (error) {
-    console.error("Error:", error);
+                  <a;
+                    href={service.link  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                    target="_blank"
-                    rel="noopener noreferrer"
+"
+                    target="_blank""
+                    rel="noopener noreferrer""
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg font-semibold text-white text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                   >
-                    Get Started
+                    Get Started"
                     <ExternalLink className="w-4 h-4" />
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 
                   </Link>
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}&body=Hi, I'm interested in learning more about your ${service.name} service. Please provide more information about pricing, features, and implementation.`  } catch (error) {
-    console.error("Error:", error);
+                  <a'`
+                    href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}&body=Hi, I'm interested in learning more about your ${service.name} service. Please provide more information about pricing, features, and implementation.`  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+"
                     className="w-full px-6 py-3 border border-white/20 hover:border-cyan-400/30 rounded-lg font-semibold text-white text-center transition-all duration-300 hover:bg-white/5"
                   >
-                    Contact Sales
+                    Contact Sales;
                   </a>
                 </div>
 
 
-                {/* Contact Info */  } catch (error) {
-    console.error("Error:", error);
+                {/* Contact Info */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                <div className="mt-6 pt-4 border-t border-white/10 text-center">
-                  <div className="text-white/60 text-sm mb-2">Need help? Contact us:</div>
-                  <div className="flex items-center justify-center gap-4 text-sm">
+"
+                <div className="mt-6 pt-4 border-t border-white/10 text-center">"
+                  <div className="text-white/60 text-sm mb-2">Need help? Contact us:</div>"
+                  <div className="flex items-center justify-center gap-4 text-sm">"`
                     <a href={`tel:${service.contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300">
 
 
-                      📞 {service.contactInfo.mobile  } catch (error) {
-    console.error("Error:", error);
+                      📞 {service.contactInfo.mobile  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    </Link>
+                    </Link>"`
                     <a href={`mailto:${service.contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300">
-                      ✉️ {service.contactInfo.email  } catch (error) {
-    console.error("Error:", error);
+                      ✉️ {service.contactInfo.email  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1048,63 +1068,62 @@ export default function Pricing2025(req, res) {
                   </div>
                 </div>
               </motion.div>
-            ))  } catch (error) {
-    console.error("Error:", error);
+            ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </motion.div>;
-          {/* No Results */  } catch (error) {
-    console.error("Error:", error);
+          {/* No Results */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          {filteredServices.length === 0 && (
-            <div className="text-center py-20">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+
+          {filteredServices.length === 0 && ("
+            <div className="text-center py-20">"
+              <div className="text-6xl mb-4">🔍</div>"
+              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>"
               <p className="text-white/70 mb-6">Try selecting a different category</p>
-              <button
-
-
-                onClick={() => setSelectedCategory('all')  } catch (error) {
-    console.error("Error:", error);
+              <button;
+'
+                onClick={() => setSelectedCategory('all')  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+"
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
-                View All Services
+                View All Services;
               </button>
             </div>
-
-                    target="_blank";
-                    rel="noopener noreferrer";
+"
+                    target="_blank";"
+                    rel="noopener noreferrer";"
                     className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - lg font - semibold text - white text - center transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap - 2";
                   >;
-                    Get Started;
+                    Get Started;"
                     <ExternalLink className="w - 4 h - 4" />;
                   </a>;
-                  <a;
-                    href={`mailto:kleber@ziontechgroup.com?subject = Inquiry about ${service.name}&body = Hi, I'm interested in learning more about your ${service.name} service. Please provide more information about pricing, features, and implementation.`}
+                  <a;'`
+                    href={`mailto:kleber@ziontechgroup.com?subject = Inquiry about ${service.name}&body = Hi, I'm interested in learning more about your ${service.name} service. Please provide more information about pricing, features, and implementation.`}"
                     className="w - full px - 6 py - 3 border border - white / 20 hover:border - cyan - 400 / 30 rounded - lg font - semibold text - white text - center transition - all duration - 300 hover:bg - white / 5";
                   >;
                     Contact Sales;
                   </a>;
                 </div>;
-                {/* Contact Info */}
-                <div className="mt - 6 pt - 4 border - t border - white / 10 text - center">;
-                  <div className="text - white / 60 text - sm mb - 2">Need help? Contact us:</div>;
-                  <div className="flex items - center justify - center gap - 4 text - sm">;
+                {/* Contact Info */}"
+                <div className="mt - 6 pt - 4 border - t border - white / 10 text - center">;"
+                  <div className="text - white / 60 text - sm mb - 2">Need help? Contact us:</div>;"
+                  <div className="flex items - center justify - center gap - 4 text - sm">;"`
                     <a href={`tel:${service.contact_info.mobile}`} className="text - cyan - 400 hover:text - cyan - 300">;
                       📞 {service.contact_info.mobile}
-                    </a>;
+                    </a>;"`
                     <a href={`mailto:${service.contact_info.email}`} className="text - cyan - 400 hover:text - cyan - 300">;
                       ✉️ {service.contact_info.email}
                     </a>;
@@ -1113,13 +1132,13 @@ export default function Pricing2025(req, res) {
               </motion.div>))}
           </motion.div>;
           {/* No Results */}
-          {filtered_services.length === 0 && (
-            <div className="text - center py - 20">;
-              <div className="text - 6xl mb - 4">🔍</div>;
-              <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
+          {filtered_services.length === 0 && ("
+            <div className="text - center py - 20">;"
+              <div className="text - 6xl mb - 4">🔍</div>;"
+              <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;"
               <p className="text - white / 70 mb - 6">Try selecting a different category</p>;
-              <button;
-                on_click={() => setSelectedCategory ('all')}
+              <button;'
+                on_click={() => setSelectedCategory ('all')}"
                 className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - lg font - semibold text - white hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300";
               >;
                 View All Services;
@@ -1127,124 +1146,115 @@ export default function Pricing2025(req, res) {
             </div>)}
         </div>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      {/* Enterprise Solutions */}
-      <section className="py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
+
+
+      {/* Enterprise Solutions */}"
+      <section className="py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;"
         <div className="max - w-4xl mx - auto text - center">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-          )  } catch (error) {
-    console.error("Error:", error);
+
+          )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         </div>;
       </section>;
-      {/* Enterprise Solutions */  } catch (error) {
-    console.error("Error:", error);
+      {/* Enterprise Solutions */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+"
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">"
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+            transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
+            viewport={{ once: true }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          >
+
+          >"
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Need Enterprise Solutions?
-            </h2>
+            </h2>"
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 
 
 
               for organizations requiring multiple services or specialized implementations.
-            </p>
+            </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry&body=Hi, I'm interested in enterprise solutions and volume pricing. Please provide more information about your enterprise offerings, custom implementations, and dedicated support options."
+              <a'"
+                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry&body=Hi, I'm interested in enterprise solutions and volume pricing. Please provide more information about your enterprise offerings, custom implementations, and dedicated support options.""
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
               >
-                Contact Enterprise Sales
+                Contact Enterprise Sales"
                 <ArrowRight className="w-5 h-5" />
 
 
               </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              <a
-                href="tel:+13024640950"
+
+              <a"
+                href="tel:+13024640950""
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
-                Call Us Now
+                Call Us Now;
               </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-          >;
+          >;"
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
               Need Enterprise Solutions?;
-            </h2>;
+            </h2>;"
             <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto">;
               We offer custom enterprise solutions, volume discounts, and dedicated support;
               for organizations requiring multiple services or specialized implementations.;
-            </p>;
+            </p>;"
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-              <a;
-                href="mailto:kleber@ziontechgroup.com?subject = Enterprise Solutions Inquiry & body = Hi, I'm interested in enterprise solutions and volume pricing. Please provide more information about your enterprise offerings, custom implementations, and dedicated support options.";
+              <a;'"
+                href="mailto:kleber@ziontechgroup.com?subject = Enterprise Solutions Inquiry & body = Hi, I'm interested in enterprise solutions and volume pricing. Please provide more information about your enterprise offerings, custom implementations, and dedicated support options.";"
                 className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2";
               >;
-                Contact Enterprise Sales;
+                Contact Enterprise Sales;"
                 <ArrowRight className="w - 5 h - 5" />;
               </a>;
-              <a;
-                href="tel:+13024640950";
+              <a;"
+                href="tel:+13024640950";"
                 className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
               >;
                 Call Us Now;
@@ -1253,118 +1263,101 @@ export default function Pricing2025(req, res) {
           </motion.div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      {/* FAQ Section */}
-      <section className="py - 20 px - 6">;
+
+
+      {/* FAQ Section */}"
+      <section className="py - 20 px - 6">;"
         <div className="max - w-4xl mx - auto">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-      {/* FAQ Section */  } catch (error) {
-    console.error("Error:", error);
+
+      {/* FAQ Section */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-      <section className="py-20 px-6">
+}"
+      <section className="py-20 px-6">"
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+            transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
+            viewport={{ once: true }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+"
             className="text-center mb-16"
-          >
+          >"
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Frequently Asked Questions
+              Frequently Asked Questions;
             </h2>
-          </motion.div>
+          </motion.div>"
           <div className="space-y-6">
-            {[
-              {
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            {[]
+              {}
+"
             className="text - center mb - 16";
-          >;
+          >;"
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
               Frequently Asked Questions;
             </h2>;
-          </motion.div>;
+          </motion.div>;"
           <div className="space - y-6">;
             {[;
-              {
-=======
-
-
-                question: "What payment methods do you accept?",
+              {}
+"
+                question: "What payment methods do you accept?","
                 answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can arrange custom payment terms.";
               },
-              {
-                question: "Do you offer free trials?",
+              {"
+                question: "Do you offer free trials?","
                 answer: "Yes! All our services come with free trial periods ranging from 14 to 60 days, depending on the service complexity.";
               },
-              {
-                question: "Can I cancel my subscription anytime?",
+              {"
+                question: "Can I cancel my subscription anytime?","
                 answer: "Absolutely. You can cancel your subscription at any time with no cancellation fees. Your service will remain active until the end of your billing period.";
               },
-              {
-                question: "Do you offer volume discounts?",
+              {"
+                question: "Do you offer volume discounts?","
                 answer: "Yes, we offer volume discounts for organizations using multiple services. Contact our sales team for custom pricing and enterprise solutions.";
               },
-              {
-                question: "What kind of support do you provide?",
+              {"
+                question: "What kind of support do you provide?","
                 answer: "We provide comprehensive support including documentation, tutorials, email support, and priority support for enterprise customers. Some services include dedicated account managers.";
               },
-              {
+              {"
                 question: "Can I upgrade or downgrade my plan?",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+'"
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
 
-
+"
                 className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl"
-              >
-                <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
+              >"
+                <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>"
                 <p className="text-white/70 leading-relaxed">{faq.answer}</p>
               </motion.div>
 
@@ -1372,56 +1365,35 @@ export default function Pricing2025(req, res) {
   );
 };
 
-=======
-<<<<<<< HEAD
-=======
-  );
-};
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-            ))  } catch (error) {
-    console.error("Error:", error);
+
+
+
+            ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
 }
 
-=======
-<<<<<<< HEAD
-=======
-}
 
-                answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.";
-              }
-            ].map ((faq, index) => (
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+"
                 className="p - 6 rounded - xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl";
-              >;
-                <h3 className="text - xl font - bold text - white mb - 3">{faq.question}</h3>;
+              >;"
+                <h3 className="text - xl font - bold text - white mb - 3">{faq.question}</h3>;"
                 <p className="text - white / 70 leading - relaxed">{faq.answer}</p>;
               </motion.div>))}
           </div>;
         </div>;
       </section>;
       <EnhancedFooter />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1832,16 +1804,25 @@ export default function Pricing2025(req, res) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="text-center mb-8">
+=======
+"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                <div className="text-center mb-8">`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} p-5 mx-auto mb-4 flex items-center justify-center text-3xl`}>
-                    {service.icon  } catch (error) {
-    console.error("Error:", error);
+                    {service.icon  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+                  </div>"
+                  <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>"
                   <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1861,18 +1842,30 @@ export default function Pricing2025(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {/* Pricing */  } catch (error) {
     console.error("Error:", error);
+=======
+                {/* Pricing */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                <div className="text-center mb-8">"
+                  <div className="mb-2">"
+                    <span className="text-4xl font-bold text-cyan-400">'
+                      {billingCycle === 'monthly' ? service.price : getAnnualPrice(service.price)  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                <div className="text-center mb-8">
-                  <div className="mb-2">
-                    <span className="text-4xl font-bold text-cyan-400">
-                      {billingCycle === 'monthly' ? service.price : getAnnualPrice(service.price)  } catch (error) {
-    console.error("Error:", error);
+                    </span>"
+                    <span className="text-white/60 ml-2">'
+                      {billingCycle === 'monthly' ? service.period : '/year'  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     </span>
+<<<<<<< HEAD
                     <span className="text-white/60 ml-2">
                       {billingCycle === 'monthly' ? service.period : '/year'  } catch (error) {
     console.error("Error:", error);
@@ -1913,28 +1906,36 @@ export default function Pricing2025(req, res) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="flex items-center justify-center gap-2 mb-6">
+=======
+                  </div>'
+                  {billingCycle === 'annual' && ("
+                    <p className="text-green-400 text-sm">'
+                      Save ${Math.round(parseFloat(service.price.replace('$', '')) * 12 * 0.2)} annually;
+                    </p>"
+                <div className="flex items-center justify-center gap-2 mb-6">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i  } catch (error) {
-    console.error("Error:", error);
+                      <Star;
+                        key={i  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-                        className={`w-4 h-4 ${;
-                          i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-white/20';
-                        }`  } catch (error) {
-    console.error("Error:", error);
+}`
+                        className={`w-4 h-4 ${;'
+                          i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-white/20';`
+                        }`  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                       />;
-                    ))  } catch (error) {
-    console.error("Error:", error);
+                    ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  </div>
+                  </div>"
                   <span className="text-white/60 text-sm">
                     {service.rating} ({service.reviews} reviews)
                   </span>
@@ -1948,10 +1949,11 @@ export default function Pricing2025(req, res) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {/* Features */}
-                {/* Features */  } catch (error) {
-    console.error("Error:", error);
+                {/* Features */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1959,9 +1961,14 @@ export default function Pricing2025(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className="mb-8">
                   <h4 className="text-white font-semibold mb-4 text-center">Key Features:</h4>
+=======
+}"
+                <div className="mb-8">"
+                  <h4 className="text-white font-semibold mb-4 text-center">Key Features:</h4>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="space-y-3">
-                    {service.features.slice(0, 5).map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-3 text-sm text-white/80">
+                    {service.features.slice(0, 5).map((feature, idx) => ("
+                      <div key={idx} className="flex items-center gap-3 text-sm text-white/80">"
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1971,11 +1978,12 @@ export default function Pricing2025(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         <span>{feature}</span>
                       </div>
-                    ))  } catch (error) {
-    console.error("Error:", error);
+                    ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {service.features.length > 5 && (
@@ -1985,29 +1993,35 @@ export default function Pricing2025(req, res) {
                       <div className="text-cyan-400 text-sm font-medium text-center">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         +{service.features.length - 5} more features
+=======
+                    {service.features.length > 5 && ("
+                      <div className="text-cyan-400 text-sm font-medium text-center">
+                        +{service.features.length - 5} more features;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       </div>
-                    )  } catch (error) {
-    console.error("Error:", error);
+                    )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </div>;
                 </div>;
-                {/* Market Info */  } catch (error) {
-    console.error("Error:", error);
+                {/* Market Info */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-                <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
-                  <div className="text-center p-3 bg-white/5 rounded-lg">
-                    <div className="text-white/60 mb-1">Market Size</div>
+}"
+                <div className="grid grid-cols-2 gap-4 mb-6 text-sm">"
+                  <div className="text-center p-3 bg-white/5 rounded-lg">"
+                    <div className="text-white/60 mb-1">Market Size</div>"
                     <div className="text-white font-medium">{service.marketSize}</div>
-                  </div>
-                  <div className="text-center p-3 bg-white/5 rounded-lg">
-                    <div className="text-white/60 mb-1">Growth Rate</div>
+                  </div>"
+                  <div className="text-center p-3 bg-white/5 rounded-lg">"
+                    <div className="text-white/60 mb-1">Growth Rate</div>"
                     <div className="text-white font-medium">{service.growthRate}</div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2021,18 +2035,25 @@ export default function Pricing2025(req, res) {
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div className="text-center p-3 bg-white/5 rounded-lg">
                     <div className="text-white/60 mb-1">Market Size</div>
+=======
+                {/* Market Info */}"
+                <div className="grid grid-cols-2 gap-4 mb-6 text-sm">"
+                  <div className="text-center p-3 bg-white/5 rounded-lg">"
+                    <div className="text-white/60 mb-1">Market Size</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className="text-white font-medium">{service.marketSize}</div>
-                  </div>
-                  <div className="text-center p-3 bg-white/5 rounded-lg">
-                    <div className="text-white/60 mb-1">Growth Rate</div>
+                  </div>"
+                  <div className="text-center p-3 bg-white/5 rounded-lg">"
+                    <div className="text-white/60 mb-1">Growth Rate</div>"
                     <div className="text-white font-medium">{service.growthRate}</div>
                   </div>
                 </div>
                 {/* ROI and Setup */}
-                {/* ROI and Setup */  } catch (error) {
-    console.error("Error:", error);
+                {/* ROI and Setup */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -2041,17 +2062,24 @@ export default function Pricing2025(req, res) {
                 <div className="mb-8 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
                   <div className="text-cyan-400 font-semibold mb-2 text-center">🚀 Expected ROI:</div>
                   <p className="text-white/80 text-sm text-center">{service.roi}</p>
+=======
+}"
+                <div className="mb-8 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">"
+                  <div className="text-cyan-400 font-semibold mb-2 text-center">🚀 Expected ROI:</div>"
+                  <p className="text-white/80 text-sm text-center">{service.roi}</p>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="mt-3 grid grid-cols-2 gap-4 text-center text-sm">
-                    <div>
-                      <div className="text-white/60">Setup Time</div>
+                    <div>"
+                      <div className="text-white/60">Setup Time</div>"
                       <div className="text-white font-medium">{service.setupTime}</div>
                     </div>
-                    <div>
-                      <div className="text-white/60">Trial Period</div>
+                    <div>"
+                      <div className="text-white/60">Trial Period</div>"
                       <div className="text-white font-medium">{service.trialDays} days</div>
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2081,9 +2109,17 @@ export default function Pricing2025(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     target="_blank"
                     rel="noopener noreferrer"
+=======
+                {/* Action Buttons */}"
+                <div className="space - y-3">;
+                  <a;
+                    href={service.link}"
+                    target="_blank""
+                    rel="noopener noreferrer""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg font-semibold text-white text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                   >
-                    Get Started
+                    Get Started"
                     <ExternalLink className="w-4 h-4" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2095,20 +2131,25 @@ export default function Pricing2025(req, res) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </Link>
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}&body=Hi, I'm interested in learning more about your ${service.name} service. Please provide more information about pricing, features, and implementation.`  } catch (error) {
-    console.error("Error:", error);
+                  <a'`
+                    href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}&body=Hi, I'm interested in learning more about your ${service.name} service. Please provide more information about pricing, features, and implementation.`  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className="w-full px-6 py-3 border border-white/20 hover:border-cyan-400/30 rounded-lg font-semibold text-white text-center transition-all duration-300 hover:bg-white/5"
                   >
-                    Contact Sales
+                    Contact Sales;
                   </a>
+<<<<<<< HEAD
                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2135,15 +2176,25 @@ export default function Pricing2025(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))  } catch (error) {
     console.error("Error:", error);
+=======
+                </div>"
+                <div className="mt-6 pt-4 border-t border-white/10 text-center">"
+                  <div className="text-white/60 text-sm mb-2">Need help? Contact us:</div>"
+                  <div className="flex items-center justify-center gap-4 text-sm">"`
+                    <a href={`tel:${service.contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300">
+            ))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </motion.div>;
-          {/* No Results */  } catch (error) {
-    console.error("Error:", error);
+          {/* No Results */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -2161,6 +2212,14 @@ export default function Pricing2025(req, res) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          {filteredServices.length === 0 && ("
+            <div className="text-center py-20">"
+              <div className="text-6xl mb-4">🔍</div>"
+              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>"
+              <p className="text-white/70 mb-6">Try selecting a different category</p>
+              <button"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
 
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -2169,8 +2228,9 @@ export default function Pricing2025(req, res) {
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
-                View All Services
+                View All Services;
               </button>
+<<<<<<< HEAD
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2181,32 +2241,36 @@ export default function Pricing2025(req, res) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+=======
+            </div>"
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+            transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
+            viewport={{ once: true }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          >
+          >"
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Need Enterprise Solutions?
-            </h2>
+            </h2>"
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2226,14 +2290,15 @@ export default function Pricing2025(req, res) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               for organizations requiring multiple services or specialized implementations.
-            </p>
+            </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry&body=Hi, I'm interested in enterprise solutions and volume pricing. Please provide more information about your enterprise offerings, custom implementations, and dedicated support options."
+              <a'"
+                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry&body=Hi, I'm interested in enterprise solutions and volume pricing. Please provide more information about your enterprise offerings, custom implementations, and dedicated support options.""
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
               >
-                Contact Enterprise Sales
+                Contact Enterprise Sales"
                 <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2246,14 +2311,19 @@ export default function Pricing2025(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <a
                 href="tel:+13024640950"
+=======
+              <a"
+                href="tel:+13024640950""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
-                Call Us Now
+                Call Us Now;
               </a>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2265,43 +2335,52 @@ export default function Pricing2025(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* FAQ Section */  } catch (error) {
     console.error("Error:", error);
+=======
+      {/* FAQ Section */  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-      <section className="py-20 px-6">
+}"
+      <section className="py-20 px-6">"
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
+            transition={{ duration: 0.8 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
+            viewport={{ once: true }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="text-center mb-16"
-          >
+          >"
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Frequently Asked Questions
+              Frequently Asked Questions;
             </h2>
-          </motion.div>
+          </motion.div>"
           <div className="space-y-6">
+<<<<<<< HEAD
             {[
               {
 <<<<<<< HEAD
@@ -2313,35 +2392,42 @@ export default function Pricing2025(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 } catch (error) {
     console.error("Error:", error);
+=======
+            {[]
+              {}
+                } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             ].map((faq, index) => (;
               <motion.div;
-                key={index  } catch (error) {
-    console.error("Error:", error);
+                key={index  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
+                initial={{ opacity: 0, y: 20 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
+                viewport={{ once: true }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -2371,9 +2457,12 @@ export default function Pricing2025() {
                 viewport={{ once: true }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl"
-              >
-                <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
+              >"
+                <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>"
                 <p className="text-white/70 leading-relaxed">{faq.answer}</p>
 <<<<<<< HEAD
 
@@ -2399,17 +2488,23 @@ export default function Pricing2025() {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))  } catch (error) {
     console.error("Error:", error);
+=======
+            ))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
           </div>;
         </div>;
       </section>;
       <EnhancedFooter />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2420,12 +2515,19 @@ export default function Pricing2025() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -2436,22 +2538,19 @@ export default function Pricing2025() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 }
 
 
+
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -2467,3 +2566,6 @@ export default function Pricing2025() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

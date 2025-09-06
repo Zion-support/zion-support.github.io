@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = {
   apps: [
     {
@@ -34,13 +35,18 @@ module.exports = {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -71,6 +77,7 @@ main
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
+<<<<<<< HEAD
       name: 'bolt-zion-app',
       name: 'ci-cd-pipeline',
       name: 'ci-cd-pipeline',
@@ -80,11 +87,25 @@ main
 
 
       name: 'bolt-zion-app',
+=======
+
+
+
+
+
+
+
+
+
+      name: 'bolt-zion-app',
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 module.exports = {
   apps: [
     {
       name: 'ci-cd-pipeline',
 
+<<<<<<< HEAD
       name: 'bolt-zion-app',
       name: 'ci-cd-pipeline',
       name: 'ci-cd-pipeline',
@@ -94,12 +115,18 @@ main
       script: 'npm',
       args: 'run build',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:ecosystem.config.cjs
+=======
+
+      script: 'npm',
+      args: 'run build',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -136,17 +163,23 @@ main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -181,11 +214,17 @@ main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         NODE_ENV: 'production',
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+        NODE_ENV: 'production'
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       },
       cron_restart: '0 0 * * *', // Daily restart
       error_file: './logs/ci-cd-error.log',
       out_file: './logs/ci-cd-out.log',
       log_file: './logs/ci-cd-combined.log',
+<<<<<<< HEAD
       time: true,    },
     {
 <<<<<<< HEAD
@@ -381,12 +420,26 @@ main
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:ecosystem.config.cjs
 =======
+=======
+      time: true
+    },
+    {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -395,6 +448,7 @@ main
     },
     {
       name: 'auto-fix',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
 =======
@@ -434,6 +488,8 @@ main
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       name: 'continuous-automation',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
@@ -445,10 +501,18 @@ main
       env: {
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         NODE_ENV: 'production'
 
       },
@@ -459,12 +523,23 @@ main
       time: true
     },
     {
+<<<<<<< HEAD
         NODE_ENV: 'development',
 
 
 
         NODE_ENV: 'development',
 
+=======
+
+
+
+
+
+
+        NODE_ENV: 'development',
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -477,6 +552,12 @@ main
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'auto-commit-fixes',
@@ -516,6 +597,168 @@ main
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
+=======
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'performance-monitor',
+        PERFORMANCE_THRESHOLD: '3000',
+        BUNDLE_SIZE_LIMIT: '2MB',
+      },
+      cron_restart: '0 */8 * * *', // Restart every 8 hours
+      log_file: 'logs/pm2/performance-monitor.log',
+      error_file: 'logs/pm2/performance-monitor-error.log',
+      out_file: 'logs/pm2/performance-monitor-out.log',
+    },
+    // NEW: Intelligent Test Automation
+    {
+      name: 'test-automation',
+      script: 'scripts/pm2/test-automation.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'test-automation',
+        TEST_COVERAGE_THRESHOLD: '80',
+        AUTO_RETRY_FAILED: 'true',
+        PARALLEL_TESTS: 'true',
+      },
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      log_file: 'logs/pm2/test-automation.log',
+      error_file: 'logs/pm2/test-automation-error.log',
+      out_file: 'logs/pm2/test-automation-out.log',
+    },
+    // NEW: Security Scanner
+    {
+      name: 'security-scanner',
+      script: 'scripts/pm2/security-scanner.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'security-scanner',
+        SCAN_DEPENDENCIES: 'true',
+        SCAN_CODE: 'true',
+        SCAN_CONFIGS: 'true',
+        ALERT_ON_CRITICAL: 'true',
+      },
+      cron_restart: '0 */12 * * *', // Restart every 12 hours
+      log_file: 'logs/pm2/security-scanner.log',
+      error_file: 'logs/pm2/security-scanner-error.log',
+      out_file: 'logs/pm2/security-scanner-out.log',
+    },
+    // NEW: Build Optimization Monitor
+    {
+      name: 'build-optimizer',
+      script: 'scripts/pm2/build-optimizer.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'build-optimizer',
+        OPTIMIZE_BUNDLES: 'true',
+        TREE_SHAKING: 'true',
+        CODE_SPLITTING: 'true',
+        MINIFICATION: 'true',
+      },
+      cron_restart: '0 0 * * *', // Restart daily at midnight
+      log_file: 'logs/pm2/build-optimizer.log',
+      error_file: 'logs/pm2/build-optimizer-error.log',
+      out_file: 'logs/pm2/build-optimizer-out.log',
+    },
+    // NEW: Git Workflow Automation
+    {
+      name: 'git-workflow',
+      script: 'scripts/pm2/git-workflow.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'git-workflow',
+        AUTO_BRANCH_CLEANUP: 'true',
+        AUTO_MERGE_SAFE: 'true',
+        CONFLICT_RESOLUTION: 'true',
+        BRANCH_STRATEGY: 'gitflow',
+      },
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      log_file: 'logs/pm2/git-workflow.log',
+      error_file: 'logs/pm2/git-workflow-error.log',
+      out_file: 'logs/pm2/git-workflow-out.log',
+    },
+    // NEW: Environment Health Monitor
+    {
+      name: 'health-monitor',
+      script: 'scripts/pm2/health-monitor.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'health-monitor',
+        MONITOR_SYSTEM: 'true',
+        MONITOR_PROCESSES: 'true',
+        MONITOR_RESOURCES: 'true',
+        ALERT_THRESHOLD: '80',
+      },
+      cron_restart: '0 */1 * * *', // Restart every hour
+      log_file: 'logs/pm2/health-monitor.log',
+      error_file: 'logs/pm2/health-monitor-error.log',
+      out_file: 'logs/pm2/health-monitor-out.log',
+    },
+    // NEW: Documentation Generator
+    {
+      name: 'docs-generator',
+      script: 'scripts/pm2/docs-generator.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'docs-generator',
+        AUTO_GENERATE: 'true',
+        UPDATE_README: 'true',
+        API_DOCS: 'true',
+        COMPONENT_DOCS: 'true',
+      },
+      cron_restart: '0 2 * * *', // Restart daily at 2 AM
+      log_file: 'logs/pm2/docs-generator.log',
+      error_file: 'logs/pm2/docs-generator-error.log',
+      out_file: 'logs/pm2/docs-generator-out.log',
+    },
+    // NEW: SEO and Accessibility Monitor
+    {
+      name: 'seo-accessibility',
+      script: 'scripts/pm2/seo-accessibility.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'seo-accessibility',
+        CHECK_SEO: 'true',
+        CHECK_ACCESSIBILITY: 'true',
+        CHECK_PERFORMANCE: 'true',
+        LIGHTHOUSE_AUDIT: 'true',
+      },
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      log_file: 'logs/pm2/seo-accessibility.log',
+      error_file: 'logs/pm2/seo-accessibility-error.log',
+      out_file: 'logs/pm2/seo-accessibility-out.log',
+    },
+  ],
+};
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 module.exports = {}
   "apps": [{}]
       name: 'ziontechgroup-web',
@@ -700,6 +943,7 @@ module.exports = {}
       "error_file": 'logs/pm2/type-checker-error.log',
       "out_file": 'logs/pm2/type-checker-out.log'};
   ];
+<<<<<<< HEAD
 };
 
 };
@@ -707,6 +951,18 @@ module.exports = {}
 };
 
 };
+=======
+
+
+};
+
+
+};
+
+
+};
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       name: 'comprehensive-automation',
       script: 'node',
@@ -751,6 +1007,7 @@ module.exports = {}
       script: 'npm',
       args: 'audit',
       cwd: '/workspace',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -849,6 +1106,8 @@ main
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.cjs',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       instances: 1,
       autorestart: true,
@@ -1304,6 +1563,7 @@ module.exports = {}
       out_file: "automation/logs/build-monitor-out.log",
       time: true
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -1334,3 +1594,7 @@ module.exports = {}
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

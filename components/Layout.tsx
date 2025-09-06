@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -219,11 +220,14 @@ export default function Layout({
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
         <meta name="keywords" content={keywords} />
         <meta property="og:title" content={ogTitle || title} />
         <meta property="og:description" content={ogDescription || description} />
@@ -277,3 +281,8 @@ main
 main
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

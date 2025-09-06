@@ -9,33 +9,39 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const series: number[] = [];
   let last = base;
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < n; i++) {}
     const change = (Math && Math.random() - 0 && 0.5) * 2 * volatility * base;
     last = Math && Math.max(0, Math && Math.round(last + change));
     series && series.push(last);
   }
   return series;
 
-function generateSeries(n: number, base: number, volatility = 0.15) {
+function generateSeries(n: number, base: number, volatility = 0.15) {}
   const series: number[] = []; let last = base,
-  for (let i = 0, i < n, i++) {
+  for (let i = 0, i < n, i++) {}
     const change = (Math.random() - 0.5) * 2 * volatility * base;
     last = Math.max(0, Math.round(last + change));
     series.push(last)
   }
   return series;
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
 
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
-    return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
+    return `${d && d.getMonth() + 1}/${d && d.getDate()}`;`
     return `${d.getMonth() + 1}/${d.getDate()}`
   });
 
 
+<<<<<<< HEAD
 return `${d.getMonth() + 1}/${d.getDate()}`;
   });
 
@@ -43,107 +49,113 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const marketplace = [
     {
       key: 'jobs_24h'
+=======
+  const marketplace = []
+    {'
+      key: 'jobs_24h''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       label: 'Jobs posted (24h)'
       value: rand(15, 60)
       trend: generateSeries(14, 40)
     }
-    {
-      key: 'jobs_7d'
+    {'
+      key: 'jobs_7d''
       label: 'Jobs posted (7d)'
       value: rand(120, 360)
       trend: generateSeries(14, 260)
     }
-    {
-      key: 'jobs_total'
+    {'
+      key: 'jobs_total''
       label: 'Jobs posted (total)'
       value: rand(5000, 15000)
     }
-    {
-      key: 'talent_onboarded'
+    {'
+      key: 'talent_onboarded''
       label: 'Talent onboarded'
       value: rand(50, 200)
       trend: generateSeries(14, 120)
     }
-    {
-      key: 'proposal_conversions'
+    {'
+      key: 'proposal_conversions''
       label: 'Proposal conversions'
       value: rand(30, 120)
       trend: generateSeries(14, 80)
     }
-    {
-      key: 'job_fill_rate'
+    {'
+      key: 'job_fill_rate''
       label: 'Job fill rate %'
       value: rand(45, 92)
       trend: generateSeries(14, 70)
     }
   ];
-  const dao = [
-    {
-      key: 'proposals_created'
+  const dao = []
+    {'
+      key: 'proposals_created''
       label: 'Proposals created'
       value: rand(3, 20)
       trend: generateSeries(14, 12)
     }
-    {
-      key: 'voter_participation'
+    {'
+      key: 'voter_participation''
       label: 'Voter participation %'
       value: rand(10, 65)
       trend: generateSeries(14, 38)
-    }
-    { key: 'delegate_heat', label: 'Delegate activity', value: rand(100, 600) }
+    }'
+    { key: 'delegate_heat', label: 'Delegate activity', value: rand(100, 600) }'
     { key: 'region_quorum', label: 'Regions above quorum', value: rand(2, 7) }
   ];
-  const token = [
-    {
-      key: 'circulating_supply'
+  const token = []
+    {'
+      key: 'circulating_supply''
       label: 'Circulating supply (ZION$)'
       value: rand(1_000_000, 2_500_000)
       trend: generateSeries(14, 1_700_000)
     }
-    {
-      key: 'active_wallets'
+    {'
+      key: 'active_wallets''
       label: 'Active wallets'
       value: rand(4_000, 12_000)
       trend: generateSeries(14, 8_000)
     }
-    {
-      key: 'tx_volume_daily'
+    {'
+      key: 'tx_volume_daily''
       label: 'Transaction volume (daily)'
       value: rand(100_000, 700_000)
       trend: generateSeries(14, 300_000)
     }
-    {
-      key: 'treasury_health'
+    {'
+      key: 'treasury_health''
       label: 'Treasury health (USD)'
       value: rand(1_000_000, 7_000_000)
       trend: generateSeries(14, 3_500_000)
-    }
+    }'
     { key: 'top_earners', label: 'Top earners (count)', value: rand(5, 25) }
   ];
-  const multiverse = [
-    {
-      key: 'active_instances'
+  const multiverse = []
+    {'
+      key: 'active_instances''
       label: 'Total active sub-instances'
       value: rand(8, 32)
       trend: generateSeries(14, 20)
     }
-    {
-      key: 'map_overlay'
+    {'
+      key: 'map_overlay''
       label: 'Map overlay intensity'
       value: rand(100, 900)
     }
-    {
-      key: 'top5_growth'
+    {'
+      key: 'top5_growth''
       label: 'Top 5 by user growth'
       value: rand(500, 2500)
     }
-    {
-      key: 'cross_token'
+    {'
+      key: 'cross_token''
       label: 'Cross-instance token movement'
       value: rand(1_000, 12_000)
       trend: generateSeries(14, 6_000)
     }
   ];
+<<<<<<< HEAD
   const response: any = {
     marketplace
     dao
@@ -161,9 +173,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   if (req.query.compare === 'quarter') {
+=======
+  const response: any = {'
+  if (req.query.compare === 'quarter') {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const factor = 0.8 + Math.random() * 0.4;
-    response.compare = {
-      prevQuarter: {
+    response.compare = {}
+      prevQuarter: {}
         })),
       },
     }
@@ -191,3 +207,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   res.status(200).json(response)
 }
+'`

@@ -23,6 +23,7 @@ export default function DomainDNSMonitorPage() {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
 =======
@@ -48,6 +49,15 @@ export default function DomainDNSMonitorPage() {
 >>>>>>>> 207d7230e0649fa517bb469b27623282180528c9:backup-problematic-files/components/audit-log-vault.tsx
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/domain-dns-monitor.tsx.backup.1755991717
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<
+=
+
+
+  return (_<UltraAdvancedFuturisticBackground>
+
+>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>Domain & DNS Health Monitor | Zion Tech Group</title>
         <meta name="description" content="Track domain expiry, DNS provider health, NS/DS drift, DNSSEC, and MX/SPF/DMARC correctness. Catch misconfigurations before outages." />

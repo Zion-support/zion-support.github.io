@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -179,32 +180,38 @@ interface WorkspaceHeaderProps {;
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard",;
+=======
+
+import React from "react","
+import { Button } from "@/components/ui/button","
+import { type Company } from "./CompanyDashboard","
+import { Bell, Users, Settings } from "lucide-react",
+
+
+interface WorkspaceHeaderProps {};
+  company: Company;
+}
+
+export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
+  return (
+
+
+};
+"
+import React from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { type Company } from "./CompanyDashboard",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Bell, Users, Settings } from "lucide-react";
 interface WorkspaceHeaderProps {;
   company: Company;
 }
-<<<<<<< HEAD
-;
-export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
-  return (;
-
-=======
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { type Company } from "./CompanyDashboard",;
-import { Bell, Users, Settings } from "lucide-react",;
-;
-interface WorkspaceHeaderProps {;
-  company:Company;
-}
-;
-export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    <div className="space-y-6">;
-      <div className="flex items-center justify-between">;
-        <div className="flex items-center gap-4">;
+"
+    <div className="space-y-6">;"
+      <div className="flex items-center justify-between">;"
+        <div className="flex items-center gap-4">;"
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <img
               src={company && company.logoUrl || "/placeholder && placeholder.svg"} 
@@ -278,6 +285,34 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
         <div className="bg - card rounded - lg p - 4 border border - border">;
           <div className="text - sm text - muted - foreground">Interviews Scheduled</div>;
           <div className="text - 2xl font - medium">12</div>;
+=======
+"
+        <div className="flex items-center gap-2">;"
+          <Button variant="outline" size="icon">;"
+            <Bell className="h-4 w-4" />;
+          </Button>;"
+          <Button variant="outline" size="icon">;"
+            <Users className="h-4 w-4" />;
+          </Button>;"
+          <Button variant="outline" size="icon">;"
+            <Settings className="h-4 w-4" />;
+          </Button>;
+        </div>;
+      </div>;
+"
+      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">;"
+        <div className="bg-card rounded-lg p-4 border border-border">;"
+          <div className="text-sm text-muted-foreground">Active Job Listings</div>;"
+          <div className="text-2xl font-medium">8</div>;
+        </div>;"
+        <div className="bg-card rounded-lg p-4 border border-border">;"
+          <div className="text-sm text-muted-foreground">Candidate Applications</div>;"
+          <div className="text-2xl font-medium">47</div>;
+        </div>;"
+        <div className="bg-card rounded-lg p-4 border border-border">;"
+          <div className="text-sm text-muted-foreground">Interviews Scheduled</div>;"
+          <div className="text-2xl font-medium">12</div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>;
       </div>;
 <<<<<<< HEAD
@@ -285,75 +320,71 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
 }
 =======
     </div>;
-<<<<<<< HEAD
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
+
+
 }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / workspace / WorkspaceHeader.tsx;
-import React from './react';
-import { Button } from '@/components / ui / button';
-import { type, Company } from './CompanyDashboard';
+import React from './react';'
+import { Button } from '@/components / ui / button';'
+import { type, Company } from './CompanyDashboard';'
 import { Bell, Users, Settings } from './lucide-react';
-interface WorkspaceHeaderProps {
+interface WorkspaceHeaderProps {}
   company: Company;
 }
-export /**
- * WorkspaceHeader - Function description
+export /**;
+ * WorkspaceHeader - Function description;
  */
-function WorkspaceHeader() {
-  return (
-    <div className="space - y-6">;
-      <div className="flex items - center justify - between">;
-        <div className="flex items - center gap - 4">;
+function WorkspaceHeader() {}
+  return ("
+    <div className="space - y-6">;"
+      <div className="flex items - center justify - between">;"
+        <div className="flex items - center gap - 4">;"
           <div className="h - 12 w - 12 rounded - lg bg - card flex items - center justify - center border border - border">;
-            <img;
+            <img;"
               src={company.logo_url || "/placeholder.svg"}
-              alt={company.name}
+              alt={company.name}"
               className="max - h-10 max - w-10";
             />;
           </div>;
-          <div>;
-            <h1 className="text - 3xl font - bold tracking - tight">{company.name} Workspace</h1>;
+          <div>;"
+            <h1 className="text - 3xl font - bold tracking - tight">{company.name} Workspace</h1>;"
             <p className="text - muted - foreground">;
               {company.plan} Plan · {company.team_size} team members;
             </p>;
           </div>;
-        </div>;
-        <div className="flex items - center gap - 2">;
-          <Button variant="outline" size="icon">;
+        </div>;"
+        <div className="flex items - center gap - 2">;"
+          <Button variant="outline" size="icon">;"
             <Bell className="h - 4 w - 4" />;
-          </Button>;
-          <Button variant="outline" size="icon">;
+          </Button>;"
+          <Button variant="outline" size="icon">;"
             <Users className="h - 4 w - 4" />;
-          </Button>;
-          <Button variant="outline" size="icon">;
+          </Button>;"
+          <Button variant="outline" size="icon">;"
             <Settings className="h - 4 w - 4" />;
           </Button>;
         </div>;
-      </div>;
-      <div className="grid grid - cols - 1 sm: grid - cols - 3 gap - 4">;
-        <div className="bg - card rounded - lg p - 4 border border - border">;
-          <div className="text - sm text - muted - foreground">Active Job Listings</div>;
+      </div>;"
+      <div className="grid grid - cols - 1 sm: grid - cols - 3 gap - 4">;"
+        <div className="bg - card rounded - lg p - 4 border border - border">;"
+          <div className="text - sm text - muted - foreground">Active Job Listings</div>;"
           <div className="text - 2xl font - medium">8</div>;
-        </div>;
-        <div className="bg - card rounded - lg p - 4 border border - border">;
-          <div className="text - sm text - muted - foreground">Candidate Applications</div>;
+        </div>;"
+        <div className="bg - card rounded - lg p - 4 border border - border">;"
+          <div className="text - sm text - muted - foreground">Candidate Applications</div>;"
           <div className="text - 2xl font - medium">47</div>;
-        </div>;
-        <div className="bg - card rounded - lg p - 4 border border - border">;
-          <div className="text - sm text - muted - foreground">Interviews Scheduled</div>;
+        </div>;"
+        <div className="bg - card rounded - lg p - 4 border border - border">;"
+          <div className="text - sm text - muted - foreground">Interviews Scheduled</div>;"
           <div className="text - 2xl font - medium">12</div>;
         </div>;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -369,6 +400,11 @@ function WorkspaceHeader() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 
 
@@ -377,26 +413,23 @@ function WorkspaceHeader() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );}
- interface WorkspaceHeaderProps {
-  company: Company 
-}export function WorkspaceHeader ({
-  company 
-}: WorkspaceHeaderProps) {
-  return (<div className="space-y-6" > <div className="flex items-center justify-between" > <div className="flex items-center gap-4" > <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border" > <img src= {
-  company.logoUrl || "/placeholder.svg" 
-}alt= {
-  company.name 
-}className="max-h-10 max-w-10" /> </div> <div> <h1 className="text-3xl font-bold tracking-tight" > {
-  company.name 
-}Workspace</h1> <p className="text-muted-foreground" > {
-  company.plan 
-}Plan · {
-  company.teamSize 
+ interface WorkspaceHeaderProps {}
+  company: Company;
+}export function WorkspaceHeader() { return null; }
+}alt= {}
+  company.name "
+}className="max-h-10 max-w-10" /> </div> <div> <h1 className="text-3xl font-bold tracking-tight" > {}
+  company.name "
+}Workspace</h1> <p className="text-muted-foreground" > {}
+  company.plan;
+}Plan · {}
+  company.teamSize "
 }team members flex items-center gap-2"> <Button variant=" outline"size=" icon"> <Bell className=" h-4 w-4"/> </Button> <Button variant=" outline"size=" icon"> <Users className=" h-4 w-4"/> </Button> <Button variant=" outline"size=" icon"> <Settings className=" h-4 w-4"/> </Button> </div> </div> </div> <div className=" bg-card rounded-lg p-4 border border-border"> <div className=" text-sm text-muted-foreground">Candidate Applications</div> <div className=" text-2xl font-medium">47</div> </div> <div className=" bg-card rounded-lg p-4 border border-border"> <div className=" text-sm text-muted-foreground">Interviews Scheduled</div> <div className=" text-2xl font-medium" >12</div> </div> </div> </div>) 
 }
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -407,3 +440,9 @@ function WorkspaceHeader() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

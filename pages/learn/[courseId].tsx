@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import ProgressBar from '../../components/learn/ProgressBar',
@@ -69,11 +70,15 @@ const cp = (progData.progress && progData.progress[courseId]) || {
         completedLessons: [],
       };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
     load();
   }, [courseId]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -145,6 +150,9 @@ async function onFinalQuizComplete(score: number) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const currentLesson = useMemo(;
     () => course?.lessons?.find((l: any) => l && l.id === currentLessonId),;
     [course, currentLessonId];
@@ -172,10 +180,10 @@ const percent = Math.round(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     );
-    const resp = await fetch('/api/learn/progress', {;
-      method: 'POST',;
+    const resp = await fetch('/api/learn/progress', {;'
+      method: 'POST',;'
       headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({;
+      body: JSON && JSON.stringify({;'
         userId: 'demo-user',;
         courseId,;
         lessonId,;
@@ -194,6 +202,7 @@ const percent = Math.round(
     if (currentLessonId) markLessonComplete(currentLessonId);  }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 <<<<<<< HEAD
@@ -203,6 +212,10 @@ const percent = Math.round(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   async function onFinalQuizComplete(): any (score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
@@ -210,6 +223,7 @@ const percent = Math.round(
     setFinalPassed(passed);  }
 
   if (!course) return <div>Loading...</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -223,11 +237,16 @@ const percent = Math.round(
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <button
+=======
+
+                  <button'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l && l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l && l.id)}
                   >                    {l && l.title}
                   </button>;
                 </li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -248,12 +267,17 @@ import {useRouter} from 'next/router';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect, useMemo, useState } from 'react';
+=======
+'
+import { useEffect, useMemo, useState } from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useRouter } from 'next/router';
-
-import ProgressBar from '../../components/learn/ProgressBar';
-import Quiz from '../../components/learn/Quiz';
-import CertificatePreview from '../../components/learn/CertificatePreview';
+'
+import ProgressBar from '../../components/learn/ProgressBar';'
+import Quiz from '../../components/learn/Quiz';'
+import CertificatePreview from '../../components/learn/CertificatePreview';'
 import CoachWidget from '../../components/learn/CoachWidget';
+<<<<<<< HEAD
 export default function CourseView(req, res) {
   try {
   const router = useRouter();
@@ -325,6 +349,9 @@ export default function CourseView(req, res) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -332,10 +359,11 @@ export default function CourseView(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return (
-    <div className="grid lg:grid-cols-3 gap-6">
+    <div className="grid lg:grid-cols-3 gap-6">"
       <div className="lg:col-span-2 space-y-4">
 <<<<<<< HEAD
         <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -370,11 +398,17 @@ setFinalPassed(passed);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <h1 className="text-2xl font-semibold">{course.title}</h1>
           <div className="text-gray-500 text-sm">{course.category} • {course.level}</div>
+=======
+"
+          <h1 className="text-2xl font-semibold">{course.title}</h1>"
+          <div className="text-gray-500 text-sm">{course.category} • {course.level}</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="mt-3">
-            <ProgressBar value={progress.percent || 0} />
+            <ProgressBar value={progress.percent || 0} />"
             <div className="text-xs text-gray-500 mt-1">Progress: {progress.percent || 0}%</div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <button
@@ -445,10 +479,14 @@ setFinalPassed(passed);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
             </ul>;
           </aside>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -457,16 +495,20 @@ setFinalPassed(passed);
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <section className='lg:col-span-3 space-y-4'>;
-            {currentLesson ? (;
-              <div className='border rounded p-4'>;
-                <div className='font-medium'>{currentLesson && currentLesson.title}</div>;
+            {currentLesson ? (;'
+              <div className='border rounded p-4'>;'
+                <div className='font-medium'>{currentLesson && currentLesson.title}</div>;'
                 <div className='mt-2 text-sm whitespace-pre-line'>;
                   {currentLesson && currentLesson.content}
                 </div>;
-                {currentLesson && currentLesson.quiz?.questions?.length ? (;
+                {currentLesson && currentLesson.quiz?.questions?.length ? (;'
                   <div className='mt-4'>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -483,17 +525,21 @@ setFinalPassed(passed);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <Quiz
+=======
+                    <Quiz;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       questions={currentLesson && currentLesson.quiz.questions}
                       onComplete={onModuleQuizComplete}
                     />;
                   </div>;
                 ) : (;
-                  <button
+                  <button'
                     className='mt-3 px-4 py-2 bg-green-600 text-white rounded'
                     onClick={() => markLessonComplete(currentLesson && currentLesson.id)}
                   >;
                     Mark Complete;
                   </button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -718,13 +764,21 @@ if (return <div > Loading...</div>) {
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
+=======
+
+
+            {currentLesson ? ("
+              <div className="border rounded p-4">"
+                <div className="font-medium">{currentLesson.title}</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="mt-2 text-sm whitespace-pre-line">{currentLesson.content}</div>
-                {currentLesson.quiz?.questions?.length ? (
+                {currentLesson.quiz?.questions?.length ? ("
                   <div className="mt-4">
                     <Quiz questions={currentLesson.quiz.questions} onComplete={onModuleQuizComplete} />
                   </div>
-                ) : (
+                ) : ("
                   <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded" onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -801,11 +855,23 @@ if (return <div > Loading...</div>) {
       </div>
 
 <<<<<<< HEAD
-      <div className="space-y-4">
-<<<<<<< HEAD
 =======
 
+            {course.finalQuiz?.questions?.length ? ("
+              <div className="border rounded p-4">"
+                <div className="font-medium mb-2">Final Certification Quiz</div>
+                <Quiz questions={course.finalQuiz.questions} onComplete={onFinalQuizComplete} />
+                {finalPassed && (
 
+          </section>
+        </div>
+      </div>
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      <div className="space-y-4">
+
+
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -821,10 +887,17 @@ if (return <div > Loading...</div>) {
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
           <div className="text-sm text-gray-600 mt-1">Opt-in to boost your visibility in matches when certified skills apply.</div>
+=======
+        <CoachWidget />"
+        <div className="border rounded p-3">"
+          <div className="font-medium">Profile Boost</div>"
+          <div className="text-sm text-gray-600 mt-1">Opt-in to boost your visibility in matches when certified skills apply.</div>'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <button className="mt-2 px-3 py-2 bg-indigo-600 text-white rounded" onClick={() => alert('Preference saved (demo)')}>Enable Boost</button>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -854,19 +927,22 @@ if (return <div > Loading...</div>) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 
-=======
+
 
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -874,6 +950,7 @@ if (return <div > Loading...</div>) {
 
 
 
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -893,3 +970,6 @@ if (return <div > Loading...</div>) {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

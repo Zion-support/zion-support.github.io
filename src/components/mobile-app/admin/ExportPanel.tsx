@@ -1,13 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+=======
+import React from "react","
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from "@/components/ui/button",
-import { Download } from 'lucide-react'
+import { Download } from 'lucide-react'"
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -445,3 +451,6 @@ return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export &
 '"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

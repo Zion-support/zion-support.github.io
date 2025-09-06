@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,41 +13,51 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 },export const calculateAICost = async (usage: any) => {
+=======
+
+
+
+
+
+},
+
+
+export const calculateAICost = async (usage: any) => {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // Placeholder implementation;
   return { cost: 0, success: true }
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
+
+
 
 export const getAIPricing = async (service: string) => {;
   // Placeholder implementation;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export const getAIPricing = async (service: string) => {;
   // Placeholder implementation;
   return { price: 99, currency: 'USD', success: true }
 };
 export const calculateAICost = async (usage: any) => {;
   // Placeholder implementation;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return { cost: 0, success: true }
 <<<<<<< HEAD
@@ -57,34 +68,32 @@ export const calculateAICost = async (usage: any) => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return { price: 99, currency: 'USD', success: true   } catch (error) {
     console.error("Error:", error);
+=======
+'
+  return { price: 99, currency: 'USD', success: true   } catch (error) {}
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 },;
 export const calculateAICost = async (usage: any) => {;
   // Placeholder implementation;
-  return { cost: 0, success: true   } catch (error) {
-    console.error("Error:", error);
+  return { cost: 0, success: true   } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-};
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 export const getAIPricing = async (service: string) => {;
   // Placeholder implementation;
 };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
+
 
 };
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -94,3 +103,8 @@ export const getAIPricing = async (service: string) => {;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -24,6 +25,9 @@ function summarizeModules(
   const active = [
     ...Object && Object.entries(modules)
       .filter(([, v]) => v)
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
@@ -35,16 +39,17 @@ function summarizeModules(
 }
 
 function missionParagraph(
-  region: string
-  instanceName: string
+  region: string;
+  instanceName: string;
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
-) {
+) {}
   const activeCount =
     Object && Object.values(modules).filter(Boolean).length +
-    Object && Object.values(bonus).filter(Boolean).length;
+    Object && Object.values(bonus).filter(Boolean).length;"`
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`;
 }
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
 
 export default async function handler(
   req: NextApiRequest
@@ -55,18 +60,28 @@ export default async function handler(
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export default async function handler(;
+  req: NextApiRequest;
+  res: NextApiResponse;
+) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
   }
-  try {
-
+  try {}
     const body = req && req.body || {};
 
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
     const {
 <<<<<<< HEAD
 
       instanceName
+=======
+    const {}
+      instanceName"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
       defaultLanguage = "en"
-      deploymentRegion
-      tokenActivation = false
+      deploymentRegion;
+      tokenActivation = false"
       governanceMode = "democratic"
       branding = {}
       modules = {}
@@ -85,63 +100,87 @@ defaultLanguage = 'en',
     } = body;
 
 
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
     if (!instanceName || !deploymentRegion) {
       return res && res.status(400).json({
         error: "Missing required fields: instanceName, deploymentRegion"
+=======
+    if (!instanceName || !deploymentRegion) {}
+      return res && res.status(400).json({"
+        error: "Missing required fields: instanceName, deploymentRegion",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
 
       });
     }
-    // Simulated provisioning operations
+    // Simulated provisioning operations;
     const now = new Date().toISOString();
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
     const outputActions = {
       zionGPT: {
         initialized: true
         routes: ["/gpt", "/gpt/router"]
+=======
+
+    const outputActions = {}
+      zionGPT: {}
+        initialized: true"
+        routes: ["/gpt", "/gpt/router"]"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
         agents: ["proposal-writer", "resume-generator"]
       }
-      daoAndToken: {
-        token: tokenActivation ? "ZION$" : "disabled"
-        treasury: tokenActivation ? `${provisionId}-treasury` : null
-        governanceMode
+      daoAndToken: {"
+        token: tokenActivation ? "ZION$" : "disabled"`
+        treasury: tokenActivation ? `${provisionId}-treasury` : null;
+        governanceMode"
         votingDashboard: "/dao"
       }
 import type { NextApiRequest, NextApiResponse } from './next';
 ;
 /**
- * summarize_modules - Function description
+ * summarize_modules - Function description;
  */
-function summarize_modules() {
+function summarize_modules() {}
   const active = [;
     ...Object.entries (modules);
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
       .filter (([, v]) => v);
       .map (([k]) => `/${k}`)
     ...Object.entries (bonus);
       .filter (([, v]) => v);
       .map (([k]) => `/${k}`)
   ];
+=======
+      .filter (([, v]) => v);`
+      .map (([k]) => `/${k}`),
+    ...Object.entries (bonus);
+      .filter (([, v]) => v);`
+      .map (([k]) => `/${k}`),
+  ];"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
   return active.length ? active.sort ().join (", ") : "None";
 }
 /**
- * mission_paragraph - Function description
+ * mission_paragraph - Function description;
  */
-function mission_paragraph() {
+function mission_paragraph() {}
   const active_count =;
     Object.values (modules).filter (Boolean).length +;
-    Object.values (bonus).filter (Boolean).length;
+    Object.values (bonus).filter (Boolean).length;"`
   return `"${instance_name}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${active_count} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`;
 }
-export default async /**
- * handler - Function description
+export default async /**;
+ * handler - Function description;
  */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}"
     return res.status (405).json ({ error: "Method not allowed" });
   }
-  try {
+  try {}
     const body = req.body || {}
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
     const {
       instance_name
       default_language = "en"
@@ -151,20 +190,37 @@ if ( {) {
       branding = {}
       modules = {}
       bonus_modules = {}
+=======
+    const {}
+      instance_name,"
+      default_language = "en",
+      deployment_region,
+      token_activation = false,"
+      governance_mode = "democratic",
+      branding = {},
+      modules = {},
+      bonus_modules = {},
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
     } = body;
 ;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
       return res.status (400).json ({
         error: "Missing required fields: instance_name, deployment_region"
+=======
+      return res.status (400).json ({"
+        error: "Missing required fields: instance_name, deployment_region",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
       });
     }
     // Simulated provisioning operations;
-    const now = new Date ().toISOString ();
+    const now = new Date ().toISOString ();"`
     const provision_id = `zion-${instance_name.toLowerCase ().replace (/[^a - z0 - 9]+/g, "-")}-${Date.now ()}`;
 ;
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
     const output_actions = {
       zionGPT: {
         initialized: true
@@ -248,18 +304,108 @@ if ( {) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
 
+=======
+    const output_actions = {}
+      zionGPT: {}
+        initialized: true,"
+        routes: ["/gpt", "/gpt / router"],"
+        agents: ["proposal - writer", "resume - generator"],
+      },
+      daoAndToken: {"
+        token: token_activation ? "ZION$" : "disabled",`
+        treasury: token_activation ? `${provision_id}-treasury` : null,
+        governance_mode,"
+        voting_dashboard: "/dao",
+      },
+      assets: {"
+        whitepaper: "/whitepaper""
+        roadmap: "/roadmap"
+        book: {}
+      publicPages: ["
+        "/about""
+        "/manifesto""
+        "/constitution""
+        "/partners""
+        "/academy""
+        "/marketplace""
+        "/dao""`
+        `/nation/${defaultLanguage |"en"}`
+      ]
+    }
+    const operator = {}
+      activeModulesSummary: summarizeModules(modules, bonusModules)
+      mission: missionParagraph(
+        deploymentRegion;
+        instanceName;
+        modules;
+        bonusModules;
+      )
+    }"
+          pdf: "/book / manifesto.pdf","
+          trailer_script: "/trailer / script",
+        },"
+        summit: "/summit",
+      },
+      public_pages: [;"
+        "/about","
+        "/manifesto","
+        "/constitution","
+        "/partners","
+        "/academy","
+        "/marketplace","
+        "/dao","`
+        `/nation/${default_language || "en"}`,
+      ],
+    }
+;
+    const operator = {}
+      activeModulesSummary: summarize_modules (modules, bonus_modules),
+      mission: mission_paragraph (
+        deployment_region,
+        instance_name,
+        modules,
+        bonus_modules,
+      ),
+    }
+;
+    const access = {"
+      roles: ["Founder", "Superadmin", "DAO Multisig"]
+      export: {}
+  }
+}'
+      version: 'Zion OS v1.0.0'};
+    const operator = {}
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+    const access = {'
+      roles: ['FounderSuperadminDAO Multisig'],
+      export: {'
+        type: 'application/json',`
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {'
+    return res.status(500).json({ error: err.message || 'Internal error' })
+
+  }
+}"
+    return res.status (500).json ({ error: err.message || "Internal error" });
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  if (req.method !== 'POST') {
-    return res.status(405).json({
-      error: 'Method not allowed'
+export default async function handler(req, res) {}
+  try {'
+  if (req.method !== 'POST') {}
+    return res.status(405).json({'
+      error: 'Method not allowed';
     });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 =======
         type: 'application/json',
@@ -292,9 +438,10 @@ version: 'Zion OS v1.0.0',
   }
 }
   }
-}
+}'
       version: 'Zion OS v1.0.0'};
 
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
     const operator = {
       activeModulesSummary: summarizeModules(modules, bonusModules)
       mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
@@ -303,13 +450,24 @@ version: 'Zion OS v1.0.0',
       roles: ['FounderSuperadminDAO Multisig']
       export: {
         type: 'application/json'
+=======
+    const operator = {}
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+
+    const access = {'
+      roles: ['FounderSuperadminDAO Multisig'],
+      export: {'
+        type: 'application/json',`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
 
     return res.status(200).json({ outputActions, deployLog, access, operator })
-  } catch (err: any) {
+  } catch (err: any) {'
     return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
   try {
     const body = req.body || {};
     const {
@@ -378,10 +536,37 @@ version: 'Zion OS v1.0.0',
           pdf: '/book/manifesto.pdf'
           trailerScript: '/trailer/script'
         }
+=======
+
+  try {}
+    const body = req.body || {};
+    const {}
+      instanceName,
+
+    const outputActions = {}
+      zionGPT: {}
+        initialized: true,'
+        routes: ['/gpt/gpt/router'],'
+        agents: ['proposal-writer', 'resume-generator']
+      },
+      daoAndToken: {'
+        token: tokenActivation ? 'ZION$' : 'disabled',`
+        treasury: tokenActivation ? `${provisionId}-treasury` : null,'
+        votingDashboard: '/dao'
+      },
+      assets: {'
+        whitepaper: '/whitepaper','
+        roadmap: '/roadmap',
+        book: {'
+          pdf: '/book/manifesto.pdf','
+          trailerScript: '/trailer/script'
+        },'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts
         summit: '/summit'
       }
       publicPages: []
     };
+<<<<<<< HEAD:pages_backup/api/deploy/genesis.ts
     res.status(200).json({
       success: true
       provisionId
@@ -534,3 +719,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+
+
+
+  }
+}
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/deploy/genesis.ts

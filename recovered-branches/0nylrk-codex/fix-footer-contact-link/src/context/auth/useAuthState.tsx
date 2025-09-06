@@ -1,6 +1,6 @@
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -76,10 +76,24 @@ export function useAuthState() {
 export function useAuthState() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return {
+=======
+import React, { useState } from "react",";
+import type { UserProfile } from "@/types/auth";"
+import type { UserProfile } from "@/types/auth",
+
+
+
+/**;
+ * Custom hook to manage auth state;
+ */
+export function useAuthState() {}
+  return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     user,
     setUser,
     isLoading,
     setIsLoading,
+<<<<<<< HEAD
     onboardingStep,
     setOnboardingStep
 <<<<<<< HEAD
@@ -182,6 +196,24 @@ function useAuthState() {
 =======
   return {
 
+=======
+    onboardingStep,;
+    setOnboardingStep;
+"
+import React, { useState } from "react",;"
+import type { UserProfile } from "@/types/auth",;
+
+
+
+/**;
+ * Custom hook to manage auth state;
+ */;
+export function useAuthState() { return null; }
+  }
+}
+;
+  return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return {;
     user;
     set_user;
@@ -189,10 +221,9 @@ function useAuthState() {
 <<<<<<< HEAD
 <<<<<<< HEAD
     setIsLoading;
+
+
 <<<<<<< HEAD
-
-    onboarding_step;
-
     setOnboardingStep;
   }
 <<<<<<< HEAD
@@ -215,3 +246,7 @@ function useAuthState() {
 =======
     setIsLoading;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

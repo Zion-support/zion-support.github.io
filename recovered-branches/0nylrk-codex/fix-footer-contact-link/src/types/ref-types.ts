@@ -8,14 +8,15 @@ export type SafeRef<T> = LegacyRef<T> | Ref<T>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 import { LegacyRef, Ref } from "react";
-// A type that safely handles all possible reference types
-export type SafeRef<T> = LegacyRef<T> | Ref<T>;
+// A type that safely handles all possible reference types;
+export type SafeRef<T> = LegacyRef<T> | Ref<T>;"
 import {LegacyRef, Ref} from "react";
-// A type that safely handles all possible reference types
+// A type that safely handles all possible reference types;
 import { LegacyRef, Ref } from './react';
 // A type that safely handles all possible reference types;
 export type SafeRef < T> = LegacyRef < T> | Ref < T>;
 
+<<<<<<< HEAD
 import {LegacyRef, Ref} from "react";
 // A type that safely handles all possible reference types
 
@@ -38,20 +39,28 @@ import {LegacyRef, Ref} from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+import {LegacyRef, Ref} from "react";
+// A type that safely handles all possible reference types;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { LegacyRef, Ref } from "react",
-
-// A type that safely handles all possible reference types
-export type SafeRef<T> = LegacyRef<T> | Ref<T>,
+;
+// A type that safely handles all possible reference types;
+export type SafeRef<T> = LegacyRef<T> | Ref<T>,";
 import { LegacyRef, Ref } from "react",;
 // A type that safely handles all possible reference types;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export type SafeRef<T> = LegacyRef<T> | Ref<T>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -72,3 +81,7 @@ export type SafeRef<T> = LegacyRef<T> | Ref<T>;export type SafeRef<T> = LegacyRe
 =======
 export type SafeRef<T> = LegacyRef<T> | Ref<T>;export type SafeRef<T> = LegacyRef<T> | Ref<T>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

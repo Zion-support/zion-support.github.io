@@ -1,4 +1,4 @@
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -242,6 +242,7 @@ export default function ServicesPage() {
           {/* Key Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
             {[
+<<<<<<< HEAD
               { number: '500+', label: 'Services', icon: Rocket, color: 'text-cyan-400' },
               { number: '21', label: 'Day Trials', icon: Clock, color: 'text-purple-400' },
               { number: '99.9%', label: 'Uptime', icon: Shield, color: 'text-green-400' },
@@ -250,6 +251,9 @@ export default function ServicesPage() {
               <div key={stat.label} className="text-center">
                 <div className={`w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center`}>
                   <stat.icon className={`w-6 h-6 ${stat.color}`} />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <div className={`text-2xl font-bold ${stat.color} mb-1`}>{stat.number}</div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -653,7 +657,7 @@ export default function ServicesPage() {
     </UltraFuturisticBackground>
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -672,4 +676,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

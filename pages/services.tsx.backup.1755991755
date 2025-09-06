@@ -4,11 +4,15 @@ import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, Trend
 import { motion } from 'framer-motion';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices, serviceCategories } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { innovativeNewServices } from '../data/innovative-new-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,11 +21,15 @@ export default function ServicesPage() {
   const [showFilters, setShowFilters] = useState(false);
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
+<<<<<<< HEAD
   // Get unique categories
   const categories = useMemo(() => {
     const cats = ['all', ...new Set(enhancedRealMicroSaasServices.map(s => s.category))];
     return cats.sort();
   }, []);
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   // Filter and sort services
   let filteredServices = enhancedRealMicroSaasServices;
@@ -56,7 +64,11 @@ export default function ServicesPage() {
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
+<<<<<<< HEAD
         return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
@@ -114,6 +126,7 @@ export default function ServicesPage() {
       name: 'AI & Content Creation',
       description: 'Revolutionary AI-powered content creation and media production',
       icon: <Brain className="w-6 h-6" />,
+<<<<<<< HEAD
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI').length
     },
     {
@@ -121,11 +134,15 @@ export default function ServicesPage() {
       description: 'Next-generation autonomous manufacturing and robotics platforms',
       icon: <Factory className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Manufacturing & Industry 4.0').length
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Healthcare & Biotechnology',
       description: 'AI-powered medical diagnostics and quantum drug discovery',
       icon: <FlaskConical className="w-6 h-6" />,
+<<<<<<< HEAD
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length
     },
     {
@@ -139,6 +156,9 @@ export default function ServicesPage() {
       description: 'Quantum-powered financial optimization and risk management',
       icon: <DollarSign className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Financial Technology').length
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Autonomous Systems',
@@ -150,6 +170,7 @@ export default function ServicesPage() {
       name: 'Emerging Technologies',
       description: 'Metaverse development and smart city IoT solutions',
       icon: <Rocket className="w-6 h-6" />,
+<<<<<<< HEAD
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Aerospace & Space Technology').length
     },
     {
@@ -560,9 +581,12 @@ export default function ServicesPage() {
         </div>
       </section>
     </UltraFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -581,4 +605,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

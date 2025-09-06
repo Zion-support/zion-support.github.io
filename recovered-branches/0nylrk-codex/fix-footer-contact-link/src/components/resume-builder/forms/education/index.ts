@@ -1,5 +1,6 @@
-export { EducationForm } from "./EducationForm";
+export { EducationForm } from "./EducationForm";"
 export * from "./types";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,3 +19,6 @@ export * from './types';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

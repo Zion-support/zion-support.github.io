@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -20,6 +21,9 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 =======
 import React from "react";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+import React from "react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
 interface TalentCardAvatarProps {;
@@ -49,9 +53,10 @@ interface TalentCardAvatarProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
-export function TalentCardAvatar({
+export function TalentCardAvatar({}
   profilePicture,
   fullName,
+<<<<<<< HEAD
 }: TalentCardAvatarProps) {
   // Get initials for avatar fallback
   const getInitials = (name: string) => {
@@ -81,14 +86,18 @@ export function TalentCardAvatar({
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+}: TalentCardAvatarProps) {};
+  // Get initials for avatar fallback;
+  const getInitials = (name: string) => {}
+    return name"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       .split(" ")
-      .map((part) => part[0])
+      .map((part) => part[0])"
       .join("")
       .toUpperCase();
-<<<<<<< HEAD
-<<<<<<< HEAD
-  };
 
+<<<<<<< HEAD
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
       <AvatarImage src={profilePicture || undefined} alt={fullName} />
@@ -179,24 +188,31 @@ interface TalentCardAvatarProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======}
 import React from './react';
+=======
+
+}
+
+import React from './react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
-interface TalentCardAvatarProps {
+interface TalentCardAvatarProps {}
   profile_picture?: string;
   full_name: string;
 }
-export /**
- * TalentCardAvatar - Function description
+export /**;
+ * TalentCardAvatar - Function description;
  */
-function TalentCardAvatar() {
+function TalentCardAvatar() {}
   // Get initials for avatar fallback;
-  const get_initials = (name: string) =>: any {
-    return name;
+  const get_initials = (name: string) =>: any {}
+    return name;"
       .split (" ");
-      .map ((part) => part[0]);
+      .map ((part) => part[0]);"
       .join ("");
       .toUpperCase ();
   }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -248,3 +264,9 @@ fullName: string
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

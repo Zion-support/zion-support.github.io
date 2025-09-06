@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,23 +39,26 @@ type Holder = { address: string, amount: string },
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useEffect, useState } from 'react';
 
 type Holder = { address: string, amount: string }
-type Metrics = {
-  updatedAt: number
+type Metrics = {}
+  updatedAt: number;
   tokenDistribution: { address: string, percent: number }[]
   topHolders: Holder[]
   activeProposals: any[]
-  governanceParticipationRate: number
-  cached?: boolean
+  governanceParticipationRate: number;
+  cached?: boolean;
 }
-export default function DaoMetrics() {
+export default function DaoMetrics() {}
   const [data, setData] = useState<Metrics | null>(null)
   const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    async function load() {
-      setLoading(true)
+  useEffect(() => {}
+    async function load() {}
+      setLoading(true)'
       const resp = await fetch('/api/dao/metrics')
       const json = await resp.json()
       setData(json)
@@ -64,9 +68,9 @@ export default function DaoMetrics() {
   }, [])
   if (loading) return <div>Loading...</div>
   if (!data) return <div>Error loading data</div>
-
+;
 type Holder = { address: string, amount: string };
-type Metrics = {
+type Metrics = {}
   updatedAt: number;
   tokenDistribution: { address: string, percent: number }[],;
   topHolders: Holder[];
@@ -74,19 +78,14 @@ type Metrics = {
   governanceParticipationRate: number;
   cached?: boolean;
 },;
-export default function DaoMetrics(req, res) {
-  try {
+export default function DaoMetrics(req, res) {}
+  try {};
   const [data, setData] = useState<Metrics | null>(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {;
-    async function load() {;
-      setLoading(true);
-      const resp = await fetch('/api/dao/metrics');
-      const json = await resp.json();
-      setData(json);
-      setLoading(false);
-      } catch (error) {
-    console.error("Error:", error);
+    async function load() { return null; }
+      } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -94,6 +93,7 @@ export default function DaoMetrics(req, res) {
   }, []),
   if (loading) return <div>Loading...</div>,
   if (!data) return <div>Error loading data</div>,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -114,23 +114,33 @@ type Holder = any;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6">
+=======
+
+
+
+
+
+
+  return ("
+    <div className="space-y-6">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="flex items-end justify-between">
-        <div>
-          <h1 className="text-2xl font-semibold">DAO Metrics</h1>
+        <div>"
+          <h1 className="text-2xl font-semibold">DAO Metrics</h1>'"
           <div className="text-xs text-gray-500">Updated {new Date(data.updatedAt).toLocaleString()} {data.cached ? '(cached)' : ''}</div>
         </div>
-      </div>
-      <section className="grid lg:grid-cols-2 gap-6">
-        <div className="border rounded p-4">
-          <div className="font-medium mb-2">Token Distribution (top ~sample)</div>
+      </div>"
+      <section className="grid lg:grid-cols-2 gap-6">"
+        <div className="border rounded p-4">"
+          <div className="font-medium mb-2">Token Distribution (top ~sample)</div>"
           <div className="space-y-2">
-            {data.tokenDistribution.map((d) => (
-              <div key={d.address} className="text-sm">
-                <div className="flex items-center justify-between">
+            {data.tokenDistribution.map((d) => ("
+              <div key={d.address} className="text-sm">"
+                <div className="flex items-center justify-between">"
                   <span className="truncate mr-2">{d.address}</span>
                   <span>{d.percent.toFixed(2)}%</span>
-                </div>
-                <div className="w-full h-2 bg-gray-200 dark:bg-gray-800 rounded">
+                </div>"
+                <div className="w-full h-2 bg-gray-200 dark:bg-gray-800 rounded">"
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,28 +158,34 @@ type Holder = any;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
+<<<<<<< HEAD
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+"
         <div className="border rounded p-4">
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="font-medium mb-2">Top Holders (approx)</div>
+=======
+"
+          <div className="font-medium mb-2">Top Holders (approx)</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <table className="w-full text-sm">
-            <thead>
-              <tr className="text-left text-gray-500">
-                <th className="py-1">Address</th>
+            <thead>"
+              <tr className="text-left text-gray-500">"
+                <th className="py-1">Address</th>"
                 <th className="py-1">Net Delta</th>
               </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
               {data.topHolders.map((h) => (
 <<<<<<< HEAD
 
@@ -179,6 +195,12 @@ type Holder = any;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
+=======
+              {data.topHolders.map((h) => ("
+                <tr key={h.address} className="border-t border-gray-200 dark:border-gray-800">
+"
+                  <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <td className="py-1">{h.amount}</td>
 =======
 
@@ -212,26 +234,31 @@ type Holder = any;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+"
       <section className="grid lg:grid-cols-2 gap-6">
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
         <div className="border rounded p-4">
+=======
+"
+        <div className="border rounded p-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="font-medium mb-2">Active Proposals</div>
-          {data.activeProposals.length ? (
+          {data.activeProposals.length ? ("
             <ul className="list-disc pl-5 text-sm">
 =======
 
@@ -250,11 +277,18 @@ type Holder = any;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="text-sm text-gray-600">No active proposals.</div>
 
 
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="text-sm text-gray-600">No active proposals.</div>
           )}
@@ -302,8 +336,28 @@ type Holder = any;
           <div className="font-medium mb-2">Governance Participation Rate</div>
           <div className="text-3xl font-semibold">{data.governanceParticipationRate}%</div>
           <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded mt-2">
+=======
+          )  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+
+
+
+
+
+        </div>"
+        <div className="border rounded p-4">"
+          <div className="font-medium mb-2">Governance Participation Rate</div>"
+          <div className="text-3xl font-semibold">{data.governanceParticipationRate}%</div>"
+          <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded mt-2">"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <div className="h-3 bg-indigo-600 rounded" style={{ width: `${Math.min(100, data.governanceParticipationRate)}%` }} />
-          </div>
+          </div>"
           <div className="text-xs text-gray-500 mt-1">Weekly updates via Etherscan</div>
 =======
 =======
@@ -332,6 +386,7 @@ type Holder = any;
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -379,9 +434,20 @@ type Holder = any;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect, useState } from 'react',
+=======
+
+
+
+
+
+}
+
+'
+import { useEffect, useState } from 'react',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 type Holder = { address: string, amount: string },
-type Metrics = {
+type Metrics = {}
   updated_at: number,
   token_distribution: { address: string, percent: number }[],
   top_holders: Holder[],
@@ -389,18 +455,18 @@ type Metrics = {
   governanceParticipationRate: number,
   cached?: boolean;
 },
-export default /**
- * DaoMetrics - Function description
+export default /**;
+ * DaoMetrics - Function description;
  */
-function DaoMetrics() {
+function DaoMetrics() {}
   const [data, set_data] = useState < Metrics | null>(null),
   const [loading, set_loading] = useState (true),
-  useEffect (() => {
+  useEffect (() => {}
     async /**
- * load - Function description
+ * load - Function description;
  */
-function load() {
-      set_loading (true),
+function load() {}
+      set_loading (true),'
       const resp = await fetch ('/api / dao / metrics'),
       const json = await resp.json (),
       set_data (json),
@@ -408,73 +474,73 @@ function load() {
     }
     load ();
   }, []),
-  // Check condition
-if (return <div > Loading...</div>, ) {
-  $2
+  // Check condition;
+if (return <div > Loading...</div>, ) {}
+  $2;
 }
-  // Check condition
-if (return <div > Error loading data</div>, ) {
-  $2
+  // Check condition;
+if (return <div > Error loading data</div>, ) {}
+  $2;
 }
-  return (
-    <div className="space - y-6">;
+  return ("
+    <div className="space - y-6">;"
       <div className="flex items - end justify - between">;
-        <div>;
-          <h1 className="text - 2xl font - semibold">DAO Metrics</h1>;
+        <div>;"
+          <h1 className="text - 2xl font - semibold">DAO Metrics</h1>;'"
           <div className="text - xs text - gray - 500">Updated {new Date (data.updated_at).toLocaleString ()} {data.cached ? '(cached)' : ''}</div>;
         </div>;
-      </div>;
-      <section className="grid lg:grid - cols - 2 gap - 6">;
-        <div className="border rounded p - 4">;
-          <div className="font - medium mb - 2">Token Distribution (top ~sample)</div>;
+      </div>;"
+      <section className="grid lg:grid - cols - 2 gap - 6">;"
+        <div className="border rounded p - 4">;"
+          <div className="font - medium mb - 2">Token Distribution (top ~sample)</div>;"
           <div className="space - y-2">;
-            {data.token_distribution.map ((d) => (
-              <div key={d.address} className="text - sm">;
-                <div className="flex items - center justify - between">;
+            {data.token_distribution.map ((d) => ("
+              <div key={d.address} className="text - sm">;"
+                <div className="flex items - center justify - between">;"
                   <span className="truncate mr - 2">{d.address}</span>;
                   <span>{d.percent.to_fixed (2)}%</span>;
-                </div>;
-                <div className="w - full h - 2 bg - gray - 200 dark:bg - gray - 800 rounded">;
+                </div>;"
+                <div className="w - full h - 2 bg - gray - 200 dark:bg - gray - 800 rounded">;"`
                   <div className="h - 2 bg - emerald - 600 rounded" style={{ width: `${Math.min (100, d.percent)}%` }} />;
                 </div>;
               </div>))}
           </div>;
-        </div>;
-        <div className="border rounded p - 4">;
-          <div className="font - medium mb - 2">Top Holders (approx)</div>;
+        </div>;"
+        <div className="border rounded p - 4">;"
+          <div className="font - medium mb - 2">Top Holders (approx)</div>;"
           <table className="w - full text - sm">;
-            <thead>;
-              <tr className="text - left text - gray - 500">;
-                <th className="py - 1">Address</th>;
+            <thead>;"
+              <tr className="text - left text - gray - 500">;"
+                <th className="py - 1">Address</th>;"
                 <th className="py - 1">Net Delta</th>;
               </tr>;
             </thead>;
             <tbody>;
-              {data.top_holders.map ((h) => (
-                <tr key={h.address} className="border - t border - gray - 200 dark:border - gray - 800">;
-                  <td className="py - 1 pr - 2 truncate max - w-[10rem]">{h.address}</td>;
+              {data.top_holders.map ((h) => ("
+                <tr key={h.address} className="border - t border - gray - 200 dark:border - gray - 800">;"
+                  <td className="py - 1 pr - 2 truncate max - w-[10rem]">{h.address}</td>;"
                   <td className="py - 1">{h.amount}</td>;
                 </tr>))}
             </tbody>;
           </table>;
         </div>;
-      </section>;
-      <section className="grid lg:grid - cols - 2 gap - 6">;
-        <div className="border rounded p - 4">;
+      </section>;"
+      <section className="grid lg:grid - cols - 2 gap - 6">;"
+        <div className="border rounded p - 4">;"
           <div className="font - medium mb - 2">Active Proposals</div>;
-          {data.active_proposals.length ? (
+          {data.active_proposals.length ? ("
             <ul className="list - disc pl - 5 text - sm">;
               {data.active_proposals.map ((p, i) => (
                 <li key={i}>{JSON.stringify (p)}</li>))}
-            </ul>) : (
+            </ul>) : ("
             <div className="text - sm text - gray - 600">No active proposals.</div>)}
-        </div>;
-        <div className="border rounded p - 4">;
-          <div className="font - medium mb - 2">Governance Participation Rate</div>;
-          <div className="text - 3xl font - semibold">{data.governanceParticipationRate}%</div>;
-          <div className="w - full h - 3 bg - gray - 200 dark:bg - gray - 800 rounded mt - 2">;
+        </div>;"
+        <div className="border rounded p - 4">;"
+          <div className="font - medium mb - 2">Governance Participation Rate</div>;"
+          <div className="text - 3xl font - semibold">{data.governanceParticipationRate}%</div>;"
+          <div className="w - full h - 3 bg - gray - 200 dark:bg - gray - 800 rounded mt - 2">;"`
             <div className="h - 3 bg - indigo - 600 rounded" style={{ width: `${Math.min (100, data.governanceParticipationRate)}%` }} />;
-          </div>;
+          </div>;"
           <div className="text - xs text - gray - 500 mt - 1">Weekly updates via Etherscan</div>;
         </div>;
       </section>;
@@ -482,6 +548,7 @@ if (return <div > Error loading data</div>, ) {
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -504,3 +571,11 @@ if (return <div > Error loading data</div>, ) {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

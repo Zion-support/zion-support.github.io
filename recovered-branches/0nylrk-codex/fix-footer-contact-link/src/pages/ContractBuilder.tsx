@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -93,15 +94,24 @@ import { ContractBuilderContent } from '@/components/contracts/page/ContractBuil
 =======
 import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',function ContractBuilderPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";"
+import { SEO } from "@/components/SEO";"
+import { AppHeader } from "@/layout/AppHeader";"
+import { Footer } from "@/components/Footer";"
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent";
+function ContractBuilderPage() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <ProtectedRoute>
       <>
-        <SEO
-          title="Smart Contract Builder | Zion AI Marketplace"
+        <SEO"
+          title="Smart Contract Builder | Zion AI Marketplace""
           description="Create and deploy blockchain-backed smart contracts for your projects"
         />
         <AppHeader />
-
+"
         <main className="container mx-auto py-10 px-4">
           <ContractBuilderContent />
         </main>
@@ -115,6 +125,7 @@ import { ContractBuilderContent } from '@/components/contracts/page/ContractBuil
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -178,34 +189,39 @@ export default ContractBuilderPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default ContractBuilderPage;
+=======
 
-import React from 'react',;
-import { SEO } from '@/components/SEO',;
-import { AppHeader } from '@/layout/AppHeader',;
-import { Footer } from '@/components/Footer',;
-import { ProtectedRoute } from '@/components/ProtectedRoute',;
+
+
+}
+
+
+
+
+;
+
+
+}
+export default ContractBuilderPage;
+
+;
+
+
+export default ContractBuilderPage;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+import React from 'react',;'
+import { SEO } from '@/components/SEO',;'
+import { AppHeader } from '@/layout/AppHeader',;'
+import { Footer } from '@/components/Footer',;'
+import { ProtectedRoute } from '@/components/ProtectedRoute',;'
 import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',;
 ;
-function ContractBuilderPage() {;
-  return (;
-    <ProtectedRoute>;
-      <>;
-        <SEO ;
-          title="Smart Contract Builder | Zion AI Marketplace" ;
-          description="Create and deploy blockchain-backed smart contracts for your projects";
-        />;
-        <AppHeader />;
-        ;
-        <main className="container mx-auto py-10 px-4">;
-          <ContractBuilderContent />;
-        </main>;
-        ;
-        <Footer />;
-      </>;
-    </ProtectedRoute>;
-  ),;
+function ContractBuilderPage() { return null; }
 }
-;
+;"
 export default ContractBuilderPage,; <ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects" /> <AppHeader /> <main className="container mx-auto py-10 px-4" > <ContractBuilderContent /> </main> <Footer /> </> </ProtectedRoute> export default ContractBuilderPage;
 }
 
@@ -214,6 +230,7 @@ export default ContractBuilderPage;
 
 ;
 export default ContractBuilderPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -226,3 +243,9 @@ export default ContractBuilderPage;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

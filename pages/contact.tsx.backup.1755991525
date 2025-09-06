@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -21,6 +22,13 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Globe } from 'lucide-react';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const ContactPage: React.FC = () => {
   const contactInfo = {
@@ -28,6 +36,7 @@ const ContactPage: React.FC = () => {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -44,11 +53,15 @@ const ContactPage: React.FC = () => {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 
   return (
     <Layout>
       <SEO 
+<<<<<<< HEAD
 <<<<<<< HEAD
         title="Contact Us | Zion Tech Group"
         description="Get in touch with Zion Tech Group for innovative AI, quantum, and IT infrastructure solutions. Contact us today to transform your business."
@@ -100,10 +113,14 @@ const ContactPage: React.FC = () => {
             </motion.p>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
 
         {/* Contact Information */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -414,6 +431,9 @@ const ContactPage: React.FC = () => {
                   <MapPin className="w-8 h-8 text-white" />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Address</h3>
                 <p className="text-gray-300 mb-4">Visit our headquarters</p>

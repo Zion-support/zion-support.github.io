@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -162,10 +163,14 @@ export default function AIServices() {
           <div className="relative z-10 max-w-7xl mx-auto text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -198,12 +203,16 @@ export default function AIServices() {
               </p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>
 
         {/* Services Grid */}
         <section className="py-20 px-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -273,10 +282,14 @@ export default function AIServices() {
                         <Star className="w-4 h-4 text-cyan-400 mr-2" />
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {feature}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -335,6 +348,9 @@ export default function AIServices() {
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -350,6 +366,7 @@ export default function AIServices() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -383,6 +400,9 @@ export default function AIServices() {
                   View Case Studies
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </button>
               </div>
             </motion.div>
@@ -391,9 +411,8 @@ export default function AIServices() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-};
 
+<<<<<<< HEAD
 export default AIServices;
 =======
 <<<<<<< HEAD
@@ -404,3 +423,5 @@ export default AIServices;
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

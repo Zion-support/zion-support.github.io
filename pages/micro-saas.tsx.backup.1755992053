@@ -183,11 +183,15 @@ export default function MicroSaasPage() {
       icon: '📧',
       color: 'from-indigo-500 to-purple-600',
       textColor: 'text-indigo-400',
+<<<<<<< HEAD
       link: 'https://email.zion.app',
       marketPosition: 'Competitive with Mailchimp ($13-350), ConvertKit ($29-59), and ActiveCampaign ($9-49)',
       targetAudience: 'Email marketers, e-commerce businesses, and marketing agencies',
       marketSize: '$22.2B email marketing market',
       growthRate: '15.7% CAGR expected through 2030'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Social Media Scheduler',
@@ -209,11 +213,15 @@ export default function MicroSaasPage() {
       icon: '📱',
       color: 'from-teal-500 to-cyan-600',
       textColor: 'text-teal-400',
+<<<<<<< HEAD
       link: 'https://social.zion.app',
       marketPosition: 'Competitive with Buffer ($6-99), Hootsuite ($29-599), and Later ($18-40)',
       targetAudience: 'Social media managers, influencers, and businesses',
       marketSize: '$17.9B social media management market',
       growthRate: '19.8% CAGR expected through 2030'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Invoice & Billing Manager',
@@ -235,11 +243,15 @@ export default function MicroSaasPage() {
       icon: '💰',
       color: 'from-green-500 to-emerald-600',
       textColor: 'text-green-400',
+<<<<<<< HEAD
       link: 'https://billing.zion.app',
       marketPosition: 'Competitive with FreshBooks ($15-55), QuickBooks ($30-200), and Wave (Free)',
       targetAudience: 'Freelancers, small businesses, and accounting professionals',
       marketSize: '$4.8B accounting software market',
       growthRate: '11.9% CAGR expected through 2030'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Project Management Hub',
@@ -259,9 +271,13 @@ export default function MicroSaasPage() {
       ],
       popular: false,
       icon: '📋',
+<<<<<<< HEAD
       color: 'from-orange-500 to-red-600',
       textColor: 'text-orange-400',
       link: 'https://projects.zion.app',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       marketPosition: 'Competitive with Asana ($10.99-24.99), Monday.com ($8-16), and ClickUp ($5-12)',
       targetAudience: 'Project managers, development teams, and creative agencies',
       marketSize: '$6.8B project management software market',
@@ -284,6 +300,7 @@ export default function MicroSaasPage() {
         'Integration with popular platforms'
       ],
       popular: false,
+<<<<<<< HEAD
       icon: '🎧',
       color: 'from-blue-500 to-indigo-600',
       textColor: 'text-blue-400',
@@ -1085,6 +1102,9 @@ export default function MicroSaasPage() {
       link: 'https://ziontechgroup.com/ai-clv-optimization',
       marketPosition: 'Competitive with Optimove ($0-1000+), Retention Science ($0-1000+), and Custora ($0-1000+)',
       targetAudience: 'Customer success managers, marketing teams, and business analysts'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -1139,10 +1159,14 @@ export default function MicroSaasPage() {
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Micro SaaS Services | Zion Tech Group - Comprehensive Guide & Market Analysis</title>
         <meta name="description" content="Complete guide to our micro SaaS services with market research, competitive analysis, pricing, and use cases. AI-powered solutions for modern businesses." />
         <meta property="og:title" content="Micro SaaS Services | Zion Tech Group - Comprehensive Guide" />
         <meta property="og:description" content="Detailed analysis of our micro SaaS services with market research, competitive positioning, and comprehensive feature breakdowns." />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -1169,6 +1193,7 @@ export default function MicroSaasPage() {
               <div className="text-3xl font-bold text-blue-400 mb-2">6+</div>
               <div className="text-sm text-gray-400">Services</div>
             </div>
+<<<<<<< HEAD
             <div className="text-center">
               <div className="text-3xl font-bold text-green-400 mb-2">$50B+</div>
               <div className="text-sm text-gray-400">Market Size</div>
@@ -1180,6 +1205,9 @@ export default function MicroSaasPage() {
             <div className="text-center">
               <div className="text-3xl font-bold text-orange-400 mb-2">AI-First</div>
               <div className="text-sm text-gray-400">Approach</div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </div>
@@ -1578,8 +1606,12 @@ export default function MicroSaasPage() {
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
               Ready to Get Started?
             </h2>
+<<<<<<< HEAD
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Understanding market dynamics helps us deliver better value and competitive positioning.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </div>
 

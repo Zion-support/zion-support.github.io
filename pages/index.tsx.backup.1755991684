@@ -4,7 +4,11 @@ import { motion } from 'framer-motion';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Mail, MessageCircle, Kanban, Headphones, ChevronRight, Play, BookOpen, Code, Server, Shield as ShieldIcon, Zap as ZapIcon2, Globe as GlobeIcon, Users as UsersIcon, Phone, MapPin } from 'lucide-react';
 import Button from '../components/ui/Button';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+<<<<<<< HEAD
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, Star, Users, Globe, Lock, Rocket, Cpu, Database, TrendingUp, Clock, Target, Building, Award, DollarSign, ChartBar, Code, BookOpen, Activity, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, Settings, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Sparkles, Atom, Brain, Eye, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, DollarSign as DollarSignIcon, MessageSquare as MessageSquareIcon } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const heroStats = [
@@ -12,8 +16,12 @@ export default function HomePage() {
     { value: '99.9%', label: 'Uptime Guarantee', color: 'text-fuchsia-400' },
     { value: '14', label: 'Day Free Trials', color: 'text-blue-400' },
     { value: '24/7', label: 'AI Support', color: 'text-green-400' },
+<<<<<<< HEAD
     { value: '$1B+', label: 'Market Value', color: 'text-yellow-400' },
     { value: '2500%+', label: 'Average ROI', color: 'text-purple-400' },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const contactInfo = {
@@ -33,6 +41,7 @@ export default function HomePage() {
       gradient: 'from-cyan-400 to-blue-500',
     },
     {
+<<<<<<< HEAD
       title: '🏭 Autonomous Manufacturing AI',
       description: 'Transform your production with self-learning manufacturing systems that achieve zero downtime and 400% ROI within 6 months. Includes predictive maintenance and quality control automation.',
       price: 'Starting at $199/month',
@@ -42,6 +51,9 @@ export default function HomePage() {
       marketPosition: 'Leading autonomous manufacturing platform. Competes with Siemens MindSphere ($500+/month) and PTC ThingWorx ($300+/month) with superior AI capabilities.',
       roi: '400% ROI within 6 months',
       competitors: 'Siemens MindSphere ($500+/month), PTC ThingWorx ($300+/month)'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       title: '🔒 Quantum Cybersecurity Suite',
@@ -77,6 +89,7 @@ export default function HomePage() {
       competitors: 'Unity Pro ($180/month), Unreal Engine ($0-1500/month)'
     },
     {
+<<<<<<< HEAD
       title: '🧬 Biomedical AI Platform',
       description: 'Accelerate drug discovery and medical research with AI-powered algorithms and clinical trial optimization. Transform healthcare with intelligent medical insights and 200% ROI.',
       price: 'Starting at $249/month',
@@ -86,6 +99,9 @@ export default function HomePage() {
       marketPosition: 'Leading biomedical AI platform. Competes with Atomwise ($5000+/month), BenevolentAI ($10000+/month) with accessible pricing and advanced capabilities.',
       roi: '200% ROI within 6 months',
       competitors: 'Atomwise ($5000+/month), BenevolentAI ($10000+/month)'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -122,6 +138,7 @@ export default function HomePage() {
       growthPotential: 'High - post-quantum security critical'
     },
     {
+<<<<<<< HEAD
       metric: '$4.2B',
       label: 'Space Technology',
       description: '290% annual growth rate',
@@ -323,6 +340,13 @@ export default function HomePage() {
       variant: 'cyberpunk',
       link: 'https://ziontechgroup.com/autonomous-seo',
       features: ['AI optimization', 'Competitor analysis', 'Content suggestions', 'Performance tracking']
+=======
+
+      icon: '💰',
+      price: '$1,199/month',
+      category: 'Financial Technology',
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -667,8 +691,12 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm">
                     {feature.icon}
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
                   <p className="text-gray-100 leading-relaxed">{feature.description}</p>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               ))}
             </div>

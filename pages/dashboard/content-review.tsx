@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import useSWR from 'swr',
 import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -40,13 +41,17 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -71,9 +76,15 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   render() {
     if (this.state.hasError) {
+=======
+
+  render() {}
+    if (this.state.hasError) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return <div>Something went wrong.</div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 =======
@@ -210,6 +221,15 @@ import React, { useMemo, useState } from 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+    return this.props.children;
+  }
+}
+import useSWR from 'swr';'
+import React, { useMemo, useState } from 'react';
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       }
     );
@@ -219,13 +239,13 @@ import React, { useMemo, useState } from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <EnhancedLayout>;
-<<<<<<< HEAD
-=======
 
+'
             value={filters && filters.status || ''}
             onChange={e =>;
               setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 
+<<<<<<< HEAD
             }
             className='border rounded px-2 py-1';
 <<<<<<< HEAD
@@ -419,6 +439,8 @@ import React, { useMemo, useState } from 'react';
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">Admin Content Review</h1>
         </div>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 =======
@@ -481,6 +503,7 @@ import React, { useMemo, useState } from 'react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm">
@@ -688,10 +711,13 @@ import React, { useMemo, useState } from 'react';
                 <th className='text-left px-3 py-2'>Actions</th>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </tr>
             </thead>
             <tbody>
               {flags.map((f: any) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -753,27 +779,50 @@ import React, { useMemo, useState } from 'react';
 <<<<<<< HEAD
               ))}
               {flags.length === 0 && (
+=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+                  <td className="px-3 py-2 font-mono text-xs">{f.id}</td>"
+                  <td className="px-3 py-2">{f.contentType}</td>"
+                  <td className="px-3 py-2">{f.userEmail}</td>"
+                  <td className="px-3 py-2 truncate max-w-xs" title={f.reason}>{f.reason}</td>"
+                  <td className="px-3 py-2 text-xs">T{Math.round(f.aiScores?.toxicity*100)}% / N{Math.round(f.aiScores?.nsfw*100)}% / S{Math.round(f.aiScores?.scam*100)}%</td>"
+                  <td className="px-3 py-2">{new Date(f.createdAt).toLocaleString()}</td>"
+                  <td className="px-3 py-2">{f.status}</td>"
+                  <td className="px-3 py-2">"
+                    <button onClick={() => setSelected(f)} className="px-2 py-1 rounded border">Review</button>
+                  </td>
+                </tr>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
-              )  } catch (error) {
-    console.error("Error:", error);
+              )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -785,12 +834,17 @@ import React, { useMemo, useState } from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </tbody>;
           </table>;
         </div>;
       </div>;
 
       {selected && (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -848,6 +902,11 @@ import React, { useMemo, useState } from 'react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <ModerationModal
+=======
+
+
+        <ModerationModal;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           flag={selected}
           onClose={() => setSelected(null)}
           onAction={handleAction}
@@ -858,6 +917,7 @@ import React, { useMemo, useState } from 'react';
   );
     </EnhancedLayout>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -872,38 +932,43 @@ import React, { useMemo, useState } from 'react';
 
         <div className='overflow - auto border rounded'>;
           <table className='min - w-full text - sm'>;
+=======
+'
+        <div className='overflow - auto border rounded'>;'
+          <table className='min - w-full text - sm'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <thead className='bg - gray - 50 dark:bg - gray - 900'>;
-              <tr>;
-                <th className='text - left px - 3 py - 2'>ID</th>;
-                <th className='text - left px - 3 py - 2'>Type</th>;
-                <th className='text - left px - 3 py - 2'>User</th>;
-                <th className='text - left px - 3 py - 2'>Reason</th>;
-                <th className='text - left px - 3 py - 2'>AI Scores</th>;
-                <th className='text - left px - 3 py - 2'>Created</th>;
-                <th className='text - left px - 3 py - 2'>Status</th>;
+              <tr>;'
+                <th className='text - left px - 3 py - 2'>ID</th>;'
+                <th className='text - left px - 3 py - 2'>Type</th>;'
+                <th className='text - left px - 3 py - 2'>User</th>;'
+                <th className='text - left px - 3 py - 2'>Reason</th>;'
+                <th className='text - left px - 3 py - 2'>AI Scores</th>;'
+                <th className='text - left px - 3 py - 2'>Created</th>;'
+                <th className='text - left px - 3 py - 2'>Status</th>;'
                 <th className='text - left px - 3 py - 2'>Actions</th>              </tr>;
             </thead>;
             <tbody>;
-              {flags.map ((function: any) => (
-                <tr key={f.id} className='border - t hover:bg - gray - 50 / 50'>;
-                  <td className='px - 3 py - 2 font - mono text - xs'>{f.id}</td>;
-                  <td className='px - 3 py - 2'>{f.content_type}</td>;
-                  <td className='px - 3 py - 2'>{f.user_email}</td>;
+              {flags.map ((function: any) => ('
+                <tr key={f.id} className='border - t hover:bg - gray - 50 / 50'>;'
+                  <td className='px - 3 py - 2 font - mono text - xs'>{f.id}</td>;'
+                  <td className='px - 3 py - 2'>{f.content_type}</td>;'
+                  <td className='px - 3 py - 2'>{f.user_email}</td>;'
                   <td className='px - 3 py - 2 truncate max - w-xs' title={f.reason}>;
                     {f.reason}
-                  </td>;
+                  </td>;'
                   <td className='px - 3 py - 2 text - xs'>;
                     T{Math.round (f.ai_scores?.toxicity * 100)}% / N;
                     {Math.round (f.ai_scores?.nsfw * 100)}% / S;
                     {Math.round (f.ai_scores?.scam * 100)}%;
-                  </td>;
+                  </td>;'
                   <td className='px - 3 py - 2'>;
                     {new Date (f.created_at).toLocaleString ()}
-                  </td>;
-                  <td className='px - 3 py - 2'>{f.status}</td>;
+                  </td>;'
+                  <td className='px - 3 py - 2'>{f.status}</td>;'
                   <td className='px - 3 py - 2'>;
                     <button;
-                      on_click={() => set_selected (f)}
+                      on_click={() => set_selected (f)}'
                       className='px - 2 py - 1 rounded border';
                     >;
                       Review;
@@ -912,7 +977,7 @@ import React, { useMemo, useState } from 'react';
               {flags.length === 0 && (
                 <tr>;
                   <td;
-                    col_span={8}
+                    col_span={8}'
                     className='px - 3 py - 6 text - center text - gray - 500';
                   >;
                     No results;
@@ -920,36 +985,46 @@ import React, { useMemo, useState } from 'react';
                 </tr>              )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 );
 <<<<<<< HEAD
 =======
-
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+"
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
-              )  } catch (error) {
-    console.error("Error:", error);
+              )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </tbody>;
           </table>;
         </div>;
       </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {selected && (
         <ModerationModal;
           flag={selected}
@@ -958,6 +1033,7 @@ import React, { useMemo, useState } from 'react';
         />)}
     </EnhancedLayout>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -987,3 +1063,18 @@ import React, { useMemo, useState } from 'react';
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

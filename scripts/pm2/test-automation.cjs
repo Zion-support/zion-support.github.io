@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
 
 
@@ -248,13 +249,19 @@ testAutomation.run().catch(error => {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 /**
  * PM2 Test Automation Service;
@@ -294,6 +301,7 @@ class TestAutomation {}
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -330,13 +338,19 @@ class TestAutomation {}
 
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -581,14 +595,19 @@ if (require.main === module) {}
 <<<<<<< HEAD
 =======
 };
+<<<<<<< HEAD
 module.exports = TestAutomation;module.exports = TestAutomation;
 module.exports = TestAutomation;module.exports = TestAutomation;
 
 module.exports = TestAutomation;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 module.exports = TestAutomation;
 
 
+<<<<<<< HEAD
 module.exports = TestAutomation;module.exports = TestAutomation;
 module.exports = TestAutomation;module.exports = TestAutomation;
 <<<<<<< HEAD
@@ -605,3 +624,6 @@ module.exports = TestAutomation;module.exports = TestAutomation;
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

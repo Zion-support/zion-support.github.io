@@ -3,13 +3,14 @@ export class jobServiceService {;
   constructor() {;
     this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api"}
   async get() {;
-    try {;
+    try {;"
       const response = await fetch("${this && this.baseUrl}/jobservice")}
       return await response && response.json()}
-    } catch (error) {;
+    } catch (error) {;"
       console && console.error("Error fetching "data": ", error)}
       throw error}
 }
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/services/jobService.ts
 <<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/src.disabled/src/services/jobService.ts
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/services/jobService.ts
@@ -54,9 +55,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src.disabled/src/services/jobService.ts
 export class jobServiceService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this.baseUrl}/jobservice");,} return await response.json();,} } catch (error) {; console.error("Error fetching data:",error);,} throw error;,} } export default new jobServiceService();,}
-export default new jobServiceService()}
+export default new jobServiceService()}";
 export class jobServiceService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this.baseUrl}/jobservice"),} return await response.json(),} } catch (error) {; console.error("Error fetching data:",error),} throw error,} } export default new jobServiceService(),}
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/services/jobService.ts
 >>>>>>> main
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/services/jobService.ts
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:src.disabled/src/services/jobService.ts
@@ -70,3 +78,7 @@ export class jobServiceService {; constructor() {; this.baseUrl = process.env.NE
 export class jobServiceService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this && this.baseUrl}/jobservice"),} return await response && response.json(),} } catch (error) {; console && console.error("Error fetching data:",error),} throw error,} } export default new jobServiceService(),}
 export class jobServiceService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this && this.baseUrl}/jobservice"),} return await response && response.json(),} } catch (error) {; console && console.error("Error fetching data:",error),} throw error,} } export default new jobServiceService(),}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src.disabled/src/services/jobService.ts

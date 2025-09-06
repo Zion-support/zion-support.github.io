@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
 <<<<<<< HEAD
@@ -49,6 +50,8 @@ interface ContractHeaderProps {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 =======
   return (  );
@@ -64,6 +67,7 @@ interface ContractHeaderProps {;
   onCreateClick: () => void;
 }
 ;
+<<<<<<< HEAD
 export function ContractHeader({ onCreateClick }: ContractHeaderProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,6 +111,9 @@ export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+export function ContractHeader() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Button size="lg" onClick={onCreateClick}>;
 =======
   return (;      <Button size="lg" onClick={onCreateClick}>;
@@ -117,28 +124,46 @@ export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
         Create New Contract;
       </Button>;
     </div>;
+<<<<<<< HEAD
   );
+=======
+
+
+  );
+  );
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button  } from '@/components / ui / button';
-interface ContractHeaderProps {
+interface ContractHeaderProps {}
   onCreateClick: () => void;
 }
-export /**
- * ContractHeader - Function description
+export /**;
+ * ContractHeader - Function description;
  */
+<<<<<<< HEAD
 function ContractHeader() {
   return (
     <div className="flex justify - between items - center mb-8">;
       <div>;
         <h1 className="text - 3xl font-bold">Smart Contract Builder</h1>;
         <p className="text - muted - foreground mt-2">;
+=======
+function ContractHeader() {}
+  return ("
+    <div className="flex justify - between items - center mb - 8">;
+      <div>;"
+        <h1 className="text - 3xl font - bold">Smart Contract Builder</h1>;"
+        <p className="text - muted - foreground mt - 2">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           Create legally binding agreements with optional blockchain deployment;
         </p>;
-      </div>;
+      </div>;"
       <Button size="lg" on_click={onCreateClick}>;
         Create New Contract;
       </Button>;
     </div>);
 
+<<<<<<< HEAD
 }=======}
 
 }
@@ -171,3 +196,16 @@ function ContractHeader() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+}
+
+}
+
+
+}
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

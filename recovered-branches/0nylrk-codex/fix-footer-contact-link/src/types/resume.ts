@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -11,6 +12,9 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ResumeBasicInfo {
+=======
+export interface ResumeBasicInfo {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
   title: string;
   headline?: string;
@@ -19,14 +23,20 @@ export interface ResumeBasicInfo {
 }
 
 }
+<<<<<<< HEAD
 export interface WorkExperience {
 export interface ResumeBasicInfo {
+=======
+export interface WorkExperience {}
+export interface ResumeBasicInfo {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface ResumeBasicInfo {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id?: string;
   title: string;
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -44,6 +54,9 @@ export interface WorkExperience {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface WorkExperience {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
   company_name: string;
   role_title: string;
@@ -55,10 +68,8 @@ export interface WorkExperience {;
   location?: string;
 }
 
-<<<<<<< HEAD
-  company_logo_url?: string,
-  location?: string;
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -68,11 +79,11 @@ export interface Education {
 =======
 export interface Education {
   company_logo_url?: string
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  location?: string
-}
-export interface Education {
 
+<<<<<<< HEAD
 export interface Education {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -82,6 +93,8 @@ export interface Education {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
   institution: string;
   degree: string;
@@ -94,6 +107,7 @@ export interface Education {;
   location?: string;
 }
 
+<<<<<<< HEAD
   institution_logo_url?: string,
   location?: string;
 
@@ -116,6 +130,9 @@ export interface Skill {
 export interface Skill {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
 =======
 export interface Skill {  id?: string;
@@ -129,6 +146,7 @@ export interface Skill {  id?: string;
   years_experience?: number;
 }
 
+<<<<<<< HEAD
   category?: string,
   years_experience?: number;
 
@@ -143,20 +161,20 @@ export interface Certification {
 =======
 export interface Certification {
   category?: string
-
-  years_experience?: number
-}
-export interface Certification {
-
-export interface Certification {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   id?: string;
   name: string;
   proficiency?: number;
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
   name: string;
   issuing_organization: string;
@@ -166,10 +184,8 @@ export interface Certification {;
   credential_url?: string;
 }
 
-<<<<<<< HEAD
-  credential_id?: string,
-  credential_url?: string;
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -179,16 +195,18 @@ export interface PortfolioProject {
 =======
 export interface PortfolioProject {
   credential_id?: string
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  credential_url?: string
-}
-export interface PortfolioProject {
 
+<<<<<<< HEAD
 export interface PortfolioProject {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
   title: string;
   description?: string;
@@ -199,10 +217,8 @@ export interface PortfolioProject {;
   pdf_url?: string;
 }
 
-<<<<<<< HEAD
-  demo_url?: string,
-  pdf_url?: string;
 
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -212,16 +228,18 @@ export interface Resume {
 =======
 export interface Resume {
   demo_url?: string
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  pdf_url?: string
-}
-export interface Resume {
 
+<<<<<<< HEAD
 export interface Resume {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id?: string;
 =======
 export interface Certification {  id?: string;
@@ -246,15 +264,15 @@ export interface Certification {  id?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
-=======
+
   portfolio_projects?: PortfolioProject[]
 =======
 
-  is_active: boolean
+  is_active: boolean;
 }
 export interface ResumeBasicInfo {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   id?: string,;
 =======
 }  id?: string,;
@@ -333,10 +351,14 @@ export interface Resume {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   portfolio_projects?: PortfolioProject[],
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   is_active: boolean;
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -354,6 +376,7 @@ export interface Resume {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 ;
@@ -370,3 +393,13 @@ export interface Resume {;
 ;
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+export interface ResumeBasicInfo {;
+
+
+
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

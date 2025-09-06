@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+<<<<<<< HEAD
 @tailwind utilities;
 
 <<<<<<< HEAD
@@ -127,3 +128,6 @@ body {
 =======
 }
 >>>>>>> pr-12243
+=======
+@tailwind utilities;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

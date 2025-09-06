@@ -85,7 +85,7 @@ export default function HomePage() {
       price: 'Starting at $49/month',
       marketSize: '$50B+ global market',
       competitors: 'Stripe, PayPal, Square'
-=======
+
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Code Review Assistant',
       description: 'AI-powered code analysis with security, performance, and maintainability insights. Support for JavaScript, Python, and TypeScript.',
@@ -273,6 +273,7 @@ export default function HomePage() {
           <div className="text-center mb-20 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse" />
+<<<<<<< HEAD
               Professional Micro SaaS Services
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -280,10 +281,14 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Deploy professional-grade SaaS services instantly. No development time, no maintenance overhead.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
             <Card className="group border border-gray-800 hover:border-purple-500/30 transition-all duration-300 hover:scale-105">
               <div className="text-center p-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white text-2xl mx-auto mb-6">
@@ -379,12 +384,19 @@ export default function HomePage() {
                 </Button>
               </div>
             </Card>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
 
       {/* Technology Stack */}
+<<<<<<< HEAD
       <section className="py-24 bg-gray-800">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">

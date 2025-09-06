@@ -1,25 +1,36 @@
 // Polyfill fetch and enable fetch mocks;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import 'whatwg - fetch',
+
+import 'whatwg - fetch','
 import fetch_mock from 'jest - fetch - mock',
 fetch_mock.enable_mocks (),
+<<<<<<< HEAD
 // Reset fetch mocks before each test to ensure isolation;
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 before_each (() => {
+=======
+;
+// Reset fetch mocks before each test to ensure isolation;
+before_each (() => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   fetch_mock.reset_mocks ();
 }),
-// Jest - DOM matchers;
-import '@testing - library / jest - dom',
-import { TextEncoder, TextDecoder } from 'util',
+// Jest - DOM matchers;'
+import '@testing - library / jest - dom','
+import { TextEncoder, TextDecoder } from 'util',;
 // Polyfill TextEncoder and TextDecoder for JSDOM environment;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 global.TextEncoder = TextEncoder,;
@@ -50,21 +61,31 @@ global.TextEncoder = TextEncoder,
 // @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,
 
+=======
+
+
+global.TextEncoder = TextEncoder,'
+// @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
+global.TextDecoder = TextDecoder,
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Set up a mock for Vite environment variables accessed via import.meta.env;
 // This assumes that Babel (via babel - plugin - transform - import - meta or similar);
-// will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
+// will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;'
 // or that import.meta itself is transformed into an object where 'env' can be populated.;
 
-process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',
-process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: //localhost:54321',
+'
+process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup','
+process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: //localhost:54321','
 process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key',
-// Jest - axe matchers for accessibility;
+// Jest - axe matchers for accessibility;'
 import { toHaveNoViolations } from 'jest - axe',
-expect.extend (toHaveNoViolations),
-// Mock window.match_media for Jest;
-Object.define_property (window, 'match_media', {
+expect.extend (toHaveNoViolations),;
+// Mock window.match_media for Jest;'
+Object.define_property (window, 'match_media', {}
   writable: true,
-  value: jest.fn ().mock_implementation (query => ({
+  value: jest.fn ().mock_implementation (query => ({}
     matches: false, // Default to false (light theme);
     media: query,
     onchange: null,
@@ -73,26 +94,32 @@ Object.define_property (window, 'match_media', {
     addEventListener: jest.fn (),
     removeEventListener: jest.fn (),
     dispatch_event: jest.fn ()}))}),
+<<<<<<< HEAD
 // Mock import.meta.env for Jest - This was ineffective for the SyntaxError;
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // global.import = {
+=======
+
+// Mock import.meta.env for Jest - This was ineffective for the SyntaxError;
+// global.import = {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 //   // @ts - expect - error;
-//   meta: {
-//     env: {
-//       VITE_SUPABASE_URL: 'mock_supabase_url',
-//       VITE_SUPABASE_ANON_KEY: 'mock_supabase_anon_key',
+//   meta: {}
+//     env: {'
+//       VITE_SUPABASE_URL: 'mock_supabase_url','
+//       VITE_SUPABASE_ANON_KEY: 'mock_supabase_anon_key','
 //       MODE: 'test',
 //     },
 //   },
 // },
-// Mock the supabase client module to prevent import.meta.env parsing errors;
-jest.mock ('@/integrations / supabase / client', () => ({
-  supabase: {
-    auth: {
-      onAuthStateChange: jest.fn (() => ({
+// Mock the supabase client module to prevent import.meta.env parsing errors;'
+jest.mock ('@/integrations / supabase / client', () => ({}
+  supabase: {}
+    auth: {}
+      onAuthStateChange: jest.fn (() => ({}
         data: { subscription: { unsubscribe: jest.fn () } }})),
       // Add any other specific methods from supabase.auth if they get called;
     },
@@ -100,19 +127,19 @@ jest.mock ('@/integrations / supabase / client', () => ({
     // e.g., from: jest.fn (), rpc: jest.fn (), etc.;
     // For now, keeping it minimal.;
   }})),
-// Mock Firebase / Firestore;
-jest.mock ('firebase / app', () => ({
+// Mock Firebase / Firestore;'
+jest.mock ('firebase / app', () => ({}
   initialize_app: jest.fn (),
   // Add other app - level exports if needed, e.g., get_apps, get_app;
-})),
-jest.mock ('firebase / firestore', () => {
+})),'
+jest.mock ('firebase / firestore', () => {}
   // Mock collection function to be available on the db instance (for v8 style);
   // and as a top - level export (for v9 style).;
-  const mock_collection = jest.fn ((firestoreInstanceOrPath, pathIfV8) => {
+  const mock_collection = jest.fn ((firestoreInstanceOrPath, pathIfV8) => {'
     const actual_path = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath : pathIfV8,
-    return {
+    return {}
       path: actual_path,
-      doc: jest.fn ((doc_id) => ({
+      doc: jest.fn ((doc_id) => ({}
         id: doc_id,
         path: `${actual_path}/${doc_id}`,
         get: jest.fn (() => Promise.resolve ({ exists: () => false, data: () => undefined })),
@@ -121,21 +148,21 @@ jest.mock ('firebase / firestore', () => {
         delete: jest.fn (() => Promise.resolve ()),
         on_snapshot: jest.fn (() => jest.fn ()), // Returns an unsubscribe function;
       })),
-      get_docs: jest.fn (() => Promise.resolve ({ docs: [] })),
+      get_docs: jest.fn (() => Promise.resolve ({ docs: [] })),'
       add_doc: jest.fn (() => Promise.resolve ({ id: 'mockedDocId' })),
       on_snapshot: jest.fn (() => jest.fn ()), // Returns an unsubscribe function;
     }
   }),
-  const mock_doc = jest.fn ((firestoreInstanceOrCollectionRef, pathOrId, ...path_segments) => {
+  const mock_doc = jest.fn ((firestoreInstanceOrCollectionRef, pathOrId, ...path_segments) => {'
     let base_path = '',
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       base_path = firestoreInstanceOrCollectionRef.path;
-    }
+    }'
     const full_path = [base_path, pathOrId, ...path_segments].filter (Boolean).join ('/'),
-    return {
+    return {}
       id: path_segments.length > 0 ? path_segments[path_segments.length - 1] : pathOrId,
       path: full_path,
       get: jest.fn (() => Promise.resolve ({ exists: () => false, data: () => undefined })),
@@ -145,16 +172,16 @@ if ( {) {
       on_snapshot: jest.fn (() => jest.fn ()), // Returns an unsubscribe function;
     }
   }),
-  return {
-    get_firestore: jest.fn (() => ({
+  return {}
+    get_firestore: jest.fn (() => ({'
       // For v8 style: db.collection ('path');
-      collection: mock_collection,
+      collection: mock_collection,'
       // For v8 style: db.doc ('path / doc_id');
       doc: mock_doc,
       // Add any other methods directly on db if used, e.g. batch, run_transaction;
-    })),
+    })),'
     // For v9 style: collection (db, 'path');
-    collection: mock_collection,
+    collection: mock_collection,'
     // For v9 style: doc (db, 'pathdoc_id');
     doc: mock_doc,
     get_doc: jest.fn (() => Promise.resolve ({ exists: () => false, data: () => undefined })),
@@ -162,61 +189,62 @@ if ( {) {
     update_doc: jest.fn (() => Promise.resolve ()),
     delete_doc: jest.fn (() => Promise.resolve ()),
     on_snapshot: jest.fn (() => jest.fn ()), // Returns an unsubscribe function for document / query snapshots;
-    query: jest.fn ((collection_ref, ...constraints) => ({ ref: collection_ref, constraints })),
-    where: jest.fn ((field_path, op_str, value) => ({ type: 'where', field_path, op_str, value })),
-    order_by: jest.fn ((field_path, direction_str) => ({ type: 'order_by', field_path, direction_str })),
+    query: jest.fn ((collection_ref, ...constraints) => ({ ref: collection_ref, constraints })),'
+    where: jest.fn ((field_path, op_str, value) => ({ type: 'where', field_path, op_str, value })),'
+    order_by: jest.fn ((field_path, direction_str) => ({ type: 'order_by', field_path, direction_str })),'
     limit: jest.fn ((count) => ({ type: 'limit', count })),
-    Timestamp: {
+    Timestamp: {}
       now: jest.fn (() => ({ to_date: () => new Date () })),
       from_date: jest.fn ((date) => ({ to_date: () => date }))},
     // Add other Firestore exports your code uses;
   }
-}),
-jest.mock ('firebase / auth', () => ({
-  get_auth: jest.fn (() => ({
+}),'
+jest.mock ('firebase / auth', () => ({}
+  get_auth: jest.fn (() => ({}
     // Mock Auth instance properties / methods if needed, e.g., current_user;
     current_user: null,
     onAuthStateChanged: jest.fn (() => jest.fn ()), // Returns an unsubscribe function;
-  })),
-  createUserWithEmailAndPassword: jest.fn (() => Promise.resolve ({ user: { uid: 'mock - uid', email: 'mock@example.com' } })),
+  })),'
+  createUserWithEmailAndPassword: jest.fn (() => Promise.resolve ({ user: { uid: 'mock - uid', email: 'mock@example.com' } })),'
   signInWithEmailAndPassword: jest.fn (() => Promise.resolve ({ user: { uid: 'mock - uid', email: 'mock@example.com' } })),
   sendEmailVerification: jest.fn (() => Promise.resolve ()),
   sendPasswordResetEmail: jest.fn (() => Promise.resolve ()),
   sign_out: jest.fn (() => Promise.resolve ()),
   // Add other Auth exports your code uses (e.g., GoogleAuthProvider, signInWithPopup, etc.);
   // For example:;
-  // GoogleAuthProvider: jest.fn (),
-  // signInWithPopup: jest.fn (() => Promise.resolve ({ user: { uid: 'mock - uid' } }))})),
-jest.mock ('firebase / storage', () => ({
-  get_storage: jest.fn (() => ({
+  // GoogleAuthProvider: jest.fn (),'
+  // signInWithPopup: jest.fn (() => Promise.resolve ({ user: { uid: 'mock - uid' } }))})),'
+jest.mock ('firebase / storage', () => ({}
+  get_storage: jest.fn (() => ({}
     // Mock Storage instance properties / methods if needed;
   })),
-  ref: jest.fn ((storage_instance, path) => ({
-    // Mock StorageReference;
-    name: path ? path.substring (path.lastIndexOf ('/') + 1) : 'mockfile.txt',
+  ref: jest.fn ((storage_instance, path) => ({}
+    // Mock StorageReference;'
+    name: path ? path.substring (path.lastIndexOf ('/') + 1) : 'mockfile.txt','
     full_path: path || 'mock / full / path / mockfile.txt',
     // Add methods like upload_bytes, getDownloadURL, delete, etc.;
   })),
-  upload_bytes: jest.fn ((storage_ref, data, metadata) => Promise.resolve ({
+  upload_bytes: jest.fn ((storage_ref, data, metadata) => Promise.resolve ({}
     // Mock UploadResult;
     metadata: { full_path: storage_ref.full_path, ...metadata },
-    ref: storage_ref})),
+    ref: storage_ref})),`
   getDownloadURL: jest.fn ((storage_ref) => Promise.resolve (`https://mockstorage.com/${storage_ref.full_path}`)),
   delete_object: jest.fn (() => Promise.resolve ()),
   // Add other Storage exports your code uses;
 })),
-// Mock axios;
-jest.mock ('axios', () => ({
+// Mock axios;'
+jest.mock ('axios', () => ({}
   get: jest.fn (() => Promise.resolve ({ data: {} })),
   post: jest.fn (() => Promise.resolve ({ data: {} })),
   // Add other axios methods if used (e.g., put, delete, request);
 })),
 // Mock ResizeObserver for Radix UI components and other libraries that might use it;
-global.ResizeObserver = jest.fn ().mock_implementation (() => ({
+global.ResizeObserver = jest.fn ().mock_implementation (() => ({}
   observe: jest.fn (),
   unobserve: jest.fn (),
   disconnect: jest.fn ()})),
 // Polyfill for URL.revokeObjectURL;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -385,11 +413,21 @@ if (typeof URL.revokeObjectURL === 'undefined') {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 if ( {) {
   $2
+=======
+
+// Check condition;
+if ( {) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
   // @ts - expect - error - BroadcastChannel polyfill for test environment;
-  global.BroadcastChannel = class BroadcastChannelMock {
-    constructor (name: string) {
+  global.BroadcastChannel = class BroadcastChannelMock {}
+    constructor (name: string) {}
       // @ts - expect - error - Mock name property assignment;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this.name = name;
     }
     post_message = jest.fn (),
@@ -402,13 +440,14 @@ if ( {) {
   }
 }
 // Polyfill for window.scroll_to;
-// Check condition
-if ( {) {
-  $2
+// Check condition;
+if ( {) {}
+  $2;
 }
   window.scroll_to = jest.fn ();
 }
 // Mock axios.create to return axios itself;
+<<<<<<< HEAD
 import axios from 'axios',
 // @ts - ignore;
 <<<<<<< HEAD
@@ -447,37 +486,48 @@ axios.create = jest.fn(() => axios),;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // -----------------------------;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 // -----------------------------;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Vitest Compatibility Layer for Jest;
-// -----------------------------;
+// -----------------------------;'
 // Some test files were originally written for Vitest and import utilities from 'vitest'.;
 // To keep migrating gradually while still running the Jest suite successfully, we create;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // a lightweight shim that re - maps the most common Vitest helpers to their Jest equivalents.;
 // This avoids individual test failures like &quot;Vitest cannot be imported in a CommonJS module & quot;.;
 //;
-// NOTE: When the test suite is fully migrated to Vitest this shim can be removed together;
+// NOTE: When the test suite is fully migrated to Vitest this shim can be removed together;`
 // with the associated `moduleNameMapper` entry in `jest.config.cjs`.;
-// ---------------------------------------------------------------------------;
-jest.mock ('vitest', () => {
+// ---------------------------------------------------------------------------;'
+jest.mock ('vitest', () => {}
   const jest_fn = (...args: unknown[]) =>: any jest.fn (...(args as [])),
 
-  return {
+  return {'`
     // Named export expected in `import { vi } from 'vitest'` statements;
+<<<<<<< HEAD
     vi: {
 
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    vi: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       fn: jest_fn,
       spy_on: jest.spy_on.bind (jest),
       mock: jest.mock.bind (jest),
@@ -487,13 +537,13 @@ jest.mock ('vitest', () => {
       useFakeTimers: jest.useFakeTimers.bind (jest),
       useRealTimers: jest.useRealTimers.bind (jest),
       runAllTimers: jest.runAllTimers.bind (jest),
-      advanceTimersByTime: jest.advanceTimersByTime.bind (jest),
+      advanceTimersByTime: jest.advanceTimersByTime.bind (jest),`
       // Provide a simple implementation of `import.meta` mocking helpers;
-      // frequently used in Vitest examples;
+      // frequently used in Vitest examples;`
       // (no - op implementations because Jest already handles env vars via `process.env`).;
       import_actual: jest.require_actual,
       mockResolvedValue: <T = unknown>(value: T) => jest.fn ().mockResolvedValue (value),
-      mockRejectedValue: <T = unknown>(value: T) => jest.fn ().mockRejectedValue (value)},
+      mockRejectedValue: <T = unknown>(value: T) => jest.fn ().mockRejectedValue (value)},'`
     // Re - export common testing globals so that `import { expect, test } from 'vitest'`;
     // continues to work inside the Jest environment.;
     describe: global.describe,
@@ -508,9 +558,9 @@ jest.mock ('vitest', () => {
 // -----------------------------;
 // Lightweight Context & Redux mocks to avoid provider runtime errors;
 // -----------------------------;
-// Auth Context;
-jest.mock ('@/context / auth / AuthProvider', () => {
-  const use_auth = () =>: any ({
+// Auth Context;'
+jest.mock ('@/context / auth / AuthProvider', () => {}
+  const use_auth = () =>: any ({}
     is_authenticated: false,
     is_loading: false,
     user: null,
@@ -518,78 +568,78 @@ jest.mock ('@/context / auth / AuthProvider', () => {
     logout: jest.fn (),
     sign_up: jest.fn ()}),
   const AuthProvider = ({ children }: any) =>: any children,
-  return {
+  return {}
     __esModule: true,
     AuthProvider,
     default: AuthProvider,
     use_auth}
 }),
-// Analytics Context;
-jest.mock ('@/context / AnalyticsContext', () => {
-  const use_analytics = () =>: any ({
+// Analytics Context;'
+jest.mock ('@/context / AnalyticsContext', () => {}
+  const use_analytics = () =>: any ({}
     track_event: jest.fn (),
     trackPageView: jest.fn ()}),
   const AnalyticsProvider = ({ children }: any) =>: any children,
-  return {
+  return {}
     __esModule: true,
     AnalyticsProvider,
     default: AnalyticsProvider,
     use_analytics}
 }),
-// Whitelabel Context;
-jest.mock ('@/context / WhitelabelContext', () => {
-  const use_whitelabel = () =>: any ({
-    brand: 'default',
+// Whitelabel Context;'
+jest.mock ('@/context / WhitelabelContext', () => {}
+  const use_whitelabel = () =>: any ({'
+    brand: 'default','
     theme: 'light'}),
   const WhitelabelProvider = ({ children }: any) =>: any children,
-  return {
+  return {}
     __esModule: true,
     WhitelabelProvider,
     default: WhitelabelProvider,
     use_whitelabel}
 }),
-// Feedback Context;
-jest.mock ('@/context / FeedbackContext', () => {
-  const use_feedback = () =>: any ({
+// Feedback Context;'
+jest.mock ('@/context / FeedbackContext', () => {}
+  const use_feedback = () =>: any ({}
     open: jest.fn ()}),
   const FeedbackProvider = ({ children }: any) =>: any children,
-  return {
+  return {}
     __esModule: true,
     FeedbackProvider,
     default: FeedbackProvider,
     use_feedback}
 }),
-// react - redux hooks;
-jest.mock ('react - redux', () => {
+// react - redux hooks;'
+jest.mock ('react - redux', () => {'
   const actual_redux = jest.require_actual ('react - redux'),
-  return {
+  return {}
     ...actual_redux,
-    use_dispatch: () => jest.fn (),
+    use_dispatch: () => jest.fn (),'
     // Provide predictable data for selectors so components don't explode;
-    use_selector: jest.fn ((selector: any) => {
-      const mock_state = {
+    use_selector: jest.fn ((selector: any) => {}
+      const mock_state = {}
         cart: { items: [] },
-        wishlist: { items: [] }},
+        wishlist: { items: [] }},'
       return typeof selector === 'function' ? selector (mock_state) : mock_state;
     })}
 }),
-// Cart Context – simple noop implementation for tests;
-jest.mock ('@/context / CartContext', () => {
+// Cart Context – simple noop implementation for tests;'
+jest.mock ('@/context / CartContext', () => {}
   const use_cart = () =>: any ({ items: [], dispatch: jest.fn () }),
   const CartProvider = ({ children }: { children: React.ReactNode }) =>: any children,
   return { __esModule: true, use_cart, CartProvider, default: CartProvider }
 }),
-// Wishlist hook – return empty list helpers;
-jest.mock ('@/hooks / use_wishlist', () => {
+// Wishlist hook – return empty list helpers;'
+jest.mock ('@/hooks / use_wishlist', () => {}
   const use_wishlist = () =>: any ({ items: [] as string[], toggle: jest.fn (), is_wishlisted: () => false }),
   return { __esModule: true, use_wishlist, default: use_wishlist }
 }),
 // Polyfill IntersectionObserver for components that use it (e.g., embla - carousel);
-// Check condition
-if ( {) {
-  $2
+// Check condition;
+if ( {) {}
+  $2;
 }
-  class MockIntersectionObserver {
+  class MockIntersectionObserver {}
     constructor () {}
     observe () {}
     unobserve () {}
@@ -599,6 +649,7 @@ if ( {) {
   // @ts - ignore;
   window.IntersectionObserver = MockIntersectionObserver,
   // @ts - ignore;
+<<<<<<< HEAD
 
   global.IntersectionObserver = MockIntersectionObserver;
 <<<<<<< HEAD
@@ -610,22 +661,39 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   global.IntersectionObserver = MockIntersectionObserver;
+=======
+
+
+
+  global.IntersectionObserver = MockIntersectionObserver;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 // Ensure all code paths use the mock implementation;
 // Some services import the global fetch reference before jest - fetch - mock is enabled.;
 // Override it explicitly so those modules receive the mocked version.;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 // @ts - ignore;
 global.fetch = fetch_mock,
 // Polyfill window.window.window.performance.getEntriesByType for JSDOM (used in production_logger);
+<<<<<<< HEAD
 // Check condition
 if ( {) {
   $2
+=======
+// Check condition;
+if ( {) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -633,66 +701,66 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // @ts - ignore;
   window.window.window.performance.getEntriesByType = () => [];
-}
-jest.mock ('@supabase / ssr', () => ({
-  supabase: {
-    auth: {
-      onAuthStateChange: jest.fn (() => ({
+}'
+jest.mock ('@supabase / ssr', () => ({}
+  supabase: {}
+    auth: {}
+      onAuthStateChange: jest.fn (() => ({}
         data: { subscription: { unsubscribe: jest.fn () } }}))}}})),
-// Provide minimal mocks for other @supabase / ssr helpers referenced by auth - js;
-jest.mock ('@supabase / ssr / dist / main / cookies', () => ({
+// Provide minimal mocks for other @supabase / ssr helpers referenced by auth - js;'
+jest.mock ('@supabase / ssr / dist / main / cookies', () => ({}
   get_all: () => ({}),
   set_item: jest.fn (),
-  get_item: jest.fn ()})),
-// When a module imports '@/context' root index (e.g., useEnqueueSnackbar);
-jest.mock ('@/context', () => {
+  get_item: jest.fn ()})),'
+// When a module imports '@/context' root index (e.g., useEnqueueSnackbar);'
+jest.mock ('@/context', () => {}
   const useEnqueueSnackbar = () =>: any jest.fn (),
   return { __esModule: true, useEnqueueSnackbar }
 }),
 // Extend Vitest shim with restoreAllMocks for suites that call it;
 // @ts - ignore - vi is added by the vitest mock above;
-// Check condition
-if ( {) {
-  $2
+// Check condition;
+if ( {) {}
+  $2;
 }
   // @ts - ignore;
   global.vi.restoreAllMocks = jest.restoreAllMocks;
-}
-// Mock @supabase / ssr createBrowserClient so components don't crash in tests;
-jest.mock ('@supabase / ssr', () => ({
-  createBrowserClient: () => ({
+}'
+// Mock @supabase / ssr createBrowserClient so components don't crash in tests;'
+jest.mock ('@supabase / ssr', () => ({}
+  createBrowserClient: () => ({}
     auth: { onAuthStateChange: jest.fn (), signInWithPassword: jest.fn (), sign_up: jest.fn () }})})),
-// Ensure hooks / use - toast exports usable toast fn;
-jest.mock ('@/hooks / use - toast', () => {
+// Ensure hooks / use - toast exports usable toast fn;'
+jest.mock ('@/hooks / use - toast', () => {}
   const toast_fn = jest.fn (),
   return { __esModule: true, toast: toast_fn, use_toast: () => ({ toast: toast_fn }) }
 }),
-// Minimal MSW mocks to satisfy tests without parsing ESM bundles;
-jest.mock ('msw', () => ({ rest: { get: jest.fn (), post: jest.fn (), put: jest.fn (), delete: jest.fn () } })),
+// Minimal MSW mocks to satisfy tests without parsing ESM bundles;'
+jest.mock ('msw', () => ({ rest: { get: jest.fn (), post: jest.fn (), put: jest.fn (), delete: jest.fn () } })),'
 jest.mock ('msw / node', () => ({ setup_server: () => ({ listen: jest.fn (), reset_handlers: jest.fn (), close: jest.fn () }) })),
-// Provide mock for missing component;
+// Provide mock for missing component;'
 jest.mock ('@/components / search / FilterSidebar', () => ({ FilterSidebar: () => null })),
 // Extend Vitest shim with timer helpers if not present;
 // @ts - ignore - vi is added by the vitest mock above;
-// Check condition
-if ( {) {
-  $2
+// Check condition;
+if ( {) {}
+  $2;
 }
   // @ts - ignore;
-  if (global.vi.useFakeTimers = jest.useFakeTimers.bind (jest), ) {
-  $2
+  if (global.vi.useFakeTimers = jest.useFakeTimers.bind (jest), ) {}
+  $2;
 }
   // @ts - ignore;
-  if (global.vi.useRealTimers = jest.useRealTimers.bind (jest)) {
-  $2
+  if (global.vi.useRealTimers = jest.useRealTimers.bind (jest)) {}
+  $2;
 }
   // @ts - ignore;
-  if (global.vi.runAllTimers = jest.runAllTimers.bind (jest)) {
-  $2
+  if (global.vi.runAllTimers = jest.runAllTimers.bind (jest)) {}
+  $2;
 }
   // @ts - ignore;
-  if (global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind (jest)) {
-  $2
+  if (global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind (jest)) {}
+  $2;
 }
 }
 <<<<<<< HEAD
@@ -701,6 +769,7 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 }
   // @ts - ignore;
   window.window.window.performance.getEntriesByType = () => [];
@@ -937,3 +1006,9 @@ getItem: jest.fn ()
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

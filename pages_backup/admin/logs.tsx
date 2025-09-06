@@ -1,10 +1,26 @@
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 import { useState, useEffect  } from 'react';
 import { GetServerSideProps  } from 'next';
 import fs from 'fs',
+=======
+
+import { useState, useEffect } from 'react';'
+import { GetServerSideProps } from 'next';
+'
+import {useState, useEffect} from 'react';'
+import {GetServerSideProps} from 'next';
+'
+import { useState, useEffect } from 'react';'
+import { GetServerSideProps } from 'next';
+
+'
+import fs from 'fs';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 import path from 'path';
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import {useState, useEffect} from 'react';
@@ -88,8 +104,16 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'
+import { Badge } from '@/components/ui/badge';'
+import { Button } from '@/components/ui/button';'
+import { Input } from '@/components/ui/input';
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   SelectTrigger,;
-  SelectValue,;
+  SelectValue,;'
 } from '@/components/ui/select';
 import {;
   AlertTriangle,;
@@ -103,65 +127,54 @@ import {;
   SelectContent,
   SelectItem,
   SelectTrigger,;
-  SelectValue,;
+  SelectValue,;'
 } from '@/components/ui/select';
-import {
+import {}
   AlertTriangle,
   Info,
   AlertCircle,
   XCircle,
-  Search,
+  Search,;
   Download,;
-  RefreshCw,;
+  RefreshCw,;'
 } from 'lucide-react';
 
-
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
+'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';'
+import { Badge } from '@/components / ui / badge';'
+import { Button } from '@/components / ui / button';'
 import { Input } from '@/components / ui / input';
-import {
+import {}
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,';
 } from '@/components / ui / select';
-import {
+import {}
   AlertTriangle,
   Info,
   AlertCircle,
   XCircle,
   Search,
 
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import fs from 'fs';
-import path from 'path';
-
-=======
-interface LogEntry {
 =======
 
-=======
-import { useState, useEffect } from 'react';
-import { GetServerSideProps } from 'next';
-=======
-import {useState, useEffect} from 'react';
-import {GetServerSideProps} from 'next';
-=======
-import { useState, useEffect } from 'react';
-import { GetServerSideProps } from 'next';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import fs from 'fs';
+';
+import fs from 'fs';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 import path from 'path';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+
+'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'
+import { Badge } from '@/components/ui/badge';'
+import { Button } from '@/components/ui/button';'
 import { Input } from '@/components/ui/input';
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -254,13 +267,18 @@ import {
   RefreshCw,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 } from 'lucide-react';
 
-=======
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';'
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+'
 import { logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 } from 'lucide-react';
@@ -303,10 +321,19 @@ interface LogEntry {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+interface LogEntry {}
+interface LogEntry {;
+  id: string;
+  timestamp: string;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   stack?: string;
   url?: string;
   userAgent?: string;
   userId?: string;
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -320,10 +347,15 @@ interface LogEntry {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   error?: {
+=======
+
+  error?: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   error?: {;
     name: string;
     message: string;
     stack?: string;
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -421,10 +453,15 @@ interface LogsPageProps {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -524,11 +561,33 @@ export default function LogsPage({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  } catch (error) {}
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+'
+const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {}
+  switch (level) {'
+    case 'debug':"
+      return <Info className="h-4 w-4 text-blue-500" />,'
+    case 'info':"
+      return <Info className="h-4 w-4 text-green-500" />,'
+    case 'warn':"
+      return <AlertTriangle className="h-4 w-4 text-yellow-500" />,'
+    case 'error':"
+      return <AlertCircle className="h-4 w-4 text-red-500" />,'
+    case 'critical':
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   logs: initialLogs,
   errorCount,
   warningCount,
   totalCount,
   lastUpdated,;
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -544,11 +603,16 @@ export default function LogsPage({
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return <XCircle className="h-4 w-4 text-red-700" />,
+=======
+"
+      return <XCircle className="h-4 w-4 text-red-700" />,"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     default: return <Info className="h-4 w-4 text-gray-500" />
-;
+;'
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {;
-  switch (level) {;
+  switch (level) {;'
     case 'debug':;
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -576,14 +640,19 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
-  const colors = {;
-    debug: 'bg-blue-100 text-blue-800',;
-    info: 'bg-green-100 text-green-800',;
-    warn: 'bg-yellow-100 text-yellow-800',;
-    error: 'bg-red-100 text-red-800',;
+  const colors = {;'
+    debug: 'bg-blue-100 text-blue-800',;'
+    info: 'bg-green-100 text-green-800',;'
+    warn: 'bg-yellow-100 text-yellow-800',;'
+    error: 'bg-red-100 text-red-800',;'
     critical: 'bg-red-200 text-red-900',;
   };
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -599,6 +668,9 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 export default function LogsPage(): any ({;
   logs: initialLogs,;
   errorCount,;
@@ -607,6 +679,7 @@ export default function LogsPage(): any ({;
   lastUpdated,;
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -619,13 +692,18 @@ export default function LogsPage(): any ({;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     cause?: unknown
+=======
+
+    cause?: unknown;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   };
-  performance?: {
+  performance?: {}
     memory?: number;
     timing?: number;
-    fps?: number
+    fps?: number;
   }
 }
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -635,12 +713,17 @@ export default function LogsPage(): any ({;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface LogsPageProps {
+=======
+
+interface LogsPageProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   logs: LogEntry[],
   errorCount: number,
   warningCount: number,
   totalCount: number,
-  lastUpdated: string
+  lastUpdated: string;
 }
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -692,6 +775,31 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {}
+  switch (level) {'
+    case 'debug':"
+      return <Info className="h-4 w-4 text-blue-500" />;'
+    case 'info':"
+      return <Info className="h-4 w-4 text-green-500" />;'
+    case 'warn':"
+      return <AlertTriangle className="h-4 w-4 text-yellow-500" />;'
+    case 'error':"
+      return <AlertCircle className="h-4 w-4 text-red-500" />;'
+    case 'critical':"
+      return <XCircle className="h-4 w-4 text-red-700" />;"
+    default: return <Info className="h-4 w-4 text-gray-500" />
+  }
+};
+'
+const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {}
+  const colors = {'
+    debug: 'bg-blue-100 text-blue-800','
+    info: 'bg-green-100 text-green-800','
+    warn: 'bg-yellow-100 text-yellow-800','
+    error: 'bg-red-100 text-red-800','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     critical: 'bg-red-200 text-red-900'},
   return (
     <Badge className={colors[level]}>
@@ -700,15 +808,16 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
   )
 };
 
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
 <<<<<<< HEAD
+=======
+export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
-<<<<<<< HEAD
-=======
-
-=======
 
 
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -736,6 +845,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
+=======
+
+  const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);'
+  const [searchTerm, setSearchTerm] = useState('');'
+  const [levelFilter, setLevelFilter] = useState<string>('all');'
+  const [categoryFilter, setCategoryFilter] = useState<string>('all');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
@@ -755,6 +871,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
     Boolean
 <<<<<<< HEAD
   );
@@ -778,6 +895,9 @@ const categories = Array.from(new Set(logs.map(log => log.category))).filter(
 origin/cursor/automate-test-improve-and-merge-code-2533
     Boolean
 
+=======
+    Boolean;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   const categories = Array && Array.from(new Set(logs && logs.map(log => log && log.category))).filter(;
     Boolean;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -785,6 +905,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const sources = Array && Array.from(new Set(logs && logs.map(log => log && log.source))).filter(;
     Boolean;
   );
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -801,11 +922,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
       setLogs(mockLogs);
       setFilteredLogs(mockLogs);
       setLoading(false);
     }, 1000);
   }, []);
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
@@ -854,6 +979,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'critical': return 'bg-red-200 text-red-900';
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
+=======
+'
+      case 'debug': return 'bg-blue-100 text-blue-800';'
+      case 'info': return 'bg-green-100 text-green-800';'
+      case 'warn': return 'bg-yellow-100 text-yellow-800';'
+      case 'error': return 'bg-red-100 text-red-800';'
+      case 'critical': return 'bg-red-200 text-red-900';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
       default: return 'bg-gray-100 text-gray-800';    }
 <<<<<<< HEAD
   }
@@ -861,6 +994,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
     const dataStr = JSON.stringify(filteredLogs, null, 2);
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
     const dataUri =
 =======
 <<<<<<< HEAD
@@ -877,6 +1011,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const dataStr = JSON.stringify(filteredLogs, null, 2);
 const dataUri =
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    const dataUri ='
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
 
@@ -885,17 +1022,22 @@ const dataUri =
   const exportLogs = () => {;
     const dataStr = JSON && JSON.stringify(filteredLogs, null, 2);
     const dataUri =;
-
+'
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
 
 
 
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -905,6 +1047,9 @@ const dataUri =
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
   useEffect(() => {;
@@ -916,35 +1061,35 @@ const dataUri =
         log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()));
       );
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-    // Level filter;
+    // Level filter;'
     if (levelFilter !== 'all') {;
       filtered = filtered.filter(log => log.level === levelFilter);
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-    // Category filter;
+    // Category filter;'
     if (categoryFilter !== 'all') {;
       filtered = filtered.filter(log => log.category === categoryFilter);
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-    // Source filter;
+    // Source filter;'
     if (sourceFilter !== 'all') {;
       filtered = filtered.filter(log => log.source === sourceFilter);
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -953,30 +1098,31 @@ const dataUri =
   }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]),;
   const refreshLogs = async () => {;
     setIsLoading(true);
-    try {
+    try {'
       const response = await fetch('/api/admin/logs');
       if (response.ok) {;
         const data = await response.json();
         setLogs(data.logs);
-        } catch (error) {
-    console.error("Error:", error);
+        } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-    } catch (error) {
+    } catch (error) {'
       logErrorToProduction('Failed to refresh logs:', error);
     } finally {;
       setIsLoading(false);
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   },;
   const exportLogs = () => {;
-    const dataStr = JSON.stringify(filteredLogs, null, 2);
-    const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
+    const dataStr = JSON.stringify(filteredLogs, null, 2);'
+    const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);`
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -984,6 +1130,12 @@ const dataUri =
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
+=======
+
+'
+    const linkElement = document.createElement('a');'
+    linkElement.setAttribute('href', dataUri);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
   },;
@@ -991,41 +1143,41 @@ const dataUri =
     return new Date(timestamp).toLocaleString();
   };
 
-  const formatTimestamp = (timestamp: string) => {
-    return new Date(timestamp).toLocaleString();  }
-  const formatPerformance = (performance?: LogEntry['performance']) => {
-
-
-    const linkElement = document && document.createElement('a');
-    linkElement && linkElement.setAttribute('href', dataUri);
+  const formatTimestamp = (timestamp: string) => {}
+    return new Date(timestamp).toLocaleString();  }'
+  const formatPerformance = (performance?: LogEntry['performance']) => {}
+'
+    const linkElement = document && document.createElement('a');'
+    linkElement && linkElement.setAttribute('href', dataUri);'
     linkElement && linkElement.setAttribute('download', exportFileDefaultName);
     linkElement && linkElement.click();
   };
 
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();  };
-
+'
   const formatPerformance = (performance?: LogEntry['performance']) => {;
 
     if (!performance) return null;
     const parts = [];
-    if (performance && performance.memory) {;
+    if (performance && performance.memory) {;`
       parts && parts.push(`Memory: ${(performance && performance.memory / 1024 / 1024).toFixed(1)}MB`);
     }
-    if (performance && performance.timing) {;
+    if (performance && performance.timing) {;`
       parts && parts.push(`Timing: ${performance && performance.timing}ms`);
     }
-    if (performance && performance.fps) {;
+    if (performance && performance.fps) {;`
       parts && parts.push(`FPS: ${performance && performance.fps}`);
     }
-  return (
-    <div className='container mx-auto p-6 space-y-6'>;
-      <div className='flex items-center justify-between'>;
-        <h1 className='text-3xl font-bold'>System Logs & Error Monitoring</h1>;
-        <div className='flex items-center space-x-2'>;
+  return ('
+    <div className='container mx-auto p-6 space-y-6'>;'
+      <div className='flex items-center justify-between'>;'
+        <h1 className='text-3xl font-bold'>System Logs & Error Monitoring</h1>;'
+        <div className='flex items-center space-x-2'>;'
           <Button onClick={refreshLogs} disabled={isLoading} variant='outline'>;
-            <RefreshCw
+            <RefreshCw'`
               className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1037,18 +1189,11 @@ const dataUri =
     linkElement.setAttribute('download', exportFileDefaultName);
 <<<<<<< HEAD
 =======
-
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
-        <Card>
-          <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-            <CardTitle className='text-sm font-medium'>Total Logs</CardTitle>
-            <Info className='h-4 w-4 text-muted-foreground' />
-          </CardHeader>
-          <CardContent>
-            <div className='text-2xl font-bold'>{totalCount}</div>
-            <p className='text-xs text-muted-foreground'>All log entries</p>          </CardContent>
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 
+
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
   useEffect(() => {;
@@ -1125,11 +1270,16 @@ const dataUri =
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
+=======
+    const dataStr = JSON.stringify(filteredLogs, null, 2);'
+    const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    const linkElement = document.createElement('a');
-    linkElement.setAttribute('href', dataUri);
+'
+    const linkElement = document.createElement('a');'
+    linkElement.setAttribute('href', dataUri);'
     linkElement.setAttribute('download', exportFileDefaultName);
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
     linkElement.click()
   };
@@ -1268,12 +1418,14 @@ const parts = [];
 <<<<<<< HEAD
     return parts.length > 0 ? parts.join() : null
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 
   },;
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
-
   };
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 =======
     return parts.length > 0 ? parts.join(', ') : null;
   }
@@ -1286,10 +1438,14 @@ const parts = [];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
   },;
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 =======
 
@@ -1303,14 +1459,22 @@ const parts = [];
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const formatPerformance = (performance?: LogEntry['performance']) => {;
+=======
+
+
+
+'
+  const formatPerformance = (performance?: LogEntry['performance']) => {;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-    return parts.length > 0 ? parts.join() : null
+    return parts.length > 0 ? parts.join() : null;
   },
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1331,12 +1495,23 @@ const parts = [];
         <h1 className="text-3xl font-bold">System Logs & Error Monitoring</h1>
         <div className="flex items-center space-x-2">
           <Button onClick={refreshLogs} disabled={isLoading} variant="outline">
+=======
+
+
+
+  return ("
+    <div className="container mx-auto p-6 space-y-6">"
+      <div className="flex items-center justify-between">"
+        <h1 className="text-3xl font-bold">System Logs & Error Monitoring</h1>"
+        <div className="flex items-center space-x-2">"
+          <Button onClick={refreshLogs} disabled={isLoading} variant="outline">'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
             <RefreshCw className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
-            Refresh
-          </Button>
-          <Button onClick={exportLogs} variant='outline'>
+            Refresh;
+          </Button>'
+          <Button onClick={exportLogs} variant='outline'>'
             <Download className='h-4 w-4 mr-2' />
-            Export
+            Export;
           </Button>
         </div>
 
@@ -1348,13 +1523,9 @@ const parts = [];
 =======
 
 
-<<<<<<< HEAD
-=======
-      </div>
-{/* Summary Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
 
 
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1375,41 +1546,50 @@ const parts = [];
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="text-2xl font-bold">{totalCount}</div>
+=======
+        <Card>"
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">"
+            <CardTitle className="text-sm font-medium">Total Logs</CardTitle>"
+            <Info className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>"
+            <div className="text-2xl font-bold">{totalCount}</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
             <p className="text-xs text-muted-foreground">All log entries</p>
           </CardContent>
         </Card>
         <Card>
-
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Errors</CardTitle>
+"
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">"
+            <CardTitle className="text-sm font-medium">Errors</CardTitle>"
             <XCircle className="h-4 w-4 text-red-500" />
           </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-red-600">{errorCount}</div>
+          <CardContent>"
+            <div className="text-2xl font-bold text-red-600">{errorCount}</div>"
             <p className="text-xs text-muted-foreground">Critical & error logs</p>
           </CardContent>
 
         </Card>
         <Card>
-
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Warnings</CardTitle>
+"
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">"
+            <CardTitle className="text-sm font-medium">Warnings</CardTitle>"
             <AlertTriangle className="h-4 w-4 text-yellow-500" />
           </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-yellow-600">{warningCount}</div>
+          <CardContent>"
+            <div className="text-2xl font-bold text-yellow-600">{warningCount}</div>"
             <p className="text-xs text-muted-foreground">Warning logs</p>
           </CardContent>
 
         </Card>
         <Card>
-
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Last Updated</CardTitle>
+"
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">"
+            <CardTitle className="text-sm font-medium">Last Updated</CardTitle>"
             <RefreshCw className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
-          <CardContent>
-            <div className="text-sm font-medium">{formatTimestamp(lastUpdated)}</div>
+          <CardContent>"
+            <div className="text-sm font-medium">{formatTimestamp(lastUpdated)}</div>"
             <p className="text-xs text-muted-foreground">Data freshness</p>
           </CardContent>
 
@@ -1423,9 +1603,8 @@ const parts = [];
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
       {/* Filters */}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1492,11 +1671,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      {/* Filters */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1511,10 +1700,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="relative">
+=======
+"
+            <div className="relative">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input
-                placeholder="Search logs..."
+              <Input"
+                placeholder="Search logs...""
                 className="pl-8"
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 
 =======
@@ -1630,9 +1824,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
               <SelectTrigger>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-                <SelectValue placeholder="All categories" />
+=======
+
+
+              <SelectTrigger>"
+                <SelectValue placeholder="All levels" />
               </SelectTrigger>
               <SelectContent>
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
+                <SelectValue placeholder="All categories" />
+              </SelectTrigger>
+              <SelectContent>"
                 <SelectItem value="all">All Categories</SelectItem>
                 {categories.map(category => (
                   <SelectItem key={category} value={category}>{category}</SelectItem>
@@ -1665,7 +1869,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 onChange={e => setSearchTerm(e && e.target.value)}
               />;
-            </div>;
+            </div>;"
                 <SelectValue placeholder="All sources" />
 <<<<<<< HEAD
 =======
@@ -1678,9 +1882,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent>"
                 <SelectItem value="all">All Sources</SelectItem>
                 {sources.map(source => (
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
                     {source}
@@ -1987,6 +2192,9 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
               </SelectContent>;
             </Select>;
           </div>;
@@ -1995,39 +2203,39 @@ if ( {) {
         <CardHeader>;
           <CardTitle > Log Entries ({filtered_logs.length})</CardTitle>;
         </CardHeader>;
-        <CardContent>;
+        <CardContent>;'
           <div className='space - y-4'>;
             {filtered_logs.length > 0 ? (
-              filtered_logs.map (log => (
-                <div key={log.id} className='border rounded - lg p - 4 space - y-2'>;
-                  <div className='flex items - center justify - between'>;
+              filtered_logs.map (log => ('
+                <div key={log.id} className='border rounded - lg p - 4 space - y-2'>;'
+                  <div className='flex items - center justify - between'>;'
                     <div className='flex items - center space - x-2'>;
                       <LogLevelIcon level={log.level} />;
-                      <LogLevelBadge level={log.level} />;
-                      <Badge variant='outline'>{log.category}</Badge>;
+                      <LogLevelBadge level={log.level} />;'
+                      <Badge variant='outline'>{log.category}</Badge>;'
                       <Badge variant='secondary'>{log.source}</Badge>;
-                      {log.component && (
+                      {log.component && ('
                         <Badge variant='outline'>{log.component}</Badge>)}
-                    </div>;
+                    </div>;'
                     <span className='text - sm text - muted - foreground'>;
                       {format_timestamp (log.timestamp)}
                     </span>;
-                  </div>;
+                  </div>;'
                   <div className='text - sm font - medium'>{log.message}</div>;
-                  {log.context && Object.keys (log.context).length > 0 && (
-                    <details className='text - xs'>;
+                  {log.context && Object.keys (log.context).length > 0 && ('
+                    <details className='text - xs'>;'
                       <summary className='cursor - pointer text - muted - foreground hover:text - foreground'>;
                         View Context;
-                      </summary>;
+                      </summary>;'
                       <pre className='mt - 2 p - 2 bg - muted rounded text - xs overflow - x-auto'>                        {JSON.stringify (log.context, null, 2)}
                       </pre>;
                     </details>)}
 
-                  {log.error && (
-                    <details className='text - xs'>;
+                  {log.error && ('
+                    <details className='text - xs'>;'
                       <summary className='cursor - pointer text - red - 600 hover:text - red - 800'>;
                         View Error Details;
-                      </summary>;
+                      </summary>;'
                       <div className='mt - 2 p - 2 bg - red - 50 rounded'>;
                         <div>;
                           <strong > Name:</strong> {log.error.name}
@@ -2035,66 +2243,40 @@ if ( {) {
                         <div>;
                           <strong > Message:</strong> {log.error.message}
                         </div>;
-                        {log.error.stack && (
-                          <details className='mt - 2'>;
+                        {log.error.stack && ('
+                          <details className='mt - 2'>;'
                             <summary className='cursor - pointer'>;
                               Stack Trace;
-                            </summary>;
+                            </summary>;'
                             <pre className='mt - 1 text - xs overflow - x-auto'>;
                               {log.error.stack}
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 
-                    </div>;
-                    <span className='text-sm text-muted-foreground'>;
-                      {formatTimestamp(log && log.timestamp)}
-                    </span>;
-                  </div>;
-                  <div className='text-sm font-medium'>{log && log.message}</div>;
-                  {log && log.context && Object && Object.keys(log && log.context).length > 0 && (;
-                    <details className='text-xs'>;
-                      <summary className='cursor-pointer text-muted-foreground hover:text-foreground'>;
-                        View Context;
-                      </summary>;
-                      <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-x-auto'>                        {JSON && JSON.stringify(log && log.context, null, 2)}
-                      </pre>;
-                    </details>;
-                  )}
-                  {log && log.error && (;
-                    <details className='text-xs'>;
-                      <summary className='cursor-pointer text-red-600 hover:text-red-800'>;
-                        View Error Details;
-                      </summary>;
-                      <div className='mt-2 p-2 bg-red-50 rounded'>;
-                        <div>;
-                          <strong>Name:</strong> {log && log.error.name}
-                        </div>;
-                        <div>;
-                          <strong>Message:</strong> {log && log.error.message}
-                        </div>;
-                        {log && log.error.stack && (;
-                          <details className='mt-2'>;
-                            <summary className='cursor-pointer'>;
-                              Stack Trace;
-                            </summary>;
-                            <pre className='mt-1 text-xs overflow-x-auto'>;
-                              {log && log.error.stack}
-                            </pre>;
-                          </details>;
 
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
       <Card>
         <CardHeader>
           <CardTitle>Log Entries ({filteredLogs.length})</CardTitle>
         </CardHeader>
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
         <CardContent>
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
+=======
+        <CardContent>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
           <div className="space-y-4">
 =======
 <<<<<<< HEAD
@@ -2108,16 +2290,17 @@ if ( {) {
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
             {filteredLogs.length > 0 ? (
-              filteredLogs.map((log) => (
-                <div key={log.id} className="border rounded-lg p-4 space-y-2">
-                  <div className="flex items-center justify-between">
+              filteredLogs.map((log) => ("
+                <div key={log.id} className="border rounded-lg p-4 space-y-2">"
+                  <div className="flex items-center justify-between">"
                     <div className="flex items-center space-x-2">
                       <LogLevelIcon level={log.level} />
-                      <LogLevelBadge level={log.level} />
-                      <Badge variant="outline">{log.category}</Badge>
+                      <LogLevelBadge level={log.level} />"
+                      <Badge variant="outline">{log.category}</Badge>"
                       <Badge variant="secondary">{log.source}</Badge>
-                      {log.component && (
+                      {log.component && ("
                         <Badge variant="outline">{log.component}</Badge>
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2146,8 +2329,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
+=======
+
+
+                  {log.context && Object.keys(log.context).length > 0 && ("
+                    <details className="text-xs">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
-                        View Context
+                        View Context;
                       </summary>
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
@@ -2164,6 +2353,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2172,27 +2362,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
                       <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
-                        {JSON.stringify(log.context, null, 2)  } catch (error) {
-    console.error("Error:", error);
+                        {JSON.stringify(log.context, null, 2)  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                       </pre>;
                     </details>;
-                  )  } catch (error) {
-    console.error("Error:", error);
+                  )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   {log.error && (
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -2223,12 +2412,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
                         View Error Details
                       </summary>
+=======
+"
+                    <details className="text-xs">"
+                      <summary className="cursor-pointer text-red-600 hover:text-red-800">
+                        View Error Details;
+                      </summary>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
                       <div className="mt-2 p-2 bg-red-50 rounded">
                         <div><strong>Name:</strong> {log.error.name}</div>
                         <div><strong>Message:</strong> {log.error.message}</div>
-                        {log.error.stack && (
-                          <details className="mt-2">
-                            <summary className="cursor-pointer">Stack Trace</summary>
+                        {log.error.stack && ("
+                          <details className="mt-2">"
+                            <summary className="cursor-pointer">Stack Trace</summary>"
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>
                           </details>
 <<<<<<< HEAD:pages/admin/logs.tsx
@@ -2316,29 +2512,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>
               ))
-            ) : (
+            ) : ("
               <div className="text-center text-muted-foreground py-8">
                 No logs found matching the current filters.
               </div>
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
                 </div>;
               ));
-            ) : (;
+            ) : (;'
               <div className='text-center text-muted-foreground py-8'>                No logs found matching the current filters.;
               </div>;
-=======
+"
               <div className="text-center text-muted-foreground py-8">
                 No logs found matching the current filters.
               </div>
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2380,11 +2578,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
             }
           }
         } catch (fileError) {;
                             </pre>;
-                          </details>)}
+                          </details>)}"
                         <div className="flex items - center justify - between text - xs text - gray - 500">;
                           <div>;
                             {log.session_id && <span > Session: {log.session_id}</span>}
@@ -2393,20 +2594,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {log.performance && (
                             <div>{format_performance (log.performance)}</div>)}
                         </div>;
-                      </div>;
+                      </div>;"
                       <div className="text - xs text - gray - 500 ml - 4">;
                         {new Date (log.timestamp).toLocaleString ()}
                       </div>;
-                    </details>)}
+                    </details>)}'
                   <div className='flex items - center justify - between text - xs text - muted - foreground'>                    <div>;
-                      Session: {log.session_id}
+                      Session: {log.session_id}`
                       {log.user_id && ` • User: ${log.user_id}`}
                     </div>;
                   </div>;
-                  {log.url && (
+                  {log.url && ('
                     <div className='text - xs text - muted - foreground truncate'>                      URL: {log.url}
                     </div>)}
-                </div>))) : (
+                </div>))) : ('
               <div className='text - center text - muted - foreground py - 8'>                No logs found matching the current filters.;
               </div>)}
           </div>;
@@ -2414,6 +2615,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>;
     </>);
 }
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -2470,6 +2672,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
+=======
+export const getServerSideProps: GetServerSideProps = async () => {}
+  try {';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     const logs_dir = path.join (process.cwd (), 'logs');
     const logs: LogEntry[] = [];
 <<<<<<< HEAD:pages/admin/logs.tsx
@@ -2477,6 +2683,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
               // Skip malformed log entries;
             }
           }
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
         } catch (file_error) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -2492,10 +2699,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }
         } catch (file_error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        } catch (file_error) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
           // Skip problematic files;
         }
       }
     }
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD:pages/admin/logs.tsx
 <<<<<<< HEAD
 =======
@@ -2614,6 +2825,17 @@ errorCount,
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+
+    const totalCount = logs.length;
+    return {}
+      props: {}
+        logs: logs.slice(0, 1000), // Limit to most recent 1000 logs;
+    }
+  } catch (error) {'
+    logErrorToProduction ('Error reading logs:', error);    return {}
+      props: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
         logs: [],
         errorCount: 0,
         warningCount: 0,
@@ -2623,9 +2845,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         lastUpdated: new Date().toISOString(),
       },
     };
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -2645,6 +2866,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     };
             )  } catch (error) {
     console.error("Error:", error);
+=======
+            )  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -2654,59 +2879,60 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Card>;
     </div>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
 export const getServerSideProps: GetServerSideProps = async () => {;
-  try {
+  try {'
     const logsDir = path.join(process.cwd(), 'logs'),;
     const logs: LogEntry[] = [];
     // Read all log files;
     if (fs.existsSync(logsDir)) {;
-      const files = fs.readdirSync(logsDir);
+      const files = fs.readdirSync(logsDir);'
       const logFiles = files.filter(file => file.endsWith('.log'));
       for (const file of logFiles) {;
-        try {
-          const filePath = path.join(logsDir, file);
-          const content = fs.readFileSync(filePath, 'utf-8');
+        try {}
+          const filePath = path.join(logsDir, file);'
+          const content = fs.readFileSync(filePath, 'utf-8');'
           const lines = content.split('\n').filter(line => line.trim());
           for (const line of lines) {;
-            try {
+            try {}
               const logEntry = JSON.parse(line);
               logs.push(logEntry);
-            } catch (error) {
+            } catch (error) {}
               // Skip malformed log entries;
-              } catch (error) {
-    console.error("Error:", error);
+              } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            } catch (error) {
-    console.error("Error:", error);
+            } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-        } catch (error) {
+        } catch (error) {}
           // Skip problematic files;
-          } catch (error) {
-    console.error("Error:", error);
+          } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-        } catch (error) {
-    console.error("Error:", error);
+        } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2715,6 +2941,10 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
     // Sort logs by timestamp (newest first);
     logs && logs.sort(;
       (a, b) =>;
@@ -2722,8 +2952,8 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     );
 
     // Calculate statistics;
-    const errorCount = logs && logs.filter(;
-      log => log && log.level === 'error' || log && log.level === 'critical';
+    const errorCount = logs && logs.filter(;'
+      log => log && log.level === 'error' || log && log.level === 'critical';'
     ).length;    const warningCount = logs && logs.filter(log => log && log.level === 'warn').length;
     const totalCount = logs && logs.length;
 
@@ -2736,7 +2966,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
         lastUpdated: new Date().toISOString(),;
       },;
     };
-  } catch (error) {;
+  } catch (error) {;'
     logErrorToProduction('Error reading logs:', error);    return {;
       props: {;
         logs: [],;
@@ -2748,6 +2978,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     };
 <<<<<<< HEAD
   }
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 
 }
@@ -2782,15 +3013,18 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 }
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx
 
         errorCount;
         warningCount;
         totalCount;
         lastUpdated: new Date().toISOString()}}
-  } catch (error) {
+  } catch (error) {'
             logErrorToProduction('Error reading logs:', error);
-    return {
-      props: {
+    return {}
+      props: {}
         logs: [],
 
 <<<<<<< HEAD
@@ -2798,6 +3032,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   }
 }
 ;
+<<<<<<< HEAD:pages_backup/admin/logs.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2825,3 +3060,9 @@ lastUpdated: new Date().toISOString(),
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/logs.tsx
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/logs.tsx

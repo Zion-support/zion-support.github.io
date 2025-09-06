@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -120,13 +121,21 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Send } from "lucide-react";
 import { useState } from "react";
+=======
+import { Button } from "@/components/ui/button";"
+import { Input } from "@/components/ui/input";"
+import { Textarea } from "@/components/ui/textarea";"
+import { Mail, Send } from "lucide-react";"
+import { useState } from "react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "@/hooks/use-toast";
-interface ProfileContactProps {
+interface ProfileContactProps {}
   email?: string;
-  profileName: string;
+  profileName: string;"
   profileType: "service" | "talent";
 }
 
+<<<<<<< HEAD
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
@@ -145,13 +154,32 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         description: `Your message has been sent to ${profileName}.`})
     }, 1000)
   },
+=======
+export function ProfileContact() { return null; }
+  const handleSendMessage = (e: React.FormEvent) => {}
+    e.preventDefault();
+    setIsSending(true);
 
-  return (
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
-      <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+    // Here would be the actual API call to send the message;
+    setTimeout(() => {}
+      setIsSending(false);"
+      setMessage("");"
+      (setSubject(""),
+        toast({"
+          title: "Message Sent",
+          description: `Your message has been sent to ${profileName}.`,
+        }));
+    }, 1000);
+  };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+  return ("
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">"
+      <h3 className="text-xl font-bold text-white mb-4 flex items-center">"
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
-        Contact
+        Contact;
       </h3>
+<<<<<<< HEAD
       {email && (
         <div className="mb - 4 text - zion - slate-light">;
           <span className="block">Email: </span>;
@@ -205,12 +233,21 @@ function ProfileContact() {
             href={`mailto:${email}`}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+      {email && ("
+        <div className="mb-4 text-zion-slate-light">"
+          <span className="block">Email: </span>
+          <a;`
+            href={`mailto:${email}`}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="text-zion-cyan hover:underline truncate block"
           >
             {email}
           </Link>
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
@@ -423,12 +460,32 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
             disabled={is_sending}
           >;
             <Send className="mr - 2 h - 4 w-4" />;
+=======
+
+
+
+            <Textarea;`
+              placeholder={`Message to ${profile_name}...`}
+              value={message}
+              on_change={(e) => set_message (e.target.value)}"
+              className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
+              required;
+            />;
+          </div>;
+          <Button;"
+            type="submit";"
+            className="w - full bg - zion - cyan hover:bg - zion - cyan / 90";
+            disabled={is_sending}
+          >;"
+            <Send className="mr - 2 h - 4 w - 4" />;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {is_sending ? "Sending..." : "Send Message"}
           </Button>;
         </div>;
       </form>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -449,10 +506,17 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   )
   )
 
+<<<<<<< HEAD
   ),;}
  interface ProfileContactProps {
   email?: string;
@@ -477,3 +541,7 @@ setIsSending (true);
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 main
@@ -150,3 +151,14 @@ export default Layout;
 main
 main
 pr-12243
+=======
+
+
+interface LayoutProps {}
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

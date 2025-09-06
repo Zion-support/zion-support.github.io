@@ -84,20 +84,29 @@ export default function ServicesPage() {
     {
       name: 'Quantum Computing & AI',
       description: 'Revolutionary quantum AI solutions with unprecedented computing power',
+<<<<<<< HEAD
       icon: <BrainIcon className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI' || s.category === 'AI & Machine Learning').length,
       color: 'from-purple-600 to-indigo-700'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Manufacturing & Industry 4.0',
       description: 'Next-generation autonomous manufacturing and robotics platforms',
+<<<<<<< HEAD
       icon: <FactoryIcon className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Manufacturing & Industry 4.0' || s.category === 'Robotics & Automation').length,
       color: 'from-orange-500 to-red-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Healthcare & Biotechnology',
       description: 'AI-powered biomedical research and drug discovery platforms',
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: <FlaskIcon className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length,
@@ -329,6 +338,9 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991970
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 
   return (
@@ -434,7 +446,7 @@ export default function ServicesPage() {
                     Show Popular Only
                   </button>
                 </div>
-=======
+
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <Head>
         <title>Micro SaaS Services - Zion Tech Group | 500+ Revolutionary Solutions</title>
@@ -747,7 +759,7 @@ export default function ServicesPage() {
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-=======
+
                   transition={{ duration: 0.6, delay: index * 0.05 }}
                 >
                   <UltraFuturisticCard

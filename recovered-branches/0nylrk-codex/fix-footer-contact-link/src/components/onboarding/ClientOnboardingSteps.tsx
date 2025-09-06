@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,9 +10,15 @@
 import React from "react";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
 import {PlusCircle, SendIcon, InboxIcon} from "lucide-react";
+=======
+import React from "react";"
+import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";"
+import {PlusCircle, SendIcon, InboxIcon} from "lucide-react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 export function ClientOnboardingSteps() {;
   const onboardingStatus = useOnboardingStatus();
 =======
@@ -49,14 +56,18 @@ export function ClientOnboardingSteps() {  const onboardingStatus = useOnboardin
       completed: onboardingStatus.jobPosted,
       link: "/post-job",
       action: "Post Job",
+=======
+export function ClientOnboardingSteps() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
-    {
-      id: "invite",
+    {"
+      id: "invite","
       label: "Send invitation to talent",
-      completed: onboardingStatus.inviteSent,
-      link: "/talent",
+      completed: onboardingStatus.inviteSent,"
+      link: "/talent","
       action: "Find Talent",
     },
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -182,14 +193,22 @@ export function ClientOnboardingSteps() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+    {"
+      id: "response","
+      label: "Receive your first application",
+      completed: onboardingStatus.responseReceived,"
+      link: "/client-dashboard","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       action: "Check Dashboard",
     },
   ];
-
+"
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
+<<<<<<< HEAD
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus(),
   
@@ -197,37 +216,53 @@ export function ClientOnboardingSteps() {
 import React from "react";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
+=======
+
+
+export function ClientOnboardingSteps() {}
+  const onboardingStatus = useOnboardingStatus(),
+
+  
+
+
+  
+";
+import React from "react";"
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";"
+import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
-export function ClientOnboardingSteps() {
+export function ClientOnboardingSteps() {};
   const onboardingStatus = useOnboardingStatus();
 
-  const steps: OnboardingStep[] = [
-    {
-      id: "post-job",
+  const steps: OnboardingStep[] = []
+    {"
+      id: "post-job","
       label: "Post your first job",
-      completed: onboardingStatus.jobPosted,
-      link: "/post-job",
+      completed: onboardingStatus.jobPosted,"
+      link: "/post-job","
       action: "Post Job",
     },
-    {
-      id: "invite",
+    {"
+      id: "invite","
       label: "Send invitation to talent",
-      completed: onboardingStatus.inviteSent,
-      link: "/talent",
+      completed: onboardingStatus.inviteSent,"
+      link: "/talent","
       action: "Find Talent",
     },
-    {
-      id: "response",
+    {"
+      id: "response","
       label: "Receive your first application",
-      completed: onboardingStatus.responseReceived,
-      link: "/client-dashboard",
+      completed: onboardingStatus.responseReceived,"
+      link: "/client-dashboard","
       action: "Check Dashboard",
     },
   ];
-
+"
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
 
+<<<<<<< HEAD
 export function ClientOnboardingSteps() {;
   const onboardingStatus = useOnboardingStatus(),;
   ;
@@ -237,26 +272,47 @@ export function ClientOnboardingSteps() {;
       label:"Post your first job",;
       completed:onboardingStatus.jobPosted,;
       link:"/post-job",;
+=======
+
+
+
+import React from './react';'
+import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';'
+import { PlusCircle, SendIcon, InboxIcon  } from './lucide-react';'
+import { OnboardingTracker, OnboardingStep  } from './OnboardingTracker';
+export /**;
+ * ClientOnboardingSteps - Function description;
+ */
+function ClientOnboardingSteps() {}
+  const onboarding_status = useOnboardingStatus ();
+;
+
+export function ClientOnboardingSteps() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       action:"Post Job"},;
-    {;
-      id:"invite",;
+    {;"
+      id:"invite",;"
       label:"Send invitation to talent",;
-      completed:onboardingStatus.inviteSent,;
-      link:"/talent",;
+      completed:onboardingStatus.inviteSent,;"
+      link:"/talent",;"
       action:"Find Talent"},;
-    {;
+    {;"
       action: "Check Dashboard",
     },
   ];
-
+"
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
-
-      id: "response",;
+"
+      id: "response",;"
       label: "Receive your first application",;
-      completed: onboardingStatus.responseReceived,;
-      link: "/client-dashboard";
-      action: "Check Dashboard"}];
+      completed: onboardingStatus.responseReceived,;"
+      link: "/client-dashboard";"
+      action: "Check Dashboard"}];"
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

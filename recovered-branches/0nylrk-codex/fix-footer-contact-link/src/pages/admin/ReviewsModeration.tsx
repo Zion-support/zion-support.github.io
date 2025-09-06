@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -46,12 +47,21 @@ import { SEO } from "@/components/SEO";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useState, useEffect } from "react";
+=======
+import { AppHeader } from "@/layout/AppHeader";"
+import { Footer } from "@/components/Footer";"
+import { SEO } from "@/components/SEO";"
+import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";"
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+import { useState, useEffect } from "react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
+import {}
   Card,
   CardContent,
   CardDescription,
   CardHeader,
+<<<<<<< HEAD
   CardTitle,
 } from "@/components/ui/card";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -98,18 +108,27 @@ function ReviewsModerationContent() {
 
 <<<<<<< HEAD
   const fetchReviews = async () => {
+=======
+  CardTitle,";
+} from "@/components/ui/card";"
+import { Star, AlertTriangle } from "lucide-react";"
+import { toast } from "@/components/ui/use-toast";
+function ReviewsModerationContent() { return null; }
+  const fetchReviews = async () => {}
+  const fetchReviews = async () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setIsLoading(true),
-    try {
-      // In a real application, you would fetch reviews from an API
-      // For now, let's simulate a delay and return empty data
+    try {}
+      // In a real application, you would fetch reviews from an API;
+      // For now, let's simulate a delay and return empty data;
       await new Promise(resolve => setTimeout(resolve, 1000)),
       setReviews([]),
       setIsLoading(false)
-    } catch (error) {
+    } catch (error) {"
       console.error("Error fetching reviews:", error),
-      toast({
-        title: "Error"
-        description: "Failed to load reviews. Please try again later."
+      toast({"
+        title: "Error""
+        description: "Failed to load reviews. Please try again later.""
         variant: "destructive"})
       setIsLoading(false)
     }
@@ -146,26 +165,37 @@ function ReviewsModerationContent() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const fetchReviews = async () => {;
+=======
+  const fetchReviews = async () => {"
+  const [activeTab, setActiveTab] = useState("pending");
+  const [reviews, setReviews] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchReviews = async () => {;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setIsLoading(true);
-    try {
-      // In a real application, you would fetch reviews from an API
-      // For now, let's simulate a delay and return empty data
+    try {}
+      // In a real application, you would fetch reviews from an API'
+      // For now, let's simulate a delay and return empty data;
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setReviews([]);
       setIsLoading(false);
-    } catch (error) {
+    } catch (error) {"
       console.error("Error fetching reviews:", error);
-      (toast({
-        title: "Error",
-        description: "Failed to load reviews. Please try again later.",
+      (toast({"
+        title: "Error","
+        description: "Failed to load reviews. Please try again later.","
         variant: "destructive",
       }),
         setIsLoading(false));
     }
   };
+<<<<<<< HEAD
   }
   useEffect(() => {
     fetchReviews()
@@ -206,46 +236,70 @@ function ReviewsModerationContent() {
 };
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  useEffect(() => {}
+    fetchReviews();
+  }, [activeTab]);
+
+  const handleRefresh = () => {;
+    fetchReviews();
+  };
+
+
+
+
+
+  const handleRefresh = () => {}
+    fetchReviews();
+  };
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>;
-      <SEO
-        title="Review Moderation | Zion AI Marketplace"
+      <SEO"
+        title="Review Moderation | Zion AI Marketplace""
         description="Moderate and manage reviews in the Zion AI Marketplace"
       />
-      <AppHeader />
-      <main className="container mx-auto px-4 py-8">
+      <AppHeader />"
+      <main className="container mx-auto px-4 py-8">"
         <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-3xl font-bold">Review Moderation</h1>
+          <div>"
+            <h1 className="text-3xl font-bold">Review Moderation</h1>"
             <p className="text-muted-foreground mt-1">
-              Manage, approve, or reject reviews
+              Manage, approve, or reject reviews;
             </p>
           </div>
         </div>
 
         <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+          <CardHeader>"
+            <CardTitle className="flex items-center gap-2">"
               <Star className="h-5 w-5" />
-              Review Management
+              Review Management;
             </CardTitle>
             <CardDescription>
-              Review and moderate user-submitted reviews before they go live
+              Review and moderate user-submitted reviews before they go live;
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Tabs
+            <Tabs"
               defaultValue="pending"
               value={activeTab}
               onValueChange={setActiveTab}
-            >
-              <TabsList className="mb-6">
-                <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
+            >"
+              <TabsList className="mb-6">"
+                <TabsTrigger value="pending">Pending Reviews</TabsTrigger>"
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
-
+"
               <TabsContent value="pending" className="mt-0">
-                <ReviewsModerationTable
+                <ReviewsModerationTable;
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
@@ -265,13 +319,13 @@ function ReviewsModerationContent() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                 />
               </TabsContent>
-
-              <TabsContent value="reported" className="mt-0">
-                <div className="text-center py-12 border rounded-lg">
-                  <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
-                  <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>
+"
+              <TabsContent value="reported" className="mt-0">"
+                <div className="text-center py-12 border rounded-lg">"
+                  <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />"
+                  <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>"
                   <p className="text-muted-foreground">
-                    This section will show reviews that have been reported by
+                    This section will show reviews that have been reported by;
                     users.
                   </p>
                 </div>
@@ -486,13 +540,14 @@ export default function ReviewsModeration() {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-export default function ReviewsModeration() {
+export default function ReviewsModeration() {}
   return (
     <ProtectedRoute>
       <ReviewsModerationContent />
-    </ProtectedRoute>
+    </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -528,37 +583,42 @@ function ReviewsModerationContent() {;
 =======
     try {;  const fetch_reviews = async () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  const fetch_reviews = async () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setIsLoading (true);
-    try {
-      // In a real application, you would fetch reviews from an API;
+    try {}
+      // In a real application, you would fetch reviews from an API;'
       // For now, let's simulate a delay and return empty data;
       await new Promise (resolve => set_timeout (resolve, 1000));
       set_reviews ([]);
       setIsLoading (false);
-    } catch (error) {
+    } catch (error) {"
       console.error ("Error fetching reviews:", error);
-      toast ({
-        title: "Error",
-        description: "Failed to load reviews. Please try again later.",
+      toast ({"
+        title: "Error","
+        description: "Failed to load reviews. Please try again later.","
         variant: "destructive"}),
       setIsLoading (false);
     }
   }
 ;
-  useEffect (() => {
+  useEffect (() => {}
     fetch_reviews ();
   }, [active_tab]);
 ;
-  const handle_refresh = () =>: any {
+  const handle_refresh = () =>: any {}
     fetch_reviews ();
   }
 ;
   return (
     <>;
-      <SEO;
-        title="Review Moderation | Zion AI Marketplace";
+      <SEO;"
+        title="Review Moderation | Zion AI Marketplace";"
         description="Moderate and manage reviews in the Zion AI Marketplace";
       />;
+<<<<<<< HEAD
       <AppHeader />;
       <main className="container mx - auto px - 4 py-8">;
         <div className="flex justify - between items - center mb-8">;
@@ -571,12 +631,27 @@ function ReviewsModerationContent() {;
           <CardHeader>;
             <CardTitle className="flex items - center gap-2">;
               <Star className="h - 5 w-5" />;
+=======
+      <AppHeader />;"
+      <main className="container mx - auto px - 4 py - 8">;"
+        <div className="flex justify - between items - center mb - 8">;
+          <div>;"
+            <h1 className="text - 3xl font - bold">Review Moderation</h1>;"
+            <p className="text - muted - foreground mt - 1">Manage, approve, or reject reviews</p>;
+          </div>;
+        </div>;
+        <Card>;
+          <CardHeader>;"
+            <CardTitle className="flex items - center gap - 2">;"
+              <Star className="h - 5 w - 5" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               Review Management;
             </CardTitle>;
             <CardDescription>;
               Review and moderate user - submitted reviews before they go live;
             </CardDescription>;
           </CardHeader>;
+<<<<<<< HEAD
           <CardContent>;
             <Tabs default_value="pending" value={active_tab} onValueChange={setActiveTab}>;
               <TabsList className="mb-6">;
@@ -584,17 +659,35 @@ function ReviewsModerationContent() {;
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>;
               </TabsList>;
               <TabsContent value="pending" className="mt-0">;
+=======
+          <CardContent>;"
+            <Tabs default_value="pending" value={active_tab} onValueChange={setActiveTab}>;"
+              <TabsList className="mb - 6">;"
+                <TabsTrigger value="pending">Pending Reviews</TabsTrigger>;"
+                <TabsTrigger value="reported">Reported Reviews</TabsTrigger>;
+              </TabsList>;"
+              <TabsContent value="pending" className="mt - 0">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <ReviewsModerationTable;
                   reviews={reviews}
                   is_loading={is_loading}
                   on_refresh={handle_refresh}
                 />;
+<<<<<<< HEAD
               </TabsContent>;
               <TabsContent value="reported" className="mt-0">;
                 <div className="text - center py - 12 border rounded-lg">;
                   <AlertTriangle className="h - 10 w - 10 text - amber - 500 mx - auto mb-2" />;
                   <h3 className="text - lg font - medium mb-2">Reported Reviews</h3>;
                   <p className="text - muted-foreground">;
+=======
+              </TabsContent>;"
+              <TabsContent value="reported" className="mt - 0">;"
+                <div className="text - center py - 12 border rounded - lg">;"
+                  <AlertTriangle className="h - 10 w - 10 text - amber - 500 mx - auto mb - 2" />;"
+                  <h3 className="text - lg font - medium mb - 2">Reported Reviews</h3>;"
+                  <p className="text - muted - foreground">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     This section will show reviews that have been reported by users.;
                   </p>;
                 </div>;
@@ -604,6 +697,11 @@ function ReviewsModerationContent() {;
         </Card>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
+=======
+    </>);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -633,11 +731,15 @@ export default function ReviewsModeration() {
   )
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-export default /**
- * ReviewsModeration - Function description
+export default /**;
+ * ReviewsModeration - Function description;
  */
-function ReviewsModeration() {
+function ReviewsModeration() {}
   return (
     <ProtectedRoute>;
       <ReviewsModerationContent />;
@@ -645,6 +747,7 @@ function ReviewsModeration() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -688,3 +791,9 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

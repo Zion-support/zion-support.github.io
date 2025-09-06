@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -72,33 +73,37 @@ export function StructuredData() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 "use client",
-export /**
- * StructuredData - Function description
+export /**;
+ * StructuredData - Function description;
  */
-function StructuredData() {
-  const structured_data = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion OS",
-    "description": "Launch sovereign AI - powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
-    "url": "https://ziontechgroup.com",
-    "application_category": "BusinessApplication",
-    "operating_system": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
+function StructuredData() {}
+  const structured_data = {"
+    "@context": "https://schema.org","
+    "@type": "SoftwareApplication","
+    "name": "Zion OS","
+    "description": "Launch sovereign AI - powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.","
+    "url": "https://ziontechgroup.com","
+    "application_category": "BusinessApplication","
+    "operating_system": "Web","
+    "offers": {"
+      "@type": "Offer","
+      "price": "0","
       "price_currency": "USD";
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com / logo.png",
-      "same_as": [;
-        "https://twitter.com / ziontechgroup",
-        "https://github.com / ziontechgroup",
+    },"
+    "provider": {"
+      "@type": "Organization","
+      "name": "Zion Tech Group","
+      "url": "https://ziontechgroup.com","
+      "logo": "https://ziontechgroup.com / logo.png","
+      "same_as": [;"
+        "https://twitter.com / ziontechgroup","
+        "https://github.com / ziontechgroup","
         "https://linkedin.com / company / ziontechgroup";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,24 +148,37 @@ export function StructuredData() {const structuredData = {;
       "Token Systems",
       "Identity & KYC",
       "AI - Powered Tools",
+=======
+
+
+      ];
+    },"
+    "feature_list": [;"
+      "Marketplace & Jobs","
+      "AI Governance","
+      "Token Systems","
+      "Identity & KYC","
+      "AI - Powered Tools","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "Modular Architecture";
-    ],
-    "screenshot": "https://ziontechgroup.com / screenshot.png",
-    "software_version": "1.0.0",
-    "release_notes": "Initial release with core features for launching digital economies",
-    "aggregate_rating": {
-      "@type": "AggregateRating",
-      "rating_value": "4.8",
-      "rating_count": "150",
-      "best_rating": "5",
+    ],"
+    "screenshot": "https://ziontechgroup.com / screenshot.png","
+    "software_version": "1.0.0","
+    "release_notes": "Initial release with core features for launching digital economies","
+    "aggregate_rating": {"
+      "@type": "AggregateRating","
+      "rating_value": "4.8","
+      "rating_count": "150","
+      "best_rating": "5","
       "worst_rating": "1";
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
+    },"
+    "author": {"
+      "@type": "Organization","
+      "name": "Zion Tech Group","
       "url": "https://ziontechgroup.com";
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -230,11 +248,22 @@ export function StructuredData() {;
   return (  return (;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <script;
+=======
+
+  return (;
+
+
+    <script;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       type="application / ld + json";
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
     />);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

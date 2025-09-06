@@ -85,7 +85,7 @@ export default function HomePage() {
       price: 'Starting at $49/month',
       marketSize: '$50B+ global market',
       competitors: 'Stripe, PayPal, Square'
-=======
+
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Code Review Assistant',
       description: 'AI-powered code analysis with security, performance, and maintainability insights. Support for JavaScript, Python, and TypeScript.',
@@ -243,6 +243,7 @@ export default function HomePage() {
       {/* Micro SaaS Services */}
       <section className="py-24 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
           <div className="text-center mb-20 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse" />
@@ -298,6 +299,9 @@ export default function HomePage() {
               size="lg"
               className="bg-purple-600 hover:bg-purple-700 shadow-2xl"
             >
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               View All Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>

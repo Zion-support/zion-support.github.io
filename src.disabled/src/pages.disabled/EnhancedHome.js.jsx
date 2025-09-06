@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from \'react\'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
 const React from "react"; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };''"
 import _React from 'react'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
@@ -17,3 +18,6 @@ import _React from 'react'; export default EnhancedHome; export { EnhancedHome }
 =======
 import _React from 'react'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Check, X, Star, ArrowRight, Zap, Shield, Database, Code, Lock, Link, QrCode, FileText, Mail, Key } from 'lucide-react';
 
 export default function PricingPage() {
@@ -126,6 +127,9 @@ export default function PricingPage() {
       cta: 'Contact Sales',
       popular: false,
       color: 'border-purple-500'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -142,6 +146,7 @@ export default function PricingPage() {
 
   const faqs = [
     {
+<<<<<<< HEAD
       question: 'Can I use multiple services with one plan?',
       answer: 'Yes! All our plans give you access to all services. You can use any combination of services within your plan limits.'
     },
@@ -164,6 +169,9 @@ export default function PricingPage() {
     {
       question: 'What payment methods do you accept?',
       answer: 'We accept all major credit cards, PayPal, and bank transfers for enterprise plans. All payments are processed securely through Stripe.'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -171,121 +179,13 @@ export default function Pricing() {
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Pricing — Zion Tech Group</title>
         <meta name="description" content="Transparent pricing for our micro SaaS services. Start with free tiers and scale as you grow. No hidden fees, no surprises." />
       </Head>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-      {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-8 leading-tight">
-            Simple, Transparent Pricing
-          </h1>
-          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12">
-            Start with our generous free tiers and scale as you grow. No hidden fees, no surprises. 
-            Choose the plan that fits your needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="#pricing" variant="primary" size="lg">
-              View Plans
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button href="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black">
-              Contact Sales
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Plans */}
-      <section id="pricing" className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold text-white mb-8">
-              Choose Your Plan
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              All plans include access to all services. Upgrade anytime to unlock more features and higher limits.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <Card
-                key={index}
-                className={`relative p-8 border-2 ${plan.color} hover:border-blue-500/50 transition-all duration-300 ${
-                  plan.popular ? 'scale-105 shadow-2xl shadow-blue-500/20' : ''
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <p className="text-gray-400 mb-6">{plan.description}</p>
-                  <div className="mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    {plan.period !== 'forever' && (
-                      <span className="text-gray-400 ml-2">/{plan.period}</span>
-                    )}
-                  </div>
-                  {plan.period === 'forever' && (
-                    <p className="text-green-400 text-sm">No credit card required</p>
-                  )}
-                </div>
-
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="text-white font-semibold mb-4 flex items-center">
-                      <Check className="w-5 h-5 text-green-400 mr-2" />
-                      What's Included
-                    </h4>
-                    <ul className="space-y-3">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {plan.limitations.length > 0 && (
-                    <div>
-                      <h4 className="text-white font-semibold mb-4 flex items-center">
-                        <X className="w-5 h-5 text-red-400 mr-2" />
-                        Limitations
-                      </h4>
-                      <ul className="space-y-3">
-                        {plan.limitations.map((limitation, limitationIndex) => (
-                          <li key={limitationIndex} className="flex items-center text-gray-400">
-                            <X className="w-4 h-4 text-red-400 mr-3 flex-shrink-0" />
-                            {limitation}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-
-                <div className="mt-8">
-                  <Button
-                    href={plan.name === 'Enterprise' ? '/contact' : '/signup'}
-                    variant={plan.popular ? 'primary' : 'outline'}
-                    size="lg"
-                    className={`w-full ${
-                      plan.popular 
-                        ? 'bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600' 
-                        : 'border-gray-600 text-white hover:border-blue-500 hover:bg-blue-500/10'
-                    }`}
-                  >
-                    {plan.cta}
-                  </Button>
                 </div>
               </Card>
             ))}
@@ -293,18 +193,8 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* Service-Specific Pricing */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold text-white mb-8">
-              Service-Specific Pricing
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Each service has its own pricing structure. Mix and match services based on your needs.
-            </p>
-          </div>
 
+<<<<<<< HEAD
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
@@ -387,6 +277,8 @@ export default function Pricing() {
             </Button>
             <Button href="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
               Talk to Sales
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>
           </div>
         </div>

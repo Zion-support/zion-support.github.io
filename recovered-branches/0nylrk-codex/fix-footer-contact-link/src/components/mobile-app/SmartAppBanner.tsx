@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,15 +14,30 @@ import { X, ArrowRight } from "lucide-react",
 import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Link } from "react-router-dom",
+=======
+import React, { useState, useEffect } from "react";"
+import {X, ArrowRight} from "lucide-react";"
+import {Link} from "react-router-dom";"
+import {useIsMobile} from "@/hooks/use-mobile";"
+import React, { useState, useEffect } from "react","
+import { X, ArrowRight } from "lucide-react",";
+import { Link } from "react-router-dom";"
+import { useIsMobile } from "@/hooks/use-mobile";"
+import { Link } from "react-router-dom","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useIsMobile } from "@/hooks/use-mobile",
-
+;
   appName?: string;
-import React, { useState, useEffect } from './react';
-import { X, ArrowRight } from './lucide-react';
-import { Link } from './react-router-dom';
+import React, { useState, useEffect } from './react';'
+import { X, ArrowRight } from './lucide-react';'
+import { Link } from './react-router-dom';'
 import { useIsMobile } from '@/hooks / use - mobile';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SmartAppBannerProps {
+=======
+interface SmartAppBannerProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   app_name?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
@@ -42,34 +58,39 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   appName = "Zion Marketplace";
-  appIconSrc;
-  appStoreUrl = "/download";
+  appIconSrc;"
+  appStoreUrl = "/download";"
   googlePlayUrl = "/download"
-  delay = 1500
-}) => {
+  delay = 1500;
+}) => {}
   const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
+  const isMobile = useIsMobile();"
   appName = "Zion Marketplace",
-  appIconSrc,
-  appStoreUrl = "/download",
+  appIconSrc,"
+  appStoreUrl = "/download","
   googlePlayUrl = "/download",
-  delay = 1500
-}) => {
+  delay = 1500;
+}) => {}
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
   
-  useEffect(() => {
-    // Only show banner on mobile devices and if it hasn't been dismissed
-    if (isMobile && !localStorage.getItem("smartBannerDismissed")) {
-      const timer = setTimeout(() => {
+  useEffect(() => {'
+    // Only show banner on mobile devices and if it hasn't been dismissed"
+    if (isMobile && !localStorage.getItem("smartBannerDismissed")) {}
+      const timer = setTimeout(() => {}
         setIsVisible(true)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       }, delay),
@@ -95,10 +116,17 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   if (!isMobile |!isVisible) {
     return process.env.NODE_ENV === 'development' ? (
       <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-400">
+=======
+  // Only render on mobile devices;
+  if (!isMobile |!isVisible) {'
+    return process.env.NODE_ENV === 'development' ? ("
+      <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-400">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
       </div>
-    ) : null
+    ) : null;
   }
+<<<<<<< HEAD
   // Detect iOS or Android
 <<<<<<< HEAD
 
@@ -111,12 +139,19 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
+=======
+  // Detect iOS or Android;
+  return ("
+    <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">"
+      <div className="flex items-center">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">
-          {appIconSrc ? (
+          {appIconSrc ? ("
             <img src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md" />
-          ) : (
+          ) : ("
             <div className="text-zion-cyan font-bold text-lg">Z</div>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
         <div className="flex-1">
@@ -146,6 +181,12 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 import React, { useState, useEffect } from "react",;
 import { X, ArrowRight } from "lucide-react",;
 import { Link } from "react-router-dom",;
+=======
+},"
+import React, { useState, useEffect } from "react",;"
+import { X, ArrowRight } from "lucide-react",;"
+import { Link } from "react-router-dom",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useIsMobile } from "@/hooks/use-mobile",;
 interface SmartAppBannerProps {;
   appName?: string,;
@@ -155,17 +196,17 @@ interface SmartAppBannerProps {;
   delay?: number, // Delay in milliseconds before showing the banner;
 }
 ;
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;"
   appName = "Zion Marketplace",;
-  appIconSrc,;
-  appStoreUrl = "/download",;
+  appIconSrc,;"
+  appStoreUrl = "/download",;"
   googlePlayUrl = "/download",;
   delay = 1500;
 }) => {;
   const [isVisible, setIsVisible] = useState(false),;
   const isMobile = useIsMobile(),;
-  useEffect(() => {;
-    // Only show banner on mobile devices and if it hasn't been dismissed;
+  useEffect(() => {;'
+    // Only show banner on mobile devices and if it hasn't been dismissed;"
     if (isMobile && !localStorage.getItem("smartBannerDismissed")) {;
       const timer = setTimeout(() => {;
         setIsVisible(true);
@@ -174,17 +215,17 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
     }
   }, [isMobile, delay]),;
   const dismissBanner = () => {;
-    setIsVisible(false),;
+    setIsVisible(false),;"
     localStorage.setItem("smartBannerDismissed", "true");
   },;
-  const resetBanner = () => {;
+  const resetBanner = () => {;"
     localStorage.removeItem("smartBannerDismissed"),;
     setIsVisible(true);
   },;
   // Only render on mobile devices;
-  if (!isMobile || !isVisible) {;
-    return process.env.NODE_ENV === 'development' ? (;
-      <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-400">;
+  if (!isMobile || !isVisible) {;'
+    return process.env.NODE_ENV === 'development' ? (;"
+      <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-400">;"
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only);
       </div>;
     ) : null;
@@ -193,39 +234,39 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
   // Detect iOS or Android;
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),;
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
-  return (;
-    <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;
-      <div className="flex items-center">;
+  return (;"
+    <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;"
+      <div className="flex items-center">;"
         <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">;
-          {appIconSrc ? (;
+          {appIconSrc ? (;"
             <img src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md" />;
-          ) : (;
+          ) : (;"
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
 
         </div>;
-
-        <div className="flex-1">;
-          <h4 className="font-semibold text-white">{appName}</h4>;
+"
+        <div className="flex-1">;"
+          <h4 className="font-semibold text-white">{appName}</h4>;"
           <p className="text-xs text-gray-300">Get our app for the best experience</p>;
         </div>;
 
-export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({
+export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({";
   app_name = "Zion Marketplace";
-  appIconSrc;
-  appStoreUrl = "/download";
+  appIconSrc;"
+  appStoreUrl = "/download";"
   googlePlayUrl = "/download",
   delay = 1500;
-}) => {
+}) => {}
   const [is_visible, setIsVisible] = useState (false);
   const is_mobile = useIsMobile ();
 ;
-  useEffect (() => {
+  useEffect (() => {'
     // Only show banner on mobile devices and if it hasn't been dismissed;
-    if () {) {
-  $2
+    if () {) {}
+  $2;
 }
-      const timer = set_timeout (() => {
+      const timer = set_timeout (() => {}
         setIsVisible (true);
       }, delay);
 ;
@@ -233,17 +274,18 @@ export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({
     }
   }, [is_mobile, delay]);
 ;
-  const dismiss_banner = () =>: any {
-    setIsVisible (false);
+  const dismiss_banner = () =>: any {}
+    setIsVisible (false);"
     local_storage.set_item ("smartBannerDismissed", "true");
   }
 ;
-  const reset_banner = () =>: any {
+  const reset_banner = () =>: any {"
     local_storage.remove_item ("smartBannerDismissed");
     setIsVisible (true);
   }
 ;
   // Only render on mobile devices;
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -251,12 +293,22 @@ if ( {) {
     return process.env.NODE_ENV === 'development' ? (
       <div className="bg - zion - blue - dark p - 2 text - xs text - center text - gray-400">;
         Smart banner hidden. <button on_click={reset_banner} className="text - zion-cyan underline">Show banner</button> (development only);
+=======
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    return process.env.NODE_ENV === 'development' ? ("
+      <div className="bg - zion - blue - dark p - 2 text - xs text - center text - gray - 400">;"
+        Smart banner hidden. <button on_click={reset_banner} className="text - zion - cyan underline">Show banner</button> (development only);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>) : null;
   }
   // Detect iOS or Android;
   const isIOS = /i_pad | i_phone | i_pod/.test (navigator.user_agent);
   const banner_link = isIOS ? appStoreUrl : googlePlayUrl;
 ;
+<<<<<<< HEAD
   return (
     <div className="fixed top - 0 left - 0 right - 0 bg - zion - blue - dark border - b border - zion - purple / 30 p - 3 z - 50 animate - fade-in">;
       <div className="flex items-center">;
@@ -279,6 +331,30 @@ if ( {) {
           </Link>;
           <button on_click={dismiss_banner} className="text - gray-400" aria - label="Dismiss">;
             <X className="h - 5 w-5" />;
+=======
+  return ("
+    <div className="fixed top - 0 left - 0 right - 0 bg - zion - blue - dark border - b border - zion - purple / 30 p - 3 z - 50 animate - fade - in">;"
+      <div className="flex items - center">;"
+        <div className="w - 12 h - 12 bg - zion - cyan / 20 rounded - lg mr - 3 flex - shrink - 0 flex items - center justify - center">;
+          {appIconSrc ? ("
+            <img src={appIconSrc} alt={app_name} className="w - 10 h - 10 rounded - md" />) : ("
+            <div className="text - zion - cyan font - bold text - lg">Z</div>)}
+        </div>;"
+        <div className="flex - 1">;"
+          <h4 className="font - semibold text - white">{app_name}</h4>;"
+          <p className="text - xs text - gray - 300">Get our app for the best experience</p>;
+        </div>;"
+        <div className="flex items - center gap - 3">;
+          <Link;"
+            to="/open - app";"
+            className="flex items - center px - 4 py - 1.5 bg - zion - cyan text - zion - blue - dark rounded text - sm font - medium";
+          >;
+            View;"
+            <ArrowRight className="w - 3 h - 3 ml - 1" />;
+          </Link>;"
+          <button on_click={dismiss_banner} className="text - gray - 400" aria - label="Dismiss">;"
+            <X className="h - 5 w - 5" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </button>;
         </div>;
       </div>;
@@ -296,4 +372,8 @@ export default SmartAppBanner;
     </div>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -31,9 +32,29 @@
 
 
 #!/usr/bin/env node console.log('🧪 Running Basic Tests...'); try { const fs = require('fs') const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error: '',',error.message)} const fs = require('fs') const files = ['src/App.tsx','next.config.js','package.json']files.forEach(file => { if () { console.log(`✅ ${file} exists`) { ) { console.log(`✅ ${file} exists`})} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');
+=======
+
+
+
+
+#!/usr/bin/env node console.log('🧪 Running Basic Tests...'); try { const fs = require('fs') const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error: '',',error.message)} const fs = require('fs') const files = ['src/App.tsx','next.config.js','package.json']files.forEach(file => { if () { console.log(`✅ ${file} exists`) { ) { console.log(`✅ ${file} exists`})} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');'
 #!/usr/bin/env node const fs = require('fs');  try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));   } catch(error) { } const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { } else { } }); 
-#!/usr/bin/env node console.log('🧪 Running Basic Tests...'); try { const fs = require('fs') const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error: '',',error.message)} const fs = require('fs') const files = ['src/App.tsx','next.config.js','package.json']files.forEach(file => { if () { console.log(`✅ ${file} exists`) { ) { console.log(`✅ ${file} exists`})} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');
+
+'`
+#!/usr/bin/env node console.log('🧪 Running Basic Tests...'); try { const fs = require('fs') const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error: '',',error.message)} const fs = require('fs') const files = ['src/App.tsx','next.config.js','package.json']files.forEach(file => { if () { console.log(`✅ ${file} exists`) { ) { console.log(`✅ ${file} exists`})} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');'
+#!/usr/bin/env node const fs = require('fs');  try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));   } catch(error) { } const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { } else { } }); '`
+#!/usr/bin/env node console.log('🧪 Running Basic Tests...'); try { const fs = require('fs') const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error: '',',error.message)} const fs = require('fs') const files = ['src/App.tsx','next.config.js','package.json']files.forEach(file => { if () { console.log(`✅ ${file} exists`) { ) { console.log(`✅ ${file} exists`})} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');'
 #!/usr/bin/env node const fs = require('fs');  try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));   } catch(error) { } const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { } else { } }); 
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de'`
+#!/usr/bin/env node console.log('🧪 Running Basic Tests...'); try { const fs = require('fs') const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error: '',',error.message)} const fs = require('fs') const files = ['src/App.tsx','next.config.js','package.json']files.forEach(file => { if () { console.log(`✅ ${file} exists`) { ) { console.log(`✅ ${file} exists`})} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+#!/usr/bin/env node const fs = require('fs');  try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));   } catch(error) { } const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { } else { } }); 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+'`
+#!/usr/bin/env node console.log('🧪 Running Basic Tests...'); try { const fs = require('fs') const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error: '',',error.message)} const fs = require('fs') const files = ['src/App.tsx','next.config.js','package.json']files.forEach(file => { if () { console.log(`✅ ${file} exists`) { ) { console.log(`✅ ${file} exists`})} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');'
+#!/usr/bin/env node const fs = require('fs');  try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8'));   } catch(error) { } const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { } else { } }); 
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node console.log('🧪 Running Basic Tests...'); try { const fs = require('fs') const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error: '',',error.message)} const fs = require('fs') const files = ['src/App.tsx','next.config.js','package.json']files.forEach(file => { if () { console.log(`✅ ${file} exists`) { ) { console.log(`✅ ${file} exists`})} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');
@@ -60,15 +81,26 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node
 const fs = require('fs');
+=======
+
+
+
+
+
+
+#!/usr/bin/env node'
+const fs = require('fs');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 console.log('🧪 Running Basic Tests...');
-// Test "1": Check if we can read package.json
-try {
-  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  console.log('✅ Package.json is valid');
-  console.log(`   - "Name": ${packageJson.name}`);
+// Test "1": Check if we can read package.json;
+try {'
+  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));'
+  console.log('✅ Package.json is valid');"`
+  console.log(`   - "Name": ${packageJson.name}`);"`
   console.log(`   - "Version": ${packageJson.version}`);
-} catch (error) {
+} catch (error) {'"
   console.log('❌ Package.json "error": ', error.message);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }console.log('✅ Basic tests completed');
@@ -96,14 +128,19 @@ try {
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 // Test "2": Check main files
+=======
+"
+// Test "2": Check main files'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const files = ['src/App.tsx', 'next.config.js', 'package.json'];
-files.forEach(file => {
-  if (fs.existsSync(file)) {
+files.forEach(file => {}
+  if (fs.existsSync(file)) {}`
     console.log(`✅ ${file} exists`);
-  } else {
+  } else {}`
     console.log(`❌ ${file} missing`);
   }
 });
+<<<<<<< HEAD
 console.log('✅ Basic tests completed');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,3 +220,29 @@ console.log('✅ Basic tests completed');
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'`
+#!/usr/bin/env node const fs = require('fs'); console.log('🧪 Running Basic Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`); console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error:',error.message)} const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { console.log(`✅ ${file} exists`)} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');'`
+#!/usr/bin/env node const fs = require('fs'); console.log('🧪 Running Basic Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`); console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error:',error.message)} const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { console.log(`✅ ${file} exists`)} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');
+
+
+
+
+
+
+'`
+#!/usr/bin/env node const fs = require('fs'); console.log('🧪 Running Basic Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`); console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error:',error.message)} const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { console.log(`✅ ${file} exists`)} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');'`
+#!/usr/bin/env node const fs = require('fs'); console.log('🧪 Running Basic Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`); console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error:',error.message)} const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { console.log(`✅ ${file} exists`)} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');
+
+'
+console.log('✅ Basic tests completed');
+
+'`
+#!/usr/bin/env node const fs = require('fs'); console.log('🧪 Running Basic Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`); console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error:',error.message)} const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { console.log(`✅ ${file} exists`)} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');
+
+'`
+#!/usr/bin/env node const fs = require('fs'); console.log('🧪 Running Basic Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`); console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json error:',error.message)} const files = ['src/App.tsx','next.config.js','package.json']; files.forEach(file => { if (fs.existsSync(file)) { console.log(`✅ ${file} exists`)} else { console.log(`❌ ${file} missing`)} }); console.log('✅ Basic tests completed');
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

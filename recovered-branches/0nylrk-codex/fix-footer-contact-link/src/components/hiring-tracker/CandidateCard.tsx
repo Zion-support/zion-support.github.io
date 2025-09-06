@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react";
@@ -35,96 +36,39 @@ import { JobApplication } from "@/types/jobs",
 import { Card, CardContent } from "@/components/ui/card",
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+import { useState } from "react","
+import { Draggable } from "react-beautiful-dnd","
+import { formatDistanceToNow } from "date-fns","
+import { Link } from "react-router-dom","
+import { JobApplication } from "@/types/jobs","
+import { Card, CardContent } from "@/components/ui/card","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Avatar } from "@/components/ui/avatar",
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import {;
-  MessageSquare,;
-  User,;
-  FileText,;
-  MoreVertical,;
-  Calendar,;
-  AlertTriangle,;
-<<<<<<< HEAD
-  BriefcaseIcon,;
-} from "lucide-react";
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
-
-=======
-  BriefcaseIcon,;
-} from "lucide-react";
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
-
-} from "@/components/ui/dropdown-menu";
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
-import { toast } from "@/hooks/use-toast";
-import { HireConfirmationModal } from "./HireConfirmationModal";
-interface CandidateCardProps {;
-import { useState  } from './react';
-import { Draggable  } from './react - beautiful - dnd';
-import { formatDistanceToNow  } from './date - fns';
-import { Link  } from './react-router-dom';
-import { JobApplication  } from '@/types / jobs';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Avatar  } from '@/components / ui / avatar';
-import { Button  } from '@/components / ui / button';
-import { Textarea  } from '@/components / ui / textarea';
-import {
-
-
-  MessageSquare,
-  User,
-  FileText,
-  MoreVertical,
-  Calendar,
-  AlertTriangle,
-
-
-  BriefcaseIcon
-} from "lucide-react",
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { Button } from "@/components/ui/button";
+";
+import { Button } from "@/components/ui/button";"
 import { Textarea } from "@/components/ui/textarea";
-import { 
+import {};
   MessageSquare;
   User;
   FileText;
   MoreVertical;
   Calendar;
   AlertTriangle;
-  BriefcaseIcon
+  BriefcaseIcon"
 } from "lucide-react",
-import {
-
-  MessageSquare
-  User
-  FileText
-  MoreVertical
-  Calendar
-  AlertTriangle
-  BriefcaseIcon
+import {};
+  MessageSquare;
+  User;
+  FileText;
+  MoreVertical;
+  Calendar;
+  AlertTriangle;
+  BriefcaseIcon"
 } from "lucide-react";
-<<<<<<< HEAD
-import {
-DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 
+<<<<<<< HEAD
 import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
 interface CandidateCardProps {
@@ -158,52 +102,41 @@ DropdownMenuTrigger,;
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 } from "@/components/ui/dropdown-menu";
+=======
+"
+} from "@/components/ui/dropdown-menu";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
-
-import { toast } from "@/hooks/use-toast";
+"
+import { toast } from "@/hooks/use-toast";"
 import { HireConfirmationModal } from "./HireConfirmationModal";
-<<<<<<< HEAD
-interface CandidateCardProps {;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { useState  } from './react';
-import { Draggable  } from './react - beautiful - dnd';
-import { formatDistanceToNow  } from './date - fns';
-import { Link  } from './react-router-dom';
-import { JobApplication  } from '@/types / jobs';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Avatar  } from '@/components / ui / avatar';
-import { Button  } from '@/components / ui / button';
+
+import { useState  } from './react';'
+import { Draggable  } from './react - beautiful - dnd';'
+import { formatDistanceToNow  } from './date - fns';'
+import { Link  } from './react-router-dom';'
+import { JobApplication  } from '@/types / jobs';'
+import { Card, CardContent  } from '@/components / ui / card';'
+import { Avatar  } from '@/components / ui / avatar';'
+import { Button  } from '@/components / ui / button';'
 import { Textarea  } from '@/components / ui / textarea';
-import {
+import {}
   MessageSquare,
   User,
   FileText,
   MoreVertical,
   Calendar,
   AlertTriangle,
-import {
+import {}
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
-
-
-
-
-=======
-=======
-=======
-} from "@/components/ui/dropdown-menu";
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
-import { toast } from "@/hooks/use-toast";
-import { HireConfirmationModal } from "./HireConfirmationModal";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
-import { toast } from "@/hooks/use-toast",
+"
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu","
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge","
+import { toast } from "@/hooks/use-toast","
 import { HireConfirmationModal } from "./HireConfirmationModal",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -213,9 +146,14 @@ import { HireConfirmationModal } from "./HireConfirmationModal",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface CandidateCardProps {
+=======
+
+interface CandidateCardProps {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   application: JobApplication;
-  index: number
+  index: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function CandidateCard({ application, index }: CandidateCardProps) {;
@@ -270,32 +208,48 @@ import { HireConfirmationModal } from "./HireConfirmationModal",
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
+=======
 
-export function CandidateCard(): any ({ application, index }: CandidateCardProps) {;
-  const [showNotes, setShowNotes] = useState(false);
-  const [notes, setNotes] = useState(application && application.notes || "");
-  const [showHireModal, setShowHireModal] = useState(false);
 
+  
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
       title: "Notes saved",
+=======
+  const handleSaveNotes = () => {}
+    // Here you would save the notes to the database'
+    // For now, we'll just show a toast;
+    toast({}
+"
+      title: "Notes saved","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       description: "Your notes have been saved"
     }),
     setShowNotes(false)
   },
   
-  const handleHireConfirmed = () => {
-    // Hiring process completed via the modal
-    toast({
-      title: "Hiring process initiated",
+  const handleHireConfirmed = () => {}
+    // Hiring process completed via the modal;
+    toast({"
+      title: "Hiring process initiated","
       description: "Offer has been sent to the talent."
     })
   },
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
         {(provided) => (
-          <Card 
+          <Card "
             className="mb-2 p-0 shadow-sm border"
+<<<<<<< HEAD
   const handleSaveNotes = () => {;
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
@@ -311,6 +265,42 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
     toast({;
       title: "Hiring process initiated",,
   description: "Offer has been sent to the talent.",;
+=======
+"
+import { useState } from "react",;"
+import { Draggable } from "react-beautiful-dnd",;"
+import { formatDistanceToNow } from "date-fns",;"
+import { Link } from "react-router-dom",;"
+import { JobApplication } from "@/types/jobs",;"
+import { Card, CardContent } from "@/components/ui/card",;"
+import { Avatar } from "@/components/ui/avatar",;"
+import { Button } from "@/components/ui/button",;"
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+  MessageSquare,;
+  User,;
+  FileText,;
+  MoreVertical,;
+  Calendar,;
+  AlertTriangle,;
+  BriefcaseIcon;"
+} from "lucide-react",;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;"
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;"
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",;"
+import { toast } from "@/hooks/use-toast",;"
+import { HireConfirmationModal } from "./HireConfirmationModal",;
+interface CandidateCardProps {;
+  application: JobApplication,;
+  index: number;
+}
+;
+export function CandidateCard() { return null; }
+    });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 
   return (
@@ -319,6 +309,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 <<<<<<< HEAD
 <<<<<<< HEAD
         {(provided) => (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <Card;
@@ -332,11 +323,17 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
-          >
+          >"
             <CardContent className="p-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               {/* Candidate Header */}
@@ -415,43 +412,40 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 <div className="flex items-center gap-2">;
                   <Avatar className="h-8 w-8">;
                     {application.talent_profile?.profile_picture_url ? (;
+=======
+"
+              <div className="flex justify-between items-start mb-2">;"
+                <div className="flex items-center gap-2">;"
+                  <Avatar className="h-8 w-8">;
+                    {application && application.talent_profile?.profile_picture_url ? (;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <img;
-                        src={application.talent_profile.profile_picture_url} ;
-                        alt={application.talent_profile.full_name || "Candidate"} ;
+                        src={application && application.talent_profile.profile_picture_url}
+                        alt={}
+                        }
                       />;
                     ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <User className="h-4 w-4" />;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <User className="h-4 w-4" />;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     )}
                   </Avatar>
-                  <div>
-                    <h4 className="font-medium text-sm">
+                  <div>"
+                    <h4 className="font-medium text-sm">"
                       {application.talent_profile?.full_name |"Candidate"}
-                    </h4>
+                    </h4>"
                     <p className="text-xs text-muted-foreground">
-<<<<<<< HEAD
-              <div className="flex justify-between items-start mb-2">;
-                <div className="flex items-center gap-2">;
-                  <Avatar className="h-8 w-8">;
-                          application && application.talent_profile.full_name || "Candidate"
-                        }
-                      />;
-                    ) : (;
-                    {application.talent_profile?.profile_picture_url ? (;
-                      <img ;
-                        src={application.talent_profile.profile_picture_url} ;
-                        alt={application.talent_profile.full_name || "Candidate"} ;
-                      />;
-                    ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                      <User className="h-4 w-4" />;
 
+<<<<<<< HEAD
 
 
                     )}
@@ -475,14 +469,18 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 =======
                     ) : (;                      {application.talent_profile?.professional_title |
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                      {application.talent_profile?.professional_title |"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         "Applicant"}
                     </p>
                   </div>
-                </div>
+                </div>"
                       {application.talent_profile?.professional_title || "Applicant"}
                     </p>
                   </div>
                 </div>
+<<<<<<< HEAD
                 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -500,13 +498,20 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
+=======
+
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>"
+                    <Button variant="ghost" className="h-8 w-8 p-0">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <MoreVertical className="h-4 w-4" />
                     </Button>
-                  </DropdownMenuTrigger>
+                  </DropdownMenuTrigger>"
                   <DropdownMenuContent align="end">
 <<<<<<< HEAD
 <<<<<<< HEAD
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -514,18 +519,22 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </Avatar>;
-                  <div>;
-                    <h4 className="font-medium text-sm">;
+                  <div>;"
+                    <h4 className="font-medium text-sm">;"
                       {application && application.talent_profile?.full_name || "Candidate"}
-                    </h4>;
+                    </h4>;"
                     <p className="text-xs text-muted-foreground">;
-                      {application && application.talent_profile?.professional_title ||;
+                      {application && application.talent_profile?.professional_title ||;"
                         "Applicant"}
                     </p>;
                   </div>;
                 </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -536,11 +545,29 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>                      {showNotes ? "Hide notes" :"Add notes"}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       {showNotes ? "Hide notes" : "Add notes"}
+=======
+
+
+
+                <DropdownMenu>;
+                  <DropdownMenuTrigger asChild>;"
+                    <Button variant="ghost" className="h-8 w-8 p-0">;"
+                      <MoreVertical className="h-4 w-4" />;
+                    </Button>;
+                  </DropdownMenuTrigger>;"
+                  <DropdownMenuContent align="end">;
+                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
+
+"
+                      {showNotes ? "Hide notes" : "Add notes"}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </DropdownMenuItem>;
-                    <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
+                    <DropdownMenuItem onClick={() => setShowHireModal(true)}>;"
                       <BriefcaseIcon className="h-4 w-4 mr-2" /> Hire Candidate;
                     </DropdownMenuItem>;
                     <DropdownMenuItem asChild>;
+<<<<<<< HEAD
                       <Link to={`/messages?talentId=${application && application.talent_id}`}>;
                         Message;
                       </Link>;
@@ -551,6 +578,12 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                           href={application && application.resume.file_url}
                           target="_blank"
                           rel="noopener noreferrer">;                          View Resume;
+=======
+
+
+
+                          View Resume;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         </a>;
                       </DropdownMenuItem>;
                     )}
@@ -558,25 +591,59 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
+<<<<<<< HEAD
+=======
+
+
+
+
+              {/* Application Info */}"
+              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;"
+                <div className="flex items-center">;"
+                  <Calendar className="h-3 w-3 mr-1" />;
+
+                  {formatDistanceToNow(new Date(application && application.created_at), {;
+                    addSuffix: true,;
+                  })}
+                </div>;
+
+
+
+
+                {isStalled && (;"
+                  <div className="flex items-center text-amber-500">;"
+                    <AlertTriangle className="h-3 w-3 mr-1" />;
+                    Stalled;
+                  </div>;
+                )}
+              </div>;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {/* Match Score */}
 
-              {application.match_score !== null && application.match_score !== undefined && (;
+              {application.match_score !== null && application.match_score !== undefined && (;"
                 <div className="mb-2">;
                   <ScoreBadge application={application} />;
                 </div>;
               )}
 ;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {/* Notes Section */}
-              {showNotes && (;
+              {showNotes && (;"
                 <div className="mt-2">;
-                  <Textarea
-                    placeholder="Add private notes about this candidate..."
+                  <Textarea"
+                    placeholder="Add private notes about this candidate...""
                     className="text-xs min-h-[60px]"
                     value={notes}
                     onChange={(e) => setNotes(e && e.target.value)}
-                  />;
-                  <div className="flex justify-end mt-2">;
+                  />;"
+                  <div className="flex justify-end mt-2">;"
                     <Button size="sm" onClick={handleSaveNotes}>;
                       Save Notes;
                     </Button>;
@@ -584,6 +651,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 </div>;
               )}
 
+<<<<<<< HEAD
               {/* Action Buttons */}
 
 <<<<<<< HEAD
@@ -721,9 +789,27 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 <Button 
                   variant="outline" 
                   size="sm" 
+=======
+
+
+
+
+
+              {/* Action Buttons */}"
+              <div className="flex justify-between mt-2 gap-1">"
+                <Button variant="outline" size="sm" className="flex-1" asChild>
+
+;
+              {/* Action Buttons */}"
+              <div className="flex justify-between mt-2 gap-1">
+                <Button "
+                  variant="outline" "
+                  size="sm" "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className="flex-1"
-                  asChild
+                  asChild;
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -742,24 +828,28 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Link to={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
+=======
+
+
+
+                  <Link to={`/messages?talentId=${application.talent_id}`}>"
+                    <MessageSquare className="h-3 w-3 mr-1" /> Message;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </Link>
                 </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
+"
                 <Button variant="outline" size="sm" className="flex-1" asChild>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
                 
-                <Button 
-                  variant="outline" 
-                  size="sm" 
+                <Button "
+                  variant="outline" "
+                  size="sm" "
                   className="flex-1"
-                  asChild
+                  asChild;
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {application.resume?.file_url ? (
@@ -785,12 +875,25 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
               <div className="flex justify-between mt-2 gap-1">;
                 <Button variant="outline" size="sm" className="flex-1" asChild>;
                   <Link to={`/messages?talentId=${application && application.talent_id}`}>;
+=======
+
+
+
+                  {application.resume?.file_url ? (
+
+
+"
+              <div className="flex justify-between mt-2 gap-1">;"
+                <Button variant="outline" size="sm" className="flex-1" asChild>;`
+                  <Link to={`/messages?talentId=${application && application.talent_id}`}>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <MessageSquare className="h-3 w-3 mr-1" /> Message;
                   </Link>;
                 </Button>;
-
+"
                 <Button variant="outline" size="sm" className="flex-1" asChild>;
                   {application && application.resume?.file_url ? (;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <a
                       href={application && application.resume.file_url}
@@ -800,10 +903,24 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                     </a>;
                   ) : (;
                     <span>;
+=======
+                    <a;
+                      href={application && application.resume.file_url}"
+                      target="_blank""
+                      rel="noopener noreferrer">;"
+                      <FileText className="h-3 w-3 mr-1" /> Resume;
+                    </a>;
+                  ) : (;
+
+
+
+                    <span>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       <FileText className="h-3 w-3 mr-1" /> No Resume;
                     </span>;
                   )}
 
+<<<<<<< HEAD
                 </Button>;
 
                 <Button
@@ -815,14 +932,17 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 =======
                 </Button>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </Button>
 
-=======
-                <Button
-                  variant="default"
+
+                <Button"
+                  variant="default""
                   size="sm"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
                 
+<<<<<<< HEAD
                 <Button 
                   variant="default" 
                   size="sm" 
@@ -844,8 +964,17 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                <Button "
+                  variant="default" "
+                  size="sm" "
+                  className="flex-1"
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   onClick={() => setShowHireModal(true)}
-                >;
+                >;"
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;
                 </Button>;
               </div>;
@@ -853,22 +982,20 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
           </Card>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </Draggable>
       </Draggable>;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-      </Draggable>;
-
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export /**
- * CandidateCard - Function description
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+export /**;
+ * CandidateCard - Function description;
  */
-function CandidateCard() {
-  const [show_notes, setShowNotes] = useState (false);
+function CandidateCard() {}
+  const [show_notes, setShowNotes] = useState (false);"
   const [notes, set_notes] = useState (application.notes || "");
   const [showHireModal, setShowHireModal] = useState (false);
 ;
@@ -878,20 +1005,20 @@ function CandidateCard() {
     new Date (application.updated_at).get_time () <;
       Date.now () - 7 * 24 * 60 * 60 * 1000;
 ;
-  const handleSaveNotes = () =>: any {
-    // Here you would save the notes to the database;
+  const handleSaveNotes = () =>: any {}
+    // Here you would save the notes to the database;'
     // For now, we'll just show a toast;
-    toast ({
-      title: "Notes saved",
+    toast ({"
+      title: "Notes saved","
       description: "Your notes have been saved",
     });
     setShowNotes (false);
   }
 ;
-  const handleHireConfirmed = () =>: any {
+  const handleHireConfirmed = () =>: any {}
     // Hiring process completed via the modal;
-    toast ({
-      title: "Hiring process initiated",
+    toast ({"
+      title: "Hiring process initiated","
       description: "Offer has been sent to the talent.",
     });
   }
@@ -900,50 +1027,50 @@ function CandidateCard() {
     <>;
       <Draggable draggable_id={application.id} index={index}>;
         {(provided) => (
-          <Card;
+          <Card;"
             className="mb - 2 p - 0 shadow - sm border";
             ref={provided.inner_ref}
             {...provided.draggable_props}
             {...provided.dragHandleProps}
-          >;
+          >;"
             <CardContent className="p - 3">;
-              {/* Candidate Header */}
-              <div className="flex justify - between items - start mb - 2">;
-                <div className="flex items - center gap - 2">;
+              {/* Candidate Header */}"
+              <div className="flex justify - between items - start mb - 2">;"
+                <div className="flex items - center gap - 2">;"
                   <Avatar className="h - 8 w - 8">;
                     {application.talent_profile?.profile_picture_url ? (
                       <img;
                         src={application.talent_profile.profile_picture_url}
-                        alt={
+                        alt={"
                           application.talent_profile.full_name || "Candidate";
                         }
-                      />) : (
+                      />) : ("
                       <User className="h - 4 w - 4" />)}
                   </Avatar>;
-                  <div>;
-                    <h4 className="font - medium text - sm">;
+                  <div>;"
+                    <h4 className="font - medium text - sm">;"
                       {application.talent_profile?.full_name || "Candidate"}
-                    </h4>;
+                    </h4>;"
                     <p className="text - xs text - muted - foreground">;
-                      {application.talent_profile?.professional_title ||;
+                      {application.talent_profile?.professional_title ||;"
                         "Applicant"}
                     </p>;
                   </div>;
                 </div>;
                 <DropdownMenu>;
-                  <DropdownMenuTrigger as_child>;
-                    <Button variant="ghost" className="h - 8 w - 8 p - 0">;
+                  <DropdownMenuTrigger as_child>;"
+                    <Button variant="ghost" className="h - 8 w - 8 p - 0">;"
                       <MoreVertical className="h - 4 w - 4" />;
                     </Button>;
-                  </DropdownMenuTrigger>;
+                  </DropdownMenuTrigger>;"
                   <DropdownMenuContent align="end">;
-                    <DropdownMenuItem on_click={() => setShowNotes (!show_notes)}>;
+                    <DropdownMenuItem on_click={() => setShowNotes (!show_notes)}>;"
                       {show_notes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>;
-                    <DropdownMenuItem on_click={() => setShowHireModal (true)}>;
+                    <DropdownMenuItem on_click={() => setShowHireModal (true)}>;"
                       <BriefcaseIcon className="h - 4 w - 4 mr - 2" /> Hire Candidate;
                     </DropdownMenuItem>;
-                    <DropdownMenuItem as_child>;
+                    <DropdownMenuItem as_child>;`
                       <Link to={`/messages?talent_id=${application.talent_id}`}>;
                         Message;
                       </Link>;
@@ -951,8 +1078,8 @@ function CandidateCard() {
                     {application.resume?.file_url && (
                       <DropdownMenuItem as_child>;
                         <a;
-                          href={application.resume.file_url}
-                          target="_blank";
+                          href={application.resume.file_url}"
+                          target="_blank";"
                           rel="noopener noreferrer";
                         >;
                           View Resume;
@@ -961,99 +1088,97 @@ function CandidateCard() {
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
-              {/* Application Info */}
-              <div className="flex flex - wrap gap - 2 items - center text - xs text - muted - foreground mb - 2">;
-                <div className="flex items - center">;
+              {/* Application Info */}"
+              <div className="flex flex - wrap gap - 2 items - center text - xs text - muted - foreground mb - 2">;"
+                <div className="flex items - center">;"
                   <Calendar className="h - 3 w - 3 mr - 1" />;
-                  {formatDistanceToNow (new Date (application.created_at), {
+                  {formatDistanceToNow (new Date (application.created_at), {}
                     add_suffix: true,
                   })}
                 </div>;
-                {is_stalled && (
-                  <div className="flex items - center text - amber - 500">;
+                {is_stalled && ("
+                  <div className="flex items - center text - amber - 500">;"
                     <AlertTriangle className="h - 3 w - 3 mr - 1" />;
                     Stalled;
                   </div>)}
               </div>;
               {/* Match Score */}
               {application.match_score !== null &&;
-                application.match_score !== undefined && (
+                application.match_score !== undefined && ("
                   <div className="mb - 2">;
                     <ScoreBadge application={application} />;
                   </div>)}
               {/* Notes Section */}
-              {show_notes && (
+              {show_notes && ("
                 <div className="mt - 2">;
-                  <Textarea;
-                    placeholder="Add private notes about this candidate...";
+                  <Textarea;"
+                    placeholder="Add private notes about this candidate...";"
                     className="text - xs min - h-[60px]";
                     value={notes}
                     on_change={(e) => set_notes (e.target.value)}
-                  />;
-                  <div className="flex justify - end mt - 2">;
+                  />;"
+                  <div className="flex justify - end mt - 2">;"
                     <Button size="sm" on_click={handleSaveNotes}>;
                       Save Notes;
                     </Button>;
                   </div>;
                 </div>)}
-              {/* Action Buttons */}
-              <div className="flex justify - between mt - 2 gap - 1">;
-                <Button variant="outline" size="sm" className="flex - 1" as_child>;
-                  <Link to={`/messages?talent_id=${application.talent_id}`}>;
+              {/* Action Buttons */}"
+              <div className="flex justify - between mt - 2 gap - 1">;"
+                <Button variant="outline" size="sm" className="flex - 1" as_child>;`
+                  <Link to={`/messages?talent_id=${application.talent_id}`}>;"
                     <MessageSquare className="h - 3 w - 3 mr - 1" /> Message;
                   </Link>;
-                </Button>;
+                </Button>;"
                 <Button variant="outline" size="sm" className="flex - 1" as_child>;
                   {application.resume?.file_url ? (
                     <a;
-                      href={application.resume.file_url}
-                      target="_blank";
+                      href={application.resume.file_url}"
+                      target="_blank";"
                       rel="noopener noreferrer";
-                    >;
+                    >;"
                       <FileText className="h - 3 w - 3 mr - 1" /> Resume;
                     </a>) : (
-                    <span>;
+                    <span>;"
                       <FileText className="h - 3 w - 3 mr - 1" /> No Resume;
                     </span>)}
                 </Button>;
-                <Button;
-                  variant="default";
-                  size="sm";
+                <Button;"
+                  variant="default";"
+                  size="sm";"
                   className="flex - 1";
                   on_click={() => setShowHireModal (true)}
-                >;
+                >;"
                   <BriefcaseIcon className="h - 3 w - 3 mr - 1" /> Hire;
                 </Button>;
               </div>;
             </CardContent>;
           </Card>)}
       </Draggable>;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-      </Draggable>;
-
-
-      </Draggable>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      </Draggable>;
+
+
+      </Draggable>;
+
+
+
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         is_open={showHireModal}
         on_close={() => setShowHireModal (false)}
         application={application}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        onConfirm={handleHireConfirmed}
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
     </>;
 <<<<<<< HEAD
@@ -1064,17 +1189,12 @@ function CandidateCard() {
 
 
   );
-<<<<<<< HEAD
-=======
-        on_confirm={handleHireConfirmed}
-      />;
-    </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
-=======
-=======
+
+
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
         on_confirm={handleHireConfirmed}
 =======
                   size="sm"                </Button>        on_confirm={handleHireConfirmed}
@@ -1085,6 +1205,7 @@ function CandidateCard() {
       />;
     </>);
 }
+<<<<<<< HEAD
       ;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
@@ -1145,3 +1266,7 @@ function CandidateCard() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,29 +1,29 @@
-interface EmailValidationResult {
+interface EmailValidationResult {}
   email: string;
   is_valid: boolean;
-interface EmailValidationResult {
+interface EmailValidationResult {}
   email: string;
   isValid: boolean;
   score: number;
   suggestions: string[];
-  details: {
+  details: {}
     hasValidFormat: boolean;
     hasValidDomain: boolean;
     hasValidMX: boolean;
   }
-  try {
+  try {}
     const { email } = req && req.body;
-    // Extract domain
+    // Extract domain;
     const domain = email && email.split('@')[1];
     const hasValidDomain = domain && domain.length > 0;
-    // Check for common disposable email providers
-    const disposableDomains = [
-      'tempmail && tempmail.org',
-      'guerrillamail && guerrillamail.com',
-      'mailinator && mailinator.com',
-      '10minutemail && 10minutemail.com',
-      'temp-mail && mail.org',
-      'sharklasers && sharklasers.com',
+    // Check for common disposable email providers;
+    const disposableDomains = ['
+      'tempmail && tempmail.org','
+      'guerrillamail && guerrillamail.com','
+      'mailinator && mailinator.com','
+      '10minutemail && 10minutemail.com','
+      'temp-mail && mail.org','
+      'sharklasers && sharklasers.com','
       'getairmail && getairmail.com',
     isRoleBased: boolean;
     isFreeProvider: boolean
@@ -89,11 +89,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (isDisposable) score -= 30;
     if (isRoleBased) score -= 15;
     if (isFreeProvider) score -= 10;
-    // Generate suggestions
+    // Generate suggestions;
     const suggestions: string[] = []
-    if (!hasValidFormat) {
-  } catch (error) {
-    console && console.error('Email validation error:', error);
+    if (!hasValidFormat) {}
+  } catch (error) {'
+    console && console.error('Email validation error:', error);'
     res && res.status(500).json({ error: 'Internal server error' });
   }      email;
       isValid: score >= 70;
@@ -108,14 +108,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 ;
     res.status (200).json (result);
-  } catch (error) {
-    console.error ('Email validation error:', error);
+  } catch (error) {'
+    console.error ('Email validation error:', error);'
     res.status (500).json ({ error: 'Internal server error' });
   }      email;
       is_valid: score >= 70;
       score: Math.max (0, score);
       suggestions;
-      details: {
+      details: {}
         hasValidFormat;
         hasValidDomain;
         hasValidMX: true, // Simplified for demo;
@@ -125,8 +125,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 ;
     res.status (200).json (result);
-  } catch (error) {
-    console.error ('Email validation error:', error);
+  } catch (error) {'
+    console.error ('Email validation error:', error);'
     res.status (500).json ({ error: 'Internal server error' });
 suggestions.push('Check email format (should be user@domain.com)');
     }
@@ -162,3 +162,4 @@ suggestions.push('Check email format (should be user@domain.com)');
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
+'

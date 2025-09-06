@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SearchType = 'all' | 'talent' | 'jobs' | 'projects';
 export type ParsedFilters = {;
   type: SearchType;
@@ -278,3 +279,8 @@ export const suggestDidYouMean = (query: string) =>: any {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

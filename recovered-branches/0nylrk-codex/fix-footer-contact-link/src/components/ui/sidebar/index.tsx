@@ -1,7 +1,8 @@
 
-import * as React from &quot;react & quot;
+import * as React from "react"
 ;
 // Export all components from the sidebar subcomponents;
+<<<<<<< HEAD
 export * from &quot;./sidebar - context & quot;
 export * from &quot;./sidebar - trigger & quot;
 export * from &quot;./sidebar - main & quot;
@@ -64,10 +65,18 @@ export * from "./sidebar-trigger"
 export * from "./sidebar-main"
 export * from "./sidebar-content"
 export * from "./sidebar-group"
+=======
+"
+export * from "./sidebar-context""
+export * from "./sidebar-trigger""
+export * from "./sidebar-main""
+export * from "./sidebar-content""
+export * from "./sidebar-group""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export * from "./sidebar-menu"
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -98,3 +107,8 @@ export type { SafeRef } from "../sidebar.types"
 =======
 // Export all components from the sidebar subcomponents
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

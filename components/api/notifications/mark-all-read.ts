@@ -1,41 +1,40 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-  const match = cookie
+  const match = cookie'
     .split(';')
-    .map(c => c && c.trim())
-    .find(c => c && c.startsWith('user_id='));
-  if (match) return decodeURIComponent(match && match.split('=')[1]);
+    .map(c => c && c.trim())'
+    .find(c => c && c.startsWith('user_id='));'
+  if (match) return decodeURIComponent(match && match.split('=')[1]);'
   return 'demo-user-1';
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
-  if (match) return decodeURIComponent(match.split('=')[1]);
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });  try {function getUserId(req: NextApiRequest): string {
-  const cookie = req && req.headers.cookie || '';
-  const match = cookie && cookie.split().map((c) => c && c.trim()).find((c) => c && c.startsWith('user_id='));
-  if (match) return decodeURIComponent(match && match.split('=')[1]);
+export default async function handler() { return null; }
+    return res && res.status(405).json({ error: 'Method not allowed' });  try {function getUserId(req: NextApiRequest): string {'
+  const cookie = req && req.headers.cookie || '';'
+  const match = cookie && cookie.split().map((c) => c && c.trim()).find((c) => c && c.startsWith('user_id='));'
+  if (match) return decodeURIComponent(match && match.split('=')[1]);'
   return 'demo-user-1'
 }
+<<<<<<< HEAD
 import { supabase } from '../../../utils/supabase/client';
 function getUserId(req: NextApiRequest): string {
     return res.status(405).json({ error: 'Method not allowed' });
 origin/cursor/automate-test-improve-and-merge-code-2533
   try {
+=======
+  try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const userId = getUserId(req);
-    const { error } = await supabase
+    const { error } = await supabase'
       .from('notifications')
-      .update({ read_status: true })
-      .eq('user_id', userId)
+      .update({ read_status: true })'
+      .eq('user_id', userId)'
       .eq('read_status', false);
 
     if (error) return res && res.status(200).json({ ok: true });
 
     return res && res.status(200).json({ ok: true });
-  } catch (e) {
+  } catch (e) {'
     return res && res.status(500).json({ error: 'Unexpected error' });
   }    return res && res.status(200).json({ ok: true })
+<<<<<<< HEAD
     if (error) return res.status(200).json({ ok: true });
 
 return res.status(200).json({ ok: true });
@@ -44,11 +43,18 @@ return res.status(200).json({ ok: true });
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
+=======
+  } catch (e) {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res && res.status(500).json({ error: 'Unexpected error' })
   };
 }
 }
 }
 }
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

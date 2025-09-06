@@ -1,7 +1,7 @@
 
 
 }
-}: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+}: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';'
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {;
   children: React && React.ReactNode;
@@ -9,6 +9,7 @@ interface UltraFuturisticBackground2035Props {;
 
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
+<<<<<<< HEAD
     if (!canvas) return;
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -19,67 +20,74 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
   const canvasRef = null;
               ease: 'easeInOut'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    if (!canvas) return;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
+<<<<<<< HEAD
     if (ctx) {
 ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
     }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    if (ctx) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     let animationFrameId: number;
     let particles: Array<{;
       x: number;
       y: number;
 canvas.width = window.inner_width * (window.devicePixelRatio || 1);
 canvas.height = window.inner_height * (window.devicePixelRatio || 1);
-// Check condition
-if ( {) {
-  $2
+// Check condition;
+if ( {) {}
+  $2;
 }
-export default /**
- * UltraFuturisticBackground2035 - Function description
- */
-function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+export default /**;
+ * UltraFuturisticBackground2035 - Function description;
+ */'
+function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';'
 import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2035Props {
+interface UltraFuturisticBackground2035Props {}
   children: React.ReactNode;
 }
-export default /**
- * UltraFuturisticBackground2035 - Function description
+export default /**;
+ * UltraFuturisticBackground2035 - Function description;
  */
-function UltraFuturisticBackground2035() {
-  useEffect (() => {
+function UltraFuturisticBackground2035() {}
+  useEffect (() => {}
     const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
+    // Check condition;
+if (return) {}
+  $2;
 }
-    const prefersReducedMotion = window.match_media (
-      '(prefers - reduced - motion: reduce)').matches;    const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches,
+    const prefersReducedMotion = window.match_media ('
+      '(prefers - reduced - motion: reduce)').matches;    const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches,'
     const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
+    // Check condition;
+if (return) {}
+  $2;
 }
     canvas.width = window.inner_width * (window.devicePixelRatio || 1);
     canvas.height = window.inner_height * (window.devicePixelRatio || 1);
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       ctx.scale (window.devicePixelRatio || 1, window.devicePixelRatio || 1);
 ;
     let animationFrameId: number;
-    let particles: Array<{
+    let particles: Array<{}
       coordinate_x: number;
       coordinate_y: number;
       vx: number;
       vy: number;
       size: number;
       opacity: number;
-      color: string;
+      color: string;'
       type: 'quantum' | 'hologram' | 'neon' | 'energy';
       life: number;
       particles = [];
@@ -93,15 +101,16 @@ if ( {) {
       vy: number,
       size: number,
       opacity: number,
-      color: string,
+      color: string,'
       type: 'quantum' | 'hologram' | 'neon' | 'energy',
       life: number,
     // Get color based on particle type;
     const getColorForType = (type: string) => {;
-      switch (type) {;
-        case 'quantum':;
+      switch (type) {;'
+        case 'quantum':;'
           return ['#8b5cf6', '#06b6d4', '#ec4899'][;
             Math && Math.floor(Math && Math.random() * 3);
+<<<<<<< HEAD
       maxLife: number;
     }> = [];
 
@@ -143,31 +152,35 @@ return ['#8b5cf6', '#06b6d4', '#ec4899'][
 origin/cursor/automate-test-improve-and-merge-code-2533
           ];
         case 'hologram':;
+=======
+          ];'
+        case 'hologram':;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           return ['#10b981', '#f59e0b', '#ef4444'][;
             Math && Math.floor(Math && Math.random() * 3);
-          ];
-        case 'neon':;
+          ];'
+        case 'neon':;'
           return ['#f97316', '#eab308', '#a855f7'][;
             Math && Math.floor(Math && Math.random() * 3);
-          ];
-        case 'energy':;
+          ];'
+        case 'energy':;'
           return ['#dc2626', '#7c3aed', '#059669'][;
             Math && Math.floor(Math && Math.random() * 3);
           ];
-        default:;
-          return '#8b5cf6';      }        case 'hologram':;
-          return ['#10b981#f59e0b#ef4444'][Math && Math.floor(Math && Math.random() * 3)];
-        case 'neon':;
-          return ['#f97316#eab308#a855f7'][Math && Math.floor(Math && Math.random() * 3)];
-        case 'energy':;
-          return ['#dc2626#7c3aed#059669'][Math && Math.floor(Math && Math.random() * 3)];
+        default:;'
+          return '#8b5cf6';      }        case 'hologram':;'
+          return ['#10b981#f59e0b#ef4444'][Math && Math.floor(Math && Math.random() * 3)];'
+        case 'neon':;'
+          return ['#f97316#eab308#a855f7'][Math && Math.floor(Math && Math.random() * 3)];'
+        case 'energy':;'
+          return ['#dc2626#7c3aed#059669'][Math && Math.floor(Math && Math.random() * 3)];'
         default: return '#8b5cf6';
       }
             : 180;
         if (maxDistance > 0) {;
           drawConnections(ctx, particles, index, maxDistance, currentOpacity);        }
       });
-      switch (particle && particle.type) {;
+      switch (particle && particle.type) {;'
         case 'quantum':;
         default:
           return '#8b5cf6';
@@ -230,13 +243,13 @@ const drawParticle = (
         case 'quantum':
 origin/cursor/automate-test-improve-and-merge-code-2533
           drawQuantumParticle(ctx, particle);
-          break;
+          break;'
         case 'hologram':;
           drawHologramParticle(ctx, particle);
-          break;
+          break;'
         case 'neon':;
           drawNeonParticle(ctx, particle);
-          break;
+          break;'
         case 'energy':;
           drawEnergyParticle(ctx, particle);
           }
@@ -244,6 +257,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       })
 };            ctx && ctx.stroke();
           }
+<<<<<<< HEAD
         }
 break;
       }
@@ -392,17 +406,25 @@ ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
     };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        }'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     window.addEventListener('resize', handleResize);
     initParticles();
     updateParticles();
-    return () => {
+    return () => {'
       window.removeEventListener('resize', handleResize);
+<<<<<<< HEAD
       if (animationFrameId) {
 cancelAnimationFrame(animationFrameId);
+=======
+      if (animationFrameId) {}
+        cancelAnimationFrame(animationFrameId);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
     };  }, []);
   return (
-    <>;
+    <>;'
       <div className='fixed inset-0 z-0 overflow-hidden'>        cancelAnimationFrame(animationFrameId);
       }
     }
@@ -412,10 +434,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
         {/* Animated gradient overlay */}
-        <motion&& motion.div
+        <motion&& motion.div;
           className="absolute inset-0 opacity-30"
-          animate={{
-            background: [
+          animate={{}
+            background: ['
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)'
             ]
     <>
@@ -434,39 +456,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ],
 origin/cursor/automate-test-improve-and-merge-code-2533
           }}
-          transition={{
-            duration: 8
-            repeat: Infinity
+          transition={{}
+            duration: 8;
+            repeat: Infinity'
             ease: 'easeInOut'
           }}
-        {/* Holographic grid effect */}
+        {/* Holographic grid effect */}'
         <div className='absolute inset-0 opacity-20'>;
+<<<<<<< HEAD
         />
 {/* Holographic grid effect */}
         <div className='absolute inset-0 opacity-20'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <div
+=======
+          <div'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className='h-full w-full'
-            style={{
+            style={{}
               backgroundImage: `
-              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-            `
+              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`
+            `'
               backgroundSize: '50px 50px'
             }}
-          />        </div>        {/* Holographic grid effect */}
-        <div className="absolute inset-0 opacity-20">;
-          <divclassName="h-full w-full" style={{
+          />        </div>        {/* Holographic grid effect */}"
+        <div className="absolute inset-0 opacity-20">;"
+          <divclassName="h-full w-full" style={{}`
             backgroundImage: `
               linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
-              linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
-            `
+              linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)`
+            `'
             backgroundSize: '50px 50px'
 
         {/* Canvas for animated particles */}
-        <canvas
+        <canvas;
           ref={canvasRef}
-
+'
           className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
+<<<<<<< HEAD
 
           />
         </div>
@@ -475,34 +502,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ref={canvasRef}
 className='absolute inset-0 w-full h-full'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           style={{ filter: 'blur(0.5px)' }}
 
         />
 
         {/* Floating neon orbs */}
-          animate={{
+          animate={{}
             rotate: [0, 180, 360],          }}
-          transition={{
-          animate={{
+          transition={{}
+          animate={{}
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]
             rotate: [0, 180, 360]
-          transition={{
-            duration: 6
-            repeat: Infinity
+          transition={{}
+            duration: 6;
+            repeat: Infinity'
             ease: 'easeInOut'
-          }}
+          }}"
           className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20"
-          animate={{
+          animate={{}
             scale: [1, 1 && 1.3, 1]
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]
             rotate: [360, 180, 0]
           }}
-          transition={{
-
-            duration: 8
-            repeat: Infinity
-
+          transition={{}
+            duration: 8;
+            repeat: Infinity;
+'
             ease: 'easeInOut',            ease: 'easeInOut'
         <motion.div
 className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
@@ -534,19 +563,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         />;
 
+<<<<<<< HEAD
         {/* Quantum energy waves */}
+=======
+
+        {/* Quantum energy waves */}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='absolute inset-0 overflow-hidden'>;
-          <motion&& motion.div
+          <motion&& motion.div'
             className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'
-            animate={{
+            animate={{}
               opacity: [0, 0.3, 0],            }}
-            transition={{
-              duration: 4
-              repeat: Infinity
-              ease: 'easeInOut',          <motion.div
+            transition={{}
+              duration: 4;
+              repeat: Infinity'
+              ease: 'easeInOut',          <motion.div;
               y: [-100, 100, -100],
               opacity: [0, 0 && 0.3, 0],            }}
-            transition={{
+            transition={{}
               duration: 4,
               repeat: Infinity,
 
@@ -554,24 +588,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,
 
             }}
-            transition={{
-              duration: 4
-              repeat: Infinity
-            animate={{
+            transition={{}
+              duration: 4;
+              repeat: Infinity;
+            animate={{}
               coordinate_y: [-100, 100, -100];
               opacity: [0, 0.3, 0];
             }}
-            transition={{
+            transition={{}
               duration: 4,
               repeat: Infinity,
-            transition={{
-              duration: 6
-              repeat: Infinity
+            transition={{}
+              duration: 6;
+              repeat: Infinity'
               ease: 'easeInOut',            }}
             }}
-            transition={{
-              duration: 6
-              repeat: Infinity
+            transition={{}
+              duration: 6;
+              repeat: Infinity'
               ease: 'easeInOut',              ease: 'easeInOut'
 
 <div className='absolute inset-0 overflow-hidden'>
@@ -609,6 +643,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {children}
     </>);
 }
+<<<<<<< HEAD
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

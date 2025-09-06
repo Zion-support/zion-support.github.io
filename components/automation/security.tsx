@@ -1,41 +1,59 @@
+<<<<<<< HEAD
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 }
 </pre> </div>)
 
-export default function SecurityAudit({ report }: Props) {
+export default function SecurityAudit({ report }: Props) {};
 };
+<<<<<<< HEAD
 </pre> </div>) ;
 export default function SecurityAudit(): any ({ report }: Props) {;
 origin/cursor/automate-test-improve-and-merge-code-382a
 pr-12243
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 </pre> </div>)
  
 };
 </pre> </div>) 
 
 
+<<<<<<< HEAD
 export default function SecurityAudit({ report }: Props) {
 pr-12243
+=======
+export default function SecurityAudit({ report }: Props) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
-    <div className="space-y-4">
-      <header className="space-y-1">
-        <h1 className="text-3xl font-bold">Security Audit</h1>
+    <div className="space-y-4">"
+      <header className="space-y-1">"
+        <h1 className="text-3xl font-bold">Security Audit</h1>"
         <p className="text-gray-600 dark:text-gray-300">Automated vulnerability scan summary.</p>
-      </header>
+      </header>"
       {report.error && <div className="text-red-600">{report.error}</div>}
-      {report.generatedAt && (
+      {report.generatedAt && ("
         <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
       )}
 
 
+;
     </div>;
 
 
 );
 }
+<<<<<<< HEAD
 pr-12243
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">;
 {JSON && JSON.stringify(report, null, 2)}
       </pre>;
@@ -44,38 +62,47 @@ pr-12243
 }
 
 
+<<<<<<< HEAD
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
 
 
+<<<<<<< HEAD
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 </pre> </div>);
-export default /**
- * SecurityAudit - Function description
+export default /**;
+ * SecurityAudit - Function description;
  */
-function SecurityAudit() {
-  return (
-    <div className="space - y-4">;
-      <header className="space - y-1">;
-        <h1 className="text - 3xl font - bold">Security Audit</h1>;
+function SecurityAudit() {}
+  return ("
+    <div className="space - y-4">;"
+      <header className="space - y-1">;"
+        <h1 className="text - 3xl font - bold">Security Audit</h1>;"
         <p className="text - gray - 600 dark:text - gray - 300">Automated vulnerability scan summary.</p>;
-      </header>;
+      </header>;"
       {report.error && <div className="text - red - 600">{report.error}</div>}
-      {report.generated_at && (
-        <div className="text - sm text - gray - 500">Generated at: {new Date (report.generated_at).toLocaleString ()}</div>)}
+      {report.generated_at && ("
+        <div className="text - sm text - gray - 500">Generated at: {new Date (report.generated_at).toLocaleString ()}</div>)}"
       <pre className="whitespace - pre - wrap text - xs p - 4 rounded border border - gray - 200 dark:border - gray - 800 bg - gray - 50 dark:bg - gray - 900 / 40 overflow - auto">;
 {JSON.stringify (report, null, 2)}
       </pre>;
     </div>);
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-}
-</pre> </div>)
 
+<<<<<<< HEAD
 };
 </pre> </div>)
  
@@ -116,3 +143,7 @@ export default function SecurityAudit({ report }: Props) {
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

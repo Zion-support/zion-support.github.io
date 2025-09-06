@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -11,10 +12,14 @@
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import * as React from "react"
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import * as React from "react"
+"
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,18 +41,25 @@ const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(
   ({ className, type, ...props }, ref) => {
     return (
       <input
+=======
+"
+const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(
+  ({ className, type, ...props }, ref) => {}
+    return (;
+      <input;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         type={type}
-        className={cn(
+        className={cn("
           "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-          className
-import * as React from "react";
-import { cn } from "@/lib/utils";
+          className"
+import * as React from "react";"
+import { cn } from "@/lib/utils";"
 const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(;
   ({ className, type, ...props }, ref) => {;
     return (;
       <input;
         type={type}
-        className={cn(;
+        className={cn(;"
           "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
           className;
 <<<<<<< HEAD
@@ -59,21 +71,14 @@ const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         )}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import * as React from &quot;react & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
         ref={ref}
 =======
         )}        ref={ref}
@@ -81,6 +86,7 @@ import { cn } from &quot;@/lib / utils & quot;
         {...props}
       />);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -96,13 +102,23 @@ import { cn } from &quot;@/lib / utils & quot;
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export { Input }
-export { Input };
+=======
+export { Input }
 
+
+
+
+
+;
+export { Input };
+"
 Input.displayName = "Input"
 
-export { Input }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+export { Input };
 ;
 export { Input }
+<<<<<<< HEAD
 export { Input };
 Input.displayName = "Input"
 
@@ -121,3 +137,7 @@ export { Input }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

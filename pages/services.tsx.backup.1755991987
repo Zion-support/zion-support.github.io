@@ -33,6 +33,7 @@ export default function ServicesPage() {
     { value: '51-100', label: '$51 - $100' },
     { value: '101-200', label: '$101 - $200' },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { value: '201-500', label: '$201 - $500' },
     { value: '501+', label: '$501+' }
 =======
@@ -40,6 +41,9 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991987
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const sortOptions = [
@@ -109,11 +113,7 @@ export default function ServicesPage() {
 ========
   const popularServices = getPopularServices();
 
-<<<<<<< HEAD
-  // Enhanced service categories with better descriptions
-=======
-  // Enhanced service categories with better descriptions and market data
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
+
   const enhancedCategories = [
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991987
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -174,7 +174,7 @@ export default function ServicesPage() {
       default:
         return 'neural';
     }
-=======
+
       icon: <FlaskConical className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length,
       color: 'from-green-500 to-emerald-600'
@@ -333,6 +333,7 @@ export default function ServicesPage() {
                 <span className="text-sm text-gray-400">Address</span>
                 <span className="text-white font-semibold text-center text-sm">{contactInfo.address}</span>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1422,6 +1423,9 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991987
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

@@ -11,6 +11,7 @@ import React from 'react';
 import Head from 'next/head';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function Leadership() {
   return (
@@ -65,3 +66,6 @@ export default function LeadershipPage() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/leadership.tsx.backup.1755991678
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,14 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';'
     return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body |{}
-  if (!itemId |!status)
+  if (!itemId |!status)'
     return res.status(400).json({ error: 'Missing required fields' });
-
+'
     return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body |{}
-  if (!itemId |!status)
+  if (!itemId |!status)'
     return res.status(400).json({ error: 'Missing required fields' });
 
+<<<<<<< HEAD
 import { updatePipelineItemStatus } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -16,23 +17,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!itemId || !status) return res.status(400).json({ error: 'Missing required fields' });
 origin/cursor/automate-test-improve-and-merge-code-2533
   try {
+=======
+  try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res.status(200).json({ ok: true });
-  } catch (e: any) {
+  } catch (e: any) {}
     res.status(500).json({ error: e.message });
-  }export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  }export default function handler() { return null; }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { itemId, status } = req.body || {};
+  const { itemId, status } = req.body || {};'
   if (!itemId || !status) return res.status(400).json({ error: 'Missing required fields' });
-  try {
+  try {}
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res && res.status(200).json({ ok: true });
-  } catch (e: any) {
+  } catch (e: any) {}
   }
-  try {
+  try {}
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res.status(200).json({ ok: true })
-  } catch (e: any) {
+  } catch (e: any) {}
     res.status(500).json({ error: e.message })
   }
 }
@@ -41,5 +45,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 }
+<<<<<<< HEAD
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

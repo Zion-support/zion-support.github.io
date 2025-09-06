@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useEffect, useState } from "react",
 import Link from "next/link",
@@ -37,9 +38,17 @@ export function ActiveProjectsCard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export function ActiveProjectsCard() {};
+  const { projects, isLoading } = useProjects();
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]),
+  
+  useEffect(() => {}
+    if (projects && !isLoading) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const active = projects.filter(p => 
         ['offer_acceptedin_progress'].includes(p.status)
-      ).slice(0, 3), // Limit to 3 most recent projects
+      ).slice(0, 3), // Limit to 3 most recent projects;
       setActiveProjects(active)
     }
   }, [projects, isLoading]),
@@ -51,6 +60,7 @@ export function ActiveProjectsCard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (isLoading) {
 <<<<<<< HEAD
@@ -62,6 +72,12 @@ export function ActiveProjectsCard() {
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { BriefcaseIcon, Clock } from 'lucide-react';
+=======
+  if (isLoading) {'
+import { useEffect, useState } from 'react';'
+import Link from 'next/link';'
+import { BriefcaseIcon, Clock } from 'lucide-react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from '@/components/ui/button';
 import {;
   Card,;
@@ -69,17 +85,17 @@ import {;
   CardDescription,;
   CardFooter,;
   CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { useProjects } from '@/hooks/useProjects';
+  CardTitle,;'
+} from '@/components/ui/card';'
+import { Badge } from '@/components/ui/badge';'
+import { useProjects } from '@/hooks/useProjects';'
 import { Project } from '@/types/projects';
-export function ActiveProjectsCard() {;
+export function ActiveProjectsCard() { return null; }
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 
   useEffect(() => {    if (projects && !isLoading) {;
-      const active = projects;
+      const active = projects;'
         .filter(p => ['offer_accepted', 'in_progress'].includes(p && p.status));
         .slice(0, 3); // Limit to 3 most recent projects;
       setActiveProjects(active);
@@ -109,6 +125,7 @@ export function ActiveProjectsCard() {;
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
+<<<<<<< HEAD
         <CardContent>
 <<<<<<< HEAD
           <div className="space-y-2">
@@ -119,14 +136,21 @@ export function ActiveProjectsCard() {;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+=======
+        <CardContent>"
+          <div className="space-y-2">
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='h-16 animate-pulse bg-muted rounded'></div>            ))}
           </div>;
         </CardContent>;
       </Card>;
-    );
+    );"
   }          <div className="space-y-2">;
             {[1, 2].map(idx => (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -143,13 +167,24 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { useProjects } from "@/hooks/useProjects",;
+=======
+"
+              <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>"
+import { useEffect, useState } from "react",;"
+import Link from "next/link",;'
+import { BriefcaseIcon, Clock } from 'lucide-react';"
+import { Button } from "@/components/ui/button",;"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Badge } from "@/components/ui/badge",;"
+import { useProjects } from "@/hooks/useProjects",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Project } from "@/types/projects",;
-export function ActiveProjectsCard() {;
+export function ActiveProjectsCard() { return null; }
   const { projects, isLoading } = useProjects(),;
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
   useEffect(() => {;
     if (projects && !isLoading) {;
-      const active = projects.filter(p =>;
+      const active = projects.filter(p =>;'
         ['offer_acceptedin_progress'].includes(p.status);
       ).slice(0, 3), // Limit to 3 most recent projects;
       setActiveProjects(active);
@@ -158,16 +193,16 @@ export function ActiveProjectsCard() {;
   if (isLoading) {;
     return (;
       <Card>;
-        <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
+        <CardHeader>;"
+          <CardTitle className="flex items-center gap-2">;"
             <BriefcaseIcon className="h-5 w-5 text-primary" />;
             <span>Active Projects</span>;
           </CardTitle>;
           <CardDescription>Your ongoing work</CardDescription>;
         </CardHeader>;
-        <CardContent>;
+        <CardContent>;"
           <div className="space-y-2">;
-            {[1, 2].map(idx => (;
+            {[1, 2].map(idx => (;"
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
             ))}
           </div>;
@@ -199,10 +234,11 @@ export function ActiveProjectsCard() {;
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   
-  if (activeProjects.length === 0) {
+  if (activeProjects.length === 0) {}
     return (
       <Card>
         <CardHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -210,14 +246,22 @@ export function ActiveProjectsCard() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <CardTitle className="flex items-center gap-2">
 <<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <BriefcaseIcon className="h-5 w-5 text-primary" />
 =======
 <CardTitle className='flex items-center gap-2'>
@@ -241,30 +285,31 @@ export function ActiveProjectsCard() {;
   if (activeProjects && activeProjects.length === 0) {;
     return (
       <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items-center gap-2'>;
+        <CardHeader>;'
+          <CardTitle className='flex items-center gap-2'>;'
             <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>;
           </CardTitle>;
-          <CardDescription>Your ongoing work</CardDescription>;
-        </CardHeader>          <CardTitle className="flex items-center gap-2">;
+          <CardDescription>Your ongoing work</CardDescription>;"
+        </CardHeader>          <CardTitle className="flex items-center gap-2">;"
             <BriefcaseIcon className="h-5 w-5 text-primary" />;
             <span>Active Projects</span>;
           </CardTitle>;
           <CardDescription>Your ongoing work</CardDescription>;
-        </CardHeader>;
-        <CardContent className='text-center py-6'>;
-          <p className='text-muted-foreground mb-2'>;
+        </CardHeader>;'
+        <CardContent className='text-center py-6'>;'
+          <p className='text-muted-foreground mb-2'>;'
             You don't have any active projects at the moment.;
-          </p>;
-          <Button variant='outline' asChild>;
-            <Link href='/jobs'>Find Opportunities</Link>          </Button>        <CardContent className="text-center py-6">;
-          <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>;
-          <Button variant="outline" asChild>;
+          </p>;'
+          <Button variant='outline' asChild>;'"
+            <Link href='/jobs'>Find Opportunities</Link>          </Button>        <CardContent className="text-center py-6">;'"
+          <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>;"
+          <Button variant="outline" asChild>;"
             <Link href="/jobs">Find Opportunities</Link>;
         </CardContent>;
       </Card>;
     );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -276,6 +321,12 @@ export function ActiveProjectsCard() {;
         <CardContent className="text-center py-6">
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
           <Button variant="outline" asChild>
+=======
+"
+        <CardContent className="text-center py-6">'"
+          <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>"
+          <Button variant="outline" asChild>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Link href="/jobs">Find Opportunities</Link>
           </Button>
 
@@ -314,12 +365,12 @@ export function ActiveProjectsCard() {;
   return (
 
     <Card>;
-      <CardHeader>;
-        <CardTitle className='flex items-center gap-2'>;
+      <CardHeader>;'
+        <CardTitle className='flex items-center gap-2'>;'
           <BriefcaseIcon className='h-5 w-5 text-primary' />          <span>Active Projects</span>;
         </CardTitle>;
         <CardDescription>Your ongoing work</CardDescription>;
-      </CardHeader>;
+      </CardHeader>;'
       <CardContent className='space-y-4'>  ;
 
   return (
@@ -327,8 +378,8 @@ export function ActiveProjectsCard() {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+      <CardHeader>"
+        <CardTitle className="flex items-center gap-2">"
           <BriefcaseIcon className="h-5 w-5 text-primary" />
 <<<<<<< HEAD
           <span>Active Projects</span>
@@ -355,12 +406,13 @@ export function ActiveProjectsCard() {;
 =======
         </CardTitle>
         <CardDescription>Your ongoing work</CardDescription>
-      </CardHeader>
+      </CardHeader>'
       <CardContent className='space-y-4'>
-        {activeProjects.map(project => (
-          <div key={project.id} className='border rounded-md p-3'>
-            <div className='flex justify-between items-start mb-2'>
+        {activeProjects.map(project => ('
+          <div key={project.id} className='border rounded-md p-3'>'
+            <div className='flex justify-between items-start mb-2'>'
               <h3 className='font-medium text-sm'>{project.job?.title}</h3>
+<<<<<<< HEAD
               <Badge
 =======
     <Card>;
@@ -409,38 +461,47 @@ return (
               <Badge
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 variant={
+=======
+              <Badge;
+                variant={'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   project.status === 'in_progress' ? 'default' : 'outline'
                 }
-                className={
-                  project.status === 'in_progress'
-                    ? 'bg-blue-100 text-blue-800 hover:bg-blue-100'
+                className={'
+                  project.status === 'in_progress''
+                    ? 'bg-blue-100 text-blue-800 hover:bg-blue-100''
                     : ''
 
+<<<<<<< HEAD
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   : 'In Progress'}
 <<<<<<< HEAD
               </Badge>;
-            </div>;
-            <div className='flex items-center text-xs text-muted-foreground gap-2'>;
+            </div>;'
+            <div className='flex items-center text-xs text-muted-foreground gap-2'>;'
               <Clock className='h-3 w-3' />;
               <span>;
                 Started {new Date(project && project.start_date).toLocaleDateString()}
               </span>;
-            </div>;
-            <Button size='sm' variant='outline' className='w-full mt-2' asChild>              <Link href={`/project/${project && project.id}`}>View Project</Link>            <Button size="sm" variant="outline" className="w-full mt-2" asChild>;
+            </div>;'"
+            <Button size='sm' variant='outline' className='w-full mt-2' asChild>              <Link href={`/project/${project && project.id}`}>View Project</Link>            <Button size="sm" variant="outline" className="w-full mt-2" asChild>;`
               <Link href={`/project/${project && project.id}`}>View Project</Link>;
             </Button>;
           </div>;
         ))}
       </CardContent>;
       {activeProjects && activeProjects.length > 2 && (;
-        <CardFooter>;
-          <Button variant='ghost' className='w-full' asChild>;
-            <Link href='/projects'>View All Projects</Link>          </Button>          <Button variant="ghost" className="w-full" asChild>;
+        <CardFooter>;'
+          <Button variant='ghost' className='w-full' asChild>;'"
+            <Link href='/projects'>View All Projects</Link>          </Button>          <Button variant="ghost" className="w-full" asChild>;"
             <Link href="/projects">View All Projects</Link>;
           </Button>;
         </CardFooter>;
 
       )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -457,6 +518,9 @@ return (
             <Button size='sm' variant='outline' className='w-full mt-2' asChild>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
@@ -464,126 +528,168 @@ return (
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { BriefcaseIcon, Clock } from 'lucide-react';
+=======
+'
+import { useEffect, useState } from 'react';'
+import Link from 'next / link';'
+import { BriefcaseIcon, Clock } from 'lucide-react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from '@/components / ui / button';
-import {
+import {}
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { use_projects } from '@/hooks / use_projects';
+  CardTitle,';
+} from '@/components / ui / card';'
+import { Badge } from '@/components / ui / badge';'
+import { use_projects } from '@/hooks / use_projects';'
 import { Project } from '@/types / projects';
-export /**
- * ActiveProjectsCard - Function description
+export /**;
+ * ActiveProjectsCard - Function description;
  */
-function ActiveProjectsCard() {
+function ActiveProjectsCard() {}
   const { projects, is_loading } = use_projects ();
   const [active_projects, setActiveProjects] = useState < Project[]>([]);
-  useEffect (() => {    // Check condition
-if ( {) {
-  $2
+  useEffect (() => {    // Check condition;
+if ( {) {}
+  $2;
 }
-      const active = projects;
+      const active = projects;'
         .filter (p => ['offer_accepted', 'in_progress'].includes (p.status));
         .slice (0, 3); // Limit to 3 most recent projects;
       setActiveProjects (active);
     }
   }, [projects, is_loading]);
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     return (
       <Card>;
+<<<<<<< HEAD
         <CardHeader>;
           <CardTitle className='flex items - center gap - 2'>;
             <BriefcaseIcon className='h - 5 w - 5 text - primary' />            <span > Active Projects</span>          <CardTitle className="flex items - center gap-2">;
             <BriefcaseIcon className="h - 5 w - 5 text-primary" />;
+=======
+        <CardHeader>;'
+          <CardTitle className='flex items - center gap - 2'>;'"
+            <BriefcaseIcon className='h - 5 w - 5 text - primary' />            <span > Active Projects</span>          <CardTitle className="flex items - center gap - 2">;"
+            <BriefcaseIcon className="h - 5 w - 5 text - primary" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span > Active Projects</span>;
           </CardTitle>;
           <CardDescription > Your ongoing work</CardDescription>;
         </CardHeader>;
-        <CardContent>;
+        <CardContent>;'
           <div className='space - y-2'>;
             {[1, 2].map (idx => (
               <div;
-                key={idx}
+                key={idx}'
                 className='h - 16 animate - pulse bg - muted rounded';
               ></div>            ))}
           </div>;
         </CardContent>;
+<<<<<<< HEAD
       </Card>);
   }          <div className="space-y-2">;
             {[1, 2].map (idx => (
               <div key={idx} className="h - 16 animate - pulse bg-muted rounded"></div>))}
+=======
+      </Card>);"
+  }          <div className="space - y-2">;
+            {[1, 2].map (idx => ("
+              <div key={idx} className="h - 16 animate - pulse bg - muted rounded"></div>))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>;
         </CardContent>;
       </Card>);
   }
     );
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     return (
       <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items - center gap - 2'>;
+        <CardHeader>;'
+          <CardTitle className='flex items - center gap - 2'>;'
             <BriefcaseIcon className='h - 5 w - 5 text - primary' />            <span > Active Projects</span>;
           </CardTitle>;
+<<<<<<< HEAD
           <CardDescription > Your ongoing work</CardDescription>;
         </CardHeader>          <CardTitle className="flex items - center gap-2">;
             <BriefcaseIcon className="h - 5 w - 5 text-primary" />;
+=======
+          <CardDescription > Your ongoing work</CardDescription>;"
+        </CardHeader>          <CardTitle className="flex items - center gap - 2">;"
+            <BriefcaseIcon className="h - 5 w - 5 text - primary" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span > Active Projects</span>;
           </CardTitle>;
           <CardDescription > Your ongoing work</CardDescription>;
-        </CardHeader>;
-        <CardContent className='text - center py - 6'>;
-          <p className='text - muted - foreground mb - 2'>;
+        </CardHeader>;'
+        <CardContent className='text - center py - 6'>;'
+          <p className='text - muted - foreground mb - 2'>;'
             You don't have any active projects at the moment.;
+<<<<<<< HEAD
           </p>;
           <Button variant='outline' as_child>;
             <Link href='/jobs'>Find Opportunities</Link>          </Button>        <CardContent className="text - center py-6">;
           <p className="text - muted - foreground mb-2">You don't have any active projects at the moment.</p>;
           <Button variant="outline" as_child>;
+=======
+          </p>;'
+          <Button variant='outline' as_child>;'"
+            <Link href='/jobs'>Find Opportunities</Link>          </Button>        <CardContent className="text - center py - 6">;'"
+          <p className="text - muted - foreground mb - 2">You don't have any active projects at the moment.</p>;"
+          <Button variant="outline" as_child>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Link href="/jobs">Find Opportunities</Link>;
         </CardContent>;
       </Card>);
   }
   return (
     <Card>;
-      <CardHeader>;
-        <CardTitle className='flex items - center gap - 2'>;
+      <CardHeader>;'
+        <CardTitle className='flex items - center gap - 2'>;'
           <BriefcaseIcon className='h - 5 w - 5 text - primary' />          <span > Active Projects</span>;
         </CardTitle>;
         <CardDescription > Your ongoing work</CardDescription>;
-      </CardHeader>;
+      </CardHeader>;'
       <CardContent className='space - y-4'>;
   return (
     <Card>;
+<<<<<<< HEAD
       <CardHeader>;
         <CardTitle className="flex items - center gap-2">;
           <BriefcaseIcon className="h - 5 w - 5 text-primary" />;
+=======
+      <CardHeader>;"
+        <CardTitle className="flex items - center gap - 2">;"
+          <BriefcaseIcon className="h - 5 w - 5 text - primary" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </CardTitle>;
         <CardDescription > Your ongoing work</CardDescription>;
-      </CardHeader>;
+      </CardHeader>;'
       <CardContent className='space - y-4'>;
-        {active_projects.map (project => (
-          <div key={project.id} className='border rounded - md p - 3'>;
-            <div className='flex justify - between items - start mb - 2'>;
+        {active_projects.map (project => ('
+          <div key={project.id} className='border rounded - md p - 3'>;'
+            <div className='flex justify - between items - start mb - 2'>;'
               <h3 className='font - medium text - sm'>{project.job?.title}</h3>;
               <Badge;
-                variant={
+                variant={'
                   project.status === 'in_progress' ? 'default' : 'outline';
                 }
+<<<<<<< HEAD
                 className={
                   project.status === 'in_progress';
                     ? 'bg - blue - 100 text - blue - 800 hover:bg - blue - 100';
@@ -593,29 +699,51 @@ if ( {) {
               <h3 className="font - medium text-sm">{project.job?.title}</h3>;
               <Badge;
                 variant = {project.status === "in_progress" ? "default" : "outline", }
+=======
+                className={'
+                  project.status === 'in_progress';'
+                    ? 'bg - blue - 100 text - blue - 800 hover:bg - blue - 100';'
+                    : '';"
+                }          <div key={project.id} className="border rounded - md p - 3">;"
+            <div className="flex justify - between items - start mb - 2">;"
+              <h3 className="font - medium text - sm">{project.job?.title}</h3>;
+              <Badge;"
+                variant = {project.status === "in_progress" ? "default" : "outline", }"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 class_name = {project.status === "in_progress" ? "bg - blue - 100 text - blue - 800 hover:bg - blue - 100" : "", }
-              >;
-                {project.status === 'offer_accepted';
-                  ? 'Starting';
+              >;'
+                {project.status === 'offer_accepted';'
+                  ? 'Starting';'
                   : 'In Progress'}
               </Badge>;
-            </div>;
-            <div className='flex items - center text - xs text - muted - foreground gap - 2'>;
+            </div>;'
+            <div className='flex items - center text - xs text - muted - foreground gap - 2'>;'
               <Clock className='h - 3 w - 3' />;
               <span>;
                 Started {new Date (project.start_date).toLocaleDateString ()}
               </span>;
+<<<<<<< HEAD
             </div>;
             <Button size='sm' variant='outline' className='w - full mt - 2' as_child>              <Link href={`/project/${project.id}`}>View Project</Link>            <Button size="sm" variant="outline" className="w - full mt-2" as_child>;
+=======
+            </div>;'"`
+            <Button size='sm' variant='outline' className='w - full mt - 2' as_child>              <Link href={`/project/${project.id}`}>View Project</Link>            <Button size="sm" variant="outline" className="w - full mt - 2" as_child>;`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Link href={`/project/${project.id}`}>View Project</Link>;
             </Button>;
           </div>))}
 
       </CardContent>;
+<<<<<<< HEAD
       {active_projects.length > 2 && (
         <CardFooter>;
           <Button variant='ghost' className='w - full' as_child>;
             <Link href='/projects'>View All Projects</Link>          </Button>          <Button variant="ghost" className="w-full" as_child>;
+=======
+      {activeProjects.length > 2 && (;
+        <CardFooter>;"
+          <Button variant="ghost" className="w-full" asChild>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Link href="/projects">View All Projects</Link>;
           </Button>;
         </CardFooter>)}
@@ -630,6 +758,7 @@ if ( {'") {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
@@ -657,3 +786,6 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
 }'"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

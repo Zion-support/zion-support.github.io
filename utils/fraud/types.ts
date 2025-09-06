@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review';
 export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
 export interface FraudEvent {;
@@ -9,15 +10,19 @@ export interface FraudEvent {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Fraud detection types
+=======
+// Fraud detection types;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export type AdminActionType =
-  | "ban_user"
-  | "suspend_user"
-  | "flag_content"
-  | "remove_content"
-  | "investigate"
-  | "dismiss"
+  | "ban_user""
+  | "suspend_user""
+  | "flag_content""
+  | "remove_content""
+  | "investigate""
+  | "dismiss"";
   | "escalate";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -25,15 +30,19 @@ export interface AdminAction {
 =======
 
 
+=======
+export interface AdminAction {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface AdminAction {;
-export interface AdminAction {
-
-
-
+export interface AdminAction {};
 export interface AdminAction {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
 <<<<<<< HEAD
   userId: string | null;
@@ -121,7 +130,7 @@ export interface AdminAction {  id: string;
   reason: string;
   details: Record<string, any>;
   createdAt: string;
-  executedAt?: string;
+  executedAt?: string;"
   status: "pending" | "executed" | "failed";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +169,7 @@ export interface FraudDetectionResult {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export interface FraudDetectionResult {;
+<<<<<<< HEAD
   isFraud: boolean;
   confidence: number;
   reasons: string[];  confidence: number;
@@ -167,10 +177,14 @@ export interface FraudDetectionResult {;
 
   suggested_actions: AdminActionType[],
   metadata: Record < string, any>;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
 export interface FraudDetectionConfig {}
 
+<<<<<<< HEAD
 export interface FraudDetectionConfig {
 };
     fakeProfile: {
@@ -209,3 +223,7 @@ export interface FraudDetectionConfig {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

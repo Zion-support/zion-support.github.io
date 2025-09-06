@@ -3,6 +3,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 /**
  * Master Automation Suite;
@@ -118,7 +122,10 @@ module.exports = MasterAutomationSuite;
 
 
 
+<<<<<<< HEAD
 main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const { execSync } = require('child_process')
 const fs = require('fs')

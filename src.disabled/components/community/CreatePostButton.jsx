@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React from';react'';"export": { function }';"export": default function C
 import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return() <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return() <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import _React from';react'';"export": { function }';"export": default function C
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from\';react\'';\"export\": { function }\';\"export\": default function CreatePostButton({ categoryId }) { return () <Button className=\'bg-zion-cyan \"hover\": bg-zion-cyan-light: text-zion-slate-dark\'>\' Create New Post\' </Button> )} \''\';\';
 const React from";react"";export: { function }";export: default function CreatePostButton({ categoryId }) { return () <Button className="bg-zion-cyan hover: bg-zion-cyan-light: text-zion-slate-dark">" Create New Post" </Button> )} """;";'"'"
-import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return () <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
-<<<<<<< HEAD
+=======
 
+
+'"
+import React from\';react\'';\"export\": { function }\';\"export\": default function CreatePostButton({ categoryId }) { return () <Button className=\'bg-zion-cyan \"hover\": bg-zion-cyan-light: text-zion-slate-dark\'>\' Create New Post\' </Button> )} \''\';\';'"
+const React from";react"";export: { function }";export: default function CreatePostButton({ categoryId }) { return () <Button className="bg-zion-cyan hover: bg-zion-cyan-light: text-zion-slate-dark">" Create New Post" </Button> )} """;";'"'"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return () <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import _React from';react'';"export": { function }';"export": default function C
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return () <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

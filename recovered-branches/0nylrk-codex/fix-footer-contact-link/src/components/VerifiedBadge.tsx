@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -138,6 +139,11 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
 =======
 =======
@@ -173,6 +179,7 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
 =======
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
   )
@@ -184,22 +191,59 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
 }
 import React from 'react';
 import {CheckCircle} from 'lucide-react';
+=======
+
+export function VerifiedBadge(): any ({ verified, size = 'sm' }: VerifiedBadgeProps) {;
+  if (!verified) return null;
+
+  const sizeClasses = {;'
+    sm: 'h-3 && 3.5 w-3 && 3.5',;'
+    md: 'h-4 w-4',;'
+    lg: 'h-5 w-5';
+  };
+
+  return (
+    <TooltipProvider>;
+      <Tooltip>;
+        <TooltipTrigger asChild>;"
+          <span className="inline-flex text-blue-500">;`
+            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />;
+          </span>;
+        </TooltipTrigger>;
+        <TooltipContent>;
+          <p>Verified talent</p>;
+        </TooltipContent>;
+      </Tooltip>;
+    </TooltipProvider>;
+  );
+}
+
+
+
+
+
+
+
+}'
+import React from 'react';'
+import {CheckCircle} from 'lucide-react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components / ui / tooltip';
-interface VerifiedBadgeProps {
-  verified: boolean,
+interface VerifiedBadgeProps {}
+  verified: boolean,'
   size?: 'sm' | 'md' | 'lg';
 }
-export /**
- * VerifiedBadge - Function description
+export /**;
+ * VerifiedBadge - Function description;
  */
-function VerifiedBadge() {
-  // Check condition
-if (return null) {
-  $2
+function VerifiedBadge() {}
+  // Check condition;
+if (return null) {}
+  $2;
 }
-  const size_classes = {
-    sm: 'h - 3.5 w - 3.5',
-    md: 'h - 4 w - 4',
+  const size_classes = {'
+    sm: 'h - 3.5 w - 3.5','
+    md: 'h - 4 w - 4','
     lg: 'h - 5 w - 5';
   }
 ;
@@ -208,6 +252,7 @@ if (return null) {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
   return (
     <TooltipProvider>;
@@ -269,3 +314,6 @@ export function VerifiedBadge({ verified, size = 'sm' } VerifiedBadgeProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

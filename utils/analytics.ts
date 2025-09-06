@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
 export type TrackEventPayload = {;
 =======
@@ -40,14 +41,21 @@ export async function trackEvent(payload: TrackEventPayload) {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
+<<<<<<< HEAD
 export type TrackEventPayload = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export type TrackEventPayload = {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   name: string;
   page?: string;
   userType?: UserType;
@@ -59,21 +67,22 @@ export async function trackEvent(payload: TrackEventPayload) {;
   try {;
 =======
 },
-export async /**
- * track_event - Function description
+export async /**;
+ * track_event - Function description;
  */
-function track_event() {
-  try {
-    await fetch ('/api / analytics / events / track', {
-      method: 'POST',
+function track_event() {}
+  try {'
+    await fetch ('/api / analytics / events / track', {'
+      method: 'POST','
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify (payload);
       keepalive: true as any});
-  } catch (e) {
+  } catch (e) {}
     // swallow;
 
   }
 }
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -112,21 +121,38 @@ function track_event() {
     // swallow;
     } catch (error) {
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 
+
+
+
+
+'
+    await fetch('/api/analytics/events/track', {;'
+      method: 'POST',;'
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify(payload);
+      keepalive: true as any});
+
+  } catch (error) {}
+    // swallow;
+    } catch (error) {}
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+
+<<<<<<< HEAD
   }
 }
   }
@@ -146,3 +172,9 @@ function track_event() {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

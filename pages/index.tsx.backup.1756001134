@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -263,11 +264,15 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network, Calendar
 } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -280,6 +285,9 @@ import SEOHead from '../components/SEOHead';
 import { ToastContainer, useToast } from '../components/ui/Toast';
 import { Service, Feature, Stat, UpdateItem } from '../types';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -289,6 +297,7 @@ export default function HomePage() {
     setIsVisible(true);
   }, []);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const services = [
 <<<<<<< HEAD
@@ -336,6 +345,9 @@ export default function HomePage() {
   const services: Service[] = [
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     {
       title: "AI Business Intelligence",
       description: "Transform data into actionable insights with AI-powered analytics",
@@ -365,6 +377,7 @@ export default function HomePage() {
     }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -632,6 +645,9 @@ export default function HomePage() {
     { number: "24/7", label: "Support Available", icon: Clock }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const updates: UpdateItem[] = [
@@ -656,6 +672,7 @@ export default function HomePage() {
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -685,6 +702,9 @@ export default function HomePage() {
       />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white">
         {/* Header */}
@@ -792,6 +812,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -936,6 +957,9 @@ export default function HomePage() {
             ))}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
 
           {/* View All Content CTA */}
@@ -1232,7 +1256,7 @@ export default function HomePage() {
           </div>
         </footer>
       </div>
-=======
+
     <QuantumHolographicMatrixBackground>
       <div className="min-h-screen bg-black text-white relative overflow-hidden">
         <Head>
@@ -1454,6 +1478,7 @@ export default function HomePage() {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1547,8 +1572,11 @@ export default function HomePage() {
     </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  );
 =======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  );
+
 import Layout from '../components/layout/Layout';
 import Homepage2025 from '../components/Homepage2025';
 

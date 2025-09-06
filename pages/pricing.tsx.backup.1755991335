@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -577,3 +578,6 @@ export default function Pricing() {
 };
 
 export default Pricing;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

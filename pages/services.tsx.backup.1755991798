@@ -3,11 +3,15 @@ import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, Filter as FilterIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
+<<<<<<< HEAD
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import { realMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -31,12 +35,16 @@ export default function ServicesPage() {
     { value: 'category', label: 'Category' }
   ];
 
+<<<<<<< HEAD
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const filteredServices = useMemo(() => {
     let filtered = [...enhancedRealMicroSaasServices];
@@ -153,7 +161,7 @@ export default function ServicesPage() {
       count: realMicroSaasServices.filter(s => s.category === 'Customer Service & Support').length,
       color: 'from-green-500 to-emerald-600'
     }
-=======
+
   const heroStats = [
     { value: '200+', label: 'Revolutionary Services', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
@@ -162,6 +170,7 @@ export default function ServicesPage() {
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <EnhancedFuturisticBackground variant="holographic-matrix" intensity="medium">
 =======
@@ -173,6 +182,9 @@ export default function ServicesPage() {
     <UltraFuturisticBackground variant="neural" intensity="high">
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-91c9
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="min-h-screen">
         <Head>
           <title>Complete Services Portfolio | Zion Tech Group - AI, Cloud, Security & More</title>
@@ -185,11 +197,15 @@ export default function ServicesPage() {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/services" />
         </Head>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991798
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="min-h-screen bg-black text-white">
       <Head>
         <title>AI-Powered Micro SAAS Services - Zion Tech Group</title>
@@ -515,6 +531,7 @@ export default function ServicesPage() {
               </div>
             </div>
 
+<<<<<<< HEAD
 =======
             {/* Results Count */}
             <div className="text-center mb-8">
@@ -522,8 +539,9 @@ export default function ServicesPage() {
                 Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of {enhancedMicroSaasServices.length} services
               </p>
             </div>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-91c9
             {/* Services Grid/List */}
             <div className={`grid gap-6 ${
               viewMode === 'grid' 
@@ -658,8 +676,12 @@ export default function ServicesPage() {
             }}></div>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/10 to-transparent"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {/* Services Grid/List */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -671,6 +693,7 @@ export default function ServicesPage() {
               Showing {filteredServices.length} of {enhancedRealMicroSaasServices.length} total services
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:components/services.tsx.backup.1755991685.backup.1756001157
 
@@ -942,5 +965,8 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-91c9
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991798
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

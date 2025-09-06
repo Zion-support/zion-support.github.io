@@ -1,15 +1,19 @@
 
+<<<<<<< HEAD
 import {AddMilestoneForm} from '../AddMilestoneForm';
 interface MilestoneCreatorProps {;
   onSubmit: (data: any) => Promise<void>,;
   isSubmitting: boolean,;
   onCancel: () => void,;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
   projectType?: string;
 }
 
+<<<<<<< HEAD
 export function MilestoneCreator(): any ({;
 
 <<<<<<< HEAD
@@ -24,15 +28,16 @@ export function MilestoneCreator(): any ({;
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 export function MilestoneCreator({;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export function MilestoneCreator(): any ({;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -49,51 +54,43 @@ export function MilestoneCreator({;
 import React from 'react';
 import { AddMilestoneForm } from '../AddMilestoneForm';
 interface MilestoneCreatorProps {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  onSubmit: (data: any) => Promise<void>
-  isSubmitting: boolean
-  onCancel: () => void
-
-  projectScope?: string;
-  projectStartDate?: string;
-  projectEndDate?: string | null;
-  projectType?: string
-}
-export function MilestoneCreator({
 
 export function MilestoneCreator({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD
 export function MilestoneCreator({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onSubmit;
   isSubmitting;
   onCancel;
   projectScope;
   projectStartDate;
   projectEndDate;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <AddMilestoneForm 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-  projectType
-}: MilestoneCreatorProps) {
+
+
+
+  projectType;
+}: MilestoneCreatorProps) {}
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <AddMilestoneForm
     <AddMilestoneForm 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    <AddMilestoneForm 
 
+<<<<<<< HEAD
 =======
 =======
     <AddMilestoneForm
@@ -109,6 +106,10 @@ export function MilestoneCreator({;import React from 'react',;
 =======
 export function MilestoneCreator({;import React from 'react',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import React from 'react',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
   onSubmit: (data: any) => Promise<void>,;
@@ -120,6 +121,7 @@ interface MilestoneCreatorProps {;
   projectType?: string;
 }
 ;
+<<<<<<< HEAD
 export function MilestoneCreator({;
   onSubmit,;
   isSubmitting,;
@@ -158,6 +160,9 @@ export function MilestoneCreator({;
     <AddMilestoneForm
 
 import React from 'react',;
+=======
+export function MilestoneCreator() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 ;
 interface MilestoneCreatorProps {;
@@ -170,6 +175,7 @@ interface MilestoneCreatorProps {;
   projectType?:string;
 }
 ;
+<<<<<<< HEAD
 export function MilestoneCreator({;
   onSubmit,;
   isSubmitting,;
@@ -194,6 +200,9 @@ export function MilestoneCreator({;
     <AddMilestoneForm
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export function MilestoneCreator() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
@@ -201,13 +210,9 @@ export function MilestoneCreator({;
       projectStartDate={projectStartDate}
       projectEndDate={projectEndDate}
       projectType={projectType}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    />;
-  );
-}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -216,6 +221,9 @@ export function MilestoneCreator({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   on_submit: (data: any) => Promise < void>,
 =======
     <AddMilestoneForm;  on_submit: (data: any) => Promise < void>,
@@ -230,10 +238,10 @@ export function MilestoneCreator({;
   projectEndDate?: string | null;
   project_type?: string;
 }
-export /**
- * MilestoneCreator - Function description
+export /**;
+ * MilestoneCreator - Function description;
  */
-function MilestoneCreator() {
+function MilestoneCreator() {}
   return (
     <AddMilestoneForm;
       on_submit={on_submit}
@@ -247,6 +255,7 @@ function MilestoneCreator() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -284,3 +293,9 @@ function MilestoneCreator() {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

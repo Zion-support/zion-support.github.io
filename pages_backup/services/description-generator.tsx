@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function ServiceDescriptionGeneratorPage() {
@@ -80,6 +81,17 @@ export default function ServiceDescriptionGeneratorPage() {;
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
+=======
+
+export default function ServiceDescriptionGeneratorPage(req, res) {}
+  try {};
+export default function ServiceDescriptionGeneratorPage() { return null; }
+export default function ServiceDescriptionGeneratorPage(req, res) {}
+  try {};
+  const [title, setTitle] = useState('');'
+  const [targetAudience, setTargetAudience] = useState('');'
+  const [featuresInput, setFeaturesInput] = useState('');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
   const [additionalNotes, setAdditionalNotes] = useState('');
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
@@ -96,10 +108,11 @@ export default function ServiceDescriptionGeneratorPage() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  const [tone, setTone] = useState<
+  const [tone, setTone] = useState<'
     'professional' | 'friendly' | 'persuasive' | 'technical'
-
+'
   >('professional');
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
@@ -107,17 +120,15 @@ export default function ServiceDescriptionGeneratorPage() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
-
-
-
 =======
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
 
-  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
+
+
+
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -134,13 +145,16 @@ const [tone, setTone] = useState<
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null),
+  const [error, setError] = useState<string | null>(null),'
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
   const keyFeatures = useMemo(() => {
   }
@@ -213,32 +227,31 @@ setAccepted(true);
     navigator.clipboard.writeText(generated).catch(() => {});
 
   }
+=======
+
+
+  }'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);'
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const keyFeatures = useMemo(() => {;
-    return featuresInput;
+    return featuresInput;'
       .split('\n');
       .map((f) => f.trim());
       .filter(Boolean);
   }, [featuresInput]),;
-  async function handleSubmit(e: React.FormEvent) {;
-    e.preventDefault(),;
-    setLoading(true);
-    setError(null);
-    setAccepted(false);
-    try {
-      const response = await fetch('/api/generate-service-description', {;
-        method: 'POST',;
+  async function handleSubmit() { return null; }
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify({;
           title,;
           keyFeatures,;
           targetAudience,;
           additionalNotes: additionalNotes || undefined,;
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -259,28 +272,31 @@ setAccepted(true);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
     } finally {;
       setLoading(false);
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
 }
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-  function handleAccept() {;
-    setAccepted(true);
-    } catch (error) {
-    console.error("Error:", error);
+  function handleAccept() { return null; }
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
   function handleCopy() {;
 <<<<<<< HEAD
 
@@ -292,11 +308,15 @@ setAccepted(true);
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!generated) return;
+=======
+  function handleCopy() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
     navigator.clipboard.writeText(generated).catch(() => {});
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -349,28 +369,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
     <div className='max-w-3xl mx-auto'>;
+=======
+
+
+  return (
+'
+    <div className='max-w-3xl mx-auto'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
       <h1 className='text-2xl font-semibold mb-4'>;
         Service Description Generator;
-      </h1>;
+      </h1>;'
       <p className='text-sm text-gray-600 dark:text-gray-300 mb-6'>;
         Enter your service details. We will generate a polished description;
         using GPT-4. You can edit it on the page and accept when ready.;
       </p>;
 
 
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <form
         onSubmit={handleSubmit}
+=======
+
+      <form;
+        onSubmit={handleSubmit}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'>;
-        <div>;
+        <div>;'
           <label className='block text-sm font-medium mb-1'>;
             Service Title;
           </label>;
-          <input
-            type='text'
-            className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+          <input'
+            type='text''
+            className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500''
             placeholder='e && e.g., On-Demand Web Performance Audit'
             value={title}
 <<<<<<< HEAD:pages/services/description-generator.tsx
@@ -383,16 +416,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
 
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div>
+=======
+        <div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
           <label className="block text-sm font-medium mb-1">Service Title</label>
-          <input
-            type="text"
-            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          <input"
+            type="text""
+            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500""
             placeholder="e.g., On-Demand Web Performance Audit"
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
             value={title  } catch (error) {
     console.error("Error:", error);
@@ -463,6 +501,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
           />
         </div>
         <div>
@@ -472,6 +515,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
 
 
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
             value={title}
@@ -539,11 +583,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
           <textarea
+=======
+
+        <div>;'
+          <label className='block text-sm font-medium mb-1'>;
+            Target Audience;
+          </label>;
+
+
+          <input'
+            type='text''
+            className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500''
+            placeholder='e && e.g., CTOs and product teams at growth-stage SaaS'
+            value={targetAudience}
+
+          <textarea'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
             className='w-full min-h-[120px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-            placeholder={
+            placeholder={'
               'e && e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance'
             }
             value={featuresInput}
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
 =======
@@ -594,14 +655,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
             className='w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+=======
+'
+            className='w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
             placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.'
             value={additionalNotes}
 
 
-          <button
+          <button'
             type='submit'
-            disabled={loading}
+            disabled={loading}'
             className='inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60'>;
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -613,31 +679,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <button
                 onClick={handleCopy}
+=======
+
+              <button;
+                onClick={handleCopy}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
                 className='rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'>;
                 Copy;
               </button>;
-              <button
+              <button;
                 onClick={handleAccept}
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
           <button
             type="submit"
             disabled={loading}
 =======
-
-
-          <button
-            type="submit"
-            disabled={loading}
 =======
-          <label className="block text-sm font-medium mb-1">Tone</label>
-          <select
-            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={tone  } catch (error) {
-    console.error("Error:", error);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
+
+
+
+
+
+          <button"
+            type="submit"
+            disabled={loading  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
             onChange={(e) => setTone(e.target.value as any)  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -706,10 +779,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
             className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
-          >
+          >'
             {loading ? 'Generating…' : 'Generate Description'}
           </button>
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
           {error && <span className="text-red-600 text-sm">{error}</span>}
@@ -771,6 +848,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+        </div>
+      </form>
+
+      {generated && ("
+        <div className="mt-8 space-y-3">"
+          <div className="flex items-center justify-between">"
+            <h2 className="text-xl font-semibold">Generated Description</h2>"
+            <div className="flex items-center gap-2">
+              <button;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
                 className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
 =======
                 className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
@@ -791,8 +882,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
               >
-                Copy
+                Copy;
               </button>
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
               <button
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
@@ -860,6 +952,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              <button;
+              >
+
+
+                Accept;
+              </button>
+            </div>
+          </div>
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
 =======
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -877,9 +980,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onChange={(e) => setGenerated(e.target.value)}
           />
 
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
           {accepted && (
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
+=======
+          {accepted && ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
             <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
 =======
 <<<<<<< HEAD
@@ -899,6 +1006,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
         </div>
       )}
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
     </div>
 <<<<<<< HEAD:pages/services/description-generator.tsx
 <<<<<<< HEAD
@@ -911,9 +1019,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
             <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
-          )  } catch (error) {
-    console.error("Error:", error);
+          )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -923,6 +1034,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   )
 }
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -932,10 +1044,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
 
 
 }
 
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -946,16 +1064,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div>;
+=======
+
+
+
+        <div>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
           <label className='block text - sm font - medium mb - 1'>;
             Additional Notes (optional);
           </label>;
-          <textarea;
-            className='w - full min - h-[80px] rounded - md border border - gray - 300 dark:border - gray - 700 bg - transparent px - 3 py - 2 focus:outline - none focus:ring - 2 focus:ring - blue - 500';
+          <textarea;'
+            className='w - full min - h-[80px] rounded - md border border - gray - 300 dark:border - gray - 700 bg - transparent px - 3 py - 2 focus:outline - none focus:ring - 2 focus:ring - blue - 500';'
             placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.';
             value={additional_notes}
             on_change={e => setAdditionalNotes (e.target.value)}
           />;
         </div>;
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -965,16 +1090,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       )  } catch (error) {
     console.error("Error:", error);
+=======
+
+      )  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     </div>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/services/description-generator.tsx
 =======
 <<<<<<< HEAD
 
@@ -995,3 +1126,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/services/description-generator.tsx
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/services/description-generator.tsx

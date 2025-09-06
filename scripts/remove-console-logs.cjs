@@ -74,10 +74,15 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 }
 function main() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/expand-services-advertise-and-build-project-0033
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
@@ -111,8 +116,14 @@ ursor/expand-services-advertise-and-build-project-0033
     console.log(`\n✨ No console statements found to remove.`);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/expand-services-advertise-and-build-project-0033
+=======
+
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }

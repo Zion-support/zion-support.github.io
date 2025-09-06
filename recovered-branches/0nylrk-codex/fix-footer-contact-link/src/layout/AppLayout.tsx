@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -46,13 +47,20 @@ import { Footer } from "@/components/Footer",interface AppLayoutProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";"
+import { AppHeader } from "./AppHeader";"
+import { Footer } from "@/components/Footer";
+interface AppLayoutProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   children: React.ReactNode;
   hideFooter?: boolean;
 }
 
-export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
-  return (
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {}
+  return ("
     <div className="flex flex-col min-h-screen bg-background">
+<<<<<<< HEAD
       <AppHeader />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,20 +105,31 @@ interface AppLayoutProps {;
   children: React && React.ReactNode,;
   hideFooter?: boolean;
 =======
+=======
+      <AppHeader />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <main className="flex-grow">{children}</main>
       {!hideFooter && <Footer />}
-    </div>
+    </div>;
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
       <main className="flex-grow">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",;
 import { AppHeader } from "./AppHeader",;
+=======
+export function AppLayout(): any ({ children, hideFooter = false }: AppLayoutProps) {;
+  return (
+"
+import React from "react",;"
+import { AppHeader } from "./AppHeader",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Footer } from "@/components/Footer",;
 ;
 interface AppLayoutProps {;
@@ -118,22 +137,22 @@ interface AppLayoutProps {;
   hideFooter?:boolean;
 }
 ;
-export function AppLayout({ children, hideFooter = false } AppLayoutProps) {;
-  return (;
+export function AppLayout() { return null; }
         {children}
       </main>
       {!hideFooter && <Footer />}
     </div>
   )
-}
-import React from "react",;
-import { AppHeader } from "./AppHeader",;
+}"
+import React from "react",;"
+import { AppHeader } from "./AppHeader",;"
 import { Footer } from "@/components/Footer",;
 interface AppLayoutProps {;
   children: React.ReactNode;
   hideFooter?: boolean;
 }
 ;
+<<<<<<< HEAD
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
   return (;
 <<<<<<< HEAD
@@ -144,12 +163,12 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
     <div className="flex flex-col min-h-screen bg-background">;
       <AppHeader />;
       <main className="flex-grow">;
+=======
+export function AppLayout() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </main>;
-      {!hideFooter && <Footer />}
 
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -158,19 +177,16 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
 ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>;
 }
 
 
 ;
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -179,24 +195,39 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from './react';
 import { AppHeader } from './AppHeader';
+=======
+
+
+import React from './react';'
+import { AppHeader } from './AppHeader';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Footer } from '@/components / Footer';
-interface AppLayoutProps {
+interface AppLayoutProps {}
   children: React.ReactNode,
   hide_footer?: boolean;
 }
-export /**
- * AppLayout - Function description
+export /**;
+ * AppLayout - Function description;
  */
+<<<<<<< HEAD
 function AppLayout() {
   return (
     <div className="flex flex - col min - h-screen bg-background">;
       <AppHeader />;
       <main className="flex-grow">;
+=======
+function AppLayout() {}
+  return ("
+    <div className="flex flex - col min - h-screen bg - background">;
+      <AppHeader />;"
+      <main className="flex - grow">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {children}
       </main>;
       {!hide_footer && <Footer />}
     </div>);
 }
+<<<<<<< HEAD
   ),;}
  interface AppLayoutProps {
   children: React.ReactNode;
@@ -229,3 +260,7 @@ hideFooter?: boolean
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

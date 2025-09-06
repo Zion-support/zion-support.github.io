@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -70,10 +71,18 @@ export function Toaster() {
 import {Toaster, as, SonnerToaster} from "sonner";
 export function Toaster() {;
   return (    <SonnerToaster
+=======
+import * as React from "react";"
+import { Toaster, as, SonnerToaster } from "sonner";
+export function Toaster() {}
+  return (
+    <SonnerToaster"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       position="top-right"
-      toastOptions={{
-        className:
+      toastOptions={{}
+        className:"
           "bg-zion-blue-dark text-white border border-zion-blue-light shadow-lg shadow-zion-purple/10",
+<<<<<<< HEAD
         style: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -181,6 +190,27 @@ function Toaster() {
         descriptionClassName: "text - zion - slate - light"}}
     />);
 }}
+=======
+        style: {"
+          background: "#0a1429","
+          color: "#fff","
+          border: "1px solid #1e3a6f",
+        },
+        duration: 4000,"
+        descriptionClassName: "text-zion-slate-light",
+      }}
+    />;
+  );
+}
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ;
 
@@ -190,7 +220,11 @@ function Toaster() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 <<<<<<< HEAD
 
@@ -200,6 +234,7 @@ function Toaster() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -208,3 +243,7 @@ function Toaster() {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

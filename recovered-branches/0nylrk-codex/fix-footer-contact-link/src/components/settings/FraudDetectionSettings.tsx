@@ -59,17 +59,18 @@ export function FraudDetectionSettings() {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import React, { useState } from "react";
-import {
+import {}
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
+  CardTitle,";
+} from "@/components/ui/card";"
+import { Switch } from "@/components/ui/switch";"
+import { Button } from "@/components/ui/button";"
+import { Label } from "@/components/ui/label";"
 import { ShieldAlert, Info } from "lucide-react";
+<<<<<<< HEAD
 import {
 =======
 =======
@@ -89,17 +90,24 @@ import { ShieldAlert, Info } from 'lucide-react',import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+  AccordionTrigger,";
+} from "@/components/ui/accordion";"
+import { toast } from "@/hooks/use-toast";"
+import { supabase } from "@/integrations/supabase/client";"
 import { useAuth } from "@/hooks/useAuth";
+<<<<<<< HEAD
 export function FraudDetectionSettings() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+export function FraudDetectionSettings() {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] =
@@ -109,6 +117,7 @@ export function FraudDetectionSettings() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleSavePreferences = async () => {
 =======
@@ -180,12 +189,21 @@ export function FraudDetectionSettings() {
       // For now, we'll just simulate a successful save
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const handleSavePreferences = async () => {}
+    if (!user?.id) return;
+    setIsSaving(true);
+    try {}
+      // In a real implementation, we would save these preferences to the database;
+      // For now, we'll just simulate a successful save;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      toast({
-        title: "Settings saved",
+      toast({"
+        title: "Settings saved","
         description: "Your fraud detection preferences have been updated.",
       });
+<<<<<<< HEAD
     } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -763,6 +781,21 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    } catch (error) {"
+      console.error("Error saving preferences:", error);
+      toast({"
+        title: "Error","
+        description: "Failed to save your preferences. Please try again.","
+        variant: "destructive",
+      });
+    } finally {}
+      setIsSaving(false);
+    }
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>
 =======
                 onCheckedChange={setAiAnalysisEnabled}            </Button>
@@ -777,6 +810,7 @@ if (return) {
   );
 }
 
+<<<<<<< HEAD
     setIsSaving(true);
     try {;
       // In a real implementation, we would save these preferences to the database;
@@ -836,3 +870,40 @@ mb-8"> <CardHeader className=" space-y-1"> <div className=" flex items-center ga
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  )
+
+  )
+
+
+
+    </Card>;
+  ),; export function FraudDetectionSettings () {}
+  const {};
+  user;
+}= useAuth ();
+const [messageScanningEnabled, setMessageScanningEnabled] = useState (true);
+const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState (true);
+const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState (true);
+const [isSaving, setIsSaving] = useState (false);
+const handleSavePreferences = async () => {}
+  if (!user?.id) return;
+try {}
+}catch (error) {'
+  console.error ('Error saving preferences:', error);
+toast ({}
+}finally {}
+  setIsSaving (false) 
+}
+
+
+
+
+  )
+  )
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

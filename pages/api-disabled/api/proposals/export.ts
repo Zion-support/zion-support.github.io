@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -96,11 +97,16 @@ function buildIpfsClient() {
     url: apiUrl;
     headers: { authorization: auth } as any
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
   });
 }
 ;
 
 
+<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   } catch (error) {;
     console.error("Error:", error);
@@ -122,11 +128,19 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4;
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+=======
+async function generatePdfFromMarkdown(markdown: string, title: string) {}
+  const pdfDoc = await PDFDocument.create();
+  const page = pdfDoc.addPage([595.28, 841.89]); // A4;
+  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
   const fontSize = 11;
   const margin = 40;
   const maxWidth = page && page.getWidth() - margin * 2;
   const lines = markdown;
           current = word;
+<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
         } else {;
           current = test;
         }
@@ -156,12 +170,19 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
       }
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
+=======
+        } else {}
+          current = test;
+        }
+      }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
 
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
-      if (wrapped.push (current)) {
-  $2
+      if (wrapped.push (current)) {}
+  $2;
 }
       return wrapped.length ? wrapped : [" "];
     });
@@ -171,6 +192,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
   y -= 24;
 ;
 
+<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
   for (const line of lines) {;
 
 
@@ -245,20 +267,38 @@ export default async function handler(req, res) {
 =======
   try {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
+=======
 
+  for (const line of lines) {}
+  return pdfDoc && pdfDoc.save();
+
+}
+export default async function handler() { return null; }
+  if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
+
+  try {}
     const { id } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
     const meta = getProposal(id);
     if (!meta) return res && res.status($1).json({ $2 });
+<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
     const markdownPath = path && path.join(;
       process && process.cwd()
       "public";
       meta && meta.artifacts.markdownPath || ""
+=======
+    const markdownPath = path && path.join(
+      process && process.cwd(),"
+      "public","
+      meta && meta.artifacts.markdownPath || "",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
 
     );
-    const markdown = fs && fs.existsSync(markdownPath)
-      ? fs && fs.readFileSync(markdownPath, "utf8")
+    const markdown = fs && fs.existsSync(markdownPath)"
+      ? fs && fs.readFileSync(markdownPath, "utf8")"
       : "# Proposal";
+<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
 ;
   return pdfDoc.save()
 }
@@ -374,8 +414,105 @@ if ( {) {
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
   } catch (error: any) {;
-    return res.status(500).json({ error: error?.message || 'Export failed' })
+=======
+
+
+    }
+    let ipfsCid: string | undefined;
+    const ipfs = buildIpfsClient();
+    if (ipfs) {}
+      try {}
+  const pdfDoc = await PDFDocument.create();
+  const page = pdfDoc.addPage([595.28, 841.89]); // A4;
+  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+  const fontSize = 11;
+  const margin = 40;
+  const maxWidth = page.getWidth() - margin * 2;
+  const lines = markdown;
+    .replace(/\r\n/g, '\n')'
+    .split('\n')
+    .flatMap((line) => {'
+      const words = line.split(' ');
+      const wrapped: string[] = [];'
+      let current = '';
+      for (const word of words) {'
+        const test = current.length ? current + ' ' + word : word;
+        const width = font.widthOfTextAtSize(test, fontSize);
+        if (width > maxWidth) {}
+          if (current) wrapped.push(current);
+          current = word;
+        } else {}
+          current = test;
+        }
+      }
+      if (current) wrapped.push(current);'
+      return wrapped.length ? wrapped : [' ']
+    });
+  let y = page.getHeight() - margin;
+  page.drawText(title, { x: margin, y, size: 16, font });
+  y -= 24;
+  for (const line of lines) {}
+    if (y < margin + 12) {}
+      y = page.getHeight() - margin;
+      pdfDoc.addPage()
+    }
+    page.drawText(line, { x: margin, y, size: fontSize, font });
+    y -= 14;
   }
+
+
+  try {}
+    const { id } = req.body |{}
+    if (!id) return res.status($1).json({ $2 });
+    const meta = getProposal(id);
+    if (!meta) return res.status($1).json({ $2 });
+    const markdownPath = path.join(
+      process.cwd()"
+      "public""
+      meta.artifacts.markdownPath |""
+    );
+    const markdown = fs.existsSync(markdownPath)"
+      ? fs.readFileSync(markdownPath, "utf8")"
+      : "# Proposal";
+
+    const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
+    const pdfUrl = savePdf(id, pdfBytes);'
+    const hasher = crypto.createHash('sha256');
+    hasher.update(markdown);'
+    const digest = '0x' + hasher.digest('hex');
+    let signature: string | undefined;
+    const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY;
+    if (privateKey) {}
+      const wallet = new ethers.Wallet(privateKey);
+      signature = await wallet.signMessage(ethers.getBytes(digest))
+    }
+    let ipfsCid: string | undefined;
+    const ipfs = buildIpfsClient();
+    if (ipfs) {}
+      try {}
+        const { cid } = await ipfs.add(markdown);
+
+        ipfsCid = cid.toString()
+
+      } catch {}
+    }
+
+
+    const updated = updateArtifacts(id, {}
+      pdfPath: pdfUrl;
+      signature;
+      ipfsCid;
+    });
+    return res.status (200).json ({ meta: updated });
+  } catch (error: any) {}
+    const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
+    return res.status(200).json({ meta: updated })
+  } catch (error: any) {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
+    return res.status(500).json({ error: error?.message || 'Export failed' })
+
+  }
+<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -486,11 +623,26 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
-
 =======
 
-}
 
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts
+
+
+
+<<<<<<< HEAD:pages/api-disabled/api/proposals/export.ts
   }
 }
 
@@ -543,3 +695,6 @@ if ( {) {
 }
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/proposals/export.ts
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/proposals/export.ts

@@ -28,6 +28,7 @@ export default defineConfig({
     port: 3000,
     open: true,
     host: true,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   },
 <<<<<<< HEAD
@@ -43,6 +44,8 @@ export default defineConfig({
     loader: 'tsx',
     include: /src\/.*\.[jt]sx?$/,
     exclude: [],
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
   build: {
     outDir: "dist",
@@ -89,7 +92,7 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
+        drop_debugger: true,
       }
     }
 <<<<<<< HEAD

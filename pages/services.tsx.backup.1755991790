@@ -1,11 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, LinkIcon, Building2, Menu, X } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -104,7 +108,7 @@ export default function ServicesPage() {
   const getPopularServices = () => {
     return enhancedRealMicroSaasServices.filter(service => service.popular).slice(0, 6);
   };
-=======
+
 import { motion } from 'framer-motion';
 import { 
   Star, 
@@ -190,6 +194,7 @@ export default function ServicesPage() {
   ];
 
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground variant="quantum-holographic-advanced" intensity="high">
       <Head>
         <title>Revolutionary Micro SaaS Services - Zion Tech Group</title>
@@ -466,6 +471,9 @@ export default function ServicesPage() {
           <meta name="keywords" content="AI services, cloud solutions, cybersecurity, data analytics, IoT platform, blockchain, quantum computing, AR/VR, micro SaaS, business automation" />
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8601
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <meta name="author" content="Zion Tech Group" />
           <meta property="og:title" content="Complete Services Portfolio | Zion Tech Group" />
           <meta property="og:description" content="Comprehensive technology services portfolio with AI, quantum, blockchain, and emerging technology solutions." />
@@ -478,6 +486,7 @@ export default function ServicesPage() {
         <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -539,55 +548,13 @@ export default function ServicesPage() {
                   From AI-powered automation to quantum computing, discover our comprehensive portfolio of 
                   real, functional micro SaaS solutions designed to transform your business.
                 </p>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-                {/* Contact Information Banner */}
-                <EnhancedFuturisticCard 
-                  variant="holographic" 
-                  intensity="medium" 
-                  className="max-w-4xl mx-auto mb-8"
-                  background="glass"
-                >
-                  <div className="grid md:grid-cols-3 gap-6 text-center">
-                    <div className="flex flex-col items-center">
-                      <Phone className="w-6 h-6 text-cyan-400 mb-2" />
-                      <span className="text-sm text-gray-400">Mobile</span>
-                      <span className="text-white font-semibold">{contactInfo.mobile}</span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <Mail className="w-6 h-6 text-purple-400 mb-2" />
-                      <span className="text-sm text-gray-400">Email</span>
-                      <span className="text-white font-semibold">{contactInfo.email}</span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <MapPin className="w-6 h-6 text-green-400 mb-2" />
-                      <span className="text-sm text-gray-400">Address</span>
-                      <span className="text-white font-semibold text-sm">{contactInfo.address}</span>
-                    </div>
-                  </div>
-                </EnhancedFuturisticCard>
-              </div>
-
-              {/* Quick Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">30+</div>
-                  <div className="text-gray-400 text-sm">Services</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">8</div>
-                  <div className="text-gray-400 text-sm">Categories</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">14</div>
-                  <div className="text-gray-400 text-sm">Day Trials</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">99.9%</div>
-                  <div className="text-gray-400 text-sm">Uptime</div>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8601
                 </div>
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* View Mode Toggle */}
@@ -1091,6 +1058,9 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8601
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991790
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="flex items-center justify-center">
                     <Phone className="w-4 h-4 text-cyan-400 mr-2" />
                     <span className="text-gray-300">{contactInfo.mobile}</span>
@@ -1101,6 +1071,7 @@ export default function ServicesPage() {
                   </div>
                   <div className="flex items-center justify-center">
                     <MapPin className="w-4 h-4 text-green-400 mr-2" />
+<<<<<<< HEAD
                     <span className="text-gray-300">{contactInfo.address}</span>
 <<<<<<< HEAD
 =======
@@ -1210,6 +1181,9 @@ export default function ServicesPage() {
                     <span className="text-gray-300 text-xs">{contactInfo.address}</span>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-8601
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
               </div>
@@ -1229,7 +1203,7 @@ export default function ServicesPage() {
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
             }}></div>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/10 to-transparent"></div>
-=======
+
       {/* Services Grid/List */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

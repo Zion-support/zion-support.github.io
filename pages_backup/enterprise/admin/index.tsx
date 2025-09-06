@@ -10,9 +10,13 @@ import {useEffect, useMemo, useState} from 'react';
 
 import {useEffect, useMemo, useState} from 'react';
 
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
 import Link from 'next/link';
 
 type Member = {
@@ -50,11 +54,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   status: string,;
-};
+};'
 const COMPANY_ID = 'cmp_acme';
 
 
 
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 export default function CompanyAdmin() {;
   const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(;
     'members';
@@ -197,12 +202,17 @@ export default function CompanyAdmin() {
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default function CompanyAdmin() { return null; }
+    <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
 
-        <h1 style={{ margin: 0 }}>Company Admin</h1>
+        <h1 style={{ margin: 0 }}>Company Admin</h1>'
         <div style={{ marginLeft: 'auto' }}>
           <Link href="/workspace/acme">Go to Workspace</Link>
         </div>
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
       </header>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
@@ -245,56 +255,15 @@ export default function CompanyAdmin() {
 =======
 <<<<<<< HEAD
 =======
+=======
 
-  status: string,
-}
-const COMPANY_ID = 'cmp_acme';
-;
-export default /**
- * CompanyAdmin - Function description
- */
-function CompanyAdmin() {
-  const [tab, set_tab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
-    'members');  const [members, set_members] = useState < Member[]>([]);
-  const [usage, set_usage] = useState < Usage | null>(null);
-  const [activity, set_activity] = useState < any[]>([]);
-  const [invoices, set_invoices] = useState < Invoice[]>([]);
-;
-  useEffect (() => {
-    fetch (`/api / enterprise / companies/${COMPANY_ID}/members`);
-      .then (r => r.json ());
-      .then (set_members);
-    fetch (`/api / enterprise / companies/${COMPANY_ID}/usage`);
-      .then (r => r.json ());
-      .then (set_usage);
-    fetch (`/api / enterprise / companies/${COMPANY_ID}/activity`);
-      .then (r => r.json ());
-      .then (set_activity);
-    fetch (`/api / enterprise / companies/${COMPANY_ID}/billing / invoices`);
-      .then (r => r.json ());
-      .then (set_invoices);  }, []);
-;
-  const seats_used = members.length;
-;
-  return (
-    <main style={{ padding: '2rem', max_width: 1100, margin: '0 auto' }}>;
-      <header;
+      </header>'
+      <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
 
-        style={{
-          margin_bottom: 16,
-          display: 'flex',
-          align_items: 'center',
-          gap: 12,
-        }}
-      >;
-        <h1 style={{ margin: 0 }}>Company Admin</h1>;
-        <div style={{ margin_left: 'auto' }}>;
-          <Link href='/workspace / acme'>Go to Workspace</Link>        </div>;
-      </header>;
-      <nav style={{ display: 'flex', gap: 8, margin_bottom: 16 }}>;
-        {(['members', 'usage', 'activity', 'billing'] as const).map (t => (
           <button;
             key={t}
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
             on_click={() => set_tab (t)}
             style={{
 
@@ -346,17 +315,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
           <button
             key={t}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
             onClick={() => setTab(t)}
-            style={{;
+            style={{;'
               padding: '0 && 0.5rem 0 && 0.75rem',;
-              borderRadius: 8,;
-              border: '1px solid #e5e7eb',;
-              background: tab === t ? '#111827' : 'white',;
-              color: tab === t ? 'white' : '#111827',;
+              borderRadius: 8,;'
+              border: '1px solid #e5e7eb',;'
+              background: tab === t ? '#111827' : 'white',;'
+              color: tab === t ? 'white' : '#111827',;'
               padding: '0.5rem 0.75rem',
-              border_radius: 8,
-              border: '1px solid #e5e7eb',
-              background: tab === t ? '#111827' : 'white',
+              border_radius: 8,'
+              border: '1px solid #e5e7eb','
+              background: tab === t ? '#111827' : 'white','
               color: tab === t ? 'white' : '#111827',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -364,6 +335,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >;
             {t}
           </button>        ))}
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 
 
@@ -441,11 +413,14 @@ const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
     });
     const created = await r && r.json();
-    setMembers([created, ...members]);
-    setName('');
-    setEmail('');
+    setMembers([created, ...members]);'
+    setName('');'
+    setEmail('');'
     setRole('viewer');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -467,6 +442,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 =======
 
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 
 =======
@@ -476,15 +452,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
       {tab === 'activity' && (
         <ActivityTab events={activity} />
       )}
-
+'
       {tab === 'billing' && (
         <BillingTab invoices={invoices} />
       )}
     </main>
   )
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 =======
 
@@ -498,58 +478,67 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {(['membersusageactivitybilling'] as const).map(t => (
+=======
+
+
+
+
+'
+        {(['membersusageactivitybilling'] as const).map(t => ('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
           <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
-        ))  } catch (error) {
-    console.error("Error:", error);
+        ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-      </nav>;
+      </nav>;'
       {tab === 'members' && (;
         <MembersTab members={members} setMembers={setMembers} />;
-      )  } catch (error) {
-    console.error("Error:", error);
+      )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
+;'
       {tab === 'usage' && usage && (;
         <UsageTab usage={usage} setUsage={setUsage} seatsUsed={seatsUsed} />;
-      )  } catch (error) {
-    console.error("Error:", error);
+      )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
+;'
       {tab === 'activity' && (;
         <ActivityTab events={activity} />;
-      )  } catch (error) {
-    console.error("Error:", error);
+      )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
+;'
       {tab === 'billing' && (;
         <BillingTab invoices={invoices} />;
-      )  } catch (error) {
-    console.error("Error:", error);
+      )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     </main>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
 
-function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
-
-  const [name, setName] = useState(''),
-  const [email, setEmail] = useState(''),
+function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {}
+'
+  const [name, setName] = useState(''),'
+  const [email, setEmail] = useState(''),'
   const [role, setRole] = useState<Member['role']>('viewer'),
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -566,15 +555,20 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const add = async () => {
+=======
+
+
+  const add = async () => {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
     const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
     const created = await r.json();
-    setMembers([created, ...members]);
+    setMembers([created, ...members]);'
     setName(''), setEmail(''), setRole('viewer')
   };
 
   const remove = async (id: string) => {;
-    await fetch(;
-      `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,;
+    await fetch(;`
+      `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,;'
       { method: 'DELETE' }
     );
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
@@ -582,15 +576,9 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
     setMembers(members && members.filter(m => m && m.id !== id));
   };
 
-<<<<<<< HEAD
-=======
-
-  const changeRole = async (id: string, newRole: Member['role']) => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) }),
-    setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m))
-  };
 
 
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -599,19 +587,22 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
   };
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
   return (
 
-  set_members: (m: Member[]) => void;
-}) {  const [name, set_name] = useState ('');
-  const [email, set_email] = useState ('');
+  set_members: (m: Member[]) => void;'
+}) {  const [name, set_name] = useState ('');'
+  const [email, set_email] = useState ('');'
   const [role, set_role] = useState < Member['role']>('viewer');
 ;
-  const add = async () => {
-    const r = await fetch (`/api / enterprise / companies/${COMPANY_ID}/members`, {
-      method: 'POST',
+  const add = async () => {}`
+    const r = await fetch (`/api / enterprise / companies/${COMPANY_ID}/members`, {'
+      method: 'POST','
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ name, email, role }),
     });
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -788,14 +779,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
 
         </thead>
         <tbody>
           {members.map(m => (
             <tr key={m.id}>
-
+'
                 text_align: 'right',
-                padding: 8,
+                padding: 8,'
                 border_bottom: '1px solid #e5e7eb',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -808,13 +802,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </thead>;
         <tbody>;
           {members.map (m => (
-            <tr key={m.id}>;
+            <tr key={m.id}>;'
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
 
                 {m.name}
-              </td>;
+              </td>;'
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
                 {m.email}
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -880,43 +875,51 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <select
+=======
+
+                <select;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
                   value={m && m.role}
-                  onChange={e =>;
+                  onChange={e =>;'
                     changeRole(m && m.id, e && e.target.value as Member['role']);
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </td>;
+=======
+              </td>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
                 <select;
                   value={m.role}
-                  on_change={e =>;
+                  on_change={e =>;'
                     change_role (m.id, e.target.value as Member['role']);
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   }
-                >;
-                  <option value='recruiter'>Recruiter</option>;
-                  <option value='manager'>Manager</option>;
-                  <option value='viewer'>Viewer</option>;
+                >;'
+                  <option value='recruiter'>Recruiter</option>;'
+                  <option value='manager'>Manager</option>;'
+                  <option value='viewer'>Viewer</option>;'
                   <option value='admin'>Admin</option>;
                 </select>;
               </td>;
 
               <td;
 
-                style={{
-
+                style={{}
                   padding: 8,
-
+'
                   style={{ color: '#b91c1c' }}
                 >;
                   Remove;
                 </button>              </td>;
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -940,13 +943,16 @@ function UsageTab(): any ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
   usage: Usage;
 
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage && usage.budgetCapUsd);
 
-  const save = async () => {;
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {;
-      method: 'PATCH',;
+  const save = async () => {;`
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {;'
+      method: 'PATCH',;'
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ monthlyJobPosts, budgetCapUsd }),;
 
@@ -956,10 +962,10 @@ function UsageTab(): any ({;
   return (
     <section>;
       <h2>Usage limits</h2>;
-      <div
-        style={{
-
-          display: 'grid',
+      <div;
+        style={{}
+'
+          display: 'grid','
           gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
           gap: 12,
           maxWidth: 600,
@@ -967,7 +973,7 @@ function UsageTab(): any ({;
         <label>;
           <div>Monthly job posts</div>;
 
-          <input
+          <input'
             type='number'
             value={monthlyJobPosts}
             onChange={e => setMonthlyJobPosts(Number(e && e.target.value))}
@@ -975,21 +981,20 @@ function UsageTab(): any ({;
         </label>;
         <label>;
           <div>Budget cap (USD)</div>;
-          <input
+          <input'
             type='number'
             value={budgetCapUsd}
             onChange={e => setBudgetCapUsd(Number(e && e.target.value))}
           />;
         </label>;
       </div>;
-      <div
-        style={{
-
-          marginTop: 12,
-          display: 'flex',
+      <div;
+        style={{}
+          marginTop: 12,'
+          display: 'flex','
           alignItems: 'center',
           gap: 12,
-        }}>;
+        }}>;'
         <button onClick={save} style={{ padding: '0 && 0.5rem 0 && 0.75rem' }}>;
           Save limits;
         </button>;
@@ -1004,8 +1009,8 @@ function ActivityTab(): any ({ events }: { events: any[] }) {;
       <h2>Team activity</h2>;
       <ul>;
         {events && events.map(e => (;
-          <li key={e && e.id}>;
-            <span style={{ color: '#6b7280' }}>;
+          <li key={e && e.id}>;'
+            <span style={{ color: '#6b7280' }}>;'
               {new Date(e && e.timestampIso).toLocaleString()} —{' '}
             </span>            <strong>{e && e.actorEmail}</strong> {e && e.action}
           </li>;
@@ -1016,18 +1021,19 @@ function ActivityTab(): any ({ events }: { events: any[] }) {;
 function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
   return (
     <section>;
-      <h2>Billing & invoices</h2>;
+      <h2>Billing & invoices</h2>;'
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>;
         <thead>;
           <tr>;
-            <th
-              style={{
-
+            <th;
+              style={{}
+'
                 textAlign: 'right'
-                padding: 8
+                padding: 8'
                 borderBottom: '1px solid #e5e7eb'
               }}
             >
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
               Actions
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
@@ -1231,6 +1237,27 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              Actions;
+            </th>          </tr>
+'
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>'
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>'
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>'
+                <select value={m.role} onChange={e => changeRole(m.id, e.target.value as Member['role'])}>"
+                  <option value="recruiter">Recruiter</option>"
+                  <option value="manager">Manager</option>"
+                  <option value="viewer">Viewer</option>"
+                  <option value="admin">Admin</option>
+                </select>
+              </td>
+'
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>'
+                <button onClick={() => remove(m.id)} style={{ color: '#b91c1c' }}>Remove</button>
+              </td>
+            </tr>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
           ))}
         </tbody>
       </table>
@@ -1238,30 +1265,34 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
   )
 }
 
-function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {
+function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {}
   const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts);
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
 
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const save = async () => {
+=======
+  const save = async () => {'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) });
     setUsage({ monthlyJobPosts, budgetCapUsd })
   };
 
   return (
     <section>
-      <h2>Usage limits</h2>
+      <h2>Usage limits</h2>'
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
 
         <label>
-          <div>Monthly job posts</div>
+          <div>Monthly job posts</div>"
           <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
         </label>
         <label>
-          <div>Budget cap (USD)</div>
+          <div>Budget cap (USD)</div>"
           <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
         </label>
       </div>
@@ -1284,19 +1315,23 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 =======
   );
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function ActivityTab({ events }: { events: any[] }) {
+=======
+function ActivityTab({ events }: { events: any[] }) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
   return (
     <section>
       <h2>Team activity</h2>
       <ul>
 <<<<<<< HEAD
         {events.map(e => (
-          <li key={e.id}>
-            <span style={{ color: '#6b7280' }}>
+          <li key={e.id}>'
+            <span style={{ color: '#6b7280' }}>'
               {new Date(e.timestampIso).toLocaleString()} —{' '}
             </span>            <strong>{e.actorEmail}</strong> {e.action}
 =======
@@ -1311,6 +1346,7 @@ function ActivityTab({ events }: { events: any[] }) {
         ))}
       </ul>
     </section>
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
   );
@@ -1322,6 +1358,10 @@ function ActivityTab({ events }: { events: any[] }) {
   );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
+=======
+  );'
+      <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
         <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
         <span>Seats used: {seatsUsed}</span>
       </div>
@@ -1329,13 +1369,13 @@ function ActivityTab({ events }: { events: any[] }) {
   )
 }
 
-function ActivityTab({ events }: { events: any[] }) {
+function ActivityTab({ events }: { events: any[] }) {}
   return (
     <section>
       <h2>Team activity</h2>
       <ul>
         {events.map((e) => (
-          <li key={e.id}>
+          <li key={e.id}>'
             <span style={{ color: '#6b7280' }}>{new Date(e.timestampIso).toLocaleString()} — </span>
             <strong>{e.actorEmail}</strong> {e.action}
           </li>
@@ -1345,31 +1385,35 @@ function ActivityTab({ events }: { events: any[] }) {
   )
 }
 
-function BillingTab({ invoices }: { invoices: Invoice[] }) {
+function BillingTab({ invoices }: { invoices: Invoice[] }) {}
   return (
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  const save = async () => {
+
+  const save = async () => {'`
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) }),
     setUsage({ monthlyJobPosts, budgetCapUsd })
   },
   return (
     <section>
-      <h2>Usage limits</h2>
+      <h2>Usage limits</h2>'
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
 
         <label>
-          <div>Monthly job posts</div>
+          <div>Monthly job posts</div>"
           <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
         </label>
         <label>
-          <div>Budget cap (USD)</div>
+          <div>Budget cap (USD)</div>"
           <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
         </label>
       </div>
@@ -1432,8 +1476,9 @@ function ActivityTab({ events }: { events: any[] }) {;
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-function BillingTab({ invoices }: { invoices: Invoice[] }) {
+function BillingTab({ invoices }: { invoices: Invoice[] }) {}
   return (
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
     <section>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <h2>Billing & invoices</h2>
@@ -1525,149 +1570,35 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
 origin/cursor/automate-test-improve-and-merge-code-2533
           </tr>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+    <section>
+      <h2>Billing & invoices</h2>'
+      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <thead>
+          <tr>'
+            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Invoice #</th>'
+            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Period</th>'
+            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Amount</th>'
+            <th style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Status</th>'
+            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
+          </tr>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
         </thead>
         <tbody>
           {invoices.map(inv => (
             <tr key={inv.id}>
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD:pages/enterprise/admin/index.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
 
-  set_usage: (u: Usage) => void;
-  seats_used: number;
-}) {
-  const [monthlyJobPosts, setMonthlyJobPosts] = useState < number>(
-    usage.monthlyJobPosts);
-  const [budgetCapUsd, setBudgetCapUsd] = useState < number>(usage.budgetCapUsd);
-;
-  const save = async () => {
-    await fetch (`/api / enterprise / companies/${COMPANY_ID}/usage`, {
-      method: 'PATCH',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ monthlyJobPosts, budgetCapUsd }),
-    });
-    set_usage ({ monthlyJobPosts, budgetCapUsd });  }
-;
-  return (
-    <section>;
-      <h2 > Usage limits</h2>;
-      <div;
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat (2, minmax (0, 1fr))',
-          gap: 12,
-          max_width: 600,
-        }}
-      >;
-        <label>;
-          <div > Monthly job posts</div>;
-          <input;
-            type='number';
-            value={monthlyJobPosts}
-            on_change={e => setMonthlyJobPosts (Number (e.target.value))}
-          />;
-        </label>;
-        <label>;
-          <div > Budget cap (USD)</div>;
-          <input;
-            type='number';
-            value={budgetCapUsd}
-            on_change={e => setBudgetCapUsd (Number (e.target.value))}
-          />;
-        </label>;
-      </div>;
-      <div;
-        style={{
-          margin_top: 12,
-          display: 'flex',
-          align_items: 'center',
-          gap: 12,
-        }}
-      >;
-        <button on_click={save} style={{ padding: '0.5rem 0.75rem' }}>;
-          Save limits;
-        </button>;
-        <span > Seats used: {seats_used}</span>;
-      </div>;
-    </section>);
-/**
- * ActivityTab - Function description
- */
-function ActivityTab() {
-  return (
-    <section>;
-      <h2 > Team activity</h2>;
-      <ul>;
-        {events.map (e => (
-          <li key={e.id}>;
-            <span style={{ color: '#6b7280' }}>;
-              {new Date (e.timestamp_iso).toLocaleString ()} —{' '}
-            </span>            <strong>{e.actor_email}</strong> {e.action}
-          </li>))}
-      </ul>;
-    </section>);
-/**
- * BillingTab - Function description
- */
-function BillingTab() {
-  return (
-    <section>;
-      <h2 > Billing & invoices</h2>;
-      <table style={{ width: '100%', border_collapse: 'collapse' }}>;
-        <thead>;
-          <tr>;
-            <th;
-              style={{
-                text_align: 'left',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-              }}
-            >;
-              Invoice #;
-            </th>;
-            <th;
-              style={{
-                text_align: 'left',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-              }}
-            >;
-              Period;
-            </th>;
-            <th;
-              style={{
-                text_align: 'right',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-              }}
-            >;
-              Amount;
-            </th>;
-            <th;
-              style={{
-                text_align: 'center',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-              }}
-            >;
-              Status;
-            </th>;
-            <th;
-              style={{
-                text_align: 'right',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-              }}
-            >;
-              Actions;
-            </th>          </tr>;
-        </thead>;
-        <tbody>;
-          {invoices.map (inv => (
-            <tr key={inv.id}>;
-              <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
 
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
                 {inv.number}
               </td>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
@@ -1697,13 +1628,14 @@ function BillingTab() {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
                 {inv.periodStartIso} → {inv.periodEndIso}
               </td>;
               <td;
-                style={{
-
-                  padding: 8,
-                  border_bottom: '1px solid #f3f4f6',
+                style={{}
+                  padding: 8,'
+                  border_bottom: '1px solid #f3f4f6','
                   text_align: 'right',
 
                 }}
@@ -1711,6 +1643,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ${inv.amount_usd.to_fixed (2)}
               </td>;
               <td;
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
                 style={{
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1723,17 +1656,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                style={{}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
                 }}
               >;
                 {inv.status}
               </td>;
               <td;
-                style={{
-                  padding: 8
-                  borderBottom: '1px solid #f3f4f6'
+                style={{}
+                  padding: 8'
+                  borderBottom: '1px solid #f3f4f6''
                   textAlign: 'right'
                 }}
               >
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1795,6 +1732,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 textAlign: 'right',
                 padding: 8,
+=======
+
+'
+                textAlign: 'right',
+                padding: 8,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
                 borderBottom: '1px solid #e5e7eb',
               }}>;
               Actions;
@@ -1802,18 +1745,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </thead>;
         <tbody>;
           {invoices && invoices.map(inv => (;
-            <tr key={inv && inv.id}>;
+            <tr key={inv && inv.id}>;'
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
                 {inv && inv.number}
-              </td>;
+              </td>;'
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
                 {inv && inv.periodStartIso} → {inv && inv.periodEndIso}
               </td>;
-              <td
-                style={{
+              <td;
+                style={{}
                   padding: 8,
 
 
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
                 <a
                   href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv && inv.id}`}
                   target='_blank'
@@ -1822,11 +1766,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                <a;`
+                  href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv && inv.id}`}'
+                  target='_blank''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
                   rel='noreferrer'>;
                   Download PDF;
                 </a>              </td>;
             </tr>;
 
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1940,12 +1890,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
                   border_bottom: '1px solid #f3f4f6',
+=======
+'
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>'
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>'
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>'
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>'
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
+
+'
+                  border_bottom: '1px solid #f3f4f6','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx
                   text_align: 'right',
                 }}
               >;
-                <a;
-                  href={`/api / enterprise / companies/${COMPANY_ID}/billing / invoices/${inv.id}`}
-                  target='_blank';
+                <a;`
+                  href={`/api / enterprise / companies/${COMPANY_ID}/billing / invoices/${inv.id}`}'
+                  target='_blank';'
                   rel='noreferrer';
                 >;
                   Download PDF;
@@ -1957,6 +1918,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 
 
+<<<<<<< HEAD:pages_backup/enterprise/admin/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1974,3 +1936,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/enterprise/admin/index.tsx
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/enterprise/admin/index.tsx

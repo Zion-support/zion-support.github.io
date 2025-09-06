@@ -24,34 +24,15 @@ export type Offer = {;
 <<<<<<< HEAD
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export interface Offer {;
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-// Marketplace types
-export interface Offer {
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export interface Offer {;
-=======
-
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+// Marketplace types;
+export interface Offer {};
 export interface Offer {;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -62,11 +43,20 @@ export interface Offer {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   createdAtIso: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,17 +85,19 @@ export interface PaymentTerms {
     dueDateIso: string;
   }>;
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   scopeSummary: string;
   paymentTerms: PaymentTerms;
+<<<<<<< HEAD
   agreementUrl?: string;
   status: OfferStatus;
   changeRequestNote?: string;
@@ -160,16 +152,22 @@ export interface Project {;
 
   scopeSummary: string;
   paymentTerms: PaymentTerms;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   title: string;
   summary: string;
@@ -232,13 +230,19 @@ export type MarketplaceDb = {;
   notes: ProjectNote[];
 }
 
+<<<<<<< HEAD
 export interface ProjectNote {
+=======
+
+export interface ProjectNote {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   authorId: string;
   authorRole: string;
   content: string;
   createdAtIso: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -276,3 +280,6 @@ export interface ProjectNote {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

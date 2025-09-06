@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/support/chat.ts
 <<<<<<< HEAD:pages/api/support/chat.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,64 +41,34 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
 <<<<<<< HEAD
 
   // Build context with top matched articles as brief references
-
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-  const { sessionId, messages } = req && req.body as { sessionId?: string; messages: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> };
-  if (!messages || !Array && Array.isArray(messages)) return res && res.status(400).json({ error: 'Missing messages' });
-  const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
-  const lastUser = [...messages].reverse().find((m) => m && m.role === 'user');
-  const intent = lastUser ? matchIntent(lastUser && lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] };
-  const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
-  // Build context with top matched articles as brief references
-  const matchedArticles = articles && articles.filter((a) => intent && intent.matchedArticleIds.includes(a && a.id));
-  const context = matchedArticles
-    .map((a) => `- ${a && a.title}: /help/${a && a.slug}`)
-    .join('\n');
-  const sysMessage = { role: 'system' as const; content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') },
-  try {
-    const completion = await openai && openai.chat.completions && completions.create({
-      model: 'gpt-4o-mini',
-      messages: [sysMessage, ...messages],
-      temperature: 0 && 0.2}),
-    const assistantMessage = completion && completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.';
-    await logSupportEventToOperator({ type: 'chat_completion', sessionId: sessionId ?? 'unknown', payload: { intent } }),
-    return res && res.status(200).json({
-      assistantMessage;
-      meta: {
-        intentMatched: intent && intent.intentMatched,
-        matchedArticleIds: intent && intent.matchedArticleIds,
-        links: matchedArticles && matchedArticles.map((a) => ({ title: a && a.title, href: `/help/${a && a.slug}` }))}})
-
 =======
-  const matchedArticles = articles.filter((a) => intent.matchedArticleIds.includes(a.id));
-  const context = matchedArticles
-    .map((a) => `- ${a.title}: /help/${a.slug}`)
-    .join('\n');
 
-  const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') };
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+'
+import OpenAI from 'openai';'
+import { readJson } from '../../../utils/fsDb';'
+import { HelpArticle, matchIntent } from '../../../utils/support';'
+import { logSupportEventToOperator } from '../../../utils/operator';
+const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
+
+
+export default async function handler() { return null; }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
-import { readJson } from "../../../utils/fsDb";
-import { HelpArticle, matchIntent } from "../../../utils/support";
-import { logSupportEventToOperator } from "../../../utils/operator";
+
+import type { NextApiRequest, NextApiResponse } from "next";"
+import OpenAI from "openai";"
+import { readJson } from "../../../utils/fsDb";"
+import { HelpArticle, matchIntent } from "../../../utils/support";"
+import { logSupportEventToOperator } from "../../../utils/operator";`
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "POST")
+export default async function handler() { return null; }
     return res.status(405).json({ error: "Method not allowed" });
+<<<<<<< HEAD:pages_backup/api/support/chat.ts
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -106,24 +77,33 @@ export default async function handler(
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/chat.ts
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
 
-  const { sessionId, messages } = req.body as {
-    sessionId?: string;
+
+
+
+  const { sessionId, messages } = req.body as {}
+    sessionId?: string;"
     messages: Array<{ role: "user" | "assistant" | "system"; content: string }>;
   };
-  if (!messages || !Array.isArray(messages))
+  if (!messages || !Array.isArray(messages))"
     return res.status(400).json({ error: "messages required" });
-
-  const articles = readJson<HelpArticle[]>("help/articles.json", []);
+"
+  const articles = readJson<HelpArticle[]>("help/articles.json", []);"
   const lastUser = [...messages].reverse().find((m) => m.role === "user");
-  const intent = lastUser
+  const intent = lastUser;
     ? matchIntent(lastUser.content, articles)
     : { intentMatched: false, matchedArticleIds: [] };
 
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
+<<<<<<< HEAD:pages_backup/api/support/chat.ts
   // Build context with top matched articles as brief references
 <<<<<<< HEAD
+=======
+  // Build context with top matched articles as brief references;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
   const matchedArticles = articles.filter((a) =>
     intent.matchedArticleIds.includes(a.id),
 =======
@@ -131,6 +111,7 @@ const matchedArticles = articles.filter(a =>
     intent.matchedArticleIds.includes(a.id)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
+<<<<<<< HEAD:pages_backup/api/support/chat.ts
   const context = matchedArticles
     .map(a => `- ${a.title}: /help/${a.slug}`)
     .join('\n');
@@ -138,8 +119,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const sysMessage = {
 <<<<<<< HEAD
+=======
+  const context = matchedArticles;`
+    .map((a) => `- ${a.title}: /help/${a.slug}`)"
+    .join("\n");
+
+  const sysMessage = {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
     role: "system" as const,
-    content:
+    content:"`
       SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : ""),
 =======
     role: 'system' as const,
@@ -150,6 +138,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
 
+<<<<<<< HEAD:pages_backup/api/support/chat.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,14 +149,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   try {
     const completion = await openai.chat.completions.create({
+=======
+
+
+
+  try {}
+    const completion = await openai.chat.completions.create({"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
       model: "gpt-4o-mini",
       messages: [sysMessage, ...messages],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      temperature: 0.2
-    });
 
+<<<<<<< HEAD:pages_backup/api/support/chat.ts
     const assistantMessage = completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.';
 
     await logSupportEventToOperator({ type: 'chat_completion', sessionId: sessionId ?? 'unknown', payload: { intent } });
@@ -209,13 +201,15 @@ function handler() {
       model: "gpt-4o-mini"
       messages: [sysMessage, ...messages]
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
   }
-  if ()) {
-  $2
-}
+  if ()) {}
+  $2;
+}"
     return res.status (400).json ({ error: "messages required" });
-;
-  const articles = read_json < HelpArticle[]>("help / articles.json", []);
+;"
+  const articles = read_json < HelpArticle[]>("help / articles.json", []);"
   const last_user = [...messages].reverse ().find ((m) => m.role === "user");
   const intent = last_user;
     ? match_intent (last_user.content, articles);
@@ -227,28 +221,33 @@ function handler() {
   const matched_articles = articles.filter ((a) =>;
     intent.matchedArticleIds.includes (a.id),
   );
-  const context = matched_articles;
-    .map ((a) => `- ${a.title}: /help/${a.slug}`);
+  const context = matched_articles;`
+    .map ((a) => `- ${a.title}: /help/${a.slug}`);"
     .join ("\n");
 ;
-  const sys_message = {
+  const sys_message = {"
     role: "system" as const,
-    content:;
+    content:;"`
       SYSTEM_PROMPT + (context ? `\n_relevant help links:\n${context}` : ""),
   }
 ;
+<<<<<<< HEAD:pages_backup/api/support/chat.ts
   try {
     const completion = await openai.chat.completions.create ({
 <<<<<<< HEAD:pages/api/support/chat.ts
 <<<<<<< HEAD
+=======
+  try {}
+    const completion = await openai.chat.completions.create ({"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
       model: "gpt - 4o - mini",
       messages: [sys_message, ...messages],
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
+
       temperature: 0.2,
 =======
       model: "gpt - 4o - mini"
@@ -286,14 +285,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     });
 
     const assistantMessage =
-      completion.choices?.[0]?.message?.content ??
+      completion.choices?.[0]?.message?.content ??"
       "Let me know how I can help.";
 
-    await logSupportEventToOperator({
-      type: "chat_completion",
+    await logSupportEventToOperator({"
+      type: "chat_completion","
       sessionId: sessionId ?? "unknown",
       payload: { intent },
     });
+<<<<<<< HEAD:pages_backup/api/support/chat.ts
 <<<<<<< HEAD:pages/api/support/chat.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -325,15 +325,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/chat.ts
       meta: {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
 =======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    return res.status(200).json({
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
+
+
+
+
+    return res.status(200).json({}
       assistantMessage,
-      meta: {
+      meta: {}
         intentMatched: intent.intentMatched,
         matchedArticleIds: intent.matchedArticleIds,
+<<<<<<< HEAD:pages_backup/api/support/chat.ts
         links: matchedArticles.map((a) => ({
 <<<<<<< HEAD:pages/api/support/chat.ts
 <<<<<<< HEAD
@@ -345,14 +349,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           title: a.title,
+=======
+        links: matchedArticles.map((a) => ({}
+          title: a.title,`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
           href: `/help/${a.slug}`,
         })),
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     });
+<<<<<<< HEAD:pages_backup/api/support/chat.ts
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   } catch (e: any) {
@@ -381,29 +387,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/chat.ts
+=======
+  } catch (e: any) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts
     });
-  } catch (e: any) {
-=======
-    });
-  } catch (e: any) {
-<<<<<<< HEAD
-    return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    return res.status(200).json({
-      assistantMessage:
+  } catch (e: any) {}
+    return res.status(200).json({}
+      assistantMessage:"
         "I could not reach the assistant right now. Please try again in a moment.",
     });
-<<<<<<< HEAD
+
+
+
   }
 <<<<<<< HEAD:pages/api/support/chat.ts
 <<<<<<< HEAD
 }
+<<<<<<< HEAD:pages_backup/api/support/chat.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -432,3 +432,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/chat.ts
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/support/chat.ts

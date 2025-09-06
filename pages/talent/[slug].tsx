@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -8,30 +9,35 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
+=======
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
+}'
 import React from 'react';
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -58,6 +64,17 @@ const TalentProfile: NextPage = () => {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const TalentProfile: NextPage = () => {
+=======
+
+
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import { useRouter } from "next/router";"
+import { useState } from "react";"
+import EnhancedButton from "../../components/ui/EnhancedButton";"
+import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
+const TalentProfile: NextPage = () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const router = use_router ();
   const { slug } = router.query;
 
@@ -66,26 +83,27 @@ const TalentProfile: NextPage = () => {;
   const router = useRouter();
   const { slug } = router && router.query;
 
-  const [responseLog, setResponseLog] = useState<;
+  const [responseLog, setResponseLog] = useState<;"
     Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>;
   >([]);
-
+"
   const handleRespond = (action: "Accept" | "Decline" | "Negotiate") => {;
     setResponseLog((prev) => [;
       ...prev,;
       { action, at: new Date().toISOString() },;
 
     ]);
-  }
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useRouter } from 'next/router',
-import { useState } from 'react',
-import EnhancedButton from '../../components/ui/EnhancedButton',
+  }'
+import type { NextPage } from 'next','
+import Head from 'next/head','
+import { useRouter } from 'next/router','
+import { useState } from 'react','
+import EnhancedButton from '../../components/ui/EnhancedButton','
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
-const TalentProfile: NextPage = () => {
+const TalentProfile: NextPage = () => {}
   const router = useRouter(),
   const { slug } = router.query,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -94,34 +112,39 @@ const TalentProfile: NextPage = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className="space-y-6 pb-20">;
+=======
+  return (";
+    <div className="space-y-6 pb-20">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       {" "}
       <Head>;
         <title>{slug} - Talent - Zion</title>;
-      </Head>;
+      </Head>;"
       <header className="flex items-start justify-between gap-4">;
-        <div>;
-          <h1 className="text-2xl font-semibold">{slug}</h1>;
-          <div className="text-sm opacity-80">Full-Stack Developer</div>;
-          <div className="mt-2 flex gap-1">;
-            <TrustBadge type="Verified" />;
+        <div>;"
+          <h1 className="text-2xl font-semibold">{slug}</h1>;"
+          <div className="text-sm opacity-80">Full-Stack Developer</div>;"
+          <div className="mt-2 flex gap-1">;"
+            <TrustBadge type="Verified" />;"
             <TrustBadge type="Top Rated" />;
           </div>;
-        </div>;
-        <div className="flex gap-2">;
+        </div>;"
+        <div className="flex gap-2">;"
           <EnhancedButton onClick={() => handleRespond("Accept")}>;
             Accept;
           </EnhancedButton>;
-          <EnhancedButton
-            variant="secondary"
+          <EnhancedButton"
+            variant="secondary""
             onClick={() => handleRespond("Decline")}
           >;
             Decline;
           </EnhancedButton>;
-          <EnhancedButton
-            variant="ghost"
+          <EnhancedButton"
+            variant="ghost""
             onClick={() => handleRespond("Negotiate")}
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -137,6 +160,15 @@ const TalentProfile: NextPage = () => {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
+=======
+'
+  const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),'
+  const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {}
+    setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
+  },
+
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="space-y-6 pb-20">
 =======
   return (
@@ -157,16 +189,21 @@ const [responseLog, setResponseLog] = useState<
       <Head>
         <title>{slug} - Talent - Zion</title>
       </Head>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <header className="flex items-start justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-semibold">{slug}</h1>
-          <div className="text-sm opacity-80">Full-Stack Developer</div>
-          <div className="mt-2 flex gap-1">
-            <TrustBadge type="Verified" />
+        <div>"
+          <h1 className="text-2xl font-semibold">{slug}</h1>"
+          <div className="text-sm opacity-80">Full-Stack Developer</div>"
+          <div className="mt-2 flex gap-1">"
+            <TrustBadge type="Verified" />"
             <TrustBadge type="Top Rated" />
           </div>
+<<<<<<< HEAD
         </div>
 =======
 <<<<<<< HEAD
@@ -199,18 +236,33 @@ const [responseLog, setResponseLog] = useState<
         <div className="md:col-span-2 space-y-4">
           <div className="border rounded-md p-4">
             <h2 className="font-semibold mb-2">About</h2>
+=======
+        </div>"
+        <div className="flex gap-2">'
+          <EnhancedButton onClick={() => handleRespond('Accept')}>Accept</EnhancedButton>'"
+          <EnhancedButton variant="secondary" onClick={() => handleRespond('Decline')}>Decline</EnhancedButton>'"
+          <EnhancedButton variant="ghost" onClick={() => handleRespond('Negotiate')}>Negotiate</EnhancedButton>
+        </div>
+      </header>
+"
+      <section className="grid md:grid-cols-3 gap-6">"
+        <div className="md:col-span-2 space-y-4">"
+          <div className="border rounded-md p-4">"
+            <h2 className="font-semibold mb-2">About</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <p className="text-sm opacity-90">
 <<<<<<< HEAD
               Experienced developer specializing in React, Next.js, and Node.js.
             </p>
-          </div>
-          <div className="border rounded-md p-4">
+          </div>"
+          <div className="border rounded-md p-4">"
             <h2 className="font-semibold mb-2">Testimonials</h2>
-            <MicroTestimonial
-              quote="Fantastic work, delivered on time."
+            <MicroTestimonial"
+              quote="Fantastic work, delivered on time.""
               author="Acme Corp"
             />
           </div>
+<<<<<<< HEAD
         </div>
 =======
 =======
@@ -308,12 +360,21 @@ const [responseLog, setResponseLog] = useState<
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        </div>"
+        <aside className="space-y-4">"
+          <div className="border rounded-md p-4">"
+            <h3 className="font-semibold mb-2">Response Log</h3>"
+            <ul className="space-y-1 text-sm">
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           >;
             Negotiate;
           </EnhancedButton>;
         </div>;
       </header>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -323,63 +384,12 @@ const [responseLog, setResponseLog] = useState<
                   <span>{r.action}</span>
                   <span className="opacity-70">{new Date(r.at).toLocaleString()}</span>
                 </li>
-
-
-          <div className="border rounded-md p-4">;
-            <h2 className="font-semibold mb-2">Testimonials</h2>;
-            <MicroTestimonial
-              quote="Fantastic work, delivered on time."
-              author="Acme Corp"
-            />;
-          </div>;
-        </div>;
-        <aside className="space-y-4">;
-          <div className="border rounded-md p-4">;
-            <h3 className="font-semibold mb-2">Response Log</h3>;
-            <ul className="space-y-1 text-sm">;
-              {responseLog && responseLog.length === 0 && (;
-                <li className="opacity-70">No responses yet.</li>;
-              )}
-              {responseLog && responseLog.map((r, idx) => (;
-                <li key={idx} className="flex items-center justify-between">;
-                  <span>{r && r.action}</span>;
-                  <span className="opacity-70">;
-                    {new Date(r && r.at).toLocaleString()}
-                  </span>{" "}
-                </li>;
-              ))}
-      <section className="grid md:grid - cols - 3 gap - 6">;
-        <div className="md:col - span - 2 space - y-4">;
-          <div className="border rounded - md p - 4">;
-            <h2 className="font - semibold mb - 2">About</h2>;
-            <p className="text - sm opacity - 90">;
-              Experienced developer specializing in React, Next.js, and Node.js.;
-            </p>;
-          </div>;
-          <div className="border rounded - md p - 4">;
-            <h2 className="font - semibold mb - 2">Testimonials</h2>;
-            <MicroTestimonial;
-              quote="Fantastic work, delivered on time.";
-              author="Acme Corp";
-            />;
-          </div>;
-        </div>;
-        <aside className="space - y-4">;
-          <div className="border rounded - md p - 4">;
-            <h3 className="font - semibold mb - 2">Response Log</h3>;
-            <ul className="space - y-1 text - sm">;
-              {response_log.length === 0 && (
-                <li className="opacity - 70">No responses yet.</li>)}
-              {response_log.map ((r, idx) => (
-                <li key={idx} className="flex items - center justify - between">;
-                  <span>{r.action}</span>;
-                  <span className="opacity - 70">;
-                    {new Date (r.at).toLocaleString ()}
-                  </span>{" "}
-                </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -396,10 +406,21 @@ const [responseLog, setResponseLog] = useState<
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+              ))  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </ul>;
           </div>;
         </aside>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -468,3 +489,12 @@ export default TalentProfile;
 
 export default TalentProfile;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+export default TalentProfile;
+;
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

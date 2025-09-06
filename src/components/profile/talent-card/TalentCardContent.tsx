@@ -29,6 +29,7 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
 summary: string | undefined;
   bio: string;
   timezone: string | undefined;
+<<<<<<< HEAD
   skills: string[] | undefined
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -230,3 +231,6 @@ function TalentCardContent() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  skills: string[] | undefined;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

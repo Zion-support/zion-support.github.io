@@ -1,3 +1,4 @@
+<<<<<<< HEAD
           <div className="max-w-6xl mx-auto">
             <nav className="mb-8">
               <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -237,3 +238,6 @@
         </main>
       </div>
     </>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

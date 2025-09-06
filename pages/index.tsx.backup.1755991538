@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -351,3 +352,6 @@ export default function HomePage() {
     </div>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

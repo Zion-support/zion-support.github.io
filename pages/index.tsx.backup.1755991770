@@ -13,6 +13,7 @@ import {
   Zap as ZapIcon, Leaf as LeafIcon
 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -23,6 +24,9 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { revolutionaryMicroSaasServices } from '../data/revolutionary-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const heroStats = [
@@ -156,7 +160,11 @@ export default function HomePage() {
     },
   ];
 
+<<<<<<< HEAD
   const innovativeServices = [
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     {
       name: 'Quantum AI Optimizer',
       description: 'Next-generation AI optimization using quantum algorithms with 10x faster processing',
@@ -214,6 +222,7 @@ export default function HomePage() {
   ];
 
   return (
+<<<<<<< HEAD
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
         <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions</title>
@@ -225,6 +234,9 @@ export default function HomePage() {
         {/* Open Graph */}
         <meta property="og:title" content="Zion Tech Group - Revolutionary Micro SaaS Services" />
         <meta property="og:description" content="500+ cutting-edge micro SaaS services with quantum AI, autonomous systems, and emerging technologies." />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
         
@@ -487,6 +499,7 @@ export default function HomePage() {
       />
 
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           {/* Main Heading */}
@@ -498,11 +511,15 @@ export default function HomePage() {
           >
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Revolutionary
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </span>
             <br />
             <span className="text-white">Micro SaaS Services</span>
           </motion.h1>
           
+<<<<<<< HEAD
           {/* Subheading */}
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
@@ -513,6 +530,9 @@ export default function HomePage() {
             Discover 500+ cutting-edge micro SaaS solutions powered by Quantum AI, Autonomous Systems, 
             and emerging technologies. Transform your business with unprecedented innovation.
           </motion.p>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           {/* CTA Buttons */}
           <motion.div 
@@ -618,6 +638,7 @@ export default function HomePage() {
             ))}
           </div>
 
+<<<<<<< HEAD
           {/* View All Services CTA */}
           <motion.div 
             className="text-center mt-16"
@@ -636,6 +657,9 @@ export default function HomePage() {
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>
       </section>
 
@@ -662,39 +686,39 @@ export default function HomePage() {
             {marketInsights.map((insight, index) => (
               <motion.div
                 key={index}
+<<<<<<< HEAD
                 className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05, y: -5 }}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="text-cyan-400">
                     {insight.icon}
                   </div>
+<<<<<<< HEAD
                   <div>
                     <div className="text-3xl font-bold text-white">{insight.metric}</div>
                     <div className="text-sm text-gray-400">{insight.label}</div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
                 <p className="text-gray-300">{insight.description}</p>
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-          <div className="text-center mt-12">
-            <Button
-              href="/micro-saas"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 text-lg"
-            >
-              View All 40 Services
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </div>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
         </div>
       </section>
 
@@ -764,6 +788,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
               <motion.div
                 key={index}
                 className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
@@ -773,6 +798,9 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, y: -5 }}
               >
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <div className="flex items-center mb-4">
                   <div className="text-3xl mr-3">{testimonial.avatar}</div>
                   <div>
@@ -793,6 +821,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Contact CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -845,6 +874,9 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
 

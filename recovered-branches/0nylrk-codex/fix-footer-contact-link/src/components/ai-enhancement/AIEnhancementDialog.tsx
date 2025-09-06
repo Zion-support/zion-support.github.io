@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -26,12 +30,15 @@ interface AIEnhancementDialogProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   title: string,
   isOpen: boolean,
   onClose: () => void,
   onApply: (content: string) => void,
   defaultOptions: AIEnhancementOptions,
-  initialContent?: string
+  initialContent?: string;
 }
 
 export function AIEnhancementDialog({;
@@ -43,6 +50,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
   defaultOptions;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -58,6 +66,11 @@ import React from 'react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react',;
 =======
   defaultOptions;import React from 'react',;
@@ -68,9 +81,9 @@ import React from 'react',;
 import {;
   Dialog,;
   DialogContent,;
-  DialogHeader,;
-  DialogTitle} from '@/components/ui/dialog',;
-import { AIEnhancementPanel } from './AIEnhancementPanel',;
+  DialogHeader,;'
+  DialogTitle} from '@/components/ui/dialog',;'
+import { AIEnhancementPanel } from './AIEnhancementPanel',;'
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
 interface AIEnhancementDialogProps {;
   title: string,;
@@ -86,50 +99,37 @@ interface AIEnhancementDialogProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  title: string
-  isOpen: boolean
-  onClose: () => void
-  onApply: (content: string) => void
-  defaultOptions: AIEnhancementOptions
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  initialContent?: string
-}
-export function AIEnhancementDialog({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
-import {AIEnhancementPanel} from './AIEnhancementPanel';
-import {AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementDialogProps {;
-  title: string,;
-  isOpen: boolean,;
-  onClose: () => void,;
-  onApply: (content: string) => void,;
-  defaultOptions: AIEnhancementOptions,;
+
+
+
+  title: string;
+  isOpen: boolean;
+  onClose: () => void;
+  onApply: (content: string) => void;
+  defaultOptions: AIEnhancementOptions;
   initialContent?: string;
 }
-
-export function AIEnhancementDialog(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export function AIEnhancementDialog({};
   title;
   isOpen;
   onClose;
   onApply;
   defaultOptions;
 
-=======
+
   title,
   isOpen,
   onClose,
   onApply,
   defaultOptions,
+<<<<<<< HEAD
 
   initialContent
 }: AIEnhancementDialogProps) {
@@ -147,15 +147,23 @@ export function AIEnhancementDialog(): any ({;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  initialContent;
+}: AIEnhancementDialogProps) {}
+  const handleApply = (content: string) => {}
+    onApply(content)
+    onClose()
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   initialContent;
 }: AIEnhancementDialogProps) {;
   const handleApply = (content: string) => {;
     onApply(content),;
     onClose();
   };
+
+
 <<<<<<< HEAD
-
-
   const handleApply = (content: string) => {
     onApply(content)
     onClose()
@@ -173,6 +181,9 @@ export function AIEnhancementDialog(): any ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 }: AIEnhancementDialogProps) {;
@@ -192,17 +203,31 @@ export function AIEnhancementDialog(): any ({;
   },
 
   return (
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
       <DialogContent className="max-w-3xl">;
         <DialogHeader>;
           <DialogTitle>{title}</DialogTitle>;
         </DialogHeader>;
+<<<<<<< HEAD
         <AIEnhancementPanel
+=======
+
+
+
+        <AIEnhancementPanel;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           title={title}
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
 
+<<<<<<< HEAD
         />;
       </DialogContent>;
     </Dialog>;
@@ -210,19 +235,14 @@ export function AIEnhancementDialog(): any ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
-=======
-        />;
-      </DialogContent>;
-    </Dialog>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
-import {AIEnhancementPanel} from './AIEnhancementPanel';
+'
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';'
+import {AIEnhancementPanel} from './AIEnhancementPanel';'
 import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
-interface AIEnhancementDialogProps {
+interface AIEnhancementDialogProps {}
   title: string,
   is_open: boolean,
   on_close: () => void,
@@ -230,17 +250,17 @@ interface AIEnhancementDialogProps {
   default_options: AIEnhancementOptions,
   initial_content?: string;
 }
-export /**
- * AIEnhancementDialog - Function description
+export /**;
+ * AIEnhancementDialog - Function description;
  */
-function AIEnhancementDialog() {
-  const handle_apply = (content: string) =>: any {
+function AIEnhancementDialog() {}
+  const handle_apply = (content: string) =>: any {}
     on_apply (content),
     on_close ();
   }
 ;
   return (
-    <Dialog open={is_open} onOpenChange={() => on_close ()}>;
+    <Dialog open={is_open} onOpenChange={() => on_close ()}>;"
       <DialogContent className="max - w-3xl">;
         <DialogHeader>;
           <DialogTitle>{title}</DialogTitle>;
@@ -254,6 +274,7 @@ function AIEnhancementDialog() {
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -286,3 +307,9 @@ function AIEnhancementDialog() {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

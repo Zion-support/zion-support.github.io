@@ -6,7 +6,7 @@ import Button from '../components/ui/Button';
 import QuantumCard from '../components/ui/QuantumCard';
 import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
 import { expandedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/expanded-micro-saas-services';
-=======
+
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
@@ -205,25 +205,34 @@ export default function ServicesPage() {
       name: 'Quantum Computing & AI',
       description: 'Revolutionary quantum AI solutions with unprecedented computing power',
       icon: <Brain className="w-6 h-6" />,
+<<<<<<< HEAD
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI' || s.category === 'AI & Machine Learning' || s.category === 'Healthcare & Biotechnology').length,
       marketSize: '$12.5B',
       growthRate: '300%',
       featuredServices: ['Quantum AI Drug Discovery', 'Quantum Financial Optimizer', 'Quantum Healthcare Diagnostics']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Autonomous Systems & Robotics',
       description: 'Next-generation autonomous manufacturing and robotics platforms',
       icon: <Factory className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Manufacturing & Industry 4.0' || s.category === 'Robotics & Automation').length,
+<<<<<<< HEAD
       marketSize: '$180B',
       growthRate: '200%',
       featuredServices: ['Autonomous Factory Orchestrator', 'AI Robotics Platform', 'Smart Manufacturing Suite']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Healthcare & Biotechnology',
       description: 'AI-powered biomedical research and drug discovery platforms',
       icon: <FlaskConical className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length,
+<<<<<<< HEAD
       marketSize: '$75B',
       growthRate: '280%',
       featuredServices: ['Quantum AI Drug Discovery', 'Quantum Healthcare Diagnostics', 'AI Medical Imaging']
@@ -254,12 +263,16 @@ export default function ServicesPage() {
       marketSize: '$12B',
       growthRate: '250%',
       featuredServices: ['AI Climate Prediction Platform', 'Sustainability Analytics', 'Green Energy Optimization']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Financial Technology',
       description: 'Quantum-powered financial optimization and trading platforms',
       icon: <DollarSign className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Financial Technology').length,
+<<<<<<< HEAD
       marketSize: '$25B',
       growthRate: '300%',
       featuredServices: ['Quantum Financial Optimizer', 'AI Trading Platform', 'Risk Management Suite']
@@ -272,6 +285,9 @@ export default function ServicesPage() {
       marketSize: '$20B',
       growthRate: '180%',
       featuredServices: ['AI Education Personalizer', 'Learning Analytics Platform', 'Adaptive Content System']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -766,7 +782,7 @@ export default function ServicesPage() {
     </UltraFuturisticBackground>
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -785,4 +801,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

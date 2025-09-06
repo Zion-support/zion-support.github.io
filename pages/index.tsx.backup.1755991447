@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import AnimatedBackground from '@/components/ui/AnimatedBackground';
 import FuturisticHero from '@/components/ui/FuturisticHero';
@@ -419,3 +420,6 @@ export default function Home() {
     </div>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

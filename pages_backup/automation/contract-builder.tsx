@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 <<<<<<< HEAD:pages/automation/contract-builder.tsx
 <<<<<<< HEAD
 =======
@@ -26,35 +27,42 @@ type PaymentType = 'hourly' | 'fixed',
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
+=======
+
+
+import React, { useEffect, useMemo, useState } from 'react';'
+import DatePicker from 'react-datepicker';'
+import { useRouter } from 'next/router';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
 type PaymentType = 'hourly' | 'fixed'
-export default function ContractBuilderPage() {
-  const router = useRouter()
-  const [talentName, setTalentName] = useState('')
-  const [projectName, setProjectName] = useState('')
+export default function ContractBuilderPage() {}
+  const router = useRouter()'
+  const [talentName, setTalentName] = useState('')'
+  const [projectName, setProjectName] = useState('')'
   const [scopeSummary, setScopeSummary] = useState('')
   const [startDate, setStartDate] = useState<Date | null>(null)
-  const [endDate, setEndDate] = useState<Date | null>(null)
-  const [paymentType, setPaymentType] = useState<PaymentType>('hourly')
+  const [endDate, setEndDate] = useState<Date | null>(null)'
+  const [paymentType, setPaymentType] = useState<PaymentType>('hourly')'
   const [currency, setCurrency] = useState('USD')
-  const [hourlyRate, setHourlyRate] = useState<number>(100)
+  const [hourlyRate, setHourlyRate] = useState<number>(100)'
   const [weeklyHourCap, setWeeklyHourCap] = useState<number | ''>('')
-  const [fixedAmount, setFixedAmount] = useState<number>(5000)
-  const [milestoneSummary, setMilestoneSummary] = useState('')
+  const [fixedAmount, setFixedAmount] = useState<number>(5000)'
+  const [milestoneSummary, setMilestoneSummary] = useState('')'
   const [paymentSchedule, setPaymentSchedule] = useState('Net 15 on invoice')
   const [nda, setNda] = useState(true)
-  const [ipTransfer, setIpTransfer] = useState(true)
+  const [ipTransfer, setIpTransfer] = useState(true)'
   const [governingLaw, setGoverningLaw] = useState('Delaware, USA')
   const [revisionRounds, setRevisionRounds] = useState<number>(2)
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null)'
   const [contract, setContract] = useState<string>('')
-  useEffect(() => {
-    if (!router.isReady) return
+  useEffect(() => {};
+    if (!router.isReady) return;
     const { talent, project } = router.query as { talent?: string, project?: string }
     if (talent && !talentName) setTalentName(decodeURIComponent(talent))
     if (project && !projectName) setProjectName(decodeURIComponent(project))
   }, [router.isReady, router.query, talentName, projectName])
-  const canSubmit = useMemo(() => {
+  const canSubmit = useMemo(() => {}
     return (
 <<<<<<< HEAD
 =======
@@ -64,9 +72,10 @@ export default function ContractBuilderPage() {
       projectName.trim().length > 0 &&
       scopeSummary.trim().length > 0 &&
       !!startDate &&
-      !!endDate &&
+      !!endDate &&'
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
     )
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -79,50 +88,56 @@ export default function ContractBuilderPage() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async function submitForm(event: React.FormEvent) {
+=======
+
+
+  async function submitForm(event: React.FormEvent) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
     event.preventDefault()
-    if (!canSubmit) return
+    if (!canSubmit) return;
     setLoading(true)
-    setError(null)
+    setError(null)'
     setContract('')
-    try {
-      const body = {
-        talentName
-        projectName
-        scopeSummary
+    try {}
+      const body = {}
+        talentName;
+        projectName;
+        scopeSummary;
         startDate: startDate?.toISOString().slice(0, 10)
         endDate: endDate?.toISOString().slice(0, 10)
-        payment:
+        payment:'
           paymentType === 'hourly'
-            ? {
+            ? {'
                 type: 'hourly'
-                currency
-                hourlyRate
-                weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined
+                currency;
+                hourlyRate'
+                weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined;
                 paymentSchedule}
-            : {
+            : {'
                 type: 'fixed'
-                currency
-                totalAmount: fixedAmount
-                milestoneSummary: milestoneSummary |undefined
+                currency;
+                totalAmount: fixedAmount;
+                milestoneSummary: milestoneSummary |undefined;
                 paymentSchedule}
-        clauses: {
-          nda
+        clauses: {}
+          nda;
           ipTransfer}
-        governingLaw
-        revisionRounds}
-      const res = await fetch('/api/ai-contract', {
+        governingLaw;
+        revisionRounds}'
+      const res = await fetch('/api/ai-contract', {'
         method: 'POST'
-        headers: {
+        headers: {'
           'Content-Type': 'application/json'}
         body: JSON.stringify(body)})
-      if (!res.ok) {
+      if (!res.ok) {}
         const data = await res.json().catch(() => ({}))
         throw new Error(data?.error |`Request failed: ${res.status}`)
       }
       const data = (await res.json()) as { contract: string }
       setContract(data.contract)
-    } catch (e: any) {
+    } catch (e: any) {'
       setError(e?.message |'Failed to generate contract')
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -238,10 +253,15 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } finally {
+=======
+
+    } finally {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
       set_loading (false);
     }
   }
 
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
     URL.revokeObjectURL(url)
@@ -254,10 +274,14 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
     setLoading(true),
-    setError(null),
+    setError(null),'
     setContract(''),
 
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 <<<<<<< HEAD
 =======
 
@@ -272,28 +296,34 @@ if ( {) {
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
+=======
+'
+import React, { useEffect, useMemo, useState } from 'react';'
+import DatePicker from 'react-datepicker';'
+import { useRouter } from 'next/router';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
 type PaymentType = 'hourly' | 'fixed';
-export default function ContractBuilderPage(req, res) {
-  try {
-  const router = useRouter();
-  const [talentName, setTalentName] = useState('');
-  const [projectName, setProjectName] = useState('');
+export default function ContractBuilderPage(req, res) {}
+  try {};
+  const router = useRouter();'
+  const [talentName, setTalentName] = useState('');'
+  const [projectName, setProjectName] = useState('');'
   const [scopeSummary, setScopeSummary] = useState('');
   const [startDate, setStartDate] = useState<Date | null>(null);
-  const [endDate, setEndDate] = useState<Date | null>(null);
-  const [paymentType, setPaymentType] = useState<PaymentType>('hourly');
+  const [endDate, setEndDate] = useState<Date | null>(null);'
+  const [paymentType, setPaymentType] = useState<PaymentType>('hourly');'
   const [currency, setCurrency] = useState('USD');
-  const [hourlyRate, setHourlyRate] = useState<number>(100);
+  const [hourlyRate, setHourlyRate] = useState<number>(100);'
   const [weeklyHourCap, setWeeklyHourCap] = useState<number | ''>('');
-  const [fixedAmount, setFixedAmount] = useState<number>(5000);
-  const [milestoneSummary, setMilestoneSummary] = useState('');
+  const [fixedAmount, setFixedAmount] = useState<number>(5000);'
+  const [milestoneSummary, setMilestoneSummary] = useState('');'
   const [paymentSchedule, setPaymentSchedule] = useState('Net 15 on invoice');
   const [nda, setNda] = useState(true);
-  const [ipTransfer, setIpTransfer] = useState(true);
+  const [ipTransfer, setIpTransfer] = useState(true);'
   const [governingLaw, setGoverningLaw] = useState('Delaware, USA');
   const [revisionRounds, setRevisionRounds] = useState<number>(2);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);'
   const [contract, setContract] = useState<string>('');
   useEffect(() => {;
     if (!router.isReady) return,;
@@ -307,10 +337,11 @@ export default function ContractBuilderPage(req, res) {
       projectName.trim().length > 0 &&;
       scopeSummary.trim().length > 0 &&;
       !!startDate &&;
-      !!endDate &&;
+      !!endDate &&;'
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0);
     );
   }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount]),;
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
   async function submitForm(event: React.FormEvent) {;
     event.preventDefault(),;
     if (!canSubmit) return,;
@@ -322,24 +353,29 @@ export default function ContractBuilderPage(req, res) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     try {
+=======
+  async function submitForm() { return null; }
+    try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
       const body = {;
         talentName;
         projectName;
         scopeSummary;
         startDate: startDate?.toISOString().slice(0, 10);
         endDate: endDate?.toISOString().slice(0, 10);
-        payment:;
+        payment:;'
           paymentType === 'hourly';
-            ? {;
+            ? {;'
                 type: 'hourly',;
                 currency,;
-                hourlyRate,;
+                hourlyRate,;'
                 weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined,;
-                paymentSchedule  } catch (error) {
-    console.error("Error:", error);
+                paymentSchedule  } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
   }
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 <<<<<<< HEAD
 =======
 }
@@ -433,65 +469,76 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <form onSubmit={submitForm} className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 dark:bg-neutral-900 p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
         <div className="col-span-1 md:col-span-2">
           <label className="block text-sm font-medium mb-1">Talent name</label>
+=======
+
+
+
+  return ("
+    <div className="max-w-5xl mx-auto">"
+      <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>"
+      <form onSubmit={submitForm} className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 dark:bg-neutral-900 p-6 rounded-lg border border-gray-200 dark:border-neutral-800">"
+        <div className="col-span-1 md:col-span-2">"
+          <label className="block text-sm font-medium mb-1">Talent name</label>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
           <input className="w-full input input-bordered" value={talentName} onChange={(e) => setTalentName(e.target.value)} placeholder="Jane Doe" />
         </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Project name</label>
+        <div>"
+          <label className="block text-sm font-medium mb-1">Project name</label>"
           <input className="w-full input input-bordered" value={projectName} onChange={(e) => setProjectName(e.target.value)} placeholder="Website Redesign" />
         </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Payment currency</label>
+        <div>"
+          <label className="block text-sm font-medium mb-1">Payment currency</label>"
           <input className="w-full input input-bordered" value={currency} onChange={(e) => setCurrency(e.target.value)} placeholder="USD" />
-        </div>
-        <div className="md:col-span-2">
-          <label className="block text-sm font-medium mb-1">Scope summary</label>
+        </div>"
+        <div className="md:col-span-2">"
+          <label className="block text-sm font-medium mb-1">Scope summary</label>"
           <textarea className="w-full textarea textarea-bordered" rows={4} value={scopeSummary} onChange={(e) => setScopeSummary(e.target.value)} placeholder="High-level deliverables, responsibilities, and success criteria..." />
         </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Start date</label>
+        <div>"
+          <label className="block text-sm font-medium mb-1">Start date</label>"
           <DatePicker className="w-full input input-bordered" selected={startDate} onChange={(d) => setStartDate(d)} dateFormat="MMMM d, yyyy" />
         </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">End date</label>
+        <div>"
+          <label className="block text-sm font-medium mb-1">End date</label>"
           <DatePicker className="w-full input input-bordered" selected={endDate} onChange={(d) => setEndDate(d)} dateFormat="MMMM d, yyyy" />
-        </div>
-        <div className="md:col-span-2">
-          <label className="block text-sm font-medium mb-2">Payment terms</label>
-          <div className="flex items-center gap-4 mb-4">
-            <label className="inline-flex items-center gap-2">
-              <input type="radio" name="pay" checked={paymentType === 'hourly'} onChange={() => setPaymentType('hourly')} /> Hourly
+        </div>"
+        <div className="md:col-span-2">"
+          <label className="block text-sm font-medium mb-2">Payment terms</label>"
+          <div className="flex items-center gap-4 mb-4">"
+            <label className="inline-flex items-center gap-2">'"
+              <input type="radio" name="pay" checked={paymentType === 'hourly'} onChange={() => setPaymentType('hourly')} /> Hourly;
+            </label>"
+            <label className="inline-flex items-center gap-2">'"
+              <input type="radio" name="pay" checked={paymentType === 'fixed'} onChange={() => setPaymentType('fixed')} /> Fixed;
             </label>
-            <label className="inline-flex items-center gap-2">
-              <input type="radio" name="pay" checked={paymentType === 'fixed'} onChange={() => setPaymentType('fixed')} /> Fixed
-            </label>
-          </div>
-          {paymentType === 'hourly' ? (
+          </div>'
+          {paymentType === 'hourly' ? ("
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div>
-                <label className="block text-sm font-medium mb-1">Hourly rate</label>
+              <div>"
+                <label className="block text-sm font-medium mb-1">Hourly rate</label>"
                 <input type="number" className="w-full input input-bordered" value={hourlyRate} onChange={(e) => setHourlyRate(Number(e.target.value))} />
               </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">Weekly hour cap (optional)</label>
+              <div>"
+                <label className="block text-sm font-medium mb-1">Weekly hour cap (optional)</label>'"
                 <input type="number" className="w-full input input-bordered" value={weeklyHourCap} onChange={(e) => setWeeklyHourCap(e.target.value === '' ? '' : Number(e.target.value))} />
               </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">Payment schedule</label>
+              <div>"
+                <label className="block text-sm font-medium mb-1">Payment schedule</label>"
                 <input className="w-full input input-bordered" value={paymentSchedule} onChange={(e) => setPaymentSchedule(e.target.value)} placeholder="e.g., weekly, Net 15" />
               </div>
             </div>
-          ) : (
+          ) : ("
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div>
-                <label className="block text-sm font-medium mb-1">Total amount</label>
+              <div>"
+                <label className="block text-sm font-medium mb-1">Total amount</label>"
                 <input type="number" className="w-full input input-bordered" value={fixedAmount} onChange={(e) => setFixedAmount(Number(e.target.value))} />
-              </div>
-              <div className="md:col-span-2">
-                <label className="block text-sm font-medium mb-1">Milestone summary (optional)</label>
+              </div>"
+              <div className="md:col-span-2">"
+                <label className="block text-sm font-medium mb-1">Milestone summary (optional)</label>"
                 <input className="w-full input input-bordered" value={milestoneSummary} onChange={(e) => setMilestoneSummary(e.target.value)} placeholder="Phase 1 design, Phase 2 implementation..." />
-              </div>
-              <div className="md:col-span-3">
-                <label className="block text-sm font-medium mb-1">Payment schedule</label>
+              </div>"
+              <div className="md:col-span-3">"
+                <label className="block text-sm font-medium mb-1">Payment schedule</label>"
                 <input className="w-full input input-bordered" value={paymentSchedule} onChange={(e) => setPaymentSchedule(e.target.value)} placeholder="e.g., 50% upfront, 50% on delivery" />
 <<<<<<< HEAD
 
@@ -519,46 +566,53 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           )}
         </div>
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div>
           <label className="block text-sm font-medium mb-2">Optional clauses</label>
           <div className="space-y-2">
             <label className="inline-flex items-center gap-2">
+=======
+        <div>"
+          <label className="block text-sm font-medium mb-2">Optional clauses</label>"
+          <div className="space-y-2">"
+            <label className="inline-flex items-center gap-2">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
               <input type="checkbox" checked={nda} onChange={(e) => setNda(e.target.checked)} /> NDA (Confidentiality)
-            </label>
-            <label className="inline-flex items-center gap-2">
-              <input type="checkbox" checked={ipTransfer} onChange={(e) => setIpTransfer(e.target.checked)} /> IP Transfer / Assignment
+            </label>"
+            <label className="inline-flex items-center gap-2">"
+              <input type="checkbox" checked={ipTransfer} onChange={(e) => setIpTransfer(e.target.checked)} /> IP Transfer / Assignment;
             </label>
           </div>
         </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Governing law</label>
+        <div>"
+          <label className="block text-sm font-medium mb-1">Governing law</label>"
           <input className="w-full input input-bordered" value={governingLaw} onChange={(e) => setGoverningLaw(e.target.value)} />
         </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Included revision rounds</label>
+        <div>"
+          <label className="block text-sm font-medium mb-1">Included revision rounds</label>"
           <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
-        </div>
-        <div className="md:col-span-2 flex items-center gap-3">
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
+        </div>"
+        <div className="md:col-span-2 flex items-center gap-3">"
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>"
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>'
             {loading ? 'Generating…' : 'Generate contract'}
-          </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>}
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
-            {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
-    console.error("Error:", error);
+          </button>"
+          {error && <span className="text-red-600 text-sm">{error}</span>}"
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>'
+            {loading ? 'Generating…' : 'Generate contract'  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
-    console.error("Error:", error);
+          </button>"
+          {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
+"
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
 
 
@@ -566,6 +620,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
       </form>
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -576,132 +631,134 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </form>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
   /**
- * copyToClipboard - Function description
+ * copyToClipboard - Function description;
  */
-function copyToClipboard() {
-    // Check condition
-if (return, ) {
-  $2
+function copyToClipboard() {}
+    // Check condition;
+if (return, ) {}
+  $2;
 }
     void navigator.clipboard.write_text (contract);
   }
   /**
- * downloadAsTxt - Function description
+ * downloadAsTxt - Function description;
  */
-function downloadAsTxt() {
-    // Check condition
-if (return, ) {
-  $2
-}
+function downloadAsTxt() {}
+    // Check condition;
+if (return, ) {}
+  $2;
+}'
     const blob = new Blob ([contract], { type: 'text / plain, charset = utf - 8' }),
-    const url = URL.createObjectURL (blob),
+    const url = URL.createObjectURL (blob),'
     const array = document.create_element ('a'),
-    a.href = url,
+    a.href = url,'`
     a.download = `contract-${project_name.replace (/\s+/g, '-').toLowerCase ()}.txt`,
     a.click (),
     URL.revokeObjectURL (url);
   }
-  return (
-    <div className="max - w-5xl mx - auto">;
-      <h1 className="text - 3xl font - bold mb - 6">Contract Builder</h1>;
-      <form on_submit={submit_form} className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 bg - gray - 50 dark:bg - neutral - 900 p - 6 rounded - lg border border - gray - 200 dark:border - neutral - 800">;
-        <div className="col - span - 1 md:col - span - 2">;
-          <label className="block text - sm font - medium mb - 1">Talent name</label>;
+  return ("
+    <div className="max - w-5xl mx - auto">;"
+      <h1 className="text - 3xl font - bold mb - 6">Contract Builder</h1>;"
+      <form on_submit={submit_form} className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 bg - gray - 50 dark:bg - neutral - 900 p - 6 rounded - lg border border - gray - 200 dark:border - neutral - 800">;"
+        <div className="col - span - 1 md:col - span - 2">;"
+          <label className="block text - sm font - medium mb - 1">Talent name</label>;"
           <input className="w - full input input - bordered" value={talent_name} on_change={(e) => setTalentName (e.target.value)} placeholder="Jane Doe" />;
         </div>;
-        <div>;
-          <label className="block text - sm font - medium mb - 1">Project name</label>;
+        <div>;"
+          <label className="block text - sm font - medium mb - 1">Project name</label>;"
           <input className="w - full input input - bordered" value={project_name} on_change={(e) => setProjectName (e.target.value)} placeholder="Website Redesign" />;
         </div>;
-        <div>;
-          <label className="block text - sm font - medium mb - 1">Payment currency</label>;
+        <div>;"
+          <label className="block text - sm font - medium mb - 1">Payment currency</label>;"
           <input className="w - full input input - bordered" value={currency} on_change={(e) => set_currency (e.target.value)} placeholder="USD" />;
-        </div>;
-        <div className="md:col - span - 2">;
-          <label className="block text - sm font - medium mb - 1">Scope summary</label>;
+        </div>;"
+        <div className="md:col - span - 2">;"
+          <label className="block text - sm font - medium mb - 1">Scope summary</label>;"
           <textarea className="w - full textarea textarea - bordered" rows={4} value={scope_summary} on_change={(e) => setScopeSummary (e.target.value)} placeholder="High - level deliverables, responsibilities, and success criteria..." />;
         </div>;
-        <div>;
-          <label className="block text - sm font - medium mb - 1">Start date</label>;
+        <div>;"
+          <label className="block text - sm font - medium mb - 1">Start date</label>;"
           <DatePicker className="w - full input input - bordered" selected={start_date} on_change={(d) => setStartDate (d)} date_format="MMMM d, yyyy" />;
         </div>;
-        <div>;
-          <label className="block text - sm font - medium mb - 1">End date</label>;
+        <div>;"
+          <label className="block text - sm font - medium mb - 1">End date</label>;"
           <DatePicker className="w - full input input - bordered" selected={end_date} on_change={(d) => setEndDate (d)} date_format="MMMM d, yyyy" />;
-        </div>;
-        <div className="md:col - span - 2">;
-          <label className="block text - sm font - medium mb - 2">Payment terms</label>;
-          <div className="flex items - center gap - 4 mb - 4">;
-            <label className="inline - flex items - center gap - 2">;
+        </div>;"
+        <div className="md:col - span - 2">;"
+          <label className="block text - sm font - medium mb - 2">Payment terms</label>;"
+          <div className="flex items - center gap - 4 mb - 4">;"
+            <label className="inline - flex items - center gap - 2">;'"
               <input type="radio" name="pay" checked={payment_type === 'hourly'} on_change={() => setPaymentType ('hourly')} /> Hourly;
-            </label>;
-            <label className="inline - flex items - center gap - 2">;
+            </label>;"
+            <label className="inline - flex items - center gap - 2">;'"
               <input type="radio" name="pay" checked={payment_type === 'fixed'} on_change={() => setPaymentType ('fixed')} /> Fixed;
             </label>;
-          </div>;
-          {payment_type === 'hourly' ? (
+          </div>;'
+          {payment_type === 'hourly' ? ("
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
-              <div>;
-                <label className="block text - sm font - medium mb - 1">Hourly rate</label>;
+              <div>;"
+                <label className="block text - sm font - medium mb - 1">Hourly rate</label>;"
                 <input type="number" className="w - full input input - bordered" value={hourly_rate} on_change={(e) => setHourlyRate (Number (e.target.value))} />;
               </div>;
-              <div>;
-                <label className="block text - sm font - medium mb - 1">Weekly hour cap (optional)</label>;
+              <div>;"
+                <label className="block text - sm font - medium mb - 1">Weekly hour cap (optional)</label>;'"
                 <input type="number" className="w - full input input - bordered" value={weeklyHourCap} on_change={(e) => setWeeklyHourCap (e.target.value === '' ? '' : Number (e.target.value))} />;
               </div>;
-              <div>;
-                <label className="block text - sm font - medium mb - 1">Payment schedule</label>;
+              <div>;"
+                <label className="block text - sm font - medium mb - 1">Payment schedule</label>;"
                 <input className="w - full input input - bordered" value={payment_schedule} on_change={(e) => setPaymentSchedule (e.target.value)} placeholder="e.g., weekly, Net 15" />;
               </div>;
-            </div>) : (
+            </div>) : ("
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
-              <div>;
-                <label className="block text - sm font - medium mb - 1">Total amount</label>;
+              <div>;"
+                <label className="block text - sm font - medium mb - 1">Total amount</label>;"
                 <input type="number" className="w - full input input - bordered" value={fixed_amount} on_change={(e) => setFixedAmount (Number (e.target.value))} />;
-              </div>;
-              <div className="md:col - span - 2">;
-                <label className="block text - sm font - medium mb - 1">Milestone summary (optional)</label>;
+              </div>;"
+              <div className="md:col - span - 2">;"
+                <label className="block text - sm font - medium mb - 1">Milestone summary (optional)</label>;"
                 <input className="w - full input input - bordered" value={milestone_summary} on_change={(e) => setMilestoneSummary (e.target.value)} placeholder="Phase 1 design, Phase 2 implementation..." />;
-              </div>;
-              <div className="md:col - span - 3">;
-                <label className="block text - sm font - medium mb - 1">Payment schedule</label>;
+              </div>;"
+              <div className="md:col - span - 3">;"
+                <label className="block text - sm font - medium mb - 1">Payment schedule</label>;"
                 <input className="w - full input input - bordered" value={payment_schedule} on_change={(e) => setPaymentSchedule (e.target.value)} placeholder="e.g., 50% upfront, 50% on delivery" />;
               </div>;
             </div>)}
         </div>;
-        <div>;
-          <label className="block text - sm font - medium mb - 2">Optional clauses</label>;
-          <div className="space - y-2">;
-            <label className="inline - flex items - center gap - 2">;
+        <div>;"
+          <label className="block text - sm font - medium mb - 2">Optional clauses</label>;"
+          <div className="space - y-2">;"
+            <label className="inline - flex items - center gap - 2">;"
               <input type="checkbox" checked={nda} on_change={(e) => set_nda (e.target.checked)} /> NDA (Confidentiality);
-            </label>;
-            <label className="inline - flex items - center gap - 2">;
+            </label>;"
+            <label className="inline - flex items - center gap - 2">;"
               <input type="checkbox" checked={ip_transfer} on_change={(e) => setIpTransfer (e.target.checked)} /> IP Transfer / Assignment;
             </label>;
           </div>;
         </div>;
-        <div>;
-          <label className="block text - sm font - medium mb - 1">Governing law</label>;
+        <div>;"
+          <label className="block text - sm font - medium mb - 1">Governing law</label>;"
           <input className="w - full input input - bordered" value={governing_law} on_change={(e) => setGoverningLaw (e.target.value)} />;
         </div>;
-        <div>;
-          <label className="block text - sm font - medium mb - 1">Included revision rounds</label>;
+        <div>;"
+          <label className="block text - sm font - medium mb - 1">Included revision rounds</label>;"
           <input type="number" className="w - full input input - bordered" value={revision_rounds} on_change={(e) => setRevisionRounds (Number (e.target.value))} />;
-        </div>;
-        <div className="md:col - span - 2 flex items - center gap - 3">;
-          <button type="submit" className="btn btn - primary" disabled={!can_submit || loading}>;
+        </div>;"
+        <div className="md:col - span - 2 flex items - center gap - 3">;"
+          <button type="submit" className="btn btn - primary" disabled={!can_submit || loading}>;'
             {loading ? 'Generating…' : 'Generate contract'}
-          </button>;
+          </button>;"
           {error && <span className="text - red - 600 text - sm">{error}</span>}
         </div>;
       </form>;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {contract && (
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 =======
 }
 
@@ -710,10 +767,13 @@ if (return, ) {
 =======
       {contract && (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
           </article>;
         </div>)}
     </div>);
 }
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -733,9 +793,20 @@ if (return, ) {
             <h2 className="text-2xl font-semibold">Generated Contract</h2>
             <div className="flex gap-2">
               <button className="btn btn-secondary" onClick={copyToClipboard}>Copy</button>
+=======
+
+
+
+"
+        <div className="mt-8">"
+          <div className="flex items-center justify-between mb-3">"
+            <h2 className="text-2xl font-semibold">Generated Contract</h2>"
+            <div className="flex gap-2">"
+              <button className="btn btn-secondary" onClick={copyToClipboard}>Copy</button>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
               <button className="btn" onClick={downloadAsTxt}>Download .txt</button>
             </div>
-          </div>
+          </div>"
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
 <<<<<<< HEAD:pages/automation/contract-builder.tsx
 <<<<<<< HEAD
@@ -758,6 +829,7 @@ if (return, ) {
   );
 };
 
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -768,22 +840,28 @@ if (return, ) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {contract  } catch (error) {
     console.error("Error:", error);
+=======
+
+            {contract  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </article>;
         </div>;
-      )  } catch (error) {
-    console.error("Error:", error);
+      )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     </div>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -794,9 +872,11 @@ if (return, ) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx
 
-}
 
+<<<<<<< HEAD:pages_backup/automation/contract-builder.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -818,3 +898,7 @@ if (return, ) {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/automation/contract-builder.tsx
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/automation/contract-builder.tsx

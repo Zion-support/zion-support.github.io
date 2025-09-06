@@ -599,8 +599,12 @@ export default function HomePage() {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {enhancedCategories.map((category, index) => (
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <motion.div
                 key={index}
                 className="group"

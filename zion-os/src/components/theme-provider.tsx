@@ -8,30 +8,31 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 "use client",
-import { create_context, useContext, useEffect, useState  } from './react';,
+import { create_context, useContext, useEffect, useState  } from './react';,"
 type Theme = "dark" | "light" | "system",
-type ThemeProviderProps = {
+type ThemeProviderProps = {}
   children: React.ReactNode,
   default_theme?: Theme,
   storage_key?: string;
 },
-type ThemeProviderState = {
+type ThemeProviderState = {}
   theme: Theme,
   set_theme: (theme: Theme) => void;
 },
-const initial_state: ThemeProviderState = {
+const initial_state: ThemeProviderState = {"
   theme: "system",
   set_theme: () => null},
 const ThemeProviderContext = create_context < ThemeProviderState>(initial_state),
-export /**
- * ThemeProvider - Function description
+export /**;
+ * ThemeProvider - Function description;
  */
-function ThemeProvider() {
+function ThemeProvider() {}
   const [theme, set_theme] = useState < Theme>(default_theme),
   const [mounted, set_mounted] = useState (false),
-  useEffect (() => {
+  useEffect (() => {}
     set_mounted (true),
     // Only access local_storage on the client side;
+<<<<<<< HEAD
     // Check condition
 if ( {) {
 <<<<<<< HEAD
@@ -134,6 +135,14 @@ export const use_theme = () =>: any {
 }"use client",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { createContext, useContext, useEffect, useState } from "react",;
+=======
+    // Check condition;
+if ( {) {}
+  $2;
+"
+"use client",;"
+import { createContext, useContext, useEffect, useState } from "react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 type Theme = "dark" | "light" | "system",;
 type ThemeProviderProps = {;
   children: React.ReactNode,;
@@ -144,36 +153,22 @@ type ThemeProviderState = {;
   theme: Theme,;
   setTheme: (theme: Theme) => void;
 },;
-const initialState: ThemeProviderState = {;
+const initialState: ThemeProviderState = {;"
   theme: "system",;
   setTheme: () => null},;
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState),;
-export function ThemeProvider({;
-  children,;
-  defaultTheme = "system",;
-  storageKey = "zion-ui-theme",;
-  ...props;
-}: ThemeProviderProps) {;
-  const [theme, setTheme] = useState<Theme>(defaultTheme),;
-  const [mounted, setMounted] = useState(false),;
-  useEffect(() => {;
-    setMounted(true),;
-    // Only access localStorage on the client side;
-    if (typeof window !== "undefined") {;
-      const storedTheme = localStorage.getItem(storageKey) as Theme,;
-      if (storedTheme) {;
-        setTheme(storedTheme);
+export function ThemeProvider() { return null; }
       }
     }
   }, [storageKey]),;
   useEffect(() => {;
     if (!mounted) return,;
-    const root = window.document.documentElement,;
-    root.classList.remove("light", "dark"),;
-    if (theme === "system") {;
+    const root = window.document.documentElement,;"
+    root.classList.remove("light", "dark"),;"
+    if (theme === "system") {;"
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-        .matches;
-        ? "dark";
+        .matches;"
+        ? "dark";"
         : "light",;
       root.classList.add(systemTheme),;
       return;
@@ -183,7 +178,7 @@ export function ThemeProvider({;
   }, [theme, mounted]),;
   const value = {;
     theme,;
-    setTheme: (theme: Theme) => {;
+    setTheme: (theme: Theme) => {;"
       if (typeof window !== "undefined") {;
         localStorage.setItem(storageKey, theme);
       }
@@ -203,7 +198,7 @@ export function ThemeProvider({;
 ;
 export const useTheme = () => {;
   const context = useContext(ThemeProviderContext),;
-  if (context === undefined);
+  if (context === undefined);"
     throw new Error("useTheme must be used within a ThemeProvider");
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,6 +208,7 @@ export const useTheme = () => {;
 =======
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   return context
@@ -224,3 +220,6 @@ export const useTheme = () => {;
 };
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

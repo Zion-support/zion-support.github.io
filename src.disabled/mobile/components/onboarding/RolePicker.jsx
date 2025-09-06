@@ -1,14 +1,15 @@
 import React from 'react';
-interface RolePickerProps {
-  // Add props here as needed
+interface RolePickerProps {}
+  // Add props here as needed;
 }
-export default function RolePicker({ }: RolePickerProps) {
+export default function RolePicker({ }: RolePickerProps) {}
   return (
     <div>
       <h1>RolePicker</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -17,3 +18,8 @@ export default function RolePicker({ }: RolePickerProps) {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -56,10 +57,13 @@ export function FeatureCard({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 "use client",
-import Link from './next / link';,
+import Link from './next / link';,'
 import { ReactNode  } from './react';,
-interface FeatureCardProps {
+interface FeatureCardProps {}
   id: number,
   title: string,
   description: string,
@@ -68,6 +72,7 @@ interface FeatureCardProps {
   href: string,
   is_active: boolean,
   on_click: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,18 +101,26 @@ interface FeatureCardProps {id: number;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export /**
  * FeatureCard - Function description
+=======
+
+
+}
+export /**;
+ * FeatureCard - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
-function FeatureCard() {
-  const color_classes = {
-    blue: "bg - blue - 500 / 20 hover:bg - blue - 500 / 30 border - blue - 500 / 30",
-    purple: "bg - purple - 500 / 20 hover:bg - purple - 500 / 30 border - purple - 500 / 30",
-    green: "bg - green - 500 / 20 hover:bg - green - 500 / 30 border - green - 500 / 30",
-    red: "bg - red - 500 / 20 hover:bg - red - 500 / 30 border - red - 500 / 30",
-    yellow: "bg - yellow - 500 / 20 hover:bg - yellow - 500 / 30 border - yellow - 500 / 30",
+function FeatureCard() {}
+  const color_classes = {"
+    blue: "bg - blue - 500 / 20 hover:bg - blue - 500 / 30 border - blue - 500 / 30","
+    purple: "bg - purple - 500 / 20 hover:bg - purple - 500 / 30 border - purple - 500 / 30","
+    green: "bg - green - 500 / 20 hover:bg - green - 500 / 30 border - green - 500 / 30","
+    red: "bg - red - 500 / 20 hover:bg - red - 500 / 30 border - red - 500 / 30","
+    yellow: "bg - yellow - 500 / 20 hover:bg - yellow - 500 / 30 border - yellow - 500 / 30","
     indigo: "bg - indigo - 500 / 20 hover:bg - indigo - 500 / 30 border - indigo - 500 / 30";
   }
   return (
     <div;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -209,12 +222,20 @@ export function FeatureCard({;
           on_click ();          e.preventDefault();
           onClick();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+          e.preventDefault();
+          onClick();
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       }}
-      tab_index={0}
+      tab_index={0}"
       role="button";
       aria - pressed={is_active}
       aria - label={`${title} - ${description}`}
+<<<<<<< HEAD
     >;
       <div className="w - 12 h - 12 rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration-200">;
         {icon}
@@ -229,6 +250,22 @@ export function FeatureCard({;
         <Link;
           href={href}
           className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue-500 rounded";
+=======
+    >;"
+      <div className="w - 12 h - 12 rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 200">;
+        {icon}
+      </div>;"
+      <h3 className="text - xl font - semibold mb - 2 group - hover:text - white transition - colors">;
+        {title}
+      </h3>;"
+      <p className="text - gray - 400 group - hover:text - gray - 300 transition - colors">;
+        {description}
+      </p>;"
+      <div className="mt - 4 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 200">;
+        <Link;
+          href={href}"
+          className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           on_click={(e) => e.stop_propagation ()}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         >;
@@ -243,8 +280,12 @@ export function FeatureCard({;
 =======
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     </div>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

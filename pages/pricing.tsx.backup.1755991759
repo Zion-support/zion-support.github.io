@@ -382,6 +382,7 @@ export default function PricingPage() {
   const yearlyDiscount = 0.2; // 20% discount for yearly billing
 
   return (
+<<<<<<< HEAD
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
       <Head>
         <title>Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services</title>
@@ -403,6 +404,9 @@ export default function PricingPage() {
         <meta name="twitter:description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
       </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Services Pricing */}
       <section className="py-20 bg-gray-50">

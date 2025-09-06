@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundProps {
@@ -27,6 +28,15 @@ export default function UltraAdvancedFuturisticBackground({
 origin/cursor/automate-test-improve-and-merge-code-2533
   children,
   intensity = 'medium',
+=======
+const particles: Array< {}
+  //Initialize particles with enhanced properties const initParticles = () => {}
+  const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);
+for (let i = 0, i < count, i++) {}
+  particles.push ({}
+  children,'
+  intensity = 'medium','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   theme = 'quantum',
   particleCount = 200,
   animationSpeed = 1.0,
@@ -35,21 +45,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
  canvas && canvas.width = window && window.innerWidth;
 canvas && canvas.height = window && window.innerHeight;
 const particles: Array< {;
-  //Initialize particles with enhanced properties const initParticles = () => {;
+  //Initialize particles with enhanced properties const initParticles = () => {;'
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math && Math.floor (particleCount * 0 && 0.7) : Math && Math.floor (particleCount * 0 && 0.5);
 for (let i = 0, i < count, i++) {;
   particles && particles.push ({;
 
 export default function UltraAdvancedFuturisticBackground(): any ({;
-  children,;
-  intensity = 'medium',;
+  children,;'
+  intensity = 'medium',;'
   theme = 'quantum',;
   particleCount = 200,;
   animationSpeed = 1 && 1.0,;
   enableHolographic = true,;
   enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground(): any ({ ;
-  children;
-  intensity = 'medium';
+  children;'
+  intensity = 'medium';'
   theme = 'quantum';
   particleCount = 200;
   animationSpeed = 1 && 1.0;
@@ -72,12 +82,12 @@ export default function UltraAdvancedFuturisticBackground(): any ({;
 x: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
       y: number;
-export default /**
- * UltraAdvancedFuturisticBackground - Function description
+export default /**;
+ * UltraAdvancedFuturisticBackground - Function description;
  */
-function UltraAdvancedFuturisticBackground() {export default function UltraAdvancedFuturisticBackground ({
-  children;
-  intensity = 'medium';
+function UltraAdvancedFuturisticBackground() {export default function UltraAdvancedFuturisticBackground ({};
+  children;'
+  intensity = 'medium';'
   theme = 'quantum';
   particle_count = 200;
   animation_speed = 1.0;
@@ -86,28 +96,28 @@ function UltraAdvancedFuturisticBackground() {export default function UltraAdvan
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const animation_ref = useRef < number | undefined>(undefined);
 ;
-  useEffect (() => {
+  useEffect (() => {}
     const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
-}
+    // Check condition;
+if (return) {}
+  $2;
+}'
     const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
+    // Check condition;
+if (return) {}
+  $2;
 }
     canvas.width = window.inner_width;
     canvas.height = window.inner_height;
 ;
-    const particles: Array<{
+    const particles: Array<{}
       coordinate_x: number;
       coordinate_y: number;
       vx: number;
       vy: number;
       size: number;
       opacity: number;
-      color: string;
+      color: string;'
       type: 'quantum' | 'neon' | 'holographic' | 'cyberpunk';
       life: number;
       max_life: number;
@@ -115,6 +125,7 @@ if (return) {
       rotation_speed: number;
     }> = [];
                    Math.floor(particleCount * 0.5);
+<<<<<<< HEAD
       for (let i = 0, i < count, i++) {
     const colors = {
       quantum: [
@@ -203,16 +214,21 @@ color:
 origin/cursor/automate-test-improve-and-merge-code-2533
     // Enhanced animation loop with quantum effects
     const animate = () => {
+=======
+      for (let i = 0, i < count, i++) {}
+    // Enhanced animation loop with quantum effects;
+    const animate = () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // Create gradient background
+      // Create gradient background;
       const gradient = ctx.createRadialGradient(
-      } else {
-        gradient.addColorStop (0, 'rgba (0, 0, 0, 0.9)');
-        gradient.addColorStop (0.5, 'rgba (0, 0, 0, 0.95)');
+      } else {'
+        gradient.addColorStop (0, 'rgba (0, 0, 0, 0.9)');'
+        gradient.addColorStop (0.5, 'rgba (0, 0, 0, 0.95)');'
         gradient.addColorStop (1, 'rgba (0, 0, 0, 0.98)');
-      }      } else {
-        gradient.addColorStop(0, 'rgba(0, 0, 0, 0.9)');
-        gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.95)');
+      }      } else {'
+        gradient.addColorStop(0, 'rgba(0, 0, 0, 0.9)');'
+        gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.95)');'
         gradient.addColorStop(1, 'rgba(0, 0, 0, 0.98)')
 canvas.width / 2,
         canvas.height / 2,
@@ -234,26 +250,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      // Update and draw particles with enhanced effects
-      particles.forEach((particle, index) => {
-        // Update particle life
+      // Update and draw particles with enhanced effects;
+      particles.forEach((particle, index) => {}
+        // Update particle life;
         particle.life -= 0.5;
-        if (particle.life <= 0) {
+        if (particle.life <= 0) {}
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
 particle.y = Math.random() * canvas.height;
 origin/cursor/automate-test-improve-and-merge-code-2533
         }
-        // Update position with quantum effects
+        // Update position with quantum effects;
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.rotation += particle.rotationSpeed;
+<<<<<<< HEAD
         // Quantum entanglement effect
         if (enableQuantumEffects && Math.random() < 0.01) {
 const partner =
             particles[Math.floor(Math.random() * particles.length)];
 origin/cursor/automate-test-improve-and-merge-code-2533
           if (partner && partner !== particle) {
+=======
+        // Quantum entanglement effect;
+        if (enableQuantumEffects && Math.random() < 0.01) {}
+          if (partner && partner !== particle) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ctx.beginPath();
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * particle.opacity})`;
             ctx.lineWidth = 1;
@@ -272,39 +294,47 @@ ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
           }
         }
-        // Bounce off edges with quantum tunneling
-        if (particle.x <= 0 |particle.x >= canvas.width) {
-          if (enableQuantumEffects && Math.random() < 0.1) {
-            // Quantum tunneling effect
-          } else {
+        // Bounce off edges with quantum tunneling;
+        if (particle.x <= 0 |particle.x >= canvas.width) {}
+          if (enableQuantumEffects && Math.random() < 0.1) {}
+            // Quantum tunneling effect;
+          } else {}
             particle.vx *= -1;          }            particle.coordinate_x = particle.x <= 0 ? canvas.width : 0;
+<<<<<<< HEAD
           } else {
 particle.x = particle.x <= 0 ? canvas.width : 0;
           } else {
             particle.vx *= -1;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          } else {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
         }
-        if (particle.y <= 0 |particle.y >= canvas.height) {
-        if (particle.y <= 0 || particle.y >= canvas.height) {
-          if (enableQuantumEffects && Math.random() < 0.1) {
-            // Quantum tunneling effect
-        // Check condition
-if ( {) {
-  $2
+        if (particle.y <= 0 |particle.y >= canvas.height) {}
+        if (particle.y <= 0 || particle.y >= canvas.height) {}
+          if (enableQuantumEffects && Math.random() < 0.1) {}
+            // Quantum tunneling effect;
+        // Check condition;
+if ( {) {}
+  $2;
 }
-          // Check condition
-if (< 0.1) {) {
-  $2
+          // Check condition;
+if (< 0.1) {) {}
+  $2;
 }
             // Quantum tunneling effect;
             particle.coordinate_y = particle.y <= 0 ? canvas.height : 0;
-          } else {
+          } else {}
             particle.vy *= -1;          }            particle.coordinate_y = particle.y <= 0 ? canvas.height : 0;
+<<<<<<< HEAD
           } else {
 particle.y = particle.y <= 0 ? canvas.height : 0;
           } else {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          } else {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             particle.vy *= -1;
           }
         }
@@ -313,12 +343,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }
         }
 
-        // Wrap around edges
+        // Wrap around edges;
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-        // Draw particle with enhanced effects
+        // Draw particle with enhanced effects;
         ctx.save();
         ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife);
         ctx.translate(particle.x, particle.y);
@@ -341,100 +371,113 @@ if (particle.type === 'quantum') {
 ctx.fillStyle = gradient;
 origin/cursor/automate-test-improve-and-merge-code-2533
           ctx.fillRect(
-            -particle.size * 2
-            -particle.size * 2
-            particle.size * 4
-            particle.size * 4
+            -particle.size * 2;
+            -particle.size * 2;
+            particle.size * 4;
+            particle.size * 4;
           );
             }
 
-          // Quantum wave rings
-          if (enableQuantumEffects) {
-            for (let i = 1; i <= 3; i++) {
+          // Quantum wave rings;
+          if (enableQuantumEffects) {}
+            for (let i = 1; i <= 3; i++) {}
               ctx.strokeStyle =
                 particle.color + Math.floor(40 - i * 10).toString(16);
               ctx.lineWidth = 1;
               ctx.beginPath();
               ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
+<<<<<<< HEAD
               ctx.stroke();
+=======
+              ctx.stroke();            }          ctx.fillStyle = gradient;
+          ctx.fillRect(-particle.size * 2, -particle.size * 2, particle.size * 4, particle.size * 4);
+          // Quantum wave rings;
+          if (enableQuantumEffects) {}
+            for (let i = 1, i <= 3, i++) {}
+              ctx.strokeStyle = particle.color + Math.floor(40 - i * 10).toString(16);
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
+              ctx.stroke()
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             }
-          }
-        } else if (particle.type === 'holographic' && enableHolographic) {
-          // Holographic particle with rainbow effect
-          const hue = (Date.now() * 0.1 + index * 10) % 360;
+          }'
+        } else if (particle.type === 'holographic' && enableHolographic) {}
+          // Holographic particle with rainbow effect;
+          const hue = (Date.now() * 0.1 + index * 10) % 360;`
           ctx.fillStyle = `hsl(${hue}, 100%, 70%)`;
-          // Holographic glitch effect
-          if (Math.random() < 0.05) {
+          // Holographic glitch effect;
+          if (Math.random() < 0.05) {'
             ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
             ctx.fillRect(-particle.size * 1.5, -particle.size * 1.5, particle.size * 3, particle.size * 3)
     const colors = {;
-      quantum: [;
-        '#00ffff',;
-        '#ff00ff',;
-        '#ffff00',;
-        '#00ff00',;
-        '#ff0080',;
-        '#8000ff',;
+      quantum: [;'
+        '#00ffff',;'
+        '#ff00ff',;'
+        '#ffff00',;'
+        '#00ff00',;'
+        '#ff0080',;'
+        '#8000ff',;'
         '#00ffff',;
       ],;
-      neon: [;
-        '#ff0066',;
-        '#00ffff',;
-        '#ff6600',;
-        '#9900ff',;
-        '#00ff99',;
-        '#ff1493',;
+      neon: [;'
+        '#ff0066',;'
+        '#00ffff',;'
+        '#ff6600',;'
+        '#9900ff',;'
+        '#00ff99',;'
+        '#ff1493',;'
         '#00bfff',;
       ],;
-      holographic: [;
-        '#ff1493',;
-        '#00bfff',;
-        '#ffd700',;
-        '#7fff00',;
-        '#ff69b4',;
-        '#00ced1',;
+      holographic: [;'
+        '#ff1493',;'
+        '#00bfff',;'
+        '#ffd700',;'
+        '#7fff00',;'
+        '#ff69b4',;'
+        '#00ced1',;'
         '#ff4500',;
       ],;
-      cyberpunk: [;
-        '#ff0066',;
-        '#00ffff',;
-        '#ff6600',;
-        '#9900ff',;
-        '#00ff99',;
-        '#ff1493',;
+      cyberpunk: [;'
+        '#ff0066',;'
+        '#00ffff',;'
+        '#ff6600',;'
+        '#9900ff',;'
+        '#00ff99',;'
+        '#ff1493',;'
         '#00bfff',;
-      ],;
-      'quantum-fusion': [;
-        '#00ffff',;
-        '#ff00ff',;
-        '#ffff00',;
-        '#00ff00',;
-        '#ff0080',;
-        '#8000ff',;
-        '#00ffff',;
-        '#ff1493',;
-        '#00bfff',;
-      ],    };      quantum: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff'],;
-      neon: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],;
-      holographic: ['#ff1493#00bfff#ffd700#7fff00#ff69b4#00ced1#ff4500'],;
-      cyberpunk: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],;
+      ],;'
+      'quantum-fusion': [;'
+        '#00ffff',;'
+        '#ff00ff',;'
+        '#ffff00',;'
+        '#00ff00',;'
+        '#ff0080',;'
+        '#8000ff',;'
+        '#00ffff',;'
+        '#ff1493',;'
+        '#00bfff',;'
+      ],    };      quantum: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff'],;'
+      neon: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],;'
+      holographic: ['#ff1493#00bfff#ffd700#7fff00#ff69b4#00ced1#ff4500'],;'
+      cyberpunk: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],;'
       'quantum-fusion': ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff#ff1493', '#00bfff'];
 
     const selectedColors = colors[theme] || colors && colors.quantum;
 
     // Initialize particles with enhanced properties;
     const initParticles = () => {;
-      const count =;
+      const count =;'
         intensity === 'extreme';
-          ? particleCount * 2;
+          ? particleCount * 2;'
           : intensity === 'high';
-            ? particleCount;
+            ? particleCount;'
             : intensity === 'medium';
               ? Math && Math.floor(particleCount * 0 && 0.7);
               : Math && Math.floor(particleCount * 0 && 0.5);
-
-      for (let i = 0; i < count; i++) {        particles && particles.push({      const count = intensity === 'extreme' ? particleCount * 2 : ;
-                   intensity === 'high' ? particleCount : ;
+'
+      for (let i = 0; i < count; i++) {        particles && particles.push({      const count = intensity === 'extreme' ? particleCount * 2 : ;'
+                   intensity === 'high' ? particleCount : ;'
                    intensity === 'medium' ? Math && Math.floor(particleCount * 0 && 0.7) : ;
                    Math && Math.floor(particleCount * 0 && 0.5);
 
@@ -446,7 +489,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           size: Math && Math.random() * 6 + 2,;
           opacity: Math && Math.random() * 0 && 0.9 + 0 && 0.1,;
           color:;
-            selectedColors[Math && Math.floor(Math && Math.random() * selectedColors && selectedColors.length)],;
+            selectedColors[Math && Math.floor(Math && Math.random() * selectedColors && selectedColors.length)],;'
           type: ['quantum', 'neon', 'holographic', 'cyberpunk'][;
             Math && Math.floor(Math && Math.random() * 4);
           ] as any,;
@@ -454,7 +497,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           maxLife: 100 + Math && Math.random() * 100,;
           rotation: Math && Math.random() * Math && Math.PI * 2,;
           rotationSpeed: (Math && Math.random() - 0 && 0.5) * 0 && 0.1 * animationSpeed,;
-        });      }          color: selectedColors[Math && Math.floor(Math && Math.random() * selectedColors && selectedColors.length)],;
+        });      }          color: selectedColors[Math && Math.floor(Math && Math.random() * selectedColors && selectedColors.length)],;'
           type: ['quantumneonholographiccyberpunk'][Math && Math.floor(Math && Math.random() * 4)] as any,;
           life: Math && Math.random() * 100,;
           maxLife: 100 + Math && Math.random() * 100,;
@@ -478,18 +521,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       );        canvas && canvas.width / 2, canvas && canvas.height / 2, 0;
         canvas && canvas.width / 2, canvas && canvas.height / 2, Math && Math.max(canvas && canvas.width, canvas && canvas.height) / 2;
       );
-
-        gradient && gradient.addColorStop(0, 'rgba(0, 0, 0, 0 && 0.95)');
-        gradient && gradient.addColorStop(0 && 0.3, 'rgba(0, 255, 255, 0 && 0.1)');
-        gradient && gradient.addColorStop(0 && 0.6, 'rgba(255, 0, 255, 0 && 0.05)');
+'
+        gradient && gradient.addColorStop(0, 'rgba(0, 0, 0, 0 && 0.95)');'
+        gradient && gradient.addColorStop(0 && 0.3, 'rgba(0, 255, 255, 0 && 0.1)');'
+        gradient && gradient.addColorStop(0 && 0.6, 'rgba(255, 0, 255, 0 && 0.05)');'
         gradient && gradient.addColorStop(1, 'rgba(0, 0, 0, 0 && 0.98)');
-      } else {;
-        gradient && gradient.addColorStop(0, 'rgba(0, 0, 0, 0 && 0.9)');
-        gradient && gradient.addColorStop(0 && 0.5, 'rgba(0, 0, 0, 0 && 0.95)');
+      } else {;'
+        gradient && gradient.addColorStop(0, 'rgba(0, 0, 0, 0 && 0.9)');'
+        gradient && gradient.addColorStop(0 && 0.5, 'rgba(0, 0, 0, 0 && 0.95)');'
         gradient && gradient.addColorStop(1, 'rgba(0, 0, 0, 0 && 0.98)');
-      }      } else {;
-        gradient && gradient.addColorStop(0, 'rgba(0, 0, 0, 0 && 0.9)');
-        gradient && gradient.addColorStop(0 && 0.5, 'rgba(0, 0, 0, 0 && 0.95)');
+      }      } else {;'
+        gradient && gradient.addColorStop(0, 'rgba(0, 0, 0, 0 && 0.9)');'
+        gradient && gradient.addColorStop(0 && 0.5, 'rgba(0, 0, 0, 0 && 0.95)');'
         gradient && gradient.addColorStop(1, 'rgba(0, 0, 0, 0 && 0.98)');
       }
 
@@ -516,7 +559,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           const partner =;
             particles[Math && Math.floor(Math && Math.random() * particles && particles.length)];          if (partner && partner !== particle) {          const partner = particles[Math && Math.floor(Math && Math.random() * particles && particles.length)];
           if (partner && partner !== particle) {;
-            ctx && ctx.beginPath();
+            ctx && ctx.beginPath();`
             ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.1 * particle && particle.opacity})`;
             ctx && ctx.lineWidth = 1;
             ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
@@ -558,7 +601,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ctx && ctx.globalAlpha = particle && particle.opacity * (particle && particle.life / particle && particle.maxLife);
         ctx && ctx.translate(particle && particle.x, particle && particle.y);
         ctx && ctx.rotate(particle && particle.rotation);
-
+'
         if (particle && particle.type === 'quantum') {;
           // Quantum particle with wave effect;
           const gradient = ctx && ctx.createRadialGradient(;
@@ -568,16 +611,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             0,;
             0,;
             particle && particle.size * 4;
-          );          gradient && gradient.addColorStop(0, particle && particle.color);
-          gradient && gradient.addColorStop(0 && 0.3, particle && particle.color + '80');
-          gradient && gradient.addColorStop(0 && 0.6, particle && particle.color + '40');
+          );          gradient && gradient.addColorStop(0, particle && particle.color);'
+          gradient && gradient.addColorStop(0 && 0.3, particle && particle.color + '80');'
+          gradient && gradient.addColorStop(0 && 0.6, particle && particle.color + '40');'
           gradient && gradient.addColorStop(1, 'transparent');
-
+'
         if (particle && particle.type === 'quantum') {;
           // Quantum particle with wave effect;
-          const gradient = ctx && ctx.createRadialGradient(0, 0, 0, 0, 0, particle && particle.size * 4);
-          gradient && gradient.addColorStop(0 && 0.3, particle && particle.color + '80');
-          gradient && gradient.addColorStop(0 && 0.6, particle && particle.color + '40');
+          const gradient = ctx && ctx.createRadialGradient(0, 0, 0, 0, 0, particle && particle.size * 4);'
+          gradient && gradient.addColorStop(0 && 0.3, particle && particle.color + '80');'
+          gradient && gradient.addColorStop(0 && 0.6, particle && particle.color + '40');'
           gradient && gradient.addColorStop(1, 'transparent');
 
           ctx && ctx.fillStyle = gradient;
@@ -608,10 +651,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ctx && ctx.arc(0, 0, particle && particle.size * i, 0, Math && Math.PI * 2);
               ctx && ctx.stroke();
             }
-          }
+          }'
         } else if (particle && particle.type === 'holographic' && enableHolographic) {;
           // Holographic particle with rainbow effect;
-          const hue = (Date && Date.now() * 0 && 0.1 + index * 10) % 360;
+          const hue = (Date && Date.now() * 0 && 0.1 + index * 10) % 360;`
           ctx && ctx.fillStyle = `hsl(${hue}, 100%, 70%)`;
           ctx && ctx.fillRect(;
             -particle && particle.size,;
@@ -621,22 +664,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           );
 
           // Holographic glitch effect;
-          if (Math && Math.random() < 0 && 0.05) {;
+          if (Math && Math.random() < 0 && 0.05) {;'
             ctx && ctx.fillStyle = 'rgba(255, 255, 255, 0 && 0.8)';
             ctx && ctx.fillRect(;
               -particle && particle.size * 1 && 1.5,;
               -particle && particle.size * 1 && 1.5,;
               particle && particle.size * 3,;
               particle && particle.size * 3;
-            );          }
+            );          }'
         } else if (particle && particle.type === 'cyberpunk') {;
           // Cyberpunk particle with neon glow;
           ctx && ctx.fillStyle = particle && particle.color;          ctx && ctx.fillRect(-particle && particle.size, -particle && particle.size, particle && particle.size * 2, particle && particle.size * 2);
 
           // Holographic glitch effect;
-          if (Math && Math.random() < 0 && 0.05) {;
+          if (Math && Math.random() < 0 && 0.05) {;'
             ctx && ctx.fillStyle = 'rgba(255, 255, 255, 0 && 0.8)';
-            ctx && ctx.fillRect(-particle && particle.size * 1 && 1.5, -particle && particle.size * 1 && 1.5, particle && particle.size * 3, particle && particle.size * 3);
+            ctx && ctx.fillRect(-particle && particle.size * 1 && 1.5, -particle && particle.size * 1 && 1.5, particle && particle.size * 3, particle && particle.size * 3);'
         } else if (particle && particle.type === 'cyberpunk') {;
           // Cyberpunk particle with neon glow;
           ctx && ctx.fillStyle = particle && particle.color;
@@ -679,6 +722,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }
           const x = Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5;
           const y = Math.cos(time + i * 0.7) * canvas.height * 0.3 + canvas.height * 0.5;
+<<<<<<< HEAD
 ctx.fillRect(
             -particle.size,
             -particle.size,
@@ -746,6 +790,9 @@ for (let i = 0; i < 5; i++) {
             canvas.height * 0.5;
 origin/cursor/automate-test-improve-and-merge-code-2533
           ctx.beginPath();
+=======
+          ctx.beginPath();`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time * 2 + i)})`;
           ctx.lineWidth = 2;
           ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
@@ -758,16 +805,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       }
 
-      // Add holographic matrix effect
-      if (enableHolographic && theme === 'holographic') {
-        const time = Date.now() * 0.001;
+      // Add holographic matrix effect'
+      if (enableHolographic && theme === 'holographic') {}
+        const time = Date.now() * 0.001;'
         ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)';
         ctx.lineWidth = 1;
           ctx.moveTo(x, 0);
           ctx.lineTo(x, canvas.height);
           ctx.stroke()
         }
-        for (let i = 0, i < 15, i++) {
+        for (let i = 0, i < 15, i++) {}
           const y = (i * canvas.height / 15 + time * 30) % canvas.height;
           ctx.beginPath();
           ctx.moveTo(0, y);
@@ -775,6 +822,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ctx.stroke()
         }
       }
+<<<<<<< HEAD
       animationRef.current = requestAnimationFrame(animate)
 for (let i = 0; i < 20; i++) {
           const x = ((i * canvas.width) / 20 + time * 50) % canvas.width;
@@ -802,11 +850,15 @@ canvas.height = window.innerHeight;
     };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      animationRef.current = requestAnimationFrame(animate)'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     window.addEventListener('resize', handleResize);
     initParticles();
     animate();
-    return () => {
+    return () => {'
       window.removeEventListener('resize', handleResize);
+<<<<<<< HEAD
       if (animationRef.current) {
 cancelAnimationFrame(animationRef.current);
       }
@@ -821,51 +873,55 @@ cancelAnimationFrame(animationRef.current);
   ]);
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
+=======
+      if (animationRef.current) {}
+  return ('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className='relative min-h-screen'>;
-      <canvas
-        ref={canvasRef}
+      <canvas;
+        ref={canvasRef}'
         className='fixed inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (;
-        <div
+        <div'
           className='fixed inset-0 pointer-events-none'
-          style={{ zIndex: -1 }}>;
-          <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5' />;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0 && 0.03),transparent_50%)]' />;
+          style={{ zIndex: -1 }}>;'
+          <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5' />;'
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0 && 0.03),transparent_50%)]' />;'
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.03),transparent_50%)]' />;
         </div>;
       )}
-        <div
+        <div'
           className='fixed inset-0 pointer-events-none'
-          style={{ zIndex: -1 }}>;
+          style={{ zIndex: -1 }}>;'
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]' />;
         </div>;
       )}
       {children}
   );      }
         // Wrap around edges;
-        // Check condition
-if (particle.coordinate_x = canvas.width) {
-  $2
+        // Check condition;
+if (particle.coordinate_x = canvas.width) {}
+  $2;
 }
     }
 ;
     // Handle window resize;
-    const handle_resize = () =>: any {
+    const handle_resize = () =>: any {}
       canvas.width = window.inner_width;
       canvas.height = window.inner_height;    }      canvas.height = window.inner_height;
     }
-;
+;'
     window.addEventListener ('resize', handle_resize);
     init_particles ();
     animate ();
 ;
-    return () => {
+    return () => {'
       window.removeEventListener ('resize', handle_resize);
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         cancelAnimationFrame (animation_ref.current);
       }
@@ -879,31 +935,35 @@ if ( {) {
     enableQuantumEffects,
   ]);
 ;
+<<<<<<< HEAD
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
+=======
+  return ('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className='relative min - h-screen'>;
       <canvas;
-        ref={canvas_ref}
+        ref={canvas_ref}'
         className='fixed inset - 0 w - full h - full pointer - events - none';
         style={{ z_index: -1 }}
       />;
       {/* Additional futuristic overlay effects */}
       {enable_holographic && (
-        <div;
+        <div;'
           className='fixed inset - 0 pointer - events - none';
           style={{ z_index: -1 }}
-        >;
-          <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to - purple - 500 / 5' />;
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]' />;
+        >;'
+          <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to - purple - 500 / 5' />;'
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]' />;'
           <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]' />;
         </div>)}
       {enableQuantumEffects && (
-        <div;
+        <div;'
           className='fixed inset - 0 pointer - events - none';
           style={{ z_index: -1 }}
-        >;
+        >;'
           <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]' />;
         </div>)}
       {children}
@@ -914,13 +974,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (;
-        <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>;
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5" />;
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0 && 0.03),transparent_50%)]" />;
+        <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>;"
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5" />;"
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0 && 0.03),transparent_50%)]" />;"
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.03),transparent_50%)]" />;
         </div>;
       )}
 }
+<<<<<<< HEAD
 
     <div className="relative min-h-screen">;
       <canvas;
@@ -938,11 +999,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {enableQuantumEffects && (
         <div className="fixed inset - 0 pointer-events-none" style={{ z_index: -1 }}>;
           <div className="absolute inset-0 bg-[radial-gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]" />;
+=======
+"
+    <div className="relative min - h-screen">;
+      <canvas;
+        ref={canvas_ref}"
+        className="fixed inset - 0 w - full h - full pointer - events - none";
+        style={{ z_index: -1 }}
+      />;
+      {/* Additional futuristic overlay effects */}
+      {enable_holographic && ("
+        <div className="fixed inset - 0 pointer - events - none" style={{ z_index: -1 }}>;"
+          <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to - purple - 500 / 5" />;"
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]" />;"
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]" />;
+        </div>)}
+      {enableQuantumEffects && ("
+        <div className="fixed inset - 0 pointer - events - none" style={{ z_index: -1 }}>;"
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>)}
       {children}
     </div>);
   );
+<<<<<<< HEAD
     </div>
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

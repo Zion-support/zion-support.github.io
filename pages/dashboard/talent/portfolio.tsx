@@ -7,8 +7,8 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
@@ -18,21 +18,22 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -40,10 +41,16 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
+=======
+}'
+import {GetServerSideProps} from 'next';'
+import React, { useRef, useState } from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import PdfExportButton from '../../../components/ui/PdfExportButton';
 import ResumePreview, {;
   ResumeData,;
 
+<<<<<<< HEAD
 import { GetServerSideProps } from 'next',
 import React, { useRef, useState } from 'react',
 import PdfExportButton from '../../../components/ui/PdfExportButton',
@@ -113,11 +120,29 @@ email: 'you@example.com',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className="relative">
       <div className="flex items-center gap-3 mb-4">
+=======
+
+  const data: ResumeData = {'
+    name: 'Your Name',
+    contact: {'
+       email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' 
+    },'
+    summary: 'AI talent focused on LLM apps and marketplaces.','
+    skills: ['AITypeScriptNext.js'],'
+    technologies: ['OpenAISupabase'],'
+    experience: [{ title: 'AI Engineer', company: 'Zion', start: '2023', end: 'Present', bullets: ['Built resume exporter.'] }],'
+    education: [{ institution: 'University of Example', degree: 'B.Sc.', start: '2016', end: '2020' }],'
+    certifications: ['AWS SAA-C03'],'
+    portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
+
+    <div className="relative">"
+      <div className="flex items-center gap-3 mb-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <label className="text-sm">Theme</label>
-        <select
+        <select;
           value={theme}
-        >
-          <option value='light'>Light</option>
+        >'
+          <option value='light'>Light</option>'
           <option value='dark'>Dark</option>
         </select>
       </div>
@@ -135,11 +160,14 @@ return { props: {} };
 <<<<<<< HEAD
 =======
 
-=======
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <PdfExportButton targetRef={ref} fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
       <ResumePreview ref={ref} data={data} theme={theme} />
     </div>
@@ -159,8 +187,9 @@ return { props: {} };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {};
   const supabase = createServerClient();
+<<<<<<< HEAD
   if (!user) {
 <<<<<<< HEAD
     return { redirect: { destination: '/auth', permanent: false } } as any;
@@ -179,12 +208,17 @@ import PdfExportButton from '../../../components / ui / PdfExportButton';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
-import PdfExportButton from '../../../components / ui / PdfExportButton';
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
+  if (!user) {'
+    return { redirect: { destination: '/auth', permanent: false } } as any;
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+};
+'
+import PdfExportButton from '../../../components / ui / PdfExportButton';
+
+<<<<<<< HEAD
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
@@ -280,50 +314,47 @@ import { createServerClient } from '../../../utils/supabase/server';
 export default function TalentPortfolio() {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const ref = useRef<HTMLDivElement>(null);
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
-import { GetServerSideProps } from 'next',
-import React, { useRef, useState } from 'react',
-import PdfExportButton from '../../../components/ui/PdfExportButton',
-import ResumePreview, { ResumeData } from '../../../components/ui/ResumePreview',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+'
+import { GetServerSideProps } from 'next','
+import React, { useRef, useState } from 'react','
+import PdfExportButton from '../../../components/ui/PdfExportButton','
+import ResumePreview, { ResumeData } from '../../../components/ui/ResumePreview','
 import { createServerClient } from '../../../utils/supabase/server',
-export default function TalentPortfolio() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
-  const ref = useRef<HTMLDivElement>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  const data: ResumeData = {
-    name: 'Your Name',
-    contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' },
-    summary: 'AI talent focused on LLM apps and marketplaces.',
-    skills: ['AITypeScriptNext.js'],
-    technologies: ['OpenAISupabase'],
-    experience: [{ title: 'AI Engineer', company: 'Zion', start: '2023', end: 'Present', bullets: ['Built resume exporter.'] }],
-    education: [{ institution: 'University of Example', degree: 'B.Sc.', start: '2016', end: '2020' }],
-    certifications: ['AWS SAA-C03'],
+export default function TalentPortfolio() { return null; }
+    contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' },'
+    summary: 'AI talent focused on LLM apps and marketplaces.','
+    skills: ['AITypeScriptNext.js'],'
+    technologies: ['OpenAISupabase'],'
+    experience: [{ title: 'AI Engineer', company: 'Zion', start: '2023', end: 'Present', bullets: ['Built resume exporter.'] }],'
+    education: [{ institution: 'University of Example', degree: 'B.Sc.', start: '2016', end: '2020' }],'
+    certifications: ['AWS SAA-C03'],'
     portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  return (
-    <div className="relative">
-      <div className="flex items-center gap-3 mb-4">
-        <label className="text-sm">Theme</label>
-        <select
-          value={theme  } catch (error) {
-    console.error("Error:", error);
+
+  return ("
+    <div className="relative">"
+      <div className="flex items-center gap-3 mb-4">";
+        <label className="text-sm">Theme</label>;
+        <select;
+          value={theme  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-          onChange={(e) => setTheme(e.target.value as 'light' | 'dark')  } catch (error) {
-    console.error("Error:", error);
+}'
+          onChange={(e) => setTheme(e.target.value as 'light' | 'dark')  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
           className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
-        >
-          <option value="light">Light</option>
+        >"
+          <option value="light">Light</option>"
           <option value="dark">Dark</option>
         </select>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <PdfExportButton
         targetRef={ref}
@@ -363,3 +394,9 @@ return { props: {} }
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,3 +39,18 @@ export default {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export default {};
+
+export default {};
+export default {};
+
+
+
+
+export default {};
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

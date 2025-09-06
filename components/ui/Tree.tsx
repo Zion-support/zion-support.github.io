@@ -1,40 +1,39 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
+}'
 import React, { useState } from 'react';
 
 export interface TreeNode {;
   name: string;
   path: string;
-
+'
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
-function NodeItem({
-  node
-  depth
-  onDeploy
-}: {
-
+function NodeItem({}
+  node;
+  depth;
+  onDeploy;
+}: {}
 interface TreeProps {;
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
@@ -46,8 +45,8 @@ function NodeItem(): any ({;
 }: {;
   node: TreeNode;
   depth: number;
-  name: string
-  path: string
+  name: string;
+  path: string;
   type: "folder" | "file"
 
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
@@ -58,14 +57,14 @@ function NodeItem(): any ({;
 };
 export interface TreeNode {;
   name: string,;
-  path: string,;
+  path: string,;"
   type: "folder" | "file",;
-  name: string
-  path: string
+  name: string;
+  path: string"
   type: "folder" | "file"
 
   name: string,
-  path: string,
+  path: string,"
   type: "folder" | "file",;
   exists?: boolean;
   children?: TreeNode[];
@@ -73,14 +72,15 @@ export interface TreeNode {;
   const [open, setOpen] = useState<boolean>(false);
 
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
-  const toggle = () => setOpen((v) => !v);
+  const toggle = () => setOpen((v) => !v);"
         "Content-Type": "application/json";
-        // Expect an admin token in local storage, fall back to prompt
+        // Expect an admin token in local storage, fall back to prompt"
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
       body: JSON.stringify({ path: node.path })})
-  return (
-    <div className='ml-2'>;
+  return ('
+    <div className='ml-2'>;'
       <div className='flex items-center gap-2 py-1'>;
+<<<<<<< HEAD
         {hasChildren ? (;
           <button className='text-sm' onClick={toggle} aria-label='Toggle'>;
 import React, { useState } from 'react';
@@ -122,112 +122,116 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         {hasChildren ? (
           <button className='text-sm' onClick={toggle} aria-label='Toggle'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        {hasChildren ? (;'
+          <button className='text-sm' onClick={toggle} aria-label='Toggle'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {open ? '▾' : '▸'}
           </button>;
-        ) : (;
+        ) : (;'
           <span className='inline-block w-4' />;
         )}
-        <span
+        <span'
           className={`font-mono text-sm ${node && node.exists ? 'text-green-600' : 'text-gray-500'}`}>;
           {node && node.path}
-        </span>;
+        </span>;'
         <div className='ml-auto flex gap-2'>;
-          <button
+          <button'
             className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded'
-            onClick={copyPath}
+            onClick={copyPath}'
             title='Copy path'>;
             Copy;
           </button>;
-          <button
+          <button'
             className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded'
-            onClick={clonePath}
+            onClick={clonePath}'
             title='Create template'>;
             Template;
           </button>;
-          <button
+          <button'
             className='px-2 py-0 && 0.5 text-xs bg-emerald-100 rounded'
-            onClick={deploy}
+            onClick={deploy}'
             title='Auto-deploy'>;
   on_deploy?: (path: string) => void;
-}) {
+}) {}
   const [open, set_open] = useState < boolean>(false);
 ;
   const has_children = Array.is_array (node.children) && node.children.length > 0;
   const toggle = () =>: any set_open (v => !v);
 ;
-  const copy_path = async () => {
+  const copy_path = async () => {}
     await navigator.clipboard.write_text (node.path);  }
-export interface TreeNode {
+export interface TreeNode {}
   name: string,
-  path: string,
-  type: "folder" | "file",
+  path: string,"
+  type: "folder" | "file",;
   exists?: boolean;
   children?: TreeNode[];
 }
-interface TreeProps {
+interface TreeProps {}
   nodes: TreeNode[],
   on_deploy?: (path: string) => void;
 }
-function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, on_deploy?: (path: string) => void }) {
+function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, on_deploy?: (path: string) => void }) {}
   const [open, set_open] = useState < boolean>(false);
 ;
   const has_children = Array.is_array (node.children) && node.children.length > 0;
   const toggle = () =>: any set_open ((v) => !v);
 ;
-  const copy_path = async () => {
+  const copy_path = async () => {}
     await navigator.clipboard.write_text (node.path);
   }
 ;
-  const clone_path = async () => {
+  const clone_path = async () => {}`
     const url = `${window.location.origin}/api / dev / source - map`;
-    await fetch (url, {
+    await fetch (url, {'
       method: 'POST',
-      headers: {
+      headers: {'
         'Content - Type': 'application / json',
-        // Expect an admin token in local storage, fall back to prompt;
+        // Expect an admin token in local storage, fall back to prompt;'
         'x - admin - token': local_storage.get_item ('ADMIN_TOKEN') || '',
       } as any,
       body: JSON.stringify ({ path: node.path }),
-    });  }      headers: {
+    });  }      headers: {"
         "Content - Type": "application / json";
-        // Expect an admin token in local storage, fall back to prompt;
+        // Expect an admin token in local storage, fall back to prompt;"
         "x - admin - token": local_storage.get_item ("ADMIN_TOKEN") || ""} as any;
       body: JSON.stringify ({ path: node.path })});
   }
 ;
   const deploy = () =>: any on_deploy && on_deploy (node.path);
 ;
-  return (
-    <div className='ml - 2'>;
+  return ('
+    <div className='ml - 2'>;'
       <div className='flex items - center gap - 2 py - 1'>;
-        {has_children ? (
-          <button className='text - sm' on_click={toggle} aria - label='Toggle'>;
+        {has_children ? ('
+          <button className='text - sm' on_click={toggle} aria - label='Toggle'>;'
             {open ? '▾' : '▸'}
-          </button>) : (
+          </button>) : ('
           <span className='inline - block w - 4' />)}
-        <span;
+        <span;'`
           className={`font - mono text - sm ${node.exists ? 'text - green - 600' : 'text - gray - 500'}`}
         >;
           {node.path}
-        </span>;
+        </span>;'
         <div className='ml - auto flex gap - 2'>;
-          <button;
+          <button;'
             className='px - 2 py - 0.5 text - xs bg - gray - 100 rounded';
-            on_click={copy_path}
+            on_click={copy_path}'
             title='Copy path';
           >;
             Copy;
           </button>;
-          <button;
+          <button;'
             className='px - 2 py - 0.5 text - xs bg - gray - 100 rounded';
-            on_click={clone_path}
+            on_click={clone_path}'
             title='Create template';
           >;
             Template;
           </button>;
-          <button;
+          <button;'
             className='px - 2 py - 0.5 text - xs bg - emerald - 100 rounded';
-            on_click={deploy}
+            on_click={deploy}'
             title='Auto - deploy';
           >;
             Deploy;
@@ -249,7 +253,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
   return (
-  return (
+  return ("
     <div className="w-full">;
       {nodes && nodes.map((n) => (;
 );
@@ -264,22 +268,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );
 export default Tree;
-}node= {
-  child
-}depth= {
-  depth + 1
-}onDeploy= {
-}node= {
-  n
-}depth= {
-  0
-}onDeploy= {
-  onDeploy 
+}node= {}
+  child;
+}depth= {}
+  depth + 1;
+}onDeploy= {}
+}node= {}
+  n;
+}depth= {}
+  0;
+}onDeploy= {}
+  onDeploy;
 }/>) ) ;
 }</div>) ;
 
 export default Tree;
-
+"
     <div className="w-full">
       {nodes.map((n) => (
 
@@ -287,34 +291,44 @@ export default Tree;
 
 export default Tree;
   child.path;
-}node= {
+}node= {}
   child;
-}depth= {
+}depth= {}
   depth + 1;
-}on_deploy= {
+}on_deploy= {}
   on_deploy;
 }/>) );
 }</div>);
 }</div>);
-}export /**
- * Tree - Function description
+}export /**;
+ * Tree - Function description;
  */
+<<<<<<< HEAD
 function Tree() {
   return (<div className="w-full"> {
   nodes.map ( (n) => (<NodeItem key= {
+=======
+function Tree() { return null; }
+  return (<div className="w - full"> {}
+  nodes.map ( (n) => (<NodeItem key= {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   n.path;
-}node= {
+}node= {}
   n;
-}depth= {
+}depth= {}
   0;
-}on_deploy= {
+}on_deploy= {}
   on_deploy;
 }/>) );
 }</div>);
 }export default Tree;}
 export default Tree;
 ;
+<<<<<<< HEAD
 }/>) ) 
 }</div>) 
 }export default Tree;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

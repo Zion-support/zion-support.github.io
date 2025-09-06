@@ -5,6 +5,7 @@ export default function FacebookRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			window.location.replace('https://www.facebook.com/profile.php?id=ziontechgroup');
 =======
 <<<<<<< HEAD
@@ -13,6 +14,9 @@ export default function FacebookRedirect() {
 			window.location.replace('https://www.facebook.com/ziontechgroup');
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7466
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 		}
 	}, []);
 
@@ -20,6 +24,7 @@ export default function FacebookRedirect() {
 		<>
 			<Head>
 				<title>Facebook | Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -41,6 +46,9 @@ export default function FacebookRedirect() {
 				</a>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7466
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			</div>
 		</>
 	);

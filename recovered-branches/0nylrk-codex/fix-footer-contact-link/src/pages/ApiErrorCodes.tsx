@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -96,6 +97,18 @@ import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+=======
+
+
+import React from "react";"
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";"
+import {CodeBlock} from "@/components/developers/CodeBlock";
+"
+import React from "react",";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";"
+import { CodeBlock } from "@/components/developers/CodeBlock";"
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { CodeBlock } from "@/components/developers/CodeBlock",
 
 <<<<<<< HEAD
@@ -113,6 +126,7 @@ export function ApiErrorCodes() {;
     {;
       "field": "title";
 
+<<<<<<< HEAD
     },
 
     {
@@ -138,34 +152,33 @@ export function ApiErrorCodes() {
       "error": "Title is required"
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export function ApiErrorCodes() {}
+  const errorExample = `{"
+  "error": "validation_error","
+  "message": "The request was invalid","
+  "details": []
+    {"
+      "field": "title","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "error": "Title is required";
-    };
-    {;
-      "field": "budget && budget.min";
-      "error": "Budget minimum must be greater than 0";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+;
+import React from './react';"
+import ApiDocsLayout from "@/components / developers / ApiDocsLayout";'
+import { CodeBlock } from '@/components / developers / CodeBlock';
+export /**;
+ * ApiErrorCodes - Function description;
+ */
+function ApiErrorCodes() {}`
+  const error_example = `{"
+  "error": "validation_error";"
+  "message": "The request was invalid";"
+  "details": [;
+    {"
+      "field": "title";"
+      "error": "Title is required";
     }
 <<<<<<< HEAD
-
-=======
-  ];
-}`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React from './react';
-import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
-import { CodeBlock } from '@/components / developers / CodeBlock';
-export /**
- * ApiErrorCodes - Function description
- */
-function ApiErrorCodes() {
-  const error_example = `{
-  "error": "validation_error";
-  "message": "The request was invalid";
-  "details": [;
-    {
-      "field": "title";
-      "error": "Title is required";
-    }
 <<<<<<< HEAD
     },
 
@@ -175,23 +188,40 @@ function ApiErrorCodes() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       "field": "budget.min";
+=======
+    {"
+      "field": "budget.min";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "error": "Budget minimum must be greater than 0";
     }
-  ];
+  ];`
 }`;
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const rateLimitExample = `{
-=======
-
+`
+  const rateLimitExample = `{}`
   const rateLimitExample = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  "error": "rate_limit_exceeded";
-  "message": "Rate limit exceeded. Try again in 30 seconds";
+"
+  "error": "rate_limit_exceeded";"
+  "message": "Rate limit exceeded. Try again in 30 seconds";"
+  "retry_after": 30;`
+}`;
+
+    }
+    },
+    }
+
+  ]`
+}`;`
+}`,
+
+
+
+`
+  const rateLimitExample = `{"
+  "error": "rate_limit_exceeded","
+  "message": "Rate limit exceeded. Try again in 30 seconds","
   "retry_after": 30;
+<<<<<<< HEAD
 }`;
 <<<<<<< HEAD
 
@@ -268,11 +298,18 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+  const errorCodes = []
+    {}
+      status: 400"
+      code: "validation_error""
+      message: "The request was invalid. Check the details for specific field errors.""
+      details: "Includes field-specific validation errors."
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -293,11 +330,17 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {}
+      status: 400"
+      code: "invalid_request""
+      message: "The request is invalid or malformed.""
+      details: "The request could not be processed due to syntactical errors."
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -328,11 +371,17 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {}
+      status: 401"
+      code: "invalid_token""
+      message: "Invalid or expired API key.""
+      details: "The provided API key is incorrect, expired, or revoked."
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -353,11 +402,17 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {}
+      status: 403"
+      code: "forbidden"'"
+      message: "You don't have permission to access this resource."'"
+      details: "Your API key doesn't have the required permissions for this operation."
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -386,11 +441,17 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {}
+      status: 404"
+      code: "not_found""
+      message: "The requested resource was not found.""
+      details: "The specified ID does not exist or is not accessible."
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -411,11 +472,17 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {}
+      status: 409"
+      code: "conflict""
+      message: "The request conflicts with the current state of the resource.""
+      details: "For example, trying to create a duplicate resource or updating a resource that has been modified."
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -446,11 +513,17 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {}
+      status: 429"
+      code: "rate_limit_exceeded""
+      message: "Rate limit exceeded. Try again later.""
+      details: "Includes retry_after parameter indicating when to retry."
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -471,11 +544,17 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {}
+      status: 500"
+      code: "internal_error""
+      message: "An unexpected error occurred.""
+      details: "Something went wrong on our end. If the problem persists, contact support."
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -540,11 +619,26 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {}
+      status: 503"
+      code: "service_unavailable""
+      message: "Service temporarily unavailable.""
+      details: "The API is temporarily unavailable due to maintenance or high load."
+    }
 
+
+
+  const rateLimits = []
+    {"
+      endpoint: "All GET endpoints""
+      limit: "100 requests per minute""
+      notes: "Aggregate limit across all GET endpoints"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -564,11 +658,16 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {"
+      endpoint: "All POST endpoints""
+      limit: "30 requests per minute""
+      notes: "Aggregate limit across all POST endpoints"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -588,11 +687,16 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {"
+      endpoint: "All PUT/PATCH endpoints""
+      limit: "30 requests per minute""
+      notes: "Aggregate limit across all PUT/PATCH endpoints"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -612,11 +716,16 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {"
+      endpoint: "All DELETE endpoints""
+      limit: "15 requests per minute""
+      notes: "Aggregate limit across all DELETE endpoints"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -636,11 +745,16 @@ function ApiErrorCodes() {
 <<<<<<< HEAD
 
     },
-
-
 =======
-    },
+    {"
+      endpoint: "/api/jobs (Search)""
+      limit: "50 requests per minute""
+      notes: "Higher limit for common search operations"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
     }
     },
@@ -657,15 +771,18 @@ function ApiErrorCodes() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
-    }
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    {"
+      endpoint: "/api/talent (Search)""
+      limit: "50 requests per minute""
+      notes: "Higher limit for common search operations"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
     },
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     },
@@ -676,71 +793,73 @@ function ApiErrorCodes() {
     {
       endpoint: "Webhook delivery"
       limit: "N/A"
-      notes: "Webhooks don't count against your rate limits"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+    {"
+      endpoint: "Webhook delivery""
+      limit: "N/A"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      notes: "Webhooks don't count against your rate limits"
+
   const errorCodes = [;
     {;
-      status: 400,;
-      code: "validation_error",;
-      message: "The request was invalid. Check the details for specific field errors.",;
+      status: 400,;"
+      code: "validation_error",;"
+      message: "The request was invalid. Check the details for specific field errors.",;"
       details: "Includes field-specific validation errors.";
     };
     {;
-      status: 400,;
-      code: "invalid_request",;
-      message: "The request is invalid or malformed.",;
+      status: 400,;"
+      code: "invalid_request",;"
+      message: "The request is invalid or malformed.",;"
       details: "The request could not be processed due to syntactical errors.";
     };
     {;
-      status: 401,;
-      code: "invalid_token",;
-      message: "Invalid or expired API key.",;
+      status: 401,;"
+      code: "invalid_token",;"
+      message: "Invalid or expired API key.",;"
       details: "The provided API key is incorrect, expired, or revoked.";
     };
     {;
-      status: 403,;
-      code: "forbidden",;
-      message: "You don't have permission to access this resource.",;
+      status: 403,;"
+      code: "forbidden",;'"
+      message: "You don't have permission to access this resource.",;'"
       details: "Your API key doesn't have the required permissions for this operation.";
     };
     {;
-      status: 404,;
-      code: "not_found",;
-      message: "The requested resource was not found.",;
+      status: 404,;"
+      code: "not_found",;"
+      message: "The requested resource was not found.",;"
       details: "The specified ID does not exist or is not accessible.";
     };
     {;
-      status: 409,;
-      code: "conflict",;
-      message: "The request conflicts with the current state of the resource.",;
+      status: 409,;"
+      code: "conflict",;"
+      message: "The request conflicts with the current state of the resource.",;"
       details: "For example, trying to create a duplicate resource or updating a resource that has been modified.";
     };
     {;
-      status: 429,;
-      code: "rate_limit_exceeded",;
-      message: "Rate limit exceeded. Try again later.",;
+      status: 429,;"
+      code: "rate_limit_exceeded",;"
+      message: "Rate limit exceeded. Try again later.",;"
       details: "Includes retry_after parameter indicating when to retry.";
     };
     {;
-      status: 500,;
-      code: "internal_error",;
-      message: "An unexpected error occurred.",;
+      status: 500,;"
+      code: "internal_error",;"
+      message: "An unexpected error occurred.",;"
       details: "Something went wrong on our end. If the problem persists, contact support.";
     };
     {;
-      status: 503,;
-      code: "service_unavailable",;
-      message: "Service temporarily unavailable.",;
+      status: 503,;"
+      code: "service_unavailable",;"
+      message: "Service temporarily unavailable.",;"
       details: "The API is temporarily unavailable due to maintenance or high load.";
     }
-<<<<<<< HEAD
-  ];
 
+<<<<<<< HEAD
   const rateLimits = [;
     {;
       endpoint: "All GET endpoints",;
@@ -1034,21 +1153,23 @@ function ApiErrorCodes() {
 =======
   ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
   ],
 
 
   return (
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-          If you're encountering persistent errors or need higher rate limits, please 
+
+'
+          If you're encountering persistent errors or need higher rate limits, please "
           <a href="#" className="text-zion-cyan"> contact our support team</Link>.
+
+
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1065,6 +1186,9 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </p>
 =======
       notes: "Aggregate limit across all GET endpoints"    {
@@ -1108,10 +1232,140 @@ function ApiErrorCodes() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>
     </ApiDocsLayout>
+<<<<<<< HEAD
   )        <h2>Error Format</h2>;        <p>;
           When an error occurs, the API will return an appropriate HTTP status code along with ;
           a JSON response body containing details about the error.;
         </p>;
+=======
+  )
+"
+import React from "react",;"
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;"
+import { CodeBlock } from "@/components/developers/CodeBlock",;
+export function ApiErrorCodes() { return null; }
+    },;
+    {;"
+      "field": "budget.min",;"
+      "error": "Budget minimum must be greater than 0";
+    }
+  ];`
+}`,;`
+  const rateLimitExample = `{;"
+  "error": "rate_limit_exceeded",;"
+  "message": "Rate limit exceeded. Try again in 30 seconds",;"
+  "retry_after": 30;`
+}`,;
+  const errorCodes = [;
+    {;
+      status: 400,;"
+      code: "validation_error",;"
+      message: "The request was invalid. Check the details for specific field errors.",;"
+      details: "Includes field-specific validation errors.";
+    },;
+    {;
+      status: 400,;"
+      code: "invalid_request",;"
+      message: "The request is invalid or malformed.",;"
+      details: "The request could not be processed due to syntactical errors.";
+    },;
+    {;
+      status: 401,;"
+      code: "invalid_token",;"
+      message: "Invalid or expired API key.",;"
+      details: "The provided API key is incorrect, expired, or revoked.";
+    },;
+    {;
+      status: 403,;"
+      code: "forbidden",;'"
+      message: "You don't have permission to access this resource.",;'"
+      details: "Your API key doesn't have the required permissions for this operation.";
+    },;
+    {;
+      status: 404,;"
+      code: "not_found",;"
+      message: "The requested resource was not found.",;"
+      details: "The specified ID does not exist or is not accessible.";
+    },;
+    {;
+      status: 409,;"
+      code: "conflict",;"
+      message: "The request conflicts with the current state of the resource.",;"
+      details: "For example, trying to create a duplicate resource or updating a resource that has been modified.";
+    },;
+    {;
+      status: 429,;"
+      code: "rate_limit_exceeded",;"
+      message: "Rate limit exceeded. Try again later.",;"
+      details: "Includes retry_after parameter indicating when to retry.";
+    },;
+    {;
+      status: 500,;"
+      code: "internal_error",;"
+      message: "An unexpected error occurred.",;"
+      details: "Something went wrong on our end. If the problem persists, contact support.";
+    },;
+    {;
+      status: 503,;"
+      code: "service_unavailable",;"
+      message: "Service temporarily unavailable.",;"
+      details: "The API is temporarily unavailable due to maintenance or high load.";
+    }
+  ],;
+  const rateLimits = [;
+    {;"
+      endpoint: "All GET endpoints",;"
+      limit: "100 requests per minute",;"
+      notes: "Aggregate limit across all GET endpoints";
+    },;
+    {;"
+      endpoint: "All POST endpoints",;"
+      limit: "30 requests per minute",;"
+      notes: "Aggregate limit across all POST endpoints";
+    },;
+    {;"
+      endpoint: "All PUT/PATCH endpoints",;"
+      limit: "30 requests per minute",;"
+      notes: "Aggregate limit across all PUT/PATCH endpoints";
+    },;
+    {;"
+      endpoint: "All DELETE endpoints",;"
+      limit: "15 requests per minute",;"
+      notes: "Aggregate limit across all DELETE endpoints";
+    },;
+    {;"
+      endpoint: "/api/jobs (Search)",;"
+      limit: "50 requests per minute",;"
+      notes: "Higher limit for common search operations";
+    },;
+    {;"
+      endpoint: "/api/talent (Search)",;"
+      limit: "50 requests per minute",;"
+      notes: "Higher limit for common search operations";
+    },;
+    {;"
+      endpoint: "Webhook delivery",;"
+      limit: "N/A",;'"
+      notes: "Webhooks don't count against your rate limits";
+    }
+  ];
+  return (;
+
+    <ApiDocsLayout>;"
+      <div className="max-w-3xl prose prose-invert">;
+        <h1>Error Codes & Rate Limits</h1>;
+
+
+        <h2>Error Format</h2>;
+
+
+        <p>;
+          When an error occurs, the API will return an appropriate HTTP status code along with ;
+          a JSON response body containing details about the error.;
+        </p>;
+"
+        <CodeBlock code={errorExample} language="json" showLineNumbers={true} />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         <p>;
           Most errors include:;
@@ -1124,17 +1378,23 @@ function ApiErrorCodes() {
         </ul>;
 
         <h2>Common Error Codes</h2>;
+<<<<<<< HEAD
         <div className="overflow-x-auto mb-8">;
+=======
+"
+        <div className="overflow-x-auto mb-8">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <table className="w-full border-collapse">;
-            <thead>;
-              <tr className="border-b border-zinc-800">;
-                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Status</th>;
-                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Error Code</th>;
-                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Message</th>;
+            <thead>;"
+              <tr className="border-b border-zinc-800">;"
+                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Status</th>;"
+                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Error Code</th>;"
+                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Message</th>;"
                 <th className="text-left py-2 px-4 text-zinc-300 font-medium">Details</th>;
               </tr>;
             </thead>;
             <tbody>;
+<<<<<<< HEAD
               {errorCodes && errorCodes.map((error, index) => (;
                 <tr key={error && error.code} className={index < errorCodes && errorCodes.length - 1 ? "border-b border-zinc-800" : ""}>;
                   <td className="py-2 px-4 text-white">;
@@ -1148,6 +1408,10 @@ function ApiErrorCodes() {
                   <td className="py-2 px-4 text-zinc-300">{error && error.message}</td>;
                   <td className="py-2 px-4 text-zinc-400 text-sm">{error && error.details}</td>;
                 </tr>;              ))}
+=======
+
+              ))}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </tbody>;
           </table>;
         </div>;
@@ -1163,12 +1427,13 @@ function ApiErrorCodes() {
         </ul>;
 
         <h3>Rate Limiting</h3>;
-        <p>;
+        <p>;'
           When you exceed the rate limit, you'll receive a 429 response with details on when to retry:;
         </p>;
-
+"
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
 
+<<<<<<< HEAD
         <h2>Rate Limits</h2>;    }
   ];
 }`;
@@ -1178,10 +1443,23 @@ function ApiErrorCodes() {
   "error": "rate_limit_exceeded";
   "message": "Rate limit exceeded. Try again in 30 seconds";
   "retry_after": 30;
+=======
+        <h2>Rate Limits</h2>;
+
+    }
+  ];`
+}`;`
+  const rateLimitExample = `{}`
+  const rateLimitExample = `{;"
+  "error": "rate_limit_exceeded";"
+  "message": "Rate limit exceeded. Try again in 30 seconds";"
+  "retry_after": 30;`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }`;
     }
   ];
   return (
+<<<<<<< HEAD
                       {error.status}
                     </span>;
                   </td>;
@@ -1245,10 +1523,21 @@ function ApiErrorCodes() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+`
+                    }`}>;
+                      {error.status}
+                    </span>;
+                  </td>;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p>;
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
           The limits are based on the number of requests per minute per API key.;
         </p>;
+<<<<<<< HEAD
 }export default ApiErrorCodes;
 
 <<<<<<< HEAD
@@ -1289,11 +1578,32 @@ export default ApiErrorCodes;
                   <td className="py - 2 px - 4 text - white font-mono">{limit.endpoint}</td>;
                   <td className="py - 2 px - 4 text - zinc-300">{limit.limit}</td>;
                   <td className="py - 2 px - 4 text - zinc - 400 text-sm">{limit.notes}</td>;
+=======
+
+export default ApiErrorCodes;
+"
+        <div className="overflow - x-auto mb - 8">;"
+          <table className="w - full border - collapse">;
+            <thead>;"
+              <tr className="border - b border - zinc - 800">;"
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Endpoint</th>;"
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Limit</th>;"
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Notes</th>;
+              </tr>;
+            </thead>;
+            <tbody>;
+              {rate_limits.map ((limit, index) => ("
+                <tr key={index} className={index < rate_limits.length - 1 ? "border - b border - zinc - 800" : ""}>;"
+                  <td className="py - 2 px - 4 text - white font - mono">{limit.endpoint}</td>;"
+                  <td className="py - 2 px - 4 text - zinc - 300">{limit.limit}</td>;"
+                  <td className="py - 2 px - 4 text - zinc - 400 text - sm">{limit.notes}</td>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </tr>))}
             </tbody>;
           </table>;
         </div>;
         <h3 > Rate Limit Headers</h3>;
+<<<<<<< HEAD
         ;
         <div className="overflow-x-auto mb-8">;
           <table className="w-full border-collapse">;
@@ -1316,6 +1626,17 @@ export default ApiErrorCodes;
           </table>;
         </div>;
         <h3>Rate Limit Headers</h3>;
+=======
+
+
+
+        <p>;
+          All API responses include headers to help you track your rate limit usage:;
+        </p>;
+
+        <ul>;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <li><code>X-RateLimit-Limit</code>: The maximum number of requests allowed per minute</li>;
           <li><code>X-RateLimit-Remaining</code>: The number of requests remaining in the current window</li>;
           <li><code>X-RateLimit-Reset</code>: The time at which the current rate limit window resets (Unix timestamp)</li>;
@@ -1330,11 +1651,12 @@ export default ApiErrorCodes;
         </ul>;
 
         <h2>Need Help?</h2>;
-        <p>;
-          If you're encountering persistent errors or need higher rate limits, please ;
+        <p>;'
+          If you're encountering persistent errors or need higher rate limits, please ;"
           <a href="#" className="text-zion-cyan"> contact our support team</a>.;
         </p>;
 export default ApiErrorCodes;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1348,3 +1670,7 @@ export default ApiErrorCodes;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

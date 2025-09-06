@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/hoc/withAuth.js.jsx
 import { useEffect } from\';react\' import { useRouter } from\';\';next/router\' import { useSelector } from\';\';react-redux\' \"function\": withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router.push(\'';/login?next=/community/new\')} },[isLoggedIn,router]) \"if\": (!isLoggedIn) { return null} return <Component {...props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth\'';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -102,3 +103,28 @@ const { useEffect } from";react" import { useRouter } from";";next/router" impor
 const { useEffect } from";react" import { useRouter } from";";next/router" import { useSelector } from";";react-redux" function: withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state && state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router && router.push("";/login?next=/community/new")} },[isLoggedIn,router]) if: (!isLoggedIn) { return null} return <Component {.props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth"";"""
 const { useEffect } from";react" import { useRouter } from";";next/router" import { useSelector } from";";react-redux" function: withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state && state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router && router.push("";/login?next=/community/new")} },[isLoggedIn,router]) if: (!isLoggedIn) { return null} return <Component {.props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth"";"""
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+const { useEffect } from";react" import { useRouter } from";";next/router" import { useSelector } from";";react-redux" function: withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router.push("";/login?next=/community/new")} },[isLoggedIn,router]) if: (!isLoggedIn) { return null} return <Component {.props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth"";"""
+
+
+"
+import { useEffect } from\';react\' import { useRouter } from\';\';next/router\' import { useSelector } from\';\';react-redux\' \"function\": withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router.push(\'';/login?next=/community/new\')} },[isLoggedIn,router]) \"if\": (!isLoggedIn) { return null} return <Component {...props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth\'';"
+const { useEffect } from";react" import { useRouter } from";";next/router" import { useSelector } from";";react-redux" function: withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router.push("";/login?next=/community/new")} },[isLoggedIn,router]) if: (!isLoggedIn) { return null} return <Component {.props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth"";"""
+
+'"
+import { useEffect } from\';react\' import { useRouter } from\';\';next/router\' import { useSelector } from\';\';react-redux\' \"function\": withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router.push(\'';/login?next=/community/new\')} },[isLoggedIn,router]) \"if\": (!isLoggedIn) { return null} return <Component {...props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth\'';"
+const { useEffect } from";react" import { useRouter } from";";next/router" import { useSelector } from";";react-redux" function: withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router.push("";/login?next=/community/new")} },[isLoggedIn,router]) if: (!isLoggedIn) { return null} return <Component {.props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth"";"""
+'"
+import { useEffect } from\';react\' import { useRouter } from\';\';next/router\' import { useSelector } from\';\';react-redux\' \"function\": withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state && state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router && router.push(\'';/login?next=/community/new\')} },[isLoggedIn,router]) \"if\": (!isLoggedIn) { return null} return <Component {...props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth\'';"
+const { useEffect } from";react" import { useRouter } from";";next/router" import { useSelector } from";";react-redux" function: withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state && state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router && router.push("";/login?next=/community/new")} },[isLoggedIn,router]) if: (!isLoggedIn) { return null} return <Component {.props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth"";"""
+
+"
+const { useEffect } from";react" import { useRouter } from";";next/router" import { useSelector } from";";react-redux" function: withAuth(Component) { const Wrapped = (props) => { const router = useRouter() const isLoggedIn = useSelector((state) => state && state.auth.isLoggedIn) useEffect(() => { if (!isLoggedIn) { router && router.push("";/login?next=/community/new")} },[isLoggedIn,router]) if: (!isLoggedIn) { return null} return <Component {.props}/>} return Wrapped} export default withAuth export default withAuth export default withAuth"";"""
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

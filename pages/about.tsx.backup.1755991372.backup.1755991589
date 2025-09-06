@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function AboutPage() {
   return (
 <<<<<<< HEAD
@@ -37,16 +38,30 @@ export default function About() {
 export default function About() { return <div className="p-8">About</div>; }
 >>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565
 =======
+=======
+
+    </div>
+  );
+}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
 
 export default function AboutPage() {
   return <div>About Zion</div>;
 }
-=======
+
 export default function About(){
   return <div style={{padding:20}}>About Zion</div>
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/about.tsx.backup.1755991372.backup.1755991589
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

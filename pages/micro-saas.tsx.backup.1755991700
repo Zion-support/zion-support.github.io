@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { realMicroSaasServices, getServicesByCategory } from '../data/real-micro-saas-services';
@@ -541,6 +545,7 @@ export default function MicroSaasPage() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
+<<<<<<< HEAD
             <div className="max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 futuristic-glow">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -575,6 +580,9 @@ export default function MicroSaasPage() {
               </div>
 
               {/* CTA Buttons */}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   href="/services" 

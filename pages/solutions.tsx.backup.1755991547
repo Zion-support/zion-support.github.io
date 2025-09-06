@@ -13,6 +13,7 @@ import { motion } from 'framer-motion',
 import React from 'react';
 import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/solutions.tsx.backup.1755991547
@@ -40,6 +41,9 @@ import {
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/solutions.tsx.backup.1755991547
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -47,6 +51,7 @@ import {
 const SolutionsPage: React.FC = () => {
   const industrySolutions = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -539,6 +544,9 @@ const SolutionsPage: React.FC = () => {
               ))}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Industry Solutions
@@ -573,6 +581,7 @@ const SolutionsPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -749,6 +758,9 @@ export default Solutions;
         </section>
       </main>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Layout>
   )
 },

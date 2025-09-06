@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -42,16 +42,24 @@ import { Input } from "@/components/ui/input",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface MobileFilterBarProps {
+=======
+import React from "react","
+import { Button } from "@/components/ui/button",";
+import { Search, Sliders } from "lucide-react";"
+import { Input } from "@/components/ui/input";"
+import { Search, Sliders } from "lucide-react","
+import { Input } from "@/components/ui/input",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  searchTerm: string
-  setSearchTerm: (value: string) => void
-
-  setIsMobileFilterOpen: (isOpen: boolean) => void
+interface MobileFilterBarProps {};
+  searchTerm: string;
+  setSearchTerm: (value: string) => void;
+  setIsMobileFilterOpen: (isOpen: boolean) => void;
 }
+
+
+
 <<<<<<< HEAD
-
-
-
 
 
 
@@ -88,21 +96,25 @@ import { Input } from "@/components/ui/input",}: MobileFilterBarProps) {
 import { Input } from "@/components/ui/input",}: MobileFilterBarProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
+=======
+}: MobileFilterBarProps) {}
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
-      <Button
-        onClick={() => setIsMobileFilterOpen(true)}
-        variant="outline"
+      <Button;
+        onClick={() => setIsMobileFilterOpen(true)}"
+        variant="outline""
         className="w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light"
-      >
+      >"
         <Sliders className="h-4 w-4" />
-        Filter Talents
-      </Button>
-      <div className="relative mt-4">
+        Filter Talents;
+      </Button>"
+      <div className="relative mt-4">"
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />
-        <Input
+        <Input"
           placeholder="Search talents..."
           value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
+          onChange={e => setSearchTerm(e.target.value)}"
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate"
         />
       </div>
@@ -110,6 +122,7 @@ import { Input } from "@/components/ui/input",}: MobileFilterBarProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -127,78 +140,31 @@ import {Input} from "@/components/ui/input";
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from "lucide-react",;
-import { Input } from "@/components/ui/input",;
-<<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"
+import React from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { Search, Sliders } from "lucide-react",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { Input } from "@/components/ui/input",;
+
 interface MobileFilterBarProps {;
   searchTerm: string,;
   setSearchTerm: (value: string) => void,;
   setIsMobileFilterOpen: (isOpen: boolean) => void;
 }
 
-<<<<<<< HEAD
-export function MobileFilterBar(): any ({ ;
-  searchTerm;
-  setSearchTerm, ;
-  setIsMobileFilterOpen ;
-}: MobileFilterBarProps) {;
-  return (
-    <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">;
-      <Button
-=======
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Search, Sliders } from "lucide-react",;
-import { Input } from "@/components/ui/input",;
-;
-interface MobileFilterBarProps {;
-  searchTerm:string,;
-  setSearchTerm:(value:string) => void,;
-  setIsMobileFilterOpen:(isOpen:boolean) => void;
-}
-;
-export function MobileFilterBar({ ;
-  searchTerm,;
-  setSearchTerm, ;
-  setIsMobileFilterOpen ;
-} MobileFilterBarProps) {;
-  return (;
-    <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">;
-      <Button ;
-;
-export function MobileFilterBar({;
-  searchTerm;
-  setSearchTerm;
-  setIsMobileFilterOpen;
-}: MobileFilterBarProps) {;
-  return (;
-    <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">;
-      <Button;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        onClick={() => setIsMobileFilterOpen(true)} ;
-        variant="outline";
+
+        onClick={() => setIsMobileFilterOpen(true)} ;"
+        variant="outline";"
         className="w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light";
-      >;
+      >;"
         <Sliders className="h-4 w-4" />;
         Filter Talents;
       </Button>;
+
+
 <<<<<<< HEAD
-
-      <div className="relative mt-4">;
-        <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />;
-        <Input
-          placeholder="Search talents..."
-          value={searchTerm}
-          onChange={e => setSearchTerm(e && e.target.value)}
-          className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate";
-        />;
-      </div>;
-    </div>;
-  );
-}
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -213,15 +179,22 @@ import React from './react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from './lucide-react';
+=======
+
+import React from './react';'
+import { Button } from '@/components / ui / button';'
+import { Search, Sliders } from './lucide-react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Input } from '@/components / ui / input';
-interface MobileFilterBarProps {
+interface MobileFilterBarProps {}
   search_term: string,
   setSearchTerm: (value: string) => void,
   setIsMobileFilterOpen: (is_open: boolean) => void;
 }
-export /**
- * MobileFilterBar - Function description
+export /**;
+ * MobileFilterBar - Function description;
  */
+<<<<<<< HEAD
 function MobileFilterBar() {
   return (
     <div className="lg:hidden mb - 4 sticky top - 0 z - 20 bg - zion - blue pt - 2 pb-4">;
@@ -240,18 +213,38 @@ function MobileFilterBar() {
           value={search_term}
           on_change={e => setSearchTerm (e.target.value)}
           className="pl - 8 bg - zion - blue border - zion - blue - light text - white placeholder: text - zion-slate";
+=======
+function MobileFilterBar() {}
+  return ("
+    <div className="lg:hidden mb - 4 sticky top - 0 z - 20 bg - zion - blue pt - 2 pb - 4">;
+      <Button;
+        on_click={() => setIsMobileFilterOpen (true)}"
+        variant="outline";"
+        className="w - full flex items - center justify - center gap - 2 border - zion - blue - light text - zion - slate - light";
+      >;"
+        <Sliders className="h - 4 w - 4" />;
+        Filter Talents;
+      </Button>;"
+      <div className="relative mt - 4">;"
+        <Search className="absolute left - 2 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate" />;
+        <Input;"
+          placeholder="Search talents...";
+          value={search_term}
+          on_change={e => setSearchTerm (e.target.value)}"
+          className="pl - 8 bg - zion - blue border - zion - blue - light text - white placeholder: text - zion - slate";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         />;
       </div>;
     </div>);
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
+
+
 ;
 
+<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Search, Sliders} from "lucide-react";
@@ -268,11 +261,15 @@ import {Input} from "@/components/ui/input";
 
       ;
       <div className="relative mt-4">;
+=======
+      ;"
+      <div className="relative mt-4">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />;
-        <Input;
+        <Input;"
           placeholder="Search talents...";
           value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
+          onChange={e => setSearchTerm(e.target.value)}"
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate";
         />;
       </div>;
@@ -280,6 +277,7 @@ import {Input} from "@/components/ui/input";
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -290,3 +288,9 @@ import {Input} from "@/components/ui/input";
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

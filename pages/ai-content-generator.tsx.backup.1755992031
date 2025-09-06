@@ -2,11 +2,16 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Bot, FileText, Zap, Users, Globe, Shield, Check, Star } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function AIContentGeneratorPage() {
   const features = [
     {
+<<<<<<< HEAD
       icon: <Bot className="w-6 h-6" />,
       title: 'AI-Powered Writing',
       description: 'Generate high-quality content using advanced language models',
@@ -30,11 +35,15 @@ export default function AIContentGeneratorPage() {
       description: 'Share projects and collaborate with your team',
       color: 'bg-gradient-to-br from-orange-500 to-red-600'
     }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
+<<<<<<< HEAD
       price: '$19',
       period: '/month',
       description: 'Perfect for individual creators and small teams',
@@ -140,11 +149,15 @@ export default function AIContentGeneratorPage() {
       content: 'The SEO optimization features are incredible. Our organic traffic increased by 40% in just 3 months.',
       rating: 5
     }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>AI Content Generator - Zion Tech Group | Professional AI Writing Tool</title>
         <meta name="description" content="Generate high-quality content with our AI-powered writing tool. Professional plans starting at $19/month. Try free for 7 days." />
         <meta property="og:title" content="AI Content Generator - Zion Tech Group" />
@@ -403,3 +416,6 @@ export default function AIContentGeneratorPage() {
     </>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

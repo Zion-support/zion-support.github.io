@@ -222,6 +222,7 @@ axios.post(url, data, { headers })
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -670,3 +671,6 @@ export default function ApiDocs() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-bb37
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/api-docs.tsx.backup.1755991675
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

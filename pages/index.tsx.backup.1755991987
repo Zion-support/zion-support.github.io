@@ -9,12 +9,16 @@ import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, Exter
 
 export default function HomePage() {
   const heroStats = [
+<<<<<<< HEAD
     { value: '200+', label: 'Revolutionary Micro SaaS Services', color: 'text-cyan-400', icon: <CpuIcon className="w-6 h-6" /> },
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
     { value: '30+', label: 'Day Free Trials', color: 'text-blue-400', icon: <Clock className="w-6 h-6" /> },
     { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Brain className="w-6 h-6" /> },
     { value: '$25B+', label: 'Combined Market Value', color: 'text-yellow-400', icon: <TrendingUp className="w-6 h-6" /> },
     { value: '800%+', label: 'Average ROI', color: 'text-purple-400', icon: <DollarSign className="w-6 h-6" /> },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const heroStats = marketStats;
@@ -90,6 +94,7 @@ export default function HomePage() {
   // Service categories with market insights
   const serviceCategoriesWithInsights = [
     {
+<<<<<<< HEAD
       name: 'Quantum Computing & AI',
       description: 'Revolutionary quantum AI solutions with unprecedented computing power',
       icon: <BrainIcon className="w-8 h-8" />,
@@ -97,6 +102,9 @@ export default function HomePage() {
       growthRate: '400%',
       services: 25,
       color: 'from-purple-500 to-indigo-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       avatar: '🏭',
@@ -138,6 +146,7 @@ export default function HomePage() {
       color: 'from-emerald-500 to-teal-600'
     },
     {
+<<<<<<< HEAD
       title: 'IoT & Edge Computing',
       description: 'Real-time data processing at the edge for instant insights',
       icon: <Cpu className="w-8 h-8" />,
@@ -169,6 +178,9 @@ export default function HomePage() {
       title: 'Real Business Value',
       description: 'Each service solves a specific business problem with measurable ROI and immediate impact.',
       color: 'from-purple-500 to-violet-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '🌐',
@@ -180,6 +192,7 @@ export default function HomePage() {
     },
   ];
 
+<<<<<<< HEAD
   const innovativeServices = [
     {
       name: 'Quantum AI Optimizer',
@@ -190,6 +203,9 @@ export default function HomePage() {
       color: 'from-cyan-500 to-blue-600',
       link: 'https://ziontechgroup.com/quantum-ai-optimizer',
       contactInfo: contactInfo
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'AI Cybersecurity Sentinel',
@@ -237,9 +253,13 @@ export default function HomePage() {
       price: '$399/month',
       category: 'Emerging Technologies',
       icon: '🤖',
+<<<<<<< HEAD
       color: 'from-cyan-600 to-blue-600',
       link: 'https://ziontechgroup.com/autonomous-ai-agents',
       contactInfo: contactInfo
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -798,12 +818,16 @@ export default function HomePage() {
                 </Button>
               </div>
 
+<<<<<<< HEAD
               {/* Final Contact Banner */}
               <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-4">Get in Touch</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                   <div>
                     <Phone className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <div className="text-sm text-gray-400">Mobile</div>
                     <div className="text-white font-medium">{contactInfo.mobile}</div>
                   </div>
@@ -827,7 +851,12 @@ export default function HomePage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </UltraFuturisticBackground>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

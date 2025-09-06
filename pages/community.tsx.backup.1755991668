@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -19,6 +20,9 @@ import {
 import Head from 'next/head';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function CommunityPage() {
 	return (
@@ -30,6 +34,7 @@ export default function CommunityPage() {
 			</Head>
 			<div className="max-w-4xl mx-auto space-y-6 text-slate-200">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Community</h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -48,6 +53,9 @@ export default function CommunityPage() {
 					<li><a className="text-cyan-400 underline" href="/resources">Resources</a></li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 				</ul>
 				<div className="flex gap-3 pt-2">
 					<a href="/contact" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Join a webinar</a>

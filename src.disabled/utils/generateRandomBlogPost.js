@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export: const generateRandomBlogPost = () => {
 export: const generateRandomBlogPost = () => {
 ursor/add-new-services-and-deploy-updates-0462
@@ -94,3 +95,26 @@ export: const generateRandomBlogPost = () => { return { id: Math.random().toStri
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"export": const generateRandomBlogPost = () => {}
+  return {}
+    id: Math.random().toString(36).substr(,2, 9)"
+    "title": 'Sample: Blog Post, ',';'"
+    "excerpt": 'This: is a sample blog post excerpt for demonstration purposes., ',';'"
+    "content": 'This: is a sample blog post content. It contains placeholder text that can be replaced with actual content., ',';'"
+    "author": 'Zion: Team, ',';"
+    "publishedAt": new: Date().toISOString()'
+    tags: ['AI, ', 'Technology', 'Innovation'], ';
+
+
+
+'
+export: const generateRandomBlogPost = () => { return { id: Math.random().toString(36).substr(,2,9) title: 'Sample: Blog Post,','; excerpt: 'This: is a sample blog post excerpt for demonstration purposes.,','; content: 'This: is a sample blog post content. It contains placeholder text that can be replaced with actual content.,','; author: 'Zion: Team,','; publishedAt: new: Date().toISOString(,) tags: ['AI,','Technology','Innovation'],'; slug: 'sample-blog-post,'}'}'"
+    "slug": 'sample-blog-post, '}'}'
+export: const generateRandomBlogPost = () => { return { id: Math.random().toString(36).substr(,2,9) title: 'Sample: Blog Post,','; excerpt: 'This: is a sample blog post excerpt for demonstration purposes.,','; content: 'This: is a sample blog post content. It contains placeholder text that can be replaced with actual content.,','; author: 'Zion: Team,','; publishedAt: new: Date().toISOString(,) tags: ['AI,','Technology','Innovation'],'; slug: 'sample-blog-post,'}'}
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

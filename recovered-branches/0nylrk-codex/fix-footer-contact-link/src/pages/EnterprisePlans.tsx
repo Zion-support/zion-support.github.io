@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -60,13 +61,26 @@ import { SEO } from "@/components/SEO",export default function EnterprisePlans()
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";"
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer";"
+import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero";"
+import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable";"
+import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures";"
+import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA";"
+import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges";"
+import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";"
+import { SEO } from "@/components/SEO";
+export default function EnterprisePlans() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
-      <SEO
-        title="Enterprise Plans - Zion AI Marketplace"
+      <SEO"
+        title="Enterprise Plans - Zion AI Marketplace""
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools."
       />
-      <Header />
+      <Header />"
       <main className="min-h-screen bg-background">
         <EnterpriseHero />
         <EnterprisePricingTable />
@@ -76,6 +90,7 @@ import { SEO } from "@/components/SEO",export default function EnterprisePlans()
         <EnterpriseCTA />
       </main>
       <Footer />
+<<<<<<< HEAD
     </>
 <<<<<<< HEAD
   )
@@ -109,28 +124,29 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 =======
+=======
+    </>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
-
-import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";
-import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";
-import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";
-import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
-import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
-import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
+"
+import React from "react";"
+import {Header} from "@/components/Header";"
+import {Footer} from "@/components/Footer";"
+import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";"
+import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";"
+import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";"
+import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";"
+import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";"
+import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";"
 import {SEO} from "@/components/SEO";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
 
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -162,11 +178,33 @@ export default function EnterprisePlans() {;
       <main className="min-h-screen bg-background">;    <>;
       <SEO;
         title="Enterprise Plans - Zion AI Marketplace";
+=======
+
+"
+import React from "react",;"
+import { Header } from "@/components/Header",;"
+import { Footer } from "@/components/Footer",;"
+import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",;"
+import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable",;"
+import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures",;"
+import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",;"
+import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",;"
+import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",;"
+import { SEO } from "@/components/SEO";
+
+
+
+
+    <>;
+      <SEO;"
+        title="Enterprise Plans - Zion AI Marketplace";'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.";
       />;
 <<<<<<< HEAD
 <<<<<<< HEAD
       <Header />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <main className="min - h-screen bg - background">;
@@ -181,6 +219,11 @@ export default function EnterprisePlans() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <EnterpriseHero />;
         <EnterprisePricingTable />;
         <EnterpriseFeatures />;
@@ -189,27 +232,10 @@ export default function EnterprisePlans() {;
         <EnterpriseCTA />;
       </main>;
       <Footer />;
-<<<<<<< HEAD
 
-    </>);
-<<<<<<< HEAD
-=======
-}
-
-;
-
-
-    </>);
-}
-    </>;
-  ),;
-} export default function EnterprisePlans () {
-  return (<> <SEO title="Enterprise Plans - Zion AI Marketplace" description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools." min-h-screen bg-background" > <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> </main> <Footer /> </> 
-    </>;
-  );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -219,14 +245,13 @@ export default function EnterprisePlans() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     </>);
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -239,3 +264,7 @@ export default function EnterprisePlans() {;
 ;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

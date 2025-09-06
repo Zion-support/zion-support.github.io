@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 pr-12243
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
@@ -72,3 +73,5 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 
 export default EnhancedMarketplaceCard;
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

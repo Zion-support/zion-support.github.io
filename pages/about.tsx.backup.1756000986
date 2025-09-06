@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function Page(){return null}
 =======
@@ -108,6 +109,9 @@ export default function AboutPage() {
 
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -164,6 +168,7 @@ const About: NextPage = () => {
   ];
 
   const achievements = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -248,10 +253,14 @@ const About: NextPage = () => {
             Pioneering the future of autonomous technology and AI-driven innovation
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </p>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -308,10 +317,14 @@ const About: NextPage = () => {
               </p>
             </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       {/* Core Values */}
@@ -469,12 +482,16 @@ const About: NextPage = () => {
               </Card>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
           </div>
         </div>
       </section>
 
       {/* Achievements */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -522,6 +539,9 @@ const About: NextPage = () => {
                 </div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             ))}
           </div>
@@ -529,6 +549,7 @@ const About: NextPage = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -673,6 +694,9 @@ const About: NextPage = () => {
         </div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
         {/* Story Section */}
         <section className="py-20 relative bg-gradient-to-r from-gray-900/50 to-gray-800/50">

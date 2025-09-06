@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
@@ -69,12 +70,15 @@ export default function MainLayout({
 }: MainLayoutProps) {
 
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
 
+<<<<<<< HEAD
 pr-12243
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
@@ -112,3 +116,6 @@ pr-12243
 export default MainLayout;
 
 pr-12243
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

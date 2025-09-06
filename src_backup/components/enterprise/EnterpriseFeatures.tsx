@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseFeatures.tsx
 <<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,40 +24,47 @@ const features = [
   {
 <<<<<<< HEAD
 =======
+=======
+import React from 'react''
+import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
+
+const features = []
+  {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseFeatures.tsx
     title: 'Private Hiring Portal'
-    description:
-      'Create a secure, private hiring portal accessible only to your team members.'
-    icon: Shield
+    description:'
+      'Create a secure, private hiring portal accessible only to your team members.';
+    icon: Shield;
   }
-  {
+  {'
     title: 'Dedicated Talent Pool'
-    description:
+    description:'
       'Access to a curated pool of pre-vetted talent matched to your industry and needs.'
-    icon: Users
+    icon: Users;
   }
-  {
+  {'
     title: 'Custom SLA'
-    description:
+    description:'
       'Get guaranteed response times and dedicated support with our custom SLAs.'
-    icon: Award
+    icon: Award;
   }
-  {
+  {'
     title: 'Branded Onboarding'
-    description:
+    description:'
       'Customize the onboarding experience with your company branding and messaging.'
-    icon: Briefcase
+    icon: Briefcase;
   }
-  {
+  {'
     title: 'Admin Dashboards'
-    description:
+    description:'
       'Powerful analytics and management tools for team leaders and administrators.'
-    icon: Settings
+    icon: Settings;
   }
-  {
+  {'
     title: 'Global Access'
-    description:
+    description:'
       'Connect with talent across multiple regions with localized interfaces.'
-    icon: Globe
+    icon: Globe;
   }
 ]
 <<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
@@ -64,45 +72,46 @@ const features = [
 =======
 =======
 const features = [;
-  {;
+  {;'
     title: 'Private Hiring Portal',;
-    description:;
+    description:;'
       'Create a secure, private hiring portal accessible only to your team members.',;
     icon: Shield,;
   },;
-  {;
+  {;'
     title: 'Dedicated Talent Pool',;
-    description:;
+    description:;'
       'Access to a curated pool of pre-vetted talent matched to your industry and needs.',;
     icon: Users,;
   },;
-  {;
+  {;'
     title: 'Custom SLA',;
-    description:;
+    description:;'
       'Get guaranteed response times and dedicated support with our custom SLAs.',;
     icon: Award,;
   },;
-  {;
+  {;'
     title: 'Branded Onboarding',;
-    description:;
+    description:;'
       'Customize the onboarding experience with your company branding and messaging.',;
     icon: Briefcase,;
   },;
-  {;
+  {;'
     title: 'Admin Dashboards',;
-    description:;
+    description:;'
       'Powerful analytics and management tools for team leaders and administrators.',;
     icon: Settings,;
   },;
-  {;
+  {;'
     title: 'Global Access',;
-    description:;
+    description:;'
       'Connect with talent across multiple regions with localized interfaces.',;
     icon: Globe,;
   },;
 ];
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterpriseFeatures.tsx
 
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseFeatures.tsx
 <<<<<<< HEAD
 =======
 export function EnterpriseFeatures() {;
@@ -125,56 +134,59 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </h2>;
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>;
 import React from 'react';
+=======
+export function EnterpriseFeatures() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseFeatures.tsx
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
 const features = [;
-  {
+  {'
     title: 'Private Hiring Portal',
-    description:;
+    description:;'
       'Create a secure, private hiring portal accessible only to your team members.',
     icon: Shield,
   },
-  {
+  {'
     title: 'Dedicated Talent Pool',
-    description:;
+    description:;'
       'Access to a curated pool of pre - vetted talent matched to your industry and needs.',
     icon: Users,
   },
-  {
+  {'
     title: 'Custom SLA',
-    description:;
+    description:;'
       'Get guaranteed response times and dedicated support with our custom SLAs.',
     icon: Award,
   },
-  {
+  {'
     title: 'Branded Onboarding',
-    description:;
+    description:;'
       'Customize the onboarding experience with your company branding and messaging.',
     icon: Briefcase,
   },
-  {
+  {'
     title: 'Admin Dashboards',
-    description:;
+    description:;'
       'Powerful analytics and management tools for team leaders and administrators.',
     icon: Settings,
   },
-  {
+  {'
     title: 'Global Access',
-    description:;
+    description:;'
       'Connect with talent across multiple regions with localized interfaces.',
     icon: Globe,
   },
 ];
-export /**
- * EnterpriseFeatures - Function description
+export /**;
+ * EnterpriseFeatures - Function description;
  */
-function EnterpriseFeatures() {
-  return (
-    <section id='features' className='py - 20 px - 4 md:px - 6 bg - muted / 50'>;
-      <div className='container mx - auto max - w-6xl'>;
-        <div className='text - center mb - 16'>;
+function EnterpriseFeatures() {}
+  return ('
+    <section id='features' className='py - 20 px - 4 md:px - 6 bg - muted / 50'>;'
+      <div className='container mx - auto max - w-6xl'>;'
+        <div className='text - center mb - 16'>;'
           <h2 className='text - 3xl md:text - 4xl font - bold mb - 4'>;
             Built for Enterprise Needs;
-          </h2>;
+          </h2>;'
           <p className='text - xl text - muted - foreground max - w-2xl mx - auto'>;
 
             Our enterprise solutions offer powerful tools designed for large;
@@ -183,9 +195,10 @@ function EnterpriseFeatures() {
         </div>;
 
 
-
+'
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {features && features.map(feature => (;
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseFeatures.tsx
             <div
 
 <<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
@@ -204,40 +217,57 @@ function EnterpriseFeatures() {
               <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>
 <<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
 <<<<<<< HEAD
+=======
+            <div;
+            <div;
+              key={feature.title}'
+              className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'            >'
+              <div className='h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5'>'
+                <feature.icon className='h-6 w-6 text-primary' />
+              </div>'
+              <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseFeatures.tsx
               <p className='text-muted-foreground'>{feature.description}</p>            </div>
 
             </div>
 
-import React from "react",
+import React from "react",'
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseFeatures.tsx
 const features = [
   {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     title: "Private Hiring Portal",
+=======
+const features = []
+  {"
+    title: "Private Hiring Portal","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseFeatures.tsx
     description: "Create a secure, private hiring portal accessible only to your team members.",
     icon: Shield},
-  {
-    title: "Dedicated Talent Pool",
+  {"
+    title: "Dedicated Talent Pool","
     description: "Access to a curated pool of pre-vetted talent matched to your industry and needs.",
     icon: Users},
-  {
-    title: "Custom SLA",
+  {"
+    title: "Custom SLA","
     description: "Get guaranteed response times and dedicated support with our custom SLAs.",
     icon: Award},
-  {
-    title: "Branded Onboarding",
+  {"
+    title: "Branded Onboarding","
     description: "Customize the onboarding experience with your company branding and messaging.",
     icon: Briefcase},
-  {
-    title: "Admin Dashboards",
+  {"
+    title: "Admin Dashboards","
     description: "Powerful analytics and management tools for team leaders and administrators.",
     icon: Settings},
-  {
-    title: "Global Access",
+  {"
+    title: "Global Access","
     description: "Connect with talent across multiple regions with localized interfaces.",
     icon: Globe}],
 
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseFeatures.tsx
 export function EnterpriseFeatures() {
   return (
     <section id="features" className="py-20 px-4 md:px-6 bg-muted/50">
@@ -300,11 +330,19 @@ export function EnterpriseFeatures() {;
     <section id="features" className="py-20 px-4 md:px-6 bg-muted/50">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-16">;
+=======
+export function EnterpriseFeatures() {}
+  return ("
+    <section id="features" className="py-20 px-4 md:px-6 bg-muted/50">"
+      <div className="container mx-auto max-w-6xl">"
+        <div className="text-center mb-16">";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseFeatures.tsx
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
             Built for Enterprise Needs;
-          </h2>;
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;
+          </h2>"
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs;
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseFeatures.tsx
           </p>;
         </div>;
 <<<<<<< HEAD
@@ -338,15 +376,62 @@ export function EnterpriseFeatures() {;
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterpriseFeatures.tsx
+=======
+          </p>
+        </div>
+"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature) => (
+            <div;
+              key={feature.title}"
+              className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
+            >"
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">"
+                <feature.icon className="h-6 w-6 text-primary" />
+              </div>"
+              <h3 className="font-bold text-xl mb-3">{feature.title}</h3>"
+              <p className="text-muted-foreground">{feature.description}</p>
+            </div>
+"
+import React from "react",;'
+import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
+const features = [;
+  {;"
+    title: "Private Hiring Portal",;"
+    description: "Create a secure, private hiring portal accessible only to your team members.",;
+    icon: Shield},;
+  {;"
+    title: "Dedicated Talent Pool",;"
+    description: "Access to a curated pool of pre-vetted talent matched to your industry and needs.",;
+    icon: Users},;
+  {;"
+    title: "Custom SLA",;"
+    description: "Get guaranteed response times and dedicated support with our custom SLAs.",;
+    icon: Award},;
+  {;"
+    title: "Branded Onboarding",;"
+    description: "Customize the onboarding experience with your company branding and messaging.",;
+    icon: Briefcase},;
+  {;"
+    title: "Admin Dashboards",;"
+    description: "Powerful analytics and management tools for team leaders and administrators.",;
+    icon: Settings},;
+  {;"
+    title: "Global Access",;"
+    description: "Connect with talent across multiple regions with localized interfaces.",;
+    icon: Globe}];
+export function EnterpriseFeatures() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseFeatures.tsx
 }
-
+'
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
           {features.map (feature => (
             <div;
-              key={feature.title}
-              className='bg - card rounded - lg p - 6 shadow - sm border border - border transition - all hover:shadow - md'            >;
-              <div className='h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5'>;
+              key={feature.title}'
+              className='bg - card rounded - lg p - 6 shadow - sm border border - border transition - all hover:shadow - md'            >;'
+              <div className='h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5'>;'
                 <feature.icon className='h - 6 w - 6 text - primary' />;
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseFeatures.tsx
               </div>;
 <<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
 <<<<<<< HEAD
@@ -360,16 +445,23 @@ export function EnterpriseFeatures() {;
               <p className='text - muted - foreground'>{feature.description}</p>            </div>;
               <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;
               <p className="text - muted - foreground">{feature.description}</p>;
+=======
+              </div>;'
+              <h3 className='font - bold text - xl mb - 3'>{feature.title}</h3>;'
+              <p className='text - muted - foreground'>{feature.description}</p>            </div>;"
+              <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;"
+              <p className="text - muted - foreground">{feature.description}</p>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseFeatures.tsx
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
           {features.map ((feature) => (
             <div;
-              key={feature.title}
+              key={feature.title}"
               className="bg - card rounded - lg p - 6 shadow - sm border border - border transition - all hover:shadow - md";
-            >;
-              <div className="h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5">;
+            >;"
+              <div className="h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5">;"
                 <feature.icon className="h - 6 w - 6 text - primary" />;
-              </div>;
-              <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;
+              </div>;"
+              <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;"
               <p className="text - muted - foreground">{feature.description}</p>;
             </div>))}
         </div>;
@@ -379,6 +471,7 @@ export function EnterpriseFeatures() {;
 }
 
 }
+<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseFeatures.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 <<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
@@ -406,3 +499,6 @@ export function EnterpriseFeatures() {;
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterpriseFeatures.tsx
+=======
+;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/enterprise/EnterpriseFeatures.tsx

@@ -1,12 +1,16 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -48,14 +52,35 @@ import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface GeneratedContent {
+=======
+import React, { useState } from "react";"
+import {useToast} from "@/hooks/use-toast";"
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";"
+import {Sparkles} from "lucide-react";"
+import {supabase} from "@/integrations/supabase/client";"
+import {AIListingForm} from "./AIListingForm";"
+import {GeneratedContentDisplay} from "./GeneratedContentDisplay";"
+import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
+"
+import React, { useState } from "react","
+import { useToast } from "@/hooks/use-toast","
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card","
+import { Sparkles } from "lucide-react","
+import { supabase } from "@/integrations/supabase/client","
+import { AIListingForm } from "./AIListingForm","
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay","
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
+interface GeneratedContent {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   description: string,
   tags: string[],
-  suggestedPrice: {
-    min: number,
-    max: number
+  suggestedPrice: {}
+    min: number,;
+    max: number;
   },
   keyPoints: string[]
 
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -70,6 +95,67 @@ import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  description: string;
+  tags: string[]
+  suggestedPrice: {}
+    min: number;
+    max: number;
+  }
+  keyPoints: string[]
+}
+interface AIListingGeneratorProps {}
+  onApplyGenerated?: (content: GeneratedContent) => void;
+  initialValues?: {}
+    title?: string;
+    category?: string;
+    keyFeatures?: string;
+    targetAudience?: string;
+  }
+}
+
+export function AIListingGenerator() { return null; }
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+  const handleGenerate = async ({}
+    title;
+    category;
+    keyFeatures;
+    targetAudience;
+  }: {}
+    title: string;
+    category: string;
+    keyFeatures: string;
+    targetAudience: string;
+  }) => {}
+    setIsLoading(true);
+    try {}
+      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {}
+        body: { title, category, keyFeatures, targetAudience }
+      });
+      if (error) {}
+        throw new Error(error.message)"
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay","
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
+interface GeneratedContent {}
+  description: string,
+  tags: string[],
+  suggestedPrice: {}
+    min: number,;
+    max: number;
+  },
+  keyPoints: string[]"
+import React, { useState } from "react",;"
+import { useToast } from "@/hooks/use-toast",;"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Sparkles } from "lucide-react",;"
+import { supabase } from "@/integrations/supabase/client",;"
+import { AIListingForm } from "./AIListingForm",;"
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;"
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface GeneratedContent {;
 =======
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton",
@@ -81,16 +167,31 @@ import {LoadingContentSkeleton} from "./LoadingContentSkeleton",
   tags: string[],;
   suggestedPrice: {;
     min: number,;
+<<<<<<< HEAD
     max: number;    title?: string;
+=======
+    max: number;
+
+
+
+    title?: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     category?: string;
     keyFeatures?: string;
     targetAudience?: string;
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -105,36 +206,45 @@ import { Sparkles } from './lucide-react';
 import { supabase } from '@/integrations / supabase / client';
 import { AIListingForm } from './AIListingForm';
 import { GeneratedContentDisplay } from './GeneratedContentDisplay';
+=======
+'
+import React, { useState } from './react';'
+import { use_toast } from '@/hooks / use - toast';'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';'
+import { Sparkles } from './lucide-react';'
+import { supabase } from '@/integrations / supabase / client';'
+import { AIListingForm } from './AIListingForm';'
+import { GeneratedContentDisplay } from './GeneratedContentDisplay';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { LoadingContentSkeleton } from './LoadingContentSkeleton';
-interface GeneratedContent {
+interface GeneratedContent {}
   description: string,
   tags: string[],
-  suggested_price: {
+  suggested_price: {}
     min: number,
     max: number;
   }
   key_points: string[];
 }
-interface AIListingGeneratorProps {
+interface AIListingGeneratorProps {}
   onApplyGenerated?: (content: GeneratedContent) => void,
-  initial_values?: {
+  initial_values?: {}
     title?: string;
     category?: string;
     key_features?: string;
     target_audience?: string;
   }
 }
-export /**
- * AIListingGenerator - Function description
+export /**;
+ * AIListingGenerator - Function description;
  */
-function AIListingGenerator() {
+function AIListingGenerator() {}
   const { toast } = use_toast ();
   const [is_loading, setIsLoading] = useState (false);
   const [generated_content, setGeneratedContent] = useState < GeneratedContent | null>(null);
 ;
-<<<<<<< HEAD
-  const handle_generate = async ({
 
+<<<<<<< HEAD
 =======
   },;
   keyPoints: string[];
@@ -179,61 +289,44 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     title;
     category;
     key_features;
     target_audience;
-  }: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  }: {}
     title: string,
     category: string,
     key_features: string,
     target_audience: string;
-  }) => {
+  }) => {}
     setIsLoading (true);
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    try {
-      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+
+
+    try {'
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {}
         body: { title, category, key_features, target_audience }
       });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
       }
-      if (data.error) {
+      if (data.error) {}
         throw new Error(data.error)
       }
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setGeneratedContent(data.generated);
+<<<<<<< HEAD
 =======
       if (data.error) {
         throw new Error(data.error)
@@ -246,17 +339,22 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       toast({
         title: "Content Generated"
+=======
+      toast({"
+        title: "Content Generated""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: "AI has created optimized listing content for you."
       })
-    } catch (error) {
+    } catch (error) {"
       console.error("Error generating content:", error);
-      toast({
-        title: "Generation Failed"
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
+      toast({"
+        title: "Generation Failed""
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.""
         variant: "destructive"
 <<<<<<< HEAD
 <<<<<<< HEAD
       })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -300,41 +398,41 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         throw new Error (error.message);
       }
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         throw new Error (data.error);
       }
       setGeneratedContent (data.generated);
-      toast ({
-        title: "Content Generated",
+      toast ({"
+        title: "Content Generated","
         description: "AI has created optimized listing content for you.";
       });
-    } catch (error) {
+    } catch (error) {"
       console.error ("Error generating content:", error);
-      toast ({
-        title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
+      toast ({"
+        title: "Generation Failed","
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.","
         variant: "destructive";
       });
-    } finally {
+    } finally {}
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleGenerate = async ({;
     title;
     category;
@@ -348,7 +446,7 @@ if ( {) {
   }) => {;
     setIsLoading(true);
 
-    try {;
+    try {;'
       const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
         body: { title, category, keyFeatures, targetAudience }
       });
@@ -362,41 +460,20 @@ if ( {) {
       }
 
       setGeneratedContent(data && data.generated);
-<<<<<<< HEAD
-=======
-          <AIListingForm
-            onSubmit={handleGenerate}
-            isLoading={isLoading}
-          <AIListingForm 
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-;
-      setGeneratedContent(data.generated),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      toast({;
-        title: "Content Generated",;
+
+      toast({;"
+        title: "Content Generated",;"
         description: "AI has created optimized listing content for you.";
       });
     } catch (error) {;
-<<<<<<< HEAD
-      console && console.error("Error generating content:", error);
-      toast({;
-        title: "Generation Failed",;
-        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
-=======
-      console.error("Error generating content:", error),;
-      toast({;
-        title: "Generation Failed",;
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
-  };
 
+<<<<<<< HEAD
   const handleApply = () => {;
     if (generatedContent && onApplyGenerated) {;
       onApplyGenerated(generatedContent);
@@ -412,6 +489,8 @@ if ( {) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
   },
@@ -420,6 +499,7 @@ if ( {) {
 
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     }
@@ -433,27 +513,35 @@ if ( {) {
 =======
       })    <div className="space-y-6">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+    <div className="space-y-6">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
-        <CardHeader>;
-          <CardTitle className="flex items-center text-white">;
+        <CardHeader>;"
+          <CardTitle className="flex items-center text-white">;"
             <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
             AI Listing Optimizer;
-          </CardTitle>;
+          </CardTitle>;"
           <p className="text-sm text-zion-slate-light">;
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing;
           </p>;
         </CardHeader>;
         <CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
 =======
           <AIListingForm
+=======
+          <AIListingForm;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 
-          <AIListingForm 
+          <AIListingForm;
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 
@@ -461,12 +549,17 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             initialValues={initialValues}
           />;
         </CardContent>;
@@ -486,6 +579,11 @@ if ( {) {
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+          <AIListingForm;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             on_submit={handle_generate}
             is_loading={is_loading}
             initial_values={initial_values}
@@ -497,6 +595,7 @@ if ( {) {
         <GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
     </div>);
 }
+<<<<<<< HEAD
 ;
 interface AIListingGeneratorProps {;
   onApplyGenerated?:(content:GeneratedContent) => void,;
@@ -609,3 +708,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

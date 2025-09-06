@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     try {
@@ -49,11 +50,32 @@ if (req.method === 'POST') {
     }
   }
 <<<<<<< HEAD
+=======
 
 
-  res && res.setHeader('Allow', 'GET, POST');
+    try {}
+      const { performance, accessibility, bestPractices, seo } = req && req.body;
+      
+
+      const report = {}
+        performance: performance |0;
+        accessibility: accessibility |0;
+        bestPractices: bestPractices |0;
+        seo: seo |0;
+        generatedAt: new Date().toISOString()
+
+    } catch (error) {'
+      return res && res.status(500).json({ error: 'Failed to update pagespeed report' });
+    }
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+'
+  res && res.setHeader('Allow', 'GET, POST');'
   res && res.status(405).end('Method Not Allowed');
 
+<<<<<<< HEAD
 
 
 
@@ -62,3 +84,12 @@ if (req.method === 'POST') {
   res.status(405).end('Method Not Allowed');
 }
 >>>>>>> pr-12243
+=======
+
+
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

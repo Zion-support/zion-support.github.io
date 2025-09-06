@@ -19,9 +19,10 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export type ServiceType = "service" | "talent" | "equipment" | "";
-export type ServiceCategory = string;
-export type TimelineType = "fixed" | "flexible";
+export type ServiceCategory = string;"
+export type TimelineType = "fixed" | "flexible";"
 export type BudgetType = "fixed" | "hourly" | "range";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,6 +73,16 @@ export interface ListingItem {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+export interface ListingItem {};
+  id: string;
+  title: string;
+  category: string;
+  image?: string;
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export interface ListingItem {;
 
@@ -100,6 +111,7 @@ export interface ContactInfo {;
   phone: string,
   company: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -153,6 +165,9 @@ export interface Budget {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface Budget {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   amount: number;
   maxAmount?: number;
   type: BudgetType;
@@ -170,6 +185,7 @@ export interface QuoteFormData {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface QuoteFormData {
 
@@ -184,6 +200,11 @@ export interface QuoteFormData {;
 export interface QuoteFormData {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
@@ -193,16 +214,13 @@ export interface QuoteFormData {;
 <<<<<<< HEAD
 <<<<<<< HEAD
   endDate?: Date;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   timeline: TimelineType;
   budget: Budget;
   contactInfo: ContactInfo;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   budget: Budget,
@@ -227,24 +245,32 @@ export type QuoteStatus =
   | "accepted"
   | "responded"
   | "closed"
+=======
+export type QuoteStatus ="
+  | "new""
+  | "in_review""
+  | "accepted""
+  | "responded""
+  | "closed"";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | "archived";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
+<<<<<<< HEAD
 =======
   endDate?: Date;  timeline: TimelineType;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface QuoteRequest {
 
+=======
+export interface QuoteRequest {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface QuoteRequest {;
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   timeline: TimelineType;
+<<<<<<< HEAD
 export interface QuoteRequest {
 <<<<<<< HEAD
 
@@ -253,6 +279,9 @@ export interface QuoteRequest {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface QuoteRequest {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -368,6 +397,7 @@ export interface QuoteRequest {;
   created_at: string;
   updated_at: string;
 }
+<<<<<<< HEAD
 ;
   created_at: string,
   updated_at: string;
@@ -386,3 +416,6 @@ export interface QuoteRequest {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

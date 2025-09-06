@@ -4,6 +4,7 @@
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {defineConfig} from 'vitest/config';
 import path from 'node: path'
@@ -30,10 +31,23 @@ export default defineConfig({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   test: {
     environment: 'jsdom';
+=======
+import {defineConfig} from 'vitest/config';'
+import path from 'node: path'
+
+export default defineConfig({};
+';
+      '@': path ;
+
+
+  test: {'
+    environment: 'jsdom';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setupFiles: './tests/setup && setup.ts',
 
     globals: true}});
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,17 +81,45 @@ export default define_config ({
   test: {
     environment: 'jsdom';
     setup_files: './tests / setup.ts',import { defineConfig } from 'vitest/config',;
+=======
+
+
+'
+import {define_config} from 'vitest / config';'
+import path from 'node: path',
+export default define_config ({}
+  resolve: {}
+    alias: {'
+      '@': path.resolve (__dirname, './src')}};
+  test: {';
+    environment: 'jsdom';'
+    setup_files: './tests / setup.ts',
+
+
+
+  resolve: {;
+    alias: {;'
+      '@': path.resolve(__dirname, './src')}};
+  test: {'
+    environment: 'jsdom';'
+    setupFiles: './tests/setup.ts',
+
+
+'
+import { defineConfig } from 'vitest/config',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import path from 'node: path',;
 export default defineConfig({;
   resolve: {;
-    alias: {;
+    alias: {;'
       '@': path.resolve(__dirname, './src')}},;
-  test: {;
-    environment: 'jsdom',;
+  test: {;'
+    environment: 'jsdom',;'
     setupFiles: './tests/setup.ts';
 <<<<<<< HEAD
 <<<<<<< HEAD
     globals: true}});
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -95,3 +137,9 @@ export default defineConfig({;
 =======
     globals: true}});
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

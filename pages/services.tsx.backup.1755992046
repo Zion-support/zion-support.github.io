@@ -318,7 +318,7 @@ export default function ServicesPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
-=======
+
   return (
     <>
       <Head>
@@ -621,6 +621,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Micro SaaS Services */}
       <MicroSaasServices
         title="Our Micro SaaS Portfolio"
@@ -745,6 +746,9 @@ export default function ServicesPage() {
           </div>
         </section>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">
@@ -834,7 +838,7 @@ export default function ServicesPage() {
         </section>
       </div>
     </AdvancedFuturisticBackground>
-=======
+
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />

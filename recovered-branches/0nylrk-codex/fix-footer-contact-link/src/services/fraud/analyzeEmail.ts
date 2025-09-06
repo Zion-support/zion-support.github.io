@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -35,10 +36,15 @@ const domain = email && email.split('@')[1]?.toLowerCase();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 // Email analysis functionality
 import { suspiciousEmailDomains } from "./constants";
+=======
+// Email analysis functionality;
+import { suspiciousEmailDomains } from "./constants";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { EmailAnalysisResult } from "./types";
 /**
- * Analyzes email for suspicious patterns
+ * Analyzes email for suspicious patterns;
  */
+<<<<<<< HEAD
 export const analyzeEmail = (email: string): EmailAnalysisResult => {
 <<<<<<< HEAD
 export const analyzeEmail = (email: string): EmailAnalysisResult => {;
@@ -63,6 +69,17 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
   // Check for suspicious domains
   for (const suspiciousDomain of suspiciousEmailDomains) {
     if (domain.includes(suspiciousDomain)) {
+=======
+export const analyzeEmail = (email: string): EmailAnalysisResult => {";
+  const domain = email.split("@")[1]?.toLowerCase();
+  const reasons: string[] = [];
+"
+  if (!domain) return { isSuspicious: true, reasons: ["Invalid email format"] };
+
+  // Check for suspicious domains;
+  for (const suspiciousDomain of suspiciousEmailDomains) {}
+    if (domain.includes(suspiciousDomain)) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       reasons.push(`Suspicious email domain: ${domain}`);
 <<<<<<< HEAD
       break
@@ -174,30 +191,41 @@ if (return { is_suspicious: true, reasons: ['Invalid email format'] }) {
     }
   }
 
+<<<<<<< HEAD
   return {
     is_suspicious: reasons.length > 0,
     reasons;
   }
 }
 
+=======
+  return {}
+    isSuspicious: reasons.length > 0,
+    reasons,
+  };
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 };
 
 // Email analysis functionality;
-import { suspiciousEmailDomains } from './constants',;
+import { suspiciousEmailDomains } from './constants',;'
 import { EmailAnalysisResult } from './types',;
 ;
 /**;
  * Analyzes email for suspicious patterns;
  */;
-export const analyzeEmail = (email:string):EmailAnalysisResult => {;
+export const analyzeEmail = (email:string):EmailAnalysisResult => {;'
   const domain = email.split('@')[1]?.toLowerCase(),;
   const reasons:string[] = [],;
-  ;
+  ;'
   if (!domain) return { isSuspicious:true, reasons:['Invalid email format'] },;
   ;
   // Check for suspicious domains;
   for (const suspiciousDomain of suspiciousEmailDomains) {;
-    if (domain.includes(suspiciousDomain)) {;
+    if (domain.includes(suspiciousDomain)) {;`
       reasons.push(`Suspicious email domain:${domain}`),;
       break,;
     }
@@ -207,16 +235,17 @@ export const analyzeEmail = (email:string):EmailAnalysisResult => {;
     isSuspicious:reasons.length > 0,;
     reasons;
   },;
-},; // Email analysis functionality 
+},; // Email analysis functionality;
     }
   }
-  return {
-    isSuspicious: reasons.length > 0
-    reasons
+  return {}
+    isSuspicious: reasons.length > 0;
+    reasons;
   }
 }
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -227,3 +256,9 @@ export const analyzeEmail = (email:string):EmailAnalysisResult => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

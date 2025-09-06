@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/listings";&apos,"
 ""
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
@@ -45,3 +46,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de=======
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,""
+";";""
+const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";""""
+import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"","
+""";,
+
+"
+";";"
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

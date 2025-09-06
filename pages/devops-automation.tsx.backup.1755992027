@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 export default function DevOpsAutomationLanding() {
@@ -28,3 +29,6 @@ export default function DevOpsAutomationLanding() {
 		</UltraFuturisticBackground>
 	);
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

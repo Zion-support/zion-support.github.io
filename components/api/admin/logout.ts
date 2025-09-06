@@ -1,13 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-  res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  clearSessionCookie(res);
-
+  res.status(200).json({ ok: true });export default function handler() { return null; }
   res.status(200).json({ ok: true })
 
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {};
   clearSessionCookie(res);
+<<<<<<< HEAD
   res.status(200).json({ ok: true })
 }
 
@@ -22,35 +21,51 @@ pr-12243
   res.status(200).json({ ok: true })
 }
 pr-12243
+=======
+
+
+  res.status(200).json({ ok: true })
+}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { clearSessionCookie } from '../../../utils / admin_auth';
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
-function handler() {
+function handler() {}
   clearSessionCookie (res);
-  res.status (200).json ({ ok: true });export default /**
- * handler - Function description
+  res.status (200).json ({ ok: true });export default /**;
+ * handler - Function description;
  */
-function handler() {
+function handler() {}
   clearSessionCookie (res);
   res.status (200).json ({ ok: true });
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+'
 import { clearSessionCookie } from '../../../utils/adminAuth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  clearSessionCookie(res);
-  res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  clearSessionCookie(res);
+export default function handler() { return null; }
+  res.status(200).json({ ok: true });export default function handler() { return null; }
   res.status(200).json({ ok: true })
 }
 }
 
 }
+<<<<<<< HEAD
   res.status(200).json({ ok: true });
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

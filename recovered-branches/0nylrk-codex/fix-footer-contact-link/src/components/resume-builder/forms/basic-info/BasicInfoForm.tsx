@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -15,10 +16,29 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
+=======
+import React, { useState, useEffect } from "react";"
+import {useForm} from "react-hook-form";"
+import {zodResolver} from "@hookform/resolvers/zod";"
+import {Button} from "@/components/ui/button";"
+import {Form} from "@/components/ui/form";"
+import {Card} from "@/components/ui/card";"
+import {RateOptimizationSection} from "../RateOptimizationSection";"
+import {basicInfoSchema, BasicInfoFormData} from "./schema";"
+import {PersonalInfoFields} from "./PersonalInfoFields";"
+import {ContactFields} from "./ContactFields";
+export interface BasicInfoFormProps {;
+
+  resumeId?: string;
+
+  initialData?: Partial<BasicInfoFormData>;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void;
 }
+<<<<<<< HEAD
 
 export function BasicInfoForm(): any ({;
 import React, { useState, useEffect } from "react",
@@ -30,22 +50,34 @@ import { Card } from "@/components/ui/card",
 import { RateOptimizationSection } from "../RateOptimizationSection",
 import { basicInfoSchema, BasicInfoFormData } from "./schema",
 import { PersonalInfoFields } from "./PersonalInfoFields";
+=======
+"
+import React, { useState, useEffect } from "react","
+import { useForm } from "react-hook-form","
+import { zodResolver } from "@hookform/resolvers/zod","
+import { Button } from "@/components/ui/button","
+import { Form } from "@/components/ui/form","
+import { Card } from "@/components/ui/card","
+import { RateOptimizationSection } from "../RateOptimizationSection","
+import { basicInfoSchema, BasicInfoFormData } from "./schema",";
+import { PersonalInfoFields } from "./PersonalInfoFields";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ContactFields } from "./ContactFields";
-export interface BasicInfoFormProps {
+export interface BasicInfoFormProps {};
   resumeId?: string;
 
   initialData?: Partial<BasicInfoFormData>;
   skills?: string[];
-  yearsExperience?: number;
-import { PersonalInfoFields } from "./PersonalInfoFields",
+  yearsExperience?: number;"
+import { PersonalInfoFields } from "./PersonalInfoFields","
 import { ContactFields } from "./ContactFields",
-export interface BasicInfoFormProps {
+export interface BasicInfoFormProps {}
   resumeId?: string,
   initialData?: Partial<BasicInfoFormData>,
   onSave: (data: BasicInfoFormData) => void,
-  skills?: string[],
-  yearsExperience?: number,
-  onComplete?: () => void
+  skills?: string[],;
+  yearsExperience?: number,;
+  onComplete?: () => void;
 }
 
 export function BasicInfoForm({;
@@ -54,12 +86,18 @@ export function BasicInfoForm({;
   onSave;
   skills = [];
   yearsExperience = 0;
+<<<<<<< HEAD
 export function BasicInfoForm({
+=======
+export function BasicInfoForm({};
+  resumeId;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   initialData = {}
   onSave;
   skills = [];
   yearsExperience = 0;
+<<<<<<< HEAD
   resumeId,
   initialData = {},
   onSave,
@@ -101,25 +139,49 @@ export function BasicInfoForm({
       location: "",
       website: "",
       linkedin: "",
+=======
+
+
+
+
+  onComplete?: () => void;
+}
+
+
+
+
+
+
+
+  onComplete;
+}: BasicInfoFormProps) {}
+  const form = useForm<BasicInfoFormData>({}
+    resolver: zodResolver(basicInfoSchema)
+    defaultValues: {}
+"
+      fullName: "","
+      title: "","
+      email: "","
+      phone: "","
+      location: "","
+      website: "","
+      linkedin: "","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       github: "",
       hourlyRate: 0,
       ...initialData}}),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  useEffect(() => {
-    if (initialData) {
-      Object.entries(initialData).forEach(([key, value]) => {
-        if (value !== undefined) {
+
+  useEffect(() => {}
+    if (initialData) {}
+      Object.entries(initialData).forEach(([key, value]) => {}
+        if (value !== undefined) {}
           form.setValue(key as keyof BasicInfoFormData, value as any)
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
       });
@@ -159,6 +221,19 @@ import { Card } from "@/components/ui/card",;
 import { RateOptimizationSection } from "../RateOptimizationSection",;
 import { basicInfoSchema, BasicInfoFormData } from "./schema",;
 import { PersonalInfoFields } from "./PersonalInfoFields",;
+=======
+
+"
+import React, { useState, useEffect } from "react",;"
+import { useForm } from "react-hook-form",;"
+import { zodResolver } from "@hookform/resolvers/zod",;"
+import { Button } from "@/components/ui/button",;"
+import { Form } from "@/components/ui/form",;"
+import { Card } from "@/components/ui/card",;"
+import { RateOptimizationSection } from "../RateOptimizationSection",;"
+import { basicInfoSchema, BasicInfoFormData } from "./schema",;"
+import { PersonalInfoFields } from "./PersonalInfoFields",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ContactFields } from "./ContactFields",;
 export interface BasicInfoFormProps {;
   resumeId?: string,;
@@ -169,6 +244,7 @@ export interface BasicInfoFormProps {;
   onComplete?: () => void;
 }
 ;
+<<<<<<< HEAD
 export function BasicInfoForm({;
   resumeId,;
   initialData = {},;
@@ -180,6 +256,9 @@ export function BasicInfoForm({;
     onSave(data),;
     if (onComplete) {;
       onComplete();
+=======
+export function BasicInfoForm() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
   },
@@ -188,8 +267,12 @@ export function BasicInfoForm({;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -197,19 +280,75 @@ export function BasicInfoForm({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
 
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
+    <Form {...form}>;"
+      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;"
         <Card className="p-6 space-y-6">;
           <PersonalInfoFields control={form && form.control} />;
           <ContactFields control={form && form.control} />;
-
-          <div className="pt-4 border-t border-gray-200">;
+"
+          <div className="pt-4 border-t border-gray-200">;"
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
+<<<<<<< HEAD
             <RateOptimizationSection
+=======
+
+
+
+
+  };
+
+  }, [initialData, form]),;
+
+  const handleSubmit = (data: BasicInfoFormData) => {;
+          form && form.setValue(key as keyof BasicInfoFormData, value as any);
+        }
+      });
+    }
+  }, [initialData, form]);
+  const handleSubmit = (data: BasicInfoFormData) => {;
+"
+import React, { useState, useEffect } from "react",;"
+import { useForm } from "react-hook-form",;"
+import { zodResolver } from "@hookform/resolvers/zod",;"
+import { Button } from "@/components/ui/button",;"
+import { Form } from "@/components/ui/form",;"
+import { Card } from "@/components/ui/card",;"
+import { RateOptimizationSection } from "../RateOptimizationSection",;"
+import { basicInfoSchema, BasicInfoFormData } from "./schema",;"
+import { PersonalInfoFields } from "./PersonalInfoFields",;"
+import { ContactFields } from "./ContactFields",;
+;
+export interface BasicInfoFormProps {;
+  resumeId?:string,;
+  initialData?:Partial<BasicInfoFormData>,;
+  onSave:(data:BasicInfoFormData) => void,;
+  skills?:string[],;
+  yearsExperience?:number,;
+  onComplete?:() => void;
+}
+;
+export function BasicInfoForm() { return null; }
+      ...initialData}}),;
+;
+      ...initialData}}),;
+  useEffect(() => {;
+    if (initialData) {;
+      Object.entries(initialData).forEach(([key, value]) => {;
+        if (value !== undefined) {;
+
+
+
+
+  return (
+
+
+            <RateOptimizationSection;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -221,11 +360,13 @@ export function BasicInfoForm({;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               yearsExperience={yearsExperience || 0}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   }, [initialData, form]);
-  const handleSubmit = (data: BasicInfoFormData) => {
+  const handleSubmit = (data: BasicInfoFormData) => {}
     onSave(data)
-    if (onComplete) {
+    if (onComplete) {}
       onComplete()
     }
   }
@@ -252,10 +393,11 @@ export function BasicInfoForm({;
   }
 
   return (
-            <RateOptimizationSection
+            <RateOptimizationSection;
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
+<<<<<<< HEAD
               yearsExperience={yearsExperience |0}
               yearsExperience={yearsExperience || 0}
 <<<<<<< HEAD
@@ -269,11 +411,15 @@ export function BasicInfoForm({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+              location={form.getValues("location")}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               rateType="hourly"
             />
           </div>
-        </Card>
-        <div className="flex justify-end">
+        </Card>"
+        <div className="flex justify-end">"
           <Button type="submit">Save Basic Information</Button>
         </div>
       </form>
@@ -282,62 +428,35 @@ export function BasicInfoForm({;
 <<<<<<< HEAD
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-              yearsExperience={yearsExperience || 0}
-              location={form && form.getValues("location")}
+              yearsExperience={yearsExperience || 0}"
+              location={form && form.getValues("location")}"
               rateType="hourly"
             />;
           </div>;
         </Card>;
-<<<<<<< HEAD
-
-=======
-  },;
-;
-  return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
-        <Card className="p-6 space-y-6">;
-          <PersonalInfoFields control={form.control} />;
-          <ContactFields control={form.control} />;
-;
-          <div className="pt-4 border-t border-gray-200">;
-            <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
-            <RateOptimizationSection;
-              control={form.control}
-              setValue={form.setValue}
-              skills={skills}
-              yearsExperience={yearsExperience || 0}
-              location={form.getValues("location")}
-              rateType="hourly";
-            />;
-          </div>;
-        </Card>;
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        <div className="flex justify-end">;
+"
+        <div className="flex justify-end">;"
           <Button type="submit">Save Basic Information</Button>;
         </div>;
       </form>;
     </Form>;
-<<<<<<< HEAD
-  );
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
 }
+<<<<<<< HEAD
 =======
   )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -353,8 +472,19 @@ import { Card } from '@/components / ui / card';
 import { RateOptimizationSection } from '../RateOptimizationSection';
 import { basicInfoSchema, BasicInfoFormData } from './schema';
 import { PersonalInfoFields } from './PersonalInfoFields';
+=======
+import React, { useState, useEffect } from './react';'
+import { use_form } from './react - hook - form';'
+import { zod_resolver } from '@hookform / resolvers / zod';'
+import { Button } from '@/components / ui / button';'
+import { Form } from '@/components / ui / form';'
+import { Card } from '@/components / ui / card';'
+import { RateOptimizationSection } from '../RateOptimizationSection';'
+import { basicInfoSchema, BasicInfoFormData } from './schema';'
+import { PersonalInfoFields } from './PersonalInfoFields';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ContactFields } from './ContactFields';
-export interface BasicInfoFormProps {
+export interface BasicInfoFormProps {};
   resume_id?: string;
   initial_data?: Partial < BasicInfoFormData>;
   on_save: (data: BasicInfoFormData) => void,
@@ -362,20 +492,20 @@ export interface BasicInfoFormProps {
   years_experience?: number;
   on_complete?: () => void;
 }
-export /**
- * BasicInfoForm - Function description
+export /**;
+ * BasicInfoForm - Function description;
  */
-function BasicInfoForm() {
-  const form = use_form < BasicInfoFormData>({
+function BasicInfoForm() {}
+  const form = use_form < BasicInfoFormData>({}
     resolver: zod_resolver (basicInfoSchema),
-    default_values: {
-      full_name: "",
-      title: "",
-      email: "",
-      phone: "",
-      location: "",
-      website: "",
-      linkedin: "",
+    default_values: {"
+      full_name: "","
+      title: "","
+      email: "","
+      phone: "","
+      location: "","
+      website: "","
+      linkedin: "","
       github: "",
       hourly_rate: 0,
       ...initial_data}});
@@ -385,6 +515,7 @@ function BasicInfoForm() {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
   useEffect (() => {
     // Check condition
@@ -486,3 +617,6 @@ if (initialData) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

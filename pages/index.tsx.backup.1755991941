@@ -6,6 +6,7 @@ import FuturisticCard, { ServiceCard, FeatureCard } from '../components/ui/Futur
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices, getRevolutionaryServices, serviceCategories } from '../data/enhanced-real-micro-saas-services';
 
@@ -18,6 +19,9 @@ export default function HomePage() {
     { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Brain className="w-6 h-6" /> },
     { value: '$25B+', label: 'Combined Market Value', color: 'text-yellow-400', icon: <TrendingUp className="w-6 h-6" /> },
     { value: '800%+', label: 'Average ROI', color: 'text-purple-400', icon: <DollarSign className="w-6 h-6" /> },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const heroStats = marketStats;
@@ -34,7 +38,11 @@ export default function HomePage() {
     {
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: '300+ Real Micro SaaS Services',
+<<<<<<< HEAD
       description: 'Complete portfolio of fully functional micro SaaS tools with real implementations, not just mockups. Starting from $49/month with 21-day free trials. All services are production-ready and deployed.',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
       gradient: 'from-cyan-400 to-blue-500',
     },
@@ -78,6 +86,7 @@ export default function HomePage() {
       savings: 'Save 55% vs. competitors'
     },
     {
+<<<<<<< HEAD
       title: '🤖 Quantum Robotics Platform',
       description: 'Quantum-enhanced autonomous robotics with human-level intelligence. Achieve 2500% ROI within 18 months.',
       price: 'Starting at $3,999/month',
@@ -229,10 +238,14 @@ export default function HomePage() {
       icon: <DollarSign className="w-8 h-8" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category.includes('Finance')).length,
       color: 'from-emerald-500 to-teal-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground variant="quantum">
       <Head>
         <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions</title>
@@ -418,6 +431,9 @@ export default function HomePage() {
                     <div className="font-semibold text-white">{service.title}</div>
                     <div className="text-sm text-slate-400">{service.description}</div>
                   </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <div className="text-cyan-400 font-bold text-lg mb-4">{service.price}</div>
                 <p className="text-slate-400 mb-4">{service.marketData}</p>
@@ -564,6 +580,7 @@ export default function HomePage() {
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 href="/contact"
@@ -571,6 +588,9 @@ export default function HomePage() {
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Button>
               <Button
                 href="/micro-saas"
@@ -580,9 +600,13 @@ export default function HomePage() {
                 Explore Services
               </Button>
             </div>
+<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
     </UltraAdvancedFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

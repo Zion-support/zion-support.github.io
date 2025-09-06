@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -173,40 +174,75 @@ export default function HelpCenterPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======import React from './react';
 import HelpCenter from "@/components / support / HelpCenter";
+=======
+import React from "react";"
+import HelpCenter from "@/components/support/HelpCenter";"
+import { SEO } from "@/components/SEO";
+export default function HelpCenterPage() {}
+  return (
+    <>
+      <SEO"
+        title="Help Center | Zion AI Marketplace""
+        description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team.""
+        keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace"
+      />
+      <HelpCenter />
+    </>;
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+import React from './react';"
+import HelpCenter from "@/components / support / HelpCenter";'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { SEO } from '@/components / SEO';
-export default /**
- * HelpCenterPage - Function description
+export default /**;
+ * HelpCenterPage - Function description;
  */
-function HelpCenterPage() {
+function HelpCenterPage() {}
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>;
       <SEO;
+<<<<<<< HEAD
         title="Help Center | Zion AI Marketplace";
         description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team.";
+=======
+
+
+"
+        title="Help Center | Zion AI Marketplace";"
+        description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team.";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace";
       />;
       <HelpCenter />;
 
+<<<<<<< HEAD
     </>;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 }
 ;
+
 
 <<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-;
-
     </>;
   ),;
 } export default function HelpCenterPage () {
@@ -232,3 +268,10 @@ function HelpCenterPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+    </>);
+}
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

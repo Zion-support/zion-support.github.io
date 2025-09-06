@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,21 +34,34 @@ console.log ('🚀 Starting development server...'),
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
+
+const { spawn } = require ('child_process'),'
+console.log ('🚀 Starting development server...'),
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+
+'
 console.log('🚀 Starting development server...'),;
 
-// Start the development server;
-const dev_process = spawn ('npm', ['rundev'], {
+// Start the development server;'
+const dev_process = spawn ('npm', ['rundev'], {'
   stdio: 'inherit',
   shell: true;
-}),
-dev_process.on ('error', (error) => {
+}),'
+dev_process.on ('error', (error) => {'
   console.error ('Error starting development server:', error);
-}),
-dev_process.on ('close', (code) => {
+}),'
+dev_process.on ('close', (code) => {}
   console.log (`Development server exited with code ${code}`);
 }),
 // Handle process termination;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,46 +75,49 @@ const { spawn } = require('child_process');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 console.log('🚀 Starting development server...');
-// Start the development server;
+// Start the development server;'
 const devProcess = spawn('npm', ['rundev'], {stdio: 'inherit';
   shell: true;
-});
+});'
 devProcess.on('error', (error) => {console.error('Error starting development server:', error);
-});
+});'`
 devProcess.on('close', (code) => {console.log(`Development server exited with code ${code}`);
 });
-// Handle process termination;
-process.on('SIGINT', () => {console.log('Stopping development server...');
+// Handle process termination;'
+process.on('SIGINT', () => {console.log('Stopping development server...');'
   devProcess.kill('SIGINT');
   process.exit(0);
-});
-process.on('SIGTERM', () => {console.log('Stopping development server...');
+});'
+process.on('SIGTERM', () => {console.log('Stopping development server...');'
   devProcess.kill('SIGTERM');
   process.exit(0);
-});
-const { spawn } = require('child_process'),;
-const { spawn } = require('child_process');
+});'
+const { spawn } = require('child_process'),;'
+const { spawn } = require('child_process');'
 console.log('🚀 Starting development server...'),;
-// Start the development server;
-const devProcess = spawn('npm', ['rundev'], {;
+// Start the development server;'
+const devProcess = spawn('npm', ['rundev'], {;'
   stdio: 'inherit',;
   shell: true;
-}),;
-devProcess.on('error', (error) => {;
+}),;'
+devProcess.on('error', (error) => {;'
   console.error('Error starting development server:', error);
-}),;
-devProcess.on('close', (code) => {;
+}),;'
+devProcess.on('close', (code) => {;`
   console.log(`Development server exited with code ${code}`);
 }),;
-// Handle process termination;
-process.on('SIGINT', () => {;
-  console.log('Stopping development server...'),;
+// Handle process termination;'
+process.on('SIGINT', () => {;'
+  console.log('Stopping development server...'),;'
   devProcess.kill('SIGINT'),;
   process.exit(0);
-}),;
-process.on('SIGTERM', () => {;
-  console.log('Stopping development server...'),;
+}),;'
+process.on('SIGTERM', () => {;'
+  console.log('Stopping development server...'),;'
   devProcess.kill('SIGTERM'),;
   process.exit(0);
 <<<<<<< HEAD
@@ -108,6 +125,7 @@ process.on('SIGTERM', () => {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,14 +140,20 @@ process.on('SIGTERM', () => {;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 process.on ('SIGINT', () => {
   console.log ('Stopping development server...'),
+=======
+'
+process.on ('SIGINT', () => {'
+  console.log ('Stopping development server...'),'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   dev_process.kill ('SIGINT'),
   process.exit (0);
-}),
-process.on ('SIGTERM', () => {
-  console.log ('Stopping development server...'),
+}),'
+process.on ('SIGTERM', () => {'
+  console.log ('Stopping development server...'),'
   dev_process.kill ('SIGTERM'),
   process.exit (0);
 }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,3 +204,12 @@ process.on('SIGTERM', () => {;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

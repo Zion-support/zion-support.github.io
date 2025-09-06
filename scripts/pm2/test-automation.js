@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
 <<<<<<< HEAD
@@ -31,6 +32,8 @@
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync, spawn } = require("child_process");"const fs = require("fs");"const path = require("path");class TestAutomation { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "test-automation"; this.testCoverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) | 80;" this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === "true";" this.parallelTests = process.env.PARALLEL_TESTS === "true";" this.logFile = "logs/pm2/test-automation.log";" this.errorFile = "logs/pm2/test-automation-error.log"; this.ensureLogDirectory(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile, logMessage); } catch (error) {" console.error("Failed to write to log file:", error.message); } } error(message) {" this.log(message, "ERROR"); try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`); } catch (err) {" console.error("Failed to write to error file:", err.message); } } async runTests() {" this.log("Starting test automation."); try { / Check if test script exists in package.json" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));" const testScript = packageJson.scripts?.test | packageJson.scripts?.["test:smoke"]; if (!testScript) {" this.log("No test script found in package.json", "WARNING");" return { success: false, message: "No test script configured" }; }` this.log(`Running tests with script: ${testScript}`); / Run tests with coverage if available const testCommand = this.parallelTests ? ` `${testScript} --coverage --maxWorkers=4` : ` `${testScript} --coverage`; const result = execSync(testCommand, { " encoding: "utf8", cwd: process.cwd()," stdio: "pipe" }); " this.log("Tests completed successfully");` this.log(`Test output: ${result}`); return { success: true, output: result }; } catch (error) {` this.error(`Test execution failed: ${error.message}`); if (this.autoRetryFailed) {" this.log("Retrying failed tests."); return await this.retryTests(); } return { success: false, error: error.message }; } } async retryTests() {" this.log("Retrying failed tests."); try {" const retryCommand = "npm test -- --passWithNoTests --maxWorkers=1"; const result = execSync(retryCommand, { " encoding: "utf8", cwd: process.cwd()," stdio: "pipe" }); " this.log("Retry tests completed"); return { success: true, output: result, retried: true }; } catch (error) {` this.error(`Retry tests also failed: ${error.message}`); return { success: false, error: error.message, retried: true }; } } async checkTestCoverage() {" this.log("Checking test coverage."); try { / Look for coverage report const coverageFiles = [" "coverage/coverage-summary.json"," "coverage/lcov-report/index.html"," "coverage/coverage-final.json" ]; let coverageData = null; for (const file of coverageFiles) { if (fs.existsSync(file)) {" if (file.endsWith(".json")) {" coverageData = JSON.parse(fs.readFileSync(file, "utf8")); break; } } } if (!coverageData) {" this.log("No coverage data found", "WARNING");" return { success: false, message: "No coverage data available" }; } / Extract coverage percentage let coveragePercentage = 0; if (coverageData.total) { coveragePercentage = coverageData.total.lines?.pct | 0; } else if (coverageData.coverageMap) { / Handle different coverage formats const statements = coverageData.coverageMap.statements | {}; const covered = Object.values(statements).filter(s => s > 0).length; const total = Object.keys(statements).length; coveragePercentage = total > 0 ? (covered / total) * 100 : 0; } ` this.log(`Test coverage: ${coveragePercentage.toFixed(2)}%`); if (coveragePercentage < this.testCoverageThreshold) {"` this.log(`Coverage below threshold (${this.testCoverageThreshold}%)`, "WARNING"); return { success: false, coverage: coveragePercentage, threshold: this.testCoverageThreshold }; } ` this.log(`Coverage meets threshold (${this.testCoverageThreshold}%)`); return { success: true, coverage: coveragePercentage, threshold: this.testCoverageThreshold }; } catch (error) {` this.error(`Coverage check failed: ${error.message}`); return { success: false, error: error.message }; } } async generateTestReport() {" this.log("Generating test report."); try { const report = { timestamp: new Date().toISOString(), processName: this.processName, testResults: await this.runTests(), coverageResults: await this.checkTestCoverage(), environment: { nodeVersion: process.version, platform: process.platform, cwd: process.cwd() } };` const reportFile = `test-reports/test-report-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir, { recursive: true }); } fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));` this.log(`Test report saved to: ${reportFile}`); return report; } catch (error) {` this.error(`Failed to generate test report: ${error.message}`); return null; } } async start() {` this.log(`Starting ${this.processName}.`); / Run initial test await this.generateTestReport(); / Set up periodic testing const interval = 3 * 60 * 60 * 1000; / 3 hours setInterval(async () => {" this.log("Running scheduled test automation."); await this.generateTestReport(); }, interval);` this.log(`${this.processName} started successfully`); }}/ Start the automation if this script is run directlyif (require.main === module) { const automation = new TestAutomation(); automation.start().catch(error => {" console.error("Test automation failed to start:", error); process.exit(1); });}module.exports = TestAutomation;"`"`
 #!/usr/bin/env node,
@@ -38,16 +41,16 @@
  * PM2 Test Automation Script;
  * Runs automated tests and monitors test coverage;
  */;
-const { execSync, spawn } = require('child_process');',
-const fs = require('fs');';,
+const { execSync, spawn } = require('child_process');','
+const fs = require('fs');';,'
 const path = require('path');';
 class TestAutomation {}
-  constructor() {}
+  constructor() {}'
     this.processName = process.env.PM2_PROCESS_NAME || 'test-automation';',
-    this.testCoverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;,
-    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true';';
-    this.parallelTests = process.env.PARALLEL_TESTS === 'true';';
-    this.logFile = 'logs/pm2/test-automation.log';';
+    this.testCoverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;,'
+    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true';';'
+    this.parallelTests = process.env.PARALLEL_TESTS === 'true';';'
+    this.logFile = 'logs/pm2/test-automation.log';';'
     this.errorFile = 'logs/pm2/test-automation-error.log';';
     this.ensureLogDirectory();
   }
@@ -56,132 +59,137 @@ class TestAutomation {}
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true });,
     }
-  }
+  }'
   log(message, level = 'INFO') {'}
-    const timestamp = new Date().toISOString();,
+    const timestamp = new Date().toISOString();,`
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
     );
     _console.log(logMessage.trim());
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
-    } catch (error) {}
+    } catch (error) {}'
       _console.error('Failed to write to log file:', error.message);',
     }
   }
-  error(message) {}
+  error(message) {}'
     this.log(message, 'ERROR');',
-    try {}
+    try {}`
       fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);,
-    } catch (err) {}
+    } catch (err) {}'
       _console.error('Failed to write to error file:', err.message);',
     }
   }
-  async runTests() {}
+  async runTests() {}'
     this.log('Starting test automation...');',
-    try {
-      // Check if test script exists in package.json}
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));',
+    try {}
+      // Check if test script exists in package.json}'
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));','
       const testScript = packageJson.scripts?.test || packageJson.scripts?.['test: smoke'];,
-      if (!testScript) {}
-        this.log('No test script found in package.json', 'WARNING');',
+      if (!testScript) {}'
+        this.log('No test script found in package.json', 'WARNING');','
         return { success: false, message: 'No test script configured' };',
-      }
+      }`
       this.log(`Running tests with script: ${testScript}`);,
       // Run tests with coverage if available;
-      const testCommand = this.parallelTests ? 
-        `${testScript} --coverage --maxWorkers=4` : 
+      const testCommand = this.parallelTests ? `
+        `${testScript} --coverage --maxWorkers=4` : `
 ;        `${testScript} --coverage`;,
-      const result = execSync(testCommand, { }),
+      const result = execSync(testCommand, { }),'
         encoding: 'utf8,',
-        cwd: process.cwd(),
+        cwd: process.cwd(),'
         stdio: 'pipe',
-;      });,
-      this.log('Tests completed successfully');';
+;      });,'
+      this.log('Tests completed successfully');';`
       this.log(`Test output: ${result}`);,
       return { success: true, output: result };,
-    } catch (error) {}
+    } catch (error) {}`
       this.error(`Test execution failed: ${error.message}`);,
-      if (this.autoRetryFailed) {}
+      if (this.autoRetryFailed) {}'
         this.log('Retrying failed tests...');',
         return await this.retryTests();,
       }
       return { success: false, error: error.message };,
     }
   }
-  async retryTests() {}
+  async retryTests() {}'
     this.log('Retrying failed tests...');',
-    try {}
+    try {}'
       const retryCommand = 'npm test -- --passWithNoTests --maxWorkers=1';',
-      const result = execSync(retryCommand, { }),
+      const result = execSync(retryCommand, { }),'
         encoding: 'utf8,',
-        cwd: process.cwd(),
+        cwd: process.cwd(),'
         stdio: 'pipe',
-;      });,
+;      });,'
       this.log('Retry tests completed');';
       return { success: true, output: result, retried: true };,
-    } catch (error) {}
+    } catch (error) {}`
       this.error(`Retry tests also failed: ${error.message}`);,
       return { success: false, error: error.message, retried: true };,
     }
   }
-  async checkTestCoverage() {}
+  async checkTestCoverage() {}'
     this.log('Checking test coverage...');',
-    try {
+    try {}
       // Look for coverage report}
-      const coverageFiles = [;,
-        'coverage/coverage-summary.json',',
-        'coverage/lcov-report/index.html',',
+      const coverageFiles = [;,'
+        'coverage/coverage-summary.json',','
+        'coverage/lcov-report/index.html',','
         'coverage/coverage-final.json'';,
 ;      ];,
       let coverageData = null;
       for (const file of, coverageFiles) {}
-        if (fs.existsSync(file)) {}
-          if (file.endsWith('.json')) {'}
+        if (fs.existsSync(file)) {}'
+          if (file.endsWith('.json')) {'}'
             coverageData = JSON.parse(fs.readFileSync(file, 'utf8'));',
             break;,
           }
         }
       }
-      if (!coverageData) {}
-        this.log('No coverage data found', 'WARNING');',
+      if (!coverageData) {}'
+        this.log('No coverage data found', 'WARNING');','
         return { success: false, message: 'No coverage data available' };',
       }
       // Extract coverage percentage;
       let coveragePercentage = 0;
       if (coverageData.total) {}
         coveragePercentage = coverageData.total.lines?.pct || 0;,
-      } else if (coverageData.coverageMap) {
+      } else if (coverageData.coverageMap) {}
         // Handle different coverage formats}
         const statements = coverageData.coverageMap.statements || {};,
         const covered = Object.values(statements).filter(s => s > 0).length;,
         const total = Object.keys(statements).length;
         coveragePercentage = total > 0 ? (covered / total) * 100 : 0;
-      }
+      }`
       this.log(`Test coverage: ${coveragePercentage.toFixed(2)}%`);,
-      if (coveragePercentage < this.testCoverageThreshold) {}
+      if (coveragePercentage < this.testCoverageThreshold) {}'`
         this.log(`Coverage below threshold (${this.testCoverageThreshold}%)`, 'WARNING');',
         return { }
           success: false, 
           coverage: coveragePercentage,
           threshold: this.testCoverageThreshold,
         };,
-      }
+      }`
       this.log(`Coverage meets threshold (${this.testCoverageThreshold}%)`);,
       return { }
         success: true, 
         coverage: coveragePercentage,
         threshold: this.testCoverageThreshold,
       };,
-    } catch (error) {}
+    } catch (error) {}`
       this.error(`Coverage check failed: ${error.message}`);,
       return { success: false, error: error.message };,
     }
   }
-  async generateTestReport() {}
+  async generateTestReport() {}'
     this.log('Generating test report...');',
     try {}
       const report = {}
@@ -194,41 +202,42 @@ class TestAutomation {}
           platform: process.platform,
           cwd: process.cwd(),
         }
-;      };,
+;      };,`
       const reportFile = `test-reports/test-report-${Date.now()}.json`;,
       const reportDir = path.dirname(reportFile);,
       if (!fs.existsSync(reportDir)) {}
         fs.mkdirSync(reportDir, { recursive: true });,
       }
-      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,
+      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,`
       this.log(`Test report saved to: ${reportFile}`);,
       return report;
-    } catch (error) {}
+    } catch (error) {}`
       this.error(`Failed to generate test report: ${error.message}`);,
       return null;,
     }
   }
-  async start() {}
+  async start() {}`
     this.log(`Starting ${this.processName}...`);,
     // Run initial test;
     await this.generateTestReport();
     // Set up periodic testing;
     const interval = 3 * 60 * 60 * 1000; // 3 hours;
-    setInterval(async () => {}
+    setInterval(async () => {}'
       this.log('Running scheduled test automation...');',
       await this.generateTestReport();,
-    }, interval);,
+    }, interval);,`
     this.log(`${this.processName} started successfully`);,
   }
 }
 // Start the automation if this script is run directly;
 if (require.main === module) {}
   const automation = new TestAutomation();,
-  automation.start().catch(error => {}),
+  automation.start().catch(error => {}),'
     _console.error('Test automation failed to start:', error);',
     process.exit(1);,
   });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = TestAutomation;module.exports = TestAutomation;
@@ -294,39 +303,59 @@ class TestAutomation {; constructor() {; this.projectRoot = process.cwd(); this.
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs');
 const path = require('path');
+=======
+
+#!/usr/bin/env node;'
+const fs = require('fs');'
+const path = require('path');'
+const { execSync } = require('child_process');'`
+class TestAutomation {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async runTests() {try {; this.log('🧪 Running test suite...'); const startTime = Date.now(); // Run tests; const testResult = execSync('npm test', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'}); const duration = Date.now() - startTime; return {success: true, output: testResult, duration: duration}} catch (error) {return {; success: false, error: error.message, output: error.stdout |error.stderr |'''
+    duration: 0}}}; async runLintTests() {try {; this.log('🔍 Running lint tests...'); const lintResult = execSync('npm run lint', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'}); return {success: true'
+    output: lintResult}} catch (error) {return {; success: false, error: error.message, output: error.stdout |error.stderr |''}}}; async runTypeCheck() {try {; this.log('📝 Running type check...'); const typeResult = execSync('npm run type-check', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'}); return {success: true'
+    output: typeResult}} catch (error) {return {; success: false, error: error.message, output: error.stdout |error.stderr |''}}}; async generateReport(testResults, lintResults, typeResults) {const report = {; timestamp: new Date().toISOString(), summary: {'
+      , tests: testResults.success ? 'passed': 'failed', lint: lintResults.success ? 'passed': 'failed', typeCheck: typeResults.success ? 'passed': 'failed''
+    overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed': 'failed'
+    }
+    details: {, tests: testResults, lint: lintResults'`
+    typeCheck: typeResults}; recommendations: []}; // Generate recommendations; if (!testResults.success) {report.recommendations.push({; priority: 'high', message: 'Tests are failing', action: 'Fix failing tests before deployment'})}; if (!lintResults.success) {report.recommendations.push({; priority: 'medium', message: 'Lint issues detected', action: 'Run npm run lint: fix to auto-fix issues'})}; if (!typeResults.success) {report.recommendations.push({; priority: 'high', message: 'TypeScript errors detected', action: 'Fix TypeScript errors before deployment'})}; return report}; async saveReport(report) {try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })}; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}; async run() {this.log('🚀 Starting Test Automation...'); this.log(`Project root: ${this.projectRoot}`); try {// Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true })}; // Run all tests; const testResults = await this.runTests(); const lintResults = await this.runLintTests(); const typeResults = await this.runTypeCheck(); // Generate report; this.log('📊 Generating test report...'); const report = await this.generateReport(testResults, lintResults, typeResults); // Save report; await this.saveReport(report); const duration = Date.now() - this.startTime; // Log summary; this.log('\n📊 Test Automation Summary: '); this.log(`Tests: ${report.summary.tests}`); this.log(`Lint: ${report.summary.lint}`); this.log(`Type Check: ${report.summary.typeCheck}`); this.log(`Overall: ${report.summary.overall}`); this.log(`Duration: ${duration}ms`); if (report.recommendations.length > 0) {this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {this.log('\n✨ All tests passed!')}`
+} catch (error) {this.log(`❌ Error running test automation: ${error.message}`); process.exit(1)}}}'
+const fs = require('fs');'
+const path = require('path');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const { execSync } = require('child_process');
-;
-class TestAutomation {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'); this.startTime = Date.now()};
-; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
-; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)}};
+;'
+class TestAutomation {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'); this.startTime = Date.now()};`
+; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;'
+; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)}};'
 ; async runTests() {; try {; this.log('🧪 Running test suite...');
-; const startTime = Date.now();
+; const startTime = Date.now();'
 ; // Run tests; const testResult = execSync('npm test', {; cwd: this.projectRoot; stdio: 'pipe'; encoding: 'utf8'});
-; const duration = Date.now() - startTime;
-; return {; success: true; output: testResult; duration: duration}} catch (error) {; return {; success: false; error: error.message; output: error.stdout || error.stderr || ''; duration: 0}}};
-; async runLintTests() {; try {; this.log('🔍 Running lint tests...');
-; const lintResult = execSync('npm run lint', {; cwd: this.projectRoot; stdio: 'pipe'; encoding: 'utf8'});
-; return {; success: true; output: lintResult}} catch (error) {; return {; success: false; error: error.message; output: error.stdout || error.stderr || ''}}};
-; async runTypeCheck() {; try {; this.log('📝 Running type check...');
-; const typeResult = execSync('npm run type-check', {; cwd: this.projectRoot; stdio: 'pipe'; encoding: 'utf8'});
-; return {; success: true; output: typeResult}} catch (error) {; return {; success: false; error: error.message; output: error.stdout || error.stderr || ''}}};
-; async generateReport(testResults, lintResults, typeResults) {; const report = {; timestamp: new Date().toISOString(); summary: {; tests: testResults.success ? 'passed': 'failed'; lint: lintResults.success ? 'passed': 'failed'; typeCheck: typeResults.success ? 'passed': 'failed'; overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed': 'failed'}; details: {; tests: testResults; lint: lintResults; typeCheck: typeResults}; recommendations: []};
-; // Generate recommendations; if (!testResults.success) {; report.recommendations.push({; priority: 'high'; message: 'Tests are failing'; action: 'Fix failing tests before deployment'})};
-; if (!lintResults.success) {; report.recommendations.push({; priority: 'medium'; message: 'Lint issues detected'; action: 'Run npm run lint: fix to auto-fix issues'})};
+; const duration = Date.now() - startTime;'
+; return {; success: true; output: testResult; duration: duration}} catch (error) {; return {; success: false; error: error.message; output: error.stdout || error.stderr || ''; duration: 0}}};'
+; async runLintTests() {; try {; this.log('🔍 Running lint tests...');'
+; const lintResult = execSync('npm run lint', {; cwd: this.projectRoot; stdio: 'pipe'; encoding: 'utf8'});'
+; return {; success: true; output: lintResult}} catch (error) {; return {; success: false; error: error.message; output: error.stdout || error.stderr || ''}}};'
+; async runTypeCheck() {; try {; this.log('📝 Running type check...');'
+; const typeResult = execSync('npm run type-check', {; cwd: this.projectRoot; stdio: 'pipe'; encoding: 'utf8'});'
+; return {; success: true; output: typeResult}} catch (error) {; return {; success: false; error: error.message; output: error.stdout || error.stderr || ''}}};'
+; async generateReport(testResults, lintResults, typeResults) {; const report = {; timestamp: new Date().toISOString(); summary: {; tests: testResults.success ? 'passed': 'failed'; lint: lintResults.success ? 'passed': 'failed'; typeCheck: typeResults.success ? 'passed': 'failed'; overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed': 'failed'}; details: {; tests: testResults; lint: lintResults; typeCheck: typeResults}; recommendations: []};'
+; // Generate recommendations; if (!testResults.success) {; report.recommendations.push({; priority: 'high'; message: 'Tests are failing'; action: 'Fix failing tests before deployment'})};'
+; if (!lintResults.success) {; report.recommendations.push({; priority: 'medium'; message: 'Lint issues detected'; action: 'Run npm run lint: fix to auto-fix issues'})};'
 ; if (!typeResults.success) {; report.recommendations.push({; priority: 'high'; message: 'TypeScript errors detected'; action: 'Fix TypeScript errors before deployment'})};
 ; return report};
-; async saveReport(report) {; try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })};
-; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {; this.log(`Error saving report: ${error.message}`)}};
-; async run() {; this.log('🚀 Starting Test Automation...'); this.log(`Project root: ${this.projectRoot}`);
+; async saveReport(report) {; try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })};`
+; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {; this.log(`Error saving report: ${error.message}`)}};'`
+; async run() {; this.log('🚀 Starting Test Automation...'); this.log(`Project root: ${this.projectRoot}`);'
 ; try {; // Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true })};
-; // Run all tests; const testResults = await this.runTests(); const lintResults = await this.runLintTests(); const typeResults = await this.runTypeCheck();
+; // Run all tests; const testResults = await this.runTests(); const lintResults = await this.runLintTests(); const typeResults = await this.runTypeCheck();'
 ; // Generate report; this.log('📊 Generating test report...'); const report = await this.generateReport(testResults, lintResults, typeResults);
 ; // Save report; await this.saveReport(report);
-; const duration = Date.now() - this.startTime;
-; // Log summary; this.log('\n📊 Test Automation Summary: '); this.log(`Tests: ${report.summary.tests}`); this.log(`Lint: ${report.summary.lint}`); this.log(`Type Check: ${report.summary.typeCheck}`); this.log(`Overall: ${report.summary.overall}`); this.log(`Duration: ${duration}ms`);
-; if (report.recommendations.length > 0) {; this.log('\n💡 Recommendations: '); report.recommendations.forEach(rec = > {; this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {; this.log('\n✨ All tests passed!')};
+; const duration = Date.now() - this.startTime;'`
+; // Log summary; this.log('\n📊 Test Automation Summary: '); this.log(`Tests: ${report.summary.tests}`); this.log(`Lint: ${report.summary.lint}`); this.log(`Type Check: ${report.summary.typeCheck}`); this.log(`Overall: ${report.summary.overall}`); this.log(`Duration: ${duration}ms`);'`
+; if (report.recommendations.length > 0) {; this.log('\n💡 Recommendations: '); report.recommendations.forEach(rec = > {; this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {; this.log('\n✨ All tests passed!')};`
 } catch (error) {; this.log(`❌ Error running test automation: ${error.message}`); process.exit(1)}}};
 ;
+<<<<<<< HEAD
 #!/usr/bin/env node;
 
 
@@ -371,34 +400,41 @@ const testAutomation = new TestAutomation();
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+// Run the test automation;
+const testAutomation = new TestAutomation();
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 class TestAutomation {;
   constructor() {;
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log');
+    this.projectRoot = process.cwd();'
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log');'
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json');
     this.startTime = Date.now();
 };
 ;
   log(message) {;
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();`
     const logMessage = `[${timestamp}] ${message}\n`;
 ;
     try {;
       fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {;
+    } catch (error) {;'
       console.error('Error writing to log file:', error.message);
 };
 };
 ;
   async runTests() {;
-    try {;
+    try {;'
       this.log('🧪 Running test suite...');
 ;
       const startTime = Date.now();
 ;
-      // Run tests;
-      const testResult = execSync('npm test', {;
-        cwd: this.projectRoot, stdio: 'pipe',
+      // Run tests;'
+      const testResult = execSync('npm test', {;'
+        cwd: this.projectRoot, stdio: 'pipe','
         encoding: 'utf8',
       });
 ;
@@ -409,18 +445,18 @@ class TestAutomation {;
         duration: duration, ,
     } catch (error) {;
       return {;
-        success: false, error: error.message,
+        success: false, error: error.message,'
         output: error.stdout || error.stderr || '', duration: 0,
       ;
 };
 };
 ;
   async runLintTests() {;
-    try {;
+    try {;'
       this.log('🔍 Running lint tests...');
-;
-      const lintResult = execSync('npm run lint', {;
-        cwd: this.projectRoot, stdio: 'pipe',
+;'
+      const lintResult = execSync('npm run lint', {;'
+        cwd: this.projectRoot, stdio: 'pipe','
         encoding: 'utf8',
       });
 ;
@@ -429,17 +465,17 @@ class TestAutomation {;
       ;
     } catch (error) {;
       return {;
-        success: false, error: error.message,
+        success: false, error: error.message,'
         output: error.stdout || error.stderr || '', ,
 };
 };
 ;
   async runTypeCheck() {;
-    try {;
+    try {;'
       this.log('📝 Running type check...');
-;
-      const typeResult = execSync('npm run type-check', {;
-        cwd: this.projectRoot, stdio: 'pipe',
+;'
+      const typeResult = execSync('npm run type-check', {;'
+        cwd: this.projectRoot, stdio: 'pipe','
         encoding: 'utf8',
       });
 ;
@@ -448,15 +484,15 @@ class TestAutomation {;
       ;
     } catch (error) {;
       return {;
-        success: false, error: error.message,
+        success: false, error: error.message,'
         output: error.stdout || error.stderr || '', ,
 };
 };
 ;
   async generateReport(testResults, lintResults, typeResults) {;
     const report = {;
-      timestamp: new Date().toISOString(), summary: {,
-        tests: testResults.success ? 'passed' : 'failed', lint: lintResults.success ? 'passed' : 'failed',
+      timestamp: new Date().toISOString(), summary: {,'
+        tests: testResults.success ? 'passed' : 'failed', lint: lintResults.success ? 'passed' : 'failed','
         typeCheck: typeResults.success ? 'passed' : 'failed', overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed' : 'failed',
       ;
       details: {, tests: testResults,
@@ -466,22 +502,22 @@ class TestAutomation {;
 ;
     // Generate recommendations;
     if (!testResults.success) {;
-      report.recommendations.push({;
-        priority: 'high', message: 'Tests are failing',
+      report.recommendations.push({;'
+        priority: 'high', message: 'Tests are failing','
         action: 'Fix failing tests before deployment',
       });
 };
 ;
     if (!lintResults.success) {;
-      report.recommendations.push({;
-        priority: 'medium', message: 'Lint issues detected',
+      report.recommendations.push({;'
+        priority: 'medium', message: 'Lint issues detected','
         action: 'Run npm run lint:fix to auto-fix issues',
       });
 };
 ;
     if (!typeResults.success) {;
-      report.recommendations.push({;
-        priority: 'high', message: 'TypeScript errors detected',
+      report.recommendations.push({;'
+        priority: 'high', message: 'TypeScript errors detected','
         action: 'Fix TypeScript errors before deployment',
       });
 };
@@ -496,18 +532,18 @@ class TestAutomation {;
         fs.mkdirSync(reportDir, { recursive: true });
       };
 ;
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`
       this.log(`Report saved to: ${this.reportFile}`);
-    } catch (error) {;
+    } catch (error) {;`
       this.log(`Error saving report: ${error.message}`);
 };
 };
 ;
-  async run() {;
-    this.log('🚀 Starting Test Automation...');
+  async run() {;'
+    this.log('🚀 Starting Test Automation...');`
     this.log(`Project root: ${this.projectRoot}`);
 ;
-    try {;
+    try {;'
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {;
@@ -519,7 +555,7 @@ class TestAutomation {;
       const lintResults = await this.runLintTests();
       const typeResults = await this.runTypeCheck();
 ;
-      // Generate report;
+      // Generate report;'
       this.log('📊 Generating test report...');
       const report = await this.generateReport(testResults, lintResults, typeResults);
 ;
@@ -528,24 +564,24 @@ class TestAutomation {;
 ;
       const duration = Date.now() - this.startTime;
 ;
-      // Log summary;
-      this.log('\n📊 Test Automation Summary: '),
-      this.log(`Tests: ${report.summary.tests}`);
-      this.log(`Lint: ${report.summary.lint}`);
-      this.log(`Type Check: ${report.summary.typeCheck}`);
-      this.log(`Overall: ${report.summary.overall}`);
+      // Log summary;'
+      this.log('\n📊 Test Automation Summary: '),`
+      this.log(`Tests: ${report.summary.tests}`);`
+      this.log(`Lint: ${report.summary.lint}`);`
+      this.log(`Type Check: ${report.summary.typeCheck}`);`
+      this.log(`Overall: ${report.summary.overall}`);`
       this.log(`Duration: ${duration}ms`);
 ;
-      if (report.recommendations.length > 0) {;
-        this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec => {,
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
+      if (report.recommendations.length > 0) {;'
+        this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec => {,`
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);`
           this.log(`    Action: ${rec.action}`);
         });
-      } else {;
+      } else {;'
         this.log('\n✨ All tests passed!');
       };
 ;
-    } catch (error) {;
+    } catch (error) {;`
       this.log(`❌ Error running test automation: ${error.message}`);
       process.exit(1);
 };
@@ -557,40 +593,40 @@ const testAutomation = new TestAutomation();
 testAutomation.run().catch(error => {;
   process.exit(1);
 });
-#!/usr/bin/env node,
-const fs = require('fs'),
-const path = require('path'),
+#!/usr/bin/env node,'
+const fs = require('fs'),'
+const path = require('path'),'
 const { execSync } = require('child_process'),
 ,
 class TestAutomation {,
   constructor() {,
-    this.projectRoot = process.cwd(),
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'),
+    this.projectRoot = process.cwd(),'
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'),'
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'),
     this.startTime = Date.now(),
   };
 ,
   log(message) {,
-    const timestamp = new Date().toISOString(),
+    const timestamp = new Date().toISOString(),`
     const logMessage = `[${timestamp}] ${message}\n`,
 ,
     try {,
       fs.appendFileSync(this.logFile, logMessage),
-    } catch (error) {,
+    } catch (error) {,'
       console.error('Error writing to log file:', error.message),
     };
   };
 ,
   async runTests() {,
-    try {,
+    try {,'
       this.log('🧪 Running test suite...'),
 ,
       const startTime = Date.now(),
 ,
-      // Run tests,
+      // Run tests,'
       const testResult = execSync('npm test', {,
-        cwd: this.projectRoot,
-        stdio: 'pipe',
+        cwd: this.projectRoot,'
+        stdio: 'pipe','
         encoding: 'utf8',
       }),
 ,
@@ -604,7 +640,7 @@ class TestAutomation {,
     } catch (error) {,
       return {,
         success: false,
-        error: error.message,
+        error: error.message,'
         output: error.stdout || error.stderr || '',
         duration: 0,
       };
@@ -612,12 +648,12 @@ class TestAutomation {,
   };
 ,
   async runLintTests() {,
-    try {,
+    try {,'
       this.log('🔍 Running lint tests...'),
-,
+,'
       const lintResult = execSync('npm run lint', {,
-        cwd: this.projectRoot,
-        stdio: 'pipe',
+        cwd: this.projectRoot,'
+        stdio: 'pipe','
         encoding: 'utf8',
       }),
 ,
@@ -628,19 +664,19 @@ class TestAutomation {,
     } catch (error) {,
       return {,
         success: false,
-        error: error.message,
+        error: error.message,'
         output: error.stdout || error.stderr || '',
       };
     };
   };
 ,
   async runTypeCheck() {,
-    try {,
+    try {,'
       this.log('📝 Running type check...'),
-,
+,'
       const typeResult = execSync('npm run type-check', {,
-        cwd: this.projectRoot,
-        stdio: 'pipe',
+        cwd: this.projectRoot,'
+        stdio: 'pipe','
         encoding: 'utf8',
       }),
 ,
@@ -651,7 +687,7 @@ class TestAutomation {,
     } catch (error) {,
       return {,
         success: false,
-        error: error.message,
+        error: error.message,'
         output: error.stdout || error.stderr || '',
       };
     };
@@ -660,10 +696,10 @@ class TestAutomation {,
   async generateReport(testResults, lintResults, typeResults) {,
     const report = {,
       timestamp: new Date().toISOString(),
-      summary: {,
-        tests: testResults.success ? 'passed' : 'failed',
-        lint: lintResults.success ? 'passed' : 'failed',
-        typeCheck: typeResults.success ? 'passed' : 'failed',
+      summary: {,'
+        tests: testResults.success ? 'passed' : 'failed','
+        lint: lintResults.success ? 'passed' : 'failed','
+        typeCheck: typeResults.success ? 'passed' : 'failed','
         overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed' : 'failed',
       },
       details: {,
@@ -676,25 +712,25 @@ class TestAutomation {,
 ,
     // Generate recommendations,
     if (!testResults.success) {,
-      report.recommendations.push({,
-        priority: 'high',
-        message: 'Tests are failing',
+      report.recommendations.push({,'
+        priority: 'high','
+        message: 'Tests are failing','
         action: 'Fix failing tests before deployment',
       }),
     };
 ,
     if (!lintResults.success) {,
-      report.recommendations.push({,
-        priority: 'medium',
-        message: 'Lint issues detected',
+      report.recommendations.push({,'
+        priority: 'medium','
+        message: 'Lint issues detected','
         action: 'Run npm run lint:fix to auto-fix issues',
       }),
     };
 ,
     if (!typeResults.success) {,
-      report.recommendations.push({,
-        priority: 'high',
-        message: 'TypeScript errors detected',
+      report.recommendations.push({,'
+        priority: 'high','
+        message: 'TypeScript errors detected','
         action: 'Fix TypeScript errors before deployment',
       }),
     };
@@ -709,18 +745,18 @@ class TestAutomation {,
         fs.mkdirSync(reportDir, { recursive: true }),
       };
 ,
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),`
       this.log(`Report saved to: ${this.reportFile}`),
-    } catch (error) {,
+    } catch (error) {,`
       this.log(`Error saving report: ${error.message}`),
     };
   };
 ,
-  async run() {,
-    this.log('🚀 Starting Test Automation...'),
+  async run() {,'
+    this.log('🚀 Starting Test Automation...'),`
     this.log(`Project root: ${this.projectRoot}`),
 ,
-    try {,
+    try {,'
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
@@ -732,7 +768,7 @@ class TestAutomation {,
       const lintResults = await this.runLintTests(),
       const typeResults = await this.runTypeCheck(),
 ,
-      // Generate report,
+      // Generate report,'
       this.log('📊 Generating test report...'),
       const report = await this.generateReport(testResults, lintResults, typeResults),
 ,
@@ -741,25 +777,25 @@ class TestAutomation {,
 ,
       const duration = Date.now() - this.startTime,
 ,
-      // Log summary,
-      this.log('\n📊 Test Automation Summary: '),
-      this.log(`Tests: ${report.summary.tests}`),
-      this.log(`Lint: ${report.summary.lint}`),
-      this.log(`Type Check: ${report.summary.typeCheck}`),
-      this.log(`Overall: ${report.summary.overall}`),
+      // Log summary,'
+      this.log('\n📊 Test Automation Summary: '),`
+      this.log(`Tests: ${report.summary.tests}`),`
+      this.log(`Lint: ${report.summary.lint}`),`
+      this.log(`Type Check: ${report.summary.typeCheck}`),`
+      this.log(`Overall: ${report.summary.overall}`),`
       this.log(`Duration: ${duration}ms`),
 ,
-      if (report.recommendations.length > 0) {,
+      if (report.recommendations.length > 0) {,'
         this.log('\n💡 Recommendations: '),
-        report.recommendations.forEach(rec => {,
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
+        report.recommendations.forEach(rec => {,`
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),`
           this.log(`    Action: ${rec.action}`),
         }),
-      } else {,
+      } else {,'
         this.log('\n✨ All tests passed!'),
       };
 ,
-    } catch (error) {,
+    } catch (error) {,`
       this.log(`❌ Error running test automation: ${error.message}`),
       process.exit(1),
     };
@@ -774,6 +810,7 @@ testAutomation.run().catch(error => {,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -782,6 +819,11 @@ testAutomation.run().catch(error => {,
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync, spawn } = require("child_process");"const fs = require("fs");"const path = require("path");class TestAutomation { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "test-automation"; this.testCoverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) | 80;" this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === "true";" this.parallelTests = process.env.PARALLEL_TESTS === "true";" this.logFile = "logs/pm2/test-automation.log";" this.errorFile = "logs/pm2/test-automation-error.log"; this.ensureLogDirectory(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile, logMessage); } catch (error) {" console.error("Failed to write to log file:", error.message); } } error(message) {" this.log(message, "ERROR"); try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`); } catch (err) {" console.error("Failed to write to error file:", err.message); } } async runTests() {" this.log("Starting test automation."); try { / Check if test script exists in package.json" const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));" const testScript = packageJson.scripts?.test | packageJson.scripts?.["test:smoke"]; if (!testScript) {" this.log("No test script found in package.json", "WARNING");" return { success: false, message: "No test script configured" }; }` this.log(`Running tests with script: ${testScript}`); / Run tests with coverage if available const testCommand = this.parallelTests ? ` `${testScript} --coverage --maxWorkers=4` : ` `${testScript} --coverage`; const result = execSync(testCommand, { " encoding: "utf8", cwd: process.cwd()," stdio: "pipe" }); " this.log("Tests completed successfully");` this.log(`Test output: ${result}`); return { success: true, output: result }; } catch (error) {` this.error(`Test execution failed: ${error.message}`); if (this.autoRetryFailed) {" this.log("Retrying failed tests."); return await this.retryTests(); } return { success: false, error: error.message }; } } async retryTests() {" this.log("Retrying failed tests."); try {" const retryCommand = "npm test -- --passWithNoTests --maxWorkers=1"; const result = execSync(retryCommand, { " encoding: "utf8", cwd: process.cwd()," stdio: "pipe" }); " this.log("Retry tests completed"); return { success: true, output: result, retried: true }; } catch (error) {` this.error(`Retry tests also failed: ${error.message}`); return { success: false, error: error.message, retried: true }; } } async checkTestCoverage() {" this.log("Checking test coverage."); try { / Look for coverage report const coverageFiles = [" "coverage/coverage-summary.json"," "coverage/lcov-report/index.html"," "coverage/coverage-final.json" ]; let coverageData = null; for (const file of coverageFiles) { if (fs.existsSync(file)) {" if (file.endsWith(".json")) {" coverageData = JSON.parse(fs.readFileSync(file, "utf8")); break; } } } if (!coverageData) {" this.log("No coverage data found", "WARNING");" return { success: false, message: "No coverage data available" }; } / Extract coverage percentage let coveragePercentage = 0; if (coverageData.total) { coveragePercentage = coverageData.total.lines?.pct | 0; } else if (coverageData.coverageMap) { / Handle different coverage formats const statements = coverageData.coverageMap.statements | {}; const covered = Object.values(statements).filter(s => s > 0).length; const total = Object.keys(statements).length; coveragePercentage = total > 0 ? (covered / total) * 100 : 0; } ` this.log(`Test coverage: ${coveragePercentage.toFixed(2)}%`); if (coveragePercentage < this.testCoverageThreshold) {"` this.log(`Coverage below threshold (${this.testCoverageThreshold}%)`, "WARNING"); return { success: false, coverage: coveragePercentage, threshold: this.testCoverageThreshold }; } ` this.log(`Coverage meets threshold (${this.testCoverageThreshold}%)`); return { success: true, coverage: coveragePercentage, threshold: this.testCoverageThreshold }; } catch (error) {` this.error(`Coverage check failed: ${error.message}`); return { success: false, error: error.message }; } } async generateTestReport() {" this.log("Generating test report."); try { const report = { timestamp: new Date().toISOString(), processName: this.processName, testResults: await this.runTests(), coverageResults: await this.checkTestCoverage(), environment: { nodeVersion: process.version, platform: process.platform, cwd: process.cwd() } };` const reportFile = `test-reports/test-report-${Date.now()}.json`; const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir, { recursive: true }); } fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));` this.log(`Test report saved to: ${reportFile}`); return report; } catch (error) {` this.error(`Failed to generate test report: ${error.message}`); return null; } } async start() {` this.log(`Starting ${this.processName}.`); / Run initial test await this.generateTestReport(); / Set up periodic testing const interval = 3 * 60 * 60 * 1000; / 3 hours setInterval(async () => {" this.log("Running scheduled test automation."); await this.generateTestReport(); }, interval);` this.log(`${this.processName} started successfully`); }}/ Start the automation if this script is run directlyif (require.main === module) { const automation = new TestAutomation(); automation.start().catch(error => {" console.error("Test automation failed to start:", error); process.exit(1); });}module.exports = TestAutomation;"`"`
 <<<<<<< HEAD
 =======
@@ -793,17 +835,17 @@ origin/cursor/integrate-build-improve-and-re-verify-242d#!/usr/bin/env node/usr/
 /**;
  * PM2 Test Automation Script;
  * Runs automated tests and monitors test coverage;
- */;
-const { execSync, spawn } = require('child_process');',
-const fs = require('fs');';,
+ */;'
+const { execSync, spawn } = require('child_process');','
+const fs = require('fs');';,'
 const path = require('path');';
 class TestAutomation {}
-  constructor() {}
+  constructor() {}'
     this.processName = process.env.PM2_PROCESS_NAME || 'test-automation';',
-    this.testCoverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;,
-    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true';';
-    this.parallelTests = process.env.PARALLEL_TESTS === 'true';';
-    this.logFile = 'logs/pm2/test-automation.log';';
+    this.testCoverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;,'
+    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true';';'
+    this.parallelTests = process.env.PARALLEL_TESTS === 'true';';'
+    this.logFile = 'logs/pm2/test-automation.log';';'
     this.errorFile = 'logs/pm2/test-automation-error.log';';
     this.ensureLogDirectory();
   }
@@ -812,128 +854,128 @@ class TestAutomation {}
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true });,
     }
-  }
+  }'
   log(message, level = 'INFO') {'}
-    const timestamp = new Date().toISOString();,
+    const timestamp = new Date().toISOString();,`
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
     );
     _console.log(logMessage.trim());
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
-    } catch (error) {}
+    } catch (error) {}'
       _console.error('Failed to write to log file:', error.message);',
     }
   }
-  error(message) {}
+  error(message) {}'
     this.log(message, 'ERROR');',
-    try {}
+    try {}`
       fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);,
-    } catch (err) {}
+    } catch (err) {}'
       _console.error('Failed to write to error file:', err.message);',
     }
   }
-  async runTests() {}
+  async runTests() {}'
     this.log('Starting test automation...');',
-    try {
-      // Check if test script exists in package.json}
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));',
+    try {}
+      // Check if test script exists in package.json}'
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));','
       const testScript = packageJson.scripts?.test || packageJson.scripts?.['test: smoke'];,
-      if (!testScript) {}
-        this.log('No test script found in package.json', 'WARNING');',
+      if (!testScript) {}'
+        this.log('No test script found in package.json', 'WARNING');','
         return { success: false, message: 'No test script configured' };',
-      }
+      }`
       this.log(`Running tests with script: ${testScript}`);,
       // Run tests with coverage if available;
-      const testCommand = this.parallelTests ? 
-        `${testScript} --coverage --maxWorkers=4` : 
+      const testCommand = this.parallelTests ? `
+        `${testScript} --coverage --maxWorkers=4` : `
 ;        `${testScript} --coverage`;,
-      const result = execSync(testCommand, { }),
+      const result = execSync(testCommand, { }),'
         encoding: 'utf8,',
-        cwd: process.cwd(),
+        cwd: process.cwd(),'
         stdio: 'pipe',
-;      });,
-      this.log('Tests completed successfully');';
+;      });,'
+      this.log('Tests completed successfully');';`
       this.log(`Test output: ${result}`);,
       return { success: true, output: result };,
-    } catch (error) {}
+    } catch (error) {}`
       this.error(`Test execution failed: ${error.message}`);,
-      if (this.autoRetryFailed) {}
+      if (this.autoRetryFailed) {}'
         this.log('Retrying failed tests...');',
         return await this.retryTests();,
       }
       return { success: false, error: error.message };,
     }
   }
-  async retryTests() {}
+  async retryTests() {}'
     this.log('Retrying failed tests...');',
-    try {}
+    try {}'
       const retryCommand = 'npm test -- --passWithNoTests --maxWorkers=1';',
-      const result = execSync(retryCommand, { }),
+      const result = execSync(retryCommand, { }),'
         encoding: 'utf8,',
-        cwd: process.cwd(),
+        cwd: process.cwd(),'
         stdio: 'pipe',
-;      });,
+;      });,'
       this.log('Retry tests completed');';
       return { success: true, output: result, retried: true };,
-    } catch (error) {}
+    } catch (error) {}`
       this.error(`Retry tests also failed: ${error.message}`);,
       return { success: false, error: error.message, retried: true };,
     }
   }
-  async checkTestCoverage() {}
+  async checkTestCoverage() {}'
     this.log('Checking test coverage...');',
-    try {
+    try {}
       // Look for coverage report}
-      const coverageFiles = [;,
-        'coverage/coverage-summary.json',',
-        'coverage/lcov-report/index.html',',
+      const coverageFiles = [;,'
+        'coverage/coverage-summary.json',','
+        'coverage/lcov-report/index.html',','
         'coverage/coverage-final.json'';,
 ;      ];,
       let coverageData = null;
       for (const file of, coverageFiles) {}
-        if (fs.existsSync(file)) {}
-          if (file.endsWith('.json')) {'}
+        if (fs.existsSync(file)) {}'
+          if (file.endsWith('.json')) {'}'
             coverageData = JSON.parse(fs.readFileSync(file, 'utf8'));',
             break;,
           }
         }
       }
-      if (!coverageData) {}
-        this.log('No coverage data found', 'WARNING');',
+      if (!coverageData) {}'
+        this.log('No coverage data found', 'WARNING');','
         return { success: false, message: 'No coverage data available' };',
       }
       // Extract coverage percentage;
       let coveragePercentage = 0;
       if (coverageData.total) {}
         coveragePercentage = coverageData.total.lines?.pct || 0;,
-      } else if (coverageData.coverageMap) {
+      } else if (coverageData.coverageMap) {}
         // Handle different coverage formats}
         const statements = coverageData.coverageMap.statements || {};,
         const covered = Object.values(statements).filter(s => s > 0).length;,
         const total = Object.keys(statements).length;
         coveragePercentage = total > 0 ? (covered / total) * 100 : 0;
-      }
+      }`
       this.log(`Test coverage: ${coveragePercentage.toFixed(2)}%`);,
-      if (coveragePercentage < this.testCoverageThreshold) {}
+      if (coveragePercentage < this.testCoverageThreshold) {}'`
         this.log(`Coverage below threshold (${this.testCoverageThreshold}%)`, 'WARNING');',
         return { }
           success: false, 
           coverage: coveragePercentage,
           threshold: this.testCoverageThreshold,
         };,
-      }
+      }`
       this.log(`Coverage meets threshold (${this.testCoverageThreshold}%)`);,
       return { }
         success: true, 
         coverage: coveragePercentage,
         threshold: this.testCoverageThreshold,
       };,
-    } catch (error) {}
+    } catch (error) {}`
       this.error(`Coverage check failed: ${error.message}`);,
       return { success: false, error: error.message };,
     }
   }
-  async generateTestReport() {}
+  async generateTestReport() {}'
     this.log('Generating test report...');',
     try {}
       const report = {}
@@ -946,37 +988,37 @@ class TestAutomation {}
           platform: process.platform,
           cwd: process.cwd(),
         }
-;      };,
+;      };,`
       const reportFile = `test-reports/test-report-${Date.now()}.json`;,
       const reportDir = path.dirname(reportFile);,
       if (!fs.existsSync(reportDir)) {}
         fs.mkdirSync(reportDir, { recursive: true });,
       }
-      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,
+      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,`
       this.log(`Test report saved to: ${reportFile}`);,
       return report;
-    } catch (error) {}
+    } catch (error) {}`
       this.error(`Failed to generate test report: ${error.message}`);,
       return null;,
     }
   }
-  async start() {}
+  async start() {}`
     this.log(`Starting ${this.processName}...`);,
     // Run initial test;
     await this.generateTestReport();
     // Set up periodic testing;
     const interval = 3 * 60 * 60 * 1000; // 3 hours;
-    setInterval(async () => {}
+    setInterval(async () => {}'
       this.log('Running scheduled test automation...');',
       await this.generateTestReport();,
-    }, interval);,
+    }, interval);,`
     this.log(`${this.processName} started successfully`);,
   }
 }
 // Start the automation if this script is run directly;
 if (require.main === module) {}
   const automation = new TestAutomation();,
-  automation.start().catch(error => {}),
+  automation.start().catch(error => {}),'
     _console.error('Test automation failed to start:', error);',
     process.exit(1);,
   });
@@ -984,13 +1026,25 @@ if (require.main === module) {}
 module.exports = TestAutomation;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 testAutomation.run().catch(error = > {process.exit(1)});
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -1012,37 +1066,59 @@ testAutomation.run().catch(error = > {process.exit(1)});
 #!/usr/bin/env node,;
 const fs = require('fs'),;
 const path = require('path'),;
+=======
+
+
+testAutomation.run().catch(error = > {process.exit(1)});
+
+
+
+ursor/automate-test-improve-and-merge-code-8ee2;
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45;
+origin/cursor/integrate-build-improve-and-re-verify-242d;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+testAutomation.run().catch(error = > {process.exit(1)});
+origin/main;
+origin/automation-improvements-final;
+testAutomation.run().catch(error = > {process.exit(1)});
+
+testAutomation.run().catch(error = > {process.exit(1)});
+#!/usr/bin/env node,;'
+const fs = require('fs'),;'
+const path = require('path'),;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const { execSync } = require('child_process'),;
 ,;
 class TestAutomation {,;
   constructor() {,;
-    this.projectRoot = process.cwd(),;
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'),;
+    this.projectRoot = process.cwd(),;'
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'),;'
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'),;
     this.startTime = Date.now();
 },;
 ,;
   log(message) {,;
-    const timestamp = new Date().toISOString(),;
+    const timestamp = new Date().toISOString(),;`
     const logMessage = `[${timestamp}] ${message}\n`,;
 ,;
     try {,;
       fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {,;
+    } catch (error) {,;'
       console.error('Error writing to log: file:', error.message);
 }
 },;
 ,;
   async runTests() {,;
-    try {,;
+    try {,;'
       this.log('🧪 Running test suite...'),;
 ,;
       const startTime = Date.now(),;
 ,;
-      // Run tests,;
+      // Run tests,;'
       const testResult = execSync('npm test', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -1055,19 +1131,19 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '',;
         duratio: n: 0;
 }
 },;
 ,;
   async runLintTests() {,;
-    try {,;
+    try {,;'
       this.log('🔍 Running lint tests...'),;
-,;
+,;'
       const lintResult = execSync('npm run lint', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -1077,18 +1153,18 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '';
 }
 },;
 ,;
   async runTypeCheck() {,;
-    try {,;
+    try {,;'
       this.log('📝 Running type check...'),;
-,;
+,;'
       const typeResult = execSync('npm run type-check', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -1098,7 +1174,7 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '';
 }
 },;
@@ -1106,10 +1182,10 @@ class TestAutomation {,;
   async generateReport(testResults, lintResults, typeResults) {,;
     const report = {,;
       timestam: p: new Date().toISOString(),;
-      summar: y: {,;
-        test: s: testResults.success ? 'passed' : 'failed',;
-        lin: t: lintResults.success ? 'passed' : 'failed',;
-        typeChec: k: typeResults.success ? 'passed' : 'failed',;
+      summar: y: {,;'
+        test: s: testResults.success ? 'passed' : 'failed',;'
+        lin: t: lintResults.success ? 'passed' : 'failed',;'
+        typeChec: k: typeResults.success ? 'passed' : 'failed',;'
         overal: l: (testResults.success && lintResults.success && typeResults.success) ? 'passed' : 'failed',;
       ,;
       detail: s: {,;
@@ -1122,25 +1198,25 @@ class TestAutomation {,;
 ,;
     // Generate recommendations,;
     if (!testResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'high',;
-        messag: e: 'Tests are failing',;
+      report.recommendations.push({,;'
+        priorit: y: 'high',;'
+        messag: e: 'Tests are failing',;'
         actio: n: 'Fix failing tests before deployment';
       });
 },;
 ,;
     if (!lintResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'medium',;
-        messag: e: 'Lint issues detected',;
+      report.recommendations.push({,;'
+        priorit: y: 'medium',;'
+        messag: e: 'Lint issues detected',;'
         actio: n: 'Run npm run: lint:fix to auto-fix issues';
       });
 },;
 ,;
     if (!typeResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'high',;
-        messag: e: 'TypeScript errors detected',;
+      report.recommendations.push({,;'
+        priorit: y: 'high',;'
+        messag: e: 'TypeScript errors detected',;'
         actio: n: 'Fix TypeScript errors before deployment';
       });
 },;
@@ -1155,18 +1231,18 @@ class TestAutomation {,;
         fs.mkdirSync(reportDir, { recursiv: e: true });
       },;
 ,;
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;`
       this.log(`Report saved: to: ${this.reportFile}`);
-    } catch (error) {,;
+    } catch (error) {,;`
       this.log(`Error saving: report: ${error.message}`);
 }
 },;
 ,;
-  async run() {,;
-    this.log('🚀 Starting Test Automation...'),;
+  async run() {,;'
+    this.log('🚀 Starting Test Automation...'),;`
     this.log(`Project: root: ${this.projectRoot}`),;
 ,;
-    try {,;
+    try {,;'
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
@@ -1178,7 +1254,7 @@ class TestAutomation {,;
       const lintResults = await this.runLintTests(),;
       const typeResults = await this.runTypeCheck(),;
 ,;
-      // Generate report,;
+      // Generate report,;'
       this.log('📊 Generating test report...'),;
       const report = await this.generateReport(testResults, lintResults, typeResults),;
 ,;
@@ -1187,26 +1263,30 @@ class TestAutomation {,;
 ,;
       const duration = Date.now() - this.startTime,;
 ,;
-      // Log summary,;
-      this.log('\n📊 Test Automation: Summary: '),;
-      this.log(`Test: s: ${report.summary.tests}`),;
-      this.log(`Lin: t: ${report.summary.lint}`),;
-      this.log(`Type: Check: ${report.summary.typeCheck}`),;
-      this.log(`Overal: l: ${report.summary.overall}`),;
+      // Log summary,;'
+      this.log('\n📊 Test Automation: Summary: '),;`
+      this.log(`Test: s: ${report.summary.tests}`),;`
+      this.log(`Lin: t: ${report.summary.lint}`),;`
+      this.log(`Type: Check: ${report.summary.typeCheck}`),;`
+      this.log(`Overal: l: ${report.summary.overall}`),;`
       this.log(`Duratio: n: ${duration}ms`),;
 ,;
-      if (report.recommendations.length > 0) {,;
+      if (report.recommendations.length > 0) {,;'
         this.log('\n💡 Recommendation: s: '),;
-        report.recommendations.forEach(rec => {,;
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
+        report.recommendations.forEach(rec => {,;`
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`
           this.log(`    Actio: n: ${rec.action}`);
         });
-      } else {,;
+      } else {,;'
         this.log('\n✨ All tests passed!');
       },;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {,;
+=======
+    } catch (error) {,;`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this.log(`❌ Error running test: automation: ${error.message}`),;
       process.exit(1);
 }
@@ -1218,40 +1298,40 @@ const testAutomation = new TestAutomation(),;
 testAutomation.run().catch(error => {,;
   process.exit(1);
 }),;
-#!/usr/bin/env node,;
-const fs = require('fs'),;
-const path = require('path'),;
+#!/usr/bin/env node,;'
+const fs = require('fs'),;'
+const path = require('path'),;'
 const { execSync } = require('child_process'),;
 ,;
 class TestAutomation {,;
   constructor() {,;
-    this.projectRoot = process.cwd(),;
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'),;
+    this.projectRoot = process.cwd(),;'
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'),;'
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'),;
     this.startTime = Date.now();
   },;
 ,;
   log(message) {,;
-    const timestamp = new Date().toISOString(),;
+    const timestamp = new Date().toISOString(),;`
     const logMessage = `[${timestamp}] ${message}\n`,;
 ,;
     try {,;
       fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {,;
+    } catch (error) {,;'
       console.error('Error writing to log: file:', error.message);
     }
   },;
 ,;
   async runTests() {,;
-    try {,;
+    try {,;'
       this.log('🧪 Running test suite...'),;
 ,;
       const startTime = Date.now(),;
 ,;
-      // Run tests,;
+      // Run tests,;'
       const testResult = execSync('npm test', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -1265,7 +1345,7 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '',;
         duratio: n: 0;
       }
@@ -1273,12 +1353,12 @@ class TestAutomation {,;
   },;
 ,;
   async runLintTests() {,;
-    try {,;
+    try {,;'
       this.log('🔍 Running lint tests...'),;
-,;
+,;'
       const lintResult = execSync('npm run lint', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -1289,19 +1369,19 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '';
       }
     }
   },;
 ,;
   async runTypeCheck() {,;
-    try {,;
+    try {,;'
       this.log('📝 Running type check...'),;
-,;
+,;'
       const typeResult = execSync('npm run type-check', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -1312,7 +1392,7 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '';
       }
     }
@@ -1321,10 +1401,10 @@ class TestAutomation {,;
   async generateReport(testResults, lintResults, typeResults) {,;
     const report = {,;
       timestam: p: new Date().toISOString(),;
-      summar: y: {,;
-        test: s: testResults.success ? 'passed' : 'failed',;
-        lin: t: lintResults.success ? 'passed' : 'failed',;
-        typeChec: k: typeResults.success ? 'passed' : 'failed',;
+      summar: y: {,;'
+        test: s: testResults.success ? 'passed' : 'failed',;'
+        lin: t: lintResults.success ? 'passed' : 'failed',;'
+        typeChec: k: typeResults.success ? 'passed' : 'failed',;'
         overal: l: (testResults.success && lintResults.success && typeResults.success) ? 'passed' : 'failed';
       },;
       detail: s: {,;
@@ -1337,25 +1417,25 @@ class TestAutomation {,;
 ,;
     // Generate recommendations,;
     if (!testResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'high',;
-        messag: e: 'Tests are failing',;
+      report.recommendations.push({,;'
+        priorit: y: 'high',;'
+        messag: e: 'Tests are failing',;'
         actio: n: 'Fix failing tests before deployment';
       });
     },;
 ,;
     if (!lintResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'medium',;
-        messag: e: 'Lint issues detected',;
+      report.recommendations.push({,;'
+        priorit: y: 'medium',;'
+        messag: e: 'Lint issues detected',;'
         actio: n: 'Run npm run: lint:fix to auto-fix issues';
       });
     },;
 ,;
     if (!typeResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'high',;
-        messag: e: 'TypeScript errors detected',;
+      report.recommendations.push({,;'
+        priorit: y: 'high',;'
+        messag: e: 'TypeScript errors detected',;'
         actio: n: 'Fix TypeScript errors before deployment';
       });
     },;
@@ -1370,18 +1450,18 @@ class TestAutomation {,;
         fs.mkdirSync(reportDir, { recursiv: e: true });
       },;
 ,;
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;`
       this.log(`Report saved: to: ${this.reportFile}`);
-    } catch (error) {,;
+    } catch (error) {,;`
       this.log(`Error saving: report: ${error.message}`);
     }
   },;
 ,;
-  async run() {,;
-    this.log('🚀 Starting Test Automation...'),;
+  async run() {,;'
+    this.log('🚀 Starting Test Automation...'),;`
     this.log(`Project: root: ${this.projectRoot}`),;
 ,;
-    try {,;
+    try {,;'
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
@@ -1393,7 +1473,7 @@ class TestAutomation {,;
       const lintResults = await this.runLintTests(),;
       const typeResults = await this.runTypeCheck(),;
 ,;
-      // Generate report,;
+      // Generate report,;'
       this.log('📊 Generating test report...'),;
       const report = await this.generateReport(testResults, lintResults, typeResults),;
 ,;
@@ -1402,23 +1482,24 @@ class TestAutomation {,;
 ,;
       const duration = Date.now() - this.startTime,;
 ,;
-      // Log summary,;
-      this.log('\n📊 Test Automation: Summary: '),;
-      this.log(`Test: s: ${report.summary.tests}`),;
-      this.log(`Lin: t: ${report.summary.lint}`),;
-      this.log(`Type: Check: ${report.summary.typeCheck}`),;
-      this.log(`Overal: l: ${report.summary.overall}`),;
+      // Log summary,;'
+      this.log('\n📊 Test Automation: Summary: '),;`
+      this.log(`Test: s: ${report.summary.tests}`),;`
+      this.log(`Lin: t: ${report.summary.lint}`),;`
+      this.log(`Type: Check: ${report.summary.typeCheck}`),;`
+      this.log(`Overal: l: ${report.summary.overall}`),;`
       this.log(`Duratio: n: ${duration}ms`),;
 ,;
-      if (report.recommendations.length > 0) {,;
+      if (report.recommendations.length > 0) {,;'
         this.log('\n💡 Recommendation: s: '),;
-        report.recommendations.forEach(rec => {,;
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
+        report.recommendations.forEach(rec => {,;`
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`
           this.log(`    Actio: n: ${rec.action}`);
         });
-      } else {,;
+      } else {,;'
         this.log('\n✨ All tests passed!');
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -1694,45 +1775,64 @@ const { exec_sync } = require ('child_process');
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     } catch (error) {,;
+=======
+
+
+
+'
+const fs = require ('fs');'
+const path = require ('path');'
+const { exec_sync } = require ('child_process');
+;
+
+    } catch (error) {,;`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this.log(`❌ Error running test: automation: ${error.message}`),;
       process.exit(1);
     }
   }
 },;
+<<<<<<< HEAD
 #!/usr/bin/env node,;
 const fs = require('fs'),;
 const path = require('path'),;
+=======
+
+#!/usr/bin/env node,;'
+const fs = require('fs'),;'
+const path = require('path'),;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const { execSync } = require('child_process'),;
 ,;
 class TestAutomation {,;
   constructor() {,;
-    this.projectRoot = process.cwd(),;
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'),;
+    this.projectRoot = process.cwd(),;'
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'),;'
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'),;
     this.startTime = Date.now();
 },;
 ,;
   log(message) {,;
-    const timestamp = new Date().toISOString(),;
+    const timestamp = new Date().toISOString(),;`
     const logMessage = `[${timestamp}] ${message}\n`,;
 ,;
     try {,;
       fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {,;
+    } catch (error) {,;'
       console.error('Error writing to log: file:', error.message);
 }
 },;
 ,;
   async runTests() {,;
-    try {,;
+    try {,;'
       this.log('🧪 Running test suite...'),;
 ,;
       const startTime = Date.now(),;
 ,;
-      // Run tests,;
+      // Run tests,;'
       const testResult = execSync('npm test', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -1745,19 +1845,19 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '',;
         duratio: n: 0;
 }
 },;
 ,;
   async runLintTests() {,;
-    try {,;
+    try {,;'
       this.log('🔍 Running lint tests...'),;
-,;
+,;'
       const lintResult = execSync('npm run lint', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -1767,18 +1867,18 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '';
 }
 },;
 ,;
   async runTypeCheck() {,;
-    try {,;
+    try {,;'
       this.log('📝 Running type check...'),;
-,;
+,;'
       const typeResult = execSync('npm run type-check', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -1788,7 +1888,7 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '';
 }
 },;
@@ -1796,10 +1896,10 @@ class TestAutomation {,;
   async generateReport(testResults, lintResults, typeResults) {,;
     const report = {,;
       timestam: p: new Date().toISOString(),;
-      summar: y: {,;
-        test: s: testResults.success ? 'passed' : 'failed',;
-        lin: t: lintResults.success ? 'passed' : 'failed',;
-        typeChec: k: typeResults.success ? 'passed' : 'failed',;
+      summar: y: {,;'
+        test: s: testResults.success ? 'passed' : 'failed',;'
+        lin: t: lintResults.success ? 'passed' : 'failed',;'
+        typeChec: k: typeResults.success ? 'passed' : 'failed',;'
         overal: l: (testResults.success && lintResults.success && typeResults.success) ? 'passed' : 'failed',;
       ,;
       detail: s: {,;
@@ -1812,25 +1912,25 @@ class TestAutomation {,;
 ,;
     // Generate recommendations,;
     if (!testResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'high',;
-        messag: e: 'Tests are failing',;
+      report.recommendations.push({,;'
+        priorit: y: 'high',;'
+        messag: e: 'Tests are failing',;'
         actio: n: 'Fix failing tests before deployment';
       });
 },;
 ,;
     if (!lintResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'medium',;
-        messag: e: 'Lint issues detected',;
+      report.recommendations.push({,;'
+        priorit: y: 'medium',;'
+        messag: e: 'Lint issues detected',;'
         actio: n: 'Run npm run: lint:fix to auto-fix issues';
       });
 },;
 ,;
     if (!typeResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'high',;
-        messag: e: 'TypeScript errors detected',;
+      report.recommendations.push({,;'
+        priorit: y: 'high',;'
+        messag: e: 'TypeScript errors detected',;'
         actio: n: 'Fix TypeScript errors before deployment';
       });
 },;
@@ -1845,18 +1945,18 @@ class TestAutomation {,;
         fs.mkdirSync(reportDir, { recursiv: e: true });
       },;
 ,;
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;`
       this.log(`Report saved: to: ${this.reportFile}`);
-    } catch (error) {,;
+    } catch (error) {,;`
       this.log(`Error saving: report: ${error.message}`);
 }
 },;
 ,;
-  async run() {,;
-    this.log('🚀 Starting Test Automation...'),;
+  async run() {,;'
+    this.log('🚀 Starting Test Automation...'),;`
     this.log(`Project: root: ${this.projectRoot}`),;
 ,;
-    try {,;
+    try {,;'
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
@@ -1868,7 +1968,7 @@ class TestAutomation {,;
       const lintResults = await this.runLintTests(),;
       const typeResults = await this.runTypeCheck(),;
 ,;
-      // Generate report,;
+      // Generate report,;'
       this.log('📊 Generating test report...'),;
       const report = await this.generateReport(testResults, lintResults, typeResults),;
 ,;
@@ -1877,33 +1977,38 @@ class TestAutomation {,;
 ,;
       const duration = Date.now() - this.startTime,;
 ,;
-      // Log summary,;
-      this.log('\n📊 Test Automation: Summary: '),;
-      this.log(`Test: s: ${report.summary.tests}`),;
-      this.log(`Lin: t: ${report.summary.lint}`),;
-      this.log(`Type: Check: ${report.summary.typeCheck}`),;
-      this.log(`Overal: l: ${report.summary.overall}`),;
+      // Log summary,;'
+      this.log('\n📊 Test Automation: Summary: '),;`
+      this.log(`Test: s: ${report.summary.tests}`),;`
+      this.log(`Lin: t: ${report.summary.lint}`),;`
+      this.log(`Type: Check: ${report.summary.typeCheck}`),;`
+      this.log(`Overal: l: ${report.summary.overall}`),;`
       this.log(`Duratio: n: ${duration}ms`),;
 ,;
-      if (report.recommendations.length > 0) {,;
+      if (report.recommendations.length > 0) {,;'
         this.log('\n💡 Recommendation: s: '),;
-        report.recommendations.forEach(rec => {,;
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
+        report.recommendations.forEach(rec => {,;`
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`
           this.log(`    Actio: n: ${rec.action}`);
         });
-      } else {,;
+      } else {,;'
         this.log('\n✨ All tests passed!');
       },;
     } catch (error) {,;
+<<<<<<< HEAD
       this.log(`❌ Error running test:automation:${error.message}`),;
       process.exit(1),;
     };
   };
 };
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ,;
 // Run the test automation,;
 const testAutomation = new TestAutomation(),;
 testAutomation.run().catch(error => {,;
+<<<<<<< HEAD
   process.exit(1);
 }),;
 
@@ -1914,37 +2019,46 @@ testAutomation.run().catch(error => {,;
 #!/usr/bin/env node,;
 const fs = require('fs'),;
 const path = require('path'),;
+=======
+
+
+  process.exit(1);
+}),;
+#!/usr/bin/env node,;'
+const fs = require('fs'),;'
+const path = require('path'),;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const { execSync } = require('child_process'),;
 ,;
 class TestAutomation {,;
   constructor() {,;
-    this.projectRoot = process.cwd(),;
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'),;
+    this.projectRoot = process.cwd(),;'
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'),;'
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'),;
     this.startTime = Date.now();
   },;
 ,;
   log(message) {,;
-    const timestamp = new Date().toISOString(),;
+    const timestamp = new Date().toISOString(),;`
     const logMessage = `[${timestamp}] ${message}\n`,;
 ,;
     try {,;
       fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {,;
+    } catch (error) {,;'
       console.error('Error writing to log: file:', error.message);
     }
   },;
 ,;
   async runTests() {,;
-    try {,;
+    try {,;'
       this.log('🧪 Running test suite...'),;
 ,;
       const startTime = Date.now(),;
 ,;
-      // Run tests,;
+      // Run tests,;'
       const testResult = execSync('npm test', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -1958,7 +2072,7 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '',;
         duratio: n: 0;
       }
@@ -1966,12 +2080,12 @@ class TestAutomation {,;
   },;
 ,;
   async runLintTests() {,;
-    try {,;
+    try {,;'
       this.log('🔍 Running lint tests...'),;
-,;
+,;'
       const lintResult = execSync('npm run lint', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -1982,19 +2096,19 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '';
       }
     }
   },;
 ,;
   async runTypeCheck() {,;
-    try {,;
+    try {,;'
       this.log('📝 Running type check...'),;
-,;
+,;'
       const typeResult = execSync('npm run type-check', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;
+        cw: d: this.projectRoot,;'
+        stdi: o: 'pipe',;'
         encodin: g: 'utf8';
       }),;
 ,;
@@ -2005,7 +2119,7 @@ class TestAutomation {,;
     } catch (error) {,;
       return {,;
         succes: s: false,;
-        erro: r: error.message,;
+        erro: r: error.message,;'
         outpu: t: error.stdout || error.stderr || '';
       }
     }
@@ -2014,10 +2128,10 @@ class TestAutomation {,;
   async generateReport(testResults, lintResults, typeResults) {,;
     const report = {,;
       timestam: p: new Date().toISOString(),;
-      summar: y: {,;
-        test: s: testResults.success ? 'passed' : 'failed',;
-        lin: t: lintResults.success ? 'passed' : 'failed',;
-        typeChec: k: typeResults.success ? 'passed' : 'failed',;
+      summar: y: {,;'
+        test: s: testResults.success ? 'passed' : 'failed',;'
+        lin: t: lintResults.success ? 'passed' : 'failed',;'
+        typeChec: k: typeResults.success ? 'passed' : 'failed',;'
         overal: l: (testResults.success && lintResults.success && typeResults.success) ? 'passed' : 'failed';
       },;
       detail: s: {,;
@@ -2030,25 +2144,25 @@ class TestAutomation {,;
 ,;
     // Generate recommendations,;
     if (!testResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'high',;
-        messag: e: 'Tests are failing',;
+      report.recommendations.push({,;'
+        priorit: y: 'high',;'
+        messag: e: 'Tests are failing',;'
         actio: n: 'Fix failing tests before deployment';
       });
     },;
 ,;
     if (!lintResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'medium',;
-        messag: e: 'Lint issues detected',;
+      report.recommendations.push({,;'
+        priorit: y: 'medium',;'
+        messag: e: 'Lint issues detected',;'
         actio: n: 'Run npm run: lint:fix to auto-fix issues';
       });
     },;
 ,;
     if (!typeResults.success) {,;
-      report.recommendations.push({,;
-        priorit: y: 'high',;
-        messag: e: 'TypeScript errors detected',;
+      report.recommendations.push({,;'
+        priorit: y: 'high',;'
+        messag: e: 'TypeScript errors detected',;'
         actio: n: 'Fix TypeScript errors before deployment';
       });
     },;
@@ -2063,18 +2177,18 @@ class TestAutomation {,;
         fs.mkdirSync(reportDir, { recursiv: e: true });
       },;
 ,;
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;`
       this.log(`Report saved: to: ${this.reportFile}`);
-    } catch (error) {,;
+    } catch (error) {,;`
       this.log(`Error saving: report: ${error.message}`);
     }
   },;
 ,;
-  async run() {,;
-    this.log('🚀 Starting Test Automation...'),;
+  async run() {,;'
+    this.log('🚀 Starting Test Automation...'),;`
     this.log(`Project: root: ${this.projectRoot}`),;
 ,;
-    try {,;
+    try {,;'
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
@@ -2086,7 +2200,7 @@ class TestAutomation {,;
       const lintResults = await this.runLintTests(),;
       const typeResults = await this.runTypeCheck(),;
 ,;
-      // Generate report,;
+      // Generate report,;'
       this.log('📊 Generating test report...'),;
       const report = await this.generateReport(testResults, lintResults, typeResults),;
 ,;
@@ -2095,24 +2209,25 @@ class TestAutomation {,;
 ,;
       const duration = Date.now() - this.startTime,;
 ,;
-      // Log summary,;
-      this.log('\n📊 Test Automation: Summary: '),;
-      this.log(`Test: s: ${report.summary.tests}`),;
-      this.log(`Lin: t: ${report.summary.lint}`),;
-      this.log(`Type: Check: ${report.summary.typeCheck}`),;
-      this.log(`Overal: l: ${report.summary.overall}`),;
+      // Log summary,;'
+      this.log('\n📊 Test Automation: Summary: '),;`
+      this.log(`Test: s: ${report.summary.tests}`),;`
+      this.log(`Lin: t: ${report.summary.lint}`),;`
+      this.log(`Type: Check: ${report.summary.typeCheck}`),;`
+      this.log(`Overal: l: ${report.summary.overall}`),;`
       this.log(`Duratio: n: ${duration}ms`),;
 ,;
-      if (report.recommendations.length > 0) {,;
+      if (report.recommendations.length > 0) {,;'
         this.log('\n💡 Recommendation: s: '),;
-        report.recommendations.forEach(rec => {,;
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
+        report.recommendations.forEach(rec => {,;`
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`
           this.log(`    Actio: n: ${rec.action}`);
         });
-      } else {,;
+      } else {,;'
         this.log('\n✨ All tests passed!');
       }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -2120,6 +2235,9 @@ class TestAutomation {,;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     } catch (error) {,;
+=======
+    } catch (error) {,;`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this.log(`❌ Error running test: automation: ${error.message}`),;
       process.exit(1);
     }
@@ -2135,6 +2253,7 @@ const testAutomation = new TestAutomation(),;
 testAutomation.run().catch(error => {,;
   process.exit(1);
 }),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2387,3 +2506,10 @@ testAutomation.run().catch(error = > {; process.exit(1)});
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -24,11 +25,16 @@ import * as React from "react"
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import * as HoverCardPrimitive from "@radix-ui/react-hover-card"
+=======
 
+import * as React from "react""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import * as HoverCardPrimitive from "@radix-ui/react-hover-card"
+"
 import { cn } from "@/lib/utils"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
 const HoverCard = HoverCardPrimitive.Root
 const HoverCardTrigger = HoverCardPrimitive.Trigger
 const HoverCardContent = React.forwardRef<
@@ -36,6 +42,21 @@ const HoverCardContent = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
 >(({ className, align = "center", sideOffset = 4, ...props }, ref) => (>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
   <HoverCardPrimitive.Content
+=======
+
+
+;
+const HoverCard = HoverCardPrimitive.Root;
+const HoverCardTrigger = HoverCardPrimitive.Trigger;
+const HoverCardContent = React.forwardRef<
+  React.ElementRef<typeof HoverCardPrimitive.Content>
+  React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
+
+"
+>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+
+  <HoverCardPrimitive.Content;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     ref={ref}
     align={align}
     sideOffset={sideOffset}
@@ -43,6 +64,7 @@ const HoverCardContent = React.forwardRef<
 <<<<<<< HEAD
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -50,11 +72,12 @@ const HoverCardContent = React.forwardRef<
 <<<<<<< HEAD
 
       "z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-
-
 =======
-      "z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+<<<<<<< HEAD
 
       &quot;z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
       "z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
@@ -69,11 +92,15 @@ const HoverCardContent = React.forwardRef<
 =======
     className={cn(      className
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      className;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     )}
     {...props}
   />;
 ));
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,24 +117,41 @@ HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export { HoverCard, HoverCardTrigger, HoverCardContent }
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export { HoverCard, HoverCardTrigger, HoverCardContent }
+export { HoverCard, HoverCardTrigger, HoverCardContent };
 ;
 export { HoverCard, HoverCardTrigger, HoverCardContent };
-export { HoverCard, HoverCardTrigger, HoverCardContent }
+export { HoverCard, HoverCardTrigger, HoverCardContent };
 ;
 <<<<<<< HEAD
 export { HoverCard, HoverCardTrigger, HoverCardContent }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import * as React from &quot;react & quot;
 import * as HoverCardPrimitive from &quot;@radix - ui / react - hover - card & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
 
-export { HoverCard, HoverCardTrigger, HoverCardContent }
+export { HoverCard, HoverCardTrigger, HoverCardContent };
 ;
 
+<<<<<<< HEAD
+=======
+
+export { HoverCard, HoverCardTrigger, HoverCardContent };
+export { HoverCard, HoverCardTrigger, HoverCardContent }
+
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 const HoverCard = HoverCardPrimitive.Root;
 const HoverCardTrigger = HoverCardPrimitive.Trigger;
@@ -125,6 +169,7 @@ const HoverCardContent = React.forward_ref<;
     {...props}
   />));
 HoverCardContent.display_name = HoverCardPrimitive.Content.display_name;
+<<<<<<< HEAD
 import * as React from "react";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 ;
@@ -171,3 +216,11 @@ export { HoverCard, HoverCardTrigger, HoverCardContent }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export { HoverCard, HoverCardTrigger, HoverCardContent }
+
+
+export { HoverCard, HoverCardTrigger, HoverCardContent }
+
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

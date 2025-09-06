@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 html { color-scheme: dark; }
 body { @apply bg-gray-950 text-gray-100; }
 
@@ -13,6 +23,7 @@ code { @apply font-mono; }
 
 /* Import Modern Design System */
 @import './modern-design-system.css';
+<<<<<<< HEAD
 =======
 >>>>>>> main
 /* Import Inter font for modern typography */
@@ -55,6 +66,18 @@ code { @apply font-mono; }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Base styles */
 @layer base {
   html {
@@ -125,8 +148,21 @@ code { @apply font-mono; }
   /* Hover effects */
   .hover-lift {
     @apply hover:transform hover:scale-105 hover:shadow-lg transition-all duration-200;
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+  }
+}
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -427,6 +463,7 @@ code { @apply font-mono; }
 
 /* Neon Glow Effects */
 .neon-glow {
+<<<<<<< HEAD
 =======
 >>>>>>> main
   box-shadow: 
@@ -442,16 +479,11 @@ h1, h2, h3, h4, h5, h6 {
     0 0 5px currentColor,
   box-shadow:     0 0 5px currentColor,
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 900;
-  background: var(--gradient-futuristic);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 h2 {
   font-size: clamp(2rem, 4vw, 3.5rem);
@@ -471,15 +503,36 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+    0 0 5px currentColor,
+  box-shadow:     0 0 5px currentColor,
+
+
+
+  box-shadow:     0 0 5px currentColor,
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     0 0 10px currentColor,
     0 0 15px currentColor,
     0 0 20px currentColor;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 .neon-glow-cyan {
   color: var(--neon-cyan);
   text-shadow: 0 0 5px var(--neon-cyan);
@@ -577,6 +630,7 @@ h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   content: '';
 .futuristic-button::before {  content: '';
 =======
@@ -651,15 +705,38 @@ a:hover {
 .futuristic-link::before {
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  content: '';
+.futuristic-button::before {  content: '';
+
+
+
+.futuristic-button::before {  content: '';
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   position: absolute;
   bottom: 0;
   left: -100%;
   width: 100%;
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left var(--animation-slow) ease;
@@ -825,6 +902,7 @@ a:hover {
   .desktop-only {
     display: block;
   .desktop-hidden {
+<<<<<<< HEAD
   height: 2px;
   background: var(--gradient-accent);
   transition: left 0.3s ease;
@@ -833,6 +911,19 @@ a:hover {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -848,9 +939,19 @@ a:hover {
   background: rgba(59, 130, 246, 0.3);
   color: white;
 /* Focus styles */
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 .focus-cyber:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
@@ -859,6 +960,7 @@ a:hover {
   box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.5);
 .focus-holographic:focus {
   box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.5);
+<<<<<<< HEAD
 :focus {
   outline: 2px solid var(--neon-blue);
   outline-offset: 2px;
@@ -1105,3 +1207,15 @@ a:hover {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+}
+}
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

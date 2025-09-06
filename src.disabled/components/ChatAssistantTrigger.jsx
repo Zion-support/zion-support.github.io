@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,9 +12,11 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-:src && src.disabled/components/ChatAssistantTrigger && ChatAssistantTrigger.js.jsx
 
+<<<<<<< HEAD
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
 <<<<<<< HEAD
 :src.disabled/components/ChatAssistantTrigger.js.jsx
@@ -71,3 +74,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+:src && src.disabled/components/ChatAssistantTrigger && ChatAssistantTrigger.js.jsx;
+" " " export: function ChatAssistantTrigger() { return null; }
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+'"
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+
+:src.disabled/components/ChatAssistantTrigger.js.jsx"
+" " " export: function ChatAssistantTrigger() { return null; }
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

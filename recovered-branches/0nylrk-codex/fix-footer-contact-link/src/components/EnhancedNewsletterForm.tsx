@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -12,10 +13,15 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 import React from 'react';import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+=======
 
-import { useState } from "react";
+import { Button } from "@/components/ui/button";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { Input } from "@/components/ui/input";
+"
+import { useState } from "react";"
 import { Mail } from "lucide-react";
+<<<<<<< HEAD
 export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -59,23 +65,26 @@ import { Mail } from "lucide-react",
 <<<<<<< HEAD
 =======
 
+=======
+export function EnhancedNewsletterForm() { return null; }
+import { Button } from "@/components/ui/button","
+import { Input } from "@/components/ui/input",";
+import { useState } from "react";"
+import { Mail } from "lucide-react";"
+import { useState } from "react","
+import { Mail } from "lucide-react",
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
-<<<<<<< HEAD
-    // Simulate API call
-    setTimeout(() => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      setIsSubmitting(false);
+
+      setIsSubmitting(false);"
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -90,18 +99,23 @@ export function EnhancedNewsletterForm() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+export function EnhancedNewsletterForm() { return null; }
+  const handleSubmit = (e: React.FormEvent) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     e.preventDefault(),
     setIsSubmitting(true),
-    
-    // Simulate API call
-    setTimeout(() => {
+    ;
+    // Simulate API call;
+    setTimeout(() => {}
       setIsSubmitting(false),
-      setIsSubmitted(true),
+      setIsSubmitted(true),"
       setEmail("")
     }, 1000)
   },
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -118,22 +132,9 @@ export function EnhancedNewsletterForm() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false),
-      setIsSubmitted(true),
-      setEmail("")
-    }, 1000)
-  },
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
   return (
 
@@ -141,13 +142,9 @@ export function EnhancedNewsletterForm() {
       
 
 
+
+
 <<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {isSubmitted ? (
@@ -159,18 +156,34 @@ export function EnhancedNewsletterForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <p className="text-white font-medium">Thank you for subscribing!</p>
+=======
+
+
+
+      {isSubmitted ? ("
+        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">"
+          <p className="text-white font-medium">Thank you for subscribing!</p>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <p className="text-zion-slate-light mt-1">
             We'll keep you updated with the latest from Zion.
           </p>
         </div>
       ) : (
 
+<<<<<<< HEAD
       <div className="flex items-center mb-4">;
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;
+=======
+"
+    <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;"
+      <div className="flex items-center mb-4">;"
+        <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Mail className="h-6 w-6" />;
         </div>;
-        <div>;
+        <div>;"
           <h4 className="text-lg font-bold text-white">Stay Updated</h4>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -210,11 +223,11 @@ function EnhancedNewsletterForm() {
         <div>;
           <h4 className="text - lg font - bold text - white">Stay Updated</h4>;
           <p className="text - zion - slate - light text - sm">;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
             Get exclusive offers, trending AI news, and early access to best;
 =======
           <p className="text-zion-slate-light text-sm">;            Get exclusive offers, trending AI news, and early access to best;
@@ -227,12 +240,30 @@ function EnhancedNewsletterForm() {
         </div>;
       </div>;
 
+<<<<<<< HEAD
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">            </div>;
+=======
+
+
+          <Input"
+            type="email""
+            placeholder="Enter your email""
+            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
+            value={email}
+
+            <div;
+              key={i}"
+              className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;
+              {String && String.fromCharCode(65 + i)}
+
+            </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           ))}
         </div>;
         <span>Join 10,000+ tech professionals who already subscribe</span>;
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,13 +313,17 @@ function EnhancedNewsletterForm() {
     </div>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+<<<<<<< HEAD
 =======
   );}            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -296,18 +331,22 @@ function EnhancedNewsletterForm() {
   );}            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             required
+=======
+            required;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           />
-          <Button 
+          <Button "
             type="submit" 
-            disabled={isSubmitting}
+            disabled={isSubmitting}"
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
-          >
+          >"
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>
 <<<<<<< HEAD
 <<<<<<< HEAD
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -334,6 +373,11 @@ function EnhancedNewsletterForm() {
       )}            <div
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               key={i}
+=======
+
+            <div;
+              key={i}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan"
             >
               {String.fromCharCode(65 + i)}
@@ -342,12 +386,13 @@ function EnhancedNewsletterForm() {
         </div>
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
-    </div>
-            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { useState } from "react",;
+    </div>"
+            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">"
+import { Button } from "@/components/ui/button",;"
+import { Input } from "@/components/ui/input",;"
+import { useState } from "react",;"
 import { Mail } from "lucide-react",;
+<<<<<<< HEAD
 export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState(""),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -366,41 +411,50 @@ export function EnhancedNewsletterForm() {;
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
       <div className="flex items-center mb-4">;
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;
+=======
+export function EnhancedNewsletterForm() { return null; }
+    }, 1000);
+  };
+  return (;"
+    <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;"
+      <div className="flex items-center mb-4">;"
+        <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Mail className="h-6 w-6" />;
         </div>;
-        <div>;
-          <h4 className="text-lg font-bold text-white">Stay Updated</h4>;
+        <div>;"
+          <h4 className="text-lg font-bold text-white">Stay Updated</h4>;"
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>;
         </div>;
       </div>;
-      {isSubmitted ? (;
-        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;
-          <p className="text-white font-medium">Thank you for subscribing!</p>;
+      {isSubmitted ? (;"
+        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;"
+          <p className="text-white font-medium">Thank you for subscribing!</p>;'"
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>;
         </div>;
-      ) : (;
+      ) : (;"
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">;
-          <Input;
-            type="email";
-            placeholder="Enter your email";
+          <Input;"
+            type="email";"
+            placeholder="Enter your email";"
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";
             value={email}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required;
           />;
-          <Button;
+          <Button;"
             type="submit";
-            disabled={isSubmitting}
+            disabled={isSubmitting}"
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
-          >;
+          >;"
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>;
         </form>;
       )}
-;
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">;
+;"
+      <div className="mt-4 flex items-center text-xs text-zion-slate-light">;"
         <div className="flex -space-x-1 mr-2">;
-          {[...Array(3)].map((_, i) => (;
+          {[...Array(3)].map((_, i) => (;"
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;
               {String.fromCharCode(65 + i)}
             </div>
@@ -415,14 +469,18 @@ export function EnhancedNewsletterForm() {;
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-  ),; const handleSubmit = (e: React.FormEvent) => {
+  ),; const handleSubmit = (e: React.FormEvent) => {}
   e.preventDefault ();
 setIsSubmitting (true);
-//Simulate API call setTimeout ( () => {
-  
+//Simulate API call setTimeout ( () => {}
 };
 }</div>) ) 
 }</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) 
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

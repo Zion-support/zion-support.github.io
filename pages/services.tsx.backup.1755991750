@@ -6,7 +6,7 @@ import Button from '../components/ui/Button';
 import QuantumCard from '../components/ui/QuantumCard';
 import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
 import { expandedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/expanded-micro-saas-services';
-=======
+
 import Card from '../components/ui/Card';
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices, serviceCategories } from '../data/enhanced-real-micro-saas-services';
@@ -1497,10 +1497,14 @@ export default function ServicesPage() {
           </UltraFuturisticCard>
         </div>
       </section>
+<<<<<<< HEAD
     </UltraFuturisticBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -1519,4 +1523,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

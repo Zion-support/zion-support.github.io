@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -280,8 +281,22 @@ export default function EnterpriseAdmin() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+import React from "react";"
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer";"
+import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";"
+import { useAuth } from "@/hooks/useAuth";"
+import { Navigate } from "react-router-dom";"
+import { SEO } from "@/components/SEO";"
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function EnterpriseAdmin() {};
+  const { user } = useAuth();
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
 
 
 =======
@@ -292,20 +307,21 @@ export default function EnterpriseAdmin() {;
 }
   }
   return (
-import React from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { AdminDashboard } from '@/components / enterprise / admin / AdminDashboard';
-import { use_auth } from '@/hooks / use_auth';
-import { Navigate } from './react-router-dom';
-import { SEO } from '@/components / SEO';
+import React from './react';'
+import { Header } from '@/components / Header';'
+import { Footer } from '@/components / Footer';'
+import { AdminDashboard } from '@/components / enterprise / admin / AdminDashboard';'
+import { use_auth } from '@/hooks / use_auth';'
+import { Navigate } from './react-router-dom';'
+import { SEO } from '@/components / SEO';'
 import { ProtectedRoute } from '@/components / ProtectedRoute';
-export default /**
- * EnterpriseAdmin - Function description
+export default /**;
+ * EnterpriseAdmin - Function description;
  */
-function EnterpriseAdmin() {
+function EnterpriseAdmin() {}
   const { user } = use_auth ();
 ;
+<<<<<<< HEAD
   // Check if user has enterprise admin role;
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
 ;
@@ -352,3 +368,9 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

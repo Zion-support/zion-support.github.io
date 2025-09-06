@@ -1,4 +1,4 @@
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -9,6 +9,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -294,10 +295,14 @@ const AboutPage: React.FC = () => {
       avatar: "👩‍🚀"
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -584,10 +589,14 @@ const AboutPage: React.FC = () => {
                   key={value.title}
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -703,11 +712,15 @@ const AboutPage: React.FC = () => {
                     <p className="text-white/70 text-sm leading-relaxed">{member.expertise}</p>
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -806,6 +819,9 @@ const AboutPage: React.FC = () => {
     </>
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

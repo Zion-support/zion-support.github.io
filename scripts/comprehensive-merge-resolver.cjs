@@ -11,6 +11,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 console.log('🚀 Comprehensive Merge Conflict Resolver');
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
 console.log('==');
 // Function to remove merge conflict markers
@@ -36,14 +37,32 @@ console.log('==');
 console.log('==');
 console.log('=====================================');
 main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
+=======
+
+
+
+    .replace(/
+    .replace(/
+    .replace(/
+
+
+
+
+    .replace(/
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
@@ -123,6 +142,7 @@ function processFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     // Check for merge conflict markers
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
 
@@ -204,16 +224,25 @@ function findFilesWithConflicts() {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+
+
+
+    if (content.includes('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
 
+<<<<<<< HEAD
 
 
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             files.push(fullPath);
           }
         } catch (error) {
@@ -232,6 +261,7 @@ main
         this.resolvedFiles.push(filePath)
         this.log(`✅ Resolved conflicts in ${filePath}`),,
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-merge-resolver.cjs
 =======
@@ -283,6 +313,9 @@ main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 main
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Additional type declaration for toast variants
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -30,3 +31,8 @@ declare type ToastVariant = "default" | "destructive" | "success",;
 =======
 declare type ToastVariant = "default" | "destructive" | "success",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// Additional type declaration for toast variants;
+declare type ToastVariant = "default" | "destructive" | "success";
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

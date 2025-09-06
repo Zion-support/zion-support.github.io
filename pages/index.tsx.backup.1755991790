@@ -12,22 +12,30 @@ import {
   RocketIcon, GlobeIcon, CpuIcon as CpuIcon2, Menu, X, ChevronDown
 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices, serviceCategories } from '../data/enhanced-real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState('hero');
 
   const heroStats = [
+<<<<<<< HEAD
     { value: '200+', label: 'Revolutionary Micro SaaS Services', color: 'text-cyan-400', icon: <CpuIcon className="w-6 h-6" /> },
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
     { value: '30+', label: 'Day Free Trials', color: 'text-blue-400', icon: <Clock className="w-6 h-6" /> },
     { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Brain className="w-6 h-6" /> },
     { value: '$25B+', label: 'Combined Market Value', color: 'text-yellow-400', icon: <TrendingUp className="w-6 h-6" /> },
     { value: '800%+', label: 'Average ROI', color: 'text-purple-400', icon: <DollarSign className="w-6 h-6" /> },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const contactInfo = {
@@ -83,9 +91,13 @@ export default function HomePage() {
 
   const platformFeatures = [
     {
+<<<<<<< HEAD
       icon: <Brain className="w-8 h-8 text-white" />,
       title: '100+ Real Micro SaaS Services',
       description: 'Comprehensive portfolio of fully functional micro SaaS tools with real implementations, not just mockups.',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
       gradient: 'from-cyan-400 to-blue-500',
     },
@@ -164,19 +176,27 @@ export default function HomePage() {
     },
     {
       icon: '🔒',
+<<<<<<< HEAD
       title: 'Quantum Security',
       description: 'Next-generation cybersecurity with quantum-resistant cryptography and AI threat detection.',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       gradient: 'from-green-400 to-emerald-500',
     },
     {
+<<<<<<< HEAD
       icon: '📊',
       title: 'Data Intelligence',
       description: 'Advanced analytics, machine learning, and business intelligence for data-driven decisions.',
       color: 'bg-gradient-to-br from-purple-500 to-violet-600',
       textColor: 'text-purple-400',
       gradient: 'from-purple-400 to-violet-500',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '🌐',
@@ -196,6 +216,7 @@ export default function HomePage() {
     },
   ];
 
+<<<<<<< HEAD
   const serviceCategories = [
     {
       name: 'AI & Machine Learning',
@@ -238,6 +259,9 @@ export default function HomePage() {
       description: '200% annual growth rate',
       icon: <FlaskConical className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -281,6 +305,7 @@ export default function HomePage() {
   };
 
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground variant="quantum-holographic-advanced" intensity="high">
       <Head>
         <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions</title>
@@ -324,6 +349,9 @@ export default function HomePage() {
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
 
@@ -353,6 +381,7 @@ export default function HomePage() {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <motion.div
@@ -582,10 +611,14 @@ export default function HomePage() {
                 </div>
               </motion.div>
             ))}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -837,6 +870,9 @@ export default function HomePage() {
                 <li className="text-xs">{contactInfo.address}</li>
               </ul>
             </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
           
           <div className="border-t border-gray-800/50 mt-8 pt-8 text-center">

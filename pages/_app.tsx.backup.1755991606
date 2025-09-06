@@ -2,6 +2,7 @@
 import '../src/utils/immediate-process-polyfill';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -146,3 +147,6 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-80f7
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

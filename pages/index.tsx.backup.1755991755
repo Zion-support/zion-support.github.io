@@ -36,6 +36,7 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   // Get the new innovative services
   const innovativeServices = enhancedRealMicroSaasServices.filter(service => 
     service.category === 'Quantum Computing & AI' || 
@@ -49,6 +50,9 @@ export default function HomePage() {
     service.category === 'IoT & Smart Cities' ||
     service.category === 'Edge Computing'
   ).slice(0, 12);
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const marketInsights = [
     {

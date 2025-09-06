@@ -1,34 +1,35 @@
 <<<<<<< HEAD
 // Analytics enhancements for Zion Tech Group;
-const analyticsEnhancements = {
+const analyticsEnhancements = {}
   // Track page views;
-  "trackPageView": (page) => {
-  if (typeof gtag !== "undefined") {
-  gtag("config", "GA_MEASUREMENT_ID", {
-  "page_title": document.title,
-        "page_location": window.location.href,
+  "trackPageView": (page) => {"
+  if (typeof gtag !== "undefined") {"
+  gtag("config", "GA_MEASUREMENT_ID", {"
+  "page_title": document.title,"
+        "page_location": window.location.href,"
         "page_path": page})}
   },
-  // Track user interactions;
-  "trackInteraction": (action, category, label) => {
-  if (typeof gtag !== "undefined") {
-  gtag("event", action, {
-  "event_category": category,
+  // Track user interactions;"
+  "trackInteraction": (action, category, label) => {"
+  if (typeof gtag !== "undefined") {"
+  gtag("event", action, {"
+  "event_category": category,"
         "event_label": label})}
   },
-  // Track form submissions;
-  "trackFormSubmission": (formName) => {
+  // Track form submissions;"
+  "trackFormSubmission": (formName) => {"
   this.trackInteraction("form_submit", "engagement", formName)},
-  // Initialize analytics;
-  "init": () => {
+  // Initialize analytics;"
+  "init": () => {}
   // Track initial page view;
     this.trackPageView(window.location.pathname);
-    // Track form submissions;
+    // Track form submissions;"
     const forms = document.querySelectorAll("form");
-    forms.forEach(form => {
-  form.addEventListener("submit", () => {
+    forms.forEach(form => {"
+  form.addEventListener("submit", () => {"
   this.trackFormSubmission(form.name || "unnamed_form")})})}
 };
+<<<<<<< HEAD:backup-problematic-files/public/analytics.js
 =======
   // Check condition
 if ( {) {
@@ -118,3 +119,29 @@ const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "
 const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name |"unnamed_form")})})} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
 const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name |"unnamed_form")})})} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Auto-initialize when DOM is ready;"
+if (document.readyState === "loading") {"
+  document.addEventListener("DOMContentLoaded", analyticsEnhancements.init)} else {}
+  analyticsEnhancements.init()}"
+const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: 'document.title',; page_location: 'window.location.href',; page_path: 'page;',})} },; trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: 'category',; event_label: 'label;',})} },; trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},; init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
+"
+const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}"
+const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}"
+const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}"
+const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
+<
+
+
+
+"
+const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
+
+
+
+"
+const analyticsEnhancements = { trackPageView: (page) => { if (typeof gtag !== "undefined") { gtag("config","GA_MEASUREMENT_ID",{ page_title: document.title,page_location: window.location.href,page_path: page,})} },trackInteraction: (action,category,label) => { if (typeof gtag !== "undefined") { gtag("event",action,{ event_category: category,event_label: label,})} },trackFormSubmission: (formName) => { this.trackInteraction("form_submit","engagement",formName)},init: () => { this.trackPageView(window.location.pathname); ; const forms = document.querySelectorAll("form"); forms.forEach(form => { form.addEventListener("submit",() => { this.trackFormSubmission(form.name || "unnamed_form")})})} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",analyticsEnhancements.init)} else { analyticsEnhancements.init()}
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:public/analytics.js

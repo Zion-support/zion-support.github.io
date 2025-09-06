@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -21,23 +22,34 @@ import SignupForm from '@/components/auth/SignupForm',;
 import { AuthButtons } from '@/components/AuthButtons',;
 import { fireEvent } from '@/lib/analytics',;
 import { logInfo } from '@/utils/productionLogger',;
+=======
+
+import React, { useEffect } from 'react',;'
+import Head from 'next/head',;'
+import Link from 'next/link',;'
+import SignupForm from '@/components/auth/SignupForm',;'
+import { AuthButtons } from '@/components/AuthButtons',;'
+import { fireEvent } from '@/lib/analytics',;'
+import { logInfo } from '@/utils/productionLogger',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useRouter } from 'next/router',;
-const RegisterPage = () => {
+const RegisterPage = () => {}
   const router = useRouter(),
 
-  useEffect(() => {
+  useEffect(() => {'
     fireEvent('signup_page_view')
   }, []),
 
-  const handleSuccess = ({ email, emailVerificationRequired }: {
+  const handleSuccess = ({ email, emailVerificationRequired }: {}
     email: string,
-    emailVerificationRequired: boolean
-  }) => {
-    if (emailVerificationRequired) {
+    emailVerificationRequired: boolean;
+  }) => {}
+    if (emailVerificationRequired) {}
       router.push(`/verify-status?email=${encodeURIComponent(email)}`)
-    } else {
+    } else {'
       router.push('/auth/login?registrationSuccess=true')
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -77,56 +89,55 @@ const RegisterPage = () =>: any {
 =======
 <<<<<<< HEAD
 =======
+=======
 
-import React, { useEffect } from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import SignupForm from '@/components / auth / SignupForm',
-import { AuthButtons } from '@/components / AuthButtons',
-import { fire_event } from '@/lib / analytics',
-import { log_info } from '@/utils / production_logger',
-import { use_router } from 'next / router',
-const RegisterPage = () =>: any {
-  const router = use_router (),
-  useEffect (() => {
-    fire_event ('signup_page_view');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+'
+import React, { useEffect } from 'react';'
+import Head from 'next/head';'
+import Link from 'next/link';'
+import SignupForm from '@/components/auth/SignupForm';'
+import { AuthButtons } from '@/components/AuthButtons';'
+import { fireEvent } from '@/lib/analytics';'
+import { logInfo } from '@/utils/productionLogger';'
+import { useRouter } from 'next/router';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-import React, { useEffect } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import SignupForm from '@/components/auth/SignupForm',;
-import { AuthButtons } from '@/components/AuthButtons',;
-import { fireEvent } from '@/lib/analytics',;
-import { logInfo } from '@/utils/productionLogger',;
+'
+import React, { useEffect } from 'react',;'
+import Head from 'next/head',;'
+import Link from 'next/link',;'
+import SignupForm from '@/components/auth/SignupForm',;'
+import { AuthButtons } from '@/components/AuthButtons',;'
+import { fireEvent } from '@/lib/analytics',;'
+import { logInfo } from '@/utils/productionLogger',;'
 import { useRouter } from 'next/router',;
-const RegisterPage = () => {
+const RegisterPage = () => {}
   const router = useRouter(),
 
-  useEffect(() => {
+  useEffect(() => {'
     fireEvent('signup_page_view')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }, []),
-  const handle_success = ({ email, emailVerificationRequired }: {
-    email: string,
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  }, []),
+  const handle_success = ({ email, emailVerificationRequired }: {}
+    email: string,
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const RegisterPage = () => {;
   const router = useRouter();
-  useEffect(() => {;
+  useEffect(() => {;'
     fireEvent('signup_page_view');
   }, []),;
   const handleSuccess = ({ email, emailVerificationRequired }: {;
     email: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -137,7 +148,10 @@ if ( {) {
   $2
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+'
       router.push ('/auth / login?registration_success = true');
 
     }
@@ -171,14 +185,22 @@ import { useRouter } from 'next/router';
         <title>Create Account - Zion Tech Marketplace</title>
 <<<<<<< HEAD
         <meta name="description" content="Create your Zion Tech Marketplace account" />
-      </Head>
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      </Head>"
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-md w-full space-y-8">
           <div>
-            <img
-              className="mx-auto h-12 w-auto"
-              src="/logos/zion-logo.png"
+            <img"
+              className="mx-auto h-12 w-auto""
+              src="/logos/zion-logo.png""
               alt="Zion Tech"
+<<<<<<< HEAD
+=======
+              width={48}
+              height={48}
+              on_error={(e) => {}
+                const target = e.current_target as HTMLImageElement,'
+                target.style.display = 'none';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
             />
@@ -227,15 +249,8 @@ export default RegisterPage,
               Or{' '  } catch (error) {
 =======
               }}
-<<<<<<< HEAD
-=======
-            />;
-            <h2 className="mt - 6 text - center text - 3xl font - extrabold text - gray - 900">;
-              Create your account;
-            </h2>;
-            <p className="mt - 2 text - center text - sm text - gray - 600">;
-              Or{' '}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               width={48  } catch (error) {
@@ -288,6 +303,15 @@ export default RegisterPage,
               height={48  } catch (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
+=======
+              width={48  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              height={48  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -308,8 +332,9 @@ export default RegisterPage,
               By creating an account, you agree to our{' '  } catch (error) {
 =======
               onError={(e) => {;
-                const target = e.currentTarget as HTMLImageElement;
+                const target = e.currentTarget as HTMLImageElement;'
                 target.style.display = 'none';
+<<<<<<< HEAD
               }  } catch (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.error("Error:", error);
@@ -344,10 +369,19 @@ export default RegisterPage;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             />
+=======
+              }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              Create your account
-            </h2>
+              Create your account;
+            </h2>"
             <p className="mt-2 text-center text-sm text-gray-600">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -367,12 +401,19 @@ export default RegisterPage;
 }
 =======
 <<<<<<< HEAD
+=======
+'
+              Or{' '  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              <Link
-                href="/auth/login"
+
+
+              <Link"
+                href="/auth/login""
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
 =======
             <p className='mt-2 text-center text-sm text-gray-600'>
@@ -383,11 +424,12 @@ export default RegisterPage;
                 className='font-medium text-blue-600 hover:text-blue-500 underline'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
-                sign in if you already have an account
+                sign in if you already have an account;
               </Link>
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -415,13 +457,24 @@ export default RegisterPage;
 <<<<<<< HEAD
               </div>
               <div className="relative flex justify-center text-sm">
+=======
+
+"
+          <div className="mt-6">"
+            <div className="relative">"
+              <div className="absolute inset-0 flex items-center">"
+                <div className="w-full border-t border-gray-300" />
+              </div>"
+              <div className="relative flex justify-center text-sm">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <span className="px-2 bg-gray-50 text-gray-500">Or continue with</span>
               </div>
-            </div>
+            </div>"
             <AuthButtons providers={["google", "github"]} />
-          </div>
-          <div className="text-center mt-4">
+          </div>"
+          <div className="text-center mt-4">"
             <p className="text-xs text-gray-500">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -474,10 +527,15 @@ export default RegisterPage;
               By creating an account, you agree to our{' '}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+              By creating an account, you agree to our{' '}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Link href="/legal / terms" className="text - blue - 600 hover:text - blue - 500">;
-                Terms of Service;
-              </Link>{' '}
+                Terms of Service;'
+              </Link>{' '}'
               and{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -488,16 +546,27 @@ export default RegisterPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               By creating an account, you agree to our{' '  } catch (error) {
     console.error("Error:", error);
+=======
+'
+              By creating an account, you agree to our{' '  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
               <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">
-                Terms of Service
-              </Link>{' '  } catch (error) {
-    console.error("Error:", error);
+                Terms of Service'
+              </Link>{' '  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}'
+              and{' '  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
               and{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -532,6 +601,12 @@ export default RegisterPage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 Privacy Policy
+=======
+
+"
+              <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
+                Privacy Policy;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Link>
             </p>
           </div>
@@ -541,6 +616,7 @@ export default RegisterPage;
 <<<<<<< HEAD
   )
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -614,6 +690,9 @@ export default RegisterPage,
 
 export default RegisterPage;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -639,8 +718,9 @@ export default RegisterPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </>);
 },
-export default RegisterPage,
+export default RegisterPage,;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -652,9 +732,16 @@ export default RegisterPage,
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+
+
 
 },
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -664,3 +751,6 @@ export default RegisterPage,
 export default RegisterPage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

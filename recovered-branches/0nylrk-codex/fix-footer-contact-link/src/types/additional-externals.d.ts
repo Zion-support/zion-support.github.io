@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -140,10 +141,34 @@ declare module "raf";
 declare module "react-beautiful-dnd";
 declare module "react-redux";
 declare module "semver";
+=======
+declare module "aria-query";"
+declare module "@babel/core";"
+declare module "@babel/generator";"
+declare module "@babel/template";"
+declare module "@babel/traverse";"
+declare module "d3-array";"
+declare module "d3-color";"
+declare module "d3-ease";"
+declare module "d3-interpolate";"
+declare module "d3-path";"
+declare module "d3-scale";"
+declare module "d3-shape";"
+declare module "d3-time";"
+declare module "d3-timer";"
+declare module "hoist-non-react-statics";"
+declare module "phoenix";"
+declare module "prop-types";"
+declare module "raf";"
+declare module "react-beautiful-dnd";"
+declare module "react-redux";"
+declare module "semver";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 declare module "ws";
-
-declare module "vite/client";
+"
+declare module "vite/client";"
 declare module "react-router-dom";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 declare module 'ws';
@@ -151,3 +176,6 @@ declare module 'ws';
 =======
 declare module 'ws';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

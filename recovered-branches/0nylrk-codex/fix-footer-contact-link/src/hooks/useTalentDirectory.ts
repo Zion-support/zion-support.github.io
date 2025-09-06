@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -77,14 +77,25 @@ export function useTalentDirectory() {
 import { useAuthStatus } from './talent / useAuthStatus';
 import { useTalentData } from './talent / useTalentData';
 import { useFilterTalents } from './talent / useFilterTalents';
+=======
+import { useAuthStatus } from "./talent/useAuthStatus","
+import { useTalentData } from "./talent/useTalentData",";
+import { useFilterTalents } from "./talent/useFilterTalents";"
+import { useUIState } from "./talent/useUIState";
+export function useTalentDirectory() {};
+  // Fetch auth status and saved talents;
+import { useAuthStatus } from './talent / useAuthStatus';'
+import { useTalentData } from './talent / useTalentData';'
+import { useFilterTalents } from './talent / useFilterTalents';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useUIState } from './talent / useUIState';
-export /**
- * useTalentDirectory - Function description
+export /**;
+ * useTalentDirectory - Function description;
  */
-function useTalentDirectory() {
+function useTalentDirectory() {}
   // Fetch auth status and saved talents;
 
-  const {
+  const {}
     is_authenticated;
     user_details,
     saved_talents,
@@ -92,7 +103,7 @@ function useTalentDirectory() {
   } = useAuthStatus ();
 ;
   // Fetch talent data;
-  const {
+  const {}
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
@@ -101,8 +112,8 @@ function useTalentDirectory() {
     expanded_sections;
 
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
   } = useTalentData();
   // Apply filters and sorting
@@ -139,6 +150,10 @@ function useTalentDirectory() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Manage UI state
   const {
+=======
+  // Manage UI state;
+  const {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     isMobileFilterOpen,
     setIsMobileFilterOpen,
     isHireModalOpen,
@@ -146,6 +161,7 @@ function useTalentDirectory() {
     selectedTalent,
     setSelectedTalent,
     expandedSections,
+<<<<<<< HEAD
     toggleSection
 <<<<<<< HEAD
 
@@ -184,6 +200,9 @@ function useTalentDirectory() {
     userDetails;
     savedTalents;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    toggleSection;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   } = useUIState(),
 =======
   // Fetch auth status and saved talents  } = useUIState(),
@@ -192,13 +211,13 @@ function useTalentDirectory() {
   // Fetch auth status and saved talents  } = useUIState(),
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  return {
-    // Talents and loading state
+  return {}
+    // Talents and loading state;
     talents,
     filteredTalents,
     isLoading,
     
-    // Search and filter state
+    // Search and filter state;
     searchTerm,
     setSearchTerm,
     selectedSkills,
@@ -211,7 +230,7 @@ function useTalentDirectory() {
     sortOption,
     setSortOption,
     
-    // UI state
+    // UI state;
     isMobileFilterOpen,
     setIsMobileFilterOpen,
     isHireModalOpen,
@@ -220,11 +239,12 @@ function useTalentDirectory() {
     setSelectedTalent,
     expandedSections,
     
-    // Auth and user state
+    // Auth and user state;
     isAuthenticated,
     userDetails,
     savedTalents,
     
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Actions
@@ -272,14 +292,16 @@ import { useAuthStatus } from "./talent/useAuthStatus",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
+=======
+
+
+"
+import { useAuthStatus } from "./talent/useAuthStatus",;"
+import { useTalentData } from "./talent/useTalentData",;"
+import { useFilterTalents } from "./talent/useFilterTalents",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useUIState } from "./talent/useUIState",;
-export function useTalentDirectory() {;
-  // Fetch auth status and saved talents;
-  const {;
-    isAuthenticated,;
-    userDetails,;
-    savedTalents,;
-    handleToggleSave;
+export function useTalentDirectory() { return null; }
   } = useAuthStatus(),;
   // Fetch talent data;
   const {;
@@ -355,13 +377,14 @@ export function useTalentDirectory() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 =======
 =======
@@ -401,6 +424,7 @@ export function useTalentDirectory() {;
     toggle_section;
     handleToggleSave;
   }
+<<<<<<< HEAD
 }  }
 }
 ;
@@ -420,3 +444,12 @@ export function useTalentDirectory() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  }
+}
+;
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

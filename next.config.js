@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 /** @type {import('next').NextConfig} */
+<<<<<<< HEAD
 const nextConfig = {
 <<<<<<< HEAD
   reactStrictMode: true,
@@ -389,3 +390,9 @@ export default nextConfig;
 export default nextConfig;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> pr-12243
+=======
+const nextConfig = {}
+};
+
+export default nextConfig;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

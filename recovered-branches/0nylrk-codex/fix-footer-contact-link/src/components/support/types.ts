@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 
 import { ReactNode } from "react";
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +23,9 @@ import { ReactNode } from "react";
 import { ReactNode } from "react";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface HelpArticle {
+=======
+export interface HelpArticle {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   title: string;
   content: string;
@@ -77,19 +81,19 @@ export interface HelpCategory {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
+
   lastUpdated: string;
   tags: string[];
 }
 
 export interface HelpCategory {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
+
 }
 
 export interface HelpCategory {;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   id: string;
   name: string;
   description: string;
@@ -110,8 +114,8 @@ export interface SupportTicket {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   articles: HelpArticle[];
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 
 
 
@@ -122,8 +126,8 @@ export interface SupportTicket {;
   id: string;
   user_id: string;
   subject: string;
-  message: string;
-  status: "open" | "in - progress" | "resolved" | "closed";
+  message: string;"
+  status: "open" | "in - progress" | "resolved" | "closed";"
   priority: "low" | "medium" | "high";
 <<<<<<< HEAD
 }
@@ -186,15 +190,18 @@ export interface SupportTicket {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   createdAt: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   updatedAt: string;
 }
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 <<<<<<< HEAD
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -206,3 +213,7 @@ export interface SupportTicket {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

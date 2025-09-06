@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,9 +25,11 @@ const { useEffect,useRef,useState,useCallback } from "react"; export const useLa
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect,useRef,useState,useCallback } from \'react\'; export const useLazyLoad = (options = {}) => {; const { threshold = 0 && 0.1,rootMargin = \'50px\',preload = true,preloadDistance = 100 } = options; const [isVisible,setIsVisible] = useState(false); const [isLoaded,setIsLoaded] = useState(false); const ref = useRef(null); const load = useCallback(() => {; if(!isLoaded) {; setIsLoaded(true); setIsVisible(true)}},[isLoaded]); useEffect(() => {; const element = ref && ref.current; if(!element); return; const observer = new IntersectionObserver((entries) => {; entries && entries.forEach((entry) => {; if(entry && entry.isIntersecting) {; load()}})},{; threshold,; \"rootMargin\": preload ? `${preloadDistance}px` : rootMargin}); observer && observer.observe(element); return () => {; observer && observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]); return { isVisible,ref,load }};
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-const { useEffect,useRef,useState,useCallback } from "react"; export const useLazyLoad = (options = {}) => {; const { threshold = 0 && 0.1,rootMargin = "50px",preload = true,preloadDistance = 100 } = options; const [isVisible,setIsVisible] = useState(false); const [isLoaded,setIsLoaded] = useState(false); const ref = useRef(null); const load = useCallback(() => {; if(!isLoaded) {; setIsLoaded(true); setIsVisible(true)}},[isLoaded]); useEffect(() => {; const element = ref && ref.current; if(!element); return; const observer = new IntersectionObserver((entries) => {; entries && entries.forEach((entry) => {; if(entry && entry.isIntersecting) {; load()}})},{; threshold,; rootMargin: preload ? `${preloadDistance}px` : rootMargin}); observer && observer.observe(element); return () => {; observer && observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]); return { isVisible,ref,load }};'"`'"`
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,3 +62,14 @@ const { useEffect,useRef,useState,useCallback } from "react"; export const useLa
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+const { useEffect,useRef,useState,useCallback } from "react"; export const useLazyLoad = (options = {}) => {; const { threshold = 0.1,rootMargin = "50px",preload = true,preloadDistance = 100 } = options; const [isVisible,setIsVisible] = useState(false); const [isLoaded,setIsLoaded] = useState(false); const ref = useRef(null); const load = useCallback(() => {; if(!isLoaded) {; setIsLoaded(true); setIsVisible(true)}},[isLoaded]); useEffect(() => {; const element = ref.current; if(!element); return; const observer = new IntersectionObserver((entries) => {; entries.forEach((entry) => {; if(entry.isIntersecting) {; load()}})},{; threshold,; rootMargin: preload ? `${preloadDistance}px` : rootMargin}); observer.observe(element); return () => {; observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]); return { isVisible,ref,load }};'"`'"`
+'"`
+import { useEffect,useRef,useState,useCallback } from \'react\'; export const useLazyLoad = (options = {}) => {; const { threshold = 0.1,rootMargin = \'50px\',preload = true,preloadDistance = 100 } = options; const [isVisible,setIsVisible] = useState(false); const [isLoaded,setIsLoaded] = useState(false); const ref = useRef(null); const load = useCallback(() => {; if(!isLoaded) {; setIsLoaded(true); setIsVisible(true)}},[isLoaded]); useEffect(() => {; const element = ref.current; if(!element); return; const observer = new IntersectionObserver((entries) => {; entries.forEach((entry) => {; if(entry.isIntersecting) {; load()}})},{; threshold,; \"rootMargin\": preload ? `${preloadDistance}px` : rootMargin}); observer.observe(element); return () => {; observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]); return { isVisible,ref,load }};'"`
+const { useEffect,useRef,useState,useCallback } from "react"; export const useLazyLoad = (options = {}) => {; const { threshold = 0.1,rootMargin = "50px",preload = true,preloadDistance = 100 } = options; const [isVisible,setIsVisible] = useState(false); const [isLoaded,setIsLoaded] = useState(false); const ref = useRef(null); const load = useCallback(() => {; if(!isLoaded) {; setIsLoaded(true); setIsVisible(true)}},[isLoaded]); useEffect(() => {; const element = ref.current; if(!element); return; const observer = new IntersectionObserver((entries) => {; entries.forEach((entry) => {; if(entry.isIntersecting) {; load()}})},{; threshold,; rootMargin: preload ? `${preloadDistance}px` : rootMargin}); observer.observe(element); return () => {; observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]); return { isVisible,ref,load }};'"`'"`
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 <<<<<<< HEAD
@@ -61,6 +62,29 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 <<<<<<< HEAD
 interface EnhancedLayoutProps {
+=======
+
+import React, { ReactNode } from "react";"
+import { ReactNode } from "react";"
+import EnhancedNavigation from "./EnhancedNavigation";"
+import EnhancedFooter from "./EnhancedFooter";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface EnhancedLayoutProps {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   \"children\": ReactNode;
 }
 =======
@@ -90,31 +114,30 @@ interface EnhancedLayoutProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   \"children\": ReactNode;
 
-export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  return (
+export default function EnhancedLayout({ children }: EnhancedLayoutProps) {}
+  return ("
     <div className=\"min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col\">
-      <EnhancedNavigation />
+      <EnhancedNavigation />"
       <main className=\"container mx-auto px-4 py-8 flex-1\">
         {children}
       </main>
       <EnhancedFooter />
-    </div>
+    </div>;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+"
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -187,3 +210,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

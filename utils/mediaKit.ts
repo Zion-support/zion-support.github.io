@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -90,13 +91,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+  }
+
+
+export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {}
+  const base: MediaAsset[] = []
+    {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       path: '',
-
+'
       filename: 'legal / terms - of - use.md',
-
+'
       type: 'text',
 
-      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,;
     },;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -105,18 +117,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ];
-  const web3Extras: MediaAsset[] = [
-
-      type: 'text',
+  const web3Extras: MediaAsset[] = []
+'
+      type: 'text',`
       content: `# Terms of Use\n\n_by using Zion products, you agree to these terms. Replace with counsel - approved language.`,
     },
-    {
-      path: '',
-      type: 'text',
+    {'
+      path: '','
+      type: 'text',`
       content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`,
     },
-    {
+    {'
       path: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,19 +142,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
     },
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
 ;
   const web3Extras: MediaAsset[] = [;
 
-    {
-
+    {}
+'
       path: '',
 
   ];
 
 
 export function buildPressRelease(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   params: {
@@ -183,13 +200,17 @@ export function buildPressRelease (
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     company_name: string;
 export function buildPressRelease(
 
-  type: PressReleaseType,
+  type: PressReleaseType,;
   params: {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     companyName: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -200,6 +221,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     date: string;
 =======
   params: {    date: string;
@@ -208,6 +233,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tokenName?: string;
     anchors?: string[];
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ): string {
@@ -228,11 +254,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (type === 'seed-round') {
+=======
+): string {}
+'
+  if (type === 'seed-round') {'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
-  }
-  if (type === 'token-sale') {
+  }'
+  if (type === 'token-sale') {'`
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces the ${params && params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -261,22 +293,36 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ): string {  return [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
+=======
+
+export function buildTimeline(startDate: Date) {};
+  const addDays = (d: Date, days: number) =>;
+    new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
+  const fmt = (d: Date) => d.toISOString().substring(0, 10);
+
+  return ['
+    { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
-    {
+    {'
       label: 'Week 3: Token Airdrop Snapshot'
       date: fmt(addDays(startDate, 14))
-    }
+    }'
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+<<<<<<< HEAD
 function titleCase(s: string) {
   return s.replace(
     /\w\S*/g
@@ -351,42 +397,58 @@ function titleCase(s: string) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
 
-}
+function titleCase(s: string) {}
+  );}
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+
+
+
+}'"`
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces a seed round of ${params.raise_amount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\n_quotes:\n- CEO: "We are thrilled..."\n\n_about ${params.company_name}:\n${boilerplate}`;
   }
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}'`
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces the ${params.token_name ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\n_distribution:\n- Community: 40%\n- Treasury: 20%\n\n_about ${params.company_name}:\n${boilerplate}`;
-  }
+  }`
   return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\n_about ${params.company_name}:\n${boilerplate}`;
 ;
-export /**
- * build_timeline - Function description
+export /**;
+ * build_timeline - Function description;
  */
-function build_timeline() {
+function build_timeline() {}
   const add_days = (d: Date, days: number) =>: any;
     new Date (d.getFullYear (), d.get_month (), d.get_date () + days);
   const fmt = (d: Date) =>: any d.toISOString ().substring (0, 10);
-  return [;
-    { label: 'Week 1: Closed Beta Invite', date: fmt (add_days (start_date, 0)) },
+  return [;'
+    { label: 'Week 1: Closed Beta Invite', date: fmt (add_days (start_date, 0)) },'
     { label: 'Week 2: ZionGPT Core Reveal', date: fmt (add_days (start_date, 7)) },
-    {
+    {'
       label: 'Week 3: Token Airdrop Snapshot',
       date: fmt (add_days (start_date, 14)),
-    },
+    },'
     { label: 'Week 4: Zion Global Summit', date: fmt (add_days (start_date, 21)) },
   ];
 ;
 /**
- * title_case - Function description
+ * title_case - Function description;
  */
-function title_case() {
+function title_case() {}
   return s.replace (
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -422,3 +484,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

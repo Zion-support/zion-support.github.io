@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/partners/request-payout.ts
 <<<<<<< HEAD:pages/api/partners/request-payout.ts
 <<<<<<< HEAD
 =======
@@ -114,6 +115,9 @@ export default async function handler(req, res) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/request-payout.ts
       partner_code: String(code).toLowerCase(),
       amount: Number(amount) || null,
       status: "requested",
@@ -124,11 +128,16 @@ export default async function handler(req, res) {;
       status: "requested"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/request-payout.ts
     });
+<<<<<<< HEAD:pages/api-disabled/api/partners/request-payout.ts
   } catch (e: any) {;
+=======
+  } catch (e: any) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/request-payout.ts
     return res && res.status(500).json({ error: e?.message });
 
   }
 }
+<<<<<<< HEAD:pages/api-disabled/api/partners/request-payout.ts
 <<<<<<< HEAD:pages/api/partners/request-payout.ts
 <<<<<<< HEAD
 
@@ -206,3 +215,18 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/request-payout.ts
+=======
+
+    });"
+    if (return res.status (500).json ({ error: "Database error" })) {}
+  $2;
+}"
+    return res.status (200).json ({ ok: true, status: "requested" });
+  } catch (e: any) {}
+  }
+}
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/request-payout.ts

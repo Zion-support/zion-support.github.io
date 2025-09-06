@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -41,20 +42,48 @@ const FILE = "jobs.json";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+
+
+
+
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";"
+import { readJsonFile, writeJsonFile } from "../../../utils/db";"
+import type { Job } from "../../../utils/types";"
+import { rateLimit } from "../../../utils/rateLimit";"
+import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
 
 =======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/jobs/[id].ts
 
+
+
+"
 const FILE = "jobs && jobs.json";
 ;
 
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
 export default function handler($2) {;
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
 const FILE = "jobs.json";
 ;
 
 export default function handler($2) {;
 
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
 =======
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -66,10 +95,14 @@ export default function handler($2) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/jobs/[id].ts
   if (!rateLimit(req, res)) return;
+=======
+export default function handler() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 <<<<<<< HEAD
   if (idx === -1) {
@@ -94,12 +127,30 @@ export default function handler($2) {;
 ;
 
   if (req && req.method === "GET") {;
+=======
+
+
+
+
+
+  if (idx === -1) {"
+    res && res.status(404).json({ error: "Job not found" });
+    return;
+  }
+
+
+
+
+"
+  if (req && req.method === "GET") {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
     res && res.status(200).json({ job: jobs[idx] });
     return;
   const idx = jobs.findIndex((j) => j.id === id);
   if (idx === -1) {
 
   }
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 <<<<<<< HEAD
   if (req.method === 'GET') {
@@ -191,6 +242,17 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+"
+  if (req && req.method === "PATCH") {}
+    const userEmail = getRequestUserEmail(req);
+    const job = jobs[idx];
+    const isOwner = userEmail && userEmail === job && job.clientEmail;
+    if (!isOwner && !isAdminEmail(userEmail)) {}
+      return;
+    }
+    const {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
       title,
       description,
       category,
@@ -199,13 +261,9 @@ if ( {) {
       budgetMaxUsd,
       deliveryDeadlineIso,
       status,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
       title;
@@ -217,20 +275,31 @@ if ( {) {
       deliveryDeadlineIso;
       status;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/jobs/[id].ts
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
       res.status(403).json({ error: 'Forbidden' });
-      return
+      return;
     }
 ;
     const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {};
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
 ;
     if (typeof title === 'string') job.title = title;
     if (typeof description === 'string') job.description = description;
+=======
+'
+    if (typeof title === 'string') job.title = title;'
+    if (typeof description === 'string') job.description = description;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
     if (typeof category === 'string') job.category = category;
-    if (Array.isArray(requiredSkills)) job.requiredSkills = requiredSkills.map(String);
-    if (typeof budgetMinUsd === 'number' || budgetMinUsd === null) job.budgetMinUsd = budgetMinUsd ?? undefined;
-    if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
-    if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
+    if (Array.isArray(requiredSkills)) job.requiredSkills = requiredSkills.map(String);'
+    if (typeof budgetMinUsd === 'number' || budgetMinUsd === null) job.budgetMinUsd = budgetMinUsd ?? undefined;'
+    if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;'
+    if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;'
     if (typeof status === 'string') job.status = status as Job['status'];
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
     } = req.body || {}
     // Check condition;
 if (job.title = title) {
@@ -407,42 +476,47 @@ export default function handler($2) {;
     if (typeof status === 'string') job.status = status as Job['status'];
 <<<<<<< HEAD:pages/api/jobs/[id].ts
 <<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
 
     } = req.body || {}
-    // Check condition
-if (job.title = title) {
-  $2
+    // Check condition;
+if (job.title = title) {}
+  $2;
 }
-    // Check condition
-if (job.description = description) {
-  $2
+    // Check condition;
+if (job.description = description) {}
+  $2;
 }
-    // Check condition
-if (job.category = category) {
-  $2
+    // Check condition;
+if (job.category = category) {}
+  $2;
 }
-    if ()) {
-  $2
+    if ()) {}
+  $2;
 }
       job.required_skills = required_skills.map (String);
-    // Check condition
+    // Check condition;
 if (
-      job.budgetMinUsd = budgetMinUsd ?? undefined) {
-  $2
+      job.budgetMinUsd = budgetMinUsd ?? undefined) {}
+  $2;
 }
-    // Check condition
+    // Check condition;
 if (
-      job.budgetMaxUsd = budgetMaxUsd ?? undefined) {
-  $2
+      job.budgetMaxUsd = budgetMaxUsd ?? undefined) {}
+  $2;
 }
-    // Check condition
+    // Check condition;
 if (
-      job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined) {
-  $2
+      job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined) {}
+  $2;
 }
-    // Check condition
-if (job.status = status as Job["status"]) {
-  $2
+    // Check condition"
+if (job.status = status as Job["status"]) {}
+  $2;
 }
     job.updatedAtIso = new Date ().toISOString ();
     jobs[idx] = job;
@@ -451,6 +525,7 @@ if (job.status = status as Job["status"]) {
     res.status (200).json ({ job });
     return;
   }
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
 
 =======
 <<<<<<< HEAD
@@ -459,22 +534,143 @@ if (job.status = status as Job["status"]) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/jobs/[id].ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+=======
+"
+  res.set_header ("Allow", "GET, PATCH");"
+  res.status (405).end ("Method Not Allowed");
+}
+
+'
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler() { return null; }
+  if (req.method === 'GET') {};
+    res.status(200).json({ job: { id: req.query.id } });'
+  } else if (req.method === 'PATCH') {'
+    res.status(200).json({ message: 'Job updated' });
+  } else {'
+    res.setHeader('Allow', ['GET', 'PATCH']);'
+    res.status(405).end('Method Not Allowed');
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}'
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import { readJsonFile, writeJsonFile } from '../../../utils/db';'
+import type { Job } from '../../../utils/types';'
+import { rateLimit } from '../../../utils/rateLimit';'
+import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth';'
+const FILE = 'jobs.json';
+export default function handler(req, res) {}
+  try {};
+  if (!rateLimit(req, res)) return,;
+  const { id } = req.query;
+  const jobs = readJsonFile<Job[]>(FILE, []),;
+  const idx = jobs.findIndex((j) => j.id === id);
+  if (idx === -1) {;'
+    res.status(404).json({ error: 'Job not found' });
+    return;
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;'
+  if (req.method === 'GET') {}
+    res.status(200).json({ job: jobs[idx] });
+    return;
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;'
+  if (req.method === 'GET') {}
+    const userEmail = getRequestUserEmail(req);
+    const job = jobs[idx];
+    const isOwner = userEmail && userEmail === job.clientEmail;
+    if (!isOwner && !isAdminEmail(userEmail)) {;
+      title,
+      description,
+      category,
+      required_skills,
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+      status,
+'
+      res.status(403).json({ error: 'Forbidden' });
+      return;
+    }
+
+    const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {};
+'
+    if (typeof title === 'string') job.title = title;'
+    if (typeof description === 'string') job.description = description;'
+    if (typeof category === 'string') job.category = category;
+    if (Array.isArray(requiredSkills)) job.requiredSkills = requiredSkills.map(String);'
+    if (typeof budgetMinUsd === 'number' || budgetMinUsd === null) job.budgetMinUsd = budgetMinUsd ?? undefined;'
+    if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;'
+    if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;'
+    if (typeof status === 'string') job.status = status as Job['status'];
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
     res.status(200).json({ job });
     return;
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
     } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {;
     console.error("Error:", error);
+=======
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
   } catch (error) {;
     console.error("Error:", error);
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD:pages/api/jobs/[id].ts
@@ -490,9 +686,10 @@ if (job.status = status as Job["status"]) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 }
-;
-  res.setHeader('AllowGET, PATCH');
+;'
+  res.setHeader('AllowGET, PATCH');'
   res.status(405).end('Method Not Allowed');
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
   } catch (error) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -557,6 +754,53 @@ if (job.status = status as Job["status"]) {
       job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === "string" || deliveryDeadlineIso === null);
       job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+
+
+
+
+
+
+
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+
+
+
+    const {}
+      title,
+      description,
+      category,
+      requiredSkills,
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+      status,
+    } = req.body || {};"
+    if (typeof title === "string") job.title = title;"
+    if (typeof description === "string") job.description = description;"
+    if (typeof category === "string") job.category = category;
+    if (Array.isArray(requiredSkills))
+      job.requiredSkills = requiredSkills.map(String);"
+    if (typeof budgetMinUsd === "number" || budgetMinUsd === null)
+      job.budgetMinUsd = budgetMinUsd ?? undefined;"
+    if (typeof budgetMaxUsd === "number" || budgetMaxUsd === null)
+      job.budgetMaxUsd = budgetMaxUsd ?? undefined;"
+    if (typeof deliveryDeadlineIso === "string" || deliveryDeadlineIso === null)
+      job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts
     if (typeof status === "string") job.status = status as Job["status"];
 ;
     job.updatedAtIso = new Date().toISOString();
@@ -566,6 +810,7 @@ if (job.status = status as Job["status"]) {
     res.status(200).json({ job });
     return;
   }
+<<<<<<< HEAD:pages/api-disabled/api/jobs/[id].ts
 ;
 res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
@@ -589,3 +834,16 @@ res.setHeader("Allow", "GET, PATCH");
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/jobs/[id].ts
+=======
+"
+res.setHeader("Allow", "GET, PATCH");"
+  res.status(405).end("Method Not Allowed");
+}
+
+}
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/jobs/[id].ts

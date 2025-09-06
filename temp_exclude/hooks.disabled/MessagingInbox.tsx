@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_exclude/hooks.disabled/MessagingInbox.tsx
 <<<<<<< HEAD
 =======
 import React, { useEffect, useState } from 'react';
@@ -6,15 +7,24 @@ import { use_messaging } from '@/context / MessagingContext';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { ConversationsList, ConversationDetailView } from '@/components / messaging';
 import { useIsMobile } from '@/hooks / use - mobile';
+=======
+import React, { useEffect, useState } from 'react';'
+import { MessageSquare, Video } from 'lucide-react';'
+import { use_messaging } from '@/context / MessagingContext';'
+import { ProtectedRoute } from '@/components / ProtectedRoute';'
+import { ConversationsList, ConversationDetailView } from '@/components / messaging';'
+import { useIsMobile } from '@/hooks / use - mobile';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/MessagingInbox.tsx
 import { toast } from 'sonner';
-
+'
 import { useRouter } from 'next/router', // Changed from react-router-dom;
-
+'
 import {logErrorToProduction} from '@/utils/productionLogger';
-export default function MessagingInbox() {;
-import { useRouter } from 'next/router'; // Changed from react-router-dom
-
+export default function MessagingInbox() { return null; }
+import { useRouter } from 'next/router'; // Changed from react-router-dom;
+'
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD:temp_exclude/hooks.disabled/MessagingInbox.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React, { useEffect, useState } from 'react',
@@ -27,6 +37,19 @@ import { toast } from 'sonner',
 import { Button } from '@/components/ui/button',
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
 import { useRouter } from 'next/router', // Changed from react-router-dom
+=======
+'
+import React, { useEffect, useState } from 'react','
+import { MessageSquare, Video } from 'lucide-react''
+import { useMessaging } from '@/context/MessagingContext','
+import { ProtectedRoute } from '@/components/ProtectedRoute','
+import { ConversationsList, ConversationDetailView } from '@/components/messaging','
+import { useIsMobile } from '@/hooks/use-mobile','
+import { toast } from 'sonner','
+import { Button } from '@/components/ui/button','
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states','
+import { useRouter } from 'next/router', // Changed from react-router-dom'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/MessagingInbox.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',
 <<<<<<< HEAD
 export default function MessagingInbox() {
@@ -55,10 +78,7 @@ export default function MessagingInbox() {
 =======
 
 
-export default function MessagingInbox() {
-
-
-
+export default function MessagingInbox() {};
   const { ;
     conversations;
     activeConversation, ;
@@ -66,28 +86,28 @@ export default function MessagingInbox() {
 
     markAsRead;
     fetchConversations;
-    isLoading
+    isLoading;
   } = useMessaging();
 
   const isMobile = useIsMobile();
-  const router = useRouter(), // Changed from navigate
+  const router = useRouter(), // Changed from navigate;
   const [activeCall, setActiveCall] = useState<string | null>(null);
 
-  const { 
+  const {}
     conversations,
 
 
-    // Fetch conversations when component mounts
-    const loadData = async () => {
-import { Button } from '@/components / ui / button';
-import { LoadingSpinner } from '@/components / ui / enhanced - loading - states';
-import { use_router } from 'next / router'; // Changed from react-router-dom;
+    // Fetch conversations when component mounts;
+    const loadData = async () => {'
+import { Button } from '@/components / ui / button';'
+import { LoadingSpinner } from '@/components / ui / enhanced - loading - states';'
+import { use_router } from 'next / router'; // Changed from react-router-dom;'
 import {logErrorToProduction} from '@/utils / production_logger';
-export default /**
- * MessagingInbox - Function description
+export default /**;
+ * MessagingInbox - Function description;
  */
-function MessagingInbox() {
-  const {
+function MessagingInbox() {}
+  const {}
     conversations,
     active_conversation,
     setActiveConversation,
@@ -99,21 +119,19 @@ function MessagingInbox() {
   const router = use_router (), // Changed from navigate;
   const [active_call, setActiveCall] = useState < string | null>(null);
 ;
-  useEffect ((, ) => {
+  useEffect ((, ) => {}
     // Fetch conversations when component mounts;
-    const load_data = async () => {
-      try {
+    const load_data = async () => {}
+      try {}
         await fetchConversations()
-      } catch (error) {
-
-
+      } catch (error) {}
     };
     
     loadData()
   }, [fetchConversations]);
   
-  const startVideoCall = () => {
-    if (!activeConversation) {
+  const startVideoCall = () => {}
+    if (!activeConversation) {}
       toast.error("Please select a conversation first");
       return;
     }
@@ -128,17 +146,31 @@ function MessagingInbox() {
   }, [fetchConversations]),
   
 
-  const startVideoCall = () => {
-    if (!activeConversation) {
+  const startVideoCall = () => {}
+    if (!activeConversation) {"
       toast.error("Please select a conversation first"),
-      return
+      return;
     }
+<<<<<<< HEAD:temp_exclude/hooks.disabled/MessagingInbox.tsx
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
     
     // Show toast notification
     toast.success("Starting video call", {
+=======
+
+    `
+    const roomId = `msg-${activeConversation.id}`,
+    setActiveCall(roomId),
+    `
+    const roomId = `msg-${activeConversation.id}`,
+    setActiveCall(roomId),
+
+    
+    // Show toast notification"
+    toast.success("Starting video call", {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/MessagingInbox.tsx
       description: "Initializing video call connection..."
 <<<<<<< HEAD
     }),
@@ -152,36 +184,42 @@ function MessagingInbox() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   
   return (
-    <ProtectedRoute>
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto py-8 px-4">
-          <div className="flex justify-between items-center mb-6">
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>
+    <ProtectedRoute>"
+      <div className="min-h-screen bg-zion-blue">"
+        <div className="container mx-auto py-8 px-4">"
+          <div className="flex justify-between items-center mb-6">'`
+            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>"
               <MessageSquare className="h-6 w-6" />
-              Messages
+              Messages;
             </h1>
             
 
             {activeConversation && (
-              <Button 
-                onClick={startVideoCall}
+              <Button;
+                onClick={startVideoCall}"
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
-              >
+              >"
                 <Video className="h-4 w-4" />
-                Start Call
+                Start Call;
               </Button>
             )}
           </div>
 
           
+<<<<<<< HEAD:temp_exclude/hooks.disabled/MessagingInbox.tsx
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
+=======
+"
+          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/MessagingInbox.tsx
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
-              {isLoading ? (
-                <div className="flex-1 flex items-center justify-center p-8">
+              {isLoading ? ("
+                <div className="flex-1 flex items-center justify-center p-8">"
                   <LoadingSpinner variant="primary" />
                 </div>
               ) : (
+<<<<<<< HEAD:temp_exclude/hooks.disabled/MessagingInbox.tsx
                 <ConversationsList
 <<<<<<< HEAD
 =======
@@ -199,15 +237,22 @@ import { toast } from 'sonner',;
 import { Button } from '@/components/ui/button',;
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',;
 import { useRouter } from 'next/router', // Changed from react-router-dom;
+=======
+                <ConversationsList;
+'
+import React, { useEffect, useState } from 'react',;'
+import { MessageSquare, Video } from 'lucide-react';'
+import { useMessaging } from '@/context/MessagingContext',;'
+import { ProtectedRoute } from '@/components/ProtectedRoute',;'
+import { ConversationsList, ConversationDetailView } from '@/components/messaging',;'
+import { useIsMobile } from '@/hooks/use-mobile',;'
+import { toast } from 'sonner',;'
+import { Button } from '@/components/ui/button',;'
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',;'
+import { useRouter } from 'next/router', // Changed from react-router-dom;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/MessagingInbox.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',;
-export default function MessagingInbox() {;
-  const {;
-    conversations,;
-    activeConversation,;
-    setActiveConversation,;
-    markAsRead,;
-    fetchConversations,;
-    isLoading;
+export default function MessagingInbox() { return null; }
   } = useMessaging(),;
   const isMobile = useIsMobile(),;
   const router = useRouter(), // Changed from navigate;
@@ -217,52 +262,63 @@ export default function MessagingInbox() {;
     const loadData = async () => {;
       try {;
         await fetchConversations();
-      } catch (error) {;
-        logErrorToProduction('Failed to load conversations:', { data: error }),;
+      } catch (error) {;'
+        logErrorToProduction('Failed to load conversations:', { data: error }),;"
         toast.error("Failed to load messages. Please try again.");
       }
     },;
     loadData();
   }, [fetchConversations]),;
   const startVideoCall = () => {;
-    if (!activeConversation) {;
+    if (!activeConversation) {;"
       toast.error("Please select a conversation first"),;
       return;
     }
-;
+;`
     const roomId = `msg-${activeConversation.id}`,;
     setActiveCall(roomId),;
-    // Show toast notification;
-    toast.success("Starting video call", {;
+    // Show toast notification;"
+    toast.success("Starting video call", {;"
       description: "Initializing video call connection...";
     });
-    // Navigate to video call page;
+    // Navigate to video call page;`
     router.push(`/call/${roomId}`), // Changed from navigate;
   };
   return (;
-    <ProtectedRoute>;
-      <div className="min-h-screen bg-zion-blue">;
-        <div className="container mx-auto py-8 px-4">;
-          <div className="flex justify-between items-center mb-6">;
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>;
+    <ProtectedRoute>;"
+      <div className="min-h-screen bg-zion-blue">;"
+        <div className="container mx-auto py-8 px-4">;"
+          <div className="flex justify-between items-center mb-6">;'`
+            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>;"
               <MessageSquare className="h-6 w-6" />;
               Messages;
             </h1>;
             {activeConversation && (;
               <Button;
+<<<<<<< HEAD:temp_exclude/hooks.disabled/MessagingInbox.tsx
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light";
               >;
+=======
+                onClick = {startVideoCall,}"
+                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/MessagingInbox.tsx
                 <Video className="h-4 w-4" />;
                 Start Call;
               </Button>;
             )}
+<<<<<<< HEAD:temp_exclude/hooks.disabled/MessagingInbox.tsx
           </div>;
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
+=======
+
+          </div>;"
+          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/MessagingInbox.tsx
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
               {/* Conversations List */}
-              {isLoading ? (;
-                <div className="flex-1 flex items-center justify-center p-8">;
+              {isLoading ? (;"
+                <div className="flex-1 flex items-center justify-center p-8">;"
                   <LoadingSpinner variant="primary" />;
                 </div>;
               ) : (;
@@ -275,11 +331,19 @@ export default function MessagingInbox() {;
               )}
 ;
               {/* Conversation Detail */}
+<<<<<<< HEAD:temp_exclude/hooks.disabled/MessagingInbox.tsx
               <ConversationDetailView />;
             </div>;
           </div>;
         </div>;
         {/* Add extra bottom padding on mobile to account for the bottom nav */}
+=======
+              <ConversationDetailView />
+            </div>
+          </div>
+        </div>
+        {/* Add extra bottom padding on mobile to account for the bottom nav */}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/MessagingInbox.tsx
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
@@ -293,7 +357,7 @@ export default function MessagingInbox() {;
           </div>;
         </div>;
 
-        {/* Add extra bottom padding on mobile to account for the bottom nav */}
+        {/* Add extra bottom padding on mobile to account for the bottom nav */}"
         {isMobile && <div className="h-16"></div>}
       </div>;
     </ProtectedRoute>;
@@ -301,37 +365,36 @@ export default function MessagingInbox() {;
 
 };
 loadData () ;
-}, [fetchConversations]);
+}, [fetchConversations]);`
 }const roomId = `msg-$ {;
-  activeConversation && activeConversation.id ;
+  activeConversation && activeConversation.id ;`
 }`;
-setActiveCall (roomId);
+setActiveCall (roomId);`
 //Show toast notification //Navigate to video call page router && router.push (`/call/$ {;
-  roomId ;
+  roomId ;`
 }`), //Changed from navigate ;
-};
-return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto py-8 px-4" > <div className="flex justify-between items-center mb-6" > <h1className= {
-  `text-$ {
-  isMobile ? '2xl' : '3xl' 
-}font-bold text-white flex items-center gap-2` "
-}> <MessageSquare className="h-6 w-6" /> activeConversation && (<ButtononClick={
-  startVideoCall "
+};"
+return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto py-8 px-4" > <div className="flex justify-between items-center mb-6" > <h1className= {}`
+  `text-$ {'
+  isMobile ? '2xl' : '3xl' "`
+}font-bold text-white flex items-center gap-2` ""
+}> <MessageSquare className="h-6 w-6" /> activeConversation && (<ButtononClick={"
+  startVideoCall ""
 }className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"> <Video className="h-4 w-4" /> Start Call </Button>) ;
-}</div> </div>) : (<ConversationsListconversations= {
-  conversations 
-}activeConversation= {
-  activeConversation 
-}setActiveConversation= {
-  setActiveConversation 
-}markAsRead= {
-  markAsRead 
-
+}</div> </div>) : (<ConversationsListconversations= {}
+  conversations;
+}activeConversation= {}
+  activeConversation;
+}setActiveConversation= {}
+  setActiveConversation;
+}markAsRead= {}
+  markAsRead;
 }/>) ;
 }{/* Conversation Detail */ ;
-}<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
+}<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;'"
 }'"}
-
-        logErrorToProduction ('Failed to load conversations:', { data: error }),
+'
+        logErrorToProduction ('Failed to load conversations:', { data: error }),"
         toast.error ("Failed to load messages. Please try again.");
       }
     }
@@ -339,49 +402,49 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
     load_data ();
   }, [fetch_conversations]);
 ;
-  const startVideoCall = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
+  const startVideoCall = () =>: any {}
+    // Check condition;
+if ( {) {}
+  $2;
+}"
       toast.error ("Please select a conversation first");
       return;
-    }
+    }`
     const room_id = `msg-${active_conversation.id}`;
     setActiveCall (room_id);
 ;
-    // Show toast notification;
-    toast.success ("Starting video call", {
+    // Show toast notification;"
+    toast.success ("Starting video call", {"
       description: "Initializing video call connection...";
     });
 ;
-    // Navigate to video call page;
+    // Navigate to video call page;`
     router.push (`/call/${room_id}`), // Changed from navigate;
   }
 ;
   return (
-    <ProtectedRoute>;
-      <div className="min - h-screen bg - zion - blue">;
-        <div className="container mx - auto py - 8 px - 4">;
-          <div className="flex justify - between items - center mb - 6">;
-            <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold text - white flex items - center gap - 2`}>;
+    <ProtectedRoute>;"
+      <div className="min - h-screen bg - zion - blue">;"
+        <div className="container mx - auto py - 8 px - 4">;"
+          <div className="flex justify - between items - center mb - 6">;'`
+            <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold text - white flex items - center gap - 2`}>;"
               <MessageSquare className="h - 6 w - 6" />;
               Messages;
             </h1>;
             {active_conversation && (
               <Button;
-                on_click = {startVideoCall, }
+                on_click = {startVideoCall, }"
                 className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light";
-              >;
+              >;"
                 <Video className="h - 4 w - 4" />;
                 Start Call;
               </Button>)}
-          </div>;
-          <div className="bg - zion - blue - light / 10 rounded - lg shadow - lg border border - zion - purple / 20 overflow - hidden">;
+          </div>;"
+          <div className="bg - zion - blue - light / 10 rounded - lg shadow - lg border border - zion - purple / 20 overflow - hidden">;'`
             <div className={`flex flex - col md:flex - row h-[${is_mobile ? '85vh' : '75vh'}]`}>;
               {/* Conversations List */}
-              {is_loading ? (
-                <div className="flex - 1 flex items - center justify - center p - 8">;
+              {is_loading ? ("
+                <div className="flex - 1 flex items - center justify - center p - 8">;"
                   <LoadingSpinner variant="primary" />;
                 </div>) : (
                 <ConversationsList;
@@ -395,41 +458,41 @@ if ( {) {
             </div>;
           </div>;
         </div>;
-        {/* Add extra bottom padding on mobile to account for the bottom nav */}
+        {/* Add extra bottom padding on mobile to account for the bottom nav */}"
         {is_mobile && <div className="h - 16"></div>}
       </div>;
     </ProtectedRoute>);
 ;
 }
 load_data () ;
-}, [fetch_conversations]);
-}const room_id = `msg-$ {
-  active_conversation.id ;
+}, [fetch_conversations]);`
+}const room_id = `msg-$ {}
+  active_conversation.id ;`
 }`;
-setActiveCall (room_id);
-//Show toast notification //Navigate to video call page router.push (`/call/$ {
-  room_id ;
+setActiveCall (room_id);`
+//Show toast notification //Navigate to video call page router.push (`/call/$ {}
+  room_id ;`
 }`), //Changed from navigate ;
-}
-return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div className="container mx - auto py - 8 px - 4" > <div className="flex justify - between items - center mb - 6" > <h1 className= {
-  `text-$ {
-  is_mobile ? '2xl' : '3xl' ;
-}font - bold text - white flex items - center gap - 2` ";
-}> <MessageSquare className="h - 6 w - 6" /> active_conversation && (<Button on_click={
-  startVideoCall ";
+}"
+return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div className="container mx - auto py - 8 px - 4" > <div className="flex justify - between items - center mb - 6" > <h1 className= {}`
+  `text-$ {'
+  is_mobile ? '2xl' : '3xl' ;"`
+}font - bold text - white flex items - center gap - 2` ";"
+}> <MessageSquare className="h - 6 w - 6" /> active_conversation && (<Button on_click={"
+  startVideoCall ";"
 }className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light" > <Video className="h - 4 w - 4" /> Start Call </Button>) ;
-}</div> </div>) : (<ConversationsList conversations= {
+}</div> </div>) : (<ConversationsList conversations= {}
   conversations ;
-}active_conversation= {
+}active_conversation= {}
   active_conversation ;
-}setActiveConversation= {
+}setActiveConversation= {}
   setActiveConversation ;
-}markAsRead= {
+}markAsRead= {}
   markAsRead ;
 }/>) ;
-}{
+}{}
   /* Conversation Detail */ ;
-}<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
+}<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;'"
 }'"}
 
 
@@ -437,4 +500,4 @@ return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 }
-;
+;'"`

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -15,17 +16,25 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-=======
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
-const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;'"
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""'"
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;'"
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""'"
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;'"
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"'"
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
-const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de'"
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;'"
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"'"
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
 const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
@@ -71,3 +80,18 @@ import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+'"
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;'"
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

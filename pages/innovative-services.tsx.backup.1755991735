@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -9,6 +10,9 @@ import InnovativeServicesShowcase from '../components/sections/InnovativeService
 import Layout from '../components/layout/Layout';
 
 export default function InnovativeServicesPage() {
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -16,6 +20,7 @@ export default function InnovativeServicesPage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   const stats = [
     { value: '200+', label: 'Revolutionary Services', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <Shield className="w-6 h-6" /> },
@@ -39,10 +44,14 @@ export default function InnovativeServicesPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Innovative Micro SAAS Services | Zion Tech Group" />
         <meta name="twitter:description" content="Discover the future of technology with our cutting-edge micro SAAS services." />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <link rel="canonical" href="https://ziontechgroup.com/innovative-services" />
       </Head>
 
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
@@ -128,10 +137,14 @@ export default function InnovativeServicesPage() {
                 Call +1 302 464 0950
               </motion.a>
             </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Stats Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900">
@@ -176,10 +189,14 @@ export default function InnovativeServicesPage() {
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services Showcase */}
       <InnovativeServicesShowcase />
 
@@ -256,10 +273,17 @@ export default function InnovativeServicesPage() {
                 <Rocket className="w-5 h-5 mr-2 inline" />
                 Explore All Services
               </motion.a>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
     </Layout>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

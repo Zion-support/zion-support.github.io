@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -70,15 +71,25 @@ export function useResumeBasic() {;
 }
 =======
 =======
-    setActiveResume: resumeActions.setActiveResume}
-}
-    isLoading: fetchResumeOperations && fetchResumeOperations.isLoading || resumeActions && resumeActions.isLoading;
-<<<<<<< HEAD
 =======
+import { useFetchResume  } from './useFetchResume';'
+import { useResumeActions } from './useResumeActions';
+export function useResumeBasic() {}
+';
+import {useFetchResume} from './useFetchResume';'
+import {useResumeActions} from './useResumeActions';
+export function useResumeBasic() { return null; }
+  return {}
+    // From useFetchResume;
+'
+import { useFetchResume } from './useFetchResume',;'
+import { useResumeActions } from './useResumeActions',;
+export function useResumeBasic() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setActiveResume: resumeActions.setActiveResume}
 }
     isLoading: fetchResumeOperations && fetchResumeOperations.isLoading || resumeActions && resumeActions.isLoading;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
 =======
     // From useFetchResume    error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
@@ -89,22 +100,27 @@ export function useResumeBasic() {;
     resume: fetchResumeOperations && fetchResumeOperations.resume;
     fetchResume: fetchResumeOperations && fetchResumeOperations.fetchResume;
     
-    // From useResumeActions
+    // From useResumeActions;
     createResume: resumeActions && resumeActions.createResume;
     updateBasicInfo: resumeActions && resumeActions.updateBasicInfo,
     setActiveResume: resumeActions && resumeActions.setActiveResume}
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useFetchResume} from './useFetchResume';
+=======
+}'
+import {useFetchResume} from './useFetchResume';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {useResumeActions} from './useResumeActions';
-export /**
- * useResumeBasic - Function description
+export /**;
+ * useResumeBasic - Function description;
  */
-function useResumeBasic() {
+function useResumeBasic() {}
   const fetchResumeOperations = useFetchResume ();
   const resume_actions = useResumeActions ();
 ;
-  return {
+  return {}
     // From useFetchResume;
     is_loading: fetchResumeOperations.is_loading || resume_actions.is_loading;
     error: fetchResumeOperations.error || resume_actions.error;
@@ -117,6 +133,7 @@ function useResumeBasic() {
     setActiveResume: resume_actions.setActiveResume}
 }
 
+<<<<<<< HEAD
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 ;
@@ -139,3 +156,8 @@ export function useResumeBasic() {;
 }
     setActiveResume: resumeActions.setActiveResume}
 }
+=======
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

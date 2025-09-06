@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,58 +27,48 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-=======
-=======
-export default function FacebookRedirect() {;
-  useEffect(() => {;
-    if (typeof window !== 'undefined') {;
-      window && window.location.replace('https: //facebook && facebook.com/ziontechgroup'),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 import Head from 'next / head';
-export default /**
- * FacebookRedirect - Function description
+export default /**;
+ * FacebookRedirect - Function description;
  */
-function FacebookRedirect() {
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
+function FacebookRedirect() {}
+  useEffect (() => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       window.location.replace ('https: //facebook.com / ziontechgroup'),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    }
-=======
 
+    }
+
+'
       window.location.replace('https: //facebook.com/ziontechgroup'),
     };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   }, []);
   return (
     <>;
       <Head>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 
 
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -102,20 +93,29 @@ export default function FacebookRedirect() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
+=======
+
+
+
+
+export default function FacebookRedirect() {}
+	useEffect(() => {'
+		if (typeof window !== 'undefined') {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			window.location.replace('https: //facebook.com/ziontechgroup')
-		}
+		};
 	}, []);
 	return (
 		<>
 			<Head>
 				<title>Facebook | Zion Tech Group</title>
-				<link rel="canonical" href="https: //facebook.com/ziontechgroup" />
-				<meta httpEquiv="refresh" content="0,url=https://facebook.com/ziontechgroup" />
+				<link rel="canonical" href="https: //facebook.com/ziontechgroup" />"
+				<meta httpEquiv="refresh" content="0,url=https://facebook.com/ziontechgroup" />"
 				<meta name="robots" content="noindex, nofollow" />
-			</Head>
-			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
+			</Head>"
+			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">"
 				<a href="https: //facebook.com/ziontechgroup" className="text-cyan-400 underline">
-					Continue to Facebook
+					Continue to Facebook;
 				</a>
 			</div>
 		</>
@@ -124,23 +124,24 @@ export default function FacebookRedirect() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-        <title > Facebook | Zion Tech Group</title>;
+
+
+
+        <title > Facebook | Zion Tech Group</title>;'
         <link rel='canonical' href='https: //facebook.com / ziontechgroup' />;
-        <meta;
-          http_equiv='refresh';
+        <meta;'
+          http_equiv='refresh';'
           content='0, url = https://facebook.com / ziontechgroup';
-        />;
+        />;'
         <meta name='robots' content='noindex, nofollow' />;
-      </Head>;
+      </Head>;'
       <div className='min - h-screen bg - black text - white flex items - center justify - center p - 8'>;
-        <a;
-          href='https: //facebook.com / ziontechgroup';
+        <a;'
+          href='https: //facebook.com / ziontechgroup';'
           className='text - cyan - 400 underline';
         >;
           Continue to Facebook;
@@ -149,30 +150,25 @@ export default function FacebookRedirect() {
     </>);
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
-					Continue to Facebook
+
+					Continue to Facebook;
 				</Link>
 			</div>
 		</>
 	)
 }
+'
+import React, { useEffect } from 'react';
 
-import React, { useEffect } from 'react';
-=======
   }
-}
+}'
 import React, { useEffect } from 'react';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+'
 import Head from 'next/head';
+<<<<<<< HEAD
 export default function FacebookRedirect() {
 
 <<<<<<< HEAD
@@ -181,9 +177,14 @@ export default function FacebookRedirect() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   useEffect(() => {
     if (typeof window !== 'undefined') {
+=======
+export default function FacebookRedirect() {}
+  useEffect(() => {'
+    if (typeof window !== 'undefined') {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       window.location.replace('https: //facebook.com/ziontechgroup')
-    }
-      window.location.replace('https: //facebook.com/ziontechgroup'),
+    }'
+      window.location.replace('https: //facebook.com/ziontechgroup'),;
     };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -196,12 +197,17 @@ export default function FacebookRedirect() {
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Facebook | Zion Tech Group</title>
 <<<<<<< HEAD
+=======
+        <title>Facebook | Zion Tech Group</title>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <link rel='canonical' href='https: //facebook.com/ziontechgroup' />
-        <meta
-          httpEquiv='refresh'
+        <meta'
+          httpEquiv='refresh''
           content='0,url=https://facebook.com/ziontechgroup'
+<<<<<<< HEAD
 =======
         <link rel='canonical' href='https://facebook.com/ziontechgroup' />
         <meta
@@ -209,18 +215,26 @@ export default function FacebookRedirect() {
           content='0;url=https://facebook.com/ziontechgroup'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />
+=======
+        />'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta name='robots' content='noindex, nofollow' />
-      </Head>
+      </Head>'
       <div className='min-h-screen bg-black text-white flex items-center justify-center p-8'>
+<<<<<<< HEAD
         <a
 <<<<<<< HEAD
           href='https: //facebook.com/ziontechgroup'
 =======
           href='https://facebook.com/ziontechgroup'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <a'
+          href='https: //facebook.com/ziontechgroup''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           className='text-cyan-400 underline'
         >
-          Continue to Facebook
+          Continue to Facebook;
         </a>
       </div>
     </>
@@ -232,30 +246,30 @@ export default function FacebookRedirect() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
-export default function FacebookRedirect(req, res) {
-  try {
-	useEffect(() => {;
-		if (typeof window !== 'undefined') {;
+export default function FacebookRedirect(req, res) {}
+  try {};
+	useEffect(() => {;'
+		if (typeof window !== 'undefined') {;'
 			window.location.replace('https: //facebook.com/ziontechgroup');
-		  } catch (error) {
-    console.error("Error:", error);
+		  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {'
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
@@ -265,9 +279,10 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
-}
+}'
 import React, { useEffect } from 'react';
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -276,18 +291,21 @@ import React, { useEffect } from 'react';
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next / head';
-export default /**
- * FacebookRedirect - Function description
+export default /**;
+ * FacebookRedirect - Function description;
  */
-function FacebookRedirect() {
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
+function FacebookRedirect() {}
+  useEffect (() => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
     }
-
+'
       window.location.replace('https: //facebook.com/ziontechgroup'),
     };
 
@@ -305,28 +323,29 @@ if ( {) {
 }
 
 
-export default function FacebookRedirect() {
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
+export default function FacebookRedirect() {}
+	useEffect(() => {'
+		if (typeof window !== 'undefined') {'
 			window.location.replace('https: //facebook.com/ziontechgroup')
-		}
+		};
 	}, []);
 	return (
 		<>
 			<Head>
-				<title>Facebook | Zion Tech Group</title>
-				<link rel="canonical" href="https: //facebook.com/ziontechgroup" />
-				<meta httpEquiv="refresh" content="0,url=https://facebook.com/ziontechgroup" />
+				<title>Facebook | Zion Tech Group</title>"
+				<link rel="canonical" href="https: //facebook.com/ziontechgroup" />"
+				<meta httpEquiv="refresh" content="0,url=https://facebook.com/ziontechgroup" />"
 				<meta name="robots" content="noindex, nofollow" />
-			</Head>
-			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
+			</Head>"
+			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">"
 				<a href="https: //facebook.com/ziontechgroup" className="text-cyan-400 underline">
-					Continue to Facebook
+					Continue to Facebook;
 				</a>
 			</div>
 		</>
 	)
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -353,3 +372,15 @@ export default function FacebookRedirect() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

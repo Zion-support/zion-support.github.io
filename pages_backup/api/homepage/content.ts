@@ -1,15 +1,18 @@
 
+<<<<<<< HEAD:pages_backup/api/homepage/content.ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
-import path from "path";
-async function fetchFromGitHub() {
-  try {
-    const response = await fetch(
-<<<<<<< HEAD
-    );
 =======
+import type { NextApiRequest, NextApiResponse } from "next";"
+import fs from "fs";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/homepage/content.ts
+import path from "path";
+async function fetchFromGitHub() {}
+  try {}
+    const response = await fetch(
 
+<<<<<<< HEAD:pages_backup/api/homepage/content.ts
       "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json",
 
     );
@@ -81,96 +84,76 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
+=======
+import type { NextApiRequest, NextApiResponse } from './next';'
+import fs from './fs';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/homepage/content.ts
 import path from './path';
 ;
 async /**
- * fetchFromGitHub - Function description
+ * fetchFromGitHub - Function description;
  */
-function fetchFromGitHub() {
-  try {
-    const response = await fetch (
+function fetchFromGitHub() {}
+  try {}
+    const response = await fetch ("
       "https://api.github.com / repos / Zion - Holdings / zion.app / contents / data / homepage.json",
     );
-    // Check condition
-if (return null) {
-  $2
+    // Check condition;
+if (return null) {}
+  $2;
 }
-    const data = await response.json ();
+    const data = await response.json ();"
     return JSON.parse (Buffer.from (data.content, "base64").to_string ());
+<<<<<<< HEAD:pages_backup/api/homepage/content.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch {
+=======
+
+  } catch {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/homepage/content.ts
     return null;
   }
 }
-<<<<<<< HEAD
-=======
 
-  if (req && req.method !== "GET") {
-    return res && res.status(405).json({ error: "Method not allowed" });
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Cache-Controls-maxage=60, stale-while-revalidate=600');
-  try {
-<<<<<<< HEAD
-=======
-
-    const localPath = path.join(process.cwd(), 'publicautonomyHOMEPAGE_CONTENT.json');
-    if (fs.existsSync(localPath)) {
-      try {
-        const json = JSON.parse(fs.readFileSync(localPath, 'utf8'));
-        return res.status(200).json(json)
-      } catch {
-        // fall back to remote
-      }
-    }
-    const remote = await fetchFromGitHub();
-    if (remote) return res.status(200).json(remote);
-    return res.status(200).json(null)
-  } catch (e: any) {
-    return res.status(500).json({ error: e.message || 'Internal error' })
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default async function handler() { return null; }
+  try {}
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
   }
-  try {
+  try {"
     const localPath = path && path.join(process && process.cwd(), "data", "homepage && homepage.json");
-    if (fs && fs.existsSync(localPath)) {
+    if (fs && fs.existsSync(localPath)) {"
       const local = JSON && JSON.parse(fs && fs.readFileSync(localPath, "utf-8"));
       return res && res.status(200).json(local);
-=======
-export default async /**
- * handler - Function description
+
+export default async /**;
+ * handler - Function description;
  */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
 }
-<<<<<<< HEAD
-=======
-    return res.status (405).json ({ error: "Method not allowed" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
   }
-  try {
+  try {"
     const local_path = path.join (process.cwd (), "data", "homepage.json");
-    if () {) {
-  $2
-}
+    if () {) {}
+  $2;
+}"
       const local = JSON.parse (fs.readFileSync (local_path, "utf - 8"));
       return res.status (200).json (local);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     }
-  } catch {
+  } catch {}
     // fall back to remote;
   }
+<<<<<<< HEAD:pages_backup/api/homepage/content.ts
 <<<<<<< HEAD
   const remote = await fetchFromGitHub();
   if (remote) return res.status(200).json(remote);
@@ -214,11 +197,15 @@ async function fetchFromGitHub(): Promise<any | null> {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/homepage/content.ts
 
   if (remote) return res && res.status(200).json(remote);
   return res && res.status(200).json(null);
 }
 
+<<<<<<< HEAD:pages_backup/api/homepage/content.ts
 <<<<<<< HEAD
 =======
 =======
@@ -237,20 +224,25 @@ async function fetchFromGitHub(): Promise<any | null> {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+
+
+  const remote = await fetchFromGitHub ();
+  if (return res.status (200).json (remote)) {}
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/homepage/content.ts
 }
+
+
 
 }
 <<<<<<< HEAD
 =======
 
-=======
-  return res.status (200).json (null);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-}
 
+<<<<<<< HEAD:pages_backup/api/homepage/content.ts
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -261,3 +253,7 @@ async function fetchFromGitHub(): Promise<any | null> {;
   return res.status(200).json(null);
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/homepage/content.ts

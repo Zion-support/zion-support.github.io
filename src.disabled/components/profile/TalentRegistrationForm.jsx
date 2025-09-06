@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +28,23 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/profile/TalentRegistrationForm.jsx
 ' \' \' \' \' \' \' \' \' \''\'";\";
+=======
+
+
+' \' \' \' \' \' \' \' \' \''\'";\";'"
 " " " " " " " " " """";";'"'"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-' \' \' \' \' \' \' \' \' \''\'";\";
+:src.disabled/components/profile/TalentRegistrationForm.jsx'"
+' \' \' \' \' \' \' \' \' \''\'";\";'"
 " " " " " " " " " """";";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
+' \' \' \' \' \' \' \' \' \''\'";\";'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+" " " " " " " " " """";";'"'"
+:temp_exclude/src.disabled/components/profile/TalentRegistrationForm.jsx;
+'"
+' \' \' \' \' \' \' \' \' \''\'";\";'"
+" " " " " " " " " """";";'"'"
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/profile/TalentRegistrationForm.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,11 +67,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
-' ' ' ' ' ' ' ' ' ' ''''";";""
 =======
-' \' \' \' \' \' \' \' \' \''\'";\";
-" " " " " " " " " """";";'"'"
+'"
 ' ' ' ' ' ' ' ' ' ' ''''";";""
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+' ' ' ' ' ' ' ' ' ' ''''";";""
+'"
+' \' \' \' \' \' \' \' \' \''\'";\";'"
+" " " " " " " " " """";";'"'"'"
+' ' ' ' ' ' ' ' ' ' ''''";";""
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -75,3 +95,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 " " " " " " " " " """";";'"'"
 ' ' ' ' ' ' ' ' ' ' ''''";";""
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

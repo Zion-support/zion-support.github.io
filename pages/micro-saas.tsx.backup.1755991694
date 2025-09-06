@@ -542,6 +542,7 @@ export default function MicroSaasPage() {
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
       </Head>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-pink-900/20 to-cyan-900/20"></div>
@@ -611,6 +612,9 @@ export default function MicroSaasPage() {
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">24/7</div>
               <div className="text-sm text-gray-400">Support</div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </div>

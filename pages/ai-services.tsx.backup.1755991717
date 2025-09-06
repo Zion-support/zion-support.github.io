@@ -50,6 +50,7 @@ const aiServices = [
 
 export default function AIServices() {
   return (
+<<<<<<< HEAD
     <>
       <SEO 
         title="AI & Machine Learning Services | Zion Tech Group"
@@ -87,6 +88,9 @@ export default function AIServices() {
                 >
                   Get Consultation
                 </motion.button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>

@@ -1,8 +1,11 @@
 
+<<<<<<< HEAD
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from './react';
 ;
-const PageTransition = () =>: any {
+const PageTransition = () =>: any {}
   return (
     <div data - testid="pagetransition">;
       <h1 > PageTransition</h1>;
@@ -12,4 +15,10 @@ const PageTransition = () =>: any {
 export default PageTransition;
 ;
 
+<<<<<<< HEAD
 pr-12243
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

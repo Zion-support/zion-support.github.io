@@ -3,10 +3,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export {};
 <<<<<<< HEAD
 =======
+=======
+
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 module.exports = {};
 <<<<<<< HEAD
@@ -15,6 +25,7 @@ module.exports = {};
 module.exports = {};
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -84,3 +95,7 @@ module.exports = {};
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

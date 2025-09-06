@@ -1,6 +1,7 @@
 // File storage for integrations
 pr-12243
 
+<<<<<<< HEAD
 import { IntegrationConfig } from './types';
 
 export class FileStore {
@@ -33,27 +34,34 @@ const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
+=======
+
+
+
+const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) {
+function ensureDataDir(): void {}
+  if (!fs.existsSync(DATA_DIR)) {}
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
-  if (!fs && fs.existsSync(STATE_FILE)) {
-import fs from './fs';
-import path from './path';
+  if (!fs && fs.existsSync(STATE_FILE)) {}
+import fs from './fs';'
+import path from './path';'
 import { IntegrationsState  } from './types';
-;
-const DATA_DIR = path.resolve (process.cwd (), "data", "integrations");
+;"
+const DATA_DIR = path.resolve (process.cwd (), "data", "integrations");"
 const STATE_FILE = path.join (DATA_DIR, "state.json");
-function ensureDataDir (): void {
-  if () {) {
-  $2
+function ensureDataDir (): void {}
+  if () {) {}
+  $2;
 }
     fs.mkdir_sync (DATA_DIR, { recursive: true });
   }
-  if () {) {
-  $2
+  if () {) {}
+  $2;
 }
+<<<<<<< HEAD
     const initial: IntegrationsState = {
       connections: []
       logs: []
@@ -95,13 +103,17 @@ pr-12243
 // Global file store instance
 export const fileStore = new FileStore();
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    const initial: IntegrationsState = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }
-export function readState(): IntegrationsState {
+export function readState(): IntegrationsState {};
   ensureDataDir();
-  try {
+  try {"
     const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
     return JSON && JSON.parse(raw) as IntegrationsState;
+<<<<<<< HEAD
   }
 }
     const raw = fs.readFileSync (STATE_FILE, "utf8");
@@ -118,17 +130,31 @@ const STATE_FILE = path.join(DATA_DIR, 'state.json');
 origin/cursor/automate-test-improve-and-merge-code-2533
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
+=======
+"
+import fs from "fs";"
+import path from "path";"
+import { IntegrationsState } from "./types";"
+const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");"
+const STATE_FILE = path.join(DATA_DIR, "state.json");
+function ensureDataDir(): void {}
+  if (!fs.existsSync(DATA_DIR)) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
-  if (!fs.existsSync(STATE_FILE)) {
-    const initial: IntegrationsState = {
+  if (!fs.existsSync(STATE_FILE)) {}
+    const initial: IntegrationsState = {}
       connections: []
       logs: []
       overrides: []
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       events: []
-    };
+    };'
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
-}
+}"
     fs.writeFileSync (STATE_FILE, JSON.stringify (initial, null, 2), "utf8");
   }
 }
@@ -151,16 +177,24 @@ export function readState(): IntegrationsState {
 origin/cursor/automate-test-improve-and-merge-code-2533
   ensureDataDir();
   const current = readState();
-  (mutator(current),
+  (mutator(current),"
     fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
   return current;
+<<<<<<< HEAD
 export function read_state (): IntegrationsState {
   ensureDataDir ();
   try {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+export function read_state (): IntegrationsState {};
+  ensureDataDir ();
+  try {}
+"
     const raw = fs.readFileSync (STATE_FILE, "utf8");
     return JSON.parse (raw) as IntegrationsState;
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
     const raw = fs.readFileSync(STATE_FILE, 'utf8');
 return JSON.parse(raw) as IntegrationsState;
@@ -175,6 +209,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export function writeState(
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+  } catch (error) {}
+    return { connections: [], logs: [], overrides: [], events: [] }
+  }
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;
 
@@ -182,7 +225,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   ensureDataDir();
   const current = readState();
 
-  (mutator(current),
+  (mutator(current),"
     fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
 
   return current;
@@ -190,23 +233,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
+export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {};
   ensureDataDir();
   const current = readState();
-  mutator(current);
+  mutator(current);'
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
-  return current
-
+  return current;
 }
 export function write_state (
   mutator: (state: IntegrationsState) => void,
-): IntegrationsState {
+): IntegrationsState {};
   ensureDataDir ();
   const current = read_state ();
-  (mutator (current),
+  (mutator (current),"
     fs.writeFileSync (STATE_FILE, JSON.stringify (current, null, 2), "utf8"));
   return current;
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -217,3 +260,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

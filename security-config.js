@@ -2,23 +2,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/security-config.js
 =======
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
 
-=======
-=======
-const securityHeaders = [{ key: "X-DNS-Prefetch-Control",value: "on" },{ key: "Strict-Transport-Security",value: "max-age=630720;0;0; includeSubDomains; preload" },{ key: "X-XSS-Protection",value: "1; mode=block" },{ key: "X-Frame-Options",value: "SAMEORIGIN" },{ key: "X-Content-Type-Options",value: "nosniff" },{ key: "Referrer-Policy",value: "origin-when-cross-origin" }]; module.exports = { securityHeaders };'"'"
+
+
+
+
+
+
+
+
+
+const securityHeaders = [{ key: "X-DNS-Prefetch-Control",value: "on" },{ key: "Strict-Transport-Security",value: "max-age=630720;0;0; includeSubDomains; preload" },{ key: "X-XSS-Protection",value: "1; mode=block" },{ key: "X-Frame-Options",value: "SAMEORIGIN" },{ key: "X-Content-Type-Options",value: "nosniff" },{ key: "Referrer-Policy",value: "origin-when-cross-origin" }]; module.exports = { securityHeaders };'"'"'"
+const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "key": 'Strict-Transport-Security',"value": 'max-age=630720;0;0; includeSubDomains; preload' },{ "key": 'X-XSS-Protection',"value": '1; mode=block' },{ "key": 'X-Frame-Options',"value": 'SAMEORIGIN' },{ "key": 'X-Content-Type-Options',"value": 'nosniff' },{ "key": 'Referrer-Policy',"value": 'origin-when-cross-origin' }]; module.exports = { securityHeaders };'''"
+const securityHeaders = [{ key: "X-DNS-Prefetch-Control",value: "on" },{ key: "Strict-Transport-Security",value: "max-age=630720;0;0; includeSubDomains; preload" },{ key: "X-XSS-Protection",value: "1; mode=block" },{ key: "X-Frame-Options",value: "SAMEORIGIN" },{ key: "X-Content-Type-Options",value: "nosniff" },{ key: "Referrer-Policy",value: "origin-when-cross-origin" }]; module.exports = { securityHeaders };'"'"'"
 const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "key": 'Strict-Transport-Security',"value": 'max-age=630720;0;0; includeSubDomains; preload' },{ "key": 'X-XSS-Protection',"value": '1; mode=block' },{ "key": 'X-Frame-Options',"value": 'SAMEORIGIN' },{ "key": 'X-Content-Type-Options',"value": 'nosniff' },{ "key": 'Referrer-Policy',"value": 'origin-when-cross-origin' }]; module.exports = { securityHeaders };''
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -100,10 +104,27 @@ const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "ke
   { key: "X-XSS-Protection", value: "1; mode=block" },
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
   { key: "X-Content-Type-Options", value: "nosniff" },
+=======
+
+
+
+
+
+
+
+
+const securityHeaders = ["
+  { key: "X-DNS-Prefetch-Control", value: "on" },"
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },"
+  { key: "X-XSS-Protection", value: "1; mode=block" },"
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },"
+  { key: "X-Content-Type-Options", value: "nosniff" },"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { key: "Referrer-Policy", value: "origin-when-cross-origin" }
 ];
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,3 +182,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

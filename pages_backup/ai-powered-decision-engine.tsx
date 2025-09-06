@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/ai-powered-decision-engine.tsx
 <<<<<<< HEAD:pages/ai-powered-decision-engine.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,17 +91,21 @@ export default function AiPoweredDecisionEngine() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-powered-decision-engine.tsx
 			pricePerMonthUSD={279}
-			implementationWeeks="3-7 days"
+			implementationWeeks="3-7 days""
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
-			features={[
-				"Policy and risk decisioning with constraints"
-				"Online experimentation (A/B, multi-armed bandits)"
-				"Explainability and audit trails"
-				"Rules + ML hybrid strategies"
-				"Real-time feature engineering and caching"
-				"Integrations: Kafka, Snowflake, Redis, REST/gRPC"
+			features={["
+				"Policy and risk decisioning with constraints""
+				"Online experimentation (A/B, multi-armed bandits)""
+				"Explainability and audit trails""
+				"Rules + ML hybrid strategies""
+				"Real-time feature engineering and caching""
+				"Integrations: Kafka, Snowflake, Redis, REST/gRPC""
 				"Drift monitoring and alerts"
+<<<<<<< HEAD:pages_backup/ai-powered-decision-engine.tsx
 
 <<<<<<< HEAD
 =======
@@ -109,13 +114,17 @@ import React from 'react';
 			title;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-powered-decision-engine.tsx
 				"Versioned strategies with canary rollouts"
-			]}
-			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
-			title="AI-Powered Decision Engine"
-			description="Operationalize policy, risk, pricing, and routing decisions with explainable AI and guardrails. Deploy strategies, test variants, and monitor outcomes."
+			]}"
+			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}"
+			title="AI-Powered Decision Engine""
+			description="Operationalize policy, risk, pricing, and routing decisions with explainable AI and guardrails. Deploy strategies, test variants, and monitor outcomes.""
 			subtitle="Make better decisions, continuously"
 			pricePerMonthUSD={279}
+<<<<<<< HEAD:pages_backup/ai-powered-decision-engine.tsx
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -145,16 +154,32 @@ import React from 'react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			implementationWeeks="3-7 days"
+=======
+			pricePerMonthUSD={279  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+
+
+
+"
+			implementationWeeks="3-7 days""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-powered-decision-engine.tsx
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
-			features={[
-				"Policy and risk decisioning with constraints",
-				"Online experimentation (A/B, multi-armed bandits)",
-				"Explainability and audit trails",
-				"Rules + ML hybrid strategies",
-				"Real-time feature engineering and caching",
-				"Integrations: Kafka, Snowflake, Redis, REST/gRPC",
-				"Drift monitoring and alerts",
+			features={["
+				"Policy and risk decisioning with constraints","
+				"Online experimentation (A/B, multi-armed bandits)","
+				"Explainability and audit trails","
+				"Rules + ML hybrid strategies","
+				"Real-time feature engineering and caching","
+				"Integrations: Kafka, Snowflake, Redis, REST/gRPC","
+				"Drift monitoring and alerts","
 				"Versioned strategies with canary rollouts"
+<<<<<<< HEAD:pages_backup/ai-powered-decision-engine.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -178,32 +203,42 @@ import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 			]  } catch (error) {
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+=======
 
+			]  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-powered-decision-engine.tsx
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+"
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
+<<<<<<< HEAD:pages_backup/ai-powered-decision-engine.tsx
 	)
 <<<<<<< HEAD:pages/ai-powered-decision-engine.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+	)"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-powered-decision-engine.tsx
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine";
 		/>;
 	);
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD:pages_backup/ai-powered-decision-engine.tsx
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -225,3 +260,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/ai-powered-decision-engine.tsx
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/ai-powered-decision-engine.tsx

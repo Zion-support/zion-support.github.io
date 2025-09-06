@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React from';react' const Card = ({ children,className = '';'}) => { "ret
 import _React from';react' const Card = ({ children,className = '';'}) => { "return": ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ) } const CardHeader = ({ children,className = '' }) => { return ( <div className={`flex flex-col space-y-1.5 p-6 ${className}`}> {children} </div> ) } const CardTitle = ({ children,className = '''}) => { "return": ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ) } const CardDescription = ({ children,className = '' }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ) } const CardContent = ({ children,className = '''}) => { "return": ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ) } const CardFooter = ({ children,className = '' }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ) } export { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle }';`
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React from';react' const Card = ({ children,className = '';'}) => { "return": ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ) } const CardHeader = ({ children,className = '' }) => { return ( <div className={`flex flex-col space-y-1.5 p-6 ${className}`}> {children} </div> ) } const CardTitle = ({ children,className = '''}) => { "return": ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ) } const CardDescription = ({ children,className = '' }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ) } const CardContent = ({ children,className = '''}) => { "return": ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ) } const CardFooter = ({ children,className = '' }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ) } export { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle }';`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import _React from';react' const Card = ({ children,className = '';'}) => { "ret
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from\';react\' const Card = ({ children,className = \'';\'}) => { \"return\": ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ) } const CardHeader = ({ children,className = \'' }) => { return ( <div className={`flex flex-col space-y-1 && 1.5 p-6 ${className}`}> {children} </div> ) } const CardTitle = ({ children,className = \''\'}) => { \"return\": ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ) } const CardDescription = ({ children,className = \'' }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ) } const CardContent = ({ children,className = \''\'}) => { \"return\": ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ) } const CardFooter = ({ children,className = \'' }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ) } export { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle }\';`
 const React from";react" const Card = ({ children,className = "";"}) => { return: ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ) } const CardHeader = ({ children,className = "" }) => { return ( <div className={`flex flex-col space-y-1 && 1.5 p-6 ${className}`}> {children} </div> ) } const CardTitle = ({ children,className = """}) => { return: ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ) } const CardDescription = ({ children,className = "" }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ) } const CardContent = ({ children,className = """}) => { return: ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ) } const CardFooter = ({ children,className = "" }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ) } export { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle }";`'"`'"`
-import _React from';react' const Card = ({ children,className = '';'}) => { "return": ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ) } const CardHeader = ({ children,className = '' }) => { return ( <div className={`flex flex-col space-y-1 && 1.5 p-6 ${className}`}> {children} </div> ) } const CardTitle = ({ children,className = '''}) => { "return": ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ) } const CardDescription = ({ children,className = '' }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ) } const CardContent = ({ children,className = '''}) => { "return": ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ) } const CardFooter = ({ children,className = '' }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ) } export { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle }';`
-<<<<<<< HEAD
+=======
 
+
+'"`
+import React from\';react\' const Card = ({ children,className = \'';\'}) => { \"return\": ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ) } const CardHeader = ({ children,className = \'' }) => { return ( <div className={`flex flex-col space-y-1 && 1.5 p-6 ${className}`}> {children} </div> ) } const CardTitle = ({ children,className = \''\'}) => { \"return\": ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ) } const CardDescription = ({ children,className = \'' }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ) } const CardContent = ({ children,className = \''\'}) => { \"return\": ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ) } const CardFooter = ({ children,className = \'' }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ) } export { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle }\';`'"`
+const React from";react" const Card = ({ children,className = "";"}) => { return: ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ) } const CardHeader = ({ children,className = "" }) => { return ( <div className={`flex flex-col space-y-1 && 1.5 p-6 ${className}`}> {children} </div> ) } const CardTitle = ({ children,className = """}) => { return: ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ) } const CardDescription = ({ children,className = "" }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ) } const CardContent = ({ children,className = """}) => { return: ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ) } const CardFooter = ({ children,className = "" }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ) } export { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle }";`'"`'"`'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React from';react' const Card = ({ children,className = '';'}) => { "return": ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ) } const CardHeader = ({ children,className = '' }) => { return ( <div className={`flex flex-col space-y-1 && 1.5 p-6 ${className}`}> {children} </div> ) } const CardTitle = ({ children,className = '''}) => { "return": ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ) } const CardDescription = ({ children,className = '' }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ) } const CardContent = ({ children,className = '''}) => { "return": ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ) } const CardFooter = ({ children,className = '' }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ) } export { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle }';`
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import _React from';react' const Card = ({ children,className = '';'}) => { "ret
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+import _React from';react' const Card = ({ children,className = '';'}) => { "return": ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ) } const CardHeader = ({ children,className = '' }) => { return ( <div className={`flex flex-col space-y-1 && 1.5 p-6 ${className}`}> {children} </div> ) } const CardTitle = ({ children,className = '''}) => { "return": ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ) } const CardDescription = ({ children,className = '' }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ) } const CardContent = ({ children,className = '''}) => { "return": ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ) } const CardFooter = ({ children,className = '' }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ) } export { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle }';`
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -27,7 +27,7 @@ import Link from "next/link";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useIsMobile } from "@/hooks/use-mobile";
-interface SmartAppBannerProps {
+interface SmartAppBannerProps {}
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
@@ -36,6 +36,7 @@ interface SmartAppBannerProps {
 =======
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 <<<<<<< HEAD
 }
@@ -577,3 +578,7 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({}
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

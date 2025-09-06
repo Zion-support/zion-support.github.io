@@ -4,6 +4,7 @@ const LoadingSpinner = dynamic(() => import("./LoadingSpinner"),{'; "loading": (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 </p>'
 </p>'
 ursor/add-new-services-and-deploy-updates-0462
@@ -26,15 +27,21 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+'
+</p>'
+
+
+
+
+'
+</p>'
+
 <<<<<<< HEAD
-
-</p>'
-
-=======
-</p>'
-
 </p>'
 </p>'
 </p>'
@@ -75,3 +82,10 @@ ursor/add-new-services-and-deploy-updates-0462
 </p>'</p>'
 </p>'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+</p>'
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

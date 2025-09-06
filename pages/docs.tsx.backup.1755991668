@@ -6,6 +6,7 @@ import Card from '../components/ui/Card';
 export default function DocsPage() {
 	return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<UltraFuturisticBackground variant="quantum" intensity="medium">
 =======
 <<<<<<< HEAD
@@ -14,12 +15,16 @@ export default function DocsPage() {
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			<Head>
 				<title>Documentation | Zion Tech Group</title>
 				<meta name="description" content="Product guides, tutorials, and best practices." />
 				<link rel="canonical" href="https://ziontechgroup.com/docs" />
 				<meta name="description" content="Documentation for Zion Tech Group platforms and micro SaaS services." />
 			</Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -47,5 +52,8 @@ export default function DocsPage() {
 		</div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	);
 }

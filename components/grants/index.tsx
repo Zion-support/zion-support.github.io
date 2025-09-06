@@ -1,26 +1,30 @@
 
+<<<<<<< HEAD
 
 import type {;
   GrantApplication,;
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
 
-const categories: GrantCategory[] = [;
-  'Ecosystem Tools',;
-  'Talent Development',;
-  'Regional Expansion',;
+const categories: GrantCategory[] = [;'
+  'Ecosystem Tools',;'
+  'Talent Development',;'
+  'Regional Expansion',;'
   'Research Grants',;
 ];
-const statuses: GrantStatus[] = [;
-  'Draft',;
-  'Submitted',;
-  'Under Review',;
-  'Approved',;
+const statuses: GrantStatus[] = [;'
+  'Draft',;'
+  'Submitted',;'
+  'Under Review',;'
+  'Approved',;'
   'Rejected',;
 ];
 
+<<<<<<< HEAD
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
     sector?: string;
@@ -163,20 +167,29 @@ pr-12243
     if (filters.sector) params.set('sector', filters.sector);
     if (filters.status) params.set('status', filters.status);
     if (filters.region) params.set('region', filters.region);
+=======
+export default function GrantsPage() { return null; }
+  }>({});
+
+  useEffect(() => {}
+    const params = new URLSearchParams();'
+    if (filters.sector) params.set('sector', filters.sector);'
+    if (filters.status) params.set('status', filters.status);'
+    if (filters.region) params.set('region', filters.region);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (filters.program) params.set('program', filters.program);
-    fetch(`/api/grants?${params.toString()}`)
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+    fetch(`/api/grants?${params.toString()}`)'
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;
-export default function GrantsPage() {;
-  const [items, setItems] = useState<GrantApplication[]>([]);
+export default function GrantsPage() { return null; }
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 
   useEffect(() => {;
-    const params = new URLSearchParams();
-    if (filters && filters.sector) params && params.set('sector', filters && filters.sector);
-    if (filters && filters.status) params && params.set('status', filters && filters.status);
-    if (filters && filters.region) params && params.set('region', filters && filters.region);
-    if (filters && filters.program) params && params.set('program', filters && filters.program);
+    const params = new URLSearchParams();'
+    if (filters && filters.sector) params && params.set('sector', filters && filters.sector);'
+    if (filters && filters.status) params && params.set('status', filters && filters.status);'
+    if (filters && filters.region) params && params.set('region', filters && filters.region);'
+    if (filters && filters.program) params && params.set('program', filters && filters.program);`
     fetch(`/api/grants?${params && params.toString()}`);
       .then(r => r && r.json());
       .then(d => setItems(d && d.items || []));
@@ -188,6 +201,7 @@ export default function GrantsPage() {;
       .then((d) => setItems(d && d.items || []));
       .catch(() => setItems([]));
   }, [filters]);
+<<<<<<< HEAD
   useEffect(() => {
 .then(r => r.json())
       .then(d => setItems(d.items || []))
@@ -200,20 +214,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
         <div className='flex gap-2'>
           <Link href='/grants/apply'>
+=======
+    <EnhancedLayout>'
+      <div className='flex items-center justify-between mb-6'>'
+        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>'
+        <div className='flex gap-2'>'
+          <Link href='/grants/apply'>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>
-          </Link>
-          <Link href='/incubator'>
+          </Link>'
+          <Link href='/incubator'>'
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>
-              Incubator
+              Incubator;
             </a>
           </Link>
-      </div>
+      </div>'
       <div className='grid md:grid-cols-4 gap-4 mb-6'>
-        <select
-          className='border rounded p-2'
+        <select'
+          className='border rounded p-2''
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+<<<<<<< HEAD
 export default /**
  * GrantsPage - Function description
  */
@@ -254,6 +276,11 @@ function GrantsPage() {
 pr-12243
           }
         >
+=======
+
+          }
+        >'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <option value=''>All Stages</option>
           {statuses.map(s => (
             <option key={s} value={s}>
@@ -261,26 +288,31 @@ pr-12243
             </option>
           ))}
         </select>
-        <input
-          className='border rounded p-2'
+        <input'
+          className='border rounded p-2''
           placeholder='Region'
+<<<<<<< HEAD
           value={filters.region |''}
           onChange={e =>
             setFilters(f => ({ ...f, region: e.target.value |undefined }))
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-          value={filters && filters.region || ''}
-          onChange={e =>;
-            setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
 
+<<<<<<< HEAD
           value={filters.region |''}
           onChange={e =>
             setFilters(f => ({ ...f, region: e.target.value |undefined }))
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
         />
-        <select
+        <select'
           className='border rounded p-2'
 
+<<<<<<< HEAD
       <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
         <select;
           className='border rounded p - 2';
@@ -288,8 +320,10 @@ pr-12243
           on_change={e =>;
             set_filters (function => ({ ...f, sector: e.target.value || undefined }));
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
-        >;
+        >;'
           <option value=''>All Sectors</option>;
           {categories && categories.map(c => (;
             <option key={c} value={c}>;
@@ -297,10 +331,10 @@ pr-12243
             </option>;
           ))}
         </select>;
-        <select
+        <select'
           className='border rounded p-2'
           }
-        >;
+        >;'
           <option value=''>All Stages</option>;
           {statuses && statuses.map(s => (;
             <option key={s} value={s}>;
@@ -308,11 +342,12 @@ pr-12243
             </option>;
           ))}
         </select>;
-        <input
-          className='border rounded p-2'
+        <input'
+          className='border rounded p-2''
           placeholder='Region'
           }
         />;
+<<<<<<< HEAD
         <select
           className='border rounded p-2'
         <select;
@@ -372,12 +407,20 @@ pr-12243
         <select
           className='border rounded p-2'
 pr-12243
+=======
+
+
+        <select'
+          className='border rounded p-2'
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
-              </div>;
-              <div className='flex gap - 2 items - center'>;
+              </div>;'
+              <div className='flex gap - 2 items - center'>;'
                 {g.program === 'incubator' && (
 
+<<<<<<< HEAD
           value={filters && filters.program || ''}
           onChange={e =>;
             setFilters(f => ({ ...f, program: e && e.target.value || undefined }));
@@ -393,33 +436,45 @@ pr-12243
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
           <Link href="/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded">Apply</a></Link>
+=======
+      <div className="flex items-center justify-between mb-6">"
+        <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>"
+        <div className="flex gap-2">"
+          <Link href="/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded">Apply</a></Link>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
         </div>
       </div>
 
 
+<<<<<<< HEAD
 pr-12243
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='grid gap-4'>;
         {items && items.map(g => (;
-          <div
-            key={g && g.id}
-            className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
+          <div;
+            key={g && g.id}'
+            className='border rounded p-4 bg-white/70 dark:bg-black/40'>;'
             <div className='flex items-center justify-between'>;
-              <div>;
-                <h3 className='text-lg font-medium'>;
+              <div>;'
+                <h3 className='text-lg font-medium'>;`
                   <Link href={`/grants/${g && g.id}`}>;
                     <a>{g && g.projectName}</a>;
                   </Link>;
-                </h3>;
-                <div className='text-xs text-gray-600 dark:text-gray-400'>;
+                </h3>;'
+                <div className='text-xs text-gray-600 dark:text-gray-400'>;'
                   {g && g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
-              </div>;
-              <div className='flex gap-2 items-center'>;
-                {g && g.program === 'incubator' && (;
+              </div>;'
+              <div className='flex gap-2 items-center'>;'
+                {g && g.program === 'incubator' && (;'
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
+<<<<<<< HEAD
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
@@ -430,28 +485,36 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 pr-12243
                 )}
                 {g && g.status === 'Approved' && (;
+=======
+
+
+
+                )}'
+                {g && g.status === 'Approved' && (;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
                     Grant Winner;
                   </span>;
-                )}
+                )}'
                 <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>;
                   {g && g.status}
                 </span>;
               </div>;
-            </div>;
+            </div>;'
             <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3'>;
               {g && g.proposalSummary}
-            </p>;
+            </p>;'
             <div className='mt-3 text-sm text-gray-600 dark:text-gray-400'>;
               Budget: {g && g.budgetAmount} {g && g.budgetCurrency}
             </div>;
           </div>;
         ))}
-        {items && items.length === 0 && (;
+        {items && items.length === 0 && (;'
           <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
 
 
+<<<<<<< HEAD
       </div>
     </EnhancedLayout>
 );
@@ -488,3 +551,19 @@ pr-12243
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+      </div>
+    </EnhancedLayout>
+);
+
+      </div>;
+    </EnhancedLayout>;
+  );
+
+}
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

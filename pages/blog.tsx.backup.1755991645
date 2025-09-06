@@ -11,9 +11,8 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 ========
 import React from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/blog.tsx.backup.1755991645
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function BlogPage() {
@@ -50,3 +49,5 @@ export default function BlogPage() {
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-45bf
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/blog.tsx.backup.1755991645
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

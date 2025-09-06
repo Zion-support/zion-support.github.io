@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/auth/logout.ts
 <<<<<<< HEAD:pages/api/auth/logout.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,19 +23,23 @@ import { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/logout.ts
 
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   res.status(200).json({ success: true })
 
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
+<<<<<<< HEAD:pages_backup/api/auth/logout.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/logout.ts
 
 =======
 
@@ -49,7 +54,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/logout.ts
 import { clearUserCookie } from '../../../utils/auth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler() { return null; }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   clearUserCookie(res)
 
@@ -60,6 +65,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearUserCookie(res);
 origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ success: true })
+<<<<<<< HEAD:pages_backup/api/auth/logout.ts
 <<<<<<< HEAD:pages/api/auth/logout.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,10 +84,11 @@ export default function handler(req, res) {
 =======
 =======
 <<<<<<< HEAD
-
 =======
-}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/logout.ts
 
+
+<<<<<<< HEAD:pages_backup/api/auth/logout.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -101,10 +108,18 @@ import { clearUserCookie } from '../../../utils / auth'
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/logout.ts
 export default /**
  * handler - Function description
+=======
+
+'
+import { NextApiRequest, NextApiResponse } from 'next','
+import { clearUserCookie } from '../../../utils / auth',;
+export default /**;
+ * handler - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/logout.ts
  */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
+function handler() { return null; }
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {}
+  $2;
 }
   clearUserCookie (res),
   res.status (200).json ({ success: true });
@@ -114,6 +129,7 @@ function handler() {
 <<<<<<< HEAD:pages/api/auth/logout.ts
 <<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/api/auth/logout.ts
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -149,3 +165,11 @@ export default function handler(req, res) {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/logout.ts
+=======
+
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/auth/logout.ts

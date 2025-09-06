@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -21,17 +22,24 @@ const { execSync } = require('child_process');
 =======
 const { execSync } = require('child_process');
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-console.log('Testing Next.js installation...');
-try {// Check if Next.js is installed;
-  const nextVersion = execSync('npx next --version', { encoding: 'utf8' });
-  console.log('Next.js version:', nextVersion.trim());
-  // Try to run a simple build;
-  console.log('Testing build...');
-  execSync('npx next build', { stdio: 'inherit' });
-  console.log('Build successful!');
-} catch (error) {console.error('Error:', error.message);
-const { execSync } = require('child_process'),;
+=======
+
 const { execSync } = require('child_process');
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+console.log('Testing Next.js installation...');
+try {// Check if Next.js is installed;'
+  const nextVersion = execSync('npx next --version', { encoding: 'utf8' });'
+  console.log('Next.js version:', nextVersion.trim());
+  // Try to run a simple build;'
+  console.log('Testing build...');'
+  execSync('npx next build', { stdio: 'inherit' });'
+  console.log('Build successful!');'
+} catch (error) {console.error('Error:', error.message);'
+const { execSync } = require('child_process'),;'
+const { execSync } = require('child_process');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,19 +66,32 @@ const { execSync } = require('child_process');
 =======
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 console.log('Testing Next.js installation...'),;
 try {;
-  // Check if Next.js is installed;
-  const nextVersion = execSync('npx next --version', { encoding: 'utf8' }),;
+  // Check if Next.js is installed;'
+  const nextVersion = execSync('npx next --version', { encoding: 'utf8' }),;'
   console.log('Next.js version:', nextVersion.trim()),;
-  // Try to run a simple build;
-  console.log('Testing build...'),;
-  execSync('npx next build', { stdio: 'inherit' }),;
+  // Try to run a simple build;'
+  console.log('Testing build...'),;'
+  execSync('npx next build', { stdio: 'inherit' }),;'
   console.log('Build successful!');
-} catch (error) {;
+} catch (error) {;'
   console.error('Error:', error.message);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
+=======
+}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

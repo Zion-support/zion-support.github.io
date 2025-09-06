@@ -6,6 +6,7 @@ export default function AIPredictiveMaintenancePlatform() {
 		<ServiceLanding
 			title="AI Predictive Maintenance Platform"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -45,6 +46,9 @@ export default function AIPredictiveMaintenancePlatform() {
 			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-732a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			canonical="https://ziontechgroup.com/ai-predictive-maintenance-platform"
 		/>
 	);

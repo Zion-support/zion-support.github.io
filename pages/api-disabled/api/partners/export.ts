@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD:pages/api-disabled/api/partners/export.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 <<<<<<< HEAD:pages/api/partners/export.ts
@@ -156,16 +157,26 @@ if ( {) {
 
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+    const { data, error } = await supabase;
+  } catch (e: any) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/export.ts
   }
 
 }
 
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD:pages/api-disabled/api/partners/export.ts
 >>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/partners/export.ts
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/partners/export.ts

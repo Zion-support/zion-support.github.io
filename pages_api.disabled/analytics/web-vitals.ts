@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) .toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }
 import { NextApiRequest, NextApiResponse } from
 import {NextApiRequest,NextApiResponse} from 'next'; interface WebVitalsData { name: string, value: number, id: string, delta: number, timestamp: number, url: string, userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req && req.method !==,POST') {' return res && res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req && req.body, if (!data && data.name || typeof data && data.value !==,number') {' return res && res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) .toISOString(),}); res && res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a && a.name,value: dat a && a.value })} catch (error) { console && console.error( 'Error processing web vitals:,' ,error); res && res.status(500).json({ error: 'Internal server error });' } }
 import {NextApiRequest,, NextApiResponse} from
+=======
+
+
+import {NextApiRequest,NextApiResponse} from 'next'; interface WebVitalsData { name: string, value: number, id: string, delta: number, timestamp: number, url: string, userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req && req.method !==,POST') {' return res && res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req && req.body, if (!data && data.name || typeof data && data.value !==,number') {' return res && res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) .toISOString(),}); res && res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a && a.name,value: dat a && a.value })} catch (error) { console && console.error( 'Error processing web vitals:,' ,error); res && res.status(500).json({ error: 'Internal server error });' } }
+import {NextApiRequest,, NextApiResponse} from;
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   'next';
-interface WebVitalsData {
+interface WebVitalsData {}
   "name": string;
   value: number;
   id: string;
@@ -11,6 +19,7 @@ interface WebVitalsData {
   timestamp: number;
   url: string;
   userAgent: string}
+<<<<<<< HEAD
 export default async function handler(
   "req": NextApiReques t, "res": NextApiRespons e
 ) {
@@ -48,23 +57,27 @@ import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData {
 import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }
 =======
   if (req && req.method !==, POST') {'
+=======
+export default async function handler() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res && res.status(405).json({ "error": 'Method not allowed });'
   }
-  try {
+  try {"
     const "data": WebVitalsDat a = req && req.body;
-    // Validate required fields
-    if (!data && data.name || typeof data && data.value !==, number') {'
+    // Validate required fields'
+    if (!data && data.name || typeof data && data.value !==, number') {''"
       return res && res.status(400).json({ "error": 'Invalid data format });'
     }
     // Log the web vitals data (in production, you,
-  d send this to your analytics service)
-    console && console.log('Web "Vitals":  , {'
-      "metric": dat a && a.name,
-      "value": dat a && a.value, "url": dat a && a.url,
+  d send this to your analytics service)'"
+    console && console.log('Web "Vitals":  , {'"
+      "metric": dat a && a.name,"
+      "value": dat a && a.value, "url": dat a && a.url,"
       "timestamp": new Date(data && data.timestamp).toISOString()});
-    // Here you would typically send the data to your analytics service
-    // For "example": Google Analytics, Mixpanel, or your own analytics database
+    // Here you would typically send the data to your analytics service"
+    // For "example": Google Analytics, Mixpanel, or your own analytics database'
     // For now, we&apos;ll just acknowledge receipt'
+<<<<<<< HEAD
 <<<<<<< HEAD
     res.status(200).json({
       "success": tru e, "message": 'Web vitals data received',
@@ -76,19 +89,23 @@ import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     })} catch (error) {
     console && console.error(
+=======
+    res && res.status(200).json({ '"
+      "success": tru e, "message": 'Web vitals data received',"
+      "metric": dat a && a.name, "value": dat a && a.value;
+    })} catch (error) {}
+    console && console.error('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   'Error processing web vitals:, '
-  , error);
+  , error);'"
     res && res.status(500).json({ "error": 'Internal server error });'
-  }
+  }'
+import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }'
+import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }'
 import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }
-import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }
-import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -160,3 +177,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }'
+import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }'
+import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }'
+import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }'
+import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de'
+import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }'
+import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }'
+import { NextApiRequest,NextApiResponse } from 'next'; interface WebVitalsData { name: string; value: number; id: string; delta: number; timestamp: number; url: string; userAgent: string} export default async function handler( req: NextApiReques t,res: NextApiRespons e ) { if (req.method !==,POST') {' return res.status(405).json({ error: 'Method not allowed });' } try { const data: WebVitalsDat a = req.body; if (!data.name || typeof data.value !==,number') {' return res.status(400).json({ error: 'Invalid data format });' } d send this to your analytics service) console.log('Web Vitals: ,{' metric: dat a.name,value: dat a.value,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),}); res.status(200).json({ success: tru e,message: 'Web vitals data received',metric: dat a.name,value: dat a.value })} catch (error) { console.error( 'Error processing web vitals:,' ,error); res.status(500).json({ error: 'Internal server error });' } }
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

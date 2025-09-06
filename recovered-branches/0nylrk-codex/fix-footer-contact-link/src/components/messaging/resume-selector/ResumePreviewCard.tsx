@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,21 +21,25 @@ import { Resume } from "@/types/resume";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react',
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button";
-import { Download  } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card","
+import { Badge } from "@/components/ui/badge",";
+import { Button } from "@/components/ui/button";'
+import { Download  } from 'lucide-react';"
 import { Resume } from "@/types/resume";
-interface ResumePreviewCardProps {
+interface ResumePreviewCardProps {}
   resume: Resume;
   onDownload: () => void;
-  isLoading: boolean
+  isLoading: boolean;
 }
+<<<<<<< HEAD
 export function ResumePreviewCard({
   resume
   onDownload
@@ -53,148 +58,50 @@ import { Resume } from "@/types/resume",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ResumePreviewCardProps {
+=======
+export function ResumePreviewCard() { return null; }
+import { Button } from "@/components/ui/button",'
+import { Download } from 'lucide-react',"
+import { Resume } from "@/types/resume",
+
+interface ResumePreviewCardProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   resume: Resume,
-  onDownload: () => void,
-  isLoading: boolean
+  onDownload: () => void,;
+  isLoading: boolean;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
 =======
 <<<<<<< HEAD
-
-export function ResumePreviewCard(): any ({;
-  resume,;
-  onDownload,;
-  isLoading,;
-}: ResumePreviewCardProps) {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  return (
 =======
-  return (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import React from 'react',;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Download } from 'lucide-react',;
-import { Resume } from "@/types/resume",;
-;
-interface ResumePreviewCardProps {;
-  resume:Resume,;
-  onDownload:() => void,;
-  isLoading:boolean;
-}
-;
-export function ResumePreviewCard({ resume, onDownload, isLoading } ResumePreviewCardProps) {;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
-      <CardContent className="p-4">;
+"
+    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;"
+      <CardContent className="p-4">;"
         <div className="flex justify-between items-start mb-2">;
           <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <h4 className="font-medium text-white">;
-              {resume && resume.basic_info.title}
-            </h4>;
-            {resume && resume.basic_info.headline && (;
-              <p className="text-sm text-zion-cyan">;
-                {resume && resume.basic_info.headline}
-              </p>;
-            )}
-          </div>;
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={onDownload}
-            disabled={isLoading}
 
-import React from './react';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
-import { Button  } from '@/components / ui / button';
-import { Download  } from './lucide-react';
-import { Resume  } from '@/types / resume';
-interface ResumePreviewCardProps {
-  resume: Resume;
-  on_download: () => void;
-  is_loading: boolean;
-=======
-
-=======
-export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
-  return (
-    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
-      <CardContent className="p-4">
-        <div className="flex justify-between items-start mb-2">
-          <div>
-            <h4 className="font-medium text-white">{resume.basic_info.title}</h4>
-            {resume.basic_info.headline && (
-              <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>
-            )}
-          </div>
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            onClick={onDownload} 
-            disabled={isLoading}
-            className="h-8 w-8 p-0"
-          >
-            <Download className="h-4 w-4 text-zion-cyan" />
-            <span className="sr-only">Download Resume</span>
-          </Button>
-        </div>
-        {resume.basic_info.summary && (
-          <p className="text-xs text-zion-slate line-clamp-2 mb-2">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         
-        {resume.basic_info.summary && (
-          <p className="text-xs text-zion-slate line-clamp-2 mb-2">
-import React from 'react',;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Download } from 'lucide-react',;
+        {resume.basic_info.summary && ("
+          <p className="text-xs text-zion-slate line-clamp-2 mb-2">'
+import React from 'react',;"
+import { Card, CardContent } from "@/components/ui/card",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Button } from "@/components/ui/button",;'
+import { Download } from 'lucide-react',;"
 import { Resume } from "@/types/resume",;
 interface ResumePreviewCardProps {;
   resume: Resume,;
   onDownload: () => void;
   isLoading: boolean;
-<<<<<<< HEAD
-=======
-}
-;
-export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {;
-  return (;
-    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
-      <CardContent className="p-4">;
-        <div className="flex justify-between items-start mb-2">;
-          <div>;
-            <h4 className="font-medium text-white">{resume.basic_info.title}</h4>;
-            {resume.basic_info.headline && (;
-              <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>;
-            )}
-          </div>;
-          <Button;
-            variant="ghost";
-            size="sm";
-            onClick={onDownload} ;
-            disabled={isLoading}
-            className="h-8 w-8 p-0";
-          >;
-=======
-        {resume.basic_info.summary && (
-          <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
-            {resume.basic_info.summary}
-
-            className="h-8 w-8 p-0">;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            <Download className="h-4 w-4 text-zion-cyan" />;
+"
+            <Download className="h-4 w-4 text-zion-cyan" />;"
             <span className="sr-only">Download Resume</span>;
           </Button>;
         </div>;
@@ -204,27 +111,28 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         
 
         
-        {resume.skills && resume.skills.length > 0 && (
+        {resume.skills && resume.skills.length > 0 && ("
           <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (
-              <Badge 
-                key={index} 
-                variant="outline"
+              <Badge;
+                key={index} "
+                variant="outline""
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
               >
                 {skill.name}
               </Badge>
             ))}
             {resume.skills.length > 5 && (
-              <Badge 
-                variant="outline"
+              <Badge "
+                variant="outline""
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
               >
-                +{resume.skills.length - 5} more
+                +{resume.skills.length - 5} more;
               </Badge>
             )}
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from './react';
@@ -265,16 +173,18 @@ interface ResumePreviewCardProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             className="h-8 w-8 p-0">;
             <Download className="h-4 w-4 text-zion-cyan" />;
+=======
+"
+            className="h-8 w-8 p-0">;"
+            <Download className="h-4 w-4 text-zion-cyan" />;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <span className="sr-only">Download Resume</span>;
           </Button>;
         </div>;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        {resume && resume.basic_info.summary && (;
+        {resume && resume.basic_info.summary && (;"
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {resume.basic_info.summary}
           </p>
@@ -306,83 +216,52 @@ interface ResumePreviewCardProps {;
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </CardContent>
     </Card>
       </CardContent>;
     </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {resume && resume.basic_info.summary}
           </p>;
         )}
 
-        {resume && resume.skills && resume && resume.skills.length > 0 && (;
+        {resume && resume.skills && resume && resume.skills.length > 0 && (;"
           <div className="flex flex-wrap gap-1 mt-2">;
             {resume && resume.skills.slice(0, 5).map((skill, index) => (;
-        {resume.basic_info.summary && (
+        {resume.basic_info.summary && ("
           <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
             {resume.basic_info.summary}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Badge
                 key={index}
                 variant="outline"
+=======
+              <Badge;
+                key={index}"
+                variant="outline""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs">;
                 {skill && skill.name}
               </Badge>;
             ))}
             {resume && resume.skills.length > 5 && (;
-              <Badge
-                variant="outline"
+              <Badge"
+                variant="outline""
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs">;
                 +{resume && resume.skills.length - 5} more;
               </Badge>;
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            <h4 className="font-medium text-white">{resume.basic_info.title}</h4>;
-            {resume.basic_info.headline && (;
-              <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>;
-            )}
-          </div>;
-          <Button ;
-            variant="ghost" ;
-            size="sm" ;
-            onClick={onDownload} ;
-            disabled={isLoading}
-            className="h-8 w-8 p-0";
-          >;
-            <Download className="h-4 w-4 text-zion-cyan" />;
-            <span className="sr-only">Download Resume</span>;
-          </Button>;
-        </div>;
-        ;
-        {resume.basic_info.summary && (;
-          <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
-            {resume.basic_info.summary}
-          </p>;
-        )}
-        ;
-        {resume.skills && resume.skills.length > 0 && (;
-          <div className="flex flex-wrap gap-1 mt-2">;
-            {resume.skills.slice(0, 5).map((skill, index) => (;
-              <Badge ;
-                key={index} ;
-                variant="outline";
-                className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs";
-              >;
-                {skill.name}
-              </Badge>;
-            ))}
-            {resume.skills.length > 5 && (;
-              <Badge ;
-                variant="outline";
-                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs";
-              >;
-                +{resume.skills.length - 5} more;
-              </Badge>;            )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
           </div>;
         )}
 
@@ -391,8 +270,8 @@ interface ResumePreviewCardProps {;
 
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
@@ -403,21 +282,23 @@ interface ResumePreviewCardProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
           </p>)}
-        {resume.skills && resume.skills.length > 0 && (
+        {resume.skills && resume.skills.length > 0 && ("
           <div className="flex flex - wrap gap - 1 mt - 2">;
             {resume.skills.slice (0, 5).map ((skill, index) => (
               <Badge;
-                key={index}
-                variant="outline";
+                key={index}"
+                variant="outline";"
                 className="bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs";
               >;
                 {skill.name}
               </Badge>))}
             {resume.skills.length > 5 && (
-              <Badge;
-                variant="outline";
+              <Badge;"
+                variant="outline";"
                 className="bg - zion - blue - dark / 50 text - zion - slate border - zion - purple / 20 text - xs";
               >;
                 +{resume.skills.length - 5} more;
@@ -426,6 +307,7 @@ interface ResumePreviewCardProps {;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   ),;}
@@ -484,3 +366,9 @@ import { Resume } from "@/types/resume",  return (  return (
         <div className="flex justify-between items-start mb-2">;
           <div>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

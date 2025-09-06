@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -14,11 +15,17 @@ import {useState} from 'react';
 import {Skill} from '@/types / resume';
 import {Button} from '@/components / ui / button';
 import {Alert, AlertDescription} from '@/components / ui / alert';
-import {use_resume} from '@/hooks / use_resume';
 =======
+import {useState} from 'react';'
+import {Skill} from '@/types / resume';'
+import {Button} from '@/components / ui / button';'
+import {Alert, AlertDescription} from '@/components / ui / alert';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import {use_resume} from '@/hooks / use_resume';
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -79,10 +86,35 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+'
+import { useState  } from 'react';'
+import { Skill  } from '@/types/resume';'
+import { Button  } from '@/components/ui/button';'
+import { Alert, AlertDescription  } from '@/components/ui/alert';'
+import { useResume  } from '@/hooks/useResume';'
+import { SkillsFormProps  } from './types';'
+import { SkillsList  } from './SkillsList';'
+import { AddSkillForm  } from './AddSkillForm';'
+import { BulkAddSkills } from './BulkAddSkills';
+export function SkillsForm() { return null; }
+import {useState} from 'react';
+'
+import {SkillsFormProps} from './types';'
+import {SkillsList} from './SkillsList';'
+import {AddSkillForm} from './AddSkillForm';'
+import {BulkAddSkills} from './BulkAddSkills';
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { addSkill, deleteSkill, fetchResume } = useResume();
 
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -110,12 +142,16 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   const [error, setError] = useState<string | null>(null),;
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
   const handleAddSkill = async (data: Skill) => {;
     try {;
       setError(null),;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const handleAddSkill = async (data: Skill) => {;
@@ -126,22 +162,33 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const success = await addSkill(resumeId, data);
       if (success) {;
         // Refresh the skills list;
         await refreshSkills();
+<<<<<<< HEAD
         // Refresh the skills list;
         await refreshSkills();
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+      if (success) {;
+        // Refresh the skills list;
+        await refreshSkills();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
-      return success
-    } catch (err: any) {
+      return success;
+    } catch (err: any) {'
       setError(err.message |'An error occurred')
-      return false
+      return false;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,8 +196,9 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -167,6 +215,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -186,21 +235,36 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {
     if (confirm('Are you sure you want to delete this skill?')) {
+=======
+
+
+'
+  const handleDeleteSkill = async (id: string, category: string = 'Other') => {'
+    if (confirm('Are you sure you want to delete this skill?')) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const success = await deleteSkill(id)
-      if (success) {
-        // Update local state
+      if (success) {}
+        // Update local state;
         setLocalSkills(localSkills.filter(skill => skill.id !== id))
       }
     }
   }
+<<<<<<< HEAD
   const refreshSkills = async () => {
     try {
       const resumeData = await fetchResume(resumeId);      return success;
     } catch (err: any) {;
+=======
+  const refreshSkills = async () => {}
+    try {}
+      return success;
+    } catch (err: any) {;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setError(err && err.message || 'An error occurred'),;
       return false;
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -224,10 +288,15 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {;
+=======
+'
+  const handleDeleteSkill = async (id: string, category: string = 'Other') => {;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (confirm('Are you sure you want to delete this skill?')) {;
       const success = await deleteSkill(id),;
       if (success) {;
         // Update local state;
+<<<<<<< HEAD
         setLocalSkills(localSkills && localSkills.filter(skill => skill && skill.id !== id));
       }
     }
@@ -235,6 +304,12 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
   const refreshSkills = async () => {;
     try {;
+=======
+
+
+      const resumeData = await fetchResume(resumeId);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
@@ -255,6 +330,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
         setLocalSkills(resumeData.skills);
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -294,28 +370,49 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   return (
       <div>;
         <h2 className="text-xl font-semibold mb-2">Skills</h2>;
+=======
+
+  };
+  },
+
+
+    <div className="space-y-6">;
+      <div>;"
+        <h2 className="text-xl font-semibold mb-2">Skills</h2>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-muted-foreground">;
           Add your technical and professional skills.;
         </p>;
       </div>;
+<<<<<<< HEAD
 
       {/* Display skills by category */}
       <SkillsList skills={localSkills} onDeleteSkill={handleDeleteSkill} />;
       <div className="space-y-6">;
         <div className="bg-muted/40 p-6 rounded-lg">;
+=======
+"
+      <div className="space-y-6">;"
+        <div className="bg-muted/40 p-6 rounded-lg">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <h3 className="text-md font-medium mb-4">Add Skills One by One</h3>;
           <AddSkillForm resumeId={resumeId} onAddSkill={handleAddSkill} />;
         </div>;
 
+<<<<<<< HEAD
         <BulkAddSkills resumeId={resumeId} onSuccess={refreshSkills} />;
       </div>;
 
       {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}  },
+=======
+  },
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   };
   },
 
   return (
+<<<<<<< HEAD
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold mb-2">Skills</h2>
@@ -369,93 +466,22 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 }export /**
  * SkillsForm - Function description
+=======
+
+export /**;
+ * SkillsForm - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
-function SkillsForm() {
+function SkillsForm() {}
   const { add_skill, delete_skill, fetch_resume } = use_resume ();
   const [error, set_error] = useState < string | null>(null);
   const [local_skills, setLocalSkills] = useState < Skill[]>(skills);
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
-<<<<<<< HEAD
-  const handleAddSkill = async (data: Skill) => {
-    try {
-      set_error (null),
-      const success = await add_skill (resume_id, data);
-      // Check condition
-if ( {) {
-  $2
-}
-        // Refresh the skills list;
-        await refresh_skills ();
-      }
-      return success;
-    } catch (err: any) {
-      set_error (err.message || 'An error occurred'),
-      return false;
-    }
-  }
-;
-  const handleDeleteSkill = async (id: string, category: string = 'Other') => {
-    if () {) {
-  $2
-}
-      const success = await delete_skill (id),
-      // Check condition
-if ( {) {
-  $2
-}
-        // Update local state;
-        setLocalSkills (local_skills.filter (skill => skill.id !== id));
-      }
-    }
-  }
-;
-  const refresh_skills = async () => {
-    try {
-      const resume_data = await fetch_resume (resume_id);
-      // Check condition
-if ( {) {
-  $2
-}
-        setLocalSkills (resume_data.skills);
-      }
-    } catch (err: any) {
-      set_error (err.message || 'Failed to refresh skills');
-    }
-  }
-;
-  return (
-    <div className="space - y-6">;
-      <div>;
-        <h2 className="text - xl font - semibold mb - 2">Skills</h2>;
-        <p className="text - muted - foreground">;
-          Add your technical and professional skills.;
-        </p>;
-      </div>;
-      {/* Display skills by category */}
-      <SkillsList skills={local_skills} onDeleteSkill={handleDeleteSkill} />;
-      <div className="space - y-6">;
-        <div className="bg - muted / 40 p - 6 rounded - lg">;
-          <h3 className="text - md font - medium mb - 4">Add Skills One by One</h3>;
-          <AddSkillForm resume_id={resume_id} onAddSkill={handleAddSkill} />;
-        </div>;
-        <BulkAddSkills resume_id={resume_id} on_success={refresh_skills} />;
-      </div>;
-      {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      <div className="flex justify - between">;
-        <Button variant="outline" on_click={on_back}>;
-          Back;
-        </Button>;
-        <Button on_click={on_complete} disabled={local_skills.length === 0}>;
-          Next;
-        </Button>;
-      </div>;
-    </div>);
+
 
 <<<<<<< HEAD
-
-
 =======
 import { useState } from 'react',;
 import { Skill } from '@/types/resume',;
@@ -571,3 +597,7 @@ return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold 
 =======
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

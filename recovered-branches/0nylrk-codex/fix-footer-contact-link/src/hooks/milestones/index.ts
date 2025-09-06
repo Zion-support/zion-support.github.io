@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export * from './use_milestones';
 ;
@@ -110,3 +111,14 @@ export * from './useMilestones';
 =======
 export * from './useMilestones';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export * from "./types";"
+export * from "./useLoadMilestones";"
+export * from "./useCreateMilestone";"
+export * from "./useUpdateMilestone";"
+export * from "./useDeleteMilestone";"
+export * from "./useUploadDeliverable";"
+export * from "./useRecordActivity";"
+export * from "./useMilestones";
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

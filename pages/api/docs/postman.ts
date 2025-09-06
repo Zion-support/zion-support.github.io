@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 function toPostman() {
@@ -21,10 +22,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
 <<<<<<< HEAD
+=======
+
+    info: {}
+        "https://schema && schema.getpostman.com/json/collection/v2 && v2.1.0/collection && collection.json",
+    },
+    item: v1 && v1.sections.flatMap((section) =>
+      section && section.endpoints.map((ep) => ({}
+        name: `${section && section.title} - ${ep && ep.title}`,
+        request: {}
+          method: ep && ep.method,
+          header: []
+            {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             : undefined,
         },
       })),
     ),
+<<<<<<< HEAD
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     },
 =======
@@ -172,3 +187,22 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(toPostman())
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+`
+            raw: `{{base_url}}${ep.path}`,"
+            host: ["{{base_url}}"],"
+            path: ep.path.replace (/^\//, "").split ("/"),
+          },
+          body: ep.requestBodySchema;"
+            ? { mode: "raw", raw: JSON.stringify ({}, null, 2) }
+            : undefined,
+        },
+      })),
+    ),
+    variable: [;"
+      { key: "base_url", value: "https://api.zion.os" },"
+      { key: "token", value: "" },
+    ],
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

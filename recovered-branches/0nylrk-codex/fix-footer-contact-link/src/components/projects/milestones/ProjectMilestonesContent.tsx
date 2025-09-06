@@ -1,17 +1,21 @@
 
 
+<<<<<<< HEAD
 export function ProjectMilestonesContent() {;
+=======
+
+
+
+export function ProjectMilestonesContent() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { projectId } = useParams() as { projectId?: string };
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-import React, { useState, useEffect } from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -40,11 +44,15 @@ export function ProjectMilestonesContent() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
   const { getProjectById } = useProjects();
-  const {
-    milestones
+  const {}
+    milestones;
     activities;
+<<<<<<< HEAD
     isLoading: milestonesLoading
 
 <<<<<<< HEAD
@@ -72,27 +80,26 @@ export function ProjectMilestonesContent() {;
 import React, { useState, useEffect } from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    isLoading: milestonesLoading;
+import React, { useState, useEffect } from 'react';
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     createMilestone;
     updateMilestoneStatus;
     deleteMilestone;
     uploadDeliverable;
     isSubmitting;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
     refetch;
-=======
-    refetch
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    refetch;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   } = useMilestones(projectId);
   const [project, setProject] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);'
   const [activeTab, setActiveTab] = useState('milestones');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
 =======
 import React, { useState, useEffect } from 'react';
@@ -175,6 +182,8 @@ export function ProjectMilestonesContent() {;
       setIsLoading(true);
       try {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
@@ -183,10 +192,14 @@ export function ProjectMilestonesContent() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -194,6 +207,7 @@ export function ProjectMilestonesContent() {;
         setIsLoading(false);
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     return (
@@ -224,9 +238,11 @@ export function ProjectMilestonesContent() {;
 =======
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
+<<<<<<< HEAD
 =======
         if (projectData) {;
           setProject(projectData);
@@ -246,15 +262,19 @@ export function ProjectMilestonesContent() {;
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
+=======
+    async function loadProject() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
-      } catch (error) {;
+      } catch (error) {;"
         console.error("Error loading project:", error),;
       } finally {;
         setIsLoading(false),;      }
         const projectData = await getProjectById(projectId);
-        if (projectData) {
+        if (projectData) {}
           setProject(projectData)}
       } catch (error) {} finally {setIsLoading(false)}
+<<<<<<< HEAD
     }
       <ProjectHeader title={project.job?.title |"Untitled Project"} />
       <ProjectHeader title={project.job?.title || "Untitled Project"} />
@@ -263,6 +283,17 @@ export function ProjectMilestonesContent() {;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>
 
       } catch (error) {;
+=======
+    }"
+      <ProjectHeader title={project.job?.title |"Untitled Project"} />"
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />"
+      <div className="flex justify-between items-center my-6">"
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>
+        <ProjectActions'
+          projectId={projectId |''}
+        <ProjectActions;
+      } catch (error) {;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         console.error("Error loading project:", error);
       } finally {;
         setIsLoading(false);
@@ -275,21 +306,14 @@ export function ProjectMilestonesContent() {;
 <<<<<<< HEAD
   }, [projectId, getProjectById, refetch]),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-
-    loadProject();
-    refetch();
-  }, [projectId, getProjectById, refetch]);
-
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
     
     loadProject(),
@@ -297,9 +321,14 @@ export function ProjectMilestonesContent() {;
   }, [projectId, getProjectById, refetch]),
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const handleMilestoneCreated = async () => {;
     await refetch();
   };
@@ -308,141 +337,22 @@ export function ProjectMilestonesContent() {;
   const isClient = user?.id === project?.client_id;
   const isTalent = user?.id === project?.talent_id;
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <div className="container mx-auto py-8 px-4">;
-        <div className="flex justify-center items-center h-64">;
+"
+      <div className="container mx-auto py-8 px-4">;"
+        <div className="flex justify-center items-center h-64">;"
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
         </div>;
       </div>;
     );
   }
-<<<<<<< HEAD
 
-
-    loadProject();
-    refetch();
-  }, [projectId, getProjectById, refetch]);
-  const handleMilestoneCreated = async () => {;
-    await refetch();
-  };
-  // Determine if the user is the client or talent;
-  const isClient = user?.id === project?.client_id;
-  const isTalent = user?.id === project?.talent_id;
-  // Determine project type based on job category or default to "Other";
-  const projectType = job?.category || "Other";
-  if (isLoading || !project) {;
-    return (
-
-import React, { useState, useEffect } from 'react',;
-import { useParams } from 'react-router-dom',;
-import { useProjects } from '@/hooks/useProjects',;
-import { useMilestones } from '@/hooks/useMilestones',;
-import { useJobDetails } from '@/hooks/useJobDetails',;
-import { useAuth } from '@/hooks/useAuth',;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
-import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
-;
-import { ;
-  MilestoneActivities,;
-  MilestoneManager,;
-  MilestoneCreator,;
-  ProjectActions,;
-  ProjectHeader;
-} from './components',;
-;
-export function ProjectMilestonesContent() {;
-  const { projectId } = useParams() as { projectId?:string },;
-  const { user } = useAuth(),;
-  const { getProjectById } = useProjects(),;
-  const { ;
-    milestones, ;
-    activities,;
-    isLoading:milestonesLoading, ;
-    createMilestone,;
-    updateMilestoneStatus,;
-    deleteMilestone,;
-    uploadDeliverable,;
-    isSubmitting,;
-    refetch;
-  } = useMilestones(projectId),;
-  const [project, setProject] = useState<any>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [activeTab, setActiveTab] = useState('milestones'),;
-  const { job, isLoading:jobLoading } = useJobDetails(project?.job_id),;
-  ;
-  const { isUnderDispute, disputeId } = useDisputeCheck(projectId),;
-;
-  useEffect(() => {;
-    async function loadProject() {;
-      if (!projectId) return,;
-      ;
-      setIsLoading(true),;
-      try {;
-        const projectData = await getProjectById(projectId),;
-        if (projectData) {;
-          setProject(projectData),;
-        }
-      } catch (error) {;
-        console.error("Error loading project:", error),;
-      } finally {;
-        setIsLoading(false),;      }
-        const projectData = await getProjectById(projectId);
-        if (projectData) {
-          setProject(projectData)}
-      } catch (error) {} finally {setIsLoading(false)}
-    }
-    ;
-    loadProject(),;
-    refetch(),;
-  }, [projectId, getProjectById, refetch]),;
-;
-  const handleMilestoneCreated = async () => {;
-    await refetch(),;
-  },;
-  ;
-  // Determine if the user is the client or talent;
-  const isClient = user?.id === project?.client_id,;
-  const isTalent = user?.id === project?.talent_id,;
-;
-  // Determine project type based on job category or default to "Other";
-  const projectType = job?.category || "Other",;
-;
-  if (isLoading || !project) {;
-    return (;
-  const handleMilestoneCreated = async () => {;
-    await refetch();
-  },;
-  // Determine if the user is the client or talent;
-  const isClient = user?.id === project?.client_id,;
-  const isTalent = user?.id === project?.talent_id,;
-  // Determine project type based on job category or default to "Other";
-  const projectType = job?.category || "Other",;
-  if (isLoading || !project) {;
-    return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <div className="container mx-auto py-8 px-4">;
-        <div className="flex justify-center items-center h-64">;
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
-        </div>;
-      </div>;
-    );
-  }
-<<<<<<< HEAD
-
-
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleMilestoneSubmit = async (data: any) => {;
     if (!projectId) return,;
 
     // Ensure all required fields are present;
     const milestoneData = {;
       project_id: projectId,;
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: data && data.title,;
       description: data && data.description || "",;
@@ -468,23 +378,27 @@ export function ProjectMilestonesContent() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <ProjectActions
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+        <ProjectActions;
     },
     
-    await createMilestone(milestoneData),
+    await createMilestone(milestoneData),'
     setActiveTab('milestones'),
     await handleMilestoneCreated()
   },
 
 
-  return (
+  return ("
     <div className="container mx-auto py-8 px-4">
-
+"
       <ProjectHeader title={project.job?.title || "Untitled Project"} />
-
-      <div className="flex justify-between items-center my-6">
+"
+      <div className="flex justify-between items-center my-6">"
         <h2 className="text-2xl font-bold">Payment Milestones</h2>
 
+<<<<<<< HEAD
         <ProjectActions 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -543,71 +457,59 @@ export function ProjectMilestonesContent() {;
       <ProjectHeader title={project.job?.title || "Untitled Project"} />;
       <div className="flex justify-between items-center my-6">;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
-        <ProjectActions;
-          projectId={projectId || ''}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        <ProjectActions;
+'
+          projectId={projectId || ''}
+
+
+
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
-          isTalent={isTalent}
+          isTalent={isTalent}'
           onAddMilestone={() => setActiveTab('create')}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        />;
-      </div>;
-
-=======
-        />;
-      </div>;
-      ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <Tabs value={activeTab} onValueChange={setActiveTab}>;
-        <TabsList className="mb-6">;
-          <TabsTrigger value="milestones">Milestones</TabsTrigger>;
+      <Tabs value={activeTab} onValueChange={setActiveTab}>;"
+        <TabsList className="mb-6">;"
+          <TabsTrigger value="milestones">Milestones</TabsTrigger>;"
           <TabsTrigger value="activity">Activity</TabsTrigger>;
-          {isTalent && (;
+          {isTalent && (;"
             <TabsTrigger value="create">Create Milestone</TabsTrigger>;
           )}
         </TabsList>;
 
-<<<<<<< HEAD
-        <TabsContent value="milestones">;
-          <MilestoneManager
-            projectId={projectId || ''}
 
-=======
 
-          <MilestoneManager 
-            projectId={projectId || ''}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-          <MilestoneManager 
+          <MilestoneManager '
             projectId={projectId || ''}
 
             milestones={milestones}
-        ;
+        ;"
         <TabsContent value="milestones">;
-          <MilestoneManager ;
+          <MilestoneManager ;'
             projectId={projectId || ''}            milestones={milestones}
         />
       </div>
-      <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="mb-6">
-          <TabsTrigger value="milestones">Milestones</TabsTrigger>
+      <Tabs value={activeTab} onValueChange={setActiveTab}>"
+        <TabsList className="mb-6">"
+          <TabsTrigger value="milestones">Milestones</TabsTrigger>"
           <TabsTrigger value="activity">Activity</TabsTrigger>
-          {isTalent && (
+          {isTalent && ("
             <TabsTrigger value="create">Create Milestone</TabsTrigger>
           )}
-        </TabsList>
+        </TabsList>"
         <TabsContent value="milestones">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <MilestoneManager
+=======
+          <MilestoneManager'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             projectId={projectId |''}
-          <MilestoneManager 
+          <MilestoneManager '
             projectId={projectId || ''}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -615,6 +517,11 @@ export function ProjectMilestonesContent() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             milestones={milestones}
 =======
   }, [projectId, getProjectById, refetch]),;            milestones={milestones}
@@ -626,6 +533,7 @@ export function ProjectMilestonesContent() {;
             isLoading={milestonesLoading}
             isClient={isClient}
             isTalent={isTalent}
+<<<<<<< HEAD
             paymentTerms={project && project.payment_terms}            isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
 import {use_params} from 'react-router-dom';
@@ -635,16 +543,30 @@ import {useJobDetails} from '@/hooks / useJobDetails';
 import {use_auth} from '@/hooks / use_auth';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
 import {useDisputeCheck} from '@/hooks / useDisputeCheck';
+=======
+
+
+
+            isSubmitting={isSubmitting}
+            onCreateMilestone={createMilestone}'
+import {use_params} from 'react-router-dom';'
+import {use_projects} from '@/hooks / use_projects';'
+import {use_milestones} from '@/hooks / use_milestones';'
+import {useJobDetails} from '@/hooks / useJobDetails';'
+import {use_auth} from '@/hooks / use_auth';'
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';'
+import {useDisputeCheck} from '@/hooks / useDisputeCheck';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
 ;
-export /**
- * ProjectMilestonesContent - Function description
+export /**;
+ * ProjectMilestonesContent - Function description;
  */
-function ProjectMilestonesContent() {
+function ProjectMilestonesContent() {}
   const { project_id } = use_params () as { project_id?: string }
   const { user } = use_auth ();
   const { getProjectById } = use_projects ();
-  const {
+  const {}
     milestones,
     activities;
     is_loading: milestones_loading,
@@ -656,32 +578,32 @@ function ProjectMilestonesContent() {
     refetch;
   } = use_milestones (project_id);
   const [project, set_project] = useState < any>(null);
-  const [is_loading, setIsLoading] = useState (true);
+  const [is_loading, setIsLoading] = useState (true);'
   const [active_tab, setActiveTab] = useState ('milestones');
   const { job, is_loading: job_loading } = useJobDetails (project?.job_id),
   const { isUnderDispute, dispute_id } = useDisputeCheck (project_id);
 ;
-  useEffect (() => {
+  useEffect (() => {}
     async /**
- * load_project - Function description
+ * load_project - Function description;
  */
-function load_project() {
-      // Check condition
-if (return) {
-  $2
+function load_project() {}
+      // Check condition;
+if (return) {}
+  $2;
 }
       setIsLoading (true);
-      try {
+      try {}
         const project_data = await getProjectById (project_id);
-        // Check condition
-if ( {) {
-  $2
+        // Check condition;
+if ( {) {}
+  $2;
 }
           set_project (project_data);
         }
-      } catch (error) {
+      } catch (error) {"
         console.error ("Error loading project:", error);
-      } finally {
+      } finally {}
         setIsLoading (false);
       }
     }
@@ -689,70 +611,92 @@ if ( {) {
     refetch ();
   }, [project_id, getProjectById, refetch]);
 ;
-  const handleMilestoneCreated = async () => {
+  const handleMilestoneCreated = async () => {}
     await refetch ();
   }
 ;
   // Determine if the user is the client or talent;
   const is_client = user?.id === project?.client_id;
   const is_talent = user?.id === project?.talent_id;
-;
-  // Determine project type based on job category or default to "Other";
+;"
+  // Determine project type based on job category or default to "Other";"
   const project_type = job?.category || "Other";
 ;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
+<<<<<<< HEAD
     return (
       <div className="container mx - auto py - 8 px-4">;
         <div className="flex justify - center items - center h-64">;
           <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border-primary"></div>;
+=======
+    return ("
+      <div className="container mx - auto py - 8 px - 4">;"
+        <div className="flex justify - center items - center h - 64">;"
+          <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - primary"></div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>;
       </div>);
   }
-  const handleMilestoneSubmit = async (data: any) => {
-    // Check condition
-if (return, ) {
-  $2
+  const handleMilestoneSubmit = async (data: any) => {}
+    // Check condition;
+if (return, ) {}
+  $2;
 }
     // Ensure all required fields are present;
-    const milestone_data = {
+    const milestone_data = {}
       project_id: project_id,
-      title: data.title,
+      title: data.title,"
       description: data.description || "",
-      amount: data.amount,
+      amount: data.amount,"
       status: "pending" as const,
       due_date: data.due_date ? data.due_date.toISOString () : undefined;
     }
 ;
-    await create_milestone (milestone_data);
+    await create_milestone (milestone_data);'
     setActiveTab ('milestones');
     await handleMilestoneCreated ();
   }
 ;
+<<<<<<< HEAD
   return (
     <div className="container mx - auto py - 8 px-4">;
       <ProjectHeader title={project.job?.title || "Untitled Project"} />;
       <div className="flex justify - between items - center my-6">;
         <h2 className="text - 2xl font-bold">Payment Milestones</h2>;
         <ProjectActions;
+=======
+  return ("
+    <div className="container mx - auto py - 8 px - 4">;"
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />;"
+      <div className="flex justify - between items - center my - 6">;"
+        <h2 className="text - 2xl font - bold">Payment Milestones</h2>;
+        <ProjectActions;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           project_id={project_id || ''}
           isUnderDispute={isUnderDispute}
           dispute_id={dispute_id}
-          is_talent={is_talent}
+          is_talent={is_talent}'
           onAddMilestone={() => setActiveTab ('create')}
         />;
       </div>;
+<<<<<<< HEAD
       <Tabs value={active_tab} onValueChange={setActiveTab}>;
         <TabsList className="mb-6">;
           <TabsTrigger value="milestones">Milestones</TabsTrigger>;
+=======
+      <Tabs value={active_tab} onValueChange={setActiveTab}>;"
+        <TabsList className="mb - 6">;"
+          <TabsTrigger value="milestones">Milestones</TabsTrigger>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsTrigger value="activity">Activity</TabsTrigger>;
-          {is_talent && (
+          {is_talent && ("
             <TabsTrigger value="create">Create Milestone</TabsTrigger>)}
-        </TabsList>;
+        </TabsList>;"
         <TabsContent value="milestones">;
-          <MilestoneManager;
+          <MilestoneManager;'
             project_id={project_id || ''}
             milestones={milestones}
             activities={activities}
@@ -768,6 +712,7 @@ if (return, ) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             refetch={refetch}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -803,8 +748,12 @@ if (return, ) {
         </TabsContent>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <MilestoneCreator
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+            <MilestoneCreator;
           {(isClient || isTalent) && (
+<<<<<<< HEAD
             <MilestoneCreator 
 
 =======
@@ -818,10 +767,16 @@ if (return, ) {
             refetch={refetch}              onSubmit={handleMilestoneSubmit}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               isSubmitting={isSubmitting}
+=======
+            <MilestoneCreator;
+              onSubmit={handleMilestoneSubmit}
+              isSubmitting={isSubmitting}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               onCancel={() => setActiveTab('milestones')}
               projectScope={project && project.scope_summary}
               projectStartDate={project && project.start_date}
               projectEndDate={project && project.end_date}
+<<<<<<< HEAD
               projectType={projectType}
             />;
           )}
@@ -837,40 +792,21 @@ if (return, ) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+=======
 
-=======
-        ;
-        <TabsContent value="activity">;
-          <MilestoneActivities projectId={projectId || ''} />;
-        </TabsContent>;
-        ;
-        <TabsContent value="create">;
-          {(isClient || isTalent) && (;
-            <MilestoneCreator ;
-              onSubmit={handleMilestoneSubmit}              isSubmitting={isSubmitting}
-              onCancel={_() => setActiveTab('milestones')}
-              projectScope={project.scopesummary}
-              projectStartDate={project.startdate}
-              projectEndDate={project.enddate}
-              projectType={projectType}
-            />;
-          )}
-        </TabsContent>;
-      </Tabs>;
-    </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
           />;
-        </TabsContent>;
-        <TabsContent value="activity">;
+        </TabsContent>;"
+        <TabsContent value="activity">;'
           <MilestoneActivities project_id={project_id || ''} />;
-        </TabsContent>;
+        </TabsContent>;"
         <TabsContent value="create">;
           {(is_client || is_talent) && (
             <MilestoneCreator;
               on_submit={handleMilestoneSubmit}
-              is_submitting={is_submitting}
+              is_submitting={is_submitting}'
               on_cancel={() => setActiveTab ('milestones')}
               project_scope={project.scope_summary}
               projectStartDate={project.start_date}
@@ -880,21 +816,20 @@ if (return, ) {
         </TabsContent>;
       </Tabs>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
 ;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   ),; setIsLoading (true);
+<<<<<<< HEAD
 =======
 }  ),; setIsLoading (true);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1016,3 +951,11 @@ await handleMilestoneCreated ()
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+try {}
+}finally {}
+  setIsLoading (false) 
+}
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

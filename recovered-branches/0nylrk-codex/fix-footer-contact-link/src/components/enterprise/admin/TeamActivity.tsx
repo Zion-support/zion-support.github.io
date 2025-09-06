@@ -5,6 +5,7 @@ import {;
   TableCell,;
   TableHead,;
   TableHeader,;
+<<<<<<< HEAD
   TableRow,;
 
 import React from "react";
@@ -25,11 +26,24 @@ import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+import React from "react";
+import {};
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
 TableRow,;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -37,11 +51,13 @@ TableRow,;
 <<<<<<< HEAD
 <<<<<<< HEAD
 TableRow,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
 TableRow,;
+<<<<<<< HEAD
 =======
   TableRow,
 >>>>>>> main
@@ -126,18 +142,32 @@ export function TeamActivity() {
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
+=======
+"
+} from "@/components/ui/table";"
+import { Badge } from "@/components/ui/badge";"
+import { CalendarIcon, Search } from "lucide-react";
+
+
+
+
+      id: 6,"
+      user: "Jamie Smith","
+      action: "Updated budget","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       target: "Monthly spending cap",
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),"
       category: "billing",
     },;
   ];
-  // Function to format the date in a readable way
-  const formatDate = (date: Date) => {
+  // Function to format the date in a readable way;
+  const formatDate = (date: Date) => {}
     const now = new Date();
     const diffMs = now.getTime() - date.getTime();
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",
@@ -296,34 +326,31 @@ export function TeamActivity() {;
     }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+export function TeamActivity() { return null; }
   };
 
   const getCategoryBadge = (category: string) => {;
     const categoryStyles: Record<;
       string,;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+"
       { variant: "default" | "outline" | "secondary" | "destructive" }
-    > = {;
-      jobs: { variant: "default" },;
-      candidates: { variant: "outline" },;
-      team: { variant: "secondary" },;
+    > = {;"
+      jobs: { variant: "default" },;"
+      candidates: { variant: "outline" },;"
+      team: { variant: "secondary" },;"
       billing: { variant: "destructive" },;
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -336,18 +363,24 @@ import { CalendarIcon, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
 
-  const getCategoryBadge = (category: string) => {
-    const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
-      jobs: { variant: "default" },
-      candidates: { variant: "outline" },
-      team: { variant: "secondary" },
+  const getCategoryBadge = (category: string) => {"
+    const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {"
+      jobs: { variant: "default" },"
+      candidates: { variant: "outline" },"
+      team: { variant: "secondary" },"
       billing: { variant: "destructive" }},
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
 
+<<<<<<< HEAD
   return (  return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -359,61 +392,77 @@ import { CalendarIcon, Search } from "lucide-react";
               type="search"
               placeholder="Search activities..."
               className="w-[200px] md:w-[300px] pl-9"import React from "react",;
+=======
+
+
+  return (
+"
+    <div className="space-y-6">;"
+      <div className="flex items-center justify-between">;"
+        <h3 className="text-xl font-medium">Recent Team Activity</h3>;"
+        <div className="flex items-center gap-2">;"
+          <div className="relative">;
+
+"
+            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
+
+            <Input"
+              type="search""
+              placeholder="Search activities...""
+              className="w-[200px] md:w-[300px] pl-9"
+
+
+
+"
+import React from "react",;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {;
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
-  TableHeader,;
-  TableRow} from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { CalendarIcon, Search } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
+  TableHeader,;"
+  TableRow} from "@/components/ui/table",;"
+import { Badge } from "@/components/ui/badge",;"
+import { CalendarIcon, Search } from "lucide-react",;"
+import { Button } from "@/components/ui/button",;"
 import { Input } from "@/components/ui/input",;
-export function TeamActivity() {;
-  // Mock activity data;
-  const activities = [;
-    {;
-      id: 1,;
-      user: "Alex Johnson",;
-      action: "Posted a job",;
-      target: "Senior AI Engineer",;
-      timestamp: new Date(Date.now() - 1000 * 60 * 30),;
+export function TeamActivity() { return null; }
       category: "jobs"},;
     {;
-      id: 2,;
-      user: "Jamie Smith",;
-      action: "Contacted candidate",;
+      id: 2,;"
+      user: "Jamie Smith",;"
+      action: "Contacted candidate",;"
       target: "Michael Chen",;
-      timestamp: new Date(Date.now() - 1000 * 60 * 120),;
+      timestamp: new Date(Date.now() - 1000 * 60 * 120),;"
       category: "candidates"},;
     {;
-      id: 3,;
-      user: "Sam Williams",;
-      action: "Updated job",;
+      id: 3,;"
+      user: "Sam Williams",;"
+      action: "Updated job",;"
       target: "Frontend Developer",;
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5),;
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5),;"
       category: "jobs"},;
     {;
-      id: 4,;
-      user: "Alex Johnson",;
-      action: "Added team member",;
+      id: 4,;"
+      user: "Alex Johnson",;"
+      action: "Added team member",;"
       target: "Chris Rodriguez",;
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24),;
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24),;"
       category: "team"},;
     {;
-      id: 5,;
-      user: "Taylor Brown",;
-      action: "Viewed candidate profile",;
+      id: 5,;"
+      user: "Taylor Brown",;"
+      action: "Viewed candidate profile",;"
       target: "Sarah Kim",;
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2),;
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2),;"
       category: "candidates"},;
     {;
-      id: 6,;
-      user: "Jamie Smith",;
-      action: "Updated budget",;
+      id: 6,;"
+      user: "Jamie Smith",;"
+      action: "Updated budget",;"
       target: "Monthly spending cap",;
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),;
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),;"
       category: "billing"}],;
   // Function to format the date in a readable way;
   const formatDate = (date: Date) => {;
@@ -424,20 +473,21 @@ export function TeamActivity() {;
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),;
     if (diffMins < 60) {;
       return `${diffMins} minutes ago`;
-    } else if (diffHrs < 24) {;
+    } else if (diffHrs < 24) {;`
       return `${diffHrs} hours ago`;
-    } else if (diffDays < 7) {;
+    } else if (diffDays < 7) {;`
       return `${diffDays} days ago`;
     } else {;
       return date.toLocaleDateString();
     }
   },;
-  const getCategoryBadge = (category: string) => {;
-    const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {;
-      jobs: { variant: "default" },;
-      candidates: { variant: "outline" },;
-      team: { variant: "secondary" },;
+  const getCategoryBadge = (category: string) => {;"
+    const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {;"
+      jobs: { variant: "default" },;"
+      candidates: { variant: "outline" },;"
+      team: { variant: "secondary" },;"
       billing: { variant: "destructive" }};
+<<<<<<< HEAD
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
 };
   return (;
@@ -446,18 +496,35 @@ export function TeamActivity() {;
         <h3 className="text-xl font-medium">Recent Team Activity</h3>;
         <div className="flex items-center gap-2">;
           <div className="relative">;
+=======
+    return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
+  };
+  return (;"
+    <div className="space-y-6">;"
+      <div className="flex items-center justify-between">;"
+        <h3 className="text-xl font-medium">Recent Team Activity</h3>;"
+        <div className="flex items-center gap-2">;"
+          <div className="relative">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />;
-            <Input;
-              type="search";
-              placeholder="Search activities...";
+            <Input;"
+              type="search";"
+              placeholder="Search activities...";"
               className="w-[200px] md:w-[300px] pl-9";
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             />;
-          </div>;
-          <Button variant="outline" size="icon" className="h-10 w-10">;
+          </div>;"
+          <Button variant="outline" size="icon" className="h-10 w-10">;"
             <CalendarIcon className="h-4 w-4" />;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 ;
   const getCategoryBadge = (category: string) =>: any {
     const category_styles: Record<;
@@ -491,10 +558,16 @@ export function TeamActivity() {;
           </Button>;
         </div>;
       </div>;
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
             <TableRow>;
+<<<<<<< HEAD
               <TableHead > User</TableHead>;
               <TableHead > Activity</TableHead>;
               <TableHead > Target</TableHead>;
@@ -525,6 +598,41 @@ export function TeamActivity() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              <TableHead>User</TableHead>;
+              <TableHead>Activity</TableHead>;
+              <TableHead>Target</TableHead>;
+              <TableHead>Category</TableHead>;
+              <TableHead>Time</TableHead>;
+            </TableRow>;
+          </TableHeader>;
+          <TableBody>;
+
+
+"
+      <div className="flex items-center justify-between">;"
+        <Button variant="outline" size="sm">;
+          Previous;
+        </Button>;
+
+                  {formatDate(activity.timestamp)}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>"
+      <div className="flex items-center justify-between">"
+        <Button variant="outline" size="sm">
+          Previous;
+        </Button>"
+        <Button variant="outline" size="sm">
+          Next;
+        </Button>
+      </div>
+    </div>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   {formatDate(activity.timestamp)}
 =======
 }                  {formatDate(activity.timestamp)}
@@ -546,17 +654,22 @@ export function TeamActivity() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="flex items-center justify-between">
+=======
+"
+      <div className="flex items-center justify-between">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Button variant="outline" size="sm">
-          Previous
-        </Button>
+          Previous;
+        </Button>"
         <div className="text-sm text-muted-foreground">
-          Page 1 of 10
-        </div>
+          Page 1 of 10;
+        </div>"
         <Button variant="outline" size="sm">
-          Next
+          Next;
         </Button>
       </div>
     </div>
@@ -565,117 +678,117 @@ export function TeamActivity() {;
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
-                <TableCell>{getCategoryBadge (activity.category)}</TableCell>;
+
+
+
+                <TableCell>{getCategoryBadge (activity.category)}</TableCell>;"
                 <TableCell className="text - muted - foreground">;
                   {format_date (activity.timestamp)}
                 </TableCell>;
               </TableRow>))}
           </TableBody>;
         </Table>;
-      </div>;
-      <div className="flex items - center justify - between">;
+      </div>;"
+      <div className="flex items - center justify - between">;"
         <Button variant="outline" size="sm">;
           Previous;
-        </Button>;
-        <div className="text - sm text - muted - foreground">Page 1 of 10</div>;
+        </Button>;"
+        <div className="text - sm text - muted - foreground">Page 1 of 10</div>;"
         <div className="text-sm text-muted-foreground">;
           Page 1 of 10;
-        </div>;
+        </div>;"
         <Button variant="outline" size="sm">;
           Next;
         </Button>;
       </div>;
     </div>;
-  ),; import {
+  ),; import {};
   Table;
 TableBody;
 TableCell;
 TableHead;
 TableHeader;
-export function TeamActivity () {
-  //Mock activity data const activities = [ {
-  id: 1;
-user: "Alex Johnson";
-action: "Posted a job";
+export function TeamActivity () {}
+  //Mock activity data const activities = [ {};
+  id: 1;"
+user: "Alex Johnson";"
+action: "Posted a job";"
 target: "Senior AI Engineer";
-timestamp: new Date (Date.now () - 1000 * 60 * 30);
+timestamp: new Date (Date.now () - 1000 * 60 * 30);"
 category: "jobs" 
 };
-{
-  id: 2;
-user: "Jamie Smith";
-action: "Contacted candidate";
+{}
+  id: 2;"
+user: "Jamie Smith";"
+action: "Contacted candidate";"
 target: "Michael Chen";
-timestamp: new Date (Date.now () - 1000 * 60 * 120);
+timestamp: new Date (Date.now () - 1000 * 60 * 120);"
 category: "candidates" 
 };
-{
-  id: 3;
-user: "Sam Williams";
-action: "Updated job";
+{}
+  id: 3;"
+user: "Sam Williams";"
+action: "Updated job";"
 target: "Frontend Developer";
-timestamp: new Date (Date.now () - 1000 * 60 * 60 * 5);
+timestamp: new Date (Date.now () - 1000 * 60 * 60 * 5);"
 category: "jobs" 
 };
-{
-  id: 4;
-user: "Alex Johnson";
-action: "Added team member";
+{}
+  id: 4;"
+user: "Alex Johnson";"
+action: "Added team member";"
 target: "Chris Rodriguez";
-timestamp: new Date (Date.now () - 1000 * 60 * 60 * 24);
+timestamp: new Date (Date.now () - 1000 * 60 * 60 * 24);"
 category: "team" 
 };
-{
-  id: 5;
-user: "Taylor Brown";
-action: "Viewed candidate profile";
+{}
+  id: 5;"
+user: "Taylor Brown";"
+action: "Viewed candidate profile";"
 target: "Sarah Kim";
-timestamp: new Date (Date.now () - 1000 * 60 * 60 * 24 * 2);
+timestamp: new Date (Date.now () - 1000 * 60 * 60 * 24 * 2);"
 category: "candidates" 
 };
-{
-  id: 6;
-user: "Jamie Smith";
-action: "Updated budget";
+{}
+  id: 6;"
+user: "Jamie Smith";"
+action: "Updated budget";"
 target: "Monthly spending cap";
 timestamp: new Date (Date.now () - 1000 * 60 * 60 * 24 * 3);
-//Function to format the date in a readable way const formatDate = (date: Date) => {
+//Function to format the date in a readable way const formatDate = (date: Date) => {}
   const now = new Date ();
 const diffMs = now.getTime () - date.getTime ();
 const diffMins = Math.floor (diffMs / (1000 * 60) );
 const diffHrs = Math.floor (diffMs / (1000 * 60 * 60) );
 const diffDays = Math.floor (diffMs / (1000 * 60 * 60 * 24) );
-if (diffMins < 60) {
-  return `$ {
-  diffMins 
+if (diffMins < 60) {}`
+  return `$ {}
+  diffMins;`
 }minutes ago` 
-}else if (diffHrs < 24) {
-  return `$ {
-  diffHrs 
+}else if (diffHrs < 24) {}`
+  return `$ {}
+  diffHrs;`
 }hours ago` 
-}else if (diffDays < 7) {
-  return `$ {
-  diffDays 
+}else if (diffDays < 7) {}`
+  return `$ {}
+  diffDays;`
 }days ago` 
-}else {
+}else {}
   return date.toLocaleDateString () 
 }
 };
-const getCategoryBadge = (category: string) => {
-  return <Badge variant= {
-  categoryStyles[category].variant 
-}> {
-  category 
+const getCategoryBadge = (category: string) => {}
+  return <Badge variant= {}
+  categoryStyles[category].variant;
+}> {}
+  category;
 }</Badge> 
-};
-return (<div className="space-y-6" > <div className="flex items-center justify-between" > <h3 className="text-xl font-medium" >Recent Team Activity</h3> <div className="flex items-center gap-2" > <div className="relative" > <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" /> search"placeholder=" Search activities..."className=" w-[200px] md:w-[300px] pl-9"/> </div> <Button variant=" outline"size=" icon"className=" h-10 w-10"> <CalendarIcon className=" h-4 w-4"/> </Button> </div> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>User</TableHead> <TableHead>Activity</TableHead> <TableHead>Target</TableHead> <TableHead>Category</TableHead> <TableHead>Time</TableHead> </TableRow> </TableHeader> <TableBody> {
-  activities.map ( (activity) => (<TableRow key= {
-  activity.id 
-}> </TableCell> </TableRow>) ) 
+};"
+return (<div className="space-y-6" > <div className="flex items-center justify-between" > <h3 className="text-xl font-medium" >Recent Team Activity</h3> <div className="flex items-center gap-2" > <div className="relative" > <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" /> search"placeholder=" Search activities..."className=" w-[200px] md:w-[300px] pl-9"/> </div> <Button variant=" outline"size=" icon"className=" h-10 w-10"> <CalendarIcon className=" h-4 w-4"/> </Button> </div> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>User</TableHead> <TableHead>Activity</TableHead> <TableHead>Target</TableHead> <TableHead>Category</TableHead> <TableHead>Time</TableHead> </TableRow> </TableHeader> <TableBody> {}
+  activities.map ( (activity) => (<TableRow key= {}
+  activity.id;
+}> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </div> <div className=" flex items-center justify-between"> <Button variant=" outline"size=" sm"> Previous </Button> <div className=" text-sm text-muted-foreground"> Page 1 of 10 </div> <Button variant=" outline"size=" sm" > Next </Button> </div> </div>) 
 }
 );
@@ -686,6 +799,7 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
   )
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -702,3 +816,10 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 =======
       </div>}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

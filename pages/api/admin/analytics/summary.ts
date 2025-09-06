@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,27 +8,32 @@
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;'
+import fs from 'fs',;'
+import path from 'path',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ensureAdminFromApi } from '../../../../utils/auth',;
-type EventRow = {
+type EventRow = {}
   name: string,
   page?: string,
   userType?: string,
   properties?: Record<string, any>,
-  at: string
+  at: string;
 },
-
+'
 const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl'),
 
-function parseLines(startIso?: string, endIso?: string): EventRow[] {
-  try {
-    if (!fs.existsSync(LOG_FILE)) return [],
-    const raw = fs.readFileSync(LOG_FILE, 'utf8'),
+function parseLines(startIso?: string, endIso?: string): EventRow[] {}
+  try {}
+    if (!fs.existsSync(LOG_FILE)) return [],'
+    const raw = fs.readFileSync(LOG_FILE, 'utf8'),'
     const lines = raw.split('\n').filter(Boolean),
     const start = startIso ? new Date(startIso) : null,
     const end = endIso ? new Date(endIso) : null,
     const rows: EventRow[] = [],
-    for (const line of lines) {
-      try {
+    for (const line of lines) {}
+      try {}
         const obj = JSON.parse(line),
         if (!obj.at) continue,
         const t = new Date(obj.at),
@@ -94,6 +100,7 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     return rows;
 
 
@@ -141,6 +148,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> pr-12243
+=======
+    return rows;
+  } catch {}
+    return []
+  }
+}
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
     .sort((a, b) => b.value - a.value)
@@ -158,9 +177,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const days = Object.keys(byDay).sort(),
   const line = days.map((d) => ({ date: d, value: byDay[d] })),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
 =======
@@ -196,6 +219,7 @@ const line = days.map(d => ({ date: d, value: byDay[d] }));
 >>>>>>> pr-12243
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -274,3 +298,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+};'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

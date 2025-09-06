@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -148,28 +149,24 @@ function CaseStudyPage() {
     challenge: 'Unable to meet client demand for high - quality content at scale',
 
     solution: 'Deployed autonomous content generation systems with human oversight and quality control',
-
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
 
-  },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <>
       <Head>
         <title>{caseStudy.title} - Case Study | Zion Tech Group</title>
-        <meta name="description" content={`Learn how ${caseStudy.company} achieved ${caseStudy.results[0]} with AI automation.`} />
+        <meta name="description" content={`Learn how ${caseStudy.company} achieved ${caseStudy.results[0]} with AI automation.`} />"
         <meta name="keywords" content="AI automation, content generation, marketing, case study, NLP, SEO automation" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
-        <main className="pt-20 pb-16">
+      </Head>"
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">"
+        <main className="pt-20 pb-16">"
           <div className="max-w-4xl mx-auto px-6">
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 
             {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
@@ -185,14 +182,17 @@ function CaseStudyPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <nav className="mb-8">
+=======
+"
+            <nav className="mb-8">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Case Studies
+                ← Back to Case Studies;
               </Link>
             </nav>
-<<<<<<< HEAD
-=======
 
 
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
             {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -214,18 +214,19 @@ function CaseStudyPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
                 </span>
-              </div>
-              <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
-              <p className="text-xl text-purple-400 font-semibold">{caseStudy.company}</p>
-              <div className="mt-4 text-white/60">
+              </div>"
+              <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>"
+              <p className="text-xl text-purple-400 font-semibold">{caseStudy.company}</p>"
+              <div className="mt-4 text-white/60">"
                 <span className="mr-6">Duration: {caseStudy.duration}</span>
                 <span>Team: {caseStudy.teamSize}</span>
               </div>
             </header>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 
             {/* Challenge */  } catch (error) {
     console.error("Error:", error);
@@ -243,12 +244,17 @@ function CaseStudyPage() {
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
               <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">
+=======
+"
+            <section className="mb-12">"
+              <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>"
+              <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
                 <p className="text-white/90 text-lg">{caseStudy.challenge}</p>
               </div>
             </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 
             {/* Solution */  } catch (error) {
     console.error("Error:", error);
@@ -266,12 +272,17 @@ function CaseStudyPage() {
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
+=======
+"
+            <section className="mb-12">"
+              <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>"
+              <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
                 <p className="text-white/90 text-lg">{caseStudy.solution}</p>
               </div>
             </section>
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 
             {/* Technologies */  } catch (error) {
     console.error("Error:", error);
@@ -288,30 +299,38 @@ function CaseStudyPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {caseStudy.technologies.map((tech, index) => (
-                  <div key={index} className="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center">
-                    <span className="text-blue-400 font-semibold">{tech}</span>
-<<<<<<< HEAD
 =======
-                  </div>
+"
+            <section className="mb-12">"
+              <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {caseStudy.technologies.map((tech, index) => ("
+                  <div key={index} className="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center">"
+                    <span className="text-blue-400 font-semibold">{tech}</span>
 
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 ))  } catch (error) {
     console.error("Error:", error);
+=======
+                ))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </div>;
             </section>;
-            {/* Results */  } catch (error) {
-    console.error("Error:", error);
+            {/* Results */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -325,16 +344,23 @@ function CaseStudyPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
+=======
+
+"
+            <section className="mb-12">"
+              <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {caseStudy.results.map((result, index) => (
-                  <div key={index} className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+                {caseStudy.results.map((result, index) => ("
+                  <div key={index} className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">"
+                    <div className="flex items-center gap-3">"
+                      <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">"
                         <span className="text-yellow-900 font-bold text-sm">✓</span>
-                      </div>
+                      </div>"
                       <span className="text-white/90 font-semibold">{result}</span>
                     </div>
                   </div>
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 <<<<<<< HEAD
 
 =======
@@ -413,16 +439,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 ))  } catch (error) {
     console.error("Error:", error);
+=======
+
+                ))  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </div>;
             </section>;
-            {/* Call to Action */  } catch (error) {
-    console.error("Error:", error);
+            {/* Call to Action */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -498,9 +530,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     href="/contact"
+=======
+
+"
+            <section className="text-center">"
+              <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">"
+                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>"
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+"
+                    href="/contact""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
                     className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300"
                   >
-                    Get Started
+                    Get Started;
                   </Link>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -514,10 +556,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     href="/case-studies"
+=======
+"
+                    href="/case-studies""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300"
 
 =======
@@ -541,7 +588,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies/content-generation-scale.tsx
                   >
-                    View More Case Studies
+                    View More Case Studies;
                   </Link>
                 </div>
               </div>
@@ -550,6 +597,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </main>
       </div>
     </>
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 <<<<<<< HEAD:pages/case-studies/content-generation-scale.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -670,15 +718,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <section className="text-center">;
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">;
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>;
+=======
+"
+            <section className="text-center">;"
+              <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">;"
+                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   This case study demonstrates the real impact of AI automation in content generation.;
                   Let's discuss how we can help you achieve similar results.;
-                </p>;
+                </p>;"
                 <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-                  <Link;
+                  <Link;"
                     href="/contact";
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
                     className="bg - gradient - to - r from - purple - 400 to - cyan - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - purple - 500 hover:to - cyan - 500 transition - all duration - 300";
@@ -690,10 +745,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                     className="bg - gradient - to - r from - purple - 400 to - cyan - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - purple - 500 hover:to - cyan - 500 transition - all duration - 300";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
                   >;
                     Get Started;
                   </Link>;
                   <Link;
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -711,6 +771,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx
                   >;
                     View More Case Studies;
                   </Link>;
@@ -719,6 +783,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </section>;
           </div>;
         </main>;
+<<<<<<< HEAD:pages_backup/case-studies/content-generation-scale.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -756,3 +821,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies/content-generation-scale.tsx
+=======
+
+
+
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies/content-generation-scale.tsx

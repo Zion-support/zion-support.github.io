@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 <<<<<<< HEAD:src/components/onboarding/UserTypeSelection.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,37 +28,42 @@ export function UserTypeSelection({
 }: UserTypeSelectionProps) {
 id: 'serviceProvider'
       name: 'Service Provider'
+=======
+id: 'serviceProvider''
+      name: 'Service Provider''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/UserTypeSelection.tsx
       description: 'I want to offer services on the platform'
-      icon: Briefcase
-    }
-import { useState } from 'react';
-import { Briefcase, Star, User } from 'lucide-react';
+      icon: Briefcase;
+    }'
+import { useState } from 'react';'
+import { Briefcase, Star, User } from 'lucide-react';'
 import { Button } from '@/components / ui / button';
-interface UserTypeOption {
+interface UserTypeOption {'
   id: 'service_provider' | 'talent' | 'client';
   name: string;
   description: string;
   icon: React.ElementType;
-interface UserTypeSelectionProps {
+interface UserTypeSelectionProps {'
   on_select: (user_type: 'service_provider' | 'talent' | 'client') => void;
   selected_type: string | null;
-export /**
- * UserTypeSelection - Function description
+export /**;
+ * UserTypeSelection - Function description;
  */
-function UserTypeSelection() {
+function UserTypeSelection() {}
   const user_types: UserTypeOption[] = [;
-    {
-      id: 'service_provider',
-      name: 'Service Provider',
+    {'
+      id: 'service_provider','
+      name: 'Service Provider','
       description: 'I want to offer services on the platform',
       icon: Briefcase,
     },
-    {
-      id: 'talent'
-      name: 'Talent'
+    {'
+      id: 'talent''
+      name: 'Talent''
       description: 'I want to showcase my skills and find opportunities'
-      icon: Star
+      icon: Star;
     }
+<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
     {
 
 
@@ -100,15 +106,27 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     {
       id: "serviceProvider",
       name: "Service Provider",
+=======
+    {}
+'
+import { Briefcase, Star, User } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+interface UserTypeOption {}
+  const userTypes: UserTypeOption[] = []
+    {"
+      id: "serviceProvider","
+      name: "Service Provider","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/UserTypeSelection.tsx
       description: "I want to offer services on the platform",
-      icon: Briefcase
+      icon: Briefcase;
     },
-    {
-      id: "talent",
-      name: "Talent",
+    {"
+      id: "talent","
+      name: "Talent","
       description: "I want to showcase my skills and find opportunities",
-      icon: Star
+      icon: Star;
     },
+<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
     {
 <<<<<<< HEAD:src/components/onboarding/UserTypeSelection.tsx
 <<<<<<< HEAD
@@ -154,63 +172,76 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     <div className='space-y-6'>;
       <div className='text-center mb-6'>;
         <h3 className='text-2xl font-bold text-white'>Choose your role</h3>;
+=======
+    {}
+  return (
+'
+    <div className='space-y-6'>;'
+      <div className='text-center mb-6'>;'
+        <h3 className='text-2xl font-bold text-white'>Choose your role</h3>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/UserTypeSelection.tsx
         <p className='text-zion-slate-light mt-2'>;
           This helps us personalize your experience;
         </p>;
       </div>;
-
+'
       <div className='grid gap-4 md:grid-cols-3'>;
         {userTypes && userTypes.map(type => {;
           const Icon = type && type.icon;
           const isSelected = selectedType === type && type.id;
 
+<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
               onClick={() => onSelect(type && type.id)}
-              variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${;
-                isSelected;
-                  ? 'border-zion-purple bg-zion-purple/10 text-zion-purple';
-                  : 'border-zion-blue-light hover:border-zion-cyan/50 text-white';
+=======
 
+              onClick={() => onSelect(type && type.id)}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/UserTypeSelection.tsx
+              variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${;
+                isSelected;'
+                  ? 'border-zion-purple bg-zion-purple/10 text-zion-purple';'
+                  : 'border-zion-blue-light hover:border-zion-cyan/50 text-white';
+`
               }`}
             >;
-              <div
+              <div'`
                 className={`p-3 rounded-full ${isSelected ? 'bg-zion-purple' : 'bg-zion-blue'}`}>;
-                <Icon
+                <Icon'`
                   className={`h-6 w-6 ${isSelected ? 'text-white' : 'text-zion-slate-light'}`}
-
-      id: 'client',
-      name: 'Client',
+'
+      id: 'client','
+      name: 'Client','
       description: 'I want to discover and hire talent or services',
       icon: User,
     },
   ];
-  return (
-    <div className='space - y-6'>;
-      <div className='text - center mb - 6'>;
-        <h3 className='text - 2xl font - bold text - white'>Choose your role</h3>;
+  return ('
+    <div className='space - y-6'>;'
+      <div className='text - center mb - 6'>;'
+        <h3 className='text - 2xl font - bold text - white'>Choose your role</h3>;'
         <p className='text - zion - slate - light mt - 2'>;
           This helps us personalize your experience;
         </p>;
-      </div>;
+      </div>;'
       <div className='grid gap - 4 md:grid - cols - 3'>;
-        {user_types.map (type => {
+        {user_types.map (type => {}
           const Icon = type.icon;
           const is_selected = selected_type === type.id;
-              on_click={() => on_select (type.id)}
-              variant='outline'              className={`h - auto flex flex - col items - center justify - center p - 6 space - y-3 border ${
-                is_selected;
-                  ? 'border - zion - purple bg - zion - purple / 10 text - zion - purple';
-                  : 'border - zion - blue - light hover:border - zion - cyan / 50 text - white';
+              on_click={() => on_select (type.id)}'`
+              variant='outline'              className={`h - auto flex flex - col items - center justify - center p - 6 space - y-3 border ${}
+                is_selected;'
+                  ? 'border - zion - purple bg - zion - purple / 10 text - zion - purple';'
+                  : 'border - zion - blue - light hover:border - zion - cyan / 50 text - white';`
               }`}
             >;
-              <div;
+              <div;'`
                 className={`p - 3 rounded - full ${is_selected ? 'bg - zion - purple' : 'bg - zion - blue'}`}
               >;
-                <Icon;
+                <Icon;'`
                   className={`h - 6 w - 6 ${is_selected ? 'text - white' : 'text - zion - slate - light'}`}
                 />;
-              </div>;
-              <div className='text - center'>;
-                <h4 className='font - medium'>{type.name}</h4>;
+              </div>;'
+              <div className='text - center'>;'
+                <h4 className='font - medium'>{type.name}</h4>;'
                 <p className='text - sm text - zion - slate - light mt - 1'>;
 
                   {type.description}
@@ -221,13 +252,17 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
                 />;
 
+<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+      "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/UserTypeSelection.tsx
       <div className="grid gap-4 md: grid-cols-3">
-        {userTypes.map((type) => {
+        {userTypes.map((type) => {}
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
           
@@ -256,8 +291,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     <div className;
 origin/cursor/automate-test-improve-and-merge-code-2533
           return (
-            <Button
+            <Button;
               key={type.id}
+<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
               onClick={() => onSelect(type.id)}
 <<<<<<< HEAD:src/components/onboarding/UserTypeSelection.tsx
 <<<<<<< HEAD
@@ -265,6 +301,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected 
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" 
+=======
+              onClick={() => onSelect(type.id)}"
+              variant="outline"`
+              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${}
+                isSelected "
+                  ? "border-zion-purple bg-zion-purple/10 text-zion-purple" "
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/UserTypeSelection.tsx
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/UserTypeSelection.tsx
@@ -272,6 +315,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 
               variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected
@@ -283,22 +327,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/UserTypeSelection.tsx
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/UserTypeSelection.tsx
               }`}
-            >
-              <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
+            >"`
+              <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>"`
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />
               </div>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
 import { useState } from "react",;
 import { Briefcase, Star, User } from 'lucide-react';
+=======
+"
+              <div className="text-center">"
+                <h4 className="font-medium">{type.name}</h4>"
+                <p className="text-sm text-zion-slate-light mt-1">"
+import { useState } from "react",;'
+import { Briefcase, Star, User } from 'lucide-react';"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/UserTypeSelection.tsx
 import { Button } from "@/components/ui/button",;
-interface UserTypeOption {;
+interface UserTypeOption {;"
   id: "serviceProvider" | "talent" | "client",;
   name: string,;
   description: string,;
@@ -311,40 +367,34 @@ interface UserTypeOption {;
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/UserTypeSelection.tsx
 ;
-interface UserTypeSelectionProps {;
+interface UserTypeSelectionProps {;"
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void,;
   selectedType: string | null;
 }
 ;
-export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {;
-  const userTypes: UserTypeOption[] = [;
-    {;
-      id: "serviceProvider",;
-      name: "Service Provider",;
-      description: "I want to offer services on the platform",;
-      icon: Briefcase;
+export function UserTypeSelection() { return null; }
     },;
-    {;
-      id: "talent",;
-      name: "Talent",;
+    {;"
+      id: "talent",;"
+      name: "Talent",;"
       description: "I want to showcase my skills and find opportunities",;
       icon: Star;
     },;
-    {;
-      id: "client",;
-      name: "Client",;
+    {;"
+      id: "client",;"
+      name: "Client",;"
       description: "I want to discover and hire talent or services",;
       icon: User;
     }
   ],;
-  return (;
-    <div className="space-y-6">;
-      <div className="text-center mb-6">;
-        <h3 className="text-2xl font-bold text-white">Choose your role</h3>;
+  return (;"
+    <div className="space-y-6">;"
+      <div className="text-center mb-6">;"
+        <h3 className="text-2xl font-bold text-white">Choose your role</h3>;"
         <p className="text-zion-slate-light mt-2">;
           This helps us personalize your experience;
         </p>;
-      </div>;
+      </div>;"
       <div className="grid gap-4 md: grid-cols-3">;
         {userTypes.map((type) => {;
           const Icon = type.icon;
@@ -352,19 +402,19 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
           return (;
             <Button;
               key={type.id}
-              onClick={() => onSelect(type.id)}
-              variant="outline";
+              onClick={() => onSelect(type.id)}"
+              variant="outline";`
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${;
-                isSelected;
-                  ? "border-zion-purple bg-zion-purple/10 text-zion-purple";
-                  : "border-zion-blue-light hover:border-zion-cyan/50 text-white";
+                isSelected;"
+                  ? "border-zion-purple bg-zion-purple/10 text-zion-purple";"
+                  : "border-zion-blue-light hover:border-zion-cyan/50 text-white";`
               }`}
-            >;
-              <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;
+            >;"`
+              <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;"`
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />;
-              </div>;
-              <div className="text-center">;
-                <h4 className="font-medium">{type.name}</h4>;
+              </div>;"
+              <div className="text-center">;"
+                <h4 className="font-medium">{type.name}</h4>;"
                 <p className="text-sm text-zion-slate-light mt-1">;
                   {type.description}
                 </p>;
@@ -405,6 +455,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 ;
 <<<<<<< HEAD:src/components/onboarding/UserTypeSelection.tsx
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -424,3 +475,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/onboarding/UserTypeSelection.tsx
+=======
+;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/onboarding/UserTypeSelection.tsx

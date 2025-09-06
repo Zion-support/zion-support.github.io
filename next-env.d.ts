@@ -1,4 +1,4 @@
-/// <reference types="next" />
+/// <reference types="next" />"
 /// <reference types="next/image-types/global" />
 <<<<<<< HEAD
 =======
@@ -7,8 +7,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-// NOTE: This file should not be edited
+// NOTE: This file should not be edited;
 // see https://nextjs.org/docs/pages/building-your-application/configuring/typescript for more information.
+<<<<<<< HEAD
 =======
 >>>>>>> pr-12243
 /// <reference path="./.next/types/routes.d.ts" />
@@ -40,3 +41,6 @@
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> pr-12243
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

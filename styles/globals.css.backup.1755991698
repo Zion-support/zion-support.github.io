@@ -36,11 +36,19 @@
   --quantum-glow: 0 0 20px rgba(0, 255, 255, 0.5);
   --holographic-glow: 0 0 30px rgba(139, 92, 246, 0.6);
   --cyberpunk-glow: 0 0 25px rgba(236, 73, 153, 0.7);
+<<<<<<< HEAD
   --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
   --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);}
+<<<<<<< HEAD
   --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
   --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
   --futuristic-shadow: 0 0 60px rgba(0, 255, 255, 0.3);
@@ -66,6 +74,16 @@
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
+  --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
+  --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 /* Base styles */
 @layer base {
@@ -264,6 +282,7 @@ body::after {
   background-size: 50px 50px;
   pointer-events: none;
   z-index: -1;
+<<<<<<< HEAD
 }
   animation: matrixMove 30s linear infinite;}
 =======
@@ -274,6 +293,19 @@ body::after {
   animation: matrixMove 30s linear infinite;}
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+}
+  animation: matrixMove 30s linear infinite;}
+
+
+
+  animation: matrixMove 30s linear infinite;}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 /* Enhanced Quantum Grid Background */
 .quantum-grid {
@@ -454,11 +486,21 @@ body::after {
 /* Enhanced Animation Keyframes */
 @keyframes backgroundFloat {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   33% { transform: translateY(-20px) rotate(1deg); }
   66% { transform: translateY(20px) rotate(-1deg); }
 }
@@ -644,6 +686,7 @@ body::after {
   body::before,
   body::after {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -697,10 +740,27 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+  }
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     display: none;  }
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+
+
+    display: none;  }
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 /* High Contrast Mode Support */
@@ -722,10 +782,20 @@ body::after {
     transition-duration: 0.01ms !important;
   }
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 /* Enhanced Focus States */
 .futuristic-focus:focus {
@@ -873,8 +943,18 @@ body::after {
   80% { transform: translate(2px, -2px); }
   100% { transform: translate(0); }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

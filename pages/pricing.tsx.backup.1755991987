@@ -64,6 +64,7 @@ const pricingPlans = [
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -260,6 +261,9 @@ const serviceCategories = [
   ];
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function Pricing() {
   return (

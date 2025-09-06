@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export {};
 export {};
 module.exports = {};
@@ -36,3 +37,6 @@ module.exports = {};
 =======
 module.exports = {};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+module.exports = {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

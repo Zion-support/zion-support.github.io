@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -46,18 +47,28 @@ import { cn } from "@/lib/utils",interface MarkdownProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";"
+import ReactMarkdown from "react-markdown";"
+import { cn } from "@/lib/utils";
+interface MarkdownProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   content: string;
   className?: string;
 }
-export function Markdown({ content, className }: MarkdownProps) {
-  return (
+export function Markdown({ content, className }: MarkdownProps) {}
+  return ("
     <div className={cn("prose dark:prose-invert max-w-none", className)}>
       <ReactMarkdown>{content}</ReactMarkdown>
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
   )
@@ -100,7 +111,7 @@ interface MarkdownProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function Markdown(): any ({ content, className }: MarkdownProps) {;
-  return (
+  return ("
     <div className={cn("prose dark:prose-invert max-w-none", className)}>;
       <ReactMarkdown>{content}</ReactMarkdown>;
     </div>;
@@ -111,15 +122,16 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
 =======
-=======
-}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -129,25 +141,39 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from './react';
 import ReactMarkdown from './react - markdown';
+=======
+
+import React from './react';'
+import ReactMarkdown from './react - markdown';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn  } from '@/lib / utils';
-interface MarkdownProps {
+interface MarkdownProps {}
   content: string;
   class_name?: string;
 }
-export /**
- * Markdown - Function description
+export /**;
+ * Markdown - Function description;
  */
-function Markdown() {
-  return (
+function Markdown() {}
+  return ("
     <div className={cn ("prose dark:prose - invert max - w-none", class_name)}>;
       <ReactMarkdown>{content}</ReactMarkdown>;
     </div>);
 }
+<<<<<<< HEAD
   )
+=======
+
+
+
+  )
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   )
 
 }
 
+<<<<<<< HEAD
 ;
 ;
 
@@ -193,3 +219,10 @@ export function Markdown({ content, className }: MarkdownProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+;
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

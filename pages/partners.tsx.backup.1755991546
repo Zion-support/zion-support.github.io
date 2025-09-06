@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -125,11 +126,15 @@ import {
 
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export default function Partners() {
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10" />
@@ -144,10 +149,14 @@ export default function Partners() {
           <div className="container mx-auto max-w-6xl">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -171,11 +180,15 @@ export default function Partners() {
                 Join forces with Zion Tech Group to revolutionize technology and create breakthrough solutions that shape the future.
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -364,6 +377,9 @@ export default function Partners() {
                         <span className="text-gray-300">{feature}</span>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       </li>
                     ))}
                   </ul>
@@ -373,6 +389,7 @@ export default function Partners() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -451,12 +468,16 @@ export default function Partners() {
                   <p className="text-sm text-cyan-400">{partner.category}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -549,6 +570,9 @@ export default function Partners() {
                   <p className="text-gray-300 leading-relaxed">{step.description}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -557,6 +581,7 @@ export default function Partners() {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -587,10 +612,14 @@ export default function Partners() {
                 Let's discuss how we can create breakthrough solutions together and shape the future of technology.
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 =======
@@ -600,10 +629,14 @@ export default function Partners() {
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   Start Partnership Discussion
                 </a>
                 <a
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -621,6 +654,9 @@ export default function Partners() {
                   Explore Our Solutions
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-2721
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               </div>
             </motion.div>

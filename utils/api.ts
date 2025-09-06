@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 // Define RequestInit if not available
@@ -10,6 +11,13 @@
 interface File extends Blob {
   name: string;
   lastModified: number;
+=======
+
+export interface ApiResponse<T = any> {};
+  data: T;
+  message?: string;
+  success: boolean;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 <<<<<<< HEAD
 interface Blob {
@@ -461,48 +469,49 @@ class ApiClient {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-export interface RequestOptions {
+export interface RequestOptions {};
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   headers?: Record<string, string>;
   body?: any;
 }
 
-class ApiClient {
+class ApiClient {}
   private baseUrl: string;
-
-  constructor(baseUrl: string = '') {
+'
+  constructor(baseUrl: string = '') {}
     this.baseUrl = baseUrl;
   }
 
-  async request<T = any>(endpoint: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+  async request<T = any>(endpoint: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {'
     const { method = 'GET', headers = {}, body } = options;
     
-    try {
-      const response = await fetch(`${this.baseUrl}${endpoint}`, {
+    try {}
+      const response = await fetch(`${this.baseUrl}${endpoint}`, {}
         method,
-        headers: {
+        headers: {'
           'Content-Type': 'application/json',
-          ...headers
+          ...headers;
         },
-        body: body ? JSON.stringify(body) : undefined
+        body: body ? JSON.stringify(body) : undefined;
       });
 
       const data = await response.json();
       
-      return {
+      return {}
         data,
-        success: response.ok
+        success: response.ok;
       };
-    } catch (error) {
-      return {
+    } catch (error) {}
+      return {}
         data: null as any,
-        success: false,
+        success: false,'
         message: error instanceof Error ? error.message : 'Unknown error'
       };
     }  }
 }
 
 export const apiClient = new ApiClient();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -535,3 +544,6 @@ export type { ApiResponse, RequestOptions }
 =======
 export type { ApiResponse, RequestOptions }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

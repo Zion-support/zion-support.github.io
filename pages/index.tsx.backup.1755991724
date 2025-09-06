@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { 
   Clock, DollarSign, TrendingUp, Brain, 
   Zap, Rocket, Mail, Phone, MapPin, Sparkles, 
@@ -25,6 +26,9 @@ export default function HomePage() {
     { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Brain className="w-6 h-6" /> },
     { value: '$35B+', label: 'Combined Market Value', color: 'text-yellow-400', icon: <TrendingUp className="w-6 h-6" /> },
     { value: '1000%+', label: 'Average ROI', color: 'text-purple-400', icon: <DollarSign className="w-6 h-6" /> },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const contactInfo = {
@@ -102,17 +106,22 @@ export default function HomePage() {
     }
   ];
 
+<<<<<<< HEAD
   // Combine all services for display
   const allServices = [
     ...innovativeMicroSaasServices.slice(0, 6), // Show top 6 innovative services
     ...enhancedRealMicroSaasServices.slice(0, 6), // Show top 6 enhanced services
     ...extraServices.slice(0, 6), // Show top 6 extra services
     ...additionalEnhancedServices.slice(0, 6) // Show top 6 additional services
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   return (
     <QuantumHolographicMatrixBackground variant="quantum" intensity={1.2}>
       <Head>
+<<<<<<< HEAD
         <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions</title>
         <meta name="description" content="Discover 300+ revolutionary micro SaaS services, quantum AI solutions, and cutting-edge technology platforms. Get started with 30-day free trials and achieve 1000%+ ROI." />
         <meta name="keywords" content="micro SaaS, AI services, quantum computing, space technology, biotech AI, autonomous manufacturing, cybersecurity, blockchain" />
@@ -121,6 +130,9 @@ export default function HomePage() {
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </Head>
 
       <div className="min-h-screen">
@@ -301,6 +313,7 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* All Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -310,6 +323,9 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -323,6 +339,7 @@ export default function HomePage() {
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {allServices.map((service, index) => (
                 <motion.div
@@ -412,5 +429,8 @@ export default function HomePage() {
         </section>
       </div>
     </QuantumHolographicMatrixBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

@@ -84,6 +84,7 @@ export default function HomePage() {
       description: 'Typical return on investment for our customers',
       color: 'text-yellow-400'
     },
+<<<<<<< HEAD
     { 
       value: '24/7', 
       label: 'AI Support', 
@@ -94,6 +95,9 @@ export default function HomePage() {
 
   // Service categories with market insights
   const serviceCategoriesWithInsights = [
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     {
       name: 'Quantum Computing & AI',
       description: 'Revolutionary quantum AI solutions with unprecedented computing power',

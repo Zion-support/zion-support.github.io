@@ -6,12 +6,16 @@ import FuturisticCard, { ServiceCard, FeatureCard } from '../components/ui/Futur
 import Button from '../components/ui/Button';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
+<<<<<<< HEAD
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, Star, Users, Globe, Lock, Rocket, Cpu, Database, TrendingUp, Clock, Target, Building, Award, DollarSign, ChartBar, Code, BookOpen, Activity, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, Settings, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Sparkles, Atom, Brain, Eye, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const heroStats = [
@@ -35,9 +39,13 @@ export default function HomePage() {
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
     {
+<<<<<<< HEAD
       icon: <Brain className="w-8 h-8 text-white" />,
       title: '100+ Real Micro SaaS Services',
       description: 'Comprehensive portfolio of fully functional micro SaaS tools with real implementations, not just mockups.',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
       gradient: 'from-cyan-400 to-blue-500',
     },
@@ -116,13 +124,18 @@ export default function HomePage() {
     },
     {
       icon: '🔒',
+<<<<<<< HEAD
       title: 'Quantum Security',
       description: 'Next-generation cybersecurity with quantum-resistant cryptography and AI threat detection.',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       textColor: 'text-green-400',
       gradient: 'from-green-400 to-emerald-500',
     },
     {
+<<<<<<< HEAD
       icon: '🚀',
       title: 'Space Technology Solutions',
       description: 'Cutting-edge space exploration and satellite optimization platforms.',
@@ -135,6 +148,9 @@ export default function HomePage() {
       label: 'Quantum Finance Market',
       description: '300% annual growth rate',
       icon: <DollarSign className="w-6 h-6" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       metric: '$3.5B',
@@ -152,6 +168,7 @@ export default function HomePage() {
 
   const emergingTechnologies = [
     {
+<<<<<<< HEAD
       id: 'quantum-ai-neural-optimizer',
       name: 'Quantum AI Neural Optimizer',
       tagline: 'Revolutionary quantum-enhanced neural network optimization',
@@ -273,10 +290,14 @@ export default function HomePage() {
       label: 'Climate Tech Market',
       description: '180% annual growth rate',
       icon: <Globe className="w-6 h-6" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>Zion Tech Group — World&apos;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform</title>
@@ -362,11 +383,15 @@ export default function HomePage() {
           <meta name="author" content="Zion Tech Group" />
           <meta property="og:title" content="Zion Tech Group - 100+ Micro SaaS Services" />
           <meta property="og:description" content="Comprehensive technology services portfolio with AI, quantum, blockchain, and emerging technology solutions." />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <meta property="og:url" content="https://ziontechgroup.com" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com" />
         </Head>
 
+<<<<<<< HEAD
         <div className="relative z-10">
           {/* Hero Section */}
           <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -383,6 +408,9 @@ export default function HomePage() {
                   Experience the future of technology with our cutting-edge micro SaaS platforms featuring quantum computing, AI, and revolutionary innovations that transform industries worldwide.
                 </p>
               </motion.div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
               {/* Hero Stats */}
               <motion.div 
@@ -396,7 +424,11 @@ export default function HomePage() {
                     <div className={`text-3xl md:text-4xl font-bold ${stat.color} mb-2`}>
                       {stat.value}
                     </div>
+<<<<<<< HEAD
                     <div className="text-gray-400 text-sm">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       {stat.label}
                     </div>
                   </div>
@@ -503,6 +535,7 @@ export default function HomePage() {
                 ))}
               </div>
 
+<<<<<<< HEAD
               <div className="text-center mt-12">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Button href="/services" variant="primary" size="lg">
@@ -513,6 +546,9 @@ export default function HomePage() {
                     <Sparkles className="w-5 h-5 mr-2" />
                     Explore Innovative Services
                   </Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               </div>
             </div>
@@ -534,6 +570,7 @@ export default function HomePage() {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {technologyStack.map((tech, index) => (
               <Card
@@ -543,6 +580,9 @@ export default function HomePage() {
               >
                 <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {tech.icon}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <h3 className="font-semibold text-white mb-2 text-lg">{tech.name}</h3>
                 <p className="text-sm text-gray-400">{tech.category}</p>
@@ -552,6 +592,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Micro SaaS Services CTA */}
       <section className="py-24 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
@@ -604,6 +645,9 @@ export default function HomePage() {
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
             </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button

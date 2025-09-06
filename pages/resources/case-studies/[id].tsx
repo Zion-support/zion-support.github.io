@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -10,12 +11,18 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
+=======
+import React from 'react',;'
+import Head from 'next/head',;'
+import Link from 'next/link',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useRouter } from 'next/router',;
-export default function CaseStudyResourcePage() {
+export default function CaseStudyResourcePage() {}
   const router = useRouter(),
   const { id } = router.query,
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -26,6 +33,12 @@ export default function CaseStudyResourcePage() {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+';
+import React from 'react';'
+import Head from 'next/head';'
+import Link from 'next/link';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useRouter } from 'next/router';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,8 +51,9 @@ import { useRouter } from 'next/router';
         delivering significant improvements in efficiency, quality, and cost reduction.</p>
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
-        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
+        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line;
         and preventing them from meeting growing customer demands.</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -60,12 +74,16 @@ and reducing operational costs. They required a solution that could adapt to cha
         <p>We implemented a comprehensive AI automation system that included:</p>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
           <li><strong>Real-time Production Optimization:</strong> Dynamic scheduling and resource allocation</li>
           <li><strong>Automated Quality Control:</strong> Computer vision systems for defect detection</li>
           <li><strong>Intelligent Scheduling:</strong> AI-powered production planning and optimization</li>
         </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -76,6 +94,9 @@ and reducing operational costs. They required a solution that could adapt to cha
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h2>Implementation</h2>
         <p>The system was deployed in phases over 6 months:</p>
         <ul>
@@ -86,12 +107,16 @@ and reducing operational costs. They required a solution that could adapt to cha
         </ul>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h2>Results</h2>
         <p>The implementation delivered exceptional results:</p>
         <ul>
@@ -102,6 +127,7 @@ and reducing operational costs. They required a solution that could adapt to cha
         </ul>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -110,6 +136,9 @@ and reducing operational costs. They required a solution that could adapt to cha
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h2>Key Learnings</h2>
         <p>This project revealed several important insights:</p>
         <ul>
@@ -118,6 +147,7 @@ and reducing operational costs. They required a solution that could adapt to cha
           <li>Gradual implementation reduces resistance and improves adoption</li>
           <li>Continuous monitoring and optimization is essential for long-term success</li>
         </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -242,10 +272,23 @@ description:
       title: 'Cloud Infrastructure Optimization',
       company: 'E - commerce Platform',
       industry: 'Technology',
-      results: '50% reduction in cloud costs, 99.9% uptime achieved',
-<<<<<<< HEAD
 =======
 
+
+        <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential;
+        of autonomous systems in traditional industries. The results exceeded expectations and positioned the company;
+        as a leader in smart manufacturing.</p>
+      `
+
+    {'
+      id: 'cloud - infrastructure - optimization','
+      title: 'Cloud Infrastructure Optimization','
+      company: 'E - commerce Platform','
+      industry: 'Technology','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      results: '50% reduction in cloud costs, 99.9% uptime achieved',
+
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -261,16 +304,18 @@ description: 'Building self-healing, auto-scaling cloud infrastructure.',
       fullContent: `
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <h2>Executive Summary</h2>
-        <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically
+        <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically;
         reduce costs while improving performance and reliability for high-traffic applications.</p>
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
-        Their infrastructure was not scaling efficiently with their business growth, leading to poor customer
+        Their infrastructure was not scaling efficiently with their business growth, leading to poor customer;
         experience and high operational expenses.</p>
         <h2>Challenge</h2>
         <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability.
-        They required a solution that could automatically adapt to traffic patterns, prevent outages, and
+        They required a solution that could automatically adapt to traffic patterns, prevent outages, and;
         optimize resource allocation in real-time.</p>
         <h2>Solution</h2>
         <p>We designed and implemented a comprehensive cloud optimization system:</p>
@@ -304,8 +349,9 @@ description: 'Building self-healing, auto-scaling cloud infrastructure.',
           <li>Cost optimization requires continuous monitoring and adjustment</li>
           <li>Self-healing systems significantly improve reliability</li>
         </ul>
-        <h2>Conclusion</h2>
+        <h2>Conclusion</h2>'
         <p>The cloud infrastructure optimization project transformed the platform's performance and cost structure.
+<<<<<<< HEAD
         The self-healing, auto-scaling infrastructure now supports continued business growth while maintaining
         optimal performance and cost efficiency.</p>
 <<<<<<< HEAD
@@ -348,17 +394,31 @@ import { useRouter } from 'next/router';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function CaseStudyResourcePage(req, res) {
   try {
+=======
+        The self-healing, auto-scaling infrastructure now supports continued business growth while maintaining;
+        optimal performance and cost efficiency.</p>`
+      `
+    }
+'
+import React from 'react';'
+import Head from 'next/head';'
+import Link from 'next/link';'
+import { useRouter } from 'next/router';
+
+export default function CaseStudyResourcePage(req, res) {}
+  try {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const router = useRouter();
   const { id } = router.query;
   // Case studies data - this should match the data in resources.tsx;
   const caseStudies = [;
-    {;
-      id: 'ai-automation-manufacturing';
-      title: 'AI-Powered Manufacturing Automation';
-      company: 'Global Manufacturing Corp';
-      industry: 'Manufacturing';
-      results: '40% increase in production efficiency, 60% reduction in downtime',;
-      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',;
+    {;'
+      id: 'ai-automation-manufacturing';'
+      title: 'AI-Powered Manufacturing Automation';'
+      company: 'Global Manufacturing Corp';'
+      industry: 'Manufacturing';'
+      results: '40% increase in production efficiency, 60% reduction in downtime',;'
+      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',;`
       fullContent: `;
         <h2>Executive Summary</h2>;
         <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations,;
@@ -406,16 +466,16 @@ export default function CaseStudyResourcePage(req, res) {
         <h2>Conclusion</h2>;
         <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential;
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company;
-        as a leader in smart manufacturing.</p>;
+        as a leader in smart manufacturing.</p>;`
       `;
     },;
-    {;
-      id: 'content-generation-scale',;
-      title: 'Scaling Content Generation 10x',;
-      company: 'Digital Marketing Agency',;
-      industry: 'Marketing',;
-      results: '10x increase in content output, 85% improvement in engagement',;
-      description: 'Transforming content creation through autonomous AI systems.',;
+    {;'
+      id: 'content-generation-scale',;'
+      title: 'Scaling Content Generation 10x',;'
+      company: 'Digital Marketing Agency',;'
+      industry: 'Marketing',;'
+      results: '10x increase in content output, 85% improvement in engagement',;'
+      description: 'Transforming content creation through autonomous AI systems.',;`
       fullContent: `;
         <h2>Executive Summary</h2>;
         <p>This case study explores how autonomous AI systems can revolutionize content creation, enabling;
@@ -460,19 +520,19 @@ export default function CaseStudyResourcePage(req, res) {
           <li>Client education about AI capabilities improves acceptance</li>;
           <li>Continuous learning systems improve content quality over time</li>;
         </ul>;
-        <h2>Conclusion</h2>;
+        <h2>Conclusion</h2>;'
         <p>The AI content generation system transformed the agency's operations, enabling unprecedented scale;
         while maintaining creative excellence. The system continues to learn and improve, positioning the agency;
-        for continued growth and success.</p>;
+        for continued growth and success.</p>;`
       `;
     },;
-    {;
-      id: 'cloud-infrastructure-optimization',;
-      title: 'Cloud Infrastructure Optimization',;
-      company: 'E-commerce Platform',;
-      industry: 'Technology',;
-      results: '50% reduction in cloud costs, 99.9% uptime achieved',;
-      description: 'Building self-healing, auto-scaling cloud infrastructure.',;
+    {;'
+      id: 'cloud-infrastructure-optimization',;'
+      title: 'Cloud Infrastructure Optimization',;'
+      company: 'E-commerce Platform',;'
+      industry: 'Technology',;'
+      results: '50% reduction in cloud costs, 99.9% uptime achieved',;'
+      description: 'Building self-healing, auto-scaling cloud infrastructure.',;`
       fullContent: `;
         <h2>Executive Summary</h2>;
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically;
@@ -517,16 +577,17 @@ export default function CaseStudyResourcePage(req, res) {
           <li>Cost optimization requires continuous monitoring and adjustment</li>;
           <li>Self-healing systems significantly improve reliability</li>;
         </ul>;
-        <h2>Conclusion</h2>;
+        <h2>Conclusion</h2>;'
         <p>The cloud infrastructure optimization project transformed the platform's performance and cost structure.;
         The self-healing, auto-scaling infrastructure now supports continued business growth while maintaining;
-        optimal performance and cost efficiency.</p>;
+        optimal performance and cost efficiency.</p>;`
       `;
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -536,11 +597,14 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
-  ],
-  const caseStudy = caseStudies.find(study => study.id === id),
 =======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  ],
+  const caseStudy = caseStudies.find(study => study.id === id),
 
+
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
@@ -561,10 +625,15 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!caseStudy) {
+=======
+
+  if (!caseStudy) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return (
       <>
         <Head>
           <title>Case Study Resource Not Found | Zion Tech Group</title>
+<<<<<<< HEAD
         </Head>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -578,6 +647,15 @@ export default function CaseStudyResourcePage(req, res) {
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>
               <p className="text-xl text-white/80 mb-8">
+=======
+        </Head>"
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+"
+          <main className="container mx-auto px-6 py-12">"
+            <div className="max-w-4xl mx-auto text-center">"
+              <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>"
+              <p className="text-xl text-white/80 mb-8">'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 The case study resource you're looking for doesn't exist.
               </p>
 <<<<<<< HEAD
@@ -603,10 +681,15 @@ export default function CaseStudyResourcePage(req, res) {
 
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/resources"
+=======
+"
+                href="/resources""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
 =======
                 href="/resources"
@@ -618,7 +701,7 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
-                ← Back to Resources
+                ← Back to Resources;
               </Link>
             </div>
           </main>
@@ -627,6 +710,7 @@ export default function CaseStudyResourcePage(req, res) {
 <<<<<<< HEAD
     )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -656,19 +740,30 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
+=======
+
+  return (
+    <>
+      <Head>
+        <title>{caseStudy.title} | Zion Tech Group - Case Study Resource</title>"
+        <meta name="description" content={caseStudy.description} />
+"`
+        <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:description" content={caseStudy.description} />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <div className="max-w-4xl mx-auto">
-            <nav className="mb-8">
+      </Head>"
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">"
+        <main className="container mx-auto px-6 py-12">"
+          <div className="max-w-4xl mx-auto">"
+            <nav className="mb-8">"
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Resources
+                ← Back to Resources;
               </Link>
-            </nav>
-            <header className="mb-12">
-              <div className="mb-6">
+            </nav>"
+            <header className="mb-12">"
+              <div className="mb-6">"
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -689,17 +784,22 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </span>
-              </div>
-              <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
-              <p className="text-xl text-cyan-400 font-semibold mb-2">{caseStudy.company}</p>
+              </div>"
+              <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>"
+              <p className="text-xl text-cyan-400 font-semibold mb-2">{caseStudy.company}</p>"
               <p className="text-white/80 text-lg">{caseStudy.description}</p>
-            </header>
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 mb-8">
-              <h2 className="text-2xl font-bold mb-4 text-white">Key Results</h2>
+            </header>"
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 mb-8">"
+              <h2 className="text-2xl font-bold mb-4 text-white">Key Results</h2>"
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
-            </div>
+            </div>"
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div 
                 className="prose prose-invert max-w-none"
@@ -800,6 +900,10 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/contact"
+=======
+"
+                href="/contact""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
 =======
                 href="/contact"
@@ -810,13 +914,14 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
-                Get Started with Your Project
+                Get Started with Your Project;
               </Link>
             </div>
           </div>
         </main>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -850,6 +955,14 @@ export default function CaseStudyResourcePage(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       description: 'Building self - healing, auto - scaling cloud infrastructure.',
+=======
+
+
+}
+
+'
+      description: 'Building self - healing, auto - scaling cloud infrastructure.',`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       full_content: `;
         <h2 > Executive Summary</h2>;
         <p > This case study demonstrates how intelligent cloud infrastructure optimization can dramatically;
@@ -894,28 +1007,29 @@ export default function CaseStudyResourcePage(req, res) {
           <li > Cost optimization requires continuous monitoring and adjustment</li>;
           <li > Self - healing systems significantly improve reliability</li>;
         </ul>;
-        <h2 > Conclusion</h2>;
+        <h2 > Conclusion</h2>;'
         <p > The cloud infrastructure optimization project transformed the platform's performance and cost structure.;
         The self - healing, auto - scaling infrastructure now supports continued business growth while maintaining;
-        optimal performance and cost efficiency.</p>;
+        optimal performance and cost efficiency.</p>;`
       `;
     }
   ],
   const case_study = case_studies.find (study => study.id === id),
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     return (
       <>;
         <Head>;
           <title > Case Study Resource Not Found | Zion Tech Group</title>;
-        </Head>;
-        <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
-          <main className="container mx - auto px - 6 py - 12">;
-            <div className="max - w-4xl mx - auto text - center">;
-              <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;
+        </Head>;"
+        <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;"
+          <main className="container mx - auto px - 6 py - 12">;"
+            <div className="max - w-4xl mx - auto text - center">;"
+              <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;"
               <p className="text - xl text - white / 80 mb - 8">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -941,10 +1055,15 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 The case study resource you're looking for doesn't exist.;
               </p>;
-              <Link;
+              <Link;"
                 href="/resources";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -962,10 +1081,17 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+              >;
+                ← Back to Resources;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </Link>;
             </div>;
           </main>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1077,12 +1203,17 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
                 Get Started with Your Project;
               </Link>;
             </div>;
           </div>;
         </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1116,3 +1247,13 @@ if ( {) {
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

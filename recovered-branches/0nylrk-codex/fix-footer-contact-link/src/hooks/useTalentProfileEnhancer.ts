@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -9,13 +10,22 @@ import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
 export interface TalentProfileData {export interface TalentProfileData {
+=======
+import {useState} from 'react';'
+import {supabase} from '@/integrations / supabase / client';
 
-import {useState} from 'react';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+export interface TalentProfileData {}
+';
+import {useState} from 'react';'
 import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -50,38 +60,36 @@ export interface CategorizedSkills {
 }
 export interface CategorizedSkills {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 
 export interface CategorizedSkills {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  programming: string[];
-  devops: string[];
-  platforms: string[];
-import { useState  } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export interface TalentProfileData {
+
+export interface TalentProfileData {};
   name: string;
   title: string;
   bio: string;
 }
-export interface CategorizedSkills {
-
+export interface CategorizedSkills {};
 export interface CategorizedSkills {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   programming: string[];
   devops: string[];
   platforms: string[];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   other: string[]
@@ -112,33 +120,41 @@ export interface CategorizedSkills {;
 export interface EnhancedProfile {
   summary: string,
   categorizedSkills: CategorizedSkills
+=======
+
+export interface EnhancedProfile {}
+  summary: string,;
+  categorizedSkills: CategorizedSkills;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
   const [error, setError] = useState<string | null>(null);
-  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
+  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {}
     setIsGenerating(true);
 <<<<<<< HEAD
 <<<<<<< HEAD
     setError(null)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export interface EnhancedProfile {
-  summary: string,
-  categorizedSkills: CategorizedSkills
+
+export interface EnhancedProfile {}
+  summary: string,;
+  categorizedSkills: CategorizedSkills;
 }
 
-export function useTalentProfileEnhancer() {;
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  
-  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
+export function useTalentProfileEnhancer() { return null; }
+  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {}
     setIsGenerating(true);
     setError(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -185,6 +201,21 @@ export function useTalentProfileEnhancer() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         throw new Error(error.message)
 import { useState } from 'react',;
+=======
+
+    try {}
+      // Call the Supabase Edge Function'
+      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {}
+        body: { talentData: profileData }
+      });
+
+
+
+
+      if (error) {}
+        throw new Error(error.message)'
+import { useState } from 'react',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from '@/integrations/supabase/client',;
 export interface TalentProfileData {;
   name: string,;
@@ -207,14 +238,7 @@ export interface EnhancedProfile {;
   categorizedSkills: CategorizedSkills;
 }
 ;
-export function useTalentProfileEnhancer() {;
-  const [isGenerating, setIsGenerating] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
-  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {;
-    setIsGenerating(true),;
-    setError(null),;
-    try {;
-      // Call the Supabase Edge Function;
+export function useTalentProfileEnhancer() { return null; }
       const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {;
         body: { talentData: profileData }
       }),;
@@ -226,20 +250,26 @@ export function useTalentProfileEnhancer() {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
-      return data as EnhancedProfile
-    } catch (err: any) {
-
+      return data as EnhancedProfile;
+    } catch (err: any) {}
+'
       setError(err && err.message || 'Failed to enhance profile'),
 
+<<<<<<< HEAD
 export interface CategorizedSkills {
+=======
+
+
+export interface CategorizedSkills {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   programming: string[];
   devops: string[];
 <<<<<<< HEAD
 <<<<<<< HEAD
   platforms: string[];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      return null
-    } finally {
+
+      return null;
+    } finally {}
       setIsGenerating(false)
     }
 <<<<<<< HEAD
@@ -248,31 +278,17 @@ export interface CategorizedSkills {
   
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   };
   
 
 
-<<<<<<< HEAD
-  return {
-    enhanceProfile;
-    isGenerating;
-<<<<<<< HEAD
 
-    error
-=======
-=======
-    error
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return {
     enhanceProfile;
@@ -345,3 +361,16 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
+=======
+  return {}
+    enhanceProfile;
+    isGenerating;
+
+    error;
+  }
+}
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

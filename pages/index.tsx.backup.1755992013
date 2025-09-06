@@ -489,7 +489,7 @@ export default function HomePage() {
         </div>
       </footer>
     </UltraFuturisticBackground>
-=======
+
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: 'Real Micro SaaS Services',
       description: '48+ fully functional micro SaaS tools with real implementations, not just mockups.',
@@ -810,7 +810,11 @@ export default function HomePage() {
         columns={3}
       />
 
+<<<<<<< HEAD
       {/* SaaS Tools Showcase */}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 animate-fade-in">

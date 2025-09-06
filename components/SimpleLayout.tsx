@@ -55,16 +55,14 @@ import React, { ReactNode } from "react";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
-export default /**
- * SimpleLayout - Function description
+export default /**;
+ * SimpleLayout - Function description;
  */
-function SimpleLayout() {,
-  return (,
-    <>,
-      <Head>,
+function SimpleLayout() { return null; }
         <title>{title}</title>,
         {description && <meta name="description" content={description} />}
       </Head>,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -117,3 +115,6 @@ export default SimpleLayout;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

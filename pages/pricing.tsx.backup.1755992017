@@ -13,6 +13,7 @@ import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, Trend
 ========
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Check, Star, Zap, Brain, Atom, Shield, Rocket, Users, Globe } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -400,11 +401,15 @@ export default function PricingPage() {
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-a86c
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/pricing.tsx.backup.1755992017
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
 export default function Pricing() {
   return (
+<<<<<<< HEAD
     <EnhancedFuturisticBackground variant="quantum-advanced" intensity="medium">
       <div className="min-h-screen">
         <Head>
@@ -495,10 +500,17 @@ export default function Pricing() {
               Contact Sales
             </Button>
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/pricing.tsx.backup.1755992017
+=======
+
+          </div>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:components/pricing.tsx.backup.1755991909.backup.1756001156
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 to-purple-900">
@@ -924,6 +936,9 @@ export default function Pricing() {
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-advertising-a86c
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/pricing.tsx.backup.1755992017
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

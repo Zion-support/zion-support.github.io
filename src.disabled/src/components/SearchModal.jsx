@@ -4,13 +4,14 @@ export: function SearchModal({ isOpen,onClose }) { const [query,setQuery] = useS
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
-interface SearchModalProps {
-  // Add props here as needed
+interface SearchModalProps {}
+  // Add props here as needed;
 }
-export default function SearchModal({ }: SearchModalProps) {
+export default function SearchModal({ }: SearchModalProps) {}
   return (
     <div>
       <h1>SearchModal</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+'

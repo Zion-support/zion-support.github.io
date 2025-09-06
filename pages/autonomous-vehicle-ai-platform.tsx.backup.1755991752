@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { Car as CarIcon } from 'lucide-react';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -9,17 +10,25 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function AutonomousVehicleAIPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-vehicle-ai-platform'));
   if (!service) return null;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
+<<<<<<< HEAD
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <link rel="canonical" href="https://ziontechgroup.com/autonomous-vehicle-ai-platform" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
+<<<<<<< HEAD
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-rose-400 bg-clip-text text-transparent flex items-center justify-center gap-3">
               <CarIcon className="w-10 h-10" />{service.name}
             </h1>
@@ -32,10 +41,14 @@ export default function AutonomousVehicleAIPlatformPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-orange-400 mt-0.5" /><span>{feat}</span></li>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 ))}
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-orange-500/30 p-6 h-fit">
+<<<<<<< HEAD
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
@@ -48,6 +61,9 @@ export default function AutonomousVehicleAIPlatformPage() {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
           </div>

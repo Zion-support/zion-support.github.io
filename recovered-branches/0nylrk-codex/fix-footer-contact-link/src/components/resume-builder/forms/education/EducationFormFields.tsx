@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,11 +25,23 @@ import { Button  } from '@/components/ui/button';
 import { Textarea  } from '@/components/ui/textarea';
 import { Input  } from '@/components/ui/input';
 import { Checkbox  } from '@/components/ui/checkbox';
+=======
+import { useForm  } from 'react-hook-form';'
+import { zodResolver  } from '@hookform/resolvers/zod';'
+import { z  } from 'zod';'
+import { format  } from 'date-fns';'
+import { Loader2  } from 'lucide-react';'
+import { Button  } from '@/components/ui/button';'
+import { Textarea  } from '@/components/ui/textarea';'
+import { Input  } from '@/components/ui/input';'
+import { Checkbox  } from '@/components/ui/checkbox';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Form;
   FormControl;
   FormField;
   FormItem;
+<<<<<<< HEAD
   FormLabel;
   FormMessage } from '@/components/ui/form';
 import { useState  } from 'react';
@@ -81,11 +93,36 @@ import { Education } from '@/types/resume';// Define schema for form validation
 =======
 import { Education } from '@/types/resume';// Define schema for form validation
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  FormLabel;'
+  FormMessage } from '@/components/ui/form';'
+import { useState  } from 'react';'
+import { EducationFormFieldsProps  } from './types';'
+import { Education } from '@/types/resume';
+'
+import {useForm} from 'react-hook-form';'
+import {zodResolver} from '@hookform/resolvers/zod';'
+import {z} from 'zod';'
+import {format} from 'date-fns';'
+import {Loader2} from 'lucide-react';'
+import {Button} from '@/components/ui/button';'
+import {Textarea} from '@/components/ui/textarea';'
+import {Input} from '@/components/ui/input';'
+import {Checkbox} from '@/components/ui/checkbox';'
+import {Alert, AlertDescription} from '@/components/ui/alert';'
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';'
+import {useState} from 'react';'
+import {EducationFormFieldsProps} from './types';'
+import {Education} from '@/types/resume';
 
-const educationSchema = z.object({
-  institution: z.string().min(1, 'Institution is required');
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+// Define schema for form validation;
+const educationSchema = z.object({'
+  institution: z.string().min(1, 'Institution is required');'
   degree: z.string().min(1, 'Degree is required');
-  field_of_study: z.string().optional()
+  field_of_study: z.string().optional()'
   start_date: z.string().min(1, 'Start date is required');
   end_date: z.string().optional()
   is_current: z.boolean().default(false)
@@ -97,6 +134,7 @@ type EducationFormValues = z.infer<typeof educationSchema>;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -136,24 +174,33 @@ export function EducationFormFields({
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
+=======
+
+
+
+
+export function EducationFormFields() { return null; }
+  const form = useForm<EducationFormValues>({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     resolver: zodResolver(educationSchema)
-    defaultValues: {
-      institution: ''
-      degree: ''
-      field_of_study: ''
+    defaultValues: {'
+      institution: '''
+      degree: '''
+      field_of_study: '''
       start_date: format(new Date(), 'yyyy-MM-dd');
-      is_current: false
-      description: ''
+      is_current: false'
+      description: '''
       location: ''}})
-  const handleSubmit = async (data: EducationFormValues) => {
+  const handleSubmit = async (data: EducationFormValues) => {}
     setIsLoading(true);
     setError(null)
-    try {
+    try {}
       await onSubmit(data)
-    } catch (err: any) {
+    } catch (err: any) {'
       setError(err.message |'An error occurred')
-    } finally {
+    } finally {}
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 =======
@@ -178,14 +225,25 @@ import {Checkbox} from '@/components / ui / checkbox';
 import {Alert, AlertDescription} from '@/components / ui / alert';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
 import {useState} from 'react';
-import {EducationFormFieldsProps} from './types';
-<<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+'
+import {z} from 'zod';'
+import {format} from 'date - fns';'
+import {Loader2} from 'lucide-react';'
+import {Button} from '@/components / ui / button';'
+import {Textarea} from '@/components / ui / textarea';'
+import {Input} from '@/components / ui / input';'
+import {Checkbox} from '@/components / ui / checkbox';'
+import {Alert, AlertDescription} from '@/components / ui / alert';'
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';'
+import {useState} from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import {EducationFormFieldsProps} from './types';
+
     }
   }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -207,18 +265,31 @@ import { Button } from '@/components/ui/button',;
 import { Textarea } from '@/components/ui/textarea',;
 import { Input } from '@/components/ui/input',;
 import { Checkbox } from '@/components/ui/checkbox',;
+=======
+'
+import { useForm } from 'react-hook-form',;'
+import { zodResolver } from '@hookform/resolvers/zod',;'
+import { z } from 'zod',;'
+import { format } from 'date-fns',;'
+import { Loader2 } from 'lucide-react',;'
+import { Button } from '@/components/ui/button',;'
+import { Textarea } from '@/components/ui/textarea',;'
+import { Input } from '@/components/ui/input',;'
+import { Checkbox } from '@/components/ui/checkbox',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
-  FormLabel,;
-  FormMessage} from '@/components/ui/form',;
-import { useState } from 'react',;
-import { EducationFormFieldsProps } from './types',;
+  FormLabel,;'
+  FormMessage} from '@/components/ui/form',;'
+import { useState } from 'react',;'
+import { EducationFormFieldsProps } from './types',;'
 import { Education } from '@/types/resume',;
 
+<<<<<<< HEAD
 // Define schema for form validation;
 const educationSchema = z && z.object({;
   institution: z && z.string().min(1, 'Institution is required');
@@ -239,12 +310,15 @@ export function EducationFormFields(): any ({ ;
 }: EducationFormFieldsProps) {;
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const form = useForm<EducationFormValues>({;
     resolver: zodResolver(educationSchema),;
-    defaultValues: {;
-      institution: '',;
-      degree: '',;
+    defaultValues: {;'
+      institution: '',;'
+      degree: '',;'
       field_of_study: '',;
+<<<<<<< HEAD
       start_date: format(new Date(), 'yyyy-MM-dd');
       is_current: false,,
   description: '',;
@@ -285,6 +359,9 @@ export function EducationFormFields(): any ({ ;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -292,11 +369,12 @@ export function EducationFormFields(): any ({ ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
+      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <FormField
-            control={form && form.control}
+          <FormField;
+            control={form && form.control}"
             name="institution"
+<<<<<<< HEAD
             render={({ field }) => (;
               <FormItem>;
 <<<<<<< HEAD
@@ -378,6 +456,9 @@ export function EducationFormFields(): any ({ ;
               <FormItem>;
                 <FormLabel>Institution</FormLabel>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Education} from '@/types / resume';
 =======
                 <FormLabel>Institution</FormLabel>;import {Education} from '@/types / resume';
@@ -386,10 +467,10 @@ import {Education} from '@/types / resume';
                 <FormLabel>Institution</FormLabel>;import {Education} from '@/types / resume';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Define schema for form validation;
-const education_schema = z.object ({
-  institution: z.string ().min (1, 'Institution is required');
+const education_schema = z.object ({'
+  institution: z.string ().min (1, 'Institution is required');'
   degree: z.string ().min (1, 'Degree is required');
-  field_of_study: z.string ().optional (),
+  field_of_study: z.string ().optional (),'
   start_date: z.string ().min (1, 'Start date is required');
   end_date: z.string ().optional (),
   is_current: z.boolean ().default (false),
@@ -397,45 +478,52 @@ const education_schema = z.object ({
   location: z.string ().optional ()}),
 type EducationFormValues = z.infer < typeof education_schema>;
 ;
-export /**
- * EducationFormFields - Function description
+export /**;
+ * EducationFormFields - Function description;
  */
-function EducationFormFields() {
+function EducationFormFields() {}
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
 ;
-  const form = use_form < EducationFormValues>({
+  const form = use_form < EducationFormValues>({}
     resolver: zod_resolver (education_schema),
-    default_values: {
-      institution: '',
-      degree: '',
-      field_of_study: '',
+    default_values: {'
+      institution: '','
+      degree: '','
+      field_of_study: '','
       start_date: format (new Date (), 'yyyy - MM - dd');
-      is_current: false,
-      description: '',
+      is_current: false,'
+      description: '','
       location: ''}}),
-  const handle_submit = async (data: EducationFormValues) => {
+  const handle_submit = async (data: EducationFormValues) => {}
     setIsLoading (true);
     set_error (null),
-    try {
+    try {}
       await on_submit (data);
-    } catch (err: any) {
+    } catch (err: any) {'
       set_error (err.message || 'An error occurred');
-    } finally {
+    } finally {}
       setIsLoading (false);
     }
   }
 ;
   return (
+<<<<<<< HEAD
     <Form {...form}>;
       <form on_submit={form.handle_submit (handle_submit)} className="space-y-4">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+=======
+    <Form {...form}>;"
+      <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;"
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <FormField;
-            control={form.control}
+            control={form.control}"
             name="institution";
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Institution</FormLabel>;
+<<<<<<< HEAD
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -445,22 +533,35 @@ import { Button } from '@/components/ui/button',;
 import { Textarea } from '@/components/ui/textarea',;
 import { Input } from '@/components/ui/input',;
 import { Checkbox } from '@/components/ui/checkbox',;
+=======
+
+'
+import { useForm } from 'react-hook-form',;'
+import { zodResolver } from '@hookform/resolvers/zod',;'
+import { z } from 'zod',;'
+import { format } from 'date-fns',;'
+import { Loader2 } from 'lucide-react',;'
+import { Button } from '@/components/ui/button',;'
+import { Textarea } from '@/components/ui/textarea',;'
+import { Input } from '@/components/ui/input',;'
+import { Checkbox } from '@/components/ui/checkbox',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
-  FormLabel,;
-  FormMessage} from '@/components/ui/form',;
-import { useState } from 'react',;
-import { EducationFormFieldsProps } from './types',;
+  FormLabel,;'
+  FormMessage} from '@/components/ui/form',;'
+import { useState } from 'react',;'
+import { EducationFormFieldsProps } from './types',;'
 import { Education } from '@/types/resume',;
 // Define schema for form validation;
-const educationSchema = z.object({;
-  institution:z.string().min(1, 'Institution is required'),;
+const educationSchema = z.object({;'
+  institution:z.string().min(1, 'Institution is required'),;'
   degree:z.string().min(1, 'Degree is required'),;
-  field_of_study:z.string().optional(),;
+  field_of_study:z.string().optional(),;'
   start_date:z.string().min(1, 'Start date is required'),;
   end_date:z.string().optional(),;
   is_current:z.boolean().default(false),,
@@ -469,6 +570,7 @@ const educationSchema = z.object({;
 ;
 type EducationFormValues = z.infer<typeof educationSchema>,;
 ;
+<<<<<<< HEAD
 export function EducationFormFields({ ;
   isEditing, ;
   onSubmit, ;
@@ -486,6 +588,9 @@ export function EducationFormFields({ ;
       start_date:format(new Date(), 'yyyy-MM-dd'),;
       is_current:false,,
   description:'',;
+=======
+export function EducationFormFields() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       location:''}}),;
 ;
   const handleSubmit = async (data:EducationFormValues) => {;
@@ -493,30 +598,31 @@ export function EducationFormFields({ ;
     setError(null),;
     try {;
       await onSubmit(data);
-    } catch (err:any) {;
+    } catch (err:any) {;'
       setError(err.message || 'An error occurred');
     } finally {;
     }
 
-  },
-import {z} from 'zod';
-import {format} from 'date - fns';
-import {Loader2} from 'lucide-react';
-import {Button} from '@/components / ui / button';
-import {Textarea} from '@/components / ui / textarea';
-import {Input} from '@/components / ui / input';
-import {Checkbox} from '@/components / ui / checkbox';
-import {Alert, AlertDescription} from '@/components / ui / alert';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
-import {useState} from 'react';
+  },'
+import {z} from 'zod';'
+import {format} from 'date - fns';'
+import {Loader2} from 'lucide-react';'
+import {Button} from '@/components / ui / button';'
+import {Textarea} from '@/components / ui / textarea';'
+import {Input} from '@/components / ui / input';'
+import {Checkbox} from '@/components / ui / checkbox';'
+import {Alert, AlertDescription} from '@/components / ui / alert';'
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';'
+import {useState} from 'react';'
 import {EducationFormFieldsProps} from './types';
     }
   }
 
   return (
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
+    <Form {...form}>;"
+      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+<<<<<<< HEAD
           <FormField;
             control={form.control}
             name="institution";
@@ -565,14 +671,19 @@ import {EducationFormFieldsProps} from './types';
               </FormItem>;            )}
           />;
 ;
-          <FormField;
-            control={form.control}
-            name="degree";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-          <FormField
-            control={form && form.control}
+
+                <FormControl>;"
+                  <Input placeholder="University of California, MIT, etc." {...field} />;
+                </FormControl>;
+                <FormMessage />;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          <FormField;
+            control={form && form.control}"
             name="degree"
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -585,10 +696,14 @@ import {EducationFormFieldsProps} from './types';
             control={form && form.control}
             name="degree"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -598,11 +713,15 @@ import {EducationFormFieldsProps} from './types';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Input placeholder="Bachelor's, Master's, Ph && Ph.D, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -627,6 +746,13 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <FormField
           control={form && form.control}
+=======
+
+
+
+        <FormField;
+          control={form && form.control}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           name="field_of_study"
           render={({ field }) => (;
             <FormItem>;
@@ -636,12 +762,12 @@ import {EducationFormFieldsProps} from './types';
               </FormItem>)}
           />;
           <FormField;
-            control={form.control}
+            control={form.control}"
             name="degree";
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Degree</FormLabel>;
-                <FormControl>;
+                <FormControl>;'"
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -649,11 +775,12 @@ import {EducationFormFieldsProps} from './types';
           />;
         </div>;
         <FormField;
-          control={form.control}
+          control={form.control}"
           name="field_of_study";
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Field of Study</FormLabel>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <FormControl>;
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />;
@@ -678,10 +805,15 @@ import {EducationFormFieldsProps} from './types';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+              <FormControl>;"
+                <Input placeholder="Computer Science, Engineering, etc." {...field} />;
+              </FormControl>;
+              <FormMessage />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         />;
+<<<<<<< HEAD
 =======
           <FormField
             control={form && form.control}
@@ -693,12 +825,17 @@ import {EducationFormFieldsProps} from './types';
             name="start_date"        />;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
-          <FormField
-            control={form && form.control}
+
+          <FormField;
+            control={form && form.control}"
             name="start_date"
 
+<<<<<<< HEAD
                   <Input 
                     type="date" 
 <<<<<<< HEAD
@@ -717,6 +854,9 @@ import {EducationFormFieldsProps} from './types';
             name="start_date"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {...field}
+=======
+                    {...field}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     value={field.value |''}
                   />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -724,6 +864,7 @@ import {EducationFormFieldsProps} from './types';
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
           />
 <<<<<<< HEAD
         </div>
@@ -789,10 +930,18 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          />"
+          <div className="space-y-4">
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -816,12 +965,19 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {...field}
                     value={field && field.value || ''}                   />;
+=======
+
+
+
+                  />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}
           />;
 
+<<<<<<< HEAD
           <div className="space-y-4">;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -842,13 +998,16 @@ import {EducationFormFieldsProps} from './types';
 =======
 ;
           <div className="space-y-4">;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <FormField;
-              control={form.control}
-              name="is_current";
-              render={({ field }) => (;
+              control={form && form.control}"
+              name="is_current"
+              render={({ field }) => (;"
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">;
                   <FormControl>;
                     <Checkbox;
+<<<<<<< HEAD
                       checked={field.value}
                       onCheckedChange={field.onChange}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -858,14 +1017,22 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                      checked={field && field.value}
+                      onCheckedChange={field && field.onChange}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     />;
-                  </FormControl>;
+                  </FormControl>;"
                   <div className="space-y-1 leading-none">;
                     <FormLabel>I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>;
               )}
 
+<<<<<<< HEAD
             />;
 
             {!form && form.watch('is_current') && (;
@@ -873,10 +1040,13 @@ import {EducationFormFieldsProps} from './types';
               <FormField
                 control={form && form.control}
                 name="end_date"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>End Date</FormLabel>;
                     <FormControl>;
+<<<<<<< HEAD
                       <Input
                         type="date" 
                         {...field} 
@@ -975,8 +1145,14 @@ import {EducationFormFieldsProps} from './types';
               <FormLabel>Location (Optional)</FormLabel>;                )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       <Input ;
+=======
+
+
+                )}
+                      <Input ;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         type="date" ;
-                        {...field} ;
+                        {...field} ;'
                         value={field.value || ''} ;
                       />;
                     </FormControl>;
@@ -987,16 +1163,17 @@ import {EducationFormFieldsProps} from './types';
           </div>;
         </div>;
         />;
-        <FormField
-          control={form && form.control}
+        <FormField;
+          control={form && form.control}"
           name="description"
 ;
         <FormField;
-          control={form.control}
+          control={form.control}"
           name="location";
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1004,56 +1181,44 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <FormControl>;
+=======
+
+
+
+              <FormControl>;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        />;
 
 
-        <FormField
-          control={form && form.control}
-          name="description"
-=======
-            </FormItem>;          )}
-        />;
-;
         <FormField;
-          control={form.control}
-          name="description";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        <FormField
-          control={form && form.control}
+          control={form && form.control}"
           name="description"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Description (Optional)</FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                <Textarea
-                  placeholder="Notable achievements, courses, activities..."
+
+                <Textarea"
+                  placeholder="Notable achievements, courses, activities...""
                   className="min-h-[100px]"
 <<<<<<< HEAD
 =======
             </FormItem>)}
         />;
         <FormField;
-          control={form.control}
+          control={form.control}"
           name="description";
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Description (Optional)</FormLabel>;
               <FormControl>;
-                <Textarea;
-                  placeholder="Notable achievements, courses, activities...";
+                <Textarea;"
+                  placeholder="Notable achievements, courses, activities...";"
                   className="min - h-[100px]";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1064,31 +1229,25 @@ import {EducationFormFieldsProps} from './types';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        />;
 
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
-        <div className="flex justify-between pt-2">;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          <Button
-            type="button"
+          <Button"
+            type="button""
             variant="outline"
-            onClick={onCancel}>;
+            onClick={onCancel}>;'
             {isEditing ? 'Cancel' : 'Back'}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
             <FormField
               control={form.control}
@@ -1185,32 +1344,14 @@ import {EducationFormFieldsProps} from './types';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          </Button>;
-
-          <Button type="submit" disabled={isLoading}>;
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-            {isEditing ? 'Update' : 'Add'} Education;
-<<<<<<< HEAD
 =======
-            </FormItem>;
-          )}
-        />;
-;
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-;
-        <div className="flex justify-between pt-2">;
-          <Button;
-            type="button";
-            variant="outline";
-            onClick={onCancel}
-          >;
-            {isEditing ? 'Cancel' :'Back'}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </Button>;
-;
-          <Button type="submit" disabled={isLoading}>;
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-            {isEditing ? 'Update' :'Add'} Education;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"
+          <Button type="submit" disabled={isLoading}>;"
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}'
+            {isEditing ? 'Update' : 'Add'} Education;
+
           </Button>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1219,6 +1360,7 @@ import {EducationFormFieldsProps} from './types';
         </div>;
       </form>;
     </Form>;
+<<<<<<< HEAD
   );
 }
             </FormItem>)}
@@ -1227,19 +1369,40 @@ import {EducationFormFieldsProps} from './types';
         <div className="flex justify - between pt-2">;
           <Button;
             type="button";
+=======
+
+            </FormItem>)}
+        />;"
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}"
+        <div className="flex justify - between pt - 2">;
+          <Button;"
+            type="button";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             variant="outline";
             on_click={on_cancel}
-          >;
+          >;'
             {is_editing ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
           </Button>;
           <Button type="submit" disabled={is_loading}>;
             {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />}
+=======
+          </Button>;"
+          <Button type="submit" disabled={is_loading}>;"
+            {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {is_editing ? 'Update' : 'Add'} Education;
           </Button>;
         </div>;
       </form>;
     </Form>);
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
 
@@ -1247,27 +1410,28 @@ import {EducationFormFieldsProps} from './types';
  type EducationFormValues = z.infer<typeof educationSchema>;
 </FormControl> <FormMessage /> </FormItem>) 
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked= {
-  field.value 
-}onCheckedChange= {
-  field.onChange 
+}/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) "
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) "
+}/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked= {}
+  field.value;
+}onCheckedChange= {}
+  field.onChange "
 }/> </FormControl> <div className="space-y-1 leading-none" > <FormLabel>I am currently studying here</FormLabel> </div> </FormItem>) 
-}/> {
-  !form.watch ('is current') && (<FormField control= {
-  form.control 
+}/> {'
+  !form.watch ('is current') && (<FormField control= {}
+  form.control;
 }<FormItem> <FormLabel>End Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
 }/>) 
 }</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="flex justify-between pt-2" > <Button > {
+}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) "
+}/> <div className="flex justify-between pt-2" > <Button > {'
   isEditing ? 'Cancel' : 'Back' 
 }</Button> </Button> </div> </form> </Form>) 
 }
 }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1280,3 +1444,9 @@ import {EducationFormFieldsProps} from './types';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

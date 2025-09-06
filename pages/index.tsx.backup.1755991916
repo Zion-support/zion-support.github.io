@@ -13,8 +13,12 @@ import {
   Cyberpunk, Neural, Space, Matrix, Infinity, Target, ZapIcon
 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, Star, Users, Globe, Lock, Rocket, Cpu, Database, TrendingUp, Clock, Target, Building, Award, DollarSign, ChartBar, Code, BookOpen, Activity, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, Settings, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Sparkles, Atom, Brain, Eye, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const heroStats = [
@@ -409,6 +413,7 @@ export default function HomePage() {
   };
 
   return (
+<<<<<<< HEAD
     <QuantumNeuralBackground variant="quantum" intensity="high">
       <div className="min-h-screen">
         <Head>
@@ -422,6 +427,9 @@ export default function HomePage() {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com" />
         </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
@@ -582,6 +590,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Services */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -644,6 +653,9 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Market Insights */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

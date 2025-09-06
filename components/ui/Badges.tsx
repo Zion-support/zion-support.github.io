@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
   const colorMap = null;
 export function TrustBadge({
@@ -40,27 +41,35 @@ pr-12243
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
   const colorMap = {
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
+=======
+'
+export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {}
+  const colorMap = {'
+    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
 ;
-export /**
- * TrustBadge - Function description
+;
+export /**;
+ * TrustBadge - Function description;
  */
-function TrustBadge() {
-  const color_map = {
-    Verified:;
-      'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',
-    Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200',
-    'Top Rated':;
+function TrustBadge() {}
+  const color_map = {}
+    Verified:;'
+      'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200','
+    Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200','
+    'Top Rated':;'
       'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200',
   } as const;
 ;
-    >;
+    >;'
       <span className='leading - none'>{type}</span>;
     </span>);
 ;
-export /**
- * MicroTestimonial - Function description
+export /**;
+ * MicroTestimonial - Function description;
  */
+<<<<<<< HEAD
 function MicroTestimonial() {
       </figcaption>
     </figure>
@@ -69,53 +78,80 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <figure className='border rounded - md p - 3 text - sm'>;
       <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;
+=======
+function MicroTestimonial() {}
+  return ('
+    <figure className='border rounded - md p - 3 text - sm'>;'
+      <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <figcaption className='mt - 2 font - medium opacity - 80'>;
         — {author}
       </figcaption>;
-    </figure>);  const color_map = {
-    Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',
+    </figure>);  const color_map = {'
+    Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200','
     Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200'} as const,
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
       <span className="leading - none">{type}</span>;
     </span>);
 }
 
+<<<<<<< HEAD
 pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </figcaption>;
     </figure>;
-  );  const colorMap = {;
-    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;
+  );  const colorMap = {;'
+    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;'
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,;
-  return (
-    <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>;
+  return (`
+    <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>;"
       <span className="leading-none">{type}</span>;
     </span>;
   );
 }
 
+<<<<<<< HEAD
 pr-12243
 export /**
  * MicroTestimonial - Function description
+=======
+export /**;
+ * MicroTestimonial - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
-function MicroTestimonial() {
-  return (
-    <figure className="border rounded - md p - 3 text - sm">;
-      <blockquote className="italic opacity - 90">“{quote}”</blockquote>;
+function MicroTestimonial() {}
+  return ("
+    <figure className="border rounded - md p - 3 text - sm">;"
+      <blockquote className="italic opacity - 90">“{quote}”</blockquote>;"
       <figcaption className="mt - 2 font - medium opacity - 80">— {author}</figcaption>;
     </figure>);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   );
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     </figure>
   );
 }
 
+<<<<<<< HEAD
 
 export function MicroTestimonial({ quote, author }: { quote: string, author: string }) {
   return (
@@ -137,66 +173,62 @@ export function TrustBadge({
 }: {
   type,
 }: {;
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   type: 'Verified' | 'Pro' | 'Top Rated';
-}) {
-  const colorMap = {
-    Verified:
-      'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'
-    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200'
-    'Top Rated':
+}) {}
+  const colorMap = {}
+    Verified:'
+      'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200''
+    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200''
+    'Top Rated':'
       'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'
   } as const;
-    >
+    >'
       <span className='leading-none'>{type}</span>
     </span>
   );
-export function MicroTestimonial({
-  quote
-  author
-}: {
-  quote,
-  author,
-}: {;
-
-  quote: string;
-  author: string;
-}) {;
-  return (
-    <figure className='border rounded-md p-3 text-sm'>;
-      <blockquote className='italic opacity-90'>“{quote}”</blockquote>;
+export function MicroTestimonial() { return null; }
+      <blockquote className='italic opacity-90'>“{quote}”</blockquote>;'
       <figcaption className='mt-2 font-medium opacity-80'>;
         — {author}
-  return (
-    <figure className='border rounded - md p - 3 text - sm'>;
-      <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;
+  return ('
+    <figure className='border rounded - md p - 3 text - sm'>;'
+      <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;'
       <figcaption className='mt - 2 font - medium opacity - 80'>;
         — {author}
       </figcaption>;
-    </figure>);  const color_map = {
-    Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',
+    </figure>);  const color_map = {'
+    Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200','
     Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200'} as const,
-  return (
-    <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
+  return (`
+    <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;"
       <span className="leading - none">{type}</span>;
     </span>);
 }
     </figure>;
-  );  const colorMap = {;
-    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;
+  );  const colorMap = {;'
+    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;'
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,;
   return (
-export /**
- * MicroTestimonial - Function description
+export /**;
+ * MicroTestimonial - Function description;
  */
-function MicroTestimonial() {
-  return (
+function MicroTestimonial() {}
+  return ("
     <figure className="border rounded - md p - 3 text - sm">;
     </figure>
   );
 }
+<<<<<<< HEAD
 }
 
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

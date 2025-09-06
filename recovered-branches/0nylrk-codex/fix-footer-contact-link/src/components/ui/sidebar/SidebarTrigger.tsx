@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -73,21 +74,32 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
 =======
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
   const { open, toggleSidebar } = useSidebar(),
+=======
+import React from "react";"
+import { Button } from "@/components/ui/button";"
+import { Menu, X } from "lucide-react";"
+import { useSidebar } from "./sidebar-context";"
+import { cn } from "@/lib/utils";
+interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {}
+  className?: string;
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
-  const { open, toggleSidebar } = useSidebar();
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
-  const { open, toggleSidebar } = useSidebar(),
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
-    <Button
-      variant="ghost"
+    <Button"
+      variant="ghost""
       size="icon"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -119,17 +131,25 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
 import { Button } from "@/components/ui/button",;
 import { Menu, X } from "lucide-react",;
 import { useSidebar } from "./sidebar-context",;
+=======
+"
+import React from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { Menu, X } from "lucide-react",;"
+import { useSidebar } from "./sidebar-context",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils",;
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {;
   className?: string;
 }
 ;
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
+export function SidebarTrigger() { return null; }
   const { open, toggleSidebar } = useSidebar();
   return (;
-    <Button;
-      variant="ghost";
+    <Button;"
+      variant="ghost";"
       size="icon";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,6 +159,8 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 =======
@@ -146,15 +168,27 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}>;
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+=======
+"
+      className={cn("", className)}
+      onClick={toggleSidebar}
+      {...props}>;
+
+
+"
+      {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -178,3 +212,12 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+;
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

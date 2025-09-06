@@ -14,6 +14,7 @@ import { useEffect, useMemo, useState } from 'react';
   name: string;
   category: 'crm' | 'ats';
   description?: string;
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -33,10 +34,15 @@ function StatusIcon(): any ({;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
+=======
+
+  return ('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
     <span className='text-xl' title={status}>;
       {label}
     </span>;
   );
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -47,6 +53,10 @@ import { useEffect, useMemo, useState } from 'react';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next/head';
+=======
+'
+import Head from 'next/head';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
 
@@ -55,6 +65,7 @@ interface ConnectionMap {;
   [key: string]: boolean,;
 
 
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -78,22 +89,28 @@ import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
+=======
+'
+import Head from 'next/head';'
+interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {}
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-interface ConnectionMap { [providerId: string]: any   } catch (error) {
-    console.error("Error:", error);
+interface ConnectionMap { [providerId: string]: any   } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnected' }) {
-  const label = status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
+}'
+function StatusIcon() { return null; }
   return <span className="text-xl" title={status}>{label}</span>;
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -113,10 +130,16 @@ const AdminIntegrationsPage: React.FC = () => {
 <<<<<<< HEAD:pages/admin/integrations.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+export default function AdminIntegrationsPage() {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true }),
@@ -132,48 +155,16 @@ const AdminIntegrationsPage: React.FC = () => {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
 
-  const [syncRules, setSyncRules] = useState<any>({;
-    autoCreateContacts: true,;
-    pushNotesMode: 'auto',;
-    autoSyncApplicants: true,;
-    autoUploadResumes: true,;
-  });
-  async function refresh() {;
-    const [p, s] = await Promise && Promise.all([;
-      fetch('/api/integrations/providers').then(r => r && r.json()),;
-      fetch('/api/integrations/status').then(r => r && r.json()),;
-    ]);
-    setProviders(p && p.providers || []);
-    setConnections(s && s.connections || {});
-  }
-  useEffect(() => {;
-    refresh();
-  }, []);
-  async function connect(): any (providerId: string) {;
-    setLoading(true),;
-    try {;
-      // Open mock oauth popup;
-      window && window.open(;
-        `/api/integrations/oauth/${providerId}/start`,;
-        'oauth',;
-        'width=500,height=700';
-      );
-      await new Promise(r => setTimeout(r, 500));
-      await fetch('/api/integrations/connect', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ providerId, syncRules }),;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       });
       await refresh();
     } finally {;
       setLoading(false);
     }  }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
       window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
@@ -270,6 +261,8 @@ window.open(
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
       });
       await refresh();
     } finally {;
@@ -277,9 +270,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages/admin/integrations.tsx
 <<<<<<< HEAD
     }  }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 
   async function resync(): any (providerId: string) {;
     setLoading(true),;
@@ -327,12 +319,15 @@ await fetch('/api/integrations/resync', {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
       });
       await refresh();
     } finally {;
       setLoading(false);
     }
   }
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -341,28 +336,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true });
-  async function refresh() {
-    const [p, s] = await Promise.all([
-      fetch('/api/integrations/providers').then(r => r.json()),
+  async function refresh() {}
+    const [p, s] = await Promise.all(['
+      fetch('/api/integrations/providers').then(r => r.json()),'
       fetch('/api/integrations/status').then(r => r.json())
     ]);
     setProviders(p.providers || []);
     setConnections(s.connections || {});
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   useEffect(() => { refresh(); }, []);
-  async function connect(providerId: string) {
+  async function connect(providerId: string) {}
     setLoading(true);
-    try {
-      // Open mock oauth popup
+    try {}
+      // Open mock oauth popup'
       window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
-      await new Promise(r => setTimeout(r, 500));
+      await new Promise(r => setTimeout(r, 500));'
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
     } finally {
@@ -480,14 +479,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-  function Card({ p }: { p: ProviderMeta }) {
-    const conn = connections[p.id] |{ status: 'disconnected' }
+
+  function Card() { return null; }
+    const conn = connections[p.id] |{ status: 'disconnected' }'
     const isConnected = conn.status === 'connected';
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -781,16 +784,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+    return (
+
+
+  function RulesModal() {}
+  function RulesModal() { return null; }
+                        }'
+                      />{' '}
+                      Auto;
+                    </label>;
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
                     <label className='flex items - center gap - 2'>;
-                      <input;
-                        type='radio';
-                        name='push_notes';
+                      <input;'
+                        type='radio';'
+                        name='push_notes';'
                         checked={sync_rules.pushNotesMode === 'manual'}
                         on_change={() =>;
-                          setSyncRules ({
-                            ...sync_rules,
+                          setSyncRules ({}
+                            ...sync_rules,'
                             pushNotesMode: 'manual',
                           });
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -839,12 +856,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
                     }
+=======
+                        }'
+                      />{' '}
+
+                    }'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
                   />{' '}
                   Auto-sync applicants;
-                </label>;
+                </label>;'
                 <label className='flex items-center gap-2'>;
-                  <input
+                  <input'
                     type='checkbox'
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD:pages/admin/integrations.tsx
 <<<<<<< HEAD
               <code>
@@ -1069,6 +1093,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Talent Matched → GET{' '}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
 
 
         </section>
@@ -1094,6 +1121,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -1103,11 +1131,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
         </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        <section>
+
+        <section>"
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -1127,10 +1162,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
         </section>
       </main>
       <RulesModal />
     </>
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD:pages/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1140,21 +1180,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
 =======
-
-
-              <code>;
-                /api/integrations/zapier/talent-matched?since=TIMESTAMP;
-              </code>;
-            </li>          </ul>;
-        </section>;
-
 =======
-  )
-}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-        <section>;
+        <section>;'
           <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />;
         </section>;
       </main>;
@@ -1162,6 +1192,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
 
 
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1218,12 +1249,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  );
+function ManualOverrideForm() { return null; }
+  }
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
   )
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 function ManualOverrideForm() {
   const [jobId, setJobId] = useState(''),
   const [disableCrmSync, setDisableCrmSync] = useState(false),
@@ -1237,12 +1280,17 @@ function ManualOverrideForm() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setMessage(''),
     const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
+=======
+function ManualOverrideForm() { return null; }
+    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
     if (res.ok) setMessage('Saved'), else setMessage('Error'),
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1309,16 +1357,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='flex items-center gap-2'>;
           <button
             onClick={save}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
 
-            className='px-3 py-1 && 1.5 rounded bg-black text-white text-sm'>;
-            Save Override;
-          </button>;
-          <div className='text-sm text-gray-500'>{message}</div>;
-        </div>;
-      </div>;
-    </div>;
-  );
 
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1334,12 +1377,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
         <label className="text-sm">Job/Post ID
+=======
+
+
+  return (
+
+
+  return (
+
+"
+    <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">"
+      <div className="grid grid-cols-1 gap-3">"
+        <label className="text-sm">Job/Post ID"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
           <input value={jobId} onChange={e => setJobId(e.target.value)} placeholder="job_123" className="w-full mt-1 px-3 py-2 rounded border bg-transparent" />
-        </label>
-        <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={disableCrmSync} onChange={e => setDisableCrmSync(e.target.checked)} /> Disable CRM sync</label>
-        <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={disableAtsSync} onChange={e => setDisableAtsSync(e.target.checked)} /> Disable ATS sync</label>
-        <div className="flex items-center gap-2">
-          <button onClick={save} className="px-3 py-1.5 rounded bg-black text-white text-sm">Save Override</button>
+        </label>"
+        <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={disableCrmSync} onChange={e => setDisableCrmSync(e.target.checked)} /> Disable CRM sync</label>"
+        <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={disableAtsSync} onChange={e => setDisableAtsSync(e.target.checked)} /> Disable ATS sync</label>"
+        <div className="flex items-center gap-2">"
+          <button onClick={save} className="px-3 py-1.5 rounded bg-black text-white text-sm">Save Override</button>"
           <div className="text-sm text-gray-500">{message}</div>
         </div>
       </div>
@@ -1374,112 +1430,101 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <>;
       <Head>;
         <title > Admin Integrations • Zion</title>;
-      </Head>;
-      <main className='container mx - auto px - 4 py - 8'>;
-        <h1 className='text - 2xl font - semibold mb - 2'>Integrations</h1>;
+      </Head>;'
+      <main className='container mx - auto px - 4 py - 8'>;'
+        <h1 className='text - 2xl font - semibold mb - 2'>Integrations</h1>;'
         <p className='text - sm text - gray - 600 mb - 6'>;
           Connect your CRM and ATS to sync contacts, applicants, and activity.;
-        </p>;
-        <section className='mb - 8'>;
-          <h2 className='text - lg font - semibold mb - 3'>CRM</h2>;
+        </p>;'
+        <section className='mb - 8'>;'
+          <h2 className='text - lg font - semibold mb - 3'>CRM</h2>;'
           <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
             {grouped.crm.map (p => (
               <Card key={p.id} p={p} />))}
           </div>;
-        </section>;
-        <section className='mb - 10'>;
-          <h2 className='text - lg font - semibold mb - 3'>ATS</h2>;
+        </section>;'
+        <section className='mb - 10'>;'
+          <h2 className='text - lg font - semibold mb - 3'>ATS</h2>;'
           <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
             {grouped.ats.map (p => (
               <Card key={p.id} p={p} />))}
           </div>;
-        </section>;
-        <section className='mb - 10'>;
-          <h2 className='text - lg font - semibold mb - 2'>Zapier</h2>;
-          <div className='text - sm text - gray - 600'>Polling endpoints:</div>;
+        </section>;'
+        <section className='mb - 10'>;'
+          <h2 className='text - lg font - semibold mb - 2'>Zapier</h2>;'
+          <div className='text - sm text - gray - 600'>Polling endpoints:</div>;'
           <ul className='list - disc pl - 6 text - sm mt - 2'>;
-            <li>;
+            <li>;'
               New Zion Job Posted → GET{' '}
               <code>/api / integrations / zapier / jobs - posted?since = TIMESTAMP</code>;
             </li>;
-            <li>;
+            <li>;'
               Talent Matched → GET{' '}
               <code>;
                 /api / integrations / zapier / talent - matched?since = TIMESTAMP;
               </code>;
             </li>          </ul>;
         </section>;
-        <section>;
+        <section>;'
           <h2 className='text - lg font - semibold mb - 2'>Manual Overrides</h2>          <ManualOverrideForm />;
         </section>;
       </main>;
       <RulesModal />;
     </>);
 /**
- * ManualOverrideForm - Function description
+ * ManualOverrideForm - Function description;
  */
-function ManualOverrideForm() {
-  const [job_id, setJobId] = useState ('');
-  const [disableCrmSync, setDisableCrmSync] = useState (false);
-  const [disableAtsSync, setDisableAtsSync] = useState (false);
-  const [message, set_message] = useState ('');
-;
-  async /**
- * save - Function description
- */
-function save() {
-    set_message ('');
-    const res = await fetch ('/api / integrations / overrides', {
-      method: 'POST',
+function ManualOverrideForm() { return null; }
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ job_id, disableCrmSync, disableAtsSync }),
-    });
-    if (set_message ('Saved')) {
-  $2
-}
+    });'
+    if (set_message ('Saved')) {}
+  $2;
+}'
     else set_message ('Error');
   }
-  return (
-    <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 bg - white / 60 dark:bg - black / 40 max - w-xl'>;
-      <div className='grid grid - cols - 1 gap - 3'>;
+  return ('
+    <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 bg - white / 60 dark:bg - black / 40 max - w-xl'>;'
+      <div className='grid grid - cols - 1 gap - 3'>;'
         <label className='text - sm'>;
           Job / Post ID;
           <input;
             value={job_id}
-            on_change={e => setJobId (e.target.value)}
-            placeholder='job_123';
+            on_change={e => setJobId (e.target.value)}'
+            placeholder='job_123';'
             className='w - full mt - 1 px - 3 py - 2 rounded border bg - transparent';
           />;
-        </label>;
+        </label>;'
         <label className='flex items - center gap - 2 text - sm'>;
-          <input;
+          <input;'
             type='checkbox';
             checked={disableCrmSync}
-            on_change={e => setDisableCrmSync (e.target.checked)}
+            on_change={e => setDisableCrmSync (e.target.checked)}'
           />{' '}
           Disable CRM sync;
-        </label>;
+        </label>;'
         <label className='flex items - center gap - 2 text - sm'>;
-          <input;
+          <input;'
             type='checkbox';
             checked={disableAtsSync}
-            on_change={e => setDisableAtsSync (e.target.checked)}
+            on_change={e => setDisableAtsSync (e.target.checked)}'
           />{' '}
           Disable ATS sync;
-        </label>;
+        </label>;'
         <div className='flex items - center gap - 2'>;
           <button;
-            on_click={save}
+            on_click={save}'
             className='px - 3 py - 1.5 rounded bg - black text - white text - sm';
           >;
             Save Override;
-          </button>;
+          </button>;'
           <div className='text - sm text - gray - 500'>{message}</div>;
         </div>;
       </div>;
     </div>);
 ;
 
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1488,6 +1533,11 @@ function save() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
 
 
 }
@@ -1497,6 +1547,7 @@ function save() {
 }
 }
 
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1504,12 +1555,16 @@ function save() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx
   ),
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/admin/integrations.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1528,3 +1583,9 @@ function save() {
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/integrations.tsx
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/admin/integrations.tsx

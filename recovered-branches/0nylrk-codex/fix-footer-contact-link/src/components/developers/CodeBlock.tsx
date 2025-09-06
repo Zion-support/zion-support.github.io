@@ -1,5 +1,12 @@
+<<<<<<< HEAD
   code: string
 import {useState} from 'react';
+=======
+
+
+  code: string;
+import {useState} from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";
 interface CodeBlockProps {;
@@ -8,21 +15,34 @@ interface CodeBlockProps {;
   language?: string;
   showLineNumbers?: boolean;
   className?: string;
+<<<<<<< HEAD
 }  code;
 
+=======
+}
+
+  code;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   language = 'bash';
   showLineNumbers = false;
   className;
 }: CodeBlockProps) {;
+<<<<<<< HEAD
   const [copied, setCopied] = useState(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
+=======
+  const [copied, setCopied] = useState(false);'
+import { useState } from 'react','
+import { Check, Copy } from 'lucide-react',"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils",
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -88,12 +108,19 @@ import { cn } from "@/lib/utils",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface CodeBlockProps {
+=======
+
+
+
+interface CodeBlockProps {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   code: string,
   language?: string,
-  showLineNumbers?: boolean,
-  className?: string
+  showLineNumbers?: boolean,;
+  className?: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -151,13 +178,34 @@ import {cn} from "@/lib/utils";export function CodeBlock({
     await navigator.clipboard.writeText(code);
     setCopied(true);
   const handleCopyClick = async () => {
+=======
+
+
+
+export function CodeBlock({}
+  code,'
+  language = 'bash',
+  showLineNumbers = false,
+
+
+;
+  className;
+}: CodeBlockProps) {}
+  const [copied, setCopied] = useState(false),
+
+
+  const handleCopyClick = async () => {}
+    await navigator.clipboard.writeText(code);
+    setCopied(true);
+  const handleCopyClick = async () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     await navigator.clipboard.writeText(code),
     setCopied(true),
-    setTimeout(() => {
+    setTimeout(() => {}
       setCopied(false)
     }, 2000)
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -182,17 +230,22 @@ import {cn} from "@/lib/utils";export function CodeBlock({
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <div className={cn(
+=======
+  return (
+    <div className={cn("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
-      className
+      className;
     )}>
-      <pre className={cn(
-        "p-4 overflow-auto",
+      <pre className={cn("
+        "p-4 overflow-auto","
         showLineNumbers && "pl-12 relative"
       )}>
-        {showLineNumbers && (
-          <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">
-            {code.split('\n').map((_, i) => (
+        {showLineNumbers && ("
+          <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">'
+            {code.split('\n').map((_, i) => ("
               <div key={i} className="h-6 leading-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,6 +258,11 @@ import {cn} from "@/lib/utils";export function CodeBlock({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from 'react',;
 import { Check, Copy } from 'lucide-react',;
+=======
+'
+import { useState } from 'react',;'
+import { Check, Copy } from 'lucide-react',;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils",;
 interface CodeBlockProps {;
   code: string,;
@@ -213,6 +271,7 @@ interface CodeBlockProps {;
   className?: string;
 }
 ;
+<<<<<<< HEAD
 export function CodeBlock({;
   code,;
   language = 'bash',;
@@ -248,20 +307,32 @@ export function CodeBlock({;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     <divclassName={cn(
+=======
+export function CodeBlock() { return null; }
+    }, 2000);
+  };
+
+
+
+
+  return (
+    <divclassName={cn("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
-      className
+      className;
     )}>;
-      <preclassName={cn(
-        "p-4 overflow-auto"
+      <preclassName={cn("
+        "p-4 overflow-auto""
         showLineNumbers && "pl-12 relative"
       )}>;
-        {showLineNumbers && (;
-          <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">;
-            {code && code.split('\n').map((_, i) => (;
+        {showLineNumbers && (;"
+          <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">;'
+            {code && code.split('\n').map((_, i) => (;"
               <div key={i} className="h-6 leading-6">;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {i + 1}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 {i + 1}
@@ -271,20 +342,22 @@ export function CodeBlock({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>;
             ))}
           </div>;
-        )}
+        )}"
         <code className="language-javascript">{code}</code>;
       </pre>;
-      <button
+      <button"
         className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors"
-        onClick={handleCopyClick}
+        onClick={handleCopyClick}"
         aria-label="Copy code">;
         {copied ? <Check size={16} /> : <Copy size={16} />}
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Check, Copy } from 'lucide-react',;
 import { cn } from "@/lib/utils",;
@@ -336,13 +409,18 @@ export function CodeBlock({ ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </button>;
-      {language && (;
+      {language && (;"
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">;
           {language}
         </div>;
       )}
     </div>;
+<<<<<<< HEAD
   );
 }
 <<<<<<< HEAD
@@ -357,6 +435,13 @@ export function CodeBlock({ ;
   );
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+  );
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 =======
@@ -367,105 +452,29 @@ export function CodeBlock({ ;
 ;
 
 export default CodeBlock;
-
-import {useState} from 'react';
-import {Check, Copy} from 'lucide-react';
+'
+import {useState} from 'react';'
+import {Check, Copy} from 'lucide-react';'
 import { cn } from '@/lib / utils';
-interface CodeBlockProps {
+interface CodeBlockProps {}
   code: string,
   language?: string;
   showLineNumbers?: boolean;
   class_name?: string;
 }
-export /**
- * CodeBlock - Function description
+export /**;
+ * CodeBlock - Function description;
  */
-function CodeBlock() {
+function CodeBlock() {}
   const [copied, set_copied] = useState (false);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default CodeBlock;
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  ),;}
-;
-export default CodeBlock,;
- interface CodeBlockProps {
-  code: string;
-language?: string;
-showLineNumbers?: boolean;
-className?: string 
-}export function CodeBlock ({
-  code;
-language = 'bash';
-showLineNumbers = false;
-className 
-}: CodeBlockProps) {
-  const [copied, setCopied] = useState (false);
-const handleCopyClick = async () => {
-  await navigator.clipboard.writeText (code);
-setCopied (true);
-setTimeout ( () => {
-  setCopied (false) 
-}, 2000) 
-};
-return (<div className= {
-  cn ("relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto";
-className) 
-}> <pre className= {
-  cn ("p-4 overflow-auto";
-showLineNumbers && "pl-12 relative") 
-}> {
-  showLineNumbers && (<div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500" > {
-  code.split ('\n') .map ( (, i) => (<div key= {
-  i 
-}className="h-6 leading-6" > {
-  i + 1 
-}
-}</div>) 
-}> {
-  copied ? <Check size= {
-  16 
-}/> : <Copy size= {
-  16 
-}/> 
-}</button> {
-  language 
-}</div>) 
-}</div>) 
-}export default CodeBlock;
-              <div key={i} className="h-6 leading-6">;
-                {i + 1}
-              </div>
-            ))}
-          </div>
-        )}
-        <code className="language-javascript">{code}</code>
-      </pre>
-      <button
-        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors"
-        onClick={handleCopyClick}
-        aria-label="Copy code"
-      >
-        {copied ? <Check size={16} /> : <Copy size={16} />}
-      </button>
-      {language && (
-        <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
-          {language}
-        </div>
-      )}
-    </div>
-  )
-}
 
-;
-export default CodeBlock;
 
+<<<<<<< HEAD
 ;
 export default CodeBlock;
 <<<<<<< HEAD
@@ -481,3 +490,7 @@ export default CodeBlock;
 =======
 export default CodeBlock;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

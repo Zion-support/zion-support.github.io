@@ -18,10 +18,14 @@ import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, Exter
 
 export default function HomePage() {
   const heroStats = [
+<<<<<<< HEAD
     { value: '85+', label: 'Real Micro SaaS Services', color: 'text-cyan-400' },
     { value: '99.9%', label: 'Uptime Guarantee', color: 'text-fuchsia-400' },
     { value: '14', label: 'Day Free Trials', color: 'text-blue-400' },
     { value: '24/7', label: 'AI Support', color: 'text-green-400' },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const contactInfo = {
@@ -38,6 +42,7 @@ export default function HomePage() {
 
   const marketInsights = [
     {
+<<<<<<< HEAD
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: 'Real Micro SaaS Services',
       description: '85+ fully functional micro SaaS tools with real implementations, not just mockups.',
@@ -55,6 +60,9 @@ export default function HomePage() {
       marketData: '$12.3B industrial AI market, 320% annual growth',
       competitors: 'Siemens MindSphere ($500+/month), PTC ThingWorx ($300+/month)',
       savings: 'Save 60% vs. competitors',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       contactInfo: {
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -238,8 +246,12 @@ export default function HomePage() {
               <span className="text-white">Micro SaaS Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
               Transform your business with 200+ cutting-edge AI-powered micro SaaS solutions. 
               From quantum computing to space technology, we're building the future of business automation.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </motion.div>
 
@@ -338,10 +350,14 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+<<<<<<< HEAD
               Cutting-Edge <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Technology</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our comprehensive suite of revolutionary technologies across multiple domains
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </motion.div>
 
@@ -429,8 +445,12 @@ export default function HomePage() {
               href="/micro-saas"
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105"
             >
+<<<<<<< HEAD
               <ZapIcon className="w-5 h-5 mr-2" />
               View All Services
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>
           </motion.div>
         </div>

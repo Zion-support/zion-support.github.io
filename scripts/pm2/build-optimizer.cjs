@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 
 
@@ -348,13 +349,19 @@ optimizer.run().catch(error => {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 /**
  * PM2 Build Optimizer Service;
@@ -395,6 +402,7 @@ class BuildOptimizer {}
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -431,13 +439,19 @@ class BuildOptimizer {}
 
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -875,6 +889,7 @@ if (require.main === module) {}
 =======
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 =======
 <<<<<<< HEAD
@@ -886,10 +901,14 @@ module.exports = BuildOptimizer;module.exports = BuildOptimizer;
 module.exports = BuildOptimizer;module.exports = BuildOptimizer;
 
 module.exports = BuildOptimizer;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 module.exports = BuildOptimizer;
 
 
+<<<<<<< HEAD
 module.exports = BuildOptimizer;module.exports = BuildOptimizer;
 module.exports = BuildOptimizer;module.exports = BuildOptimizer;
 <<<<<<< HEAD
@@ -906,3 +925,6 @@ module.exports = BuildOptimizer;module.exports = BuildOptimizer;
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

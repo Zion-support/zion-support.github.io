@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { prisma } from "@/lib/prisma";
@@ -22,11 +23,19 @@ import { getServerSession } from "next-auth";
 import { prisma } from "@/lib/prisma";
 export async function POST(request: NextRequest) {
   try {
+=======
+import { NextRequest, NextResponse } from "next/server";"
+import { getServerSession } from "next-auth";"
+import { prisma } from "@/lib/prisma";
+export async function POST(request: NextRequest) {}
+  try {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const session = await getServerSession();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-      {
+      {"
         message: "Onboarding completed successfully",
+<<<<<<< HEAD
         user: {
 
 =======          id: updatedUser && updatedUser.id,
@@ -41,6 +50,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+        user: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           id: updatedUser && updatedUser.id,
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
           name: updatedUser && updatedUser.name,
@@ -51,6 +63,7 @@ main
       },
       { status: 200 },
     );
+<<<<<<< HEAD
   } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +203,11 @@ export async function POST(request: NextRequest) { try {
     console.error("Onboarding completion error:", error);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     return NextResponse.json(
+=======
+  } catch (error) {"
+    console.error("Onboarding completion error:", error);
+    return NextResponse.json("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       { error: "Internal server error" },
       { status: 500 },
     return NextResponse && NextResponse.json(
@@ -261,6 +279,7 @@ main
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
@@ -269,3 +288,6 @@ main
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

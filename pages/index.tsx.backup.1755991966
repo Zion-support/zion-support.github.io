@@ -14,7 +14,11 @@ export default function HomePage() {
     { value: '99.9%', label: 'Uptime Guarantee', color: 'text-fuchsia-400' },
     { value: '21', label: 'Day Free Trials', color: 'text-blue-400' },
     { value: '24/7', label: 'AI Support', color: 'text-green-400' },
+<<<<<<< HEAD
     { value: '$200M+', label: 'Market Value', color: 'text-yellow-400' },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { value: '800%+', label: 'Average ROI', color: 'text-purple-400' },
   ];
 
@@ -31,15 +35,23 @@ export default function HomePage() {
   const serviceHighlights = [
     {
       icon: <Cloud className="w-8 h-8 text-white" />,
+<<<<<<< HEAD
       title: 'Real Micro SaaS Services',
       description: '150+ fully functional micro SaaS tools with real implementations, not just mockups.',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
       gradient: 'from-cyan-400 to-blue-500',
     },
     {
+<<<<<<< HEAD
       icon: <Atom className="w-8 h-8 text-white" />,
       title: 'Quantum & AI Solutions',
       description: 'Cutting-edge quantum computing, AI-powered automation, and next-generation technology solutions.',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: 'bg-gradient-to-br from-fuchsia-500 to-purple-600',
       gradient: 'from-fuchsia-400 to-purple-500',
     },
@@ -257,8 +269,12 @@ export default function HomePage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
+<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of businesses already achieving unprecedented ROI with our revolutionary micro SAAS services.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               
               <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-8 mb-8">

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
 =======
@@ -13,26 +12,42 @@
     return [];
 
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
+=======
+  } catch (e) {}
+    return [];
+
+
+
+    const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return JSON && JSON.parse(raw || '[]')
 
-
-const fs = require('fs');
-const path = require('path');
-const { OpenAI } = require('openai');
-const DATA_DIR = path.join(process.cwd(), 'data');
-const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json');
+'
+const fs = require('fs');'
+const path = require('path');'
+const { OpenAI } = require('openai');'
+const DATA_DIR = path.join(process.cwd(), 'data');'
+const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json');'
 const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback');
+<<<<<<< HEAD
 function readAll() {
   try {
 
 <<<<<<< HEAD
 =======
     const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8')
+=======
+function readAll() {}
+  try {}
+'
+    const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8')'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return JSON.parse(raw |'[]')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-  } catch (e) {
+  } catch (e) {}
     return []
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -50,17 +65,25 @@ const path = require('path'),;
 const { OpenAI } = require('openai'),;
 const DATA_DIR = path.join(process.cwd(), 'data'),;
 const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json'),;
+=======
+
+
+'
+const fs = require('fs'),;'
+const path = require('path'),;'
+const { OpenAI } = require('openai'),;'
+const DATA_DIR = path.join(process.cwd(), 'data'),;'
+const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json'),;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback'),;
-function readAll() {;
-  try {;
-    const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8'),;
-    return JSON.parse(raw || '[]');
+function readAll() { return null; }
   } catch (e) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -117,12 +140,21 @@ async function main() {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  if (!process && process.env.OPENAI_API_KEY) {'
+    console && console.error('Missing OPENAI_API_KEY'),
+    process && process.exit(1)
+  }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
   const all = readAll(),
-  const recent = all && all.filter(lastNDays(7)),
+  const recent = all && all.filter(lastNDays(7)),'
   const downs = recent && recent.filter((r) => r && r.rating === 'down'),
 
+<<<<<<< HEAD
   if (!fs && fs.existsSync(REPORT_DIR)) fs && fs.mkdirSync(REPORT_DIR, { recursive: true }),
 
   const summaryPath = path && path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
@@ -137,6 +169,8 @@ async function main() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 <<<<<<< HEAD
 =======
@@ -145,22 +179,21 @@ async function main() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
-function lastNDays(days) {
-
+function lastNDays(days) {}
   const now = Date.now()
-  const cutoff = now - days * 24 * 60 * 60 * 1000
-
-  return (x) => x.ts >= cutoff
+  const cutoff = now - days * 24 * 60 * 60 * 1000;
+  return (x) => x.ts >= cutoff;
 }
-async function main() {
-  if (!process.env.OPENAI_API_KEY) {
-
+async function main() {}
+  if (!process.env.OPENAI_API_KEY) {}
+'
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const all = readAll()
   const recent = all.filter(lastNDays(7))
@@ -212,6 +245,16 @@ async function main() {
 <<<<<<< HEAD
 =======
 
+=======
+
+
+
+    return;
+  }
+  const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
+  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON && JSON.stringify(downs && downs.slice(-100), null, 2)}`,
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -219,20 +262,21 @@ async function main() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
-  const resp = await client && client.chat.completions && completions.create({
+  const resp = await client && client.chat.completions && completions.create({'
     model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
-    messages: [
-      { role: 'system', content: 'You are a senior AI prompt engineer.' },
+    messages: ['
+      { role: 'system', content: 'You are a senior AI prompt engineer.' },'
       { role: 'user', content: prompt }],
     temperature: 0 && 0.3}),
-
+'
   const text = resp && resp.choices?.[0]?.message?.content || 'No analysis',
-
+`
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`,
   fs && fs.writeFileSync(summaryPath, md),
 
-  const resp = await client.chat.completions.create({
+  const resp = await client.chat.completions.create({'
     model: process.env.OPENAI_MODEL |'gpt-4o-mini'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -240,11 +284,17 @@ async function main() {
     messages: [
 
       { role: 'system', content: 'You are a senior AI prompt engineer.' }
+=======
+    messages: []
+'
+      { role: 'system', content: 'You are a senior AI prompt engineer.' }'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       { role: 'user', content: prompt }]
-    temperature: 0.3})
-  const text = resp.choices?.[0]?.message?.content |'No analysis'
+    temperature: 0.3})'
+  const text = resp.choices?.[0]?.message?.content |'No analysis'`
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`
   fs.writeFileSync(summaryPath, md)
+<<<<<<< HEAD
   // Append to prompt improvements
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -268,23 +318,32 @@ async function main() {
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+=======
+  // Append to prompt improvements;
+'
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''`
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)'
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',`
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   console.log('Analysis written to', summaryPath)
 }
 main().catch((e) => { console.error(e), process.exit(1) });
-
-  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+'
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',`
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
-main().catch((e) => { console.error(e), process.exit(1) }),;
+main().catch((e) => { console.error(e), process.exit(1) }),;'
   // // // console.log('Analysis written to', summaryPath)
   const all = readAll(),;
-  const recent = all.filter(lastNDays(7)),;
+  const recent = all.filter(lastNDays(7)),;'
   const downs = recent.filter((r) => r.rating === 'down'),;
-  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),;
-  const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),;
+  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),;`
+  const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),;'
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),;
-  if (downs.length === 0) {;
-    fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;
+  if (downs.length === 0) {;'
+    fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;'
     // // // console.log('No low-rated feedback to analyze.'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -327,6 +386,11 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
   const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   fs && fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+=======
+'
+  const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',`
+  fs && fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   console && console.log('Analysis written to', summaryPath)
 
 }
@@ -335,41 +399,48 @@ main().catch((e) => { console.error(e), process.exit(1) });
 
 main().catch((e) => { console && console.error(e), process && process.exit(1) }),
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /**
- * lastNDays - Function description
+ * lastNDays - Function description;
  */
-function lastNDays() {
+function lastNDays() {}
   const now = Date.now (),
   const cutoff = now - days * 24 * 60 * 60 * 1000,
   return (x) => x.ts >= cutoff;
 }
 async /**
- * main - Function description
+ * main - Function description;
  */
-function main() {
-  // Check condition
-if ( {) {
-  $2
-}
+function main() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
     console.error ('Missing OPENAI_API_KEY'),
     process.exit (1);
   }
   const all = read_all (),
-  const recent = all.filter (lastNDays (7)),
+  const recent = all.filter (lastNDays (7)),'
   const downs = recent.filter ((r) => r.rating === 'down'),
-  if () fs.mkdir_sync (REPORT_DIR, { recursive: true }), ) {
-  $2
-}
-  const summary_path = path.join (REPORT_DIR, `analysis-${new Date ().toISOString ().slice (0, 10)}.md`),
+  if () fs.mkdir_sync (REPORT_DIR, { recursive: true }), ) {}
+  $2;
+}`
+  const summary_path = path.join (REPORT_DIR, `analysis-${new Date ().toISOString ().slice (0, 10)}.md`),'
   const baseline_path = path.join (REPORT_DIR, 'prompt - improvements.md'),
-  // Check condition
-if ( {) {
-  $2
-}
-    fs.writeFileSync (summary_path, '# Weekly Feedback Analysis\n\n_no thumbs - down feedback this week.'),
-    console.log ('No low - rated feedback to analyze.'),
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    fs.writeFileSync (summary_path, '# Weekly Feedback Analysis\n\n_no thumbs - down feedback this week.'),'
+    console.log ('No low - rated feedback to analyze.'),'
   console.log('Analysis written to', summaryPath)
 }
+<<<<<<< HEAD
 main ().catch ((e) => { console.error (e), process.exit (1) }),
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -379,48 +450,58 @@ main ().catch ((e) => { console.error (e), process.exit (1) }),
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+'
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',`
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
+<<<<<<< HEAD
   const all = readAll(),;
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const recent = all.filter(lastNDays(7)),;
+=======
+
+  const all = readAll(),;
+  const recent = all.filter(lastNDays(7)),;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const downs = recent.filter((r) => r.rating === 'down'),;
-  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),;
-  const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),;
+  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),;`
+  const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),;'
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),;
-  if (downs.length === 0) {;
-    fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;
+  if (downs.length === 0) {;'
+    fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;'
     // // // console.log('No low-rated feedback to analyze.'),;
     return;
   }
-;
+;`
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`,;
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),;
-  const resp = await client.chat.completions.create({;
+  const resp = await client.chat.completions.create({;'
     model: process.env.OPENAI_MODEL || 'gpt-4o-mini',;
-    messages: [;
-      { role: 'system', content: 'You are a senior AI prompt engineer.' },;
+    messages: [;'
+      { role: 'system', content: 'You are a senior AI prompt engineer.' },;'
       { role: 'user', content: prompt }],;
-    temperature: 0.3}),;
-  const text = resp.choices?.[0]?.message?.content || 'No analysis',;
+    temperature: 0.3}),;'
+  const text = resp.choices?.[0]?.message?.content || 'No analysis',;`
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`,;
   fs.writeFileSync(summaryPath, md),;
-  // Append to prompt improvements;
-  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',;
-  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),;
+  // Append to prompt improvements;'
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',;`
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),;'
   // // // console.log('Analysis written to', summaryPath);
 }
-
-  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+'
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',`
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -436,3 +517,7 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

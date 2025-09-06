@@ -1,6 +1,7 @@
 // comment;
 export class apiService {;
   constructor() {;
+<<<<<<< HEAD
     this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api"}
   async get() {;
     try {;
@@ -21,12 +22,16 @@ export default new apiService()}}
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
       throw error,
 
 
 
+<<<<<<< HEAD
 export default new apiService(),
 }
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
@@ -36,10 +41,14 @@ export default new apiService()}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
-export default new apiService()}
+export default new apiService()}";
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api"),} return await response && response.json(),} } catch (error) {; console && console.error("Error fetching data:",error),} throw error,} } export default new apiService(),}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -56,13 +65,26 @@ export default new apiService()}
 =======
 =======
     this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"}
+=======
+
+
+
+export default new apiService(),
+}";
+export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
+export default new apiService()}
+
+"
+    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   async get() {;
-    try {;
+    try {;"
       const response = await fetch("${this.baseUrl}/api")}
       return await response.json()}
-    } catch (error) {;
+    } catch (error) {;"
       console.error("Error fetching "data": ", error)}
       throw error}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default new apiService(),
@@ -78,9 +100,13 @@ export class apiService {; constructor() {; this && this.baseUrl = process && pr
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 }
+=======
+}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this.baseUrl}/api");,} return await response.json();,} } catch (error) {; console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
-export default new apiService()}
+export default new apiService()}";
 export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this.baseUrl}/api"),} return await response.json(),} } catch (error) {; console.error("Error fetching data:",error),} throw error,} } export default new apiService(),}
+<<<<<<< HEAD
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -96,3 +122,7 @@ export default new apiService(),
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
 export default new apiService()}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

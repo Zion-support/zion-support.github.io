@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { useState } from 'react';'
+import { Card, CardContent, CardFooter } from '@/components/ui/card';'
+import { Button } from '@/components/ui/button';'
 import { Badge } from '@/components/ui/badge';
 
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState } from 'react',;
@@ -47,14 +48,29 @@ interface ProjectCardProps {
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'
+import Image from 'next/image';'
+import { PortfolioProject } from '@/types/resume';
+interface ProjectCardProps {}
+  project: PortfolioProject;
+  onEdit: (project: PortfolioProject) => void;
+
+'
+  onDelete: (projectId: string) => void; import Image from 'next/image'
+interface ProjectCardProps {};
+  project: PortfolioProject;
+  onEdit: (project: PortfolioProject,) => void;
+  onDelete: (projectId: string,) => void;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
 }
 
 }
 
 interface ProjectCardProps {;
   project: PortfolioProject;
-  onEdit: (project: PortfolioProject) => void;
-  onDelete: (projectId: string) => void;import Image from 'next/image';
+  onEdit: (project: PortfolioProject) => void;'
+  onDelete: (projectId: string) => void;import Image from 'next/image';'
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {;
   project: PortfolioProject,;
@@ -72,32 +88,32 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
     setDeleteDialogOpen(false)
 };
 
-  return (
-    <Card className='h-full flex flex-col'>;
+  return ('
+    <Card className='h-full flex flex-col'>;'
       <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>        {project && project.image_url ? (;
-          <Image
+          <Image;
             src={project && project.image_url}
-            alt={project && project.title}
-            className='object-cover'
-            loading='lazy'    <Card className="h-full flex flex-col">;
+            alt={project && project.title}'
+            className='object-cover''
+            loading='lazy'    <Card className="h-full flex flex-col">;"
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project && project.image_url ? (;
-          <Image
+          <Image;
             src={project && project.image_url}
-            alt={project && project.title}
-            className='object-cover'
+            alt={project && project.title}'
+            className='object-cover''
             loading='lazy'
-        ) : (
-          <div className='w-full h-full flex items-center justify-center bg-muted'>;
+        ) : ('
+          <div className='w-full h-full flex items-center justify-center bg-muted'>;'
             <FileText className='h-12 w-12 text-muted-foreground/50' />;
           </div>;
         )}
-
-import { useState } from 'react';
-import { Card, CardContent, CardFooter } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
+'
+import { useState } from 'react';'
+import { Card, CardContent, CardFooter } from '@/components / ui / card';'
+import { Button } from '@/components / ui / button';'
 import { Badge } from '@/components / ui / badge';
-import {
+import {}
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -105,6 +121,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
   AlertDialogTitle,
 } from '@/components / ui / alert - dialog';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -130,82 +147,111 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 =======
 export /**
  * ProjectCard - Function description
+=======
+  AlertDialogTitle,';
+} from '@/components / ui / alert - dialog';'
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';'
+import Image from 'next / image';'
+import { PortfolioProject } from '@/types / resume';
+interface ProjectCardProps {}
+  project: PortfolioProject;
+  on_edit: (project: PortfolioProject) => void;'
+  on_delete: (project_id: string) => void; import Image from 'next / image';
+interface ProjectCardProps {}
+  project: PortfolioProject,
+  on_edit: (project: PortfolioProject, ) => void,
+  on_delete: (project_id: string, ) => void;
+}
+export /**;
+ * ProjectCard - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
  */
-function ProjectCard() {
+function ProjectCard() {}
   const [deleteDialogOpen, setDeleteDialogOpen] = useState (false);
-  const handle_delete = () =>: any {
-    // Check condition
-if ( {) {
-  $2
+  const handle_delete = () =>: any {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       on_delete (project.id);
     }
     setDeleteDialogOpen (false);
   }
-  return (
-    <Card className='h - full flex flex - col'>;
+  return ('
+    <Card className='h - full flex flex - col'>;'
       <div className='relative h - 48 overflow - hidden rounded - t-lg bg - muted'>        {project.image_url ? (
           <Image;
             src={project.image_url}
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
             alt={project.title}
             className='object - cover';
             loading='lazy'    <Card className="h - full flex flex-col">;
       <div className="relative h - 48 overflow - hidden rounded - t-lg bg-muted">;
+=======
+            alt={project.title}'
+            className='object - cover';'"
+            loading='lazy'    <Card className="h - full flex flex - col">;"
+      <div className="relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
         {project.image_url ? (
           <Image;
             src={project.image_url}
-            alt={project.title}
-            className='object - cover';
-            loading='lazy') : (
-          <div className='w - full h - full flex items - center justify - center bg - muted'>;
+            alt={project.title}'
+            className='object - cover';'
+            loading='lazy') : ('
+          <div className='w - full h - full flex items - center justify - center bg - muted'>;'
             <FileText className='h - 12 w - 12 text - muted - foreground / 50' />;
           </div>)}
-      </div>;
-      <CardContent className='flex - grow pt - 6'>;
-        <div className='space - y-2'>;
+      </div>;'
+      <CardContent className='flex - grow pt - 6'>;'
+        <div className='space - y-2'>;'
           <h3 className='font - semibold text - lg'>{project.title}</h3>;
 
-          {project.description && (
+          {project.description && ('
             <p className='text - sm text - muted - foreground line - clamp - 3'>;
               {project.description}
 
-          {project.technologies && project.technologies.length > 0 && (
+          {project.technologies && project.technologies.length > 0 && ('
             <div className='flex flex-wrap gap-1 mt-2'>
-              {project.technologies.map((tech, index) => (
-                <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
-import Image from 'next/image';
+              {project.technologies.map((tech, index) => ('"
+                <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">'
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';'
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'';
+import Image from 'next/image';'
 import { PortfolioProject } from '@/types/resume';
-interface ProjectCardProps {
+interface ProjectCardProps {}
   project: PortfolioProject,
   onEdit: (project: PortfolioProject) => void,
-  onDelete: (projectId: string) => void
+  onDelete: (projectId: string) => void;
 }
 
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {}
   const [ deleteDialogOpen, setDeleteDialogOpen ] = useState(false),
 
   
-  const handleDelete = () => {
-    if (project.id) {
+  const handleDelete = () => {}
+    if (project.id) {}
       onDelete(project.id)
     }
-    setDeleteDialogOpen(false)
+    setDeleteDialogOpen(false);
   };
 
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <Card className="h-full flex flex-col">
+=======
+  return ("
+    <Card className="h-full flex flex-col">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
         {project.image_url ? (
-          <Image
+          <Image;
             src={project.image_url}
             alt={project.title}
 <<<<<<< HEAD:src/components/resume-builder/portfolio/ProjectCard.tsx
@@ -215,6 +261,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -229,6 +276,16 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
+=======
+"
+            className="object-cover""
+            loading="lazy"
+          />
+
+
+        ) : ("
+          <div className="w-full h-full flex items-center justify-center bg-muted">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
             <FileText className="h-12 w-12 text-muted-foreground/50" />
           </div>
         )}
@@ -252,12 +309,12 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 =======
 
       </div>;
-
-      <CardContent className='flex-grow pt-6'>;
-        <div className='space-y-2'>;
+'
+      <CardContent className='flex-grow pt-6'>;'
+        <div className='space-y-2'>;'
           <h3 className='font-semibold text-lg'>{project && project.title}</h3>;
 
-          {project && project.description && (;
+          {project && project.description && (;'
             <p className='text-sm text-muted-foreground line-clamp-3'>;
               {project && project.description}
             </p>;
@@ -295,29 +352,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-          {project && project.technologies && project && project.technologies.length > 0 && (;
+          {project && project.technologies && project && project.technologies.length > 0 && (;'
             <div className='flex flex-wrap gap-1 mt-2'>;
-              {project && project.technologies.map((tech, index) => (;
+              {project && project.technologies.map((tech, index) => (;'"
                 <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">;
           />;
-        ) : (;
-          <div className="w-full h-full flex items-center justify-center bg-muted">;
+        ) : (;"
+          <div className="w-full h-full flex items-center justify-center bg-muted">;"
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
         )}
       </div>;
-
-      <CardContent className="flex-grow pt-6">;
-        <div className="space-y-2">;
+"
+      <CardContent className="flex-grow pt-6">;"
+        <div className="space-y-2">;"
           <h3 className="font-semibold text-lg">{project && project.title}</h3>;
 
-          {project && project.description && (;
+          {project && project.description && (;"
             <p className="text-sm text-muted-foreground line-clamp-3">{project && project.description}</p>;
           )}
 
-          {project && project.technologies && project && project.technologies.length > 0 && (;
+          {project && project.technologies && project && project.technologies.length > 0 && (;"
             <div className="flex flex-wrap gap-1 mt-2">;
-              {project && project.technologies.map((tech, index) => (;
+              {project && project.technologies.map((tech, index) => (;"
                 <Badge key={index} variant="secondary" className="text-xs">;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -331,6 +388,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardContent>
 =======
 
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
@@ -351,16 +409,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
+=======
+
+            <a;
+              href={project && project.github_url}'
+              target='_blank''
+              rel='noopener noreferrer''
+              aria-label='GitHub''
+              title='GitHub'
+              href = {project && project.github_url,}
+
+      "
+      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
         <div className="flex gap-2">
           {project.github_url && (
-            <a
+            <a;
               href={project.github_url}
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
+=======
+"
+              target="_blank""
+              rel="noopener noreferrer""
+              aria-label="GitHub""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
               title="GitHub"
-            >
-              <Button variant="ghost" size="icon" aria-label="GitHub link">
+            >"
+              <Button variant="ghost" size="icon" aria-label="GitHub link">"
                 <Github className="h-4 w-4" />
               </Button>
             </Link>
@@ -383,9 +461,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         </div>;
-
+'
         <div className='flex gap-2'>;
 
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
@@ -406,32 +485,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
           <Button
             variant='ghost'
+=======
+          <Button'
+            variant='ghost''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
             size='icon'
-            onClick={() => onEdit(project)}
+            onClick={() => onEdit(project)}'
             aria-label='Edit project';
-          >;
+          >;'
             <Edit className='h-4 w-4' />;
-          <Button
-            variant='ghost'
+          <Button'
+            variant='ghost''
             size='icon'
             onClick={() => setDeleteDialogOpen(true)}
 
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
                 <Link className="h-4 w-4" />
               </Button>
             </Link>
           )}
         </div>
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
         
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)} aria-label="Edit project">
+=======
+
+        "
+        <div className="flex gap-2">"
+          <Button variant="ghost" size="icon" onClick={() => onEdit(project)} aria-label="Edit project">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
             <Edit className="h-4 w-4" />
-          </Button>
-          <Button variant="ghost" size="icon" onClick={() => setDeleteDialogOpen(true)} aria-label="Delete project">
+          </Button>"
+          <Button variant="ghost" size="icon" onClick={() => setDeleteDialogOpen(true)} aria-label="Delete project">"
             <Trash2 className="h-4 w-4" />
           </Button>
         </div>
@@ -453,10 +547,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 =======
 
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
             aria-label='Delete project';
-          >;
+          >;'
             <Trash2 className='h-4 w-4' />;
           </Button>;
         </div>;
@@ -468,8 +566,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogTitle>Delete Project</AlertDialogTitle>;
 
             </p>)}
-          {project.technologies && project.technologies.length > 0 && (
+          {project.technologies && project.technologies.length > 0 && ('
             <div className='flex flex - wrap gap - 1 mt - 2'>;
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
               {project.technologies.map ((tech, index) => (
                 <Badge key={index} variant='secondary' className='text - xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">;
           />) : (
@@ -486,59 +585,83 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex flex - wrap gap - 1 mt-2">;
               {project.technologies.map ((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">;
+=======
+              {project.technologies.map ((tech, index) => ('"
+                <Badge key={index} variant='secondary' className='text - xs'>                  {tech}                <Badge key={index} variant="secondary" className="text - xs">;
+          />) : ("
+          <div className="w - full h - full flex items - center justify - center bg - muted">;"
+            <FileText className="h - 12 w - 12 text - muted - foreground / 50" />;
+          </div>)}
+      </div>;"
+      <CardContent className="flex - grow pt - 6">;"
+        <div className="space - y-2">;"
+          <h3 className="font - semibold text - lg">{project.title}</h3>;
+          {project.description && ("
+            <p className="text - sm text - muted - foreground line - clamp - 3">{project.description}</p>)}
+          {project.technologies && project.technologies.length > 0 && ("
+            <div className="flex flex - wrap gap - 1 mt - 2">;
+              {project.technologies.map ((tech, index) => ("
+                <Badge key={index} variant="secondary" className="text - xs">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
                   {tech}
                 </Badge>))}
             </div>)}
         </div>;
-      </CardContent>;
-      <CardFooter className='flex justify - between border - t bg - muted / 40 p - 4'>;
+      </CardContent>;'
+      <CardFooter className='flex justify - between border - t bg - muted / 40 p - 4'>;'
         <div className='flex gap - 2'>;
           {project.github_url && (
             <a;
-              href={project.github_url}
-              target='_blank';
-              rel='noopener noreferrer';
-              aria - label='GitHub';
+              href={project.github_url}'
+              target='_blank';'
+              rel='noopener noreferrer';'
+              aria - label='GitHub';'
               title='GitHub';
-              href = {project.github_url, }
-              target="_blank";
-              rel="noopener noreferrer";
-              aria - label="GitHub";
+              href = {project.github_url, }"
+              target="_blank";"
+              rel="noopener noreferrer";"
+              aria - label="GitHub";"
               title="GitHub";
-            >;
-              <Button variant='ghost' size='icon' aria - label='GitHub link'>;
+            >;'
+              <Button variant='ghost' size='icon' aria - label='GitHub link'>;'
                 <Github className='h - 4 w - 4' />;
               </Button>;
             </a>)}
           {project.demo_url && (
             <a;
-              href={project.demo_url}
-              target='_blank';
-              rel='noopener noreferrer';
-              aria - label='Live demo';
-              title='Live demo'            >;
-              <Button variant='ghost' size='icon' aria - label='Live demo link'>;
+              href={project.demo_url}'
+              target='_blank';'
+              rel='noopener noreferrer';'
+              aria - label='Live demo';'
+              title='Live demo'            >;'
+              <Button variant='ghost' size='icon' aria - label='Live demo link'>;'
                 <Link className='h - 4 w - 4' />              </Button>;
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
             </a>)}
         </div>              <Button variant="ghost" size="icon" aria - label="Live demo link">;
                 <Link className="h - 4 w-4" />;
+=======
+            </a>)}"
+        </div>              <Button variant="ghost" size="icon" aria - label="Live demo link">;"
+                <Link className="h - 4 w - 4" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
               </Button>;
             </a>)}
-        </div>;
+        </div>;'
         <div className='flex gap - 2'>;
-          <Button;
-            variant='ghost';
+          <Button;'
+            variant='ghost';'
             size='icon';
-            on_click={() => on_edit (project)}
+            on_click={() => on_edit (project)}'
             aria - label='Edit project';
-          >;
+          >;'
             <Edit className='h - 4 w - 4' />;
-          <Button;
-            variant='ghost';
+          <Button;'
+            variant='ghost';'
             size='icon';
-            on_click={() => setDeleteDialogOpen (true)}
+            on_click={() => setDeleteDialogOpen (true)}'
             aria - label='Delete project';
-          >;
+          >;'
             <Trash2 className='h - 4 w - 4' />;
           </Button>;
         </div>;
@@ -554,14 +677,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </AlertDialogHeader>;
           <AlertDialogFooter>;
 
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
             <AlertDialogAction
               onClick={handleDelete}
+=======
+
+            <AlertDialogAction;
+              onClick={handleDelete}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
               className='bg-destructive text-destructive-foreground'>              Delete              Are you sure you want to delete this project? This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
-            <AlertDialogAction
+            <AlertDialogAction;
               onClick={handleDelete}
 
 <<<<<<< HEAD
@@ -592,17 +721,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
 =======
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
@@ -617,6 +751,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
               Delete
+=======
+              Delete;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -630,13 +767,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       </AlertDialog>
     </Card>
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 <<<<<<< HEAD:src/components/resume-builder/portfolio/ProjectCard.tsx
 <<<<<<< HEAD
 
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
               className='bg-destructive text-destructive-foreground'>            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
-              on_click={handle_delete}
+              on_click={handle_delete}'
               className='bg - destructive text - destructive - foreground';
             >              Delete              Are you sure you want to delete this project? This action cannot be undone.;
             </AlertDialogDescription>;
@@ -644,9 +785,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <AlertDialogFooter>;
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
               on_click={handle_delete}
               className='bg - destructive text - destructive - foreground';
             >            <AlertDialogAction on_click={handle_delete} className="bg - destructive text - destructive-foreground">;
+=======
+              on_click={handle_delete}'
+              className='bg - destructive text - destructive - foreground';"
+            >            <AlertDialogAction on_click={handle_delete} className="bg - destructive text - destructive - foreground">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx
 
               Delete;
             </AlertDialogAction>;
@@ -658,6 +805,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
     </Card>);
+<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -672,3 +820,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
+=======
+}'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/resume-builder/portfolio/ProjectCard.tsx

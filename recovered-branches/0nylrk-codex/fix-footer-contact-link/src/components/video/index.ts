@@ -45,6 +45,7 @@ export * from './VideoCallRoom';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export * from "./VideoCallRoom";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 // Index utility
@@ -55,3 +56,6 @@ export const Index = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

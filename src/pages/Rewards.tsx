@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Gift } from 'lucide-react'
 
 const REWARDS = [
@@ -18,13 +19,25 @@ const REWARDS = [
             key={r && r.id}
             className='flex justify-between items-center border rounded-md p-4'>            <div>;
               <p className='font-medium'>{r && r.title}</p>;
+=======
+return (
+    <div className='container max-w-xl py-10'>;'
+      <h1 className='text-3xl font-bold mb-6'>Rewards</h1>;'
+      <ul className='space-y-4'>;
+        {REWARDS && REWARDS.map(r => (;
+          <li;
+            key={r && r.id}'
+            className='flex justify-between items-center border rounded-md p-4'>            <div>;'
+              <p className='font-medium'>{r && r.title}</p>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className='text-sm text-muted-foreground'>{r && r.cost} pts</p>;
-            </div>;
+            </div>;'
             <Gift className='h-5 w-5' />          </li>            <Gift className="h-5 w-5" />;
           </li>;
-
+'
 import { Gift } from 'lucide-react'
 
+<<<<<<< HEAD
 const REWARDS = [
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
@@ -50,19 +63,35 @@ const REWARDS = [
   return (
     <div className="container max-w-xl py-10">
       <h1 className="text-3xl font-bold mb-6">Rewards</h1>
+=======
+const REWARDS = ['
+  { id: 'coupon5', title: '$5 Coupon', cost: 500 },'
+  { id: 'premium-week', title: 'Premium Week', cost: 1000 },'
+  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
+
+export default function RewardsPage() {}
+  return ("
+    <div className="container max-w-xl py-10">"
+      <h1 className="text-3xl font-bold mb-6">Rewards</h1>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <ul className="space-y-4">
-        {REWARDS.map((r) => (
+        {REWARDS.map((r) => ("
           <li key={r.id} className="flex justify-between items-center border rounded-md p-4">
-            <div>
-              <p className="font-medium">{r.title}</p>
+            <div>"
+              <p className="font-medium">{r.title}</p>"
               <p className="text-sm text-muted-foreground">{r.cost} pts</p>
+<<<<<<< HEAD
             </div>
 <<<<<<< HEAD
+=======
+            </div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <Gift className="h-5 w-5" />
 =======
             <Gift className='h-5 w-5' />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
         ))}
 <<<<<<< HEAD
@@ -70,6 +99,11 @@ const REWARDS = [
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+        ))};
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </ul>;
     </div>;
   );
@@ -81,34 +115,35 @@ const REWARDS = [
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   );
-}
+}'
 import { Gift } from 'lucide-react';
-const REWARDS = [;
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 },
-  { id: 'premium - week', title: 'Premium Week', cost: 1000 },
+const REWARDS = [;'
+  { id: 'coupon5', title: '$5 Coupon', cost: 500 },'
+  { id: 'premium - week', title: 'Premium Week', cost: 1000 },'
   { id: 'swag - pack', title: 'Swag Pack', cost: 2000 },
 ];
-const REWARDS = [;
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 },
-  { id: 'premium - week', title: 'Premium Week', cost: 1000 },
+const REWARDS = [;'
+  { id: 'coupon5', title: '$5 Coupon', cost: 500 },'
+  { id: 'premium - week', title: 'Premium Week', cost: 1000 },'
   { id: 'swag - pack', title: 'Swag Pack', cost: 2000 },
 ];
-  return (
-    <div className='container max - w-xl py - 10'>;
-      <h1 className='text - 3xl font - bold mb - 6'>Rewards</h1>;
+  return ('
+    <div className='container max - w-xl py - 10'>;'
+      <h1 className='text - 3xl font - bold mb - 6'>Rewards</h1>;'
       <ul className='space - y-4'>;
         {REWARDS.map (r => (
           <li;
-            key={r.id}
+            key={r.id}'
             className='flex justify - between items - center border rounded - md p - 4';
-          >            <div>;
-              <p className='font - medium'>{r.title}</p>;
+          >            <div>;'
+              <p className='font - medium'>{r.title}</p>;'
               <p className='text - sm text - muted - foreground'>{r.cost} pts</p>;
-            </div>;
+            </div>;'"
             <Gift className='h - 5 w - 5' />          </li>            <Gift className="h - 5 w - 5" />;
           </li>))}
       </ul>;
     </div>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 import { Gift } from 'lucide-react'
@@ -143,3 +178,7 @@ export default Rewards;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}'
+import { Gift } from 'lucide-react''";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

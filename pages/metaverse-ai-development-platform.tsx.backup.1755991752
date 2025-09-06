@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -36,10 +37,14 @@ export default function MetaverseAIDevelopmentPage() {
   ];
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-64da
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />
@@ -52,12 +57,16 @@ export default function MetaverseAIDevelopmentPage() {
         <meta name="description" content="AI platform for creating, managing, and monetizing immersive metaverse experiences." />
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-64da
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <link rel="canonical" href="https://ziontechgroup.com/metaverse-ai-development-platform" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent flex items-center justify-center gap-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -88,10 +97,14 @@ export default function MetaverseAIDevelopmentPage() {
                   <li key={feat} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-violet-400 mt-0.5" /><span>{feat}</span></li>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-64da
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 ))}
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -120,6 +133,9 @@ export default function MetaverseAIDevelopmentPage() {
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-64da
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
           </div>

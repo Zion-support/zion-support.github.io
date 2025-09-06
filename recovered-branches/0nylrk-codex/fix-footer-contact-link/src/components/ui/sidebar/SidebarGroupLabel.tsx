@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -27,13 +28,23 @@ import {cn} from "@/lib/utils";
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function SidebarGroupLabel({
+=======
+import React from "react";"
+import { cn } from "@/lib/utils";
+interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {}
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export function SidebarGroupLabel({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   className,
-  children,
-  ...props
-}: SidebarGroupLabelProps) {
+  children,;
+  ...props;
+}: SidebarGroupLabelProps) {}
   return (
-    <div
-      className={cn(
+    <div;
+      className={cn("
         "px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider",
         className,
       )}
@@ -151,6 +162,7 @@ import { cn } from "@/lib/utils",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -195,3 +207,9 @@ export function SidebarGroupLabel({ className, children, ...props }: SidebarGrou
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -357,6 +358,13 @@ declare namespace NodeJS {
     NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
     SUPABASE_SERVICE_ROLE_KEY?: string;
     NEXT_PUBLIC_GA_TRACKING_ID?: string;
+=======
+// Global type declarations for DOM types;
+declare global {}
+  interface Window {}
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }
 

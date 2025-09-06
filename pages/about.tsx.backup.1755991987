@@ -1,6 +1,6 @@
 export default function Page(){return null}
-=======
-=======
+
+
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -106,6 +106,7 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 export default function AboutPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<<< HEAD:components/about.tsx.backup.1755991860.backup.1756001148
@@ -425,6 +426,9 @@ export default About;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/about.tsx.backup.1755991987
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

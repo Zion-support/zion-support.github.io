@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -25,4 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
   );
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

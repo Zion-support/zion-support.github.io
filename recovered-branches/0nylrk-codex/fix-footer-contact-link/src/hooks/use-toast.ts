@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 <<<<<<< HEAD
 
@@ -17,15 +18,19 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+import React from "react";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useToast, as, useToastHook, Toast } from "@/components/ui/toast";
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-// Extend the Toast component props with common toast options
+// Extend the Toast component props with common toast options;
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
   description?: string;
+<<<<<<< HEAD
   title?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,15 +72,17 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
   title?: string;
   variant?: "default" | "destructive" | "success"
 =======
+=======
+  title?: string;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   variant?: "default" | "destructive" | "success";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 };
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
 export const useToast = useToastHook;
 =======
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -88,12 +95,16 @@ export const useToast = useToastHook;
 };
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Base toast function that delegates to the implementation from `useToastHook`.
-function baseToast(props: ToastOptions) {
+function baseToast(props: ToastOptions) {}
   const { toast } = useToastHook();
   toast(props);
 }
 // Convenience helpers mirroring common toast variants.
+<<<<<<< HEAD
 baseToast.title = (title: string) => {
   baseToast({ title })
 };
@@ -109,6 +120,13 @@ baseToast && baseToast.description = (description: string) => {
 baseToast.description = (description: string) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+baseToast.title = (title: string) => {}
+  baseToast({ title });
+};
+
+baseToast.description = (description: string) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   baseToast({ description });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -119,6 +137,7 @@ baseToast.description = (description: string) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
+<<<<<<< HEAD
 baseToast.error = (error: string) => {
   baseToast({ variant: "destructive", title: "Error", description: error })
 };
@@ -127,17 +146,50 @@ baseToast.success = (message: string) => {
   baseToast({ variant: "success", title: "Success", description: message })
 };
 
+=======
+baseToast.error = (error: string) => {"
+  baseToast({ variant: "destructive", title: "Error", description: error });
+};
+
+baseToast.success = (message: string) => {"
+  baseToast({ variant: "success", title: "Success", description: message });
+};
+
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Base toast function that delegates to the implementation from `useToastHook`.
-function baseToast(props: ToastOptions) {
+function baseToast(props: ToastOptions) {}
   const { toast } = useToastHook(),
   toast(props)
 }
 // Convenience helpers mirroring common toast variants.
+<<<<<<< HEAD
 baseToast && baseToast.title = (title: string) => {  baseToast({ variant: "success", title: "Success", description: message })
 }
 // Export the callable toast function.
 export const toast = baseToast as typeof baseToast & {
   title: (title: string) => void,
+=======
+baseToast.title = (title: string) => {}
+  baseToast({ title })
+}
+baseToast.description = (description: string) => {}
+  baseToast({ description })
+}
+baseToast.error = (error: string) => {"
+  baseToast({ variant: "destructive", title: "Error", description: error })
+}
+baseToast.success = (message: string) => {}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a"
+  baseToast({ variant: "success", title: "Success", description: message })
+}
+// Export the callable toast function.
+export const toast = baseToast as typeof baseToast & {};
+  title: (title: string) => void;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   description: (description: string) => void;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,8 +239,8 @@ baseToast.success = (message: string) => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const toast = baseToast as typeof baseToast & {;
@@ -205,26 +257,26 @@ export const toast = baseToast as typeof baseToast & {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: (description: string) => void;
   error: (error: string) => void,
-  success: (message: string) => void
-export const toast = baseToast as typeof baseToast & {
+  success: (message: string) => void;
+export const toast = baseToast as typeof baseToast & {}
   title: (title: string) => void,
   description: (description: string) => void,
-  error: (error: string) => void,
-  success: (message: string) => void
-},
+  error: (error: string) => void,;
+  success: (message: string) => void;
+},"
 import React from "react",;
 import {;
-  useToast as useToastHook,;
+  useToast as useToastHook,;"
   Toast} from "@/components/ui/toast",;
 // Extend the Toast component props with common toast options;
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
   description?: string,;
-  title?: string,;
+  title?: string,;"
   variant?: "default" | "destructive" | "success";
 },;
-export const useToast = useToastHook,;
+export const useToast = useToastHook,;`
 // Base toast function that delegates to the implementation from `useToastHook`.;
-function baseToast(props: ToastOptions) {;
+function baseToast() { return null; }
   const { toast } = useToastHook(),;
   toast(props);
 }
@@ -236,10 +288,10 @@ baseToast.title = (title: string) => {;
 baseToast.description = (description: string) => {;
   baseToast({ description });
 },;
-baseToast.error = (error: string) => {;
+baseToast.error = (error: string) => {;"
   baseToast({ variant: "destructive", title: "Error", description: error });
 },;
-baseToast.success = (message: string) => {;
+baseToast.success = (message: string) => {;"
   baseToast({ variant: "success", title: "Success", description: message });
 },;
 // Export the callable toast function.;
@@ -253,9 +305,13 @@ export const toast = baseToast as typeof baseToast & {;
 <<<<<<< HEAD
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -265,6 +321,7 @@ export const toast = baseToast as typeof baseToast & {;
 };
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -276,3 +333,7 @@ export const toast = baseToast as typeof baseToast & {;
 
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

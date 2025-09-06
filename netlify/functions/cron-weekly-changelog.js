@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,22 +78,32 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       return {
+=======
+
+exports.handler = async function () {}
+  try {}
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+
+      return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         statusCode: 200,
         body: JSON && JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' }),
       };
     }
-<<<<<<< HEAD
-=======
-    const since = new Date(Date && Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
-    const commitsUrl = `https://api && api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const commits = await fetchJson(commitsUrl, token);
     const byAuthor = {}
     const messages = [];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   } catch (e) {
   }
@@ -298,3 +309,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+  } catch (e) {}
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+}
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

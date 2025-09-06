@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/components.disabled/components/AIChatAssistant.test.ts
 =======
 <<<<<<< HEAD
@@ -65,11 +66,23 @@ import { render, screen  } from "@testing-library/react";",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it("displays correct content", () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it("handles user interactions", () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""
+    render(<AIChatAssistant />);,"
+    expect(screen.getByRole("main")).toBeInTheDocument()});","
+  it("displays correct content", () => {;"}
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     render(<AIChatAssistant />);
-    // Add specific content checks based on component functionality});,
+    // Add specific content checks based on component functionality});,"
   it("handles user interactions", () => {;"}
 
     render(<AIChatAssistant />);
+<<<<<<< HEAD
 import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => {; render(<AIChatAssistant />); it("handles user interactions",() => {; render(<AIChatAssistant />)})
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,3 +93,13 @@ import { render,screen } from "@testing-library/react"; render(<AIChatAssistant 
 =======
     // Add interaction tests based on component functionality})});
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+    // Add interaction tests based on component functionality})});
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

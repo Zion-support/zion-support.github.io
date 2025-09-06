@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,11 +66,31 @@ interface DiscussionPost {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+import React, { useState } from "react","
+import { MessageCircle } from "lucide-react","
+import { Button } from "@/components/ui/button","
+import { Input } from "@/components/ui/input","
+import { Textarea } from "@/components/ui/textarea","
+import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+;
+import React, { useState } from './react';'
+import { MessageCircle  } from './lucide-react';'
+import { Button  } from '@/components / ui / button';'
+import { Input  } from '@/components / ui / input';'
+import { Textarea  } from '@/components / ui / textarea';'
+import { Avatar, AvatarFallback  } from '@/components / ui / avatar';'
+import { Card, CardContent  } from '@/components / ui / card';'
+import { Separator  } from '@/components / ui / separator';
+interface DiscussionPost {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: number;
   author: string;
   avatar?: string;
   time: string;
   title: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
@@ -79,10 +100,14 @@ import { Separator } from "@/components/ui/separator",
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-import { Card, CardContent } from "@/components/ui/card",
+"
+import { Card, CardContent } from "@/components/ui/card","
 import { Separator } from "@/components/ui/separator",
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -91,23 +116,33 @@ import { Separator } from "@/components/ui/separator",
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface DiscussionPost {
+=======
+
+
+interface DiscussionPost {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: number,
   author: string,
   avatar?: string,
   time: string,
   title: string,
+<<<<<<< HEAD
   body: string
 }  body: string
 }
 
   body: string
 }
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const initial_posts: DiscussionPost[] = [;
-  {
-    id: 1,
-    author: "Anna Zhou",
-    time: "2h ago",
+  {}
+    id: 1,"
+    author: "Anna Zhou","
+    time: "2h ago","
     title: "What AI trends are you most excited for in 2025?",
+<<<<<<< HEAD
     body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
   },
   body: string
@@ -121,29 +156,52 @@ const initial_posts: DiscussionPost[] = [;
   }
 ];
 export const CommunityDiscussion: React.FC = () => {const initialPosts: DiscussionPost[] = [;
+=======
+
+
+  body: string;
+}
+
+  {}
+    id: 2"
+    author: "David Kim""
+    time: "50m ago""
+    title: "Quick tip: How to rank your Zion listing higher""
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
+  }
+];
+
+const initialPosts: DiscussionPost[] = [;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   {;
-    id: 1,;
-    author: "Anna Zhou",;
-    time: "2h ago",;
+    id: 1,;"
+    author: "Anna Zhou",;"
+    time: "2h ago",;"
     title: "What AI trends are you most excited for in 2025?",;
   {;
-    id: 2,;
-    author: "David Kim",;
-    time: "50m ago",;
+    id: 2,;"
+    author: "David Kim",;"
+    time: "50m ago",;"
     title: "Quick tip: How to rank your Zion listing higher",;
+<<<<<<< HEAD
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
   },;
 ];
+=======
+
+  const handleAddPost = () => {;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
     setPosts([;
       {;
-        id: Date && Date.now(),;
-        author: "You",;
+        id: Date && Date.now(),;"
+        author: "You",;"
         time: "Now",;
         title: newTitle,;
         body: newBody,;
       },;
       ...posts,;
+<<<<<<< HEAD
     ]);
     setNewTitle("");
     setNewBody("");
@@ -154,209 +212,124 @@ export const CommunityDiscussion: React.FC = () => {const initialPosts: Discussi
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
         <MessageCircle size={28} className="text-zion-cyan" />
+=======
+
+    ]);"
+    setNewTitle("");"
+    setNewBody("");
+    setShowNew(false);
+  }
+
+
+  return ("
+    <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">"
+      <div className="flex items-center gap-3 mb-4">"
+        <MessageCircle size={28} className="text-zion-cyan" />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <span className="font-bold text-2xl text-white tracking-tight">
-          Community Discussion
-        </span>
+          Community Discussion;
+        </span>"
         <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">
-          {posts.length} posts
+          {posts.length} posts;
         </span>
-      </div>
-      <Separator className="mb-6" />
+      </div>"
+      <Separator className="mb-6" />"
       <div className="mb-4 flex justify-end">
-        <Button
-          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
+        <Button"
+          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale""
           size="sm"
           onClick={() => setShowNew((v) => !v)}
-        >
+        >"
           {showNew ? "Cancel" : "New Post"}
         </Button>
       </div>
-      {showNew && (
-        <Card className="mb-6 animate-scale-in">
+      {showNew && ("
+        <Card className="mb-6 animate-scale-in">"
           <CardContent className="py-5">
-            <Input
-              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+            <Input"
+              placeholder="Title (e.g., Share an AI tool, Ask for help...)""
               className="mb-3 bg-zion-blue-light text-white placeholder:text-zion-slate"
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
               maxLength={80}
             />
+<<<<<<< HEAD
             <Textarea
               placeholder="What's on your mind?"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+            <Textarea'"
+              placeholder="What's on your mind?""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React, { useState } from "react",;
-import { MessageCircle } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Avatar, AvatarFallback } from "@/components/ui/avatar",;
-import { Card, CardContent } from "@/components/ui/card",;
+"
+import React, { useState } from "react",;"
+import { MessageCircle } from "lucide-react",;"
+import { Button } from "@/components/ui/button",;"
+import { Input } from "@/components/ui/input",;"
+import { Textarea } from "@/components/ui/textarea",;"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar",;"
+import { Card, CardContent } from "@/components/ui/card",;"
 import { Separator } from "@/components/ui/separator",;
-<<<<<<< HEAD
-interface DiscussionPost {;
-  id: number,;
-  author: string,;
-  avatar?: string,;
-  time: string,;
-  title: string,;
-  body: string;
-}
-;
-const initialPosts: DiscussionPost[] = [;
-  {;
-    id: 1,;
-    author: "Anna Zhou",;
-    time: "2h ago",;
-    title: "What AI trends are you most excited for in 2025?",;
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},;
-  {;
-    id: 2,;
-    author: "David Kim",;
-    time: "50m ago",;
-    title: "Quick tip: How to rank your Zion listing higher",;
-    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],;
-export const CommunityDiscussion: React.FC = () => {;
-=======
-;
-interface DiscussionPost {;
-  id:number,;
-  author:string,;
-  avatar?:string,;
-  time:string,;
-  title:string,;
-  body:string;
-}
-;
-const initialPosts:DiscussionPost[] = [;
-  {;
-    id:1,;
-    author:"Anna Zhou",;
-    time:"2h ago",;
-    title:"What AI trends are you most excited for in 2025?",;
-    body:"Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},;
-  {;
-    id:2,;
-    author:"David Kim",;
-    time:"50m ago",;
-    title:"Quick tip:How to rank your Zion listing higher",;
-    body:"Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],;
-;
-export const CommunityDiscussion:React.FC = () => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
   const [posts, setPosts] = useState(initialPosts),;
-  const [showNew, setShowNew] = useState(false),;
-  const [newTitle, setNewTitle] = useState(""),;
+  const [showNew, setShowNew] = useState(false),;"
+  const [newTitle, setNewTitle] = useState(""),;"
   const [newBody, setNewBody] = useState(""),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   const handleAddPost = () => {;
     if (!newTitle.trim() || !newBody.trim()) return,;
     setPosts([;
       {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        id: Date.now(),;
-        author: "You",;
-        time: "Now",;
-        title: newTitle,;
-        body: newBody},;
-      ...posts]),;
-    setNewTitle(""),;
-    setNewBody(""),;
-    setShowNew(false);
-  };
-  return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        id:Date.now(),;
-        author:"You",;
+
+        id:Date.now(),;"
+        author:"You",;"
         time:"Now",;
         title:newTitle,;
         body:newBody},;
-      ...posts]),;
-    setNewTitle(""),;
+      ...posts]),;"
+    setNewTitle(""),;"
     setNewBody(""),;
     setShowNew(false),;
   },;
 ;
   return (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
-  },;
-];
-    ]);
-    setNewTitle("");
-    setNewBody("");
-    setShowNew(false);
-  }
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
-      <div className="flex items-center gap-3 mb-4">;
-        <MessageCircle size={28} className="text-zion-cyan" />;
+"
+    <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;"
+      <div className="flex items-center gap-3 mb-4">;"
+        <MessageCircle size={28} className="text-zion-cyan" />;"
         <span className="font-bold text-2xl text-white tracking-tight">;
           Community Discussion;
         </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0 && 0.5">;
-          {posts && posts.length} posts;
-=======
+
+"
         <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">;
           {posts.length} posts;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">;
-          {posts.length} posts;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
         </span>;
-      </div>;
-      <Separator className="mb-6" />;
+      </div>;"
+      <Separator className="mb-6" />;"
       <div className="mb-4 flex justify-end">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <Button
-          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
-          size="sm"
-          onClick={() => setShowNew((v) => !v)}
-        >;
-          {showNew ? "Cancel" : "New Post"}
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <Button;
-          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
+
+        <Button;"
+          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";"
           size="sm";
           onClick={() => setShowNew((v) => !v)}
-        >;
+        >;"
           {showNew ? "Cancel" :"New Post"}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
         </Button>;
       </div>;
-      {showNew && (;
-        <Card className="mb-6 animate-scale-in">;
+      {showNew && (;"
+        <Card className="mb-6 animate-scale-in">;"
           <CardContent className="py-5">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <Input
@@ -447,53 +420,42 @@ export const CommunityDiscussion: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
               rows={3}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            />
+
+            />"
             <div className="flex gap-3 justify-end">
-              <Button
-                variant="secondary"
-                size="sm"
+              <Button"
+                variant="secondary""
+                size="sm""
                 className="bg-zion-blue text-white hover:bg-zion-blue-dark"
                 onClick={() => setShowNew(false)}
               >
-                Cancel
+                Cancel;
               </Button>
-              <Button
-                size="sm"
+              <Button"
+                size="sm""
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            />;
 
 
-                disabled={!newTitle.trim() || !newBody.trim()}
-
-
-<<<<<<< HEAD
-=======
-disabled={!newTitle.trim() |!newBody.trim()}
                 disabled={!newTitle.trim() |!newBody.trim()}
                 disabled={!newTitle.trim() || !newBody.trim()}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                disabled={!newTitle.trim() |!newBody.trim()}
-                disabled={!newTitle.trim() || !newBody.trim()}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
               >
-                Post
+                Post;
               </Button>
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -566,16 +528,41 @@ disabled={!newTitle.trim() |!newBody.trim()}
                 size="sm";
                 className="bg - zion - blue text - white hover:bg - zion - blue-dark";
                 on_click={() => setShowNew (false)}
+=======
+
+
+
+
+                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;"
+            <div className="flex gap - 3 justify - end">;
+              <Button;"
+                variant="secondary";"
+                size="sm";"
+                className="bg - zion - blue text - white hover:bg - zion - blue - dark";
+                on_click={() => setShowNew (false)}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
                 Cancel;
               </Button>;
-              <Button;
+              <Button;"
                 size="sm";
+<<<<<<< HEAD
                 className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover-scale";
                 on_click={handleAddPost}
                 disabled={!new_title.trim () || !new_body.trim ()}                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover-scale";
                 on_click={handleAddPost}
                 disabled={!new_title.trim () || !new_body.trim ()}
+=======
+
+"
+                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
+                on_click={handleAddPost}
+                disabled={!new_title.trim () || !new_body.trim ()}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >;
               }
               max_length={400}
@@ -589,18 +576,18 @@ disabled={!newTitle.trim() |!newBody.trim()}
 
                 </AvatarFallback>;
               </Avatar>;
-              <div>;
-                <div className="flex gap-2 items-center">;
+              <div>;"
+                <div className="flex gap-2 items-center">;"
                   <span className="font-semibold text-white">;
                     {post && post.author}
-                  </span>;
+                  </span>;"
                   <span className="text-xs text-zion-slate-light">;
                     {post && post.time}
                   </span>;
-                </div>;
+                </div>;"
                 <h3 className="text-lg font-bold text-zion-cyan mt-1">;
                   {post && post.title}
-                </h3>;
+                </h3>;"
                 <p className="text-zion-slate-light mt-1 whitespace-pre-line">;
                   {post && post.body}
                 </p>;
@@ -608,13 +595,14 @@ disabled={!newTitle.trim() |!newBody.trim()}
             </CardContent>;
           </Card>;
         ))}
-      </div>;
+      </div>;"
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
         🚀 Stay engaged! Top contributors are regularly featured on the;
         homepage.;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -682,3 +670,18 @@ disabled={!newTitle.trim() |!newBody.trim()}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+};
+
+
+
+
+
+
+
+  );
+};
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export default function HomePage() {
   return (
     <div className="space-y-10">
@@ -33,8 +34,14 @@ export default function HomePage() {
         <div className="flex items-center gap-3">
           <Link href="/talent"><a className="px-4 py-2 rounded bg-black text-white">Browse Talent</a></Link>
           <Link href="/favorites"><a className="px-4 py-2 rounded bg-gray-100">Your Favorites</a></Link>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

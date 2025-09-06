@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -17,6 +18,9 @@ export default function InnovativeServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'roi' | 'category'>('name');
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -25,6 +29,7 @@ export default function InnovativeServicesPage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   const heroStats = [
     { value: '10+', label: 'Revolutionary Services', icon: <Rocket className="w-6 h-6 text-cyan-400" /> },
     { value: '99.99%', label: 'Uptime Guarantee', icon: <ShieldCheck className="w-6 h-6 text-fuchsia-400" /> },
@@ -323,6 +328,9 @@ export default function InnovativeServicesPage() {
           </motion.div>
         </div>
       </section>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </UltraAdvancedQuantumBackground>
   );
 }

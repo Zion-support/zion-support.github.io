@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -15,43 +16,54 @@ private readonly RETRY_DELAY = 1000; // 1 second
     // Handle webpack chunk loading errors
 
     window && window.addEventListener('error', event => {
+=======
+private readonly RETRY_DELAY = 1000; // 1 second;
+  private readonly CACHE_CLEAR_THRESHOLD = 2;
+  constructor() {}
+    this && this.initializeGlobalHandlers();
+
+  }
+  private initializeGlobalHandlers(): void {}
+    if (typeof window === 'undefined') return;
+    // Handle webpack chunk loading errors;
+'
+    window && window.addEventListener('error', event => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this && this.handleScriptError(event);
     });
 
-    // Handle unhandled promise rejections (async chunk loading)
-    window && window.addEventListener('unhandledrejection', event => {
+    // Handle unhandled promise rejections (async chunk loading)'
+    window && window.addEventListener('unhandledrejection', event => {}
       this && this.handlePromiseRejection(event);
     });  }
 
       this.handlePromiseRejection(event)
     }) }
-  private handleScriptError(event: ErrorEvent): void {
-
+  private handleScriptError(event: ErrorEvent): void {}
     const { error, filename } = event;
 
-    if (this && this.isChunkError(error, filename)) {
-      event && event.preventDefault(); // Prevent the error from bubbling up
+    if (this && this.isChunkError(error, filename)) {}
+      event && event.preventDefault(); // Prevent the error from bubbling up'
       this && this.handleChunkError(error, { filename, source: 'script' });
 
     }
   }
-  private handlePromiseRejection(event: PromiseRejectionEvent): void {
-
+  private handlePromiseRejection(event: PromiseRejectionEvent): void {}
     const error = event && event.reason;
 
-    if (this && this.isChunkError(error)) {
-      event && event.preventDefault(); // Prevent unhandled rejection
+    if (this && this.isChunkError(error)) {}
+      event && event.preventDefault(); // Prevent unhandled rejection'
       this && this.handleChunkError(error, { source: 'promise' });
 
     }
   }
-  private isChunkError(error: any, filename?: string): boolean {
-
+  private isChunkError(error: any, filename?: string): boolean {}
     if (!error) return false;
 
-    const errorMessage = error && error.message || String(error);
+    const errorMessage = error && error.message || String(error);'
     const errorName = error && error.name || '';
 
+<<<<<<< HEAD
     const chunkErrorPatterns = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /**;
@@ -61,9 +73,20 @@ private readonly RETRY_DELAY = 1000; // 1 second
 import { logErrorToProduction } from './productionLogger';
 interface ChunkErrorStats {;
   errorCount: number;
+=======
+    const chunkErrorPatterns = []
+/**;
+* Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
+* Handles automatic retry, cache clearing, and graceful degradation;
+*/;'
+import { logErrorToProduction } from './production_logger';
+interface ChunkErrorStats {}
+  error_count: number;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   lastErrorTime: number;
   userAgent: string;
   url: string;
+<<<<<<< HEAD
 }
 ;
 class ChunkErrorHandler {;
@@ -190,6 +213,140 @@ class ChunkErrorHandler {;
         try {;
           localStorage.removeItem(key);
         } catch (e) {;
+=======
+class ChunkErrorHandler {}
+  private error_stats: Map < string, ChunkErrorStats> = new Map ();
+  private readonly MAX_RETRIES = 3;
+  private readonly RETRY_DELAY = 1000; // 1 second;
+  private readonly CACHE_CLEAR_THRESHOLD = 2;
+  constructor () {}
+    this.initializeGlobalHandlers ();
+  }
+  private initializeGlobalHandlers (): void {}
+    // Check condition;
+if (return) {}
+  $2;
+}
+    // Handle webpack chunk loading errors;'
+    window.addEventListener ('error', event => {}
+      this.handleScriptError (event);
+    });
+    // Handle unhandled promise rejections (async chunk loading);'
+    window.addEventListener ('unhandledrejection', event => {}
+      this.handlePromiseRejection (event);
+    }) }
+  private handleScriptError (event: ErrorEvent): void {}
+    const { error, filename } = event;
+    if () {) {}
+  $2;
+}
+      event.prevent_default (); // Prevent the error from bubbling up;'
+      this.handleChunkError (error, { filename, source: 'script' });
+    }
+  }
+  private handlePromiseRejection (event: PromiseRejectionEvent): void {}
+    const error = event.reason;
+    if () {) {}
+  $2;
+}
+      event.prevent_default (); // Prevent unhandled rejection;'
+      this.handleChunkError (error, { source: 'promise' });
+    }
+  }
+  private isChunkError (error: any, filename?: string): boolean {}
+    // Check condition;
+if (return false) {}
+  $2;
+}
+    const error_message = error.message || String (error);'
+    const error_name = error.name || '';
+    const chunkErrorPatterns = [;
+'
+      'ChunkLoadError','
+      'Loading chunk','
+      'Failed to fetch dynamically imported module','
+      'Failed to import','
+      'chunk-','
+      'vendors-',
+    ];
+
+    const sessionKey = this && this.getSessionKey();
+    const stats = this && this.getOrCreateErrorStats(sessionKey);
+
+    stats && stats.errorCount++;
+    stats && stats.lastErrorTime = Date && Date.now();
+'
+    logErrorToProduction('ChunkLoadError detected', error, {'
+      context: 'chunkErrorHandler',
+      errorCount: stats && stats.errorCount,
+      retryAttempt: stats && stats.errorCount,
+      source: context && context.source,
+      filename: context && context.filename,
+      userAgent: navigator && navigator.userAgent,
+      url: window && window.location.href,
+    });
+
+    // Attempt recovery based on error count;
+    if (stats && stats.errorCount <= this && this.MAX_RETRIES) {}
+      await this && this.attemptRecovery(stats && stats.errorCount, context);
+    } else {}
+      this && this.showFatalErrorMessage();
+
+    }
+  }
+  private async attemptRecovery(
+    attemptNumber: number;
+    context: { filename?: string; source: string }
+  ): Promise<void> {}
+    logErrorToProduction(
+      `Attempting ChunkLoadError recovery #${attemptNumber}`
+      undefined;
+    return chunkErrorPatterns.some (
+      pattern =>;
+        error_message.includes (pattern) ||;
+        error_name.includes (pattern) ||;
+        (filename && filename.includes (pattern)));
+  }
+  private async handleChunkError (
+    error: Error,
+    context: { filename?: string; source: string }
+  ): Promise < void> {}
+    const session_key = this.getSessionKey ();
+    const stats = this.getOrCreateErrorStats (session_key);
+    stats.error_count++;
+    stats.lastErrorTime = Date.now ();'
+    logErrorToProduction ('ChunkLoadError detected', error, {'
+      context: 'chunkErrorHandler',
+      error_count: stats.error_count,
+      retry_attempt: stats.error_count,
+      source: context.source,
+      filename: context.filename,
+      user_agent: navigator.user_agent,
+      url: window.location.href,
+    });
+    // Attempt recovery based on error count;
+    // Check condition;
+if ( {) {}
+  $2;
+}
+      await this.attempt_recovery (stats.error_count, context);
+    } else {}
+      this.showFatalErrorMessage ();
+    }
+  }
+  private async attempt_recovery (
+    attempt_number: number,
+    context: { filename?: string; source: string }
+  ): Promise < void> {}
+    logErrorToProduction (`
+      `Attempting ChunkLoadError recovery #${attempt_number}`,
+      undefined,
+      {}
+'
+        context: 'chunkErrorRecovery',
+
+        } catch (e) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           // Ignore localStorage errors;
         }
 <<<<<<< HEAD
@@ -202,34 +359,33 @@ class ChunkErrorHandler {;
     window && window.location.replace(window && window.location.href);
 
   }
-  private hardRefresh(): void {
-    // Force a hard refresh bypassing all caches
-
+  private hardRefresh(): void {}
+    // Force a hard refresh bypassing all caches;
+'
     window && window.location.href = window && window.location.href + '?_t=' + Date && Date.now();
 
   }
-  private showFatalErrorMessage(): void {
-    // Create a user-friendly error message
-
-          background: #0070f3
-          color: white
-          border: none
-          padding: 0.75rem 1.5rem
-          border-radius: 0.5rem
-          font-size: 1rem
-          cursor: pointer
+  private showFatalErrorMessage(): void {}
+    // Create a user-friendly error message;
+          background: #0070f3;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          cursor: pointer;
           margin-right: 1rem;        ">
 
-          Try Again
-        </button>
+          Try Again;
+        </button>'"
         <button onclick="window.location.href='/'" style="
-          background: #666
-          color: white
-          border: none
-          padding: 0.75rem 1.5rem
-          border-radius: 0.5rem
-    const errorDiv = document && document.createElement('div');
-    errorDiv && errorDiv.style.cssText = `
+          background: #666;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem'
+    const errorDiv = document && document.createElement('div');`
+    errorDiv && errorDiv.style.cssText = `'
     window.location.href = window.location.href + '?_t=' + Date.now()
 
 <<<<<<< HEAD
@@ -241,9 +397,15 @@ class ChunkErrorHandler {;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       });
+<<<<<<< HEAD
     } catch (error) {;
       logErrorToProduction('Failed to clear caches', error as Error, {;
         context: 'chunkErrorRecovery';
+=======
+    } catch (error) {;'
+      logErrorToProduction('Failed to clear caches', error as Error, {;'
+        context: 'chunkErrorRecovery',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         action: 'cache-clear-failed';
       });
     }
@@ -256,6 +418,10 @@ class ChunkErrorHandler {;
 ;
   private hardRefresh(): void {;
     // Force a hard refresh bypassing all caches;
+<<<<<<< HEAD
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     window.location.href = window.location.href + '?_t=' + Date.now();
 <<<<<<< HEAD
 =======
@@ -265,6 +431,7 @@ class ChunkErrorHandler {;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
+<<<<<<< HEAD
 
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
@@ -298,9 +465,27 @@ class ChunkErrorHandler {;
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
         <p style="margin-bottom: 1.5rem, line-height: 1.5,">
+=======
+  private showFatalErrorMessage (): void {}
+    // Create a user - friendly error message;'
+    const error_div = document.create_element ('div');`
+    error_div.style.css_text = `;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+  private showFatalErrorMessage(): void {}
+    // Create a user-friendly error message;`
+    errorDiv.innerHTML = `"
+      <div style="text-align: center, padding: 2rem, max-width: 500px,">"
+        <h2 style="margin-bottom: 1rem,">Connection Issue</h2>"
+        <p style="margin-bottom: 1.5rem, line-height: 1.5,">'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           We're having trouble loading some parts of the application. 
           This might be due to a poor network connection or a temporary server issue.
-        </p>
+        </p>"
         <button onclick="window.location.reload()" style="
 <<<<<<< HEAD
           background: #0070f3,
@@ -326,6 +511,7 @@ class ChunkErrorHandler {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -369,30 +555,35 @@ background: #666;
           cursor: pointer;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         ">
-          Go Home
+          Go Home;
         </button>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     `;
 
     document && document.body.appendChild(errorDiv);
 
   }
-  private delay(ms: number): Promise<void> {
+  private delay(ms: number): Promise<void> {}
     return new Promise(resolve => setTimeout(resolve, ms))
   }
-  private getSessionKey(): string {
-
+  private getSessionKey(): string {}`
     return `${navigator && navigator.userAgent}_${window && window.location.origin}`;
 
   }
-  private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {
-
-    if (!this && this.errorStats.has(sessionKey)) {
-      this && this.errorStats.set(sessionKey, {
+  private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {}
+    if (!this && this.errorStats.has(sessionKey)) {}
+      this && this.errorStats.set(sessionKey, {}
         errorCount: 0,
         lastErrorTime: 0,
         userAgent: navigator && navigator.userAgent,
@@ -402,13 +593,18 @@ background: #666;
     return this && this.errorStats.get(sessionKey)!;
 
   }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     `,
 
     document.body.appendChild(errorDiv)
 ;
   private showFatalErrorMessage(): void {;
+<<<<<<< HEAD
     // Create a user-friendly error message;
     const errorDiv = document.createElement('div');
     errorDiv.style.cssText = `;
@@ -429,10 +625,33 @@ background: #666;
       <div style="text-align: center, padding: 2rem, max-width: 500px,">;
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>;
         <p style="margin-bottom: 1.5rem, line-height: 1.5,">;
+=======
+    // Create a user-friendly error message;'
+    const errorDiv = document.createElement('div'),;`
+    errorDiv.style.cssText = `;
+      position: fixed,;
+      top: 0,;
+      left: 0,;
+      width: 100%,;
+      height: 100%,;
+      background: rgba(0, 0, 0, 0.8),;
+      color: white,;
+      display: flex,;
+      align-items: center,;
+      justify-content: center,;
+      z-index: 999999,;
+      font-family: system-ui, -apple-system, sans-serif,;`
+    `,;`
+    errorDiv.innerHTML = `;"
+      <div style="text-align: center, padding: 2rem, max-width: 500px,">;"
+        <h2 style="margin-bottom: 1rem,">Connection Issue</h2>;"
+        <p style="margin-bottom: 1.5rem, line-height: 1.5,">;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           We're having trouble loading some parts of the application.;
           This might be due to a poor network connection or a temporary server issue.;
-        </p>;
+        </p>;"
         <button onclick="window.location.reload()" style=";
+<<<<<<< HEAD
           background: #0070f3;
           color: white;
           border: none;
@@ -441,10 +660,21 @@ background: #666;
           font-size: 1rem;
           cursor: pointer;
           margin-right: 1rem;
+=======
+          background: #0070f3,;
+          color: white,;
+          border: none,;
+          padding: 0.75rem 1.5rem,;
+          border-radius: 0.5rem,;
+          font-size: 1rem,;
+          cursor: pointer,;
+          margin-right: 1rem,;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         ">;
           Try Again;
-        </button>;
+        </button>;'"
         <button onclick="window.location.href='/'" style=";
+<<<<<<< HEAD
           background: #666;
           color: white;
           border: none;
@@ -457,6 +687,20 @@ background: #666;
         </button>;
       </div>;
     `;
+=======
+          background: #666,;
+          color: white,;
+          border: none,;
+          padding: 0.75rem 1.5rem,;
+          border-radius: 0.5rem,;
+          font-size: 1rem,;
+          cursor: pointer,;"
+        ">;
+          Go Home;
+        </button>;
+      </div>;`
+    `,;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     document.body.appendChild(errorDiv);
   }
 ;
@@ -464,7 +708,7 @@ background: #666;
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 ;
-  private getSessionKey(): string {;
+  private getSessionKey(): string {;`
     return `${navigator.userAgent}_${window.location.origin}`;
   }
 ;
@@ -485,31 +729,29 @@ background: #666;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-  // Public method to manually trigger recovery
-  public triggerRecovery(): void {
-
-    this && this.clearCaches().then(() => {
+  // Public method to manually trigger recovery;
+  public triggerRecovery(): void {}
+    this && this.clearCaches().then(() => {}
       this && this.reloadPage();
     });  }
 
       this.reloadPage()
-    }) }
-  // Public method to check if we're in a chunk error state
-  public isInErrorState(): boolean {
-
+    }) }'
+  // Public method to check if we're in a chunk error state;
+  public isInErrorState(): boolean {}
     const sessionKey = this && this.getSessionKey();
     const stats = this && this.errorStats.get(sessionKey);
     return stats ? stats && stats.errorCount > 0 : false;
 
   }
-  // Public method to reset error state
-  public resetErrorState(): void {
-
+  // Public method to reset error state;
+  public resetErrorState(): void {}
     const sessionKey = this && this.getSessionKey();
     this && this.errorStats.delete(sessionKey);
 
   }
 
+<<<<<<< HEAD
 // Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
@@ -519,6 +761,16 @@ export default chunkErrorHandler
 export default chunkErrorHandler
         ">
           Try Again
+=======
+
+// Create and export singleton instance;
+export const chunkErrorHandler = new ChunkErrorHandler();
+// Export for manual usage;
+export default chunkErrorHandler;
+export default chunkErrorHandler"
+        ">;
+          Try Again;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </button>
 
       background: rgba (0, 0, 0, 0.8);
@@ -527,15 +779,15 @@ export default chunkErrorHandler
       align - items: center;
       justify - content: center;
       z - index: 999999;
-      font - family: system - ui, -apple - system, sans - serif;
-    `;
-    error_div.innerHTML = `;
-      <div style="text - align: center; padding: 2rem; max - width: 500px;">;
-        <h2 style="margin - bottom: 1rem;">Connection Issue</h2>;
-        <p style="margin - bottom: 1.5rem; line - height: 1.5;">;
+      font - family: system - ui, -apple - system, sans - serif;`
+    `;`
+    error_div.innerHTML = `;"
+      <div style="text - align: center; padding: 2rem; max - width: 500px;">;"
+        <h2 style="margin - bottom: 1rem;">Connection Issue</h2>;"
+        <p style="margin - bottom: 1.5rem; line - height: 1.5;">;'
           We're having trouble loading some parts of the application.;
           This might be due to a poor network connection or a temporary server issue.;
-        </p>;
+        </p>;"
         <button onclick="window.location.reload ()" style=";
           background: #0070f3;
           color: white;
@@ -543,11 +795,15 @@ export default chunkErrorHandler
           padding: 0.75rem 1.5rem;
           border - radius: 0.5rem;
           font - size: 1rem;
-          cursor: pointer;
+          cursor: pointer;"
           margin - right: 1rem;        ">;
           Try Again;
+<<<<<<< HEAD
         </button>;
 <<<<<<< HEAD
+=======
+        </button>;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <button onclick="window.location.href='/'" style=";
           background: #666;
           color: white;
@@ -577,10 +833,19 @@ export default chunkErrorHandler
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   // Public method to manually trigger recovery;
+<<<<<<< HEAD
   public trigger_recovery (): void {
     this.clear_caches ().then (() => {
       this.reload_page ();
     }) }
+=======
+  public triggerRecovery(): void {;
+    this.clearCaches().then(() => {;
+      this.reloadPage();
+    });
+  }
+;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // Public method to check if we're in a chunk error state;
 <<<<<<< HEAD
   public isInErrorState(): boolean {;
@@ -611,14 +876,18 @@ export const chunkErrorHandler = new ChunkErrorHandler ();
 <<<<<<< HEAD
 =======
 export default chunkErrorHandler;
-export default chunkErrorHandler;
+export default chunkErrorHandler;"
         ">;
           Try Again;
-        </button>;
+        </button>;'"
         <button onclick="window.location.href='/'" style=";
+<<<<<<< HEAD
 export default chunkErrorHandler;
 =======
 
+=======
+export default chunkErrorHandler;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
 }
@@ -632,7 +901,7 @@ export default chunkErrorHandler;
       this.reloadPage();
     });
   }
-;
+;'
   // Public method to check if we're in a chunk error state;
   public isInErrorState(): boolean {;
     const sessionKey = this.getSessionKey(),;
@@ -651,6 +920,7 @@ export default chunkErrorHandler;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default chunkErrorHandler;
 =======
@@ -659,3 +929,6 @@ export default chunkErrorHandler;
 export default chunkErrorHandler;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default chunkErrorHandler;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

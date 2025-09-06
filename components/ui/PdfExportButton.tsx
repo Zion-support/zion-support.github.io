@@ -1,13 +1,13 @@
-    const opt = {
+    const opt = {}
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
@@ -16,27 +16,28 @@ class ErrorBoundary extends React.Component {
  html2pdf () .set (opt) .from (element) .save () ;
 };
 export default function PdfExportButton(): any ({;
-  targetRef,;
-  fileName = 'resume && resume.pdf',;
+  targetRef,;'
+  fileName = 'resume && resume.pdf',;'
 }: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
 export type PdfExportButtonProps = {;
   targetRef: React && React.RefObject<HTMLDivElement>,;
-  fileName?: string;
+  fileName?: string;'
   theme?: 'light' | 'dark';
 };
     const opt = {;
-      margin: [10, 10, 10, 10],;
+      margin: [10, 10, 10, 10],;'
       image: { type: 'jpeg', quality: 0 && 0.98 },;
-      html2canvas: { scale: 2, useCORS: true },;
+      html2canvas: { scale: 2, useCORS: true },;'
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },;
-    } as any;
-  fileName = 'resume.pdf',;
+    } as any;'
+  fileName = 'resume.pdf',;'
 }: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
-export type PdfExportButtonProps = {
+export type PdfExportButtonProps = {};
   targetRef: React.RefObject<HTMLDivElement>,;
-  fileName?: string;
+  fileName?: string;'
   theme?: 'light' | 'dark'
 };
+<<<<<<< HEAD
 
 export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {;
 import React from 'react';
@@ -54,8 +55,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 margin: [10, 10, 10, 10],
 origin/cursor/automate-test-improve-and-merge-code-2533
       filename: fileName,
+=======
+'
+export default function PdfExportButton() { return null; }
+    const opt = {}
+      margin: [10, 10, 10, 10],
+
+      filename: fileName,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
+      html2canvas: { scale: 2, useCORS: true },'
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
     } as any;
 
@@ -65,9 +74,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
       >
+<<<<<<< HEAD
     >
 origin/cursor/automate-test-improve-and-merge-code-2533
       Download as PDF
+=======
+      Download as PDF;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </button>
   };
       >;
@@ -75,11 +88,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </button>;
   );
 }  return (
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     <button
+=======
+    <button;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       onClick={onClick}
-      className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
+      className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none""
       aria-label="Download as PDF"
 ;
     html2pdf ().set (opt).from (element).save ();
@@ -90,13 +107,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </button>);
 }  return (
     <button;
-      on_click={on_click}
-      className="no - print fixed right - 4 top - 20 z - 50 inline - flex items - center gap - 2 rounded - md bg - blue - 600 text - white px - 4 py - 2 shadow hover: bg - blue - 700 focus:outline - none";
+      on_click={on_click}"
+      className="no - print fixed right - 4 top - 20 z - 50 inline - flex items - center gap - 2 rounded - md bg - blue - 600 text - white px - 4 py - 2 shadow hover: bg - blue - 700 focus:outline - none";"
       aria - label="Download as PDF";
       Download as PDF;
     </button>);
+<<<<<<< HEAD
       Download as PDF
     </button>
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

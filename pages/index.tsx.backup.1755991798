@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { 
   Clock, DollarSign, TrendingUp, Brain, 
   Zap, Rocket, Mail, Phone, MapPin, Sparkles, 
@@ -13,6 +14,9 @@ import QuantumHolographicBackground from '../components/ui/QuantumHolographicBac
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -59,15 +63,20 @@ export default function HomePage() {
       color: 'from-pink-500 to-rose-600'
     },
     {
+<<<<<<< HEAD
       name: 'Development & DevOps',
       description: 'Streamline development workflows with AI automation',
       icon: <Code className="w-8 h-8" />,
       count: realMicroSaasServices.filter(s => s.category.includes('Development') || s.category.includes('DevOps')).length,
       color: 'from-slate-500 to-gray-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <Head>
         <title>Zion Tech Group - Revolutionary AI-Powered Micro SAAS Services</title>
@@ -80,6 +89,9 @@ export default function HomePage() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Sticky contact micro-bar */}
       <div className="fixed top-20 left-0 right-0 z-40">
@@ -115,6 +127,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
             {/* Hero Stats */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
               {heroStats.map((stat, index) => (
@@ -129,6 +142,9 @@ export default function HomePage() {
                   </div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
 
@@ -194,6 +210,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
               {featuredServices.map((service, index) => (
                 <QuantumHolographicCard key={service.id} className="group hover:scale-105 transition-transform duration-500">
                   <div className="p-6">
@@ -244,6 +261,9 @@ export default function HomePage() {
                     </div>
                   </div>
                 </QuantumHolographicCard>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
 
@@ -308,12 +328,16 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
               <div className="text-center p-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <RocketIcon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">First-to-Market Solutions</h3>
                 <p className="text-gray-400">We pioneer cutting-edge AI technology that gives you a competitive advantage in your industry.</p>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
 
               <div className="text-center p-6">
@@ -357,6 +381,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </UltraFuturisticBackground>
       </section>
 
@@ -416,5 +441,8 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

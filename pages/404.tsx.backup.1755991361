@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function NotFound() {
   return (
     <div className="py-20 text-center">
@@ -6,3 +7,6 @@ export default function NotFound() {
     </div>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

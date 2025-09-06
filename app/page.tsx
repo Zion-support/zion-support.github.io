@@ -15,6 +15,7 @@ import Link from 'next/link';
 =======
 import Link from 'next/link';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function HomePage() {
   return (
@@ -786,10 +787,52 @@ export default function HomePage() {
               Learn More About Us
             </Link>
           </div>
+=======
+
+      <div className="flex items-center mb-4">"
+        {icon && <span className="text-2xl mr-3">{icon}</span>}"
+        <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+      </div>
+      {bullets && (
+        <ul className="mt-4 space-y-2">
+          {bullets.map((bullet, index) => (
+            <li key={index} className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-gray-600">{bullet}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+export default function HomePage() {}
+  return (
+
+          >;
+            Get Started;
+          </Link>
+
+          >
+            View Services;
+          </Link>
+        </div>
+      </section>
+
+
+            Ready to Transform Your Business?
+          </h2>"
+          <p className="text-xl text-blue-100 mb-8">'
+            Let's discuss how we can help you achieve your technology goals;
+          </p>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -992,3 +1035,6 @@ export default function Home() {
   )
 }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+}'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

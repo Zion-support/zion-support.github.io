@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -71,13 +72,17 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const content = (;
     <>;
-      {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
-      {icon && iconPosition === 'left' && !loading && <span className="mr-2">{icon}</span>}
-      <span className={loading ? 'opacity-0' : ''}>{children}</span>;
+      {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}"
+      {icon && iconPosition === 'left' && !loading && <span className="mr-2">{icon}</span>}'
+      <span className={loading ? 'opacity-0' : ''}>{children}</span>;'"
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,22 +131,27 @@ interface ButtonProps {children: React.ReactNode;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
-const Button = forward_ref < HTMLButtonElement ButtonProps>(({
-  children,
-  variant = 'primary',
+const Button = forward_ref < HTMLButtonElement ButtonProps>(({}
+  children,'
+  variant = 'primary','
   size = 'md',
   href,
   on_click,
   disabled = false,
   loading = false,
-  icon,
-  icon_position = 'right',
-  class_name = '',
+  icon,'
+  icon_position = 'right','
+  class_name = '','
   type = 'button',
-  full_width = false,
+  full_width = false,'
   rounded = 'lg';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -182,9 +192,11 @@ if ( {) {
   $2
 }
     return (
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ),;
   if (href) {;
@@ -194,11 +206,14 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Link href={href} className={classes}>;
         {content}
       </Link>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -207,9 +222,13 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -227,10 +246,17 @@ if ( {) {
   return (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+  return (;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <button;
       ref={ref}
       type={type}
       className={classes}
+<<<<<<< HEAD
 <<<<<<< HEAD
       onClick={onClick}
 =======
@@ -302,6 +328,10 @@ export function FloatingActionButton({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <Button;
 =======
   return (  return (;
@@ -340,9 +370,13 @@ export function FloatingActionButton({;
       {...props}
       icon={icon}
       on_click={on_click}
-      className={`fixed bottom - 8 right - 8 w - 16 h - 16 rounded - full shadow - 2xl hover:shadow - 3xl z - 50 ${class_name}`}
-      size="lg";
+      className={`fixed bottom - 8 right - 8 w - 16 h - 16 rounded - full shadow - 2xl hover:shadow - 3xl z - 50 ${class_name}`}"
+      size="lg";"
       rounded="full";
     />);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

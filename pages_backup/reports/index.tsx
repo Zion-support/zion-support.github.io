@@ -13,16 +13,21 @@ import { useEffect, useState } from 'react';
 import { useEffect, useState } from 'react';
 
 
+<<<<<<< HEAD:pages_backup/reports/index.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Reports() {
+=======
+export default function Reports() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/index.tsx
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
   const [links, setLinks] = useState<any>({}),
   const [deps, setDeps] = useState<any>({}),
   const [changelog, setChangelog] = useState<any>({}),
+<<<<<<< HEAD:pages_backup/reports/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -31,10 +36,13 @@ export default function Reports() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import {useEffect, useState} from 'react';
-export default function Reports() {;
 =======
+';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/index.tsx
+import {useEffect, useState} from 'react';
+export default function Reports() { return null; }
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD:pages_backup/reports/index.tsx
 export default function Reports() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -45,11 +53,15 @@ export default function Reports() {;
 import { useEffect, useState } from 'react';
 export default function Reports() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default function Reports() {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/index.tsx
   const [uptime, setUptime] = useState<any[]>([]);
   const [seo, setSeo] = useState<any>({});
   const [links, setLinks] = useState<any>({});
   const [deps, setDeps] = useState<any>({});
   const [changelog, setChangelog] = useState<any>({});
+<<<<<<< HEAD:pages_backup/reports/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -156,21 +168,28 @@ export default function Reports() {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/reports/index.tsx
+=======
+
+  const [pagespeed, setPagespeed] = useState<any>({});
+  useEffect(() => {}
+    Promise.all([]
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/index.tsx
       fetch('/api/reports/uptime')
         .then(r => r.json())
-        .then(setUptime)
+        .then(setUptime)'
       fetch('/api/reports/seo')
         .then(r => r.json())
-        .then(setSeo)
+        .then(setSeo)'
       fetch('/api/reports/links')
         .then(r => r.json())
-        .then(setLinks)
+        .then(setLinks)'
       fetch('/api/reports/deps')
         .then(r => r.json())
-        .then(setDeps)
+        .then(setDeps)'
       fetch('/api/reports/changelog')
         .then(r => r.json())
-        .then(setChangelog)
+        .then(setChangelog)'
       fetch('/api/reports/pagespeed')
         .then(r => r.json())
         .then(setPagespeed)
@@ -179,8 +198,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:pages/reports/index.tsx
 <<<<<<< HEAD
 
-  return (
+  return ('
     <div className='space-y-6'>
+<<<<<<< HEAD:pages_backup/reports/index.tsx
 =======
 <<<<<<< HEAD
 
@@ -194,24 +214,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div>
         <h1 className='text-2xl font-semibold'>Automation Reports</h1>
+=======
+      <div>'
+        <h1 className='text-2xl font-semibold'>Automation Reports</h1>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/index.tsx
         <div className='text-sm text-gray-500'>
-          Autonomously generated and synced
+          Autonomously generated and synced;
         </div>
-      </div>
-      <section className='grid lg:grid-cols-2 gap-6'>
-        <div className='border rounded p-4'>
+      </div>'
+      <section className='grid lg:grid-cols-2 gap-6'>'
+        <div className='border rounded p-4'>'
           <div className='font-medium mb-1'>Uptime</div>
-          {lastUptime ? (
-            <div className='text-sm'>
+          {lastUptime ? ('
+            <div className='text-sm'>'
               Last check: {new Date(lastUptime.timestamp).toLocaleString()} —{' '}
-              {
+              {}
                 lastUptime.results?.filter(
-                  (r: any) => r.status >= 200 && r.status < 400
-                ).length
+                  (r: any) => r.status >= 200 && r.status < 400;
+                ).length;
               }
               /{lastUptime && lastUptime.results?.length} ok;
             </div>;
-          ) : (;
+          ) : (;'
             <div className='text-sm text-gray-500'>No data</div>;
           )}
 <<<<<<< HEAD
@@ -257,6 +281,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD:pages_backup/reports/index.tsx
 <<<<<<< HEAD
 =======
 
@@ -277,11 +302,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/index.tsx
 
 
 }
 
 
+<<<<<<< HEAD:pages_backup/reports/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -311,16 +340,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
     ]).catch(() => {})
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+      fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);'
+      fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);'
+      fetch('/api/reports/links').then((r) => r.json()).then(setLinks);'
+      fetch('/api/reports/deps').then((r) => r.json()).then(setDeps);'
+      fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog);'
+      fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/index.tsx
   }, []);
 
   const lastUptime = uptime[uptime.length - 1];
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold">Automation Reports</h1>
+      <div>"
+        <h1 className="text-2xl font-semibold">Automation Reports</h1>"
         <div className="text-sm text-gray-500">Autonomously generated and synced</div>
       </div>
+<<<<<<< HEAD:pages_backup/reports/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -336,38 +377,43 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className='border rounded p-4'>;
           <div className='font-medium mb-1'>SEO (weekly)</div>;
+=======
+'
+        <div className='border rounded p-4'>;'
+          <div className='font-medium mb-1'>SEO (weekly)</div>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/index.tsx
           <div className='text-sm text-gray-600'>;
             Pages: {seo?.results?.length || 0}
           </div>;
         </div>;
-
-        <div className='border rounded p-4'>;
-          <div className='font-medium mb-1'>Broken Links (weekly)</div>;
+'
+        <div className='border rounded p-4'>;'
+          <div className='font-medium mb-1'>Broken Links (weekly)</div>;'
           <div className='text-sm text-gray-600'>;
             Broken: {links?.broken?.length || 0}
           </div>;
         </div>;
-
-        <div className='border rounded p-4'>;
-          <div className='font-medium mb-1'>Dependencies (weekly)</div>;
+'
+        <div className='border rounded p-4'>;'
+          <div className='font-medium mb-1'>Dependencies (weekly)</div>;'
           <div className='text-sm text-gray-600'>;
             Checked: {deps?.entries?.length || 0}
           </div>;
         </div>;
-
-        <div className='border rounded p-4'>;
-          <div className='font-medium mb-1'>Changelog (weekly)</div>;
+'
+        <div className='border rounded p-4'>;'
+          <div className='font-medium mb-1'>Changelog (weekly)</div>;'
           <div className='text-sm text-gray-600'>;
             Commits: {changelog?.totalCommits || 0}
           </div>;
         </div>;
 
-
+'
 import {useEffect, useState} from 'react';
-export default /**
- * Reports - Function description
+export default /**;
+ * Reports - Function description;
  */
-function Reports() {
+function Reports() {}
   const [uptime, set_uptime] = useState < any[]>([]);
   const [seo, set_seo] = useState < any>({});
   const [links, set_links] = useState < any>({});
@@ -375,23 +421,23 @@ function Reports() {
   const [changelog, set_changelog] = useState < any>({});
   const [pagespeed, set_pagespeed] = useState < any>({});
 ;
-  useEffect (() => {
-    Promise.all ([;
+  useEffect (() => {}
+    Promise.all ([;'
       fetch ('/api / reports / uptime');
         .then (r => r.json ());
-        .then (set_uptime),
+        .then (set_uptime),'
       fetch ('/api / reports / seo');
         .then (r => r.json ());
-        .then (set_seo),
+        .then (set_seo),'
       fetch ('/api / reports / links');
         .then (r => r.json ());
-        .then (set_links),
+        .then (set_links),'
       fetch ('/api / reports / deps');
         .then (r => r.json ());
-        .then (set_deps),
+        .then (set_deps),'
       fetch ('/api / reports / changelog');
         .then (r => r.json ());
-        .then (set_changelog),
+        .then (set_changelog),'
       fetch ('/api / reports / pagespeed');
         .then (r => r.json ());
         .then (set_pagespeed),
@@ -399,60 +445,61 @@ function Reports() {
 ;
   const last_uptime = uptime[uptime.length - 1];
 ;
-  return (
+  return ('
     <div className='space - y-6'>;
-      <div>;
-        <h1 className='text - 2xl font - semibold'>Automation Reports</h1>;
+      <div>;'
+        <h1 className='text - 2xl font - semibold'>Automation Reports</h1>;'
         <div className='text - sm text - gray - 500'>;
           Autonomously generated and synced;
         </div>;
-      </div>;
-      <section className='grid lg:grid - cols - 2 gap - 6'>;
-        <div className='border rounded p - 4'>;
+      </div>;'
+      <section className='grid lg:grid - cols - 2 gap - 6'>;'
+        <div className='border rounded p - 4'>;'
           <div className='font - medium mb - 1'>Uptime</div>;
-          {last_uptime ? (
-            <div className='text - sm'>;
+          {last_uptime ? ('
+            <div className='text - sm'>;'
               Last check: {new Date (last_uptime.timestamp).toLocaleString ()} —{' '}
-              {
+              {}
                 last_uptime.results?.filter (
                   (r: any) => r.status >= 200 && r.status < 400).length;
               }
               /{last_uptime.results?.length} ok;
-            </div>) : (
+            </div>) : ('
             <div className='text - sm text - gray - 500'>No data</div>)}
-        </div>;
-        <div className='border rounded p - 4'>;
-          <div className='font - medium mb - 1'>SEO (weekly)</div>;
+        </div>;'
+        <div className='border rounded p - 4'>;'
+          <div className='font - medium mb - 1'>SEO (weekly)</div>;'
           <div className='text - sm text - gray - 600'>;
             Pages: {seo?.results?.length || 0}
           </div>;
-        </div>;
-        <div className='border rounded p - 4'>;
-          <div className='font - medium mb - 1'>Broken Links (weekly)</div>;
+        </div>;'
+        <div className='border rounded p - 4'>;'
+          <div className='font - medium mb - 1'>Broken Links (weekly)</div>;'
           <div className='text - sm text - gray - 600'>;
             Broken: {links?.broken?.length || 0}
           </div>;
-        </div>;
-        <div className='border rounded p - 4'>;
-          <div className='font - medium mb - 1'>Dependencies (weekly)</div>;
+        </div>;'
+        <div className='border rounded p - 4'>;'
+          <div className='font - medium mb - 1'>Dependencies (weekly)</div>;'
           <div className='text - sm text - gray - 600'>;
             Checked: {deps?.entries?.length || 0}
           </div>;
-        </div>;
-        <div className='border rounded p - 4'>;
-          <div className='font - medium mb - 1'>Changelog (weekly)</div>;
+        </div>;'
+        <div className='border rounded p - 4'>;'
+          <div className='font - medium mb - 1'>Changelog (weekly)</div>;'
           <div className='text - sm text - gray - 600'>;
             Commits: {changelog?.total_commits || 0}
           </div>;
-        </div>;
-        <div className='border rounded p - 4'>;
-          <div className='font - medium mb - 1'>PageSpeed (weekly)</div>;
+        </div>;'
+        <div className='border rounded p - 4'>;'
+          <div className='font - medium mb - 1'>PageSpeed (weekly)</div>;'
           <div className='text - sm text - gray - 600'>;
 
             Pages: {pagespeed?.results?.length || 0}
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD:pages_backup/reports/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -612,3 +659,19 @@ function Reports() {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/reports/index.tsx
+=======
+
+"
+        <div className="border rounded p-4">"
+          <div className="font-medium mb-1">Changelog (weekly)</div>"
+          <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
+        </div>
+
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/index.tsx

@@ -11,6 +11,7 @@ import {
   ChevronRight, Play
 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import QuantumMatrixBackground from '../components/ui/QuantumMatrixBackground';
@@ -21,6 +22,9 @@ export default function HomePage() {
     { value: '600+', label: 'Real Micro SaaS Services', color: 'text-cyan-400' },
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400' },
     { value: '30', label: 'Day Free Trials', color: 'text-blue-400' },
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     { value: '24/7', label: 'AI Support', color: 'text-green-400' },
     { value: '$18.5B+', label: 'Market Value', color: 'text-yellow-400' },
     { value: '600%+', label: 'Average ROI', color: 'text-purple-400' },
@@ -33,6 +37,7 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   // Enhanced hero section with better advertising
   const heroContent = {
     title: "The Future of Micro SaaS is Here",
@@ -143,6 +148,9 @@ export default function HomePage() {
 
   // New revolutionary services showcase
   const revolutionaryServices = [
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     {
       name: 'Quantum Metaverse Platform',
       description: 'Quantum-enhanced virtual reality with AI avatars',
@@ -289,6 +297,7 @@ export default function HomePage() {
     },
     {
       icon: '🔒',
+<<<<<<< HEAD
       title: 'Enterprise Security',
       description: 'Bank-level security, SOC 2 compliance, and 99.9% uptime guarantee for all services.',
       color: 'from-blue-500 to-indigo-600',
@@ -315,10 +324,14 @@ export default function HomePage() {
       color: 'from-rose-500 to-pink-600',
       bgColor: 'from-rose-500/10 to-rose-500/10'
     }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const serviceCategories = [
     {
+<<<<<<< HEAD
       name: 'Quantum Computing & AI',
       description: 'Revolutionary quantum AI solutions with unprecedented computing power',
       icon: <BrainIcon className="w-8 h-8" />,
@@ -489,10 +502,14 @@ export default function HomePage() {
       description: 'Quantum-resistant encryption and AI-powered threat detection',
       icon: <Shield className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
+<<<<<<< HEAD
     <QuantumMatrixBackground variant="intense">
       <div className="min-h-screen">
         <Head>
@@ -502,6 +519,9 @@ export default function HomePage() {
           <meta name="author" content="Zion Tech Group" />
           <meta property="og:title" content="Zion Tech Group - 600+ Revolutionary Micro SaaS Services" />
           <meta property="og:description" content="Transform your business with cutting-edge micro SaaS solutions. AI, Quantum Computing, Autonomous Systems, and more." />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <meta property="og:url" content="https://ziontechgroup.com" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com" />
@@ -511,6 +531,7 @@ export default function HomePage() {
         <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-6xl mx-auto">
+<<<<<<< HEAD
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -544,6 +565,9 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   <div className={`text-3xl md:text-4xl font-bold ${stat.color} mb-2`}>
                     {stat.value}
@@ -984,6 +1008,7 @@ export default function HomePage() {
                 <Button href="/contact" variant="primary" className="w-full">
                   Start Free Trial
                 </Button>
+<<<<<<< HEAD
               </UltraFuturisticCard>
 
               <UltraFuturisticCard variant="holographic" className="text-center p-8 border-2 border-cyan-500">
@@ -1009,11 +1034,15 @@ export default function HomePage() {
                   </li>
                 </ul>
                 <Button href="/contact" variant="primary" className="w-full">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Get Started
                   <ExternalLink className="ml-2 w-5 h-5" />
                 </Button>
               </UltraFuturisticCard>
 
+<<<<<<< HEAD
               <UltraFuturisticCard variant="quantum" className="text-center p-8">
                 <div className="text-4xl font-bold text-white mb-4">Enterprise</div>
                 <div className="text-6xl font-bold text-cyan-400 mb-2">$999</div>
@@ -1050,6 +1079,9 @@ export default function HomePage() {
                 View Detailed Pricing
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
@@ -1059,11 +1091,15 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+<<<<<<< HEAD
                 Market <span className="bg-gradient-to-r from-yellow-400 to-orange-600 bg-clip-text text-transparent">Insights</span> & Growth
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our services target the fastest-growing markets in technology, 
                 with average annual growth rates exceeding 200%.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </div>
 
@@ -1105,6 +1141,7 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {platformFeatures.map((feature, index) => (
+<<<<<<< HEAD
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -1123,11 +1160,15 @@ export default function HomePage() {
                     <p className="text-gray-300">{feature.description}</p>
                   </UltraFuturisticCard>
                 </motion.div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Contact Section */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
@@ -1284,5 +1325,8 @@ export default function HomePage() {
         </section>
       </div>
     </QuantumMatrixBackground>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -149,11 +150,15 @@ const AIServices: React.FC = () => {
           <div className="max-w-6xl mx-auto text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -197,12 +202,16 @@ const AIServices: React.FC = () => {
                 </button>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* Services Grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -239,10 +248,14 @@ const AIServices: React.FC = () => {
                 Comprehensive AI solutions designed to meet the unique needs of modern enterprises
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -267,10 +280,14 @@ const AIServices: React.FC = () => {
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   <div className="mb-6">
                     {service.icon}
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -296,10 +313,14 @@ const AIServices: React.FC = () => {
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {feature}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -356,6 +377,9 @@ const AIServices: React.FC = () => {
                   <p className="text-gray-400">{benefit.description}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -363,6 +387,7 @@ const AIServices: React.FC = () => {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -421,11 +446,15 @@ const AIServices: React.FC = () => {
                 </button>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>
   );
@@ -443,3 +472,6 @@ const AIServices: React.FC = () => {
 export default AIServices;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

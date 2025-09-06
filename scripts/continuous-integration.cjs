@@ -3,6 +3,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 /**
  * Continuous Integration Automation;
@@ -111,7 +115,10 @@ module.exports = ContinuousIntegration;
 
 
 
+<<<<<<< HEAD
 main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -143,8 +150,11 @@ const path = require('path')
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
       console.error('Fatal "error")
+<<<<<<< HEAD
       console.error('Fatal "error")
 
       console.error('Fatal "error")
 main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 

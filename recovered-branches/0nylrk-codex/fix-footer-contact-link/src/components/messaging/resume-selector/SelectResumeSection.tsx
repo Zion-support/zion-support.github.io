@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -24,11 +28,14 @@ interface SelectResumeSectionProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
   handleDownloadResume: () => void,
-  isLoading: boolean
+  isLoading: boolean;
 }
 
 export function SelectResumeSection({;
@@ -39,6 +46,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
   handleDownloadResume;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -64,6 +72,15 @@ import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
 import { ResumePreviewCard } from './ResumePreviewCard',;
+=======
+
+
+'
+import React from 'react',;'
+import { FileText } from 'lucide-react',;'
+import { ResumeOption } from '../resume-selector/types',;'
+import { ResumePreviewCard } from './ResumePreviewCard',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Resume } from '@/types/resume',;
 interface SelectResumeSectionProps {;
   resumeOptions: ResumeOption[],;
@@ -78,19 +95,23 @@ interface SelectResumeSectionProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  resumeOptions: ResumeOption[]
-  selectedResume: ResumeOption | null
-  handleResumeSelect: (resumeId: string) => void
-  handleDownloadResume: () => void
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  isLoading: boolean
+
+
+
+  resumeOptions: ResumeOption[]
+  selectedResume: ResumeOption | null;
+  handleResumeSelect: (resumeId: string) => void;
+  handleDownloadResume: () => void;
+  isLoading: boolean;
 }
+<<<<<<< HEAD
 export function SelectResumeSection({
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,11 +141,18 @@ export function SelectResumeSection({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {FileText} from 'lucide-react';
 import {ResumeOption} from '../resume - selector / types';
+=======
+export function SelectResumeSection({}
+';
+import {FileText} from 'lucide-react';'
+import {ResumeOption} from '../resume - selector / types';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {ResumePreviewCard} from './ResumePreviewCard';
 
-                selectedResume?.id === option && option.id 
+                selectedResume?.id === option && option.id '
                   ? 'bg-zion-purple/20 border border-zion-purple' 
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -132,17 +160,21 @@ import {ResumePreviewCard} from './ResumePreviewCard';
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option && option.id)}
             >;
-              <div className="flex items-center">;
-                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
+              <div className="flex items-center">;"
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;"
                 <span className="text-white">{option && option.title}</span>;
               </div>;
             </button>;
           ))}
-            <ResumePreviewCard
+            <ResumePreviewCard;
               resume={selectedResume && selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
@@ -152,62 +184,13 @@ import {ResumePreviewCard} from './ResumePreviewCard';
 <<<<<<< HEAD
 <<<<<<< HEAD
       )}
-<<<<<<< HEAD
 
-    </div>;
-  );
-}
 
-<<<<<<< HEAD
-=======
-import {Resume} from '@/types / resume';
-interface SelectResumeSectionProps {
-  resume_options: ResumeOption[],
-  selected_resume: ResumeOption | null,
-  handleResumeSelect: (resume_id: string) => void,
-  handleDownloadResume: () => void,
-  is_loading: boolean;
-}
-export /**
- * SelectResumeSection - Function description
- */
-function SelectResumeSection() {
-  return (
-    <div className="space - y-2">;
-      {resume_options.length === 0 ? (
-        <p className="text - sm text - zion - slate">No saved resumes found.</p>) : (
-        <>;
-          {resume_options.map ((option) => (
-            <button;
-              key={option.id}
-              className={`w - full text - left p - 3 rounded - md transition ${
-                selected_resume?.id === option.id;
-                  ? 'bg - zion - purple / 20 border border - zion - purple';
-                  : 'bg - zion - blue - dark / 30 hover:bg - zion - blue - dark / 50';
-              }`}
-              on_click={() => handleResumeSelect (option.id)}
-            >;
-              <div className="flex items - center">;
-                <FileText className="h - 4 w - 4 mr - 2 text - zion - cyan" />;
-                <span className="text - white">{option.title}</span>;
-              </div>;
-            </button>))}
-          {selected_resume?.type === 'ai_resume' && selected_resume.resume && (
-            <ResumePreviewCard;
-              resume={selected_resume.resume as Resume}
-              on_download={handleDownloadResume}
-              is_loading={is_loading}
-            />)}
-        </>)}
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-import React from 'react',;
-import { FileText } from 'lucide-react',;
-import { ResumeOption } from '../resume-selector/types',;
-import { ResumePreviewCard } from './ResumePreviewCard',;
+'
+import React from 'react',;'
+import { FileText } from 'lucide-react',;'
+import { ResumeOption } from '../resume-selector/types',;'
+import { ResumePreviewCard } from './ResumePreviewCard',;'
 import { Resume } from '@/types/resume',;
 ;
 interface SelectResumeSectionProps {;
@@ -218,36 +201,22 @@ interface SelectResumeSectionProps {;
   isLoading:boolean;
 }
 ;
-export function SelectResumeSection({;
-  resumeOptions,;
-  selectedResume,;
-  handleResumeSelect,;
-  handleDownloadResume,;
-  isLoading;
-} SelectResumeSectionProps) {;
-  return (;
-    <div className="space-y-2">;
-      {resumeOptions.length === 0 ? (;
-        <p className="text-sm text-zion-slate">No saved resumes found.</p>;
-      ) :(;
-        <>;
-          {resumeOptions.map((option) => (;
-            <button;
-              key={option.id}
+export function SelectResumeSection() { return null; }
+              key={option.id}`
               className={`w-full text-left p-3 rounded-md transition ${;
-                selectedResume?.id === option.id ;
-                  ? 'bg-zion-purple/20 border border-zion-purple' ;
-                  :'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50';
+                selectedResume?.id === option.id ;'
+                  ? 'bg-zion-purple/20 border border-zion-purple' ;'
+                  :'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50';`
               }`}
               onClick={() => handleResumeSelect(option.id)}
-            >;
-              <div className="flex items-center">;
-                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
+            >;"
+              <div className="flex items-center">;"
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;"
                 <span className="text-white">{option.title}</span>;
               </div>;
             </button>;
           ))}
-          ;
+          ;'
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;
             <ResumePreviewCard;
               resume={selectedResume.resume as Resume}              onDownload={handleDownloadResume}
@@ -258,38 +227,38 @@ export function SelectResumeSection({;
       )}
     </div>;
   ),;}
- key= {
-  option.id 
-}className= {
-  `w-full text-left p-3 rounded-md transition $ {
-  selectedResume?.id === option.id ? 'bg-zion-purple/20 border border-zion-purple' : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50' 
+ key= {}
+  option.id;
+}className= {}`
+  `w-full text-left p-3 rounded-md transition $ {'
+  selectedResume?.id === option.id ? 'bg-zion-purple/20 border border-zion-purple' : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50' `
 }` 
-}onClick= {
+}onClick= {}
   () => handleResumeSelect (option.id) 
 }> </div> </button>) ) 
-}{
-  selectedResume?.type === 'ai resume' && selectedResume.resume && (<ResumePreviewCard resume= {
-  selectedResume.resume as Resume 
-}onDownload= {
-  handleDownloadResume 
-}isLoading= {
-  isLoading 
+}{'
+  selectedResume?.type === 'ai resume' && selectedResume.resume && (<ResumePreviewCard resume= {}
+  selectedResume.resume as Resume;
+}onDownload= {}
+  handleDownloadResume;
+}isLoading= {}
+  isLoading;
 }/>) 
 }</>) 
 }</div>) 
-}
-                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
+}'
+                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'`
               }`}
               onClick={() => handleResumeSelect(option.id)}
-            >
-              <div className="flex items-center">
-                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
+            >"
+              <div className="flex items-center">"
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />"
                 <span className="text-white">{option.title}</span>
               </div>
             </button>
-          ))}
+          ))}'
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
-            <ResumePreviewCard
+            <ResumePreviewCard;
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
@@ -300,6 +269,7 @@ export function SelectResumeSection({;
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -310,3 +280,9 @@ export function SelectResumeSection({;
 =======
       )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

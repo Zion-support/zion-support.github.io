@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   try {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
@@ -9,33 +10,44 @@
     content = content ;/g,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       (match) => {
+=======
+
+  try {}
+    const filePath = path.join(process.cwd(), file);
+    let content = fs.readFileSync(filePath, "utf8");
+    const modified = false;
+    // Fix import statements with double punctuation;
+    content = content ;/g,
+      (match) => {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return match && match.replace(",;", ";");
 #!/usr / bin / env node;
-import fs from './fs';
-import path from './path';
+import fs from './fs';'
+import path from './path';'
 import { glob  } from './glob';
 ;
-// Find all TypeScript and JavaScript files;
+// Find all TypeScript and JavaScript files;"
 const files = glob.sync ("src/**/*.{ts, tsx, js, jsx}", { cwd: process.cwd () });
 ;
 let total_fixed = 0;
 ;
-files.for_each ((file) => {
-  try {
-    const file_path = path.join (process.cwd (), file);
+files.for_each ((file) => {}
+  try {}
+    const file_path = path.join (process.cwd (), file);"
     let content = fs.readFileSync (file_path, "utf8");
     const modified = false;
 ;
     // Fix import statements with double punctuation;
-    content = content.replace (
+    content = content.replace ('"
       /import\s+.*?from\s+['"][^'"]+['"], \s*;/g,
-      (match) => {
+      (match) => {"
         return match.replace (",", ";");
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -61,11 +73,22 @@ files.for_each ((file) => {
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       (match) => {
+=======
+
+
+
+    content = content.replace(;'"
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+
+
+      (match) => {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         return match.replace(";", ";");
       }
     );
-    // Fix import statements missing semicolons
+    // Fix import statements missing semicolons;
     content = content.replace(
+<<<<<<< HEAD
 <<<<<<< HEAD
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
       (match) => {
@@ -78,11 +101,15 @@ files.for_each ((file) => {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
-
-        if (!match.trim().endsWith(";")) {
+"
+        if (!match.trim().endsWith(";")) {"
           return match.trim() + ";";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,10 +121,15 @@ files.for_each ((file) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
         return match;
       }
     );
+<<<<<<< HEAD
       (match, varName) => {
         if (
           !match.includes("function") &&
@@ -114,10 +146,34 @@ files.for_each ((file) => {
           !match.includes("continue") &&
           !match.includes("debugger") &&
           !match.includes("export") &&
+=======
+
+      (match, varName) => {}
+        if ("
+          !match.includes("function") &&"
+          !match.includes("if") &&"
+          !match.includes("for") &&"
+          !match.includes("while") &&"
+          !match.includes("switch") &&"
+          !match.includes("try") &&"
+          !match.includes("catch") &&"
+          !match.includes("finally") &&"
+          !match.includes("return") &&"
+          !match.includes("throw") &&"
+          !match.includes("break") &&"
+          !match.includes("continue") &&"
+          !match.includes("debugger") &&"
+          !match.includes("export") &&"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           !match.includes("import")
-        ) {
+        ) {"
           return match + ";";
         }
         return match;
       }
     );
+<<<<<<< HEAD
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

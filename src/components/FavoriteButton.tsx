@@ -67,6 +67,7 @@ interface FavoriteButtonProps {;
   className?: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+<<<<<<< HEAD
 ;
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
   const { isWishlisted, toggle } = useWishlist(),;
@@ -247,6 +248,18 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
           ? 'bg-red-500 hover:bg-red-600 text-white''
           : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`
 } ${className}`}
+=======
+      // Add to favorites`;`
+      // console && console.log(`Added ${itemType} ${itemId} to favorites`)}  };
+  return ();
+
+    <button;`
+      onClick = {handleToggleFavorite}``
+      className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited''
+          ? 'bg-red-500 hover:bg-red-600 text-white'''`
+          : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'``
+} ${className}`}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
 
 <<<<<<< HEAD
@@ -278,20 +291,27 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
           <TooltipTrigger asChild>;
 =======
      aria-label="Button">;
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <Heart`
         className={`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : ''`
+=======
+`
+      <Heart``
+        className={`w-4 h-4 transition-all duration-300 ${'`
+          isFavorited ? 'fill-current' : ''``
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }`}
-      />    </button>
-  )};`
-className: {`w-4 h-4 transition-all duration-300 ${
-          isFavorited ? 'fill-current' : '';`
+      />    </button>`
+  )};``
+className: {`w-4 h-4 transition-all duration-300 ${'`
+          isFavorited ? 'fill-current' : '';``
 }`}
       />
-    </button>;) }
+    </button>;) }'`
 '`
 }
 <<<<<<< HEAD
@@ -318,6 +338,7 @@ className: {`w-4 h-4 transition-all duration-300 ${
           <TooltipTrigger asChild>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <button;
+<<<<<<< HEAD
               className={cn(;
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
                 className;
@@ -331,11 +352,27 @@ className: {`w-4 h-4 transition-all duration-300 ${
                   active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate';
                 )}
               />;
+=======
+              class_name = {cn ('
+                'absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors',
+                class_name)}
+              on_click={handle_click}
+              aria - label={'
+                active ? 'Remove from favorites' : 'Save to favorites';
+              }            >;
+              <Heart;
+                class_name = {cn ('
+                  'h - 4 w - 4 transition - transform duration - 200',
+                  active;'
+                    ? 'fill - red - 500 text - red - 500 scale - 110';'
+                    : 'text - zion - slate')}              />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </button>;
           </TooltipTrigger>;
           {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>;
       </TooltipProvider>;
+<<<<<<< HEAD
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
 <<<<<<< HEAD
@@ -351,26 +388,32 @@ className: {`w-4 h-4 transition-all duration-300 ${
   );}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Add to favorites`;
+=======
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+    </>);
+}`
+      // Add to favorites`;`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       // console.log (`Added ${item_type} ${item_id} to favorites`)}  }
   return ();
-    <button;
-      on_click = {handleToggleFavorite}`;
-      className={`absolute top - 2 right - 2 p - 2 rounded - full transition - all duration - 300 ${is_favorited';
-          ? 'bg - red - 500 hover:bg - red - 600 text - white'';
-          : 'bg - zion - blue - dark / 80 hover:bg - zion - cyan text - white'`;
-} ${class_name}`}
+    <button;`
+      on_click = {handleToggleFavorite}`;'`
+      className={`absolute top - 2 right - 2 p - 2 rounded - full transition - all duration - 300 ${is_favorited';'
+          ? 'bg - red - 500 hover:bg - red - 600 text - white'';'`
+          : 'bg - zion - blue - dark / 80 hover:bg - zion - cyan text - white'`;`
+} ${class_name}`}'
       aria - label={is_favorited ? 'Remove from favorites' : 'Add to favorites'}
-    >;
-      <Heart`;
-        className={`w - 4 h - 4 transition - all duration - 300 ${
-          is_favorited ? 'fill - current' : ''`;
-}`}
-      />    </button>)}`;
-class_name: {`w - 4 h - 4 transition - all duration - 300 ${
-          is_favorited ? 'fill - current' : '';`;
+    >;`
+      <Heart`;`
+        className={`w - 4 h - 4 transition - all duration - 300 ${'`
+          is_favorited ? 'fill - current' : ''`;`
+}`}`
+      />    </button>)}`;`
+class_name: {`w - 4 h - 4 transition - all duration - 300 ${'`
+          is_favorited ? 'fill - current' : '';`;`
 }`}
       />;
-    </button>) }
+    </button>) }'`
 '`;
 }
 
@@ -379,6 +422,7 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <button
@@ -396,3 +440,6 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            <button'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

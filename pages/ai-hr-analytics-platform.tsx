@@ -1,40 +1,41 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
-
+'
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 
 
-export default function AiHrAnalyticsPlatform() {
-	return (
-		<ServiceLanding
-			title="AI HR Analytics Platform"
-			description="Understand attrition, performance, and workforce planning with AI. Combine HRIS, ATS, and engagement data for proactive people decisions."
+export default function AiHrAnalyticsPlatform() {};
+	return (;
+		<ServiceLanding;
+			title="AI HR Analytics Platform""
+			description="Understand attrition, performance, and workforce planning with AI. Combine HRIS, ATS, and engagement data for proactive people decisions.""
 			subtitle="People insights that drive outcomes"
 
-
-			implementationWeeks="1-2 weeks"
+"
+			implementationWeeks="1-2 weeks""
 			roiNote="HR teams report measurable gains in retention and hiring yield"
-			features={[
-				"Attrition risk scoring and alerting",
-				"Diversity and inclusion analytics",
-				"Recruiting funnel and hiring yield insights",
-				"Performance signal detection and calibration",
-				"Headcount planning and skills inventory",
-				"Integrations: Workday, BambooHR, Greenhouse, Lever",
-				"Compensation benchmarking and ranges",
+			features={["
+				"Attrition risk scoring and alerting","
+				"Diversity and inclusion analytics","
+				"Recruiting funnel and hiring yield insights","
+				"Performance signal detection and calibration","
+				"Headcount planning and skills inventory","
+				"Integrations: Workday, BambooHR, Greenhouse, Lever","
+				"Compensation benchmarking and ranges","
 				"Engagement drivers and action suggestions"
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -64,22 +65,37 @@ import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[s
 
 
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+=======
+'
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+export default function AiHrAnalyticsPlatform() {}
+	return (;
+		<ServiceLanding;
+'
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 
-=======
+'
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function AiHrAnalyticsPlatform() {
+=======
+
+export default function AiHrAnalyticsPlatform() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	return (
-		<ServiceLanding
-			title="AI HR Analytics Platform"
-			description="Understand attrition, performance, and workforce planning with AI. Combine HRIS, ATS, and engagement data for proactive people decisions."
+		<ServiceLanding"
+			title="AI HR Analytics Platform""
+			description="Understand attrition, performance, and workforce planning with AI. Combine HRIS, ATS, and engagement data for proactive people decisions.""
 			subtitle="People insights that drive outcomes"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 			pricePerMonthUSD={199}
@@ -178,3 +194,24 @@ export default function AiHrAnalyticsPlatform() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+			implementationWeeks="1-2 weeks""
+			roiNote="HR teams report measurable gains in retention and hiring yield"
+			features={["
+				"Attrition risk scoring and alerting","
+				"Diversity and inclusion analytics","
+				"Recruiting funnel and hiring yield insights","
+				"Performance signal detection and calibration","
+				"Headcount planning and skills inventory","
+				"Integrations: Workday, BambooHR, Greenhouse, Lever","
+				"Compensation benchmarking and ranges","
+				"Engagement drivers and action suggestions"
+
+
+
+
+
+;
+'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

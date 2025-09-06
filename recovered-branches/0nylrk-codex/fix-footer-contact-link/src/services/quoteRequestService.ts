@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -24,30 +25,43 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {supabase} from "@/integrations/supabase/client";
 
+=======
+
+
+import { supabase } from "@/integrations/supabase/client";"
+import {supabase} from "@/integrations/supabase/client";"
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";"
+import { supabase } from "@/integrations/supabase/client","
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+
+
+";
+import {supabase} from "@/integrations/supabase/client";
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { supabase } from '@/integrations / supabase / client';
+=======
+import { supabase } from '@/integrations / supabase / client';"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export const quoteRequestService = {
+
+export const quoteRequestService = {};
   // Get all quote requests (for admin);
-  get_all: async () => {
-    const { data, error } = await supabase;
+  get_all: async () => {}
+    const { data, error } = await supabase;'
       .from ('quote_requests');
       .select (`;
         *;
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 <<<<<<< HEAD
@@ -56,6 +70,7 @@ export const quoteRequestService = {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 =======
 import { supabase } from '@/integrations / supabase / client';
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
@@ -83,10 +98,14 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const quoteRequestService = {
+=======
+export const quoteRequestService = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // Get all quote requests (for admin)
-  getAll: async () => {
-    const { data, error } = await supabase
+  getAll: async () => {}
+    const { data, error } = await supabase'
       .from('quote_requests')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         talent:talent_id (
@@ -136,10 +155,23 @@ export const quoteRequestService = {
       talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
   }
       ...item,
+=======
+
+        talent:talent_id (
+
+    return data && data.map((item: any) => ({}
+'
+      .order('created_at', { ascending: false }),
+    
+    if (error) throw error,
+    ;
+    // Format the data to include talent_name;
+    return data.map((item: any) => ({}
+      ...item,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
   
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -150,38 +182,21 @@ export const quoteRequestService = {
 
 
 
-=======
-      ...item,
-      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
-  },
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  // Get quote requests for a specific talent
-  getByTalentId: async (talentId: string) => {
-    const { data, error } = await supabase
-      .from('quote_requests')
-      .select('*')
+  // Get quote requests for a specific talent;
+  getByTalentId: async (talentId: string) => {}
+    const { data, error } = await supabase'
+      .from('quote_requests')'
+      .select('*')'
       .eq('talent_id', talentId)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-      .order('created_at', { ascending: false });
-    if (error) throw error;
-    return data as QuoteRequest[]
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+'
       .order('created_at', { ascending: false }),
     
     if (error) throw error,
     return data as QuoteRequest[]
   },
   
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -190,13 +205,20 @@ export const quoteRequestService = {
   getById: async (id: string) => {
     const { data, error } = await supabase
       .from('quote_requests')
+=======
+  // Get a single quote request by id;
+  getById: async (id: string) => {}
+    const { data, error } = await supabase'
+      .from('quote_requests')`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       .select(`
         *,
         talent:talent_id (
-          display_name
-        )
-      `)
+          display_name;
+        )`
+      `)'
       .eq('id', id)
+<<<<<<< HEAD
 
 import { supabase } from "@/integrations/supabase/client",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
@@ -226,9 +248,31 @@ export const quoteRequestService = {;
       .eq('talent_id', talentId);
       .order('created_at', { ascending: false }),;
     if (error) throw error,;
+=======
+      .single();
+    if (error) throw error;
+    return {}
+      ...data;'
+      talent_name: data.talent?.display_name |'Unknown Talent'} as QuoteRequest;
+  }
+;
+  // Get quote requests for a specific talent;
+  getByTalentId: async (talent_id: string) => {}
+    const { data, error } = await supabase;'
+      .from ('quote_requests');'
+      .select ('*');'
+      .eq ('talent_id', talent_id);'
+      .order ('created_at', { ascending: false });
+;
+    // Check condition;
+if (throw error) {}
+  $2;
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return data as QuoteRequest[];
   },;
   // Get a single quote request by id;
+<<<<<<< HEAD
 <<<<<<< HEAD
   getById: async (id: string) => {;
     const { data, error } = await supabase;
@@ -300,15 +344,17 @@ export const quoteRequestService = {;
   getById: async (id: string) => {
     const { data, error } = await supabase;
       .from ('quote_requests');
+=======
+  getById: async (id: string) => {}
+    const { data, error } = await supabase;'
+      .from ('quote_requests');`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       .select (`;
         *;
         talent:talent_id (
+
+
 <<<<<<< HEAD
-
-      talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
-  };
-  
-
 =======
   // Get a single quote request by id
   getById: async (id: string) => {
@@ -348,51 +394,79 @@ export const quoteRequestService = {;
         .select('viewed_at')
         .eq('id', id)
         .single();      }
+=======
+
+  // Update quote request status;
+  updateStatus: async (id: string, status: QuoteStatus) => {}
+    const updates: any = { status }
+    // If marking as responded, set replied_at'
+    if (status === 'responded') {}
     }
-    const { data, error } = await supabase
+    // If marking as in_review and viewed_at is null, set viewed_at'
+    if (status === 'in_review') {}
+      const { data } = await supabase'
+        .from('quote_requests')'
+        .select('viewed_at')'
+        .eq('id', id)
+        .single();
+
+
+
+      }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    }
+    const { data, error } = await supabase'
       .from('quote_requests')
-      .update(updates)
+      .update(updates)'
       .eq('id', id)
       .select();
     if (error) throw error;
-    return data[0] as QuoteRequest
+    return data[0] as QuoteRequest;
   }
-  // Archive/Unarchive a quote request
-  toggleArchive: async (id: string, isArchived: boolean) => {
-    const { data, error } = await supabase
+  // Archive/Unarchive a quote request;
+  toggleArchive: async (id: string, isArchived: boolean) => {}
+    const { data, error } = await supabase'
       .from('quote_requests')
-      .update({ is_archived: isArchived })
+      .update({ is_archived: isArchived })'
       .eq('id', id)
       .select();
     if (error) throw error;
-    return data[0] as QuoteRequest
+    return data[0] as QuoteRequest;
   }
-  // Delete a quote request
-  delete: async (id: string) => {
-    const { error } = await supabase
+  // Delete a quote request;
+  delete: async (id: string) => {}
+    const { error } = await supabase'
       .from('quote_requests')
-      .delete()
+      .delete()'
       .eq('id', id);
     if (error) throw error;
-    return true
+    return true;
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       .single(),
     
     if (error) throw error,
     
-    return {
-      ...data,
-      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
+    return {}
+      ...data,'
+      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
   },
   
-  // Update quote request status
-  updateStatus: async (id: string, status: QuoteStatus) => {
+  // Update quote request status;
+  updateStatus: async (id: string, status: QuoteStatus) => {}
     const updates: any = { status },
     
-    // If marking as responded, set replied_at
-    if (status === 'responded') {
+    // If marking as responded, set replied_at'
+    if (status === 'responded') {}
       updates.replied_at = new Date().toISOString()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -454,65 +528,69 @@ import { supabase } from "@/integrations/supabase/client",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+import { supabase } from "@/integrations/supabase/client",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
   // Get all quote requests (for admin);
   getAll: async () => {;
-    const { data, error } = await supabase;
-      .from('quote_requests');
+    const { data, error } = await supabase;'
+      .from('quote_requests');`
       .select(`;
         *,;
         talent:talent_id (;
           display_name;
-        );
-      `);
+        );`
+      `);'
       .order('created_at', { ascending: false }),;
     if (error) throw error,;
     // Format the data to include talent_name;
     return data.map((item: any) => ({;
-      ...item,;
+      ...item,;'
       talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
   },;
   // Get quote requests for a specific talent;
   getByTalentId: async (talentId: string) => {;
-    const { data, error } = await supabase;
-      .from('quote_requests');
-      .select('*');
-      .eq('talent_id', talentId);
+    const { data, error } = await supabase;'
+      .from('quote_requests');'
+      .select('*');'
+      .eq('talent_id', talentId);'
       .order('created_at', { ascending: false }),;
     if (error) throw error,;
     return data as QuoteRequest[];
   },;
   // Get a single quote request by id;
   getById: async (id: string) => {;
-    const { data, error } = await supabase;
-      .from('quote_requests');
+    const { data, error } = await supabase;'
+      .from('quote_requests');`
       .select(`;
         *,;
         talent:talent_id (;
           display_name;
-        );
-      `);
+        );`
+      `);'
       .eq('id', id);
       .single(),;
     if (error) throw error,;
     return {;
-      ...data,;
+      ...data,;'
       talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
   },;
   // Update quote request status;
   updateStatus: async (id: string, status: QuoteStatus) => {;
     const updates: any = { status },;
-    // If marking as responded, set replied_at;
+    // If marking as responded, set replied_at;'
     if (status === 'responded') {;
       updates.replied_at = new Date().toISOString();
     }
 ;
-    // If marking as in_review and viewed_at is null, set viewed_at;
+    // If marking as in_review and viewed_at is null, set viewed_at;'
     if (status === 'in_review') {;
-      const { data } = await supabase;
-        .from('quote_requests');
-        .select('viewed_at');
+      const { data } = await supabase;'
+        .from('quote_requests');'
+        .select('viewed_at');'
         .eq('id', id);
         .single(),;
       if (!data.viewed_at) {;
@@ -520,9 +598,9 @@ export const quoteRequestService = {;
       }
     }
 ;
-    const { data, error } = await supabase;
+    const { data, error } = await supabase;'
       .from('quote_requests');
-      .update(updates);
+      .update(updates);'
       .eq('id', id);
       .select(),;
     if (error) throw error,;
@@ -530,9 +608,9 @@ export const quoteRequestService = {;
   },;
   // Archive/Unarchive a quote request;
   toggleArchive: async (id: string, isArchived: boolean) => {;
-    const { data, error } = await supabase;
+    const { data, error } = await supabase;'
       .from('quote_requests');
-      .update({ is_archived: isArchived });
+      .update({ is_archived: isArchived });'
       .eq('id', id);
       .select(),;
     if (error) throw error,;
@@ -540,14 +618,15 @@ export const quoteRequestService = {;
   },;
   // Delete a quote request;
   delete: async (id: string) => {;
-    const { error } = await supabase;
+    const { error } = await supabase;'
       .from('quote_requests');
-      .delete();
+      .delete();'
       .eq('id', id),;
     if (error) throw error;
 <<<<<<< HEAD
 <<<<<<< HEAD
     return true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
@@ -587,94 +666,68 @@ if (throw error) {
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-      .order('created_at', { ascending: false }),
-    
-    if (error) throw error,
-    return data as QuoteRequest[]
-  },
-  
-
-
-  // Get a single quote request by id
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          display_name);
-      `);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+          display_name);`
+      `);'
       .eq ('id', id);
       .single ();
 ;
-    // Check condition
-if (throw error) {
-  $2
+    // Check condition;
+if (throw error) {}
+  $2;
 }
-    return {
-      ...data;
+    return {}
+      ...data;'
       talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
   }
 ;
   // Update quote request status;
-  update_status: async (id: string, status: QuoteStatus) => {
+  update_status: async (id: string, status: QuoteStatus) => {}
     const updates: any = { status }
 ;
     // If marking as responded, set replied_at;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       updates.replied_at = new Date ().toISOString ();
     }
     // If marking as in_review and viewed_at is null, set viewed_at;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      const { data } = await supabase;
-        .from ('quote_requests');
-        .select ('viewed_at');
+      const { data } = await supabase;'
+        .from ('quote_requests');'
+        .select ('viewed_at');'
         .eq ('id', id);
         .single ();
 ;
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         updates.viewed_at = new Date ().toISOString ();
       }
     }
-    const { data, error } = await supabase;
+    const { data, error } = await supabase;'
       .from ('quote_requests');
-      .update (updates);
+      .update (updates);'
       .eq ('id', id);
       .select ();
 ;
-    // Check condition
-if (throw error) {
-  $2
+    // Check condition;
+if (throw error) {}
+  $2;
 }
     return data[0] as QuoteRequest;
   }
-<<<<<<< HEAD
-;
-  // Delete a quote request;
-  delete: async (id: string) => {
-    const { error } = await supabase;
-      .from ('quote_requests');
-      .delete ();
-      .eq ('id', id);
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return true;
-  }
-}
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+
+
 };
+<<<<<<< HEAD
   }
 };
   }
@@ -690,3 +743,7 @@ if (throw error) {
 =======
     return true;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

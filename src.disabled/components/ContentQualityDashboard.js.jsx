@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React from';react' const ContentQualityDashboard = ({ className = ' }) =
 import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,11 +57,16 @@ import _React from';react' const ContentQualityDashboard = ({ className = ' }) =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from\';react\' const ContentQualityDashboard = ({ className = \' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(\') const [filterStatus,setFilterStatus] = useState(\'all\') const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {\''\';
-const React from";react" const ContentQualityDashboard = ({ className = " }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(") const [filterStatus,setFilterStatus] = useState("all") const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {""";""
-import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
-<<<<<<< HEAD
+=======
 
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import React from\';react\' const ContentQualityDashboard = ({ className = \' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(\') const [filterStatus,setFilterStatus] = useState(\'all\') const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {\''\';
+const React from";react" const ContentQualityDashboard = ({ className = " }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(") const [filterStatus,setFilterStatus] = useState("all") const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {""";""'
+import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +111,12 @@ import _React from';react' const ContentQualityDashboard = ({ className = ' }) =
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+import _React from';react' const ContentQualityDashboard = ({ className = ' }) => { const [isOpen,setIsOpen] = useState(false) const [isLoading,setIsLoading] = useState(false) const [report,setReport] = useState(null) const [selectedPage,setSelectedPage] = useState(null) const [searchTerm,setSearchTerm] = useState(') const [filterStatus,setFilterStatus] = useState('all') const contentAnalyzer = ContentQualityAnalyzer && ContentQualityAnalyzer.getInstance() const analyzeAllPages = useCallback(async () => { setIsLoading(true) try {''';
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

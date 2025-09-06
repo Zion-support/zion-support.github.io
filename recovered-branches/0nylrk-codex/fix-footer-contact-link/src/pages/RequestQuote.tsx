@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -52,13 +53,20 @@ import { QuoteRequestForm } from "@/components/QuoteRequestForm",export default 
 =======
 import { QuoteRequestForm } from "@/components/QuoteRequestForm",export default function RequestQuote() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer";"
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+export default function RequestQuote() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
-      <Header />
+      <Header />"
       <div className="min-h-screen bg-zion-blue">
         <QuoteRequestForm />
       </div>
       <Footer />
+<<<<<<< HEAD
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,11 +148,15 @@ export default function RequestQuote() {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-  );
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+    </>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
+
+
+
+  );
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
     </>;  );
@@ -152,23 +164,32 @@ export default function RequestQuote() {;
 =======
     </>;  );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
+import { Header } from '@/components / Header';'
+import { Footer } from '@/components / Footer';'
 import { QuoteRequestForm } from '@/components / QuoteRequestForm';
-export default /**
- * RequestQuote - Function description
+export default /**;
+ * RequestQuote - Function description;
  */
-function RequestQuote() {
+function RequestQuote() {}
   return (
     <>;
+<<<<<<< HEAD
       <Header />;
       <div className="min - h-screen bg - zion-blue">;
+=======
+      <Header />;"
+      <div className="min - h-screen bg - zion - blue">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <QuoteRequestForm />;
       </div>;
       <Footer />;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,15 +205,18 @@ function RequestQuote() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
 
 
   ),;
-} export default function RequestQuote () {
-  return (min-h-screen bg-zion-blue" > <QuoteRequestForm /> </div> <Footer /> </> 
-  );
+} export default function RequestQuote() { return null; }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -203,3 +227,9 @@ function RequestQuote() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

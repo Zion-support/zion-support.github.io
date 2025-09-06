@@ -1,8 +1,9 @@
-interface IntegrationState {
+interface IntegrationState {}
   connections: any[];
   logs: any[];
   overrides: any[];
 }
+<<<<<<< HEAD
 let state: IntegrationState = {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,9 @@ let state: IntegrationState = {
   overrides: []
 }
 =======
+=======
+let state: IntegrationState = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   connections: [],
   logs: [],
   overrides: [],}
@@ -42,18 +46,31 @@ export function getState(): IntegrationState {
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
   updater(state);
+=======
+export function writeState(
+  updater: (state: IntegrationState) => void,
+): IntegrationState {};
+  updater(state);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return { ...state }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 export function resetState(): void {
   state = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
+=======
+export function resetState(): void {}
+  state = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   connections: [],
-  logs: [],
+  logs: [],;
   overrides: [];
 =======
   connections: []
@@ -64,6 +81,7 @@ export function resetState(): void {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+<<<<<<< HEAD
 export function get_state (): IntegrationState {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return { ...state }
@@ -116,10 +134,16 @@ export function resetState(): void {
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+export function get_state (): IntegrationState {}
+  return { ...state }
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   updater(state);
   return { ...state }
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 export function reset_state (): void {
   state = {
 <<<<<<< HEAD
@@ -178,9 +202,13 @@ export function reset_state (): void {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export function reset_state (): void {}
+  state = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     connections: [],
     logs: [],
-    overrides: [],
+    overrides: [],;
   };
 <<<<<<< HEAD
 }

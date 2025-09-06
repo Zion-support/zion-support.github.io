@@ -4,33 +4,40 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Button } from "@/components/ui/button";
-import { Download } from 'lucide-react';
+import { Download } from 'lucide-react';"
 import type { QuoteRequest } from "@/types/quotes";
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
+=======
+"
+import { Button } from "@/components/ui/button";'
+import { Download } from 'lucide-react'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { QuoteRequest } from "@/types/quotes";
 
-interface ExportToCSVProps {
+interface ExportToCSVProps {}
   quotes: QuoteRequest[]
-  filename?: string
-}
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
-  const handleExport = () => {
-    // Define CSV Headers
-    const headers = [
-      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline'
+  filename?: string;
+}"
+export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {}
+  const handleExport = () => {};
+    // Define CSV Headers;
+    const headers = ['
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline''
       'StatusCreated Date'
     ]
-    // Format quote data for CSV
-    const rows = quotes.map(quote => [
-      quote.id
+    // Format quote data for CSV;
+    const rows = quotes.map(quote => []
+      quote.id'
       quote.talent_name |'Unknown'
-      quote.requester_name
-      quote.requester_email
-      quote.project_name
-      quote.project_summary
+      quote.requester_name;
+      quote.requester_email;
+      quote.project_name;
+      quote.project_summary;
       quote.budget_display |
+<<<<<<< HEAD
 =======
   quotes: QuoteRequest[];
   filename?: string
@@ -43,14 +50,21 @@ export const ExportToCSV = null;
           : quote.budget_min
             ? `$${quote.budget_min}`
 <<<<<<< HEAD
+=======
+        (quote.budget_min && quote.budget_max;
+          ? `$${quote.budget_min} - $${quote.budget_max}`
+          : quote.budget_min;`
+            ? `$${quote.budget_min}`'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             : 'Not specified')
-      quote.timeline
-      quote.status
+      quote.timeline;
+      quote.status;
       new Date(quote.created_at).toLocaleDateString()
     ])
-    // Create CSV content
-    const csvContent = [
+    // Create CSV content;
+    const csvContent = []
       headers.join()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -535,3 +549,6 @@ URL.revokeObjectURL(url);
 '"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

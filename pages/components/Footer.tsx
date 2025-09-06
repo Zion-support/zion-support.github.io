@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import Link from "next/link";
@@ -45,28 +46,35 @@ import {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
+=======
+
+
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
 }
-import React from "react";
-import Link from "next/link";
+import React from "react";"
+import Link from "next/link";"
 import { motion } from "framer-motion";
 import {;
   Mail,;
@@ -77,11 +85,16 @@ import {;
   Linkedin,;
   Instagram,;
   Github,;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from "lucide-react";
-const Footer = () => {
+const Footer = () => {}
   const currentYear = new Date().getFullYear();
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,12 +164,13 @@ import {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
 
-import React from 'react';
-import Link from 'next/link';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> origin/automation-improvements-final
 
+
+<<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -218,33 +232,55 @@ import Link from 'next/link';
       { name: "Industries", href: "/industries" }
       { name: "Custom Development", href: "/custom-development" }
       { name: "Digital Transformation", href: "/digital-transformation" }
+=======
+
+
+
+  const footerLinks = {}
+    services: ["
+      { name: "AI Services", href: "/ai-services" }"
+      { name: "IT Services", href: "/it-services" }"
+      { name: "Micro SaaS", href: "/micro-saas" }"
+      { name: "Cloud Solutions", href: "/cloud-solutions" }"
+      { name: "Cybersecurity", href: "/cybersecurity" }"
+      { name: "Database Solutions", href: "/database-solutions" }
+    ]
+
+    solutions: ["
+      { name: "Enterprise Solutions", href: "/enterprise-solutions" }"
+      { name: "Startup Solutions", href: "/startup-solutions" }"
+      { name: "Industries", href: "/industries" }"
+      { name: "Custom Development", href: "/custom-development" }"
+      { name: "Digital Transformation", href: "/digital-transformation" }"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       { name: "Consulting", href: "/consulting" }
     ]
-    company: [
-      { name: "About Us", href: "/about" }
-      { name: "Our Team", href: "/team" }
-      { name: "Careers", href: "/careers" }
-      { name: "Case Studies", href: "/case-studies" }
-      { name: "News", href: "/news" }
+    company: ["
+      { name: "About Us", href: "/about" }"
+      { name: "Our Team", href: "/team" }"
+      { name: "Careers", href: "/careers" }"
+      { name: "Case Studies", href: "/case-studies" }"
+      { name: "News", href: "/news" }"
       { name: "Partners", href: "/partners" }
     ]
-    resources: [
-      { name: "Blog", href: "/blog" }
-      { name: "Documentation", href: "/docs" }
-      { name: "API Documentation", href: "/docs/api" }
-      { name: "Tutorials", href: "/tutorials" }
-      { name: "White Papers", href: "/white-papers" }
+    resources: ["
+      { name: "Blog", href: "/blog" }"
+      { name: "Documentation", href: "/docs" }"
+      { name: "API Documentation", href: "/docs/api" }"
+      { name: "Tutorials", href: "/tutorials" }"
+      { name: "White Papers", href: "/white-papers" }"
       { name: "Webinars", href: "/webinars" }
     ]
-    legal: [
-      { name: "Privacy Policy", href: "/privacy" }
-      { name: "Terms of Service", href: "/terms" }
-      { name: "Cookie Policy", href: "/cookies" }
-      { name: "Security", href: "/security" }
-      { name: "Compliance", href: "/compliance" }
+    legal: ["
+      { name: "Privacy Policy", href: "/privacy" }"
+      { name: "Terms of Service", href: "/terms" }"
+      { name: "Cookie Policy", href: "/cookies" }"
+      { name: "Security", href: "/security" }"
+      { name: "Compliance", href: "/compliance" }"
       { name: "Accessibility", href: "/accessibility" }
     ]
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -413,41 +449,78 @@ const microSaasCategories = [
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
+=======
+
+  const socialLinks = ["
+    { name: "Facebook", href: "#", icon: Facebook }"
+    { name: "Twitter", href: "#", icon: Twitter }"
+    { name: "LinkedIn", href: "#", icon: Linkedin }"
+    { name: "Instagram", href: "#", icon: Instagram }"
+    { name: "GitHub", href: "#", icon: Github }
+
+
+  const socialLinks = [;"
+    { name: "Facebook", href: "#", icon: Facebook },;"
+    { name: "Twitter", href: "#", icon: Twitter },;"
+    { name: "LinkedIn", href: "#", icon: Linkedin },;"
+    { name: "Instagram", href: "#", icon: Instagram },;"
+    { name: "GitHub", href: "#", icon: Github },;
+  ];
+
+
+
+
+
+
+
+
+  return ("
+    <footer className="bg-gray-900 text-white">;"
+      <div className="container mx-auto px-4 py-16">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8">;
-          {/* Company Info */}
+          {/* Company Info */}"
           <div className="lg:col-span-1">;
-            <motion&& motion.div
+            <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {/* Company */}
           <div>;
-            <motion&& motion.div
+            <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}>;
-              <h3 className="text-lg font-semibold mb-6">Company</h3>;
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}>;"
+              <h3 className="text-lg font-semibold mb-6">Company</h3>;"
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.company.map((link, index) => (;
                   <li key={index}>;
-                    <Link
-                      href={link && link.href}
+                    <Link;
+                      href={link && link.href}"
                       className="text-gray-400 hover:text-white transition-colors">;
                       {link && link.name}
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {/* Resources & Legal */}
           <div>;
-            <motion&& motion.div
+            <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
-              <h3 className="text-lg font-semibold mb-6">Resources</h3>;
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;"
+              <h3 className="text-lg font-semibold mb-6">Resources</h3>;"
               <ul className="space-y-3 mb-8">;
                 {footerLinks && footerLinks.resources.map((link, index) => (;
                   <li key={index}>;
-                    <Link
-                      href={link && link.href}
+                    <Link;
+                      href={link && link.href}"
                       className="text-gray-400 hover:text-white transition-colors">;
                       {link && link.name}
                     </Link>;
@@ -474,6 +547,7 @@ const microSaasCategories = [
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 origin/main
@@ -488,19 +562,31 @@ origin/automation-improvements-final
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d;
+origin/main;
+origin/automation-improvements-final;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </ul>;
-
-              <h3 className="text-lg font-semibold mb-6">Legal</h3>;
+"
+              <h3 className="text-lg font-semibold mb-6">Legal</h3>;"
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.legal.map((link, index) => (;
                   <li key={index}>;
+<<<<<<< HEAD
                     <Link
                       href={link && link.href}
+=======
+
+                    <Link;
+                      href={link && link.href}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       className="text-gray-400 hover:text-white transition-colors">;
                       {link && link.name}
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -510,10 +596,13 @@ origin/automation-improvements-final
             </motion && motion.div>;
           </div>;
         </div>;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 <<<<<<< HEAD
@@ -530,8 +619,14 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
+=======
+
+
+        {/* Bottom Section */}"
+        <div className="border-t border-gray-800 mt-12 pt-8">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="flex flex-col md:flex-row justify-between items-center">;
-            <motion&& motion.div
+            <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
@@ -544,9 +639,9 @@ origin/automation-improvements-final
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+
+
 <<<<<<< HEAD
-
-
 
 
 <<<<<<< HEAD
@@ -575,25 +670,35 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             <motion.div
               transition={{ duration: 0 && 0.8 }}
+=======
+            <motion.div;
+            <motion.div;
+              transition={{ duration: 0 && 0.8 }}"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className="text-gray-400 text-sm mb-4 md:mb-0">;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </motion && motion.div>;
 
+<<<<<<< HEAD
             <motion&& motion.div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            <motion&& motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0 && 0.8 }}"
               className="flex space-x-4">;
               {socialLinks && socialLinks.map((social, index) => (;
-                <a
+                <a;
                   key={index}
-                  href={social && social.href}
+                  href={social && social.href}"
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
-                  aria-label={social && social.name}>;
+                  aria-label={social && social.name}>;"
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -609,15 +714,21 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
+=======
+
+
+        {/* Service Categories */}"
+        <div className="mt-16 pt-8 border-t border-gray-800">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Micro SaaS Categories */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-blue-400">Micro SaaS Solutions</h4>
+            <div>"
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Micro SaaS Solutions</h4>"
               <div className="grid grid-cols-2 gap-2">
-                {microSaasCategories.map((category) => (
-                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
+                {microSaasCategories.map((category) => ("
+                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">"
                     <category.icon className="w-4 h-4" />
-                    <span>{category.title}</span>
+                    <span>{category.title}</span>"
                     <span className="text-blue-400">({category.count})</span>
                   </div>
                 ))}
@@ -625,13 +736,13 @@ origin/automation-improvements-final
             </div>
 
             {/* AI Service Categories */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-green-400">AI Services</h4>
+            <div>"
+              <h4 className="text-lg font-semibold mb-4 text-green-400">AI Services</h4>"
               <div className="grid grid-cols-2 gap-2">
-                {aiServiceCategories.map((category) => (
-                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
+                {aiServiceCategories.map((category) => ("
+                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">"
                     <category.icon className="w-4 h-4" />
-                    <span>{category.title}</span>
+                    <span>{category.title}</span>"
                     <span className="text-green-400">({category.count})</span>
                   </div>
                 ))}
@@ -639,13 +750,13 @@ origin/automation-improvements-final
             </div>
 
             {/* IT Service Categories */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-purple-400">IT Services</h4>
+            <div>"
+              <h4 className="text-lg font-semibold mb-4 text-purple-400">IT Services</h4>"
               <div className="grid grid-cols-2 gap-2">
-                {itServiceCategories.map((category) => (
-                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
+                {itServiceCategories.map((category) => ("
+                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">"
                     <category.icon className="w-4 h-4" />
-                    <span>{category.title}</span>
+                    <span>{category.title}</span>"
                     <span className="text-purple-400">({category.count})</span>
                   </div>
                 ))}
@@ -654,34 +765,35 @@ origin/automation-improvements-final
           </div>
         </div>
 
-        {/* Stats Section */}
-        <div className="mt-16 pt-8 border-t border-gray-800">
+        {/* Stats Section */}"
+        <div className="mt-16 pt-8 border-t border-gray-800">"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-400 mb-2">235+</div>
+            <div>"
+              <div className="text-3xl font-bold text-blue-400 mb-2">235+</div>"
               <div className="text-gray-400">Services & Solutions</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-green-400 mb-2">1,200+</div>
+            <div>"
+              <div className="text-3xl font-bold text-green-400 mb-2">1,200+</div>"
               <div className="text-gray-400">Projects Completed</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-purple-400 mb-2">95+</div>
+            <div>"
+              <div className="text-3xl font-bold text-purple-400 mb-2">95+</div>"
               <div className="text-gray-400">Expert Team Members</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">15+</div>
+            <div>"
+              <div className="text-3xl font-bold text-yellow-400 mb-2">15+</div>"
               <div className="text-gray-400">Years Experience</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="bg-gray-800 border-t border-gray-700">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      {/* Bottom Bar */}"
+      <div className="bg-gray-800 border-t border-gray-700">"
+        <div className="container mx-auto px-4 py-6">"
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">"
             <div className="text-gray-400 text-sm">
+<<<<<<< HEAD
               © 2025 Zion Tech Group. All rights reserved. |
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> |
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
@@ -708,22 +820,31 @@ origin/main
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             <motion.div
+=======
+              © 2025 Zion Tech Group. All rights reserved. | "
+              <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | "
+              <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
+            </div>
+
+            <motion.div;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8 }}"
               className="flex space-x-4"
             >
               {socialLinks.map((social, index) => (
-                <a
+                <a;
                   key={index}
-                  href={social.href}
+                  href={social.href}"
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
                   aria-label={social.name}
-                >
+                >"
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -736,16 +857,21 @@ origin/main
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             <div className="flex items-center space-x-6">
+=======
+"
+            <div className="flex items-center space-x-6">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Sitemap
-              </Link>
+                Sitemap;
+              </Link>"
               <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Accessibility
-              </Link>
+                Accessibility;
+              </Link>"
               <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Cookie Policy
+                Cookie Policy;
               </Link>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -758,6 +884,12 @@ origin/main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </div>
@@ -771,6 +903,7 @@ origin/main
     </footer>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1014,17 +1147,20 @@ export default Footer;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import MainLayout from '../../src/components/layout/MainLayout';
 
-const Page = () => {
+const Page = () => {}
   return (
-    <MainLayout
-      title="Footer - Zion Tech Group"
+    <MainLayout"
+      title="Footer - Zion Tech Group""
       description="Footer component"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Footer</h1>
+    >"
+      <div className="min-h-screen bg-gray-50">"
+        <div className="container mx-auto px-4 py-16">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Footer</h1>"
           <p className="text-xl text-gray-600">Footer component page</p>
         </div>
       </div>
@@ -1033,6 +1169,7 @@ const Page = () => {
 };
 
 export default Page;
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1041,3 +1178,7 @@ export default Page;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

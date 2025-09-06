@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 export default function Contact() {
@@ -7,3 +8,6 @@ export default function Contact() {
     </EnhancedLayout>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

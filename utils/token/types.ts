@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type TokenSymbol = "ZION$";
 =======
 =======
@@ -15,11 +16,23 @@ export type TokenSymbol = "ZION$";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
-export type TokenSymbol = "ZION$",
-
 =======
 
 
+export type TokenSymbol = "ZION$",
+
+
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+export type TokenSymbol = "ZION$",
+
+
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -55,6 +68,17 @@ export interface TokenTransaction {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+;
+export type TokenTransactionType =;"
+  | "earn";"
+  | "burn";"
+  | "issue";"
+  | "revoke";
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | "redeem",;
 export interface TokenTransaction {;
   id: string,;
@@ -70,21 +94,41 @@ export interface TokenTransaction {;
 =======
 export interface Wallet {userId: string;
   balance: number, // current token balance;
+<<<<<<< HEAD
+=======
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   | "redeem",
-export interface TokenTransaction {
+export interface TokenTransaction {}
   id: string,
   user_id: string,
-  type: TokenTransactionType,
+  type: TokenTransactionType,;
   amount: number, // positive integer tokens;
   reason: string,
   metadata?: Record < string any>,
   created_at: string, // ISO timestamp;
+<<<<<<< HEAD
+=======
+
+}
+export interface Wallet {}
+  user_id: string,;
+  balance: number, // current token balance;
+
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 }
 
-export interface WalletSummary {
+export interface WalletSummary {}
   wallet: Wallet,
-
+;
   transactions: TokenTransaction[];
   config: TokenConfig;
 
@@ -94,21 +138,21 @@ export interface WalletSummary {
 
 }
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-}
-export interface Wallet {
-  user_id: string,
-  balance: number, // current token balance;
 
+
+
+}
+export interface Wallet {}
+  user_id: string,;
+  balance: number, // current token balance;
+"
   | "redeem",;
 export interface TokenTransaction {;
 
 
 }
-export interface TokenConfig {
-  symbol: TokenSymbol,
+export interface TokenConfig {}
+  symbol: TokenSymbol,;
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
   earn_rules: Record < string number>, // action -> tokens;
   burn_rules: Record < string number>, // feature -> tokens;
@@ -122,8 +166,8 @@ export interface TokenConfig {
   reason: string;
   metadata?: Record<string, any>,;
   createdAt: string, // ISO timestamp;
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -132,6 +176,13 @@ export interface TokenConfig {
 export interface Wallet {;
   userId: string;
   balance: number, // current token balance;
+<<<<<<< HEAD
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
 export interface TokenConfig {;
@@ -139,6 +190,13 @@ export interface TokenConfig {;
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
   earnRules: Record<string, number>, // action -> tokens;
   burnRules: Record<string, number>, // feature -> tokens;
+<<<<<<< HEAD
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 ;
 export interface WalletSummary {;
@@ -146,22 +204,25 @@ export interface WalletSummary {;
   transactions: TokenTransaction[];
   config: TokenConfig;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
   } catch (error) {
     console.error("Error:", error);
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 }
+
+
+
+
+
 <<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-
-
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -180,3 +241,10 @@ export interface WalletSummary {;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+
+}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

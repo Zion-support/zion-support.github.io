@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -9,6 +10,9 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import UltraAdvancedFuturisticCard from '../components/ui/UltraAdvancedFuturisticCard';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-real-micro-saas-services';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,6 +21,7 @@ export default function ServicesPage() {
   const [showFilters, setShowFilters] = useState(false);
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
+<<<<<<< HEAD
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
     { value: '0-50', label: '$0 - $50' },
@@ -71,6 +76,9 @@ export default function ServicesPage() {
         return parseFloat(b.roi.replace('%', '').replace('+', '')) - parseFloat(a.roi.replace('%', '').replace('+', ''));
       default:
         return a.name.localeCompare(b.name);
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 
     // Apply category filter
@@ -114,6 +122,7 @@ export default function ServicesPage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   // Enhanced service advertising content with comprehensive market data
   const serviceHighlights = [
     {
@@ -292,6 +301,9 @@ export default function ServicesPage() {
         {/* Open Graph */}
         <meta property="og:title" content="500+ Revolutionary Micro SAAS Services | Zion Tech Group" />
         <meta property="og:description" content="Discover 500+ cutting-edge micro SAAS services powered by quantum AI and autonomous systems" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:url" content="https://ziontechgroup.com/services" />
         <meta property="og:type" content="website" />
         
@@ -301,6 +313,7 @@ export default function ServicesPage() {
         <meta name="twitter:description" content="Discover 500+ cutting-edge micro SAAS services powered by quantum AI and autonomous systems" />
       </Head>
 
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
@@ -1085,9 +1098,16 @@ export default function ServicesPage() {
         </div>
       </section>
     </UltraFuturisticBackground>
+=======
+
+            </div>
+          </section>
+        </div>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -1106,4 +1126,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

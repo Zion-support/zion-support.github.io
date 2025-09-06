@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -57,13 +58,30 @@ import { ProfileBadge } from "@/components/profile/ProfileBadge",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface PostCardProps {
+=======
 
-  post: ForumPost
-  compact?: boolean
+import { formatDistanceToNow } from "date-fns","
+import { Link } from "react-router-dom","
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react","
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card","
+import { Badge } from "@/components/ui/badge","
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
+import { Button } from "@/components/ui/button","
+import { cn } from "@/lib/utils",";
+import { ForumPost } from "@/types/community";"
+import { ProfileBadge } from "@/components/profile/ProfileBadge";"
+import { ForumPost } from "@/types/community","
+import { ProfileBadge } from "@/components/profile/ProfileBadge",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+interface PostCardProps {};
+  post: ForumPost;
+  compact?: boolean;
 }
-export const PostCard = ({ post, compact = false }: PostCardProps) => {
+export const PostCard = ({ post, compact = false }: PostCardProps) => {}
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       post.isPinned && "border-zion-purple/50",
@@ -100,15 +118,24 @@ import { ProfileBadge } from "@/components/profile/ProfileBadge",      post.isFe
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
+=======
+
+
+"
+      post.isFeatured && "bg-zion-purple/5"
+    )}>"
+      <CardHeader className="flex flex-row items-start gap-4 space-y-0">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Avatar className="h-10 w-10">
           <AvatarImage src={post.authorAvatar} />
           <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
-        </Avatar>
-        <div className="flex-1">
-          <div className="flex items-center">
+        </Avatar>"
+        <div className="flex-1">"
+          <div className="flex items-center">"
             <Link to={`/community/post/${post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">
               {post.title}
             </Link>
+<<<<<<< HEAD
             {post.isAnswered && (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,49 +160,31 @@ interface PostCardProps {;
   post: ForumPost,;
   compact?: boolean;
 }
+=======
+            {post.isAnswered && ("
+              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export const PostCard = ({ post, compact = false }: PostCardProps) => {;
-  const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;
-
-  return (
-    <CardclassName={cn(
-      "transition-shadow hover: shadow-md"
-      post && post.isPinned && "border-zion-purple/50",
-      post && post.isFeatured && "bg-zion-purple/5"
-    )}>;
-      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
-        <Avatar className="h-10 w-10">;
-          <AvatarImage src={post && post.authorAvatar} />;
-          <AvatarFallback>{post && post.authorName.charAt(0)}</AvatarFallback>;
-        </Avatar>;
-        <div className="flex-1">;
-          <div className="flex items-center">;
-            <Link to={`/community/post/${post && post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">;
-              {post && post.title}
-            </Link>;
-            {post && post.isAnswered && (;
-              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            )}
-            {post && post.isPinned && (;
+            )};
+            {post && post.isPinned && (;"
               <Pin className="h-4 w-4 text-amber-500 ml-2" />;
             )}
-            {post && post.isLocked && (;
+            {post && post.isLocked && (;"
               <Lock className="h-4 w-4 text-red-500 ml-2" />;
             )}
 
 
-=======
 
-import { formatDistanceToNow } from "date-fns",;
-import { Link } from "react-router-dom",;
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { cn } from "@/lib/utils",;
-import { ForumPost } from "@/types/community",;
+"
+import { formatDistanceToNow } from "date-fns",;"
+import { Link } from "react-router-dom",;"
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;"
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
+import { Button } from "@/components/ui/button",;"
+import { cn } from "@/lib/utils",;"
+import { ForumPost } from "@/types/community",;"
 import { ProfileBadge } from "@/components/profile/ProfileBadge",;
 ;
 interface PostCardProps {;
@@ -187,40 +196,46 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix:true }),;
 ;
   return (;
-    <Card className={cn(;
-      "transition-shadow hover:shadow-md",;
-      post.isPinned && "border-zion-purple/50",;
+    <Card className={cn(;"
+      "transition-shadow hover:shadow-md",;"
+      post.isPinned && "border-zion-purple/50",;"
       post.isFeatured && "bg-zion-purple/5";
-    )}>;
-      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
+    )}>;"
+      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;"
         <Avatar className="h-10 w-10">;
           <AvatarImage src={post.authorAvatar} />;
           <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>;
-        </Avatar>;
-        <div className="flex-1">;
-          <div className="flex items-center">;
+        </Avatar>;"
+        <div className="flex-1">;"
+          <div className="flex items-center">;"`
             <Link to={`/community/post/${post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">;
               {post.title}
             </Link>;
-            {post.isAnswered && (;
+            {post.isAnswered && (;"
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />;
             )}
-            {post.isPinned && (;
+            {post.isPinned && (;"
               <Pin className="h-4 w-4 text-amber-500 ml-2" />;
             )}
-            {post.isLocked && (;
+            {post.isLocked && (;"
               <Lock className="h-4 w-4 text-red-500 ml-2" />;
             )}
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             )}
-            {post.isPinned && (
+            {post.isPinned && ("
               <Pin className="h-4 w-4 text-amber-500 ml-2" />
             )}
-            {post.isLocked && (
+            {post.isLocked && ("
               <Lock className="h-4 w-4 text-red-500 ml-2" />
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
           <div className="text-sm text-muted-foreground">
@@ -253,6 +268,18 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
 import { cn } from "@/lib/utils",;
 import { ForumPost } from "@/types/community",;
+=======
+"
+import { formatDistanceToNow } from "date-fns",;"
+import { Link } from "react-router-dom",;"
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;"
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
+import { Button } from "@/components/ui/button",;"
+import { cn } from "@/lib/utils",;"
+import { ForumPost } from "@/types/community",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ProfileBadge } from "@/components/profile/ProfileBadge",;
 interface PostCardProps {;
   post: ForumPost,;
@@ -262,47 +289,51 @@ interface PostCardProps {;
 export const PostCard = ({ post, compact = false }: PostCardProps) => {;
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),;
   return (;
-    <Card className={cn(;
-      "transition-shadow hover:shadow-md",;
-      post.isPinned && "border-zion-purple/50",;
+    <Card className={cn(;"
+      "transition-shadow hover:shadow-md",;"
+      post.isPinned && "border-zion-purple/50",;"
       post.isFeatured && "bg-zion-purple/5";
-    )}>;
-      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
+    )}>;"
+      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;"
         <Avatar className="h-10 w-10">;
           <AvatarImage src={post.authorAvatar} />;
           <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>;
-        </Avatar>;
-        <div className="flex-1">;
-          <div className="flex items-center">;
+        </Avatar>;"
+        <div className="flex-1">;"
+          <div className="flex items-center">;"`
             <Link to={`/community/post/${post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">;
               {post.title}
             </Link>
-            {post.isAnswered && (
+            {post.isAnswered && ("
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
             )}
-            {post.isPinned && (
+            {post.isPinned && ("
               <Pin className="h-4 w-4 text-amber-500 ml-2" />
             )}
-            {post.isLocked && (
+            {post.isLocked && ("
               <Lock className="h-4 w-4 text-red-500 ml-2" />
             )}
-          </div>
+          </div>"
           <div className="text-sm text-muted-foreground">
             Posted by {post.authorName} {timeAgo}
-          </div>;
+          </div>;"
           <div className="flex flex-wrap gap-2 mt-2">;
-            {post.tags?.map(tag => (;
+            {post.tags?.map(tag => (;"
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {tag}
               </Badge>
             ))}
@@ -310,33 +341,34 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
         </div>
       </CardHeader>
       {!compact && (
-        <CardContent>
+        <CardContent>"
           <div className="line-clamp-3">{post.content}</div>
         </CardContent>
-      )}
-      <CardFooter className="flex justify-between">
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-1">
-            <Button variant="ghost" size="sm" className="px-2">
+      )}"
+      <CardFooter className="flex justify-between">"
+        <div className="flex items-center gap-4">"
+          <div className="flex items-center gap-1">"
+            <Button variant="ghost" size="sm" className="px-2">"
               <ThumbsUp className="h-4 w-4 mr-1" />
               <span>{post.upvotes}</span>
-            </Button>
-            <Button variant="ghost" size="sm" className="px-2">
+            </Button>"
+            <Button variant="ghost" size="sm" className="px-2">"
               <ThumbsDown className="h-4 w-4 mr-1" />
               <span>{post.downvotes}</span>
             </Button>
-          </div>
-          <div className="flex items-center gap-1">
-            <MessageSquare className="h-4 w-4" />
+          </div>"
+          <div className="flex items-center gap-1">"
+            <MessageSquare className="h-4 w-4" />"
             <span className="text-sm">{post.replyCount} replies</span>
           </div>
         </div>
         {post.isFeatured && (
-          <div>
+          <div>"
             <Badge className="bg-zion-purple">Featured</Badge>
           </div>
         )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default PostCard;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -359,6 +391,9 @@ export default PostCard;
           <div className="flex flex-wrap gap-2 mt-2">;
             {post.tags?.map(tag => (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
                 {tag}
               </Badge>;
@@ -366,59 +401,19 @@ export default PostCard;
           </div>;
         </div>;
       </CardHeader>;
-<<<<<<< HEAD
-
-      {!compact && (;
-        <CardContent>;
-          <div className="line-clamp-3">{post && post.content}</div>;
-        </CardContent>;
-      )}
-
-=======
-;
-      {!compact && (;
-        <CardContent>;
-          <div className="line-clamp-3">{post.content}</div>;
-        </CardContent>;
-      )}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <CardFooter className="flex justify-between">;
-        <div className="flex items-center gap-4">;
-          <div className="flex items-center gap-1">;
-            <Button variant="ghost" size="sm" className="px-2">;
+"
+      <CardFooter className="flex justify-between">;"
+        <div className="flex items-center gap-4">;"
+          <div className="flex items-center gap-1">;"
+            <Button variant="ghost" size="sm" className="px-2">;"
               <ThumbsUp className="h-4 w-4 mr-1" />;
-<<<<<<< HEAD
-              <span>{post && post.upvotes}</span>;
-            </Button>;
-            <Button variant="ghost" size="sm" className="px-2">;
-              <ThumbsDown className="h-4 w-4 mr-1" />;
-              <span>{post && post.downvotes}</span>;
-=======
-              <span>{post.upvotes}</span>;
-            </Button>;
-            <Button variant="ghost" size="sm" className="px-2">;
-              <ThumbsDown className="h-4 w-4 mr-1" />;
-              <span>{post.downvotes}</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            </Button>;
-          </div>;
-          <div className="flex items-center gap-1">;
-            <MessageSquare className="h-4 w-4" />;
-<<<<<<< HEAD
-            <span className="text-sm">{post && post.replyCount} replies</span>;
-          </div>;
-        </div>;
 
-        {post && post.isFeatured && (;
-=======
-            <span className="text-sm">{post.replyCount} replies</span>;
-          </div>;
-        </div>;
-        ;
-        {post.isFeatured && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          <div>;
+            </Button>;
+          </div>;"
+          <div className="flex items-center gap-1">;"
+            <MessageSquare className="h-4 w-4" />;
+
+          <div>;"
             <Badge className="bg-zion-purple">Featured</Badge>;
           </div>;
         )}
@@ -426,60 +421,53 @@ export default PostCard;
 
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD
-  );
-};
 
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default PostCard;
 
-=======
-import { formatDistanceToNow } from './date - fns';
-import { Link } from './react-router-dom';
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from './lucide-react';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Button } from '@/components / ui / button';
-import { cn } from '@/lib / utils';
-import { ForumPost } from '@/types / community';
+
+import { formatDistanceToNow } from './date - fns';'
+import { Link } from './react-router-dom';'
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from './lucide-react';'
+import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';'
+import { Badge } from '@/components / ui / badge';'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';'
+import { Button } from '@/components / ui / button';'
+import { cn } from '@/lib / utils';'
+import { ForumPost } from '@/types / community';'
 import { ProfileBadge } from '@/components / profile / ProfileBadge';
-interface PostCardProps {
+interface PostCardProps {}
   post: ForumPost,
   compact?: boolean;
 }
-export const PostCard = ({ post, compact = false }: PostCardProps) =>: any {
+export const PostCard = ({ post, compact = false }: PostCardProps) =>: any {}
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
   return (
-    <Card className={cn (
-      "transition - shadow hover: shadow - md";
-      post.is_pinned && "border - zion - purple / 50",
-      post.is_featured && "bg - zion - purple / 5")}>;
-      <CardHeader className="flex flex - row items - start gap - 4 space - y-0">;
+    <Card className={cn (";
+      "transition - shadow hover: shadow - md";"
+      post.is_pinned && "border - zion - purple / 50","
+      post.is_featured && "bg - zion - purple / 5")}>;"
+      <CardHeader className="flex flex - row items - start gap - 4 space - y-0">;"
         <Avatar className="h - 10 w - 10">;
           <AvatarImage src={post.author_avatar} />;
           <AvatarFallback>{post.author_name.char_at (0)}</AvatarFallback>;
-        </Avatar>;
-        <div className="flex - 1">;
-          <div className="flex items - center">;
+        </Avatar>;"
+        <div className="flex - 1">;"
+          <div className="flex items - center">;"`
             <Link to={`/community / post/${post.id}`} className="font - semibold text - lg hover:text - zion - purple transition - colors">;
               {post.title}
             </Link>;
-            {post.is_answered && (
+            {post.is_answered && ("
               <CheckCircle className="h - 4 w - 4 text - green - 500 ml - 2" />)}
-            {post.is_pinned && (
+            {post.is_pinned && ("
               <Pin className="h - 4 w - 4 text - amber - 500 ml - 2" />)}
-            {post.is_locked && (
+            {post.is_locked && ("
               <Lock className="h - 4 w - 4 text - red - 500 ml - 2" />)}
-          </div>;
+          </div>;"
           <div className="text - sm text - muted - foreground">;
             Posted by {post.author_name} {time_ago}
-          </div>;
+          </div>;"
           <div className="flex flex - wrap gap - 2 mt - 2">;
-            {post.tags?.map (tag => (
+            {post.tags?.map (tag => ("
               <Badge key={tag} variant="outline" className="bg - zion - purple / 10 hover:bg - zion - purple / 20">;
                 {tag}
               </Badge>))}
@@ -487,28 +475,28 @@ export const PostCard = ({ post, compact = false }: PostCardProps) =>: any {
         </div>;
       </CardHeader>;
       {!compact && (
-        <CardContent>;
+        <CardContent>;"
           <div className="line - clamp - 3">{post.content}</div>;
-        </CardContent>)}
-      <CardFooter className="flex justify - between">;
-        <div className="flex items - center gap - 4">;
-          <div className="flex items - center gap - 1">;
-            <Button variant="ghost" size="sm" className="px - 2">;
+        </CardContent>)}"
+      <CardFooter className="flex justify - between">;"
+        <div className="flex items - center gap - 4">;"
+          <div className="flex items - center gap - 1">;"
+            <Button variant="ghost" size="sm" className="px - 2">;"
               <ThumbsUp className="h - 4 w - 4 mr - 1" />;
               <span>{post.upvotes}</span>;
-            </Button>;
-            <Button variant="ghost" size="sm" className="px - 2">;
+            </Button>;"
+            <Button variant="ghost" size="sm" className="px - 2">;"
               <ThumbsDown className="h - 4 w - 4 mr - 1" />;
               <span>{post.downvotes}</span>;
             </Button>;
-          </div>;
-          <div className="flex items - center gap - 1">;
-            <MessageSquare className="h - 4 w - 4" />;
+          </div>;"
+          <div className="flex items - center gap - 1">;"
+            <MessageSquare className="h - 4 w - 4" />;"
             <span className="text - sm">{post.reply_count} replies</span>;
           </div>;
         </div>;
         {post.is_featured && (
-          <div>;
+          <div>;"
             <Badge className="bg - zion - purple">Featured</Badge>;
           </div>)}
       </CardFooter>;
@@ -517,6 +505,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) =>: any {
 ;
 export default PostCard;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -596,3 +585,12 @@ export default PostCard;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+export default PostCard;
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

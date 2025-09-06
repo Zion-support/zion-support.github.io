@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const fixes = [];
 
 function fixFile(filePath, description, fixFunction) {
@@ -32,11 +33,54 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/\\\(/g, '(');
     content = content.replace(/\\\)/g, ')');
 
+=======
+// Function to fix common syntax errors
+function fixSyntaxErrors(content, filePath) {
+    let fixes = 0;
+    let originalContent = content;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
 
+<<<<<<< HEAD
+=======
+    // Fix malformed return statements
+    content = content.replace(/return\s*\(\s*<div[^>]*>\s*\/\*[^*]*\*\/\s*<div[^>]*>\s*<div[^>]*><\/div>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<\/div>\s*<p[^>]*>([^<]*)<\/p>\s*<p[^>]*>([^<]*)<\/p>\s*<div[^>]*>\s*<Link[^>]*>([^<]*)<\/Link>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*\)/g, (match, title, desc1, desc2, linkText) => {
+        fixes++;
+        return `return (
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+            <div className="relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                        ${title}
+                    </h1>
+                    <p className="text-xl md:text-2xl mb-8 text-zion-cyan-light max-w-4xl mx-auto">
+                        ${desc1}
+                    </p>
+                    <p className="text-lg text-zion-cyan-light mb-12 max-w-3xl mx-auto">
+                        ${desc2}
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link href="/contact" className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+                            ${linkText}
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );`;
+    });
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
@@ -83,8 +127,15 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
     );
 });
 
+<<<<<<< HEAD
     // Fix missing semicolons at end of statements
 ursor/automate-test-improve-and-merge-code-59d5
+=======
+
+
+    // Fix missing semicolons at end of statements
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     content = content.replace(/([^;}])\s*$/gm, '$1;');
 
 
@@ -95,26 +146,15 @@ ursor/automate-test-improve-and-merge-code-59d5
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
 
+<<<<<<< HEAD
 }
+=======
 
-// Function to process a single file
-function processFile(filePath) {
-    try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        const { "content": fixedContent, fixes } = fixSyntaxErrors(content, filePath);
-        
-        if (fixes > 0) {
-            fs.writeFileSync(filePath, fixedContent, 'utf8');
-            
-            return fixes;
-        }
-        return 0;
-    } catch (error) {
-        console.error("❌ Error processing ${filePath}:", error.message);
-        return 0;
-    }
-}
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
 // Main execution
 async function main() {
     const patterns = ['src/**/*.tsx',
@@ -154,6 +194,8 @@ async function main() {
         
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'
@@ -161,6 +203,7 @@ async function main() {
     
     return fixed;
 });
+<<<<<<< HEAD
 console.log(`Total fixes applied: ${fixes.length}`);
 
 if (fixes.length > 0) {
@@ -174,6 +217,11 @@ if (fixes.length > 0) {
 
 console.log('\n🎯 Syntax error fixing completed!');
 origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     if (openBraces > closeBraces) {
       const missingBraces = openBraces - closeBraces;
@@ -184,7 +232,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
     // Fix missing closing parentheses
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     if (openParens > closeParens) {
       const missingParens = openParens - closeParens;
@@ -247,6 +299,10 @@ ursor/automate-test-improve-and-merge-code-59d5
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
@@ -277,5 +333,9 @@ function processDirectory(dirPath) {
 console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 

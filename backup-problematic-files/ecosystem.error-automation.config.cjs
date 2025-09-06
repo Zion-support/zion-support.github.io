@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 =======
@@ -6,6 +7,9 @@
 <<<<<<< HEAD
 =======
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -59,13 +63,9 @@ module.exports = {
         "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes
         "ERROR_THRESHOLD": '10'
       },
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
 
 
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:ecosystem.error-automation.config.cjs
@@ -75,6 +75,13 @@ module.exports = {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -140,15 +147,20 @@ module.exports = {
         "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes
         "ERROR_THRESHOLD": '10'
       };
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes
       "log_file": './automation/logs/error-detection-monitor.log',
       "error_file": './automation/logs/error-detection-monitor-error.log',
       "out_file": './automation/logs/error-detection-monitor-out.log',
       "merge_logs": true,
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
@@ -188,11 +200,15 @@ module.exports = {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
       "cron_restart": '0 */15 * * *', // Restart every 15 minutes
       "log_file": './automation/logs/typescript-error-auto-fixer.log',
       "error_file": './automation/logs/typescript-error-auto-fixer-error.log',
       "out_file": './automation/logs/typescript-error-auto-fixer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
@@ -232,11 +248,15 @@ module.exports = {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes
       "log_file": './automation/logs/eslint-error-auto-fixer.log',
       "error_file": './automation/logs/eslint-error-auto-fixer-error.log',
       "out_file": './automation/logs/eslint-error-auto-fixer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
@@ -276,11 +296,15 @@ module.exports = {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
       "cron_restart": '0 */30 * * *', // Restart every 30 minutes
       "log_file": './automation/logs/dependency-error-resolver.log',
       "error_file": './automation/logs/dependency-error-resolver-error.log',
       "out_file": './automation/logs/dependency-error-resolver-out.log',
       "merge_logs": true,
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
@@ -366,11 +390,15 @@ module.exports = {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
       "cron_restart": '0 */20 * * *', // Restart every 20 minutes
       "log_file": './automation/logs/build-error-auto-fixer.log',
       "error_file": './automation/logs/build-error-auto-fixer-error.log',
       "out_file": './automation/logs/build-error-auto-fixer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
@@ -446,11 +474,15 @@ module.exports = {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
       "cron_restart": '0 */60 * * *', // Restart every hour
       "log_file": './automation/logs/code-quality-auto-enhancer.log',
       "error_file": './automation/logs/code-quality-auto-enhancer-error.log',
       "out_file": './automation/logs/code-quality-auto-enhancer-out.log',
       "merge_logs": true,
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
@@ -490,11 +522,15 @@ module.exports = {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
       "cron_restart": '0 */15 * * *', // Restart every 15 minutes
       "log_file": './automation/logs/error-prevention-monitor.log',
       "error_file": './automation/logs/error-prevention-monitor-error.log',
       "out_file": './automation/logs/error-prevention-monitor-out.log',
       "merge_logs": true,
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
@@ -580,11 +616,15 @@ module.exports = {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes
       "log_file": './automation/logs/error-analytics-dashboard.log',
       "error_file": './automation/logs/error-analytics-dashboard-error.log',
       "out_file": './automation/logs/error-analytics-dashboard-out.log',
       "merge_logs": true,
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
@@ -870,11 +910,15 @@ module.exports = {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes
       "log_file": './automation/logs/intelligent-error-orchestrator.log',
       "error_file": './automation/logs/intelligent-error-orchestrator-error.log',
       "out_file": './automation/logs/intelligent-error-orchestrator-out.log',
       "merge_logs": true,
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
@@ -902,6 +946,9 @@ module.exports = {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:ecosystem.error-automation.config.cjs
       "path": '/var/www/zion-tech-group',
       'pre-deploy-local': '',
       'post-deploy': 'npm install --legacy-peer-deps && pm2 reload ecosystem.error-automation.config.cjs --env production',

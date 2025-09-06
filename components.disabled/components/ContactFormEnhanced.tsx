@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Auto-generated module
 export {};
 origin/main
@@ -210,3 +211,5 @@ export default ContactFormEnhanced;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Auto-generated module
 export {};
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

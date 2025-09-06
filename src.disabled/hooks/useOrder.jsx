@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQ
 import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQuery(orderId) { return useQuery({ queryKey[';';order',orderId],"queryFn": async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res.ok) { throw new Error( 'Failed to fetch order')} return (await res.json())},"enabled": '!!orderI',d})}';`''
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQuery(orderId) { return useQuery({ queryKey[';';order',orderId],"queryFn": async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res.ok) { throw new Error( 'Failed to fetch order')} return (await res.json())},"enabled": '!!orderI',d})}';`''
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQ
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :src && src.disabled/hooks/useOrder && useOrder.js.jsx
 const { useQuery } from";@tanstack/react-query" export: function useGetOrderQuery(orderId) { return useQuery({ queryKey[";";order",orderId],queryFn: async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res && res.ok) { throw new Error( "Failed to fetch order")} return (await res && res.json())},enabled: "!orderI",d})}";`'"`'"`
-import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQuery(orderId) { return useQuery({ queryKey[';';order',orderId],"queryFn": async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res && res.ok) { throw new Error( 'Failed to fetch order')} return (await res && res.json())},"enabled": '!!orderI',d})}';`''
-<<<<<<< HEAD
+=======
 
+
+
+:src && src.disabled/hooks/useOrder && useOrder.js.jsx'"`
+const { useQuery } from";@tanstack/react-query" export: function useGetOrderQuery(orderId) { return useQuery({ queryKey[";";order",orderId],queryFn: async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res && res.ok) { throw new Error( "Failed to fetch order")} return (await res && res.json())},enabled: "!orderI",d})}";`'"`'"`'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQuery(orderId) { return useQuery({ queryKey[';';order',orderId],"queryFn": async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res && res.ok) { throw new Error( 'Failed to fetch order')} return (await res && res.json())},"enabled": '!!orderI',d})}';`''
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQ
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"`
+import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQuery(orderId) { return useQuery({ queryKey[';';order',orderId],"queryFn": async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res && res.ok) { throw new Error( 'Failed to fetch order')} return (await res && res.json())},"enabled": '!!orderI',d})}';`''
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

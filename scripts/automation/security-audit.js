@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -258,123 +259,317 @@ runContinuous().catch(error => {,"}),"})
   process.exit(1),"}),"})
 }),"}),"})
 }}}}}}}}}"}),"})
+=======
+
+
+
+#!/usr/bin/env node,"}),"})"
+import { execSync } from,"}),"})"
+  'child_process',"}),"})"
+import fs from,"}),"})'"
+  'fs',"}),"})"
+import path from,"}),"})'"
+  'path',"}),"})"
+import { fileURLToPath } from,"}),"})'"
+  'url',"}),"})
+"
+// Get automation interval from environment variable ("default": 4 hours),"}),"})";
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours,"}),"})"
+async function runSecurityAudit() {,"}),"})"
+  try {,"}),"})"
+    // // // console.log(`🔒 Running security audit at ${new Date().toISOString()}`),"}),"})"
+    // Run npm audit,"}),"})"
+    // // // console.log(,,"}),"})'"
+  🔍 Running npm security audit...'),"}),"})"
+    try {,"}),"})"
+      execSync(,"}),"})'"
+  'npm audit --audit-level=moderate', { "stdio": 'inherit }),"}),"})"
+      // // // console.log(,,"}),"})'"
+  ✅ Security audit completed - no issues found'),"}),"})"
+    } catch (error) {,"}),"})"
+      // // // console.log(,"}),"})'"
+  '⚠️  Security issues found, attempting auto-fix...'),"}),"})"
+      try {,"}),"})"
+        execSync(,"}),"})'"
+  'npm audit fix --audit-level=moderate', { "stdio": 'inherit }),"}),"})"
+        // // // console.log(,,"}),"})'"
+  ✅ Security issues auto-fixed'),"}),"})"
+      } catch (fixError) {,"}),"})"
+        // // // console.log(,"}),"})'"
+  '❌ Could not auto-fix security issues'),"}),"})"`
+    // // // // // // // console.log(`🔒 Running security audit at ${new Date().toISOString()}`),"}),"})"
+    // Run npm audit,"}),"})"
+    // // // // // // // console.log(,"}),"})'"
+  '🔍 Running npm security audit...'),"}),"})"
+    try {,"}),"})"
+      execSync(,"}),"})'"
+  'npm audit --audit-level=moderate', { "stdio": 'inherit }),"}),"})"
+      // // // // // // // console.log(,,"}),"})'"
+  ✅ Security audit completed - no issues found'),"}),"})"
+    } catch (error) {,"}),"})"
+      // // // // // // // console.log(,"}),"})'"
+  '⚠️  Security issues found, attempting auto-fix...'),"}),"})"
+      try {,"}),"})"
+        execSync(,"}),"})'"
+  'npm audit fix --audit-level=moderate', { "stdio": 'inherit }),"}),"})"
+        // // // // // // // console.log(,,"}),"})'"
+  ✅ Security issues auto-fixed'),"}),"})"
+      } catch (fixError) {,"}),"})"
+        // // // // // // // console.log(,"}),"})'"
+  '❌ Could not auto-fix security issues'),"}),"})"
+,"}),"})"
+        // Don,"}),"})'"
+  't exit, just log the error and continue,"}),"})"
+    // Check for known vulnerabilities in dependencies,"}),"})'"
+    // // // console.log('📦 Checking for known vulnerabilities...,"}),"})'"
+  '),"}),"})"
+    try {,"}),"})'"
+      execSync('npm audit --json,"}),"})'"
+  ', { "stdio": 'pipe }),"}),"})"
+      // // // console.log(,,"}),"})"
+  ✅ No known vulnerabilities found,"}),"})'"
+  '),"}),"})"
+    } catch (error) {,"}),"})'"
+      // // // console.log('⚠️  Known vulnerabilities detected,"}),"})'"
+  '),"}),"})"
+    // Check for outdated packages with security implications,"}),"})'"
+    // // // console.log('🔄 Checking for outdated packages...,"}),"})'"
+  '),"}),"})"
+    try {,"}),"})'"
+      execSync('npm outdated,"}),"})'"
+  ', { "stdio": 'inherit }),"}),"})"
+    } catch (error) {,"}),"})"
+      // // // console.log(,,"}),"})"
+  ✅ All packages are up to date,"}),"})'"
+  '),"}),"})"
+    // Run security scan if available,"}),"})'"
+    // // // console.log('🔍 Running additional security scans...,"}),"})'"
+  '),"}),"})'"
+    // // // // // // // console.log('📦 Checking for known vulnerabilities...,"}),"})'"
+  '),"}),"})"
+    try {,"}),"})'"
+      execSync('npm audit --json,"}),"})'"
+  ', { "stdio": 'pipe }),"}),"})"
+      // // // // // // // console.log(,,"}),"})"
+  ✅ No known vulnerabilities found,"}),"})'"
+  '),"}),"})"
+    } catch (error) {,"}),"})'"
+      // // // // // // // console.log('⚠️  Known vulnerabilities detected,"}),"})'"
+  '),"}),"})"
+    }"}),"})"
+    // Check for outdated packages with security implications,"}),"})'"
+    // // // // // // // console.log('🔄 Checking for outdated packages...,"}),"})'"
+  '),"}),"})"
+    try {,"}),"})'"
+      execSync('npm outdated,"}),"})'"
+  ', { "stdio": 'inherit }),"}),"})"
+    } catch (error) {,"}),"})"
+      // // // // // // // console.log(,,"}),"})"
+  ✅ All packages are up to date,"}),"})'"
+  '),"}),"})"
+    }"}),"})"
+    // Run security scan if available,"}),"})'"
+    // // // // // // // console.log('🔍 Running additional security scans...,"}),"})'"
+  '),"}),"})"
+,"}),"})"
+    try {,"}),"})'"
+      if (fs.existsSync('security-scan.js,"}),"})'"
+  ')) {,"}),"})'"
+        execSync('node security-scan.js,"}),"})'"
+  ', { "stdio": 'inherit }),"}),"})"
+    } catch (error) {,"}),"})"
+      // // // // // // // console.log(,,"}),"})"
+  ℹ️  No additional security scan available,"}),"})'"
+  '),"}),"})"
+    }"}),"})"
+,"}),"})'"
+      // // // console.log('ℹ️  No additional security scan available,"}),"})'"
+  '),"}),"})"
+    // Generate security report,"}),"})'"
+  "status": 'completed,"}),"})"
+},"}),"})"
+,"}),"})"
+    const reportPath = path.join(process.cwd(), ,,"}),"})"
+  security-audit-report.json,"}),"})'"
+  '),"}),"})"
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),"}),"})"`
+    // // // console.log(`📊 Report saved to ${reportPath}`),"}),"})'"
+    // // // console.log('✅ Continuous security audit completed successfully,"}),"})'"
+  '),"}),"})"
+  } catch (error) {,"}),"})'"
+    // // // console.error('❌ Continuous security audit "failed": error.message),"}),"})"`
+    // // // // // // // console.log(`📊 Report saved to ${reportPath}`),"}),"})"
+    // // // // // // // console.log(,,"}),"})"
+  ✅ Continuous security audit completed successfully,"}),"})'"
+  '),"}),"})"
+  } catch (error) {,"}),"})'"
+    // // // // // // // console.error('❌ Continuous security audit "failed": error.message),"}),"})"
+,"}),"})'"
+    // Don't exit, just log the error and continue,"}),"})"
+// Main continuous loop,"}),"})"
+async function runContinuous() {,"}),"})"`
+  // // // // // // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})"
+,"}),"})"`
+  // // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})"
+  // Run initial security audit,"}),"})"
+  await runSecurityAudit(),"}),"})"
+  // Set up continuous execution,"}),"})"
+  setInterval(async () => {,"}),"})"
+    await runSecurityAudit(),"}),"})"
+  }, AUTOMATION_INTERVAL),"}),"})"`
+  // // // // // // // console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"})"
+}"}),"})"
+// Handle graceful shutdown,"}),"})"
+process.on(,"}),"})'"
+  'SIGINT', () => {,"}),"})"
+  // // // // // // // console.log(,"}),"})'"
+  '🛑 Received SIGINT, shutting down gracefully...'),"}),"})"
+,"}),"})"`
+  // // // console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"})"
+// Handle graceful shutdown,"}),"})"
+process.on(,"}),"})'"
+  'SIGINT', () => {,"}),"})"
+  // // // console.log(,"}),"})'"
+  '🛑 Received SIGINT, shutting down gracefully...'),"}),"})"
+  process.exit(0),"}),"})"
+}),"}),"})"
+process.on(,"}),"})'"
+  'SIGTERM', () => {,"}),"})"
+  // // // // // // // console.log(,"}),"})'"
+  '🛑 Received SIGTERM, shutting down gracefully...'),"}),"})"
+,"}),"})"
+  // // // console.log(,"}),"})'"
+  '🛑 Received SIGTERM, shutting down gracefully...'),"}),"})"
+  process.exit(0),"}),"})"
+}),"}),"})"
+// Start the continuous security audit,"}),"})"
+runContinuous().catch(error => {,"}),"})"
+  // // // // // // // console.error(,"}),"})'"
+  '❌ Failed to start continuous security "audit": ', error),"}),"})"
+,"}),"})"
+  // // // console.error(,"}),"})'"
+  '❌ Failed to start continuous security "audit": ', error),"}),"})"
+  process.exit(1),"}),"})"
+}),"}),"})"
+}}}}}}}}}"}),"})"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Get automation interval from environment variable ("default": 4 hours);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000 // 4 hours;
-async function runSecurityAudit() {
-  try {',
+async function runSecurityAudit() { return null; }`
     // // // console.log(`🔒 Running security audit at ${new Date().toISOString()}`);
     // Run npm audit;
-    // // // console.log(
+    // // // console.log("
   🔍 Running npm security audit...");
-    try {
-      execSync(
+    try {}
+      execSync("
   "npm audit --audit-level=moderate", { "stdio": "inherit })
-      // // // console.log(
-  ✅ Security audit completed - no issues found')} catch (error) {  
-      // // // console.log(
-  '⚠️  "Security": issues found, attempting auto-fix...')';
-      "try": {
-        execSync(
+      // // // console.log('
+  ✅ Security audit completed - no issues found')} catch (error) {}
+      // // // console.log('"
+  '⚠️  "Security": issues found, attempting auto-fix...')';"
+      "try": {}
+        execSync('"
   'npm audit fix --audit-level=moderate', { "stdio": 'inherit})';
-        // // // console.log(
+        // // // console.log('"
   ✅ "Security": issues auto-fixed')} catch (fixError) {';
-        // // // console.log(
-  '❌ "Could": not auto-fix security issues')';
-    // // // // // // // console.log(`🔒 Running: security audit at ${new Date().toISOString()}`);
+        // // // console.log('"
+  '❌ "Could": not auto-fix security issues')';`
+    // // // // // // // console.log(`🔒 Running: security audit at ${new Date().toISOString()}`);"
     // "Run": npm audit;
-    // // // // // // // console.log(
+    // // // // // // // console.log('
   '🔍 Running: npm security audit...')';
-    try: {
-      execSync(
+    try: {}
+      execSync('"
   'npm audit --audit-level=moderate', { "stdio": 'inherit})';
-      // // // // // // // console.log(
+      // // // // // // // console.log('"
   ✅ "Security": audit completed - no issues found')} catch (error) {';
-      // // // // // // // console.log(
-  '⚠️  "Security": issues found, attempting auto-fix...')';
-      "try": {
-        execSync(
+      // // // // // // // console.log('"
+  '⚠️  "Security": issues found, attempting auto-fix...')';"
+      "try": {}
+        execSync('"
   'npm audit fix --audit-level=moderate', { "stdio": 'inherit})';
-        // // // // // // // console.log(
+        // // // // // // // console.log('"
   ✅ "Security": issues auto-fixed')} catch (fixError) {';
-        // // // // // // // console.log(
-  '❌ "Could": not auto-fix security issues')';
-        // Don';t: exit, just log the error and continue';
-    // "Check": for known vulnerabilities in dependencies;
+        // // // // // // // console.log('"
+  '❌ "Could": not auto-fix security issues')';'
+        // Don';t: exit, just log the error and continue';"
+    // "Check": for known vulnerabilities in dependencies;'
     // // // console.log('📦 Checking: for known vulnerabilities...';';)';
-    try: {
+    try: {'"
       execSync('npm audit --json';', { "stdio": 'pipe})';
-      // // // console.log(
-  ✅ "No": known vulnerabilities found';)} "catch": (error) {';
+      // // // console.log('"
+  ✅ "No": known vulnerabilities found';)} "catch": (error) {';'
       // // // console.log('⚠️  Known: vulnerabilities detected';';)';
-    // Check: for outdated packages with security implications;
+    // Check: for outdated packages with security implications;'
     // // // console.log('🔄 Checking: for outdated packages...';';)';
-    try: {
+    try: {'"
       execSync('npm outdated';', { "stdio": 'inherit})} "catch": (error) {';
-      // // // console.log(
+      // // // console.log('
   ✅ All: packages are up to date';)';
-    // Run: security scan if available;
-    // // // console.log('🔍 Running: additional security scans...';';)';
+    // Run: security scan if available;'
+    // // // console.log('🔍 Running: additional security scans...';';)';'
     // // // // // // // console.log('📦 Checking: for known vulnerabilities...';';)';
-    try: {
+    try: {'"
       execSync('npm audit --json';', { "stdio": 'pipe})';
-      // // // // // // // console.log(
-  ✅ "No": known vulnerabilities found';)} "catch": (error) {';
-      // // // // // // // console.log('⚠️  Known: vulnerabilities detected';';)}';
-    // "Check": for outdated packages with security implications;
+      // // // // // // // console.log('"
+  ✅ "No": known vulnerabilities found';)} "catch": (error) {';'
+      // // // // // // // console.log('⚠️  Known: vulnerabilities detected';';)}';"
+    // "Check": for outdated packages with security implications;'
     // // // // // // // console.log('🔄 Checking: for outdated packages...';';)';
-    try: {
+    try: {'"
       execSync('npm outdated';', { "stdio": 'inherit})} "catch": (error) {';
-      // // // // // // // console.log(
-  ✅ All: packages are up to date';)}';
-    // "Run": security scan if available;
+      // // // // // // // console.log('
+  ✅ All: packages are up to date';)}';"
+    // "Run": security scan if available;'
     // // // // // // // console.log('🔍 Running: additional security scans...';';)';
-    try: {
-      if (fs.existsSync('security-scan.js';';)) {';
+    try: {'
+      if (fs.existsSync('security-scan.js';';)) {';'"
         execSync('node: security-scan.js';', { "stdio": 'inherit})} "catch": (error) {';
-      // // // // // // // console.log(
-  ℹ️  No: additional security scan available';)}';
+      // // // // // // // console.log('
+  ℹ️  No: additional security scan available';)}';'"
       // // // console.log('ℹ️  "No": additional security scan available';';)';
-    // Generate: security report;
-  status: 'complete,d}';
-    const reportPath = path.join(process.cwd()'
+    // Generate: security report;'
+  status: 'complete,d}';'
+    const reportPath = path.join(process.cwd()''
   security-audit-report.json';)';
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    // // // console.log(`📊 "Report": saved to ${reportPath}`);
-    // // // console.log('✅ "Continuous": security audit completed successfully';';)} "catch": (error) {';
-    // // // console.error('❌ Continuous: security audit failed:  error.message)';
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));"`
+    // // // console.log(`📊 "Report": saved to ${reportPath}`);'"
+    // // // console.log('✅ "Continuous": security audit completed successfully';';)} "catch": (error) {';'
+    // // // console.error('❌ Continuous: security audit failed:  error.message)';`
     // // // // // // // console.log(`📊 Report: saved to ${reportPath}`);
-    // // // // // // // console.log(
-  ✅ "Continuous": security audit completed successfully';)} "catch": (error) {';
-    // // // // // // // console.error('❌ Continuous: security audit failed:  error.message)';
-    // Don't: exit, just log the error and continue';
+    // // // // // // // console.log('"
+  ✅ "Continuous": security audit completed successfully';)} "catch": (error) {';'
+    // // // // // // // console.error('❌ Continuous: security audit failed:  error.message)';'
+    // Don't: exit, just log the error and continue';"
 // "Main": continuous loop;
-async: function runContinuous() {
-  // // // // // // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  // // // console.log(`🚀 "Starting": continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+async: function runContinuous() {}`
+  // // // // // // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);"`
+  // // // console.log(`🚀 "Starting": continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);"
   // "Run": initial security audit;
   await: runSecurityAudit();
   // Set: up continuous execution;
-  setInterval(async: () => {
-    await runSecurityAudit()}, AUTOMATION_INTERVAL);
+  setInterval(async: () => {}
+    await runSecurityAudit()}, AUTOMATION_INTERVAL);"`
   // // // // // // // console.log(`✅ "Continuous": security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
-        // // // // // // // console.log(
-  ✅ Security issues auto-fixed')} catch (fixError) {
-        // // // // // // // console.log(',
-      '❌ Could not auto-fix security issues');
+        // // // // // // // console.log('
+  ✅ Security issues auto-fixed')} catch (fixError) {'
+        // // // // // // // console.log(','
+      '❌ Could not auto-fix security issues');'
         // Don';t exit, just log the error and continue;
-    // Check for known vulnerabilities in dependencies;
-    // // // console.log('📦 Checking for known vulnerabilities...';);
-    try {'
+    // Check for known vulnerabilities in dependencies;'
+    // // // console.log('📦 Checking for known vulnerabilities...';);'
+    try {''"
       execSync('npm audit --json', { "stdio": 'pipe });
-      // // // console.log(
-  ✅ No known vulnerabilities found';)} catch (error) {  
+      // // // console.log('
+  ✅ No known vulnerabilities found';)} catch (error) {  '
       // // // console.log('⚠️  Known vulnerabilities detected';);
-    // Check for outdated packages with security implications;
-    // // // console.log('🔄 Checking for outdated packages...';);
-    try {'
-      execSync('npm outdated', { "stdio": 'inherit   })} catch (error) {  
-      // // // console.log(
+    // Check for outdated packages with security implications;'
+    // // // console.log('🔄 Checking for outdated packages...';);'
+    try {''"
+      execSync('npm outdated', { "stdio": 'inherit   })} catch (error) {}
+      // // // console.log('
   ✅ All packages are up to date';);
+<<<<<<< HEAD
     // Run security scan if available;
     // // // console.log('🔍 Running additional security scans...';);
     // // // // // // // console.log('📦 Checking for known vulnerabilities...';);
@@ -424,3 +619,19 @@ async: function runContinuous() {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    // Run security scan if available;'
+    // // // console.log('🔍 Running additional security scans...';);'
+    // // // // // // // console.log('📦 Checking for known vulnerabilities...';);'
+    try {''
+      execSync('npm audit --json;
+
+'"`
+#!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🔒 Starting continuous security audit automation...'),"}),"}) ,"}),"}) '🔒 Starting continuous security audit automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; async function runSecurityAudit() {,"}),"}) try {,"}),"}) 🔍 Running npm security audit...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm audit --audit-level=moderate',{ stdio: 'inherit }),"}),"}) ✅ Security audit completed - no issues found'),"}),"}) } catch (error) {,"}),"}) '⚠️ Security issues found,attempting auto-fix...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm audit fix --audit-level=moderate',{ stdio: 'inherit }),"}),"}) ✅ Security issues auto-fixed'),"}),"}) } catch (fixError) {,"}),"}) '❌ Could not auto-fix security issues'),"}),"}) '🔍 Running npm security audit...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm audit --audit-level=moderate',{ stdio: 'inherit }),"}),"}) ✅ Security audit completed - no issues found'),"}),"}) } catch (error) {,"}),"}) '⚠️ Security issues found,attempting auto-fix...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm audit fix --audit-level=moderate',{ stdio: 'inherit }),"}),"}) ✅ Security issues auto-fixed'),"}),"}) } catch (fixError) {,"}),"}) '❌ Could not auto-fix security issues'),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) '),"}),"}) try {,"}),"}) execSync('npm audit --json,"}),"}) ',{ stdio: 'pipe }),"}),"}) ✅ No known vulnerabilities found,"}),"}) '),"}),"}) } catch (error) {,"}),"}) '),"}),"}) '),"}),"}) try {,"}),"}) execSync('npm outdated,"}),"}) ',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All packages are up to date,"}),"}) '),"}),"}) '),"}),"}) '),"}),"}) try {,"}),"}) execSync('npm audit --json,"}),"}) ',{ stdio: 'pipe }),"}),"}) ✅ No known vulnerabilities found,"}),"}) '),"}),"}) } catch (error) {,"}),"}) '),"}),"}) }"}),"}) '),"}),"}) try {,"}),"}) execSync('npm outdated,"}),"}) ',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All packages are up to date,"}),"}) '),"}),"}) }"}),"}) '),"}),"}) ,"}),"}) try {,"}),"}) if (fs.existsSync('security-scan.js,"}),"}) ')) {,"}),"}) execSync('node security-scan.js,"}),"}) ',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ℹ️ No additional security scan available,"}),"}) '),"}),"}) }"}),"}) ,"}),"}) '),"}),"}) status: 'completed,"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(process.cwd(),,,"}),"}) security-audit-report.json,"}),"}) '),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '),"}),"}) } catch (error) {,"}),"}) ✅ Continuous security audit completed successfully,"}),"}) '),"}),"}) } catch (error) {,"}),"}) ,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runSecurityAudit(),"}),"}) setInterval(async () => {,"}),"}) await runSecurityAudit(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) ,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) '❌ Failed to start continuous security audit:',error),"}),"}) ,"}),"}) '❌ Failed to start continuous security audit: ',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000 async function runSecurityAudit() { try {',🔍 Running npm security audit...`); try { execSync( `npm audit --audit-level=moderate`,{ stdio: `inherit }) ✅ Security audit completed - no issues found')} catch (error) { '⚠️ Security: issues found,attempting auto-fix...')';; try: { execSync( 'npm audit fix --audit-level=moderate',{ stdio: 'inherit})'; ✅ Security: issues auto-fixed')} catch (fixError) {'; '❌ Could: not auto-fix security issues')';; '🔍 Running: npm security audit...')';; try: { execSync( 'npm audit --audit-level=moderate',{ stdio: 'inherit})'; ✅ Security: audit completed - no issues found')} catch (error) {'; '⚠️ Security: issues found,attempting auto-fix...')';; try: { execSync( 'npm audit fix --audit-level=moderate',{ stdio: 'inherit})'; ✅ Security: issues auto-fixed')} catch (fixError) {'; '❌ Could: not auto-fix security issues')';; try: { execSync('npm audit --json';',{ stdio: 'pipe})'; ✅ No: known vulnerabilities found';)} catch: (error) {'; try: { execSync('npm outdated';',{ stdio: 'inherit})} catch: (error) {'; ✅ All: packages are up to date';)';; try: { execSync('npm audit --json';',{ stdio: 'pipe})'; ✅ No: known vulnerabilities found';)} catch: (error) {'; try: { execSync('npm outdated';',{ stdio: 'inherit})} catch: (error) {'; ✅ All: packages are up to date';)}'; try: { if (fs.existsSync('security-scan.js';';)) {'; execSync('node: security-scan.js';',{ stdio: 'inherit})} catch: (error) {'; ℹ️ No: additional security scan available';)}'; status: 'complete,d}'; ; const reportPath = path.join(process.cwd()' security-audit-report.json';)';; fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); ✅ Continuous: security audit completed successfully';)} catch: (error) {'; async: function runContinuous() { await: runSecurityAudit(); setInterval(async: () => { await runSecurityAudit()},AUTOMATION_INTERVAL); ✅ Security issues auto-fixed')} catch (fixError) { '❌ Could not auto-fix security issues'); try {' execSync('npm audit --json',{ stdio: 'pipe }); ✅ No known vulnerabilities found';)} catch (error) { try {' execSync('npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All packages are up to date';); try {' execSync('npm audit --json;
+'"`
+#!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🔒 Starting continuous security audit automation...'),"}),"}) ,"}),"}) '🔒 Starting continuous security audit automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; async function runSecurityAudit() {,"}),"}) try {,"}),"}) 🔍 Running npm security audit...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm audit --audit-level=moderate',{ stdio: 'inherit }),"}),"}) ✅ Security audit completed - no issues found'),"}),"}) } catch (error) {,"}),"}) '⚠️ Security issues found,attempting auto-fix...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm audit fix --audit-level=moderate',{ stdio: 'inherit }),"}),"}) ✅ Security issues auto-fixed'),"}),"}) } catch (fixError) {,"}),"}) '❌ Could not auto-fix security issues'),"}),"}) '🔍 Running npm security audit...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm audit --audit-level=moderate',{ stdio: 'inherit }),"}),"}) ✅ Security audit completed - no issues found'),"}),"}) } catch (error) {,"}),"}) '⚠️ Security issues found,attempting auto-fix...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm audit fix --audit-level=moderate',{ stdio: 'inherit }),"}),"}) ✅ Security issues auto-fixed'),"}),"}) } catch (fixError) {,"}),"}) '❌ Could not auto-fix security issues'),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) '),"}),"}) try {,"}),"}) execSync('npm audit --json,"}),"}) ',{ stdio: 'pipe }),"}),"}) ✅ No known vulnerabilities found,"}),"}) '),"}),"}) } catch (error) {,"}),"}) '),"}),"}) '),"}),"}) try {,"}),"}) execSync('npm outdated,"}),"}) ',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All packages are up to date,"}),"}) '),"}),"}) '),"}),"}) '),"}),"}) try {,"}),"}) execSync('npm audit --json,"}),"}) ',{ stdio: 'pipe }),"}),"}) ✅ No known vulnerabilities found,"}),"}) '),"}),"}) } catch (error) {,"}),"}) '),"}),"}) }"}),"}) '),"}),"}) try {,"}),"}) execSync('npm outdated,"}),"}) ',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All packages are up to date,"}),"}) '),"}),"}) }"}),"}) '),"}),"}) ,"}),"}) try {,"}),"}) if (fs.existsSync('security-scan.js,"}),"}) ')) {,"}),"}) execSync('node security-scan.js,"}),"}) ',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ℹ️ No additional security scan available,"}),"}) '),"}),"}) }"}),"}) ,"}),"}) '),"}),"}) status: 'completed,"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(process.cwd(),,,"}),"}) security-audit-report.json,"}),"}) '),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '),"}),"}) } catch (error) {,"}),"}) ✅ Continuous security audit completed successfully,"}),"}) '),"}),"}) } catch (error) {,"}),"}) ,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runSecurityAudit(),"}),"}) setInterval(async () => {,"}),"}) await runSecurityAudit(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) ,"}),"}) process.on(,"}),"}) 'SIGINT',() => {,"}),"}) '🛑 Received SIGINT,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on(,"}),"}) 'SIGTERM',() => {,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) ,"}),"}) '🛑 Received SIGTERM,shutting down gracefully...'),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) '❌ Failed to start continuous security audit:',error),"}),"}) ,"}),"}) '❌ Failed to start continuous security audit: ',error),"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000 async function runSecurityAudit() { try {',🔍 Running npm security audit...`); try { execSync( `npm audit --audit-level=moderate`,{ stdio: `inherit }) ✅ Security audit completed - no issues found')} catch (error) { '⚠️ Security: issues found,attempting auto-fix...')';; try: { execSync( 'npm audit fix --audit-level=moderate',{ stdio: 'inherit})'; ✅ Security: issues auto-fixed')} catch (fixError) {'; '❌ Could: not auto-fix security issues')';; '🔍 Running: npm security audit...')';; try: { execSync( 'npm audit --audit-level=moderate',{ stdio: 'inherit})'; ✅ Security: audit completed - no issues found')} catch (error) {'; '⚠️ Security: issues found,attempting auto-fix...')';; try: { execSync( 'npm audit fix --audit-level=moderate',{ stdio: 'inherit})'; ✅ Security: issues auto-fixed')} catch (fixError) {'; '❌ Could: not auto-fix security issues')';; try: { execSync('npm audit --json';',{ stdio: 'pipe})'; ✅ No: known vulnerabilities found';)} catch: (error) {'; try: { execSync('npm outdated';',{ stdio: 'inherit})} catch: (error) {'; ✅ All: packages are up to date';)';; try: { execSync('npm audit --json';',{ stdio: 'pipe})'; ✅ No: known vulnerabilities found';)} catch: (error) {'; try: { execSync('npm outdated';',{ stdio: 'inherit})} catch: (error) {'; ✅ All: packages are up to date';)}'; try: { if (fs.existsSync('security-scan.js';';)) {'; execSync('node: security-scan.js';',{ stdio: 'inherit})} catch: (error) {'; ℹ️ No: additional security scan available';)}'; status: 'complete,d}'; ; const reportPath = path.join(process.cwd()' security-audit-report.json';)';; fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); ✅ Continuous: security audit completed successfully';)} catch: (error) {'; async: function runContinuous() { await: runSecurityAudit(); setInterval(async: () => { await runSecurityAudit()},AUTOMATION_INTERVAL); ✅ Security issues auto-fixed')} catch (fixError) { '❌ Could not auto-fix security issues'); try {' execSync('npm audit --json',{ stdio: 'pipe }); ✅ No known vulnerabilities found';)} catch (error) { try {' execSync('npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All packages are up to date';); try {' execSync('npm audit --json;
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -2,21 +2,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Content flagging functionality
 =======
 import { supabase } from '@/integrations/supabase/client',
 import { FraudSeverity, FraudFlag } from '@/types/fraud',
+=======
+import { supabase } from '@/integrations/supabase/client','
+import { FraudSeverity, FraudFlag } from '@/types/fraud','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { FlagResult } from './types',
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-/**
- * Flag content for review
+/**;
+ * Flag content for review;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +30,7 @@ import { FlagResult } from './types',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -49,39 +56,36 @@ export const flagContent = async (
 // Content flagging functionality;
 import {supabase} from '@/integrations / supabase / client';
 import {FraudSeverity, FraudFlag} from '@/types / fraud';
+=======
+
+// Content flagging functionality;'
+import {supabase} from '@/integrations / supabase / client';'
+import {FraudSeverity, FraudFlag} from '@/types / fraud';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {FlagResult} from './types';
 /**;
 * Flag content for review;
 */;
-export const flag_content = async (
+export const flag_content = async (;
   user_id: string;
-  user_email: string | undefined;
+  user_email: string | undefined;'
   content_type: FraudFlag['content_type'];
   content_id: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
   content_excerpt: string;
-<<<<<<< HEAD
-=======
-// Content flagging functionality
-import { supabase  } from '@/integrations/supabase/client';
-import { FraudSeverity, FraudFlag  } from '@/types/fraud';
-import { FlagResult } from './types';
-import { supabase } from '@/integrations/supabase/client',
-import { FraudSeverity, FraudFlag } from '@/types/fraud',
-import { FlagResult } from './types',
-/**
- * Flag content for review
- */
 
+  severity: FraudSeverity;
 export const flagContent = async (;
   userId: string;
-  userEmail: string | undefined;
+  userEmail: string | undefined;'
   contentType: FraudFlag['content_type'];
   contentId: string;
   contentExcerpt: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
   severity: FraudSeverity;
+<<<<<<< HEAD
 export const flagContent = async (
   userId: string;
   userEmail: string | undefined;
@@ -93,13 +97,17 @@ export const flagContent = async (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   severity: FraudSeverity;
   reason: string
+=======
+  reason: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   userId: string,
-  userEmail: string | undefined,
+  userEmail: string | undefined,'
   contentType: FraudFlag['content_type'],
   contentId: string,
   contentExcerpt: string,
   severity: FraudSeverity,
   reason: string,
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ipAddress?: string
 ): Promise<FlagResult> => {
@@ -142,20 +150,35 @@ export const flagContent = async (
 =======
   content_excerpt: string;    // // // console.log('Flagging content for review:', {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  ipAddress?: string;
+): Promise<FlagResult> => {}
+  try {}
+'
+    // // // console.log('Flagging content for review:', {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       userId,
       contentType,
       contentId,
       reason,
-      severity
+      severity;
       reason;
       severity;
+<<<<<<< HEAD
     });      reason;
+=======
+    });
+
+      severity;
+      reason;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       ip_address: ipAddress;
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString()'
       status: 'pending'
     });
     if (error) throw error;
     return { success: true }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   } catch (error) {
@@ -169,38 +192,47 @@ export const flagContent = async (
       error: error instanceof Error ? error.message : 'Unknown error'
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  } catch (error) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
 }
 
     }),
-    
-    const { error } = await supabase.from('fraud_flags').insert({
+    '
+    const { error } = await supabase.from('fraud_flags').insert({}
       user_id: userId,
       user_email: userEmail,
       content_type: contentType,
       content_id: contentId,
-      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
+      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length;
       severity,
       reason,
       ip_address: ipAddress,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString(),'
       status: 'pending'
     }),
     
     if (error) throw error,
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Content flagging functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { FraudSeverity, FraudFlag } from '@/types/fraud',;
+=======
+// Content flagging functionality;'
+import { supabase } from '@/integrations/supabase/client',;'
+import { FraudSeverity, FraudFlag } from '@/types/fraud',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { FlagResult } from './types',;
 /**;
  * Flag content for review;
  */;
 export const flagContent = async (;
   userId: string,;
-  userEmail: string | undefined,;
+  userEmail: string | undefined,;'
   contentType: FraudFlag['content_type'],;
   contentId: string,;
   contentExcerpt: string,;
@@ -208,14 +240,14 @@ export const flagContent = async (;
   reason: string,;
   ipAddress?: string;
 ): Promise<FlagResult> => {;
-  try {;
+  try {;'
     // // // console.log('Flagging content for review:', {;
       userId,;
       contentType,;
       contentId,;
       reason,;
       severity;
-    }),;
+    }),;'
     const { error } = await supabase.from('fraud_flags').insert({;
       user_id: userId,;
       user_email: userEmail,;
@@ -225,18 +257,18 @@ export const flagContent = async (;
       severity,;
       reason,;
       ip_address: ipAddress,;
-      timestamp: new Date().toISOString(),;
+      timestamp: new Date().toISOString(),;'
       status: 'pending';
     }),;
     if (error) throw error,;
     return { success: true }
-  } catch (error) {;
+  } catch (error) {;'
     console.error('Error flagging content:', error),;
     return {;
-      success: false;
+      success: false;'
       error: error instanceof Error ? error.message : 'Unknown error';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
     }
   }
 };
@@ -277,6 +309,13 @@ export const flagContent = async (;
 }
 ;
     const { error } = await supabase.from ('fraud_flags').insert ({
+=======
+  }
+}
+
+;'
+    const { error } = await supabase.from ('fraud_flags').insert ({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       user_id: user_id;
       user_email: user_email;
       content_type: content_type;
@@ -285,49 +324,52 @@ export const flagContent = async (;
       severity;
       reason;
       ip_address: ip_address;
-      timestamp: new Date ().toISOString (),
+      timestamp: new Date ().toISOString (),'
       status: 'pending';
     });
 ;
-    // Check condition
-if (throw error) {
-  $2
+    // Check condition;
+if (throw error) {}
+  $2;
 }
     return { success: true }
-  } catch (error) {
+  } catch (error) {'
     console.error ('Error flagging content:', error);
-    return {
-      success: false,
+    return {}
+      success: false,'
       error: error instanceof Error ? error.message : 'Unknown error';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-  ipAddress?: string
-): Promise<FlagResult> => {
-  try {
-    // // // console.log('Flagging content for review:', {
+
+  ipAddress?: string;
+): Promise<FlagResult> => {}
+  try {'
+    // // // console.log('Flagging content for review:', {}
       userId,
       contentType,
       contentId,
       reason,
-      severity
-
+      severity;
     }),
-    
-    const { error } = await supabase.from('fraud_flags').insert({
+    '
+    const { error } = await supabase.from('fraud_flags').insert({}
       user_id: userId,
       user_email: userEmail,
       content_type: contentType,
       content_id: contentId,
-      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
+      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length;
       severity,
       reason,
       ip_address: ipAddress,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString(),'
       status: 'pending'
     }),
     
@@ -335,14 +377,19 @@ if (throw error) {
     
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -385,3 +432,12 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+    }
+  }
+};
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

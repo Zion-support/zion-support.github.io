@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
@@ -39,13 +40,28 @@ import type { AppProps } from 'next/app'; import '../styles/globals.css'; export
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
+=======
 
-import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
-const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
-import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
+const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"';
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}''
+</Component>'';
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}''
 </Component>'
-<<<<<<< HEAD
 
+';
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}''
+</Component>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+';
+import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'";
+const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"';
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}''
+</Component>'
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -60,3 +76,7 @@ import type { AppProps } from 'next/app'; import '../styles/globals.css'; export
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

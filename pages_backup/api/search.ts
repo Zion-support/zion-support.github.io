@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/search.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -5,37 +6,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/search.ts
 
 
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import type { AccessLevel } from '../../utils/search/filter';
-import { parseQueryToFilters } from '../../utils/search/parser';
-import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {;
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { AccessLevel } from '../../utils/search/filter';
-import { parseQueryToFilters } from '../../utils/search/parser';
-import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
-export default async function handler(req, res) {
-  try {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    const q = (req.query.q as string) || '';
+    const q = (req.query.q as string) || '';'
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
-import type { NextApiRequest, NextApiResponse } from "next";
-import type { AccessLevel } from "../../utils/search/filter";
-import { parseQueryToFilters } from "../../utils/search/parser";
+import type { NextApiRequest, NextApiResponse } from "next";"
+import type { AccessLevel } from "../../utils/search/filter";"
+import { parseQueryToFilters } from "../../utils/search/parser";"
 import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
 
+<<<<<<< HEAD:pages_backup/api/search.ts
   try {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -43,26 +26,32 @@ import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const q = (req.query.q as string) || '';
+=======
+  try {}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  try {';
+    const q = (req.query.q as string) || '';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/search.ts
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])]));
     const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
-    res.status(200).json({
-      ok: true
-      query: q
-      parsed
-      keywords
-      didYouMean
-      counts: {
-        all: results.all.length
-        talent: results.talent.length
-        jobs: results.jobs.length
-        projects: results.projects.length
+    res.status(200).json({}
+      ok: true;
+      query: q;
+      parsed;
+      keywords;
+      didYouMean;
+      counts: {}
+        all: results.all.length;
+        talent: results.talent.length;
+        jobs: results.jobs.length;
+        projects: results.projects.length;
       }
-      results
-    const q = (req && req.query.q as string) || "";
-    const access = ((req && req.headers["x-access-level"] as string) ||
+      results"
+    const q = (req && req.query.q as string) || "";"
+    const access = ((req && req.headers["x-access-level"] as string) ||"
       "public") as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
@@ -70,39 +59,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       new Set([...(parsed && parsed.skills || []), ...(parsed && parsed.keywords || [])]),
     );
     const didYouMean = results && results.all.length === 0 ? suggestDidYouMean(q) : null;
-    res && res.status(200).json({
-import type { NextApiRequest, NextApiResponse } from './next';
-import type { AccessLevel } from "../../utils / search / filter";
-import { parseQueryToFilters  } from '../../utils / search / parser';
+    res && res.status(200).json({'
+import type { NextApiRequest, NextApiResponse } from './next';"
+import type { AccessLevel } from "../../utils / search / filter";'
+import { parseQueryToFilters  } from '../../utils / search / parser';'
 import { search_all, suggestDidYouMean  } from '../../utils / search / filter';
 ;
-export default async /**
- * handler - Function description
+export default async /**;
+ * handler - Function description;
  */
-function handler() {
-  try {
-    const q = (req.query.q as string) || "";
-    const access = ((req.headers["x - access - level"] as string) ||;
+function handler() {}
+  try {"
+    const q = (req.query.q as string) || "";"
+    const access = ((req.headers["x - access - level"] as string) ||;"
       "public") as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    const keywords = Array.from(
-      new Set([...(parsed.skills || []), ...(parsed.keywords || [])]),
-    );
-    const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
-
-    res.status(200).json({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ok: true,
       query: q,
       parsed,
       keywords,
       didYouMean,
+<<<<<<< HEAD:pages_backup/api/search.ts
       counts: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,54 +116,43 @@ function handler() {
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-    res.status(500).json({ ok: false, error: e?.message |"Search failed" });
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      counts: {}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/search.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import type { AccessLevel } from '../../utils/search/filter';
-import { parseQueryToFilters } from '../../utils/search/parser';
-import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {;
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { AccessLevel } from '../../utils/search/filter';
-import { parseQueryToFilters } from '../../utils/search/parser';
-import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
-export default async function handler(req, res) {
-  try {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-    const q = (req.query.q as string) || '';
+'
+    const q = (req.query.q as string) || '';'
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
+<<<<<<< HEAD:pages_backup/api/search.ts
 =======
 <<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { AccessLevel } from "../../utils/search/filter";
 import { parseQueryToFilters } from "../../utils/search/parser";
+=======
+"
+import type { NextApiRequest, NextApiResponse } from "next";"
+import type { AccessLevel } from "../../utils/search/filter";"
+import { parseQueryToFilters } from "../../utils/search/parser";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/search.ts
 import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
-  try {
-    const q = (req.query.q as string) || "";
-    const access = ((req.headers["x-access-level"] as string) ||
+) {}
+  try {";
+    const q = (req.query.q as string) || "";"
+    const access = ((req.headers["x-access-level"] as string) ||"
       "public") as AccessLevel;
->>>>>>> main
+
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+<<<<<<< HEAD:pages_backup/api/search.ts
   }
 }
 =======
@@ -219,20 +187,23 @@ export default async function handler(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/search.ts
     res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
+
+
+'
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    const q = (req.query.q as string) || '';
+
+'
+    const q = (req.query.q as string) || '';'
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
@@ -240,6 +211,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
+<<<<<<< HEAD:pages_backup/api/search.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -310,14 +282,20 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
+=======
+
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/search.ts
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+"
     res.status(500).json({ ok: false, error: e?.message || "Search failed" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/search.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -340,3 +318,9 @@ export default async function handler(
 
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/search.ts

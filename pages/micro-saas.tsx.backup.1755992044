@@ -1,12 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Card from '../components/ui/Card';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 
 export default function MicroSaasPage() {
   const detailedServices = [
     {
+<<<<<<< HEAD
 =======
       name: 'AI Content Generator Pro',
       tagline: 'Professional AI-powered content creation',
@@ -155,11 +160,15 @@ export default function MicroSaasPage() {
       ],
       popular: false,
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-d599
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       icon: '📊',
       color: 'from-rose-500 to-pink-600',
       textColor: 'text-rose-400',
       link: 'https://bi.zion.app',
       marketPosition: 'Competitive with Tableau ($70-70), Power BI ($9.99-20), and Looker ($500-5000)',
+<<<<<<< HEAD
 <<<<<<< HEAD
       targetAudience: 'Data analysts, business intelligence teams, and executives'
     },
@@ -177,20 +186,28 @@ export default function MicroSaasPage() {
         'A/B testing automation',
         'Email template builder',
         'Analytics & reporting',
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         'GDPR compliance tools',
         'Integration with major CRMs'
       ],
       popular: false,
       icon: '📧',
+<<<<<<< HEAD
       color: 'from-blue-500 to-indigo-600',
       textColor: 'text-blue-400',
       link: 'https://emailstudio.zion.app',
       marketPosition: 'Competitive with Mailchimp ($13-350), ConvertKit ($29-59), and ActiveCampaign ($29-289)',
       targetAudience: 'Email marketers, e-commerce businesses, and marketing agencies'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Social Media Scheduler',
       tagline: 'Intelligent social media management',
+<<<<<<< HEAD
       price: '$29',
       period: '/month',
       description: 'Schedule, analyze, and optimize your social media presence across all platforms with AI insights.',
@@ -331,6 +348,9 @@ export default function MicroSaasPage() {
       link: 'https://inventory.zion.app',
       marketPosition: 'Competitive with TradeGecko ($39-199), Zoho Inventory ($119-299), and Fishbowl ($4,395)',
       targetAudience: 'Retail businesses, e-commerce stores, and warehouses'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -348,6 +368,7 @@ export default function MicroSaasPage() {
       opportunity: 'Our focused micro SaaS approach aligns with market preferences'
     },
     {
+<<<<<<< HEAD
       trend: 'Competitive Pricing',
       description: 'Price sensitivity is increasing as more SaaS options become available',
       impact: 'Competitive pricing is crucial for market penetration',
@@ -452,6 +473,9 @@ export default function MicroSaasPage() {
       title: '24/7 Support',
       description: 'Dedicated support team with average response time under 2 hours for all customers.',
       icon: '🎧'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -620,11 +644,16 @@ export default function MicroSaasPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Market Analysis Section */}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+<<<<<<< HEAD
                 Market Analysis & Industry Insights
               </h2>
               <p className="text-xl text-gray-400 max-w-4xl mx-auto">
@@ -693,6 +722,9 @@ export default function MicroSaasPage() {
                     <h3 className="text-xl font-bold text-white mb-4">{advantage.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{advantage.description}</p>
                   </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               ))}
             </div>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:components/contact.tsx.backup.1755991341.backup.1756001154
 ========
@@ -33,20 +34,27 @@ const Contact: NextPage = () => {
       </main>
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Component;
   );
 }
 =======
 <<<<<<< HEAD
 export default Component;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }
-=======
+
 import React from 'react';
 
 export default function ContactPage() {
@@ -57,9 +65,9 @@ export default function ContactPage() {
     </div>
   );
 }
-=======
+
 export default Contact;
-=======
+
 export default function Contact() {
   return (
     <div className="space-y-2">
@@ -68,10 +76,15 @@ export default function Contact() {
     </div>
   );
 }
-=======
+
 export default function Contact() {
   return <div>Contact Us</div>;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/develop-zion-trust-scoring-engine-7911
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

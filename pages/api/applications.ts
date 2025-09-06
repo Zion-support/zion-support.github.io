@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +17,13 @@ import { rateLimit } from '../../utils/rateLimit',;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;'
+import { v4 as uuidv4 } from 'uuid',;'
+import { readJsonFile, writeJsonFile } from '../../utils/db',;'
+import type { Application } from '../../utils/types',;'
+import { rateLimit } from '../../utils/rateLimit',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const FILE = 'applications.json',
 =======
 import { readJsonFile, writeJsonFile } from '../../utils/fileUtils';
@@ -25,15 +33,21 @@ import { rateLimit } from '../../utils/rateLimit';
 const FILE = 'data/applications.json';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   if (!rateLimit(req, res)) return,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   if (req.method === 'GET') {
+=======
+'
+  if (req.method === 'GET') {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const { jobId, talentSlug } = req.query,
     let apps = readJsonFile<Application[]>(FILE, []),
     if (jobId) apps = apps.filter((a) => a.jobId === String(jobId)),
     if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug)),
+<<<<<<< HEAD
     res.status(200).json({ applications: apps }),
 =======
 >>>>>>> pr-12243
@@ -86,18 +100,28 @@ if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
 <<<<<<< HEAD
     const { jobId, talentSlug, action } = req.body || {},
     if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
+=======
+    res.status(200).json({ applications: apps }),;
+    return;
+  }
+'
+  if (req.method === 'POST') {}
+    const { jobId, talentSlug, action } = req.body || {},'
+    if (!jobId || !talentSlug || !['applyskip'].includes(action)) {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       res.status(400).json({ error: 'Invalid request' }),
-      return
+      return;
     }
 
     const now = new Date().toISOString(),
     const apps = readJsonFile<Application[]>(FILE, []),
 
     const existing = apps.find((a) => a.jobId === jobId && a.talentSlug === talentSlug),
-    if (existing) {
+    if (existing) {'
       existing.status = action === 'apply' ? 'applied' : 'skipped',
       writeJsonFile<Application[]>(FILE, apps),
       res.status(200).json({ application: existing }),
+<<<<<<< HEAD
 =======
 >>>>>>> pr-12243
     const { jobId, talentSlug, action } = req.body || {}
@@ -150,15 +174,22 @@ return;
 
     const app: Application = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      return;
+    }
+
+    const app: Application = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       id: uuidv4(),
       jobId: String(jobId),
-      talentSlug: String(talentSlug),
+      talentSlug: String(talentSlug),'
       status: action === 'apply' ? 'applied' : 'skipped',
 <<<<<<< HEAD
       createdAtIso: now},
     apps.push(app),
     writeJsonFile<Application[]>(FILE, apps),
     res.status(201).json({ application: app }),
+<<<<<<< HEAD
 =======
 >>>>>>> pr-12243
       id: uuidv4()
@@ -196,3 +227,10 @@ return;
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    return;
+  }'
+  res.setHeader('AllowGET, POST')'
+  res.status(405).end('Method Not Allowed')
+};'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

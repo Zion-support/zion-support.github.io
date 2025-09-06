@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +28,23 @@ export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = tr
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/ModernUIEnhancer.jsx
 "export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";
+=======
+
+
+"export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";"
 export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-"export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";
+:src.disabled/components/ModernUIEnhancer.jsx'"
+"export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";"
 export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5'"
+"export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
+:temp_exclude/src.disabled/components/ModernUIEnhancer.jsx;
+'"
+"export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";"
+export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/ModernUIEnhancer.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,11 +67,17 @@ export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = tr
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
-"export": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ('auto') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ('desktop') const scrollToTopRef = useRef (null) ';"";""}
 =======
-"export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";
-export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
+'"
 "export": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ('auto') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ('desktop') const scrollToTopRef = useRef (null) ';"";""}
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+"export": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ('auto') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ('desktop') const scrollToTopRef = useRef (null) ';"";""}
+'"
+"export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";"
+export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""'"
+"export": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ('auto') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ('desktop') const scrollToTopRef = useRef (null) ';"";""}
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -75,3 +95,8 @@ export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = tr
 export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
 "export": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ('auto') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ('desktop') const scrollToTopRef = useRef (null) ';"";""}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

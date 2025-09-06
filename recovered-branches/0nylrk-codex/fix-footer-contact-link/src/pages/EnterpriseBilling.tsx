@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -98,10 +99,20 @@ import { Navigate } from "react-router-dom",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { Navigate } from "react-router-dom",import { SEO } from "@/components/SEO";
+=======
+import React from "react";"
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer";"
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";"
+import { useAuth } from "@/hooks/useAuth";"
+import { Navigate } from "react-router-dom";"
+import { SEO } from "@/components/SEO";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-export default function EnterpriseBilling() {
+export default function EnterpriseBilling() {};
   const { user } = useAuth();
 
+<<<<<<< HEAD
   // Check if user has billing permissions
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -315,8 +326,11 @@ export default function EnterpriseBilling() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
 
 
 =======
@@ -327,20 +341,21 @@ export default function EnterpriseBilling() {;
 }
   }
   return (
-import React from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { BillingDashboard } from '@/components / enterprise / billing / BillingDashboard';
-import { use_auth } from '@/hooks / use_auth';
-import { Navigate } from './react-router-dom';
-import { SEO } from '@/components / SEO';
+import React from './react';'
+import { Header } from '@/components / Header';'
+import { Footer } from '@/components / Footer';'
+import { BillingDashboard } from '@/components / enterprise / billing / BillingDashboard';'
+import { use_auth } from '@/hooks / use_auth';'
+import { Navigate } from './react-router-dom';'
+import { SEO } from '@/components / SEO';'
 import { ProtectedRoute } from '@/components / ProtectedRoute';
-export default /**
- * EnterpriseBilling - Function description
+export default /**;
+ * EnterpriseBilling - Function description;
  */
-function EnterpriseBilling() {
+function EnterpriseBilling() {}
   const { user } = use_auth ();
 ;
+<<<<<<< HEAD
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" ||;
                           (user?.permissions && user.permissions.includes ('billing_access'));
@@ -388,3 +403,9 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

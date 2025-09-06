@@ -5,17 +5,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 import {format} from 'date-fns';
+
+
 
 
 <<<<<<< HEAD
-=======
-import {format} from 'date-fns';
-
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { format } from 'date-fns';
 import {format} from 'date-fns';
@@ -31,14 +33,18 @@ import {format} from 'date-fns';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-/**
- * Formats a date for display in the referral system
- * @param date Date or string to format
- * @returns Formatted date string
- */
-export function formatDate(date: Date | string | undefined): string {
+=======
 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+/**
+ * Formats a date for display in the referral system;
+ * @param date Date or string to format;
+ * @returns Formatted date string;
+ */
+export function formatDate(date: Date | string | undefined): string {}
+'
   if (!date) return '-'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,6 +54,9 @@ export function formatDate(date: Date | string | undefined): string {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {format} from 'date - fns';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -58,6 +67,7 @@ import {format} from 'date - fns';
 * @param date Date or string to format;
 * @returns Formatted date string;
 */;
+<<<<<<< HEAD
 export function format_date (date: Date | string | undefined): string {
   // Check condition
 if (return '-', ) {
@@ -80,10 +90,25 @@ if (return '-', ) {
     // Check condition
 if ( {) {
   $2
+=======
+export function format_date (date: Date | string | undefined): string {}
+  // Check condition'
+if (return '-', ) {};
+  $2;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
+
+
+
+  try {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       return format (new Date (date), 'MMM d, yyyy');
-    }
+    }'
     return format (date, 'MMM d, yyyy');
+<<<<<<< HEAD
   } catch (e) {
 
   
@@ -100,10 +125,15 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (refCode) {
+=======
+  } catch (e) {}
+  if (refCode) {'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     localStorage && localStorage.setItem('referral_code', refCode);
-    // Remove it from URL to keep it clean
+    // Remove it from URL to keep it clean'
     url && url.searchParams.delete('ref');
     window && window.history.replaceState({}, document && document.title, url && url.toString());
+<<<<<<< HEAD
     return refCode
 <<<<<<< HEAD
   }
@@ -165,34 +195,18 @@ export function formatDate(date: Date | string | undefined): string {;
 =======
     console.error ('Error formatting date:', e);
     return '-';
+=======
+    return refCode;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }
 /**;
 
-<<<<<<< HEAD
-=======
-    return '-';
-  }
-=======
-  }
-  return localStorage.getItem('referral_code')
 }
-
-
-
-/**
- * Track referral when a user signs up
-* Stores referral code in local_storage when detected in URL;
-*/;
-export function checkUrlForReferralCode (): string | null {
-  // Check condition
-if (return null) {
-  $2
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-}
-  const url = new URL (window.location.href);
+  const url = new URL (window.location.href);'
   const ref_code = url.search_params.get ('ref');
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -255,12 +269,20 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  }'
+  return local_storage.get_item ('referral_code');
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /**;
 * Track referral when a user signs up;
 */;
-export async /**
- * track_referral - Function description
+export async /**;
+ * track_referral - Function description;
  */
+<<<<<<< HEAD
 function track_referral() {
   try {
 <<<<<<< HEAD
@@ -297,19 +319,20 @@ function track_referral() {
         ipAddress: '', // This will be captured by the server
 <<<<<<< HEAD
 <<<<<<< HEAD
-      })});
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    
-    if (response && response.ok) {
-
-      // Clear the stored referral code
-
 =======
-    if (response && response.ok) {
-      // Clear the stored referral code
-
+function track_referral() {}
+  try {}
+    // Call API to record the referral'
+    const response = await fetch('/api/track-referral', {'
+      method: 'POST'
+      headers: {}
+        refCode;
+        userId;
+        email'
+        ipAddress: '', // This will be captured by the server;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      })});
+'
       localStorage.removeItem('referral_code')
 
 <<<<<<< HEAD
@@ -321,64 +344,52 @@ function track_referral() {
     console && console.error('Error tracking referral:', error)
 =======
 
-    if (response.ok) {
-      // Clear the stored referral code
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      localStorage.removeItem('referral_code')
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 /**;
  * Track referral when a user signs up;
  */;
-export async function trackReferral(userId: string, email: string) {;
-  try {;
-    const refCode = localStorage.getItem('referral_code'),;
-    if (!refCode) return,;
-    // Call API to record the referral;
-    const response = await fetch('/api/track-referral', {;
-      method: 'POST',;
-      headers: {;
+export async function trackReferral() { return null; }
         'Content-Type': 'application/json'},;
       body: JSON.stringify({;
         refCode,;
         userId,;
-        email;
+        email;'
         ipAddress: '', // This will be captured by the server;
       })});
     if (response.ok) {;
-      // Clear the stored referral code;
-      localStorage.removeItem('referral_code');
+      // Clear the stored referral code;'
+      localStorage.removeItem('referral_code');'
       localStorage && localStorage.removeItem('referral_code')
     }
-  } catch (error) {
-    console && console.error('Error tracking referral:', error)
+  } catch (error) {'
+    console && console.error('Error tracking referral:', error)'
     const ref_code = local_storage.get_item ('referral_code');
-    // Check condition
-if (return, ) {
-  $2
+    // Check condition;
+if (return, ) {}
+  $2;
 }
-    // Call API to record the referral;
-    const response = await fetch ('/api / track - referral', {
+    // Call API to record the referral;'
+    const response = await fetch ('/api / track - referral', {'
       method: 'POST',
-      headers: {
+      headers: {'
         'Content - Type': 'application / json'}
-      body: JSON.stringify ({
+      body: JSON.stringify ({}
         ref_code;
         user_id;
-        email,
+        email,'
         ip_address: '', // This will be captured by the server;
       })});
 ;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      // Clear the stored referral code;
+      // Clear the stored referral code;'
       local_storage.remove_item ('referral_code');
     }
-  } catch (error) {
+  } catch (error) {'
     console.error ('Error tracking referral:', error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -405,69 +416,65 @@ export function formatDate(date:Date | string | undefined):string {;
     return '-',;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }
 ;
 /**;
  * Stores referral code in localStorage when detected in URL;
  */;
-export function checkUrlForReferralCode():string | null {;
+export function checkUrlForReferralCode():string | null {;'
   if (typeof window === 'undefined') return null,;
   ;
-  const url = new URL(window.location.href),;
+  const url = new URL(window.location.href),;'
   const refCode = url.searchParams.get('ref'),;
   ;
-  if (refCode) {;
+  if (refCode) {;'
     localStorage.setItem('referral_code', refCode),;
-    // Remove it from URL to keep it clean;
+    // Remove it from URL to keep it clean;'
     url.searchParams.delete('ref'),;
     window.history.replaceState({}, document.title, url.toString()),;
     return refCode,;
   }
-  ;
+  ;'
   return localStorage.getItem('referral_code'),;
 }
 ;
 /**;
  * Track referral when a user signs up;
  */;
-export async function trackReferral(userId:string, email:string) {;
-  try {;
-    const refCode = localStorage.getItem('referral_code'),;
-    if (!refCode) return,;
-    ;
-    // Call API to record the referral;
-    const response = await fetch('/api/track-referral', {;
-      method:'POST',;
-      headers:{;
+export async function trackReferral() { return null; }
         'Content-Type':'application/json'},;
       body:JSON.stringify({;
         refCode,;
         userId,;
-        email,;
+        email,;'
         ipAddress:'', // This will be captured by the server;
       })}),;
     ;
     if (response.ok) {;
-      // Clear the stored referral code;
+      // Clear the stored referral code;'
       localStorage.removeItem('referral_code'),;
     }
-  } catch (error) {;
+  } catch (error) {;'
     console.error('Error tracking referral:', error),;
   }
 } /** * Formats a date for display in the referral system * @param date Date or string to format * @returns Formatted date string */ 
-}/** * Stores referral code in localStorage when detected in window.URL */ 
-}return localStorage.getItem ('referral code') 
-}/** * Track referral when a user signs up */ // Call API to record the referral const response = await fetch ('/api/track-referral', {
-  method: 'POST', headers: {
+}/** * Stores referral code in localStorage when detected in window.URL */ '
+}return localStorage.getItem ('referral code') '
+}/** * Track referral when a user signs up */ // Call API to record the referral const response = await fetch ('/api/track-referral', {'
+  method: 'POST', headers: {'
   'Content-Type': 'application/json' 
 };
 }
     }
-  } catch (error) {
+  } catch (error) {'
     console.error('Error tracking referral:', error)
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -478,3 +485,7 @@ export async function trackReferral(userId:string, email:string) {;
 =======
       })});
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
             // Simple conflict resolution - take the incoming change
 
 
@@ -6,6 +7,11 @@
             // Simple conflict resolution - take the incoming change
 
 main
+=======
+
+            // Simple conflict resolution - take the incoming change
+            const resolved = content.replace(/\n<<<<<<<[\s\S]*?[\s\S]*?>>>>>>>\n/g, '\n');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
             fs.writeFileSync(file, resolved);
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
@@ -120,6 +126,7 @@ if (require.main === module) {
   automator.run();
 }
 
+<<<<<<< HEAD
 module.exports = GitWorkflowAutomator;'
 
 module.exports = GitWorkflowAutomator;
@@ -129,6 +136,15 @@ module.exports = GitWorkflowAutomator;
 module.exports = GitWorkflowAutomator;'
 
 main
+=======
+
+
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"

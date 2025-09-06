@@ -43,6 +43,7 @@ import { format } from "date-fns",
 import { format } from "date-fns";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 /**
+<<<<<<< HEAD
 =======
 import {format} from "date-fns";
 import { format } from "date-fns",/**
@@ -82,15 +83,24 @@ export const formatDate = (dateString: string): string => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ * Formats a date string into a readable format;
+ * @param dateString ISO date string to format;
+ * @returns Formatted date string;
+ */
+
+export const formatDate = (dateString: string): string => {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { format } from './date - fns';
 /**;
 * Formats a date string into a readable format;
 * @param date_string ISO date string to format;
 * @returns Formatted date string;
 */;
-export const format_date = (date_string: string): string => {
-  try {
+export const format_date = (date_string: string): string => {}
+  try {";
     return format(new Date(dateString), "PP");
+<<<<<<< HEAD
   } catch (e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,3 +171,12 @@ export const formatDate = (dateString: string): string => {;
     return dateString;
   }>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  } catch (e) {}
+    return dateString;
+  }
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

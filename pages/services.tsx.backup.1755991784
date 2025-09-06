@@ -1,11 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
 import { motion } from 'framer-motion';
 import { ArrowRight as ArrowRightIcon } from 'lucide-react';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -104,7 +108,7 @@ export default function ServicesPage() {
   const getPopularServices = () => {
     return enhancedRealMicroSaasServices.filter(service => service.popular).slice(0, 6);
   };
-=======
+
 import { motion } from 'framer-motion';
 import { 
   Star, 
@@ -169,6 +173,7 @@ export default function ServicesPage() {
   };
 
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>Revolutionary Micro SAAS Services | Zion Tech Group</title>
@@ -253,6 +258,9 @@ export default function ServicesPage() {
                   </button>
                 </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
 
               {/* Contact Info */}
@@ -369,7 +377,7 @@ export default function ServicesPage() {
         </div>
       </div>
     </EnhancedFuturisticBackground>
-=======
+
       <div className="relative min-h-screen">
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden">
@@ -419,6 +427,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Category Filter */}
         <section className="py-12 bg-slate-800/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -657,5 +666,8 @@ export default function ServicesPage() {
         </section>
       </div>
     </>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages/api-disabled/api/learn/progress.ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
@@ -10,8 +11,23 @@ import path from 'path';
 =======
 import fs from 'fs';
 import path from 'path';
+=======
+import { NextApiRequest, NextApiResponse } from "next";"
+import fs from "fs";"
+import path from "path";
+"
+const usersPath = path.join(process.cwd(), "data", "users.json");
 
-function writeUsers(data: any) {
+function readUsers() {}
+  try {"
+    return JSON.parse(fs.readFileSync(usersPath, "utf8"));
+  } catch {}
+    return { users: [] };
+  }
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/progress.ts
+
+function writeUsers(data: any) {}
   fs.writeFileSync(usersPath, JSON.stringify(data, null, 2));
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -22,6 +38,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
+<<<<<<< HEAD:pages/api-disabled/api/learn/progress.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 <<<<<<< HEAD
@@ -82,43 +99,75 @@ export default function handler($2) {;
       const { userId } = req.query;
       const user = users.users.find((u: any) => u.id === userId);
       if (!user) {;
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  try {};
+    const users = readUsers();"
+    if (req.method === "GET") {}
+      const { userId } = req.query;
+      const user = users.users.find((u: any) => u.id === userId);
+      if (!user) {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/progress.ts
         return res.status(404).json({ error: "User not found" });
       }
       return res.status(200).json({ progress: user.progress || [] });
     }
+<<<<<<< HEAD:pages/api-disabled/api/learn/progress.ts
 ;
     if (req.method === "POST") {;
       const { userId, courseId, progress } = req.body;
       let user = users.users.find((u: any) => u.id === userId);
       if (!user) {;
+=======
+"
+    if (req.method === "POST") {}
+      const { userId, courseId, progress } = req.body;
+      let user = users.users.find((u: any) => u.id === userId);
+      if (!user) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/progress.ts
         user = { id: userId, progress: [] };
         users.users.push(user);
       }
       if (!user.progress) user.progress = [];
+<<<<<<< HEAD:pages/api-disabled/api/learn/progress.ts
       user.progress.push({;
         courseId;
         progress;
         updatedAt: new Date().toISOString()
+=======
+      user.progress.push({}
+        courseId,
+        progress,
+        updatedAt: new Date().toISOString(),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/progress.ts
       });
       writeUsers(users);
       return res.status(200).json({ success: true });
     }
+<<<<<<< HEAD:pages/api-disabled/api/learn/progress.ts
 ;
     res.setHeader("Allow", "GET, POST");
     return res.status(405).end("Method Not Allowed");
   } catch (e: any) {;
+=======
+"
+    res.setHeader("Allow", "GET, POST");"
+    return res.status(405).end("Method Not Allowed");
+  } catch (e: any) {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/progress.ts
     res.status(500).json({ error: e?.message ?? "Progress error" });
   }
 
-=======
+
 
 
 
 }
         course_progress.completed_lessons.push (lesson_id);
       }
-    if (req.method === 'GET') {;
+    if (req.method === 'GET') {;'
       const { userId = 'demo-user' } = req.query;
+<<<<<<< HEAD:pages/api-disabled/api/learn/progress.ts
       const user = users[userId as string];
     if (req && req.method === 'POST') {;
       const {;
@@ -184,11 +233,28 @@ export default function handler($2) {;
       if (typeof percent === 'number') {;
         courseProgress.percent = Math.max(courseProgress.percent, percent);
       }
+=======
+
+
+
+
+      const user = users[userId as string];'
+    if (req && req.method === 'POST') {}
+      const {'
+        userId = 'demo-user',
+        courseId,
+        lessonId,
+        percent,
+      } = req && req.body || {};
+      if (!courseId)
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/progress.ts
       user.progress[courseId] = courseProgress;
       users[userId] = user;
       writeUsers(users);
       return res.status(200).json({ ok: true, progress: courseProgress });
     }
+<<<<<<< HEAD:pages/api-disabled/api/learn/progress.ts
     res.setHeader('Allow', 'GET, POST');
     return res.status(405).end('Method Not Allowed');
 
@@ -361,6 +427,19 @@ export default function handler($2) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD:pages/api/learn/progress.ts
 =======
+=======
+'
+    res.setHeader('Allow', 'GET, POST');'
+    return res.status(405).end('Method Not Allowed');
+
+
+  } catch (e: any) {}
+    return res;
+      .status(500)'
+      .json({ error: e?.message ?? 'Failed to handle progress' });
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/progress.ts
 
 
   }
@@ -369,9 +448,9 @@ export default function handler($2) {;
 }
         course_progress.completed_lessons.push (lesson_id);
       }
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
 <<<<<<< HEAD
 =======
@@ -379,10 +458,15 @@ if ( {) {
 
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+<<<<<<< HEAD:pages/api-disabled/api/learn/progress.ts
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:pages/api-disabled/api/learn/progress.ts
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/learn/progress.ts

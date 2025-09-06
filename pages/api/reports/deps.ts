@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     try {
@@ -28,10 +29,20 @@ if (req.method === 'POST') {
       const { dependencies, vulnerabilities, outdated } = req.body;
 >>>>>>> pr-12243
       const report = {
+=======
+
+
+    try {}
+      const { dependencies, vulnerabilities, outdated } = req && req.body;
+      
+
+      const report = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         dependencies: dependencies |[]
         vulnerabilities: vulnerabilities |[]
         outdated: outdated |[]
         generatedAt: new Date().toISOString()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       };
@@ -45,14 +56,20 @@ if (req.method === 'POST') {
 >>>>>>> pr-12243
     } catch (error) {
       return res.status(500).json({ error: 'Failed to update deps report' });
+=======
+
+    } catch (error) {'
+      return res && res.status(500).json({ error: 'Failed to update deps report' });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   }
 <<<<<<< HEAD
 
-
-  res && res.setHeader('Allow', 'GET, POST');
+'
+  res && res.setHeader('Allow', 'GET, POST');'
   res && res.status(405).end('Method Not Allowed');
 
+<<<<<<< HEAD
 
 
 
@@ -61,3 +78,12 @@ if (req.method === 'POST') {
   res.status(405).end('Method Not Allowed');
 }
 >>>>>>> pr-12243
+=======
+
+
+
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

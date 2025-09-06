@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
@@ -133,11 +134,15 @@ import Image from 'next/image'; // Import next/image;
 import React, { useState } from 'react'; // Import React and useState;
 
 export interface TalentCardProps {;
+=======
+export interface TalentCardProps {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   talent: TalentProfile;
   onViewProfile: (id: string) => void;
   onRequestHire: (talent: TalentProfile) => void;
   isSaved: boolean;
   onToggleSave: (id: string, isSaved: boolean) => void;
+<<<<<<< HEAD
   isAuthenticated: boolean;
 export interface TalentCardProps {;
   talent: TalentProfile,;
@@ -714,3 +719,6 @@ size='sm'
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  isAuthenticated: boolean;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

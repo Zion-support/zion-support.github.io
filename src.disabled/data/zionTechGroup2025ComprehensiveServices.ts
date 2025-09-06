@@ -1,20 +1,21 @@
-"export": interface ZionService {
+"export": interface ZionService {}
    id: string;
    title: string;
-   description: string;
+   description: string;"
    category,:  "Micro": SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';
-   price: string;
+   price: string;'
    billing: 'month' | 'year' | 'project' | 'hour';
    features: string[];
    benefits: string[];
    useCases: string[];
    targetAudience: string[];
-   contactInfo: {
+   contactInfo: {}
    mobile: string;
    email: string;
-   address: string;
-export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string} website: 'strin',g} ctaLabel: 'string: href: string: external?: boolean'} export: const zionTechGroup2025Services: ZionService[] = ['';,;
+   address: string;'
+export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string} website: 'strin',g} ctaLabel: 'string: href: string: external?: boolean'} export: const zionTechGroup2025Services: ZionService[] = ['';,;'"
    website: strin,g} "ctaLabel": string: href: string: external?: boolean} "export": const zionTechGroup2025Services: ZionService[] = ['',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,3 +64,12 @@ export: interface ZionService { id: string; title: string,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'
+export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string; website: strin,g} ctaLabel: string: href: string: external?: boolean} export: const zionTechGroup2025Services: ZionService[] = ['',
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

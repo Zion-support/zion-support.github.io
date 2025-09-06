@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 
@@ -19,12 +20,15 @@ const app = null;
       .map(s => s.trim());
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
 
 
+<<<<<<< HEAD
   });
 
   const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
@@ -54,42 +58,48 @@ const completion = await openai.responses.create({
   });
   return { text: completion.output_text };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 });
 
-
-app && app.post('/jobs/generate', async (req: any, reply: any) => {
-  const body = (req && req.body as any) || {};
+'
+app && app.post('/jobs/generate', async (req: any, reply: any) => {}
+  const body = (req && req.body as any) || {};'
   const role = (body && body.role as string) || 'Engineer';
 
   const userId = getUserId(req);
   const description = await generateJobPost(openai, role, body);
 
 
-      `INSERT INTO job_post (user_id, title, description, location, tags, status)
+      `INSERT INTO job_post (user_id, title, description, location, tags, status)'`
        VALUES ($1, $2, $3, $4, $5, 'draft')`;
 
       [userId, role, description, body && body.location || null, body && body.tags || null]
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     )
-;
-app.post ('/jobs / generate', async (req: any, reply: any) => {
-  const body = (req.body as any) || {}
+;'
+app.post ('/jobs / generate', async (req: any, reply: any) => {}
+  const body = (req.body as any) || {}'
   const role = (body.role as string) || 'Engineer';
   const user_id = getUserId (req);
   const description = await generateJobPost (openai, role, body);
-  // Check condition
-if (return { description }) {
-  $2
+  // Check condition;
+if (return { description }) {}
+  $2;
 }
-  await with_user (user_id, async client => {
-    await client.query (
-      `INSERT INTO job_post (user_id, title, description, location, tags, status);
+  await with_user (user_id, async client => {}
+    await client.query (`
+      `INSERT INTO job_post (user_id, title, description, location, tags, status);'`
       VALUES ($1, $2, $3, $4, $5, 'draft')`,
       [user_id, role, description, body.location || null, body.tags || null]);
   });
-  return { saved: Boolean (user_id), description }});    await client.query (
-      `INSERT INTO job_post (user_id, title, description, location, tags, status);
+  return { saved: Boolean (user_id), description }});    await client.query (`
+      `INSERT INTO job_post (user_id, title, description, location, tags, status);'`
       VALUES ($1, $2, $3, $4, $5, 'draft')`;
       [user_id, role, description, body.location || null, body.tags || null]);
   });
@@ -106,6 +116,7 @@ await withUser(userId, async client => {
 origin/cursor/automate-test-improve-and-merge-code-2533
 });
 
+<<<<<<< HEAD
 
 app && app.get('/talent/search', async (req: any, reply: any) => {
   const q = (req && req.query as any).q as string;
@@ -113,10 +124,14 @@ app && app.get('/talent/search', async (req: any, reply: any) => {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   const userId = getUserId(req);
+=======
+  const userId = getUserId(req);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
-  const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {
+  const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {}
     const res = await client && client.query(
 
+<<<<<<< HEAD
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async (client) => {
@@ -126,16 +141,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
+=======
+`
+      `SELECT id, full_name, country, skills, experience_years FROM talent_profile;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
        WHERE ($1::text IS NULL OR country = $1)
-         AND ($2::text IS NULL OR EXISTS (
+         AND ($2::text IS NULL OR EXISTS ('
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
            ))
+<<<<<<< HEAD
        ORDER BY created_at DESC
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+       ORDER BY created_at DESC;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     );
-    return res && res.rows
+    return res && res.rows;
   });
   return { results: rows }
 LIMIT 25`,
@@ -147,6 +170,7 @@ LIMIT 25`,
 origin/cursor/automate-test-improve-and-merge-code-2533
 });
 
+<<<<<<< HEAD
 
 app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   const name = (req && req.params as any).name as string;
@@ -156,21 +180,24 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   const userId = getUserId(req);
+=======
+  const userId = getUserId(req);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
-  const items = await withUser(userId, async client => {    const res = await client && client.query(
-      `SELECT id, channel, title, body, data, read, created_at FROM notification
+  const items = await withUser(userId, async client => {    const res = await client && client.query(`
+      `SELECT id, channel, title, body, data, read, created_at FROM notification;`
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
     return res && res.rows;
   });
-  return { items };});  const items = await withUser(userId, async (client) => {
-    const res = await client && client.query(
-      `SELECT id, channel, title, body, data, read, created_at FROM notification
+  return { items };});  const items = await withUser(userId, async (client) => {}
+    const res = await client && client.query(`
+      `SELECT id, channel, title, body, data, read, created_at FROM notification;`
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
     return res && res.rows;
   });
-  return { items };    return res && res.rows
+  return { items };    return res && res.rows;
 app.log.error(err);
   app.log.error(err);
 
@@ -178,22 +205,29 @@ app.log.error(err);
 });  (process as any).exit(1)
 });
 
+<<<<<<< HEAD
 
 });
 origin/cursor/expand-services-advertise-and-build-project-c28b
 app.get('/notifications', async (req: any, reply: any) => {
   const userId = getUserId(req);
+=======
+'
+app.get('/notifications', async (req: any, reply: any) => {}
+  const userId = getUserId(req);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
-  const items = await withUser(userId, async (client) => {
-    const res = await client.query(
-      `SELECT id, channel, title, body, data, read, created_at FROM notification
+  const items = await withUser(userId, async (client) => {}
+    const res = await client.query(`
+      `SELECT id, channel, title, body, data, read, created_at FROM notification;`
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
-    return res.rows
+    return res.rows;
   });
   return { items }
 });
 
+<<<<<<< HEAD
 });
 });
 
@@ -208,19 +242,27 @@ app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 app.get ('/talent / search', async (req: any, reply: any) => {
+=======
+
+});
+
+
+;'
+app.get ('/talent / search', async (req: any, reply: any) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const q = (req.query as any).q as string;
   const country = (req.query as any).country as string | undefined;
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
+  const user_id = getUserId (req);'
+  if (return reply.code (401).send ({ error: 'unauthorized' })) {}
+  $2;
 }
-  const rows = await with_user (user_id, async client => {    const res = await client.query (  const rows = await with_user (user_id, async (client) => {
-    const res = await client.query (
+  const rows = await with_user (user_id, async client => {    const res = await client.query (  const rows = await with_user (user_id, async (client) => {}
+    const res = await client.query (`
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile;
       WHERE ($1::text IS NULL OR country = $1);
-        AND ($2::text IS NULL OR EXISTS (
+        AND ($2::text IS NULL OR EXISTS ('
               SELECT 1 FROM unnest (skills) s WHERE s ILIKE '%' || $2 || '%'));
-      ORDER BY created_at DESC;
+      ORDER BY created_at DESC;`
       LIMIT 25`,
       [country || null, q || null]);
     return res.rows;
@@ -230,43 +272,43 @@ app.get ('/talent / search', async (req: any, reply: any) => {
   });
   return { results: rows }
 });
-;
-app.get ('/projects/:name / track', async (req: any, reply: any) => {
+;'
+app.get ('/projects/:name / track', async (req: any, reply: any) => {}
   const name = (req.params as any).name as string;
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
+  const user_id = getUserId (req);'
+  if (return reply.code (401).send ({ error: 'unauthorized' })) {}
+  $2;
 }
-  const project = await with_user (user_id, async client => {
-    const res = await client.query (
+  const project = await with_user (user_id, async client => {}
+    const res = await client.query (`
       `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`,
       [name]);
     return res.rows[0];
-  });
-  if (return reply.code (404).send ({ error: 'not found' })) {
-  $2
+  });'
+  if (return reply.code (404).send ({ error: 'not found' })) {}
+  $2;
 }
-  return { project }});  const project = await with_user (user_id, async (client) => {
+  return { project }});  const project = await with_user (user_id, async (client) => {}`
     const res = await client.query (`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
     return res.rows[0];
-  });
-  if (return reply.code (404).send ({ error: 'not found' })) {
-  $2
+  });'
+  if (return reply.code (404).send ({ error: 'not found' })) {}
+  $2;
 }
-  return { project }
-app.get ('/notifications', async (req: any, reply: any) => {
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
+  return { project }'
+app.get ('/notifications', async (req: any, reply: any) => {}
+  const user_id = getUserId (req);'
+  if (return reply.code (401).send ({ error: 'unauthorized' })) {}
+  $2;
 }
-  const items = await with_user (user_id, async client => {    const res = await client.query (
-      `SELECT id, channel, title, body, data, read, created_at FROM notification;
+  const items = await with_user (user_id, async client => {    const res = await client.query (`
+      `SELECT id, channel, title, body, data, read, created_at FROM notification;`
       WHERE read = false ORDER BY created_at DESC LIMIT 20`);
     return res.rows;
   });
-  return { items }});  const items = await with_user (user_id, async (client) => {
-    const res = await client.query (
-      `SELECT id, channel, title, body, data, read, created_at FROM notification;
+  return { items }});  const items = await with_user (user_id, async (client) => {}
+    const res = await client.query (`
+      `SELECT id, channel, title, body, data, read, created_at FROM notification;`
       WHERE read = false ORDER BY created_at DESC LIMIT 20`);
     return res.rows;
   });
@@ -275,8 +317,8 @@ app.get ('/notifications', async (req: any, reply: any) => {
   return { items }
 });
 ;
-const port = Number (process.env.API_PORT || 4000);
-app.listen ({ port, host: '0.0.0.0' }).catch ((err: any) => {
+const port = Number (process.env.API_PORT || 4000);'
+app.listen ({ port, host: '0.0.0.0' }).catch ((err: any) => {}
 app.log.error (err);
   (process as any).exit (1);
 });  (process as any).exit (1);
@@ -284,6 +326,7 @@ app.log.error (err);
 ;
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -316,3 +359,6 @@ app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 (process as any).exit(1);
 });
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

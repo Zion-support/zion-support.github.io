@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -26,26 +27,26 @@ import { cn } from &quot;@/lib / utils & quot;
 function Skeleton() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+function Skeleton({}
+  className;
+  ...props;
+}: React.HTMLAttributes<HTMLDivElement>) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div;
       className={cn (&quot;animate - pulse rounded - md bg - muted & quot;, class_name)}
 
 import { cn } from "@/lib/utils";
 ;
-function Skeleton({;
-  className,;
-  ...props;
-} React.HTMLAttributes<HTMLDivElement>) {;
-  return (;
-    <div;
+function Skeleton() { return null; }
       className={cn("animate-pulse rounded-md bg-muted", className)}
       {...props}
     />);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -88,3 +89,8 @@ function Skeleton({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

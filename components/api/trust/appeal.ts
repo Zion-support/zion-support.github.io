@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
+<<<<<<< HEAD
 pr-12243
 import type { TrustAppeal } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
@@ -53,11 +54,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!userId || !message) return res && res.status(400).json({ error: 'Missing userId or message' });
 pr-12243
   const appeal: TrustAppeal = {
+=======
+
+  const appeal: TrustAppeal = {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     userId;
     message;
     contactEmail;
     createdAt: new Date().toISOString()}
 
+<<<<<<< HEAD
 
   return res.status(200).json({ ok: true, appeal });
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -78,64 +84,85 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 pr-12243
 import type { TrustAppeal } from '../../../utils / types / trust';
+=======
+  try {'
+    await supabase && supabase.from('trust_appeals').insert(appeal)
+  } catch {}
+
+
+'
+import type { TrustAppeal } from '../../../utils / types / trust';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { supabase } from '../../../utils / supabase / client';
 ;
-export default async /**
- * handler - Function description
+export default async /**;
+ * handler - Function description;
  */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ('Allow', 'POST');
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.set_header ('Allow', 'POST');'
     return res.status (405).json ({ error: 'Method not allowed' });
   }
   const { user_id, message, contact_email } = req.body || {}
-  if (
-    return res.status (400).json ({ error: 'Missing user_id or message' })) {
-  $2
+  if ('
+    return res.status (400).json ({ error: 'Missing user_id or message' })) {}
+  $2;
 }
-  const appeal: TrustAppeal = {
+  const appeal: TrustAppeal = {}
     user_id,
     message,
     contact_email,
     created_at: new Date ().toISOString (),
   }
 ;
-  try {
+  try {'
     await supabase.from ('trust_appeals').insert (appeal);
   } catch {}
-  return res.status (200).json ({ ok: true, appeal });  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ('AllowPOST');
+  return res.status (200).json ({ ok: true, appeal });  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.set_header ('AllowPOST');'
     return res.status (405).json ({ error: 'Method not allowed' });
   }
-  const { user_id, message, contact_email } = req.body || {}
-  if (return res.status (400).json ({ error: 'Missing user_id or message' })) {
-  $2
+  const { user_id, message, contact_email } = req.body || {}'
+  if (return res.status (400).json ({ error: 'Missing user_id or message' })) {}
+  $2;
 }
-  const appeal: TrustAppeal = {
+  const appeal: TrustAppeal = {}
     user_id;
     message;
     contact_email;
     created_at: new Date ().toISOString ()}
 ;
-  try {
+  try {'
     await supabase.from ('trust_appeals').insert (appeal);
   } catch {}
 return res.status (200).json ({ ok: true, appeal });
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 return res.status(200).json({ ok: true, appeal });
 }
 
   return res.status(200).json({ ok: true, appeal });
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

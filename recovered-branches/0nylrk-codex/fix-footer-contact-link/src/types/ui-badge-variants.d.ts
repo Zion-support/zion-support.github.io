@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -92,3 +93,15 @@ declare type BadgeVariant =;
 =======
   | "info",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// Additional type declaration for the badge variants;
+declare type BadgeVariant =
+  | "default""
+  | "secondary""
+  | "destructive""
+  | "outline""
+  | "success""
+  | "warning""
+  | "info";
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

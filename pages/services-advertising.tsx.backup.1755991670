@@ -269,6 +269,7 @@ export default function ServicesAdvertisingPage() {
 				
 				<section className="space-y-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -288,10 +289,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://workspace.google.com/pricing')} (Gmail/Workspace), {ext('https://mailgun.com/pricing/')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ce67
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -312,10 +317,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.zendesk.com/pricing/')}, {ext('https://freshdesk.com/pricing')}, {ext('https://intercom.com/pricing')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ce67
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -336,10 +345,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.aftership.com/returns/pricing')}, {ext('https://www.loopreturns.com/pricing')}, {ext('https://www.returnly.com/')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ce67
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -360,10 +373,14 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://webflow.com/pricing')}, {ext('https://www.framer.com/pricing/')}, {ext('https://carrd.co/pricing')}</li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ce67
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
 				<section className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -420,6 +437,9 @@ export default function ServicesAdvertisingPage() {
 				
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ce67
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 				<div className="pt-4 text-slate-400 text-sm">See also: <a className="text-cyan-400 underline" href="/market-pricing">Market Pricing</a> for a broader list of benchmarks and links.</div>
 
 				{/* Latest Real Additions (concise) */}

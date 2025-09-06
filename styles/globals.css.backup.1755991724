@@ -194,11 +194,21 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
+<<<<<<< HEAD
   background-image:
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   background-image: 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
@@ -225,6 +235,7 @@ h3 {
   background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
   animation: quantumHolographic 20s ease-in-out infinite;
 /* Quantum Matrix Background */
+<<<<<<< HEAD
 body::after {
 <<<<<<< HEAD
 =======
@@ -258,6 +269,11 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   content: '';
   position: fixed;
   top: 0;
@@ -266,6 +282,7 @@ body::after {  content: '';
 =======
   position: fixed;
   top: 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
@@ -279,6 +296,13 @@ body::after {  content: '';
 =======
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   left: 0;
   right: 0;
   height: 2px;
@@ -402,6 +426,7 @@ body::after {  content: '';
 }
 
 .btn-futuristic:hover::before {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4782
@@ -409,6 +434,15 @@ body::after {  content: '';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   left: 0;
   width: 100%;
   height: 100%;

@@ -425,7 +425,7 @@ export default function HomePage() {
         </div>
       </footer>
     </UltraFuturisticBackground>
-=======
+
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: 'Real Micro SaaS Services',
       description: '48+ fully functional micro SaaS tools with real implementations, not just mockups.',
@@ -580,6 +580,7 @@ export default function HomePage() {
       color: 'text-green-400'
     },
     {
+<<<<<<< HEAD
       title: 'AI Services Market',
       value: '$200B+',
       description: 'Global AI services market size',
@@ -596,6 +597,9 @@ export default function HomePage() {
       value: '1000%+',
       description: 'Average return on investment',
       color: 'text-yellow-400'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -1622,6 +1626,7 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Technology Stack */}
         <section className="py-20 px-4 bg-gray-800/30">
           <div className="container mx-auto">
@@ -1661,10 +1666,14 @@ export default function HomePage() {
                   </AdvancedFuturisticCard>
                 </motion.div>
               ))}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Market Insights */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
@@ -1682,6 +1691,9 @@ export default function HomePage() {
                 Understanding the market dynamics and growth opportunities in the technology sector
               </p>
             </motion.div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {marketInsights.map((insight, index) => (

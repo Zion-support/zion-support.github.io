@@ -4,6 +4,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         content = content.replace(/
 
 <<<<<<< HEAD
@@ -120,14 +121,22 @@ function resolveContentConflicts() {
         let content = fs.readFileSync(file, 'utf8');
         
         // Remove conflict markers and keep main branch version
+=======
+        content = content.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Clean up any remaining conflict markers
+<<<<<<< HEAD
 <<<<<<< HEAD
         content = content.replace(/
         content = content.replace(/
 
 =======
+=======
+        content = content.replace(/
+        content = content.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
         // Write the cleaned content
@@ -165,6 +174,7 @@ function resolveAddAddConflicts() {
 
         // Remove conflict markers and keep both versions
 <<<<<<< HEAD
+<<<<<<< HEAD
         content = content.replace(/
           const parts = match.split('
 =======
@@ -181,3 +191,10 @@ function resolveAddAddConflicts() {
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+        content = content.replace(/
+          const parts = match.split('');
+          if (parts.length === 2) {
+            const headPart = parts[0].replace(/
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

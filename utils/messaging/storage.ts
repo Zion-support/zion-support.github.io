@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -162,6 +163,9 @@ export function createOrGetConversation(;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   body: string;
   link_url?: string;
   attachmentBase64?: string;
@@ -175,6 +179,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   is_deleted: boolean;
   deletedAtIso?: string;
   replyToId?: string;
+<<<<<<< HEAD
   reactions: Array<{
 <<<<<<< HEAD
 export interface Conversation {  }>;
@@ -191,12 +196,22 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   }>;
 }
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  reactions: Array<{}
+  }>;
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 export interface Conversation {;
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   id: string;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -207,7 +222,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   isMuted: boolean;
   createdAtIso: string;
   updatedAtIso: string;
-  metadata?: {
+  metadata?: {}
     title?: string;
     description?: string;
 <<<<<<< HEAD
@@ -215,6 +230,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     type?: 'direct' | 'group' | 'support' | 'project';
 
+<<<<<<< HEAD
     tags?: string[]
   }
 
@@ -222,23 +238,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tags?: string[],
   }
 origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface MessageThread {;
 
 
 }
-export interface MessageThread {
+export interface MessageThread {};
   id: string;
   conversation_id: string;
   rootMessageId: string;
   messages: string[]; // message IDs;
   createdAtIso: string;
 
+<<<<<<< HEAD
   updatedAtIso: string
 
 }
@@ -251,50 +274,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface MessageSearchResult {;
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+export interface MessageSearchResult {;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   message: Message;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   conversation: Conversation;
   highlights: string[];
 
-  relevanceScore: number
-
+  relevanceScore: number;
 }
-class MessagingStorage {
+class MessagingStorage {}
   private messages: Map<string, Message> = new Map();
   private conversations: Map<string, Conversation> = new Map();
   private threads: Map<string, MessageThread> = new Map();
-  private userConversations: Map<string, Set<string>> = new Map(); // userId -> conversationIds
-  private conversationMessages: Map<string, Set<string>> = new Map(); // conversationId -> messageIds
-  // Message methods
-  async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {
-    const newMessage: Message = {
-<<<<<<< HEAD
-=======
-
-      ...message,
-      id: `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
-      sentAtIso: new Date().toISOString(),
-      isRead: false,
-      isEdited: false,
-      isDeleted: false,
-      reactions: []
-    };
-
-    this && this.messages.set(newMessage && newMessage.id, newMessage);
-
-    // Update conversation
-    await this && this.updateConversationLastMessage(newMessage && newMessage.conversationId, newMessage && newMessage.id);
-
-    // Update user conversations
-    this && this.addToUserConversations(newMessage && newMessage.senderId, newMessage && newMessage.conversationId);
-    this && this.addToUserConversations(newMessage && newMessage.recipientId, newMessage && newMessage.conversationId);
-
-    // Add to conversation messages
-    this && this.addToConversationMessages(newMessage && newMessage.conversationId, newMessage && newMessage.id);
-
-
-    return newMessage;
+  private userConversations: Map<string, Set<string>> = new Map(); // userId -> conversationIds;
+  private conversationMessages: Map<string, Set<string>> = new Map(); // conversationId -> messageIds;
+  // Message methods'
+  async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {}
+    const newMessage: Message = {}
   }
+<<<<<<< HEAD
   async getMessage(id: string): Promise<Message | null> {
 
     return this.messages.get(id) |null
@@ -313,6 +317,13 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {}
+    if (!message) return null;
+    const updatedMessage = { ...message, ...updates }
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.messages.set(id, updatedMessage);
     const message = this && this.messages.get(id);
     if (!message) return null,
@@ -321,17 +332,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     this && this.messages.set(id, updatedMessage);
     return updatedMessage;
   }
-  async deleteMessage(id: string): Promise<boolean> {
+  async deleteMessage(id: string): Promise<boolean> {}
     const message = this && this.messages.get(id);
     if (!message) return false;
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
     message.deletedAtIso = new Date().toISOString()
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.messages.set(id, message);
 
     message && message.isDeleted = true;
@@ -339,6 +351,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     this && this.messages.set(id, message);
     return true;
   }
+<<<<<<< HEAD
   async markAsRead(id: string): Promise<boolean> {
 <<<<<<< HEAD
 =======
@@ -348,6 +361,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  async markAsRead(id: string): Promise<boolean> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
     if (!message || message && message.isRead) return false;
@@ -357,6 +373,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     this && this.messages.set(id, message);
     return true;
   }
+<<<<<<< HEAD
   async markAsUnread(id: string): Promise<boolean> {
 <<<<<<< HEAD
 =======
@@ -366,6 +383,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  async markAsUnread(id: string): Promise<boolean> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
     if (!message || !message && message.isRead) return false;
@@ -375,9 +395,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     this && this.messages.set(id, message);
     return true;
   }
-  async addReaction(messageId: string, userId: string, emoji: string): Promise<boolean> {
+  async addReaction(messageId: string, userId: string, emoji: string): Promise<boolean> {}
     const message = this && this.messages.get(messageId);
     if (!message) return false;
+<<<<<<< HEAD
     // Remove existing reaction from this user
 <<<<<<< HEAD
 =======
@@ -399,24 +420,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+    // Remove existing reaction from this user;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return true;
   }
-  async removeReaction(messageId: string, userId: string): Promise<boolean> {
+  async removeReaction(messageId: string, userId: string): Promise<boolean> {}
     const message = this && this.messages.get(messageId);
     if (!message) return false;
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
     message.reactions = message.reactions.filter(r => r.userId !== userId)
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.messages.set(messageId, message);
     message && message.reactions = message && message.reactions.filter(r => r && r.userId !== userId),
     this && this.messages.set(messageId, message);
     return true;
   }
+<<<<<<< HEAD
   // Conversation methods
   async createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
     const newConversation: Conversation = {
@@ -466,10 +492,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const updatedConversation = {
       ...conversation
       ...updates
-      updatedAtIso: new Date().toISOString()
-<<<<<<< HEAD
 =======
+  // Conversation methods'
+  async createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {}
+    const newConversation: Conversation = {}
+    }
+    return newConversation;
+  }
+  async getConversation(id: string): Promise<Conversation | null> {}
+  }
+  async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {}
+    const conversation = this && this.conversations.get(id);
+    if (!conversation) return null,
 
+
+
+
+    if (!conversation) return null;
+    const updatedConversation = {}
+      ...conversation;
+      ...updates;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      updatedAtIso: new Date().toISOString()
+
+<<<<<<< HEAD
     };
 
     this && this.conversations.set(id, updatedConversation);
@@ -517,10 +563,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+    // Remove from user conversations;
+    for (const participantId of conversation && conversation.participants) {}
+      this && this.removeFromUserConversations(participantId, id);
+    }
+    // Delete all messages in this conversation;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
-  async archiveConversation(id: string): Promise<boolean> {
+  async archiveConversation(id: string): Promise<boolean> {}
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -535,6 +589,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.conversations.set(id, conversation);
 
     conversation && conversation.isArchived = true;
@@ -542,9 +599,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     this && this.conversations.set(id, conversation);
     return true;
   }
-  async unarchiveConversation(id: string): Promise<boolean> {
+  async unarchiveConversation(id: string): Promise<boolean> {}
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -559,6 +617,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.conversations.set(id, conversation);
 
     conversation && conversation.isArchived = false;
@@ -566,9 +627,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     this && this.conversations.set(id, conversation);
     return true;
   }
-  async muteConversation(id: string): Promise<boolean> {
+  async muteConversation(id: string): Promise<boolean> {}
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -583,6 +645,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.conversations.set(id, conversation);
 
     conversation && conversation.isMuted = true;
@@ -590,9 +655,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     this && this.conversations.set(id, conversation);
     return true;
   }
-  async unmuteConversation(id: string): Promise<boolean> {
+  async unmuteConversation(id: string): Promise<boolean> {}
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -607,6 +673,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.conversations.set(id, conversation);
 
     conversation && conversation.isMuted = false;
@@ -614,6 +683,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     this && this.conversations.set(id, conversation);
     return true;
   }
+<<<<<<< HEAD
   // Query methods
   async getMessagesByConversation(conversationId: string, limit: number = 50, offset: number = 0): Promise<Message[]> {
 <<<<<<< HEAD
@@ -631,16 +701,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const sortedIds = Array.from(messageIds).sort((a, b) => {
+=======
+  // Query methods;
+  async getMessagesByConversation(conversationId: string, limit: number = 50, offset: number = 0): Promise<Message[]> {}
+    const sortedIds = Array.from(messageIds).sort((a, b) => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const msgA = this.messages.get(a);
       const msgB = this.messages.get(b);
       if (!msgA |!msgB) return 0;
       return new Date(msgA.sentAtIso).getTime() - new Date(msgB.sentAtIso).getTime();
     });
     const paginatedIds = sortedIds.slice(offset, offset + limit);
-    return paginatedIds
+    return paginatedIds;
       .map(id => this && this.messages.get(id))
       .filter((msg): msg is Message => msg !== undefined);
   }
+<<<<<<< HEAD
   async getConversationsByUser(userId: string, includeArchived: boolean = false): Promise<Conversation[]> {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -663,6 +739,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  async getConversationsByUser(userId: string, includeArchived: boolean = false): Promise<Conversation[]> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     return conversations.sort((a, b) =>
       new Date(b.lastMessageAtIso).getTime() - new Date(a.lastMessageAtIso).getTime()
@@ -673,6 +752,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       new Date(b && b.lastMessageAtIso).getTime() - new Date(a && a.lastMessageAtIso).getTime()
     );
   }
+<<<<<<< HEAD
   async getUnreadMessageCount(userId: string): Promise<number> {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -694,21 +774,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  async getUnreadMessageCount(userId: string): Promise<number> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const messageIds = this && this.conversationMessages.get(conversationId) || new Set();
-      for (const messageId of messageIds) {
+      for (const messageId of messageIds) {}
         const message = this && this.messages.get(messageId);
+<<<<<<< HEAD
         if (message && message.recipientId === userId && !message && message.isRead) {
+=======
+        if (message && message.recipientId === userId && !message && message.isRead) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   relevance_score: number,
 }
-class MessagingStorage {
+class MessagingStorage {}
   private messages: Map < string, Message> = new Map ();
   private conversations: Map < string, Conversation> = new Map ();
   private threads: Map < string, MessageThread> = new Map ();
   private user_conversations: Map < string, Set < string>> = new Map (); // user_id -> conversation_ids;
   private conversation_messages: Map < string, Set < string>> = new Map (); // conversation_id -> message_ids;
-  // Message methods;
-  async create_message (message: Omit < Message, 'id' | 'sentAtIso' | 'is_read' | 'is_edited' | 'is_deleted' | 'reactions'>): Promise < Message> {
-    const new_message: Message = {
+  // Message methods;'
+  async create_message (message: Omit < Message, 'id' | 'sentAtIso' | 'is_read' | 'is_edited' | 'is_deleted' | 'reactions'>): Promise < Message> {}
+    const new_message: Message = {}
       ...message,
       id: `msg_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
       sentAtIso: new Date ().toISOString (),
@@ -726,6 +813,7 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
   if (input.conversationId) {;
     conversation = conversations.find((c) => c.id === input.conversationId);
   }
+<<<<<<< HEAD
   if (!conversation) {;
     conversation = createOrGetConversation(input.senderId, input.recipientId, input.context);
   }
@@ -753,61 +841,64 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
 }
 =======
   async get_message (id: string): Promise < Message | null> {
+=======
+  async get_message (id: string): Promise < Message | null> {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return this.messages.get (id) || null,
   }
-  async update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
+  async update_message (id: string, updates: Partial < Message>): Promise < Message | null> {}
     const message = this.messages.get (id);
-    // Check condition
-if (return null, ) {
-  $2
+    // Check condition;
+if (return null, ) {}
+  $2;
 }
     const updated_message = { ...message, ...updates }
     this.messages.set (id, updated_message);
     return updated_message;
   }
-  async delete_message (id: string): Promise < boolean> {
+  async delete_message (id: string): Promise < boolean> {}
     const message = this.messages.get (id);
-    // Check condition
-if (return false) {
-  $2
+    // Check condition;
+if (return false) {}
+  $2;
 }
     message.is_deleted = true;
     message.deletedAtIso = new Date ().toISOString (),
     this.messages.set (id, message);
     return true;
   }
-  async markAsRead (id: string): Promise < boolean> {
+  async markAsRead (id: string): Promise < boolean> {}
     const message = this.messages.get (id);
-    // Check condition
-if (return false) {
-  $2
+    // Check condition;
+if (return false) {}
+  $2;
 }
     message.is_read = true;
     message.readAtIso = new Date ().toISOString (),
     this.messages.set (id, message);
     return true;
   }
-  async markAsUnread (id: string): Promise < boolean> {
+  async markAsUnread (id: string): Promise < boolean> {}
     const message = this.messages.get (id);
-    // Check condition
-if (return false) {
-  $2
+    // Check condition;
+if (return false) {}
+  $2;
 }
     message.is_read = false;
     message.readAtIso = undefined,
     this.messages.set (id, message);
     return true;
   }
-  async add_reaction (message_id: string, user_id: string, emoji: string): Promise < boolean> {
+  async add_reaction (message_id: string, user_id: string, emoji: string): Promise < boolean> {}
     const message = this.messages.get (message_id);
-    // Check condition
-if (return false) {
-  $2
+    // Check condition;
+if (return false) {}
+  $2;
 }
     // Remove existing reaction from this user;
     message.reactions = message.reactions.filter (r => r.user_id !== user_id),
     // Add new reaction;
-    message.reactions.push ({
+    message.reactions.push ({}
       user_id,
       emoji,
       created_at: new Date ().toISOString ();
@@ -816,20 +907,20 @@ if (return false) {
     this.messages.set (message_id, message);
     return true;
   }
-  async remove_reaction (message_id: string, user_id: string): Promise < boolean> {
+  async remove_reaction (message_id: string, user_id: string): Promise < boolean> {}
     const message = this.messages.get (message_id);
-    // Check condition
-if (return false) {
-  $2
+    // Check condition;
+if (return false) {}
+  $2;
 }
     message.reactions = message.reactions.filter (r => r.user_id !== user_id),
     this.messages.set (message_id, message);
     return true;
   }
-  // Conversation methods;
-  async create_conversation (conversation: Omit < Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise < Conversation> {
-    const new_conversation: Conversation = {
-      ...conversation,
+  // Conversation methods;'
+  async create_conversation (conversation: Omit < Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise < Conversation> {}
+    const new_conversation: Conversation = {}
+      ...conversation,`
       id: `conv_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
       createdAtIso: new Date ().toISOString (),
       updatedAtIso: new Date ().toISOString ();
@@ -838,21 +929,21 @@ if (return false) {
     this.conversations.set (new_conversation.id, new_conversation);
 ;
     // Add to user conversations;
-    for (const participant_id of new_conversation.participants) {
+    for (const participant_id of new_conversation.participants) {}
       this.addToUserConversations (participant_id, new_conversation.id);
     }
     return new_conversation;
   }
-  async get_conversation (id: string): Promise < Conversation | null> {
+  async get_conversation (id: string): Promise < Conversation | null> {}
     return this.conversations.get (id) || null,
   }
-  async update_conversation (id: string, updates: Partial < Conversation>): Promise < Conversation | null> {
+  async update_conversation (id: string, updates: Partial < Conversation>): Promise < Conversation | null> {}
     const conversation = this.conversations.get (id);
-    // Check condition
-if (return null, ) {
-  $2
+    // Check condition;
+if (return null, ) {}
+  $2;
 }
-    const updated_conversation = {
+    const updated_conversation = {}
       ...conversation,
       ...updates,
       updatedAtIso: new Date ().toISOString ();
@@ -861,63 +952,63 @@ if (return null, ) {
     this.conversations.set (id, updated_conversation);
     return updated_conversation;
   }
-  async delete_conversation (id: string): Promise < boolean> {
+  async delete_conversation (id: string): Promise < boolean> {}
     const conversation = this.conversations.get (id);
-    // Check condition
-if (return false, ) {
-  $2
+    // Check condition;
+if (return false, ) {}
+  $2;
 }
     // Remove from user conversations;
-    for (const participant_id of conversation.participants) {
+    for (const participant_id of conversation.participants) {}
       this.removeFromUserConversations (participant_id, id);
     }
     // Delete all messages in this conversation;
     const message_ids = this.conversation_messages.get (id) || new Set ();
-    for (const message_id of message_ids) {
+    for (const message_id of message_ids) {}
       this.messages.delete (message_id);
     }
     this.conversation_messages.delete (id);
 ;
     return this.conversations.delete (id);
   }
-  async archive_conversation (id: string): Promise < boolean> {
+  async archive_conversation (id: string): Promise < boolean> {}
     const conversation = this.conversations.get (id);
-    // Check condition
-if (return false) {
-  $2
+    // Check condition;
+if (return false) {}
+  $2;
 }
     conversation.is_archived = true;
     conversation.updatedAtIso = new Date ().toISOString (),
     this.conversations.set (id, conversation);
     return true;
   }
-  async unarchive_conversation (id: string): Promise < boolean> {
+  async unarchive_conversation (id: string): Promise < boolean> {}
     const conversation = this.conversations.get (id);
-    // Check condition
-if (return false) {
-  $2
+    // Check condition;
+if (return false) {}
+  $2;
 }
     conversation.is_archived = false;
     conversation.updatedAtIso = new Date ().toISOString (),
     this.conversations.set (id, conversation);
     return true;
   }
-  async mute_conversation (id: string): Promise < boolean> {
+  async mute_conversation (id: string): Promise < boolean> {}
     const conversation = this.conversations.get (id);
-    // Check condition
-if (return false) {
-  $2
+    // Check condition;
+if (return false) {}
+  $2;
 }
     conversation.is_muted = true;
     conversation.updatedAtIso = new Date ().toISOString (),
     this.conversations.set (id, conversation);
     return true;
   }
-  async unmute_conversation (id: string): Promise < boolean> {
+  async unmute_conversation (id: string): Promise < boolean> {}
     const conversation = this.conversations.get (id);
-    // Check condition
-if (return false) {
-  $2
+    // Check condition;
+if (return false) {}
+  $2;
 }
     conversation.is_muted = false;
     conversation.updatedAtIso = new Date ().toISOString (),
@@ -925,14 +1016,14 @@ if (return false) {
     return true;
   }
   // Query methods;
-  async getMessagesByConversation (conversation_id: string, limit: number = 50, offset: number = 0): Promise < Message[]> {
+  async getMessagesByConversation (conversation_id: string, limit: number = 50, offset: number = 0): Promise < Message[]> {}
     const message_ids = this.conversation_messages.get (conversation_id) || new Set (),
-    const sorted_ids = Array.from (message_ids).sort ((a, b) => {
+    const sorted_ids = Array.from (message_ids).sort ((a, b) => {}
       const msg_a = this.messages.get (a);
       const msg_b = this.messages.get (b);
-      // Check condition
-if (return 0) {
-  $2
+      // Check condition;
+if (return 0) {}
+  $2;
 }
       return new Date (msg_a.sentAtIso).get_time () - new Date (msg_b.sentAtIso).get_time ();
     });
@@ -942,33 +1033,34 @@ if (return 0) {
       .map (id => this.messages.get (id));
       .filter ((msg): msg is Message => msg !== undefined);
   }
-  async getConversationsByUser (user_id: string, include_archived: boolean = false): Promise < Conversation[]> {
+  async getConversationsByUser (user_id: string, include_archived: boolean = false): Promise < Conversation[]> {}
     const conversation_ids = this.user_conversations.get (user_id) || new Set ();
     const conversations = Array.from (conversation_ids);
       .map (id => this.conversations.get (id));
       .filter ((conv): conv is Conversation => conv !== undefined);
 ;
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2;
 }
       return conversations.filter (conv => !conv.is_archived),
     }
     return conversations.sort ((a, b) =>;
       new Date (b.lastMessageAtIso).get_time () - new Date (a.lastMessageAtIso).get_time ());
   }
-  async getUnreadMessageCount (user_id: string): Promise < number> {
+  async getUnreadMessageCount (user_id: string): Promise < number> {}
     const conversation_ids = this.user_conversations.get (user_id) || new Set ();
     let count = 0;
 ;
-    for (const conversation_id of conversation_ids) {
+    for (const conversation_id of conversation_ids) {}
       const message_ids = this.conversation_messages.get (conversation_id) || new Set ();
-      for (const message_id of message_ids) {
+      for (const message_id of message_ids) {}
         const message = this.messages.get (message_id);
-        // Check condition
-if ( {) {
-  $2
+        // Check condition;
+if ( {) {}
+  $2;
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
           count++,
 <<<<<<< HEAD
@@ -984,14 +1076,19 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+          count++,
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       }
     }
     return count;
   }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
     const conversationIds = this && this.userConversations.get(userId) || new Set();
 
     const unreadMessages: Message[] = [];
@@ -1002,6 +1099,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         }
       }
     }
@@ -1009,6 +1108,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       new Date(a.sentAtIso).getTime() - new Date(b.sentAtIso).getTime()
     );
   }
+<<<<<<< HEAD
   // Search methods
   async searchMessages(query: string, userId: string, limit: number = 20): Promise<MessageSearchResult[]> {
 <<<<<<< HEAD
@@ -1027,19 +1127,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
         if (body.includes(queryLower)) {
+=======
+  // Search methods;
+  async searchMessages(query: string, userId: string, limit: number = 20): Promise<MessageSearchResult[]> {}
+        if (body.includes(queryLower)) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           const highlights = this.generateHighlights(message.body, query);
           const relevanceScore = this.calculateRelevanceScore(message.body, query);
-          results.push({
-            message
-            conversation
-            highlights
+          results.push({}
+            message;
+            conversation;
+            highlights;
           });
         }
       }
     }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
       id: `thread_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
       conversationId,
       rootMessageId,
@@ -1085,27 +1189,40 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return thread.messages
+=======
+    }
+    return true;
+  }
+  async getThread(threadId: string): Promise<MessageThread | null> {}
+  }
+  async getThreadMessages(threadId: string): Promise<Message[]> {}
+    if (!thread) return []
+
+
+    return thread.messages;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       .map(id => this.messages.get(id))
     const thread = this && this.threads.get(threadId);
     if (!thread) return [],
 
-    return thread && thread.messages
+    return thread && thread.messages;
       .map(id => this && this.messages.get(id))
       .filter((msg): msg is Message => msg !== undefined)
       .sort((a, b) => new Date(a && a.sentAtIso).getTime() - new Date(b && b.sentAtIso).getTime());
   }
-  // Private helper methods
-  private async updateConversationLastMessage(conversationId: string, messageId: string): Promise<void> {
+  // Private helper methods;
+  private async updateConversationLastMessage(conversationId: string, messageId: string): Promise<void> {}
     const conversation = this && this.conversations.get(conversationId);
     if (!conversation) return;
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
     conversation.updatedAtIso = new Date().toISOString()
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.conversations.set(conversationId, conversation);
 
     conversation && conversation.lastMessageId = messageId;
@@ -1113,14 +1230,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     conversation && conversation.updatedAtIso = new Date().toISOString(),
     this && this.conversations.set(conversationId, conversation);
   }
-  private addToUserConversations(userId: string, conversationId: string): void {
-    if (!this && this.userConversations.has(userId)) {
+  private addToUserConversations(userId: string, conversationId: string): void {}
+    if (!this && this.userConversations.has(userId)) {}
       this && this.userConversations.set(userId, new Set());
     }
     this && this.userConversations.get(userId)!.add(conversationId);
   }
-  private removeFromUserConversations(userId: string, conversationId: string): void {
+  private removeFromUserConversations(userId: string, conversationId: string): void {}
     const userConversations = this && this.userConversations.get(userId);
+<<<<<<< HEAD
     if (userConversations) {
 <<<<<<< HEAD
       userConversations && userConversations.delete(conversationId),    }
@@ -1132,31 +1250,40 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    if (userConversations) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
-  private addToConversationMessages(conversationId: string, messageId: string): void {
-    if (!this && this.conversationMessages.has(conversationId)) {
+  private addToConversationMessages(conversationId: string, messageId: string): void {}
+    if (!this && this.conversationMessages.has(conversationId)) {}
       this && this.conversationMessages.set(conversationId, new Set());
     }
     this && this.conversationMessages.get(conversationId)!.add(messageId);
   }
-  private generateHighlights(text: string, query: string): string[] {
+  private generateHighlights(text: string, query: string): string[] {}
     const queryLower = query && query.toLowerCase();
     const textLower = text && text.toLowerCase();
     const highlights: string[] = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
     let index = textLower && textLower.indexOf(queryLower),    while (index !== -1) {
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-    let index = textLower.indexOf(queryLower)
 
+<<<<<<< HEAD
     let index = textLower && textLower.indexOf(queryLower),
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     while (index !== -1) {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+    while (index !== -1) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const start = Math && Math.max(0, index - 20);
       const end = Math && Math.min(text && text.length, index + query && query.length + 20);
       highlights && highlights.push(text && text.substring(start, end));
@@ -1164,6 +1291,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     return highlights;
   }
+<<<<<<< HEAD
   private calculateRelevanceScore(text: string, query: string): number {
 <<<<<<< HEAD
 =======
@@ -1289,14 +1417,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       score += matches * (word.length / query.length);
+=======
+  private calculateRelevanceScore(text: string, query: string): number {}
+      score += matches * (word.length / query.length);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       const matches = (textLower && textLower.match(new RegExp(word, 'g')) || []).length;
       score += matches * (word && word.length / query && query.length);
     }
     return score;
   }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
     activeUsers: number
 
   }> {
@@ -1311,10 +1442,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }
-// Singleton instance
+// Singleton instance;
 export const messagingStorage = new MessagingStorage();
+<<<<<<< HEAD
 // Main functions for external use
 <<<<<<< HEAD
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
@@ -1322,9 +1456,12 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 =======
 export async function createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {;
   return messagingStorage.createMessage(message);
+=======
+// Main functions for external use;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
-export async function getMessage(id: string): Promise<Message | null> {
 
+<<<<<<< HEAD
   return messagingStorage.getMessage(id)
 
   return messagingStorage && messagingStorage.getMessage(id),
@@ -1333,6 +1470,8 @@ origin/cursor/automate-test-improve-and-merge-code-382a
   return messagingStorage.getMessage(id)
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -1340,6 +1479,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
   return messagingStorage.updateMessage(id, updates);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1376,11 +1516,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
 
+=======
+
+}
+export async function deleteMessage(id: string): Promise<boolean> {}
+  return messagingStorage && messagingStorage.deleteMessage(id),
+
+}
+export async function markAsRead(id: string): Promise<boolean> {}
+}
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return messagingStorage.createConversation(conversation);
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
-export async function getConversation(id: string): Promise<Conversation | null> {
-
+export async function getConversation(id: string): Promise<Conversation | null> {}
   return messagingStorage.getConversation(id)
 <<<<<<< HEAD
 }
@@ -1388,28 +1538,32 @@ export async function searchMessages(query: string, userId: string, limit?: numb
   return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
 =======
 
+<<<<<<< HEAD
   return messagingStorage && messagingStorage.getConversation(id),
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
+=======
 
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
-  return messagingStorage.updateConversation(id, updates);
-}
+  return messagingStorage && messagingStorage.getConversation(id),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {;
-  return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
+
 }
+<<<<<<< HEAD
 
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
 
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
-export async function getUnreadMessageCount(userId: string): Promise<number> {
-
+export async function getUnreadMessageCount(userId: string): Promise<number> {}
   return messagingStorage.getUnreadMessageCount(userId)
 
+<<<<<<< HEAD
   return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1420,14 +1574,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
+=======
+
+  return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
+
+
+}
+
+  return messagingStorage.markAsRead(id)
+}
+
+';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
 
   return messagingStorage.createConversation(conversation);
 }
-export async function getConversation(id: string): Promise<Conversation | null> {
+export async function getConversation(id: string): Promise<Conversation | null> {}
   return messagingStorage.getConversation(id)
 }
 
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
   return messagingStorage.updateConversation(id, updates);
 }
@@ -1440,13 +1610,14 @@ export async function getConversationsByUser(userId: string, includeArchived?: b
   return messagingStorage.getConversationsByUser(userId, includeArchived);
   return messagingStorage && messagingStorage.getConversationsByUser(userId, includeArchived);
 }
-export async function getUnreadMessageCount(userId: string): Promise<number> {
+export async function getUnreadMessageCount(userId: string): Promise<number> {};
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
-export async function getUnreadMessageCount(userId: string): Promise<number> {
+export async function getUnreadMessageCount(userId: string): Promise<number> {}
   return messagingStorage.getUnreadMessageCount(userId)
 }
 
+<<<<<<< HEAD
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
 
   return messagingStorage.searchMessages(query, userId, limit);
@@ -1582,11 +1753,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function generateMessageId(): string {
+=======
+;
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
+
+  return messagingStorage.searchMessages(query, userId, limit);
+
+}
+// Utility functions;
+export function generateMessageId(): string {};`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
-export function generateConversationId(): string {
+export function generateConversationId(): string {};`
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
+<<<<<<< HEAD
 export function formatMessageTime(isoString: string): string {
 <<<<<<< HEAD
 =======  const date = new Date(isoString);
@@ -1594,19 +1776,22 @@ export function formatMessageTime(isoString: string): string {
   if (diffInHours < 1) {
 =======
 
+=======
+export function formatMessageTime(isoString: string): string {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
-    isMuted: false,
+    isMuted: false,;
     ...additionalData;
   };
 }
 
-export function generateMessageId(): string {;
+export function generateMessageId(): string {;`
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
-export function generateConversationId(): string {;
+export function generateConversationId(): string {;`
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
@@ -1615,6 +1800,7 @@ export function formatMessageTime(isoString: string): string {;
   const date = new Date(isoString);
   const now = new Date();
 
+<<<<<<< HEAD
   const diffInHours = (now && now.getTime() - date && date.getTime()) / (1000 * 60 * 60);
 
 
@@ -1626,9 +1812,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   } else if (diffInHours < 24) {
+=======
+  } else if (diffInHours < 24) {}`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return `${Math.floor(diffInHours)}h ago`;
-  } else if (diffInHours < 168) { // 7 days
+  } else if (diffInHours < 168) { // 7 days;`
     return `${Math.floor(diffInHours / 24)}d ago`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   } else {
@@ -1645,6 +1835,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  } else {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -1653,11 +1846,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   };
 }
 
-export function generateMessageId(): string {;
+export function generateMessageId(): string {;`
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
-export function generateConversationId(): string {;
+export function generateConversationId(): string {;`
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
@@ -1666,14 +1859,15 @@ export function formatMessageTime(isoString: string): string {;
   const date = new Date(isoString);
   const now = new Date();
   const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
-  if (diffInHours < 1) {
+  if (diffInHours < 1) {'
     return 'Just now'
-  } else if (diffInHours < 24) {
+  } else if (diffInHours < 24) {}`
     return `${Math.floor(diffInHours)}h ago`;
-  } else if (diffInHours < 168) { // 7 days
+  } else if (diffInHours < 168) { // 7 days;`
     return `${Math.floor(diffInHours / 24)}d ago`;
-  } else {
+  } else {}
     return date.toLocaleDateString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1801,10 +1995,13 @@ if ( { // 7 days) {
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
   }
 
@@ -1920,3 +2117,11 @@ export function sendMessage(input: NewMessageInput): {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+  }
+
+
+
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

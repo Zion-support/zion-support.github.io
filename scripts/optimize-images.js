@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
@@ -106,12 +107,27 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+
+#!/usr/bin/env node;
+const sharp = // // require('sharp')'
+const fs = // // require('fs')'
+const path = // // require('path')
+async function optimizeImages() { return null; }
+    console.log('No images directory found')) {}
+    ) {}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     console.log('No images directory found')}
     return}
   const files = fs.readdirSync(imagesDir;);
   const imageFiles = files.filter(file =>
     /.(jpg|jpeg|png|webp)$/i.test(file)
   ;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -291,12 +307,12 @@ async function run() {
   const pngquant = require('imagemin-pngquant');
   const svgo = require('imagemin-svgo');
   const fg = require('fast-glob');
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
+<<<<<<< HEAD
 console.log('🖼️  Image optimization script - placeholder');
 console.log('✅ Image optimization completed');
 <<<<<<< HEAD
@@ -316,11 +332,15 @@ console.log('✅ Image optimization completed');
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       console.log(`"Optimized": ${file}`)} catch (error) {
+=======
+      console.log(`"Optimized": ${file}`)} catch (error) {}`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       console.error(`Error optimizing ${file}:`, error.message)}
   }
 }
-optimizeImages();
+optimizeImages();'`
 #!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { console.log('No images directory found')) { ) { console.log('No images directory found')} return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); for (const file of imageFiles) { const inputPath = path.join(imagesDir,file;); const outputPath = path.join(imagesDir,file.replace(/\.(jpg|jpeg|png)$/i,'.webp');); try { await sharp(inputPath) .webp({ quality: '80' }) .toFile(outputPath); console.log(`Optimized: ${file}`)} catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -337,3 +357,8 @@ optimizeImages();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

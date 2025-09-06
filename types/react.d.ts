@@ -26,6 +26,7 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 import 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 =======
@@ -443,3 +444,11 @@ declare namespace React {;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+declare module 'react' {}
+  interface CSSProperties {}
+    [key: `--${string}`]: string | number;
+  }
+}'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

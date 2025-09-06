@@ -11,28 +11,28 @@ export default function RAGEvaluationLabPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
+}'
 import React from 'react';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -41,9 +41,10 @@ import React from 'react';
 
   return (
     <>;
-      <SEO
-        title='RAG Evaluation Lab'
+      <SEO'
+        title='RAG Evaluation Lab''
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       />
@@ -193,16 +194,21 @@ export default function RAGEvaluationLabPage() {
 export default function RAGEvaluationLabPage() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export default function RAGEvaluationLabPage() {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	return (
 		<>
-			<SEO title="RAG Evaluation Lab" description="Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates." />
-			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
-				<div className="container mx-auto px-4">
-					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">RAG Evaluation Lab</h1>
+			<SEO title="RAG Evaluation Lab" description="Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates." />"
+			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">"
+				<div className="container mx-auto px-4">"
+					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">RAG Evaluation Lab</h1>"
 					<p className="mt-6 text-lg text-gray-300 max-w-3xl">
 						Production-ready evaluations for retrieval-augmented generation. Track accuracy, hallucination rate, latency, and cost. Integrate with CI to prevent regressions.
-					</p>
+					</p>"
 					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<<<<<<< HEAD
 						{[
 <<<<<<< HEAD
 							{ title: 'Grounding & Faithfulness', desc: 'Measure factual consistency, citation quality, and hallucination rate.' },
@@ -226,6 +232,18 @@ export default function RAGEvaluationLabPage() {
 						].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
+=======
+						{[';
+							{ title: 'Grounding & Faithfulness', desc: 'Measure factual consistency, citation quality, and hallucination rate.' };'
+							{ title: 'Golden Datasets', desc: 'Curate and run task-specific datasets for repeatable evaluation.' },'
+							{ title: 'Scenario Evals', desc: 'Synthetic and real-world tests across intents, domains, and edge cases.' };'
+							{ title: 'CI/CD Quality Gates', desc: 'Fail builds on regressions, compare models and versions.' };'
+							{ title: 'Offline & Canary', desc: 'Pre-release offline runs and live traffic canaries with alerts.' },'
+							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
+						].map((f) => ("
+							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">"
+								<h3 className="text-lg font-semibold text-white">{f.title}</h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
 							</div>
 <<<<<<< HEAD
@@ -242,14 +260,21 @@ export default function RAGEvaluationLabPage() {
 						))}
 					</div>
 
-  const useCases = [
+  const useCases = ['
     'Enterprise Knowledge ManagementCustomer Support SystemsResearch & DevelopmentContent Generation PlatformsEducational ApplicationsLegal & Compliance Systems'
   ];
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
 						<a href="mailto: kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
+=======
+"
+					<div className="mt-12 flex flex-wrap items-center gap-4">"
+						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>"
+						<a href="mailto: kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
 					</div>
 				</div>
@@ -287,6 +312,7 @@ export default function RAGEvaluationLabPage(req, res) {
 =======
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -362,3 +388,13 @@ export default function RAGEvaluationLabPage(req, res) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

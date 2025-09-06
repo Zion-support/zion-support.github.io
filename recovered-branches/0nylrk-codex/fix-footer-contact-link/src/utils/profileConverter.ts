@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -9,10 +10,14 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-import { ProfileData } from "@/types/profile",
+import { ProfileData } from "@/types/profile";"
+import { TalentProfile } from "@/types/talent";"
+import { ProfileData } from "@/types/profile","
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -64,6 +69,21 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 =======
   return {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+";
+import {ProfileData} from "@/types/profile";"
+import {TalentProfile} from "@/types/talent";"
+import { ProfileData } from "@/types/profile","
+import { TalentProfile } from "@/types/talent",
+
+
+export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {};
+  // Handle both ProfileData and existing TalentProfile inputs;
+  // If this is already a TalentProfile, just return it;
+  if (profile && profile.professional_title !== undefined) {}
+    return profile;
+  return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     id: profile && profile.id;
     user_id: profile && profile.id;
     full_name: profile && profile.name;
@@ -71,23 +91,20 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     bio: profile && profile.bio || '',
     summary: profile && profile.bio?.substring(0, 150);
     profile_picture_url: profile && profile.avatarUrl,
-    years_experience: 3, // Default value
-    skills: profile && profile.skills?.map((skill: { name: string }) => skill && skill.name) || [];
-    availability_type: profile && profile.availability?.status === 'available' ? 'full_time' :
-                      profile && profile.availability?.status === 'limited' ? 'part_time' : 'unavailable';
+    years_experience: 3, // Default value;
+    skills: profile && profile.skills?.map((skill: { name: string }) => skill && skill.name) || [];'
+    availability_type: profile && profile.availability?.status === 'available' ? 'full_time' :'
+                      profile && profile.availability?.status === 'limited' ? 'part_time' : 'unavailable';'
     timezone: 'UTC';
     hourly_rate: profile && profile.hourlyRate || 0;
     rating_count: profile && profile.reviewCount || 0,
-    average_rating: profile && profile.rating || 0
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    average_rating: profile && profile.rating || 0;
+'
     bio: profile.bio || '',
     summary: profile.bio?.substring (0, 150);
     profile_picture_url: profile.avatar_url,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
@@ -122,6 +139,10 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { ProfileData } from "@/types/profile",;
+=======
+"
+import { ProfileData } from "@/types/profile",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { TalentProfile } from "@/types/talent",;
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {;
   // Handle both ProfileData and existing TalentProfile inputs;
@@ -157,10 +178,11 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     id: profile.id,;
     user_id: profile.id,;
     full_name: profile.name,;
-    professional_title: profile.title,;
+    professional_title: profile.title,;'
     bio: profile.bio || '',;
     summary: profile.bio?.substring(0, 150),;
     profile_picture_url: profile.avatarUrl,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -185,10 +207,18 @@ import { TalentProfile } from "@/types/talent",    years_experience: 3, // Defau
     skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
     availability_type: profile.availability?.status === 'available' ? 'full_time' :;
                       profile.availability?.status === 'limited' ? 'part_time' : 'unavailable';
+=======
+
+    years_experience: 3, // Default value;
+    skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];'
+    availability_type: profile.availability?.status === 'available' ? 'full_time' :;'
+                      profile.availability?.status === 'limited' ? 'part_time' : 'unavailable';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     timezone: 'UTC';
     hourly_rate: profile.hourly_rate || 0;
     rating_count: profile.review_count || 0,
     average_rating: profile.rating || 0;
+<<<<<<< HEAD
   }
 }  }
 
@@ -229,3 +259,11 @@ import { TalentProfile } from "@/types/talent",    years_experience: 3, // Defau
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  }
+}
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,8 +1,26 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { SystemNotificationParams } from './types';
 import {createNotification} from './createNotification';
+=======
+
+
+
+import {createNotification} from './createNotification';'
+import {SystemNotificationParams} from './types';
+
+
+/**
+ * Creates a system notification for a user;
+ */
+export async function createSystemNotification({}
+';
+import { createNotification  } from './createNotification';'
+import { SystemNotificationParams } from './types';'
+import {createNotification} from './createNotification';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {SystemNotificationParams} from './types';
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -28,25 +46,39 @@ import {SystemNotificationParams} from './types';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 /**
- * Creates a system notification for a user
+ * Creates a system notification for a user;
  */
+<<<<<<< HEAD
 export async function createSystemNotification({  title;
+=======
+export async function createSystemNotification({;
+
+  userId;
+  title;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   message;
 
   actionUrl = null;
   actionText = null;
+<<<<<<< HEAD
   sendEmail = false
 }: SystemNotificationParams) {
   try {  return createNotification({
+=======
+  sendEmail = false;
+}: SystemNotificationParams) {}
+  try {}
+  return createNotification({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     userId;
     title;
-    message;
+    message;'
     type: 'system';
     sendEmail;
-    actionUrl
-
-    actionText
+    actionUrl;
+    actionText;
   })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,27 +98,37 @@ import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
+=======
 
-import { createNotification } from './createNotification',;
+
+'
+import {create_notification} from './create_notification';'
+import {SystemNotificationParams} from './types';
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+'
+import { createNotification } from './createNotification',;'
 import { SystemNotificationParams } from './types',;
 
 /**;
 * Creates a system notification for a user;
 */;
-export async /**
- * createSystemNotification - Function description
+export async /**;
+ * createSystemNotification - Function description;
  */
-function createSystemNotification() {
-  return create_notification ({
+function createSystemNotification() {}
+  return create_notification ({}
     user_id;
     title;
-    message;
+    message;'
     type: 'system';
     send_email;
     action_url,
     action_text;
   });
 
+<<<<<<< HEAD
 }
 ;
 <<<<<<< HEAD
@@ -146,3 +188,14 @@ export async function createSystemNotification({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+}
+;
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

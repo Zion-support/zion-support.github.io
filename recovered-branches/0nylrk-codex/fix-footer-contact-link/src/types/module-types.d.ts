@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Type declarations for modules used in Vite configuration;
 declare module 'vitest / config' {
   export { define_config } from 'vite';
@@ -38,11 +39,22 @@ declare module 'path' {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 declare module '@vitejs/plugin-react-swc' {;
-import {Plugin} from 'vite';
-  export default function reactSWC(): Plugin
-}
+=======
 
+declare module '@vitejs/plugin-react-swc' {'
+  import { Plugin } from 'vite';
+  export default function reactSWC(): Plugin;
+}'
+declare module 'path' {}
+'
+declare module '@vitejs/plugin-react-swc' {;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import {Plugin} from 'vite';
+  export default function reactSWC(): Plugin;
+}
+'
 declare module 'path' {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -59,6 +71,11 @@ declare module 'path' {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   export function resolve(...paths: string[]): string;
 =======
 declare module 'path' {  export function resolve(...paths: string[]): string;
@@ -67,18 +84,23 @@ declare module 'path' {  export function resolve(...paths: string[]): string;
 declare module 'path' {  export function resolve(...paths: string[]): string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  export function join(...paths: string[]): string
-
-  export function dirname(path: string): string
+  export function join(...paths: string[]): string;
+  export function dirname(path: string): string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-declare module 'lovable-tagger' {;
+=======
 
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+declare module 'lovable-tagger' {;
+'
 import {Plugin} from 'vite';
   export default function reactSWC (): Plugin;
 }
@@ -86,8 +108,8 @@ import {Plugin} from 'vite';
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -116,17 +138,23 @@ import {Plugin} from 'vite';
 ;;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 declare module '@vitejs/plugin-react-swc' {;
+=======
+
+
+;'
+declare module '@vitejs/plugin-react-swc' {;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   import { Plugin } from 'vite',;
   export default function reactSWC(): Plugin;
 }
-;
+;'
 declare module 'path' {;
   export function resolve(...paths: string[]): string,;
   export function join(...paths: string[]): string;
   export function dirname(path: string): string;
 }
-;
-declare module 'lovable-tagger' {;
+;'
+declare module 'lovable-tagger' {;'
   import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
@@ -134,15 +162,13 @@ declare module 'lovable-tagger' {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -151,3 +177,7 @@ declare module 'lovable-tagger' {;
 =======
 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

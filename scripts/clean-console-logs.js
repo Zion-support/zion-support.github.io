@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -231,3 +232,19 @@ export { cleanConsoleLogs, processFile };
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;"""
+#!/usr/bin/env node];import { glob } from "glob;"""
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;"""
+#!/usr/bin/env node];import { glob } from "glob;""
+
+
+
+
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

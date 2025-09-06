@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 export default function SiteHealth() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
       <Head><title>Site Health — Broken Images</title></Head>
       <main className="container mx-auto px-4 py-12">
@@ -10,6 +11,9 @@ export default function SiteHealth() {
         <ul className="list-disc pl-6">
           <li className="py-2">No issues found.</li>
         </ul>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </main>
     </div>
   );

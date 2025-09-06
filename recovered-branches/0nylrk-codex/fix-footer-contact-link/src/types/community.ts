@@ -81,10 +81,10 @@ export interface ForumCategoryInfo {;
 
 =======
 export type ForumCategory =
-  | "getting-hired"
-  | "project-help"
-  | "ai-tools"
-  | "feedback"
+  | "getting-hired""
+  | "project-help""
+  | "ai-tools""
+  | "feedback"";
   | "announcements";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -107,16 +107,25 @@ export interface ForumPost {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export interface ForumPost {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+export interface ForumPost {};
 export interface ForumPost {;
+<<<<<<< HEAD
 export interface ForumPost {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface ForumPost {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -204,17 +213,26 @@ export interface ForumReply {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export interface ForumReply {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+export interface ForumReply {};
 export interface ForumReply {;
 }
+<<<<<<< HEAD
 export interface ForumReply {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface ForumReply {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -303,13 +321,18 @@ export interface Badge {;
   color: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface UserBadge {
+=======
+export interface UserBadge {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   user_id: string;
   badge_id: string,
   awarded_at: string;
 
 }
+<<<<<<< HEAD
 export interface CommunityUser {
 
 export interface UserBadge {;
@@ -350,6 +373,12 @@ export interface UserBadge {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface CommunityUser {}
+export interface UserBadge {};
+export interface UserBadge {;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   userId: string;
   badgeId: string;
   awardedAt: string;
@@ -365,16 +394,10 @@ export interface CommunityUser {;
 
 export interface CommunityUser {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export interface CommunityUser {
 
-export interface CommunityUser {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 }
+<<<<<<< HEAD
 =======
 export interface UserBadge {
 
@@ -386,10 +409,14 @@ export interface UserBadge {
 export interface UserBadge {;}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Badge {
+=======
+export interface Badge {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   name: string,
   description: string;
 }
+<<<<<<< HEAD
 export interface CommunityUser {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -399,11 +426,19 @@ export interface CommunityUser {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export interface CommunityUser {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   name: string;
   avatar?: string;
   role: string;
   reputation: number;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   post_count: number;
   reply_count: number;
   badges: Badge[];
@@ -506,6 +541,7 @@ export interface CommunityUser {;
   isVerified: boolean;
   isModerator: boolean;
 }
+<<<<<<< HEAD
 ;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -525,3 +561,6 @@ export interface CommunityUser {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

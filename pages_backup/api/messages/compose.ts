@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/messages/compose.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from '[^']*';
@@ -54,6 +55,10 @@ if (return) {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const {
+=======
+
+  const {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/messages/compose.ts
     recipient_id,
 
     body,
@@ -62,7 +67,7 @@ if (return) {
     attachment_name,
     context,
 
-  } = req.body as {
+  } = req.body as {}
     recipient_id: string;
 
     body: string;
@@ -71,100 +76,56 @@ if (return) {
     attachment_name?: string;
     context?: ConversationContext;
 
-    senderId: user.id
-    recipientId
-    body
-    linkUrl
-    attachmentBase64
-    attachmentName
-    context
-<<<<<<< HEAD
-=======
-=======
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../utils/auth';
-import { sendMessage } from '../../../utils/messaging/storage';
-import { ConversationContext } from '../../../utils/messaging/types';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res);
-  if (!user) return;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
-  const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
-    recipientId: string, body: string,
-    linkUrl?: string;
-    attachmentBase64?: string;
-    attachmentName?: string;
-    context?: ConversationContext
-
-  };
-  if (!recipientId || !body)
-    return res && res.status(400).json({ error: "Missing required fields" });
-  const { conversation, message } = sendMessage({
-
-    senderId: user.id, recipientId,
-
-=======
-  }
-  if (
-    return res.status (400).json ({ error: "Missing required fields" })) {
-  $2
-}
-  const { conversation, message } = send_message ({
-    sender_id: user.id,
-    recipient_id,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    senderId: user.id;
+    recipientId;
+    body;
+    linkUrl;
+    attachmentBase64;
+    attachmentName;
+    context;
     body,
     link_url,
     attachmentBase64,
 
 
     context,
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
   });
 
 }
 
-<<<<<<< HEAD
-=======
-=======
-    context});
 
-  res.status(200).json({ conversation, message })
 
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   res.status (200).json ({ conversation, message });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
+  const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {}
     recipientId: string,
     body: string,
     linkUrl?: string,
     attachmentBase64?: string,
     attachmentName?: string,
-    context?: ConversationContext
-  };
+    context?: ConversationContext;
+  };'
   if (!recipientId || !body) return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD:pages_backup/api/messages/compose.ts
   const { conversation, message } = sendMessage({
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const { conversation, message } = sendMessage({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/messages/compose.ts
     senderId: user.id,
     recipientId,
     body,
     linkUrl,
     attachmentBase64,
+<<<<<<< HEAD:pages_backup/api/messages/compose.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
     attachmentName,
@@ -239,3 +200,9 @@ context,
 
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/messages/compose.ts

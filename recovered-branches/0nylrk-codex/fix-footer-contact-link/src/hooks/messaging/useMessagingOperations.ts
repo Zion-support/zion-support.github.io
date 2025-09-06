@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,9 +51,26 @@ import {useMessages} from './useMessages';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Allow either UserProfile or UserDetails
+=======
+import { UserProfile, UserDetails  } from '@/types/auth';'
+import { Message, Conversation, ConversationContextData  } from '@/types/messaging';'
+import { useConversationState  } from './useConversationState';'
+import { useConversations  } from './useConversations';'
+import { useMessages } from './useMessages';
+'
+import {UserProfile, UserDetails} from '@/types/auth';'
+import {Message, Conversation, ConversationContextData} from '@/types/messaging';'
+import {useConversationState} from './useConversationState';'
+import {useConversations} from './useConversations';'
+import {useMessages} from './useMessages';
 
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+// Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
+<<<<<<< HEAD
  * Hook that combines all messaging operations
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,14 +89,17 @@ import {use_conversations} from './use_conversations';
 import {use_messages} from './use_messages';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+ * Hook that combines all messaging operations;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null;
 ;
 /**;
 * Hook that combines all messaging operations;
 */;
-export /**
- * useMessagingOperations - Function description
+export /**;
+ * useMessagingOperations - Function description;
  */
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     messages;
@@ -92,8 +112,8 @@ export /**
     setUnreadCount;
     active_conversation;
     setActiveConversation;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -167,39 +187,25 @@ import { useConversations } from './useConversations',;
 import { useMessages } from './useMessages',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     is_loading,
     setIsLoading;
   } = useConversationState ();
 ;
   // Conversations management;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  const {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  const {}
     fetch_conversations;
     create_conversation;
   } = use_conversations (
     user;
     set_conversations;
     setUnreadCount;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    setIsLoading);
-;
-  // Messages management;
 
-=======
-    setIsLoading);
-;
-  // Messages management;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const {
+
+  const {}
     load_messages;
     send_message;
     markAsRead;
@@ -212,19 +218,10 @@ import { useMessages } from './useMessages',;
     set_conversations;
     setUnreadCount;
     setIsLoading;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    fetch_conversations);
-;
 
-=======
-    fetch_conversations);
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return {
+
+  return {}
     // State;
     messages;
     active_messages;
@@ -235,11 +232,7 @@ import { useMessages } from './useMessages',;
     setUnreadCount;
     active_conversation;
     setActiveConversation;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     is_loading;
 ;
     // Operations;
@@ -252,16 +245,12 @@ import { useMessages } from './useMessages',;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-}
-=======
-    fetch_conversations;
-    load_messages;
+
+
   }
 }
 
+<<<<<<< HEAD
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { Message, Conversation, ConversationContextData } from '@/types/messaging',;
 import { useConversationState } from './useConversationState',;
@@ -364,3 +353,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
  * Hook that combines all messaging operations  }
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

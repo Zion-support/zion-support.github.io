@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
+=======
+import React from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from '@/components/ui/button';
 
     </Button>;
@@ -13,22 +17,31 @@ import { Button } from '@/components/ui/button';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Menu, X } from 'lucide-react'
 import { useSidebar } from "./sidebar-context",
+=======
+
+import React from "react","
+import { Button } from "@/components/ui/button",'
+import { Menu, X } from 'lucide-react'"
+import { useSidebar } from "./sidebar-context","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils",
-interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
-  className?: string
+interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {};
+  className?: string;
 }
 =======
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) { const { open, toggleSidebar  } = useSidebar(),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
+export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {}
   const { open, toggleSidebar } = useSidebar(),
 
   return (
+<<<<<<< HEAD
     <Button
       variant="ghost"
       size="icon"
@@ -56,6 +69,24 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
     >;
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
       <span className="sr-only">Toggle Sidebar</span>;
+=======
+    <Button"
+      variant="ghost""
+      size="icon"";
+import React from "react",;"
+import { Button } from "@/components/ui/button",;'
+import { Menu, X } from 'lucide-react';'
+import { useSidebar } from './sidebar-context';'
+import { cn } from '@/lib/utils';
+interface SidebarTriggerProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
+  className?: string;
+
+export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerProps) { const { open, toggleSidebar  } = useSidebar(),;
+
+      >;'
+      {open ? <X className='h-4 w-4' /> : <Menu className='h-4 w-4' />}'
+      <span className='sr-only'>Toggle Sidebar</span>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Button>;
   );
 <<<<<<< HEAD
@@ -65,6 +96,7 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 <<<<<<< HEAD
@@ -89,3 +121,6 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

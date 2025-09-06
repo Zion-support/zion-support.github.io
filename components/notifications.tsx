@@ -1,29 +1,37 @@
 
+<<<<<<< HEAD
 pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
+=======
+
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
+}'
 import React from 'react';
 
+<<<<<<< HEAD
 
   return <NotificationCenter />;
 }
@@ -50,14 +58,22 @@ export default function NotificationsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function NotificationsPage() {
 const NotificationCenter = dynamic(;
+=======
+  {}
+    ssr: false;
+  }
+);
+export default function NotificationsPage() {};
+const NotificationCenter = dynamic(;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   () => import('../components/notifications/NotificationCenter'),;
   {;
     ssr: false,;
   }
 );
-export default function NotificationsPage() {;
-  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;
+export default function NotificationsPage() { return null; }
   ssr: false}),;
+<<<<<<< HEAD
 export default function NotificationsPage() {;
   return <NotificationCenter />;
 }
@@ -77,3 +93,9 @@ function NotificationsPage() {
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+export default function NotificationsPage() { return null; }
+}
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

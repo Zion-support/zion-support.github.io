@@ -9,6 +9,7 @@ import Card from '../../components/ui/Card';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -74,29 +75,33 @@ function extractServiceSlugFromLink(link: string): string | null {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -145,6 +150,9 @@ export async function getStaticPaths() {;
 export async function getStaticPaths() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     return null;
   } catch {;
@@ -152,6 +160,7 @@ export async function getStaticPaths() {;
   }
 
 
+<<<<<<< HEAD
 export async function getStaticPaths() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const services = getAllServices();
@@ -188,6 +197,11 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export async function getStaticPaths() { return null; }
+  }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return {;
     paths: Array && Array.from(slugs).map(slug => ({ params: { slug } })),;
     fallback: false,;
@@ -195,10 +209,14 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const services = getAllServices();
+=======
+  const services = getAllServices();'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 
   let service: Service | undefined = services && services.find(s => {;
@@ -209,8 +227,8 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 
   if (!service) {;
     service = services && services.find(;
-      s =>;
-        toSlug(s && s.id || '') === incomingSlug ||;
+      s =>;'
+        toSlug(s && s.id || '') === incomingSlug ||;'
         toSlug(s && s.name || '') === incomingSlug;
     );
   }
@@ -231,6 +249,7 @@ export default function ServiceDetailPage(): any ({ service }: { service: Servic
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -564,20 +583,42 @@ function ServiceDetailPage() {
                   variant='outline'
                   <a
                     href={`tel:${contactInfo && contactInfo.mobile.replace(/[^+\\d]/g, '')}`}
+=======
+
+  return ('
+    <UltraFuturisticBackground variant='quantum' intensity='high'>;
+      <Head>;
+        <title>{service && service.name} | Zion Tech Group</title>;
+        <meta'
+          name='description'
+
+                <Button'
+                  href='/contact''
+                  className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
+                  Contact Sales;
+                </Button>;
+                <Button;
+                  href={service && service.link}'
+                  variant='outline'
+
+                  <a'
+                    href={`tel:${contactInfo && contactInfo.mobile.replace(/[^+\\d]/g, '')}`}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     className='hover:underline'>;
                     {contactInfo && contactInfo.mobile}
                   </a>;
-                </div>;
-                <div className='flex items-center gap-2 text-purple-400'>;
+                </div>;'
+                <div className='flex items-center gap-2 text-purple-400'>;'
                   <Mail className='w-4 h-4' />;
-                  <a
-                    href={`mailto:${contactInfo && contactInfo.email}`}
+                  <a;`
+                    href={`mailto:${contactInfo && contactInfo.email}`}'
                     className='hover:underline'>;
                     {contactInfo && contactInfo.email}
                   </a>;
-                </div>;
-                <div className='flex items-center gap-2 text-green-400'>;
+                </div>;'
+                <div className='flex items-center gap-2 text-green-400'>;'
                   <MapPin className='w-4 h-4' />;
+<<<<<<< HEAD
                   <a
                     href={`https://maps && maps.google.com/?q=${encodeURIComponent(contactInfo && contactInfo.address)}`}
                     target='_blank'
@@ -588,6 +629,16 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Button from '../../components/ui/Button';
+=======
+                  <a;`
+                    href={`https://maps && maps.google.com/?q=${encodeURIComponent(contactInfo && contactInfo.address)}`}'
+                    target='_blank''
+                    rel='noopener noreferrer''
+import React from 'react';'
+import Head from 'next/head';'
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';'
+import Button from '../../components/ui/Button';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Card from '../../components/ui/Card';
 
 }
@@ -595,58 +646,58 @@ import Card from '../../components/ui/Card';
 }
 }
 }
-
+'
                     className='text-xs hover:underline'>;
                     {contactInfo && contactInfo.address}
                 </span>;
-              </div>;
-              <div className='text - sm text - gray - 400 mt - 2'>;
-                Trial: {service.trial_days || 14} days • Setup:{' '}
+              </div>;'
+              <div className='text - sm text - gray - 400 mt - 2'>;'
+                Trial: {service.trial_days || 14} days • Setup:{' '}'
                 {service.setup_time || 'Fast'}
-              </div>;
+              </div>;'
               <div className='mt - 6 flex gap - 3'>;
-                <Button;
-                  href='/contact';
+                <Button;'
+                  href='/contact';'
                   className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
                 >;
                   Contact Sales;
                 </Button>;
                 <Button;
-                  href={service.link}
-                  variant='outline';
+                  href={service.link}'
+                  variant='outline';'
                   className='flex - 1 border border - gray - 600 text - gray - 200';
-                >;
+                >;'
                   <ExternalLink className='w - 4 h - 4 mr - 2' /> Learn More;
                 </Button>;
               </div>;
-            </Card>;
-<Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'>;
-              <h3 className='text - white font - semibold mb - 3'>Contact</h3>;
-              <div className='space - y-3 text - sm'>;
-                <div className='flex items - center gap - 2 text - cyan - 400'>;
+            </Card>;'
+<Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'>;'
+              <h3 className='text - white font - semibold mb - 3'>Contact</h3>;'
+              <div className='space - y-3 text - sm'>;'
+                <div className='flex items - center gap - 2 text - cyan - 400'>;'
                   <Phone className='w - 4 h - 4' />;
-                  <a;
-                    href={`tel:${contact_info.mobile.replace (/[^+\\d]/g, '')}`}
+                  <a;'`
+                    href={`tel:${contact_info.mobile.replace (/[^+\\d]/g, '')}`}'
                     className='hover:underline';
                   >;
                     {contact_info.mobile}
                   </a>;
-                </div>;
-                <div className='flex items - center gap - 2 text - purple - 400'>;
+                </div>;'
+                <div className='flex items - center gap - 2 text - purple - 400'>;'
                   <Mail className='w - 4 h - 4' />;
-                  <a;
-                    href={`mailto:${contact_info.email}`}
+                  <a;`
+                    href={`mailto:${contact_info.email}`}'
                     className='hover:underline';
                   >;
                     {contact_info.email}
                   </a>;
-                </div>;
-                <div className='flex items - center gap - 2 text - green - 400'>;
+                </div>;'
+                <div className='flex items - center gap - 2 text - green - 400'>;'
                   <MapPin className='w - 4 h - 4' />;
-                  <a;
-                    href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`}
-                    target='_blank';
-                    rel='noopener noreferrer';
+                  <a;`
+                    href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`}'
+                    target='_blank';'
+                    rel='noopener noreferrer';'
                     className='text - xs hover:underline';
                   >;
                     {contact_info.address}
@@ -660,6 +711,7 @@ import Card from '../../components/ui/Card';
       </div>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -719,16 +771,22 @@ function extractServiceSlugFromLink(link: string): string | null {
 	try {
 		const url = new URL(link);
 		const path = url.pathname.replace(/^\/+|\/+$/g, '');
+=======
 
-function getAllServices(): Service[] {_return enhancedRealMicroSaasServices
-		.concat(
-			extraServices as Service[],
-			additionalEnhancedServices as Service[],
-			newRealServices as Service[],
-			marketReadyServices as Service[]
-		)
+
+'
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';'
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';'
+import { extraServices } from '../../data/extra-services';'
+import { additionalEnhancedServices } from '../../data/additional-real-services';'
+import { newRealServices } from '../../data/new-real-services';'
+import { marketReadyServices } from '../../data/market-ready-services';
+type Service = typeof enhancedRealMicroSaasServices[number];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 }
 
+<<<<<<< HEAD
 function toSlug(value: string): string {
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
@@ -899,13 +957,17 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ServiceDetailPage({ service }: { service: Service }) {
+=======
+export default function ServiceDetailPage({ service }: { service: Service }) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
-				<title>{service.name} | Zion Tech Group</title>
-				<meta name="description" content={service.tagline || service.description} />
+				<title>{service.name} | Zion Tech Group</title>"
+				<meta name="description" content={service.tagline || service.description} />"
 				<link rel="canonical" href={service.link} />
 			</Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -935,17 +997,29 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 					<div className="lg:col-span-2 space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
+=======
+
+					</h1>"
+					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+				</div>
+"
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">"
+					<div className="lg:col-span-2 space-y-6">"
+						<Card className="p-6 bg-black/40 border border-gray-700/50">"
+							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>
 						</Card>
-
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
+"
+						<Card className="p-6 bg-black/40 border border-gray-700/50">"
+							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>"
 							<ul className="space-y-2 text-gray-300">
-								{(service.features || []).slice(0, 12).map((f: string) => (
-									<li key={f} className="flex items-start gap-2">
+								{(service.features || []).slice(0, 12).map((f: string) => ("
+									<li key={f} className="flex items-start gap-2">"
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1004,12 +1078,28 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+						<Card className="p-6 bg-black/40 border border-gray-700/50">"
+							<div className="text-sm text-gray-400 mb-1">Pricing</div>"
+							<div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>'"
+							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'}</div>"
+							<div className="mt-6 flex gap-3">"
+								<Button href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Button>"
+								<Button href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
+							</div>
+						</Card>
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 							</div>
 						</Card>
 					</div>
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	)
@@ -1055,3 +1145,13 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+'";`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

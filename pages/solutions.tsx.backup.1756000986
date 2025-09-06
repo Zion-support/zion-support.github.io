@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -24,10 +25,14 @@ import {
 } from 'lucide-react';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const Solutions: NextPage = () => {
   const industrySolutions = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -246,6 +251,9 @@ const Solutions: NextPage = () => {
       icon: <BarChart3 className="w-6 h-6" />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -286,6 +294,7 @@ const Solutions: NextPage = () => {
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -748,6 +757,9 @@ const Solutions: NextPage = () => {
     </Layout>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

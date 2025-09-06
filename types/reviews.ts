@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -29,6 +30,9 @@ export type ReviewCategoryScores = {;
 export type ProjectStatus = 'InProgress' | 'Completed';
 <<<<<<< HEAD
 export type Project = {;
+=======
+export interface Review {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   clientId: string, // slug for client/user;
   talentSlug: string, // slug from TALENT_PROFILES;
@@ -372,6 +376,7 @@ export type Review = {
   projectId: string;
   fromRole: ReviewRole;
 
+<<<<<<< HEAD
 
 
 
@@ -395,6 +400,12 @@ export type ReviewsSummary = {
   totalReviews: number;
 <<<<<<< HEAD
   ratingDistribution: {
+=======
+export interface ReviewSummary {};
+  averageRating: number;
+  totalReviews: number;
+  ratingDistribution: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     1: number;
     2: number;
     3: number;

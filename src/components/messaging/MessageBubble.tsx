@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { format } from 'date-fns',;
 =======
@@ -20,15 +21,22 @@ interface MessageBubbleProps {;
   message: Message,;
 =======
 import { cn } from '@/lib/utils';
+=======
+import React from 'react';'
+import { format } from 'date-fns';'
+import { PaperclipIcon } from 'lucide-react';'
+import { cn } from '@/lib/utils';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Message } from '@/types/messaging';
 <<<<<<< HEAD
 
-interface MessageBubbleProps {
+interface MessageBubbleProps {}
   message: Message;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   isUserMessage: boolean;
 }
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -57,14 +65,21 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
     <div
       className={cn(
         'flex',
+=======
+export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {}
+  return (;
+    <div;
+      className={cn('
+        'flex','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         isUserMessage ? 'justify-end' : 'justify-start'
       )}
     >
-      <div
-        className={cn(
+      <div;
+        className={cn('
           'max-w-[75%] rounded-lg px-4 py-2',
-          isUserMessage
-            ? 'bg-zion-purple text-white'
+          isUserMessage'
+            ? 'bg-zion-purple text-white''
             : 'bg-zion-blue-dark text-white'
         )}
       >
@@ -85,14 +100,21 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         <div className="whitespace-pre-wrap">{message.content}</div>
         
         {message.attachment_url && (
+<<<<<<< HEAD
           <a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             href={message.attachment_url}
             target="_blank"
             rel="noopener noreferrer"
+=======
+          <a;
+            href={message.attachment_url}"
+            target="_blank""
+            rel="noopener noreferrer""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
-          >
-            <PaperclipIcon className="h-3 w-3 mr-1" aria-hidden="true" />
+          >"
+            <PaperclipIcon className="h-3 w-3 mr-1" aria-hidden="true" />'
             {message.attachment_name || 'Attachment'}
 <<<<<<< HEAD
           </Link>
@@ -110,8 +132,8 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 =======
           </a>
         )}
-
-        <div className="text-xs opacity-70 text-right mt-1">
+"
+        <div className="text-xs opacity-70 text-right mt-1">'
           {format(new Date(message.created_at), 'h:mm a')}
         </div>;
       </div>;
@@ -236,9 +258,13 @@ function MessageBubble() {
     </div>
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 }
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

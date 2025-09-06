@@ -1000,6 +1000,7 @@ export default function MicroSaasPage() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen futuristic-bg particle-bg">
       <ParticleBackground />
       <Head>
@@ -1011,6 +1012,9 @@ export default function MicroSaasPage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
       </Head>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">

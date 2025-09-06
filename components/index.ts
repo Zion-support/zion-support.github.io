@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Layout Components
 export { default as Layout } from "./layout/Layout";
@@ -10,11 +11,17 @@ export { default as Layout } from "./layout/Layout";
 export { default as Layout } from "./layout/Layout";
 
 pr-12243
-// Re-export types for external use;
+=======
+// Layout Components;
+export { default as Layout } from "./layout/Layout";
 
-export type { ButtonProps } from "./ui/Button";
-export type { CardProps } from "./ui/Card";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+// Re-export types for external use;
+"
+export type { ButtonProps } from "./ui/Button";"
+export type { CardProps } from "./ui/Card";"
 export type { LayoutProps } from "./layout/Layout";
+<<<<<<< HEAD
 // UI Components
 export { default as Card } from "./ui/Card";
 // Layout Components
@@ -28,3 +35,6 @@ export type { LayoutProps } from "./layout/Layout";
 export type { LayoutProps } from "./layout/Layout";
 
 pr-12243
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

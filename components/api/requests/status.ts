@@ -1,7 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
 import path from 'path';
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2));
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -13,6 +14,17 @@ const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
     return [];
   }
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2))
+=======
+export default async function handler(;
+  req: NextApiRequest;
+  res: NextApiResponse;
+) {}
+  const items = readAll();
+  const idx = items.findIndex((r: any) => r.id === id)'
+if (idx === -1) return res.status(404).json({ error: 'Not found' });
+  items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() }
+  writeAll(items);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -38,17 +50,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   writeAll(items);
 }
 
-;
+;'
 const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
-;
+;'
 const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
   const items = readAll();
-  const idx = items && items.findIndex((r: any) => r && r.id === id),
+  const idx = items && items.findIndex((r: any) => r && r.id === id),'
   if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
   items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() };
-  try {
+  try {'
     return JSON.parse (fs.readFileSync (REQUESTS_PATH, 'utf - 8'));
-  } catch {
+  } catch {}
     return [];
+<<<<<<< HEAD
   res.status(200).json({ ok: true });
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

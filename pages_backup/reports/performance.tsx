@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
@@ -128,14 +129,17 @@ const PerformancePage: React.FC = () => {
 =======
 =======
 import Head from 'next / head';
+=======
+'
+import Head from 'next / head';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
 import Link from 'next / link';
 ;
 
-<<<<<<< HEAD
 
-
-const PerformancePage: React.FC = () => {
+const PerformancePage: React.FC = () => {}
   const performance_metrics = [;
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
     {
 =======
 =======
@@ -152,59 +156,62 @@ const PerformancePage: React.FC = () => {
 =======
 
 
+=======
+    {}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
       category: 'System Performance',
-      metrics: [;
-        { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' },
-        { name: 'Throughput', value: '2.4k req / s', status: 'good', trend: '+8%' },
+      metrics: [;'
+        { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' },'
+        { name: 'Throughput', value: '2.4k req / s', status: 'good', trend: '+8%' },'
         { name: 'Error Rate', value: '0.02%', status: 'excellent', trend: '-15%' },
 
 
       ]
 
     },
-    {
+    {'
       category: 'Resource Utilization',
-      metrics: [;
-        { name: 'CPU Usage', value: '23%', status: 'good', trend: '-5%' },
+      metrics: [;'
+        { name: 'CPU Usage', value: '23%', status: 'good', trend: '-5%' },'
         { name: 'Memory Usage', value: '67%', status: 'good', trend: '+3%' },
-
+'
         { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
 
 
       ]
 
     },
-    {
+    {'
       category: 'User Experience',
-      metrics: [;
+      metrics: [;'
         { name: 'Page Load Time', value: '1.2s', status: 'excellent', trend: '-20%' },
-
-        { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },
+'
+        { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },'
         { name: 'Accessibility Score', value: '96/100', status: 'excellent', trend: '+2%' },
 
 
-  const recentReports = [
-
-    {
-      id: 'performance - weekly - 2025 - 01 - 17',
-      title: 'Weekly Performance Report',
-      date: '2025 - 01 - 17',
-      summary: 'System performance metrics for the week ending January 17, 2025',
+  const recentReports = []
+    {'
+      id: 'performance - weekly - 2025 - 01 - 17','
+      title: 'Weekly Performance Report','
+      date: '2025 - 01 - 17','
+      summary: 'System performance metrics for the week ending January 17, 2025','
       status: 'completed';
     },
-    {
-      id: 'lighthouse - audit - 2025 - 01 - 16',
-      title: 'Lighthouse Performance Audit',
-      date: '2025 - 01 - 16',
-      summary: 'Comprehensive performance audit using Google Lighthouse',
+    {'
+      id: 'lighthouse - audit - 2025 - 01 - 16','
+      title: 'Lighthouse Performance Audit','
+      date: '2025 - 01 - 16','
+      summary: 'Comprehensive performance audit using Google Lighthouse','
       status: 'completed';
     },
-    {
-      id: 'load - testing - 2025 - 01 - 15',
-      title: 'Load Testing Results',
-      date: '2025 - 01 - 15',
+    {'
+      id: 'load - testing - 2025 - 01 - 15','
+      title: 'Load Testing Results','
+      date: '2025 - 01 - 15','
       summary: 'Stress testing results under high traffic conditions',
-
+'
       status: 'completed'
 
 
@@ -212,145 +219,146 @@ const PerformancePage: React.FC = () => {
 
 
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'excellent': return 'text-green-400';
-      case 'good': return 'text-yellow-400';
-      case 'warning': return 'text-orange-400';
-      case 'critical': return 'text-red-400';
+  const getStatusColor = (status: string) => {}
+    switch (status) {'
+      case 'excellent': return 'text-green-400';'
+      case 'good': return 'text-yellow-400';'
+      case 'warning': return 'text-orange-400';'
+      case 'critical': return 'text-red-400';'
       default: return 'text-gray-400';
 
   };
 
 
-=======
-      } catch (error) {
-    console.error("Error:", error);
+
+      } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
-  const getTrendColor = (trend: string) => {
+  const getTrendColor = (trend: string) => {'
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
   };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
+
+
+  return ("
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
-        <title>Performance Reports - bolt.new.zion.app</title>
-        <meta name="description" content="Comprehensive performance metrics and system analytics" />
+        <title>Performance Reports - bolt.new.zion.app</title>"
+        <meta name="description" content="Comprehensive performance metrics and system analytics" />"
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      </Head>"
       <div className="container mx-auto px-4 py-8">
 
 
-        {/* Header */  } catch (error) {
-    console.error("Error:", error);
+        {/* Header */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        <div className="mb-8">
+"
+        <div className="mb-8">"
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            ← Back to Home
-          </Link>
+            ← Back to Home;
+          </Link>"
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Performance Reports
-          </h1>
+            Performance Reports;
+          </h1>"
           <p className="text-gray-300 text-lg">
-            Real-time system performance metrics and analytics dashboard
+            Real-time system performance metrics and analytics dashboard;
           </p>
         </div>
 
 
-        {/* Performance Overview */  } catch (error) {
-    console.error("Error:", error);
+        {/* Performance Overview */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>
-            <div className="text-4xl font-bold text-green-400">96.8</div>
+"
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>"
+            <div className="text-4xl font-bold text-green-400">96.8</div>"
             <p className="text-gray-300 text-sm mt-2">Performance Index</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Status</h3>
-            <div className="text-2xl font-bold text-green-400">Healthy</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Status</h3>"
+            <div className="text-2xl font-bold text-green-400">Healthy</div>"
             <p className="text-gray-300 text-sm mt-2">All systems operational</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Last Updated</h3>
-            <div className="text-2xl font-bold text-blue-400">2 min ago</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Last Updated</h3>"
+            <div className="text-2xl font-bold text-blue-400">2 min ago</div>"
             <p className="text-gray-300 text-sm mt-2">Real-time monitoring</p>
           </div>
         </div>
 
 ;
-  const getTrendColor = (trend: string) =>: any {
+  const getTrendColor = (trend: string) =>: any {'
     return trend.starts_with ('+') ? 'text - green - 400' : 'text - red - 400';
   }
 ;
-  return (
+  return ("
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - gray - 900 text - white">;
       <Head>;
-        <title > Performance Reports - bolt.new.zion.app</title>;
-        <meta name="description" content="Comprehensive performance metrics and system analytics" />;
+        <title > Performance Reports - bolt.new.zion.app</title>;"
+        <meta name="description" content="Comprehensive performance metrics and system analytics" />;"
         <meta name="viewport" content="width = device - width, initial - scale = 1" />;
-      </Head>;
+      </Head>;"
       <div className="container mx - auto px - 4 py - 8">;
-        {/* Header */}
-        <div className="mb - 8">;
+        {/* Header */}"
+        <div className="mb - 8">;"
           <Link href="/" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
             ← Back to Home;
-          </Link>;
+          </Link>;"
           <h1 className="text - 4xl font - bold mt - 4 mb - 2 bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent">;
             Performance Reports;
-          </h1>;
+          </h1>;"
           <p className="text - gray - 300 text - lg">;
             Real - time system performance metrics and analytics dashboard;
           </p>;
         </div>;
-        {/* Performance Overview */}
-        <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 8">;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Overall Score</h3>;
-            <div className="text - 4xl font - bold text - green - 400">96.8</div>;
+        {/* Performance Overview */}"
+        <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 8">;"
+          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Overall Score</h3>;"
+            <div className="text - 4xl font - bold text - green - 400">96.8</div>;"
             <p className="text - gray - 300 text - sm mt - 2">Performance Index</p>;
-          </div>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Status</h3>;
-            <div className="text - 2xl font - bold text - green - 400">Healthy</div>;
+          </div>;"
+          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Status</h3>;"
+            <div className="text - 2xl font - bold text - green - 400">Healthy</div>;"
             <p className="text - gray - 300 text - sm mt - 2">All systems operational</p>;
-          </div>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Last Updated</h3>;
-            <div className="text - 2xl font - bold text - blue - 400">2 min ago</div>;
+          </div>;"
+          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Last Updated</h3>;"
+            <div className="text - 2xl font - bold text - blue - 400">2 min ago</div>;"
             <p className="text - gray - 300 text - sm mt - 2">Real - time monitoring</p>;
           </div>;
         </div>;
 
-        {/* Performance Metrics */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
+        {/* Performance Metrics */}"
+        <div className="mb - 8">;"
+          <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;"
           <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
-            {performance_metrics.map ((section, section_index) => (
-              <div key={section_index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">{section.category}</h3>;
+            {performance_metrics.map ((section, section_index) => ("
+              <div key={section_index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;"
+                <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">{section.category}</h3>;"
                 <div className="space - y-4">;
-                  {section.metrics.map ((metric, metric_index) => (
-                    <div key={metric_index} className="flex justify - between items - center">;
-                      <span className="text - gray - 300">{metric.name}</span>;
+                  {section.metrics.map ((metric, metric_index) => ("
+                    <div key={metric_index} className="flex justify - between items - center">;"
+                      <span className="text - gray - 300">{metric.name}</span>;"
                       <div className="flex items - center space - x-3">;
                         <span className={`font - semibold ${getStatusColor (metric.status)}`}>;
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -422,16 +430,22 @@ const PerformancePage: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%'   } catch (error) {
     console.error("Error:", error);
+=======
+
+'
+        { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%'   } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 =======
 <<<<<<< HEAD
 =======
@@ -439,16 +453,20 @@ const PerformancePage: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
       ]
 
     },
-    {
+    {'
       category: 'Resource Utilization',
-      metrics: [;
-        { name: 'CPU Usage', value: '23%', status: 'good', trend: '-5%' },
+      metrics: [;'
+        { name: 'CPU Usage', value: '23%', status: 'good', trend: '-5%' },'
         { name: 'Memory Usage', value: '67%', status: 'good', trend: '+3%' },
-
+'
         { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 
 =======
@@ -461,16 +479,21 @@ const PerformancePage: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {
     console.error("Error:", error);
+=======
+'
+        { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 =======
 <<<<<<< HEAD
 =======
@@ -478,16 +501,20 @@ const PerformancePage: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
       ]
 
     },
-    {
+    {'
       category: 'User Experience',
-      metrics: [;
+      metrics: [;'
         { name: 'Page Load Time', value: '1.2s', status: 'excellent', trend: '-20%' },
-
-        { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },
+'
+        { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },'
         { name: 'Accessibility Score', value: '96/100', status: 'excellent', trend: '+2%' },
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -502,28 +529,28 @@ const PerformancePage: React.FC = () => {
     }
   ];
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-        { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%'   } catch (error) {
-    console.error("Error:", error);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
+
+'
+        { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%'   } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
       ]
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ];
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const recentReports = [
@@ -558,38 +585,48 @@ const PerformancePage: React.FC = () => {
       title: 'Weekly Performance Report',
       date: '2025-01-17',
       summary: 'System performance metrics for the week ending January 17, 2025',
+=======
+  const recentReports = []
+    {'
+      id: 'performance-weekly-2025-01-17','
+      title: 'Weekly Performance Report','
+      date: '2025-01-17','
+      summary: 'System performance metrics for the week ending January 17, 2025','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
       status: 'completed'
 <<<<<<< HEAD
 =======
     },
-    {
-      id: 'lighthouse-audit-2025-01-16',
-      title: 'Lighthouse Performance Audit',
-      date: '2025-01-16',
-      summary: 'Comprehensive performance audit using Google Lighthouse',
+    {'
+      id: 'lighthouse-audit-2025-01-16','
+      title: 'Lighthouse Performance Audit','
+      date: '2025-01-16','
+      summary: 'Comprehensive performance audit using Google Lighthouse','
       status: 'completed'
     },
-    {
-      id: 'load-testing-2025-01-15',
-      title: 'Load Testing Results',
-      date: '2025-01-15',
-      summary: 'Stress testing results under high traffic conditions',
+    {'
+      id: 'load-testing-2025-01-15','
+      title: 'Load Testing Results','
+      date: '2025-01-15','
+      summary: 'Stress testing results under high traffic conditions','
       status: 'completed'
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
     }
   ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      } catch (error) {
-    console.error("Error:", error);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
+
+
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 
   ];
@@ -598,11 +635,14 @@ const PerformancePage: React.FC = () => {
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
 
   ];
 
 
 
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
@@ -625,29 +665,34 @@ const PerformancePage: React.FC = () => {
 <<<<<<< HEAD
 
   };
-
-
 =======
-<<<<<<< HEAD
-    }
-  }
-  const getTrendColor = (trend: string) => {
-    return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
-<<<<<<< HEAD
-  }
-=======
-  };
+  const getStatusColor = (status: string) => {}
+    switch (status) {'
+      case 'excellent': return 'text-green-400';'
+      case 'good': return 'text-yellow-400';'
+      case 'warning': return 'text-orange-400';'
+      case 'critical': return 'text-red-400';'
+      default: return 'text-gray-400';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
 
+
+
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       } catch (error) {
     console.error("Error:", error);
+=======
+      } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
-  const getTrendColor = (trend: string) => {
+  const getTrendColor = (trend: string) => {'
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
   };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -665,13 +710,22 @@ const PerformancePage: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+=======
+
+
+
+
+
+  return ("
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
-        <title>Performance Reports - bolt.new.zion.app</title>
-        <meta name="description" content="Comprehensive performance metrics and system analytics" />
+        <title>Performance Reports - bolt.new.zion.app</title>"
+        <meta name="description" content="Comprehensive performance metrics and system analytics" />"
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      </Head>"
       <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -695,16 +749,25 @@ const PerformancePage: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-8">
+=======
+
+
+
+
+"
+        <div className="mb-8">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            ← Back to Home
-          </Link>
+            ← Back to Home;
+          </Link>"
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Performance Reports
-          </h1>
+            Performance Reports;
+          </h1>"
           <p className="text-gray-300 text-lg">
-            Real-time system performance metrics and analytics dashboard
+            Real-time system performance metrics and analytics dashboard;
           </p>
         </div>
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -731,19 +794,31 @@ const PerformancePage: React.FC = () => {
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>
             <div className="text-4xl font-bold text-green-400">96.8</div>
+=======
+
+
+
+
+"
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>"
+            <div className="text-4xl font-bold text-green-400">96.8</div>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
             <p className="text-gray-300 text-sm mt-2">Performance Index</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Status</h3>
-            <div className="text-2xl font-bold text-green-400">Healthy</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Status</h3>"
+            <div className="text-2xl font-bold text-green-400">Healthy</div>"
             <p className="text-gray-300 text-sm mt-2">All systems operational</p>
-          </div>
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Last Updated</h3>
-            <div className="text-2xl font-bold text-blue-400">2 min ago</div>
+          </div>"
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">"
+            <h3 className="text-xl font-semibold mb-4 text-cyan-400">Last Updated</h3>"
+            <div className="text-2xl font-bold text-blue-400">2 min ago</div>"
             <p className="text-gray-300 text-sm mt-2">Real-time monitoring</p>
           </div>
         </div>
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -825,73 +900,84 @@ const PerformancePage: React.FC = () => {
 
         {/* Performance Metrics */  } catch (error) {
     console.error("Error:", error);
+=======
+"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
+
+
+"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {performanceMetrics.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">{section.category}</h3>
+            {performanceMetrics.map((section, sectionIndex) => ("
+              <div key={sectionIndex} className="bg-white/10 rounded-xl p-6 border border-white/20">"
+                <h3 className="text-xl font-semibold mb-4 text-cyan-400">{section.category}</h3>"
                 <div className="space-y-4">
-                  {section.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex justify-between items-center">
-                      <span className="text-gray-300">{metric.name}</span>
-                      <div className="flex items-center space-x-3">
+                  {section.metrics.map((metric, metricIndex) => ("
+                    <div key={metricIndex} className="flex justify-between items-center">"
+                      <span className="text-gray-300">{metric.name}</span>"
+                      <div className="flex items-center space-x-3">`
                         <span className={`font-semibold ${getStatusColor(metric.status)}`}>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-                          {metric.value  } catch (error) {
-    console.error("Error:", error);
+                          {metric.value  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                        </span>
+                        </span>`
                         <span className={`text-sm ${getTrendColor(metric.trend)}`}>
-                          {metric.trend  } catch (error) {
-    console.error("Error:", error);
+                          {metric.trend  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                         </span>
                       </div>
                     </div>
-                  ))  } catch (error) {
-    console.error("Error:", error);
+                  ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                 </div>
               </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
+            ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </div>
         </div>
-        {/* Recent Reports */  } catch (error) {
-    console.error("Error:", error);
+        {/* Recent Reports */  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Reports</h2>
+=======
+"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Recent Reports</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recentReports.map((report) => (
-              <div key={report.id} className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-semibold text-white">{report.title}</h3>
+            {recentReports.map((report) => ("
+              <div key={report.id} className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">"
+                <div className="flex justify-between items-start mb-4">"
+                  <h3 className="text-lg font-semibold text-white">{report.title}</h3>"
                   <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 
 =======
@@ -911,11 +997,23 @@ const PerformancePage: React.FC = () => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+                    {report.status  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
                   </span>
-                </div>
-                <p className="text-gray-300 text-sm mb-4">{report.summary}</p>
-                <div className="flex justify-between items-center">
+                </div>"
+                <p className="text-gray-300 text-sm mb-4">{report.summary}</p>"
+                <div className="flex justify-between items-center">"
                   <span className="text-gray-400 text-sm">{report.date}</span>
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
                   <Link 
                     href={`/reports/${report.id}`}
@@ -935,21 +1033,30 @@ const PerformancePage: React.FC = () => {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
 
 
 
 
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
                     className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
                   >
                     View Report →
                   </Link>
                 </div>
               </div>
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -983,6 +1090,16 @@ const PerformancePage: React.FC = () => {
             <div className="text-center">
               <div className="text-6xl font-bold text-cyan-400 mb-4">📈</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Continuous Improvement</h3>
+=======
+
+"
+        <div className="mb-8">"
+          <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>"
+          <div className="bg-white/10 rounded-xl p-8 border border-white/20">"
+            <div className="text-center">"
+              <div className="text-6xl font-bold text-cyan-400 mb-4">📈</div>"
+              <h3 className="text-xl font-semibold mb-2 text-white">Continuous Improvement</h3>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
               <p className="text-gray-300 mb-6">
 <<<<<<< HEAD
                 Our automated systems continuously monitor and optimize performance
@@ -993,6 +1110,7 @@ const PerformancePage: React.FC = () => {
 
                 Our automated systems continuously monitor and optimize performance,
 
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Our automated systems continuously monitor and optimize performance, 
@@ -1011,23 +1129,28 @@ const PerformancePage: React.FC = () => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
                 ensuring consistent improvement across all metrics.
-              </p>
+              </p>"
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-green-400">+15%</div>
+                <div>"
+                  <div className="text-2xl font-bold text-green-400">+15%</div>"
                   <div className="text-gray-400 text-sm">Avg Response Time</div>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-green-400">+8%</div>
+                <div>"
+                  <div className="text-2xl font-bold text-green-400">+8%</div>"
                   <div className="text-gray-400 text-sm">Throughput</div>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-green-400">+12%</div>
+                <div>"
+                  <div className="text-2xl font-bold text-green-400">+12%</div>"
                   <div className="text-gray-400 text-sm">User Experience</div>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-green-400">+5%</div>
+                <div>"
+                  <div className="text-2xl font-bold text-green-400">+5%</div>"
                   <div className="text-gray-400 text-sm">Efficiency</div>
                 </div>
               </div>
@@ -1040,8 +1163,9 @@ const PerformancePage: React.FC = () => {
           <Link 
 =======
 
-
+"
         <div className="flex flex-wrap gap-4 justify-center">
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
           <Link 
 
 <<<<<<< HEAD
@@ -1075,9 +1199,21 @@ const PerformancePage: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             href="/reports"
+=======
+          <Link;
+        {/* Navigation */  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+"
+            href="/reports""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
-            All Reports
+            All Reports;
           </Link>
 <<<<<<< HEAD
           <Link
@@ -1088,12 +1224,17 @@ const PerformancePage: React.FC = () => {
 
 
 
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             href="/reports/updates"
+=======
+"
+            href="/reports/updates""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
-            Recent Updates
+            Recent Updates;
           </Link>
 <<<<<<< HEAD
           <Link
@@ -1104,17 +1245,23 @@ const PerformancePage: React.FC = () => {
 
 
 
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             href="/automation-health"
+=======
+"
+            href="/automation-health""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
           >
-            System Health
+            System Health;
           </Link>
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD:pages_backup/reports/performance.tsx
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1210,3 +1357,8 @@ const PerformancePage: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default PerformancePage;
+=======
+
+
+export default PerformancePage;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/reports/performance.tsx

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Security Configuration
 export const securityConfig = {
   // Content Security Policy
@@ -18,6 +19,22 @@ export const securityConfig = {
       frameSrc: ["'none'"],
       objectSrc: ["'none'"],
       baseUri: ["'self'"],
+=======
+// Security Configuration;
+export const security_config = {};
+  // Content Security Policy;
+  csp: {}
+    directives: {}
+      defaultSrc: ["'self'"],'"
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],'"
+      fontSrc: ["'self'", "https://fonts && fonts.gstatic.com"],'"
+      imgSrc: ["'self'", "data:", "https:"],'"
+      scriptSrc: ["'self'"],'"
+      connectSrc: ["'self'"],'"
+      frameSrc: ["'none'"],'"
+      objectSrc: ["'none'"],'"
+      baseUri: ["'self'"],'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       formAction: ["'self'"],
 <<<<<<< HEAD
 =======
@@ -27,22 +44,23 @@ export const securityConfig = {
     },
   },
 
-  // Security Headers
-  headers: {
-    "X-Frame-Options": "DENY",
-    "X-Content-Type-Options": "nosniff",
-    "Referrer-Policy": "strict-origin-when-cross-origin",
+  // Security Headers;
+  headers: {"
+    "X-Frame-Options": "DENY","
+    "X-Content-Type-Options": "nosniff","
+    "Referrer-Policy": "strict-origin-when-cross-origin","
     "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
   },
 
-  // Rate Limiting
-  rateLimit: {
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100, // limit each IP to 100 requests per windowMs
+  // Rate Limiting;
+  rateLimit: {}
+    windowMs: 15 * 60 * 1000, // 15 minutes;
+    max: 100, // limit each IP to 100 requests per windowMs;
   },
 };
 
 export default securityConfig;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       upgradeInsecureRequests: []
@@ -88,3 +106,6 @@ export default securityConfig;
 export default securityConfig;
 =======
 >>>>>>> pr-12243
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

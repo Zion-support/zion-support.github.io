@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
 export type Job = {;
   id: string;
@@ -60,6 +61,9 @@ export interface Application {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface Application {;
   id: string;
   name: string;
@@ -72,11 +76,11 @@ export interface Application {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
-=======
+
 
 
 export interface Application {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
 
   id: string;
@@ -86,6 +90,7 @@ export interface Application {;
   createdAtIso: string;
 }
 export type UserRole = 'admin' | 'user' | 'guest';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -206,3 +211,8 @@ export type UserRole = 'admin' | 'user' | 'guest';
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+export type UserRole = "admin" | "user" | "guest";
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

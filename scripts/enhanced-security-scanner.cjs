@@ -1,8 +1,11 @@
 
 
+<<<<<<< HEAD
 
 main
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -41,6 +44,7 @@ main
     process.exit(1)}
 }
 
+<<<<<<< HEAD
 main();#!/usr/bin/env node;
 
 main();
@@ -50,6 +54,15 @@ main();
 main();#!/usr/bin/env node;
 
 main
+=======
+
+
+
+
+
+
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const fs = require('fs')
 const path = require('path')

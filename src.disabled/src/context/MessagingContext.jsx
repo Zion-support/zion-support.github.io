@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,9 +26,11 @@ import _React,{ createContext,useContext,useState } from 'react'; const Messagin
 import React,{ createContext,useContext,useState } from \'react\'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} \"id\": Date && Date.now().toString(),; content,; \"timestamp\": new Date(),; \"isRead\": \'false\',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const React,{ createContext,useContext,useState } from "react"; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} id: Date && Date.now().toString(),; content,; timestamp: new Date(),; isRead: "false",; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };'"'"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date && Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,3 +80,13 @@ import React,{ createContext,useContext,useState } from \'react\'; const Messagi
 const React,{ createContext,useContext,useState } from "react"; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} id: Date.now().toString(),; content,; timestamp: new Date(),; isRead: "false",; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };'"'"
 import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React,{ createContext,useContext,useState } from \'react\'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} \"id\": Date.now().toString(),; content,; \"timestamp\": new Date(),; \"isRead\": \'false\',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };'"
+const React,{ createContext,useContext,useState } from "react"; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} id: Date.now().toString(),; content,; timestamp: new Date(),; isRead: "false",; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };'"'"'"
+import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

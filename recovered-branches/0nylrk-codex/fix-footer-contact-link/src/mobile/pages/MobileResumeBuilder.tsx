@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from "react",
@@ -37,12 +38,17 @@ export function MobileResumeBuilder() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { MobileHeader } from "../components/common/MobileHeader";
+=======
+import React from "react";"
+import { MobileHeader } from "../components/common/MobileHeader";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { BottomNavigation } from "../components/common/BottomNavigation";
-import {
+import {}
   MobileResumeBuilder,
   as,
-  ResumeBuilderComponent,
+  ResumeBuilderComponent,";
 } from "../components/resume/MobileResumeBuilder";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function MobileResumeBuilder() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -61,9 +67,15 @@ import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/res
 
 export function MobileResumeBuilder() {
   return (
+=======
+export function MobileResumeBuilder() {}
+export function MobileResumeBuilder() {}
+  return (";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="min-h-screen">;
-      <MobileHeader
+      <MobileHeader"
         title="Resume Builder"
+<<<<<<< HEAD
         showBack
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,10 +122,28 @@ export function MobileResumeBuilder() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+        showBack;
+"
+import React from "react","
+import { MobileHeader } from "../components/common/MobileHeader",";
+import { BottomNavigation } from "../components/common/BottomNavigation";"
+import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder";"
+import { BottomNavigation } from "../components/common/BottomNavigation","
+import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",
+
+
+export function MobileResumeBuilder() {}
+  return ("
+    <div className="min-h-screen">"
+      <MobileHeader title="Resume Builder" showBack />
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <main className="py-4">
         <ResumeBuilderComponent />
       </main>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -157,6 +187,10 @@ export function MobileResumeBuilder() {;
       <BottomNavigation />
     </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+      <BottomNavigation />;
+    </div>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 =======
       <BottomNavigation />;
@@ -166,13 +200,14 @@ export function MobileResumeBuilder() {;
     </div>;  );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
-import React from './react';
-import { MobileHeader } from '../components / common / MobileHeader';
-import { BottomNavigation } from '../components / common / BottomNavigation';
+import React from './react';'
+import { MobileHeader } from '../components / common / MobileHeader';'
+import { BottomNavigation } from '../components / common / BottomNavigation';'
 import { MobileResumeBuilder, as, ResumeBuilderComponent } from '../components / resume / MobileResumeBuilder';
-export /**
- * MobileResumeBuilder - Function description
+export /**;
+ * MobileResumeBuilder - Function description;
  */
+<<<<<<< HEAD
 function MobileResumeBuilder() {
   return (
     <div className="min-h-screen">;
@@ -181,6 +216,16 @@ function MobileResumeBuilder() {
         show_back;
       />;
       <main className="py-4">;
+=======
+function MobileResumeBuilder() {}
+  return ("
+    <div className="min - h-screen">;
+      <MobileHeader;"
+        title="Resume Builder";
+        show_back;
+      />;"
+      <main className="py - 4">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <ResumeBuilderComponent />;
       </main>;
       <BottomNavigation />;
@@ -190,47 +235,31 @@ function MobileResumeBuilder() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
-
-
-
-import React from "react",;
-import { MobileHeader } from "../components/common/MobileHeader",;
-import { BottomNavigation } from "../components/common/BottomNavigation",;
+"
+import React from "react",;"
+import { MobileHeader } from "../components/common/MobileHeader",;"
+import { BottomNavigation } from "../components/common/BottomNavigation",;"
 import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",;
 ;
-export function MobileResumeBuilder() {;
-  return (;
-    <div className="min-h-screen">;
-      <MobileHeader;
-        title="Resume Builder";
-        showBack;
-      />;
-      ;
-      <main className="py-4">;
-        <ResumeBuilderComponent />;
-      </main>;
-      ;
-      <BottomNavigation />;
-    </div>;
-  ),;
-} export function MobileResumeBuilder () {
-  return (<div className="min-h-screen" > Resume Builder"showBack /> <main className=" py-4" > <ResumeBuilderComponent /> </main> <BottomNavigation /> </div> 
-}
+export function MobileResumeBuilder() { return null; }
+} export function MobileResumeBuilder() { return null; }
+};
 ;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -241,3 +270,9 @@ export function MobileResumeBuilder() {;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

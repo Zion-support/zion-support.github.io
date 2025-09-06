@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
   return <ExpoPage />;
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -15,23 +16,28 @@ export default function ExpoRoute() {;
 export default function ExpoRoute() {;
   return <ExpoPage />;
 import dynamic from 'next / dynamic';
-;
-const ExpoPage = dynamic (() => import ('../components / expo / ExpoPage'), {
-  ssr: false,
+=======
+export default function ExpoRoute() { return null; }
+  return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false }),;
+export default function ExpoRoute() { return null; }
+const ExpoPage = dynamic (() => import ('../components / expo / ExpoPage'), {}
+  ssr: false,;
 });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
-export default /**
- * ExpoRoute - Function description
+export default /**;
+ * ExpoRoute - Function description;
  */
-function ExpoRoute() {
+function ExpoRoute() { return null; }
   return <ExpoPage />;const ExpoPage = dynamic (() => import ('../components / expo / ExpoPage'), { ssr: false }),
-export default /**
- * ExpoRoute - Function description
+export default /**;
+ * ExpoRoute - Function description;
  */
-function ExpoRoute() {
+function ExpoRoute() {}
   return <ExpoPage />;
 }
 
+<<<<<<< HEAD
 import dynamic from 'next/dynamic';
 const ExpoPage = null;
 export default function ExpoRoute() {
@@ -41,3 +47,6 @@ export default function ExpoRoute() {
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

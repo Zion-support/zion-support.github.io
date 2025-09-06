@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -22,6 +23,16 @@ import EmptyState from '../../components/ui/EmptyState';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const Dashboard: NextPage = () => {
+=======
+
+
+
+
+
+
+
+const Dashboard: NextPage = () => {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div className="space-y-6 pb-16">
       <Head>
@@ -31,6 +42,7 @@ const Dashboard: NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <h1 className="text-2xl font-semibold">Dashboard</h1>
       <section>
@@ -38,6 +50,8 @@ const Dashboard: NextPage = () => {
         <EmptyState
           title="No jobs yet"
           description="Post your first job to get quotes from top talent."
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -45,6 +59,7 @@ const Dashboard: NextPage = () => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -54,42 +69,44 @@ const Dashboard: NextPage = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           icon={<span>🧰</span>  } catch (error) {
     console.error("Error:", error);
+=======
+
+          icon={<span>🧰</span>  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          primaryAction={{ label: 'Post a job', href: '/jobs/post' }  } catch (error) {
-    console.error("Error:", error);
+          primaryAction={{ label: 'Post a job', href: '/jobs/post' }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-          secondaryAction={{ label: 'Explore talent', href: '/talent' }  } catch (error) {
-    console.error("Error:", error);
+}'
+          secondaryAction={{ label: 'Explore talent', href: '/talent' }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      <h1 className="text-2xl font-semibold">Dashboard</h1>
-      <section>
-        <h2 className="text-lg font-semibold mb-2">My Jobs</h2>
-        <EmptyState
-          title="No jobs yet"
-          description="Post your first job to get quotes from top talent."
-          icon={<span>🧰</span>}
-          primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
-          secondaryAction={{ label: 'Explore talent', href: '/talent' }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          icon={<span>🧰</span>  } catch (error) {
-    console.error("Error:", error);
+
+          icon={<span>🧰</span>  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}'
+          primaryAction={{ label: 'Post a job', href: '/jobs/post' }  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}'
+          secondaryAction={{ label: 'Explore talent', href: '/talent' }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           primaryAction={{ label: 'Post a job', href: '/jobs/post' }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -106,12 +123,20 @@ const Dashboard: NextPage = () => {
       </section>
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         />
       </section>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      <section>
+
+        />
+      </section>
+
+
+      <section>"
         <h2 className="text-lg font-semibold mb-2">Messages</h2>
+<<<<<<< HEAD
         <EmptyState
 =======
 =======
@@ -130,18 +155,22 @@ const Dashboard: NextPage;
         <EmptyState
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <EmptyState"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           title="No messages yet"
-          icon={<span>💬</span>  } catch (error) {
-    console.error("Error:", error);
+          icon={<span>💬</span>  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-          primaryAction={{ label: 'Browse services', href: '/services' }  } catch (error) {
-    console.error("Error:", error);
+}'
+          primaryAction={{ label: 'Browse services', href: '/services' }  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -154,19 +183,25 @@ const Dashboard: NextPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextPage } from 'next',
 import Head from 'next / head',
+=======
+'
+import type { NextPage } from 'next','
+import Head from 'next / head','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import EmptyState from '../../components / ui / EmptyState',
-const Dashboard: NextPage = () => {
-  return (
+const Dashboard: NextPage = () => {}
+  return (";
     <div className="space - y-6 pb - 16">;
       <Head>;
         <title > Dashboard - Zion</title>;
-      </Head>;
+      </Head>;"
       <h1 className="text - 2xl font - semibold">Dashboard</h1>;
-      <section>;
+      <section>;"
         <h2 className="text - lg font - semibold mb - 2">My Jobs</h2>;
-        <EmptyState;
-          title="No jobs yet";
+        <EmptyState;"
+          title="No jobs yet";"
           description="Post your first job to get quotes from top talent.";
+<<<<<<< HEAD
           icon={<span>🧰</span>}
           primary_action={{ label: 'Post a job', href: '/jobs / post' }}
           secondary_action={{ label: 'Explore talent', href: '/talent' }}
@@ -249,33 +284,59 @@ const Dashboard: NextPage = () => {
           description="Post your first job to get quotes from top talent.";
           icon={<span>🧰</span>}
           primary_action={{ label: 'Post a job', href: '/jobs / post' }}
+=======
+          icon={<span>🧰</span>}'
+          primary_action={{ label: 'Post a job', href: '/jobs / post' }}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           secondary_action={{ label: 'Explore talent', href: '/talent' }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         />;
       </section>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+'
+import type { NextPage } from 'next','
+import Head from 'next / head','
+import EmptyState from '../../components / ui / EmptyState',
+const Dashboard: NextPage = () => {}
+  return (";
+    <div className="space - y-6 pb - 16">;
+      <Head>;
+        <title > Dashboard - Zion</title>;
+      </Head>;"
+      <h1 className="text - 2xl font - semibold">Dashboard</h1>;
+      <section>;"
+        <h2 className="text - lg font - semibold mb - 2">My Jobs</h2>;
+        <EmptyState;"
+          title="No jobs yet";"
+          description="Post your first job to get quotes from top talent.";
+          icon={<span>🧰</span>}'
+          primary_action={{ label: 'Post a job', href: '/jobs / post' }}'
+          secondary_action={{ label: 'Explore talent', href: '/talent' }}
+        />;
+      </section>;
+
+
     </div>;
   );
 },;
 export default Dashboard;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
 
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -297,3 +358,9 @@ export default Dashboard;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default Dashboard;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

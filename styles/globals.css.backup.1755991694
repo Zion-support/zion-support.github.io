@@ -33,6 +33,7 @@
   --neon-cyan: #06b6d4;
   --neon-yellow: #eab308;
   --neon-red: #ef4444;
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -41,12 +42,22 @@
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   /* Gradient backgrounds */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+<<<<<<< HEAD
 }
   --gradient-futuristic: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);}
   --gradient-futuristic: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
@@ -59,6 +70,19 @@
 =======
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+}
+  --gradient-futuristic: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);}
+
+
+
+  --gradient-futuristic: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 /* Base styles */
 @layer base {
@@ -243,10 +267,20 @@ h3 {
   animation: quantumHolographic 20s ease-in-out infinite;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 @keyframes quantumHolographic {
   0%, 100% {
     background-position: 0% 0%, 100% 100%, 0% 100%, 0% 0%;
@@ -269,6 +303,7 @@ h3 {
     linear-gradient(0deg, transparent 0%, rgba(147, 51, 234, 0.1) 50%, transparent 100%),
     radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
   background-size: 200px 200px, 200px 200px, 100% 100%;
+<<<<<<< HEAD
 =======
 >>>>>>> main
   animation: neuralPulse 15s ease-in-out infinite;
@@ -308,11 +343,28 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   animation: neuralPulse 15s ease-in-out infinite;}
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  animation: neuralPulse 15s ease-in-out infinite;}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 @keyframes neuralPulse {
   0%, 100% {
@@ -325,10 +377,20 @@ body::after {
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Cyberpunk Background */
 .cyberpunk-bg {
   background:
@@ -503,6 +565,7 @@ body::after {
 /* Enhanced Button States */
 .btn-futuristic {
   position: relative;
+<<<<<<< HEAD
 =======
 >>>>>>> main
   overflow: hidden;
@@ -615,11 +678,28 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+  transition: all 0.3s ease;
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   transition: all 0.3s ease;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   overflow: hidden;  transition: all 0.3s ease;
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  overflow: hidden;  transition: all 0.3s ease;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 .quantum-button::before {
@@ -629,16 +709,27 @@ body::after {
   left: -100%;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   background: linear-gradient(
     90deg,
     transparent,
     rgba(255, 255, 255, 0.1),
     transparent
+<<<<<<< HEAD
   transition: left 0.5s ease;
   );  transition: left 0.5s ease;
   );
@@ -646,16 +737,39 @@ body::after {
 =======
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  transition: left 0.5s ease;
+  );  transition: left 0.5s ease;
+
+
+
+  );  transition: left 0.5s ease;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 .quantum-button:hover::before {
   left: 100%;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /* Enhanced Card Hover Effects */
 .card-hover-3d {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -750,6 +864,7 @@ body::after {
 
 .quantum-ripple:active::after {
   width: 300px;
+<<<<<<< HEAD
 =======
 >>>>>>> main
   height: 300px;
@@ -802,11 +917,28 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   height: 300px;}
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+  height: 300px;}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 @keyframes holographicShift {
   0%, 100% {
@@ -852,11 +984,21 @@ body::after {
 
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   .mobile-optimized {
     font-size: 0.9rem;
     padding: 0.75rem;
@@ -882,6 +1024,7 @@ body::after {
     display: none !important;
   body {
     background: white !important;
+<<<<<<< HEAD
     color: black !important;
   .quantum-particles::before {
     background-size: 50px 50px, 40px 40px, 60px 60px, 45px 45px;
@@ -914,8 +1057,25 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+
+
+  }
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     color: black !important;  }
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+
+
+    color: black !important;  }
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

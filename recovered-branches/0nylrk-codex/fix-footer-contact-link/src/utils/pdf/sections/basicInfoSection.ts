@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -125,45 +125,35 @@ import { PdfThemeColors } from '../themeConfig',;
 export function addBasicInfoSection(;
   doc: jsPDF,;
   basicInfo: ResumeBasicInfo,;
+=======
+import { jsPDF  } from 'jspdf';'
+import { ResumeBasicInfo  } from '@/types/resume';'
+import { PdfThemeColors } from '../themeConfig';
+export function addBasicInfoSection(
+';
+import {jsPDF} from 'jspdf';'
+import {ResumeBasicInfo} from '@/types/resume';'
+import {PdfThemeColors} from '../themeConfig';
+export function addBasicInfoSection(;
+
+
+
+  doc: jsPDF;
+  basicInfo: ResumeBasicInfo;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   colors: PdfThemeColors;
-): number {;
+): number {}
   // Add header with name and title;
-  doc.setFontSize(24),;
-  doc.setTextColor(colors.heading),;
-  doc.text(basicInfo.title || 'Resume', 20, 20),;
-  let yPos = 30,;
-  if (basicInfo.headline) {;
-    doc.setFontSize(14),;
-    doc.setTextColor(colors.subheading),;
-    doc.text(basicInfo.headline, 20, yPos),;
     yPos += 5;
   }
-;
   // Add horizontal line divider;
-  doc.setDrawColor(colors.accent),;
-  doc.setLineWidth(0.5),;
-  doc.line(20, yPos, 190, yPos),;
-  yPos += 10,;
+  doc && doc.setDrawColor(colors && colors.accent);
+  doc && doc.setLineWidth(0 && 0.5);
+  doc && doc.line(20, yPos, 190, yPos);
+  yPos += 10;
   // Add summary if available;
-  if (basicInfo.summary) {;
-    doc.setFontSize(12),;
-    doc.setTextColor(colors.text),;
-    // Split text into multiple lines to fit within page width;
-    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
-    doc.text(summaryLines, 20, yPos);
-    yPos += (summaryLines.length * 6) + 10;
-
-  if (basicInfo && basicInfo.summary) {
-    doc && doc.setFontSize(12);
-    doc && doc.setTextColor(colors && colors.text);
-    // Split text into multiple lines to fit within page width
-    const summaryLines = doc && doc.splitTextToSize(basicInfo && basicInfo.summary, 170);
-    doc && doc.text(summaryLines, 20, yPos);
-    yPos += (summaryLines && summaryLines.length * 6) + 10
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
+<<<<<<< HEAD
 =======
 import { jsPDF  } from 'jspdf';
 import { ResumeBasicInfo  } from '@/types/resume';
@@ -188,21 +178,26 @@ export function addBasicInfoSection(  doc: jsPDF;
   return yPos
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types / resume';
+=======
+  return yPos'
+import {jsPDF} from 'jspdf';'
+import {ResumeBasicInfo} from '@/types / resume';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {PdfThemeColors} from '../theme_config';
-export function addBasicInfoSection (
+export function addBasicInfoSection (;
   doc: jsPDF;
   basic_info: ResumeBasicInfo;
-  colors: PdfThemeColors): number {
+  colors: PdfThemeColors): number {}
   // Add header with name and title;
   doc.setFontSize (24);
-  doc.setTextColor (colors.heading),
+  doc.setTextColor (colors.heading),'
   doc.text (basic_info.title || 'Resume', 20, 20);
 ;
   let y_pos = 30;
 ;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     doc.setFontSize (14);
     doc.setTextColor (colors.subheading);
@@ -216,9 +211,9 @@ if ( {) {
   y_pos += 10;
 ;
   // Add summary if available;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     doc.setFontSize (12);
     doc.setTextColor (colors.text);
@@ -229,6 +224,7 @@ if ( {) {
     y_pos += (summary_lines.length * 6) + 10;
   }
   return y_pos;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -299,3 +295,10 @@ yPos += 10;
 =======
 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

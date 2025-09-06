@@ -24,6 +24,7 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   const revolutionaryServices = [
     {
       name: 'Quantum AI Cognitive Platform',
@@ -64,6 +65,9 @@ export default function HomePage() {
       variant: 'neural',
       link: 'https://ziontechgroup.com/biomedical-ai-research',
       features: ['Drug discovery acceleration', 'Genomic analysis', 'Clinical trial optimization', 'Research automation']
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Quantum Finance Optimizer',
@@ -319,6 +323,7 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
+<<<<<<< HEAD
                 <UltraFuturisticCard
                   variant={service.variant as any}
                   glowIntensity="high"
@@ -518,6 +523,9 @@ export default function HomePage() {
             >
               View All 500+ Services
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>
           </motion.div>
         </div>

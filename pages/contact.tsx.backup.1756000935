@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -187,10 +188,14 @@ export default function ContactPage() {
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </Head>
 
       <EnhancedNavigation />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -271,10 +276,14 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <motion.div
                 key={method.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -731,6 +740,9 @@ export default function ContactPage() {
                 </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Expert Team</h3>
               <p className="text-slate-600">World-class engineers and researchers with decades of combined experience.</p>
@@ -778,44 +790,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* FAQ Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-slate-600">
-              Get quick answers to common questions about our services and processes.
-            </p>
-          </motion.div>
 
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-lg"
-              >
-                <h3 className="text-xl font-bold text-slate-900 mb-4">{faq.question}</h3>
-                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <EnhancedContactForm />
-
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-751f
       <EnhancedFooter />
     </>
   );

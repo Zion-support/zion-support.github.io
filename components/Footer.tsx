@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pr-12243
   Phone
   Mail
@@ -583,10 +584,18 @@ pr-12243
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
                 <span>kleber@ziontechgroup.com</span>
+=======
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>"
+            <ul className="space-y-2">
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 mt-8 pt-8>
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -763,3 +772,7 @@ main
 export default Footer;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

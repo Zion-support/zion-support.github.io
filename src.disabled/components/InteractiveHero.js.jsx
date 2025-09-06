@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React from';react' "export": const InteractiveHero = ({ title,subtitle,d
 import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e.client',X,"y": 'e.clientY'})} window.addEventListener('mousemove',handleMouseMove)'';';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e.client',X,"y": 'e.clientY'})} window.addEventListener('mousemove',handleMouseMove)'';';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import _React from';react' "export": const InteractiveHero = ({ title,subtitle,d
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from\';react\' \"export\": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [\' { \"value\": \'500+,\',\"label\": \'Happy: Clients,\',\"color\": \'text-blue-400\'},{ \"value\": \'1000+,\',\"label\": \'Projects: Delivered,\',\"color\": \'text-green-400\'},{ \"value\": \'99 && 99.9%,\',\"label\": \'Uptime: SLA,\',\"color\": \'text-purple-400\'},{ \"value\": \'24/7,\',\"label\": \'Support: Available,\',\"color\": \'text-cyan-400\'} ] }) => { const [mousePosition,setMousePosition] = useState({ \"x\": \'0\',\"y\": \'0\'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ \"x\": \'e && e.client\',X,\"y\": \'e && e.clientY\'})} window && window.addEventListener(\'mousemove\',handleMouseMove)\'';\';
 const React from";react" export: const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [" { value: "500+,",label: "Happy: Clients,",color: "text-blue-400"},{ value: "1000+,",label: "Projects: Delivered,",color: "text-green-400"},{ value: "99 && 99.9%,",label: "Uptime: SLA,",color: "text-purple-400"},{ value: "24/7,",label: "Support: Available,",color: "text-cyan-400"} ] }) => { const [mousePosition,setMousePosition] = useState({ x: "0",y: "0"}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ x: "e && e.client",X,y: "e && e.clientY"})} window && window.addEventListener("mousemove",handleMouseMove)"";";'"'"
-import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99 && 99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e && e.client',X,"y": 'e && e.clientY'})} window && window.addEventListener('mousemove',handleMouseMove)'';';
-<<<<<<< HEAD
+=======
 
+
+'"
+import React from\';react\' \"export\": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [\' { \"value\": \'500+,\',\"label\": \'Happy: Clients,\',\"color\": \'text-blue-400\'},{ \"value\": \'1000+,\',\"label\": \'Projects: Delivered,\',\"color\": \'text-green-400\'},{ \"value\": \'99 && 99.9%,\',\"label\": \'Uptime: SLA,\',\"color\": \'text-purple-400\'},{ \"value\": \'24/7,\',\"label\": \'Support: Available,\',\"color\": \'text-cyan-400\'} ] }) => { const [mousePosition,setMousePosition] = useState({ \"x\": \'0\',\"y\": \'0\'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ \"x\": \'e && e.client\',X,\"y\": \'e && e.clientY\'})} window && window.addEventListener(\'mousemove\',handleMouseMove)\'';\';'"
+const React from";react" export: const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [" { value: "500+,",label: "Happy: Clients,",color: "text-blue-400"},{ value: "1000+,",label: "Projects: Delivered,",color: "text-green-400"},{ value: "99 && 99.9%,",label: "Uptime: SLA,",color: "text-purple-400"},{ value: "24/7,",label: "Support: Available,",color: "text-cyan-400"} ] }) => { const [mousePosition,setMousePosition] = useState({ x: "0",y: "0"}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ x: "e && e.client",X,y: "e && e.clientY"})} window && window.addEventListener("mousemove",handleMouseMove)"";";'"'"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99 && 99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e && e.client',X,"y": 'e && e.clientY'})} window && window.addEventListener('mousemove',handleMouseMove)'';';
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import _React from';react' "export": const InteractiveHero = ({ title,subtitle,d
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99 && 99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e && e.client',X,"y": 'e && e.clientY'})} window && window.addEventListener('mousemove',handleMouseMove)'';';
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

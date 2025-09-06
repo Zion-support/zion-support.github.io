@@ -1,6 +1,8 @@
-<<<<<<< HEAD
+
+
 import Link from 'next/link';
 
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:components/index.tsx.backup.1755991372.backup.1756001154
 ========
@@ -30,28 +32,11 @@ export default function Home() {
         <div className="absolute top-1/3 left-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-amber-400 via-pink-500 to-sky-500 blur-3xl opacity-20 animate-float-fast" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.06),rgba(0,0,0,0)_60%)]" />
       </div>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-      {/* Hero */}
-      <header className="relative"> 
-        <div className="mx-auto max-w-6xl px-6 pt-24 pb-16 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 backdrop-blur">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-            <span className="text-xs font-medium tracking-wider text-white/80">Autonomous. Cloud-Native. Always On.</span>
-          </div>
-          <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl">
-            <span className="bg-gradient-to-br from-white via-cyan-200 to-fuchsia-200 bg-clip-text text-transparent">Zion Autonomous Cloud Intelligence</span>
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-white/70">
-            Ship faster with self-driving automations for IPO readiness, investor relations, data rooms, and growth. Secure by design, powered by schedules, zero human babysitting.
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Link href="/admin/ipo-portal"><a className="neon-btn">Open IPO Portal</a></Link>
-            <Link href="/api/ipo/export-metrics"><a className="neon-btn ghost">Export Metrics</a></Link>
-            <Link href="/api/ipo/audit-log"><a className="neon-btn ghost">Audit Log</a></Link>
-          </div>
-        </div>
-      </header>
 
+<<<<<<< HEAD
       {/* Feature grid */}
       <section className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -329,6 +314,8 @@ function AutomationItem({ title, desc, link }: { title: string; desc: string; li
 >>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   return (
@@ -368,8 +355,14 @@ export default function HomePage() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-talent-marketplace-platform-793e
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991372.backup.1755991589
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

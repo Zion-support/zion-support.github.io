@@ -8,6 +8,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, Star, Users, Globe, Lock, Rocket, Cpu, Database, TrendingUp, Clock, Target, Building, Award, DollarSign, ChartBar, Code, BookOpen, Activity, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, Settings, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Sparkles, Atom, Brain, Eye, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:components/index.tsx.backup.1755991779.backup.1756001155
 export default function HomePage() {
@@ -53,11 +54,15 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
     {
+<<<<<<< HEAD
       title: '🧠 Revolutionary Quantum AI Cognitive Platform',
       description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months.',
       price: 'Starting at $299/month',
@@ -72,6 +77,9 @@ export default function HomePage() {
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       title: '🏭 Autonomous Manufacturing AI Platform',
@@ -299,7 +307,11 @@ export default function HomePage() {
   ];
 
   return (
+<<<<<<< HEAD
     <UltraFuturisticBackground variant="neural" intensity="extreme">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="min-h-screen">
         <Head>
           <title>Zion Tech Group - Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
@@ -674,9 +686,13 @@ export default function HomePage() {
                   Ready to Transform Your Business?
                 </span>
               </h2>
+<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Join thousands of businesses that have already revolutionized their operations 
                 with Zion Tech Group's cutting-edge solutions. Start your transformation today.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

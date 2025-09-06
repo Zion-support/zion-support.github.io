@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -195,10 +196,20 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
       await supabase.auth.signOut({ scope: 'global' }),;
       // Update state;
 =======
+=======
+import { supabase } from "@/integrations/supabase/client";"
+import { cleanupAuthState } from "@/utils/authUtils";"
+import type { UserProfile } from "@/types/auth";
+export const useLogout = (setUser: (user: UserProfile | null) => void) => {}
+  const logout = async () => {}
+    try {};
+      // Clean up existing auth state;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       (cleanupAuthState(),
-        // Sign out
+        // Sign out"
         await supabase.auth.signOut({ scope: "global" }));
 
+<<<<<<< HEAD
       // Update state
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
       setUser(null);
@@ -246,6 +257,12 @@ export const use_logout = (set_user: (user: UserProfile | null) =>: any void) =>
     } catch (error) {
       console.error("Error during logout:", error)
 
+=======
+      // Update state;
+      setUser(null);
+    } catch (error) {"
+      console.error("Error during logout:", error);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   };
 
@@ -288,6 +305,7 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
     }
@@ -296,6 +314,9 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -305,6 +326,7 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 }
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -325,3 +347,7 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

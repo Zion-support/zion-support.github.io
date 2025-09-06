@@ -3,11 +3,16 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Check, Star, TrendingUp, Clock, DollarSign, ShieldCheck, Search, Filter, Grid3X3, List, Phone, Mail, MapPin, ArrowRight, ExternalLink, Brain, Rocket, Globe, Cpu, Lock, Eye, Zap } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Check, TrendingUp, DollarSign, Users, Zap, Shield, BarChart3, Globe, Lock, Cpu, Database, Cloud, Bot, Code, Server, Monitor } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const microSaasServices = [
     {
+<<<<<<< HEAD
       icon: <Bot className="w-8 h-8 text-white" />,
       title: 'AI Content Automation Platform',
       description: 'Automated content generation, SEO optimization, and social media management powered by advanced AI.',
@@ -462,6 +467,9 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-b680
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992041
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -533,14 +541,18 @@ export default function ServicesPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
-=======
+
   return (
     <>
       <Head>
         <title>Micro SaaS Services | Zion Tech Group - Real Solutions with Market Pricing</title>
+<<<<<<< HEAD
         <meta name="description" content="Discover real micro SaaS services with market research, actual pricing, and proven ROI. AI automation, security, analytics, and more with competitive market analysis." />
         <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" />
         <meta property="og:description" content="Real micro SaaS services with market research, pricing, and ROI analysis." />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -553,6 +565,7 @@ export default function ServicesPage() {
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+<<<<<<< HEAD
             Real Micro SaaS Services
           </div>
           <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
@@ -560,15 +573,23 @@ export default function ServicesPage() {
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Discover real micro SaaS services backed by market research, competitive analysis, and proven ROI. No generic descriptions - just actionable solutions with actual pricing and market data.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </p>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Market Insights */}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-16">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+<<<<<<< HEAD
               Market Intelligence & Insights
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -578,12 +599,16 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {marketInsights.map((insight, index) => (
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Card
                 key={index}
                 className="card-hover text-center border-gradient-blue"
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onClick={() => { if (service.href) window.location.href = service.href; }}
               >
+<<<<<<< HEAD
                 <div className="p-6">
                   <div className="text-3xl font-bold text-white mb-2">{insight.value}</div>
                   <div className="text-sm text-gray-400 mb-3">{insight.metric}</div>
@@ -593,6 +618,9 @@ export default function ServicesPage() {
                   }`}>
                     <TrendingUp className={`w-4 h-4 mr-1 ${insight.trend === 'down' ? 'rotate-180' : ''}`} />
                     {insight.change}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
               </Card>
@@ -601,8 +629,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Micro SaaS Services */}
       <section className="section-padding bg-gradient-cursor">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
@@ -740,7 +772,7 @@ export default function ServicesPage() {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
               Technology Stack
-=======
+
   return (
     <>
       <Head>
@@ -853,7 +885,11 @@ export default function ServicesPage() {
             Ready to Implement Real Solutions?
           </h2>
           <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
             Get detailed proposals, custom pricing, and implementation roadmaps for any of our micro SaaS services. No generic consultations - just actionable solutions.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
@@ -861,7 +897,11 @@ export default function ServicesPage() {
               size="lg"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
             >
+<<<<<<< HEAD
               Get Custom Proposal
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>
             <Button
               href="/pricing"
@@ -869,7 +909,11 @@ export default function ServicesPage() {
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
             >
+<<<<<<< HEAD
               View Pricing Plans
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>
           </div>
         </section>
@@ -933,7 +977,7 @@ export default function ServicesPage() {
         </section>
       </div>
     </AdvancedFuturisticBackground>
-=======
+
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />

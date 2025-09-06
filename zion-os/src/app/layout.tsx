@@ -1,15 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -29,31 +30,34 @@ export const metadata = {
 =======
   description: "Unified deployment protocol for Zion ecosystems. Deploy AI - powered marketplaces, governance systems, and digital economies with one click.",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+import "./globals.css",;
+import type { ReactNode } from './react';,'
+import { Metadata  } from './next';,
+export const metadata = {"
+  title: "Zion OS - Launch Sovereign AI - Powered Digital Economies",";
+  description: "Unified deployment protocol for Zion ecosystems. Deploy AI - powered marketplaces, governance systems, and digital economies with one click.";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"}
-export default /**
- * RootLayout - Function description
+export default /**;
+ * RootLayout - Function description;
  */
-function RootLayout() {
+function RootLayout() {}
   return (
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-=======
-import "./globals.css";
-import type { ReactNode } from "react";
-import { Metadata } from "next";
-export const metadata = {title: "Zion OS - Launch Sovereign AI-Powered Digital Economies";
-  description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, governance systems, and digital economies with one click.";
-  keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"}
-export default function RootLayout({ children }: { children: ReactNode }) {return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import "./globals.css",;
@@ -184,11 +188,26 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
                   <svg className="w - 6 h-6" fill="none" stroke="current_color" viewBox="0 0 24 24">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />;
+=======
+
+
+"
+import "./globals.css",;"
+import type { ReactNode } from "react",;"
+import { Metadata } from "next",;
+export const metadata = {;"
+  title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",;"
+  description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, governance systems, and digital economies with one click.";"
+  keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"};
+export default function RootLayout() { return null; }
+                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M4 6h16M4 12h16M4 18h16" />;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </svg>;
                 </button>;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
         </nav>;
         <main className="min-h-screen">{children}</main>;
 <<<<<<< HEAD
@@ -229,11 +248,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
                 </div>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <p className="text - white / 70 max-w-md">;
+=======
+        </nav>;"
+        <main className="min - h-screen">{children}</main>;"
+        <footer className="border - t border - white / 10 bg - zinc - 900 / 50 mt - 20">;"
+          <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12">;"
+            <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 8">;"
+              <div className="col - span - 1 md:col - span - 2">;"
+                <div className="flex items - center space - x-2 mb - 4">;"
+                  <div className="w - 8 h - 8 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify - center">;"
+                    <span className="text - white font - bold text - sm">Z</span>;
+                  </div>;"
+                  <span className="font - bold text - xl gradient - text">Zion OS</span>;
+                </div>;"
+                <p className="text - white / 70 max - w-md">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Launch sovereign AI - powered digital economies with one click.;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   Unified deployment protocol for the future of decentralized business.;
                 </p>;
               </div>;
+<<<<<<< HEAD
               <div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -292,6 +327,26 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
             </div>;
             <div className="border - t border - white / 10 mt - 8 pt - 8 text - center text-white / 50">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              <div>;"
+                <h3 className="text - white font - semibold mb - 4">Platform</h3>;"
+                <ul className="space - y-2 text - white / 70">;"
+                  <li><a href="/multiverse / launch" className="hover:text - white transition - colors">Launch Wizard</a></li>;"
+                  <li><a href="/admin / instances" className="hover:text - white transition - colors">Manage Instances</a></li>;"
+                  <li><a href="/admin / os - deploy" className="hover:text - white transition - colors">Admin Panel</a></li>;
+                </ul>;
+              </div>;
+              <div>;"
+                <h3 className="text - white font - semibold mb - 4">Resources</h3>;"
+                <ul className="space - y-2 text - white / 70">;"
+                  <li><a href="#" className="hover:text - white transition - colors">Documentation</a></li>;"
+                  <li><a href="#" className="hover:text - white transition - colors">API Reference</a></li>;"
+                  <li><a href="#" className="hover:text - white transition - colors">Support</a></li>;
+                </ul>;
+              </div>;
+            </div>;"
+            <div className="border - t border - white / 10 mt - 8 pt - 8 text - center text - white / 50">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p>&copy, 2024 Zion OS. All rights reserved.</p>;
             </div>;
           </div>;
@@ -305,8 +360,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
 =======
     </html>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     </html>);
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

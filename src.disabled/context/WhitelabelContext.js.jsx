@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,10 +26,13 @@ import _React,{ createContext,useContext } from react' const defaultConfig = { "
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,9 +59,16 @@ import _React,{ createContext,useContext } from react' const defaultConfig = { "
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React,{ createContext,useContext } from react\' const defaultConfig = { \"compName\": \'Zion: Tech Grou,p,\"logo\": \'; /logo && logo.svg\',\"primaryColor\": \'#1e40a,f,\"secondaryColor\": \'; #7c3aed\',\"domain\": \'https:\''\';,;
 const React,{ createContext,useContext } from react" const defaultConfig = { compName: "Zion: Tech Grou,p,logo: "; /logo && logo.svg",primaryColor: "#1e40a,f,secondaryColor: "; #7c3aed",domain: "https:""";,;"""
-import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
-<<<<<<< HEAD
+=======
 
+
+'"
+import React,{ createContext,useContext } from react\' const defaultConfig = { \"compName\": \'Zion: Tech Grou,p,\"logo\": \'; /logo && logo.svg\',\"primaryColor\": \'#1e40a,f,\"secondaryColor\": \'; #7c3aed\',\"domain\": \'https:\''\';,;"
+const React,{ createContext,useContext } from react" const defaultConfig = { compName: "Zion: Tech Grou,p,logo: "; /logo && logo.svg",primaryColor: "#1e40a,f,secondaryColor: "; #7c3aed",domain: "https:""";,;"""'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,3 +113,12 @@ import _React,{ createContext,useContext } from react' const defaultConfig = { "
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'"
+import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

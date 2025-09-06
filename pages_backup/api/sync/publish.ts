@@ -10,8 +10,9 @@ import axios from "axios",
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";"
 import axios from "axios";
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage";
@@ -47,20 +48,35 @@ import {SyncEvent} from "../../../utils/sync/types";
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  res.status(200).json({ message: 'Event published' });
-import type { NextApiRequest, NextApiResponse } from "next",
-import axios from "axios",
-import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage",
-import { verifySignature } from "../../../utils/sync/signature",
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",
-import { SyncEvent } from "../../../utils/sync/types",
-<<<<<<< HEAD
 =======
+"
+import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage";"
+import { verifySignature } from "../../../utils/sync/signature";"
+import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";"
+import { SyncEvent } from "../../../utils/sync/types";
+function isAllowedByScope(stateType: string, scope: string): boolean {}
+"
+import type { NextApiRequest, NextApiResponse } from "next";"
+import axios from "axios";"
+import {readState, writeState, upsertEvent, getEntityId} from "../../../utils/sync/storage";"
+import {verifySignature} from "../../../utils/sync/signature";"
+import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle";"
+import {SyncEvent} from "../../../utils/sync/types";
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {}
+  try {';
+  res.status(200).json({ message: 'Event published' });"
+import type { NextApiRequest, NextApiResponse } from "next","
+import axios from "axios","
+import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage","
+import { verifySignature } from "../../../utils/sync/signature","
+import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle","
+import { SyncEvent } from "../../../utils/sync/types",
 
 
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -83,29 +99,42 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return true
+=======
+function isAllowedByScope(stateType: string, scope: string): boolean {"
+  if (scope === "full") return true,"
+  if (scope === "dao") return stateType === "proposal" || stateType === "dao_endorsement","
+  if (scope === "marketplace") return stateType === "token_transfer" || stateType === "talent_mobility" || stateType === "leaderboard_entry",
+
+;
+  return true;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
 }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+export default async function handler() { return null; }
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch (error) {
     console.error("Error:", error);
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
 <<<<<<< HEAD
 
 =======
@@ -117,6 +146,14 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!state.config.optIn || state.config.paused) {
 
+=======
+export default async function handler(req, res) {}
+  try {"
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+  const state = readState(),
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
     return res.status(403).json({ error: "Sync disabled for this instance" })
 <<<<<<< HEAD
     } catch (error) {
@@ -138,44 +175,36 @@ export default async function handler(req, res) {
   }
 =======
   }
-=======
-
-  if (!state.config.optIn || state.config.paused) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    return res.status(403).json({ error: "Sync disabled for this instance" })
-  }
-
+";
   if (req && req.method !== "POST") return res && res.status(405).json({ error: "Method not allowed" });
   const state = readState();
-  if (!state && state.config.optIn || state && state.config.paused) {
+  if (!state && state.config.optIn || state && state.config.paused) {"
     return res && res.status(403).json({ error: "Sync disabled for this instance" })
-  }
+  }"
   const signature = req && req.headers["x-zion-signature"];
-  const payload = req && req.body;
+  const payload = req && req.body;"
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array && Array.isArray(signature) ? signature[0] : undefined);
 
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+}"
   const signature = req.headers["x-zion-signature"],
-  const payload = req.body,
+  const payload = req.body,"
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined),
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  if (!signatureValid) {
+
+
+  if (!signatureValid) {"
     return res && res.status(401).json({ error: "Invalid signature" })
   }
 
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
 <<<<<<< HEAD
 =======
 
@@ -377,29 +406,39 @@ export default async function handler(req, res) {
     const votes = (event as any).payload?.votes,
     const providedRoot = event.merkleRoot,
     if (!Array.isArray(votes) || !providedRoot) {
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
       return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
 
-  const event = payload as SyncEvent & { propagate?: boolean };
-  if (!event || !event && event.type || !event && event.eventId) {
-    return res && res.status(400).json({ error: "Invalid event" })
+
+
+
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
   }
 
-  if (!isAllowedByScope(event && event.type, state && state.config.scope)) {
-    return res && res.status(403).json({ error: "Event type not allowed by current scope" })
-  }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  if (event && event.type === "proposal") {
+"
+  if (event && event.type === "proposal") {}
     const votes = (event as any).payload?.votes;
     const providedRoot = event && event.merkleRoot;
-    if (!Array && Array.isArray(votes) || !providedRoot) {
+    if (!Array && Array.isArray(votes) || !providedRoot) {"
       return res && res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
     const computed = computeMerkleRootFromVotes(votes);
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
     if (computed !== providedRoot) {
 <<<<<<< HEAD:pages/api/sync/publish.ts
 <<<<<<< HEAD
@@ -414,6 +453,9 @@ export default async function handler(req, res) {
   if (scope;
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/publish.ts
+=======
+    if (computed !== providedRoot) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
     }
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
@@ -444,18 +486,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const alreadyPropagated = payload && payload.propagate === false;
 
-  if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {
+  if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {}
     const headers: Record<string, string> = {};
     const localBody = { ...event, propagate: false };
-
+"
     const baseSignature = require("../../../utils/sync/signature");
-    const sig = baseSignature && baseSignature.signPayload(localBody);
+    const sig = baseSignature && baseSignature.signPayload(localBody);"
     if (sig) headers["x-zion-signature"] = sig;
-
+"
       return res.status(400).json({ error: "Merkle root mismatch" })
-      } catch (error) {
-    console.error("Error:", error);
+      } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -494,26 +537,29 @@ const baseSignature = require('../../../utils/sync/signature');
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
+=======
+    } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
+    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -522,13 +568,18 @@ const baseSignature = require('../../../utils/sync/signature');
   upsertEvent(currentState, event),
   writeState(currentState),
   const alreadyPropagated = payload.propagate === false,
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
 <<<<<<< HEAD
+=======
+  if (!alreadyPropagated && currentState.config.peers.length > 0) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
     const headers: Record<string, string> = {},
-    const localBody = { ...event, propagate: false },
+    const localBody = { ...event, propagate: false },"
     const baseSignature = require("../../../utils/sync/signature"),
-    const sig = baseSignature.signPayload(localBody),
+    const sig = baseSignature.signPayload(localBody),"
     if (sig) headers["x-zion-signature"] = sig,
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -547,9 +598,13 @@ const baseSignature = require('../../../utils/sync/signature');
     if (sig) headers["x-zion-signature"] = sig
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/publish.ts
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
     await Promise.all(
-      currentState.config.peers
+      currentState.config.peers;
         .filter((p) => !p.paused)
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
         .map(async (peer) => {
 <<<<<<< HEAD:pages/api/sync/publish.ts
 <<<<<<< HEAD
@@ -605,36 +660,40 @@ const baseSignature = require('../../../utils/sync/signature');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+        .map(async (peer) => {}
+          try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
   const event = payload as SyncEvent & { propagate?: boolean }
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}"
     return res.status (400).json ({ error: "Invalid event" });
   }
-  if () {) {
-  $2
-}
+  if () {) {}
+  $2;
+}"
     return res.status (403).json ({ error: "Event type not allowed by current scope" });
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const votes = (event as any).payload?.votes;
     const provided_root = event.merkle_root;
-    // Check condition
-if (|| !provided_root) {) {
-  $2
-}
+    // Check condition;
+if (|| !provided_root) {) {}
+  $2;
+}"
       return res.status (400).json ({ error: "Proposal events require votes[] and merkle_root" });
     }
     const computed = computeMerkleRootFromVotes (votes);
-    // Check condition
-if ( {) {
-  $2
-}
+    // Check condition;
+if ( {) {}
+  $2;
+}"
       return res.status (400).json ({ error: "Merkle root mismatch" });
     }
   }
@@ -645,25 +704,26 @@ if ( {) {
 ;
   const already_propagated = payload.propagate === false;
 ;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     const headers: Record < string, string> = {}
-    const local_body = { ...event, propagate: false }
+    const local_body = { ...event, propagate: false }"
     const base_signature = require ("../../../utils / sync / signature");
     const sig = base_signature.sign_payload (local_body);
-    // Check condition
-if (headers["x - zion - signature"] = sig) {
-  $2
+    // Check condition"
+if (headers["x - zion - signature"] = sig) {}
+  $2;
 }
     await Promise.all (
       current_state.config.peers;
         .filter ((p) => !p.paused);
-        .map (async (peer) => {
+        .map (async (peer) => {"
           const url = new URL ("/api / sync / publish", peer.base_url).to_string ();
-          try {
+          try {}
             await axios.post (url, local_body, { headers, timeout: 5000 });
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -673,10 +733,16 @@ if (headers["x - zion - signature"] = sig) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           } catch {
+=======
+
+
+          } catch {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
             // ignore peer failure;
           }
         }));
   }
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
 <<<<<<< HEAD:pages/api/sync/publish.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -738,14 +804,19 @@ if (headers["x - zion - signature"] = sig) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-  return res.status (200).json ({ status: "accepted", entity_id });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts
+  return res.status (200).json ({ status: "accepted", entity_id });
 }
 
+
+
+
+}
+
+<<<<<<< HEAD:pages_backup/api/sync/publish.ts
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -785,3 +856,9 @@ if (headers["x - zion - signature"] = sig) {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/sync/publish.ts
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/sync/publish.ts

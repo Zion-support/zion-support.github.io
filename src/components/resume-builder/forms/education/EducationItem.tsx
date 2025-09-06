@@ -4,9 +4,10 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Edit, Trash2 } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
+'
+import { Button } from '@/components/ui/button''
 import { EducationItemProps } from './types'
+<<<<<<< HEAD
 =======
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
@@ -22,11 +23,20 @@ export function EducationItem({
 <<<<<<< HEAD
 
 import { format } from 'date-fns';
+=======
+export function EducationItem({};
+  education;
+  onEdit;
+  onDelete;
+}: EducationItemProps) {}
+'
+import { format } from 'date-fns';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Edit, Trash2 } from 'lucide-react';
-
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Education } from '@/types/resume';
+'
+import { Button } from '@/components/ui/button';'
+import { Card, CardContent } from '@/components/ui/card';'
+import { Education } from '@/types/resume';'
 import { EducationItemProps } from './types';
 
 <<<<<<< HEAD
@@ -36,6 +46,7 @@ import { EducationItemProps } from './types';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -336,3 +347,6 @@ function EducationItem() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

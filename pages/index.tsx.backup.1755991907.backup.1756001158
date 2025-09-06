@@ -1,16 +1,21 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Hero from '../components/sections/Hero';
 import Features from '../components/sections/Features';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import ServiceCard from '../components/ui/ServiceCard';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 import { allEnhancedRealMicroSaasServices, getServicesByCategory, getPopularServices, serviceCategories } from '../data/enhanced-real-micro-saas-services';
 
 export default function HomePage() {
   const heroStats = [
+<<<<<<< HEAD
     { value: '100+', label: 'Real Micro SaaS Services', color: 'text-cyan-400', icon: <Sparkles className="w-5 h-5" /> },
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <Shield className="w-5 h-5" /> },
     { value: '21', label: 'Day Free Trials', color: 'text-blue-400', icon: <Clock className="w-5 h-5" /> },
@@ -22,6 +27,9 @@ export default function HomePage() {
   const revolutionaryServices = allEnhancedRealMicroSaasServices
     .filter(service => service.realImplementation && service.popular)
     .slice(0, 12); // Show more services
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const marketInsights = [
     {
@@ -124,6 +132,7 @@ export default function HomePage() {
       avatar: '🏭',
       name: 'Marcus Rodriguez',
       role: 'Operations Director',
+<<<<<<< HEAD
       company: 'AutoManufacture Inc.',
       rating: 5,
       content: 'The Autonomous Manufacturing Orchestrator increased our production efficiency by 40% and reduced downtime by 60%. Game-changing technology.',
@@ -164,11 +173,15 @@ export default function HomePage() {
       rating: 5,
       content: 'Quantum Finance Trading Platform gives us 1000x faster execution and 99.9% prediction accuracy. Unmatched performance.',
       service: 'Quantum Finance Trading Platform'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const technologyCategories = [
     {
+<<<<<<< HEAD
       title: 'Quantum Computing Breakthroughs',
       description: 'First-to-market quantum AI platform with real quantum hardware access',
       icon: <Atom className="w-8 h-8" />,
@@ -195,6 +208,9 @@ export default function HomePage() {
       icon: <Globe className="w-8 h-8" />,
       color: 'from-purple-500 to-violet-600',
       stats: '10x faster world creation'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -206,6 +222,7 @@ export default function HomePage() {
   };
 
   return (
+<<<<<<< HEAD
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
         <title>Zion Tech Group - Revolutionary Micro SAAS Services & AI Solutions</title>
@@ -214,6 +231,9 @@ export default function HomePage() {
         <meta property="og:title" content="Zion Tech Group - Revolutionary Micro SAAS Services" />
         <meta property="og:description" content="150+ cutting-edge micro SAAS services powered by AI and quantum technology" />
         <meta property="og:url" content="https://ziontechgroup.com" />
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
@@ -226,6 +246,7 @@ export default function HomePage() {
       </Head>
 
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="container mx-auto px-4 text-center z-10">
           <motion.div
@@ -316,6 +337,9 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Discover the cutting-edge technologies that are reshaping industries and creating unprecedented opportunities
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </motion.div>
 
@@ -352,6 +376,7 @@ export default function HomePage() {
           >
             {heroStats.map((stat, index) => (
               <motion.div
+<<<<<<< HEAD
                 key={highlight.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -439,10 +464,14 @@ export default function HomePage() {
                 </UltraFuturisticCard>
               ))}
             </div>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Revolutionary Services */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
@@ -458,6 +487,13 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
               Experience the future with our most innovative and popular micro SAAS services
+=======
+
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
             <Button
               href="/micro-saas"
@@ -474,6 +510,7 @@ export default function HomePage() {
             {revolutionaryServices.map((service, index) => (
               <motion.div
                 key={service.id}
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -482,6 +519,13 @@ export default function HomePage() {
                 <ServiceCard
                   service={service}
                   showContactInfo={true}
+=======
+
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 />
               </motion.div>
             ))}
@@ -506,6 +550,7 @@ export default function HomePage() {
       </section>
 
       {/* Market Insights */}
+<<<<<<< HEAD
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div
@@ -520,6 +565,13 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Stay ahead of the curve with insights into the fastest-growing technology markets
+=======
+
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </motion.div>
 
@@ -527,6 +579,7 @@ export default function HomePage() {
             {marketInsights.map((insight, index) => (
               <motion.div
                 key={insight.label}
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -540,6 +593,13 @@ export default function HomePage() {
                   <div className="text-3xl font-bold text-white mb-2">{insight.metric}</div>
                   <div className="text-white font-semibold mb-2">{insight.label}</div>
                   <div className="text-gray-200 text-sm">{insight.description}</div>
+=======
+
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{insight.metric}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{insight.label}</h3>
@@ -551,6 +611,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
+<<<<<<< HEAD
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div
@@ -565,6 +626,13 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               See how our revolutionary services are transforming businesses across industries
+=======
+
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </p>
           </motion.div>
 
@@ -572,6 +640,7 @@ export default function HomePage() {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -591,6 +660,13 @@ export default function HomePage() {
                     <div className="text-gray-400 text-sm">{testimonial.role} at {testimonial.company}</div>
                     <div className="text-cyan-400 text-sm mt-2">{testimonial.service}</div>
                   </div>
+=======
+
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               </motion.div>
             ))}
@@ -598,16 +674,21 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+<<<<<<< HEAD
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
@@ -652,6 +733,9 @@ export default function HomePage() {
                 Explore Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </motion.div>
         </div>

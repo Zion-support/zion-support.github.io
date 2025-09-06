@@ -1,28 +1,32 @@
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
+import type { NextPage } from "next";"
+import Head from "next/head";"
 import Link from "next/link";
 const DatabaseAdministrationChat: NextPage = () => {;
   return (
     <div>;
       <Head>;
         <title>DatabaseAdministrationChat - Zion Tech Solutions</title>;
-        <meta
-          name="description"
-          content="DatabaseAdministrationChat blog post"
+        <meta"
+          name="description""
+          content="DatabaseAdministrationChat blog post""
         />{" "}
       <main>
         <h1>DatabaseAdministrationChat</h1>
-        <p>Blog content coming soon...</p>
+        <p>Blog content coming soon...</p>"
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <main>;
         <h1>DatabaseAdministrationChat</h1>;
-        <p>Blog content coming soon...</p>;
+        <p>Blog content coming soon...</p>;"
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>;
@@ -33,14 +37,17 @@ export default DatabaseAdministrationChat;
 
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
+
+
+"
+import type { NextPage } from "next";"
+import Head from "next/head";"
 import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
 import Link from 'next/link';
 
-const DatabaseAdministrationChat: NextPage = () => {
+const DatabaseAdministrationChat: NextPage = () => {}
   return (
     <div>
       <Head>
@@ -51,24 +58,32 @@ const DatabaseAdministrationChat: NextPage = () => {
 
         <title>DatabaseAdministrationChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
 import type { NextPage } from './next';
 import Head from './next / head';
+=======
+
+
+'
+import type { NextPage } from './next';'
+import Head from './next / head';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from './next / link';
-const DatabaseAdministrationChat: NextPage = () => {
+const DatabaseAdministrationChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
         <title > DatabaseAdministrationChat - Zion Tech Solutions</title>;
-        <meta;
-          name="description";
-          content="DatabaseAdministrationChat blog post";
+        <meta;"
+          name="description";"
+          content="DatabaseAdministrationChat blog post";"
         />{" "}
       </Head>;
       <main>;
         <h1 > DatabaseAdministrationChat</h1>;
-        <p > Blog content coming soon...</p>;
+        <p > Blog content coming soon...</p>;"
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
@@ -76,6 +91,7 @@ const DatabaseAdministrationChat: NextPage = () => {
 ;
 export default DatabaseAdministrationChat;
 ;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
     <div>
@@ -94,15 +110,12 @@ pr-12243
 },
 
 export default DatabaseAdministrationChat
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 
+<<<<<<< HEAD
 const DatabaseAdministrationChat: NextPage = () => {
   return (
     <div>
@@ -127,3 +140,6 @@ export default DatabaseAdministrationChat;
         <title>DatabaseAdministrationChat - Zion Tech Solutions</title>
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

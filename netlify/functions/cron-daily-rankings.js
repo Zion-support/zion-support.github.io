@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
           0
         )
@@ -55,11 +54,14 @@ if ( {) {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         content,
         message: 'chore (automation): daily rankings update',
         token,
       });
     }
+<<<<<<< HEAD
     return {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -111,11 +113,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+    return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     })),
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -133,11 +139,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
-    // Check condition
-if ( {) {
-  $2
-}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
 
     const content = JSON.stringify({ updatedAt: Date.now(), top }, null, 2);
@@ -146,11 +155,12 @@ if ( {) {
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
-<<<<<<< HEAD
-  } catch (e) {
+
+  } catch (e) {}
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -249,3 +259,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

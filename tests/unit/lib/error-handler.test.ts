@@ -50,6 +50,7 @@ describe('Error Handler', () => {
   describe('errorHandler', () => {
     it('handles AppError correctly', () => {
       const error = new AppError('Test error', 400);
+<<<<<<< HEAD
 
       errorHandler(error, mockReq as NextApiRequest, mockRes as unknown as NextApiResponse);
 
@@ -75,22 +76,63 @@ describe('Error Handler', () => {
           statusCode: 500,
           timestamp: expect.any(String),
         },
+=======
+      errorHandler(error, mockReq as NextApiRequest, mockRes as NextApiResponse);
+      
+      expect(mockStatus).toHaveBeenCalledWith(400);
+      expect(mockJson).toHaveBeenCalledWith({
+        success: false,
+        error: 'Test error'
+      });
+    });
+
+    it('handles generic error correctly', () => {
+      const error = new Error('Generic error');
+      errorHandler(error, mockReq as NextApiRequest, mockRes as NextApiResponse);
+      
+      expect(mockStatus).toHaveBeenCalledWith(500);
+      expect(mockJson).toHaveBeenCalledWith({
+        success: false,
+        error: 'Something went wrong'
+      });
+    });
+
+    it('handles validation error correctly', () => {
+      const error = new Error('Validation failed');
+      error.name = 'ValidationError';
+      errorHandler(error, mockReq as NextApiRequest, mockRes as NextApiResponse);
+      
+      expect(mockStatus).toHaveBeenCalledWith(400);
+      expect(mockJson).toHaveBeenCalledWith({
+        success: false,
+        error: 'Validation failed'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       });
     });
   });
 
   describe('asyncHandler', () => {
-    it('handles async function errors', async () => {
+    it('calls next with error when async function throws', async () => {
+      const mockNext = jest.fn();
       const asyncFn = jest.fn().mockRejectedValue(new Error('Async error'));
+<<<<<<< HEAD
       const wrappedFn = asyncHandler(asyncFn);
 
       await wrappedFn(mockReq as any, mockRes as any, jest.fn());
 
       expect(mockStatus).toHaveBeenCalledWith(500);
+=======
+      
+      await asyncHandler(asyncFn)(mockReq as NextApiRequest, mockRes as NextApiResponse, mockNext);
+      
+      expect(mockNext).toHaveBeenCalledWith(expect.any(Error));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     });
 
-    it('passes through successful async functions', async () => {
+    it('does not call next when async function succeeds', async () => {
+      const mockNext = jest.fn();
       const asyncFn = jest.fn().mockResolvedValue('success');
+<<<<<<< HEAD
       const wrappedFn = asyncHandler(asyncFn);
 
       await wrappedFn(mockReq as any, mockRes as any, jest.fn());
@@ -104,3 +146,12 @@ describe('Error Handler', () => {
 =======
 });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      
+      await asyncHandler(asyncFn)(mockReq as NextApiRequest, mockRes as NextApiResponse, mockNext);
+      
+      expect(mockNext).not.toHaveBeenCalled();
+    });
+  });
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,10 +1,24 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/final-syntax-fix.cjs
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/final-syntax-cleanup.cjs
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
 
+<<<<<<< HEAD:backup-problematic-files/scripts/final-syntax-fix.cjs
 =======
 console.log('====');
+=======
+console.log('🔧 Final Syntax Cleanup');
+console.log('=');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/final-syntax-cleanup.cjs
 
 console.log('🔧 Final Syntax Fix');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

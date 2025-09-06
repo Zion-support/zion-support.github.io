@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,6 +51,21 @@ export function usePortfolio() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { useState, useCallback  } from 'react';'
+import { PortfolioProject  } from '@/types/resume';'
+import { supabase  } from '@/integrations/supabase/client';'
+import { useAuth  } from '@/hooks/useAuth';'
+import { toast } from '@/hooks/use-toast';
+export function usePortfolio() {}
+';
+import {useState, useCallback} from 'react';'
+import {PortfolioProject} from '@/types/resume';'
+import {supabase} from '@/integrations/supabase/client';'
+import {useAuth} from '@/hooks/useAuth';'
+import {toast} from '@/hooks/use-toast';
+export function usePortfolio() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
 =======
 export function usePortfolio() {  const { user } = useAuth();
@@ -62,22 +77,30 @@ export function usePortfolio() {  const { user } = useAuth();
 
   const [error, setError] = useState<string | null>(null);
   const [projects, setProjects] = useState<PortfolioProject[]>([]);
-  const fetchProjects = useCallback(async () => {
-    if (!user) {
+  const fetchProjects = useCallback(async () => {}
+    if (!user) {'
       setError('You must be logged in to access portfolio projects');
       return []
     }
     setIsLoading(true);
     setError(null);
-    try {
-      const { data, error } = await supabase
-        .from('portfolio_projects')
+    try {}
+      const { data, error } = await supabase'
+        .from('portfolio_projects')'
         .select('*')
+<<<<<<< HEAD
         .eq('user_id', user && user.id)        .eq('user_id', user && user.id)
+=======
+
+'
+        .eq('user_id', user && user.id)
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         .order('created_at', { ascending: false });
       if (error) throw error;
       setProjects(data |[]);
       return data |[]
+<<<<<<< HEAD
     } catch (e: any) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +108,10 @@ export function usePortfolio() {  const { user } = useAuth();
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    } catch (e: any) {}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       console && console.error('Error fetching portfolio projects:', e);
       setError(e && e.message);
       return []
@@ -95,23 +122,24 @@ export function usePortfolio() {  const { user } = useAuth();
     setIsLoading (true);
     set_error (null);
 ;
-    try {
-      const { data, error } = await supabase;
-        .from ('portfolio_projects');
-        .select ('*');
-        .eq ('user_id', user.id);
+    try {}
+      const { data, error } = await supabase;'
+        .from ('portfolio_projects');'
+        .select ('*');'
+        .eq ('user_id', user.id);'
         .order ('created_at', { ascending: false });
 ;
-      // Check condition
-if (throw error) {
-  $2
+      // Check condition;
+if (throw error) {}
+  $2;
 }
       set_projects (data || []);
       return data || [];
-    } catch (e: any) {
+    } catch (e: any) {'
       console.error ('Error fetching portfolio projects:', e);
       set_error (e.message);
       return [];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
       setIsLoading (false);
@@ -151,34 +179,45 @@ import { useState, useCallback } from 'react',;
 import { PortfolioProject } from '@/types/resume',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
+=======
+    } finally {}
+      setIsLoading (false);
+    }
+  }, [user]);
+'
+import { useState, useCallback } from 'react',;'
+import { PortfolioProject } from '@/types/resume',;'
+import { supabase } from '@/integrations/supabase/client',;'
+import { useAuth } from '@/hooks/useAuth',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from '@/hooks/use-toast',;
-export function usePortfolio() {;
+export function usePortfolio() { return null; }
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const [projects, setProjects] = useState<PortfolioProject[]>([]),;
   const fetchProjects = useCallback(async () => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to access portfolio projects'),;
       return [];
 <<<<<<< HEAD
 <<<<<<< HEAD
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 ;
     setIsLoading(true),;
     setError(null),;
     try {;
-      const { data, error } = await supabase;
-        .from('portfolio_projects');
-        .select('*');
-        .eq('user_id', user.id);
+      const { data, error } = await supabase;'
+        .from('portfolio_projects');'
+        .select('*');'
+        .eq('user_id', user.id);'
         .order('created_at', { ascending: false }),;
       if (error) throw error,;
       setProjects(data || []),;
       return data || [];
-    } catch (e: any) {;
+    } catch (e: any) {;'
       console.error('Error fetching portfolio projects:', e),;
       setError(e.message),;
       return [];
@@ -187,25 +226,17 @@ export function usePortfolio() {;
     }
   }, [user]),;
   const addProject = async (project: PortfolioProject): Promise<string | null> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to add a portfolio project'),;
       return null;
     }
     
     setIsLoading(true),
     setError(null),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-    
+<<<<<<< HEAD
     
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -225,21 +256,29 @@ export function usePortfolio() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    try {}
+      const { data, error } = await supabase'
+        .from('portfolio_projects')
+        .insert({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
-  const add_project = async (project: PortfolioProject): Promise < string | null> => {
-    // Check condition
-if ( {) {
-  $2
-}
+  const add_project = async (project: PortfolioProject): Promise < string | null> => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       set_error ('You must be logged in to add a portfolio project'),
       return null;
     }
     setIsLoading (true);
     set_error (null);
 ;
-    try {
-      const { data, error } = await supabase;
+    try {}
+      const { data, error } = await supabase;'
         .from ('portfolio_projects');
+<<<<<<< HEAD
         .insert ({
 <<<<<<< HEAD
 
@@ -248,17 +287,16 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        .insert ({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           user_id: user.id;
           title: project.title;
           description: project.description;
           technologies: project.technologies;
           image_url: project.image_url;
           github_url: project.github_url;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           user_id: user && user.id;
           title: project && project.title;
           description: project && project.description;
@@ -266,19 +304,12 @@ if ( {) {
           image_url: project && project.image_url;
           github_url: project && project.github_url;
           demo_url: project && project.demo_url,
-          pdf_url: project && project.pdf_url
-<<<<<<< HEAD
-
-=======
-          demo_url: project.demo_url
-          pdf_url: project.pdf_url
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        })
+          pdf_url: project && project.pdf_url;
+        })'
         .select('id')
         .single();
       if (error) throw error;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -287,15 +318,15 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Project added"
+=======
+
+      toast({}
+        title: "Project added""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: "Your project has been added to your portfolio"
       });
       await fetchProjects();
-      return data && data.id
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
+      return data && data.id;
           user_id: user.id,
           title: project.title,
           description: project.description,
@@ -303,30 +334,18 @@ if ( {) {
           image_url: project.image_url,
           github_url: project.github_url,
           demo_url: project.demo_url,
-          pdf_url: project.pdf_url
-        })
+          pdf_url: project.pdf_url;
+        })'
         .select('id')
         .single(),
       
       if (error) throw error,
       
-<<<<<<< HEAD
 
-      toast({
-        title: "Project added"
-        description: "Your project has been added to your portfolio"
-
-      }),
-      
-      await fetchProjects(),
-
-      return data.id
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    } catch (e: any) {
+    } catch (e: any) {'
       console && console.error('Error adding portfolio project:', e);
       setError(e && e.message);
+<<<<<<< HEAD
       toast({
 <<<<<<< HEAD
 
@@ -366,11 +385,16 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      toast({}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"
       }),
-      return null
-    } finally {
+      return null;
+    } finally {}
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     }
@@ -406,40 +430,48 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
         description: `Could not add project: ${e.message}`,
+=======
+"
+        variant: "destructive"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           demo_url: project.demo_url,
           pdf_url: project.pdf_url;
-        });
+        });'
         .select ('id');
         .single ();
 ;
-      // Check condition
-if (throw error) {
-  $2
+      // Check condition;
+if (throw error) {}
+  $2;
 }
-      toast ({
-        title: "Project added",
+      toast ({"
+        title: "Project added","
         description: "Your project has been added to your portfolio";
       });
 ;
       await fetch_projects ();
       return data.id;
-    } catch (e: any) {
+    } catch (e: any) {'
       console.error ('Error adding portfolio project:', e);
       set_error (e.message);
-      toast ({
+      toast ({"
         title: "Error",
-        description: `Could not add project: ${e.message}`;
+        description: `Could not add project: ${e.message}`;"
         variant: "destructive";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       });
       return null;
-    } finally {
-
+    } finally {}
       setIsLoading(false)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -461,11 +493,16 @@ if (throw error) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     setIsLoading(true);
     setError(null);
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -480,11 +517,14 @@ if (throw error) {
     setError(null);
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     setIsLoading(true),;
     setError(null),;
     try {;
-      const { data, error } = await supabase;
+      const { data, error } = await supabase;'
         .from('portfolio_projects');
         .insert({;
           user_id: user.id,;
@@ -495,22 +535,34 @@ if (throw error) {
           github_url: project.github_url,;
           demo_url: project.demo_url,;
           pdf_url: project.pdf_url;
-        });
+        });'
         .select('id');
         .single(),;
       if (error) throw error,;
+<<<<<<< HEAD
       toast({;
         title: "Project added",,
   description: "Your project has been added to your portfolio";
+=======
+      toast({;"
+        title: "Project added",;"
+        description: "Your project has been added to your portfolio";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }),;
       await fetchProjects(),;
       return data.id;
-    } catch (e: any) {;
+    } catch (e: any) {;'
       console.error('Error adding portfolio project:', e),;
       setError(e.message),;
+<<<<<<< HEAD
       toast({;
         title: "Error",,
   description: `Could not add project: ${e.message}`,;
+=======
+      toast({;"
+        title: "Error",;`
+        description: `Could not add project: ${e.message}`,;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive";
       }),;
       return null;
@@ -519,18 +571,21 @@ if (throw error) {
     }
   },;
   const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to update a portfolio project'),;
       return false;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 <<<<<<< HEAD
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -540,11 +595,14 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -569,25 +627,31 @@ if (throw error) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+    try {}
+      const { error } = await supabase'
+        .from('portfolio_projects')
+        .update({}
 ;
-  const update_project = async (project_id: string, project: PortfolioProject): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
+  const update_project = async (project_id: string, project: PortfolioProject): Promise < boolean> => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       set_error ('You must be logged in to update a portfolio project'),
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
-    try {
-      const { error } = await supabase;
+    try {}
+      const { error } = await supabase;'
         .from ('portfolio_projects');
+<<<<<<< HEAD
         .update ({
 <<<<<<< HEAD
 
@@ -596,12 +660,16 @@ if ( {) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        .update ({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           title: project.title;
           description: project.description;
           technologies: project.technologies;
           image_url: project.image_url;
           github_url: project.github_url;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           title: project && project.title;
           description: project && project.description;
@@ -613,32 +681,23 @@ if ( {) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
           title: project && project.title;
           description: project && project.description;
           technologies: project && project.technologies;
           image_url: project && project.image_url;
           github_url: project && project.github_url;
           demo_url: project && project.demo_url,
-          pdf_url: project && project.pdf_url
-
-<<<<<<< HEAD
-=======
-          demo_url: project.demo_url
-          pdf_url: project.pdf_url
-        })
-        .eq('id', projectId)
-        .eq('user_id', user.id);
-      if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          pdf_url: project && project.pdf_url;
           title: project.title,
           description: project.description,
           technologies: project.technologies,
           image_url: project.image_url,
           github_url: project.github_url,
           demo_url: project.demo_url,
+<<<<<<< HEAD
           pdf_url: project.pdf_url
 <<<<<<< HEAD
 
@@ -698,22 +757,37 @@ if ( {) {
         .update({      toast({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         title: "Project updated"
+=======
+          pdf_url: project.pdf_url;
+      toast({"
+        title: "Project updated""
+        description: "Your portfolio project has been updated"
+
+
+      toast({"
+        title: "Project updated""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         description: "Your portfolio project has been updated"
       });
       await fetchProjects();
-      return true
-    } catch (e: any) {
+      return true;
+    } catch (e: any) {'
       console && console.error('Error updating portfolio project:', e);
       setError(e && e.message);
+<<<<<<< HEAD
       toast({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      toast({"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"
 <<<<<<< HEAD
 <<<<<<< HEAD
       }),
-      return false
-    } finally {
+      return false;
+    } finally {}
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     }
@@ -738,40 +812,43 @@ if ( {) {
         title: "Error",
         description: `Could not update project: ${e && e.message}`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        variant: "destructive"
 =======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        variant: "destructive"
+
           demo_url: project.demo_url,
           pdf_url: project.pdf_url;
-        });
-        .eq ('id', project_id);
+        });'
+        .eq ('id', project_id);'
         .eq ('user_id', user.id);
 ;
-      // Check condition
-if (throw error) {
-  $2
+      // Check condition;
+if (throw error) {}
+  $2;
 }
-      toast ({
-        title: "Project updated",
+      toast ({"
+        title: "Project updated","
         description: "Your portfolio project has been updated";
       });
 ;
       await fetch_projects ();
       return true;
-    } catch (e: any) {
+    } catch (e: any) {'
       console.error ('Error updating portfolio project:', e);
       set_error (e.message);
-      toast ({
-        title: "Error",
-        description: `Could not update project: ${e.message}`;
+      toast ({"
+        title: "Error",`
+        description: `Could not update project: ${e.message}`;"
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       });
       return false;
-    } finally {
-
+    } finally {}
       setIsLoading(false)
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -793,11 +870,16 @@ if (throw error) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     setIsLoading(true);
     setError(null);
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -812,11 +894,14 @@ if (throw error) {
         description: `Could not update project: ${e.message}`,
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     setIsLoading(true),;
     setError(null),;
     try {;
-      const { error } = await supabase;
+      const { error } = await supabase;'
         .from('portfolio_projects');
         .update({;
           title: project.title,,
@@ -826,22 +911,34 @@ if (throw error) {
           github_url: project.github_url,;
           demo_url: project.demo_url,;
           pdf_url: project.pdf_url;
-        });
-        .eq('id', projectId);
+        });'
+        .eq('id', projectId);'
         .eq('user_id', user.id),;
       if (error) throw error,;
+<<<<<<< HEAD
       toast({;
         title: "Project updated",,
   description: "Your portfolio project has been updated";
+=======
+      toast({;"
+        title: "Project updated",;"
+        description: "Your portfolio project has been updated";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }),;
       await fetchProjects(),;
       return true;
-    } catch (e: any) {;
+    } catch (e: any) {;'
       console.error('Error updating portfolio project:', e),;
       setError(e.message),;
+<<<<<<< HEAD
       toast({;
         title: "Error",,
   description: `Could not update project: ${e.message}`,;
+=======
+      toast({;"
+        title: "Error",;`
+        description: `Could not update project: ${e.message}`,;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive";
       }),;
       return false;
@@ -850,18 +947,21 @@ if (throw error) {
     }
   },;
   const deleteProject = async (projectId: string): Promise<boolean> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to delete a portfolio project'),;
       return false;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 
 
 <<<<<<< HEAD
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -871,11 +971,14 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -908,50 +1011,33 @@ if (throw error) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-        .eq('user_id', user && user.id);
-      
-
 =======
-        .eq('user_id', user && user.id);
-      
 
-  }
-        .eq('user_id', user && user.id);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+    try {}
+      const { error } = await supabase'
+        .from('portfolio_projects')
+        .delete()'
+        .eq('id', projectId)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
       if (error) throw error;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      toast({
-        title: "Project deleted"
+
+
+      toast({"
+        title: "Project deleted""
         description: "Your portfolio project has been deleted"
       });
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      
-      setProjects(projects && projects.filter(p => p && p.id !== projectId));
-
-=======
-
-=======
-        .eq('user_id', user.id);
-      if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+'
         .eq('user_id', user.id),
       
       if (error) throw error,
       
+
+
+
 <<<<<<< HEAD
-
-      toast({
-        title: "Project deleted"
-        description: "Your portfolio project has been deleted"
-
-      }),
-      
-      setProjects(projects.filter(p => p.id !== projectId)),
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
       toast({
@@ -1012,11 +1098,20 @@ if (throw error) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      return true;
+    } catch (e: any) {'
+      console && console.error('Error deleting portfolio project:', e);
+      setError(e && e.message);
+      toast({}
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"
       }),
-      return false
-    } finally {
+      return false;
+    } finally {}
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1041,79 +1136,65 @@ if (throw error) {
         title: "Error",
         description: `Could not delete project: ${e && e.message}`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        variant: "destructive"
 =======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        variant: "destructive"
+
 ;
-  const delete_project = async (project_id: string): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
+  const delete_project = async (project_id: string): Promise < boolean> => {}
+    // Check condition;
+if ( {) {}
+  $2;
+}'
       set_error ('You must be logged in to delete a portfolio project'),
       return false;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
     }
     setIsLoading (true);
     set_error (null);
 ;
-    try {
-      const { error } = await supabase;
+    try {}
+      const { error } = await supabase;'
         .from ('portfolio_projects');
-        .delete ();
-        .eq ('id', project_id);
+        .delete ();'
+        .eq ('id', project_id);'
         .eq ('user_id', user.id);
 ;
-      // Check condition
-if (throw error) {
-  $2
+      // Check condition;
+if (throw error) {}
+  $2;
 }
-      toast ({
-        title: "Project deleted",
+      toast ({"
+        title: "Project deleted","
         description: "Your portfolio project has been deleted";
       });
 ;
       set_projects (projects.filter (p => p.id !== project_id));
       return true;
-    } catch (e: any) {
+    } catch (e: any) {'
       console.error ('Error deleting portfolio project:', e);
       set_error (e.message);
-      toast ({
-        title: "Error",
-        description: `Could not delete project: ${e.message}`;
+      toast ({"
+        title: "Error",`
+        description: `Could not delete project: ${e.message}`;"
         variant: "destructive";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
       return false;
-    } finally {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-;
-
-=======
-      setIsLoading (false);
-    }
-  }
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return {
+    } finally {}
+  return {}
     is_loading;
     error;
     projects;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     fetch_projects;
     add_project;
     update_project;
     delete_project;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
       setIsLoading(false)
 
@@ -1138,28 +1219,30 @@ if (throw error) {
 =======
     deleteProject
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ;
     setIsLoading(true),;
     setError(null),;
     try {;
-      const { error } = await supabase;
+      const { error } = await supabase;'
         .from('portfolio_projects');
-        .delete();
-        .eq('id', projectId);
+        .delete();'
+        .eq('id', projectId);'
         .eq('user_id', user.id),;
       if (error) throw error,;
-      toast({;
-        title: "Project deleted",;
+      toast({;"
+        title: "Project deleted",;"
         description: "Your portfolio project has been deleted";
       }),;
       setProjects(projects.filter(p => p.id !== projectId)),;
       return true;
-    } catch (e: any) {;
+    } catch (e: any) {;'
       console.error('Error deleting portfolio project:', e),;
       setError(e.message),;
-      toast({;
-        title: "Error",;
-        description: `Could not delete project: ${e.message}`,;
+      toast({;"
+        title: "Error",;`
+        description: `Could not delete project: ${e.message}`,;"
         variant: "destructive";
       }),;
       return false;
@@ -1175,6 +1258,7 @@ if (throw error) {
     addProject;
     updateProject;
     deleteProject;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -1213,13 +1297,18 @@ import { toast } from '@/hooks/use-toast',;
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function usePortfolio() {;
+=======
+
+;
+export function usePortfolio() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const [projects, setProjects] = useState<PortfolioProject[]>([]),;
   ;
   const fetchProjects = useCallback(async () => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to access portfolio projects'),;
       return [],;
     }
@@ -1228,17 +1317,17 @@ export function usePortfolio() {;
     setError(null),;
     ;
     try {;
-      const { data, error } = await supabase;
-        .from('portfolio_projects');
-        .select('*');
-        .eq('user_id', user.id);
+      const { data, error } = await supabase;'
+        .from('portfolio_projects');'
+        .select('*');'
+        .eq('user_id', user.id);'
         .order('created_at', { ascending:false }),;
       ;
       if (error) throw error,;
       ;
       setProjects(data || []),;
       return data || [],;
-    } catch (e:any) {;
+    } catch (e:any) {;'
       console.error('Error fetching portfolio projects:', e),;
       setError(e.message),;
       return [],;
@@ -1248,7 +1337,7 @@ export function usePortfolio() {;
   }, [user]),;
   ;
   const addProject = async (project:PortfolioProject):Promise<string | null> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to add a portfolio project'),;
       return null;
     }
@@ -1257,7 +1346,7 @@ export function usePortfolio() {;
     setError(null),;
     ;
     try {;
-      const { data, error } = await supabase;
+      const { data, error } = await supabase;'
         .from('portfolio_projects');
         .insert({;
           user_id:user.id,;
@@ -1268,25 +1357,37 @@ export function usePortfolio() {;
           github_url:project.github_url,;
           demo_url:project.demo_url,;
           pdf_url:project.pdf_url;
-        });
+        });'
         .select('id');
         .single(),;
       ;
       if (error) throw error,;
       ;
+<<<<<<< HEAD
       toast({;
         title:"Project added",,
   description:"Your project has been added to your portfolio";
+=======
+      toast({;"
+        title:"Project added",;"
+        description:"Your project has been added to your portfolio";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }),;
       ;
       await fetchProjects(),;
       return data.id,;
-    } catch (e:any) {;
+    } catch (e:any) {;'
       console.error('Error adding portfolio project:', e),;
       setError(e.message),;
+<<<<<<< HEAD
       toast({;
         title:"Error",,
   description:`Could not add project:${e.message}`,;
+=======
+      toast({;"
+        title:"Error",;`
+        description:`Could not add project:${e.message}`,;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant:"destructive";
       }),;
       return null,;
@@ -1295,7 +1396,7 @@ export function usePortfolio() {;
   },;
   ;
   const updateProject = async (projectId:string, project:PortfolioProject):Promise<boolean> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to update a portfolio project'),;
       return false;
     }
@@ -1304,7 +1405,7 @@ export function usePortfolio() {;
     setError(null),;
     ;
     try {;
-      const { error } = await supabase;
+      const { error } = await supabase;'
         .from('portfolio_projects');
         .update({;
           title:project.title,,
@@ -1314,25 +1415,37 @@ export function usePortfolio() {;
           github_url:project.github_url,;
           demo_url:project.demo_url,;
           pdf_url:project.pdf_url;
-        });
-        .eq('id', projectId);
+        });'
+        .eq('id', projectId);'
         .eq('user_id', user.id),;
       ;
       if (error) throw error,;
       ;
+<<<<<<< HEAD
       toast({;
         title:"Project updated",,
   description:"Your portfolio project has been updated";
+=======
+      toast({;"
+        title:"Project updated",;"
+        description:"Your portfolio project has been updated";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }),;
       ;
       await fetchProjects(),;
       return true,;
-    } catch (e:any) {;
+    } catch (e:any) {;'
       console.error('Error updating portfolio project:', e),;
       setError(e.message),;
+<<<<<<< HEAD
       toast({;
         title:"Error",,
   description:`Could not update project:${e.message}`,;
+=======
+      toast({;"
+        title:"Error",;`
+        description:`Could not update project:${e.message}`,;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant:"destructive";
       }),;
       return false,;
@@ -1341,7 +1454,7 @@ export function usePortfolio() {;
   },;
   ;
   const deleteProject = async (projectId:string):Promise<boolean> => {;
-    if (!user) {;
+    if (!user) {;'
       setError('You must be logged in to delete a portfolio project'),;
       return false;
     }
@@ -1350,27 +1463,39 @@ export function usePortfolio() {;
     setError(null),;
     ;
     try {;
-      const { error } = await supabase;
+      const { error } = await supabase;'
         .from('portfolio_projects');
-        .delete();
-        .eq('id', projectId);
+        .delete();'
+        .eq('id', projectId);'
         .eq('user_id', user.id),;
       ;
       if (error) throw error,;
       ;
+<<<<<<< HEAD
       toast({;
         title:"Project deleted",,
   description:"Your portfolio project has been deleted";
+=======
+      toast({;"
+        title:"Project deleted",;"
+        description:"Your portfolio project has been deleted";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }),;
       ;
       setProjects(projects.filter(p => p.id !== projectId)),;
       return true,;
-    } catch (e:any) {;
+    } catch (e:any) {;'
       console.error('Error deleting portfolio project:', e),;
       setError(e.message),;
+<<<<<<< HEAD
       toast({;
         title:"Error",,
   description:`Could not delete project:${e.message}`,;
+=======
+      toast({;"
+        title:"Error",;`
+        description:`Could not delete project:${e.message}`,;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant:"destructive";
       }),;
       return false,;
@@ -1389,3 +1514,8 @@ export function usePortfolio() {;
     deleteProject;
   }
 }
+<<<<<<< HEAD
+=======
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -188,6 +188,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $5–$40/mo</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/tools')}</li>
 =======
 <<<<<<< HEAD
@@ -196,6 +197,9 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/ssl-tools/ssl-checker/')}</li>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-0d5e
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</ul>
 				</section>
 
@@ -268,6 +272,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $9–$50/mo</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -286,6 +291,9 @@ export default function ServicesAdvertisingPage() {
 			</section>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-0d5e
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 			<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Automated Email Follow-ups</h2>

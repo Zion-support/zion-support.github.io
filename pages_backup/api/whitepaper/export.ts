@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -96,31 +97,38 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
  * handler - Function description
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
+export default async /**;
+ * handler - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/whitepaper/export.ts
  */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
+function handler() { return null; }
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {}
+  $2;
 }
-  const { markdown, token_name } = req.body || {},
-  if (return res.status (400).json ({ error: 'Missing markdown or token_name' }), ) {
-  $2
+  const { markdown, token_name } = req.body || {},'
+  if (return res.status (400).json ({ error: 'Missing markdown or token_name' }), ) {}
+  $2;
 }
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF);
-  const html = `<!doctype html><html><head><meta charset="utf - 8"><title>${token_name} Whitepaper</title></head><body><pre style="white - space: pre - wrap, font - family:ui - monospace, SFMono - Regular, Menlo, Monaco, Consolas, monospace, ">${escape_html (markdown)}</pre></body></html>`,
-  const base64 = Buffer.from (html, 'utf - 8').to_string ('base64'),
+  const html = `<!doctype html><html><head><meta charset="utf - 8"><title>${token_name} Whitepaper</title></head><body><pre style="white - space: pre - wrap, font - family:ui - monospace, SFMono - Regular, Menlo, Monaco, Consolas, monospace, ">${escape_html (markdown)}</pre></body></html>`,'
+  const base64 = Buffer.from (html, 'utf - 8').to_string ('base64'),`
   const url = `data: text / html, base64, ${base64}`,
   res.status (200).json ({ url });
 }
 /**
- * escape_html - Function description
+ * escape_html - Function description;
  */
-function escape_html() {
-  return String (str);
-    .replace (/&/g, '&amp, ');
-    .replace (/</g, '&lt, ');
+function escape_html() {}
+  return String (str);'
+    .replace (/&/g, '&amp, ');'
+    .replace (/</g, '&lt, ');'
     .replace (/>/g, '&gt, ');
 }
 ;
+<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -192,12 +200,69 @@ function escapeHtml(str: string) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
 
-function escapeHtml(str: string) {
-  return String(str)
-    .replace(/&/g, '&amp,')
-    .replace(/</g, '&lt,')
+
+
+
+
+
+
+
+}
+
+'
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
+export default async /**;
+ * handler - Function description;
+ */
+function handler() { return null; }
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {}
+  $2;
+}
+  const { markdown, token_name } = req.body || {},'
+  if (return res.status (400).json ({ error: 'Missing markdown or token_name' }), ) {}
+  $2;
+}
+  // Placeholder export: return a data URL (clients will open it, allowing print->PDF);"`
+  const html = `<!doctype html><html><head><meta charset="utf - 8"><title>${token_name} Whitepaper</title></head><body><pre style="white - space: pre - wrap, font - family:ui - monospace, SFMono - Regular, Menlo, Monaco, Consolas, monospace, ">${escape_html (markdown)}</pre></body></html>`,'
+  const base64 = Buffer.from (html, 'utf - 8').to_string ('base64'),`
+  const url = `data: text / html, base64, ${base64}`,
+  res.status (200).json ({ url });
+}
+/**
+ * escape_html - Function description;
+ */
+function escape_html() {}
+  return String (str);'
+    .replace (/&/g, '&amp, ');'
+    .replace (/</g, '&lt, ');'
+    .replace (/>/g, '&gt, ');
+}
+;
+
+
+
+
+
+
+  // Placeholder export: return a data URL (clients will open it, allowing print->PDF)"`
+  const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`,'
+  const base64 = Buffer.from(html, 'utf-8').toString('base64'),`
+  const url = `data: text/html,base64,${base64}`,
+  res.status(200).json({ url })
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/whitepaper/export.ts
+
+
+
+
+function escapeHtml(str: string) {}
+  return String(str)'
+    .replace(/&/g, '&amp,')'
+    .replace(/</g, '&lt,')'
     .replace(/>/g, '&gt,')
+<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 };
 =======
 >>>>>>> main
@@ -206,3 +271,6 @@ function escapeHtml(str: string) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> pr-12243
+=======
+};'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/api/whitepaper/export.ts

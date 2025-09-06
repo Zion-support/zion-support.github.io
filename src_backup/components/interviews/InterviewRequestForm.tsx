@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 <<<<<<< HEAD:src/components/interviews/InterviewRequestForm.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,9 @@
 =======
 =======
 import React, { useState } from 'react';
+=======
+import React, { useState } from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
 import { Button } from '@/components/ui/button';
 import {;
   Form,;
@@ -15,39 +19,40 @@ import {;
   FormItem,;
   FormLabel,;
   FormControl,;
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
+  FormMessage,;'
+} from '@/components/ui/form';'
+import { Input } from '@/components/ui/input';'
 import { Textarea } from '@/components/ui/textarea';
 import {;
   Select,;
   SelectTrigger,;
   SelectValue,;
   SelectContent,;
-  SelectItem,;
-} from '@/components/ui/select';
+  SelectItem,;'
+} from '@/components/ui/select';'
 import { Calendar } from '@/components/ui/calendar';
 import {;
   Popover,;
   PopoverTrigger,;
-  PopoverContent,;
-} from '@/components/ui/popover';
-import { TalentProfile } from '@/types/talent';
-import type { UserProfile } from '@/types/auth';
-import { cn } from '@/lib/utils';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { z } from 'zod';
-import { format, addDays } from 'date-fns';
-import { CalendarIcon } from 'lucide-react';
-import { toast } from '@/components/ui/use-toast';
-import { useInterviews } from '@/hooks/useInterviews';
+  PopoverContent,;'
+} from '@/components/ui/popover';'
+import { TalentProfile } from '@/types/talent';'
+import type { UserProfile } from '@/types/auth';'
+import { cn } from '@/lib/utils';'
+import { zodResolver } from '@hookform/resolvers/zod';'
+import { useForm, ControllerRenderProps } from 'react-hook-form';'
+import { z } from 'zod';'
+import { format, addDays } from 'date-fns';'
+import { CalendarIcon } from 'lucide-react';'
+import { toast } from '@/components/ui/use-toast';'
+import { useInterviews } from '@/hooks/useInterviews';'
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface InterviewRequestFormProps {;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewRequestForm.tsx
 
   talent: TalentProfile;
   onClose: () => void;
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
   userDetails?: UserProfile
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -56,96 +61,102 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 import React, { useState } from 'react';
+=======
+  userDetails?: UserProfile;
+'
+import React, { useState } from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
 import { Button } from '@/components / ui / button';
-import {
+import {}
   Form,
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input } from '@/components / ui / input';
+  FormMessage,';
+} from '@/components / ui / form';'
+import { Input } from '@/components / ui / input';'
 import { Textarea } from '@/components / ui / textarea';
   Select,
   SelectTrigger,
   SelectValue,
   SelectContent,
-  SelectItem,
-} from '@/components / ui / select';
+  SelectItem,'
+} from '@/components / ui / select';'
 import { Calendar } from '@/components / ui / calendar';
   Popover,
   PopoverTrigger,
-  PopoverContent,
-} from '@/components / ui / popover';
-import { TalentProfile } from '@/types / talent';
-import type { UserProfile } from '@/types / auth';
-import { cn } from '@/lib / utils';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { use_form, ControllerRenderProps } from 'react - hook - form';
-import { z } from 'zod';
-import { format, add_days } from 'date - fns';
-import { CalendarIcon } from 'lucide-react';
-import { toast } from '@/components / ui / use - toast';
-import { use_interviews } from '@/hooks / use_interviews';
+  PopoverContent,'
+} from '@/components / ui / popover';'
+import { TalentProfile } from '@/types / talent';'
+import type { UserProfile } from '@/types / auth';'
+import { cn } from '@/lib / utils';'
+import { zod_resolver } from '@hookform / resolvers / zod';'
+import { use_form, ControllerRenderProps } from 'react - hook - form';'
+import { z } from 'zod';'
+import { format, add_days } from 'date - fns';'
+import { CalendarIcon } from 'lucide-react';'
+import { toast } from '@/components / ui / use - toast';'
+import { use_interviews } from '@/hooks / use_interviews';'
 import { logErrorToProduction } from '@/utils / production_logger';
-interface InterviewRequestFormProps {
+interface InterviewRequestFormProps {}
   talent: TalentProfile;
   on_close: () => void;
   user_details?: UserProfile;
-const form_schema = z.object ({
+const form_schema = z.object ({}
   date: z;
-    .date ({
+    .date ({'
       required_error: 'Please select a date for the interview.',
     });
-    .refine (date => date > new Date (), {
+    .refine (date => date > new Date (), {'
       message: 'Interview date must be in the future',
-    }),
-  time: z.string ().min (1, 'Please select a time for the interview.'),
-  duration: z.string ().min (1, 'Please select the interview duration.'),
+    }),'
+  time: z.string ().min (1, 'Please select a time for the interview.'),'
+  duration: z.string ().min (1, 'Please select the interview duration.'),'
   platform: z.string ().min (1, 'Please select a meeting platform.'),
-  meeting_link: z.string ().optional (),
+  meeting_link: z.string ().optional (),'
   title: z.string ().min (3, 'Please provide a brief title for the interview.'),
   notes: z.string ().optional (),
 });
-export /**
- * InterviewRequestForm - Function description
+export /**;
+ * InterviewRequestForm - Function description;
  */
-function InterviewRequestForm() {
+function InterviewRequestForm() {}
   const { request_interview } = use_interviews ();
   const [is_submitting, setIsSubmitting] = useState (false);
-  const form = use_form < z.infer < typeof form_schema>>({
+  const form = use_form < z.infer < typeof form_schema>>({}
     resolver: zod_resolver (form_schema),
-    default_values: {
-      title: `Interview with ${talent.full_name}`,
-      duration: '30',
-      platform: 'zoom',
-      notes: '',
+    default_values: {}
+      title: `Interview with ${talent.full_name}`,'
+      duration: '30','
+      platform: 'zoom','
+      notes: '','
       meeting_link: '',
     },
   });
   async /**
- * on_submit - Function description
+ * on_submit - Function description;
  */
-function on_submit() {
-    // Check condition
-if ( {) {
-  $2
+function on_submit() {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      toast ({
-        title: 'Authentication required',
-        description: 'Please log in to schedule an interview',
+      toast ({'
+        title: 'Authentication required','
+        description: 'Please log in to schedule an interview','
         variant: 'destructive',
       });
       return;
     }
     setIsSubmitting (true);
-    try {
-      // Combine date and time;
+    try {}
+      // Combine date and time;'`
       const dateTimeString = `${format (values.date, 'yyyy - MM - dd')}T${values.time}:00`;
       const scheduled_date = new Date (dateTimeString);
       // Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration);
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
       await request_interview ({
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewRequestForm.tsx
@@ -241,11 +252,32 @@ import { format, addDays } from "date-fns",
 import { CalendarIcon } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast",
 import { useInterviews } from "@/hooks/useInterviews",
+=======
+      await request_interview ({}
+import React, { useState } from "react","
+import { Button } from "@/components/ui/button","
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form","
+import { Input } from "@/components/ui/input","
+import { Textarea } from "@/components/ui/textarea","
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select","
+import { Calendar } from "@/components/ui/calendar","
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover","
+import { TalentProfile } from "@/types/talent","
+import type { UserProfile } from "@/types/auth","
+import { cn } from "@/lib/utils","
+import { zodResolver } from "@hookform/resolvers/zod","
+import { useForm, ControllerRenderProps } from "react-hook-form","
+import { z } from "zod","
+import { format, addDays } from "date-fns",'
+import { CalendarIcon } from 'lucide-react'"
+import { toast } from "@/components/ui/use-toast","
+import { useInterviews } from "@/hooks/useInterviews",'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',
-interface InterviewRequestFormProps {
+interface InterviewRequestFormProps {}
   talent: TalentProfile,
-  onClose: () => void,
-  userDetails?: UserProfile
+  onClose: () => void,;
+  userDetails?: UserProfile;
 }
 
 <<<<<<< HEAD:src/components/interviews/InterviewRequestForm.tsx
@@ -255,6 +287,7 @@ interface InterviewRequestFormProps {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -262,10 +295,15 @@ interface InterviewRequestFormProps {
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
+=======
+const formSchema = z.object({}
+  date: z.date({"
+    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
     message: "Interview date must be in the future"
-  }),
-  time: z.string().min(1, "Please select a time for the interview."),
-  duration: z.string().min(1, "Please select the interview duration."),
+  }),"
+  time: z.string().min(1, "Please select a time for the interview."),"
+  duration: z.string().min(1, "Please select the interview duration."),"
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),
 <<<<<<< HEAD
@@ -277,6 +315,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   const { requestInterview } = useInterviews(),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -309,13 +348,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const form = useForm<z.infer<typeof formSchema>>({
+=======
+  const form = useForm<z.infer<typeof formSchema>>({}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
     resolver: zodResolver(formSchema)
-    defaultValues: {
-
+    defaultValues: {}`
       title: `Interview with ${talent.full_name}`,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-      await requestInterview({
+      await requestInterview({}
         talent_id: talent.id,
         client_id: userDetails.id,
         scheduled_date: scheduledDate.toISOString(),
@@ -348,23 +389,29 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
         meeting_link: values.meetingLink,
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
     } finally {
+=======
+
+
+    } finally {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
       setIsSubmitting (false);
     }
   }
 
 const formSchema = z && z.object({;
   date: z;
-    .date({;
+    .date({;'
       required_error: 'Please select a date for the interview.',;
     });
-    .refine(date => date > new Date(), {;
+    .refine(date => date > new Date(), {;'
       message: 'Interview date must be in the future',;
-    }),;
-  time: z && z.string().min(1, 'Please select a time for the interview.'),;
-  duration: z && z.string().min(1, 'Please select the interview duration.'),;
+    }),;'
+  time: z && z.string().min(1, 'Please select a time for the interview.'),;'
+  duration: z && z.string().min(1, 'Please select the interview duration.'),;'
   platform: z && z.string().min(1, 'Please select a meeting platform.'),;
-  meetingLink: z && z.string().optional(),;
+  meetingLink: z && z.string().optional(),;'
   title: z && z.string().min(3, 'Please provide a brief title for the interview.'),;
   notes: z && z.string().optional(),;
 });
@@ -379,20 +426,26 @@ export function InterviewRequestForm(): any ({;
 
   const form = useForm<z && z.infer<typeof formSchema>>({;
     resolver: zodResolver(formSchema),;
-    defaultValues: {;
-      title: `Interview with ${talent && talent.full_name}`,;
-      duration: '30',;
-      platform: 'zoom',;
-      notes: '',;
+    defaultValues: {;`
+      title: `Interview with ${talent && talent.full_name}`,;'
+      duration: '30',;'
+      platform: 'zoom',;'
+      notes: '',;'
       meetingLink: '',;
     },;
   });
 
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
       toast({;
         title: 'Authentication required',,
   description: 'Please log in to schedule an interview',;
+=======
+      toast({;'
+        title: 'Authentication required',;'
+        description: 'Please log in to schedule an interview',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
         variant: 'destructive',;
       });
       return;
@@ -401,7 +454,7 @@ export function InterviewRequestForm(): any ({;
     setIsSubmitting(true);
 
     try {;
-      // Combine date and time;
+      // Combine date and time;'`
       const dateTimeString = `${format(values && values.date, 'yyyy-MM-dd')}T${values && values.time}:00`;
       const scheduledDate = new Date(dateTimeString);
 
@@ -415,22 +468,35 @@ export function InterviewRequestForm(): any ({;
         duration_minutes: durationMinutes,;
         notes: values && values.notes,;
         meeting_platform: values && values.platform as any,;
-        meeting_link: values && values.meetingLink,;
+        meeting_link: values && values.meetingLink,;'
         interview_type: 'video',;
         title: values && values.title,;
       });
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
       toast({;
         title: 'Interview requested',,
   description: `Your interview request with ${talent && talent.full_name} has been sent.`,;
+=======
+      toast({;'
+        title: 'Interview requested',;`
+        description: `Your interview request with ${talent && talent.full_name} has been sent.`,;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
       });
       onClose();
-    } catch (error) {;
+    } catch (error) {;'
       logErrorToProduction('Failed to schedule interview:', { data: error });
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
       toast({;
         title: 'Failed to schedule interview',,
   description:;
           'An error occurred while scheduling the interview. Please try again.',;
+=======
+      toast({;'
+        title: 'Failed to schedule interview',;
+        description:;'
+          'An error occurred while scheduling the interview. Please try again.',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
         variant: 'destructive',;
       });
     } finally {;
@@ -438,41 +504,41 @@ export function InterviewRequestForm(): any ({;
     }
   }
 
-  const timeSlots = [;
-    '09:00',;
-    '09:30',;
-    '10:00',;
-    '10:30',;
-    '11:00',;
-    '11:30',;
-    '12:00',;
-    '12:30',;
-    '13:00',;
-    '13:30',;
-    '14:00',;
-    '14:30',;
-    '15:00',;
-    '15:30',;
-    '16:00',;
-    '16:30',;
-    '17:00',;
-    '17:30',;
-    '18:00',;
-    '18:30',;
-    '19:00',;
-    '19:30',;
+  const timeSlots = [;'
+    '09:00',;'
+    '09:30',;'
+    '10:00',;'
+    '10:30',;'
+    '11:00',;'
+    '11:30',;'
+    '12:00',;'
+    '12:30',;'
+    '13:00',;'
+    '13:30',;'
+    '14:00',;'
+    '14:30',;'
+    '15:00',;'
+    '15:30',;'
+    '16:00',;'
+    '16:30',;'
+    '17:00',;'
+    '17:30',;'
+    '18:00',;'
+    '18:30',;'
+    '19:00',;'
+    '19:30',;'
     '20:00',;
   ];
 
   return (
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-5'>;
-        <div className='flex items-center mb-6'>;
+    <Form {...form}>;'
+      <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-5'>;'
+        <div className='flex items-center mb-6'>;'
           <div className='flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4'>;
-            <img
-
+            <img;
   const time_slots = [;
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
     '09:00',
     '09:30',
     '10:00',
@@ -502,14 +568,47 @@ export function InterviewRequestForm(): any ({;
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+=======
+'
+    '09:00','
+    '09:30','
+    '10:00','
+    '10:30','
+    '11:00','
+    '11:30','
+    '12:00','
+    '12:30','
+    '13:00','
+    '13:30','
+    '14:00','
+    '14:30','
+    '15:00','
+    '15:30','
+    '16:00','
+    '16:30','
+    '17:00','
+    '17:30','
+    '18:00','
+    '18:30','
+    '19:00','
+    '19:30','
+    '20:00',
+
+
+  ]"
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30","
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30","
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ],
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-        <div className="flex items-center mb-6">
+    <Form {...form}>"
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">"
+        <div className="flex items-center mb-6">"
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
             <img
 <<<<<<< HEAD
 =======
@@ -520,9 +619,18 @@ export function InterviewRequestForm(): any ({;
               className='h-full w-full object-cover'
               loading='lazy'            />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            <img;
+'
+              src={talent.profile_picture_url || '/placeholder.svg'}
+
+              alt={talent.full_name}'
+              className='h-full w-full object-cover''
+              loading='lazy'            />"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
               src={talent.profile_picture_url || "/placeholder.svg"}
-              alt={talent.full_name}
-              className="h-full w-full object-cover"
+              alt={talent.full_name}"
+              className="h-full w-full object-cover""
               loading="lazy"
             />
 <<<<<<< HEAD
@@ -533,10 +641,11 @@ export function InterviewRequestForm(): any ({;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>
-          <div>
-            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
+          <div>"
+            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>"
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
         </div>
 
         <FormField
@@ -549,20 +658,43 @@ export function InterviewRequestForm(): any ({;
               <FormControl>
                 <Input placeholder="Brief title for the interview" {...field} />
 =======
+=======
+        </div>'
+              src={talent && talent.profile_picture_url || '/placeholder && placeholder.svg'}
+              alt={talent && talent.full_name}'
+              className='h-full w-full object-cover''
+              loading='lazy'            />;
+          </div>;
+          <div>;'
+            <h3 className='text-lg font-medium text-white'>;
+              {talent && talent.full_name}
+            </h3>;'
+            <p className='text-sm text-zion-slate-light'>;
+              {talent && talent.professional_title}
+            </p>;
+          </div>;
+        </div>;
+
+        <FormField;
+            </p>;
+          </div>;
+        </div>;
+        <FormField;
+          control={form.control}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
           name='title';
 
-          render={({
-            field
-          }: {
-
+          render={({}
+            field;
+          }: {}
           control={form.control}
-
-          name="title"
+"
+          name="title""
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (
             <FormItem>
 
               <FormLabel>Interview Title</FormLabel>
-              <FormControl>
+              <FormControl>'
                 <Input placeholder='Brief title for the interview' {...field} />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </FormControl>
@@ -570,6 +702,7 @@ export function InterviewRequestForm(): any ({;
             </FormItem>
           )}
         />
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 
 <<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -580,25 +713,29 @@ export function InterviewRequestForm(): any ({;
               <FormItem className="flex flex-col">
                 <FormLabel>Date</FormLabel>
 =======
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
             field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'title'>;
           }) => (            <FormItem>;
-              <FormLabel>Interview Title</FormLabel>;
+              <FormLabel>Interview Title</FormLabel>;'
             field: ControllerRenderProps < z.infer < typeof form_schema>, 'title'>;
           }) => (            <FormItem>;
               <FormLabel > Interview Title</FormLabel>;
 
-              <FormControl>;
+              <FormControl>;'
                 <Input placeholder='Brief title for the interview' {...field} />;
               </FormControl>;
               <FormMessage />;
 
             </FormItem>)}
-        />;
+        />;'
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
           <FormField;
-            control={form.control}
+            control={form.control}'
             name='date';
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
             render={({
               field
             }: {
@@ -624,9 +761,19 @@ export function InterviewRequestForm(): any ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+            render={({}
+              field;
+            }: {}
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <FormControl>
+                      <Button;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
                         variant="outline"
-                        className={cn(
-                          "w-full pl-3 text-left font-normal",
+                        className={cn("
+                          "w-full pl-3 text-left font-normal","
                           !field.value && "text-muted-foreground"
                         )}
                       >
@@ -641,6 +788,7 @@ export function InterviewRequestForm(): any ({;
 =======
 
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewRequestForm.tsx
@@ -662,40 +810,56 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+
+                        {field.value ? ('
+                          format(field.value, 'PPP')
+                        ) : (
+                          <span>Pick a date</span>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
               field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'date'>;
-            }) => (;
+            }) => (;'
               <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>;
                 <Popover>;
                   <PopoverTrigger asChild>;
                     <FormControl>;
-                      <Button
+                      <Button'
                         variant='outline'
-                        className={cn(
-                          'w-full pl-3 text-left font-normal',
+                        className={cn('
+                          'w-full pl-3 text-left font-normal','
                           !field && field.value && 'text-muted-foreground'
                         )}>;
-                        {field && field.value ? (;
+                        {field && field.value ? (;'
                           format(field && field.value, 'PPP');
                         ) : (;
                           <span>Pick a date</span>;
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewRequestForm.tsx
                         )}
+=======
+                        )}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
                         <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />;
                       </Button>;
                     </FormControl>;
-                  </PopoverTrigger>;
+                  </PopoverTrigger>;'
                   <PopoverContent className='w-auto p-0' align='start'>;
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
                     <Calendar
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                    <Calendar;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
                       mode="single"
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
-                      initialFocus
+                      initialFocus"
                       className="p-3 pointer-events-auto"
 =======
 
@@ -719,11 +883,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       onSelect={field && field.onChange}
                       disabled={date =>;
                         date < new Date() || date > addDays(new Date(), 90);
-                      }                      initialFocus;
-                      className='p-3 pointer-events-auto';
+                      }                      initialFocus;'
+                      className='p-3 pointer-events-auto';'
               field: ControllerRenderProps < z.infer < typeof form_schema>, 'date'>;
-            }) => (
+            }) => ('
               <FormItem className='flex flex - col'>                <FormLabel > Date</FormLabel>;
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",;
@@ -744,6 +909,27 @@ import { format, addDays } from "date-fns",;
 import { CalendarIcon } from 'lucide-react';
 import { toast } from "@/components/ui/use-toast",;
 import { useInterviews } from "@/hooks/useInterviews",;
+=======
+"
+import React, { useState } from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;"
+import { Input } from "@/components/ui/input",;"
+import { Textarea } from "@/components/ui/textarea",;"
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",;"
+import { Calendar } from "@/components/ui/calendar",;"
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",;"
+import { TalentProfile } from "@/types/talent",;"
+import type { UserProfile } from "@/types/auth",;"
+import { cn } from "@/lib/utils",;"
+import { zodResolver } from "@hookform/resolvers/zod",;"
+import { useForm, ControllerRenderProps } from "react-hook-form",;"
+import { z } from "zod",;"
+import { format, addDays } from "date-fns",;'
+import { CalendarIcon } from 'lucide-react';"
+import { toast } from "@/components/ui/use-toast",;"
+import { useInterviews } from "@/hooks/useInterviews",;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface InterviewRequestFormProps {;
   talent: TalentProfile,;
@@ -752,39 +938,43 @@ interface InterviewRequestFormProps {;
 }
 ;
 const formSchema = z.object({;
-  date: z.date({;
-    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;
+  date: z.date({;"
+    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;"
     message: "Interview date must be in the future";
-  }),;
-  time: z.string().min(1, "Please select a time for the interview."),;
-  duration: z.string().min(1, "Please select the interview duration."),;
+  }),;"
+  time: z.string().min(1, "Please select a time for the interview."),;"
+  duration: z.string().min(1, "Please select the interview duration."),;"
   platform: z.string().min(1, "Please select a meeting platform."),;
-  meetingLink: z.string().optional(),;
+  meetingLink: z.string().optional(),;"
   title: z.string().min(3, "Please provide a brief title for the interview."),;
   notes: z.string().optional()}),;
-export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
+export function InterviewRequestForm() { return null; }
   const { requestInterview } = useInterviews(),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const form = useForm<z.infer<typeof formSchema>>({;
     resolver: zodResolver(formSchema),;
-    defaultValues: {;
-      title: `Interview with ${talent.full_name}`,;
-      duration: "30",;
-      platform: "zoom",;
-      notes: "",;
+    defaultValues: {;`
+      title: `Interview with ${talent.full_name}`,;"
+      duration: "30",;"
+      platform: "zoom",;"
+      notes: "",;"
       meetingLink: ""}}),;
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
   async function onSubmit(values: z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
         title: "Authentication required",,
   description: "Please log in to schedule an interview",;
+=======
+  async function onSubmit() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
         variant: "destructive"}),;
       return;
     }
 ;
     setIsSubmitting(true),;
     try {;
-      // Combine date and time;
+      // Combine date and time;'`
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`,;
       const scheduledDate = new Date(dateTimeString),;
       // Calculate end time based on duration;
@@ -796,71 +986,84 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         duration_minutes: durationMinutes,;
         notes: values.notes,;
         meeting_platform: values.platform as any,;
-        meeting_link: values.meetingLink,;
+        meeting_link: values.meetingLink,;"
         interview_type: "video",;
         title: values.title;
       }),;
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
       toast({;
         title: "Interview requested",,
   description: `Your interview request with ${talent.full_name} has been sent.`}),;
+=======
+      toast({;"
+        title: "Interview requested",;`
+        description: `Your interview request with ${talent.full_name} has been sent.`}),;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
       onClose();
-    } catch (error) {;
+    } catch (error) {;'
       logErrorToProduction('Failed to schedule interview:', { data: error }),;
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
       toast({;
         title: "Failed to schedule interview",,
   description: "An error occurred while scheduling the interview. Please try again.",;
+=======
+      toast({;"
+        title: "Failed to schedule interview",;"
+        description: "An error occurred while scheduling the interview. Please try again.",;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
     }
   }
 ;
-  const timeSlots = [;
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",;
-    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",;
-    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",;
+  const timeSlots = [;"
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",;"
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",;"
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",;"
     "18:00", "18:30", "19:00", "19:30", "20: 00";
   ];
   return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">;
-        <div className="flex items-center mb-6">;
+    <Form {...form}>;"
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">;"
+        <div className="flex items-center mb-6">;"
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">;
-            <img;
+            <img;"
               src={talent.profile_picture_url || "/placeholder.svg"}
-              alt={talent.full_name}
-              className="h-full w-full object-cover";
+              alt={talent.full_name}"
+              className="h-full w-full object-cover";"
               loading="lazy";
             />;
           </div>;
-          <div>;
-            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>;
+          <div>;"
+            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>;"
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>;
           </div>;
         </div>;
         <FormField;
-          control={form.control}
-          name="title";
+          control={form.control}"
+          name="title";"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (;
             <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
-              <FormControl>;
+              <FormControl>;"
                 <Input placeholder="Brief title for the interview" {...field} />;
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
-        />;
+        />;"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
-            control={form.control}
-            name="date";
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (;
+            control={form.control}"
+            name="date";"
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (;"
               <FormItem className="flex flex-col">;
                 <FormLabel>Date</FormLabel>;
                 <Popover>;
                   <PopoverTrigger asChild>;
                     <FormControl>;
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
                       <Button;
                         variant="outline";
                         className={cn(;
@@ -885,6 +1088,29 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";
+=======
+                      <Button;'
+                        variant='outline';
+                        className={cn ('
+                          'w - full pl - 3 text - left font - normal','
+                          !field.value && 'text - muted - foreground')}                      >;
+                        {field.value ? ('
+                          format (field.value, 'PPP')) : (
+                          <span > Pick a date</span>)}'
+                        <CalendarIcon className='ml - auto h - 4 w - 4 opacity - 50' />;
+                      </Button>;
+                    </FormControl>;
+                  </PopoverTrigger>;'
+                  <PopoverContent className='w - auto p - 0' align='start'>;
+                    <Calendar;'
+                      mode='single';
+                      selected={field.value}
+                      on_select={field.on_change}
+                      disabled={date =>;
+                        date < new Date () || date > add_days (new Date (), 90);
+                      }                      initial_focus;'
+                      className='p - 3 pointer - events - auto';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
                     />;
                   </PopoverContent>;
                 </Popover>;
@@ -898,19 +1124,19 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 
                   <FormControl>;
-                    <SelectTrigger>;
+                    <SelectTrigger>;'
                       <SelectValue placeholder='Select time' />;
                     </SelectTrigger>;
                   </FormControl>;
 
           />;
         </div>;
-
+'
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
 
-          <FormField
-            control={form && form.control}
-            name='duration'
+          <FormField;
+            control={form && form.control}'
+            name='duration''
                   <SelectContent className='max - h-[300px]'>;
                     {time_slots.map (time => (                      <SelectItem key={time} value={time}>;
                         {time}
@@ -920,33 +1146,45 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormMessage />;
               </FormItem>)}
           />;
-        </div>;
+        </div>;'
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
           <FormField;
-            control={form.control}
+            control={form.control}'
             name='duration';
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
             render={({
               field
             }: {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             name="time"
+=======
+            render={({}
+              field;
+            }: {}
+"
+            name="time""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (
               <FormItem>
 
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
-                    <SelectTrigger>
+                    <SelectTrigger>"
                       <SelectValue placeholder="Select time" />
                     </SelectTrigger>
                   </FormControl>
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 <<<<<<< HEAD
                   <SelectContent className="max-h-[300px]">
                     {timeSlots.map((time) => (
                       <SelectItem key={time} value={time}>
 =======
 
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
                   <SelectContent className="max-h-[300px]">
                     {timeSlots.map((time) => (
                       <SelectItem key={time} value={time}>
@@ -963,10 +1201,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />
         </div>
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-            name="duration"
+          <FormField;
+            control={form.control}"
+            name="duration""
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
 <<<<<<< HEAD:src/components/interviews/InterviewRequestForm.tsx
@@ -993,17 +1235,23 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewRequestForm.tsx
           <FormField
             control={form.control}
+=======
+          <FormField;
+            control={form.control}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
             name='duration'
-            render={({
+            render={({}
               field,
-            }: {
+            }: {}
               field: ControllerRenderProps<
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 <<<<<<< HEAD:src/components/interviews/InterviewRequestForm.tsx
 <<<<<<< HEAD
                 <FormLabel>Duration</FormLabel>                <Select
@@ -1011,30 +1259,37 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 =======
                 z.infer<typeof formSchema>,
+=======
+                z.infer<typeof formSchema>,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
                 'duration'
               >
             }) => (              <FormItem>
-
+"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-            name="duration"
+          <FormField;
+            control={form.control}"
+            name="duration""
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
                 <FormLabel>Duration</FormLabel>
-                z && z.infer<typeof formSchema>,;
+                z && z.infer<typeof formSchema>,;'
                 'duration';
               >;
             }) => (              <FormItem>;
                 <FormLabel>Duration</FormLabel>;
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewRequestForm.tsx
                 <Select
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+                <Select;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
               field: ControllerRenderProps<;
-                z.infer < typeof form_schema>,
+                z.infer < typeof form_schema>,'
                 'duration';
               >;
             }) => (              <FormItem>;
@@ -1044,14 +1299,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   default_value={field.value}
                 >;
                   <FormControl>;
-                    <SelectTrigger>;
+                    <SelectTrigger>;'
                       <SelectValue placeholder='Select duration' />;
                     </SelectTrigger>;
                   </FormControl>;
-                  <SelectContent>;
-                    <SelectItem value='15'>15 minutes</SelectItem>;
-                    <SelectItem value='30'>30 minutes</SelectItem>;
-                    <SelectItem value='45'>45 minutes</SelectItem>;
+                  <SelectContent>;'
+                    <SelectItem value='15'>15 minutes</SelectItem>;'
+                    <SelectItem value='30'>30 minutes</SelectItem>;'
+                    <SelectItem value='45'>45 minutes</SelectItem>;'
                     <SelectItem value='60'>60 minutes</SelectItem>;
                   </SelectContent>;
                 </Select>;
@@ -1059,12 +1314,19 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
           />;
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
           <FormField
             control={form && form.control}
+=======
+
+          <FormField;
+            control={form && form.control}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
             name='platform'
               </FormItem>)}
           />;
           <FormField;
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
             control={form.control}
 <<<<<<< HEAD:src/components/interviews/InterviewRequestForm.tsx
 <<<<<<< HEAD
@@ -1078,10 +1340,17 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+            control={form.control}'
+            name='platform';
+            render={({}
+              field;
+            }: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
           />;
           <FormField;
-            control={form.control}
-            name="platform"
+            control={form.control}"
+            name="platform""
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
               <FormItem>
 <<<<<<< HEAD:src/components/interviews/InterviewRequestForm.tsx
@@ -1113,16 +1382,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                 <FormLabel>Platform</FormLabel>
-                z && z.infer<typeof formSchema>,;
+                z && z.infer<typeof formSchema>,;'
                 'platform';
               >;
             }) => (              <FormItem>;
                 <FormLabel>Platform</FormLabel>;
-                <Select
+                <Select;
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
               field: ControllerRenderProps<;
-                z.infer < typeof form_schema>,
+                z.infer < typeof form_schema>,'
                 'platform';
               >;
             }) => (              <FormItem>;
@@ -1132,16 +1401,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   default_value={field.value}
                 >;
                   <FormControl>;
-                    <SelectTrigger>;
+                    <SelectTrigger>;'
                       <SelectValue placeholder='Select platform' />;
                     </SelectTrigger>;
                   </FormControl>;
-                  <SelectContent>;
+                  <SelectContent>;'
                     <SelectItem value='zoom'>Zoom</SelectItem>;
-
+'
                     <SelectItem value='google - meet'>Google Meet</SelectItem>;
-
-                    <SelectItem value='teams'>Microsoft Teams</SelectItem>;
+'
+                    <SelectItem value='teams'>Microsoft Teams</SelectItem>;'
                     <SelectItem value='other'>Other</SelectItem>;
                   </SelectContent>;
                 </Select>;
@@ -1149,19 +1418,20 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
           />;
         </div>;
-
+'
         {form && form.watch('platform') !== 'in-app' && (;
 
-          <FormField
-            control={form && form.control}
+          <FormField;
+            control={form && form.control}'
             name='meetingLink'
               </FormItem>)}
           />;
-        </div>;
+        </div>;'
         {form.watch ('platform') !== 'in - app' && (
           <FormField;
-            control={form.control}
+            control={form.control}'
             name='meeting_link';
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 <<<<<<< HEAD:src/components/interviews/InterviewRequestForm.tsx
 <<<<<<< HEAD
 =======
@@ -1175,22 +1445,28 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             }: {
 
                 z && z.infer<typeof formSchema>,;
+=======
+            render={({}
+              field;
+            }: {}
+                z && z.infer<typeof formSchema>,;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
                 'meetingLink';
               >;
             }) => (              <FormItem>;
                 <FormLabel>Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
 
-                  <Input
+                  <Input'`
                     placeholder={`Add your ${form && form.watch('platform')} link here`}
               field: ControllerRenderProps<;
-                z.infer < typeof form_schema>,
+                z.infer < typeof form_schema>,'
                 'meeting_link';
               >;
             }) => (              <FormItem>;
                 <FormLabel > Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
-                  <Input;
+                  <Input;'`
                     placeholder={`Add your ${form.watch ('platform')} link here`}
                     {...field}
                   />;
@@ -1203,17 +1479,17 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           />;
-        </div>;
+        </div>;'
         {form.watch('platform') !== 'in-app' && (;
           <FormField;
-            control={form.control}
-            name="meetingLink"
+            control={form.control}"
+            name="meetingLink""
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (
               <FormItem>
 
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
-                  <Input
+                  <Input'`
                     placeholder={`Add your ${form.watch('platform')} link here`}
                     {...field}
                   />;
@@ -1226,29 +1502,41 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
         <FormField
 <<<<<<< HEAD:src/components/interviews/InterviewRequestForm.tsx
 =======
           control={form && form.control}
+=======
+        <FormField;
+          control={form && form.control}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
           name='notes'
               </FormItem>)}
           />)}
         <FormField;
-          control={form.control}
+          control={form.control}'
           name='notes';
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewRequestForm.tsx
 
           render={({
             field
           }: {
 
+=======
+          render={({}
+            field;
+          }: {}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
             field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'notes'>;
           }) => (            <FormItem>;
               <FormLabel>Notes (Optional)</FormLabel>;
               <FormControl>;
 
-                <Textarea
-                  placeholder="Share what you'd like to discuss in this interview"
+                <Textarea'"
+                  placeholder="Share what you'd like to discuss in this interview"'
                   className='h-20'
 
 <<<<<<< HEAD:src/components/interviews/InterviewRequestForm.tsx
@@ -1261,14 +1549,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name='platform';;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <FormField;
-          control={form.control}
-          name="notes"
+          control={form.control}"
+          name="notes""
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "notes"> }) => (
             <FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
-                <Textarea 
-                  placeholder="Share what you'd like to discuss in this interview"
+                <Textarea '"
+                  placeholder="Share what you'd like to discuss in this interview""
                   className="h-20"
 
                   {...field}
@@ -1286,12 +1574,18 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewRequestForm.tsx
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <div className="flex justify-end gap-4 pt-4">
+=======
+"
+        <div className="flex justify-end gap-4 pt-4">"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
           <Button variant="outline" onClick={onClose} type="button">
 =======
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 <<<<<<< HEAD:src/components/interviews/InterviewRequestForm.tsx
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -1303,6 +1597,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           </Button>
           <Button type="submit" disabled={isSubmitting}>
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}
+=======
+            Cancel;
+          </Button>'
+          <Button type='submit' disabled={isSubmitting}>'
+            {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
           </Button>
         </div>
       </form>
@@ -1318,44 +1618,53 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 toast ({;
 }finally {;
-  setIsSubmitting (false) ;
+  setIsSubmitting (false) ;"
 }";
 
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"
 "18:00", "18:30", "19:00", "19:30", "20: 00" ];"
 }/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) "
+=======
+"
+}const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";""
+"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";""
+"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";""
+"18:00", "18:30", "19:00", "19:30", "20: 00" ];""
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) ""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
-}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {
-  field.onChange
-}defaultValue= {
-  field.value "
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) )
-}</SelectContent> </Select> <FormMessage /> </FormItem>) "
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {
-  field.onChange
-}defaultValue= {
-  field.value "
+}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {}
+  field.onChange;
+}defaultValue= {"
+  field.value ""
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) )"
+}</SelectContent> </Select> <FormMessage /> </FormItem>) ""
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {}
+  field.onChange;
+}defaultValue= {"
+  field.value ""
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
-}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {
-  field.onChange
-}defaultValue= {
-  field.value "
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
-}/> </div> {'
-  form.watch ('platform') !== 'in-app' && (<FormField control= {
-  form.control
-}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
-  `Add your $ {'
-  form.watch ('platform')
+}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {}
+  field.onChange;
+}defaultValue= {"
+  field.value ""
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)'
+}/> </div> {''
+  form.watch ('platform') !== 'in-app' && (<FormField control= {}
+  form.control;
+}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {'`
+  `Add your $ {''
+  form.watch ('platform')`
 }link here`
-}{
-  ...field
+}{}
+  ...field;
 }/> </FormControl> <FormMessage /> </FormItem>)
 }/>)
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
-}/> </Button> </div> </form> </Form>)
+}/> </Button> </div> </form> </Form>)'"
 }'"}
 
 <<<<<<< HEAD
@@ -1366,22 +1675,23 @@ toast ({;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewRequestForm.tsx
             </FormItem>)}
-        />;
-        <div className='flex justify - end gap - 4 pt - 4'>;
+        />;'
+        <div className='flex justify - end gap - 4 pt - 4'>;'
           <Button variant='outline' on_click={on_close} type='button'>;
             Cancel;
-          </Button>;
-          <Button type='submit' disabled={is_submitting}>;
+          </Button>;'
+          <Button type='submit' disabled={is_submitting}>;'
             {is_submitting ? 'Scheduling...' : 'Schedule Interview'}
           </Button>;
         </div>;
       </form>;
     </Form>);
 }setIsSubmitting (true);
-}catch (error) {
-  logErrorToProduction ('Failed to schedule interview:', {
+}catch (error) {'
+  logErrorToProduction ('Failed to schedule interview:', {}
   data: error;
 });
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 toast ({
 }finally {
   setIsSubmitting (false);
@@ -1399,31 +1709,51 @@ toast ({
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) );
 }</SelectContent> </Select> <FormMessage /> </FormItem>) ";
 }/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4" > <FormField <FormItem> <FormLabel > Duration</FormLabel> <Select onValueChange= {
+=======
+toast ({}
+}finally {}
+  setIsSubmitting (false);"
+}";"
+}const time_slots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";";"
+"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";";"
+"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";";"
+"18:00", "18:30", "19:00", "19:30", "20: 00" ];";"
+}/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormLabel > Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Pick a date</span>) ";"
+}<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar initial_focus className="p - 3 pointer - events - auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
+}/> <FormField <FormLabel > Time</FormLabel> <Select onValueChange= {}
   field.on_change;
-}default_value= {
-  field.value ";
+}default_value= {"
+  field.value ";"
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) );"
+}</SelectContent> </Select> <FormMessage /> </FormItem>) ";"
+}/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormItem> <FormLabel > Duration</FormLabel> <Select onValueChange= {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx
+  field.on_change;
+}default_value= {"
+  field.value ";"
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>);
-}/> <FormField <FormItem> <FormLabel > Platform</FormLabel> <Select onValueChange= {
+}/> <FormField <FormItem> <FormLabel > Platform</FormLabel> <Select onValueChange= {}
   field.on_change;
-}default_value= {
-  field.value ";
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google - meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>);
-}/> </div> {';
-  form.watch ('platform') !== 'in - app' && (<FormField control= {
+}default_value= {"
+  field.value ";"
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google - meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>);'
+}/> </div> {';'
+  form.watch ('platform') !== 'in - app' && (<FormField control= {}
   form.control;
-}<FormItem> <FormLabel > Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
-  `Add your $ {';
-  form.watch ('platform');
+}<FormItem> <FormLabel > Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {'`
+  `Add your $ {';'
+  form.watch ('platform');`
 }link here`;
-}{
+}{}
   ...field;
 }/> </FormControl> <FormMessage /> </FormItem>);
 }/>);
 }<FormField <FormItem> <FormLabel > Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>);
-}/> </Button> </div> </form> </Form>);
+}/> </Button> </div> </form> </Form>);'"
 }'"}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD:src_backup/components/interviews/InterviewRequestForm.tsx
 ;
 <<<<<<< HEAD:src/components/interviews/InterviewRequestForm.tsx
 <<<<<<< HEAD
@@ -1489,3 +1819,6 @@ toast ({;
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/interviews/InterviewRequestForm.tsx
+=======
+;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/components/interviews/InterviewRequestForm.tsx

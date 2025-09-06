@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
@@ -22,3 +23,8 @@ import React from 'react';declare const _default: import('@/utils/withErrorLoggi
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default _default;
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+declare const _default: import("@/utils/withErrorLogging").ApiHandler;
+export default _default;
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

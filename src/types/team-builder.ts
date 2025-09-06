@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ProjectBrief {
+=======
+export interface ProjectBrief {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   projectName: string;
   goals: string;
   timeline: string;

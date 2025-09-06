@@ -1,6 +1,7 @@
 <<<<<<< HEAD:backup-problematic-files/solutions.disabled/email-automation.tsx
 import React from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/solutions.disabled/email-automation.tsx
 =======
 interface Email-automationProps {
@@ -17,6 +18,14 @@ interface Ai-cybersecurityProps {
 const Ai-cybersecurity: React.FC<Ai-cybersecurityProps> = ({ className }) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:src.disabled/src/pages.disabled/services/ai-cybersecurity.tsx
   return (
+=======
+interface Ai-cybersecurityProps {}
+  className?: string;
+}
+
+const Ai-cybersecurity: React.FC<Ai-cybersecurityProps> = ({ className }) => {}
+  return ('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className={className || ''}>
       <h1>Ai-cybersecurity</h1>
       <p>This component is under development.</p>
@@ -36,5 +45,9 @@ const Ai-cybersecurity: React.FC<Ai-cybersecurityProps> = ({ className }) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
+<<<<<<< HEAD
 export default Ai-cybersecurity;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:src.disabled/src/pages.disabled/services/ai-cybersecurity.tsx
+=======
+export default Ai-cybersecurity;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
@@ -11,3 +12,6 @@ export default function Document() {
     </Html>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

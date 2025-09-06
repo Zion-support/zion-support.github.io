@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -142,11 +143,15 @@ const TermsPage: React.FC = () => {
         'Prohibition of reverse engineering'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       ]
     }
   ];
 
   const prohibitedActivities = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1398,10 +1403,14 @@ export default function Terms() {
                       </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </div>
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1977,3 +1986,6 @@ export default Terms;
 export default TermsPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

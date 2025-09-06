@@ -1,34 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
-;
-export async /**
- * getStaticProps - Function description
- */
-function getStaticProps() {
-return (getSlugStaticProps as any)({ params: { slug: 'ai - autonomous - marketing - platform' } });
-}
-export default /**
- * AIAutonomousMarketingPlatform - Function description
- */
-function AIAutonomousMarketingPlatform() {
-return <ServicePage {...props} />;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-=======
-}
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 =======
@@ -78,16 +58,23 @@ import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[s
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export async /**
  * getStaticProps - Function description
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+export async /**;
+ * getStaticProps - Function description;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
-function getStaticProps() {
+function getStaticProps() { return null; }
 return (getSlugStaticProps as any)({ params: { slug: 'ai - autonomous - marketing - platform' } });
 }
-export default /**
- * AIAutonomousMarketingPlatform - Function description
+export default /**;
+ * AIAutonomousMarketingPlatform - Function description;
  */
-function AIAutonomousMarketingPlatform() {
+function AIAutonomousMarketingPlatform() {}
 return <ServicePage {...props} />;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -105,3 +92,43 @@ return <ServicePage {...props} />;
   return <ServicePage {...props} />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+export async function getStaticProps() { return null; }
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
+}
+export default function AIAutonomousMarketingPlatform(props: any) {}
+	return <ServicePage {...props} />
+}';
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+export async function getStaticProps() { return null; }
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })';
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+export async function getStaticProps() { return null; }
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
+  } catch (error) {}
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }'
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+export async /**;
+ * getStaticProps - Function description;
+ */
+function getStaticProps() { return null; }
+return (getSlugStaticProps as any)({ params: { slug: 'ai - autonomous - marketing - platform' } });
+}
+export default /**;
+ * AIAutonomousMarketingPlatform - Function description;
+ */
+function AIAutonomousMarketingPlatform() {}
+return <ServicePage {...props} />;
+}
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

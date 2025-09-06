@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -8,19 +9,27 @@ export default function Home() {;
 
   return (
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
+<<<<<<< HEAD
 import React from './react';
+=======
+
+import React from './react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from './next / link';
 ;
-export default /**
- * Home - Function description
+export default /**;
+ * Home - Function description;
  */
-function Home() {
+function Home() {}
   return (
     <div>;
       <main>;
@@ -30,3 +39,4 @@ function Home() {
       </main>;
     </div>);
 }
+'"

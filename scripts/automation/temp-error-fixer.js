@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         const originalLog = console.log;
 
@@ -56,15 +57,23 @@ const originalLog = console.log;
 const originalLog = console.log;
 >        const originalLog = console.log;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+        const originalLog = console.log;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         let fixCount = 0;
-        console.log = (...args) => {
-          const message = args.join(' ');
-          if (message.includes('✅ Fixed') || message.includes('fixes applied')) {
+        console.log = (...args) => {}
+          const message = args.join(' ');'
+          if (message.includes('✅ Fixed') || message.includes('fixes applied')) {}
             const match = message.match(/(d+)/);
-            if (match) {
+            if (match) {}
               fixCount = parseInt(match[1]);
             }
           }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,20 +107,24 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           originalLog(...args);
 =======
 <<          originalLog(...args);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
         };
-        try {
+        try {'
           // // require('/workspace/scripts/automation/console-error-fixer.cjs');
-          setTimeout(() => {
+          setTimeout(() => {}
             process.exit(0);
           }, 5000);
-        } catch (error) {
+        } catch (error) {'
           console.error('Script error:', error.message);
           process.exit(1);
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,9 +160,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           originalLog(...args)};
-        try {
+        try {'
           // // require('/workspace/scripts/automation/console-error-fixer.cjs');
+<<<<<<< HEAD
           setTimeout(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,3 +239,16 @@ const originalLog = console.log; let fixCount = 0; console.log = (...args) => { 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          setTimeout(() => {}
+'
+const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
+
+            process.exit(0)}, 5000)} catch (error) {'
+          console.error('Script "error": ', error.message);
+          process.exit(1)}'
+const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

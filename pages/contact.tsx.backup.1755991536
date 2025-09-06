@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -23,6 +24,9 @@ import {
   Globe, Users, Target, Award
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
@@ -51,6 +55,7 @@ const ContactPage: React.FC = () => {
     // Simulate form submission
     setTimeout(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
       setSubmitStatus('success');
       setIsSubmitting(false);
 =======
@@ -62,6 +67,9 @@ const ContactPage: React.FC = () => {
       setSubmitStatus('success');
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setFormData({
         name: '',
         email: '',
@@ -70,6 +78,7 @@ const ContactPage: React.FC = () => {
         service: '',
         message: ''
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -125,11 +134,15 @@ const ContactPage: React.FC = () => {
   ];
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const services = [
     'AI & Machine Learning',
     'Quantum Computing',
     'IT Infrastructure',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'Business Automation',
     'Micro SAAS Solutions',
@@ -142,6 +155,9 @@ const ContactPage: React.FC = () => {
     'Business Automation',
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'Customer Success',
     'Marketing & Sales',
     'Finance & Legal',
@@ -152,6 +168,7 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -732,6 +749,9 @@ const ContactPage: React.FC = () => {
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
 
                 <div>
@@ -982,6 +1002,7 @@ const ContactPage: React.FC = () => {
               </motion.div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1124,6 +1145,9 @@ const ContactPage: React.FC = () => {
     </ErrorBoundary>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

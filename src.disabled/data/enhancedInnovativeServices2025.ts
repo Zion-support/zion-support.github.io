@@ -1,8 +1,8 @@
 import React from';react' "export": interface ServiceContact {';
   phone: string;
    email: string;
-   website: string;
-   address: strin,g} "export": interface MicroSaasService {
+   website: string;"
+   address: strin,g} "export": interface MicroSaasService {}
   id: number;
    name: string;
    category: string;
@@ -21,8 +21,8 @@ import React from';react' "export": interface ServiceContact {';
    roi: string;
    setupTime: string;
    integrations: string[];
-   freeTier: boolean;
-   trialPeriod: strin,g} "export": interface ITService {
+   freeTier: boolean;"
+   trialPeriod: strin,g} "export": interface ITService {}
   id: number;
    name: string;
    category: string;
@@ -38,8 +38,8 @@ import React from';react' "export": interface ServiceContact {';
    responseTime: string;
    sla: string;
    certifications: string[];
-   deliveryTime: string;
-   support: strin,g} "export": interface AIService {
+   deliveryTime: string;"
+   support: strin,g} "export": interface AIService {}
   id: number;
    name: string;
    category: string;
@@ -57,9 +57,10 @@ import React from';react' "export": interface ServiceContact {';
    accuracy: string;
    trainingData: string;
    compliance: string[];
-   aiScore: number;
-import React from';react' export: interface ServiceContact {'; phone: string; email: string; website: string} address: 'strin',g} export: interface MicroSaasService { id: number; name: string; category: string; pricing: string; description: string; price: number; pricingModel: string; userLimit: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; competitors: string[]; roi: string; setupTime: string; integrations: string[]; freeTier: boolean} trialPeriod: 'strin',g} export: interface ITService { id: number; name: string; category: string; description: string; hourlyRate: number; projectRate: number; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; responseTime: string; sla: string; certifications: string[]; deliveryTime: string} support: 'strin',g} export: interface AIService { id: number; name: string; category: string; description: string; pricing: string; price: number; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; aiModels: string[]; accuracy: string; trainingData: string; compliance: string[]; aiScore: number} useCases: 'string[]'} export: const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [''';,;
+   aiScore: number;'
+import React from';react' export: interface ServiceContact {'; phone: string; email: string; website: string} address: 'strin',g} export: interface MicroSaasService { id: number; name: string; category: string; pricing: string; description: string; price: number; pricingModel: string; userLimit: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; competitors: string[]; roi: string; setupTime: string; integrations: string[]; freeTier: boolean} trialPeriod: 'strin',g} export: interface ITService { id: number; name: string; category: string; description: string; hourlyRate: number; projectRate: number; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; responseTime: string; sla: string; certifications: string[]; deliveryTime: string} support: 'strin',g} export: interface AIService { id: number; name: string; category: string; description: string; pricing: string; price: number; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; aiModels: string[]; accuracy: string; trainingData: string; compliance: string[]; aiScore: number} useCases: 'string[]'} export: const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [''';,;'"
    useCases: string[]} "export": const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [''',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,3 +111,12 @@ import React from';react' export: interface ServiceContact {'; phone: string; em
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'
+import React from';react' export: interface ServiceContact {'; phone: string; email: string; website: string; address: strin,g} export: interface MicroSaasService { id: number; name: string; category: string; pricing: string; description: string; price: number; pricingModel: string; userLimit: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; competitors: string[]; roi: string; setupTime: string; integrations: string[]; freeTier: boolean; trialPeriod: strin,g} export: interface ITService { id: number; name: string; category: string; description: string; hourlyRate: number; projectRate: number; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; responseTime: string; sla: string; certifications: string[]; deliveryTime: string; support: strin,g} export: interface AIService { id: number; name: string; category: string; description: string; pricing: string; price: number; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; aiModels: string[]; accuracy: string; trainingData: string; compliance: string[]; aiScore: number; useCases: string[]} export: const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [''',
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,7 +1,8 @@
-#!/usr/bin/env node
-import { mkdirSync, existsSync } from 'node: fs';
-import { resolve } from 'node: path';
+#!/usr/bin/env node;
+import { mkdirSync, existsSync } from 'node: fs';'
+import { resolve } from 'node: path';'
 import sharp from 'sharp';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,14 +12,19 @@ import sharp from 'sharp';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
+=======
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const root = new URL ('.';
-import.meta.url).pathname,
-const svg_path = resolve (root, '../assets / zion.svg');
+import.meta.url).pathname,'
+const svg_path = resolve (root, '../assets / zion.svg');'
 const out_dir = resolve (root, '../public / icons');
-if () mkdir_sync (out_dir, { recursive: true }), ) {
-  $2
+if () mkdir_sync (out_dir, { recursive: true }), ) {}
+  $2;
 }
 const sizes = [16, 32, 48, 128];
+<<<<<<< HEAD
 for (const size of sizes) {
 <<<<<<< HEAD
 =======
@@ -29,12 +35,16 @@ for (const size of sizes) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+for (const size of sizes) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const out = resolve (out_dir, `icon-${size}.png`),
   await sharp (svg_path).resize (size, size).png ().to_file (out),
-  // eslint - disable - next - line no - console;
+  // eslint - disable - next - line no - console;'
   console.log ('generated', out);
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,9 +55,16 @@ for (const size of sizes) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+
+`
   const out = resolve(outDir, `icon-${size}.png`),
   await sharp(svgPath).resize(size, size).png().toFile(out),
+<<<<<<< HEAD
   // eslint-disable-next-line no-console
 
 <<<<<<< HEAD
@@ -78,21 +95,25 @@ for (const size of sizes) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  // eslint-disable-next-line no-console;
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   // // // console.log('generated', out)
-#!/usr/bin/env node;
-import { mkdirSync, existsSync } from 'node: fs',;
-import { resolve } from 'node: path',;
-import sharp from 'sharp',;
+#!/usr/bin/env node;'
+import { mkdirSync, existsSync } from 'node: fs',;'
+import { resolve } from 'node: path',;'
+import sharp from 'sharp',;'
 const root = new URL('.',;
-import.meta.url).pathname,;
-const svgPath = resolve(root, '../assets/zion.svg'),;
+import.meta.url).pathname,;'
+const svgPath = resolve(root, '../assets/zion.svg'),;'
 const outDir = resolve(root, '../public/icons'),;
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),;
 const sizes = [16, 32, 48, 128],;
-for (const size of sizes) {;
+for (const size of sizes) {;`
   const out = resolve(outDir, `icon-${size}.png`),;
   await sharp(svgPath).resize(size, size).png().toFile(out);
-  // eslint-disable-next-line no-console;
+  // eslint-disable-next-line no-console;'
   // // // console.log('generated', out);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -102,6 +123,7 @@ for (const size of sizes) {;
 =======
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -114,3 +136,10 @@ for (const size of sizes) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

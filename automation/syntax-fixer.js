@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -33,6 +34,9 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const fixer = new SyntaxFixer(); fixer.run().catch(console.error)}
 export default SyntaxFixer;
@@ -42,6 +46,7 @@ export default SyntaxFixer;
     files.forEach(file => {;
       try {;
         let content = fs.readFileSync(file, "utf8");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,51 +123,56 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Main execution;
-// Check condition
-if ( {) {
-  $2
+// Check condition;
+if ( {) {}
+  $2;
 } const fixer = new SyntaxFixer (); fixer.run ().catch (console.error)}
 ;
 export default SyntaxFixer;
     });
 }
 ;
-  async fixImportIssues () {
+  async fixImportIssues () {}
     const files = this.getSourceFiles ();
-    files.for_each (file => {
-      try {
+    files.for_each (file => {}
+      try {"
         let content = fs.readFileSync (file, "utf8");
         let modified = false;
         // Fix import statements;
 
-        content = content.replace (/import\s+([^, ]+), \s*$/gm, 'import $1, ');
+        content = content.replace (/import\s+([^, ]+), \s*$/gm, 'import $1, ');'
         content = content.replace (/import\s+([^, ]+), \s*$/gm, 'import $1, ');
 ;
-        if () {) {
-  $2
+        if () {) {}
+  $2;
 }
           modified = true;
         }
 ;
-        // Check condition
-if ( {) {
-  $2
+        // Check condition;
+if ( {) {}
+  $2;
 }
   async fixExportIssues() {const files = this.getSourceFiles();
     files.forEach(file => {;
-      try {;
+      try {;"
         let content = fs.readFileSync(file, "utf8");
         let modified = false;
-        // Fix export statements;
-        content = content.replace(/export\s+([^,]+),\s*$/gm, 'export $1,');
+        // Fix export statements;'
+        content = content.replace(/export\s+([^,]+),\s*$/gm, 'export $1,');"
         if (content !== fs.readFileSync(file, "utf8")) {;
           modified = true;
         }
         if (modified) {fs.writeFileSync(file, content);
-          this.fixesApplied++;
+          this.fixesApplied++;`
           this.log(`Fixed import issues in ${file}`);
-        }
+        }"`
       } catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
       }
     });
@@ -174,33 +184,33 @@ if ( {) {
   async fixExportIssues() {,
     const files = this.getSourceFiles(),
     files.forEach(file => {,
-      try {,
+      try {,"
         let content = fs.readFileSync(file, "utf8"),
         let modified = false,
 ,
-        // Fix export statements,
-        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
-          modified = true
+        // Fix export statements,'
+        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),;
+          modified = true;
         },
 ,
         if (modified) {,
           fs.writeFileSync(file, content),
-          this.fixesApplied++,
+          this.fixesApplied++,`
           this.log(`Fixed export issues in ${file}`)
         }
       }
     })
   }
-  getSourceFiles() {
-    const files = []
+  getSourceFiles() {}
+    const files = [];
     const srcDir = path.join(process.cwd(), &quot;src&quot;)
-    if (fs.existsSync(srcDir)) {
-      const walkDir = (dir) => {
+    if (fs.existsSync(srcDir)) {}
+      const walkDir = (dir) => {}
         const items = fs.readdirSync(dir)
-        items.forEach(item => {
+        items.forEach(item => {}
           const fullPath = path.join(dir, item)
           const stat = fs.statSync(fullPath)
-          if (stat.isDirectory() && !item.startsWith(&quot;.&quot;) && item !== &quot;node_modules&quot;) {
+          if (stat.isDirectory() && !item.startsWith(&quot;.&quot;) && item !== &quot;node_modules&quot;) {}
             walkDir(fullPath)
 <<<<<<< HEAD
           } else if (item.endsWith(&quot;.ts&quot;) |item.endsWith(&quot;.tsx&quot;) |item.endsWith(&quot;.js&quot;) |item.endsWith(&quot;.jsx&quot;)) {
@@ -246,17 +256,22 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
         items.forEach(item => {,
           const fullPath = path.join(dir, item),
           const stat = fs.statSync(fullPath),
-,
+,"
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
-            walkDir(fullPath)
+            walkDir(fullPath)"
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             files.push(fullPath)
           }
         })
       }
       walkDir(srcDir)
     }
+<<<<<<< HEAD
     return files
 <<<<<<< HEAD
   }
@@ -278,47 +293,54 @@ this.log("=" * 50),
       this.log("=" * 50),
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    return files;`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
-    } catch (error) {
+    } catch (error) {}
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
           modified = true;
         }
 ;
-        // Check condition
-if ( {) {
-  $2
+        // Check condition;
+if ( {) {}
+  $2;
 }
           fs.writeFileSync (file, content);
-          this.fixes_applied++;
+          this.fixes_applied++;`
           this.log (`Fixed export issues in ${file}`);
         }
-      } catch (error) {
+      } catch (error) {"`
         this.log (`Failed to fix ${file}: ${error.message}`, "WARN");
       }
     });
 }
 ;
-  getSourceFiles () {
-    const files = [];
+  getSourceFiles () {}
+    const files = [];"
     const src_dir = path.join (process.cwd (), "src");
 ;
-    if () {) {
-  $2
+    if () {) {}
+  $2;
 }
-      const walk_dir = (dir) =>: any {
+      const walk_dir = (dir) =>: any {}
         const items = fs.readdir_sync (dir);
-        items.for_each (item => {
+        items.for_each (item => {}
           const full_path = path.join (dir, item);
           const stat = fs.stat_sync (full_path);
-;
-          if (&& !item.starts_with (".") && item !== "node_modules") {) {
-  $2
+;"
+          if (&& !item.starts_with (".") && item !== "node_modules") {) {}
+  $2;
 }
-            walk_dir (full_path);
-          } else if (|| item.ends_with (".tsx") || item.ends_with (".js") || item.ends_with (".jsx")) {) {
-  $2
+            walk_dir (full_path);"
+          } else if (|| item.ends_with (".tsx") || item.ends_with (".js") || item.ends_with (".jsx")) {) {}
+  $2;
 }
             files.push (full_path);
           }
@@ -330,6 +352,7 @@ if ( {) {
 ;
     return files;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -438,11 +461,16 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+          modified = true;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         },
 ,
         if (modified) {,
           fs.writeFileSync(file, content),
-          this.fixesApplied++,
+          this.fixesApplied++,`
           this.log(`Fixed export issues in ${file}`)
         }
 <<<<<<< HEAD
@@ -450,6 +478,7 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       } catch (error) {,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -469,11 +498,17 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       }
     })
   },
 ,
   getSourceFiles() {,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -491,6 +526,10 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ,
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
@@ -498,14 +537,18 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
         items.forEach(item => {,
           const fullPath = path.join(dir, item),
           const stat = fs.statSync(fullPath),
-,
+,"
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
-            walkDir(fullPath)
+            walkDir(fullPath)"
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             files.push(fullPath)
 <<<<<<< HEAD
 =======
@@ -517,6 +560,7 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
         })
       }
       walkDir(srcDir)
+<<<<<<< HEAD
     }
     return files
 <<<<<<< HEAD
@@ -606,30 +650,42 @@ export default SyntaxFixer,
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ;
+=======
+    };
+    return files;`
+      this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
+
+    } catch (error) {"`
+      this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
+    }
+  }
+
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     });
   },;
 ,;
   async fixImportIssues() {,;
     const files = this.getSourceFiles(),;
     files.forEach(file => {,;
-      try {,;
+      try {,;"
         let content = fs.readFileSync(file, "utf8"),;
         let modified = false,;
 ,;
-        // Fix import statements,;
+        // Fix import statements,;'
+        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),;'
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),;
-        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),;
-,;
+,;"
         if (content !== fs.readFileSync(file, "utf8")) {,;
           modified = true;
         },;
 ,;
         if (modified) {,;
           fs.writeFileSync(file, content),;
-          this.fixesApplied++,;
+          this.fixesApplied++,;`
           this.log(`Fixed import issues in ${file}`),;
         }
-      } catch (error) {,;
+      } catch (error) {,;"`
         this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
       }
     });
@@ -638,30 +694,30 @@ export default SyntaxFixer,
   async fixExportIssues() {,;
     const files = this.getSourceFiles(),;
     files.forEach(file => {,;
-      try {,;
+      try {,;"
         let content = fs.readFileSync(file, "utf8"),;
         let modified = false,;
 ,;
-        // Fix export statements,;
+        // Fix export statements,;'
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),;
-,;
+,;"
         if (content !== fs.readFileSync(file, "utf8")) {,;
           modified = true;
         },;
 ,;
         if (modified) {,;
           fs.writeFileSync(file, content),;
-          this.fixesApplied++,;
+          this.fixesApplied++,;`
           this.log(`Fixed export issues in ${file}`);
         }
-      } catch (error) {,;
+      } catch (error) {,;"`
         this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
       }
     });
   },;
 ,;
   getSourceFiles() {,;
-    const files = [],;
+    const files = [],;"
     const srcDir = path.join(process.cwd(), "src"),;
 ,;
     if (fs.existsSync(srcDir)) {,;
@@ -670,9 +726,9 @@ export default SyntaxFixer,
         items.forEach(item => {,;
           const fullPath = path.join(dir, item),;
           const stat = fs.statSync(fullPath),;
-,;
+,;"
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,;
-            walkDir(fullPath);
+            walkDir(fullPath);"
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,;
             files.push(fullPath);
           }
@@ -685,27 +741,28 @@ export default SyntaxFixer,
     return files;
   },;
 ,;
-  async run() {,;
+  async run() {,;"
     this.log("🚀 Starting Syntax Fixer"),;
 ,;
     try {,;
       await this.fixSyntaxErrors(),;
-,;
-      this.log("=" * 50),;
+,;"
+      this.log("=" * 50),;`
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`);
-    } catch (error) {,;
+    } catch (error) {,;"`
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR");
     }
   }
 },;
 ,;
-// Main execution,;
+// Main execution,;`
 if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   const fixer = new SyntaxFixer(),;
   fixer.run().catch(console.error);
 },;
 ;
 export default SyntaxFixer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -726,3 +783,8 @@ this.log("=" * 50)this.log("=" * 50),      this.log(`🎯 Syntax Fixer completed
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

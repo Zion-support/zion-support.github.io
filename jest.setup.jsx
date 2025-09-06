@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}},;
 =======
 =======
@@ -21,12 +22,29 @@
 
 
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+<<<<<<< HEAD
+}}}
+;
+=======
 
 
 
 
 }}}
 ;
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }}};
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -42,6 +60,7 @@ export default function Jest.setup({ }: Jest.setupProps) {;
 };
 };
 };
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/automate-test-fix-improve-and-merge-code-48f3; jest.mock( \'next/router\',() => ({ useRouter() { return { \"route\": \'/,\"pathname\": ; \'/\',\"query\": {},\"asPath\": ; \'/\',\"push\": jest.fn(),\"pop\": jest.fn(),\"reload\": jest.fn(),\"back\": jest.fn(),\"prefetch\": jest.fn().mockResolvedValue(undefined),\"beforePopState\": jest.fn(),\"events\": { on: jest.fn(),\"off\": jest.fn(),\"emit\": jest.fn()},\"isFallback\": \'false\'} }})); jest.mock( \'next/image\',() => ({ \"__esModule\": \'true\',\"default\": props => { return <img {...props} /> }})) jest.mock( \'next/link\',() => ({ \"__esModule\": \'true\',\"default\": ({ children,href,...props }) => { return ( <a href={href} {...props}> {children} </a> )}})); global.ResizeObserver = jest.fn().mockImplementation(() => ({ \"observe\": jest.fn(),\"unobserve\": jest.fn(),\"disconnect\": jest.fn()})) global.matchMedia = jest.fn().mockImplementation(query => ({ \"matches\": \'false\',\"media\": \'query\',\"onchange\": \'null\',\"addListener\": jest.fn(),\"removeListener\": jest.fn(),\"addEventListener\": jest.fn(),\"removeEventListener\": jest.fn(),\"dispatchEvent\": jest.fn()}))
 ursor/automate-test-fix-improve-and-merge-code-48f3; jest.mock( "next/router",() => ({ useRouter() { return { route: "/,pathname: "/",query: {},asPath: "/",push: jest.fn(),pop: jest.fn(),reload: jest.fn(),back: jest.fn(),prefetch: jest.fn().mockResolvedValue(undefined),beforePopState: jest.fn(),events: { on: jest.fn(),off: jest.fn(),emit: jest.fn()},isFallback: "false"} }})); jest.mock( "next/image",() => ({ __esModule: "true",default: props => { return <img {.props} /> }})) jest.mock( "next/link",() => ({ __esModule: "true",default: ({ children,href,.props }) => { return ( <a href={href} {.props}> {children} </a> )}})); global.ResizeObserver = jest.fn().mockImplementation(() => ({ observe: jest.fn(),unobserve: jest.fn(),disconnect: jest.fn()})) global.matchMedia = jest.fn().mockImplementation(query => ({ matches: "false",media: "query",onchange: "null",addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn()}))"""
@@ -51,6 +70,16 @@ ursor/automate-test-fix-improve-and-merge-code-48f3; jest.mock( "next/router",()
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d;
+ursor/automate-test-fix-improve-and-merge-code-48f3; jest.mock( \'next/router\',() => ({ useRouter() { return { \"route\": \'/,\"pathname\": ; \'/\',\"query\": {},\"asPath\": ; \'/\',\"push\": jest.fn(),\"pop\": jest.fn(),\"reload\": jest.fn(),\"back\": jest.fn(),\"prefetch\": jest.fn().mockResolvedValue(undefined),\"beforePopState\": jest.fn(),\"events\": { on: jest.fn(),\"off\": jest.fn(),\"emit\": jest.fn()},\"isFallback\": \'false\'} }})); jest.mock( \'next/image\',() => ({ \"__esModule\": \'true\',\"default\": props => { return <img {...props} /> }})) jest.mock( \'next/link\',() => ({ \"__esModule\": \'true\',\"default\": ({ children,href,...props }) => { return ( <a href={href} {...props}> {children} </a> )}})); global.ResizeObserver = jest.fn().mockImplementation(() => ({ \"observe\": jest.fn(),\"unobserve\": jest.fn(),\"disconnect\": jest.fn()})) global.matchMedia = jest.fn().mockImplementation(query => ({ \"matches\": \'false\',\"media\": \'query\',\"onchange\": \'null\',\"addListener\": jest.fn(),\"removeListener\": jest.fn(),\"addEventListener\": jest.fn(),\"removeEventListener\": jest.fn(),\"dispatchEvent\": jest.fn()}))"
+ursor/automate-test-fix-improve-and-merge-code-48f3; jest.mock( "next/router",() => ({ useRouter() { return { route: "/,pathname: "/",query: {},asPath: "/",push: jest.fn(),pop: jest.fn(),reload: jest.fn(),back: jest.fn(),prefetch: jest.fn().mockResolvedValue(undefined),beforePopState: jest.fn(),events: { on: jest.fn(),off: jest.fn(),emit: jest.fn()},isFallback: "false"} }})); jest.mock( "next/image",() => ({ __esModule: "true",default: props => { return <img {.props} /> }})) jest.mock( "next/link",() => ({ __esModule: "true",default: ({ children,href,.props }) => { return ( <a href={href} {.props}> {children} </a> )}})); global.ResizeObserver = jest.fn().mockImplementation(() => ({ observe: jest.fn(),unobserve: jest.fn(),disconnect: jest.fn()})) global.matchMedia = jest.fn().mockImplementation(query => ({ matches: "false",media: "query",onchange: "null",addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn()}))"""'
+import React from 'react';
+interface Jest.setupProps {}
+  // Add props here as needed;
+}
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
 interface Jest.setupProps {
   // Add props here as needed
@@ -67,12 +96,13 @@ import React from 'react';
 import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-interface Jest.setupProps {
-  // Add props here as needed
+interface Jest.setupProps {}
+  // Add props here as needed;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -90,12 +120,17 @@ interface Jest.setupProps {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Jest.setup({ }: Jest.setupProps) {
+=======
+
+export default function Jest.setup({ }: Jest.setupProps) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
       <h1>Jest.setup</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,10 +167,15 @@ origin/automation-improvements-final
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }}};
 }}}
 }}}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -150,13 +190,22 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
-}
-}
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
+
+
+}
+
+
+
+}
+<<<<<<< HEAD
 =======
 }
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
@@ -203,3 +252,8 @@ origin/automation-improvements-final
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

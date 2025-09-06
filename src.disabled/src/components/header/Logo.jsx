@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,9 +26,11 @@ import _React from 'react'; import { Link } from 'react-router-dom'; import { Za
 import React from \'react\'; import { Link } from \'react-router-dom\'; import { Zap } from \'lucide-react\'; export function Logo({ customLogo,customColor,className = \'' }) {; if(customLogo) {; return ( <Link to=\"/\" className={`flex-shrink-0 group ${className}`}>;\";\" <img\" src={customLogo} \"\" alt=\"Logo\"\" className=\"h-8 w-auto\" / / / / / />; </Link>;\" );\";\" };\";\" const logoColor = customColor || \'#3b82f6\'}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const React from "react"; import { Link } from "react-router-dom"; import { Zap } from "lucide-react"; export function Logo({ customLogo,customColor,className = "" }) {; if(customLogo) {; return ( <Link to="/" className={`flex-shrink-0 group ${className}`}>;";" <img" src={customLogo} "" alt="Logo"" className="h-8 w-auto" / / / / / />; </Link>;" );";" };";" const logoColor = customColor | "#3b82f6"}'"`'"`
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-import _React from 'react'; import { Link } from 'react-router-dom'; import { Zap } from 'lucide-react'; export function Logo({ customLogo,customColor,className = '' }) {; if(customLogo) {; return ( <Link to="/" className={`flex-shrink-0 group ${className}`}>;";" <img" src={customLogo} "" alt="Logo"" className="h-8 w-auto" / / / / / />; </Link>;" );";" };";" const logoColor = customColor || '#3b82f6'}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,3 +80,13 @@ import React from \'react\'; import { Link } from \'react-router-dom\'; import {
 const React from "react"; import { Link } from "react-router-dom"; import { Zap } from "lucide-react"; export function Logo({ customLogo,customColor,className = "" }) {; if(customLogo) {; return(; <Link to="/" className={`flex-shrink-0 group ${className}`}>;";" <img;" src={customLogo} ";" alt="Logo";" className="h-8 w-auto"; / / / / / />; </Link>;" );";" };";" const logoColor = customColor | "#3b82f6"}'"`'"`
 import _React from 'react'; import { Link } from 'react-router-dom'; import { Zap } from 'lucide-react'; export function Logo({ customLogo,customColor,className = '' }) {; if(customLogo) {; return(; <Link to="/" className={`flex-shrink-0 group ${className}`}>;";" <img;" src={customLogo} ";" alt="Logo";" className="h-8 w-auto"; / / / / / />; </Link>;" );";" };";" const logoColor = customColor || '#3b82f6'}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from \'react\'; import { Link } from \'react-router-dom\'; import { Zap } from \'lucide-react\'; export function Logo({ customLogo,customColor,className = \'' }) {; if(customLogo) {; return(; <Link to=\"/\" className={`flex-shrink-0 group ${className}`}>;\";\" <img;\" src={customLogo} \";\" alt=\"Logo\";\" className=\"h-8 w-auto\"; / / / / / />; </Link>;\" );\";\" };\";\" const logoColor = customColor || \'#3b82f6\'}'"`
+const React from "react"; import { Link } from "react-router-dom"; import { Zap } from "lucide-react"; export function Logo({ customLogo,customColor,className = "" }) {; if(customLogo) {; return(; <Link to="/" className={`flex-shrink-0 group ${className}`}>;";" <img;" src={customLogo} ";" alt="Logo";" className="h-8 w-auto"; / / / / / />; </Link>;" );";" };";" const logoColor = customColor | "#3b82f6"}'"`'"`'"`
+import _React from 'react'; import { Link } from 'react-router-dom'; import { Zap } from 'lucide-react'; export function Logo({ customLogo,customColor,className = '' }) {; if(customLogo) {; return(; <Link to="/" className={`flex-shrink-0 group ${className}`}>;";" <img;" src={customLogo} ";" alt="Logo";" className="h-8 w-auto"; / / / / / />; </Link>;" );";" };";" const logoColor = customColor || '#3b82f6'}
+
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

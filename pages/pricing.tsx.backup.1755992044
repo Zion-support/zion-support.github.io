@@ -1,10 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, X } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Button from '../components/ui/Button';
 import { microSaasServices, serviceCategories, getServicesByCategory } from '../data/micro-saas-services';
 
 export default function PricingPage() {
+<<<<<<< HEAD
   const microSaasPlans = [
     {
       name: 'Social Media Analytics',
@@ -239,6 +244,9 @@ export default function PricingPage() {
       starter: 'Standard',
       professional: 'Enhanced',
       enterprise: '99.9% uptime'
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -454,11 +462,15 @@ export default function Pricing() {
                 <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse" />
                 Micro SaaS Solutions
               </div>
+<<<<<<< HEAD
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
                 12 Specialized Tools & Services
               </h2>
               <p className="text-xl text-gray-400 max-w-4xl mx-auto">
                 Focused solutions for specific business needs with transparent, competitive pricing starting from $25/month.
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </div>
 

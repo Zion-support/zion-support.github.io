@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,13 +62,35 @@ import { BillingHeader } from "./BillingHeader",
 import { CurrentSubscription } from "./CurrentSubscription",
 import { PaymentMethods } from "./PaymentMethods",
 import { InvoiceHistory } from "./InvoiceHistory",
+=======
+
+import React from "react";"
+import { BillingHeader } from "./BillingHeader";"
+import { CurrentSubscription } from "./CurrentSubscription";"
+import { PaymentMethods } from "./PaymentMethods";
+"
+import { InvoiceHistory } from "./InvoiceHistory";"
+import { UsageOverview } from "./UsageOverview";
+"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+
+
+"
+import React from "react","
+import { BillingHeader } from "./BillingHeader","
+import { CurrentSubscription } from "./CurrentSubscription","
+import { PaymentMethods } from "./PaymentMethods","
+import { InvoiceHistory } from "./InvoiceHistory","
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { UsageOverview } from "./UsageOverview",
-import {
+import {}
   Tabs,
   TabsContent,
-  TabsList,
+  TabsList,"
   TabsTrigger} from "@/components/ui/tabs",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,10 +119,21 @@ import {
           <TabsTrigger value="subscription">Subscription</TabsTrigger>
           <TabsTrigger value="payment">Payment Methods</TabsTrigger>
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>
+=======
+
+
+"
+      <Tabs defaultValue="subscription" className="mt-8">"
+        <TabsList className="grid w-full grid-cols-4 mb-8">"
+          <TabsTrigger value="subscription">Subscription</TabsTrigger>"
+          <TabsTrigger value="payment">Payment Methods</TabsTrigger>"
+          <TabsTrigger value="invoices">Invoice History</TabsTrigger>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>
 <<<<<<< HEAD
 <<<<<<< HEAD
         </TabsList>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -113,15 +147,19 @@ import {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <TabsContent value="subscription" className="space-y-8">
           <CurrentSubscription />
-        </TabsContent>
+        </TabsContent>"
         <TabsContent value="payment" className="space-y-8">
           <PaymentMethods />
-        </TabsContent>
+        </TabsContent>"
         <TabsContent value="invoices" className="space-y-8">
           <InvoiceHistory />
         </TabsContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         
@@ -143,20 +181,27 @@ import {
           <InvoiceHistory />
         </TabsContent>
         
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <TabsContent value="usage" className="space-y-8">
           <UsageOverview />
         </TabsContent>
       </Tabs>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   );
@@ -196,22 +241,26 @@ function BillingDashboard() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
   );
 }
     </div>
-  )
-import React from "react",;
-import { BillingHeader } from "./BillingHeader",;
-import { CurrentSubscription } from "./CurrentSubscription",;
-import { PaymentMethods } from "./PaymentMethods",;
-import { InvoiceHistory } from "./InvoiceHistory",;
+  )"
+import React from "react",;"
+import { BillingHeader } from "./BillingHeader",;"
+import { CurrentSubscription } from "./CurrentSubscription",;"
+import { PaymentMethods } from "./PaymentMethods",;"
+import { InvoiceHistory } from "./InvoiceHistory",;"
 import { UsageOverview } from "./UsageOverview",;
 import {;
   Tabs,;
   TabsContent,;
-  TabsList,;
+  TabsList,;"
   TabsTrigger} from "@/components/ui/tabs";
+<<<<<<< HEAD
 export function BillingDashboard() {;
   return (;
 <<<<<<< HEAD
@@ -246,27 +295,32 @@ export function BillingDashboard() {;
 }
 }
         ;
+=======
+export function BillingDashboard() { return null; }
+}
+        ;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <TabsContent value="subscription" className="space-y-8">;
           <CurrentSubscription />;
         </TabsContent>;
-        ;
+        ;"
         <TabsContent value="payment" className="space-y-8">;
           <PaymentMethods />;
         </TabsContent>;
-        ;
+        ;"
         <TabsContent value="invoices" className="space-y-8">;
           <InvoiceHistory />;
         </TabsContent>;
-        ;
+        ;"
         <TabsContent value="subscription" className="space-y-8">;
           <CurrentSubscription />;
-        </TabsContent>;
+        </TabsContent>;"
         <TabsContent value="payment" className="space-y-8">;
           <PaymentMethods />;
-        </TabsContent>;
+        </TabsContent>;"
         <TabsContent value="invoices" className="space-y-8">;
           <InvoiceHistory />;
-        </TabsContent>;
+        </TabsContent>;"
         <TabsContent value="usage" className="space-y-8">;
           <UsageOverview />;
         </TabsContent>;
@@ -275,6 +329,7 @@ export function BillingDashboard() {;
   );
 }
 ;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -284,3 +339,10 @@ export function BillingDashboard() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+}
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

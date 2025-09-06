@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Job {
 =======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -9,6 +13,7 @@ export interface Job {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -30,6 +35,9 @@ export interface Job {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface Job {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   title: string;
 =======
@@ -49,18 +57,16 @@ export interface Job {;
   description: string;
   company_name?: string;
   budget?: string;
-  client_id: string
+  client_id: string;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
+
 
 <<<<<<< HEAD
-=======
-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface ApplyToJobModalProps {
   job: Job;
@@ -75,12 +81,17 @@ export interface ApplyToJobModalProps {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export interface ApplyToJobModalProps {;
   job: Job;
   isOpen: boolean;
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -92,6 +103,11 @@ export interface ApplyToJobModalProps {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -112,6 +128,7 @@ export interface ApplyToJobModalProps {;
 <<<<<<< HEAD
   isOpen: boolean,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -123,6 +140,11 @@ export interface ApplyToJobModalProps {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   onClose: () => void;
 =======
   isOpen: boolean,;  onClose: () => void;
@@ -151,6 +173,21 @@ export interface ApplyToJobModalProps {
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 
+<<<<<<< HEAD
 export interface ApplyToJobModalProps {
   job: Job;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+;
+
+;
+;
+
+
+export interface ApplyToJobModalProps {};
+  job: Job;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

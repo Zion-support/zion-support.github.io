@@ -32,6 +32,7 @@
   // Check if file has merge conflicts
   hasMergeConflicts(content) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-syntax-fixer.cjs
 =======
 <<<<<<< HEAD
@@ -49,6 +50,10 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
     return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
 main
@@ -85,6 +90,7 @@ main
     // Fix merge conflicts by keeping the HEAD version
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,6 +98,12 @@ main
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     fixed = fixed.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1\n');
+=======
+
+
+
+    fixed = fixed.replace(/
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/comprehensive-syntax-fixer.cjs
     // Fix common syntax patterns
@@ -457,6 +469,7 @@ if (require.main === module) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -480,16 +493,21 @@ if (require.main === module) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
 
 
+<<<<<<< HEAD
 
 main
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

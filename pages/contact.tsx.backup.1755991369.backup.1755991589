@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:components/contact.tsx.backup.1755991270.backup.1756001154
 ========
@@ -35,41 +36,14 @@ export default function Contact() {
       <p className="mt-2 text-gray-600 dark:text-gray-300">Reach us at hello@zion.app</p>
 =======
 import React from "react";
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-export default function ContactPage() {
-  return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold">Contact</h1>
-      <p className="text-gray-600">Reach us at support@zion.ai</p>
-    </main>
-  );
-}
-=======
-export default Contact;
-=======
-export default function ContactPage() {
-  return (
-    <div className="py-8">
-      <h1 className="text-xl font-semibold mb-2">Contact</h1>
-      <p className="text-gray-600 dark:text-gray-300">Reach us at contact@zion.ai</p>
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     </div>
   );
 }
-=======
+
 <<<<<<< HEAD
-export default function ContactPage() {
-  return (
-    <div className="prose dark:prose-invert">
-      <h1>Contact</h1>
-      <p>For partnerships and media, email contact@zion.global</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/build-zion-global-expo-platform-712b
-=======
-import React from 'react';
-
 export default function ContactPage() {
   return <div>Contact Zion</div>;
 }
@@ -77,3 +51,7 @@ export default function ContactPage() {
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 >>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/contact.tsx.backup.1755991369.backup.1755991589
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

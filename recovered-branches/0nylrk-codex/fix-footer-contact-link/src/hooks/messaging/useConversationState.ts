@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -23,10 +23,16 @@ export function useConversationState() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState} from 'react';
+=======
+
+
+import {useState} from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Conversation, Message} from '@/types/messaging';
 /**
- * Hook to manage messaging state
+ * Hook to manage messaging state;
  */
+<<<<<<< HEAD
 export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
@@ -69,14 +75,18 @@ export function useConversationState() {;
   const [isLoading, setIsLoading] = useState(false);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useState} from 'react';
+=======
+export function useConversationState() { return null; }
+import {useState} from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Conversation, Message} from '@/types / messaging';
 /**;
 * Hook to manage messaging state;
 */;
-export /**
- * useConversationState - Function description
+export /**;
+ * useConversationState - Function description;
  */
-function useConversationState() {
+function useConversationState() {}
   const [messages, set_messages] = useState < Message[]>([]);
   const [active_messages, setActiveMessages] = useState < Message[]>([]);
   const [conversations, set_conversations] = useState < Conversation[]>([]);
@@ -84,8 +94,12 @@ function useConversationState() {
   const [active_conversation, setActiveConversation] = useState < Conversation | null>(null);
   const [is_loading, setIsLoading] = useState (false);
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return {
+=======
+  return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // State;
     messages;
     set_messages;
@@ -97,8 +111,8 @@ function useConversationState() {
 <<<<<<< HEAD
 <<<<<<< HEAD
     setUnreadCount;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   return {
     // State
@@ -127,10 +141,17 @@ function useConversationState() {
     setUnreadCount;    activeConversation;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useState } from 'react',;
+=======
+
+
+    activeConversation;'
+import { useState } from 'react',;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Conversation, Message } from '@/types/messaging',;
 /**;
  * Hook to manage messaging state;
  */;
+<<<<<<< HEAD
 export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]),;
   const [activeMessages, setActiveMessages] = useState<Message[]>([]),;
@@ -155,3 +176,12 @@ export function useConversationState() {;
     is_loading;
     setIsLoading}
 }}
+=======
+export function useConversationState() { return null; }
+    setIsLoading}
+
+
+}
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
