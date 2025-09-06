@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Newspaper
-  Calendar
-  User
-  Tag
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Award
-  Rocket
-  Globe
-  Brain
-  Atom
-  Zap
-} from 'lucide-react'
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -40,7 +18,7 @@ import {
   Zap
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 const NewsPage: React.FC = () => {
   const newsArticles = [
     {
@@ -78,10 +56,8 @@ const NewsPage: React.FC = () => {
       image: '/images/news/quantum-azure-partnership.jpg'
       tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership']
     }
-<<<<<<< HEAD
-  ]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -143,9 +119,8 @@ const NewsPage: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -175,17 +150,7 @@ const NewsPage: React.FC = () => {;
       tags: ['RecognitionForbesAI LeadershipInnovation']
     }
     {
-<<<<<<< HEAD
-      id: 6
-      title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"'
-      excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.'
-      category: 'research'
-      date: '2025-01-03'
-      author: 'Dr. Michael Rodriguez'
-      readTime: '8 min read'
-      featured: false
-      image: '/images/news/quantum-drug-discovery.jpg'
-=======
+
       id: 6,
       title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"',
       excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.',
@@ -195,7 +160,7 @@ const NewsPage: React.FC = () => {;
       readTime: '8 min read',
       featured: false,
       image: '/images/news/quantum-drug-discovery.jpg',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       tags: ['Quantum ComputingDrug DiscoveryResearchHealthcare']
     }
     {
@@ -233,70 +198,7 @@ const NewsPage: React.FC = () => {;
       featured: false
       image: '/images/news/european-expansion.jpg'
       tags: ['ExpansionEuropeInternationalGrowth']
-<<<<<<< HEAD
-    }
-  ]
-  const pressReleases = [
-    {
-      title: 'Zion Tech Group Announces Revolutionary AI Consciousness Breakthrough'
-      date: '2025-01-15'
-      summary: 'Major milestone in artificial intelligence research with implications for human-AI collaboration and consciousness studies.'
-    }
-    {
-      title: 'Series C Funding Round: $250M Investment for Global Expansion'
-      date: '2025-01-10'
-      summary: 'Strategic investment to accelerate AI consciousness platform development and international market expansion.'
-    }
-    {
-      title: 'Quantum-Secure Cloud Partnership with Microsoft Azure'
-      date: '2025-01-05'
-      summary: 'World\'s first quantum-secure cloud infrastructure for enterprise customers.'
-    }
-  ]
-  const mediaResources = [
-    {
-      title: 'Company Fact Sheet'
-      description: 'Key facts, figures, and company information for media and investors.'
-      type: 'PDF'
-      size: '2.1 MB'
-      download: '/media/zion-tech-group-fact-sheet.pdf'
-    }
-    {
-      title: 'Executive Biographies'
-      description: 'Professional backgrounds and photos of Zion Tech Group leadership team.'
-      type: 'ZIP'
-      size: '15.3 MB'
-      download: '/media/executive-bios.zip'
-    }
-    {
-      title: 'Company Logo Package'
-      description: 'High-resolution logos and brand assets for media use.'
-      type: 'ZIP'
-      size: '8.7 MB'
-      download: '/media/logo-package.zip'
-    }
-    {
-      title: 'Product Screenshots'
-      description: 'High-quality screenshots of our AI and quantum computing platforms.'
-      type: 'ZIP'
-      size: '25.1 MB'
-      download: '/media/product-screenshots.zip'
-    }
-  ]
-  const filteredNews = [...featuredNews, ...latestNews].filter(news => {
-    const categoryMatch = selectedCategory === 'all' |news.category === selectedCategory
-    const searchMatch = searchQuery === '' |
-      news.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-      news.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) |
-      news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-    return categoryMatch && searchMatch
-  })
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric'
-      month: 'long'
-=======
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -371,7 +273,7 @@ const NewsPage: React.FC = () => {;
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       day: 'numeric'
     })
   }
@@ -385,10 +287,7 @@ export default function NewsPage() {
           <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
         </Head>
-<<<<<<< HEAD
-        {/* Hero Section */}
-<<<<<<< HEAD
-=======
+
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1 
@@ -396,7 +295,7 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -408,11 +307,7 @@ export default function NewsPage() {
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
+
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -428,10 +323,7 @@ export default function NewsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center"
             >
@@ -442,62 +334,8 @@ export default function NewsPage() {
                 News & Press
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-                Stay updated with the latest developments, breakthroughs, and innovations
-                from Zion Tech Group and the technology industry.
-              </p>
-            </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                Stay updated with the latest developments, breakthroughs, and innovations 
-                from Zion Tech Group and the technology industry.
-              </p>
-            </motion.div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {/* Category Filter */}
-        <section className="py-10 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-=======
-<<<<<<< HEAD
-=======
-                Stay updated with the latest developments, breakthroughs, and innovations
-                from Zion Tech Group and the technology industry.
-              </p>
-            </motion.div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {/* Category Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-10 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
               className="flex flex-wrap justify-center gap-4"
             >
               {categories.map((category, index) => (
@@ -510,130 +348,13 @@ export default function NewsPage() {
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-<<<<<<< HEAD
-                      : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Newspaper, Globe, Award, Users, Rocket, Brain
+
 =======
-=======
-<<<<<<< HEAD
-                      : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600";
-import React, { useState } from 'react',;
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import { 
-  Newspaper, Globe, Award, Users, Rocket, Brain, 
-=======
-                      : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from 'react',
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import {
-  Newspaper, Globe, Award, Users, Rocket, Brain,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  ArrowRight, ExternalLink, Calendar, Tag, Star
-} from 'lucide-react'
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  ArrowRight, ExternalLink, Calendar, Tag, Star
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export default function NewsPage() {
   const newsItems = [
     {
-<<<<<<< HEAD
-      title: "Zion Tech Group Named Top AI Innovation Company 2025"
-      category: "Awards & Recognition"
-      date: "January 15, 2025"
-      excerpt: "Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechCrunch, highlighting our breakthrough work in autonomous AI systems and quantum computing integration."
-      image: "/api/placeholder/600/400"
-      source: "TechCrunch"
-      url: "#"
-      featured: true
-      icon: Award
-      color: "from-yellow-500 to-orange-500"
-    }
-    {
-      title: "Revolutionary Quantum AI Breakthrough Announced"
-      category: "Technology Innovation"
-      date: "January 10, 2025"
-      excerpt: "Zion Tech Group announces a major breakthrough in quantum AI integration, achieving unprecedented performance improvements in machine learning algorithms through quantum-enhanced neural networks."
-      image: "/api/placeholder/600/400"
-      source: "MIT Technology Review"
-      url: "#"
-      featured: false
-      icon: Brain
-      color: "from-purple-500 to-pink-500"
-    }
-    {
-      title: "Partnership with Fortune 500 Financial Institution"
-      category: "Business Development"
-      date: "January 5, 2025"
-      excerpt: "Zion Tech Group announces strategic partnership with leading financial institution to deploy AI-powered risk assessment and fraud detection systems across their global operations."
-      image: "/api/placeholder/600/400"
-      source: "Business Insider"
-      url: "#"
-      featured: false
-      icon: Users
-      color: "from-blue-500 to-cyan-500"
-    }
-    {
-      title: "New Cybersecurity Division Launch"
-      category: "Company News"
-      date: "December 28, 2024"
-      excerpt: "Zion Tech Group expands its service portfolio with the launch of a dedicated cybersecurity division, offering quantum-resistant encryption and AI-powered threat detection solutions."
-      image: "/api/placeholder/600/400"
-      source: "Security Weekly"
-      url: "#"
-      featured: false
-      icon: Rocket
-      color: "from-red-500 to-orange-500"
-    }
-    {
-      title: "Record-Breaking AI Model Performance"
-      category: "Research & Development"
-      date: "December 20, 2024"
-      excerpt: "Our research team achieves record-breaking performance in natural language processing, with our latest AI model outperforming industry benchmarks by 40% in accuracy and 60% in speed."
-      image: "/api/placeholder/600/400"
-      source: "AI Research Journal"
-      url: "#"
-      featured: false
-      icon: Brain
-      color: "from-emerald-500 to-teal-500"
-    }
-    {
-      title: "Global Expansion: New Office in Singapore"
-      category: "Company News"
-      date: "December 15, 2024"
-      excerpt: "Zion Tech Group announces the opening of its new Asia-Pacific headquarters in Singapore, expanding our global reach and strengthening partnerships in the region."
-      image: "/api/placeholder/600/400"
-      source: "Singapore Business Times"
-      url: "#"
-      featured: false
-      icon: Globe
-      color: "from-indigo-500 to-purple-500"
-    }
-  ]
-  const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"]
-  const [selectedCategory, setSelectedCategory] = React.useState("All")
-  const filteredNews = selectedCategory === "All"
-    ? newsItems
-    : newsItems.filter(item => item.category === selectedCategory)
-  const featuredNews = newsItems.filter(item => item.featured)
-=======
+
       title: "Zion Tech Group Named Top AI Innovation Company 2025",
       category: "Awards & Recognition",
       date: "January 15, 2025",
@@ -704,33 +425,7 @@ export default function NewsPage() {
       featured: false,
       icon: Globe,
       color: "from-indigo-500 to-purple-500"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  ],
 
-  const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"],
-  const [selectedCategory, setSelectedCategory] = React.useState("All"),
-
-  const filteredNews = selectedCategory === "All" 
-    ? newsItems 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"],
-  const [selectedCategory, setSelectedCategory] = React.useState("All"),
-  const filteredNews = selectedCategory === "All"
-    ? newsItems
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     : newsItems.filter(item => item.category === selectedCategory),
   const featuredNews = newsItems.filter(item => item.featured),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -744,15 +439,7 @@ export default function NewsPage() {
         <link rel="canonical" href="https://ziontechgroup.com/news" />
       </Head>
       <EnhancedNavigation />
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-=======
+
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -776,10 +463,7 @@ export default function NewsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className="mb-8"
           >
@@ -791,17 +475,12 @@ export default function NewsPage() {
             </p>
           </motion.div>
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-=======
+
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -823,38 +502,27 @@ export default function NewsPage() {
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               innovation from Zion Tech Group and our global team.
             </p>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Featured News */}
-=======
+
       {/* Featured News */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {featuredNews.length > 0 && (
         <section className="py-16 px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
+
   ],;
   const filteredNews = [...featuredNews, ...latestNews].filter(news => {;
     const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory;
@@ -1148,10 +816,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-12"
             >
@@ -1161,13 +826,7 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredNews.map((item, index) => (
                 <motion.div
-<<<<<<< HEAD
-                  key={item.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-=======
+
                   key={item.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1193,10 +852,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
                 >
@@ -1207,18 +863,13 @@ export default function NewsPage(req, res) {
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full">
-<<<<<<< HEAD
-                          {item.category}
-=======
+
                           {item.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                         <span className="text-xs text-white/40 bg-white/5 px-2 py-1 rounded">
@@ -1244,14 +895,7 @@ export default function NewsPage(req, res) {
                     </button>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-      {/* Category Filter */}
-=======
+
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1271,40 +915,14 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section className="py-8 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
-<<<<<<< HEAD
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
-                    : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* News Grid */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-=======
+
                 key={category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1367,10 +985,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className="text-center mb-16"
           >
@@ -1382,13 +997,7 @@ export default function NewsPage(req, res) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredNews.filter(item => !item.featured).map((item, index) => (
               <motion.div
-<<<<<<< HEAD
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-=======
+
                 key={item.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1414,10 +1023,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
@@ -1427,18 +1033,13 @@ export default function NewsPage(req, res) {
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full">
-<<<<<<< HEAD
-                      {item.category}
-=======
+
                       {item.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                   </div>
@@ -1459,13 +1060,7 @@ export default function NewsPage(req, res) {
                   </button>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Press Kit CTA */}
-=======
+
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1479,40 +1074,27 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
                     <a
-<<<<<<< HEAD
-                      href={`/news/${news.id}`}
-=======
+
                       href={`/news/${news.id}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Read More
                       <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD
-                    </a>
-=======
+
                     </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 </motion.div>
@@ -1530,11 +1112,7 @@ export default function NewsPage(req, res) {
       </section>
           <div className="max-w-7xl mx-auto">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-=======
+
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1550,10 +1128,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
@@ -1565,12 +1140,7 @@ export default function NewsPage(req, res) {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.filter(article => !article.featured).map((article, index) => (
                 <motion.article
-<<<<<<< HEAD
-                  key={article.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
-=======
+
                   key={article.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1591,27 +1161,19 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full border border-cyan-500/30">
-<<<<<<< HEAD
-                      {article.category}
-=======
+
                       {article.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                   </div>
@@ -1620,13 +1182,7 @@ export default function NewsPage(req, res) {
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-<<<<<<< HEAD
-                      {new Date(article.date).toLocaleDateString()}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4" />
-                      {article.readTime}
-=======
+
                       {new Date(article.date).toLocaleDateString()  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1640,10 +1196,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </div>
@@ -1652,13 +1205,7 @@ export default function NewsPage(req, res) {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </motion.article>
-<<<<<<< HEAD
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Newsletter Signup */}
-=======
+
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1672,10 +1219,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
@@ -1719,13 +1263,7 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pressReleases.map((release, index) => (
                 <motion.article
-<<<<<<< HEAD
-                  key={release.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-=======
+
                   key={release.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1751,38 +1289,25 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
-<<<<<<< HEAD
-                      {release.category}
-=======
+
                       {release.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                     <span className="text-gray-400 text-sm">{release.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
-<<<<<<< HEAD
-                    {release.title}
-                  </h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {release.excerpt}
-=======
+
                     {release.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1795,10 +1320,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </p>
                   <div className="flex items-center gap-2">
@@ -1806,20 +1328,7 @@ export default function NewsPage(req, res) {
                     <span className="text-gray-400 text-sm">{release.date}</span>
                   </div>
                 </motion.article>
-<<<<<<< HEAD
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* News Categories */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
+
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1856,10 +1365,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
@@ -1873,13 +1379,7 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {newsCategories.map((category, index) => (
                 <motion.div
-<<<<<<< HEAD
-                  key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-=======
+
                   key={category.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1905,37 +1405,13 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="text-center group cursor-pointer"
                 >
                   <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
                     <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
-<<<<<<< HEAD
-                      {category.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-sm font-semibold text-white mb-1">
-                    {category.name}
-                  </h3>
-                  <p className="text-gray-400 text-xs">{category.count} articles</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Recent News */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
+
                       {category.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1988,10 +1464,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
@@ -2005,13 +1478,7 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {recentNews.map((news, index) => (
                 <motion.article
-<<<<<<< HEAD
-                  key={news.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-=======
+
                   key={news.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2037,38 +1504,25 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
-<<<<<<< HEAD
-                      {news.category}
-=======
+
                       {news.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                     <span className="text-gray-400 text-sm">{news.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
-<<<<<<< HEAD
-                    {news.title}
-                  </h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {news.excerpt}
-=======
+
                     {news.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2081,10 +1535,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </p>
                   <div className="flex items-center justify-between">
@@ -2098,13 +1549,7 @@ export default function NewsPage(req, res) {
                     </div>
                   </div>
                 </motion.article>
-<<<<<<< HEAD
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Media Contact */}
-=======
+
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2118,10 +1563,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -2151,13 +1593,9 @@ export default function NewsPage(req, res) {
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                For press inquiries, media interviews, or additional information
 
-=======
                 For press inquiries, media interviews, or additional information,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
                 For press inquiries, media interviews, or additional information, 
 =======
@@ -2173,14 +1611,9 @@ export default function NewsPage(req, res) {
                 >
                   Contact Media Team
                   <Mic className="ml-2 w-5 h-5" />
-<<<<<<< HEAD
-                </a>
-=======
+
                 </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <a
                   href="/press"
@@ -2193,18 +1626,13 @@ export default function NewsPage(req, res) {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      {/* CTA Section */}
-=======
+
       {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -2234,40 +1662,16 @@ export default function NewsPage(req, res) {
               Ready to Stay Informed?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              Explore our latest research, industry insights, and technology breakthroughs 
-              that are shaping the future of AI and quantum computing.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              Explore our latest research, industry insights, and technology breakthroughs
-              that are shaping the future of AI and quantum computing.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
                 href="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-<<<<<<< HEAD
-              <Link
-=======
-<<<<<<< HEAD
-              <Link 
-=======
-              <Link
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
                 href="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
               >
@@ -2355,20 +1759,8 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-      {/* Call to Action */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
@@ -2381,16 +1773,7 @@ export default function NewsPage(req, res) {
               <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
                 <span>Contact Us</span>
                 <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD
-              </a>
-              <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-                About Zion Tech Group
-              </a>
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-=======
+
               </Link>
               <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 About Zion Tech Group
@@ -2415,10 +1798,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -2438,16 +1818,7 @@ export default function NewsPage(req, res) {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-        {/* Latest News */}
-        <section className="py-20 bg-black/50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
+
         {/* Latest News */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2476,10 +1847,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
@@ -2493,13 +1861,7 @@ export default function NewsPage(req, res) {
             <div className="grid lg:grid-cols-2 gap-8">
               {filteredNews.filter(news => !news.featured).map((news, index) => (
                 <motion.div
-<<<<<<< HEAD
-                  key={news.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-=======
+
                   key={news.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2525,10 +1887,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="flex gap-6 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
@@ -2538,19 +1897,7 @@ export default function NewsPage(req, res) {
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs border border-purple-500/30">
-<<<<<<< HEAD
-                        {news.category}
-                      </span>
-                      <span className="text-gray-400 text-xs">
-                        {news.readTime}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold text-white mb-2 line-clamp-2">
-                      {news.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm mb-3 line-clamp-2">
-                      {news.excerpt}
-=======
+
                         {news.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2578,10 +1925,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                     <div className="flex items-center justify-between text-xs text-gray-400">
@@ -2590,14 +1934,7 @@ export default function NewsPage(req, res) {
                     </div>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
-              ))}
-            </div>
-            {filteredNews.filter(news => !news.featured).length === 0 && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-=======
+
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2616,10 +1953,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="text-center py-12"
               >
@@ -2627,19 +1961,7 @@ export default function NewsPage(req, res) {
                   No news articles match your current filters. Try adjusting your search or category selection.
                 </p>
               </motion.div>
-<<<<<<< HEAD
-            )}
-          </div>
-        </section>
-        {/* Press Releases */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
+
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2675,10 +1997,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
@@ -2692,24 +2011,7 @@ export default function NewsPage(req, res) {
             <div className="max-w-4xl mx-auto space-y-6">
               {pressReleases.map((release, index) => (
                 <motion.div
-<<<<<<< HEAD
-                  key={release.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <h3 className="text-xl font-bold text-white mb-3">
-                    {release.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4">
-                    {release.summary}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">
-                      {formatDate(release.date)}
-=======
+
                   key={release.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2758,10 +2060,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                     <a
@@ -2772,20 +2071,7 @@ export default function NewsPage(req, res) {
                     </a>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Media Resources */}
-        <section className="py-20 bg-black/50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
+
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2822,10 +2108,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
@@ -2839,20 +2122,7 @@ export default function NewsPage(req, res) {
             <div className="grid lg:grid-cols-2 gap-8">
               {mediaResources.map((resource, index) => (
                 <motion.div
-<<<<<<< HEAD
-                  key={resource.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <h3 className="text-xl font-bold text-white mb-3">
-                    {resource.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4">
-                    {resource.description}
-=======
+
                   key={resource.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2893,23 +2163,13 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <span className="px-2 py-1 bg-gray-700/50 rounded">
-<<<<<<< HEAD
-                        {resource.type}
-                      </span>
-                      <span>{resource.size}</span>
-                    </div>
-                    <a
-                      href={resource.download}
-=======
+
                         {resource.type  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2924,10 +2184,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
@@ -2935,13 +2192,7 @@ export default function NewsPage(req, res) {
                     </a>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-=======
+
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2955,10 +2206,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
@@ -3024,13 +2272,11 @@ export default function NewsPage(req, res) {
       <EnhancedFooter />
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 };
 ;
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
 =======
             >;
@@ -3080,8 +2326,6 @@ export default function NewsPage(req, res) {
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

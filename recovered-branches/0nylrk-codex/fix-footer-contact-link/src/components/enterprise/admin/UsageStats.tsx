@@ -1,47 +1,30 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Slider } from "@/components/ui/slider",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-=======
 import React from "react";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import {
-<<<<<<< HEAD
 
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-=======
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
 CardTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
-<<<<<<< HEAD
-      title: "Limits updated"
-      description: "The new usage limits have been saved successfully."
-=======
+
       title: "Limits updated",
       description: "The new usage limits have been saved successfully.",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     });
   }
 
@@ -98,13 +81,9 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
-=======
+
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader>
@@ -134,13 +113,9 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
-=======
+
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader>
@@ -170,13 +145,9 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
-=======
+
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader>
@@ -218,13 +189,9 @@ export function UsageStats() {
           </CardFooter>
         </Card>
       </div>
-<<<<<<< HEAD
-=======
+
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -241,12 +208,8 @@ export function UsageStats() {
         <Button>Contact Us</Button>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
   )
 import React from "react",;
@@ -418,9 +381,8 @@ export function UsageStats() {;
         <Button>Contact Us</Button>;
       </div>;
     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }

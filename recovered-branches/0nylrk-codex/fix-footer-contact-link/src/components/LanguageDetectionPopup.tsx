@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import {
-  AlertDialog
-  AlertDialogAction
-  AlertDialogCancel
-  AlertDialogContent
-  AlertDialogDescription
-  AlertDialogFooter
-  AlertDialogHeader
-  AlertDialogTitle
-} from "../components/ui/alert-dialog";
-import {
-  useLanguage
-  SupportedLanguage
-  LanguageContextType
-=======
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -34,7 +15,7 @@ import {
   useLanguage,
   SupportedLanguage,
   LanguageContextType,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {;
   const [open, setOpen] = useState(false);
@@ -64,13 +45,8 @@ export function LanguageDetectionPopup() {;
   const languageName =
     supportedLanguages.find((lang) => lang.code === detectedLanguage)?.name |
     detectedLanguage;
-<<<<<<< HEAD
-  const handleAccept = async () => {
-    await changeLanguage(detectedLanguage);
-    setOpen(false);
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
@@ -108,9 +84,8 @@ export function LanguageDetectionPopup() {;
   if (!detectedLanguage) return null,
 
   const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const handleAccept = async () => {
@@ -127,33 +102,16 @@ export function LanguageDetectionPopup() {;
             {t('language.switch_to_detected', { language: languageName })}
           </AlertDialogTitle>
           <AlertDialogDescription className="text-zion-slate-light">
-<<<<<<< HEAD
-            {`${supportedLanguages.find((lang) => lang.code === detectedLanguage)?.flag |""} ${languageName}`}
-=======
+
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
-<<<<<<< HEAD
-            {t("general.no")}
-          </AlertDialogCancel>
-          <AlertDialogAction
-            onClick={handleAccept}
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-          >
-            {t("general.yes")}
-          </AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
-<<<<<<< HEAD
-  );
-}
-=======
+
 );
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
             {t('general.no')}
           </AlertDialogCancel>;
@@ -167,9 +125,8 @@ export function LanguageDetectionPopup() {;
       </AlertDialogContent>;
     </AlertDialog>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

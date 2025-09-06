@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-//Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
-=======
  //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 =======
@@ -28,7 +24,6 @@ const ServicePage: NextPage<Props> = () => {
 }
 export default ServicePage;
 
-<<<<<<< HEAD
-=======
+
 export default ServicePage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

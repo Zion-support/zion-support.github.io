@@ -94,32 +94,25 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
-<<<<<<< HEAD
-                        name: 'load'
-                        value: Math.round(loadTime)
-=======
+
                         name: 'load',
                         value: Math.round(loadTime),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                       });
                     }
                   }
                 }, 0);
               });
             }
-<<<<<<< HEAD
-          `
-=======
+
           `,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         }}
       />
     </Head>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export default Analytics;

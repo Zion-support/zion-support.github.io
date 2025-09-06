@@ -1,66 +1,10 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-=======
+
 import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import {
-  Menu
-  X
-  ChevronDown
-  ChevronRight
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Sparkles
-  Brain
-  Atom
-  Shield
-  DollarSign
-  FileText
-  BarChart3
-  MessageSquare
-  Truck
-  Users
-  Database
-  Cpu
-  Cloud
-  Play
-  Search
-  ShieldCheck
-  TrendingUp
-  Rocket
-  Zap
-  Check
-  Star
-  Clock
-  Target
-  Building
-  Award
-  ChartBar
-  Lock
-  Smartphone
-  Palette
-  Calendar
-  CreditCard
-  Settings
-  Code
-  BookOpen
-  Activity
-  Bot
-  ChevronRight as ChevronRightIcon
-  Eye
-  FlaskConical
-  Link as LinkIcon;
-import Button from '../ui/Button';
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 import {
   Menu,
@@ -113,11 +57,9 @@ import {
   FlaskConical,;
   Link as LinkIcon,;
 import Button from '../ui/Button';
-<<<<<<< HEAD
-export default function NeoFuturisticNavigation() {;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 export default function NeoFuturisticNavigation() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isOpen, setIsOpen] = useState(false);
@@ -145,10 +87,9 @@ export default function NeoFuturisticNavigation() {
     setActiveDropdown(null);
   }
   const isActive = (path: string) => router.pathname === path;
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   const serviceCategories = [
     {
       name: 'Quantum Computing'
@@ -439,10 +380,9 @@ export default function NeoFuturisticNavigation() {
       link: '/reports'
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   // Popular quick links to flagship services
   const popularServiceLinks = [
     { name: 'AI Content Generator', href: '/ai-content-generator' }
@@ -455,10 +395,9 @@ export default function NeoFuturisticNavigation() {
     { name: 'AI Sales Automation', href: '/ai-sales-automation' }
     { name: 'AI Market Research', href: '/ai-market-research' }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   // Newly added real services quick links
   const newServiceLinks = [
     {
@@ -759,13 +698,9 @@ export default function NeoFuturisticNavigation() {
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
                   />
                 </button>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
@@ -808,13 +743,9 @@ export default function NeoFuturisticNavigation() {
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Company Section */}
               <div>
@@ -919,10 +850,9 @@ export default function NeoFuturisticNavigation() {
       )}
     </nav>
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   `w-4 h-4 transition-transform duration-300 $ {
   activeDropdown === 'services' ? 'rotate-180' : ''
 }`
@@ -976,10 +906,7 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-<<<<<<< HEAD
-);
-}
-=======
+
 	);
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

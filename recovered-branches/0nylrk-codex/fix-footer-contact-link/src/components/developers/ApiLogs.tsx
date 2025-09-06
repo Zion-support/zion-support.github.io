@@ -1,38 +1,10 @@
 
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {format} from "date-fns";
-import {List, RefreshCw} from "lucide-react";
-import {useApiKeys, type, ApiLog} from "@/hooks/useApiKeys";
 
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Badge} from "@/components/ui/badge";
-<<<<<<< HEAD
-
-export function ApiLogs() {
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
-  const [pageSize, setPageSize] = useState(25);
-  const [currentPage, setCurrentPage] = useState(0);
-  // Load logs on mount and when pagination changes
-  useEffect(() => {
-    fetchApiLogs(pageSize, currentPage * pageSize)
-  }, [pageSize, currentPage]);
-
-  const handleRefresh = () => {
-    fetchApiLogs(pageSize, currentPage * pageSize)
-  }
-  // Helper to format the timestamp
-  const formatTimestamp = (timestamp: string) => {
-    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
-  }
-=======
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -75,13 +47,7 @@ export function ApiLogs() {
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
     }
-<<<<<<< HEAD
-  }
-  // Calculate pagination info
-  const totalPages = Math.ceil(totalLogs / pageSize);
-  const hasNextPage = currentPage < totalPages - 1;
-  const hasPrevPage = currentPage > 0;
-=======
+
   },
   
   // Calculate pagination info
@@ -89,7 +55,7 @@ export function ApiLogs() {
   const hasNextPage = currentPage < totalPages - 1,
   const hasPrevPage = currentPage > 0,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -105,13 +71,7 @@ export function ApiLogs() {
           <div className="flex items-center space-x-2">
             <span className="text-sm text-zinc-400">Show</span>
             <Select
-<<<<<<< HEAD
-              value={pageSize.toString()}
-              onValueChange={(value) => {
-                setPageSize(Number(value));
 
-                setCurrentPage(0), // Reset to first page when changing page size
-=======
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
@@ -170,10 +130,7 @@ export function ApiLogs() {;
               onValueChange={(value) => {;
                 setPageSize(Number(value));
                 setCurrentPage(0), // Reset to first page when changing page size;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
             >
@@ -289,15 +246,10 @@ export function ApiLogs() {;
             </div>
           </div>
         )}
-<<<<<<< HEAD
-      </CardContent>
-    </Card>
-  )
-}
-=======
+
       </CardContent>;
     </Card>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

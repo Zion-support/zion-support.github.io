@@ -1,148 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react'
-import { useInterviews } from '@/hooks/useInterviews'
-import { Interview } from '@/types/interview'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { SEO } from '@/components/SEO'
-import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { InterviewCard } from '@/components/interviews/InterviewCard'
-import { Button } from '@/components/ui/button'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-import React, { useEffect, useState } from "react",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { InterviewCard } from "@/components/interviews/InterviewCard",
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-=======
-import { Button } from "@/components/ui/button",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
-<<<<<<< HEAD
 
-  const { interviews, isLoading, fetchInterviews } = useInterviews()
-  const [activeTab, setActiveTab] = useState('upcoming')
-  useEffect(() => {function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews()
-  const [activeTab, setActiveTab] = useState("upcoming")
-  useEffect((,) => {
-    // Modified to handle Promise<Interview[]> return type
-    const loadInterviews = async () => {
-      await fetchInterviews()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    }
-    loadInterviews()
-  }, [])
-  // Filter interviews based on status and date
-  const now = new Date()
-  const today = startOfDay(now)
-  const upcomingInterviews = interviews
-    .filter(interview => {
-      const interviewDate = parseISO(interview.scheduled_date)
-      return (
-        isAfter(interviewDate, now) &&
-        ['confirmed', 'requested'].includes(interview.status)
-      )
-    })
-    .sort(
-      (a, b) =>
-        parseISO(a.scheduled_date).getTime() -
-        parseISO(b.scheduled_date).getTime()
-    )
-  const pendingInterviews = interviews.filter(
-    interview => interview.status === 'requested'
-  )
-  const pastInterviews = interviews.filter(interview => {
-    const interviewDate = parseISO(interview.scheduled_date)
-    return (
-      !isAfter(interviewDate, now) |
-      ['completed', 'declined', 'cancelled'].includes(interview.status)
-    )
-  })
-  // Group interviews by date
-  const groupInterviewsByDate = (interviews: Interview[]) => {
-    const grouped: Record<string, Interview[]> = {}
-    interviews.forEach(interview => {
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd')
-=======
-<<<<<<< HEAD
-  const { interviews, isLoading, fetchInterviews } = useInterviews(),
-  const [activeTab, setActiveTab] = useState("upcoming"),
-  
-  useEffect(() => {
-    // Modified to handle Promise<Interview[]> return type
-    const loadInterviews = async () => {
-      await fetchInterviews()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    },
-    
-    loadInterviews()
-  }, []),
 
-  // Filter interviews based on status and date
-  const now = new Date(),
-  const today = startOfDay(now),
-  
-  const upcomingInterviews = interviews
-    .filter((interview) => {
-      const interviewDate = parseISO(interview.scheduled_date),
-      return isAfter(interviewDate, now) && 
-        ['confirmedrequested'].includes(interview.status)
-    })
-    .sort((a, b) => 
-      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
-    ),
-  
-  const pendingInterviews = interviews.filter(interview => 
-    interview.status === 'requested'
-  ),
-  
-  const pastInterviews = interviews.filter(interview => {
-    const interviewDate = parseISO(interview.scheduled_date),
-    return !isAfter(interviewDate, now) || 
-      ['completeddeclinedcancelled'].includes(interview.status)
-  }),
-
-  // Group interviews by date
-  const groupInterviewsByDate = (interviews: Interview[]) => {
-    const grouped: Record<string Interview[]> = {},
-    
-    interviews.forEach((interview) => {
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
       }
       grouped[dateKey].push(interview)
-<<<<<<< HEAD
-    })
-    return grouped
-  }
-  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews)
-  const pendingGrouped = groupInterviewsByDate(pendingInterviews)
-  const pastGrouped = groupInterviewsByDate(pastInterviews)
-  const renderInterviewGroups = (
-    groupedInterviews: Record<string, Interview[]>
-  ) => {
-=======
+
     }),
     
     return grouped
@@ -153,10 +20,7 @@ function InterviewsContent() {
   const pastGrouped = groupInterviewsByDate(pastInterviews),
 
   const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return Object.entries(groupedInterviews)
       .sort(
@@ -164,21 +28,7 @@ function InterviewsContent() {
           parseISO(dateA).getTime() - parseISO(dateB).getTime()
       )
       .map(([date, interviews]) => (
-<<<<<<< HEAD
-        <div key={date} className='mb-8'>
-          <h3 className='text-lg font-medium text-white mb-4 flex items-center'>
-            <Calendar className='h-5 w-5 mr-2' />
-            {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
-          </h3>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-            {interviews.map(interview => (
-              <InterviewCard
-                key={interview.id}
-                interview={interview}
-                onRefresh={async () => {
-                  await fetchInterviews() }}
-              />
-=======
+
         <div key={date} className="mb-8">
           <h3 className="text-lg font-medium text-white mb-4 flex items-center">
             <Calendar className="h-5 w-5 mr-2" />
@@ -263,24 +113,18 @@ function InterviewsContent() {;
                   await fetchInterviews();
                 }}
               />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       ))
-<<<<<<< HEAD
-  }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  },
+
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
@@ -295,19 +139,7 @@ function InterviewsContent() {;
             <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
           </div>
         </div>
-<<<<<<< HEAD
-        <Tabs
-          defaultValue={activeTab}
-          onValueChange={setActiveTab}
-          className='space-y-8'
-        >
-          <TabsList className='mb-6'>
-            <TabsTrigger value='upcoming' className='flex items-center'>
-              <Clock className='h-4 w-4 mr-2' />
-              Upcoming
-              {upcomingInterviews.length > 0 && (
-                <span className='ml-2 bg-primary rounded-full px-2 py-0.5 text-xs'>
-=======
+
 
         <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">
           <TabsList className="mb-6">
@@ -316,10 +148,7 @@ function InterviewsContent() {;
               Upcoming
               {upcomingInterviews.length > 0 && (
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {upcomingInterviews.length}
                 </span>
@@ -328,14 +157,9 @@ function InterviewsContent() {;
             <TabsTrigger value="pending">
               Pending
               {pendingInterviews.length > 0 && (
-<<<<<<< HEAD
-                <span className='ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs'>
-=======
+
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {pendingInterviews.length}
                 </span>
@@ -343,15 +167,10 @@ function InterviewsContent() {;
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
           </TabsList>
-<<<<<<< HEAD
-          <TabsContent value='upcoming' className='space-y-6'>
-=======
+
           
           <TabsContent value="upcoming" className="space-y-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {isLoading ? (
               <div className="flex justify-center py-12">
@@ -367,15 +186,10 @@ function InterviewsContent() {;
               </div>
             )}
           </TabsContent>
-<<<<<<< HEAD
-          <TabsContent value='pending' className='space-y-6'>
-=======
+
           
           <TabsContent value="pending" className="space-y-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {isLoading ? (
               <div className="flex justify-center py-12">
@@ -391,15 +205,10 @@ function InterviewsContent() {;
               </div>
             )}
           </TabsContent>
-<<<<<<< HEAD
-          <TabsContent value='past' className='space-y-6'>
-=======
+
           
           <TabsContent value="past" className="space-y-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {isLoading ? (
               <div className="flex justify-center py-12">
@@ -414,23 +223,7 @@ function InterviewsContent() {;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
-<<<<<<< HEAD
-          </TabsContent>
-        </Tabs>
-      </main>
-    </>
-  )
-export default function Interviews() {
-  return (
-    <ProtectedRoute>
-      <InterviewsContent />
-    </ProtectedRoute>;
-  );
-};
-};
-}
-}
-=======
+
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -446,8 +239,5 @@ export default function Interviews() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

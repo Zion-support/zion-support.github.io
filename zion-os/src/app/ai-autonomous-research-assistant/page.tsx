@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-export default function AIAutonomousResearchAssistantPage() {return (;
-=======
+
 export default function AIAutonomousResearchAssistantPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-600 to-pink-600 text-white py-20">;

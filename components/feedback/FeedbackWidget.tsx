@@ -6,15 +6,7 @@ export type FeedbackWidgetProps = {;
   aiModel?: string;
 }
 export default function FeedbackWidget({
-<<<<<<< HEAD
-  responseId
-  aiModel
-}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
-  responseId?: string;
-  aiModel?: string
-}
-export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
-=======
+
   responseId,
   aiModel,;
 }: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {;
@@ -23,7 +15,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 };
 
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -65,24 +57,9 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setError(e?.message |'Something went wrong');
     } finally {
       setSubmitting(false);    }
-<<<<<<< HEAD
-  }
-  return (
-    <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
-      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>          comment: comment.trim()
-          pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined
-          aiModel})});
-      if (!res.ok) throw new Error('Failed to submit feedback');
-      setSubmitted(true)
-    } catch (e: any) {
-      setError(e?.message |'Something went wrong')
-    } finally {
-      setSubmitting(false)
-    }
-  }
-=======
+
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
@@ -146,12 +123,9 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         </div>
       )}
     </div>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
+
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
 =======
 }

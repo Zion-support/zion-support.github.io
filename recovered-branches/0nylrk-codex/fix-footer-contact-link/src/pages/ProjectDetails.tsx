@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {format} from "date-fns";
@@ -24,30 +21,8 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
-<<<<<<< HEAD
-function ProjectDetailsContent() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-  const { projectId } = useParams() as { projectId?: string }
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const { getProjectById, updateProjectStatus } = useProjects();
-  const [project, setProject] = useState<Project | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [notes, setNotes] = useState<any[]>([]);
-  const [newNote, setNewNote] = useState("");
-  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
-  const [activeTab, setActiveTab] = useState("details");
-  // Load project data
-  useEffect(() => {
-    async function loadProject() {
-      if (!projectId) return;
-      setIsLoading(true);
-      const projectData = await getProjectById(projectId);
-      if (projectData) {
-        setProject(projectData);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
@@ -99,9 +74,8 @@ import {
   Video,
   User,
   XCircle} from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 function ProjectDetailsContent() {
@@ -139,8 +113,7 @@ function ProjectDetailsContent() {
           description: "The requested project could not be found."
           variant: "destructive"})
         navigate("/dashboard")
-<<<<<<< HEAD
-=======
+
 import { useState, useEffect } from "react",;
 import { useParams, useNavigate, Link } from "react-router-dom",;
 import { format } from "date-fns",;
@@ -220,23 +193,17 @@ function ProjectDetailsContent() {;
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       setIsLoading(false)
     }
-<<<<<<< HEAD
-    loadProject()
-  }, [projectId]);
-=======
+
     
     loadProject()
   }, [projectId]),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const fetchProjectNotes = async (projectId: string) => {
     try {
       const { data, error } = await supabase
@@ -246,18 +213,7 @@ function ProjectDetailsContent() {;
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
-<<<<<<< HEAD
-        .order("created_at", { ascending: false })
-      if (error) throw error;
-      setNotes(data |[])
-    } catch (err) {
-      console.error("Error fetching project notes:", err)
-    }
-  }
-  const handleSubmitNote = async () => {
-    if (!newNote.trim() |!project |!user) return;
-    setIsSubmittingNote(true);
-=======
+
         .order("created_at", { ascending: false }),
       
       if (error) throw error,
@@ -273,7 +229,7 @@ function ProjectDetailsContent() {;
     
     setIsSubmittingNote(true),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     try {
       const { data, error } = await supabase
         .from("project_notes")
@@ -281,13 +237,7 @@ function ProjectDetailsContent() {;
           project_id: project.id
           user_id: user.id
           content: newNote})
-<<<<<<< HEAD
-        .select();
-      if (error) throw error;
-      // Refresh notes
-      fetchProjectNotes(project.id);
-      setNewNote("");
-=======
+
         .select(),
       
       if (error) throw error,
@@ -296,7 +246,7 @@ function ProjectDetailsContent() {;
       fetchProjectNotes(project.id),
       setNewNote(""),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       toast({
         title: "Note added"
         description: "Your note has been added to the project."})
@@ -309,16 +259,7 @@ function ProjectDetailsContent() {;
     } finally {
       setIsSubmittingNote(false)
     }
-<<<<<<< HEAD
-  }
-  const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return
-    const success = await updateProjectStatus(project.id, newStatus);
-    if (success) {
-      setProject({
-        ...project;
-        status: newStatus})
-=======
+
   },
   
   const handleStatusChange = async (newStatus: ProjectStatus) => {
@@ -331,7 +272,7 @@ function ProjectDetailsContent() {;
         ...project,
         status: newStatus}),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
@@ -339,12 +280,10 @@ function ProjectDetailsContent() {;
           description: "The project is now in progress. Congratulations!"})
       }
     }
-<<<<<<< HEAD
-  }
-=======
+
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
@@ -361,12 +300,10 @@ function ProjectDetailsContent() {;
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-<<<<<<< HEAD
-  }
-=======
+
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   if (isLoading) {
     return (
       <div className="container mx-auto py-8">
@@ -398,30 +335,22 @@ function ProjectDetailsContent() {;
     )
   }
   // Check if user is either the client or the talent
-<<<<<<< HEAD
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
-=======
+
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   if (!isClient && !isTalent) {
     navigate("/unauthorized"),
     return null
   }
-<<<<<<< HEAD
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
 
-=======
   
   const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <>
       <SEO
@@ -764,14 +693,7 @@ function ProjectDetailsContent() {;
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
                         </Button>
-<<<<<<< HEAD
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-=======
+
 ;
     loadProject();
   }, [projectId]),;
@@ -1246,10 +1168,7 @@ function ProjectDetailsContent() {;
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Project Status Card */}
             <Card className="mt-6">
@@ -1312,24 +1231,7 @@ function ProjectDetailsContent() {;
                   </p>
                 </CardFooter>
               )}
-<<<<<<< HEAD
-            </Card>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
-  )
-}
-export default function ProjectDetails() {
-  return (
-    <ProtectedRoute>
-      <ProjectDetailsContent />
-    </ProtectedRoute>
-  )
-};
-;
-=======
+
             </Card>;
           </div>;
         </div>;
@@ -1356,8 +1258,5 @@ export default function ProjectDetails() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

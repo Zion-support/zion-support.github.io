@@ -1,74 +1,18 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Check} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-<<<<<<< HEAD
-import { Card, CardContent } from "@/components/ui/card";
-import { Check } from "lucide-react";
-=======
-import { Card, CardContent } from "@/components/ui/card",
-import { Check } from "lucide-react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function FeatureHighlights() {
 
   const highlightsData = [
     {
-<<<<<<< HEAD
-      title: "For Talent Seekers"
-=======
+
       title: "For Talent Seekers",
-<<<<<<< HEAD
-      features: [;
-        "AI-powered talent matching based on your specific project requirements";
-        "Verified profiles with skills validation and credential checking";
-        "Transparent pricing and no hidden fees";
-        "Direct communication with potential candidates";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      features: [
-<<<<<<< HEAD
-        "AI-powered talent matching based on your specific project requirements";
-        "Verified profiles with skills validation and credential checking";
-        "Transparent pricing and no hidden fees";
-        "Direct communication with potential candidates";
-        "Secure payment protection and dispute resolution"
-        "Post jobs and receive AI-matched applicants"
-      ]
-    }
-=======
-        "AI-powered talent matching based on your specific project requirements",
-        "Verified profiles with skills validation and credential checking",
-        "Transparent pricing and no hidden fees",
-        "Direct communication with potential candidates",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-        "Secure payment protection and dispute resolution",
-        "Post jobs and receive AI-matched applicants"
-      ]
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       title: "For Talent & Service Providers"
       features: [
-<<<<<<< HEAD
-        "Create a professional profile showcasing your skills and experience";
-        "Get matched with relevant projects that fit your expertise";
-        "Secure payment processing with on-time disbursements";
-        "Build your reputation through client reviews and ratings";
-        "Access to enterprise clients and high-value projects"
-        "Professional development resources and community support"
-      ]
-    }
-=======
+
         "Create a professional profile showcasing your skills and experience",
         "Get matched with relevant projects that fit your expertise",
         "Secure payment processing with on-time disbursements",
@@ -77,23 +21,17 @@ export function FeatureHighlights() {
         "Professional development resources and community support"
       ]
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       title: "For Enterprise Clients"
       features: [
-<<<<<<< HEAD
-        "White-labeled talent portal with your company branding";
-        "Dedicated account management and priority support";
-        "Custom talent pools and preferred provider networks";
-        "Advanced analytics and reporting capabilities";
-        "API access for seamless integration with your HR systems"
-=======
+
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
         "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         "Customizable workflow and approval processes"
       ]
     }
@@ -119,8 +57,7 @@ export function FeatureHighlights() {
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
-<<<<<<< HEAD
-=======
+
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",;
@@ -180,10 +117,7 @@ export function FeatureHighlights() {;
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />;
                       <span className="text-zion-slate-light">{feature}</span>;
                     </li>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </ul>

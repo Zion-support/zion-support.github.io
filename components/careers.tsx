@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
-=======
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
 =======
@@ -41,12 +37,10 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
-<<<<<<< HEAD
-export default function Careers() {
-=======
+
 
 export default function Careers() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [
     { id: 'all', name: 'All Departments' }
@@ -120,10 +114,9 @@ export default function Careers() {;
       ]
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   const companyValues = [
     {
       icon: <Brain className="w-8 h-8" />
@@ -159,13 +152,8 @@ export default function Careers() {;
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <motion.div
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -185,12 +173,8 @@ export default function Careers() {;
             Be part of a team that's revolutionizing technology through AI, quantum computing, and space technology. Help us build the future.
           </p>
         </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Company Culture */}
-        <motion.div
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -215,12 +199,8 @@ export default function Careers() {;
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Benefits */}
-        <motion.div
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -244,12 +224,8 @@ export default function Careers() {;
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Job Openings */}
-        <motion.div
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -278,13 +254,9 @@ export default function Careers() {;
               </button>
             ))}
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Job Listings */}
           <div className="space-y-6">
@@ -347,12 +319,8 @@ export default function Careers() {;
             </div>
           )}
         </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* General Application */}
-        <motion.div
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -393,7 +361,6 @@ export default function Careers() {;
 }
 export default CareersPage;
 
-<<<<<<< HEAD
-=======
+
 export default CareersPage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

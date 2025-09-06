@@ -1,11 +1,9 @@
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-export interface TokenTransaction {
-=======
+
 
 export interface TokenTransaction {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   userId: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -14,12 +12,10 @@ export interface TokenTransaction {;
   timestamp: string;
   metadata?: Record<string, any>;
 }
-<<<<<<< HEAD
-export interface TokenConfig {
-=======
+
 
 export interface TokenConfig {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   name: string;
   symbol: string;
   totalSupply: number;
@@ -77,19 +73,14 @@ function getDefaultConfig(): TokenConfig {
     stakingRewardRate: 12.5
   }
 }
-<<<<<<< HEAD
-export function getAllTransactions(): TokenTransaction[] {
-  return loadTransactions();
-}
-export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
-=======
+
 
 export function getAllTransactions(): TokenTransaction[] {;
   return loadTransactions();
 }
 
 export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
     ...transaction
@@ -100,15 +91,7 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
   saveTransactions(transactions);
   return newTransaction;
 }
-<<<<<<< HEAD
-export function getConfig(): TokenConfig {
-  return loadConfig();
-}
-export function setConfig(config: TokenConfig): void {
-  saveConfig(config);
-}
-export function getUserBalance(userId: string): number {
-=======
+
 
 export function getConfig(): TokenConfig {;
   return loadConfig();
@@ -119,7 +102,7 @@ export function setConfig(config: TokenConfig): void {;
 }
 
 export function getUserBalance(userId: string): number {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {

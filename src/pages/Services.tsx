@@ -15,51 +15,12 @@ const Services: React.FC = () => {
             and drive innovation across all sectors.
           </p>
         </div>
-<<<<<<< HEAD
 
-        {/* Main Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <ServiceCard
-            title="AI & Machine Learning"
-            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
-            icon="🤖"
-          />
-          <ServiceCard
-            title="Cybersecurity"
-            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
-            icon="🔒"
-          />
-          <ServiceCard
-            title="Cloud Infrastructure"
-            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
-            icon="☁️"
-          />
-          <ServiceCard
-            title="Digital Transformation"
-            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
-            icon="🚀"
-          />
-          <ServiceCard
-            title="Data Analytics"
-            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
-            icon="📊"
-          />
-          <ServiceCard
-            title="IoT Solutions"
-            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
-            icon="🌐"
-          />
-        </div>
-
-        {/* Service Categories */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
-=======
       </div>
       {/* Services Grid */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card
               title="Consulting Services"
@@ -87,13 +48,7 @@ const Services: React.FC = () => {
             />
           </div>
         </div>
-<<<<<<< HEAD
 
-        {/* Industry Solutions */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-=======
       </div>
       {/* Process Section */}
       <div className="py-20 bg-white">
@@ -103,7 +58,7 @@ const Services: React.FC = () => {
             <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏥</span>
@@ -140,8 +95,7 @@ const Services: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold">Government</h3>
             </div>
-<<<<<<< HEAD
-=======
+
           </div>
         </div>
       </div>
@@ -163,7 +117,7 @@ const Services: React.FC = () => {
             >
               View Pricing
             </Link>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           </div>
         </div>
       </div>

@@ -1,50 +1,12 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-=======
+
 import React from 'react';
 import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  CheckCircle
-  ArrowRight
-  Star
-  TrendingUp
-  Phone
-  Zap
-  DollarSign
-  Shield
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Sparkles
-  Globe
-  Atom
-  Heart
-  Leaf
-  Car
-  GraduationCap
-  Scale
-  Building
-  Factory
-  Camera
-  Video
-  Music
-  Gamepad2
-  Crown
-  Award
-  Target
-  Users
-  Clock
-  Globe2;} from 'lucide-react';import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
 
-=======
   CheckCircle,
   ArrowRight,
   Star,
@@ -78,7 +40,7 @@ import {
   Clock,;
   Globe2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
@@ -212,10 +174,9 @@ const servicePricing = [
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
   }
 ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 export default function Revolutionary2028Pricing() {
   return (
     <>
@@ -444,35 +405,14 @@ export default function Revolutionary2028Pricing() {
                         >
                           <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
                           <span className='text-purple-200'>{feature}</span>                        </li>
-<<<<<<< HEAD
-                    <div className="mb-8">
-                      <div className="flex items-baseline space-x-2">
-                        <span className="text-4xl font-bold text-white">{tier.price}</span>
-                        <span className="text-purple-300">{tier.period}</span>
-                      </div>
-                      {tier.name === 'Enterprise' && (
-                        <p className="text-sm text-purple-300 mt-2">Contact us for custom pricing</p>
-                      )}
-                    </div>
-                    <ul className="space-y-3 mb-8">
-                      {tier.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                          <span className="text-purple-200">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-=======
+
 
                         </li>
 
                       ))}
                     </ul>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Link
                       href={tier.href}
@@ -487,13 +427,9 @@ export default function Revolutionary2028Pricing() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Service Pricing */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
@@ -519,117 +455,9 @@ export default function Revolutionary2028Pricing() {
               Detailed pricing for our individual services. Mix and match to create your perfect solution.
           </div>
           {servicePricing.map((category, categoryIndex) => (
-<<<<<<< HEAD
-            <div key={category.category} className='mb-16'>
-              <h3 className='text-3xl font-bold text-white mb-8 text-center'>
-                {category.category}
-              </h3>
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-                {category.services.map((service, serviceIndex) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{
-                      opacity: 0
-                      x: serviceIndex % 2 === 0 ? -30 : 30
-                    }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                    viewport={{ once: true }}
-                    className='group relative'
-                  >
-                    <div className='relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105'>
-                      <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-                      <div className='relative z-10'>
-                        <div className='flex items-start justify-between mb-4'>
-                          <div className='text-3xl'>{service.icon}</div>
-                          <div className='text-right'>
-                            <div className='text-xl font-bold text-purple-400'>
-                              {service.price}
-                            </div>
-                            <div className='text-sm text-purple-300'>
-                              {service.period}
-                            </div>
-                          </div>
-                        </div>
-                        <h4 className='text-xl font-bold text-white mb-2'>
-                          {service.name}
-                        </h4>
-                        <p className='text-purple-300 mb-4 text-sm'>
-                          {service.description}
-                        </p>
-                        <div className='mb-4'>
-                          <div className='flex items-center space-x-2 mb-2'>
-                            <Star className='w-4 h-4 text-yellow-400' />
-                            <span className='text-white font-medium'>
-                              {service.rating}
-                            </span>
-                            <span className='text-purple-300 text-sm'>
-                              ({service.reviews} reviews)
-                            </span>
-                          </div>
-                          <div className='text-sm text-purple-300'>
-                            <span className='font-medium'>Setup:</span>{' '}
-                            {service.setupTime}
-                          </div>
-                        </div>
-                        <div className='flex items-center justify-between'>
-                          <Link
-                            href={service.link}
-                            className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm'
-                          >
-                            Learn More
-                          </Link>
-                          <div className='text-right'>
-                            <div className='text-xs text-purple-300'>Trial</div>
-                            <div className='text-white font-medium'>
-                              {service.trialDays} days
-                            </div>                          </div>                {category.services.map((service, serviceIndex) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                    viewport={{ once: true }}
-                    className="group relative"
-                  >
-                    <div className="relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="relative z-10">
-                        <div className="flex items-start justify-between mb-4">
-                          <div className="text-3xl">{service.icon}</div>
-                          <div className="text-right">
-                            <div className="text-xl font-bold text-purple-400">{service.price}</div>
-                            <div className="text-sm text-purple-300">{service.period}</div>
-                          </div>
-                        </div>
-                        <h4 className="text-xl font-bold text-white mb-2">{service.name}</h4>
-                        <p className="text-purple-300 mb-4 text-sm">{service.description}</p>
-                        <div className="mb-4">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <Star className="w-4 h-4 text-yellow-400" />
-                            <span className="text-white font-medium">{service.rating}</span>
-                            <span className="text-purple-300 text-sm">({service.reviews} reviews)</span>
-                          </div>
-                          <div className="text-sm text-purple-300">
-                            <span className="font-medium">Setup:</span> {service.setupTime}
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <Link
-                            href={service.link}
-                            className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm"
-                          >
-                            Learn More
-                          </Link>
-                          <div className="text-right">
-                            <div className="text-xs text-purple-300">Trial</div>
-                            <div className="text-white font-medium">{service.trialDays} days</div>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                         </div>
@@ -642,13 +470,9 @@ export default function Revolutionary2028Pricing() {
           ))}
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Value Proposition */}
       <section className='py-20 bg-black/50'>
@@ -659,13 +483,9 @@ export default function Revolutionary2028Pricing() {
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Our Pricing
               </span>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
@@ -680,26 +500,18 @@ export default function Revolutionary2028Pricing() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
@@ -727,13 +539,9 @@ export default function Revolutionary2028Pricing() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
@@ -762,13 +570,9 @@ export default function Revolutionary2028Pricing() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
@@ -798,26 +602,18 @@ export default function Revolutionary2028Pricing() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='space-y-8'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -865,23 +661,13 @@ export default function Revolutionary2028Pricing() {
         </div>
       </section>
       <UltraFuturisticFooter2028 />
-<<<<<<< HEAD
-    </>
-<<<<<<< HEAD
-);
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    </>;
-);
-}
 
-}
+  );
+
 =======
+
     </>
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

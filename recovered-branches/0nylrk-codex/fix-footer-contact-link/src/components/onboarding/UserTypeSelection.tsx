@@ -1,23 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {Briefcase, Star, User} from "lucide-react";
-import {Button} from "@/components/ui/button";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState } from "react",
-<<<<<<< HEAD
-import { Briefcase, Star, User } from "lucide-react";
-import { Button } from "@/components/ui/button";
-=======
-import { Briefcase, Star, User } from "lucide-react",
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface UserTypeOption {
 
@@ -36,30 +19,11 @@ interface UserTypeSelectionProps {
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {
-<<<<<<< HEAD
 
-      id: "serviceProvider"
-      name: "Service Provider"
-      description: "I want to offer services on the platform"
-
-=======
       id: "serviceProvider",
       name: "Service Provider",
       description: "I want to offer services on the platform",
-<<<<<<< HEAD
-      icon: Briefcase;
-    };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      icon: Briefcase
-<<<<<<< HEAD
-    }
-=======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
 
@@ -68,11 +32,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       description: "I want to showcase my skills and find opportunities"
 
       icon: Star
-<<<<<<< HEAD
-    }
-=======
+
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
 
       id: "client"
@@ -81,12 +43,10 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
       icon: User
     }
-<<<<<<< HEAD
-  ];
-=======
+
   ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
 
     <div className="space-y-6">
@@ -98,15 +58,11 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
-<<<<<<< HEAD
-          const Icon = type.icon;
-          const isSelected = selectedType === type.id
 
-=======
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           return (
             <Button
               key={type.id}
@@ -124,20 +80,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
-<<<<<<< HEAD
-                  {type.description}
-                </p>
-              </div>
-            </Button>
-          )
-        })}
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
@@ -213,9 +157,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;

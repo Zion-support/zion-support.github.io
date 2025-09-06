@@ -1,11 +1,9 @@
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 export default function PostJob({ }: PostJobProps) {
   return (
     <div>
@@ -13,13 +11,9 @@ export default function PostJob({ }: PostJobProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:src.disabled/src/pages.disabled/PostJob.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======

@@ -1,134 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}; import React, { useState } from 'react'
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones'
-import { useAuth } from '@/hooks/useAuth'
-import { MilestoneCard } from './MilestoneCard'
-import { AddMilestoneForm } from './AddMilestoneForm'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-// lucide-react doesn't export PlusIcon, use our icon wrapper
-import { Plus } from 'lucide-react'import { EmptyState } from '@/components/ui/empty-state'
-interface MilestonesListProps {
-  milestones: Milestone[],
-  activities: Record<string, MilestoneActivity[]>
-  isLoading: boolean,
-  isClient: boolean,
-  onCreateMilestone: (data: any) => Promise<Milestone | null>,
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>
-  onDeleteMilestone: (id: string) => Promise<boolean>,
-  onUploadDeliverable: (id: string, file: File) => Promise<any>,  isSubmitting: boolean,
-  onApprove?: (id: string,) => Promise<void>,
-  onReject?: (id: string,) => Promise<void>
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
-import { useAuth  } from '@/hooks/useAuth';
-import { MilestoneCard  } from './MilestoneCard';
-import { AddMilestoneForm  } from './AddMilestoneForm';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper
-import { Plus } from 'lucide-react'
-import { EmptyState } from '@/components/ui/empty-state';
-interface MilestonesListProps {
 
-  milestones: Milestone[]
-  activities: Record<string, MilestoneActivity[]>
-  isLoading: boolean
-  isClient: boolean
-  onCreateMilestone: (data: any) => Promise<Milestone | null>
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>
-  onDeleteMilestone: (id: string) => Promise<boolean>
-  onUploadDeliverable: (id: string, file: File) => Promise<any>,  isSubmitting: boolean
-  onApprove?: (id: string,) => Promise<void>
-  onReject?: (id: string,) => Promise<void>
-
-}
-export const MilestonesList: React.FC<MilestonesListProps> = ({
-
-  milestones
-  activities
-  isLoading
-  isClient
-  onCreateMilestone
-  onUpdateStatus
-  onDeleteMilestone
-  onUploadDeliverable
-  isSubmitting
-<<<<<<< HEAD
-  onApprove
-  onReject
-}) => {
-  const [showAddForm, setShowAddForm] = useState(false)
-  const handleSubmit = async (data: any) => {
-    await onCreateMilestone(data);    setShowAddForm(false)
-  }
-=======
-=======
-  onApprove,
-  onReject;
-}) => {;
-  const [showAddForm, setShowAddForm] = useState(false);
-  const handleSubmit = async (data: any) => {;
-    await onCreateMilestone(data);    setShowAddForm(false)
-  }
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from 'react',;
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
-import { useAuth } from '@/hooks/useAuth',;
-import { MilestoneCard } from './MilestoneCard',;
-import { AddMilestoneForm } from './AddMilestoneForm',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent } from '@/components/ui/card',;
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
-import { Plus } from 'lucide-react';
-import { EmptyState } from '@/components/ui/empty-state',;
-interface MilestonesListProps {;
-  milestones: Milestone[],;
-  activities: Record<string MilestoneActivity[]>,;
-  isLoading: boolean,;
-  isClient: boolean,;
-  onCreateMilestone: (data: any) => Promise<Milestone | null>,;
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,;
-  onDeleteMilestone: (id: string) => Promise<boolean>,;
-  onUploadDeliverable: (id: string, file: File) => Promise<any>,;
-  isSubmitting: boolean,;
-  onApprove?: (id: string) => Promise<void>,;
-  onReject?: (id: string) => Promise<void>;
-}
-
-export const MilestonesList: React.FC<MilestonesListProps> = ({
-  milestones,
-  activities,
-  isLoading,
-  isClient,
-  onCreateMilestone,
-  onUpdateStatus,
-  onDeleteMilestone,
-  onUploadDeliverable,
-  isSubmitting,
-  onApprove,
-  onReject
-}) => {
-  const [showAddForm, setShowAddForm] = useState(false),
-  
-  const handleSubmit = async (data: any) => {
-    await onCreateMilestone(data),
-    setShowAddForm(false)
-  },
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -144,29 +15,15 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       </div>
     )
   }
-<<<<<<< HEAD
-=======
+
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
-<<<<<<< HEAD
-        description = {isClient ?
-          "Break down the project into manageable milestones to track progress and payments." :
-          "No milestones have been created for this project yet.",}
-        action={isClient ?
-          {
-            text: "Create First Milestone"
-            onClick: (,) => setShowAddForm(true)
-          } : undefined
-        }
-      />
-    )
-  }
-=======
+
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
           "No milestones have been created for this project yet."}
@@ -176,18 +33,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             onClick: () => setShowAddForm(true)
           } : undefined
         }
-<<<<<<< HEAD
-      />;
-    );
-=======
-<<<<<<< HEAD
-      />
-    )
-=======
-      />;
-    );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -201,84 +47,13 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </Button>
         </div>
       )}
-<<<<<<< HEAD
-=======
+
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <AddMilestoneForm
-=======
-            <AddMilestoneForm 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              onSubmit = {handleSubmit,}
-              isSubmitting = {isSubmitting,}
-              onCancel = {(,) => setShowAddForm(false),}
-            />
-          </CardContent>
-        </Card>
-      )}
-      <div className="space-y-4">
-        {milestones.map((milestone,) => (
-          <MilestoneCard
-            key = {milestone.id,}
-            id = {milestone.id,}
-            projectId = {milestone.project_id,}
-            title = {milestone.title,}
-            description = {milestone.description,}
-            amount = {parseFloat(milestone.amount.toString()),}
-            status = {milestone.status,}
-            dueDate = {milestone.due_date,}
-            onApprove = {onApprove,}
-            onReject = {onReject,}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
-"
-<<<<<<< HEAD
 
-=======
             <AddMilestoneForm 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              onSubmit={handleSubmit}
-              isSubmitting={isSubmitting}
-              onCancel={() => setShowAddForm(false)}
-            />;
-          </CardContent>;
-        </Card>;
-      )}
-      
-      <div className="space-y-4">
-        {milestones.map((milestone) => (
-          <MilestoneCard
-            key={milestone.id}
-            id={milestone.id}
-            projectId={milestone.project_id}
-            title={milestone.title}
-            description={milestone.description}
-            amount={parseFloat(milestone.amount.toString())}
-            status={milestone.status}
-            dueDate={milestone.due_date}
-            onApprove={onApprove}
-            onReject={onReject}
-          />;
-        ))}
-      </div>;
-    </div>;
-  );
-};
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

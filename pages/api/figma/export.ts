@@ -1,30 +1,15 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import JSZip from "jszip";
-import {
-<<<<<<< HEAD
-  getZionDesignMap
-  buildTokenSet
-  buildUIKit
-  UIKitKind
-=======
+
   getZionDesignMap,
   buildTokenSet,
   buildUIKit,
   UIKitKind,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-  try {
-    const kit = (req.query.kit as string) |"tailwind";
-    const kind = (
-      ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
-    ) as UIKitKind;
-=======
+
   try {;
     const kit = (req.query.kit as string) || "tailwind";
     const kind = (
@@ -63,7 +48,7 @@ export default async function handler(
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
@@ -110,10 +95,7 @@ export default async function handler(req, res) {
       `attachment; filename=zion-design-${kind}.zip`
     );
     res.status(200).send(buffer);
-<<<<<<< HEAD
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message |"Export failed" });
-=======
+
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Export failed' });
     } catch (error) {
@@ -140,12 +122,5 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  }
-}
-=======
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

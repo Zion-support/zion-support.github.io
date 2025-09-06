@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -23,9 +20,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -35,12 +31,10 @@ type RewardOption = {
   description: string
   cost: number
   type: 'credit' | 'feature' | 'course'
-<<<<<<< HEAD
-}
-=======
+
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week'
@@ -48,22 +42,18 @@ const REWARD_OPTIONS: RewardOption[] = [
     description: '7 days of premium features including top placement in search results'
     cost: 100
     type: 'feature'
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     id: 'resume-review'
     title: 'AI Resume Review'
     description: 'Get your resume analyzed and optimized by our AI'
     cost: 50
     type: 'feature'
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     id: 'platform-credit'
     title: '$5 Platform Credit'
@@ -71,34 +61,17 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 100
     type: 'credit'
   }
-<<<<<<< HEAD
-];
-export function RedeemTokensCard() {
-  const { wallet, spendTokens } = useWallet();
-  const [open, setOpen] = useState(false);
-=======
+
 ],
 
-<<<<<<< HEAD
-export function RedeemTokensCard() {;
-  const { wallet, spendTokens } = useWallet();
-  const [open, setOpen] = useState(false);
-=======
-export function RedeemTokensCard() {
-  const { wallet, spendTokens } = useWallet(),
-  const [open, setOpen] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet |wallet.balance < option.cost) return
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <Card>
@@ -152,11 +125,8 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -260,9 +230,8 @@ export function RedeemTokensCard() {;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;

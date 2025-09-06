@@ -1,16 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { toast } from 'sonner';
-export interface MilestoneInput {
-=======
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from 'sonner';
 export interface MilestoneInput {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   scope: string;
   startDate: string;
 
@@ -18,12 +12,10 @@ export interface MilestoneInput {;
 
   projectType: string
 }
-<<<<<<< HEAD
-export interface GeneratedMilestone {
-=======
+
 
 export interface GeneratedMilestone {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   title: string;
   description: string;
   dueDate: string;
@@ -32,12 +24,10 @@ export interface GeneratedMilestone {;
 
   isAiGenerated: boolean
 }
-<<<<<<< HEAD
-export function useMilestoneGenerator() {
-=======
+
 
 export function useMilestoneGenerator() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const [isGenerating, setIsGenerating] = useState(false);
 
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
@@ -115,10 +105,8 @@ export function useMilestoneGenerator() {;
   },;
   return {;
     generateMilestones,;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     generatedMilestones;
     isGenerating;

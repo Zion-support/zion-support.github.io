@@ -1,10 +1,5 @@
-<<<<<<< HEAD:src.disabled/components/Navigation.jsx
-<<<<<<< HEAD
-import { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [\' \''\';\'"\";
-const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";"""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 =======
 import { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [\' \''\';\'"\";
 const { Menu,X,Phone,Globe,Brain,Zap,Shield,Building,ChevronDown const Navigation = () => { const [isOpen,setIsOpen] = useState (false) const [isServicesOpen,setIsServicesOpen] = useState (false) const location = useLocation () const navigationItems = [" """;""";"""

@@ -1,39 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from "react";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {ScrollArea} from "@/components/ui/scroll-area";
-import {Separator} from "@/components/ui/separator";
-import {toast} from "@/components/ui/use-toast";
-import {cn} from "@/lib/utils";
-import {ChatMessage} from "./ChatMessage";
-import {QuickReplyButton} from "./QuickReplyButton";
-import {Send, Loader2} from "lucide-react";
-import {useTheme} from "@/hooks/useTheme";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState, useRef, useEffect } from "react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { Separator } from "@/components/ui/separator",
-import { toast } from "@/components/ui/use-toast",
-import { cn } from "@/lib/utils",
-import { ChatMessage } from "./ChatMessage",
-import { QuickReplyButton } from "./QuickReplyButton",
-<<<<<<< HEAD
-import { Send, Loader2 } from "lucide-react";
-import { useTheme } from "@/hooks/useTheme";
-=======
-import { Send, Loader2 } from "lucide-react",
-import { useTheme } from "@/hooks/useTheme",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define suggested quick replies
 
@@ -46,22 +13,7 @@ type Message = {
   content: string
   sender: "user" | "bot"
   timestamp: Date
-<<<<<<< HEAD
-}
-export function ChatBotPanel() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: "welcome"
-      content: "Hi! How can I help you?"
-      sender: "bot"
-      timestamp: new Date()}])
-  const [inputValue, setInputValue] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [failedAttempts, setFailedAttempts] = useState(0);
-  const scrollAreaRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const { theme } = useTheme();
-=======
+
 },
 
 export function ChatBotPanel() {
@@ -70,39 +22,12 @@ export function ChatBotPanel() {
       id: "welcome",
       content: "Hi! How can I help you?",
       sender: "bot",
-<<<<<<< HEAD
-      timestamp: new Date()}]),;
-  const [inputValue, setInputValue] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [failedAttempts, setFailedAttempts] = useState(0);
-  const scrollAreaRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const { theme } = useTheme();
-=======
-      timestamp: new Date()}]),
-  const [inputValue, setInputValue] = useState(""),
-  const [isLoading, setIsLoading] = useState(false),
-  const [failedAttempts, setFailedAttempts] = useState(0),
-  const scrollAreaRef = useRef<HTMLDivElement>(null),
-  const inputRef = useRef<HTMLInputElement>(null),
-  const { theme } = useTheme(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
-<<<<<<< HEAD
-    }
-  }, [messages]);
-  // Focus input when component mounts
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus()
-    }
-  }, []);
-=======
+
 import React, { useState, useRef, useEffect } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -150,39 +75,13 @@ export function ChatBotPanel() {;
       inputRef.current.focus();
     }
   }, []),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return
     const userMessage: Message = {
-<<<<<<< HEAD
-      id: `user-${Date.now()}`
-      content: text
-      sender: "user"
-      timestamp: new Date()}
-    setMessages((prev) => [...prev, userMessage]);
-    setInputValue("");
-    setIsLoading(true);
-    try {
-      // Call the OpenAI-powered support function
-      const response = await sendToAIAssistant(text);
-      const botMessage: Message = {
-        id: `bot-${Date.now()}`
-        content: response.message |"Sorry, I couldn't process your request. Please try again.";
-        sender: "bot"
-        timestamp: new Date()}
-      setMessages((prev) => [...prev, botMessage]);
-      // Check if the request was successful
-      if (!response.success) {
-        setFailedAttempts((prev) => prev + 1);
-        // After 3 failed attempts, suggest escalation
-        if (failedAttempts >= 2) {
-          suggestEscalation()
-=======
+
       id: `user-${Date.now()}`,
       content: text,
       sender: "user",
@@ -211,42 +110,7 @@ export function ChatBotPanel() {;
         // After 3 failed attempts, suggest escalation
         if (failedAttempts >= 2) {
           suggestEscalation()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }, []),;
-  const handleSendMessage = async (text: string = inputValue) => {;
-    if (!text.trim()) return,;
-    const userMessage: Message = {;
-      id: `user-${Date.now()}`,;
-      content: text,;
-      sender: "user",;
-      timestamp: new Date()},;
-    setMessages((prev) => [...prev, userMessage]),;
-    setInputValue(""),;
-    setIsLoading(true),;
-    try {;
-      // Call the OpenAI-powered support function;
-      const response = await sendToAIAssistant(text),;
-      const botMessage: Message = {;
-        id: `bot-${Date.now()}`,;
-        content: response.message || "Sorry, I couldn't process your request. Please try again.",;
-        sender: "bot",;
-        timestamp: new Date()},;
-      setMessages((prev) => [...prev, botMessage]),;
-      // Check if the request was successful;
-      if (!response.success) {;
-        setFailedAttempts((prev) => prev + 1),;
-        // After 3 failed attempts, suggest escalation;
-        if (failedAttempts >= 2) {;
-          suggestEscalation();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         }
       } else {
         // Reset failed attempts if successful
@@ -255,14 +119,7 @@ export function ChatBotPanel() {;
     } catch (error) {
       console.error("Error in AI chat:", error),
       toast({
-<<<<<<< HEAD
-        variant: "destructive"
-        title: "Communication Error"
-        description: "We're having trouble connecting to our support service."})
-      setFailedAttempts((prev) => prev + 1);
-      if (failedAttempts >= 2) {
-        suggestEscalation()
-=======
+
         variant: "destructive",
         title: "Communication Error",
         description: "We're having trouble connecting to our support service."}),
@@ -270,39 +127,18 @@ export function ChatBotPanel() {;
       setFailedAttempts((prev) => prev + 1),
       if (failedAttempts >= 2) {
         suggestEscalation()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    } catch (error) {;
-      console.error("Error in AI chat:", error),;
-      toast({;
-        variant: "destructive",;
-        title: "Communication Error",;
-        description: "We're having trouble connecting to our support service."}),;
-      setFailedAttempts((prev) => prev + 1),;
-      if (failedAttempts >= 2) {;
-        suggestEscalation();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       }
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
+
   },
 =======
   };
 =======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -311,18 +147,13 @@ export function ChatBotPanel() {;
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
-<<<<<<< HEAD
-          "Content-Type": "application/json"}
-        body: JSON.stringify({
-          messages: [{ role: "user", content: message }]
-        })});
-=======
+
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       if (!response.ok) {
         return {
           success: false
@@ -331,11 +162,9 @@ export function ChatBotPanel() {;
           message: "I'm having trouble connecting to my knowledge base right now."
         };
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       const data = await response.json();
       return {
         success: true
@@ -346,10 +175,8 @@ export function ChatBotPanel() {;
       return {;
         success: true,;
         message: data.message;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
@@ -362,31 +189,15 @@ export function ChatBotPanel() {;
       return {
         success: false
         message: "I'm experiencing technical difficulties. Please try again later."
-<<<<<<< HEAD
-      }
-    }
-<<<<<<< HEAD
-  }
-  const suggestEscalation = () => {
-    const escalationMessage: Message = {
-      id: `bot-escalation-${Date.now()}`
-      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?"
-      sender: "bot"
-      timestamp: new Date()}
-    setMessages((prev) => [...prev, escalationMessage]);
-    // Log this interaction for the support team
-    logSupportEscalation()
-  }
-=======
+
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
       };
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const suggestEscalation = () => {
@@ -408,11 +219,9 @@ export function ChatBotPanel() {;
     try {
       // Send the conversation to the backend for logging
       // This would be implemented in a real system
-<<<<<<< HEAD
-      console.log("Support escalation triggered", {
-=======
+
       // // // console.log("Support escalation triggered", { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         conversationHistory: messages.map(m => ({
           content: m.content
           sender: m.sender
@@ -422,19 +231,14 @@ export function ChatBotPanel() {;
     } catch (error) {
       console.error("Failed to log support escalation:", error)
     }
-<<<<<<< HEAD
-  }
-  const handleQuickReply = (text: string) => {
-    handleSendMessage(text)
-  }
-=======
+
   },
 
   const handleQuickReply = (text: string) => {
     handleSendMessage(text)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleEscalateToLiveAgent = () => {
     setMessages((prev) => [
       ...prev
@@ -443,16 +247,7 @@ export function ChatBotPanel() {;
         content: "I'd like to speak with a human agent"
         sender: "user"
         timestamp: new Date()
-<<<<<<< HEAD
-      }
-      {
-        id: `bot-${Date.now()}`
-        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";
-        sender: "bot"
-        timestamp: new Date()
-      }
-    ]);
-=======
+
       },
       {
         id: `bot-${Date.now()}`,
@@ -462,17 +257,15 @@ export function ChatBotPanel() {;
       }
     ]),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     // In a real implementation, this would trigger a live chat request
     toast({
       title: "Support request submitted"
       description: "A support agent will be with you shortly."})
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleEmailSupport = () => {
     setMessages((prev) => [
       ...prev
@@ -481,11 +274,9 @@ export function ChatBotPanel() {;
         content: "I'd like to email support"
         sender: "user"
         timestamp: new Date()
-<<<<<<< HEAD
-      }
-=======
+
       },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       {
         id: `bot-${Date.now()}`
         content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours."
@@ -493,20 +284,17 @@ export function ChatBotPanel() {;
         timestamp: new Date()
       }
     ])
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <div className="flex flex-col h-full">
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
         <div className="flex flex-col gap-4">
           {messages.map((message) => (
             <ChatMessage
-<<<<<<< HEAD
-=======
+
   },;
   const suggestEscalation = () => {;
     const escalationMessage: Message = {;
@@ -581,10 +369,7 @@ export function ChatBotPanel() {;
         <div className="flex flex-col gap-4">;
           {messages.map((message) => (;
             <ChatMessage;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               key={message.id}
               message={message.content}
@@ -592,10 +377,9 @@ export function ChatBotPanel() {;
               timestamp={message.timestamp}
             />
           ))}
-<<<<<<< HEAD
-=======
+
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           {isLoading && (
             <div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
@@ -619,10 +403,9 @@ export function ChatBotPanel() {;
           </div>
         </div>
       )}
-<<<<<<< HEAD
-=======
+
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       {failedAttempts >= 3 && (
         <div className="px-4 py-3 border-t border-zion-purple/10">
           <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
@@ -663,16 +446,11 @@ export function ChatBotPanel() {;
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Type your question..."
             className={cn(
-<<<<<<< HEAD
-              "flex-1";
-              theme === "dark"
-                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
 
-=======
               "flex-1",
               theme === "dark" 
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 : "bg-white border-gray-200"
             )}
           />
@@ -688,11 +466,8 @@ export function ChatBotPanel() {;
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 ;
       {failedAttempts >= 3 && (;
@@ -754,9 +529,8 @@ export function ChatBotPanel() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;

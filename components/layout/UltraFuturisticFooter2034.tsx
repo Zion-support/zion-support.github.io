@@ -1,68 +1,11 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Rocket
-  Brain
-  Atom
-  Zap
-  Sparkles
-  Shield
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Linkedin
-  Twitter
-  Facebook
-  Instagram
-  Youtube
-  Github
-  CheckCircle
-  Award
-  Star
-  Crown
-  Gem
-  Infinity
-  Heart
-  ShieldCheck
-  Users
-  Briefcase
-  BookOpen
-  Target
-  Microscope
-  Cpu
-  Database
-  Cloud
-  Lock
-  Home
-  Building
-  DollarSign
-  FileText
-  MessageSquare
-  MessageCircle
-  Newspaper
-  Handshake
-  LifeBuoy
-  Activity
-  ShoppingCart
-  UserCheck
-  BarChart
-  Palette
-  Video
-  LockIcon
-  GlobeIcon
-  CpuIcon;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Zap, Sparkles, Shield
 
-=======
   Rocket,
   Brain,
   Atom,
@@ -116,7 +59,7 @@ import {
   GlobeIcon,;
   CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -328,65 +271,16 @@ export default function UltraFuturisticFooter2034() {
   return (
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle };
 ];
-<<<<<<< HEAD
-export default function UltraFuturisticFooter2034() {
-  return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
-      {/* Animated Background Elements */}
-      <div className='absolute inset-0 overflow-hidden'>
-        <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
-        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
-      </div>
-      <div className='relative z-10'>
-        {/* Main Footer Content */}
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-          <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
-            {/* Company Info */}
-            <div className='lg:col-span-1'>              <motion.div      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-      </div>
-      <div className="relative z-10">
-        {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            {/* Company Info */}
-            <div className="lg:col-span-1">
-              <motion.div
-=======
-<<<<<<< HEAD
 
-export default function UltraFuturisticFooter2034() {
-  return (
 
-              <motion.div
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-              <motion.div
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className='space-y-6'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='flex items-center space-x-3'>
@@ -445,15 +339,7 @@ export default function UltraFuturisticFooter2034() {
                       <div className='text-lg font-bold text-white'>
                         {stat.value}
                       </div>
-<<<<<<< HEAD
-                      <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
-                    >
-                      <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
-                      <div className="text-lg font-bold text-white">{stat.value}</div>
-                      <div className="text-xs text-gray-400">{stat.label}</div>
-                  ))}
-                </div>
-=======
+
                       <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>
 
                     </motion.div>
@@ -461,22 +347,15 @@ export default function UltraFuturisticFooter2034() {
                   ))}
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Contact Info */}
                 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
                     <Phone className='w-4 h-4' />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <span>{contactInfo.mobile}</span>
                   </div>
@@ -502,13 +381,9 @@ export default function UltraFuturisticFooter2034() {
             {/* Services */}
             <div className='lg:col-span-2'>              <motion.div            <div className="lg:col-span-2">
               <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -530,13 +405,9 @@ export default function UltraFuturisticFooter2034() {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       className='space-y-4'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className='flex items-center space-x-2'>
@@ -555,33 +426,12 @@ export default function UltraFuturisticFooter2034() {
                             <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm'>
                               {service.name}
                             </span>
-<<<<<<< HEAD
-                            <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>                              {service.price}                    >
-                      <div className="flex items-center space-x-2">
-                        <category.icon className="w-5 h-5 text-cyan-400" />
-                        <h4 className="font-semibold text-white">{category.title}</h4>
-                      </div>
-                      <div className="space-y-2">
-                        {category.services.map((service) => (
-                          <Link
-                            key={service.name}
-                            href={service.href}
-                            className="flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200"
-                          >
-                            <span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm">
-                              {service.name}
-                            </span>
-                            <span className="text-xs text-gray-500 group-hover:text-cyan-400 transition-colors">
-                              {service.price}
-=======
+
                             <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>                              {service.price}
 
                               {service.price}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </span>
                           </Link>
@@ -592,34 +442,23 @@ export default function UltraFuturisticFooter2034() {
                 </div>
               </motion.div>
             </div>
-<<<<<<< HEAD
-            {/* Quick Links & Social */}
-            <div className='lg:col-span-1'>              <motion.div            <div className="lg:col-span-1">
-              <motion.div
-=======
+
 
             {/* Quick Links & Social */}
             <div className='lg:col-span-1'>              <motion.div
 
               <motion.div
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
                 className='space-y-8'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 {/* Quick Links */}
@@ -635,25 +474,7 @@ export default function UltraFuturisticFooter2034() {
                         className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
-<<<<<<< HEAD
-                        <span className='text-sm'>{link.name}</span>                      </Link>              >
-                {/* Quick Links */}
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
-                  <div className="space-y-2">
-                    {quickLinks.map((link) => (
-                      <Link
-                        key={link.name}
-                        href={link.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
-                      >
-                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm">{link.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-=======
+
                         <span className='text-sm'>{link.name}</span>                      </Link>
 
                       </Link>
@@ -662,10 +483,7 @@ export default function UltraFuturisticFooter2034() {
                   </div>
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Company Links */}
                 <div>
@@ -680,19 +498,7 @@ export default function UltraFuturisticFooter2034() {
                         className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
-<<<<<<< HEAD
-                        <span className='text-sm'>{link.name}</span>                      </Link>                      <Link
-                        key={link.name}
-                        href={link.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
-                      >
-                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm">{link.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-=======
+
                         <span className='text-sm'>{link.name}</span>                      </Link>
 
                       </Link>
@@ -701,10 +507,7 @@ export default function UltraFuturisticFooter2034() {
                   </div>
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Social Links */}
                 <div>
@@ -720,25 +523,12 @@ export default function UltraFuturisticFooter2034() {
                         rel='noopener noreferrer'
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
                       >
-<<<<<<< HEAD
-                        <social.icon className='w-5 h-5' />                      </Link>                      <Link
-                        key={social.name}
-                        href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110"
-                      >
-                        <social.icon className="w-5 h-5" />
-                      </Link>
-=======
+
                         <social.icon className='w-5 h-5' />                      </Link>
 
                       </Link>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </div>
@@ -746,13 +536,9 @@ export default function UltraFuturisticFooter2034() {
               </motion.div>
             </div>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Certifications */}
           <motion.div
@@ -780,42 +566,28 @@ export default function UltraFuturisticFooter2034() {
                   <CheckCircle className='w-4 h-4 text-green-400 mr-2' />
                   <span className='text-xs text-gray-300 text-center'>
                     {cert}
-<<<<<<< HEAD
-                  </span>                </motion.div>                  className="flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200"
-                >
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  <span className="text-xs text-gray-300 text-center">{cert}</span>
-=======
+
                   </span>                </motion.div>
 
                 </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Bottom Bar */}
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
-<<<<<<< HEAD
-              <div className='flex items-center space-x-6 text-sm text-gray-400'>;
-=======
+
               <div className='flex items-center space-x-6 text-sm text-gray-400'>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
                 <Link
                   href='/privacy'
@@ -841,17 +613,11 @@ export default function UltraFuturisticFooter2034() {
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
-);
-}
-import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
-<<<<<<< HEAD
-export default function UltraFuturisticFooter2034() {return (";
-=======
+
 ;
 export default function UltraFuturisticFooter2034() {;
   return (";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     <footer className = "py-8 text-center text-sm text-gray-400">;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;
@@ -859,8 +625,6 @@ export default function UltraFuturisticFooter2034() {;
 =======
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

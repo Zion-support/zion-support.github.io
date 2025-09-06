@@ -1,29 +1,12 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-=======
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
-  Shield
-  Zap
-  BarChart3
-  Code
-  ArrowRight
-  Copy
-  RefreshCw
-  CheckCircle
-  AlertTriangle;
-} from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
-export default function APIRateLimiterPage() {
-=======
   Shield,
   Zap,
   BarChart3,
@@ -35,7 +18,7 @@ export default function APIRateLimiterPage() {
   AlertTriangle,;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 export default function APIRateLimiterPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
   const [timeWindow, setTimeWindow] = useState('1m');
@@ -63,20 +46,9 @@ export default function APIRateLimiterPage() {;
       Date.now().toString(36);
     setApiKey(key);  }
   const testRateLimiting = async () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (!endpoint.trim() |!rateLimit |!timeWindow) return;
-    { value: '10000', label: '10000 requests', description: 'Enterprise' }
-  ];
-=======
-    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
-<<<<<<< HEAD
-    { value: '10000', label: '10000 requests', description: 'Enterprise' }
-  ];
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+
   const generateApiKey = () => {
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
     setApiKey(key)
@@ -154,24 +126,15 @@ export default function APIRateLimiterPage() {;
       case 'rate_limited':
         return <AlertTriangle className='w-5 h-5 text-red-400' />;
       default:
-<<<<<<< HEAD
-        return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }      case 'rate_limited':
-        return <AlertTriangle className="w-5 h-5 text-red-400" />;
-      default:
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />
-    }
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }
 
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   };
 
@@ -185,13 +148,11 @@ export default function APIRateLimiterPage() {;
       default:
         return 'text-yellow-400';    }        return 'text-yellow-400'
     }
-<<<<<<< HEAD
-  }
-=======
+
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <>
       <Head>
@@ -307,23 +268,12 @@ export default function APIRateLimiterPage() {;
                     Rate Limit
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
-<<<<<<< HEAD
-                    {rateLimits.map(limit => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
-                    Rate Limit
-                  ">
-                    Rate Limit
-                  </label>
-                  <div className="grid grid-cols-2 gap-3">
-                    {rateLimits.map((limit) => (
-=======
+
                     {rateLimits.map(limit => (                      <button
 
                       <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         key={limit.value}
                         onClick={() => setRateLimit(limit.value)}
@@ -339,20 +289,13 @@ export default function APIRateLimiterPage() {;
                         </div>                      </button>                        <div className="font-medium">{limit.label}</div>
                         <div className="text-xs text-gray-400 mt-1">{limit.description}</div>
                       </button>
-<<<<<<< HEAD
-                    ))}
-                  </div>
-                </div>
-=======
+
 
                     ))}
                   </div>
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Time Window */}
                 <div>
@@ -360,23 +303,12 @@ export default function APIRateLimiterPage() {;
                     Time Window
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
-<<<<<<< HEAD
-                    {timeWindows.map(window => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
-                    Time Window
-                  ">
-                    Time Window
-                  </label>
-                  <div className="grid grid-cols-2 gap-3">
-                    {timeWindows.map((window) => (
-=======
+
                     {timeWindows.map(window => (                      <button
 
                       <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         key={window.value}
                         onClick={() => setTimeWindow(window.value)}
@@ -392,20 +324,13 @@ export default function APIRateLimiterPage() {;
                         </div>                      </button>                        <div className="font-medium">{window.label}</div>
                         <div className="text-xs text-gray-400 mt-1">{window.description}</div>
                       </button>
-<<<<<<< HEAD
-                    ))}
-                  </div>
-                </div>
-=======
+
 
                     ))}
                   </div>
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* API Key Generation */}
                 <div>
@@ -470,13 +395,9 @@ export default function APIRateLimiterPage() {;
                 </Button>
               </div>
             </Card>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Test Results */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
@@ -486,15 +407,11 @@ export default function APIRateLimiterPage() {;
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
                   <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
-<<<<<<< HEAD
-=======
+
 
                   Test Results
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </h3>
                 {testResults.length > 0 && (
@@ -522,91 +439,18 @@ export default function APIRateLimiterPage() {;
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
-<<<<<<< HEAD
-                        result.status === 'success'
-                          ? 'border-green-500/30 bg-green-500/10'
-                          : 'border-red-500/30 bg-red-500/10'
-                      }`}
-                    >
-                      <div className='flex items-center justify-between mb-2'>
-                        <div className='flex items-center space-x-3'>
-                          {getStatusIcon(result.status)}
-                          <span
-                            className={`font-medium ${getStatusColor(result.status)}`}
-                          >
-                            Request #{result.request}
-                          </span>
-                        </div>
-                        <span className='text-sm text-gray-400'>
-                          {result.timestamp}
-                        </span>
-                      </div>
-                      <div className='grid grid-cols-2 gap-4 text-sm'>
-                        <div>
-                          <span className='text-gray-400'>Status:</span>
-                          <span
-                            className={`ml-2 font-medium ${getStatusColor(result.status)}`}
-                          >
-                            {result.statusCode}{' '}
-                            {result.status === 'success'
-                              ? 'OK'
-                              : 'Too Many Requests'}
-                          </span>
-                        </div>
-                        <div>
-                          <span className='text-gray-400'>Response Time:</span>
-                          <span className='ml-2 text-white'>
-                            {result.responseTime.toFixed(0)}ms
-                          </span>                        </div>
-                      </div>
-                      {result.status === 'rate_limited' && (
-                        <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
-                          <strong>Rate Limited:</strong> Request exceeded the
-                          limit of {rateLimit} requests per {timeWindow}                        </div>                      }`}
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center space-x-3">
-                          {getStatusIcon(result.status)}
-                          <span className={`font-medium ${getStatusColor(result.status)}`}>
-                            Request #{result.request}
-                          </span>
-                        </div>
-                        <span className="text-sm text-gray-400">{result.timestamp}</span>
-                      </div>
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="text-gray-400">Status:</span>
-                          <span className={`ml-2 font-medium ${getStatusColor(result.status)}`}>
-                            {result.statusCode} {result.status === 'success' ? 'OK' : 'Too Many Requests'}
-                          </span>
-                        </div>
-                        <div>
-                          <span className="text-gray-400">Response Time:</span>
-                          <span className="ml-2 text-white">{result.responseTime.toFixed(0)}ms</span>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                       </div>
                       {result.status === 'rate_limited' && (
-<<<<<<< HEAD
-                        <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
-                          <strong>Rate Limited:</strong> Request exceeded the
-                          limit of {rateLimit} requests per {timeWindow}                        <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
-                          <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
-                        </div>
-=======
+
 
                         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
                     </div>
@@ -627,27 +471,19 @@ export default function APIRateLimiterPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-=======
+
 
               Advanced Rate Limiting Features
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -788,28 +624,19 @@ const endpoint = '${endpoint |'/api/users'}';
 // Make API request with rate limiting
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'Authorization': \`Bearer \${apiKey}\`
-    'X-RateLimit-Limit': '${rateLimit}'
-    'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
-    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
-=======
+
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'  }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
-<<<<<<< HEAD
-    'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
-    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
-=======
+
     'X-RateLimit-Window': '${timeWindow}'  }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
@@ -855,23 +682,18 @@ api_key = '${apiKey |'your_api_key_here'}'
 endpoint = '${endpoint |'/api/users'}'
 # Make API request with rate limiting
 headers = {
-<<<<<<< HEAD
-    'Authorization': f'Bearer {api_key}'
-    'X-RateLimit-Limit': '${rateLimit}'
-=======
+
     'Authorization': f'Bearer {api_key}',
     'X-RateLimit-Limit': '${rateLimit}',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     'X-RateLimit-Window': '${timeWindow}'
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
-<<<<<<< HEAD
-response = requests.get(
-=======
+
 
 response = requests.get(;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     f'https://api.zion.tech{endpoint}';
 )
 print('Response:', response.json())
@@ -896,12 +718,10 @@ headers = {
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
-<<<<<<< HEAD
-response = requests.get(
-=======
+
 
 response = requests.get(;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     f'https://api.zion.tech{endpoint}';
 )
 print('Response:', response.json())
@@ -961,14 +781,7 @@ print('Rate Limit Info:', {
         </div>
       </section>
     </>;
-<<<<<<< HEAD
-  );    </>
-  )
-}
-=======
+
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

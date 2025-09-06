@@ -1,51 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {TalentCard} from "@/components/talent/TalentCard";
-import {useAuth} from "@/hooks/useAuth";
-import {supabase} from "@/integrations/supabase/client";
-import {TalentProfile} from "@/types/talent";
-import {toast} from "@/components/ui/use-toast";
-import {useNavigate} from "react-router-dom";
-export default function SavedTalentsPage() {;
-  const { user } = useAuth();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const navigate = useNavigate();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState, useEffect } from "react",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { TalentCard } from "@/components/talent/TalentCard",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-import { toast } from "@/components/ui/use-toast";
-import { useNavigate } from "react-router-dom";
-export default function SavedTalentsPage() {
-  const { user } = useAuth();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-=======
-import { toast } from "@/components/ui/use-toast",
-import { useNavigate } from "react-router-dom",
-export default function SavedTalentsPage() {
-  const { user } = useAuth(),
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const navigate = useNavigate(),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const navigate = useNavigate();
@@ -131,19 +86,15 @@ export default function SavedTalentsPage() {;
         if (error) {
           throw error
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             item => item.talent_profile as unknown as TalentProfile
           );
-<<<<<<< HEAD
-          setSavedTalents(talentProfiles)
-        }
-=======
+
           .eq("user_id", user.id),;
         if (error) {;
           throw error;
@@ -156,10 +107,7 @@ export default function SavedTalentsPage() {;
           ),;
           setSavedTalents(talentProfiles);
         }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
         console.error("Error fetching saved talents:", error),
@@ -170,14 +118,7 @@ export default function SavedTalentsPage() {;
       } finally {
         setIsLoading(false)
       }
-<<<<<<< HEAD
-    }
-    fetchSavedTalents()
-  }, [user]);
-  const handleViewProfile = (talentId: string) => {
-    navigate(`/talent/${talentId}`)
-  }
-=======
+
     },
 
     fetchSavedTalents()
@@ -187,38 +128,23 @@ export default function SavedTalentsPage() {;
     navigate(`/talent/${talentId}`)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleRequestHire = (talent: TalentProfile) => {
     // // // console.log("Request to hire:", talent),
     toast({
       title: "Hire Request Sent"
       description: `A hire request has been sent to ${talent.full_name}.`})
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
       if (!user) {
         console.warn("User not authenticated.")
         return
-<<<<<<< HEAD
-      }
-      if (isCurrentlySaved) {
-        // Remove from saved talents
-        const { error } = await supabase
-          .from('saved_talents')
-          .delete()
-          .eq('user_id', user.id)
-          .eq('talent_id', talentId);
-        if (error) {
-          throw error
-<<<<<<< HEAD
-        }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
@@ -257,9 +183,8 @@ export default function SavedTalentsPage() {;
           .eq('talent_id', talentId),;
         if (error) {;
           throw error;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
   
@@ -283,12 +208,10 @@ export default function SavedTalentsPage() {;
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-<<<<<<< HEAD
-          .single();
-=======
+
           .single(),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         if (talentError) {
           console.error("Error fetching talent profile:", talentError),
           toast({
@@ -311,11 +234,9 @@ export default function SavedTalentsPage() {;
         description: "Failed to update saved talents. Please try again later."
         variant: "destructive"})
     }
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <>
@@ -337,8 +258,7 @@ export default function SavedTalentsPage() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (
               <TalentCard
-<<<<<<< HEAD
-=======
+
 ;
         setSavedTalents(prevTalents =>;
           prevTalents.filter(talent => talent.id !== talentId);
@@ -405,10 +325,7 @@ export default function SavedTalentsPage() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">;
             {savedTalents.map((talent) => (;
               <TalentCard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={talent.id}
                 talent={talent}
@@ -421,17 +338,11 @@ export default function SavedTalentsPage() {;
             ))}
           </div>
         )}
-<<<<<<< HEAD
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
+
       </div>;
       <Footer />;
     </>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Switch  } from '@/components/ui/switch';
-import { Button  } from '@/components/ui/button';
-import { Label  } from '@/components/ui/label';
-=======
+
 }
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
@@ -20,22 +13,7 @@ import { Label } from '@/components/ui/label',
 import { ShieldAlert, Info } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
-<<<<<<< HEAD
-  Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger} from "@/components/ui/accordion",
-import { toast  } from '@/hooks/use-toast';
-import { supabase  } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-export function FraudDetectionSettings() {
-  const { user } = useAuth();
-  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
-  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
-  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
-  const [isSaving, setIsSaving] = useState(false);
-  const handleSavePreferences = null;
-=======
+
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -73,7 +51,7 @@ export function FraudDetectionSettings() {
     }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">
@@ -178,10 +156,7 @@ export function FraudDetectionSettings() {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-}
-}
-=======
+
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -325,8 +300,5 @@ export function FraudDetectionSettings() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

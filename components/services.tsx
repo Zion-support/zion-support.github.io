@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-...realMicroSaasServices2025;
-=======
  ...realMicroSaasServices2025;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 ...realMicroSaasServices2025;
 =======
@@ -68,27 +64,12 @@ and micro SAAS services designed to transform your business and drive innovation
   opacity: 0, y: 20
 }animate= {
   {
-<<<<<<< HEAD
-  opacity: 1, y: 0
-<<<<<<< HEAD
-}transition= {
-  {
-  duration: 0.8, delay: 0.8
-}> ⭐ Popular </span>)
-}</div> </div> </div> </motion.div>) )
-}</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion.div>)
-}</div> </section> </li>) )
-}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) )
-}</div> Popular </span>)
-}</div> </span>) )
-}</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion.div>) )
-}</div>)
-=======
+
   opacity: 1, y: 0 
 =======
 =======
   opacity: 1, y: 0 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 }transition= {
@@ -164,10 +145,9 @@ and micro SAAS services designed to transform your business and drive innovation
         default: return 0
       }
     });
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -249,13 +229,9 @@ and micro SAAS services designed to transform your business and drive innovation
                 </div>
               </motion.div>
             </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Enhanced Search and Filters */}
             <motion.div
@@ -321,13 +297,10 @@ and micro SAAS services designed to transform your business and drive innovation
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`p-3 rounded-xl transition-all duration-300 ${
-<<<<<<< HEAD
-                          viewMode === 'grid'
-                            ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25'
-=======
+
                           viewMode === 'grid' 
                             ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                             : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
                         }`}
                       >
@@ -363,13 +336,9 @@ and micro SAAS services designed to transform your business and drive innovation
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
-<<<<<<< HEAD
-=======
+
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <select
                 value={sortBy}
@@ -382,13 +351,9 @@ and micro SAAS services designed to transform your business and drive innovation
                 <option value="rating">Sort by Rating</option>
               </select>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Enhanced Category Overview */}
             <motion.div
@@ -443,13 +408,9 @@ and micro SAAS services designed to transform your business and drive innovation
                           Click to explore →
                         </div>
                       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Services Grid/List */}
             <motion.div
@@ -490,13 +451,9 @@ and micro SAAS services designed to transform your business and drive innovation
                             </span>
                           )}
                         </div>
-<<<<<<< HEAD
-=======
+
                         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* Service Icon */}
                         <div className="text-4xl mb-4">{service.icon}</div>
@@ -528,13 +485,9 @@ and micro SAAS services designed to transform your business and drive innovation
             )}
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Enhanced Price */}
                       <div className="mb-6 relative z-10">
@@ -556,13 +509,9 @@ and micro SAAS services designed to transform your business and drive innovation
                           ))}
                         </ul>
                       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Enhanced Stats */}
                       <div className="grid grid-cols-3 gap-3 mb-6 text-center relative z-10">
@@ -622,13 +571,9 @@ and micro SAAS services designed to transform your business and drive innovation
                             ))}
                           </div>
                         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* Pricing & Stats */}
                         <div className="lg:w-48 space-y-4">
@@ -661,13 +606,9 @@ and micro SAAS services designed to transform your business and drive innovation
                 </div>
               )}
             </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Enhanced CTA Section */}
             <motion.div
@@ -729,10 +670,7 @@ and micro SAAS services designed to transform your business and drive innovation
       </main>
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-<<<<<<< HEAD
-  )
-}
-=======
+
   ),
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

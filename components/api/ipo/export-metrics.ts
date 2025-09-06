@@ -1,10 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireSuperadminApi } from '../../../utils/api/auth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
@@ -39,8 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
 
   res.status(200).send(csv)
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

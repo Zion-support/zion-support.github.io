@@ -1,26 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { format  } from 'date-fns';
-import { Loader2  } from 'lucide-react';
-import { Button  } from '@/components/ui/button';
-import { Textarea  } from '@/components/ui/textarea';
-import { Input  } from '@/components/ui/input';
-import { Checkbox  } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { useState  } from 'react';
-import { EducationFormFieldsProps  } from './types';
-import { Education } from '@/types/resume';
-=======
+
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -35,7 +14,7 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 // Define schema for form validation
 
 const educationSchema = z.object({
@@ -48,20 +27,14 @@ const educationSchema = z.object({
   description: z.string().optional()
   location: z.string().optional()})
 type EducationFormValues = z.infer<typeof educationSchema>;
-<<<<<<< HEAD
-export function EducationFormFields({
-  isEditing
-  onSubmit
-  onCancel
-}: EducationFormFieldsProps) {
-=======
+
 
 export function EducationFormFields({ 
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
@@ -84,11 +57,9 @@ export function EducationFormFields({
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-  }
-=======
+
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -149,10 +120,8 @@ export function EducationFormFields({;
       setIsLoading(false);
     }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
@@ -207,13 +176,10 @@ export function EducationFormFields({;
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
-<<<<<<< HEAD
-                  <Input
-                    type="date"
-=======
+
                   <Input 
                     type="date" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                     {...field}
                     value={field.value |''}
                   />
@@ -308,9 +274,7 @@ export function EducationFormFields({;
       </form>
     </Form>
   )
-<<<<<<< HEAD
-}
-=======
+
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

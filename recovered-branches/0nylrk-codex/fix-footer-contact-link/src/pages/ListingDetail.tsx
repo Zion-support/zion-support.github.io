@@ -1,66 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {useParams} from "react-router-dom";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {Skeleton} from "@/components/ui/skeleton";
-import {Star, MessageSquare, Brain, Shield} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {MARKETPLACE_LISTINGS} from "@/data/marketplaceData";
-import {toast} from "@/hooks/use-toast";
-import {PaymentButton} from "@/components/transactions/PaymentButton";
-import {AppLayout} from "@/layout/AppLayout";
-import {ProfileContact} from "@/components/profile/ProfileContact";
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.;
-  const { id } = useParams() as { id?: string };
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState } from "react",
-import { useParams } from "react-router-dom",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Skeleton } from "@/components/ui/skeleton",
-import { Star, MessageSquare, Brain, Shield } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { AppLayout } from "@/layout/AppLayout",
-import { ProfileContact } from "@/components/profile/ProfileContact",
-<<<<<<< HEAD
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-  const { id } = useParams() as { id?: string }
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
-  // Find the listing from our shared data source - now also checking equipment listings
-=======
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-  const { id } = useParams() as { id?: string },
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
-  const [isLoading, setIsLoading] = useState(false),
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
-  // Find the listing from our shared data source - now also checking equipment listings
-  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -82,12 +22,10 @@ export default function ListingDetail() {
   }
   const handleContact = () => {
     setIsContactDialogOpen(true)
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <AppLayout>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -129,10 +67,7 @@ export default function ListingDetail() {
                           alt={`${listing.title} - image ${index + 1}`}
                           className="w-full h-full object-cover"
                           onError={(e) => {
-<<<<<<< HEAD
-                            const target = e.target as HTMLImageElement;
-                            target.src = "/placeholder.svg"
-=======
+
                             const target = e.target as HTMLImageElement,
                             target.src = "/placeholder.svg"
 import { useState } from "react",;
@@ -221,10 +156,7 @@ export default function ListingDetail() {;
                           onError={(e) => {;
                             const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           }}
                         />
@@ -237,13 +169,9 @@ export default function ListingDetail() {;
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
-<<<<<<< HEAD
-=======
+
                 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Features */}
                 <div className="mt-8">
@@ -303,14 +231,9 @@ export default function ListingDetail() {;
                         <Star
                           key={i}
                           className={cn(
-<<<<<<< HEAD
-                            "h-5 w-5";
-=======
+
                             "h-5 w-5",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
@@ -348,8 +271,7 @@ export default function ListingDetail() {;
                           title: "Payment Processing"
                           description: "Redirecting to secure checkout..."
                         })
-<<<<<<< HEAD
-=======
+
                 <div className="space-y-3 mb-8">;
                   {listing.price !== null ? (;
                     <PaymentButton;
@@ -363,10 +285,7 @@ export default function ListingDetail() {;
                           title: "Payment Processing";
                           description: "Redirecting to secure checkout...";
                         });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       }}
                     />
@@ -399,12 +318,9 @@ export default function ListingDetail() {;
                         alt={listing.author.name}
                         className="h-12 w-12 rounded-full"
                         onError={(e) => {
-<<<<<<< HEAD
-                          const target = e.target as HTMLImageElement;
 
-=======
                           const target = e.target as HTMLImageElement,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                         }}
                       />
@@ -450,11 +366,8 @@ export default function ListingDetail() {;
       </Dialog>
     </AppLayout>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
@@ -528,9 +441,8 @@ export default function ListingDetail() {;
       </Dialog>;
     </AppLayout>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;

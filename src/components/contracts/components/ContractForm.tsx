@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -29,15 +26,7 @@ const formSchema = z.object({
   paymentAmount: z.string().min(1, "Payment amount is required")
   additionalClauses: z.array(z.string()).optional()})
 export type ContractFormValues = z.infer<typeof formSchema>
-<<<<<<< HEAD
-        values
-        talent
-        clientName
-}
 
-  )
-}
-=======
         values, 
         talent, 
         clientName, 
@@ -45,7 +34,7 @@ export type ContractFormValues = z.infer<typeof formSchema>
 };
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
@@ -322,8 +311,6 @@ export function ContractForm({;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

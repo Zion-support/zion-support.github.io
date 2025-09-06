@@ -1,11 +1,9 @@
 import React from 'react';
 interface ProfileProjectsProps {
   // Add props here as needed
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 export default function ProfileProjects({ }: ProfileProjectsProps) {
   return (
     <div>
@@ -13,13 +11,9 @@ export default function ProfileProjects({ }: ProfileProjectsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:src.disabled/components/profile/ProfileProjects.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======

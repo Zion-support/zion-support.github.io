@@ -1,48 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {CommunityDiscussion} from "@/components/CommunityDiscussion";
-import {Badge} from "@/components/ui/badge";
-import {UserCheck, Bell, MessageSquare, LogOut, Send, Settings} from "lucide-react";
-import {createTestNotification, createOnboardingNotification, createSystemNotification} from "@/utils/notifications";
-import {NotificationCenter} from "@/components/NotificationCenter";
-import {useToast} from "@/hooks/use-toast";
-import {Link} from "react-router-dom";
-export default function Dashboard() {;
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { CommunityDiscussion } from "@/components/CommunityDiscussion",
-import { Badge } from "@/components/ui/badge",
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",
-import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",
-import { NotificationCenter } from "@/components/NotificationCenter",
-<<<<<<< HEAD
-import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
-export default function Dashboard() {
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-  if (!user) return null;
-=======
-import { useToast } from "@/hooks/use-toast",
-import { Link } from "react-router-dom",
-export default function Dashboard() {
-  const { user, logout } = useAuth(),
-  const { toast } = useToast(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
-  if (!user) return null,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   const handleTestNotification = async () => {
     const result = await createTestNotification(user.id),
@@ -56,12 +13,10 @@ export default function Dashboard() {
         description: "Something went wrong"
         variant: "destructive"})
     }
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <>
       <Header />
@@ -77,20 +32,16 @@ export default function Dashboard() {
                   </div>
                   <h2 className="text-xl font-bold text-white">{user.displayName}</h2>
                   <p className="text-zion-slate-light mb-2">{user.email}</p>
-<<<<<<< HEAD
-                  <Badge
-=======
+
                   <Badge 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>
-<<<<<<< HEAD
-                  <Button
-=======
+
                   <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
                   >
@@ -134,26 +85,19 @@ export default function Dashboard() {
                       <Send size={16} className="text-zion-cyan" />
                       Send Test Notification
                     </Button>
-<<<<<<< HEAD
-                    <Button
-=======
+
                     <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
                         await createOnboardingNotification({
-<<<<<<< HEAD
-                          userId: user.id
-                          missingMilestone: 'profile_completed'
-                          userRole: user.userType === 'employer' |user.userType === 'buyer' ? 'client' : 'talent'
-                        });
-=======
+
                           userId: user.id,
                           missingMilestone: 'profile_completed',
                           userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
                         }),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                         toast({
                           title: "Onboarding notification sent"
                           description: "Check your notification center"
@@ -163,11 +107,9 @@ export default function Dashboard() {
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
-<<<<<<< HEAD
-                    <Button
-=======
+
                     <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
@@ -277,9 +219,7 @@ export default function Dashboard() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-}
-=======
+
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
@@ -501,8 +441,5 @@ export default function Dashboard() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

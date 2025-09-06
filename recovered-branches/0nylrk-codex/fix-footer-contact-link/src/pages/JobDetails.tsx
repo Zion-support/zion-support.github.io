@@ -1,31 +1,5 @@
 
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase  } from '@/components/icons';
-import { formatDistanceToNow  } from 'date-fns';
-import { toast  } from 'sonner';
-import { useAuth  } from '@/hooks/useAuth';
-import useJobDetails from '@/hooks/useJobDetails';
-<<<<<<< HEAD
-import { ApplyToJobModal  } from '@/components/messaging/job-application';
-import { SEO  } from '@/components/SEO';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
-export default function JobDetails() {
-  // Cast to specify the expected route param type since useParams may be untyped
-  const { jobId } = useParams() as { jobId?: string }
-  const { job, isLoading, error } = useJobDetails(jobId);
-  const { user, isAuthenticated } = useAuth();
 
-  const navigate = useNavigate();
-  const { isWhitelabel, brandName } = useWhitelabel();
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
-=======
 import {ApplyToJobModal} from '@/components/messaging/job-application';
 import {SEO} from '@/components/SEO';
 import {useWhitelabel} from '@/context/WhitelabelContext';
@@ -36,7 +10,7 @@ export default function JobDetails() {
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
@@ -96,33 +70,26 @@ export default function JobDetails() {
       return
     }
     setIsApplyModalOpen(true)
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleApplySuccess = async (appliedJobId: string) => {
     toast.success("Application submitted successfully!")
     setIsApplyModalOpen(false)
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified"
     return `$${budget.min} - $${budget.max}`
-<<<<<<< HEAD
-  }
-  const isOwnJob = user?.id === job.client_id;
-=======
+
   },
 
   const isOwnJob = user?.id === job.client_id,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <>
       <SEO
@@ -167,8 +134,7 @@ export default function JobDetails() {
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
-<<<<<<< HEAD
-=======
+
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -281,10 +247,7 @@ export default function JobDetails() {;
                   <div className="flex flex-wrap gap-2">;
                     {job.skills?.map((skill: string, i: number) => (;
                       <Badge key={i} variant="secondary">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {skill}
                       </Badge>
@@ -321,23 +284,19 @@ export default function JobDetails() {;
                   </div>
                 </div>
                 {!isOwnJob && (
-<<<<<<< HEAD
-                  <Button
-                    className="w-full mt-4"
-=======
+
                   <Button 
                     className="w-full mt-4" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                     onClick={handleApply}
                     disabled={isOwnJob}
                   >
                     Apply Now
                   </Button>
                 )}
-<<<<<<< HEAD
-=======
+
                 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>

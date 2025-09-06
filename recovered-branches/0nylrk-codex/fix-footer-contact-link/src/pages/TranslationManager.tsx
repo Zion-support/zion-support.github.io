@@ -1,86 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {toast} from "@/components/ui/use-toast";
-import {useTranslation} from "react-i18next";
-import {AlertTriangle, Check, Globe, Search, Loader2} from "lucide-react";
-import {useIsMobile} from "@/hooks/use-mobile";
-import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
-import {useTranslationService} from "@/hooks/useTranslationService";
-export default function TranslationManager() {;
-  const { t, i18n } = useTranslation();
-  const isMobile = useIsMobile();
-  const { supportedLanguages } = useLanguage();
-  const { translateContent, isTranslating } = useTranslationService();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState, useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/components/ui/use-toast",
-import { useTranslation } from "react-i18next",
-import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react",
-import { useIsMobile } from "@/hooks/use-mobile",
-<<<<<<< HEAD
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-import { useTranslationService } from "@/hooks/useTranslationService";
-export default function TranslationManager() {
-  const { t, i18n } = useTranslation();
 
-  const isMobile = useIsMobile();
-  const { supportedLanguages } = useLanguage();
-  const { translateContent, isTranslating } = useTranslationService();
-  const [selectedNamespace, setSelectedNamespace] = useState("translation");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [translations, setTranslations] = useState<Record<string, any>>({});
-  const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
-  const [editingKey, setEditingKey] = useState<string | null>(null);
-  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
-  const [isSaving, setIsSaving] = useState(false);
-  // Simulated translation data - in a real app, this would come from your backend
-  useEffect(() => {
-    // For demo purposes, we're using the loaded translations from i18next
-    const currentTranslations: Record<string, any> = {}
-=======
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-import { useTranslationService } from "@/hooks/useTranslationService",
-export default function TranslationManager() {
-  const { t, i18n } = useTranslation(),
-  const isMobile = useIsMobile(),
-  const { supportedLanguages } = useLanguage(),
-  const { translateContent, isTranslating } = useTranslationService(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
-  const [selectedNamespace, setSelectedNamespace] = useState("translation"),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [translations, setTranslations] = useState<Record<string any>>({}),
-  const [filteredKeys, setFilteredKeys] = useState<string[]>([]),
-  const [editingKey, setEditingKey] = useState<string | null>(null),
-  const [editedTranslations, setEditedTranslations] = useState<Record<string Record<SupportedLanguage string>>>({}),
-  const [isSaving, setIsSaving] = useState(false),
-  
-  // Simulated translation data - in a real app, this would come from your backend
-  useEffect(() => {
-    // For demo purposes, we're using the loaded translations from i18next
-    const currentTranslations: Record<string any> = {},
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace),
       if (res) {
@@ -92,78 +12,8 @@ export default function TranslationManager() {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
               acc[`${pre}${key}`] = obj[key]
-<<<<<<< HEAD
-            }
-            return acc
-          }, {} as Record<string, string>)
-        }
-        currentTranslations[lang.code] = flattenObject(res)
-      }
-    });
-    setTranslations(currentTranslations);
-    // Get all unique keys across all languages
-    const allKeys = new Set<string>();
-    Object.values(currentTranslations).forEach(langTranslations => {
-      Object.keys(langTranslations).forEach(key => allKeys.add(key))
-    });
-    setFilteredKeys(Array.from(allKeys))
-  }, [selectedNamespace, i18n]);
-  // Filter keys based on search query
-  useEffect(() => {
-    if (!searchQuery.trim()) {
-      // Get all unique keys across all languages
-      const allKeys = new Set<string>();
-      Object.values(translations).forEach(langTranslations => {
-        Object.keys(langTranslations).forEach(key => allKeys.add(key))
-      });
-      setFilteredKeys(Array.from(allKeys));
-      return
-    }
-    const query = searchQuery.toLowerCase().trim();
-    const filtered: string[] = []
-    // Search in keys and values
-    Object.values(translations).forEach(langTranslations => {
-      Object.entries(langTranslations).forEach(([key, value]) => {
-        if (
-          key.toLowerCase().includes(query) |
-          (typeof value === 'string' && value.toLowerCase().includes(query))
-        ) {
-          filtered.push(key)
-        }
-      })
-    });
-    setFilteredKeys([...new Set(filtered)])
-  }, [searchQuery, translations]);
-  const handleEdit = (key: string) => {
-    setEditingKey(key)
-    // Initialize edited translations for this key
-    const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>;
-    supportedLanguages.forEach(lang => {
-      initialEdits[lang.code] = translations[lang.code]?.[key] |''
-    });
-    setEditedTranslations({
-      ...editedTranslations;
-      [key]: initialEdits
-    })
-  }
-  const handleSave = (key: string) => {
-    setIsSaving(true)
-    // In a real application, you would save these to your backend
-    setTimeout(() => {
-      // Update translations with edited values
-      const updatedTranslations = { ...translations }
-      supportedLanguages.forEach(lang => {
-        if (!updatedTranslations[lang.code]) {
-<<<<<<< HEAD
-          updatedTranslations[lang.code] = {}
-        }
-        updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
-      });
-      setTranslations(updatedTranslations);
-      setEditingKey(null);
-      setIsSaving(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
@@ -269,9 +119,8 @@ export default function TranslationManager() {;
       const updatedTranslations = { ...translations },;
       supportedLanguages.forEach(lang => {;
         if (!updatedTranslations[lang.code]) {;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           updatedTranslations[lang.code] = {}
         }
@@ -287,13 +136,7 @@ export default function TranslationManager() {;
         title: t("translation.saved")
         description: t("translation.changes_saved")})
     }, 1000)
-<<<<<<< HEAD
-  }
-  const handleTranslateKey = async (key: string) => {
-    // Find first non-empty translation to use as source
-    let sourceLanguage: SupportedLanguage = 'en'
-    let sourceText = '';
-=======
+
   },
   
   const handleTranslateKey = async (key: string) => {
@@ -301,7 +144,7 @@ export default function TranslationManager() {;
     let sourceLanguage: SupportedLanguage = 'en',
     let sourceText = '',
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     for (const lang of supportedLanguages.map(l => l.code)) {
       if (translations[lang]?.[key]) {
         sourceLanguage = lang,
@@ -321,12 +164,10 @@ export default function TranslationManager() {;
         sourceText
         'general'
         sourceLanguage
-<<<<<<< HEAD
-      );
-=======
+
       ),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       if (error) {
         toast({
           title: t('translation.translation_failed')
@@ -338,12 +179,10 @@ export default function TranslationManager() {;
       setEditedTranslations({
         ...editedTranslations,
         [key]: translatedText
-<<<<<<< HEAD
-      });
-=======
+
       }),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       toast({
         title: t('translation.translation_success')
         description: t('translation.content_translated')})
@@ -353,36 +192,10 @@ export default function TranslationManager() {;
         title: t('translation.translation_failed')
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
-<<<<<<< HEAD
-    }
-  }
-  const handleCancel = () => {
-    setEditingKey(null)
-  }
-  const handleChange = (lang: SupportedLanguage, key: string, value: string) => {
-    setEditedTranslations({
-      ...editedTranslations;
-      [key]: {
-        ...editedTranslations[key]
-        [lang]: value
-      }
-    })
-  }
-  const getMissingLanguages = (key: string): SupportedLanguage[] => {
-    return supportedLanguages
-      .map(lang => lang.code)
-      .filter(lang => !translations[lang]?.[key])
-  }
 
-  return (
-    <>
-<<<<<<< HEAD
-      <SEO
-        title={t('translation.manager_title')}
-=======
       <SEO 
         title={t('translation.manager_title')} 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
@@ -465,10 +278,8 @@ export default function TranslationManager() {;
     <>;
       <SEO;
         title={t('translation.manager_title')} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         description={t('translation.manager_description')}
       />
@@ -504,13 +315,9 @@ export default function TranslationManager() {;
                   </TabsList>
                 </Tabs>
               </div>
-<<<<<<< HEAD
-=======
+
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Translations table */}
               <div className="border rounded-md">
@@ -556,13 +363,10 @@ export default function TranslationManager() {;
                               ))}
                             </div>
                             <div className="flex gap-2 mt-4">
-<<<<<<< HEAD
-                              <Button
-                                size="sm"
-=======
+
                               <Button 
                                 size="sm" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >
@@ -577,17 +381,7 @@ export default function TranslationManager() {;
                                     {t('general.save')}
                                   </>
                                 )}
-<<<<<<< HEAD
-                              </Button>
-                              <Button
-                                size="sm"
-                                variant="outline"
-                                onClick={handleCancel}
-                              >
-                                {t('general.cancel')}
-                              </Button>
-                              <Button
-=======
+
                               </Button>
                               <Button 
                                 size="sm" 
@@ -597,7 +391,7 @@ export default function TranslationManager() {;
                                 {t('general.cancel')}
                               </Button>
                               <Button
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                                 size="sm"
                                 variant="secondary"
                                 onClick={() => handleTranslateKey(key)}
@@ -650,17 +444,7 @@ export default function TranslationManager() {;
                     ))}
                   </div>
                 )}
-<<<<<<< HEAD
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </main>
-      <Footer />
-    </>
-  )
-}
-=======
+
               </div>;
             </div>;
           </CardContent>;
@@ -671,4 +455,4 @@ export default function TranslationManager() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

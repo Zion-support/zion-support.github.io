@@ -1,11 +1,9 @@
 import React from 'react';
 interface HomePageSkeletonProps {
   // Add props here as needed
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 export default function HomePageSkeleton({ }: HomePageSkeletonProps) {
   return (
     <div>
@@ -13,13 +11,9 @@ export default function HomePageSkeleton({ }: HomePageSkeletonProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:src.disabled/components/home/HomePageSkeleton.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======

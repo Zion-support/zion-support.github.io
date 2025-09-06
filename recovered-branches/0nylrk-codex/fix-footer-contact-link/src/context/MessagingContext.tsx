@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { MessagingContextType  } from '@/types/messaging';
-import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
-// Default context used when React type definitions are missing
-<<<<<<< HEAD
-=======
+
 const defaultContext: MessagingContextType = {
   messages: [],
   conversations: [],
@@ -21,7 +14,7 @@ const defaultContext: MessagingContextType = {
   fetchConversations: async () => {},
   loadMessages: async () => {}
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -42,10 +35,8 @@ const defaultContext: MessagingContextType = {;
   fetchConversations: async () => {},;
   loadMessages: async () => {}
 },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const defaultContext: MessagingContextType = {
@@ -67,31 +58,24 @@ const defaultContext: MessagingContextType = {
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
   defaultContext as MessagingContextType
-<<<<<<< HEAD
-);
-=======
+
 ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 // Hook for using the messaging context
 export function useMessaging(): MessagingContextType {
-<<<<<<< HEAD
-  // Cast to avoid type errors when React type definitions are missing;
-  const context = useContext(MessagingContext) as MessagingContextType;
-=======
+
   // Cast to avoid type errors when React type definitions are missing
   const context = useContext(MessagingContext) as MessagingContextType,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   if (context === undefined) {
     throw new Error('useMessaging must be used within a MessagingProvider')
   }
   return context
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
   const { user } = useAuth();
@@ -148,13 +132,8 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 
   return (
     <MessagingContext.Provider value={contextValue}>
-<<<<<<< HEAD
-      {children}
-    </MessagingContext.Provider>
-  )
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 ;
 // Provider component;
@@ -212,9 +191,8 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
   };
   return (;
     <MessagingContext.Provider value={contextValue}>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {children}
     </MessagingContext.Provider>;

@@ -1,70 +1,11 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-=======
+
 import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
 
-=======
   Menu,
   X,
   ChevronDown,
@@ -120,7 +61,7 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -484,20 +425,7 @@ const serviceCategories = [
         price: '$1,999/month'
       }
       {
-<<<<<<< HEAD
-        name: 'Sustainable Supply Chain'
-        href: '/sustainable-supply-chain'
-        description: 'Green supply chain solutions'
-        price: '$3,999/month'
-      }
-    ]
-  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' }
-      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' }
-      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' }
-      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
-    ]
-  }
-=======
+
         name: 'Sustainable Supply Chain',
         href: '/sustainable-supply-chain',
         description: 'Green supply chain solutions',
@@ -510,16 +438,7 @@ const serviceCategories = [
       { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
     ]
   }
-<<<<<<< HEAD
 
-];
-=======
-<<<<<<< HEAD
-=======
-
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const companyLinks = [
@@ -556,15 +475,9 @@ const resourceLinks = [
   { name: '🔐 Security Center', href: '/security', icon: Shield }
   { name: '📊 Analytics', href: '/analytics', icon: BarChart3 },];  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
 ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function UltraFuturisticNavigation2028() {
-=======
-export default function UltraFuturisticNavigation2028() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -583,14 +496,11 @@ export default function UltraFuturisticNavigation2028() {;
         service.description.toLowerCase().includes(searchQuery.toLowerCase())    )
   );
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  }
-=======
+
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
 =======
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleCategoryLeave = () => {
@@ -660,13 +570,9 @@ export default function UltraFuturisticNavigation2028() {;
       {/* Main Navigation */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Logo */}
           <div className='flex items-center'>
@@ -744,50 +650,12 @@ export default function UltraFuturisticNavigation2028() {;
                                 </div>
                                 <span className='text-xs text-purple-400 font-medium'>
                                   {service.price}
-<<<<<<< HEAD
-                                </span>                              </div>            {/* Service Categories */}
-            <div className="relative group">
-              <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">
-                <Sparkles className="w-5 h-5" />
-                <span>Services</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {/* Mega Menu */}
-              <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                <div className="p-6">
-                  <div className="grid grid-cols-3 gap-6">
-                    {serviceCategories.slice(0, 6).map((category) => (
-                      <div key={category.title} className="space-y-3">
-                        <div className="flex items-center space-x-3">
-                          <category.icon className={`w-6 h-6 bg-gradient-to-r ${category.color} bg-clip-text text-transparent`} />
-                          <h3 className="font-semibold text-white">{category.title}</h3>
-                        </div>
-                        <p className="text-sm text-purple-300">{category.description}</p>
-                        <div className="space-y-2">
-                          {category.services.slice(0, 2).map((service) => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors group"
-                            >
-                              <div className="flex items-center justify-between">
-                                <div>
-                                  <h4 className="text-sm font-medium text-white group-hover:text-purple-300 transition-colors">
-                                    {service.name}
-                                  </h4>
-                                  <p className="text-xs text-purple-300">{service.description}</p>
-                                </div>
-                                <span className="text-xs text-purple-400 font-medium">{service.price}</span>
-                              </div>
-=======
+
                                 </span>                              </div>
 
                               </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </Link>
                           ))}
@@ -815,13 +683,9 @@ export default function UltraFuturisticNavigation2028() {;
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Company Links */}
             {companyLinks.slice(1, 5).map(link => (
@@ -841,12 +705,7 @@ export default function UltraFuturisticNavigation2028() {;
                 <link.icon className="w-4 h-4" />
                 <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
               </Link>
-<<<<<<< HEAD
-            ))}
-          </div>
-          {/* Search and Actions */}
-          <div className='hidden lg:flex items-center space-x-4'>
-=======
+
 
             ))}
           </div>
@@ -854,10 +713,7 @@ export default function UltraFuturisticNavigation2028() {;
           {/* Search and Actions */}
           <div className='hidden lg:flex items-center space-x-4'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Search */}
             <div className='relative'>
@@ -906,13 +762,9 @@ export default function UltraFuturisticNavigation2028() {;
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -922,13 +774,9 @@ export default function UltraFuturisticNavigation2028() {;
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='px-4 py-6 space-y-6'>
@@ -986,43 +834,20 @@ export default function UltraFuturisticNavigation2028() {;
                           key={service.name}
                           href={service.href}
                           onClick={closeMenu}
-<<<<<<< HEAD
-                          className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
-                        >
-                          <h4 className='text-sm font-medium text-white'>
-                            {service.name}
-                          </h4>
-                          <p className='text-xs text-purple-300'>
-                            {service.description}
-                          </p>
-                          <span className='text-xs text-purple-400 font-medium'>
-                            {service.price}
-                          </span>                        </Link>                          className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
-                        >
-                          <h4 className="text-sm font-medium text-white">{service.name}</h4>
-                          <p className="text-xs text-purple-300">{service.description}</p>
-                          <span className="text-xs text-purple-400 font-medium">{service.price}</span>
-=======
+
 
                         </Link>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Mobile Company Links */}
               <div className='space-y-4'>
@@ -1042,22 +867,7 @@ export default function UltraFuturisticNavigation2028() {;
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}
-<<<<<<< HEAD
-                      className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
-                    >
-                      <link.icon className='w-5 h-5 text-purple-400' />
-                      <span className='text-purple-200'>
-                        {link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}
-                      </span>                    </Link>                      className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
-                    >
-                      <link.icon className="w-5 h-5 text-purple-400" />
-                      <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
-                  ))}
-                </div>
-              </div>
-              {/* Mobile CTA */}
-              <div className='pt-4 border-t border-purple-500/30'>
-=======
+
 
                     </Link>
 
@@ -1068,10 +878,7 @@ export default function UltraFuturisticNavigation2028() {;
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Link
                   href='/contact'
@@ -1088,13 +895,9 @@ export default function UltraFuturisticNavigation2028() {;
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
@@ -1118,28 +921,12 @@ export default function UltraFuturisticNavigation2028() {;
                     </div>
                     <span className='text-xs text-purple-400 font-medium'>
                       {service.price}
-<<<<<<< HEAD
-                    </span>                  </div>                <Link
-                  key={service.name}
-                  href={service.href}
-                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="text-sm font-medium text-white">{service.name}</h4>
-                      <p className="text-xs text-purple-300">{service.description}</p>
-                    </div>
-                    <span className="text-xs text-purple-400 font-medium">{service.price}</span>
-                  </div>
-=======
+
                     </span>                  </div>
 
                   </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </Link>
               ))}
@@ -1148,12 +935,9 @@ export default function UltraFuturisticNavigation2028() {;
         </div>
       )}
     </nav>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
+
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
 =======
 }

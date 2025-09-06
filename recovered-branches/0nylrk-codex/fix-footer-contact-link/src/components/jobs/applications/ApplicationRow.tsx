@@ -1,37 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {formatDistanceToNow} from "date-fns";
-import {Link} from "react-router-dom";
-import {Calendar, User, FileText, BarChart} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Avatar} from "@/components/ui/avatar";
-import {TableRow, TableCell} from "@/components/ui/table";
-import {JobApplication, ApplicationStatus} from "@/types/jobs";
-import {StatusBadge} from "./StatusBadge";
-import {ScoreBadge} from "./ScoreBadge";
-import {ApplicationActions} from "./ApplicationActions";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { Calendar, User, FileText, BarChart } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Avatar } from "@/components/ui/avatar",
-import { TableRow, TableCell } from "@/components/ui/table",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { StatusBadge } from "./StatusBadge",
-<<<<<<< HEAD
-import { ScoreBadge } from "./ScoreBadge";
-import { ApplicationActions } from "./ApplicationActions";
-=======
-import { ScoreBadge } from "./ScoreBadge",
-import { ApplicationActions } from "./ApplicationActions",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplicationRowProps {
 
@@ -42,23 +11,9 @@ interface ApplicationRowProps {
 
   onViewScore: (application: JobApplication) => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function ApplicationRow({;
-  application;
-  processingId;
-  onViewApplication;
-  onStatusChange;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export function ApplicationRow({
-  application,
-  processingId,
-  onViewApplication,
-  onStatusChange,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
   onViewScore
 }: ApplicationRowProps) {
   return (
@@ -118,8 +73,7 @@ export function ApplicationRow({
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
-<<<<<<< HEAD
-=======
+
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { Calendar, User, FileText, BarChart } from "lucide-react",;
@@ -202,10 +156,7 @@ export function ApplicationRow({;
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           application={application}
           processingId={processingId}

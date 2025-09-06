@@ -4,16 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-  Brain
-  Cloud
-  RefreshCw
-  Wifi
-  Shield
-  BarChart3
-  ArrowRight
-  Zap;} from 'lucide-react';import {
-=======
+
   Brain,
   Cloud,
   RefreshCw,
@@ -22,7 +13,7 @@ import {
   BarChart3,
   ArrowRight,;
   Zap,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   Brain;
   Cloud
   RefreshCw
@@ -161,52 +152,9 @@ const ServicesSection: React.FC = () => {
       }
     },  }
   const cardVariants = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    hidden: { opacity: 0, y: 20 }
-    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
-      }
-    }
-  }
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 }
-    visible: { opacity: 1, y: 0 }
-  }
-=======
+
     hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
-    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
-      }
-    }
-=======
-    visible: { opacity: 1, y: 0 },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>
-      {/* Background Elements */}
-      <div className='absolute inset-0'>
-        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
-        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />
-      </div>
-<<<<<<< HEAD
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}  }
-=======
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
-=======
-        {/* Section Header */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
       {/* Background Elements */}
@@ -233,15 +181,10 @@ const ServicesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className='text-center mb-16'        >          className="text-center mb-16"
-=======
+
           className='text-center mb-16'        >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <motion.div
@@ -250,14 +193,10 @@ const ServicesSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
             className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
-<<<<<<< HEAD
-=======
+
 
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
@@ -269,23 +208,17 @@ const ServicesSection: React.FC = () => {
             </span>
           </h2>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-<<<<<<< HEAD
-            We deliver cutting-edge technology solutions that drive innovation
-=======
+
             We deliver cutting-edge technology solutions that drive innovation,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             efficiency, and growth for businesses across all industries.          </p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth
             for businesses across all industries.
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Grid */}
         <motion.div
@@ -319,55 +252,7 @@ const ServicesSection: React.FC = () => {
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>
                   {service.title}
                 </h3>
-<<<<<<< HEAD
-                <p className='text-gray-300 mb-6 leading-relaxed'>                  {service.description}
-                </p>
-                {/* Features */}            >
-              <div className="relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden">
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                {/* Content */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                {/* Features */}
-                <ul className='space-y-2 mb-8'>
-                  {service.features.map(feature => (
-                    <li
-                      key={feature}
-                      className='flex items-center space-x-3 text-gray-400'
-                    >
-                      <div className='w-2 h-2 bg-blue-400 rounded-full' />
-                      <span className='text-sm'>{feature}</span>                    </li>                <ul className="space-y-2 mb-8">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center space-x-3 text-gray-400">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full" />
-                      <span className="text-sm">{feature}</span>
-                  ))}
-                </ul>
-                {/* CTA */}
-                <Link
-                  href={service.href}
-                  className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1'
-                >
-                  <span className='font-medium'>Learn More</span>
-                  <ArrowRight className='w-4 h-4' />
-                </Link>
-                {/* Hover Effect */}
-                <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />              </div>                >
-                  <span className="font-medium">Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                {/* Hover Effect */}
-                <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
-=======
+
 
                 <p className='text-gray-300 mb-6 leading-relaxed'>                  {service.description}
                 </p>
@@ -379,22 +264,15 @@ const ServicesSection: React.FC = () => {
 
                 {/* Features */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </motion.div>
           ))}
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Bottom CTA */}
         <motion.div
@@ -403,13 +281,9 @@ const ServicesSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
           className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
@@ -445,24 +319,8 @@ const ServicesSection: React.FC = () => {
       </div>
     </section>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default ServicesSection;  )
-}
-export default ServicesSection;
 
-<<<<<<< HEAD
-=======
-export default ServicesSection;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default ServicesSection;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

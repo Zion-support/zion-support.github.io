@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
+
   const half = value - filled >= 0.5
   const total = 5
 }
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import React from 'react',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -25,15 +22,11 @@ export function RatingStars({ value;
             />
           )
         }
-<<<<<<< HEAD
-        if (i === filled && half) {
-          return (
-            <StarHalf
-=======
+
         if (i === filled && half) {;
           return (;
             <StarHalf;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
@@ -43,8 +36,7 @@ export function RatingStars({ value;
       })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
-<<<<<<< HEAD
-=======
+
               className="h-4 w-4 fill-zion-cyan text-zion-cyan";
             />;
           );
@@ -53,17 +45,12 @@ export function RatingStars({ value;
       })}
       {typeof count === 'number' && (;
         <span className="text-xs ml-1">({count})</span>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       )}
     </div>
   )
 }
-<<<<<<< HEAD
-}
-=======
+
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

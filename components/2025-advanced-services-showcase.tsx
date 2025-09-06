@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
   Search
@@ -799,23 +797,11 @@ const getServiceFeatures = (service: any) => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-          {/* Category Filters */}
-          <div className='mt-6'>
-            <div className='flex flex-wrap gap-3'>
-              {categories.map(category => (                <button
-          {/* Category Filters */}
-          <div className="mt-6">
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-=======
+
 
                 <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -832,13 +818,9 @@ const getServiceFeatures = (service: any) => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Results Summary */}
         <div className='mb-8'>
@@ -912,24 +894,12 @@ const getServiceFeatures = (service: any) => {
                 </div>
               ) : (
                 <div className='space-y-6'>
-<<<<<<< HEAD
-                  {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                          {filteredServices.map((service) => (
-          <ServiceCard key={service.id} service={service} />
-        ))}
-                </div>
-              ) : (
-                <div className="space-y-6">
-                  {filteredServices.map((service) => (
-=======
+
                   {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />
 
                     <ServiceList key={service.id} service={service} />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>
@@ -937,13 +907,9 @@ const getServiceFeatures = (service: any) => {
             </AnimatePresence>
           )}
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <div className='mt-16 text-center'>
@@ -993,23 +959,7 @@ const getServiceFeatures = (service: any) => {
                 Call Now
               </a>
             </div>
-<<<<<<< HEAD
+
           </div>
-          <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
-            Get Started Today
-          </button>
-        </motion.div>
-      </div>
-    </div>
-);        </div>
-      </div>
-    </div>
-  );
-}
-=======
-          </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

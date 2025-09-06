@@ -3,25 +3,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
-<<<<<<< HEAD
-  TrendingUp
-  BarChart3
-  DollarSign
-  Users
-  Globe
-  Target
-  Clock
-  Award
-  ArrowRight
-  ExternalLink
-  PieChart
-  LineChart
-  Activity
-  Zap;
-} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Zap } from 'lucide-react';
-=======
+
   TrendingUp,
   BarChart3,
   DollarSign,
@@ -36,20 +18,7 @@ import { Zap } from 'lucide-react';
   LineChart,
   Activity,;
   Zap,;
-<<<<<<< HEAD
-} from 'lucide-react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Zap } from 'lucide-react';
-=======
-} from 'lucide-react';
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function MarketResearchPage() {
 
   const marketSegments = [
@@ -65,146 +34,7 @@ export default function MarketResearchPage() {
       ]
       topPlayers: ['OpenAI', 'Anthropic', 'Google AI', 'Microsoft Azure AI']
       opportunities: [
-<<<<<<< HEAD
-        'AI content generation tools'
-        'Predictive analytics platforms'
-        'Automated customer service'
-        'Intelligent process automation'
-      ]
-      color: 'from-fuchsia-500 to-purple-600'
-      icon: <Zap className='w-8 h-8 text-white' />
-    },    {      opportunities: [
-        'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation'
-      ];
-      color: 'from-fuchsia-500 to-purple-600'
-      icon: <Zap className="w-8 h-8 text-white" />
-    }
-    {
-      name: 'Database & Analytics'
-      marketSize: '$8.9B'
-      growthRate: '18.7% CAGR'
-      keyTrends: [
-        'Real-time analytics demand'
-        'Cloud database migration'
-        'Data privacy regulations'
-        'Performance optimization focus'
-      ]
-      topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk']
-      opportunities: [
-        'Database performance monitoring'
-        'Real-time analytics dashboards'
-        'Data visualization tools'
-        'Query optimization platforms'
-      ]
-      color: 'from-cyan-500 to-blue-600'
-      icon: <BarChart3 className='w-8 h-8 text-white' />
-    },    {      opportunities: [
-        'Database performance monitoringReal-time analytics dashboardsData visualization toolsQuery optimization platforms'
-      ];
-      color: 'from-cyan-500 to-blue-600'
-      icon: <BarChart3 className="w-8 h-8 text-white" />
-    }
-    {
-      name: 'Security & Identity'
-      marketSize: '$12.3B'
-      growthRate: '21.2% CAGR'
-      keyTrends: [
-        'Zero-trust security adoption'
-        'Multi-factor authentication growth'
-        'API security concerns'
-        'Compliance requirements increasing'
-      ]
-      topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin']
-      opportunities: [
-        'Identity verification platforms'
-        'API security gateways'
-        'Compliance monitoring tools'
-        'Threat detection systems'
-      ]
-      color: 'from-green-500 to-emerald-600'
-      icon: <Target className='w-8 h-8 text-white' />
-    },    {      opportunities: [
-        'Identity verification platformsAPI security gatewaysCompliance monitoring toolsThreat detection systems'
-      ];
-      color: 'from-green-500 to-emerald-600'
-      icon: <Target className="w-8 h-8 text-white" />
-    }
-    {
-      name: 'Business Intelligence'
-      marketSize: '$22.1B'
-      growthRate: '19.8% CAGR'
-      keyTrends: [
-        'Self-service BI adoption'
-        'Real-time data integration'
-        'Mobile BI growth'
-        'Predictive analytics demand'
-      ]
-      topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik']
-      opportunities: [
-        'Custom dashboard builders'
-        'Data integration platforms'
-        'Mobile analytics solutions'
-        'Predictive modeling tools'
-      ]
-      color: 'from-orange-500 to-red-600'
-      icon: <Activity className='w-8 h-8 text-white' />
-    },    {      opportunities: [
-        'Custom dashboard buildersData integration platformsMobile analytics solutionsPredictive modeling tools'
-      ];
-      color: 'from-orange-500 to-red-600'
-      icon: <Activity className="w-8 h-8 text-white" />
-    }
-    {
-      name: 'API Management'
-      marketSize: '$6.8B'
-      growthRate: '24.1% CAGR'
-      keyTrends: [
-        'Microservices architecture growth'
-        'API-first development'
-        'Rate limiting importance'
-        'Developer experience focus'
-      ]
-      topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management']
-      opportunities: [
-        'API rate limiting services'
-        'Developer portal platforms'
-        'API analytics tools'
-        'Webhook management systems'
-      ]
-      color: 'from-indigo-500 to-purple-600'
-      icon: <Globe className='w-8 h-8 text-white' />
-    },    {      opportunities: [
-        'API rate limiting servicesDeveloper portal platformsAPI analytics toolsWebhook management systems'
-      ];
-      color: 'from-indigo-500 to-purple-600'
-      icon: <Globe className="w-8 h-8 text-white" />
-    }
-    {
-      name: 'User Experience Analytics'
-      marketSize: '$9.4B'
-      growthRate: '20.5% CAGR'
-      keyTrends: [
-        'Privacy-compliant tracking'
-        'Real-time user insights'
-        'Conversion optimization focus'
-        'Mobile app analytics growth'
-      ]
-      topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude']
-      opportunities: [
-        'Heatmap and session recording'
-        'A/B testing platforms'
-        'User journey mapping tools'
-        'Conversion funnel analytics'
-      ]
-      color: 'from-teal-500 to-cyan-600'
-      icon: <Users className='w-8 h-8 text-white' />
-    },  ];      opportunities: [
-        'Heatmap and session recordingA/B testing platformsUser journey mapping toolsConversion funnel analytics'
-      ];
-      color: 'from-teal-500 to-cyan-600'
-      icon: <Users className="w-8 h-8 text-white" />
-    }
-=======
+
         'AI content generation tools',
         'Predictive analytics platforms',
         'Automated customer service',
@@ -212,133 +42,7 @@ export default function MarketResearchPage() {
       ],
       color: 'from-fuchsia-500 to-purple-600',
       icon: <Zap className='w-8 h-8 text-white' />,
-<<<<<<< HEAD
-    },    {
 
-=======
-    },    {      opportunities: [
-        'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation';
-      ];
-      color: 'from-fuchsia-500 to-purple-600',
-      icon: <Zap className="w-8 h-8 text-white" />
-    };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    {
-
-      name: 'Database & Analytics',
-      marketSize: '$8.9B',
-      growthRate: '18.7% CAGR',
-      keyTrends: [
-        'Real-time analytics demand',
-        'Cloud database migration',
-        'Data privacy regulations',
-        'Performance optimization focus',
-      ],
-      topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
-
-      opportunities: [
-        'Database performance monitoring',
-        'Real-time analytics dashboards',
-        'Data visualization tools',
-        'Query optimization platforms',
-      ],
-      color: 'from-cyan-500 to-blue-600',
-      icon: <BarChart3 className='w-8 h-8 text-white' />,
-    },    {
-
-    {
-
-      name: 'Security & Identity',
-      marketSize: '$12.3B',
-      growthRate: '21.2% CAGR',
-      keyTrends: [
-        'Zero-trust security adoption',
-        'Multi-factor authentication growth',
-        'API security concerns',
-        'Compliance requirements increasing',
-      ],
-      topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
-
-      opportunities: [
-        'Identity verification platforms',
-        'API security gateways',
-        'Compliance monitoring tools',
-        'Threat detection systems',
-      ],
-      color: 'from-green-500 to-emerald-600',
-      icon: <Target className='w-8 h-8 text-white' />,
-    },    {
-
-    {
-
-      name: 'Business Intelligence',
-      marketSize: '$22.1B',
-      growthRate: '19.8% CAGR',
-      keyTrends: [
-        'Self-service BI adoption',
-        'Real-time data integration',
-        'Mobile BI growth',
-        'Predictive analytics demand',
-      ],
-      topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
-
-      opportunities: [
-        'Custom dashboard builders',
-        'Data integration platforms',
-        'Mobile analytics solutions',
-        'Predictive modeling tools',
-      ],
-      color: 'from-orange-500 to-red-600',
-      icon: <Activity className='w-8 h-8 text-white' />,
-    },    {
-
-    {
-
-      name: 'API Management',
-      marketSize: '$6.8B',
-      growthRate: '24.1% CAGR',
-      keyTrends: [
-        'Microservices architecture growth',
-        'API-first development',
-        'Rate limiting importance',
-        'Developer experience focus',
-      ],
-      topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
-
-      opportunities: [
-        'API rate limiting services',
-        'Developer portal platforms',
-        'API analytics tools',
-        'Webhook management systems',
-      ],
-      color: 'from-indigo-500 to-purple-600',
-      icon: <Globe className='w-8 h-8 text-white' />,
-    },    {
-
-    {
-
-      name: 'User Experience Analytics',
-      marketSize: '$9.4B',
-      growthRate: '20.5% CAGR',
-      keyTrends: [
-        'Privacy-compliant tracking',
-        'Real-time user insights',
-        'Conversion optimization focus',
-        'Mobile app analytics growth',
-      ],
-      topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
-
-      opportunities: [
-        'Heatmap and session recording',
-        'A/B testing platforms',
-        'User journey mapping tools',
-        'Conversion funnel analytics',
-      ],
-      color: 'from-teal-500 to-cyan-600',
-      icon: <Users className='w-8 h-8 text-white' />,
-    },  ];
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const competitiveAnalysis = [
     {
@@ -670,26 +374,18 @@ export default function MarketResearchPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Market Segments */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Market Segment Analysis
             </h2>
@@ -797,13 +493,9 @@ export default function MarketResearchPage() {
                             ))}
                           </ul>
                         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* Top Players */}
                         <div>
@@ -829,13 +521,9 @@ export default function MarketResearchPage() {
                           </ul>
                         </div>
                       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Opportunities */}
                       <div className='mt-8 pt-6 border-t border-gray-700'>
@@ -861,15 +549,11 @@ export default function MarketResearchPage() {
                               {opportunity}
                             </div>
                           ))}
-<<<<<<< HEAD
-=======
+
 
                         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </div>
@@ -880,26 +564,18 @@ export default function MarketResearchPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Competitive Analysis */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Competitive Landscape Analysis
             </h2>
@@ -974,40 +650,19 @@ export default function MarketResearchPage() {
                     </div>
                   </div>
                   {/* Strengths */}
-<<<<<<< HEAD
-                  <div className='mb-4'>
-                    <h4 className='text-sm font-semibold text-green-400 mb-2'>
-                      Strengths:
-                    </h4>
-                    <ul className='space-y-1 text-xs text-gray-300'>
-                      {analysis.strengths.map((strength, strengthIndex) => (
-                        <li key={strengthIndex} className='flex items-start'>
-                          <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {strength}                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
-                      {analysis.strengths.map((strength, strengthIndex) => (
-                        <li key={strengthIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-=======
+
 
                           {strength}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Weaknesses */}
                   <div>
@@ -1032,26 +687,18 @@ export default function MarketResearchPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Market Trends */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Emerging Market Trends
             </h2>
@@ -1116,31 +763,11 @@ export default function MarketResearchPage() {
                       </span>
                     </div>
                   </div>
-<<<<<<< HEAD
-                  <p className='text-gray-300 mb-4'>{trend.description}</p>
-                  <div className='mb-4'>
-                    <h4 className='text-sm font-semibold text-gray-400 mb-2'>
-                      Examples:
-                    </h4>
-                    <ul className='space-y-1 text-xs text-gray-300'>
-                      {trend.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} className='flex items-start'>
-                          <span className='w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {example}
-                  <p className="text-gray-300 mb-4">{trend.description}</p>
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
-                      {trend.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
-=======
+
 
                           {example}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </li>
                       ))}
@@ -1161,26 +788,18 @@ export default function MarketResearchPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Strategies */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Pricing Strategy Analysis
             </h2>
@@ -1237,13 +856,9 @@ export default function MarketResearchPage() {
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Cons */}
                   <div className='mb-4'>
@@ -1263,13 +878,9 @@ export default function MarketResearchPage() {
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Best For */}
                   <div>
@@ -1285,26 +896,18 @@ export default function MarketResearchPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Apply This Market Intelligence?
           </h2>
@@ -1336,27 +939,7 @@ export default function MarketResearchPage() {
             >
               Get Strategic Consultation
             </Button>
-<<<<<<< HEAD
+
             <Button
-              href='/services'
-              variant='outline'
-              size='lg'
-              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'              href="/services"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
-              View Our Services
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
-}
-=======
-            <Button
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

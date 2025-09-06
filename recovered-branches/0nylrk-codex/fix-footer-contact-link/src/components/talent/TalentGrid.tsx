@@ -1,19 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { TalentCard } from "@/components/talent/TalentCard";
-import { TalentProfile } from "@/types/talent";
-export interface TalentGridProps {
 
-  talents: TalentProfile[]
-  isLoading: boolean
-  onTalentClick: (id: string) => void
-  savedTalentIds: string[]
-  onToggleSave: (id: string, isSaved: boolean) => void
-  isAuthenticated: boolean
-  viewProfile?: (id: string) => void
-  clearFilters?: () => void;
-=======
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
 =======
@@ -22,7 +8,7 @@ import {TalentProfile} from "@/types/talent";
 =======
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export interface TalentGridProps {
   talents: TalentProfile[],
@@ -31,16 +17,10 @@ export interface TalentGridProps {
   savedTalentIds: string[],
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean,
-<<<<<<< HEAD
-  viewProfile?: (id: string) => void,;
-  clearFilters?: () => void;
-=======
+
   viewProfile?: (id: string) => void,
   clearFilters?: () => void,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   handleRequestHire?: (talent: TalentProfile) => void
 }
@@ -51,30 +31,13 @@ export function TalentGrid({
   savedTalentIds
   onToggleSave
 
-<<<<<<< HEAD
-  isAuthenticated;
-  viewProfile;
-  clearFilters;
-=======
+
 export function TalentGrid({ 
   talents, 
   isLoading, 
   onTalentClick, 
   savedTalentIds, 
-<<<<<<< HEAD
-  onToggleSave, ;
-  isAuthenticated;
-  viewProfile;
-  clearFilters;
-=======
-  onToggleSave, 
-  isAuthenticated,
-  viewProfile,
-  clearFilters,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   handleRequestHire
 }: TalentGridProps) {
@@ -84,22 +47,9 @@ export function TalentGrid({
       handleRequestHire(talent)
     } else {
       // Default implementation
-<<<<<<< HEAD
-      console.log("Request to hire:", talent.id)
-    }
-  }
-  const handleViewProfile = (id: string) => {
-    if (viewProfile) {
-      viewProfile(id)
-    } else {
-      onTalentClick(id)
-    }
-<<<<<<< HEAD
-  }
 
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard",;
@@ -142,9 +92,8 @@ export function TalentGrid({;
       onTalentClick(id);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -164,8 +113,7 @@ export function TalentGrid({;
         >
           Clear Filters
         </button>
-<<<<<<< HEAD
-=======
+
   };
   if (isLoading) {;
     return <div className="py-8 text-center">;
@@ -184,18 +132,14 @@ export function TalentGrid({;
         >
           Clear Filters
         </button>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
     </div>
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {talents.map((talent) => (
@@ -209,13 +153,9 @@ export function TalentGrid({;
           isAuthenticated={isAuthenticated}
         />
       ))}
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
+
     </div>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

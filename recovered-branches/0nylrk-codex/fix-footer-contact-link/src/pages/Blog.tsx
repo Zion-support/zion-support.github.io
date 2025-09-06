@@ -1,44 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {Link} from "react-router-dom";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {SEO} from "@/components/SEO";
-import {Card, CardContent, CardFooter} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
-import {BlogPost} from "@/types/blog";
-import {Search} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState } from "react",
-import { Link } from "react-router-dom",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { GradientHeading } from "@/components/GradientHeading",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-<<<<<<< HEAD
-import { BlogPost } from "@/types/blog";
-import { Search } from "lucide-react";
-// Sample blog data - in a real app this would come from an API or CMS
-const BLOG_POSTS: BlogPost[] = [
-  {
-=======
-import { BlogPost } from "@/types/blog",
-import { Search } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
@@ -47,17 +9,8 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "ai-trends-2025",
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-    id: "ai-trends-2025"
-    title: "10 Emerging AI Trends to Watch in 2025"
-    slug: "ai-trends-2025"
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
 
-    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>
@@ -69,8 +22,7 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>5. AI for Climate Solutions</h2>
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`,
     author: {
-<<<<<<< HEAD
-=======
+
       name: "Dr. Alicia Zhang",
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -88,28 +40,7 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "optimize-ai-listings",
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-      name: "Dr. Alicia Zhang"
-      title: "AI Research Director"
-      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
-    }
-    publishedDate: "Apr 15, 2025";
-    readTime: "5 min read"
-    category: "Trends"
-    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"];
-    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630"
-    isFeatured: true
-  }
-  {
-    id: "optimize-ai-listings"
-    title: "How to Optimize Your AI Service Listings for Maximum Visibility"
-    slug: "optimize-ai-listings"
-    excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
-    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
 <h2>Compelling Service Descriptions That Convert</h2>
@@ -124,21 +55,7 @@ const BLOG_POSTS: BlogPost[] = [
       name: "Marcus Johnson"
       title: "Marketing Strategist"
       avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
-<<<<<<< HEAD
-    }
-    publishedDate: "Apr 10, 2025";
-    readTime: "8 min read"
-    category: "Marketing"
-    tags: ["Marketing", "AI Services", "Visibility", "SEO"];
-    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
-  }
-  {
-    id: "green-it"
-    title: "Green IT: Reducing Your Data Center's Carbon Footprint"
-    slug: "green-it"
-    excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability."
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
-=======
+
     },
     publishedDate: "Apr 10, 2025",
     readTime: "8 min read",
@@ -151,15 +68,7 @@ const BLOG_POSTS: BlogPost[] = [
     title: "Green IT: Reducing Your Data Center's Carbon Footprint",
     slug: "green-it",
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
-<<<<<<< HEAD
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
-=======
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
@@ -175,15 +84,7 @@ const BLOG_POSTS: BlogPost[] = [
       name: "Sophia Chen"
       title: "Sustainability Engineer"
       avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
-<<<<<<< HEAD
-    }
-    publishedDate: "Apr 5, 2025";
-    readTime: "6 min read"
-    category: "Sustainability"
-    tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"];
-    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
-  }
-=======
+
     },
     publishedDate: "Apr 5, 2025",
     readTime: "6 min read",
@@ -191,7 +92,7 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
     featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     id: "ai-ethics-frameworks"
     title: "Implementing Ethical AI Frameworks in Enterprise Applications"
@@ -212,15 +113,7 @@ const BLOG_POSTS: BlogPost[] = [
       name: "Dr. James Peterson"
       title: "AI Ethics Officer"
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
-<<<<<<< HEAD
-    }
-    publishedDate: "Mar 30, 2025";
-    readTime: "7 min read"
-    category: "Ethics"
-    tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"];
-    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
-  }
-=======
+
     },
     publishedDate: "Mar 30, 2025",
     readTime: "7 min read",
@@ -228,7 +121,7 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"],
     featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     id: "ai-talent-acquisition"
     title: "Winning the AI Talent War: Recruitment Strategies for 2025"
@@ -249,15 +142,7 @@ const BLOG_POSTS: BlogPost[] = [
       name: "Elena Rodriguez"
       title: "Head of AI Talent"
       avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"
-<<<<<<< HEAD
-    }
-    publishedDate: "Mar 22, 2025";
-    readTime: "9 min read"
-    category: "Recruitment"
-    tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"];
-    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"
-  }
-=======
+
     },
     publishedDate: "Mar 22, 2025",
     readTime: "9 min read",
@@ -265,7 +150,7 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
     featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     id: "ai-compute-optimization"
     title: "AI Compute Optimization: Balancing Performance and Cost"
@@ -286,16 +171,7 @@ const BLOG_POSTS: BlogPost[] = [
       name: "Michael Wong"
       title: "ML Infrastructure Architect"
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
-<<<<<<< HEAD
-    }
-    publishedDate: "Mar 15, 2025";
-    readTime: "6 min read"
-    category: "Infrastructure"
-    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
-    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
-  }
-];
-=======
+
     },
     publishedDate: "Mar 15, 2025",
     readTime: "6 min read",
@@ -305,7 +181,7 @@ const BLOG_POSTS: BlogPost[] = [
   }
 ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 // Categories for filtering
 const CATEGORIES = [
   "All Categories",
@@ -315,51 +191,10 @@ const CATEGORIES = [
   "Ethics",
   "Recruitment",
   "Infrastructure"
-<<<<<<< HEAD
-];
-export default function Blog() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
-  // Filter blog posts based on search and category
-  const filteredPosts = BLOG_POSTS.filter(post => {
-    const matchesSearch =
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) |
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === "All Categories" |post.category === selectedCategory;
-    return matchesSearch && matchesCategory
-  });
-  // Get featured posts
-  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured);
-=======
+
 ],
 
-<<<<<<< HEAD
-export default function Blog() {;
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
-=======
-export default function Blog() {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
-  // Filter blog posts based on search and category
-  const filteredPosts = BLOG_POSTS.filter(post => {
-    const matchesSearch = 
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-      
-    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory,
-    
-    return matchesSearch && matchesCategory
-  }),
-  
-  // Get featured posts
-  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured),
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <>
       <SEO
@@ -377,8 +212,7 @@ export default function Blog() {
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
-<<<<<<< HEAD
-=======
+
           
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -599,10 +433,7 @@ export default function Blog() {;
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation;
             </p>;
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (
@@ -738,12 +569,9 @@ export default function Blog() {;
               <Button
                 variant="outline"
                 onClick={() => {
-<<<<<<< HEAD
-                  setSearchQuery("");
 
-=======
                   setSearchQuery(""),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                   setSelectedCategory("All Categories")
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -751,17 +579,8 @@ export default function Blog() {;
                 Clear all filters
               </Button>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          )}
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
                     </p>;
                     <div className="flex items-center">;
@@ -802,9 +621,8 @@ export default function Blog() {;
                 Clear all filters
               </Button>
             </div>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </div>;

@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
@@ -41,38 +38,10 @@ export const useLoadMilestones = (projectId?: string) => {;
           .eq('milestone_id', milestone.id)
           .order('created_at', { ascending: false });
         if (activitiesError) throw activitiesError;
-<<<<<<< HEAD
-        activitiesMap[milestone.id] = activitiesData |[]
-      }
-      setActivities(activitiesMap);
-      setError(null)
-    } catch (err: any) {
-      console.error("Error fetching milestones:", err);
-      setError("Failed to fetch milestones: " + err.message)
-      toast.error("Failed to fetch milestones")
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  // Fetch milestones when component mounts or projectId changes
-  useEffect(() => {
-    if (projectId) {
-      fetchMilestones()
-    }
-  }, [projectId]);
-  return {
-    milestones;
-    activities;
-    isLoading;
-    error;
-    refetch: fetchMilestones
-  }
-}
 
-=======
         
         activitiesMap[milestone.id] = activitiesData || []
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -113,9 +82,8 @@ export const useLoadMilestones = (projectId?: string) => {;
           .order('created_at', { ascending: false }),;
         if (activitiesError) throw activitiesError,;
         activitiesMap[milestone.id] = activitiesData || [];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
@@ -127,54 +95,8 @@ export const useLoadMilestones = (projectId?: string) => {;
       toast.error("Failed to fetch milestones")
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  };
 
-  // Fetch milestones when component mounts or projectId changes
-  useEffect(() => {
-    if (projectId) {
-      fetchMilestones()
-    }
-  }, [projectId]);
 
-  return {
-    milestones;
-    activities;
-    isLoading;
-    error;
-    refetch: fetchMilestones
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-;
-      setActivities(activitiesMap),;
-      setError(null);
-    } catch (err: any) {;
-      console.error("Error fetching milestones:", err),;
-      setError("Failed to fetch milestones: " + err.message),;
-      toast.error("Failed to fetch milestones");
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  // Fetch milestones when component mounts or projectId changes;
-  useEffect(() => {;
-    if (projectId) {;
-      fetchMilestones();
-    }
-  }, [projectId]),;
-  return {;
-    milestones,;
-    activities,;
-    isLoading,;
-    error;
-    refetch: fetchMilestones;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

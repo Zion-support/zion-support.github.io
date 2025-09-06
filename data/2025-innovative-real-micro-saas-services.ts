@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
-export interface InnovativeMicroSaasService {
-
-=======
 export interface InnovativeMicroSaasService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -642,21 +636,14 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'AI-powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.'
-      launchDate: '2024-02-20'
-      customers: 42
-      rating: 4.7
-      reviews: 20
-    }
-=======
+
         'AI-powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.',
       launchDate: '2024-02-20',
       customers: 42,
       rating: 4.7,
       reviews: 20,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   ];    features: [
       'AI-powered contract analysis and reviewLegal risk identification and assessmentDocument comparison and analysisLegal research and case law analysisCompliance checking and monitoringLegal document generationIntegration with legal systemsMobile legal app';
       'Multi-language legal supportPredictive legal analytics'
@@ -717,11 +704,8 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     customers: 42;
     rating: 4.7;
     reviews: 20
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnhancedRealMicroSaasService {;
@@ -1205,9 +1189,8 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     customers: 42,;
     rating: 4.7;
     reviews: 20;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];

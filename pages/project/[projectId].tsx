@@ -1,34 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import FeedbackModal from "../../components/ui/FeedbackModal";
-export default function ProjectPage() {
-  const router = useRouter()
-  const { projectId } = router.query as { projectId?: string }
-  const [project, setProject] = useState<any | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [note, setNote] = useState("")
-  const headers = {
-    "x-demo-user-role": "client"
-    "x-demo-user-id": "client-1"
-    // For talent view demo, swap role and provide slug
-    // "x-demo-user-role": "talent"
-    // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
-=======
 import { useEffect, useState } from "react",;
 import { useRouter } from "next/router",;
 import FeedbackModal from "../../components/ui/FeedbackModal",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { useEffect, useState } from "react",
 import { useRouter } from "next/router",
 import FeedbackModal from "../../components/ui/FeedbackModal",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ProjectPage() {
   const router = useRouter(),
@@ -37,42 +17,26 @@ export default function ProjectPage() {
   const [loading, setLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
   const [note, setNote] = useState(""),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const headers = {
     "x-demo-user-role": "client",
     "x-demo-user-id": "client-1",
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent",
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   useEffect(() => {
     async function load() {
       if (!projectId) return
       try {
-<<<<<<< HEAD
-        setLoading(true)
-        const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers })
-        const json = await res.json()
-        if (!json.ok) throw new Error(json.error |"Failed to load project")
-=======
+
         setLoading(true),
         const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers }),
         const json = await res.json(),
         if (!json.ok) throw new Error(json.error || "Failed to load project"),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         setProject(json.project)
       } catch (e: any) {
         setError(e.message)
@@ -89,16 +53,7 @@ export default function ProjectPage() {
   }
 }
     load()
-<<<<<<< HEAD
-  }, [projectId])
-  const [showFeedback, setShowFeedback] = useState(false)
-  async function addNote() {
-    const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH"
-      headers: { "Content-Type": "application/json", ...headers }
-      body: JSON.stringify({ id: projectId, action: "add_note", content: note })})
-    const json = await res.json()
-=======
+
   }, [projectId]),
   const [showFeedback, setShowFeedback] = useState(false),
   async function addNote() {
@@ -107,30 +62,19 @@ export default function ProjectPage() {
       headers: { "Content-Type": "application/json", ...headers },
       body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),
     const json = await res.json(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     if (json.ok) {
       setProject(json.project)
       setNote("")
       setShowFeedback(true)
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
-  }
-  async function markCompleted() {
-    const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH"
-      headers: { "Content-Type": "application/json", ...headers }
-      body: JSON.stringify({ id: projectId, action: "mark_completed" })})
-    const json = await res.json()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
@@ -154,12 +98,7 @@ export default function ProjectPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-  return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
-      {loading && <div>Loading…</div>}
-      {error && <div className="text-red-600">{error}</div>}
-=======
+
 }
     } catch (error) {
     console.error("Error:", error);
@@ -168,45 +107,19 @@ export default function ProjectPage() {
 }
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      {loading && <div>Loading…</div>}
-      {error && <div className="text-red-600">{error}</div>}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {loading && <div>Loading…</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      {error && <div className="text-red-600">{error}</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {project && (
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <h1 className="text-2xl font-semibold">Project Kickoff</h1>
             <span className={`px-2 py-0.5 rounded text-xs ${project.status === "ACTIVE" ? "bg-emerald-100 text-emerald-700" : "bg-gray-200"}`}>
-<<<<<<< HEAD
-              {project.status}
-=======
+
               {project.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </span>
           </div>
@@ -226,16 +139,7 @@ export default function ProjectPage() {
                 project.timeline.map((m: any) => (
                   <li key={m.id}>
                     <span className="font-medium">{m.title}</span>
-<<<<<<< HEAD
-                    {m.dueDateIso && <span> • due {new Date(m.dueDateIso).toLocaleDateString()}</span>}
-                    {m.amountUsd && <span> • ${m.amountUsd}</span>}
-                    {m.status && <span> • {m.status}</span>}
-                  </li>
-                ))
-              ) : (
-                <li>No timeline defined</li>
-              )}
-=======
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -384,10 +288,7 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </ul>
           </section>
@@ -398,12 +299,7 @@ export default function ProjectPage(req, res) {
                 project.documents.map((d: any) => (
                   <li key={d.id}>
                     {d.url ? (
-<<<<<<< HEAD
-                      <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</a>
-                    ) : (
-                      <span>{d.name}</span>
-                    )}
-=======
+
                       <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</Link>
                     ) : (
                       <span>{d.name}</span>
@@ -412,10 +308,7 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
                   </li>
@@ -435,36 +328,26 @@ export default function ProjectPage(req, res) {
               {project.notes?.length ? (
                 project.notes.map((n: any) => (
                   <div key={n.id} className="text-sm">
-<<<<<<< HEAD
-                    <span className="font-medium">{n.authorRole}</span>: {n.content}
-=======
+
                     <span className="font-medium">{n.authorRole}</span>: {n.content  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
                 ))
               ) : (
                 <div className="text-sm text-gray-600">No notes yet.</div>
-<<<<<<< HEAD
-              )}
-=======
+
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className="flex gap-2">
@@ -475,24 +358,10 @@ export default function ProjectPage(req, res) {
           <div className="flex justify-end">
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
-<<<<<<< HEAD
-            )}
-          </div>
-        </div>
-      )}
-      <FeedbackModal
-        isOpen={showFeedback}
-        onClose={() => setShowFeedback(false)}
-        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
-        userHeaders={headers}
-      />
-    </div>
-<<<<<<< HEAD
-  )
-=======
+
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
             )  } catch (error) {
     console.error("Error:", error);
@@ -534,10 +403,7 @@ export default function ProjectPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

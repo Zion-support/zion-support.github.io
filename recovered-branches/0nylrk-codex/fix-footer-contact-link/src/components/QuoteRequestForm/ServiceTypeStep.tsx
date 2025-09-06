@@ -1,28 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
-import {Input} from "@/components/ui/input";
-import {Card} from "@/components/ui/card";
-import {Search} from "lucide-react";
-import {ListingScoreCard} from "@/components/ListingScoreCard";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState } from "react",
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Card } from "@/components/ui/card",
-<<<<<<< HEAD
-import { Search } from "lucide-react";
-import { ListingScoreCard } from "@/components/ListingScoreCard";
-=======
-import { Search } from "lucide-react",
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
@@ -31,63 +8,10 @@ interface ServiceTypeStepProps {
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  {
-    id: "service-1"
-    title: "AI Development"
-    category: "Services"
-    image:
-      "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format"
-  }
-  {
-    id: "service-2"
-    title: "Cloud Migration"
-    category: "Services"
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format"
-  }
-  {
-    id: "talent-1"
-    title: "AI Engineer"
-    category: "Talents"
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format"
-  }
-  {
-    id: "talent-2"
-    title: "Data Scientist"
-    category: "Talents"
-    image:
-      "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format"
-  }
-  {
-    id: "equipment-1"
-    title: "Workstation"
-    category: "Equipment"
-    image:
-      "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format"
-  }
-  {
-    id: "equipment-2"
-    title: "Server Rack"
-    category: "Equipment"
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format"
-  }
-];
-export function ServiceTypeStep({
-  formData
-  updateFormData
-}: ServiceTypeStepProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type });
-  }
-=======
+
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
@@ -103,23 +27,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       specificItem: item
       serviceCategory: item.category
       serviceType: item.category.toLowerCase() as ServiceType
-<<<<<<< HEAD
-    });
-  }
-  const filteredListings = SAMPLE_LISTINGS.filter((item) => {
-    // Filter by category only when a service type has been selected
-    if (formData.serviceType !== "") {
-      const categoryMatch =
-        item.category.toLowerCase() === formData.serviceType.toLowerCase();
-      if (!categoryMatch) return false;
-    }
-    if (searchQuery.trim() === "") return true;
-    return (
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-      item.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  });
-=======
+
     })
   },
   
@@ -134,7 +42,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
   }),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <div className="space-y-6">
@@ -156,11 +64,9 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               AI solutions, consulting, development
             </p>
           </Card>
-<<<<<<< HEAD
-          <Card
-=======
+
           <Card 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -173,11 +79,9 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               AI specialists, developers, consultants
             </p>
           </Card>
-<<<<<<< HEAD
-          <Card
-=======
+
           <Card 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -194,18 +98,13 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       </div>
       {formData.serviceType && (
         <div className="space-y-4">
-<<<<<<< HEAD
-          <h3 className="text-xl font-semibold text-white">
-            Select a specific {formData.serviceType}
-          </h3>
-=======
+
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
-<<<<<<< HEAD
-=======
+
 import { useState } from "react",;
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -294,10 +193,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           <div className="relative">;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
             <Input;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
@@ -312,13 +208,9 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                   key={item.id}
                   onClick={() => handleItemSelect(item)}
                   className={`cursor-pointer transition-all ${
-<<<<<<< HEAD
-                    formData.specificItem?.id === item.id
-                      ? "ring-2 ring-zion-purple rounded-lg"
-                      : ""
-=======
+
                     formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                   }`}
                 >
                   <ListingScoreCard

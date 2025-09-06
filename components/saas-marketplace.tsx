@@ -1,30 +1,12 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-=======
+
 import React from 'react';
 import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
-  Zap
-  Shield
-  BarChart3
-  Globe
-  Users
-  Lock
-  TrendingUp
-  Code
-  Database
-  Cloud
-  ArrowRight
-  Star
-  Check
-  ExternalLink;} from 'lucide-react';import {
-=======
+
   Zap,
   Shield,
   BarChart3,
@@ -37,14 +19,7 @@ import {
   Cloud,
   ArrowRight,
   Star,
-<<<<<<< HEAD
-  Check,
-  ExternalLink,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-  Check,;
-  ExternalLink,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   Zap;
   Shield
   BarChart3
@@ -295,15 +270,7 @@ export default function SaaSMarketplacePage() {
       useCase:
         'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
       pros: [
-<<<<<<< HEAD
-        'Lightning fast'
-        'Beautiful design'
-        'Great keyboard shortcuts'
-        'Git integration'
-      ]
-      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
-    }
-=======
+
         'Lightning fast',
         'Beautiful design',
         'Great keyboard shortcuts',
@@ -311,7 +278,7 @@ export default function SaaSMarketplacePage() {
       ],
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   ];
   const categories = [
     'All'
@@ -405,13 +372,9 @@ export default function SaaSMarketplacePage() {
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {microSaasServices.length}+
               </div>
@@ -466,15 +429,11 @@ export default function SaaSMarketplacePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-<<<<<<< HEAD
-=======
+
 
               <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -490,13 +449,9 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Services Grid */}
       <section id='services' className='py-24 bg-black'>
@@ -506,14 +461,10 @@ export default function SaaSMarketplacePage() {
               {selectedCategory === 'All'
                 ? 'All Services'
                 : `${selectedCategory} Services`}
-<<<<<<< HEAD
-=======
+
 
             </h2>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
@@ -558,13 +509,9 @@ export default function SaaSMarketplacePage() {
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {service.description}
                     </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
@@ -612,27 +559,19 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
+
 
             Need Help Choosing?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -664,12 +603,9 @@ export default function SaaSMarketplacePage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
+
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 }
 

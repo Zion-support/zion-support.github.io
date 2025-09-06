@@ -2,20 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-  ArrowRight
-  Brain
-  Zap
-  Shield
-  Rocket
-  Sparkles
-  Star
-  TrendingUp
-  Globe
-  Cpu
-  Lock
-  Cloud;
-=======
+
   ArrowRight,
   Brain,
   Zap,
@@ -28,7 +15,7 @@ import {
   Cpu,
   Lock,;
   Cloud,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
 import Link from 'next/link';
@@ -190,10 +177,9 @@ const Enhanced2026ServicesShowcase = () => {
       color: 'from-yellow-500 to-orange-500'
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
       {/* Background Effects */}
@@ -217,13 +203,9 @@ const Enhanced2026ServicesShowcase = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -243,13 +225,9 @@ const Enhanced2026ServicesShowcase = () => {
             Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business
           </p>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Category Overview */}
         <motion.div
@@ -257,15 +235,10 @@ const Enhanced2026ServicesShowcase = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-=======
+
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {categories.map((category, index) => (
@@ -277,13 +250,9 @@ const Enhanced2026ServicesShowcase = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, y: -5 }}
               className='group text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div
@@ -303,12 +272,7 @@ const Enhanced2026ServicesShowcase = () => {
               <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
               <p className="text-2xl font-bold text-cyan-400">{category.count}</p>
             </motion.div>
-<<<<<<< HEAD
-          ))}
-        </motion.div>
-        {/* Featured Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-=======
+
 
           ))}
         </motion.div>
@@ -316,10 +280,7 @@ const Enhanced2026ServicesShowcase = () => {
         {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {featuredServices.map((service, index) => (
             <motion.div
@@ -330,13 +291,9 @@ const Enhanced2026ServicesShowcase = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, y: -5 }}
               className='group relative'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div
@@ -373,24 +330,7 @@ const Enhanced2026ServicesShowcase = () => {
                   </div>
                 </div>
                 {/* Description */}
-<<<<<<< HEAD
-                <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-                {/* Features */}
-                <div className='mb-4'>
-                  <ul className='space-y-1'>
-                    {service.features.slice(0, 2).map((feature, i) => (
-                      <li
-                        key={i}
-                        className='flex items-center text-gray-400 text-xs'
-                      >
-                        <Star className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />                        {feature}                <div className="mb-4">
-                  <ul className="space-y-1">
-                    {service.features.slice(0, 2).map((feature, i) => (
-                      <li key={i} className="flex items-center text-gray-400 text-xs">
-                        <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-=======
+
 
                   {service.description}
                 </p>
@@ -399,27 +339,18 @@ const Enhanced2026ServicesShowcase = () => {
 
                         {feature}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
-                {/* Price and CTA */}
-                <div className='flex items-center justify-between'>
-=======
+
 
                 {/* Price and CTA */}
                 <div className='flex items-center justify-between'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div>
                     <span className='text-2xl font-bold text-cyan-400'>
@@ -448,13 +379,9 @@ const Enhanced2026ServicesShowcase = () => {
             </motion.div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <motion.div
@@ -463,13 +390,9 @@ const Enhanced2026ServicesShowcase = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
           className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8'>
@@ -525,27 +448,8 @@ const Enhanced2026ServicesShowcase = () => {
       </div>
     </section>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default Enhanced2026ServicesShowcase;  )
-}
-export default Enhanced2026ServicesShowcase;
 
-<<<<<<< HEAD
-=======
-export default Enhanced2026ServicesShowcase;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-}
-=======
-export default Enhanced2026ServicesShowcase;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

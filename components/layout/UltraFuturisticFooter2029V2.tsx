@@ -1,67 +1,11 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Brain
-  Rocket
-  Target
-  Shield
-  Cpu
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  MessageCircle
-  Star
-  Zap
-  Sparkles
-  Home
-  Users
-  Briefcase
-  BookOpen
-  TrendingUp
-  MessageSquare
-  Calendar
-  GraduationCap
-  ShieldCheck
-  Eye
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Globe2
-  Bot
-  Crown
-  Infinity;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight
-  Brain, Rocket, Target, Shield, Cpu
 
-=======
   Phone,
   Mail,
   MapPin,
@@ -114,7 +58,7 @@ import {
   Infinity,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, 
   Brain, Rocket, Target, Shield, Cpu, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -363,18 +307,7 @@ const serviceCategories = [
         href: '/services/intelligent-hr-management-system'
       }
       {
-<<<<<<< HEAD
-        name: 'Smart Financial Management'
-        href: '/services/smart-financial-management-platform'
-      }
-    ]
-  },];      { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite' }
-      { name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization' }
-      { name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system' }
-      { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
-    ]
-  }
-=======
+
         name: 'Smart Financial Management',
         href: '/services/smart-financial-management-platform',
       },
@@ -385,16 +318,7 @@ const serviceCategories = [
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
-<<<<<<< HEAD
 
-];
-=======
-<<<<<<< HEAD
-=======
-
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const mainNavigation = [
@@ -533,38 +457,12 @@ const footerSections = [
       { name: 'Research', href: '/research' }
     ]
   },];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-export default function UltraFuturisticFooter2029V2() {
-  return (
-    <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>      { name: 'Research', href: '/research' }
-    ]
-  };
-];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>
-<<<<<<< HEAD
-      {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12'>
-          {/* Company Info */}
-          <div className='lg:col-span-2 xl:col-span-1'>            <motion.div      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2 xl:col-span-1">
-            <motion.div
-=======
+
 
 ];
 
@@ -573,10 +471,7 @@ export default function UltraFuturisticFooter2029V2() {
 
             <motion.div
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -655,13 +550,9 @@ export default function UltraFuturisticFooter2029V2() {
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Service Categories */}
           {footerSections.map((section, index) => (
@@ -701,13 +592,9 @@ export default function UltraFuturisticFooter2029V2() {
             </motion.div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Service Showcase */}
         <motion.div
@@ -716,13 +603,9 @@ export default function UltraFuturisticFooter2029V2() {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
           className='mt-16 pt-12 border-t border-gray-800'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h3 className='text-2xl font-bold text-white text-center mb-8'>
@@ -741,13 +624,9 @@ export default function UltraFuturisticFooter2029V2() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div
@@ -794,13 +673,9 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Bottom Footer */}
       <div className='border-t border-gray-800'>
@@ -828,21 +703,12 @@ export default function UltraFuturisticFooter2029V2() {
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'
               >
                 Terms of Service
-<<<<<<< HEAD
-              </Link>            </motion.div>              className="text-gray-400 text-sm"
-            >
-              © 2025 Zion Tech Group. All rights reserved.
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>
-=======
+
               </Link>            </motion.div>
 
             </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Social Links */}
             <motion.div
@@ -851,13 +717,9 @@ export default function UltraFuturisticFooter2029V2() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className='flex items-center space-x-4'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               {socialLinks.map(social => (
@@ -868,40 +730,21 @@ export default function UltraFuturisticFooter2029V2() {
                   rel='noopener noreferrer'
                   className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
                 >
-<<<<<<< HEAD
-                  <social.icon className='w-4 h-4' />                </Link>            >
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
-                >
-                  <social.icon className="w-4 h-4" />
-                </Link>
-=======
+
                   <social.icon className='w-4 h-4' />                </Link>
 
                 </Link>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </motion.div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Newsletter Signup */}
       <motion.div
@@ -910,13 +753,9 @@ export default function UltraFuturisticFooter2029V2() {
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true }}
         className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
@@ -957,22 +796,14 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </div>
       </motion.div>
-<<<<<<< HEAD
-    </footer>
-<<<<<<< HEAD
-);
-=======
+
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
 =======
-<<<<<<< HEAD
-    </footer>;
-);
-}
-=======
+
     </footer>
   );
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,34 +1,12 @@
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO',
-=======
+
 import React from 'react';
 import SEO from '../components/SEO';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Star
-  Brain
-  Atom
-  Shield
-  Zap
-  TrendingUp
-  Globe
-  Rocket
-  Lock
-  Palette
-  Factory
-  Database
-  Cloud
-  Cpu
-  Eye
-  Target
-  Users
-  BarChart3;
-=======
+
   Star,
   Brain,
   Atom,
@@ -47,7 +25,7 @@ import {
   Target,
   Users,;
   BarChart3,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [
@@ -115,20 +93,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
     { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' }
     { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' }
     { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-  ];
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.name === category);
     return cat ? cat.icon : Star;    return cat ? cat.icon : Star
@@ -139,41 +106,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   }
   return (
     <Layout>
-<<<<<<< HEAD
-      <SEO
-        title='2025 Innovative Services Showcase | Zion Tech Group'
-        description='Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'
-        keywords={[
-          'innovative services 2025'
-          'micro SAAS'
-          'quantum computing'
-          'space technology'
-          'AI platforms'
-          'autonomous systems'
-        ]}
-      />
-      {/* Hero Section */}
-      <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
-        {/* Enhanced Background Elements */}
-        <div className='absolute inset-0 pointer-events-none'>
-          <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>
-          <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>
-          <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>
-          <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500'></div>
-          <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500'></div>
-        </div>
-        <div className='text-center max-w-6xl mx-auto relative z-10'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='space-y-6'          >
-        <div className="text-center max-w-6xl mx-auto relative z-10">
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -181,13 +116,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             transition={{ duration: 0.8 }}
             className='space-y-6'            className="space-y-6"
           >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Enhanced Company Badge */}
             <motion.div
@@ -195,13 +126,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Star className='w-5 h-5' />
@@ -213,13 +140,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               Pioneering the future with cutting-edge micro SAAS services
               quantum computing solutions, and autonomous AI platforms
             </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Enhanced Stats */}
             <motion.div
@@ -227,13 +150,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20'>
@@ -290,26 +209,18 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
@@ -323,11 +234,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {categories.map((category, index) => {
               const IconComponent = category.icon;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 =======
               
 =======
@@ -390,13 +299,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Featured Services */}
       <section className='py-20 px-4'>
@@ -415,13 +320,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               industries
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {innovative2025MicroSaasBatch
@@ -491,16 +392,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       {/* All Services Grid */}
       <section className='py-20 px-4 bg-black/30 relative'>
         <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5'></div>
-<<<<<<< HEAD
-        <div className='max-w-7xl mx-auto relative z-10'>      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-=======
+
         <div className='max-w-7xl mx-auto relative z-10'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -508,14 +403,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-<<<<<<< HEAD
-=======
+
 
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
               Complete Service Portfolio
@@ -528,11 +419,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 =======
               
 =======
@@ -579,13 +468,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Contact CTA */}
       <section className='py-20 px-4'>
@@ -593,28 +478,20 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
-<<<<<<< HEAD
-=======
+
 
           <motion.div
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='space-y-8'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -734,11 +611,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 }
 export default Comprehensive2025InnovativeServicesShowcase;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 export default Comprehensive2025InnovativeServicesShowcase;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 export default Comprehensive2025InnovativeServicesShowcase;
 

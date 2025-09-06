@@ -1,62 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Link} from "react-router-dom";
-import {SEO} from "@/components/SEO";
-import {BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {SuggestedJobs} from "@/components/jobs/SuggestedJobs";
-import {useAuth} from "@/hooks/useAuth";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Avatar} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {TalentOnboardingSteps} from "@/components/onboarding/TalentOnboardingSteps";
-import {MyApplications} from "@/components/jobs/MyApplications";
-import {ProjectOfferBanner} from "@/components/projects/ProjectOfferBanner";
-import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
-function TalentDashboardContent() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("job-matches");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState, useEffect } from "react",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Link } from "react-router-dom",
-import { SEO } from "@/components/SEO",
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from "lucide-react",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",
-import { useAuth } from "@/hooks/useAuth",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
-import { MyApplications } from "@/components/jobs/MyApplications",
-<<<<<<< HEAD
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
-function TalentDashboardContent() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("job-matches");
-=======
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-function TalentDashboardContent() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("job-matches"),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -135,8 +79,7 @@ function TalentDashboardContent() {
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
-=======
+
             
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -235,10 +178,7 @@ function TalentDashboardContent() {;
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
@@ -315,16 +255,7 @@ function TalentDashboardContent() {;
     </>
   )
 }
-<<<<<<< HEAD
-export default function TalentDashboard() {
-  return (
-    <ProtectedRoute>
-      <TalentDashboardContent />
-    </ProtectedRoute>
-  )
-}
-<<<<<<< HEAD
-=======
+
 ;
 export default function TalentDashboard() {;
   return (;
@@ -334,7 +265,7 @@ export default function TalentDashboard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

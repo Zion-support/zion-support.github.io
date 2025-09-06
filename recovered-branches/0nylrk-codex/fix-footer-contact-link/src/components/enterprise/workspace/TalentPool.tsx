@@ -1,88 +1,16 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-=======
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function TalentPool() {
   // Mock talent data
 
   const talents = [
     {
-<<<<<<< HEAD
-      id: "talent-1"
-      name: "Jessica Lee"
-      role: "UI/UX Designer"
-      skills: ["Figma", "Sketch", "User Testing"];
-      status: "available"
-      match: 95
-    }
-    {
-      id: "talent-2"
-      name: "Marcus Wright"
-      role: "Full Stack Developer"
-      skills: ["React", "Node.js", "MongoDB"];
-      status: "interviewing"
-      match: 92
-    }
-    {
-      id: "talent-3"
-      name: "Aisha Patel"
-      role: "Product Manager"
-      skills: ["Agile", "Roadmapping", "User Research"];
-      status: "available"
-      match: 88
-    }
-  ];
-=======
+
       id: "talent-1",
       name: "Jessica Lee",
-<<<<<<< HEAD
-      role: "UI/UX Designer",;
-      skills: ["Figma", "Sketch", "User Testing"];
-=======
-      role: "UI/UX Designer",
-      skills: ["Figma", "Sketch", "User Testing"],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-      status: "available",
-      match: 95
-    },
-    {
-      id: "talent-2",
-      name: "Marcus Wright",
-      role: "Full Stack Developer",
-      skills: ["React", "Node.js", "MongoDB"],
-      status: "interviewing",
-      match: 92
-    },
-    {
-      id: "talent-3",
-      name: "Aisha Patel",
-      role: "Product Manager",
-      skills: ["Agile", "Roadmapping", "User Research"],
-      status: "available",
-      match: 88
-    }
-  ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusBadge = (status: string) => {
     switch (status) {
       case "available": return <Badge className="bg-green-500">Available</Badge>,
@@ -93,11 +21,9 @@ export function TalentPool() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <Card>
@@ -128,8 +54,7 @@ export function TalentPool() {
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
-<<<<<<< HEAD
-=======
+
                   <Badge key={index} variant="secondary" className="text-xs">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -203,10 +128,7 @@ export function TalentPool() {;
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
@@ -219,17 +141,11 @@ export function TalentPool() {;
               </div>
             </div>
           ))}
-<<<<<<< HEAD
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-=======
+
         </div>;
       </CardContent>;
     </Card>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

@@ -1,55 +1,17 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
-=======
-import { Button } from "@/components/ui/button",
-import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function QuickActions() {
 
   const actions = [
     {
-<<<<<<< HEAD
-      id: "post-job"
-      label: "Post New Job"
-      icon: <FileText className="h-5 w-5 mr-2" />
-      description: "Create a new job posting"
-=======
+
       id: "post-job",
       label: "Post New Job",
       icon: <FileText className="h-5 w-5 mr-2" />,
       description: "Create a new job posting",
-<<<<<<< HEAD
-      color: "bg-blue-100 dark:bg-blue-900/20";
-    };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      color: "bg-blue-100 dark:bg-blue-900/20"
-<<<<<<< HEAD
-    }
-=======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: "add-member"
@@ -57,22 +19,18 @@ export function QuickActions() {
       icon: <Plus className="h-5 w-5 mr-2" />
       description: "Invite someone to your team"
       color: "bg-green-100 dark:bg-green-900/20"
-<<<<<<< HEAD
-    }
-=======
+
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       id: "find-talent"
       label: "Find Talent"
       icon: <Search className="h-5 w-5 mr-2" />
       description: "Search the talent pool"
       color: "bg-purple-100 dark:bg-purple-900/20"
-<<<<<<< HEAD
-    }
-=======
+
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       id: "schedule"
       label: "Schedule Interview"
@@ -104,8 +62,7 @@ export function QuickActions() {
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
-<<<<<<< HEAD
-=======
+
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -163,10 +120,7 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           ))}
         </div>

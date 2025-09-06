@@ -1,11 +1,9 @@
 import React from 'react';
 interface SOC2ComplianceAutomationProps {
   // Add props here as needed
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationProps) {
   return (
     <div>
@@ -13,13 +11,9 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:src.pages.disabled/SOC2ComplianceAutomation.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
 =======
 
 

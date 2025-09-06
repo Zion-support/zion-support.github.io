@@ -1,26 +1,16 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-export interface ContractTemplate {
-=======
+
 import {ContractFormValues} from "@/components/contracts/components/ContractForm";
 export interface ContractTemplate {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   title: string;
   template_data: ContractFormValues;
   is_default: boolean;
-<<<<<<< HEAD
 
-  created_at: string
-
-  updated_at: string
-}
-=======
   created_at: string,
   updated_at: string
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",
 export interface ContractTemplate {
@@ -38,9 +28,8 @@ export interface ContractTemplate {;
   is_default: boolean;
   created_at: string;
   updated_at: string;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;

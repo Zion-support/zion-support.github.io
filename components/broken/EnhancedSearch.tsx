@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
-=======
  //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
 =======
 //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
 =======
  //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -54,19 +50,14 @@ setIsSearching (false)
   opacity: 1, y: 0, scale: 1
 }exit= {
   {
-<<<<<<< HEAD
-  opacity: 0, y: -10, scale: 0.95
-}transition= {
-  {
-  duration: 0.2
-=======
+
   opacity: 0, y: -10, scale: 0.95 
 
 }transition= {
   {
   duration: 0.2 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
   /* Filters */
 }{
@@ -197,11 +188,8 @@ function debounce<T extends (...args: any[]) => any>(
   }
 }
 export default EnhancedSearch;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 }
 }

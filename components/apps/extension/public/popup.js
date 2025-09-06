@@ -1,22 +1,11 @@
-<<<<<<< HEAD
 
-const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000'
-=======
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
 function getUserId(cb) {
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
-<<<<<<< HEAD
-function setUserId(id) {
-  chrome.storage.local.set({ user_id: id })
-}
-document.querySelectorAll('.example').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    document.getElementById('prompt').value = btn.dataset.text |''
-  })
-=======
+
 
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
@@ -71,7 +60,7 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
   const data = await res.json(),
   document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2)
 }),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
 })
 document.getElementById('askBtn').addEventListener('click', async () => {
@@ -118,15 +107,9 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
 })
 document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
-<<<<<<< HEAD
-  const id = crypto.randomUUID()
-  setUserId(id)
-document.getElementById('result').textContent = 'Signed in (local).';
-})
 
-=======
   const id = crypto.randomUUID(),
   setUserId(id),
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

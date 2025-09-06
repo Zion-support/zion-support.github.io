@@ -1,15 +1,4 @@
-<<<<<<< HEAD:components/email-validator.tsx
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
-export default function EmailValidatorPage() {const [emails, setEmails] = useState('');
-  const [validationResults, setValidationResults] = useState<any[]>([]);
-  const [isValidating, setIsValidating] = useState(false);
-  const [bulkMode, setBulkMode] = useState(false);
-=======
+
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Card from '../components/ui/Card',;
@@ -20,7 +9,7 @@ export default function EmailValidatorPage() {;
   const [validationResults, setValidationResults] = useState<any[]>([]),;
   const [isValidating, setIsValidating] = useState(false),;
   const [bulkMode, setBulkMode] = useState(false),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const validateEmails = async () => {;
     if (!emails.trim()) return;
     setIsValidating(true);
@@ -68,8 +57,7 @@ export default function EmailValidatorPage() {;
     } else if (hasTypo) {status = 'suspicious';
       score = 60;
       issues.push('Possible typo in domain');
-<<<<<<< HEAD
-=======
+
     }
 ;
     // Additional checks;
@@ -77,7 +65,7 @@ export default function EmailValidatorPage() {;
       status = 'invalid',;
       score = 0,;
       issues.push('Email too long');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import React, { useState } from 'react',
 import Head from 'next/head',
@@ -157,10 +145,8 @@ if (email.length > 254) {
       status = 'invalid',
       score = 0,
       issues.push('Email too long')
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     // Additional checks;
@@ -172,72 +158,8 @@ if (email.length > 254) {
       score = 0;
       issues.push('Local part too long');
     }
-<<<<<<< HEAD:components/email-validator.tsx
-    return {email;
-      status;
-      score;
-      issues;
-      domain;
-      isDisposable;
-      hasTypo;
-      timestamp: new Date().toLocaleTimeString();
-    }
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD:components/email-validator.tsx
-},
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'valid':
-    }
-  }
-  const getStatusColor = (status: string) => {switch (status) {;
-      case 'valid':;
-        return 'text-green-400';
-      case 'suspicious':;
-        return 'text-yellow-400';
-      case 'disposable':;
-        return 'text-orange-400';
-      case 'invalid':;
-        return 'text-red-400';
-      default:;
-        return 'text-gray-400';
-=======
-  },
-  const getStatusIcon = (status: string) => {switch (status) {
-      case 'valid':
-        return <CheckCircle className="w-5 h-5 text-green-400" />,
-      case 'suspicious':
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />,
-      case 'disposable':
-        return <XCircle className="w-5 h-5 text-orange-400" />,
-      case 'invalid':
-        return <XCircle className="w-5 h-5 text-red-400" />,
-      default:
-        return <AlertTriangle className="w-5 h-5 text-gray-400" />    }
-  },
-        return <AlertTriangle className="w-5 h-5 text-gray-400" />}
-  };
 
-  const getStatusColor = (status: string) => {switch (status) {
-      case 'valid':
-        return 'text-green-400',
-      case 'suspicious':
-        return 'text-yellow-400',
-      case 'disposable':
-        return 'text-orange-400',
-      case 'invalid':
-        return 'text-red-400',
-      default:
-        return 'text-gray-400'
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   const getScoreColor = (score: number) => {if (score >= 80) return 'text-green-400';
@@ -283,14 +205,10 @@ if (email.length > 254) {
             Email Validator
           </h1>
           <p className=&quot;text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed&quot;>
-<<<<<<< HEAD:components/email-validator.tsx
-            Validate email addresses with our advanced validation service. Check for typos, disposable domains
-            and ensure maximum deliverability for your email campaigns and user registrations.
-          </p>
-=======
+
             Validate email addresses with our advanced validation service. Check for typos, disposable domains, 
             and ensure maximum deliverability for your email campaigns and user registrations.          </p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+
         </div>
       </section>
       {/* Email Validation Tool */}
@@ -327,11 +245,9 @@ type=&quot;checkbox&quot;
                     <textarea,
 value={emails}
                       onChange={(e) => setEmails(e.target.value)}
-<<<<<<< HEAD:components/email-validator.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
                     )}
                   </Button>;
                   {validationResults.length > 0 && (;
@@ -396,10 +312,8 @@ onClick={validateEmails}
                     <Button,
 onClick={clearResults}
                       variant=&quot;outline&quot;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
@@ -450,44 +364,17 @@ onClick={copyResults}
                     <div>
                       <span className=&quot;text-gray-400&quot;>Avg Score:</span>
                       <span className={`ml-2 font-medium ${getScoreColor(stats.avgScore)}`}>
-<<<<<<< HEAD:components/email-validator.tsx
-                        {stats.avgScore.toFixed(0)}
-                      </span>;
-                    </div>;
-                  </div>;
-                </div>;
-=======
+
                         {stats.avgScore.toFixed(0)}                      </span>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
 {validationResults.length > 0 ? (
                 <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
-<<<<<<< HEAD:components/email-validator.tsx
-                  {validationResults.map((result, index) => (
-                    <div
-                      key={index}
-                      className={`p-4 rounded-lg border ${result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :;
-                        result.status === 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :;
-                        result.status === 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :;
-                        'border-red-500/30 bg-red-500/10';
-                      }`}
->
-                      <div className=&quot;flex items-center justify-between mb-2&quot;>
-                        <div className=&quot;flex items-center space-x-3&quot;>
-                          {getStatusIcon(result.status)}
-                          <span className={`font-medium ${getStatusColor(result.status)}`}>;
-                            {result.email}
-                          </span>;
-                        </div>;
-                        <span className={`text-sm font-medium ${getScoreColor(result.score)}`}>;
-=======
+
                   {validationResults.map((result, index) => (                    <div,
 key={index}
                       className={_`p-4 rounded-lg border ${
@@ -503,10 +390,7 @@ key={index}
                             {result.email}                          </span>
                         </div>
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           Score: {result.score}
 </span>
@@ -522,32 +406,19 @@ key={index}
                             {result.issues.map((issue: string, issueIndex: number) => (
                               <li key={issueIndex} className=&quot;text-red-300 flex items-center&quot;>
                                 <XCircle className=&quot;w-3 h-3 mr-2 flex-shrink-0&quot; />
-<<<<<<< HEAD:components/email-validator.tsx
-                                {issue}
-                              </li>;
-=======
+
                                 {issue}                              </li>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             ))}
                           </ul>;
                         </div>;
                       )}
-<<<<<<< HEAD:components/email-validator.tsx
-{result.isDisposable && (
-                        <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>
-                          ⚠️ Disposable email domain detected
-=======
+
 
                       {result.isDisposable && (
                         <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>                          ⚠️ Disposable email domain detected
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                       )}
@@ -570,13 +441,9 @@ key={index}
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD:components/email-validator.tsx
-=======
+
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Features */}
 <section className=&quot;py-20 bg-gray-800&quot;>
@@ -697,11 +564,9 @@ key={index}
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD:components/email-validator.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 }
 =======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
@@ -737,8 +602,6 @@ href=&quot;/pricing&quot;
       </section>
     </>
   )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,21 +1,7 @@
 import React, { useState } from 'react';
 
 import {
-<<<<<<< HEAD
-  Brain
-  Shield
-  Rocket
-  Cpu
-  Database
-  Atom
-  Users
-  CheckCircle
-  TrendingUp
-  Clock
-  Star
-  Filter
-  ChevronDown;
-=======
+
   Brain,
   Shield,
   Rocket,
@@ -29,7 +15,7 @@ import {
   Star,
   Filter,;
   ChevronDown,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';
 
 interface Service {
@@ -263,24 +249,11 @@ const EnhancedServicesShowcase: React.FC = () => {
     }
   ];
   const categories = [
-<<<<<<< HEAD
-    'all'
-    ...Array.from(new Set(services.map(s => s.category)))
-=======
+
     'all',
     ...Array.from(new Set(services.map(s => s.category))),
 
-<<<<<<< HEAD
-  ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-  ];
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const filteredServices = services.filter(service => {
     const matchesCategory =
       selectedCategory === 'all' |service.category === selectedCategory;
@@ -347,39 +320,9 @@ const EnhancedServicesShowcase: React.FC = () => {
           </p>
         </div>
         {/* Filters */}
-<<<<<<< HEAD
-        <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
-          {/* Category Filter */}
-          <div className='relative'>
-            <select
-              value={selectedCategory}
-              onChange={e => setSelectedCategory(e.target.value)}
-              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12'
-            >
-              {categories.map(category => (
-                <option
-                  key={category}
-                  value={category}
-                  className='bg-slate-800 text-white'
-                >                  {category === 'all' ? 'All Categories' : category}
-                </option>
-              ))}
-            </select>
-            <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />          {/* Category Filter */}
-          <div className="relative">
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12"
-            >
-              {categories.map((category) => (
-                <option key={category} value={category} className="bg-slate-800 text-white">
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {category === 'all' ? 'All Categories' : category}
                 </option>
@@ -387,61 +330,9 @@ const EnhancedServicesShowcase: React.FC = () => {
             </select>
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
           </div>
-<<<<<<< HEAD
-          {/* Search */}
-          <div className='relative'>
-            <input
-              type='text'
-              placeholder='Search services...'
-              value={searchTerm}
-              onChange={e => setSearchTerm(e.target.value)}
-              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64'
-            />
-            <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />          </div>
-        </div>
-        {/* Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          </div>
-          {/* Search */}
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search services..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
-            />
-            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
-          </div>
-        </div>
-        {/* Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {filteredServices.map((service, index) => (
-            <div
-              key={service.id}
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-            >
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className='absolute top-4 right-4 z-20'>
-                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
-                    <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
-            <div
-              key={service.id}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            >
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className="absolute top-4 right-4 z-20">
-                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
-                    <Star className="w-3 h-3" />
-                    Popular
-                  </div>
-                </div>
-              )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
               {/* Service Content */}
               <div className='p-8'>
 =======
@@ -458,10 +349,8 @@ const EnhancedServicesShowcase: React.FC = () => {
               {/* Service Content */}
               <div className='p-8'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>
@@ -538,13 +427,9 @@ const EnhancedServicesShowcase: React.FC = () => {
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Benefits */}
                 <div className='mb-6'>
@@ -567,13 +452,9 @@ const EnhancedServicesShowcase: React.FC = () => {
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-white/5 rounded-lg'>
@@ -623,25 +504,17 @@ const EnhancedServicesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Ready to Transform Your Business?
             </h3>
@@ -682,27 +555,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       </div>
     </section>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default EnhancedServicesShowcase;  )
-}
-export default EnhancedServicesShowcase;
 
-<<<<<<< HEAD
-=======
-export default EnhancedServicesShowcase;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-}
-=======
-export default EnhancedServicesShowcase;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

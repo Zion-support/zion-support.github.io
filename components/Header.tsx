@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 =======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 "use client";
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -14,17 +9,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
-<<<<<<< HEAD
-  Menu,
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-=======
 
-'use client';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -32,15 +18,8 @@ import {
   X, 
   Phone, 
   Mail, 
-<<<<<<< HEAD
-  MapPin,
-  Brain,
-  Network,
-  Cloud,
-  ArrowRight
-} from 'lucide-react';
-=======
->>>>>>> origin/main
+
+
 
 "use client";
 import React, { useState, useEffect } from "react";
@@ -68,10 +47,8 @@ import {
   GraduationCap,
   Factory,
   Truck,
-<<<<<<< HEAD
-  CreditCard,
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
   Menu
   X
   ChevronDown
@@ -206,26 +183,14 @@ export default function Header() {;
   }
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              Zion Tech Group
-            </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 =======
 =======
             <Link href="/" className="flex items-center">
@@ -234,7 +199,7 @@ export default function Header() {;
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 =======
 =======
             <Link href="/" className="text-2xl font-bold text-blue-600">
@@ -375,11 +340,7 @@ const Header = () => {
               <span>364 E Main St STE 1008, Middletown, DE 19709</span>
             </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-          </div>
-<<<<<<< HEAD
-=======
+
         </div>
       </div>
 
@@ -397,27 +358,16 @@ const Header = () => {
             </div>
           </Link>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
+
+
           </div>
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <nav className="hidden lg:flex space-x-8">
-            {navigation.map((item) => (
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-          <nav className="hidden md:flex space-x-8">
-=======
-          <nav className="hidden lg:flex space-x-8">
->>>>>>> origin/main
+
+
+
+
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -428,45 +378,12 @@ const Header = () => {
               </Link>
             ))}
           </nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 =======
 =======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-              >
-                Services <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              <AnimatePresence>
-                {isServicesOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border z-50"
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                  >
-                    <div className="p-6">
-                      <div className="grid grid-cols-2 gap-4">
-                        {servicesDropdown.map((service) => (
-                          <Link key={service.title} href={service.href} className="group">
-                            <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                              <service.icon className="w-6 h-6 text-blue-600 mt-1" />
-                              <div>
-                                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{service.title}</h3>
-                                <p className="text-sm text-gray-600">{service.description}</p>
-                              </div>
-                            </div>
-=======
+
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <button
@@ -501,7 +418,7 @@ const Header = () => {
                             onClick={() => setActiveDropdown(null)}
                           >
                             {subItem.name}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                           </Link>
                         ))}
                       </motion.div>
@@ -522,122 +439,15 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white shadow-lg"
-            >
-              <div className="px-4 py-6 space-y-4">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={closeMenu}
-                    className="block text-gray-700 hover:text-blue-600 font-medium"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-                <Link
-                  href="/contact"
-                  onClick={closeMenu}
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden mt-4 border-t border-gray-200 pt-4"
-            >
-              {navigation.map((item) => (
-                <div key={item.name} className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <Link
-                      href={item.href}
-                      className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                    {item.dropdown && (
-                      <button
-                        onClick={() => toggleDropdown(item.name)}
-                        className="p-1"
-                      >
-                        <ChevronDown 
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
-                          }`} 
-                        />
-                      </button>
-                    )}
-                  </div>
-                  {item.dropdown && activeDropdown === item.name && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {item.dropdown.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-<<<<<<< HEAD
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
 
-            {/* Industries Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                onMouseEnter={() => setIsIndustriesOpen(true)}
-                onMouseLeave={() => setIsIndustriesOpen(false)}
-              >
-                Industries <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              <AnimatePresence>
-                {isIndustriesOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border z-50"
-                    onMouseEnter={() => setIsIndustriesOpen(true)}
-                    onMouseLeave={() => setIsIndustriesOpen(false)}
-                  >
-                    <div className="p-4">
-                      {industriesDropdown.map((industry) => (
-                        <Link key={industry.name} href={industry.href} className="group flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                          <industry.icon className="w-5 h-5 text-blue-600" />
-                          <span className="text-gray-700 group-hover:text-blue-600">{industry.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
 
-            {/* Regular Navigation Items */}
-            {navigation.slice(0, 2).map((item) => (
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               <Link
                 key={item.name}
                 href={item.href}
@@ -646,37 +456,9 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-<<<<<<< HEAD
-          </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
-            <div className="flex items-center">
-              <Phone className="h-4 w-4 mr-1" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center">
-              <Mail className="h-4 w-4 mr-1" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-          </div>
+=======
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-=======
-=======
-<<<<<<< HEAD
-          </nav>
-<<<<<<< HEAD
-=======
-          </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -686,25 +468,14 @@ const Header = () => {
             <Link
               href="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
             >
               Get Started
             </Link>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        </div>
-<<<<<<< HEAD
-=======
-      </nav>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
+
+
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -721,14 +492,8 @@ const Header = () => {
             )}
           </button>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      </nav>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -771,10 +536,8 @@ const Header = () => {
                   href="/contact"
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                   onClick={() => setIsMenuOpen(false)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   Get Started
@@ -783,20 +546,12 @@ const Header = () => {
             </motion.div>
           )}
         </AnimatePresence>
-<<<<<<< HEAD
-      </div>
-    </header>
-  );
-}
-=======
+
       </nav>
     </header>
   );
 };
 
 export default Header;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

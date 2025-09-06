@@ -1,10 +1,5 @@
-<<<<<<< HEAD:src.disabled/components/FuturisticAnimatedBackground.jsx
-<<<<<<< HEAD
-"export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\' }) => { const canvasRef = useRef (null) const animationRef = useRef () useEffect ( () => { \''\';\'"\";
-export: const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi" }) => { const canvasRef = useRef (null) const animationRef = useRef () useEffect ( () => { """;""";"""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 =======
 "export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\' }) => { const canvasRef = useRef (null) const animationRef = useRef () useEffect ( () => { \''\';\'"\";
 export: const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi" }) => { const canvasRef = useRef (null) const animationRef = useRef () useEffect ( () => { """;""";"""

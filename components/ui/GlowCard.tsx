@@ -1,26 +1,19 @@
-<<<<<<< HEAD
-=======
+
 import React from "react";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
 import React from "react";
 export default function GlowCard({
-<<<<<<< HEAD
-  title
-  children
-}: {
-=======
+
   title,
   children,
 }: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   title: string;
   children: React.ReactNode;
 }) {
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">
       <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />
@@ -39,8 +32,6 @@ export default function GlowCard({
       </div>
     </div>
   );
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

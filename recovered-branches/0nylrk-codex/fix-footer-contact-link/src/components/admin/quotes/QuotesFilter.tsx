@@ -1,39 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Calendar, RefreshCw} from "@/components/icons";
-import {Card, CardContent} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
-import {Button} from "@/components/ui/button";
-import {Calendar, as, CalendarComponent} from "@/components/ui/calendar";
-import {format} from "date-fns";
-import type { DateRange } from "@/types/dateRange";
-import type { QuoteStatus } from "@/types/quotes";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-import { Calendar, RefreshCw } from "@/components/icons",
-import { Card, CardContent } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Button } from "@/components/ui/button",
-import { Calendar as CalendarComponent } from "@/components/ui/calendar",
-<<<<<<< HEAD
-import { format } from "date-fns";
-import type { DateRange } from "@/types/dateRange";
-import type { QuoteStatus } from "@/types/quotes";
-=======
-import { format } from "date-fns",
-import type { DateRange } from "@/types/dateRange",
-import type { QuoteStatus } from "@/types/quotes",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface QuotesFilterProps {
 
@@ -48,42 +14,9 @@ interface QuotesFilterProps {
 
   onReset: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  archiveFilter;
-  setArchiveFilter;
-  dateRange;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const QuotesFilter: React.FC<QuotesFilterProps> = ({
-<<<<<<< HEAD
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  archiveFilter;
-  setArchiveFilter;
-  dateRange;
 
-  setDateRange
-=======
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  archiveFilter,
-  setArchiveFilter,
-  dateRange,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  setDateRange,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   onReset
 }) => {
   return (
@@ -153,8 +86,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
                 <CalendarComponent
                   initialFocus
-<<<<<<< HEAD
-=======
+
                   mode="range"
 import React from "react",;
 import { Calendar, RefreshCw } from "@/components/icons",;
@@ -257,10 +189,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
                 <CalendarComponent
                   initialFocus
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   mode="range"
                   defaultMonth={dateRange?.from}
@@ -284,13 +213,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 };
 =======

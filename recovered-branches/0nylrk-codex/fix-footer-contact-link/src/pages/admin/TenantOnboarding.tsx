@@ -1,59 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate} from "react-router-dom";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {toast} from "sonner";
-import {supabase} from "@/integrations/supabase/client";
-import {Switch} from "@/components/ui/switch";
-export default function TenantOnboarding() {;
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { toast } from "sonner",
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
-import { Switch } from "@/components/ui/switch";
-export default function TenantOnboarding() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-=======
-import { supabase } from "@/integrations/supabase/client",
-import { Switch } from "@/components/ui/switch",
-export default function TenantOnboarding() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("company"),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [formData, setFormData] = useState({
 
@@ -66,38 +13,20 @@ export default function TenantOnboarding() {
     industry: ""
     custom_domain: ""
     is_co_branded: true
-<<<<<<< HEAD
-  });
-  // Check if user has admin role
-  const isAdmin = user?.role === "admin";
-=======
+
   }),
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
-<<<<<<< HEAD
-  }
-  const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }))
-  }
-  const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked }))
-  }
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true)
-    try {
-      // Generate subdomain if not provided
-      const subdomain = formData.subdomain |formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
-=======
+
   },
   
   const handleSelectChange = (name: string, value: string) => {
@@ -116,18 +45,16 @@ export default function TenantOnboarding() {
       // Generate subdomain if not provided
       const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant"
         subtitle: `Find the best talent for your ${formData.industry |"company"}`
         cta: "Get Started"
-<<<<<<< HEAD
-      }
-=======
+
       },
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -145,13 +72,7 @@ export default function TenantOnboarding() {
           email_template_override: null
         })
         .select('id, brand_name, subdomain')
-<<<<<<< HEAD
-        .single();
-      if (error) throw error;
-      toast.success("Tenant created successfully!", {
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
-      });
-=======
+
         .single(),
       
       if (error) throw error,
@@ -160,7 +81,7 @@ export default function TenantOnboarding() {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
       }),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       // Reset form
       setFormData({
         brand_name: ""
@@ -174,24 +95,18 @@ export default function TenantOnboarding() {
         is_co_branded: true
       })
     } catch (error: any) {
-<<<<<<< HEAD
-      console.error("Error creating tenant:", error);
-      toast.error("Failed to create tenant", {
-        description: error.message
-=======
+
       console.error("Error creating tenant:", error),
       toast.error("Failed to create tenant", { 
         description: error.message 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       })
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <>
@@ -395,11 +310,8 @@ export default function TenantOnboarding() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -704,9 +616,8 @@ export default function TenantOnboarding() {;
       <Footer />;
     </>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -16,15 +13,11 @@ async function ensure() {
   }
 }
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-=======
+
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   await ensure();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
@@ -74,12 +67,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(201).json(comment);
 
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  res.status(405).json({ error: "Method not allowed" });
-=======
+
   res.status(405).json({ error: 'Method not allowed' })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
 =======
 res.status(405).json({ error: "Method not allowed" });

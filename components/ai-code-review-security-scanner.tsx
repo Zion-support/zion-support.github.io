@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
+
 import {
   Brain,
   Shield,
@@ -23,7 +20,7 @@ import {
   Globe,;
   Award,;
 } from 'lucide-react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 import {
   Brain
@@ -41,10 +38,9 @@ import {
   Globe
   Award;
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 const AICodeReviewSecurityScanner = () => {
   return (
     <>
@@ -187,98 +183,19 @@ const AICodeReviewSecurityScanner = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className='text-center mb-16'
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Comprehensive Code Security & Quality
-              </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Our AI-powered platform provides end-to-end code analysis
-                security scanning, and quality assurance to protect your
-                applications and improve development efficiency.
-              </p>
-            </motion.div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              {[
-                {
-                  icon: <Code className='w-8 h-8' />
-                  title: 'Multi-Language Support'
-                  description:
-                    'Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices.'
-                }
-                {
-                  icon: <Shield className='w-8 h-8' />
-                  title: 'AI-Powered Vulnerability Detection'
-                  description:
-                    'Advanced machine learning algorithms that detect security vulnerabilities, code smells, and potential security risks.'
-                }
-                {
-                  icon: <Eye className='w-8 h-8' />
-                  title: 'Automated Code Review'
-                  description:
-                    'Intelligent code analysis with detailed feedback, improvement suggestions, and automated quality checks.'
-                }
-                {
-                  icon: <Lock className='w-8 h-8' />
-                  title: 'Security Best Practices'
-                  description:
-                    'Enforce security standards, compliance requirements, and industry best practices automatically.'
-                }
-                {
-                  icon: <BarChart3 className='w-8 h-8' />
-                  title: 'Performance Analytics'
-                  description:
-                    'Comprehensive metrics and insights to track code quality improvements and security posture over time.'
-                }
-                {
-                  icon: <Globe className='w-8 h-8' />
-                  title: 'Integration & APIs'
-                  description:
-                    'Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access.'
-                },              ].map((feature, index) => (                  icon: <Globe className="w-8 h-8" />
-                  title: "Integration & APIs"
-                  description: "Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access."
-                }
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300'
-                >
-                  <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6'>
-                    {feature.icon}
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-4'>
-                    {feature.title}
-                  </h3>
-                  <p className='text-gray-300'>{feature.description}</p>                </motion.div>                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
-=======
+
 
                 </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Pricing Section */}
         <section className='py-20'>
@@ -286,112 +203,19 @@ const AICodeReviewSecurityScanner = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className='text-center mb-16'        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
+
               className='text-center mb-16'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className='text-center mb-16'
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Transparent Pricing Plans
-              </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Choose the plan that fits your development team size and
-                security requirements. All plans include our core AI-powered
-                security scanning capabilities.
-              </p>
-            </motion.div>
-            <div className='grid md:grid-cols-3 gap-8'>
-              {[
-                {
-                  name: 'Starter'
-                  price: '$299'
-                  period: '/month'
-                  description:
-                    'Perfect for small development teams and startups'
-                  features: [
-                    'Up to 10 developers'
-                    'Basic security scanning'
-                    'GitHub/GitLab integration'
-                    'Email support'
-                    'Standard security rules'
-                    'Basic reporting'
-                  ]
-                  popular: false
-                }
-                {
-                  name: 'Professional'
-                  price: '$799'
-                  period: '/month'
-                  description: 'Ideal for growing development teams'
-                  features: [
-                    'Up to 50 developers'
-                    'Advanced security scanning'
-                    'Multi-repository support'
-                    'Priority support'
-                    'Custom security rules'
-                    'Advanced analytics'
-                    'CI/CD integration'
-                    'Team collaboration tools'
-                  ]
-                  popular: true
-                }
-                {
-                  name: 'Enterprise'
-                  price: '$1,999'
-                  period: '/month'
-                  description:
-                    'For large organizations with complex security needs'
-                  features: [
-                    'Unlimited developers'
-                    'Enterprise security scanning'
-                    'On-premise deployment'
-                    '24/7 dedicated support'
-                    'Custom rule creation'
-                    'Advanced compliance'
-                    'API access'
-                    'Custom integrations'
-                    'SLA guarantees'
-                  ]
-                  popular: false
-                },              ].map((plan, index) => (                    "Unlimited developers";
-                    "Enterprise security scanning";
-                    "On-premise deployment";
-                    "24/7 dedicated support";
-                    "Custom rule creation";
-                    "Advanced compliance";
-                    "API access";
-                    "Custom integrations";
-                    "SLA guarantees"
-                  ]
-                  popular: false
-                }
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
-                    plan.popular
-                      ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10'                      : 'border-white/10'
-=======
+
 
                       : 'border-white/10'
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }`}
                 >
@@ -413,45 +237,11 @@ const AICodeReviewSecurityScanner = () => {
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                  <div className='text-center mb-8'>
-                    <h3 className='text-2xl font-bold text-white mb-2'>
-                      {plan.name}
-                    </h3>
-                    <div className='flex items-baseline justify-center mb-4'>
-                      <span className='text-5xl font-bold text-white'>
-                        {plan.price}
-                      </span>
-                      <span className='text-gray-400 ml-1'>{plan.period}</span>
-                    </div>
-                    <p className='text-gray-300'>{plan.description}</p>
-                  </div>
-                  <ul className='space-y-4 mb-8'>
-                    {plan.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className='flex items-center text-gray-300'
-                      >
-                        <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                        {feature}
-                      </li>
-                    ))}
-                  </ul>                    </div>
-                    <p className="text-gray-300">{plan.description}</p>
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-=======
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {feature}
                       </li>
@@ -473,13 +263,9 @@ const AICodeReviewSecurityScanner = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Benefits Section */}
         <section className='py-20 bg-white/5'>
@@ -487,145 +273,28 @@ const AICodeReviewSecurityScanner = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className='text-center mb-16'        <section className="py-20 bg-white/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
+
               className='text-center mb-16'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className='text-center mb-16'
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Why Choose Our AI Code Security Platform?
-              </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Our platform delivers measurable results that improve your
-                security posture, development efficiency, and code quality while
-                reducing costs and risks.
-              </p>
-            </motion.div>
-            <div className='grid md:grid-cols-2 gap-12'>
-              <div className='space-y-8'>
-                {[
-                  {
-                    icon: <Shield className='w-8 h-8' />
-                    title: 'Reduce Security Vulnerabilities by 85%'
-                    description:
-                      'Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface.'
-                  }
-                  {
-                    icon: <Zap className='w-8 h-8' />
-                    title: 'Speed Up Code Review Process by 70%'
-                    description:
-                      'Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review.'
-                  }
-                  {
-                    icon: <TrendingUp className='w-8 h-8' />
-                    title: 'Improve Code Quality & Maintainability'
-                    description:
-                      'AI-powered insights help maintain consistent code standards and improve overall codebase health.'
-                  },                ].map((benefit, index) => (                    icon: <TrendingUp className="w-8 h-8" />
-                    title: "Improve Code Quality & Maintainability"
-                    description: "AI-powered insights help maintain consistent code standards and improve overall codebase health."
-                  }
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className='flex items-start'
-                  >
-                    <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <h3 className='text-xl font-semibold text-white mb-2'>
-                        {benefit.title}
-                      </h3>
-                      <p className='text-gray-300'>{benefit.description}</p>                    </div>
-                  </motion.div>
-                ))}
-              </div>
-              <div className='space-y-8'>                  >
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                      <p className="text-gray-300">{benefit.description}</p>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </motion.div>
                 ))}
               </div>
-<<<<<<< HEAD
-              <div className='space-y-8'>
-                  {
-                    icon: <CheckCircle className='w-8 h-8' />
-                    title: 'Ensure Compliance with Security Standards'
-                    description:
-                      'Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting.'
-                  }
-                  {
-                    icon: <Users className='w-8 h-8' />
-                    title: 'Reduce Technical Debt & Bugs'
-                    description:
-                      'Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.'
-                  }
-                  {
-                    icon: <Star className='w-8 h-8' />
-                    title: 'Enable Faster Development Cycles'
-                    description:
-                      'Confident code deployment with automated security validation accelerates your development and release processes.'
-                  },                ].map((benefit, index) => (                    icon: <Star className="w-8 h-8" />
-                    title: "Enable Faster Development Cycles"
-                    description: "Confident code deployment with automated security validation accelerates your development and release processes."
-                  }
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className='flex items-start'
-                  >
-                    <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <h3 className='text-xl font-semibold text-white mb-2'>
-                        {benefit.title}
-                      </h3>
-                      <p className='text-gray-300'>{benefit.description}</p>                    </div>                  >
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                      <p className="text-gray-300">{benefit.description}</p>
-                    </div>
-=======
+
 
                     </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </motion.div>
                 ))}
@@ -633,13 +302,9 @@ const AICodeReviewSecurityScanner = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Use Cases Section */}
         <section className='py-20'>
@@ -647,93 +312,32 @@ const AICodeReviewSecurityScanner = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className='text-center mb-16'        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
+
               className='text-center mb-16'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className='text-center mb-16'
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Trusted by Development Teams Worldwide
-              </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Our AI-powered code security platform is used by development
-                teams across various industries to protect their applications
-                and improve code quality.
-              </p>
-            </motion.div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {[
-                'Software Development Teams'
-                'DevOps & Security Teams'
-                'Financial Technology Companies'
-                'Healthcare Software Providers'
-                'E-commerce Platforms'
-                'Government Software Projects'
-                'Educational Institutions'
-                'Startups & Enterprises',              ].map((useCase, index) => (                "Software Development Teams";
-                "DevOps & Security Teams";
-                "Financial Technology Companies";
-                "Healthcare Software Providers";
-                "E-commerce Platforms";
-                "Government Software Projects";
-                "Educational Institutions"
-                "Startups & Enterprises"
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300'
-                >
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4'>
-                    <Users className='w-6 h-6' />
-                  </div>
-                  <h3 className='text-white font-semibold'>{useCase}</h3>                </motion.div>                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                    <Users className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-white font-semibold">{useCase}</h3>
-                </motion.div>
-=======
+
 
                 </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
+
 
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -860,24 +464,8 @@ const AICodeReviewSecurityScanner = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default AICodeReviewSecurityScanner;  )
-}
-export default AICodeReviewSecurityScanner;
 
-<<<<<<< HEAD
-=======
-export default AICodeReviewSecurityScanner;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default AICodeReviewSecurityScanner;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

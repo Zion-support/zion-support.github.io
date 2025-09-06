@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-</div> </div>) )
-=======
  </div> </div>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -43,10 +39,9 @@ export async function getServerSideProps() {;
 
   return { props: { items } }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
     <div className="space-y-6">
@@ -69,12 +64,9 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
-<<<<<<< HEAD
-    </div>
-<<<<<<< HEAD
-=======
+
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 );
 }
 =======

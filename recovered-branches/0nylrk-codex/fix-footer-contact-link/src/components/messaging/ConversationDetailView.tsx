@@ -1,18 +1,5 @@
 
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-<<<<<<< HEAD
-import { format  } from 'date-fns';
-import { MessageSquare  } from 'lucide-react';
-import { useMessaging  } from '@/context/MessagingContext';
-import { Button  } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
-import { AspectRatio  } from '@/components/ui/aspect-ratio';
-import { useAuth  } from '@/hooks/useAuth';
-import { MessageBubble  } from './MessageBubble';
-import { DateDivider } from './DateDivider';
-export function ConversationDetailView() {
-=======
+
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
@@ -23,7 +10,7 @@ import {useAuth} from '@/hooks/useAuth';
 import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const { user } = useAuth();
   const {
     activeConversation;
@@ -39,21 +26,8 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id)
     }
   }, [activeConversation?.id, loadMessages]);
-<<<<<<< HEAD
-  useEffect(() => {
-    scrollToBottom()
-  }, [activeMessages]);
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
-  const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!messageText.trim() |!activeConversation) return
-    await sendMessage(activeConversation.id, messageText);
-    setMessageText('')
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
@@ -80,9 +54,8 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id);
     }
   }, [activeConversation?.id, loadMessages]),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
   useEffect(() => {
@@ -113,11 +86,9 @@ export function ConversationDetailView() {;
       </div>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -132,11 +103,8 @@ export function ConversationDetailView() {;
       })
     }
   });
-<<<<<<< HEAD
-  const hasContextData = activeConversation.context_data &&
-    (activeConversation.context_data.title |activeConversation.context_data.description);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 ;
   // Group messages by date;
@@ -153,9 +121,8 @@ export function ConversationDetailView() {;
       });
     }
   }),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
   const hasContextData = activeConversation.context_data && 
@@ -181,13 +148,10 @@ export function ConversationDetailView() {;
               {activeConversation.other_user.name}
             </div>
             <div className="text-xs text-zion-slate">
-<<<<<<< HEAD
-              {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
-               activeConversation.other_user.user_type === 'employer' ? 'Employer' :
-=======
+
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
@@ -269,11 +233,8 @@ export function ConversationDetailView() {;
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
@@ -293,9 +254,8 @@ export function ConversationDetailView() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;

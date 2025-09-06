@@ -1,21 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useAuth  } from './useAuth';
-import { getAccessibleRoutes  } from '@/config/sitemap';
-=======
+
 import {useAuth} from './useAuth';
 import {getAccessibleRoutes} from '@/config/sitemap';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import type { SitemapItem } from '@/config/sitemap';
 // Define the allowed user types
 
-<<<<<<< HEAD
-type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
-export function useSitemap() {
-=======
+
 export function useSitemap() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const { user, isAuthenticated } = useAuth();
   // Get routes that the current user can access
   // Cast userType to UserType or pass undefined if not valid
@@ -88,10 +81,8 @@ export function useSitemap() {;
     accessibleRoutes;
     findRouteByPath;
     canAccessRoute;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }

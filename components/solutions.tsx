@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import React from 'react';
+
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
  const SolutionsPage: React.FC = () => {
   const industrySolutions = [ {
@@ -54,19 +52,14 @@ import React from 'react';
   opacity: 0, y: 30
 }whileInView= {
   {
-<<<<<<< HEAD
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0.8, delay: categoryIndex * 0.2
-=======
+
   opacity: 1, y: 0 
 
 }transition= {
   {
   duration: 0.8, delay: categoryIndex * 0.2 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }viewport= {
   {
   once: true
@@ -106,11 +99,8 @@ import React from 'react';
 }
 export default Solutions;}
 export default Solutions;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 }
 }

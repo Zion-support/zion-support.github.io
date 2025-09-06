@@ -1,64 +1,5 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { useState } from "react";
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardDescription
-  CardFooter
-=======
-<<<<<<< HEAD
-import { useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardFooter,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react";
 
-import { format } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-<<<<<<< HEAD
-interface JobMatchCardProps {
-  match: JobMatch;
-  onApply: (matchId: string, jobId: string) => void;
-  onDecline: (matchId: string) => void;
-  showApplied?: boolean
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-export function JobMatchesCard({
-  match
-  onApply
-  onDecline
-  showApplied = false
-}: JobMatchCardProps) {
-  const job = match.job;
-  if (!job) return null;
-
-=======
-import { useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",
-import { format } from "date-fns",
-import { JobMatch } from "@/types/jobs",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface JobMatchCardProps {
   match: JobMatch,
   onApply: (matchId: string, jobId: string) => void,
@@ -66,27 +7,13 @@ interface JobMatchCardProps {
   showApplied?: boolean
 }
 
-<<<<<<< HEAD
-export function JobMatchesCard({
-  match,
-  onApply,
-  onDecline,
-  showApplied = false,
-}: JobMatchCardProps) {;
-  const job = match.job;
 
-  if (!job) return null;
-
-=======
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
   if (!job) return null,
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
@@ -112,13 +39,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
           {job.description}
         </p>
-<<<<<<< HEAD
-=======
+
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
@@ -126,8 +49,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <div className="flex flex-wrap gap-1">
               {match.matched_skills.slice(0, 5).map((skill, i) => (
                 <Badge key={i} variant="secondary" className="text-xs">
-<<<<<<< HEAD
-=======
+
 import { useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -175,10 +97,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <div className="flex flex-wrap gap-1">;
               {match.matched_skills.slice(0, 5).map((skill, i) => (;
                 <Badge key={i} variant="secondary" className="text-xs">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {skill}
                 </Badge>
@@ -191,11 +110,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </div>
           </div>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$
@@ -206,10 +123,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className="flex items-center text-sm">
@@ -219,11 +134,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-<<<<<<< HEAD
-        {match.status === "applied" |showApplied ? (
-=======
+
         {match.status === 'applied' || showApplied ? (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
             <CheckCircle className="h-4 w-4 mr-2" />
             Applied
@@ -241,16 +154,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             >
               Apply Now
             </Button>
-<<<<<<< HEAD
-            <Button
-              variant="outline"
-=======
+
             <Button 
               variant="outline" 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="flex-1"
               onClick={() => onDecline(match.id)}
@@ -259,16 +166,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </Button>
           </div>
         )}
-<<<<<<< HEAD
-      </CardFooter>
-    </Card>
-=======
+
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }

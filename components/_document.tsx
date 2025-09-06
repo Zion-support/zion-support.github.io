@@ -1,26 +1,16 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Document, {
-<<<<<<< HEAD
-  Html
-  Head
-  Main
-  NextScript
-  DocumentContext;
-=======
+
   Html,
   Head,
   Main,
   NextScript,;
   DocumentContext,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from 'next/document';
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+} from 'next/document';
+
+
 export default function Document() {
   return (
     <Html lang='en'>
@@ -52,8 +42,6 @@ export default function Document() {
       </body>
     </Html>
   );
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

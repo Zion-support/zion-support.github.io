@@ -1,13 +1,11 @@
-<<<<<<< HEAD:advanced-app-improvements.js
-#!/usr/bin/env node
-=======
+
 // Advanced-app-improvements utility
 export const Advanced-app-improvements = () => {
   // Implementation here
   return null;
 };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/advanced-app-improvements.js
+
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -17,14 +15,11 @@ function createAdvancedMonitoring() {
   console.log('\n📊 Creating advanced monitoring system...');
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
-<<<<<<< HEAD
-export class HealthChecker {
-  constructor() {this.checks = new Map();
-=======
+
 export class HealthChecker {;
   constructor() {;
     this.checks = new Map();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     this.results = new Map();  }
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
@@ -214,15 +209,11 @@ export class AnalyticsTracker {
 export const queryOptimizer = new QueryOptimizer();`
     'database/connection-pool.js': `// Database connection pooling
 export class ConnectionPool {
-<<<<<<< HEAD
-  constructor(options = {}) {
-    this.maxConnections = options.maxConnections |10;
-    this.minConnections = options.minConnections |2;
-=======
+
   constructor(options = {}) {;
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     this.connections = [];
     this.availableConnections = [];
     this.usedConnections = new Set();
@@ -314,9 +305,7 @@ main();// Run if called directly
 if (require.main === module) {
   main();
 }
-<<<<<<< HEAD
-export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
-=======
+
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
 
@@ -326,4 +315,4 @@ export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessi
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

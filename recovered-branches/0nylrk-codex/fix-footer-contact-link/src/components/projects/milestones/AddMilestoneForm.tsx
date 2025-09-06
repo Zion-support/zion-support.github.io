@@ -1,41 +1,8 @@
 
-<<<<<<< HEAD
-import React from 'react';
 
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {CalendarIcon, Loader2} from 'lucide-react';
-import {format} from 'date-fns';
-import {Button} from '@/components/ui/button';
-import {Calendar} from '@/components/ui/calendar';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
-import {Input} from '@/components/ui/input';
-import {Textarea} from '@/components/ui/textarea';
-import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
-import {AIMilestoneGenerator} from './AIMilestoneGenerator';
-import {GeneratedMilestone} from '@/hooks/useMilestoneGenerator';
-const formSchema = z.object({
-  title: z.string().min(1, 'Title is required');
-  description: z.string().optional()
-  due_date: z.date().optional()
-  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
-type MilestoneFormValues = z.infer<typeof formSchema>;
-interface AddMilestoneFormProps {
-  onSubmit: (data: MilestoneFormValues) => void
-  isSubmitting: boolean
-  onCancel?: () => void;
-  projectScope?: string;
-  projectStartDate?: string;
-  projectEndDate?: string;
-  projectType?: string
-}
-<<<<<<< HEAD
-export function AddMilestoneForm({
-=======
 
 export function AddMilestoneForm({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   onSubmit;
   isSubmitting;
   onCancel;
@@ -65,10 +32,8 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       });
       return
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -139,9 +104,8 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
       }),;
       return;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
@@ -155,12 +119,10 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
       title: milestone.title
@@ -168,11 +130,9 @@ export function AddMilestoneForm({;
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <div className="space-y-6">
@@ -187,10 +147,9 @@ export function AddMilestoneForm({;
           onAddMilestone={handleAddMilestone}
         />
       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
           <FormField

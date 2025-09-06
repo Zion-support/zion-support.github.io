@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-let pool: Pool | null = null;
-}return pool
-=======
  let pool: Pool | null = null;
 =======
 let pool: Pool | null = null;
 =======
  let pool: Pool | null = null;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }return pool 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

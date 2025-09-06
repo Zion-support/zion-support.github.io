@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO';
-import Link from 'next/link';
 
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <>
@@ -154,8 +149,6 @@ import Link from 'next/link';
 			</section>
 		</>
 	)
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

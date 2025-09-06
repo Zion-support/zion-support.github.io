@@ -2,16 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-  Zap
-  Clock
-  TrendingUp
-  Activity
-  Gauge
-  Cpu
-  Database
-  Network;
-=======
+
   Zap,
   Clock,
   TrendingUp,
@@ -20,7 +11,7 @@ import {
   Cpu,
   Database,;
   Network,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';
 
 interface PerformanceMetrics {
@@ -311,10 +302,9 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
         observer.disconnect()
       }
   }, [measurePerformance]);
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   const getPerformanceScore = (): number => {
     let score = 100;
     if (metrics.firstContentfulPaint > 1800) score -= 20;
@@ -370,31 +360,14 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
           />
         </div>
         <div className='text-right mt-1'>
-<<<<<<< HEAD
-          <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>        </div>
-        <div className="w-full bg-white/10 rounded-full h-3">
-          <motion.div
-            className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${performanceScore}%` }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          />
-        </div>
-        <div className="text-right mt-1">
-          <span className="text-sm text-white/60">{performanceScore}/100</span>
-        </div>
-      </div>
-=======
+
           <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>
 
         </div>
 
       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Metrics Display */}
       {showMetrics && (
@@ -403,14 +376,10 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
-<<<<<<< HEAD
-=======
+
 
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
@@ -459,29 +428,11 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             <div className="text-xs text-white/60">FID</div>
         </motion.div>
       )}
-<<<<<<< HEAD
-      {/* Optimization Controls */}
-<<<<<<< HEAD
-      <div className='space-y-3'>        <button      <div className="space-y-3">
-        <button
-=======
+
 
       {/* Optimization Controls */}
 =======
-<<<<<<< HEAD
-      <div className='space-y-3'>        <button      <div className="space-y-3">
-        <button
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      <div className='space-y-3'>        <button
 
-        <button
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -511,35 +462,22 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             <div className='text-sm text-white/80'>{optimizationStatus}</div>          </div>          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
             <div className="text-sm text-white/80">{optimizationStatus}</div>
           </div>
-<<<<<<< HEAD
-        )}
-      </div>
-=======
+
 
         )}
       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
           Performance Tips
         </h4>
-<<<<<<< HEAD
-        <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt-6 pt-4 border-t border-white/10">
-        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
-        <ul className="text-xs text-white/60 space-y-1">
-=======
+
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
@@ -550,135 +488,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
       </div>
     </div>
   );
-<<<<<<< HEAD
-};export default PerformanceOptimizer;}
-      // Preload critical resources;
-      preloadImages.forEach(image => {addResourceHint(image, 'image');
-'      });';
-      preloadFonts.forEach(font => {addResourceHint(font, 'style');
-'      });'    }}, [preloadImages, preloadFonts]);
-  return (;
-    <Head>;
-      {/* Critical CSS inlined for above-the-fold content */}
-      {criticalCSS && (;
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
-      )}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-{/* Preload critical resources */}
-      {preloadImages.map((image, index) => (;
-        <link;
-key={`preload-image-${index}}          rel="preload""          as="image""          href={image}"        />))}
-      {preloadFonts.map((font, index) => (;
-        <link;
-key={`preload-font-${index}`}          rel="preload""          as="style""          href={font}"          onLoad={() => {const link = document.querySelector(link[href="${font}"]`);
-"            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet;
-}'          }}`        />;
-      ))}
-      {/* Performance hints */}
-      <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
-      <script;
-        dangerouslySetInnerHTML={{__html:             if ('serviceWorker' in navigator) {'              window.addEventListener('load', function() {'                navigator.serviceWorker.register('/sw.js')'                  .then(function(registration) {'                    console.log('SW registered: ', registration);
-'                  })'                  .catch(function(registrationError) {console.log('SW registration failed: ', registrationError);'                  });'              });
-}
-          ``        }}/>;
-    </Head>;
-  );
-}
-  )
-}
-export default PerformanceOptimizer;
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  memory?: {
-    used: number;
-    total: number;
-    limit: number;
-  }
-}
-interface PerformanceOptimizerProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableReporting?: boolean;
-}
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  onMetricsUpdate
-  enableReporting = false
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' |!('performance' in window)) return;
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paint = performance.getEntriesByType('paint');
-    // Core Web Vitals
-    const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime |0;
-    const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime |0;
-    const ttfb = navigation.responseStart - navigation.requestStart;
-    // Memory usage (if available)
-    const memory = (performance as any).memory ? {
-      used: (performance as any).memory.usedJSHeapSize
-      total: (performance as any).memory.totalJSHeapSize
-      limit: (performance as any).memory.jsHeapSizeLimit
-    } : undefined;
-    const newMetrics: PerformanceMetrics = {
-      fcp
-      lcp
-      fid: 0, // First Input Delay - would need user interaction to measure
-      cls: 0, // Cumulative Layout Shift - would need observer
-      ttfb
-      memory
-    }
-    setMetrics(newMetrics);
-    if (onMetricsUpdate) {
-      onMetricsUpdate(newMetrics);
-    }
-    if (enableReporting && process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', newMetrics);
-    }
-  }, [onMetricsUpdate, enableReporting]);
-  useEffect(() => {
-    if (document.readyState === 'complete') {
-      measureWebVitals();
-    } else {
-      window.addEventListener('load', measureWebVitals);
-    }
-    return () => {
-      window.removeEventListener('load', measureWebVitals);
-    }
-  }, [measureWebVitals]);
-  // Monitor for performance issues
-  useEffect(() => {
-    if (!metrics) return;
-    const warnings: string[] = [];
-    if (metrics.fcp > 1800) warnings.push('First Contentful Paint is slow (>1.8s)');
-    if (metrics.lcp > 2500) warnings.push('Largest Contentful Paint is slow (>2.5s)');
-    if (metrics.ttfb > 600) warnings.push('Time to First Byte is slow (>600ms)');
-    if (metrics.memory) {
-      const memoryUsage = (metrics.memory.used / metrics.memory.limit) * 100;
-      if (memoryUsage > 80) warnings.push('High memory usage detected');
-    }
-    if (warnings.length > 0 && enableReporting) {
-      console.warn('Performance Issues Detected:', warnings);
-    }
-  }, [metrics, enableReporting]);
-  return null;
-}
-export default PerformanceOptimizer;
 
-=======
-};export default PerformanceOptimizer;
 
-export default PerformanceOptimizer;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default PerformanceOptimizer;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

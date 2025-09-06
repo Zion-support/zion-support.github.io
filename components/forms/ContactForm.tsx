@@ -1,26 +1,17 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-  Mail
-  Phone
-  MapPin
-  Send
-  CheckCircle
-  AlertCircle;
-=======
+
   Mail,
   Phone,
   MapPin,
   Send,
   CheckCircle,;
   AlertCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -124,13 +115,9 @@ const ContactForm: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
@@ -145,31 +132,13 @@ const ContactForm: React.FC = () => {
             goals.
           </p>
         </motion.div>
-<<<<<<< HEAD
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}        >
-          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            Let&apos,s Start a
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Conversation
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business? Get in touch with our team of experts to discuss
-            how we can help you achieve your technology goals.
-          </p>
-        </motion.div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-          {/* Contact Information */}
-=======
+
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}
 
           {/* Contact Information */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -204,13 +173,9 @@ const ContactForm: React.FC = () => {
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   viewport={{ once: true }}
                   className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>
@@ -233,13 +198,9 @@ const ContactForm: React.FC = () => {
                 </motion.a>
               ))}
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Additional Info */}
             <motion.div
@@ -287,13 +248,9 @@ const ContactForm: React.FC = () => {
               </ul>
             </motion.div>
           </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Form */}
           <motion.div
@@ -301,15 +258,10 @@ const ContactForm: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'          >            className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
-=======
+
             className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'          >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             {submitStatus === 'success' ? (
@@ -471,22 +423,7 @@ const ContactForm: React.FC = () => {
                     required
                     rows={5}
                     className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
-<<<<<<< HEAD
-                    placeholder='Tell us about your project or inquiry...'                  />                  <label htmlFor="message" className="block text-white font-medium mb-2" htmlFor="input-
-                    Message *
-                  ">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
-                    placeholder='Tell us about your project or inquiry...'                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none"
-                    placeholder="Tell us about your project or inquiry..."
-=======
+
                     placeholder='Tell us about your project or inquiry...'                  />
 
                     value={formData.message}
@@ -494,10 +431,7 @@ const ContactForm: React.FC = () => {
                     required
                     rows={5}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   />
                 </div>
@@ -546,24 +480,8 @@ const ContactForm: React.FC = () => {
       </div>
     </section>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default ContactForm;  )
-}
-export default ContactForm;
 
-<<<<<<< HEAD
-=======
-export default ContactForm;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default ContactForm;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

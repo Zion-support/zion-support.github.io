@@ -1,18 +1,7 @@
 
-<<<<<<< HEAD
-// Signup checking functionality
-import { supabase  } from '@/integrations/supabase/client';
-import { analyzeEmail  } from './analyzeEmail';
-import { SignupCheckResult } from './types';
-/**
- * Check for suspicious signup patterns
- */
-<<<<<<< HEAD
 
-export const checkSignupPatterns = async (
-=======
 export const checkSignupPatterns = async (;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   email: string;
   ipAddress?: string
 ): Promise<SignupCheckResult> => {
@@ -63,10 +52,8 @@ export const checkSignupPatterns = async (;
         .order('created_at', { ascending: false }),;
       if (!error && recentSignups && recentSignups.length >= 3) {;
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
@@ -77,9 +64,6 @@ export const checkSignupPatterns = async (;
     isSuspicious: reasons.length > 0
     reasons
   }
-<<<<<<< HEAD
-}
 
-=======
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

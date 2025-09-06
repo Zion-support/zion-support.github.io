@@ -38,19 +38,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ summary: text.trim() });
   } catch (err) {
     return fallback();
-<<<<<<< HEAD
-  }
-    const text = completion.choices?.[0]?.message?.content ?? '';
 
-    return res.status(200).json({ summary: text.trim() })
-  } catch (err) {
-    return fallback()
-}
-<<<<<<< HEAD
-}
-=======
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 =======
   }

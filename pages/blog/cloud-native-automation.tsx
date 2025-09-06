@@ -177,14 +177,9 @@ export default function CloudNativeAutomation() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
-<<<<<<< HEAD
-                  infrastructure, we&apos,re exploring emerging technologies
-=======
+
                   infrastructure, we're exploring emerging technologies
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
@@ -228,9 +223,7 @@ export default function CloudNativeAutomation() {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
@@ -456,4 +449,4 @@ export default function CloudNativeAutomation(req, res) {
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

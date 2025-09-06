@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -170,10 +169,8 @@ const SearchBar: React.FC = () => {
       )}
     </div>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export default SearchBar;

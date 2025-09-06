@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-=======
+
 useEffect ( () => {
   if (!isOpen && messages.length === 0) {
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import { X } from 'lucide-react';
 
 type ChatMessage = {
@@ -61,35 +59,17 @@ export default function ChatWidget() {;
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-<<<<<<< HEAD
-          sessionId: sessionIdRef.current
-          eventType
-          payload
-        })
-      });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
-=======
+
           sessionId: sessionIdRef.current,
           eventType,
           payload,
         }),
-<<<<<<< HEAD
-      });    } catch {}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-      });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
-=======
-      });    } catch {}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch {}
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
@@ -101,27 +81,21 @@ export default function ChatWidget() {;
           tag: 'escalate'
         })
       });
-<<<<<<< HEAD
-<<<<<<< HEAD
-      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
-=======
+
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       setShowEscalation(true)
 =======
       setShowEscalation(true);    } catch {}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch {}
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
@@ -187,40 +161,9 @@ export default function ChatWidget() {;
       setIsLoading(false);    }
   }
   return (
-<<<<<<< HEAD
-    <div className='fixed bottom-4 right-4 z-50'>      }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      if (data?.meta?.intentMatched === false) {
-        setFailedIntents((n) => {
-          const next = n + 1;
-          if (next >= 3) {
-            escalateSupport('Failed to match user intent 3+ times')
-          }
-          return next
-        })
-      } else if (data?.meta?.intentMatched === true) {
-        setFailedIntents(0)
-      }
-    } catch (e) {
-      setMessages((prev) => [
-        ...prev;
-        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
-    } finally {
-      setIsLoading(false)
-<<<<<<< HEAD
-    }
-  }
-=======
-    <div className='fixed bottom-4 right-4 z-50'>
 
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     }
   }
 
@@ -275,13 +218,9 @@ export default function ChatWidget() {;
                     m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }
                 >
@@ -306,23 +245,12 @@ export default function ChatWidget() {;
                   <button
                     key={q}
                     onClick={() => onSend(q)}
-<<<<<<< HEAD
-                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">
-              <div className="flex flex-wrap gap-2 mb-2">
-                {quickReplies.map((q) => (
-                  <button
-                    key={q}
-                    onClick={() => onSend(q)}
-                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-=======
+
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
 
                   >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {q}
                   </button>
@@ -330,10 +258,9 @@ export default function ChatWidget() {;
               </div>
             </div>
           )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
@@ -351,32 +278,8 @@ export default function ChatWidget() {;
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
-              <div className="flex gap-2">
-                <input
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' && !e.shiftKey) {
-                      e.preventDefault();
 
-<<<<<<< HEAD
-                      onSend()
-                    }
-                  }}
-                  placeholder="Ask a question…"
-                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />
                 <button
@@ -415,12 +318,9 @@ export default function ChatWidget() {;
         </div>
       )}
     </div>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
+
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
 =======
 }

@@ -1,30 +1,12 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-=======
+
 import React from 'react';
 import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
-  Search
-  Filter
-  TrendingUp
-  DollarSign
-  Users
-  Star
-  Check
-  X
-  ArrowRight
-  ExternalLink
-  Zap
-  Brain
-  Globe
-  Rocket;} from 'lucide-react';import {
-=======
+
   Search,
   Filter,
   TrendingUp,
@@ -37,14 +19,7 @@ import {
   ExternalLink,
   Zap,
   Brain,
-<<<<<<< HEAD
-  Globe,
-  Rocket,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-  Globe,;
-  Rocket,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   Search;
   Filter
   TrendingUp
@@ -61,12 +36,9 @@ import {
   Globe;
   Rocket
 
-<<<<<<< HEAD
 
-export default function ToolComparisonPage() {
-=======
 export default function ToolComparisonPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -133,32 +105,7 @@ export default function ToolComparisonPage() {;
       users: '100K+'
       bestFor: 'Marketing teams, content creators, businesses'
       pros: [
-<<<<<<< HEAD
-        'Specialized for marketing'
-        'Brand voice training'
-        'SEO optimization'
-        'Team features'
-      ]
-      cons: ['Expensive', 'Limited free trial', 'Can be repetitive']
-      website: 'https://jasper.ai'
-      icon: <Brain className='w-6 h-6' />
-      color: 'text-blue-400'
-    },    // SaaS Tools      bestFor: 'Marketing teams, content creators, businesses';
-      pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features']
-      cons: ['ExpensiveLimited free trialCan be repetitive']
-      website: 'https://jasper.ai'
-      icon: <Brain className="w-6 h-6" />
-      color: 'text-blue-400'
-    }
-    // SaaS Tools
-    {
-      name: 'Zapier'
-      category: 'Automation'
-      pricing: 'Free - $19.99/month'
-      rating: 4.8
-      users: '2M+'
-      bestFor: 'Businesses looking to automate workflows'
-=======
+
         'Specialized for marketing',
         'Brand voice training',
         'SEO optimization',
@@ -283,7 +230,7 @@ export default function ToolComparisonPage() {;
       rating: 4.8,
       users: '10M+',
       bestFor: 'Sales teams, consultants, remote teams',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       pros: [
         'Easy to use'
         'Extensive integrations'
@@ -459,10 +406,9 @@ export default function ToolComparisonPage() {;
         return a.name.localeCompare(b.name);
       default: return 0
   });
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   const getPricingColor = (pricing: string) => {
     if (pricing.includes('Free')) return 'text-green-400';
     if (pricing.includes('$')) return 'text-blue-400';
@@ -537,13 +483,9 @@ export default function ToolComparisonPage() {;
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {allTools.length}+
               </div>
@@ -606,24 +548,7 @@ export default function ToolComparisonPage() {;
             </div>
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>
-<<<<<<< HEAD
-              {categories.map(category => (                <button            {/* Search */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search tools, categories, or use cases..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              />
-            </div>
-            {/* Category Filter */}
-            <div className='flex flex-wrap gap-2'>
-              {categories.map(category => (            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-=======
+
               {categories.map(category => (                <button
 
               />
@@ -633,10 +558,7 @@ export default function ToolComparisonPage() {;
 
                 <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   key={category}
                   onClick={() => setSelectedCategory(category)}
@@ -650,20 +572,13 @@ export default function ToolComparisonPage() {;
                 </button>
               ))}
             </div>
-<<<<<<< HEAD
-            {/* Sort */}
-            <div className='flex items-center space-x-2'>
-              <Filter className='w-5 h-5 text-gray-400' />
-=======
+
 
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <select
                 value={sortBy}
@@ -815,11 +730,7 @@ export default function ToolComparisonPage() {;
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-<<<<<<< HEAD
-          )}
-        </div>
-      </section>
-=======
+
 
             </div>
 
@@ -827,24 +738,17 @@ export default function ToolComparisonPage() {;
         </div>
       </section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-<<<<<<< HEAD
-=======
+
 
               Detailed Analysis
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -939,13 +843,9 @@ export default function ToolComparisonPage() {;
                     </ul>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className='flex items-center justify-between'>
                   <span
@@ -953,41 +853,20 @@ export default function ToolComparisonPage() {;
                   >                    {tool.pricing}
                   </span>
                   <Button
-<<<<<<< HEAD
-                    href={tool.website}                <div className="flex items-center justify-between">
-                  <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
-=======
+
                     href={tool.website}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {tool.pricing}
                   </span>
                   <Button
                     href={tool.website}
-<<<<<<< HEAD
-                    variant='outline'
-                    size='sm'
-                    className='group-hover:border-purple-500 group-hover:text-purple-400'
-                  >
-                    Visit Website
-                    <ExternalLink className='w-4 h-4 ml-2' />                  </Button>                    variant="outline"
-                    size="sm"
-                    className="group-hover:border-purple-500 group-hover:text-purple-400"
-                  >
-                    Visit Website
-                    <ExternalLink className="w-4 h-4 ml-2" />
-=======
+
 
                   </Button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </Card>
@@ -995,27 +874,19 @@ export default function ToolComparisonPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
+
 
             Need Help Choosing?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1046,12 +917,9 @@ export default function ToolComparisonPage() {;
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
+
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 }
 

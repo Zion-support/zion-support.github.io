@@ -1,26 +1,13 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-import React from "react";
-import { Control } from "react-hook-form";
-import {
-<<<<<<< HEAD
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
-=======
+
+
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormDescription,
   FormMessage,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -38,14 +25,11 @@ export function DescriptionFields({
   return (
     <>
       <FormField
-<<<<<<< HEAD
-        control;
-                  field.onChange(e.target.value)
-=======
+
 =======
 =======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React from 'react',
 import { Control } from 'react-hook-form',
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
@@ -70,9 +54,8 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
   return (;
     <>;
       <FormField;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         control={control}
         name="description"
@@ -80,14 +63,8 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <Textarea
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              <Textarea 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e.target.value);
@@ -184,16 +161,10 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
             <FormMessage />
           </FormItem>
         )}
-<<<<<<< HEAD
-      />
-    </>
-=======
+
       />;
     </>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }

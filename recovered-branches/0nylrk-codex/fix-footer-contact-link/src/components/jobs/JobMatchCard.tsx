@@ -1,83 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent} from "@/components/ui/card";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Building, MapPin, Clock, DollarSign, Star} from "lucide-react";
-import {formatDistanceToNow} from "date-fns";
-import {JobMatch} from "@/types/jobs";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from 'react',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
-<<<<<<< HEAD
-import { formatDistanceToNow } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-interface JobMatchProps {
 
-  matchId: string
-  talentId: string
-  name: string
-  title: string
-  company: string
-  avatar: string
-  location: string
-  category: string
-  matchPercent: number
-  skills: string[]
-  onApply?: (matchId: string) => void
-  onViewDetails?: (matchId: string) => void
 
-  onInvite?: (matchId: string) => void
-}
-export function JobMatchCard({
-  matchId;
-
-  talentId
-  name
-  title
-  company
-  avatar
-  location
-  category
-  matchPercent
-  skills;
-  onApply
-  onViewDetails
-  onInvite
-}: JobMatchProps) {
-  const handleApply = () => {
-    if (onApply) {
-      onApply(matchId)
-    }
-  }
-  const handleViewDetails = () => {
-    if (onViewDetails) {
-      onViewDetails(matchId)
-    }
-  }
-  const handleInvite = () => {
-    if (onInvite) {
-      onInvite(matchId)
-    }
-  }
-  // Generate a formatted date for display
-  const postedDate = new Date();
-
-=======
-import { formatDistanceToNow } from "date-fns",
-import { JobMatch } from "@/types/jobs",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface JobMatchProps {
   matchId: string,
   talentId: string,
@@ -92,103 +14,8 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void,
   onViewDetails?: (matchId: string) => void,
   onInvite?: (matchId: string) => void
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
 
-export function JobMatchCard({ ;
-  matchId;
-  talentId, 
-  name, 
-  title, 
-  company, 
-  avatar, 
-  location, 
-  category, 
-  matchPercent, 
-  skills;
-  onApply, 
-  onViewDetails, 
-  onInvite 
-}: JobMatchProps) {
-  const handleApply = () => {
-    if (onApply) {
-      onApply(matchId)
-    }
-  };
 
-  const handleViewDetails = () => {
-    if (onViewDetails) {
-      onViewDetails(matchId)
-    }
-  };
-
-  const handleInvite = () => {
-    if (onInvite) {
-      onInvite(matchId)
-    }
-  };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from 'react',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",;
-import { formatDistanceToNow } from "date-fns",;
-import { JobMatch } from "@/types/jobs",;
-interface JobMatchProps {;
-  matchId: string,;
-  talentId: string,;
-  name: string,;
-  title: string,;
-  company: string,;
-  avatar: string,;
-  location: string,;
-  category: string,;
-  matchPercent: number,;
-  skills: string[],;
-  onApply?: (matchId: string) => void,;
-  onViewDetails?: (matchId: string) => void,;
-  onInvite?: (matchId: string) => void;
-}
-;
-export function JobMatchCard({;
-  matchId,;
-  talentId,;
-  name,;
-  title,;
-  company,;
-  avatar,;
-  location,;
-  category,;
-  matchPercent,;
-  skills,;
-  onApply,;
-  onViewDetails,;
-  onInvite;
-}: JobMatchProps) {;
-  const handleApply = () => {;
-    if (onApply) {;
-      onApply(matchId);
-    }
-  },;
-  const handleViewDetails = () => {;
-    if (onViewDetails) {;
-      onViewDetails(matchId);
-    }
-  },;
-  const handleInvite = () => {;
-    if (onInvite) {;
-      onInvite(matchId);
-    }
-  },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   // Generate a formatted date for display
   const postedDate = new Date(),
@@ -260,25 +87,16 @@ export function JobMatchCard({;
                 Apply Now
               </Button>
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;

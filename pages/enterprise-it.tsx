@@ -1,36 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
-export default function EnterpriseITPage() {
-  const features = [
-    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation']
-  const solutions = [
-    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' }
-    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
-    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' }
-    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }]
-
-  return (
-    <Layout>
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
 import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function EnterpriseITPage() {
   const features = [
@@ -64,16 +45,10 @@ export default function EnterpriseITPage() {_const _features = [
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Enterprise IT</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Ship secure, reliable platforms with measurable business outcomes.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-<<<<<<< HEAD
-              <a href="/contact" className="px-8 py-4">Get a Roadmap</a>
-              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
-=======
+
               <a href="/contact" className="px-8 py-4">Get a Roadmap</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </header>
@@ -99,20 +74,10 @@ export default function EnterpriseITPage() {_const _features = [
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
-<<<<<<< HEAD
-                </a>
-              ))}
-            </div>
-          </section>
-        </div>
-      </div>
-    </Layout>
-<<<<<<< HEAD
-  )
-=======
+
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
                 </Link>
               ))  } catch (error) {
@@ -130,10 +95,7 @@ export default function EnterpriseITPage() {_const _features = [
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

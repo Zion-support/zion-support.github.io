@@ -1,11 +1,7 @@
 ' \' \' \' \' \' \'"export\": const MobileLaunchPage = () => {\'';
-<<<<<<< HEAD:src.pages.disabled/MobileLaunchPage.jsx
-<<<<<<< HEAD
+
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
-<<<<<<< HEAD
-=======
-' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
 =======
 =======
 :src.pages.disabled/MobileLaunchPage.jsx

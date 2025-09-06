@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export const real2036AIServices = [
   {
     id: 'ai-emotion-intelligence-platform'
@@ -327,19 +324,7 @@ export const real2036AIServices = [
       'Predictive maintenance'
     ]
     useCases: [
-<<<<<<< HEAD
-      'Autonomous vehicles'
-      'Fleet management'
-      'Traffic optimization'
-      'Safety systems'
-    ]
-  }
-];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
-    ]
-  }
-];
 
-=======
       'Autonomous vehicles',
       'Fleet management',
       'Traffic optimization',
@@ -348,7 +333,7 @@ export const real2036AIServices = [
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 export const real2036AIServices = [;
   {;
@@ -560,9 +545,8 @@ export const real2036AIServices = [;
     useCases: [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';
     ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];

@@ -1,42 +1,6 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import Link from 'next/link'
-import { SEO } from '@/components/SEO'
-import {
-  BriefcaseIcon
-  UserIcon
-  MessageSquare
-  Star
-  PlusCircle
-  FileText
-  Inbox
-  Video
-} from 'lucide-react'
-import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { SuggestedJobs } from '@/components/jobs/SuggestedJobs'
-import { useAuth } from '@/hooks/useAuth'
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Avatar } from '@/components/ui/avatar'
-import { Badge } from '@/components/ui/badge'
-import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps'
-import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps'
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
-import { MyApplications } from '@/components/jobs/MyApplications'
-import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
-import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
-<<<<<<< HEAD
-=======
+
+
 function TalentDashboardContent() {
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState('job-matches')
@@ -47,7 +11,7 @@ function TalentDashboardContent() {
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 function TalentDashboardContent() {
   const { user } = useAuth();
@@ -82,10 +46,8 @@ function TalentDashboardContent() {
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
@@ -115,15 +77,10 @@ function TalentDashboardContent() {
         </div>
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
-<<<<<<< HEAD
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-=======
+
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <Card className="mb-8">
@@ -132,34 +89,20 @@ function TalentDashboardContent() {
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (
-<<<<<<< HEAD
-                        <img
-                          src={user.avatarUrl}
-                          alt={user.displayName |'User'}
-                          loading='lazy'
-                        />
-                      ) : (
-                        <div className='flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase'>
-                          {user?.displayName?.charAt(0) |'U'}
-=======
+
                         <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
                           {user?.displayName?.charAt(0) || "U"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                         </div>
                       )}
                     </Avatar>
                     <div>
-<<<<<<< HEAD
-                      <CardTitle>{user?.displayName |'User'}</CardTitle>
-                      <CardDescription>
-                        {user?.headline |'AI Professional'}
-                      </CardDescription>
-=======
+
                       <CardTitle>{user?.displayName || "User"}</CardTitle>
                       <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Online</Badge>
@@ -179,21 +122,13 @@ function TalentDashboardContent() {
                     <span className="text-xs text-muted-foreground">Projects</span>
                   </div>
                 </div>
-<<<<<<< HEAD
-                <div className='mt-4'>
-                  <Button className='w-full' asChild>
-                    <Link href='/messages'>
-                      <MessageSquare className='h-4 w-4 mr-2' />
-=======
+
                 
                 <div className="mt-4">
                   <Button className="w-full" asChild>
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Messages
                     </Link>
@@ -201,13 +136,9 @@ function TalentDashboardContent() {
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
-=======
+
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
@@ -215,14 +146,7 @@ function TalentDashboardContent() {
               <div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>
-<<<<<<< HEAD
-            )}
-            {/* Upcoming Interviews Card */}
-            <div className='mt-8'>
-              <UpcomingInterviewsCard />
-            </div>
-            <Card className='mt-8'>
-=======
+
 import { useState, useEffect } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -339,10 +263,7 @@ function TalentDashboardContent() {;
             </div>
             
             <Card className="mt-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
@@ -369,45 +290,28 @@ function TalentDashboardContent() {;
               </CardContent>
             </Card>
           </div>
-<<<<<<< HEAD
-          <div className='lg:col-span-2'>
-            <Tabs defaultValue='job-matches' onValueChange={setActiveTab}>
-              <TabsList className='mb-6'>
-                <TabsTrigger value='job-matches' className='flex items-center'>
-                  <BriefcaseIcon className='h-4 w-4 mr-2' />
-=======
+
           
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
-<<<<<<< HEAD
-              <TabsContent value='job-matches' className='mt-0'>
-                <SuggestedJobs />
-              </TabsContent>
-              <TabsContent value='applications' className='mt-0'>
-=======
+
               
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
               </TabsContent>
               
               <TabsContent value="applications" className="mt-0">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <MyApplications />
                 <div className="mt-4 flex justify-center">
@@ -418,21 +322,13 @@ function TalentDashboardContent() {;
                   </Button>
                 </div>
               </TabsContent>
-<<<<<<< HEAD
-              <TabsContent value='saved' className='mt-0'>
-                <Card className='bg-muted/30'>
-                  <CardContent className='pt-6 text-center'>
-                    <p className='text-muted-foreground'>
-=======
+
               
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       You haven't saved any jobs yet.
                     </p>
@@ -448,21 +344,12 @@ function TalentDashboardContent() {;
       </main>
     </>
   )
-<<<<<<< HEAD
-export default function TalentDashboard() {
-  return (
-    <ProtectedRoute>
-<<<<<<< HEAD
-      <TalentDashboardContent />
-    </ProtectedRoute>
-  )
-}
-=======
+
       <TalentDashboardContent />;
     </ProtectedRoute>;
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 }
 ;
@@ -474,8 +361,6 @@ export default function TalentDashboard() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

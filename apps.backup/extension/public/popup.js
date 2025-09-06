@@ -1,25 +1,16 @@
-<<<<<<< HEAD
-const API_BASE = 'http: //localhost:4000';
-function getUserId(cb) {
-  chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id))
-=======
+
 const API_BASE = 'http: //localhost:4000',;
 function getUserId(cb) {;
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.getElementById('prompt').value = btn.dataset.text |''
@@ -81,10 +72,8 @@ document.getElementById('signIn').addEventListener('click', async () => {
 
   document.getElementById('result').textContent = 'Signed in (local).';
 });
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 ;
 document.querySelectorAll('.example').forEach((btn) => {;
@@ -138,8 +127,6 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   setUserId(id),;
   document.getElementById('result').textContent = 'Signed in (local).';
 }),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,95 +1,11 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-=======
+
 import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Network
-  Server
-  HardDrive
-  Monitor
-  Laptop
-  Watch
-  Headphones
-  Speaker
-  Mic
-  Keyboard
-  Mouse
-  CpuIcon
-  DatabaseIcon
-  CloudIcon
-  LockIcon
-  ShieldIcon
-  GlobeIcon
-  ZapIcon
-  SparklesIcon
-  BrainIcon
-  AtomIcon
-  MenuIcon
-  CloseIcon
-  ChevronRightIcon;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
 
-=======
   Menu,
   X,
   ChevronDown,
@@ -170,7 +86,7 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -396,20 +312,7 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
-<<<<<<< HEAD
-        name: 'Synthetic Biology Automation Platform'
-        href: '/synthetic-biology-automation-platform'
-        description: 'Automate biology research'
-        price: '$3,999/month'
-      }
-    ]
-  },];      { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' }
-      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface', price: '$1,299/month' }
-      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2,999/month' }
-      { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
-    ]
-  }
-=======
+
         name: 'Synthetic Biology Automation Platform',
         href: '/synthetic-biology-automation-platform',
         description: 'Automate biology research',
@@ -422,16 +325,7 @@ const serviceCategories = [
       { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
     ]
   }
-<<<<<<< HEAD
 
-];
-=======
-<<<<<<< HEAD
-=======
-
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const mainNavigation = [
@@ -452,12 +346,10 @@ const companyLinks = [
   { name: 'Support', href: '/support' }
   { name: 'Status', href: '/status' },];  { name: 'Status', href: '/status' }
 ];
-<<<<<<< HEAD
-export default function UltraFuturisticNavigation2032() {
-=======
+
 
 export default function UltraFuturisticNavigation2032() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -579,35 +471,9 @@ export default function UltraFuturisticNavigation2032() {;
             </Link>
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
-<<<<<<< HEAD
-              {mainNavigation.map(item => (            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Rocket className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </div>
-                <div className="text-xs text-gray-400">2030 Future Technology</div>
-              </div>
-            </Link>
-            {/* Desktop Navigation */}
-            <div className='hidden lg:flex items-center space-x-8'>
-              {mainNavigation.map(item => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'
-                >
-                  <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
-                  <span>{item.name}</span>
-                </Link>
-              ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
               {/* Services Dropdown */}
               <div className='relative group'>
                 <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>
@@ -680,38 +546,18 @@ export default function UltraFuturisticNavigation2032() {;
 
             {/* Desktop Navigation */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             {category.services.map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
-<<<<<<< HEAD
-                                className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
-                              >
-                                <div className='flex items-center justify-between'>
-                                  <div>
-                                    <div className='text-white group-hover:text-cyan-400 transition-colors font-medium'>
-                                      {service.name}
-                                    </div>
-                                    <div className='text-sm text-gray-400'>
-                                      {service.description}                                    </div>
-                                  </div>
-                                  <div className='text-cyan-400 font-semibold text-sm'>
-                                    {service.price}
-                                  </div>                                </div>                                  <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>
-                                </div>
-=======
+
 
                                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               </Link>
                             ))}
@@ -723,36 +569,22 @@ export default function UltraFuturisticNavigation2032() {;
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            {/* CTA Buttons */}
-            <div className='hidden lg:flex items-center space-x-4'>
-              <Link href='/contact'>
-                <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">
-              <Link href="/contact">
-                <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
-=======
+
 
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Get Started
                 </button>
               </Link>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Mobile Menu Button */}
             <button
@@ -770,13 +602,9 @@ export default function UltraFuturisticNavigation2032() {;
           </div>
         </div>
       </nav>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -787,13 +615,9 @@ export default function UltraFuturisticNavigation2032() {;
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed inset-0 z-50 lg:hidden'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div
@@ -858,12 +682,7 @@ export default function UltraFuturisticNavigation2032() {;
                     >
                       <item.icon className="w-5 h-5" />
                       <span>{item.name}</span>
-<<<<<<< HEAD
-                    </Link>
-                  ))}
-                  {/* Services Accordion */}
-                  <div className='space-y-2'>
-=======
+
 
                     </Link>
                   ))}
@@ -871,10 +690,7 @@ export default function UltraFuturisticNavigation2032() {;
                   {/* Services Accordion */}
                   <div className='space-y-2'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <button
                       onClick={() =>
@@ -926,13 +742,9 @@ export default function UltraFuturisticNavigation2032() {;
                       </div>
                     )}
                   </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Company Links */}
                   <div className='pt-4 border-t border-gray-700/50'>
@@ -958,13 +770,9 @@ export default function UltraFuturisticNavigation2032() {;
                       ))}
                     </div>
                   </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Contact Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
@@ -974,13 +782,9 @@ export default function UltraFuturisticNavigation2032() {;
                     <div className='space-y-2 text-sm text-gray-400'>
                       <div className='flex items-center space-x-2'>
                         <Phone className='w-4 h-4 text-cyan-400' />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <span>{contactInfo.mobile}</span>
                       </div>
@@ -1018,27 +822,16 @@ export default function UltraFuturisticNavigation2032() {;
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-      {/* Spacer for fixed navigation */}
-      <div className='h-20' />
-    </>
-);      <div className="h-20" />
-    </>
-  );
-}
-<<<<<<< HEAD
-=======
+
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

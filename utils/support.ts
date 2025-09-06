@@ -1,26 +1,16 @@
-<<<<<<< HEAD
-// Support utilities
-export const support = {
-  // Add support functionality here
-<<<<<<< HEAD
-  logEvent: (event: any) => null
-  getArticles: () => []
-  getArticleById: (id: string) => null
-}
-=======
+
   logEvent: (event: any) => null,
   getArticles: () => [],
   getArticleById: (id: string) => null;
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 }
 =======
 };

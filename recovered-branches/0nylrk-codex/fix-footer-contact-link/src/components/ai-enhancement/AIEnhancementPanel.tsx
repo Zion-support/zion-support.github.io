@@ -1,28 +1,8 @@
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
-import { Textarea  } from '@/components/ui/textarea';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check  } from '@/components/icons';
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementPanelProps {
 
-  title: string
-  defaultOptions: AIEnhancementOptions
-  onApply: (content: string) => void
-
-  onClose?: () => void;
-  showInstructions?: boolean;
-  initialContent?: string
-}
-<<<<<<< HEAD
-export function AIEnhancementPanel({
-=======
 
 export function AIEnhancementPanel({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   title;
   defaultOptions;
   onApply;
@@ -42,11 +22,9 @@ export function AIEnhancementPanel({;
     if (result) {
       setGeneratedContent(result)
     }
-<<<<<<< HEAD
-  }
-=======
+
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -84,9 +62,8 @@ export function AIEnhancementPanel({;
       setGeneratedContent(result);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -97,30 +74,24 @@ export function AIEnhancementPanel({;
     setOptions({
       ...options
       [field]: e.target.value})
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleApply = () => {
     onApply(generatedContent),
     if (onClose) onClose()
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -162,20 +133,14 @@ export function AIEnhancementPanel({;
             />
           </div>
         )}
-<<<<<<< HEAD
-        {/* Generate button */}
-        <Button
-          onClick={handleGenerate}
-          className="w-full"
-          disabled={isEnhancing |!options.content && !options.context}
-=======
+
 
         {/* Generate button */}
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         >
           {isEnhancing ? (
             <>

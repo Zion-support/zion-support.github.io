@@ -1,13 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
-<<<<<<< HEAD
-export default function RequestToHirePage() {
 
-=======
 
 export default function RequestToHirePage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(
@@ -66,11 +63,9 @@ export default function RequestToHirePage() {;
     } finally {
       setSubmitting(false)
     }
-<<<<<<< HEAD
-  }
-=======
+
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   if (result) {
     return (
@@ -174,10 +169,7 @@ export default function RequestToHirePage() {;
         </button>
       </form>
     </div>
-<<<<<<< HEAD
-);
-}
-=======
+
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

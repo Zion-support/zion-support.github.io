@@ -1,42 +1,4 @@
-<<<<<<< HEAD
-'use client';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 20);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  const navigation = [;
-    { name: 'Home', href: '/' }
-    { name: 'About', href: '/about' }
-    { name: 'Services', href: '/services' }
-    { name: 'AI Solutions', href: '/ai-solutions' }
-    { name: 'Quantum Computing', href: '/quantum-computing' }
-    { name: 'Research & Development', href: '/research-development' }
-    { name: 'Case Studies', href: '/case-studies' }
-    { name: 'News', href: '/news' }
-    { name: 'Contact', href: '/contact' }];
-  const services = [;
-    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' }
-    { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' }
-    { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' }
-    { name: 'Business Intelligence', href: '/ai-business-intelligence' }
-    { name: 'Content Generation', href: '/ai-content-generator' }
-    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' }];
-  return (;
-    <header;
-      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled;
-          ? 'bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl';
-          : 'bg-black/60 backdrop-blur-md border-b border-white/10';
-      }`}
-role=&quot;banner&quot;
-      aria-label=&quot;Main navigation&quot;
-=======
+
 'use client',;
 import { useState, useEffect } from 'react',;
 import Link from 'next/link',;
@@ -74,19 +36,7 @@ export default function Header() {;
           ? 'bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl';
           : 'bg-black/60 backdrop-blur-md border-b border-white/10';
       }`}
-<<<<<<< HEAD
-      role="banner"
-      aria-label="Main navigation"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-role=&quot;banner&quot;
-      aria-label=&quot;Main navigation&quot;
-=======
-      role="banner"
-      aria-label="Main navigation"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -111,38 +61,19 @@ role=&quot;banner&quot;
                 aria-label={`Navigate to ${item.name} page`}
               >;
                 {item.name}
-<<<<<<< HEAD
-<span className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full&quot;></span>
-<<<<<<< HEAD
-              </Link>
-            ))}
-            {/* Services Dropdown */}
-<div className=&quot;relative group&quot;>
-              <button
-                className=&quot;text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group&quot;
-                aria-expanded=&quot;false&quot;
-                aria-haspopup=&quot;true&quot;
-                aria-label=&quot;Services menu&quot;
-=======
+
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
 =======
 =======
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Link>
             ))}
 ;
             {/* Services Dropdown */}
-<<<<<<< HEAD
-            <div className="relative group">
-=======
-<<<<<<< HEAD
-<div className=&quot;relative group&quot;>
-=======
-            <div className="relative group">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
               <button 
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
@@ -177,14 +108,9 @@ role=&quot;banner&quot;
             </div>;
           </nav>;
           {/* CTA Button */}
-<<<<<<< HEAD
-<div className=&quot;hidden lg:flex items-center space-x-4&quot;>
-=======
+
           <div className="hidden lg:flex items-center space-x-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Link
               href="/contact"
@@ -197,14 +123,9 @@ role=&quot;banner&quot;
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-<<<<<<< HEAD
-className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
-=======
+
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -220,21 +141,14 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
           </button>;
         </div>;
         {/* Mobile Navigation */}
-<<<<<<< HEAD
-{isMenuOpen && (
-          <div
-            id=&quot;mobile-menu&quot;
-            className=&quot;lg:hidden border-t border-white/10 animate-fade-in&quot;
-            role=&quot;navigation&quot;
-            aria-label=&quot;Mobile menu&quot;
-=======
+
         {isMenuOpen && (
           <div 
             id="mobile-menu"
             className="lg:hidden border-t border-white/10 animate-fade-in"
             role="navigation"
             aria-label="Mobile menu"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
@@ -248,16 +162,10 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                   {item.name}
                 </Link>;
               ))}
-<<<<<<< HEAD
-<div className=&quot;px-3 py-2&quot;>
-                <div className=&quot;text-gray-400 text-sm font-medium mb-2&quot;>Services</div>
-=======
+
               <div className="px-3 py-2">
                 <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {services.map((service) => (
                   <Link
@@ -270,16 +178,10 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                     {service.name}
                   </Link>;
                 ))}
-<<<<<<< HEAD
-</div>
-              <div className=&quot;pt-4&quot;>
-=======
+
               </div>
               <div className="pt-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Link
                   href="/contact"

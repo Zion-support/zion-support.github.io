@@ -1,11 +1,7 @@
 import React from \'react\' export default OpenAppRedirect\';
-<<<<<<< HEAD:src.pages.disabled/OpenAppRedirect.jsx
-<<<<<<< HEAD
+
 import _React from 'react' export default OpenAppRedirect';
-<<<<<<< HEAD
-=======
-import _React from 'react' export default OpenAppRedirect';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
 =======
 =======
 :src.pages.disabled/OpenAppRedirect.jsx

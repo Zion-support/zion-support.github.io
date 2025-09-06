@@ -5,18 +5,7 @@ import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-rea
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
-<<<<<<< HEAD
-  innovativeRealMicroSaasServices2025
-} from '../data/2025-innovative-real-micro-saas-services';
-import {
-  innovativeAIServicesEnhanced2025
-} from '../data/2025-innovative-ai-services-enhanced';
-import {
-  innovativeITServicesEnhanced2025
-} from '../data/2025-innovative-it-services-enhanced';
-import {
-  emergingTechServicesEnhanced2025
-=======
+
   innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
 import { 
@@ -27,7 +16,7 @@ import {
 } from '../data/2025-innovative-it-services-enhanced';
 import { 
   emergingTechServicesEnhanced2025 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from '../data/2025-emerging-tech-services-enhanced';
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
@@ -37,22 +26,7 @@ import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackgrou
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
 import {
-<<<<<<< HEAD
-  ArrowRight
-  Star
-  Brain
-  Atom
-  Shield
-  Zap
-  Users
-  Globe
-  TrendingUp
-  Rocket
-  Cpu
-  Lock
-  BarChart3
-  Cloud;
-=======
+
   ArrowRight,
   Star,
   Brain,
@@ -67,7 +41,7 @@ import {
   Lock,
   BarChart3,;
   Cloud,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';
 interface Homepage2025Props {
   showInternalNav?: boolean;
@@ -177,19 +151,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     initial: {}
     animate: {
       transition: {
-<<<<<<< HEAD
-        staggerChildren: 0.1
-      }
-    }
-  }
-=======
+
         staggerChildren: 0.1,
       },
     },
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <UltraFuturisticBackground2026 intensity='medium' theme='quantum'>
       {showInternalNav && (
@@ -210,46 +179,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </motion.div>
                 {/* Desktop Navigation */}
                 <div className='hidden lg:flex space-x-8'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  {navigationSections.map(section => (                    <button  }
-=======
+
                   {navigationSections.map(section => (                    <button  };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
-      {showInternalNav && (
-        <>
-          {/* Navigation */}
-          <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex justify-between items-center h-16">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  className="flex items-center space-x-2"
-                >
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
-                  <span className="text-white font-bold text-xl">ZionTech Group</span>
-                </motion.div>
-                {/* Desktop Navigation */}
-                <div className="hidden lg:flex space-x-8">
-                  {navigationSections.map((section) => (
-                    <button
-=======
-<<<<<<< HEAD
-                  {navigationSections.map(section => (                    <button
 
-                    <button
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                    <button
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       key={section.id}
                       onClick={() => scrollToSection(section.id)}
                       className={`flex items-center space-x-2 text-sm font-medium transition-all duration-300 ${
@@ -263,13 +196,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     </button>
                   ))}
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Contact Info */}
                 <motion.div
@@ -323,13 +252,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Mobile Navigation Menu */}
               <AnimatePresence>
@@ -341,20 +266,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     className='lg:hidden border-t border-white/10'
                   >
                     <div className='py-4 space-y-2'>
-<<<<<<< HEAD
-                      {navigationSections.map(section => (                        <button                    className="lg:hidden border-t border-white/10"
-                  >
-                    <div className="py-4 space-y-2">
-                      {navigationSections.map((section) => (
-=======
+
                       {navigationSections.map(section => (                        <button
 
                         <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
@@ -395,10 +312,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </nav>
         </>
       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
       {/* Hero Section */}
       <section
         id='hero'
@@ -412,16 +328,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-<<<<<<< HEAD
-              className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            >      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
-        <div className="text-center z-10 max-w-6xl mx-auto">
-=======
+
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -450,13 +360,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Pioneering the future of technology with innovative solutions
                 that drive business transformation
               </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Enhanced CTA Section */}
               <motion.div
@@ -514,13 +420,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </button>
                 </Link>
               </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Trust Indicators */}
               <motion.div
@@ -560,26 +462,18 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-20'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -594,27 +488,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-<<<<<<< HEAD
-                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Comprehensive Technology Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
-=======
+
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -644,32 +521,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
-<<<<<<< HEAD
-            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-=======
+
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
 
             initial={{ opacity: 0, y: 40 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -737,77 +602,18 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-<<<<<<< HEAD
-                onClick={() => (window.location.href = service.link)}              Our Revolutionary 2026 Services
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Cloud Infrastructure", description: "Automate cloud infrastructure deployment and management", icon: Cloud, gradient: "from-cyan-500 to-blue-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
-            ].map((service, index) => (
-              <motion.div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
-=======
+
                 onClick={() => (window.location.href = service.link)}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-<<<<<<< HEAD
-                onClick={() => (window.location.href = service.link)}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
-                />
-                <div className='relative p-6'>
-                  <div
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.gradient} p-3 mb-4`}
-                  >
-                    <service.icon className='w-full h-full text-white' />
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-3'>
-                    {service.title}
-                  </h3>
-                  <p className='text-gray-300 leading-relaxed mb-4'>
-                    {service.description}
-                  </p>
-                  <a
-                    href={service.link}
-                    className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors'
-                  >
-                    <span className='text-sm font-medium'>Explore Service</span>
-                    <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                  </a>                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">{service.description}</p>
-                  <a href={service.link} className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                    <span className="text-sm font-medium">Explore Service</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          {/* Call to Action for Services Showcase */}
-          <motion.div
-            className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -832,20 +638,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section id='contact' className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
-<<<<<<< HEAD
-            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section id="contact" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-=======
+
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
 
             initial={{ opacity: 0, y: 40 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -924,14 +722,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             </div>
           </div>
           <motion.div
-<<<<<<< HEAD
-            className='text-center'            className="text-center"
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1012,24 +805,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </footer>
     </UltraFuturisticBackground2026>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default Homepage2025;  )
-}
-export default Homepage2025;
 
-<<<<<<< HEAD
-=======
-export default Homepage2025;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default Homepage2025;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,22 +1,12 @@
 import * as React from "react"
 import type { CSSProperties } from "react"
-<<<<<<< HEAD
-import {TooltipProvider} from "@/components/ui/tooltip"
-import {useIsMobile} from "@/hooks/use-mobile"
-import {cn} from "@/lib/utils"
-import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
-;
-=======
+
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
-<<<<<<< HEAD
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -26,45 +16,25 @@ export function useSidebar(): SidebarContextType {
   if (!context) {
     throw new Error("useSidebar must be used within a SidebarProvider.")
   }
-<<<<<<< HEAD
-  return context as SidebarContextType
-}
-=======
+
 
   return context as SidebarContextType
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   defaultOpen?: boolean
   open?: boolean
   onOpenChange?: (open: boolean) => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export const SidebarProvider = React.forwardRef<;
-  HTMLDivElement;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const SidebarProvider = React.forwardRef<
-  HTMLDivElement,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
   SidebarProviderProps
 >(
   (
     {
-<<<<<<< HEAD
-      defaultOpen = true;
-      open: openProp
-      onOpenChange: setOpenProp
-      className;
-      style;
-      children;
-      ...props
-    }
-=======
+
       defaultOpen = true,
       open: openProp,
       onOpenChange: setOpenProp,
@@ -73,7 +43,7 @@ export const SidebarProvider = React.forwardRef<
       children,
       ...props
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     ref
   ) => {
     const isMobile = useIsMobile()
@@ -90,11 +60,9 @@ export const SidebarProvider = React.forwardRef<
         } else {
           _setOpen(openState)
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -115,11 +83,8 @@ export const SidebarProvider = React.forwardRef<
         ) {
           event.preventDefault()
           toggleSidebar()
-<<<<<<< HEAD
-        }
-      }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 ;
         // This sets the cookie to keep the sidebar state.;
@@ -142,9 +107,8 @@ export const SidebarProvider = React.forwardRef<
         ) {;
           event.preventDefault();
           toggleSidebar();
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
@@ -178,12 +142,9 @@ export const SidebarProvider = React.forwardRef<
                 ...style} as CSSProperties
               }
             className={cn(
-<<<<<<< HEAD
-              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
 
-=======
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               className
             )}
             ref={ref}
@@ -197,18 +158,7 @@ export const SidebarProvider = React.forwardRef<
   }
 )
 SidebarProvider.displayName = "SidebarProvider"
-<<<<<<< HEAD
-export { SidebarContext }
-=======
 
-<<<<<<< HEAD
-export { SidebarContext };
-;
-=======
-export { SidebarContext }
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

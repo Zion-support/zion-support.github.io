@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
-export interface EmergingTechService {
-
-=======
 export interface EmergingTechService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -987,21 +981,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Quantum metaverse platform with enhanced graphics and AI capabilities.'
-    launchDate: '2024-04-30'
-    customers: 18
-    rating: 4.8
-    reviews: 11
-  }
-=======
+
       'Quantum metaverse platform with enhanced graphics and AI capabilities.',
     launchDate: '2024-04-30',
     customers: 18,
     rating: 4.8,
     reviews: 11,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1016,11 +1003,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8
 
     reviews: 11
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
@@ -1680,9 +1664,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     customers: 18,;
     rating: 4.8;
     reviews: 11;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];

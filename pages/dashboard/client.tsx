@@ -1,88 +1,5 @@
-<<<<<<< HEAD
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import {useEffect, useState} from 'react';
-const STEPS = [
-  { key: 'job', label: 'Job posted' }
-  { key: 'invite', label: 'First invite sent' }
-  { key: 'response', label: 'First response received' }
-] as const;
-type StepKey = (typeof STEPS)[number]['key'];
-export default function ClientDashboard() {
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
-<<<<<<< HEAD
-    job: false
-    invite: false
-    response: false
-=======
-    job: false,
-    invite: false,
-    response: false,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  });
-  useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem('onboarding.client');
-      if (raw) setCompleted(JSON.parse(raw));    } catch {}
-  }, []);
-  useEffect(() => {
-    try {
-      window.localStorage.setItem(
-        'onboarding.client'
-        JSON.stringify(completed)
-      );
-    } catch {}
-  }, [completed]);
-  const progress = Math.round(
-    (Object.values(completed).filter(Boolean).length / STEPS.length) * 100
-  );
-  const toggle = (key: StepKey) =>
-    setCompleted(c => ({ ...c, [key]: !c[key] }));
 
-=======
-<<<<<<< HEAD
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useEffect, useState } from 'react';
-const STEPS = [;
-  { key: 'job', label: 'Job posted' },;
-  { key: 'invite', label: 'First invite sent' },;
-  { key: 'response', label: 'First response received' }] as const,;
-type StepKey = typeof STEPS[number]['key'];
-export default function ClientDashboard(req, res) {
-  try {
-  const [completed, setCompleted] = useState<Record<StepKey boolean>>({ job: false, invite: false, response: false }),;
-  useEffect(() => {;
-    try {
-      const raw = window.localStorage.getItem('onboarding.client');
-      if (raw) setCompleted(JSON.parse(raw));
-    } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, []),;
-  useEffect(() => {;
-    try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, [completed]),
-  const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
-  const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -109,25 +26,10 @@ export default function ClientDashboard(req, res) {
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
-<<<<<<< HEAD
-                <EnhancedButton
-                  onClick={() => toggle(s.key)}
-                  variant='secondary'
-                  className='text-xs py-1 px-2'
-                >
-                  {s.key === 'job' ? 'Post a Job' : 'Mark done'}
-                </EnhancedButton>              )}
-            </li>
-          ))}
-        </ul>
-      </EnhancedCard>
-    </div>
-);
-<<<<<<< HEAD
-=======
+
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
@@ -150,8 +52,6 @@ export default function ClientDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

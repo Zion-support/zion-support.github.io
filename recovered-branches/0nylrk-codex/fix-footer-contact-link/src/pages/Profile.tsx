@@ -1,39 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {useNavigate} from "react-router-dom";
-import {toast} from "sonner";
-export default function Profile() {;
-  const { user, isLoading, logout } = useAuth();
-  const navigate = useNavigate();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
-export default function Profile() {
-  const { user, isLoading, logout } = useAuth();
-=======
-import { useNavigate } from "react-router-dom",
-import { toast } from "sonner",
-export default function Profile() {
-  const { user, isLoading, logout } = useAuth(),
-  const navigate = useNavigate(),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const navigate = useNavigate();
@@ -42,12 +9,10 @@ export default function Profile() {
       toast.error("Please log in to view your profile"),
       navigate("/login?redirect=/profile")
     }
-<<<<<<< HEAD
-  }, [user, isLoading, navigate]);
-=======
+
   }, [user, isLoading, navigate]),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   if (isLoading) {
     return (
       <>
@@ -97,12 +62,9 @@ export default function Profile() {
                 <p className="text-zion-slate-light mb-4">{user.email}</p>
                 <Button
                   onClick={() => {
-<<<<<<< HEAD
-                    logout();
 
-=======
                     logout(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                     navigate("/")
                   }}
                   variant="outline"
@@ -118,9 +80,7 @@ export default function Profile() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-}
-=======
+
 import React, { useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -206,8 +166,5 @@ export default function Profile() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

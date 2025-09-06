@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -11,21 +8,14 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { logErrorToProduction } from '@/utils/productionLogger'; import {
-<<<<<<< HEAD
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-=======
+
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,;
   FormMessage;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject } from '@/types/resume'
 import { usePortfolio } from '@/hooks/usePortfolio'
@@ -104,10 +94,8 @@ export function ProjectForm({
       setIsLoading(false)
     }
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -196,57 +184,31 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-<<<<<<< HEAD
-          name='title'
-=======
+
           name="title"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-<<<<<<< HEAD
-                <Input
-                  placeholder='E.g., AI Chatbot, E-commerce Website'
-                  {...field}                />
-=======
+
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-        />
-        <FormField
-          control={form.control}
-          name='description'
-          render={({ field }: { field: any }) => (            <FormItem>
-              <FormLabel>Project Description</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder='Describe what the project does and your role in it...'
-                  className='min-h-[100px]'
-                  {...field}
-=======
+
         />;
         <FormField;
           control={form.control}
@@ -259,30 +221,19 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                   placeholder="Describe what the project does and your role in it..."
                   className="min-h-[100px]"
                   {...field} 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-        />
-        <FormField
-          control={form.control}
-          name='technologies'
-=======
+
         />;
         <FormField;
           control={form.control}
           name="technologies"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -294,36 +245,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             </FormItem>
           )}
         />
-<<<<<<< HEAD
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <FormField
-            control={form.control}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            name='github_url'
-            render={({ field }: { field: any }) => (              <FormItem>
-                <FormLabel className='flex items-center gap-2'>
-                  <Github className='h-4 w-4' />
-=======
-<<<<<<< HEAD
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            name="github_url"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-                <FormLabel className="flex items-center gap-2">
-                  <Github className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -332,15 +255,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormMessage />
               </FormItem>
             )}
-<<<<<<< HEAD
-          />
-          <FormField
-            control={form.control}
-            name='demo_url'
-            render={({ field }: { field: any }) => (              <FormItem>
-                <FormLabel className='flex items-center gap-2'>
-                  <Link className='h-4 w-4' />
-=======
+
           />;
           <FormField;
             control={form.control}
@@ -349,10 +264,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Link className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Demo URL
                 </FormLabel>
@@ -362,16 +274,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormMessage />
               </FormItem>
             )}
-<<<<<<< HEAD
-          />
-        </div>
-        <FormField
-          control={form.control}
-          name='image_url'
-          render={({ field }: { field: any }) => (            <FormItem>
-              <FormLabel className='flex items-center gap-2'>
-                <FileImage className='h-4 w-4' />
-=======
+
           />;
         </div>;
         <FormField;
@@ -381,10 +284,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             <FormItem>
               <FormLabel className="flex items-center gap-2">
                 <FileImage className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Screenshot URL
               </FormLabel>
@@ -394,21 +294,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-        />
-        {/* Future file upload field would go here */}
-        <div className='flex justify-end space-x-2 pt-4'>
-          <Button type='button' variant='outline' onClick={onCancel}>
-=======
+
         />;
         {/* Future file upload field would go here */}
         
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Cancel
           </Button>
@@ -418,22 +310,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           </Button>
         </div>
       </form>
-<<<<<<< HEAD
-    </Form>;
-  );
-};
-};
-=======
+
     </Form>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

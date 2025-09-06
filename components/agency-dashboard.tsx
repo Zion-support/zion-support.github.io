@@ -2,13 +2,10 @@ import type { GetServerSideProps } from 'next';
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-=======
+
 type Props = { vendor: Vendor | null };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function AgencyDashboardPage({ vendor }: Props) {;
@@ -40,11 +37,9 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       )
         .split(',')
         .map(s => s.trim())
-<<<<<<< HEAD
-        .filter(Boolean)
-=======
+
         .filter(Boolean),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only
     setActiveVendor(updated);  }
@@ -59,33 +54,9 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     setActiveVendor(updated)
   }
   function addPackage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (!pkgTitle |!pkgPrice |!activeVendor) return;
-=======
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    const packages = [
-      ...(activeVendor.packages |[])
-      {
-        id: `pkg_${Date.now()}`
-        title: pkgTitle
-        description: pkgDesc
-        priceUsd: Number(pkgPrice)
-      }
-    ];
-    setActiveVendor({ ...activeVendor, packages });
-    setPkgTitle('');
-    setPkgDesc('');
-    setPkgPrice('');
-  }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+
   return (
     <div className='space-y-8'>
       <div className='flex items-center justify-between'>
@@ -166,86 +137,8 @@ export default function AgencyDashboardPage({ vendor }: Props) {
           </div>
         </form>
       </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      <section className='space-y-3'>
-        <h2 className='text-lg font-medium'>Publish Packages</h2>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-            <div
-              key={p.id}
-              className='border border-gray-200 dark:border-gray-800 rounded p-4'
-            >
-              <div className='font-medium'>{p.title}</div>
-              <div className='text-sm text-gray-500'>{p.description}</div>
-              <div className='mt-2 text-sm'>${p.priceUsd}</div>
-            </div>
-          ))}
-        </div>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-2 items-end'>
-          <input
-            placeholder='Title'
-            value={pkgTitle}
-            onChange={e => setPkgTitle(e.target.value)}
-            className='border rounded px-3 py-2 bg-transparent'
-          />
-          <input
-            placeholder='Description'
-            value={pkgDesc}
-            onChange={e => setPkgDesc(e.target.value)}
-            className='border rounded px-3 py-2 bg-transparent'
-          />
-          <div className='flex gap-2'>
-            <input
-              placeholder='Price (USD)'
-              type='number'
-              value={pkgPrice}
-              onChange={e => setPkgPrice(Number(e.target.value))}
-              className='border rounded px-3 py-2 bg-transparent w-full'
-            />
-            <button
-              onClick={addPackage}
-              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
-            >
-              Add
-            </button>          </div>
-        </div>
-      </section>
-      <section className='space-y-3'>
-        <h2 className='text-lg font-medium'>Project Pipeline</h2>        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">
-          <input placeholder="Title" value={pkgTitle} onChange={e => setPkgTitle(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
-          <input placeholder="Description" value={pkgDesc} onChange={e => setPkgDesc(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
-          <div className="flex gap-2">
-            <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value))} className="border rounded px-3 py-2 bg-transparent w-full" />
-            <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>
-        </div>
-      </section>
-      <section className='space-y-3'>
-        <h2 className='text-lg font-medium'>Project Pipeline</h2>
-        <Pipeline vendorId={activeVendor.id} />
-      </section>
-      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
-    </div>
-  );        <Pipeline vendorId={activeVendor.id} />
-      </section>
-      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
-    </div>
-  );
-}
-=======
-<<<<<<< HEAD
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
-          </div>
-        </form>
-      </section>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
@@ -264,20 +157,9 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       body: JSON.stringify({ itemId, status })
     });
     fetchItems();
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-  }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   useEffect(() => {
     fetchItems();
   }, []);
@@ -319,35 +201,25 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             <option value="lost">Lost</option>
         </div>
       ))}
-<<<<<<< HEAD
-    </div>
-  );
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-=======
+
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
   return { props: { vendor } }
 };  )
 }
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-=======
+
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null, // tie to auth later
   return { props: { vendor } }
-<<<<<<< HEAD
-}
 
-=======
     </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 };
 =======

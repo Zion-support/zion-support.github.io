@@ -1,9 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
 
@@ -142,14 +141,8 @@ const EnhancedFooter = () => {
       </div>
     </footer>
 
-<<<<<<< HEAD
-);
-}
-export default EnhancedFooter;}
-export default EnhancedFooter;
 
-=======
 export default EnhancedFooter;},
 
 export default EnhancedFooter;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

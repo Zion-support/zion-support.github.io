@@ -1,14 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
-export interface ThemeColors {
-=======
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 
 export interface ThemeColors {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -63,11 +58,9 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 }
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
-<<<<<<< HEAD
-  const root = document.documentElement
-=======
+
   const root = document.documentElement,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -78,10 +71,8 @@ export function applyThemeColors(colors: ThemeColors) {
   document.body.style.backgroundColor = colors.backgroundColor;
 
   document.body.style.color = colors.textColor
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
@@ -152,9 +143,8 @@ export function applyThemeColors(colors: ThemeColors) {;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;

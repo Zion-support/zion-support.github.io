@@ -1,18 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useWallet  } from '@/hooks/useWallet';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
-import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
-import { BadgeDollarSign } from 'lucide-react';
-export default function WalletPage() {
-=======
+
 import {useWallet} from '@/hooks/useWallet';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {BadgeDollarSign} from 'lucide-react';
 export default function WalletPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const { wallet, transactions, loading } = useWallet();
 =======
 import { useWallet } from '@/hooks/useWallet',
@@ -85,9 +78,7 @@ export default function WalletPage() {
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
+
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

@@ -1,102 +1,18 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {Button} from "@/components/ui/button";
-import {Form} from "@/components/ui/form";
-import {Card} from "@/components/ui/card";
-import {RateOptimizationSection} from "../RateOptimizationSection";
-import {basicInfoSchema, BasicInfoFormData} from "./schema";
-import {PersonalInfoFields} from "./PersonalInfoFields";
-import {ContactFields} from "./ContactFields";
-export interface BasicInfoFormProps {;
-  resumeId?: string;
-  initialData?: Partial<BasicInfoFormData>;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState, useEffect } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { Button } from "@/components/ui/button",
-import { Form } from "@/components/ui/form",
-import { Card } from "@/components/ui/card",
-import { RateOptimizationSection } from "../RateOptimizationSection",
-import { basicInfoSchema, BasicInfoFormData } from "./schema",
-<<<<<<< HEAD
-import { PersonalInfoFields } from "./PersonalInfoFields";
-import { ContactFields } from "./ContactFields";
-export interface BasicInfoFormProps {
-  resumeId?: string;
 
-  initialData?: Partial<BasicInfoFormData>;
-  onSave: (data: BasicInfoFormData) => void
 
-  skills?: string[];
-  yearsExperience?: number;
-=======
-import { PersonalInfoFields } from "./PersonalInfoFields",
-import { ContactFields } from "./ContactFields",
-export interface BasicInfoFormProps {
-  resumeId?: string,
-  initialData?: Partial<BasicInfoFormData>,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  onSave: (data: BasicInfoFormData) => void,
-  skills?: string[],
-  yearsExperience?: number,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onComplete?: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function BasicInfoForm({;
-  resumeId;
-  initialData = {};
-  onSave;
-  skills = [];
-  yearsExperience = 0;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export function BasicInfoForm({
-<<<<<<< HEAD
-  resumeId;
 
-  initialData = {}
-  onSave;
-  skills = [];
-  yearsExperience = 0;
-=======
-  resumeId,
-  initialData = {},
-  onSave,
-  skills = [],
-  yearsExperience = 0,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
     resolver: zodResolver(basicInfoSchema)
     defaultValues: {
-<<<<<<< HEAD
-      fullName: ""
-      title: ""
-      email: ""
-      phone: ""
-      location: ""
-      website: ""
-      linkedin: ""
-      github: ""
-      hourlyRate: 0
-      ...initialData}});
-=======
+
       fullName: "",
       title: "",
       email: "",
@@ -108,14 +24,13 @@ export function BasicInfoForm({
       hourlyRate: 0,
       ...initialData}}),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   useEffect(() => {
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)
-<<<<<<< HEAD
-=======
+
 import React, { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -161,26 +76,14 @@ export function BasicInfoForm({;
       Object.entries(initialData).forEach(([key, value]) => {;
         if (value !== undefined) {;
           form.setValue(key as keyof BasicInfoFormData, value as any);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       })
     }
-<<<<<<< HEAD
-  }, [initialData, form]);
-  const handleSubmit = (data: BasicInfoFormData) => {
-    onSave(data)
-    if (onComplete) {
-      onComplete()
-    }
-<<<<<<< HEAD
-  }
-=======
+
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
   }, [initialData, form]),;
   const handleSubmit = (data: BasicInfoFormData) => {;
@@ -189,10 +92,8 @@ export function BasicInfoForm({;
       onComplete();
     }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
@@ -207,11 +108,9 @@ export function BasicInfoForm({;
               control={form.control}
               setValue={form.setValue}
               skills={skills}
-<<<<<<< HEAD
-              yearsExperience={yearsExperience |0}
-=======
+
               yearsExperience={yearsExperience || 0}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               location={form.getValues("location")}
               rateType="hourly"
             />
@@ -223,9 +122,7 @@ export function BasicInfoForm({;
       </form>
     </Form>
   )
-<<<<<<< HEAD
-}
-=======
+
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

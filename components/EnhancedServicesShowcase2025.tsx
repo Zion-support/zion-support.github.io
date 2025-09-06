@@ -2,34 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  FaRocket
-  FaBrain
-  FaCloud
-  FaShieldAlt
-  FaChartLine
-  FaCogs
-  FaLightbulb
-  FaGlobe
-  FaMobile
-  FaDatabase
-  FaNetworkWired
-  FaRobot
-  FaSearch;
-import {
-  SiNextdotjs
-  SiReact
-  SiTypescript
-  SiTailwindcss
-  SiPrisma
-  SiSupabase
-  SiVercel
-  SiDocker
-  SiKubernetes
-  SiAws
-  SiGooglecloud
-  SiMicrosoftazure;
-=======
+
   FaRocket,
   FaBrain,
   FaCloud,
@@ -56,7 +29,7 @@ import {
   SiAws,
   SiGooglecloud,;
   SiMicrosoftazure,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'react-icons/si';
 
 interface Service {
@@ -80,30 +53,14 @@ interface ServiceCategory {
   name: string;
   description: string;
   icon: React.ReactNode;
-<<<<<<< HEAD
-=======
+
   color: string;  id: string,
   name: string,
   description: string,
   icon: React.ReactNode,
   color: string
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-  color: string;  id: string
-  name: string
-  description: string
-  icon: React.ReactNode
-
-  color: string
-}
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const serviceCategories: ServiceCategory[] = [
   {
 
@@ -200,200 +157,7 @@ const services: Service[] = [
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization'
     icon: <FaRobot className='w-6 h-6' />
     features: [
-<<<<<<< HEAD
-      'Intelligent workflow automation'
-      'Natural language processing'
-      'Predictive analytics'
-      'Real-time decision making'
-      'Custom AI model training'
-      'Multi-platform integration'
-    ]
-    pricing: {
-      starter: 299
-      professional: 799
-      enterprise: 1999
-    }
-    technologies: [
-      'TensorFlow'
-      'PyTorch'
-      'OpenAI'
-      'LangChain'
-      'React'
-      'Node.js'
-    ]
-    benefits: [
-      'Reduce manual tasks by 80%'
-      'Improve accuracy by 95%'
-      '24/7 automated operations'
-      'Scalable AI infrastructure'
-    ]
-  }
-  {
-    id: 'quantum-computing-platform'
-    title: 'Quantum Computing Platform'
-    description:
-      'Next-generation quantum computing solutions for complex problem solving'
-    icon: <FaBrain className='w-6 h-6' />
-    category: 'ai-ml'
-    features: [
-      'Quantum algorithm optimization'
-      'Hybrid classical-quantum computing'
-      'Quantum machine learning'
-      'Cryptographic solutions'
-      'Quantum simulation tools'
-      'API access to quantum hardware'
-    ]
-    pricing: {
-      starter: 999
-      professional: 2499
-      enterprise: 4999
-    }
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA']
-    benefits: [
-      'Solve previously impossible problems'
-      'Exponential speed improvements'
-      'Future-proof technology'
-      'Research and development support'
-    ]
-  }
-  {
-    id: 'edge-ai-platform'
-    title: 'Edge AI Computing Platform'
-    description:
-      'Distributed artificial intelligence at the edge for real-time processing'
-    icon: <FaNetworkWired className='w-6 h-6' />
-    category: 'iot'
-    features: [
-      'Edge device optimization'
-      'Real-time AI inference'
-      'Distributed learning'
-      'Low-latency processing'
-      'Offline AI capabilities'
-      'Edge-to-cloud synchronization'
-    ]
-    pricing: {
-      starter: 199
-      professional: 599
-      enterprise: 1499
-    }
-    technologies: [
-      'TensorFlow Lite'
-      'ONNX Runtime'
-      'Edge TPU'
-      'Raspberry Pi'
-      'Arduino'
-    ]
-    benefits: [
-      'Reduced latency by 90%'
-      'Lower bandwidth costs'
-      'Enhanced privacy'
-      'Scalable edge deployment'
-    ]
-  }
-  {
-    id: 'quantum-cybersecurity'
-    title: 'Quantum Cybersecurity Suite'
-    description:
-      'Advanced security solutions leveraging quantum-resistant cryptography'
-    icon: <FaShieldAlt className='w-6 h-6' />
-    category: 'security'
-    features: [
-      'Post-quantum cryptography'
-      'Quantum key distribution'
-      'Advanced threat detection'
-      'Zero-trust architecture'
-      'Compliance frameworks'
-      'Real-time monitoring'
-    ]
-    pricing: {
-      starter: 399
-      professional: 999
-      enterprise: 2499
-    }
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR']
-    benefits: [
-      'Future-proof security'
-      'Quantum-resistant encryption'
-      'Comprehensive compliance'
-      'Advanced threat protection'
-    ]
-  }
-  {
-    id: 'data-fabric-platform'
-    title: 'Intelligent Data Fabric Platform'
-    description:
-      'Unified data management and analytics across all sources and formats'
-    icon: <FaDatabase className='w-6 h-6' />
-    category: 'data'
-    features: [
-      'Unified data access'
-      'Real-time analytics'
-      'Data governance'
-      'AI-powered insights'
-      'Multi-cloud support'
-      'Data lineage tracking'
-    ]
-    pricing: {
-      starter: 299
-      professional: 799
-      enterprise: 1999
-    }
-    technologies: [
-      'Apache Kafka'
-      'Apache Spark'
-      'Snowflake'
-      'Databricks'
-      'Airflow'
-    ]
-    benefits: [
-      'Unified data view'
-      'Real-time insights'
-      'Improved data quality'
-      'Reduced integration costs'
-    ]
-  },  {
-    id: 'cloud-native-platform'
-    title: 'Cloud-Native Development Platform'
-    description: 'Modern cloud-native development and deployment platform'
-    icon: <FaCloud className='w-6 h-6' />,      'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
-    ]
-  }
-  {
-    id: 'cloud-native-platform'
-    title: 'Cloud-Native Development Platform'
-    description: 'Modern cloud-native development and deployment platform'
-    icon: <FaCloud className='w-6 h-6' />
-    features: [
-      'Kubernetes orchestration'
-      'Microservices architecture'
-      'CI/CD pipelines'
-      'Auto-scaling'
-      'Multi-cloud deployment'
-      'DevOps automation'
-    ]
-    pricing: {
-      starter: 199
-      professional: 599
-      enterprise: 1499
-    }
-    technologies: [
-      'Kubernetes'
-      'Docker'
-      'Helm'
-      'ArgoCD'
-      'Prometheus'
-      'Grafana'
-    ]
-    benefits: [
-      'Faster deployment'
-      'Improved scalability'
-      'Better resource utilization'
-      'Enhanced reliability'
-    ]
-  },];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
-    ]
-  }
-=======
+
       'Intelligent workflow automation',
       'Natural language processing',
       'Predictive analytics',
@@ -554,46 +318,7 @@ const services: Service[] = [
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    icon: <FaCloud className='w-6 h-6' />,
-    features: [
-      'Kubernetes orchestration',
-      'Microservices architecture',
-      'CI/CD pipelines',
-      'Auto-scaling',
-      'Multi-cloud deployment',
-      'DevOps automation',
-    ],
-    pricing: {
-      starter: 199,
-      professional: 599,
-      enterprise: 1499,
-    },
-    technologies: [
-      'Kubernetes',
-      'Docker',
-      'Helm',
-      'ArgoCD',
-      'Prometheus',
-      'Grafana',
-    ],
-    benefits: [
-      'Faster deployment',
-      'Improved scalability',
-      'Better resource utilization',
-      'Enhanced reliability',
-    ],
-  },];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
-    ]
-  }
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -621,15 +346,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     }    if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
-<<<<<<< HEAD
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-        service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
-    }
-=======
+
     
     if (searchTerm) {
       filtered = filtered.filter(service => 
@@ -638,16 +355,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     }
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -659,10 +367,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       }
     });
   }, [selectedCategory, searchTerm, sortBy]);
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service);
   }
@@ -710,13 +417,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
           </p>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Search and Filters */}
         <motion.div
@@ -724,13 +427,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-12'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
@@ -753,31 +452,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             >
               <option value='name'>Sort by Name</option>
               <option value='price'>Sort by Price</option>
-<<<<<<< HEAD
-              <option value='category'>Sort by Category</option>            </select>        >
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
-            <div className="relative flex-1 max-w-md">
-              <input
-                type="text"
-                placeholder="Search services, technologies, or features..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-            </div>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
-              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="name">Sort by Name</option>
-              <option value="price">Sort by Price</option>
-              <option value="category">Sort by Category</option>
-            </select>
-          </div>
-        </motion.div>
-=======
+
               <option value='category'>Sort by Category</option>            </select>
 
             </select>
@@ -785,10 +460,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           </div>
         </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Category Tabs */}
         <motion.div
@@ -801,13 +473,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         >
           <div className="flex flex-wrap justify-center gap-4">
             <button
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
@@ -820,13 +488,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </button>
             {serviceCategories.map(category => (              <button            {serviceCategories.map((category) => (
               <button
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -842,28 +506,19 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
+
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {filteredServices.map((service, index) => (
@@ -874,13 +529,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
               className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onClick={() => handleServiceSelect(service)}
             >
@@ -907,34 +558,12 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 {service.technologies.slice(0, 3).map(tech => (
                   <span
                     key={tech}
-<<<<<<< HEAD
-                    className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'                  >              onClick={() => handleServiceSelect(service)}
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
-                  {service.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  <p className="text-sm text-gray-400">{serviceCategories.find(c => c.id === service.category)?.name}</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {service.technologies.slice(0, 3).map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300"
-                  >
-=======
+
                     className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'                  >
 
                   >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {tech}
                   </span>
@@ -967,13 +596,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* No Results */}
         {filteredServices.length === 0 && (
@@ -988,15 +613,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </h3>
             <p className='text-gray-400'>
               Try adjusting your search terms or category filters
-<<<<<<< HEAD
-            </p>          </motion.div>            className="text-center py-16"
-          >
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-300 mb-2">No services found</h3>
-            <p className="text-gray-400">Try adjusting your search terms or category filters</p>
-        )}
-      </div>
-=======
+
             </p>          </motion.div>
 
           </motion.div>
@@ -1004,10 +621,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         )}
       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Service Detail Modal */}
       <AnimatePresence>
@@ -1016,18 +630,12 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-<<<<<<< HEAD
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={closeModal}
-=======
+
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
 
             onClick={closeModal}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <motion.div
@@ -1036,13 +644,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               exit={{ scale: 0.9, opacity: 0 }}
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
               onClick={e => e.stopPropagation()}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='flex items-start justify-between mb-6'>
@@ -1077,61 +681,19 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 </div>
                 <button
                   onClick={closeModal}
-<<<<<<< HEAD
-                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'
-                >
-                  <span className='text-2xl'>×</span>
-                </button>
-              </div>
-              <p className='text-gray-300 text-lg mb-8'>
-                {selectedService.description}
-              </p>
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-                {/* Features */}
-                <div>
-                  <h3 className='text-xl font-bold text-white mb-4'>
-                    Key Features
-                  </h3>
-                  <ul className='space-y-2'>
-                    {selectedService.features.map((feature, index) => (
-                      <li
-                        key={index}
-                        className='flex items-center gap-2 text-gray-300'
-                      >
-                        <div className='w-2 h-2 bg-blue-500 rounded-full'></div>                        {feature}                >
-                  <span className="text-2xl">×</span>
-                </button>
-              </div>
-              <p className="text-gray-300 text-lg mb-8">{selectedService.description}</p>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Features */}
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
-                  <ul className="space-y-2">
-                    {selectedService.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                        {feature}
-=======
+
 
                         {feature}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Benefits */}
                 <div>
@@ -1154,13 +716,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   </ul>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Technologies */}
               <div className='mt-8'>
@@ -1171,36 +729,21 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   {selectedService.technologies.map(tech => (
                     <span
                       key={tech}
-<<<<<<< HEAD
-                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >              <div className="mt-8">
-                <h3 className="text-xl font-bold text-white mb-4">Technologies</h3>
-                <div className="flex flex-wrap gap-3">
-                  {selectedService.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-2 bg-white/10 rounded-lg text-gray-300"
-=======
+
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >
 
                     >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Pricing */}
               <div className='mt-8'>
@@ -1233,15 +776,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                       </button>
                     </div>
                   ))}
-<<<<<<< HEAD
-=======
+
 
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </motion.div>
@@ -1250,24 +789,8 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       </AnimatePresence>
     </div>
 );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default EnhancedServicesShowcase2025;  )
-}
-export default EnhancedServicesShowcase2025;
 
-<<<<<<< HEAD
-=======
-export default EnhancedServicesShowcase2025;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default EnhancedServicesShowcase2025;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

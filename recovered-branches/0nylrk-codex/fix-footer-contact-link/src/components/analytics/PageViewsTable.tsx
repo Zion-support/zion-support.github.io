@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -19,9 +16,8 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -31,31 +27,17 @@ const timeRangeToInterval = {
   '30d': { days: 30, interval: 'day' }
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
-<<<<<<< HEAD
-}
-export function PageViewsTable() {
-  const [timeRange, setTimeRange] = useState<TimeRange>('7d');
-=======
+
 },
 
-<<<<<<< HEAD
-export function PageViewsTable() {;
-  const [timeRange, setTimeRange] = useState<TimeRange>('7d');
-=======
-export function PageViewsTable() {
-  const [timeRange, setTimeRange] = useState<TimeRange>('7d'),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const { data: pageViews, isLoading } = useQuery({
     queryKey: ['page-views-data', timeRange],
     queryFn: async () => {
-<<<<<<< HEAD
-      const { days } = timeRangeToInterval[timeRange];
-=======
+
       const { days } = timeRangeToInterval[timeRange],
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       // Get top pages by views
       const { data, error } = await supabase
         .from('analytics_events')
@@ -63,12 +45,7 @@ export function PageViewsTable() {
         .eq('event_typepage_view')
         .gte('created_at', new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString())
         .order('count', { ascending: false })
-<<<<<<< HEAD
-        .limit(10);
-      if (error) throw error;
-      return data |[]
-    }});
-=======
+
         .limit(10),
         
       if (error) throw error,
@@ -76,22 +53,18 @@ export function PageViewsTable() {
       return data || []
     }}),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   // Format path names for better display
   const formatPathName = (path: string) => {
     if (path === '/') return 'Home Page'
     return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' ')
-<<<<<<< HEAD
-  }
-  // Calculate total views to determine percentages
-  const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) |0;
-=======
+
   },
   
   // Calculate total views to determine percentages
   const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) || 0,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader className="pb-2">
@@ -128,13 +101,10 @@ export function PageViewsTable() {
             ))
           ) : pageViews && pageViews.length > 0 ? (
             pageViews.map((page, index) => {
-<<<<<<< HEAD
-              const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0';
 
-=======
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0',
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               return (
                 <div key={index} className="flex items-center justify-between">
                   <div className="text-zion-slate-light font-medium">
@@ -159,16 +129,8 @@ export function PageViewsTable() {
             <div className="text-center py-8 text-zion-slate">
               No page view data available for this time period
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          )}
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -269,9 +231,8 @@ export function PageViewsTable() {;
             <div className="text-center py-8 text-zion-slate">;
               No page view data available for this time period;
             </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </div>;

@@ -1,36 +1,19 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
-import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
-import { toast } from '@/hooks/use-toast';
-interface AIEnhancementButtonProps {
 
-  options: AIEnhancementOptions
-  onEnhanced: (enhancedContent: string) => void
-
-  buttonText?: string;
-  className?: string;
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
-  size?: "default" | "sm" | "lg" | "icon";
-=======
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 import {toast} from '@/hooks/use-toast';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
 import { toast } from '@/hooks/use-toast',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
@@ -42,48 +25,9 @@ interface AIEnhancementButtonProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   contentLength?: number
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function AIEnhancementButton({;
-  options;
-  onEnhanced;
-  buttonText = "Enhance with AI";
-  className;
-  variant = "ghost";
-  size = "sm";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export function AIEnhancementButton({
-<<<<<<< HEAD
-  options;
-  onEnhanced;
 
-  buttonText = "Enhance with AI";
-  className;
-  variant = "ghost";
-  size = "sm";
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-  const [showActions, setShowActions] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
-=======
-  options,
-  onEnhanced,
-  buttonText = "Enhance with AI",
-  className,
-  variant = "ghost",
-  size = "sm",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
-  const [showActions, setShowActions] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -91,20 +35,9 @@ export function AIEnhancementButton({
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
-<<<<<<< HEAD
-      });
-      return
-    }
-    const enhancedContent = await enhanceContent(options);
-    if (enhancedContent) {
-      setGeneratedContent(enhancedContent);
-      setShowActions(true)
-    }
-<<<<<<< HEAD
-  }
-=======
+
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
       }),
       return
@@ -152,9 +85,8 @@ export function AIEnhancementButton({;
       setShowActions(true);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -167,29 +99,21 @@ export function AIEnhancementButton({;
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
-<<<<<<< HEAD
-  }
-  const handleRegenerate = async () => {
-    await handleEnhance()
-  }
-=======
+
   },
   
   const handleRegenerate = async () => {
     await handleEnhance()
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleCancel = () => {
     setShowActions(false),
     setGeneratedContent(null)
-<<<<<<< HEAD
-  }
 
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -234,8 +158,7 @@ export function AIEnhancementButton({;
   return (
     <Button
       type="button"
-<<<<<<< HEAD
-=======
+
   },;
   const handleAccept = () => {;
     if (generatedContent) {;
@@ -299,10 +222,7 @@ export function AIEnhancementButton({;
   return (;
     <Button;
       type="button";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       variant={variant}
       size={size}
@@ -318,9 +238,7 @@ export function AIEnhancementButton({;
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
-<<<<<<< HEAD
-}
-=======
+
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

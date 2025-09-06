@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 
-import { GradientHeading } from "./GradientHeading",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Button } from "./ui/button",
-=======
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts
@@ -19,22 +14,7 @@ const recentPosts = [...BLOG_POSTS]
     );
   })
   .slice(0, 3);
-<<<<<<< HEAD
-export function BlogSection() {
-  return (
-    <section className="py-20 bg-zion-blue-dark" id="blog">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
-          <div>
-            <GradientHeading>Latest Insights</GradientHeading>
-            <p className="mt-2 text-zion-slate-light text-xl max-w-2xl">
-              Stay updated with trends in AI technology, marketplace strategies
-              and IT services
-            </p>
-          </div>
-          <Button
-            variant="outline"
-=======
+
 
 import { GradientHeading } from "./GradientHeading",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
@@ -46,7 +26,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
   return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
 }).slice(0, 3),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             className="mt-4 md:mt-0 border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
             asChild
           >
@@ -62,17 +42,10 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                   alt={post.title}
                   className="object-cover w-full h-full opacity-60 hover: opacity-80 transition-opacity duration-300"
                   loading="lazy"
-<<<<<<< HEAD
-                  onError={(
-<<<<<<< HEAD
-                    e: React.SyntheticEvent<HTMLImageElement, Event>
-                  ) => {
-                    const target = e.currentTarget as HTMLImageElement;
 
-=======
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
                     e: React.SyntheticEvent<HTMLImageElement, Event>,
                   ) => {;
@@ -106,14 +79,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                 </Button>
               </CardFooter>
             </Card>
-<<<<<<< HEAD
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-=======
+
 import { GradientHeading } from "./GradientHeading",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { Button } from "./ui/button",;
@@ -184,8 +150,5 @@ export function BlogSection() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

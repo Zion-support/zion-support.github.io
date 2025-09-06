@@ -1,39 +1,9 @@
 
-<<<<<<< HEAD
-const winston = require('winston');
-const logger = winston.createLogger({
 
-  level: 'info'
-  format: winston.format.combine(
-    winston.format.timestamp()
-    winston.format.errors({ stack: true })
-
-    winston.format.json()
-  )
-  defaultMeta: { service: 'automation-script' }
-  transports: [
-
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' })
-    new winston.transports.File({ filename: 'logs/combined.log' })
-  ]
-})
-
-if (process.env.NODE_ENV !== 'production') {
-  logger.add(new winston.transports.Console({
-    format: winston.format.simple()
-  }))
-}
-const fs = require('fs');
-const path = require('path');
-const { glob } = require('glob');
-class AggressiveSyntaxFixer {
-    constructor() {
-<<<<<<< HEAD
-=======
         this.projectRoot = process.cwd(),
         this.fixedFiles = [],
         this.errors = []
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 const winston = require('winston'),;
 const logger = winston.createLogger({;
@@ -63,9 +33,8 @@ class AggressiveSyntaxFixer {;
         this.projectRoot = process.cwd(),;
         this.fixedFiles = [],;
         this.errors = [];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 ;
@@ -206,26 +175,20 @@ class AggressiveSyntaxFixer {;
 
         return errorPatterns.some(pattern => pattern.test(content))
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
     createValidFile(filePath) {
 
         const ext = path.extname(filePath)
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
         // Convert invalid characters to valid ones
-<<<<<<< HEAD
-        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_')
-if (ext === '.tsx' |ext === '.jsx') {
 
-=======
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
         
 if (ext === '.tsx' || ext === '.jsx') {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             return `import React from 'react';
 default function ${validFileName}() {
   return (
@@ -273,10 +236,8 @@ const ${validFileName} = {;
 const ${validFileName} = {;
   // TODO: Implement ${validFileName} functionality;
 }`;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         return `// ${validFileName} placeholder
@@ -334,58 +295,22 @@ async function main() {
 if (require.main === module) {
     main()
 }
-<<<<<<< HEAD
-module.exports = AggressiveSyntaxFixer
-// Graceful shutdown handling
-process.on('SIGINT', () => {
-  console.log('\n🛑 Received SIGINT, shutting down gracefully...')
 
-=======
 
 module.exports = AggressiveSyntaxFixer, 
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {
   // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   // Add cleanup logic here
   process.exit(0)
 })
 process.on('SIGTERM', () => {
-<<<<<<< HEAD
 
-  console.log('\n🛑 Received SIGTERM, shutting down gracefully...')
-  // Add cleanup logic here
-  process.exit(0)
-});
-
-=======
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here
   process.exit(0)
 }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-;
-module.exports = AggressiveSyntaxFixer,;
-// Graceful shutdown handling;
-process.on('SIGINT', () => {;
-  // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),;
-  // Add cleanup logic here;
-  process.exit(0);
-}),;
-process.on('SIGTERM', () => {;
-  // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),;
-  // Add cleanup logic here;
-  process.exit(0);
-});
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

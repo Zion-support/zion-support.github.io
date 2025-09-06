@@ -1,69 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {useAdminQuotes} from "@/hooks/useAdminQuotes";
-import {useAuth} from "@/hooks/useAuth";
-import {Card, CardContent} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Navigate} from "react-router-dom";
-import type { QuoteRequest } from "@/types/quotes";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {QuoteDetails} from "@/components/quotes/QuoteDetails";
-import {ExportToCSV} from "@/components/quotes/ExportToCSV";
-import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
 
-export default function QuoteManager() {;
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { 
-  Card;
-  CardContent
-} from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Navigate } from "react-router-dom",
-<<<<<<< HEAD
-import type { QuoteRequest } from "@/types/quotes";
 
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {QuoteDetails} from "@/components/quotes/QuoteDetails";
-import {ExportToCSV} from "@/components/quotes/ExportToCSV";
-import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
-export default function QuoteManager() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
-=======
-import type { QuoteRequest } from "@/types/quotes",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { QuoteDetails } from "@/components/quotes/QuoteDetails",
-import { ExportToCSV } from "@/components/quotes/ExportToCSV",
-import {
-  QuoteStatusCards,
-  QuotesFilter,
-  QuotesTable
-} from "@/components/admin/quotes",
-
-export default function QuoteManager() {
-  const { user } = useAuth(),
-  const isAdmin = user?.userType === 'admin',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
-  const [showDetails, setShowDetails] = useState(false),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const {
     quotes,
     isLoading,
@@ -79,12 +16,10 @@ export default function QuoteManager() {
     updateStatus,
     toggleArchive,
     deleteQuote
-<<<<<<< HEAD
-  } = useAdminQuotes();
-=======
+
   } = useAdminQuotes(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length
@@ -92,32 +27,26 @@ export default function QuoteManager() {
     accepted: quotes.filter(q => q.status === 'accepted').length
     responded: quotes.filter(q => q.status === 'responded').length
     closed: quotes.filter(q => q.status === 'closed').length
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote)
     setShowDetails(true)
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleResetFilters = () => {
     setStatusFilter('all'),
     setArchiveFilter('all'),
     setSearchQuery(''),
     setDateRange({ from: undefined, to: undefined })
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
   }
@@ -134,8 +63,7 @@ export default function QuoteManager() {
               </div>
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
-<<<<<<< HEAD
-=======
+
             
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -213,10 +141,7 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />
@@ -256,41 +181,18 @@ export default function QuoteManager() {;
                   <QuotesTable
                     quotes={quotes.filter(quote => quote.is_archived)}
                     isArchived={true}
-<<<<<<< HEAD
-                    isLoading={isLoading}
-                    updateStatus={updateStatus}
-                    toggleArchive={toggleArchive}
-                    deleteQuote={deleteQuote}
-                    onViewDetails={handleViewDetails}
-                  />
-                </Card>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
-<<<<<<< HEAD
-          onClose={() => {
-            setShowDetails(false);
 
-            setSelectedQuote(null)
-=======
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         />

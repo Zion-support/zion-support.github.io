@@ -1,39 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0"
-import {Resend} from "npm: resend@2.0.0";
-// Initialize Resend with API key
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-// Initialize Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
-const supabase = createClient(supabaseUrl, supabaseServiceKey);
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*";
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-interface EmailData {
-  user_id: string;
-  email_type: string;
-  display_name: string;
-  user_type: string;
-  days_inactive?: number;
-  onboarding_status?: any;
-  job_id?: string
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 import {Resend} from "npm: resend@2.0.0";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import { Resend } from "npm: resend@2.0.0",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
@@ -65,27 +41,21 @@ serve(async (req) => {
   }
   try {
     // Extract job data from request
-<<<<<<< HEAD
-    const jobData = await req.json();
-    const { id: jobId, payload } = jobData;
-    const emailData = payload as EmailData;
-=======
+
     const jobData = await req.json(),
     const { id: jobId, payload } = jobData,
     const emailData = payload as EmailData,
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     // Fetch user's email
     const { data: userData, error: userError } = await supabase
       .from("profiles")
       .select("id, display_name, avatar_url, user_type")
       .eq("id", emailData.user_id)
-<<<<<<< HEAD
-      .single();
-=======
+
       .single(),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     if (userError) {
       throw new Error(`Error fetching user data: ${userError.message}`)
     }
@@ -93,13 +63,7 @@ serve(async (req) => {
       .from("auth.users")
       .select("email")
       .eq("id", emailData.user_id)
-<<<<<<< HEAD
-      .single();
-    if (authError) {
-      throw new Error(`Error fetching user email: ${authError.message}`)
-    }
-    const userEmail = authUser.email;
-=======
+
       .single(),
     
     if (authError) {
@@ -107,20 +71,12 @@ serve(async (req) => {
     }
     
     const userEmail = authUser.email,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     if (!userEmail) {
       throw new Error("User email not found")
     }
     // Generate email content based on email type
-<<<<<<< HEAD
-    const { subject, html } = await generateEmail(emailData, userData);
-    // Send email via Resend
-    const emailResponse = await resend.emails.send({
-      from: "Zion AI Marketplace <notifications@zion.ai>";
-      to: userEmail;
-      subject: subject
-      html: html});
-=======
+
     const { subject, html } = await generateEmail(emailData, userData),
 
     // Send email via Resend
@@ -130,7 +86,7 @@ serve(async (req) => {
       subject: subject,
       html: html}),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     if (emailResponse.error) {
       throw new Error(`Failed to send email: ${emailResponse.error.message}`)
     }
@@ -140,12 +96,10 @@ serve(async (req) => {
       .update({
         status: "completed"
         completed_at: new Date().toISOString()})
-<<<<<<< HEAD
-      .eq("id", jobId);
-=======
+
       .eq("id", jobId),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     // Update email campaign record
     await supabase
       .from("email_campaigns")
@@ -153,41 +107,7 @@ serve(async (req) => {
         status: "sent"
         sent_at: new Date().toISOString()})
       .eq("user_id", emailData.user_id)
-<<<<<<< HEAD
-      .eq("campaign_type", emailData.email_type);
-    return new Response(
-      JSON.stringify({
-        success: true;
-        message: "Email sent successfully"
-        email: emailResponse});
-      {
-        headers: {
-          ...corsHeaders
-          "Content-Type": "application/json"}
-        status: 200}
-    )
-  } catch (error) {
-    console.error("Error in send-retention-email function:", error);
-    return new Response(
-      JSON.stringify({
-        success: false
-        error: error.message});
-      {
-        headers: {
-          ...corsHeaders
-          "Content-Type": "application/json"}
-        status: 500}
-    )
-  }
-});
-async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
-  const { email_type, display_name, user_type } = emailData;
-  const firstName = display_name?.split(" ")[0] |"there";
-  // Get onboarding status for personalized content
-  let nextAction = "";
-  let ctaLink = "/dashboard";
-  let ctaText = "Go to Dashboard";
-=======
+
       .eq("campaign_type", emailData.email_type),
 
     return new Response(
@@ -211,131 +131,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       {
         headers: {
           ...corsHeaders,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          "Content-Type": "application/json"};
-        status: 500}
-    )
-  }
-});
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          "Content-Type": "application/json"},
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
-import { Resend } from "npm: resend@2.0.0",;
-// Initialize Resend with API key;
-const resend = new Resend(Deno.env.get("RESEND_API_KEY")),;
-// Initialize Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
-const supabase = createClient(supabaseUrl, supabaseServiceKey),;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-interface EmailData {;
-  user_id: string,;
-  email_type: string,;
-  display_name: string,;
-  user_type: string,;
-  days_inactive?: number,;
-  onboarding_status?: any,;
-  job_id?: string,;
-  job_title?: string;
-}
-;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers: corsHeaders });
-  }
-;
-  try {;
-    // Extract job data from request;
-    const jobData = await req.json(),;
-    const { id: jobId, payload } = jobData,;
-    const emailData = payload as EmailData,;
-    // Fetch user's email;
-    const { data: userData, error: userError } = await supabase;
-      .from("profiles");
-      .select("id, display_name, avatar_url, user_type");
-      .eq("id", emailData.user_id);
-      .single(),;
-    if (userError) {;
-      throw new Error(`Error fetching user data: ${userError.message}`);
-    }
-;
-    const { data: authUser, error: authError } = await supabase;
-      .from("auth.users");
-      .select("email");
-      .eq("id", emailData.user_id);
-      .single(),;
-    if (authError) {;
-      throw new Error(`Error fetching user email: ${authError.message}`);
-    }
-;
-    const userEmail = authUser.email,;
-    if (!userEmail) {;
-      throw new Error("User email not found");
-    }
-;
-    // Generate email content based on email type;
-    const { subject, html } = await generateEmail(emailData, userData),;
-    // Send email via Resend;
-    const emailResponse = await resend.emails.send({;
-      from: "Zion AI Marketplace <notifications@zion.ai>",;
-      to: userEmail,;
-      subject: subject,;
-      html: html}),;
-    if (emailResponse.error) {;
-      throw new Error(`Failed to send email: ${emailResponse.error.message}`);
-    }
-;
-    // Update job status;
-    await supabase;
-      .from("scheduled_jobs");
-      .update({;
-        status: "completed",;
-        completed_at: new Date().toISOString()});
-      .eq("id", jobId),;
-    // Update email campaign record;
-    await supabase;
-      .from("email_campaigns");
-      .update({;
-        status: "sent",;
-        sent_at: new Date().toISOString()});
-      .eq("user_id", emailData.user_id);
-      .eq("campaign_type", emailData.email_type),;
-    return new Response(;
-      JSON.stringify({;
-        success: true,;
-        message: "Email sent successfully",;
-        email: emailResponse}),;
-      {;
-        headers: {;
-          ...corsHeaders,;
-          "Content-Type": "application/json"},;
-        status: 200}
-    );
-  } catch (error) {;
-    console.error("Error in send-retention-email function:", error),;
-    return new Response(;
-      JSON.stringify({;
-        success: false,;
-        error: error.message}),;
-      {;
-        headers: {;
-          ...corsHeaders,;
-          "Content-Type": "application/json"},;
-        status: 500}
-    );
-  }
-}),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
   const { email_type, display_name, user_type } = emailData,
@@ -398,14 +194,11 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
   } else if (email_type === "inactivity_3") {
     // Day 3 incomplete action reminder
     if (emailData.onboarding_status) {
-<<<<<<< HEAD
-      const onboarding = emailData.onboarding_status;
-      if (user_type === "jobSeeker" |user_type === "creator") {
-=======
+
       const onboarding = emailData.onboarding_status,
       
       if (user_type === "jobSeeker" || user_type === "creator") {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         if (!onboarding.profile_completed) {
           nextAction = "complete your profile",
           ctaLink = "/profile",
@@ -562,12 +355,9 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
   }
   // Default generic email
   return {
-<<<<<<< HEAD
-    subject: `${firstName}, we miss you at Zion AI Marketplace`;
 
-=======
     subject: `${firstName}, we miss you at Zion AI Marketplace`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     html: `
       <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
         <h2>We've missed you!</h2>
@@ -583,12 +373,8 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
         </div>
         <p>The Zion AI Marketplace Team</p>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    `}
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 }),;
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {;
@@ -825,9 +611,8 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
         </div>;
         <p>The Zion AI Marketplace Team</p>;
       </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     `}
 }

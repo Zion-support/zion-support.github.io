@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TrustedBySection} from "@/components/TrustedBySection";
@@ -25,11 +22,9 @@ import {useTranslation} from "react-i18next";
 import {useLanguage} from "@/context/LanguageContext";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone} from "lucide-react";
 
-<<<<<<< HEAD
-export default function Index() {
-=======
+
 export default function Index() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 =======
@@ -78,51 +73,41 @@ export default function Index() {
       description: t("home.tool_ai_matcher_desc")
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />
       link: "/match"
-<<<<<<< HEAD
-    }
-=======
+
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       title: t("home.tool_talent")
       description: t("home.tool_talent_desc")
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
-<<<<<<< HEAD
-    }
-=======
+
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       title: t("home.tool_services")
       description: t("home.tool_services_desc")
       icon: <Zap className="h-6 w-6 text-zion-cyan" />
       link: "/services"
-<<<<<<< HEAD
-    }
-=======
+
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       title: t("home.tool_equipment")
       description: t("home.tool_equipment_desc")
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
-<<<<<<< HEAD
-    }
-=======
+
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       title: t("home.tool_analytics")
       description: t("home.tool_analytics_desc")
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />
       link: "/analytics"
-<<<<<<< HEAD
-    }
-=======
+
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       title: "Mobile App"
       description: "Take Zion with you on the go with our mobile app for iOS and Android"
@@ -169,8 +154,7 @@ export default function Index() {
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
                 </div>
               </Link>
-<<<<<<< HEAD
-=======
+
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { TrustedBySection } from "@/components/TrustedBySection",;
@@ -281,10 +265,7 @@ export default function Index() {;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
                 </div>;
               </Link>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>

@@ -1,10 +1,5 @@
-<<<<<<< HEAD:src.disabled/components/CategoryListingPage.jsx
-<<<<<<< HEAD
-' \' \' \' import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,\"listings\": \'initialListing\',s,\"sortOptions\": = [\'';\'";\";
-" " " " import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,listings: "initialListing",s,sortOptions: = ["";"";";"""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 =======
 ' \' \' \' import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,\"listings\": \'initialListing\',s,\"sortOptions\": = [\'';\'";\";
 " " " " import { Search,Filter,ArrowDownAZ,ArrowUpZA,Loader2 export function CategoryListingPage ({ title,description,listings: "initialListing",s,sortOptions: = ["";"";";"""

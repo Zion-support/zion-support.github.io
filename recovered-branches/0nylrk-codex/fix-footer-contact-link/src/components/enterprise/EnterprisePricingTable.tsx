@@ -1,41 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Check, X} from "lucide-react";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { Check, X } from "lucide-react";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge";
-=======
-import { Button } from "@/components/ui/button",
-import { Check, X } from "lucide-react",
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterprisePricingTable() {
 
@@ -58,18 +23,10 @@ export function EnterprisePricingTable() {
         { name: "Custom integrations", included: false }
         { name: "Dedicated success manager", included: false }]}
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      name: "Business"
-      price: "$1,999";
-      billing: "/month"
-      description: "Ideal for growing companies"
-      users: "Up to 50 users"
-      popular: true
-=======
+
       name: "Business",;
       price: "$1,999";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
       name: "Business",
       price: "$1,999",
@@ -126,8 +83,7 @@ export function EnterprisePricingTable() {
                     <div className="flex flex-col items-center">
                       {plan.popular && (
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>
-<<<<<<< HEAD
-=======
+
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Check, X } from "lucide-react",;
@@ -211,10 +167,7 @@ export function EnterprisePricingTable() {;
                     <div className="flex flex-col items-center">;
                       {plan.popular && (;
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
                       <span className="font-bold text-xl">{plan.name}</span>

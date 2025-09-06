@@ -1,57 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {JobsList} from "@/components/jobs/JobsList";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Link} from "react-router-dom";
-import {JobStatus} from "@/types/jobs";
-import {SEO} from "@/components/SEO";
-import {BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {SuggestedTalents} from "@/components/jobs/SuggestedTalents";
-import {useJobs} from "@/hooks/useJobs";
-import {ClientOnboardingSteps} from "@/components/onboarding/ClientOnboardingSteps";
-import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
-import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
-import {useIsMobile} from "@/hooks/use-mobile";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState, useEffect } from "react",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { JobsList } from "@/components/jobs/JobsList",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Link } from "react-router-dom",
-import { JobStatus } from "@/types/jobs",
-import { SEO } from "@/components/SEO",
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",
-import { useJobs } from "@/hooks/useJobs",
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-<<<<<<< HEAD
-import { useIsMobile } from "@/hooks/use-mobile";
-function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
-  const { jobs, isLoading } = useJobs();
 
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
-  const isMobile = useIsMobile();
-=======
-import { useIsMobile } from "@/hooks/use-mobile",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -66,20 +15,16 @@ function ClientDashboardContent() {
       setSelectedJobId(jobs[0].id),
       setSelectedJobTitle(jobs[0].title)
     }
-<<<<<<< HEAD
-  }, [jobs, selectedJobId]);
-=======
+
   }, [jobs, selectedJobId]),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <>
@@ -140,8 +85,7 @@ function ClientDashboardContent() {
           </div>
           <div>
             <div className="sticky top-4 space-y-6">
-<<<<<<< HEAD
-=======
+
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -235,10 +179,7 @@ function ClientDashboardContent() {;
           </div>;
           <div>;
             <div className="sticky top-4 space-y-6">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Active Projects Card */}
               <ActiveProjectsCard />
@@ -268,16 +209,7 @@ function ClientDashboardContent() {;
     </>
   )
 }
-<<<<<<< HEAD
-export default function ClientDashboard() {
-  return (
-    <ProtectedRoute>
-      <ClientDashboardContent />
-    </ProtectedRoute>
-  )
-}
-<<<<<<< HEAD
-=======
+
 ;
 export default function ClientDashboard() {;
   return (;
@@ -287,7 +219,7 @@ export default function ClientDashboard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

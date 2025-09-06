@@ -1,47 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-import React, { useState } from "react";
-import Head from "next/head";
-import Layout from "./components/Layout";
-import { motion } from "framer-motion";
-import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Layout from './components/Layout';
-import { motion } from 'framer-motion';
-import { 
->>>>>>> origin/automation-improvements-final
-  ArrowRight,
-  Users,
-  Calendar,
-  FileText,
-  Video,
-  Globe,
-  Shield,
-  Zap,
-  CheckCircle,
-  Mail,
-  Send,
-  Star,
-  TrendingUp,
-  Award,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Clock,
-=======
-  Clock,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from "lucide-react";
-=======
-  Clock
-} from 'lucide-react';
->>>>>>> origin/automation-improvements-final
+
+
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -61,9 +19,8 @@ import {
   Award
   Clock
 } from "lucide-react";
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const benefits = [
   {
@@ -73,16 +30,8 @@ const benefits = [
     icon: FileText
   }
   {
-<<<<<<< HEAD
-    title: "Webinar Invitations"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: "Webinar Invitations",
-=======
-    title: "Webinar Invitations"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
     description:
       "Receive invitations to our expert-led webinars and virtual events."
     icon: Video
@@ -96,30 +45,8 @@ const benefits = [
   {
     title: "Industry Insights"
     description:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      "Stay updated with the latest trends and developments in technology.",
-    icon: TrendingUp,
-  },
-=======
-    title: 'Webinar Invitations',
-    description: 'Receive invitations to our expert-led webinars and virtual events.',
-    icon: Video
-  },
-  {
-    title: 'Early Access',
-    description: 'Be the first to know about new features, products, and services.',
-    icon: Zap
-  },
-  {
-    title: 'Industry Insights',
-    description: 'Stay updated with the latest trends and developments in technology.',
-    icon: TrendingUp
-  }
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
@@ -127,14 +54,10 @@ const benefits = [
 ];
 const testimonials = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    name: "Sarah Johnson",
-    role: "CTO, TechCorp",
-=======
+
     name: "Sarah Johnson"
     role: "CTO, TechCorp"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5
@@ -176,31 +99,21 @@ export default function NewsletterPage() {
   }
 ];
 
-<<<<<<< HEAD
-export default function NewsletterPage() {
-  const [email, setEmail] = useState('');
->>>>>>> origin/automation-improvements-final
-=======
+
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-=======
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
->>>>>>> origin/automation-improvements-final
+
 =======
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -212,17 +125,8 @@ export default function NewsletterPage() {;
     <Layout>
       <Head>
         <title>Newsletter - Zion Tech Group</title>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-        <meta
-          name="description"
-          content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
-        />
-=======
-        <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
->>>>>>> origin/automation-improvements-final
+
+
       </Head>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -238,25 +142,8 @@ export default function NewsletterPage() {;
                 Stay Ahead with Our Newsletter
               </h1>
               <p className="text-xl mb-8 text-blue-100">
-<<<<<<< HEAD
-                Get exclusive insights, industry trends, and early access to new
-                features delivered directly to your inbox.
-              </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                Get exclusive insights, industry trends, and early access to new
-                features delivered directly to your inbox.
-              </p>
-<<<<<<< HEAD
 
-=======
-                Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
-              </p>
-              
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -317,15 +204,8 @@ export default function NewsletterPage() {;
                 What You'll Get
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-                Join thousands of professionals who rely on our newsletter for
-                the latest insights and updates.
-=======
-                Join thousands of professionals who rely on our newsletter for the latest insights and updates.
->>>>>>> origin/automation-improvements-final
+
+
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -343,17 +223,8 @@ export default function NewsletterPage() {;
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {benefit.title}
                   </h3>
-<<<<<<< HEAD
-                  <p className="text-gray-600">{benefit.description}</p>
-=======
-<<<<<<< HEAD
-                  <p className="text-gray-600">{benefit.description}</p>
-=======
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
                 </motion.div>
               ))}
             </div>
@@ -369,19 +240,8 @@ export default function NewsletterPage() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0 }}
               >
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  10K+
-                </div>
-=======
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  10K+
-                </div>
-=======
-                <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
@@ -399,19 +259,8 @@ export default function NewsletterPage() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  Weekly
-                </div>
-=======
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  Weekly
-                </div>
-=======
-                <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -439,15 +288,8 @@ export default function NewsletterPage() {;
                 What Our Subscribers Say
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-                Don't just take our word for it. Here's what our community has
-                to say.
-=======
-                Don't just take our word for it. Here's what our community has to say.
->>>>>>> origin/automation-improvements-final
+
+
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -461,20 +303,8 @@ export default function NewsletterPage() {;
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-                      <Star
-                        key={i}
-                        className="w-4 h-4 text-yellow-400 fill-current"
-                      />
-<<<<<<< HEAD
-=======
-=======
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
                     ))}
                   </div>
                   <p className="text-gray-600 mb-4 italic">
@@ -506,25 +336,8 @@ export default function NewsletterPage() {;
                 Ready to Join Our Community?
               </h2>
               <p className="text-xl mb-8 text-green-100">
-<<<<<<< HEAD
-                Subscribe now and start receiving valuable insights delivered to
-                your inbox every week.
-              </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                Subscribe now and start receiving valuable insights delivered to
-                your inbox every week.
-              </p>
-<<<<<<< HEAD
 
-=======
-                Subscribe now and start receiving valuable insights delivered to your inbox every week.
-              </p>
-              
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -570,12 +383,9 @@ export default function NewsletterPage() {;
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/automation-improvements-final
+
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

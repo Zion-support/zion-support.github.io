@@ -1,37 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react";
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-import React from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
->>>>>>> origin/automation-improvements-final
+
+
 
 =======
-<<<<<<< HEAD
-import React from "react";
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 interface LayoutProps {
   children: React.ReactNode;
@@ -112,9 +84,7 @@ const Layout: React.FC<LayoutProps> = ({
       <main>{children}</main>
       <Footer />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 =======
 import React, { ReactNode } from "react";
 
@@ -127,11 +97,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
+
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 }
@@ -172,9 +140,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 };

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import {Link} from "react-router-dom";
 import {GradientHeading} from "./GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -24,63 +21,25 @@ import {
   Plus,
   HelpCircle
 } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function FeaturesGuideSection() {
   const features = [
     {
-<<<<<<< HEAD
-      id: "ai-matcher"
-      title: "AI Matcher"
-      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system."
-      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />
-=======
+
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
-<<<<<<< HEAD
-      instructions: [;
-        "Navigate to the AI Matcher page from the homepage or marketplace";
-        "Fill in your project requirements and specifications";
-        "Review the AI-recommended matches tailored to your needs";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      instructions: [
-        "Navigate to the AI Matcher page from the homepage or marketplace",
-        "Fill in your project requirements and specifications",
-        "Review the AI-recommended matches tailored to your needs",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
         "Connect with matched talents or services directly"
       ]
       link: "/match"
       buttonText: "Try AI Matcher"
-<<<<<<< HEAD
-    }
-    {
-      id: "talent-directory"
-      title: "Talent Directory"
-      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";
-      icon: <Users className="h-10 w-10 text-zion-purple" />
-      instructions: [
-        "Access the talent directory from the main navigation"
-        "Use filters to narrow down by skills, experience, and pricing";
-        "Save favorite profiles for future reference";
-        "Contact talents directly or request quotes through their profiles"
-      ];
-      link: "/talents"
-      buttonText: "Explore Talents"
-    }
-    {
-      id: "services"
-      title: "Services Marketplace"
-      description: "Discover professional services for your AI and tech needs, from development to consulting.";
-      icon: <Zap className="h-10 w-10 text-zion-cyan" />
-=======
+
     },
     {
       id: "talent-directory",
@@ -101,7 +60,7 @@ export function FeaturesGuideSection() {
       title: "Services Marketplace",
       description: "Discover professional services for your AI and tech needs, from development to consulting.",
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       instructions: [
         "Browse service categories on the marketplace",
         "Compare service offerings and pricing options",
@@ -110,11 +69,9 @@ export function FeaturesGuideSection() {
       ]
       link: "/services"
       buttonText: "View Services"
-<<<<<<< HEAD
-    }
-=======
+
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       id: "equipment"
       title: "Equipment Catalog"
@@ -128,21 +85,14 @@ export function FeaturesGuideSection() {
       ]
       link: "/equipment"
       buttonText: "Browse Equipment"
-<<<<<<< HEAD
-    }
-    {
-      id: "analytics"
-      title: "Marketplace Analytics"
-      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
-      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
-=======
+
     },
     {
       id: "analytics",
       title: "Marketplace Analytics",
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       instructions: [
         "Access analytics from your user dashboard",
         "View interactive charts on market trends and rates",
@@ -151,21 +101,14 @@ export function FeaturesGuideSection() {
       ]
       link: "/analytics"
       buttonText: "View Analytics"
-<<<<<<< HEAD
-    }
-    {
-      id: "ai-assistant"
-      title: "Zion AI Assistant"
-      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.";
-      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />
-=======
+
     },
     {
       id: "ai-assistant",
       title: "Zion AI Assistant",
       description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       instructions: [
         "Click on the chat icon in the bottom right corner",
         "Ask questions about available services or talents",
@@ -175,32 +118,16 @@ export function FeaturesGuideSection() {
       link: "#"
       buttonText: "Chat with Assistant"
       action: "openChat"
-<<<<<<< HEAD
-    }
-=======
+
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       id: "publishing"
       title: "List Your Services"
       description: "Showcase your AI and tech expertise by creating your own listings on the marketplace."
       icon: <Plus className="h-10 w-10 text-zion-cyan" />
       instructions: [
-<<<<<<< HEAD
-        "Create or log in to your account";
-        "Navigate to 'Create Listing' in your dashboard"
-        "Choose between talent profile, service, or equipment listing";
-        "Complete the guided form and publish your listing"
-      ];
-      link: "/create-profile"
-      buttonText: "Create Listing"
-    }
-    {
-      id: "help-center"
-      title: "Help & Resources"
-      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
-      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />
-=======
+
         "Create or log in to your account",
         "Navigate to 'Create Listing' in your dashboard",
         "Choose between talent profile, service, or equipment listing",
@@ -214,7 +141,7 @@ export function FeaturesGuideSection() {
       title: "Help & Resources",
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       instructions: [
         "Visit our comprehensive knowledge base",
         "Watch video tutorials on specific features",
@@ -244,8 +171,7 @@ export function FeaturesGuideSection() {
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
-<<<<<<< HEAD
-=======
+
 import { Link } from "react-router-dom",;
 import { GradientHeading } from "./GradientHeading",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -395,10 +321,7 @@ export function FeaturesGuideSection() {;
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {feature.title}
               </TabsTrigger>
@@ -464,11 +387,9 @@ export function FeaturesGuideSection() {;
       </div>
     </section>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
         </Tabs>;
         <div className="mt-12 text-center">;
@@ -486,10 +407,7 @@ export function FeaturesGuideSection() {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

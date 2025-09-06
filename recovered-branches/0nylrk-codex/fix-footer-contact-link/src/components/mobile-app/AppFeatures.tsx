@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
@@ -12,50 +9,40 @@ import React from "react",
 import { Brain, Clock, Award, Zap } from "lucide-react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />
     title: "AI Talent Matching"
     description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements."
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />
     title: "1-Click Hiring"
     description: "Streamlined hiring process that lets you connect with talent instantly with just one click."
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     icon: <Award className="h-10 w-10 text-zion-cyan" />
     title: "Resume Builder"
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     icon: <Zap className="h-10 w-10 text-zion-cyan" />
     title: "Real-time Notifications"
     description: "Get instant alerts about new job opportunities, messages, and hiring requests."
   }
-<<<<<<< HEAD
-];
-=======
+
 ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export const AppFeatures: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -77,17 +64,8 @@ export const AppFeatures: React.FC = () => {
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>
               </CardContent>
             </Card>
-<<<<<<< HEAD
-          ))}
-        </div>
-      </div>
-    </section>
-<<<<<<< HEAD
-  )
-}
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import React from "react",;
 import { Brain, Clock, Award, Zap } from "lucide-react",;

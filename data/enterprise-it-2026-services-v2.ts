@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
-export interface EnterpriseIt2026ServiceV2 {
-
-=======
 export interface EnterpriseIt2026ServiceV2 {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -769,21 +763,14 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
-    launchDate: '2026-05-01'
-    customers: 280
-    rating: 4.9
-    reviews: 180
-  }
-=======
+
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',
     launchDate: '2026-05-01',
     customers: 280,
     rating: 4.9,
     reviews: 180,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -796,11 +783,8 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.9
 
     reviews: 180
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
@@ -1240,9 +1224,8 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     customers: 280,;
     rating: 4.9;
     reviews: 180;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
@@ -74,8 +71,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     conversations[idx].messages.push(msg);
     conversations[idx].updatedAtIso = now;
     writeJsonFile<Conversation[]>(FILE, conversations);
-<<<<<<< HEAD
-=======
+
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -158,16 +154,14 @@ export default function handler(req, res) {
     conversations[idx].messages.push(msg);
     conversations[idx].updatedAtIso = now;
     writeJsonFile<Conversation[]>(FILE, conversations),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     res.status(201).json({ message: msg });
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   if (req.method === "GET") {
 =======
 
@@ -177,40 +171,15 @@ export default function handler(req, res) {
     const conversations = readJsonFile<Conversation[]>(FILE, []);
     const conv = conversations.find((c) => c.id === String(conversationId));
     if (!conv) {
-<<<<<<< HEAD
-      res.status(404).json({ error: "Conversation not found" });
-=======
-<<<<<<< HEAD
-      res.status(404).json({ error: 'Conversation not found' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  if (req.method === 'GET') {
-    const { conversationId } = req.query;
-    const conversations = readJsonFile<Conversation[]>(FILE, []),;
-    const conv = conversations.find((c) => c.id === String(conversationId));
-    if (!conv) {;
-      res.status(404).json({ error: 'Conversation not found' });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return;
     }
     res.status(200).json({ conversation: conv });
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  res.setHeader("AllowGET, POST");
-  res.status(405).end("Method Not Allowed");
-}
 
-=======
 
 =======
 
@@ -225,17 +194,15 @@ res.setHeader("AllowGET, POST");
   }
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

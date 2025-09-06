@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-"use client";
-import { useWalkthroughTarget } from "./OnboardingWalkthrough";
-import { useAuth } from "@/contexts/AuthContext";
-import Link from "next/link";
-export function LayoutWrapper({ children }: { children: React.ReactNode }) {const { user, isAuthenticated, logout } = useAuth();
-=======
+
 "use client",;
 import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
 import { useAuth } from "@/contexts/AuthContext",;
 import Link from "next/link",;
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
   const { user, isAuthenticated, logout } = useAuth();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (;
     <>;
       <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur" {...useWalkthroughTarget("nav-menu")}>;
@@ -41,11 +35,9 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                 </Link>;
                 <div className="flex items-center gap-3">;
                   <span className="text-sm text-zinc-400">;
-<<<<<<< HEAD
-                    Welcome, {user?.name |user?.email}
-=======
+
                     Welcome, {user?.name || user?.email}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                   </span>;
                   <button;
                     onClick={logout}

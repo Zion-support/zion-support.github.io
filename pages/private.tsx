@@ -7,47 +7,20 @@ import { User, Mail, Calendar, Shield } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
-<<<<<<< HEAD
-interface PrivatePageProps {user: SupabaseUser;
-=======
+
 interface PrivatePageProps {;
   user: SupabaseUser;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
 export default function PrivatePage({ user }: PrivatePageProps) {
   return (
     <>
       <Head>
-<<<<<<< HEAD
-        <title>Private Profile - Zion Tech Marketplace</title>;
-        <meta name=&quot;description&quot; content=&quot;Private user profile page&quot; />
-      </Head>
-      <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
-=======
+
         <title>Private Profile - Zion Tech Marketplace</title>
         <meta name="description" content="Private user profile page" />
       </Head>
-<<<<<<< HEAD
-      <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
-=======
-      <div className="container max-w-4xl mx-auto py-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader>
@@ -101,15 +74,8 @@ export default function PrivatePage({ user }: PrivatePageProps) {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
-              <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
-              <div className=&quot;grid gap-2 text-sm&quot;>
-<<<<<<< HEAD
-                <div>
-                  <span className=&quot;font-medium&quot;>Last Sign In: </span>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
@@ -139,14 +105,9 @@ export default function PrivatePage({ user }: PrivatePageProps) {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className=&quot;flex gap-2&quot;>
-=======
+
             <div className="flex gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Button asChild>
                 <Link href="/dashboard">
@@ -164,21 +125,8 @@ export default function PrivatePage({ user }: PrivatePageProps) {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {const supabase = createServerSideClient(context);
-  const { data, error } = await supabase.auth.getUser();
-  if (error |!data?.user) {return {;
-      redirect: {;
-        destination: '/auth/login';
-        permanent: false}}
-  }
-  return {props: {;
-      user: data.user}}
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -211,10 +159,7 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 } ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

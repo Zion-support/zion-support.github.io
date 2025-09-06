@@ -1,39 +1,11 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-=======
+
 import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Link from 'next/link';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-<<<<<<< HEAD
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Zap
-  Brain
-  Atom
-  Microscope
-  Gamepad2
-  Shield
-  Rocket
-  Database
-  TestTube
-  Car
-  Globe
-  Code
-  Palette
-  Cloud
-  Server
-  Network
-  Cpu;
-} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
-=======
+
   Menu,
   X,
   ChevronDown,
@@ -58,20 +30,7 @@ import {
   Server,
   Network,;
   Cpu,;
-<<<<<<< HEAD
-} from 'lucide-react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
-export default function UltraAdvancedNavigation2026V2() {;
-=======
-} from 'lucide-react';
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function UltraAdvancedNavigation2026V2() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -177,28 +136,7 @@ export default function UltraAdvancedNavigation2026V2() {
         }
       ]
     },    {
-<<<<<<< HEAD
-      name: 'Showcase'
-      href: '/enhanced-services-showcase-2026-v2'
-      icon: <Rocket className='w-4 h-4' />
-    }
-    {
-      name: 'Pricing'
-      href: '/pricing-enhanced-2026'
-      icon: <Database className='w-4 h-4' />
-    }
-    {
-      name: 'About'
-      href: '/about'
-      icon: <Globe className='w-4 h-4' />
-    }
-    {
-      name: 'Contact'
-      href: '/contact'
-      icon: <Mail className='w-4 h-4' />
-    },  ];      icon: <Mail className="w-4 h-4" />
-    }
-=======
+
       name: 'Showcase',
       href: '/enhanced-services-showcase-2026-v2',
       icon: <Rocket className='w-4 h-4' />,
@@ -219,7 +157,7 @@ export default function UltraAdvancedNavigation2026V2() {
       icon: <Mail className='w-4 h-4' />,
     },  ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   ];
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -236,13 +174,9 @@ export default function UltraAdvancedNavigation2026V2() {
             <div className='flex items-center space-x-6 text-gray-300'>
               <div className='flex items-center space-x-2'>
                 <Phone className='w-4 h-4 text-purple-400' />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <span>{contactInfo.mobile}</span>
               </div>
@@ -343,20 +277,8 @@ export default function UltraAdvancedNavigation2026V2() {
                     >
                       {item.icon}
                       <span>{item.name}</span>
-<<<<<<< HEAD
-                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
-                    >
-                      {item.icon}
-                      <span>{item.name}</span>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </Link>
                   )}
@@ -366,13 +288,9 @@ export default function UltraAdvancedNavigation2026V2() {
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
                       className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className='grid grid-cols-1 gap-2'>
@@ -385,29 +303,12 @@ export default function UltraAdvancedNavigation2026V2() {
                             <div className='text-purple-400 group-hover:text-purple-300 transition-colors'>
                               {dropdownItem.icon}
                             </div>
-<<<<<<< HEAD
-                            <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}                    >
-                      <div className="grid grid-cols-1 gap-2">
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            href={dropdownItem.href}
-                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
-                          >
-                            <div className="text-purple-400 group-hover:text-purple-300 transition-colors">
-                              {dropdownItem.icon}
-                            </div>
-                            <span className="text-gray-300 group-hover:text-white transition-colors">
-                              {dropdownItem.name}
-=======
+
                             <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}
 
                               {dropdownItem.name}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </span>
                           </Link>
@@ -418,36 +319,22 @@ export default function UltraAdvancedNavigation2026V2() {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
-            {/* CTA Button */}
-            <div className='hidden lg:flex items-center space-x-4'>
-              <Link href='/contact'>
-                <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">
-              <Link href="/contact">
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-=======
+
 
             {/* CTA Button */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
                 <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Get Started
                 </button>
               </Link>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Mobile Menu Button */}
             <button
@@ -465,13 +352,9 @@ export default function UltraAdvancedNavigation2026V2() {
           </div>
         </div>
       </nav>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
@@ -482,14 +365,10 @@ export default function UltraAdvancedNavigation2026V2() {
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
-<<<<<<< HEAD
-=======
+
 
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className='p-6'>
               <div className='flex items-center justify-between mb-8'>
@@ -547,14 +426,9 @@ export default function UltraAdvancedNavigation2026V2() {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-                        className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         {item.icon}
@@ -563,10 +437,9 @@ export default function UltraAdvancedNavigation2026V2() {
                     )}
                   </div>
                 ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
                 <div className='pt-6 border-t border-white/10'>
                   <Link href='/contact' onClick={() => setIsOpen(false)}>
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">
@@ -604,13 +477,9 @@ export default function UltraAdvancedNavigation2026V2() {
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Overlay */}
       {isOpen && (
@@ -619,29 +488,15 @@ export default function UltraAdvancedNavigation2026V2() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-          className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-          onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-        />
-      )}
-      {/* Spacer for fixed navigation */}
-      <div className='h-32'></div>
-    </>
-);      <div className="h-32"></div>
-    </>
-  );
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
 
           onClick={() => setIsOpen(false)}
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       )}
@@ -649,18 +504,5 @@ export default function UltraAdvancedNavigation2026V2() {
       {/* Spacer for fixed navigation */}
       <div className='h-32'></div>
     </>
-<<<<<<< HEAD
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-);      <div className="h-32"></div>
-    </>
-  );
-}
 
-}
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

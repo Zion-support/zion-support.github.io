@@ -1,27 +1,10 @@
 
-<<<<<<< HEAD
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
-export interface WhitelabelContextType {
 
-  isWhitelabel: boolean
-  primaryColor: string
-  logoUrl: string | null
-  brandName: string
-  themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup'
-  landingPageCopy: {
-<<<<<<< HEAD
-    headline: string
-    subtitle: string
-
-    cta: string
-  }
-=======
     headline: string,
     subtitle: string,
     cta: string;
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   tenant: WhitelabelTenant | null
 }
 
@@ -40,12 +23,10 @@ const defaultContext: WhitelabelContextType = {
 // the generic as `WhitelabelContextType | null` we get proper type checking
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
-<<<<<<< HEAD
-export const useWhitelabel = (): WhitelabelContextType => {
-=======
+
 
 export const useWhitelabel = (): WhitelabelContextType => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const context = useContext(WhitelabelContext);
   if (!context) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider')
@@ -57,12 +38,10 @@ export const useWhitelabel = (): WhitelabelContextType => {;
 interface WhitelabelProviderProps {
   children: ReactNode
 }
-<<<<<<< HEAD
-export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
-=======
+
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
   useEffect(() => {
@@ -154,8 +133,6 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
     </WhitelabelContext.Provider>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

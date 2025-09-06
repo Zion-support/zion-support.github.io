@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -13,20 +10,13 @@ interface JobApplicationsTableProps {
   jobId: string
 }
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
-<<<<<<< HEAD
 
-  const {
-    applications
-    isLoading
-    error
-    updateApplicationStatus
-=======
   const { 
     applications, 
     isLoading, 
     error, 
     updateApplicationStatus, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     markApplicationAsViewed;
     refetch
   } = useJobApplications(jobId);
@@ -89,22 +79,17 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
       const application = applications.find(app => app.id === applicationId),;
       if (application && !application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } finally {
       setProcessingId(null)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
+
   };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
     setShowScoreDialog(true)
@@ -132,10 +117,8 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   };
   if (isLoading) {;
     return <LoadingState />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   if (error) {
@@ -144,10 +127,9 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   if (applications.length === 0) {
     return <EmptyState />
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   return (
     <>
       <ApplicationsTable

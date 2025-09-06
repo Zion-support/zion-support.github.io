@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-import ReactDOM from 'react-dom/client',
-import App from './App.tsx',
-=======
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import './index.css';
 import { HelmetProvider  } from 'react-helmet-async';
 import { BrowserRouter as Router  } from 'react-router-dom';
@@ -40,11 +35,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
         </Router>
       </WhitelabelProvider>
     </HelmetProvider>
-<<<<<<< HEAD
-  </React.StrictMode>);
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import React from 'react',;
 import ReactDOM from 'react-dom/client',;
@@ -81,9 +73,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(;
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   </React.StrictMode>);
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

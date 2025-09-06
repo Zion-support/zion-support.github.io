@@ -2,30 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-  ArrowRight
-  Brain
-  Zap
-  Shield
-  Rocket
-  Sparkles
-  Star
-  TrendingUp
-  Globe
-  Cpu
-  Lock
-  Cloud
-  Atom
-  Microscope
-  Satellite
-  DollarSign
-  Factory
-  Earth
-  TestTube
-  Megaphone
-  Scale
-  Network;
-=======
+
   ArrowRight,
   Brain,
   Zap,
@@ -48,7 +25,7 @@ import {
   Megaphone,
   Scale,;
   Network,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
 import Link from 'next/link';
@@ -201,21 +178,14 @@ const Revolutionary2027ServicesShowcase = () => {
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-        staggerChildren: 0.1
-      }
-    },  };        staggerChildren: 0.1
-      }
-    }
-  }
-=======
+
         staggerChildren: 0.1,
       },
     },  };
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -242,13 +212,9 @@ const Revolutionary2027ServicesShowcase = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className='text-center mb-20'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
@@ -270,13 +236,9 @@ const Revolutionary2027ServicesShowcase = () => {
             Transform your business with solutions that were once science fiction.
           </p>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Category Overview */}
         <motion.div
@@ -316,13 +278,9 @@ const Revolutionary2027ServicesShowcase = () => {
             </motion.div>
           ))}
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Featured Services Grid */}
         <motion.div
@@ -352,36 +310,7 @@ const Revolutionary2027ServicesShowcase = () => {
                   <h3 className='text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>
                     {service.name}
                   </h3>
-<<<<<<< HEAD
-                  <p className='text-gray-300 leading-relaxed'>                    {service.description}
-                  </p>
-                  {/* Features */}            >
-              <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20">
-                {/* Service Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                {/* Service Content */}
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {service.description}
-                  </p>
-                  {/* Features */}
-                  <div className='space-y-2'>
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className='flex items-center space-x-2'>
-                        <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
-                        <span className='text-sm text-gray-400'>{feature}</span>                      </div>                  <div className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
-                        <span className="text-sm text-gray-400">{feature}</span>
-                    ))}
-                  </div>
-=======
+
 
                   <p className='text-gray-300 leading-relaxed'>                    {service.description}
                   </p>
@@ -398,10 +327,7 @@ const Revolutionary2027ServicesShowcase = () => {
                     ))}
                   </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
@@ -449,13 +375,9 @@ const Revolutionary2027ServicesShowcase = () => {
             </motion.div>
           ))}
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <motion.div
@@ -464,13 +386,9 @@ const Revolutionary2027ServicesShowcase = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
           className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
@@ -521,24 +439,8 @@ const Revolutionary2027ServicesShowcase = () => {
       </div>
     </section>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default Revolutionary2027ServicesShowcase;  )
-}
-export default Revolutionary2027ServicesShowcase;
 
-<<<<<<< HEAD
-=======
-export default Revolutionary2027ServicesShowcase;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default Revolutionary2027ServicesShowcase;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

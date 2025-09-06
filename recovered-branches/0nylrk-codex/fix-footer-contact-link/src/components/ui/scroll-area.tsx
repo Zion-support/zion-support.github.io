@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import * as ScrollAreaPrimitive from &quot;@radix-ui/react-scroll-area&quot;
-import { cn } from &quot;@/lib/utils&quot;
-=======
+
 import * as React from "react"
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 const ScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
@@ -17,16 +13,10 @@ const ScrollArea = React.forwardRef<
     ref={ref}
     className={cn("relative overflow-hidden", className)}
     {...props}
-<<<<<<< HEAD
->
-    <ScrollAreaPrimitive.Viewport className=&quot;h-full w-full rounded-[inherit]&quot;>
-=======
+
   >
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {children}
     </ScrollAreaPrimitive.Viewport>
@@ -43,19 +33,13 @@ const ScrollBar = React.forwardRef<
     ref={ref}
     orientation={orientation}
     className={cn(
-<<<<<<< HEAD
-      &quot;flex touch-none select-none transition-colors&quot;
-      orientation === &quot;vertical&quot; &&
-        &quot;h-full w-2.5 border-l border-l-transparent p-[1px]&quot;
-      orientation === &quot;horizontal&quot; &&
-        &quot;h-2.5 flex-col border-t border-t-transparent p-[1px]&quot;
-=======
+
       "flex touch-none select-none transition-colors",
       orientation === "vertical" &&
         "h-full w-2.5 border-l border-l-transparent p-[1px]",
       orientation === "horizontal" &&
         "h-2.5 flex-col border-t border-t-transparent p-[1px]",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       className
     )}
     {...props}
@@ -64,14 +48,11 @@ const ScrollBar = React.forwardRef<
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
-<<<<<<< HEAD
-<<<<<<< HEAD
-export { ScrollArea, ScrollBar }
-=======
+
 
 export { ScrollArea, ScrollBar }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 export { ScrollArea, ScrollBar };
 =======

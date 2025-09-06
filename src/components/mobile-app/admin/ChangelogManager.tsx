@@ -1,44 +1,13 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./MetadataManager"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea";
-import { Plus, Trash2 } from 'lucide-react'
-<<<<<<< HEAD
-import { AppPlatform } from "./MetadataManager";
-=======
-import { AppPlatform } from "./MetadataManager",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
 
 type ChangelogEntry = {
-<<<<<<< HEAD
-  id: string
-  version: string
-  date: string
-  changes: string
-}
-    })
-  }
-=======
+
   id: string,
   version: string,
   date: string,
@@ -77,14 +46,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     })
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const handleRemoveEntry = (id: string) => {
-    setEntries(entries.filter(entry => entry.id !== id))
-  }
-  )
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
   };
@@ -109,33 +71,18 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 placeholder="Version (e.g. 1.0.1)"
                 name="version"
-<<<<<<< HEAD
-                value = {newEntry.version,}
-                onChange = {handleInputChange,}
-=======
+
                 value={newEntry.version}
                 onChange={handleInputChange}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               />
               <Input
                 type="date"
                 name="date"
-<<<<<<< HEAD
-                value = {newEntry.date,}
-                onChange = {handleInputChange,}
-              />
-            </div>
-            <Button
-              onClick = {handleAddEntry,}
-<<<<<<< HEAD
-              disabled = {!newEntry.version |!newEntry.changes,}
-=======
+
               disabled = {!newEntry.version || !newEntry.changes,}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -213,10 +160,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             <Button;
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Plus className="mr-2 h-4 w-4" />
@@ -226,16 +171,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
-<<<<<<< HEAD
-            value = {newEntry.changes,}
-            onChange = {handleInputChange,}
-            rows = {3,}
-          />
-          <div className="border-t border-zion-purple/20 pt-4 space-y-4">
-            {entries.map((entry,) => (
-              <div
-                key = {entry.id,}
-=======
+
             value={newEntry.changes}
             onChange={handleInputChange}
             rows={3}
@@ -245,10 +181,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             {entries.map((entry) => (
               <div 
                 key={entry.id}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
               >
@@ -260,14 +193,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                   <Button
                     variant="ghost"
                     size="sm"
-<<<<<<< HEAD
-                    onClick = {(,) => handleRemoveEntry(entry.id),}
-=======
+
                     onClick={() => handleRemoveEntry(entry.id)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
                   >
@@ -280,18 +208,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             {entries.length === 0 && (
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-<<<<<<< HEAD
-}
 
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
           </div>;
         </div>;
@@ -299,8 +218,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     </Card>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

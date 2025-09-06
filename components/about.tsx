@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>)
-=======
  ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
 =======
@@ -21,12 +17,9 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Button from '../components/ui/Button'
-=======
+
 import Button from '../components/ui/Button',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {
 	const contactInfo = {
@@ -173,19 +166,13 @@ export default function AboutPage() {
     { number: '24/7', label: 'Support', color: 'text-green-400' }
     { number: '99.9%', label: 'SLA', color: 'text-blue-400' }]
   const contactInfo = {
-<<<<<<< HEAD
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
-=======
+
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com';
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
   return (
       {/* Mission & Vision */}
@@ -355,8 +342,6 @@ export default function AboutPage() {
       </section>
     </>
   );
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

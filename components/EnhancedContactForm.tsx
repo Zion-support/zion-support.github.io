@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
+
  setErrors (newErrors);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
  setErrors (newErrors);
 }
@@ -42,19 +41,17 @@ export default EnhancedContactForm;
     } else if (formData.name.trim().length < 2) {
       newErrors.name = 'Name must be at least 2 characters long'
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address'
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
     } else if (formData.message.trim().length < 10) {
@@ -62,10 +59,9 @@ export default EnhancedContactForm;
     } else if (formData.message.trim().length > 1000) {
       newErrors.message = 'Message must be less than 1000 characters'
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0
   }
@@ -189,13 +185,10 @@ export default EnhancedContactForm;
                   onChange={handleInputChange}
                   onBlur={() => handleInputBlur('name')}
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-<<<<<<< HEAD
-                    errors.name
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
-=======
+
                     errors.name 
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
                   } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your full name"
@@ -225,13 +218,10 @@ export default EnhancedContactForm;
                   onChange={handleInputChange}
                   onBlur={() => handleInputBlur('email')}
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-<<<<<<< HEAD
-                    errors.email
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
-=======
+
                     errors.email 
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
                   } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your email address"
@@ -301,13 +291,10 @@ export default EnhancedContactForm;
                 onChange={handleInputChange}
                 onBlur={() => handleInputBlur('message')}
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${
-<<<<<<< HEAD
-                  errors.message
-                    ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
-=======
+
                   errors.message 
                     ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                     : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
                 } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                 placeholder="Tell us about your project and requirements..."
@@ -327,13 +314,10 @@ export default EnhancedContactForm;
               type="submit"
               disabled={isSubmitting}
               className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
-<<<<<<< HEAD
-                isSubmitting
-                  ? 'bg-gray-600 cursor-not-allowed'
-=======
+
                 isSubmitting 
                   ? 'bg-gray-600 cursor-not-allowed' 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                   : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
               } flex items-center justify-center gap-3`}
             >
@@ -356,7 +340,5 @@ export default EnhancedContactForm;
   )
 }
 export default EnhancedContactForm;
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

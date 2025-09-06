@@ -1,30 +1,7 @@
-<<<<<<< HEAD
-import { NextApiRequest } from 'next';
-export function getUserFromRequest(req: any): User | null {
-  // Mock implementation - in production, this would extract user from JWT or session;
-  const authHeader = req.headers.authorization;
-  if (!authHeader |!authHeader.startsWith('Bearer ')) {
-    return null;
-  }
-  const token = authHeader.substring(7);
-  if (token && token.length > 0) {
-    return {
-      id: 'user-1'
-      email: 'user@example.com'
-      role: 'client'
-      name: 'Test User'
-    }
-  }
-  return null;
-}
-export function assertTalentOrClientForOffer(
-<<<<<<< HEAD
-  req: NextApiRequest
-  offer: { clientId: string; talentSlug: string }
-=======
+
   req: NextApiRequest,;
   offer: { clientId: string; talentSlug: string },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -44,10 +21,9 @@ export function assertTalentOrClientForOffer(
   }
   return user;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 =======
 
 }

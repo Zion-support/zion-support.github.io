@@ -1,51 +1,4 @@
-<<<<<<< HEAD
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
-  {
-    id: 'ai-email-responder'
-    name: 'AI Email Responder'
-    tagline:
-      'Autonomous email triage, drafting, and follow-ups for sales and support'
-    price: '$39'
-    period: '/month'
-    description:
-      'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.'
-    features: [
-<<<<<<< HEAD
-      'Intent classification + prioritization'
-      'On-brand response drafting'
-      'Automatic polite follow-ups'
-      'Lead/contact enrichment'
-      'Analytics and response SLAs'
-    ]
-    popular: true
-    icon: '📧'
-    color: 'from-cyan-600 to-blue-700'
-    textColor: 'text-cyan-300'
-    link: 'https://ziontechgroup.com/services/ai-email-responder'
-    marketPosition: 'Competes with Superhuman/Front add-ons; turnkey for SMBs'
-    targetAudience: 'Sales, support, founder-led teams'
-    trialDays: 14
-    setupTime: '30 minutes'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['Gmail/Outlook APIs', 'LLM', 'Webhook']
-    integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack']
-    useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting']
-    roi: 'Cuts manual email time by 60–80%'
-    competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons']
-    marketSize: '$10B+ email productivity'
-    growthRate: '15% CAGR'
-    variant: 'network-futuristic'
-    contactInfo: contact
-    realImplementation: true
-=======
       'Intent classification + prioritization',
       'On-brand response drafting',
       'Automatic polite follow-ups',
@@ -73,7 +26,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     variant: 'network-futuristic',
     contactInfo: contact,
     realImplementation: true,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     implementationDetails:
       'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
     launchDate: '2025-08-20'
@@ -807,41 +760,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description:
       'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
     features: [
-<<<<<<< HEAD
-      'Repo scanner'
-      'Flag inventory'
-      'Risk detection'
-      'PR suggestions'
-      'CI integration'
-    ]
-    popular: false
-    icon: '🚩'
-    color: 'from-rose-600 to-pink-700'
-    textColor: 'text-rose-300'
-    link: 'https://ziontechgroup.com/services/feature-flag-auditor'
-    marketPosition: 'Proactive hygiene vs manual debt'
-    targetAudience: 'Platform + app teams'
-    trialDays: 7
-    setupTime: '30 minutes'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['Git APIs', 'Static analysis']
-    integrations: ['GitHub', 'GitLab', 'Flagsmith']
-    useCases: ['Cleanup debt', 'Reduce risk']
-    roi: 'Avoid outages; reduce toil'
-    competitors: ['LaunchDarkly add-ons']
-    marketSize: '$1B flags'
-    growthRate: '10% CAGR'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Scanner + PR bot'
-    launchDate: '2025-08-20'
-    customers: 8
-    rating: 4.4
-    reviews: 3
-  }
-=======
+
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
@@ -875,7 +794,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.4,
     reviews: 3,
   },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   {
     id: 'postgres-index-advisor-pro'
     name: 'Postgres Index Advisor Pro'
@@ -1003,15 +922,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     reviews: 5
   }
   {
-<<<<<<< HEAD
-    id: 'api-breaking-change-watcher'
-    name: 'API Breaking Change Watcher'
-    tagline: 'Schema diffs with CI gates and notifications'
-    price: '$49'
-    period: '/month'
-    description:
-      'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.'
-=======
+
     id: 'api-breaking-change-watcher',
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -1019,7 +930,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description:;
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     features: [
       'Schema registry'
       'Diff rules'
@@ -2252,12 +2163,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		customers: 24;
 		rating: 4.6
 		reviews: 6
-<<<<<<< HEAD
-	}
-];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
@@ -3254,9 +3161,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 24,;
 		rating: 4.6;
 		reviews: 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];

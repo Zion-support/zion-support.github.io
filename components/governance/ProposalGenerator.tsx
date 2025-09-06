@@ -6,12 +6,10 @@ export type ProposalType =
   | 'AI Ethics'
   | 'Digital ID';
   | 'Education';
-<<<<<<< HEAD
-export type ProposalForm = {
-=======
+
 
 export type ProposalForm = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   targetInstitution: string;
   type: ProposalType;
   regionalScope: string;
@@ -19,19 +17,13 @@ export type ProposalForm = {;
   supportingMultiverses: string;
   language?: string;
   customPrompt?: string;};export type ProposalForm = {
-<<<<<<< HEAD
-  targetInstitution: string
-  type: ProposalType
-  regionalScope: string
-  budgetOrGoals: string
-  supportingMultiverses: string
-=======
+
   targetInstitution: string,
   type: ProposalType,
   regionalScope: string,
   budgetOrGoals: string,
   supportingMultiverses: string,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   language?: string;
   customPrompt?: string
 }
@@ -44,11 +36,9 @@ export default function ProposalGenerator() {
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
-<<<<<<< HEAD
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
-=======
+
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -88,30 +78,16 @@ export default function ProposalGenerator() {
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');
     } finally {
-<<<<<<< HEAD
-      setIsGenerating(false);    }      const data = await res.json();
-      setDraftMarkdown(data.markdown |'');
-      setDraftJson(data.json |null);
-      setStatusMessage('Draft ready. You can edit and export.')
-    } catch (e: any) {
-      console.error(e);
-      setStatusMessage('Failed to generate. You can edit manually and export.')
-    } finally {
-      setIsGenerating(false)
-=======
+
       setIsGenerating(false);    }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
@@ -133,26 +109,15 @@ export default function ProposalGenerator() {
       setStatusMessage('Exported. Files saved.');
     } catch (e) {
       console.error(e);
-<<<<<<< HEAD
-      setStatusMessage('Export failed');    }      const data = await res.json();
-      setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl })
-      setStatusMessage('Exported. Files saved.')
-    } catch (e) {
-      console.error(e);
-      setStatusMessage('Export failed')
-    }
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
       setStatusMessage('Export failed');    }
 
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
@@ -180,72 +145,22 @@ export default function ProposalGenerator() {
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        <div className='space-y-4'>      const data = await res.json();
-      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
-    } catch (e) {
-      console.error(e);
-<<<<<<< HEAD
 
-      setStatusMessage('Submission failed')
-=======
-      setStatusMessage('Submission failed')
-=======
-        <div className='space-y-4'>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='space-y-4'>
-<<<<<<< HEAD
-          <div>
-            <label className='block text-sm font-medium'>
-              Target institution
-            </label>
-            <input
-              className='w-full border rounded px-3 py-2'
-              value={form.targetInstitution}
-              onChange={e => handleChange('targetInstitution', e.target.value)}
-              placeholder='UNDP / World Bank / ILO'
-            />
-          </div>
-          <div>
-            <label className='block text-sm font-medium'>Type</label>
-            <select
-              className='w-full border rounded px-3 py-2'
-              value={form.type}
-              onChange={e =>
-                handleChange('type', e.target.value as ProposalType)
-              }            >          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>
-            <input
-              className="w-full border rounded px-3 py-2"
-              value={form.targetInstitution}
-              onChange={(e) => handleChange('targetInstitution', e.target.value)}
-              placeholder="UNDP / World Bank / ILO"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Type">Type</label>
-            <select
-              className="w-full border rounded px-3 py-2"
-              value={form.type}
-              onChange={(e) => handleChange('type', e.target.value as ProposalType)}
-=======
+
 
     }
   }
 
   return (
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -309,61 +224,10 @@ export default function ProposalGenerator() {
           </div>
           <div className='flex gap-2'>
             <button
-<<<<<<< HEAD
-              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
-              className="w-full border rounded px-3 py-2"
-              value={form.regionalScope}
-              onChange={(e) => handleChange('regionalScope', e.target.value)}
-              placeholder="Global / Africa / LATAM / APAC / EU / ..."
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Budget / Resolution goals">Budget / Resolution goals</label>
-            <textarea
-              className="w-full border rounded px-3 py-2 min-h-[80px]"
-              value={form.budgetOrGoals}
-              onChange={(e) => handleChange('budgetOrGoals', e.target.value)}
-              placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc."
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Supporting multiverse(s)">Supporting multiverse(s)</label>
-            <input
-              className="w-full border rounded px-3 py-2"
-              value={form.supportingMultiverses}
-              onChange={(e) => handleChange('supportingMultiverses', e.target.value)}
-              placeholder="Eg. Zion.ai, Zion.ID, Zion.Work"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
-              <input
-                className="w-full border rounded px-3 py-2"
-                value={form.language}
-                onChange={(e) => handleChange('language', e.target.value)}
-                placeholder="English / French / Spanish / Arabic / ..."
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium" htmlFor="input-GPT Prompt Assist">GPT Prompt Assist</label>
-              <textarea
-                className="w-full border rounded px-3 py-2 min-h-[80px]"
-                value={form.customPrompt}
-                onChange={(e) => handleChange('customPrompt', e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="flex gap-2">
-            <button
-              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
-=======
+
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onClick={handleGenerate}
               disabled={isGenerating}
@@ -435,13 +299,9 @@ export default function ProposalGenerator() {
                     JSON
                   </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
@@ -460,12 +320,9 @@ export default function ProposalGenerator() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
+
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
 =======
 }

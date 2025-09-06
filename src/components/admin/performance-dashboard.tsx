@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -358,9 +355,8 @@ export function PerformanceDashboard() {;
   }, []),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
@@ -373,11 +369,7 @@ export function PerformanceDashboard() {;
           </p>
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
-<<<<<<< HEAD
-          <RefreshCw
-            className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
-          />
-=======
+
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
 ;
     return vitals;
@@ -437,10 +429,7 @@ export function PerformanceDashboard() {;
         </div>;
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {isLoading ? 'Collecting...' : 'Refresh'}
         </Button>
@@ -471,17 +460,11 @@ export function PerformanceDashboard() {;
                   <Progress value={metrics.performanceScore} className="h-2" />
                 </div>
               </div>
-<<<<<<< HEAD
-              {lastUpdated && (
-                <p className='text-sm text-muted-foreground'>
-=======
+
               
               {lastUpdated && (
                 <p className="text-sm text-muted-foreground">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Last updated: {lastUpdated.toLocaleString()}
                 </p>
@@ -562,26 +545,14 @@ export function PerformanceDashboard() {;
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
-<<<<<<< HEAD
-            <div className='space-y-2'>
-              {chunks.slice(0, 10).map((chunk, index) => (
-                <div
-                  key={chunk.name}
-                  className='flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded'
-                >
-                  <div className='flex items-center gap-3'>
-                    <span className='text-sm font-mono text-muted-foreground'>                      {index + 1}
-=======
+
             <div className="space-y-2">
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
                   <div className="flex items-center gap-3">
                     <span className="text-sm font-mono text-muted-foreground">
                       {index + 1}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                     <div>
@@ -606,10 +577,9 @@ export function PerformanceDashboard() {;
                   </div>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
+
               
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               {chunks.length > 10 && (
                 <p className="text-sm text-muted-foreground text-center pt-2">
                   ... and {chunks.length - 10} more chunks
@@ -644,17 +614,11 @@ export function PerformanceDashboard() {;
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
-              <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
-=======
+
             
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div>
                 <p className="font-medium text-green-900 dark:text-green-100">
@@ -665,13 +629,9 @@ export function PerformanceDashboard() {;
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
-=======
+
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">
@@ -686,18 +646,8 @@ export function PerformanceDashboard() {;
                 </div>
               </div>
             )}
-<<<<<<< HEAD
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-<<<<<<< HEAD
-}
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
           </div>;
         </CardContent>;
@@ -705,8 +655,6 @@ export function PerformanceDashboard() {;
     </div>;
   );
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

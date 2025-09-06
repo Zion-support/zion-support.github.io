@@ -1,38 +1,11 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Star
-  Rocket
-  Brain
-  Atom
-  Building
-  Briefcase
-  Microscope
-  Twitter
-  Facebook
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  Zap
-  Sparkles
-  Shield
-  Cpu
-  Database;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight, Star
-=======
+
   Phone,
   Mail,
   MapPin,
@@ -57,7 +30,7 @@ import {
   Cpu,;
   Database,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
   Twitter, Facebook, Linkedin, Instagram, Youtube;
   Github, Zap, Sparkles, Shield, Cpu, Database
@@ -226,131 +199,17 @@ const UltraFuturisticFooter2029 = () => {
 const UltraFuturisticFooter2029 = () => {
   return (
     <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'>
-<<<<<<< HEAD
-      {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-        <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
-          {/* Company Info */}
-          <div className='lg:col-span-1'>
-            <div className='flex items-center space-x-3 mb-6'>
-              <div className='w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center'>
-                <Rocket className='w-6 h-6 text-white' />
-              </div>
-              <div>
-                <h3 className='text-xl font-bold text-white'>
-                  Zion Tech Group
-                </h3>
-                <p className='text-sm text-gray-400'>Innovating the Future</p>
-              </div>
-            </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            <p className='text-gray-400 mb-6 leading-relaxed'>
-              Leading the revolution in AI, quantum computing, and autonomous
-              technology solutions. Transforming businesses with cutting-edge
-              innovation.
-            </p>
-            {/* Contact Information */}
-            <div className='space-y-3 mb-6'>
-              <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>
-                <Phone className='w-4 h-4' />
-                <a href={`tel:${contactInfo.mobile}`} className='text-sm'>
-                  {contactInfo.mobile}
-                </a>
-              </div>
-              <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>
-                <Mail className='w-4 h-4' />
-                <a href={`mailto:${contactInfo.email}`} className='text-sm'>
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div className='flex items-center space-x-3 text-gray-400'>
-                <MapPin className='w-4 h-4' />
-                <span className='text-sm'>{contactInfo.address}</span>              </div>            </div>
-            {/* Social Links */}
-            <div className='flex space-x-4'>
-              {socialLinks.map(social => (            {/* Contact Information */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
-                <Phone className="w-4 h-4" />
-                <a href={`tel:${contactInfo.mobile}`} className="text-sm">
-                  {contactInfo.mobile}
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
-                <Mail className="w-4 h-4" />
-                <a href={`mailto:${contactInfo.email}`} className="text-sm">
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <MapPin className="w-4 h-4" />
-                <span className="text-sm">{contactInfo.address}</span>
-              </div>
-            </div>
-            {/* Social Links */}
-            <div className='flex space-x-4'>
-              {socialLinks.map(social => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
-                >
-                  <social.icon className='w-5 h-5' />                </a>                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-          </div>
-=======
 
-<<<<<<< HEAD
-];
 
-const UltraFuturisticFooter2029 = () => {
-  return (
-
-              </div>
-            </div>
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            {/* Social Links */}
-
-                </a>
-
-              ))}
-            </div>
-          </div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Service Categories */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
               Our Services
             </h4>
             <div className='space-y-4'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {serviceCategories.map((category, index) => (
                 <div key={index}>
@@ -384,13 +243,9 @@ const UltraFuturisticFooter2029 = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Quick Links */}
           <div className='lg:col-span-1'>
@@ -399,61 +254,38 @@ const UltraFuturisticFooter2029 = () => {
             </h4>
             <div className='grid grid-cols-2 gap-2'>
               {quickLinks.map(link => (
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Link
                   key={link.name}
                   href={link.href}
                   className='flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50'
                 >
-<<<<<<< HEAD
-                  <link.icon className='w-4 h-4' />                  <span>{link.name}</span>                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50"
-                >
-                  <link.icon className="w-4 h-4" />
-                  <span>{link.name}</span>
-=======
+
                   <link.icon className='w-4 h-4' />                  <span>{link.name}</span>
 
                   <span>{link.name}</span>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </Link>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Footer Sections */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
             <div className='space-y-4'>
               {footerSections.map(section => (
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div key={section.title}>
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
@@ -484,26 +316,18 @@ const UltraFuturisticFooter2029 = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Bottom Footer */}
       <div className='border-t border-slate-700/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
             <div className='text-sm text-gray-400'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               © 2025 Zion Tech Group. All rights reserved.
             </div>
@@ -578,26 +402,8 @@ const UltraFuturisticFooter2029 = () => {
       </div>
     </footer>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default UltraFuturisticFooter2029;  )
-}
-export default UltraFuturisticFooter2029;
 
-<<<<<<< HEAD
-=======
-export default UltraFuturisticFooter2029;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-=======
-export default UltraFuturisticFooter2029;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

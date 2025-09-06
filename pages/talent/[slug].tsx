@@ -1,29 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
-<<<<<<< HEAD
-const TalentProfile: NextPage = () => {
-  const router = useRouter();
-  const { slug } = router.query;
-  const [responseLog, setResponseLog] = useState<
-    Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>
-  >([]);
-  const handleRespond = (action: "Accept" | "Decline" | "Negotiate") => {
-    setResponseLog((prev) => [
-      ...prev
-      { action, at: new Date().toISOString() }
-    ]);
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -31,9 +15,8 @@ import { useRouter } from 'next/router',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const TalentProfile: NextPage = () => {
   const router = useRouter(),
@@ -88,18 +71,7 @@ const TalentProfile: NextPage = () => {
                   <span>{r.action}</span>
                   <span className="opacity-70">{new Date(r.at).toLocaleString()}</span>
                 </li>
-<<<<<<< HEAD
-              ))}
-            </ul>
-          </div>
-        </aside>
-      </section>
-    </div>
-  );
-}
-export default TalentProfile;
 
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -112,9 +84,6 @@ export default TalentProfile;
     </div>;
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export default TalentProfile;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

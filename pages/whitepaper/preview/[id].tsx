@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useEffect, useState } from 'react';
-export default function WhitepaperPreview() {
 
-=======
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
 export default function WhitepaperPreview() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { useRouter } from 'next/router',
 import { useEffect, useState } from 'react',
@@ -38,20 +32,16 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 export default function WhitepaperPreview(req, res) {
   try {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { id } = router.query;
   const [markdown, setMarkdown] = useState<string>('');
   const [notFound, setNotFound] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   useEffect(() => {
     if (!id |Array.isArray(id)) return;
     // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query)
@@ -76,11 +66,10 @@ export default function WhitepaperPreview(req, res) {
       <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>
     </div>
 );
-<<<<<<< HEAD
-=======
+
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
   useEffect(() => {;
     if (!id || Array.isArray(id)) return,;
@@ -97,8 +86,6 @@ export default function WhitepaperPreview(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

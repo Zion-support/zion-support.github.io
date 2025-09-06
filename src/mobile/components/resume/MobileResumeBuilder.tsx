@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-=======
-<<<<<<< HEAD
-=======
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 import {
 
   Select
@@ -60,11 +45,9 @@ export function MobileResumeBuilder() {
       case "education":
         return <EducationStep />
       case "skills":
-<<<<<<< HEAD
-        return <SkillsStep />
-=======
+
         return <SkillsStep />,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       default:
         return <BasicsStep />
     }
@@ -73,91 +56,53 @@ export function MobileResumeBuilder() {
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
-<<<<<<< HEAD
-          variant = {currentStep === "basics" ? "default" : "outline",}
-          className="flex-1 rounded-full"
-          onClick = {(,) => setCurrentStep("basics"),}
-=======
+
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Basics
         </Button>
         <Button
-<<<<<<< HEAD
-          variant = {currentStep === "experience" ? "default" : "outline",}
-          className="flex-1 rounded-full"
-          onClick = {() => setCurrentStep("experience"),}
-=======
+
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Experience
         </Button>
         <Button
-<<<<<<< HEAD
-          variant = {currentStep === "education" ? "default" : "outline",}
-          className="flex-1 rounded-full"
-          onClick = {() => setCurrentStep("education"),}
-=======
+
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Education
         </Button>
         <Button
-<<<<<<< HEAD
-          variant = {currentStep === "skills" ? "default" : "outline",}
-          className="flex-1 rounded-full"
-          onClick = {() => setCurrentStep("skills"),}
-=======
+
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Skills
         </Button>
       </div>
       {renderStepContent()}
-<<<<<<< HEAD
-      <Button className="w-full flex gap-2" size="lg">
-        <Zap className="h-5 w-5" /> Enhance with AI
-      </Button>
-=======
+
       
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
@@ -191,144 +136,11 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Textarea
-            id="summary"
-            placeholder="Write a brief summary about yourself"
-=======
+
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            rows = {4,}
-          />
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-=======
-<<<<<<< HEAD
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
-import { Label } from "@/components/ui/label",;
-import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
-type ResumeStep = "basics" | "experience" | "education" | "skills",;
-export function MobileResumeBuilder() {;
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
-  const renderStepContent = () => {;
-    switch (currentStep) {;
-      case "basics": return <BasicsStep />,;
-      case "experience":;
-        return <ExperienceStep />,;
-      case "education":;
-        return <EducationStep />,;
-      case "skills":;
-        return <SkillsStep />,;
-      default:;
-        return <BasicsStep />;
-    }
-  },;
-  return (;
-    <div className="space-y-6 px-4 pb-24">;
-      <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
-        <Button;
-          variant={currentStep === "basics" ? "default" : "outline"}
-          className="flex-1 rounded-full";
-          onClick={() => setCurrentStep("basics")}
-        >;
-          Basics;
-        </Button>;
-        <Button;
-          variant={currentStep === "experience" ? "default" : "outline"}
-          className="flex-1 rounded-full";
-          onClick={() => setCurrentStep("experience")}
-        >;
-          Experience;
-        </Button>;
-        <Button;
-          variant={currentStep === "education" ? "default" : "outline"}
-          className="flex-1 rounded-full";
-          onClick={() => setCurrentStep("education")}
-        >;
-          Education;
-        </Button>;
-        <Button;
-          variant={currentStep === "skills" ? "default" : "outline"}
-          className="flex-1 rounded-full";
-          onClick={() => setCurrentStep("skills")}
-        >;
-          Skills;
-        </Button>;
-      </div>;
-      {renderStepContent()}
-;
-      <Button className="w-full flex gap-2" size="lg">;
-        <Zap className="h-5 w-5" /> Enhance with AI;
-      </Button>;
-      <Button variant="default" className="w-full" size="lg">;
-        Save & Preview;
-      </Button>;
-    </div>;
-  );
-}
-;
-function BasicsStep() {;
-  return (;
-    <Card>;
-      <CardContent className="p-4 space-y-4">;
-        <div className="space-y-2">;
-          <Label htmlFor="title">Resume Title</Label>;
-          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />;
-        </div>;
-        <div className="space-y-2">;
-          <Label htmlFor="fullName">Full Name</Label>;
-          <Input id="fullName" name="fullName" placeholder="Your full name" autoComplete="name" />;
-        </div>;
-        <div className="space-y-2">;
-          <Label htmlFor="email">Email Address</Label>;
-          <Input id="email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />;
-        </div>;
-        <div className="space-y-2">;
-          <Label htmlFor="phone">Phone Number</Label>;
-          <Input id="phone" name="phone" placeholder="Your phone number" autoComplete="tel" />;
-        </div>;
-        <div className="space-y-2">;
-          <Label htmlFor="location">Location</Label>;
-          <Input id="location" name="location" placeholder="City, Country" autoComplete="address-level2" />;
-        </div>;
-        <div className="space-y-2">;
-          <Label htmlFor="summary">Professional Summary</Label>;
-          <Textarea;
-            id="summary";
-            placeholder="Write a brief summary about yourself";
-            rows={4}
-          />;
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function ExperienceStep() {
@@ -339,25 +151,12 @@ function ExperienceStep() {
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
-<<<<<<< HEAD
-  }
-  const removeEducation = (id: string,) => {
-    setEducations(educations.filter(edu => edu.id !== id))
-  }
-  const removeSkill = (id: string,) => {
-    setSkills(skills.filter(skill => skill.id !== id))
-<<<<<<< HEAD
-  }
-}
-  )
-}
 
-=======
   };
 };
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
   },
   
@@ -707,8 +506,6 @@ function SkillsStep() {;
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

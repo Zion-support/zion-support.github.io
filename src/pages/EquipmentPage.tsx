@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-=======
+
 
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
@@ -28,19 +23,7 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
-<<<<<<< HEAD
-    id: "nvidia-a100-server";
-    title: "NVIDIA A100 GPU Training Server";
-    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
-    category: "AI Hardware";
-    price: 85000;
-    currency: "$";
-    brand: "NVIDIA";
-    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
-    tags: ["AI", "Machine Learning", "GPU"],
-    author: { name: "NVIDIA", id: "nvidia" },
-    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
-=======
+
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -208,209 +191,14 @@ const EquipmentFilterControls = ({
     </Button>
   </div>
 ),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <EquipmentErrorBoundary>
-      <EquipmentPageContent />
-    </EquipmentErrorBoundary>
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    <Card className="h-full hover:shadow-lg transition-shadow">
-      <CardHeader className="pb-3">
-        <div className="flex items-start justify-between">
-          <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
-            <p className="text-sm text-muted-foreground">{equipment.category}</p>
-            <div className="flex items-center gap-2 mt-2">
-              <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>
-            </div>
-          </div>
-          <div className="text-right">
-            <div className="text-xl font-bold text-blue-600">{formatPrice(equipment.price ?? 0)}</div>
-            <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
-              {equipment.availability}
-            </Badge>
-          </div>
-        </div>
-      </CardHeader>
-      <CardContent className="pt-0">
-        <div className="flex items-center gap-4 mb-3">
-          <div className="flex items-center gap-1">
-            <Star className="h-4 w-4 text-yellow-500 fill-current" />
-            <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>
-            <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
-          </div>
-        </div>
-        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-medium">{equipment.category}</span>
-          <Button size="sm" onClick={onViewDetails}>
-            <ShoppingCart className="h-4 w-4 mr-1" />
-            View Details
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  )
-},
 
-// Loading grid
-const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
-  </div>
-),
 
-// Error fallback component
-function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, resetErrorBoundary: () => void }) {
-  return (
-    <div className="container py-8">
-      <Card className="border-red-200 bg-red-50">
-        <CardContent className="p-8 text-center">
-          <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-red-600" />
-          <h2 className="text-2xl font-bold text-red-900 mb-2">Something went wrong</h2>
-          <p className="text-red-700 mb-4">
-            We're having trouble loading the equipment listings. This might be a temporary issue.
-          </p>
-          <div className="flex gap-2 justify-center">
-            <Button onClick={resetErrorBoundary} variant="outline">
-              <RefreshCw className="h-4 w-4 mr-2" />
-              Try Again
-            </Button>
-            <Button onClick={() => window.location.reload()} variant="default">
-              Refresh Page
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-;
-// Main component;
-function EquipmentPageContent() {;
-  const router = useRouter(),;
-  const [sortBy, setSortBy] = useState('newest'),;
-  const [filterCategory, setFilterCategory] = useState(''),;
-  const [showRecommended, setShowRecommended] = useState(false),;
-  // Generate a consistent seed based on current filters for deterministic data;
-  const dataSeed = useMemo(() => {;
-    return `equipment-${filterCategory}-${showRecommended}`;
-  }, [filterCategory, showRecommended]),;
-  const fetchEquipment = useCallback(async (page: number, limit: number) => {;
-    // Simulate realistic API delay;
-    await new Promise(resolve => setTimeout(resolve, 300)),;
-    try {;
-      // Generate consistent virtual dataset using the seed;
-      const VIRTUAL_DATASET_SIZE = 150,;
-      const baseVirtualEquipment = generateDatacenterEquipment(;
-        VIRTUAL_DATASET_SIZE,;
-        INITIAL_EQUIPMENT.length,;
-        dataSeed;
-      ),;
-      let fullVirtualDataset: ProductListing[] = [;
-        ...INITIAL_EQUIPMENT,;
-        ...baseVirtualEquipment;
-      ],;
-      // Deduplicate by ID in case of overlaps;
-      const dedupMap = new Map<string ProductListing>(),;
-      for (const item of fullVirtualDataset) {;
-        if (!dedupMap.has(item.id)) {;
-          dedupMap.set(item.id, item);
-        }
-      }
-      fullVirtualDataset = Array.from(dedupMap.values()),;
-      // Apply category filtering;
-      let processedDataset = fullVirtualDataset,;
-      if (filterCategory) {;
-        processedDataset = processedDataset.filter(e => e.category === filterCategory);
-      }
-;
-      // Apply recommended filtering;
-      if (showRecommended) {;
-        processedDataset = getRecommendedEquipment(processedDataset);
-      }
-;
-      // Sort the processed dataset;
-      processedDataset.sort((a, b) => {;
-        switch (sortBy) {;
-          case 'price-low':;
-            return (a.price || 0) - (b.price || 0),;
-          case 'price-high':;
-            return (b.price || 0) - (a.price || 0),;
-          case 'rating':;
-            return (b.rating || 0) - (a.rating || 0),;
-          default: // 'newest';
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
-        }
-      }),;
-      // Slice for pagination;
-      const startIndex = (page - 1) * limit,;
-      const endIndex = startIndex + limit,;
-      const items = processedDataset.slice(startIndex, endIndex),;
-      return {;
-        items,;
-        hasMore: endIndex < processedDataset.length,;
-        total: processedDataset.length;
-      }
-    } catch (error) {;
-      logErrorToProduction('Error in fetchEquipment:', { data: error }),;
-      throw new Error('Failed to load equipment data. Please try again.');
-    }
-  }, [sortBy, filterCategory, showRecommended, dataSeed]),
-
-  const {
-    items: equipment,
-    loading,
-    error,
-    hasMore,
-    total,
-    isFetching,
-    lastElementRef,
-    refresh,
-    scrollToTop,
-    loadMore
-  } = useInfiniteScrollPagination(fetchEquipment, 12),
-
-  // Refresh when filters change
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      refresh()
-    }, 100), // Small delay to prevent rapid successive refreshes
-
-    return () => clearTimeout(timeoutId)
-  }, [sortBy, filterCategory, showRecommended, refresh]),
-
-  const marketStats = useMemo(() => {
-    if (equipment.length === 0) return null,
-    return getEquipmentMarketStats(equipment)
-  }, [equipment]),
-
-  const categories = useMemo(() => {
-    // Use all possible categories, not just from current items
-    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
-  }, []),
-
-  const [showScrollTop, setShowScrollTop] = useState(false),
-  useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Loading state
   if (loading && equipment.length === 0) {
     return (
@@ -426,19 +214,7 @@ function EquipmentPageContent() {;
     )
   }
 
-<<<<<<< HEAD
 
-
-}
-// Main export with error boundary
-export default function EquipmentPage() {
-  return (
-    <EquipmentErrorBoundary>
-      <EquipmentPageContent />
-    </EquipmentErrorBoundary>
-  )
-}
-=======
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -644,8 +420,5 @@ export default function EquipmentPage() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

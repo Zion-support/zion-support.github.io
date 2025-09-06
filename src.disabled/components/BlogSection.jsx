@@ -1,10 +1,5 @@
-<<<<<<< HEAD:src.disabled/components/BlogSection.jsx
-<<<<<<< HEAD
-"export\": function BlogSection () { ;
-export: function BlogSection () { ;""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 =======
 "export\": function BlogSection () { ;
 export: function BlogSection () { ;""

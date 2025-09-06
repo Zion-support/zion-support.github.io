@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 =======
 export default function CloudAutomationsPage() {;
 =======
@@ -64,10 +62,7 @@ export default function CloudAutomationsPage() {
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-);
-}
-=======
+
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

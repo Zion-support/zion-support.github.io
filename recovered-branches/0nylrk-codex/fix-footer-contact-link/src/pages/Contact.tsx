@@ -1,63 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Card} from "@/components/ui/card";
-import {toast} from "@/components/ui/use-toast";
-import z from "zod";
-import {ChatAssistant} from "@/components/ChatAssistant";
-import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
-import {AppLayout} from "@/layout/AppLayout";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card } from "@/components/ui/card",
-import { toast } from "@/components/ui/use-toast",
-import z from "zod",
-import { ChatAssistant } from "@/components/ChatAssistant",
-<<<<<<< HEAD
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
-import { AppLayout } from "@/layout/AppLayout";
-=======
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
-import { AppLayout } from "@/layout/AppLayout",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function Contact() {
-  const [formData, setFormData] = useState({
 
-    name: ""
-    email: ""
-    subject: ""
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-<<<<<<< HEAD
-    message: "";
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -67,27 +16,16 @@ export default function Contact() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
       // Basic validation with Zod
       const schema = z.object({
-<<<<<<< HEAD
-        name: z.string().min(2, "Name must be at least 2 characters");
-        email: z.string().email("Invalid email address")
-        subject: z.string().min(2, "Subject must be at least 2 characters");
-        message: z.string().min(10, "Message must be at least 10 characters")
-      });
-      schema.parse(formData);
-      // Simulate form submission
-      setIsSubmitting(true);
-=======
+
         name: z.string().min(2, "Name must be at least 2 characters"),
         email: z.string().email("Invalid email address"),
         subject: z.string().min(2, "Subject must be at least 2 characters"),
@@ -99,7 +37,7 @@ export default function Contact() {
       // Simulate form submission
       setIsSubmitting(true),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       setTimeout(() => {
         setIsSubmitting(false),
         toast({
@@ -128,30 +66,23 @@ export default function Contact() {
         })
       }
     }
-<<<<<<< HEAD
-  }
-=======
+
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
-<<<<<<< HEAD
-          "Content-Type": "application/json"}
-        body: JSON.stringify({
-          messages: [{ role: "user", content: message }]
-        })});
-=======
+
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -165,23 +96,7 @@ export default function Contact() {
       }),
       return Promise.resolve()
     }
-<<<<<<< HEAD
-  }
-  const offices = [
-    {
-      name: "Headquarters"
-      address: "123 Tech Avenue, San Francisco, CA 94105";
-      phone: "+1 302 464 0950"
-      email: "commercial@ziontechgroup.com"
-    }
-    {
-      name: "East Coast Office"
-      address: "456 Innovation Street, New York, NY 10001";
-      phone: "+1 302 464 0950"
-      email: "commercial@ziontechgroup.com"
-    }
-  ];
-=======
+
   },
 
   const offices = [
@@ -199,7 +114,7 @@ export default function Contact() {
     }
   ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <AppLayout>
       <SEO
@@ -275,13 +190,10 @@ export default function Contact() {
                     required
                   />
                 </div>
-<<<<<<< HEAD
-                <Button
-                  type="submit"
-=======
+
                 <Button 
                   type="submit" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}
                 >
@@ -374,8 +286,7 @@ export default function Contact() {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-=======
+
 
 import { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -654,10 +565,7 @@ export default function Contact() {;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Chat Assistant Modal */}
       {isChatOpen && (
@@ -674,13 +582,9 @@ export default function Contact() {;
           onSendMessage={handleSendMessage}
         />
       )}
-<<<<<<< HEAD
-    </AppLayout>
-  )
-}
-=======
+
     </AppLayout>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

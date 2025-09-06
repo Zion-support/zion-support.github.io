@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants';
 
-import { ServiceVariant  } from "../types/service-variants";
-<<<<<<< HEAD
-export interface InnovativeNewService2025 {
-
-=======
 export interface InnovativeNewService2025 {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -354,21 +347,14 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.'
-    launchDate: '2025-01-08'
-    customers: 12
-    rating: 4.9
-    reviews: 6
-  }
-=======
+
       'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
     launchDate: '2025-01-08',
     customers: 12,
     rating: 4.9,
     reviews: 6,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -383,11 +369,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     rating: 4.9
 
     reviews: 6
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeNewService {;
@@ -651,9 +634,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     customers: 12,;
     rating: 4.9;
     reviews: 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];

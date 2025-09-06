@@ -1,99 +1,7 @@
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants';
-export interface PracticalBusinessSolution2029 {;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
 
-    website: string;
-  }
-
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number
-}
-export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
-  // AI-Powered Business Intelligence
-  {
-
-    id: 'ai-business-intelligence-suite'
-    name: 'AI Business Intelligence Suite'
-    tagline:
-      'Intelligent insights and predictive analytics for business growth'
-    price: '$2,499'
-    period: '/month'
-    description:
-      'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.'
-    features: [
-      'Real-time data analytics'
-      'Predictive business modeling'
-      'Automated report generation'
-      'Custom dashboard creation'
-      'Data visualization tools'
-      'Business trend analysis'
-      'Performance benchmarking'
-      'ROI tracking automation'
-      'Market opportunity identification'
-      'Competitive intelligence'
-    ]
-    popular: true
-    icon: '📊'
-    color: 'from-blue-500 via-indigo-500 to-purple-500'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/services/ai-business-intelligence-suite'
-    marketPosition:
-      'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.'
-    targetAudience:
-      'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies'
-    trialDays: 21
-    setupTime: '2-3 weeks'
-    category: 'AI Business Intelligence'
-    realService: true
-    technology: [
-      'Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'
-    ]
-    integrations: [
-      'ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'
-    ]
-    useCases: [
-<<<<<<< HEAD
-      'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'
-    ],    features: [
-
-=======
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making',
     ],    features: [;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
       'Market opportunity identificationCompetitive intelligence'
     ];
@@ -484,13 +392,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   }
 ];
 export const getPopularPracticalBusinessSolutions2029 = () => {
-<<<<<<< HEAD
-  return practicalBusinessSolutions2029.filter(service => service.popular)
-}
-export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-  return practicalBusinessSolutions2029.filter(service => service.category === category)
-}
-=======
+
   return practicalBusinessSolutions2029.filter(service => service.popular);
 };
 
@@ -498,7 +400,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
   return practicalBusinessSolutions2029.filter(service => service.category === category);
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -963,12 +865,10 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     reviews: 198
   }
 ];
-<<<<<<< HEAD
-export const getPopularPracticalBusinessSolutions2029 = () => {
-=======
+
 
 export const getPopularPracticalBusinessSolutions2029 = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
 export const getPracticalBusinessSolutions2029ByCategory = (
@@ -1381,11 +1281,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 ]}}
     return price >= minPrice && price <= maxPrice
   })
-<<<<<<< HEAD
-}
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface PracticalBusinessSolution2029 {;
@@ -1794,9 +1691,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,44 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useNavigate} from "react-router-dom";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {ProductListing} from "@/types/listings";
-import {Star, DollarSign} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useNavigate } from "react-router-dom",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-import { ProductListing } from "@/types/listings";
-import { Star, DollarSign } from "lucide-react";
-interface ProductListingCardProps {
 
-  listing: ProductListing
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void
-}
-export function ProductListingCard({
-  listing
-  view = 'grid';
-  onRequestQuote
-}: ProductListingCardProps) {
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  // Get the first image or use a placeholder
-  const imageUrl = listing.images && listing.images.length > 0
-    ? listing.images[0]
-    : '/placeholder.svg';
-=======
-import { ProductListing } from "@/types/listings",
-import { Star, DollarSign } from "lucide-react",
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
@@ -46,13 +7,10 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
-<<<<<<< HEAD
-  listing, ;
-  view = 'grid';
-=======
+
   listing, 
   view = 'grid',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
@@ -68,21 +26,7 @@ export function ProductListingCard({
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing",
     return `${listing.currency}${listing.price.toLocaleString()}`
-<<<<<<< HEAD
-  }
-  // Handle image loading errors
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg'
-  }
-  // Handle navigating to listing detail
-  const handleViewListing = () => {
-    navigate(`/listing/${listing.id}`)
-  }
-  // Handle request quote button click
-  const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation()
-=======
+
   },
 
   // Handle image loading errors
@@ -100,18 +44,13 @@ export function ProductListingCard({
     e.preventDefault(),
     e.stopPropagation(),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
       navigate(`/request-quote?listing=${listing.id}`)
-<<<<<<< HEAD
-    }
-  }
-  return (
-    <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>
-=======
+
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -160,10 +99,7 @@ export function ProductListingCard({;
   };
   return (;
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Image */}
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>
@@ -198,14 +134,9 @@ export function ProductListingCard({;
                 )}
               </div>
             )}
-<<<<<<< HEAD
-          </div>
-=======
+
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
@@ -241,14 +172,9 @@ export function ProductListingCard({;
             ) : (
               <span className="text-zion-slate-light">
                 {formatPrice()}
-<<<<<<< HEAD
-              </span>
-=======
+
               </span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </div>
@@ -256,12 +182,9 @@ export function ProductListingCard({;
             <Button
               size="sm"
               onClick={(e) => {
-<<<<<<< HEAD
-                e.stopPropagation();
 
-=======
                 e.stopPropagation(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"

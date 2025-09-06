@@ -5,8 +5,6 @@
       <p className="text-white/70 mt-2">Runs every 30 minutes and auto-PRs updates.</p>
     </div>
   );
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

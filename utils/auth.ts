@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export interface User {
-  id: string;
-  email: string;
-  role: string;
-  isAdmin: boolean;
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface User {;
@@ -30,7 +20,7 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   }
   
   return { id: 'user-1', email: 'user@zion.os', role: 'user' };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
@@ -53,13 +43,10 @@ export function ensureAdmin(user: User): void {
   }
 }
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
-<<<<<<< HEAD
 
-  try {
-=======
   try {;
     const user = parseUserFromRequest(req);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     ensureAdmin(user);
 
     return { allowed: true }
@@ -78,27 +65,16 @@ const demoUsers: DemoUser[] = [];
 export function ensureDemoUsers(): void {
   if (demoUsers.length === 0) {
     demoUsers.push(
-<<<<<<< HEAD
-      { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' }
-      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
-=======
+
       { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
       { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     );
   }
 }
 export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
   return {
-<<<<<<< HEAD
-    id: `user-${Date.now()}`
-    name
-    role
-    email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`
-  }
-}
-export function upsertUser(user: DemoUser): void {
-=======
+
     id: `user-${Date.now()}`,
     name,
     role,
@@ -107,7 +83,7 @@ export function upsertUser(user: DemoUser): void {
 }
 
 export function upsertUser(user: DemoUser): void {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const index = demoUsers.findIndex(u => u.id === user.id);
   if (index >= 0) {
     demoUsers[index] = user;
@@ -115,13 +91,7 @@ export function upsertUser(user: DemoUser): void {;
     demoUsers.push(user);
   }
 }
-<<<<<<< HEAD
-export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
-  res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
-}
-export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
-  const cookieHeader = req.headers.cookie |'';
-=======
+
 
 export function setUserCookie(res: NextApiResponse, user: DemoUser): void {;
   res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
@@ -129,7 +99,7 @@ export function setUserCookie(res: NextApiResponse, user: DemoUser): void {;
 
 export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   const cookieHeader = req.headers.cookie || '';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
   try {
@@ -137,14 +107,11 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   } catch {
     return null;
   }
-<<<<<<< HEAD
-}
 
-=======
 
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 =======
 

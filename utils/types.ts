@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface Application {
-=======
+
 export interface Application {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   email: string;
@@ -15,11 +12,9 @@ export interface Application {;
 }
 
 export type UserRole = 'admin' | 'user' | 'guest';
-<<<<<<< HEAD
 
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 =======
 

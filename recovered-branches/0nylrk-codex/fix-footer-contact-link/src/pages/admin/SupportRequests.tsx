@@ -1,39 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-import {Search, Filter} from "lucide-react";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Search, Filter } from "lucide-react",
-<<<<<<< HEAD
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-=======
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock data for support requests
 
@@ -48,11 +15,9 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T14:30:00Z"
     lastUpdated: "2023-12-15T15:45:00Z"
     category: "authentication"
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     id: "SR-1002"
     user: "sarah.smith@company.co"
@@ -63,11 +28,9 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-14T09:15:00Z"
     lastUpdated: "2023-12-15T13:20:00Z"
     category: "billing"
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     id: "SR-1003"
     user: "tech.guru@startup.io"
@@ -78,11 +41,9 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T11:00:00Z"
     lastUpdated: "2023-12-15T11:00:00Z"
     category: "billing"
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     id: "SR-1004"
     user: "developer@codelab.dev"
@@ -93,11 +54,9 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-13T16:45:00Z"
     lastUpdated: "2023-12-13T16:45:00Z"
     category: "api"
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     id: "SR-1005"
     user: "maria.rodriguez@design.co"
@@ -108,11 +67,9 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-12T10:30:00Z"
     lastUpdated: "2023-12-15T09:15:00Z"
     category: "disputes"
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     id: "SR-1006"
     user: "alex.wong@datacompany.com"
@@ -123,11 +80,9 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-08T13:20:00Z"
     lastUpdated: "2023-12-15T08:30:00Z"
     category: "verification"
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     id: "SR-1007"
     user: "jamie.taylor@tech.org"
@@ -139,31 +94,10 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T11:25:00Z"
     category: "profile"
   }
-<<<<<<< HEAD
-];
-export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
-=======
+
 ],
 
-<<<<<<< HEAD
-export default function SupportRequests() {;
-  const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
-=======
-export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [statusFilter, setStatusFilter] = useState<string | null>(null),
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
@@ -172,8 +106,7 @@ export default function SupportRequests() {
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
-<<<<<<< HEAD
-=======
+
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
@@ -278,10 +211,7 @@ export default function SupportRequests() {;
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     // Apply status filter
@@ -296,15 +226,7 @@ export default function SupportRequests() {;
     if (categoryFilter && request.category !== categoryFilter) {
       return false
     }
-<<<<<<< HEAD
-    return true
-  });
-  // Count by status for the summary dashboard
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
-  const totalCount = MOCK_SUPPORT_REQUESTS.length;
-=======
+
     
     return true
   }),
@@ -315,19 +237,16 @@ export default function SupportRequests() {;
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
   const totalCount = MOCK_SUPPORT_REQUESTS.length,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const resetFilters = () => {
     setSearchQuery(""),
     setStatusFilter(null),
     setPriorityFilter(null),
     setCategoryFilter(null)
-<<<<<<< HEAD
-  }
 
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <AppLayout>
       <SEO
@@ -396,11 +315,9 @@ export default function SupportRequests() {;
                   className="pl-10"
                 />
               </div>
-<<<<<<< HEAD
-              <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
-=======
+
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -411,11 +328,9 @@ export default function SupportRequests() {;
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-              <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
-=======
+
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -426,11 +341,9 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-              <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
-=======
+
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -479,8 +392,7 @@ export default function SupportRequests() {;
                               ? 'secondary'
                               : 'outline'
                           }>
-<<<<<<< HEAD
-=======
+
 ;
     return true;
   }),;
@@ -634,10 +546,7 @@ export default function SupportRequests() {;
                               ? 'secondary';
                               : 'outline';
                           }>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             {request.status}
                           </Badge>
@@ -695,9 +604,7 @@ export default function SupportRequests() {;
       </div>
     </AppLayout>
   )
-<<<<<<< HEAD
-}
-=======
+
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

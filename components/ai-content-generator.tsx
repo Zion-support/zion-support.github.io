@@ -2,8 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
+
 import {
   Brain,
   Zap,
@@ -21,7 +20,7 @@ import {
   Lock,;
   Sparkles,;
 } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
 import {
   Brain
@@ -141,28 +140,7 @@ import {
       period: '/month'
       description: 'For large organizations and enterprises'
       features: [
-<<<<<<< HEAD
-        'Unlimited words'
-        'All templates + custom'
-        'Full SEO suite'
-        'Dedicated support'
-        'Unlimited API access'
-        'Advanced analytics'
-        'White-label solution'
-        'Custom integrations'
-        'SLA guarantee'
-      ]
-      popular: false
-      color: 'border-purple-600'
-      buttonColor: 'bg-purple-600 hover:bg-purple-700'
-    },  ];        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
-        'SLA guarantee'
-      ];
-      popular: false
-      color: 'border-purple-600'
-      buttonColor: 'bg-purple-600 hover:bg-purple-700'
-    }
-=======
+
         'Unlimited words',
         'All templates + custom',
         'Full SEO suite',
@@ -180,7 +158,7 @@ import {
 
   ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const useCases = [
     {
       title: 'Blog Writing'
@@ -234,37 +212,9 @@ import {
     }
   ];
   const integrations = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
-=======
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    {
-      name: 'Shopify'
-      icon: '🛒'
-      description: 'E-commerce content automation'
-    }
-    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' }
-    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' }
-    { name: 'Slack', icon: '💬', description: 'Team collaboration' }
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },  ];    { name: 'Shopify', icon: '🛒', description: 'E-commerce content automation' }
-    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' }
-    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' }
-    { name: 'Slack', icon: '💬', description: 'Team collaboration' }
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-=======
-<<<<<<< HEAD
+
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 
-  ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-  ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <>
@@ -420,48 +370,11 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map((feature, index) => (
-              <Card
-                key={index}
-                className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
-              >
-                <div className='relative'>
-                  <div
-                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
-                  >
-                    {feature.icon}
-                  </div>
-                </div>
-                <h3 className='text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300'>
-                  {feature.title}
-                </h3>
-                <p className='text-gray-400 leading-relaxed'>                  {feature.description}            {features.map((feature, index) => (
-              <Card
-                key={index}
-                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
-              >
-                <div className="relative">
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
-                    {feature.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {feature.description}
-=======
+
 
                   {feature.description}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
               </Card>
@@ -469,13 +382,9 @@ import {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
@@ -496,55 +405,11 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {useCases.map((useCase, index) => (
-              <Card
-                key={index}
-                className='group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'
-              >
-                <div className='flex items-start space-x-4'>
-                  <div className='text-4xl'>{useCase.icon}</div>
-                  <div className='flex-1'>
-                    <h3 className='text-xl font-bold mb-3 text-white group-hover:text-purple-400 transition-colors duration-300'>
-                      {useCase.title}
-                    </h3>
-                    <p className='text-gray-400 mb-4 leading-relaxed'>
-                      {useCase.description}
-                    </p>
-                    <div className='grid grid-cols-2 gap-2'>
-                      {useCase.examples.map((example, exampleIndex) => (
-                        <div
-                          key={exampleIndex}
-                          className='flex items-center text-sm text-gray-300'
-                        >
-                          <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {example}            {useCases.map((useCase, index) => (
-              <Card
-                key={index}
-                className="group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{useCase.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-purple-400 transition-colors duration-300">
-                      {useCase.title}
-                    </h3>
-                    <p className="text-gray-400 mb-4 leading-relaxed">
-                      {useCase.description}
-                    </p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {useCase.examples.map((example, exampleIndex) => (
-                        <div key={exampleIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {example}
-=======
+
 
                           {example}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                       ))}
@@ -556,13 +421,9 @@ import {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Section */}
       <section
@@ -603,45 +464,11 @@ import {
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                <div className='text-center mb-8'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    {plan.name}
-                  </h3>
-                  <div className='text-4xl font-bold text-white mb-2'>
-                    {plan.price}
-                    <span className='text-lg text-gray-400'>{plan.period}</span>
-                  </div>
-                  <p className='text-gray-400'>{plan.description}</p>
-                </div>
-                <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-=======
-<<<<<<< HEAD
 
-                      {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                      {feature}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
@@ -663,13 +490,9 @@ import {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
@@ -690,65 +513,28 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-<<<<<<< HEAD
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
-            {integrations.map((integration, index) => (
-              <Card
-                key={index}
-                className='text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'
-              >
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-300'>
-                  {integration.icon}
-                </div>
-                <h3 className='font-semibold text-white mb-2'>
-                  {integration.name}
-                </h3>
-                <p className='text-sm text-gray-400'>
-                  {integration.description}
-                </p>              </Card>            {integrations.map((integration, index) => (
-              <Card
-                key={index}
-                className="text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300"
-              >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {integration.icon}
-                </div>
-                <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
-                <p className="text-sm text-gray-400">{integration.description}</p>
-              </Card>
-=======
+
 
               </Card>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Transform Your Content Creation?
           </h2>
@@ -801,13 +587,5 @@ import {
       </section>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-;
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-  const isGuest = !auth?.isAuthenticated
-  const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return;
-import React, {
-<<<<<<< HEAD
-=======
+
   useState,
   useEffect,
   useRef,
@@ -24,7 +18,7 @@ export interface Message {
   message: string,
   timestamp: Date,
   read?: boolean
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 import React, {;
   useState,;
@@ -46,9 +40,8 @@ export interface Message {;
   message: string,;
   timestamp: Date,;
   read?: boolean;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
@@ -303,13 +296,10 @@ export function ChatAssistant({
       setDisplayGuestMessages(newMessages)
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {
-<<<<<<< HEAD
-      const newMessages =
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
-=======
+
       const newMessages = null;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       setLoggedInMessages(newMessages)
     }
   }
@@ -402,14 +392,9 @@ export function ChatAssistant({
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
-<<<<<<< HEAD
-            onClick = {onClose,}
-=======
+
             onClick={onClose}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             aria-label="Close chat"
           >
@@ -432,15 +417,7 @@ export function ChatAssistant({
               <p>Start a conversation with {recipient.name}</p>
               {starterQuestions.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2">
-<<<<<<< HEAD
-                  {starterQuestions.map((q, idx,) => (
-                    <Button
-                      key = {idx,}
-                      variant="outline"
-                      className="text-xs"
-                      onClick = {(,) => handleSendMessage(q),}
-                    >
-=======
+
                   {starterQuestions.map((q, idx) => (
                     <Button
                       key={idx}
@@ -448,10 +425,7 @@ export function ChatAssistant({
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {q}
                     </Button>
@@ -491,28 +465,18 @@ export function ChatAssistant({
             <div className="flex justify-end space-x-3">
               <Button
                 variant="outline"
-<<<<<<< HEAD
-                onClick = {handleModalCancel,}
-=======
+
                 onClick={handleModalCancel}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
               </Button>
               <Button
-<<<<<<< HEAD
-                onClick = {handleModalSendConfirm,}
-=======
+
                 onClick={handleModalSendConfirm}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
@@ -524,18 +488,7 @@ export function ChatAssistant({
       )}
     </div>
   );
-<<<<<<< HEAD
-};
-};
-=======
+
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

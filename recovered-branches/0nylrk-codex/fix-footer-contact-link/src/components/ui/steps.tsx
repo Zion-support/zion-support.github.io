@@ -1,29 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {cn} from "@/lib/utils";
-import {CheckIcon} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-<<<<<<< HEAD
-import { cn } from "@/lib/utils";
-import { CheckIcon } from "lucide-react";
-interface StepProps {
 
-  status: "incomplete" | "current" | "complete"
-  label: string
 
-  description?: string;
-=======
-import { cn } from "@/lib/utils",
-import { CheckIcon } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
@@ -31,21 +8,9 @@ interface StepProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   className?: string
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function Step({;
-  status;
-  label;
-  description;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export function Step({
-  status,
-  label,
-  description,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
   className}: StepProps) {
   return (
     <li
@@ -53,11 +18,9 @@ export function Step({
       className={cn(
         "relative flex items-center",
         {
-<<<<<<< HEAD
-          "opacity-60": status === "incomplete"}
-=======
+
           "opacity-60": status === "incomplete"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         className
       )}
     >
@@ -77,8 +40,7 @@ export function Step({
           <CheckIcon className="h-5 w-5" />
         ) : (
           <span>
-<<<<<<< HEAD
-=======
+
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { CheckIcon } from "lucide-react",;
@@ -119,10 +81,7 @@ export function Step({;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Step number would go here */}
           </span>
@@ -131,13 +90,10 @@ export function Step({;
       <div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
-<<<<<<< HEAD
-            "text-zion-slate-light": status === "incomplete";
-            "text-white": status === "current" |status === "complete"})}
-=======
+
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         >
           {label}
         </h3>
@@ -148,22 +104,18 @@ export function Step({;
     </li>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 interface StepsProps {
   currentStep: number
   className?: string;
   children: React.ReactNode
 }
-<<<<<<< HEAD
-export function Steps({ currentStep, className, children }: StepsProps) {
-=======
+
 
 export function Steps({ currentStep, className, children }: StepsProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const childrenArray = React.Children.toArray(children);
 =======
 ;
@@ -182,20 +134,14 @@ export function Steps({ currentStep, className, children }: StepsProps) {
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
-<<<<<<< HEAD
-          if (!React.isValidElement(child)) return null;
-          let status: "incomplete" | "current" | "complete" = "incomplete"
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
 
-=======
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
@@ -205,17 +151,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
-          />
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
@@ -237,9 +174,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />;

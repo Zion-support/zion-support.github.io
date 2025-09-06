@@ -1,26 +1,11 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Code
-  Database
-  Shield
-  Zap
-  Globe
-  Cpu
-  BookOpen
-  CheckCircle
-  ArrowRight
-  BarChart3
-  Lock
-  Brain;
-=======
+
   Code,
   Database,
   Shield,
@@ -33,7 +18,7 @@ import {
   BarChart3,
   Lock,;
   Brain,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';
 
 export default function APIDocumentation() {
@@ -89,10 +74,7 @@ export default function APIDocumentation() {
 				</ul>
 			</div>
 		</div>
-<<<<<<< HEAD
-	)
-}
-=======
+
 	),
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

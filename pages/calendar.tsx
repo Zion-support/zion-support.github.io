@@ -3,19 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-<<<<<<< HEAD
-  Calendar
-  Clock
-  Users
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Video
-  MessageSquare
-  Building
-=======
+
   Calendar,
   Clock,
   Users,
@@ -27,7 +15,7 @@ import {
   Video,
   MessageSquare,
   Building,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from "lucide-react";
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" }

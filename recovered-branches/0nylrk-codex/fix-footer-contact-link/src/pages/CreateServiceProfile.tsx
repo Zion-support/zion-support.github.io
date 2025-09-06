@@ -1,12 +1,8 @@
 
-<<<<<<< HEAD
-import React from "react";
-<<<<<<< HEAD
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
-=======
+
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 =======
@@ -29,11 +25,8 @@ export default function CreateServiceProfile() {
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
@@ -55,7 +48,5 @@ export default function CreateServiceProfile() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+

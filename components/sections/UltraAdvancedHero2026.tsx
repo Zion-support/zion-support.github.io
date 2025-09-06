@@ -3,20 +3,7 @@ import { motion  } from 'framer-motion';
 import Link from 'next/link';
 
 import {
-<<<<<<< HEAD
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Rocket
-  Globe
-  Sparkles
-  CheckCircle
-  Phone
-  Mail
-  MapPin;
-=======
+
   ArrowRight,
   Star,
   TrendingUp,
@@ -29,7 +16,7 @@ import {
   Phone,
   Mail,;
   MapPin,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
@@ -69,19 +56,14 @@ export default function UltraAdvancedHero2026() {;
       opacity: 1
       y: 0
       transition: {
-<<<<<<< HEAD
-        duration: 0.8
-      }
-    }
-  }
-=======
+
         duration: 0.8,
       },
     },
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
       {/* Enhanced Background Effects */}
@@ -112,13 +94,9 @@ export default function UltraAdvancedHero2026() {;
               2026 Revolutionary Technology Solutions
             </span>
           </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Main Heading */}
           <motion.h1
@@ -131,13 +109,9 @@ export default function UltraAdvancedHero2026() {;
             <br />
             <span className='text-white'>is Now</span>
           </motion.h1>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Subheading */}
           <motion.p
@@ -152,13 +126,9 @@ export default function UltraAdvancedHero2026() {;
             </span>{' '}
             with our revolutionary solutions.
           </motion.p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Service Statistics */}
           <motion.div
@@ -261,32 +231,14 @@ export default function UltraAdvancedHero2026() {;
           </motion.div>
           {/* Key Benefits */}
           <motion.div
-<<<<<<< HEAD
-            variants={itemVariants}
-            className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'
-          >
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl'>
-              <CheckCircle className='w-6 h-6 text-blue-400 flex-shrink-0' />
-              <span className='text-gray-200 font-medium'>
-                First-to-Market Technology
-              </span>
-            </div>
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-purple-500/20 rounded-xl'>
-              <CheckCircle className='w-6 h-6 text-purple-400 flex-shrink-0' />
-              <span className='text-gray-200 font-medium'>
-                1000% ROI Guaranteed
-              </span>
-=======
+
 
             </div>
           </motion.div>
 
           {/* Key Benefits */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
@@ -295,57 +247,9 @@ export default function UltraAdvancedHero2026() {;
                 24/7 Autonomous Operation
               </span>            </div>
           </motion.div>
-<<<<<<< HEAD
-          {/* Call to Action Buttons */}
-          <motion.div            variants={itemVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
-          >
-            <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl">
-              <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
-              <span className="text-gray-200 font-medium">First-to-Market Technology</span>
-            </div>
-            <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-purple-500/20 rounded-xl">
-              <CheckCircle className="w-6 h-6 text-purple-400 flex-shrink-0" />
-              <span className="text-gray-200 font-medium">1000% ROI Guaranteed</span>
-            </div>
-            <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl">
-              <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-              <span className="text-gray-200 font-medium">24/7 Autonomous Operation</span>
-            </div>
-          </motion.div>
-          {/* Call to Action Buttons */}
-          <motion.div
-            variants={itemVariants}
-            className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'
-          >
-            <Link
-              href='/services'
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl'
-            >
-              <Rocket className='w-6 h-6 mr-3' />
-              Explore All Services
-              <ArrowRight className='w-6 h-6 ml-3' />
-            </Link>
-            <Link
-              href='/contact'
-              className='inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
-            >
-              <Zap className='w-6 h-6 mr-3' />              Get Started Today            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
-          >
-            <Link
-              href="/services"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl"
-            >
-              <Rocket className="w-6 h-6 mr-3" />
-              Explore All Services
-              <ArrowRight className="w-6 h-6 ml-3" />
-            </Link>
-<<<<<<< HEAD
-            <Link
-=======
+
             <Link 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
@@ -354,21 +258,15 @@ export default function UltraAdvancedHero2026() {;
 
           {/* Call to Action Buttons */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Get Started Today
             </Link>
           </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Information */}
           <motion.div
@@ -439,13 +337,9 @@ export default function UltraAdvancedHero2026() {;
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Trust Indicators */}
           <motion.div
@@ -580,13 +474,7 @@ export default function UltraAdvancedHero2026() {;
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-);  )
-}
-=======
+
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,59 +1,14 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-interface Contract {
-  id: string;
-  title: string;
-  client: string;
-  talent: string;
-  date: string;
-  isSmartContract: boolean
-}
-interface RecentContractsTableProps {
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Button } from "@/components/ui/button",
-interface Contract {
-  id: string,
-  title: string,
-  client: string,
-  talent: string,
-  date: string,
-  isSmartContract: boolean
-import { Button } from "@/components/ui/button",;
-interface Contract {;
-  id: string,;
-  title: string,;
-  client: string,;
-  talent: string,;
-  date: string,;
-  isSmartContract: boolean;
-}
-;
-interface RecentContractsTableProps {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
-<<<<<<< HEAD
-export function RecentContractsTable({
-  contracts
-  onViewContract
-}: RecentContractsTableProps) {
-=======
+
 
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <>
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>
@@ -118,23 +73,15 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                 </td>
               </tr>
             ))}
-<<<<<<< HEAD
-          </tbody>
-        </table>
-      </div>
-<<<<<<< HEAD
-    </>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
           </tbody>;
         </table>;
       </div>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   );
 }

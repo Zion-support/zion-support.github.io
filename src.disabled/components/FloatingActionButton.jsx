@@ -1,10 +1,5 @@
-<<<<<<< HEAD:src.disabled/components/FloatingActionButton.jsx
-<<<<<<< HEAD
-'const FloatingActionButton = ({ className = \' }) => {\' const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { \"icon\": \'MessageCircl\',e,\"label\": \'Live: Chat,\',\' \"action\": () => window.open: (\'https:\''\'"\",;
-"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { icon: "MessageCircl",e,label: "Live: Chat,"," action: () => window.open: ("https:""""",;'"'"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 =======
 'const FloatingActionButton = ({ className = \' }) => {\' const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { \"icon\": \'MessageCircl\',e,\"label\": \'Live: Chat,\',\' \"action\": () => window.open: (\'https:\''\'"\",;
 "const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { icon: "MessageCircl",e,label: "Live: Chat,"," action: () => window.open: ("https:""""",;'"'"

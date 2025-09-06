@@ -7,13 +7,10 @@ type PersonaConfig = {
 }
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
-<<<<<<< HEAD
-    voice: 'Visionary'
-    language: 'English'
-=======
+
     voice: 'Visionary',
     language: 'English',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
@@ -22,11 +19,9 @@ export default function StudioHostPage() {
     'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
   );}
 export default function StudioHostPage() {
-<<<<<<< HEAD
-  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
-=======
+
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
@@ -115,10 +110,8 @@ export default function StudioHostPage() {
   return (
     <div className='space-y-8'>
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>AI Persona</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -322,71 +315,9 @@ export default function StudioHostPage() {
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
-<<<<<<< HEAD
-            {episode.audio && (              <p>{episode.bestQuote}</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              <div>
-                <h4 className="font-semibold">YouTube Description</h4>
-                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded">{episode.youtubeDescription}</pre>
-              </div>
-              <div>
-                <h4 className="font-semibold">Spotify Description</h4>
-                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded">{episode.spotifyDescription}</pre>
-              </div>
-              <div>
-                <h4 className="font-semibold">Transcript</h4>
-                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded max-h-64 overflow-auto">{episode.transcript}</pre>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <button className="px-4 py-2 bg-purple-600 text-white rounded" onClick={handleSynthesize} disabled={synthesizing}>
-                {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
-              </button>
-              <button className="px-4 py-2 bg-gray-800 text-white rounded" onClick={handlePublishRss} disabled={publishing}>
-                {publishing ? 'Publishing…' : 'Update RSS'}
-              </button>
-            </div>
-            {episode.audio && (
-              <div className='flex gap-3'>
-                {episode.audio.mp3Url && (
-                  <a
-                    href={episode.audio.mp3Url}
-                    className='text-blue-600 underline'
-                  >
-                    Download MP3
-                  </a>
-                )}
-                {episode.audio.wavUrl && (
-                  <a
-                    href={episode.audio.wavUrl}
-                    className='text-blue-600 underline'
-                  >
-                    Download WAV
-                  </a>
-                )}
-                {episode.audio.mp4Url && (
-                  <a
-                    href={episode.audio.mp4Url}
-                    className='text-blue-600 underline'
-                  >
-                    Download MP4
-                  </a>
-                )}              </div>              <div className="flex gap-3">
-                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}
-                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}
-                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
-            )}
-          </div>
-        </section>
-      )}
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
+
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
             {episode.audio && (
 
@@ -394,8 +325,6 @@ export default function StudioHostPage() {
               </button>
             </div>
             {episode.audio && (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

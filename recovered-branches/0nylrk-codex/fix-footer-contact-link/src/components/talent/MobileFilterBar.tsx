@@ -1,25 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Search, Sliders} from "lucide-react";
-import {Input} from "@/components/ui/input";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-import { Search, Sliders } from "lucide-react";
-import { Input } from "@/components/ui/input";
-=======
-import { Search, Sliders } from "lucide-react",
-import { Input } from "@/components/ui/input",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MobileFilterBarProps {
 
@@ -28,25 +9,9 @@ interface MobileFilterBarProps {
 
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
-<<<<<<< HEAD
-export function MobileFilterBar({
-  searchTerm;
 
-  setSearchTerm
-  setIsMobileFilterOpen
 
-=======
 
-<<<<<<< HEAD
-export function MobileFilterBar({ ;
-  searchTerm;
-=======
-export function MobileFilterBar({ 
-  searchTerm,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  setSearchTerm, 
-  setIsMobileFilterOpen 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }: MobileFilterBarProps) {
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
@@ -69,9 +34,7 @@ export function MobileFilterBar({
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
+
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from "lucide-react",;
@@ -110,8 +73,5 @@ export function MobileFilterBar({;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

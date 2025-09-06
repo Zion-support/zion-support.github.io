@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export const real2027Q3Additions = [
   {
     id: 'it-asset-discovery-agent'
@@ -316,18 +313,7 @@ export const real2027Q3Additions = [
     description:
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.'
     features: [
-<<<<<<< HEAD
-      'Discovery via traffic/specs'
-      'OWASP API Top 10 checks'
-      'PR annotations and CI gating'
-      'Change detection and drift alerts'
-    ]
-    category: 'Security & Identity'
-    link: '/api-security-scanner'
-    realService: true
-    roi: 'Prevent high-severity API incidents and cut MTTR.'
-  }
-=======
+
       'Discovery via traffic/specs',
       'OWASP API Top 10 checks',
       'PR annotations and CI gating',
@@ -338,19 +324,15 @@ export const real2027Q3Additions = [
     realService: true,
     roi: 'Prevent high-severity API incidents and cut MTTR.',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity';
     link: '/api-security-scanner';
     realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.'
-<<<<<<< HEAD
-  }
-];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
 export const real2027Q3Additions = [;
   {;
@@ -607,9 +589,8 @@ export const real2027Q3Additions = [;
     link: '/api-security-scanner',;
     realService: true,;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];

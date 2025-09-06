@@ -40,12 +40,10 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
 }
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
+
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req.body |{}
   const id = uuidv4();
@@ -112,45 +110,9 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
     }
     const episodes = readEpisodes();
-<<<<<<< HEAD
-    const episode = {
-      id
-      createdAt: new Date().toISOString()
-      persona
-      invitee
-      topic
-      title: generated.title
-      questions: generated.questions |[]
-      timeMarkers: generated.timeMarkers |{
-        intro: '00:00'
-        segments: []
-        closing: '14:30'
-      }
-      transcript: generated.transcript
-      youtubeDescription: generated.youtubeDescription |''
-      spotifyDescription: generated.spotifyDescription |''
-      bestQuote: generated.bestQuote |''
-      audio: {}
-    }
-    episodes.unshift(episode);
-    writeEpisodes(episodes);
-    return res.status(200).json({ episode });
-  } catch (error: any) {
-    console.error(error);
-    return res.status(500).json({ error: error?.message |'Unknown error' });
-  }    episodes.unshift(episode);
-    writeEpisodes(episodes);
-    return res.status(200).json({ episode })
-  } catch (error: any) {
-    console.error(error);
-    return res.status(500).json({ error: error?.message |'Unknown error' })
 
-}
-<<<<<<< HEAD
-}
-=======
     const episode = {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 
 }

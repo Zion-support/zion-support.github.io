@@ -1,97 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
-import { UseFormReturn } from "react-hook-form";
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,;
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,;
-} from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
-import { ContractFormValues } from "./ContractForm";
-interface ProjectDetailsFieldsProps {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-import { format } from "date-fns",
-<<<<<<< HEAD
-import { CalendarIcon } from "lucide-react";
-import { UseFormReturn } from "react-hook-form";
 
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import {
-  Popover
-  PopoverContent
-  PopoverTrigger
-} from "@/components/ui/popover";
-
-import { Calendar } from "@/components/ui/calendar";
-import { ContractFormValues } from "./ContractForm";
-interface ProjectDetailsFieldsProps {
-=======
-import { CalendarIcon } from "lucide-react",
-import { UseFormReturn } from "react-hook-form",
-import { 
-  FormField,
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormDescription, 
-  FormMessage 
-} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Button } from "@/components/ui/button",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Calendar } from "@/components/ui/calendar",
-import { ContractFormValues } from "./ContractForm",
-interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>
-import { format } from "date-fns",;
-import { CalendarIcon } from "lucide-react",;
-import { UseFormReturn } from "react-hook-form",;
-import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormDescription,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Button } from "@/components/ui/button",;
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { Calendar } from "@/components/ui/calendar",;
-import { ContractFormValues } from "./ContractForm";
-interface ProjectDetailsFieldsProps {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   form: UseFormReturn<ContractFormValues>;
 }
@@ -110,16 +18,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             <FormMessage />
           </FormItem>
         )}
-<<<<<<< HEAD
-      />
-      <FormField
-=======
+
       />;
       <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         control={form.control}
         name="scopeSummary"
@@ -140,10 +42,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           </FormItem>
         )}
       />
-<<<<<<< HEAD
-=======
+
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control={form.control}
@@ -180,16 +81,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-        />
-        <FormField
-=======
+
         />;
         <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           control={form.control}
           name="endDate"
@@ -228,21 +123,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-        />
-      </div>
-<<<<<<< HEAD
-    </>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 =======
         />;
       </div>;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   );
 }

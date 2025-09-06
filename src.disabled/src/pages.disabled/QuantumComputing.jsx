@@ -1,10 +1,5 @@
-<<<<<<< HEAD:src.disabled/src/pages.disabled/QuantumComputing.jsx
-<<<<<<< HEAD
-import React from \'react\'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
-const React from "react"; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;''"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 =======
 import React from \'react\'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
 const React from "react"; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;''"

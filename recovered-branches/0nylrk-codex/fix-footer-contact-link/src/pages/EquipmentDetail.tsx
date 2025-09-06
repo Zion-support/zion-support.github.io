@@ -1,133 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {useParams} from "react-router-dom";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {ShoppingCart, Star, Truck, Shield, RotateCcw, Clock} from "lucide-react";
-import {toast} from "@/hooks/use-toast";
-interface EquipmentSpecification {
-  name: string,
-  value: string
-}
 
-interface EquipmentDetails {
-  id: string,
-  name: string,
-  description: string,
-  brand: string,
-  category: string,
-  subcategory?: string;
-  images: string[],
-  price: number,
-  currency: string,
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean,
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[],
-  features: string[],
-  warranty?: string;
-  returnPolicy?: string
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState } from "react",
-import { useParams } from "react-router-dom",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-<<<<<<< HEAD
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-interface EquipmentSpecification {
 
-  name: string
-
-  value: string
-}
-interface EquipmentDetails {
-
-  id: string
-  name: string
-  description: string
-  brand: string
-  category: string
-  subcategory?: string;
-  images: string[]
-  price: number
-  currency: string
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[]
-  features: string[]
-
-  warranty?: string;
-  returnPolicy?: string
-}
-// Sample data - in a real app this would come from an API
-const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
-  "pro-camera-x1000": {
-
-    id: "pro-camera-x1000"
-    name: "Pro Camera X1000"
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
-    brand: "CineTech"
-    category: "Equipment"
-    subcategory: "Cameras"
-=======
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",
-import { toast } from "@/hooks/use-toast",
-interface EquipmentSpecification {
-  name: string,
-  value: string
-import { useState } from "react",;
-import { useParams } from "react-router-dom",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",;
-import { toast } from "@/hooks/use-toast",;
-interface EquipmentSpecification {;
-  name: string,;
-  value: string;
-}
-;
-interface EquipmentDetails {;
-  id: string,;
-  name: string,;
-  description: string,;
-  brand: string,;
-  category: string,;
-  subcategory?: string,;
-  images: string[],;
-  price: number,;
-  currency: string,;
-  rating?: number,;
-  reviewCount?: number,;
-  inStock: boolean,;
-  expectedShipping?: string,;
-  specifications: EquipmentSpecification[],;
-  features: string[],;
-  warranty?: string,;
-  returnPolicy?: string;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 // Sample data - in a real app this would come from an API
@@ -152,17 +25,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     inStock: true
     expectedShipping: "3-5 business days"
     specifications: [
-<<<<<<< HEAD
-      { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" }
-      { name: "Resolution", value: "8K (8192 x 4320)" }
-      { name: "Dynamic Range", value: "16+ stops" }
-      { name: "ISO Range", value: "100-51,200 (expandable to 50-204,800)" }
-      { name: "Recording Format", value: "RAW, ProRes, H.265" }
-      { name: "Frame Rates", value: "Up to 120fps at 4K, 60fps at 8K" }
-      { name: "Storage", value: "Dual CFexpress Type B" }
-      { name: "Battery Life", value: "~3 hours continuous recording" }
-      { name: "Weight", value: "4.5 lbs (body only)" }
-=======
+
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" },
       { name: "Resolution", value: "8K (8192 x 4320)" },
       { name: "Dynamic Range", value: "16+ stops" },
@@ -172,33 +35,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       { name: "Storage", value: "Dual CFexpress Type B" },
       { name: "Battery Life", value: "~3 hours continuous recording" },
       { name: "Weight", value: "4.5 lbs (body only)" },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
     ],
     features: [
-<<<<<<< HEAD
-      "Advanced 8K full-frame sensor";
-      "16+ stops of dynamic range";
-      "Internal RAW recording";
-      "Dual native ISO technology";
-      "5-axis in-body image stabilization";
-      "AI-powered autofocus with subject tracking";
-      "Weather-sealed magnesium alloy body"
-      "Multiple assist tools: false color, waveform, vectorscope";
-      "Anamorphic de-squeeze options";
-      "Custom 3D LUT support"
-    ];
-    warranty: "2 years manufacturer warranty"
-    returnPolicy: "30-day return policy for unused items in original packaging"
-  }
-  "audio-mixer-pro": {
-    id: "audio-mixer-pro"
-    name: "AudioMixer Pro Digital Mixing Console"
-    description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.";
-    brand: "AudioTech"
-    category: "Equipment"
-    subcategory: "Audio"
-=======
+
       "Advanced 8K full-frame sensor",
       "16+ stops of dynamic range",
       "Internal RAW recording",
@@ -220,7 +61,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     brand: "AudioTech",
     category: "Equipment",
     subcategory: "Audio",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800"
@@ -256,36 +97,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     warranty: "3 years manufacturer warranty"
     returnPolicy: "21-day return policy for items in original condition"
   }
-<<<<<<< HEAD
-}
-export default function EquipmentDetail() {
-  const { equipmentId } = useParams() as { equipmentId?: string }
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
-  // In a real app, this would fetch from an API
-  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
-=======
+
 },
 
-<<<<<<< HEAD
-export default function EquipmentDetail() {;
-  const { equipmentId } = useParams() as { equipmentId?: string };
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
-=======
-export default function EquipmentDetail() {
-  const { equipmentId } = useParams() as { equipmentId?: string },
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
-  const [quantity, setQuantity] = useState(1),
-  const [isAdding, setIsAdding] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
-  // In a real app, this would fetch from an API
-  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   if (!equipment) {
     return (
       <>
@@ -303,12 +118,10 @@ export default function EquipmentDetail() {
     )
   }
   const handleAddToCart = () => {
-<<<<<<< HEAD
-    setIsAdding(true);
-=======
+
     setIsAdding(true),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -316,17 +129,13 @@ export default function EquipmentDetail() {
         title: "Added to cart"
         description: `${quantity}x ${equipment.name} added to your cart.`})
     }, 800)
-<<<<<<< HEAD
-  }
-  const handleBuyNow = () => {
-    setIsAdding(true);
-=======
+
   },
 
   const handleBuyNow = () => {
     setIsAdding(true),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -334,11 +143,9 @@ export default function EquipmentDetail() {
         title: "Proceeding to checkout"
         description: `Preparing your order for ${equipment.name}.`})
     }, 800)
-<<<<<<< HEAD
-  }
-=======
+
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   return (
     <>
@@ -374,8 +181,7 @@ export default function EquipmentDetail() {
                           className="w-full h-full object-cover"
                         />
                       </div>
-<<<<<<< HEAD
-=======
+
 ;
 // Sample data - in a real app this would come from an API;
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
@@ -545,10 +351,7 @@ export default function EquipmentDetail() {;
                           className="w-full h-full object-cover";
                         />;
                       </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </div>
@@ -598,24 +401,14 @@ export default function EquipmentDetail() {;
                             <span className="text-zion-slate-light">{feature}</span>
                           </li>
                         ))}
-<<<<<<< HEAD
-                      </ul>
-                    </div>
-                  </TabsContent>
-                </Tabs>
-              </div>
-            </div>
-=======
+
                       </ul>;
                     </div>;
                   </TabsContent>;
                 </Tabs>;
               </div>;
             </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">
@@ -634,13 +427,9 @@ export default function EquipmentDetail() {;
                 {/* Product Title */}
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>
-<<<<<<< HEAD
-=======
+
                 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Rating */}
                 {equipment.rating && (
@@ -650,13 +439,10 @@ export default function EquipmentDetail() {;
                         <Star
                           key={i}
                           className={`h-5 w-5 ${
-<<<<<<< HEAD
-                            i < Math.floor(equipment.rating!)
-                              ? "text-zion-cyan fill-zion-cyan"
-=======
+
                             i < Math.floor(equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                               : "text-zion-slate-light"
                           }`}
                         />
@@ -694,11 +480,9 @@ export default function EquipmentDetail() {;
                 <div className="mb-6">
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">
-<<<<<<< HEAD
-                    <button
-=======
+
                     <button 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
                       disabled={quantity <= 1 |!equipment.inStock}
@@ -711,11 +495,9 @@ export default function EquipmentDetail() {;
                       value={quantity}
                       readOnly
                     />
-<<<<<<< HEAD
-                    <button
-=======
+
                     <button 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -726,22 +508,18 @@ export default function EquipmentDetail() {;
                 </div>
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">
-<<<<<<< HEAD
-                  <Button
-=======
+
                   <Button 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                     onClick={handleBuyNow}
                     disabled={isAdding |!equipment.inStock}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                   >
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
-<<<<<<< HEAD
-                  <Button
-=======
+
                   <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}
                     variant="outline"
@@ -781,18 +559,7 @@ export default function EquipmentDetail() {;
                       </div>
                     </div>
                   )}
-<<<<<<< HEAD
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
+
                 </div>;
               </div>;
             </div>;
@@ -804,4 +571,4 @@ export default function EquipmentDetail() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -222,10 +219,8 @@ const HealthDashboard: React.FC = () => {;
     return `${bytes.toFixed(1)} MB`
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (loading) {
     return (
@@ -249,22 +244,17 @@ const HealthDashboard: React.FC = () => {;
       </Card>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!healthData) return null
-=======
+
 
   if (!healthData) return null,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
 
-<<<<<<< HEAD
-  if (!healthData) return null
-=======
+
   if (!healthData) return null,
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
@@ -276,19 +266,12 @@ const HealthDashboard: React.FC = () => {;
         </div>
         <div className="flex items-center space-x-2">
           <Button
-<<<<<<< HEAD
-            variant='outline'
-            size='sm'
-            onClick={() => setAutoRefresh(!autoRefresh)}          >
-=======
+
             variant="outline"
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
@@ -352,17 +335,11 @@ const HealthDashboard: React.FC = () => {;
           <TabsTrigger value="metrics">Metrics</TabsTrigger>
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
-<<<<<<< HEAD
-        <TabsContent value='overview' className='space-y-4'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-=======
+
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Card>
               <CardHeader>
@@ -398,15 +375,7 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
-<<<<<<< HEAD
-                  <ul className='space-y-2'>
-                    {healthData.health.issues.map((issue, index) => (
-                      <li
-                        key={index}
-                        className='text-sm text-red-600 flex items-start'
-                      >
-                        <span className='w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0'></span>                        {issue}
-=======
+
                   <ul className="space-y-2">
                     {healthData.health.issues.map((issue, index) => (
                       <li key={index} className="text-sm text-red-600 flex items-start">
@@ -585,10 +554,7 @@ const HealthDashboard: React.FC = () => {;
                       <li key={index} className="text-sm text-red-600 flex items-start">;
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>;
                         {issue}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
                     ))}
@@ -600,17 +566,11 @@ const HealthDashboard: React.FC = () => {;
             </Card>
           </div>
         </TabsContent>
-<<<<<<< HEAD
-        <TabsContent value='errors' className='space-y-4'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-=======
+
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Card>
               <CardHeader>
@@ -643,24 +603,7 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
-<<<<<<< HEAD
-                  <div className='space-y-2'>
-                    {healthData.errors.topErrors
-                      .slice(0, 5)
-                      .map((error, index) => (
-                        <div
-                          key={index}
-                          className='border-l-4 border-red-400 pl-3 py-1'
-                        >
-                          <p className='text-sm font-medium'>
-                            {error.description}
-                          </p>
-                          <p className='text-xs text-gray-600'>
-                            {error.occurrences} occurrences • {error.severity}
-                          </p>
-                        </div>
-                      ))}                  </div>
-=======
+
                   <div className="space-y-2">
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
                       <div key={index} className="border-l-4 border-red-400 pl-3 py-1">
@@ -671,10 +614,7 @@ const HealthDashboard: React.FC = () => {;
                       </div>;
                     ))}
                   </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
@@ -683,17 +623,11 @@ const HealthDashboard: React.FC = () => {;
             </Card>
           </div>
         </TabsContent>
-<<<<<<< HEAD
-        <TabsContent value='metrics' className='space-y-4'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
-=======
+
 
         <TabsContent value="metrics" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Card>
               <CardHeader className="pb-2">
@@ -733,15 +667,10 @@ const HealthDashboard: React.FC = () => {;
             </Card>
           </div>
         </TabsContent>
-<<<<<<< HEAD
-        <TabsContent value='recommendations' className='space-y-4'>
-=======
+
 
         <TabsContent value="recommendations" className="space-y-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Card>
             <CardHeader>
@@ -749,36 +678,11 @@ const HealthDashboard: React.FC = () => {;
             </CardHeader>
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
-<<<<<<< HEAD
-                <ul className='space-y-3'>
-                  {healthData.health.recommendations.map((rec, index) => (
-                    <li key={index} className='flex items-start'>
-                      <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0' />
-                      <span className='text-sm'>{rec}</span>                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className='text-gray-600'>
-                  No specific recommendations at this time
-                </p>
-              )}
-            </CardContent>
-          </Card>
-        </TabsContent>
-      </Tabs>
-    </div>
-  )
-}
-export default HealthDashboard
-<<<<<<< HEAD
-export default HealthDashboard
-export default HealthDashboard
 
-=======
 export default HealthDashboard, ;
 export default HealthDashboard;
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 =======
                 <ul className="space-y-3">
                   {healthData.health.recommendations.map((rec, index) => (
@@ -799,8 +703,6 @@ export default HealthDashboard;
   );
 },;
 export default HealthDashboard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
