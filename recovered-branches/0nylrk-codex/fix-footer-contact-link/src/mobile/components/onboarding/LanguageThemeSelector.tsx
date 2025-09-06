@@ -21,9 +21,7 @@ export function LanguageThemeSelector() {;
   const { theme, setTheme } = useTheme();
 
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
-=======
 
-=======
   const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
 
@@ -32,9 +30,6 @@ export function LanguageThemeSelector() {;
   { code: "fr", name: "Français", flag: "🇫🇷" }
   { code: "de", name: "Deutsch", flag: "🇩🇪" }
   { code: "zh", name: "中文", flag: "🇨🇳" }]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
@@ -42,11 +37,7 @@ export function LanguageThemeSelector() {;
   { code: "zh", name: "中文", flag: "🇨🇳" },
 ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-8 px-4">
@@ -71,8 +62,6 @@ export function LanguageThemeSelector() {;
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Choose theme</h2>
@@ -86,11 +75,6 @@ export function LanguageThemeSelector() {;
               theme === "light"
                 ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       <div className="space-y-2">;
         <h2 className="text-xl font-medium">Choose theme</h2>;
@@ -102,10 +86,6 @@ export function LanguageThemeSelector() {;
               theme === 'light' ;
                 ? "border-primary bg-primary/5" ;
                 :"border-border hover:border-primary/40";
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }`}
             onClick={() => setTheme("light")}
           >
@@ -118,28 +98,17 @@ export function LanguageThemeSelector() {;
             </CardContent>
           </Card>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Card
             className={`flex-1 cursor-pointer transition-all ${
               theme === "dark"
                 ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ;
           <Card ;
             className={`flex-1 cursor-pointer transition-all ${;
               theme === 'dark' ;
                 ? "border-primary bg-primary/5" ;
                 :"border-border hover:border-primary/40";
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }`}
             onClick={() => setTheme("dark")}
           >
@@ -156,7 +125,6 @@ export function LanguageThemeSelector() {;
     </div>
   );
 }
-<<<<<<< HEAD
 const languages: Language[] = [;
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
@@ -229,9 +197,6 @@ function LanguageThemeSelector() {
               <span > Dark</span>;
               {theme === 'dark' && (
                 <Check className="h - 4 w - 4 text - primary mt - 2" />)}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
             }`}
             onClick={() => setTheme('dark')}
           >
@@ -248,9 +213,6 @@ function LanguageThemeSelector() {
     </div>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </CardContent>;
           </Card>;
         </div>;
@@ -260,14 +222,8 @@ function LanguageThemeSelector() {
 
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </div>);
 }
     </div>);
@@ -300,9 +256,6 @@ flag: string
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
     </div>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

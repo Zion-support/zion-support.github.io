@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 
 const BenefitsSection = () => {
@@ -59,10 +56,6 @@ const BenefitsSection = () => {
 };
 
 export default BenefitsSection;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
 const getBenefits = (t: any) => [
 
 
@@ -290,8 +283,3 @@ function Page() {
       "Transparent cost structure" ];
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

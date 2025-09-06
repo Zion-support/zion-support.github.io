@@ -14,8 +14,6 @@ import { Peer } from "../../../utils/sync/types"
 import { v4 as uuidv4 } from "uuid"
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()

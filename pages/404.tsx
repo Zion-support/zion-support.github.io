@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
@@ -22,27 +21,17 @@ const Page = () => {
 };
 
 export default Page;
-=======
-<<<<<<< HEAD
 
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </Link>
         </main>
       </div>
     </>
-<<<<<<< HEAD
   );
 
-=======
-);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -68,23 +57,7 @@ const NotFoundPage: NextPage = () => {
       <Head>;
           </Link>;
         </div>;
-<<<<<<< HEAD
 
-=======
-}
-
-
-      </div>;
-    </>);
-}
-import Head from 'next/head';
-import Link from 'next/link';
-export default function Custom404() {
-  return (
-    <>
-      <Head>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <title>404 - Page Not Found</title>
       </Head>
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
@@ -153,8 +126,6 @@ const NotFoundPage: NextPage = () => {
             Go Home;
           </Link>;
         </div>;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </main>;
     </>;
   );
@@ -162,17 +133,10 @@ const NotFoundPage: NextPage = () => {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

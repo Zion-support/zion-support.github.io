@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';
@@ -75,10 +74,6 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
     </WhitelabelContext.Provider>
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface WhitelabelProviderProps {;
   children: ReactNode;
@@ -88,58 +83,20 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
 
-<<<<<<< HEAD
-=======
-interface WhitelabelProviderProps {;
-  children: ReactNode;
-}
-export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
-  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
-  const { tenant, isLoading } = useWhitelabelTenant();
-  // Cast is used here because the context default is `null` until provided by;
-  // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
-  return context as WhitelabelContextType;
-},;
-interface WhitelabelProviderProps {;
-  children: ReactNode;
-}
-;
-export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
-  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext),;
-  const { tenant, isLoading } = useWhitelabelTenant(),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     if (!isLoading && tenant) {;
       setContextValue({;
         isWhitelabel: true,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         primaryColor: tenant && tenant.primary_color,;
         logoUrl: tenant && tenant.logo_url,;
         brandName: tenant && tenant.brand_name,;
         themePreset: tenant && tenant.theme_preset,;
         landingPageCopy: tenant && tenant.landing_page_copy,;
-<<<<<<< HEAD
-=======
-        primaryColor: tenant.primary_color,;
-        logoUrl: tenant.logo_url,;
-        brandName: tenant.brand_name,;
-        themePreset: tenant.theme_preset,;
-        landingPageCopy: tenant.landing_page_copy,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         tenant: tenant});
     } else if (!isLoading) {;
       setContextValue(defaultContext);
     }
   }, [tenant, isLoading]);
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
       {children}
@@ -148,17 +105,9 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   );
 };
 
-=======
-=======
-    </WhitelabelContext && WhitelabelContext.Provider>;
-  );
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
     <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
       {children}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { create_context, useContext, useState, useEffect, ReactNode } from 'react';
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks / useWhitelabelTenant';
 export interface WhitelabelContextType {
@@ -234,17 +183,13 @@ if ( {) {
   return (
     <WhitelabelContext.Provider value={context_value}>;
       {children}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     </WhitelabelContext.Provider>;
   );
 };
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
     </WhitelabelContext.Provider>);
 }
@@ -323,9 +268,6 @@ export const WhitelabelProvider = ({ children } WhitelabelProviderProps) => {;
     </WhitelabelContext.Provider>;
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     </WhitelabelContext.Provider>);
 }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

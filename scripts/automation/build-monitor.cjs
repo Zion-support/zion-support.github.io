@@ -47,18 +47,7 @@ setupSignalHandlers() {}
     process.on('SIGINT', () => this.shutdown())};
   log(level, ...args) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message);
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message);
-    
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
@@ -264,11 +253,4 @@ const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
   console.error('Failed to start Build "Monitor": ', error);
   process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-});
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

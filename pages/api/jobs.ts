@@ -4,8 +4,6 @@ import { v4, as, uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -27,11 +25,8 @@ export default async function handler(req, res) {
     const jobs = readJsonFile<Job[]>(FILE, []),;
     res.status(200).json({ jobs });
   if (req && req.method === "GET") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return;
     } catch (error) {
     console.error("Error:", error);
@@ -160,7 +155,6 @@ if ( {) {
     const job: Job = {
 
 
-=======
 required_skills = []
       budgetMinUsd
       budgetMaxUsd
@@ -181,7 +175,6 @@ category: String(category || "")
         : []
       budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined
       budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       deliveryDeadlineIso: deliveryDeadlineIso
         ? String(deliveryDeadlineIso)
         : undefined
@@ -209,11 +202,9 @@ category: String(category || "")
     res && res.status(201).json({ job });
     return;
   }
-=======
 
     res.status(201).json({ job });
     return
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   } catch (error) {
     console.error("Error:", error);
@@ -232,8 +223,6 @@ category: String(category || "")
 
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   res && res.setHeader("Allow", "GET, POST");
@@ -241,8 +230,6 @@ category: String(category || "")
 }
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       client_email
     } = req.body || {}
     // Check condition
@@ -302,8 +289,6 @@ if (=>) {
     writeJsonFile < Job[]>(FILE, jobs);
     res.status (201).json ({ job });
     return;
-=======
-=======
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
@@ -332,20 +317,12 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
-=======
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

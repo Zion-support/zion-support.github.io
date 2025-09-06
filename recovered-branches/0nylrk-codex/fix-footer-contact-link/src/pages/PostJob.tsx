@@ -15,7 +15,6 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   if (isLoading) {
     return (
@@ -24,7 +23,6 @@ export default function PostJob() {
       </div>
     );
   }
-<<<<<<< HEAD
 
   return (
     <>
@@ -63,21 +61,16 @@ export default function PostJob() {
       </div>);
   }
   return (
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <>;
       <SEO;
         title="Post a Job | Zion AI Marketplace";
         description="Post a job to find the perfect AI talent for your project.";
       />;
       <Header />;
-<<<<<<< HEAD
       <main className={`container mx - auto px-${is_mobile ? '2' : '4'} py-${is_mobile ? '6' : '12'} max - w-4xl`}>;
         <Card className="border shadow - md">;
           <CardHeader>;
             <CardTitle className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>Post a Job</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
@@ -115,9 +108,6 @@ export default function PostJob() {;
         <Card className="border shadow-md">;
           <CardHeader>;
             <CardTitle className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Post a Job</CardTitle>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CardDescription>;
               Fill out the form below to post your job and find the perfect talent.;
             </CardDescription>;
@@ -133,17 +123,10 @@ export default function PostJob() {;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       {is_mobile && <div className="h - 16"></div>}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
       {is_mobile && <div className="h - 16"></div>}
     </>);
@@ -172,11 +155,8 @@ if (isLoading) {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
       {is_mobile && <div className="h - 16"></div>}
     </>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

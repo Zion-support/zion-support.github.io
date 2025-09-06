@@ -1,21 +1,10 @@
 import { ApiDocsSpec } from './types';
-<<<<<<< HEAD
   ]
 }
 export default v1;
 
   ];
 
-=======
-
-const baseUrl = 'https://api && api.zion.os';
-=======
-<<<<<<< HEAD
-=======
-
-
-const v1: ApiDocsSpec = {
-<<<<<<< HEAD
   product: 'Zion OS'
   versions: ['v1']
   defaultVersion: 'v1'
@@ -36,30 +25,7 @@ const v1: ApiDocsSpec = {
 
           ],
           versions: ['v1']
-=======
-  openapi: '3.0.0',
-  info: {
-    title: 'Zion OS API',
-    version: '1.0.0',
-    description: 'Zion OS API Documentation'
-  },
-  servers: [{ url: baseUrl }],
-  paths: {
-    '/v1/nation/stats': {
-      get: {
-        summary: 'Get Nation Stats',
-        responses: {
-          '200': {
-            description: 'Success',
-            content: {
-              'application/json': {
-                schema: { type: 'object' }
-              }
-            }
-          }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }
-<<<<<<< HEAD
       ]
     },
 
@@ -106,38 +72,6 @@ const v1: ApiDocsSpec = {
           samples: [
 
 
-=======
-
-
-const baseUrl = 'https://api.zion.os';
-
-
-const baseUrl = 'https://api.zion.os';
-const v1: ApiDocsSpec = {
-
-  openapi: '3.0.0',
-  info: {
-    title: 'Zion OS API',
-    version: '1.0.0',
-    description: 'Zion OS API Documentation'
-  },
-  servers: [{ url: baseUrl }],
-  paths: {
-    '/v1/nation/stats': {
-      get: {
-        summary: 'Get Nation Stats',
-        responses: {
-          '200': {
-            description: 'Success',
-            content: {
-              'application/json': {
-                schema: { type: 'object' }
-              }
-            }
-          }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         }
       ];
     }
@@ -147,22 +81,10 @@ const v1: ApiDocsSpec = {
             { language: 'python', code: `import requests\nrequests ;
 
 
-<<<<<<< HEAD
 
   ];
 
   }
-=======
-=======
-=======
-
-  ];
-
-=======
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 export default v1;
   ];
@@ -170,8 +92,3 @@ export default v1;
 ;
 export default v1;
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

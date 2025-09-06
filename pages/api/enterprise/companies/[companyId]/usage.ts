@@ -1,11 +1,8 @@
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -13,8 +10,6 @@ export default /**
  */
 function handler() {
   const { company_id } = req.query;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Check condition
 if ( {) {
   $2
@@ -40,9 +35,5 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 

@@ -1,13 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const { sessionId, messages } = req.body as {
     sessionId?: string;
@@ -38,8 +34,6 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
       SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
   };
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini"
@@ -76,10 +70,6 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
     const completion = await openai.chat.completions.create ({
       model: "gpt - 4o - mini"
       messages: [sys_message, ...messages]
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       temperature: 0.2
     });
 
@@ -97,9 +87,6 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
         matchedArticleIds: intent.matchedArticleIds
 
         links: matched_articles.map ((a) => ({
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     return res.status(200).json({
       assistantMessage
@@ -107,20 +94,13 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
         intentMatched: intent.intentMatched
         matchedArticleIds: intent.matchedArticleIds
         links: matchedArticles.map((a) => ({
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           title: a.title
           href: `/help/${a.slug}`
         }))
       }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   } catch (e: any) {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
   } catch (e: any) {
     return res.status(200).json({
@@ -129,5 +109,3 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
     });
   }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

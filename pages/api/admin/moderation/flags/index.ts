@@ -19,8 +19,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ flags: filtered })
   }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   res.setHeader('AllowGET,POST')
   return res.status(405).end('Method Not Allowed')

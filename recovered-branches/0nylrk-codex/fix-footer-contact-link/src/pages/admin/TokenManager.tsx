@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import {useEffect, useState} from 'react';
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -40,28 +30,20 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {useToast} from '@/hooks/use-toast';
 export default function TokenManager() {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
 import {useEffect, useState} from 'react';
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [userId, setUserId] = useState('');
   const [amount, setAmount] = useState(0);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const isAdmin = user?.userType === 'admin';
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
@@ -119,35 +101,8 @@ if ( {) {
         title: 'Success',
         description: 'Transaction processed';
 
-<<<<<<< HEAD
       });
       fetch_transactions ();
-=======
-  const isAdmin = user?.userType === 'admin';
-  useEffect(() => {
-    if (isAdmin) fetchTransactions()
-  }, [isAdmin]);
-  const fetchTransactions = async () => {
-    const { data, error } = await supabase
-      .from('token_transactions')
-      .select('*')
-      .order('created_at', { ascending: false })
-      .limit(100);
-    if (!error) setTransactions(data |[])
-  }
-  const handleIssue = async (type: 'earn' | 'burn') => {
-    if (!userId |amount <= 0) return
-    const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId, amount })});
-    if (res.ok) {
-      toast({
-        title: 'Success'
-        description: 'Transaction processed'
-      });
-      fetchTransactions()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } else {
       const err = await res.json();
       toast({
@@ -162,17 +117,9 @@ if ( {) {
 
   };
 
-<<<<<<< HEAD
-=======
-=======
-  }
-  };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -192,86 +139,29 @@ export default function TokenManager() {;
   const [userId, setUserId] = useState(''),;
   const [amount, setAmount] = useState(0),;
   const isAdmin = user?.userType === 'admin',;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     if (isAdmin) fetchTransactions();
   }, [isAdmin]);
 
-<<<<<<< HEAD
-=======
-      });
-      fetch_transactions ();
-    } else {
-  useEffect(() => {;
-    if (isAdmin) fetchTransactions();
-  }, [isAdmin]);
-import { useEffect, useState } from 'react',;
-import { Header } from '@/components/Header',;
-import { Footer } from '@/components/Footer',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { useAuth } from '@/hooks/useAuth',;
-import { supabase } from '@/integrations/supabase/client',;
-import { TokenTransaction } from '@/types/tokens',;
-import { ProtectedRoute } from '@/components/ProtectedRoute',;
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
-import { useToast } from '@/hooks/use-toast',;
-;
-export default function TokenManager() {;
-  const { user } = useAuth(),;
-  const { toast } = useToast(),;
-  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),;
-  const [userId, setUserId] = useState(''),;
-  const [amount, setAmount] = useState(0),;
-;
-  const isAdmin = user?.userType === 'admin',;
-;
-  useEffect(() => {;
-    if (isAdmin) fetchTransactions(),;
-  }, [isAdmin]),;
-;
-  useEffect(() => {;
-    if (isAdmin) fetchTransactions();
-  }, [isAdmin]),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const fetchTransactions = async () => {;
     const { data, error } = await supabase;
       .from('token_transactions');
       .select('*');
       .order('created_at', { ascending: false });
-<<<<<<< HEAD
-<<<<<<< HEAD
       .limit(100);
     if (!error) setTransactions(data || []);
   };
 
-=======
-      .limit(100),;
-    if (!error) setTransactions(data || []);
-  },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       .limit(100);
     if (!error) setTransactions(data || []);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleIssue = async (type: 'earn' | 'burn') => {;
     if (!userId || amount <= 0) return,;
     const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
-<<<<<<< HEAD
-<<<<<<< HEAD
       body: JSON && JSON.stringify({ userId, amount })});
     if (res && res.ok) {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({;
         title: 'Success',;
         description: 'Transaction processed';
@@ -293,41 +183,6 @@ export default function TokenManager() {;
 
   return (
 
-<<<<<<< HEAD
-=======
-  }
-  return (
-      .order('created_at', { ascending:false });
-      .limit(100),;
-    if (!error) setTransactions(data || []),;
-  },;
-;
-  const handleIssue = async (type:'earn' | 'burn') => {;
-    if (!userId || amount <= 0) return,;
-    const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' :'burn'}`, {;
-      method:'POST',;
-      headers:{ 'Content-Type':'application/json' },;
-      body:JSON.stringify({ userId, amount })}),;
-    if (res.ok) {;
-      toast({;
-        title:'Success',;
-        description:'Transaction processed';
-      }),;
-      fetchTransactions(),;
-    } else {;
-      const err = await res.json(),;
-      toast({;
-        title:'Error',;
-        description:err.error || 'Failed',;
-        variant:'destructive';
-      }),;
-    }
-  },;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;
@@ -339,28 +194,16 @@ export default function TokenManager() {;
                 <CardTitle>Issue or Revoke Tokens</CardTitle>;
               </CardHeader>;
               <CardContent className="space-y-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <Input placeholder="User ID" value={userId} onChange={e => setUserId(e && e.target.value)} />;
                 <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e && e.target.value))} />;
-=======
-                <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />;
-                <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))} />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                 <Input placeholder="User ID" value={userId} onChange={e => setUserId(e && e.target.value)} />;
                 <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e && e.target.value))} />;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="flex gap-2">;
                   <Button onClick={() => handleIssue('earn')}>Issue</Button>;
                   <Button variant="destructive" onClick={() => handleIssue('burn')}>Revoke</Button>;
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <Tabs defaultValue="history">;
       const err = await res.json ();
@@ -370,13 +213,8 @@ export default function TokenManager() {;
         variant: 'destructive';
       });
     }
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <ProtectedRoute admin_only>;
       <div>;
@@ -398,46 +236,21 @@ export default function TokenManager() {;
               </CardContent>;
             </Card>;
             <Tabs default_value="history">;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-;
-            <Tabs defaultValue="history">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <TabsList>;
                 <TabsTrigger value="history">Transaction History</TabsTrigger>;
               </TabsList>;
               <TabsContent value="history">;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-                  ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <ul className="space - y-2">;
                   {transactions.map (tx => (
                     <li key={tx.id} className="flex justify - between border - b py - 2 text - white">;
                       <span>{tx.user_id}</span>;
                       <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
                     </li>))}
-<<<<<<< HEAD
 
-=======
-                <ul className="space-y-2">;
-                  {transactions.map(tx => (;
-                    <li key={tx.id} className="flex justify-between border-b py-2 text-white">;
-                      <span>{tx.user_id}</span>;
-                      <span>{tx.transaction_type === 'earn' ? '' :'-'}{tx.amount}</span>;
-                    </li>;
-                  ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </ul>;
               </TabsContent>;
             </Tabs>;
@@ -445,80 +258,7 @@ export default function TokenManager() {;
         </div>;
         <Footer />;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </ProtectedRoute>);
 
-=======
-    </ProtectedRoute>;
-  ),; const fetchTransactions = async () => {
-  const {
-  data, error 
-}= await supabase .from ('token transactions') .select ('*') 
-}
-};
-return (<ProtectedRoute adminOnly> <div> <Header /> <div className="min-h-screen bg-zion-blue px-4 py-8" > <div className="container mx-auto" > <h1 className="text-3xl font-bold text-white mb-6" >Token Manager</h1> <Card className="mb-6" > <CardHeader> <CardTitle>Issue or Revoke Tokens</CardTitle> </CardHeader> </div> </CardContent> </Card> <Tabs defaultValue="history" > <TabsList> <TabsTrigger value="history" >Transaction History</TabsTrigger> </TabsList> </li>) ) 
-}</ul> </TabsContent> </Tabs> </div> </div> <Footer /> </div> </ProtectedRoute>) 
-      body: JSON.stringify({ userId, amount })}),;
-    if (res.ok) {;
-      toast({;
-        title: 'Success',;
-        description: 'Transaction processed';
-      }),;
-      fetchTransactions();
-    } else {;
-      const err = await res.json(),;
-      toast({;
-        title: 'Error',;
-        description: err.error || 'Failed';
-        variant: 'destructive';
-      });
-    }
-  },
-
-  return (
-    <ProtectedRoute adminOnly>
-      <div>
-        <Header />
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
-          <div className="container mx-auto">
-            <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>
-            <Card className="mb-6">
-              <CardHeader>
-                <CardTitle>Issue or Revoke Tokens</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />
-                <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))} />
-                <div className="flex gap-2">
-                  <Button onClick={() => handleIssue('earn')}>Issue</Button>
-                  <Button variant="destructive" onClick={() => handleIssue('burn')}>Revoke</Button>
-                </div>
-              </CardContent>
-            </Card>
-            <Tabs defaultValue="history">
-              <TabsList>
-                <TabsTrigger value="history">Transaction History</TabsTrigger>
-              </TabsList>
-              <TabsContent value="history">
-                <ul className="space-y-2">
-                  {transactions.map(tx => (
-                    <li key={tx.id} className="flex justify-between border-b py-2 text-white">
-                      <span>{tx.user_id}</span>
-                      <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>
-                    </li>
-                  ))}
-                </ul>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    </ProtectedRoute>
-  )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

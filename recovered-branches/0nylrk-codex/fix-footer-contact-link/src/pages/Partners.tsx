@@ -23,9 +23,6 @@ export default function Partners() {
   const navigate = useNavigate();
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
@@ -200,15 +197,11 @@ export default function Partners() {
 
 
 
-=======
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     );
   }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Authenticated user view - Partner Dashboard
   return (
     <div className="container max-w-7xl py-10">
@@ -417,24 +410,16 @@ export default function Partners() {
           <Button variant="outline" className="flex items - center gap - 2" on_click={() => window.print ()}>;
             <FileDown className="h - 4 w - 4" />;
 
-=======
           <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>;
             <FileDown className="h-4 w-4" />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             Export CSV;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
       <Tabs value={active_tab} onValueChange={setActiveTab} className="space - y-4">;
         <TabsList className="grid grid - cols - 2 md:grid - cols - 5 mb - 4">;
 
-=======
-;
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">;
-        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <TabsTrigger value="overview">Overview</TabsTrigger>;
           <TabsTrigger value="referrals">Referral Links</TabsTrigger>;
           <TabsTrigger value="earnings">Earnings</TabsTrigger>;
@@ -442,7 +427,6 @@ export default function Partners() {
           <TabsTrigger value="resources">Resources</TabsTrigger>;
         </TabsList>;
 
-<<<<<<< HEAD
         <TabsContent value="overview" className="space - y-4">;
           <PartnerDashboard />;
         </TabsContent>;
@@ -471,13 +455,6 @@ export default function Partners() {
     </div>);
 }
 
-=======
-
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 ;
 
@@ -522,6 +499,3 @@ export default function Partners() {
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

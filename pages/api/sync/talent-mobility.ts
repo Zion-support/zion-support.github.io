@@ -6,11 +6,6 @@ import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -58,20 +53,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-<<<<<<< HEAD
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
-=======
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
->>>>>>> main
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
       })
-<<<<<<< HEAD
   ),
-=======
-  )
->>>>>>> main
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 };

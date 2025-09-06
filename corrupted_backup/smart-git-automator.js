@@ -312,7 +312,6 @@ class SmartGitAutomator {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       
-      if (!content.includes('<<<<<<<') || !content.includes('>>>>>>>')) {
         return { type: 'none', success: true };
       }
 
@@ -372,7 +371,6 @@ class SmartGitAutomator {
         const current = JSON.parse(match[1].trim());
         const incoming = JSON.parse(match[2].trim());
         const merged = { ...current, ...incoming };
-        return content.replace(/<<<<<<<[\s\S]*?>>>>>>>/g, JSON.stringify(merged, null, 2));
       } catch (error) {
         return null;
       }
@@ -385,7 +383,6 @@ class SmartGitAutomator {
     if (match) {
       const current = match[1].trim();
       const incoming = match[2].trim();
-      return content.replace(/<<<<<<<[\s\S]*?>>>>>>>/g, 
         current.length > incoming.length ? current : incoming);
     }
     return null;

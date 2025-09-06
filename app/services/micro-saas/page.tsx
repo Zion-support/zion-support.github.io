@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -615,19 +614,6 @@ function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radi
 export default function MicroSaaSPage() {
   return (
     <div className="space-y-16">
-=======
-import React from 'react';
-import Link from 'next/link';
-
-export const metadata = {
-  title: 'Micro SaaS Solutions | Zion Tech Group - Complete SaaS Development',
-  description: 'End-to-end micro SaaS development with billing, authentication, analytics, and growth optimization. Build and scale your SaaS product with our comprehensive solutions.',
-};
-
-export default function MicroSAASPage() {
-  return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg mb-16">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -741,46 +727,4 @@ export default function MicroSAASPage() {
     </div>
   );
 }
-<<<<<<< HEAD
 }
-=======
-
-function MicroSAASCard({ title, description, href, icon, pricing, features, category }: {
-  title: string;
-  description: string;
-  href: string;
-  icon: string;
-  pricing: string;
-  features: string[];
-  category: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className="group bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:border-green-300 hover:shadow-lg transition-all duration-200"
-    >
-      <div className="flex items-center justify-between mb-4">
-        <div className="text-4xl">{icon}</div>
-        <span className="text-sm font-semibold text-green-600 bg-green-100 px-2 py-1 rounded">
-          {category}
-        </span>
-      </div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
-        {title}
-      </h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2 mb-4">
-        {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      <div className="text-lg font-semibold text-green-600">
-        {pricing}
-      </div>
-    </Link>
-  );
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-134f

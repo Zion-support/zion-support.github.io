@@ -1,29 +1,19 @@
-<<<<<<< HEAD
 
 
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { QuoteFormData } from "@/types/quotes",
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label",
 import { Slider } from "@/components/ui/slider",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface BudgetStepProps {
 
   formData: QuoteFormData
@@ -35,8 +25,6 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { QuoteFormData } from '@/types / quotes';
 import { Label } from '@/components / ui / label';
@@ -60,45 +48,19 @@ if ( {) {
           type,
           max_amount: form_data.budget.amount + 5000;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       })
     } else {
       updateFormData({
         budget: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
-=======
-import {QuoteFormData} from "@/types/quotes";
-import {Label} from "@/components/ui/label";
-import {Slider} from "@/components/ui/slider";
-        budget: {;
-          ...formData.budget;
-          type,
-          maxAmount: formData.budget.amount + 5000
-        budget: {
-          ...formData.budget;
-          type
-          maxAmount: formData.budget.amount + 5000
-          ...formData.budget,
-          type,
-          maxAmount: formData.budget.amount + 5000
-import { QuoteFormData } from "@/types/quotes",;
-import { Label } from "@/components/ui/label",;
-import { Slider } from "@/components/ui/slider",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface BudgetStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
-<<<<<<< HEAD
 
 export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps) {;
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {;
@@ -108,16 +70,11 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
           ...formData && formData.budget;
           type,;
           maxAmount: formData && formData.budget.amount + 5000;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         }
       })
     } else {
       updateFormData({
           maxAmount: formData && formData.budget.amount + 5000;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         budget: {
 
@@ -132,70 +89,30 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
         }
       });
     }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-;
-export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
-  const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {;
-    if (type === "range" && !formData.budget.maxAmount) {;
-      updateFormData({;
-        budget: {;
-          ...formData.budget,;
-          type,;
-          maxAmount: formData.budget.amount + 5000;
-        }
-      })
-    } else {
-      updateFormData({
-        budget: {
-          ...formData.budget
-          type
-        }
-      })
-    }
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   };
   },
 
 
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
   },
   };
   },
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: 'USD'
       maximumFractionDigits: 0
     }).format(value)
-<<<<<<< HEAD
 
 
   },
 
 
 
-<<<<<<< HEAD
-=======
-  }
-  },
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6">
       <div>
@@ -214,24 +131,10 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               <p className="text-sm text-zion-slate-light">I have a set amount</p>
             </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <div 
 
 
-<<<<<<< HEAD
-=======
-            <div 
-
-
-            <div
-            <div 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "hourly"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -243,24 +146,10 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               <p className="text-sm text-zion-slate-light">Pay per hour of work</p>
             </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <div 
 
 
-<<<<<<< HEAD
-=======
-            <div 
-
-
-            <div
-            <div 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "range"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -272,35 +161,18 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               <p className="text-sm text-zion-slate-light">I have a min and max</p>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           
           
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {formData.budget.type === "fixed" && (
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
                 Fixed Budget: {formatCurrency(formData.budget.amount)}
               </Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
   const formatCurrency = (value: number) => {;
     return new Intl && Intl.NumberFormat('en-US', {;
@@ -320,109 +192,30 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
                 formData && formData.budget.type === "fixed" 
                   ? "bg-zion-purple/20 border-zion-purple" 
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { QuoteFormData } from "@/types/quotes",;
-import { Label } from "@/components/ui/label",;
-import { Slider } from "@/components/ui/slider",;
-;
-interface BudgetStepProps {;
-  formData:QuoteFormData,;
-  updateFormData:(data:Partial<QuoteFormData>) => void;
-}
-;
-export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
-  const handleBudgetTypeSelect = (type:"fixed" | "hourly" | "range") => {;
-    if (type === "range" && !formData.budget.maxAmount) {;
-      updateFormData({;
-        budget:{;
-          ...formData.budget,;
-          type,;
-          maxAmount:formData.budget.amount + 5000;
-        }
-      }),;
-    } else {;
-      updateFormData({;
-        budget:{;
-          ...formData.budget,;
-          type;
-        }
-      }),;
-    }
-  },;
-;
-  const formatCurrency = (value:number) => {;
-    return new Intl.NumberFormat('en-US', {;
-      style:'currency',;
-      currency:'USD',;
-      maximumFractionDigits:0;
-    }).format(value),;
-  },;
-;
-  return (;
-    <div className="space-y-6">;
-      <div>;
-        <h3 className="text-xl font-semibold text-white mb-4">What's your budget?</h3>;
-        ;
-        <div className="space-y-4">;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
-            <div ;
-              className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${;
-                formData.budget.type === "fixed" ;
-                  ? "bg-zion-purple/20 border-zion-purple" ;
-                  :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }`}
               onClick={() => handleBudgetTypeSelect("fixed")}
             >;
               <h4 className="font-medium text-white">Fixed Budget</h4>;
               <p className="text-sm text-zion-slate-light">I have a set amount</p>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <div
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.budget.type === "hourly" 
                   ? "bg-zion-purple/20 border-zion-purple" 
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-=======
-            ;
-            <div ;
-              className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${;
-                formData.budget.type === "hourly" ;
-                  ? "bg-zion-purple/20 border-zion-purple" ;
-                  :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }`}
               onClick={() => handleBudgetTypeSelect("hourly")}
             >;
               <h4 className="font-medium text-white">Hourly Rate</h4>;
               <p className="text-sm text-zion-slate-light">Pay per hour of work</p>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <div
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.budget.type === "range" 
                   ? "bg-zion-purple/20 border-zion-purple" 
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-=======
-            ;
-            <div ;
-              className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${;
-                formData.budget.type === "range" ;
-                  ? "bg-zion-purple/20 border-zion-purple" ;
-                  :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }`}
               onClick={() => handleBudgetTypeSelect("range")}
             >;
@@ -430,43 +223,21 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
               <p className="text-sm text-zion-slate-light">I have a min and max</p>;
             </div>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           {formData && formData.budget.type === "fixed" && (;
             <div className="mt-6">;
               <Label className="text-zion-slate-light mb-4 block">;
                 Fixed Budget: {formatCurrency(formData && formData.budget.amount)}
               </Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         }
       });
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Slider
                 defaultValue={[formData && formData.budget.amount]}
                 max={50000}
                 step={500}
                 onValueChange={(value) => updateFormData({;
                   budget: { ...formData && formData.budget, amount: value[0] }
-<<<<<<< HEAD
-=======
-          ;
-          {formData.budget.type === "fixed" && (;
-            <div className="mt-6">;
-              <Label className="text-zion-slate-light mb-4 block">;
-                Fixed Budget:{formatCurrency(formData.budget.amount)}
-              </Label>;
-              <Slider;
-                defaultValue={[formData.budget.amount]}
-                max={50000}
-                step={500}
-                onValueChange={(value) => updateFormData({;
-                  budget:{ ...formData.budget, amount:value[0] }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 })}
                 className="py-4";
               />;
@@ -476,8 +247,6 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
               </div>;
             </div>;
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
           {formData && formData.budget.type === "hourly" && (;
@@ -486,34 +255,12 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
                 Hourly Rate: {formatCurrency(formData && formData.budget.amount)}/hour;
               </Label>;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Slider
                 defaultValue={[formData && formData.budget.amount]}
                 max={500}
                 step={5}
                 onValueChange={(value) => updateFormData({;
                   budget: { ...formData && formData.budget, amount: value[0] }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          ;
-          {formData.budget.type === "hourly" && (;
-            <div className="mt-6">;
-              <Label className="text-zion-slate-light mb-4 block">;
-                Hourly Rate:{formatCurrency(formData.budget.amount)}/hour;
-              </Label>;
-              <Slider;
-                defaultValue={[formData.budget.amount]}
-                max={500}
-                step={5}
-                onValueChange={(value) => updateFormData({;
-                  budget:{ ...formData.budget, amount:value[0] }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 })}
                 className="py-4";
               />;
@@ -523,8 +270,6 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
               </div>;
             </div>;
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
           {formData && formData.budget.type === "range" && (;
@@ -534,19 +279,11 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
                   Minimum Budget: {formatCurrency(formData && formData.budget.amount)}
                 </Label>;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Slider
                   defaultValue={[formData && formData.budget.amount]}
                   max={50000}
                   step={500}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     const maxAmount = formData && formData.budget.maxAmount || 50000;
 
 
@@ -554,28 +291,19 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
                     const newAmount = value[0],;
                     const maxAmount = formData.budget.maxAmount || 50000,;
 
-<<<<<<< HEAD
-=======
-                  onValueChange={(value) => {;
-                    const newAmount = value[0];
-                    const maxAmount = formData && formData.budget.maxAmount || 50000;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     updateFormData({;
                       budget: { ;
                         ...formData && formData.budget, ;
                         amount: newAmount,;
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
-<<<<<<< HEAD
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }
                     });
                   }}
 
 
-=======
               <Slider
                 defaultValue={[formData.budget.amount]}
                 max={50000}
@@ -656,29 +384,16 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
                 </Label>
                 <Slider
                   defaultValue={[formData.budget.maxAmount |formData.budget.amount + 5000]}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Maximum Budget: {formatCurrency(formData.budget.maxAmount || 0)}
                 </Label>;
                 <Slider;
                   defaultValue={[formData.budget.maxAmount || formData.budget.amount + 5000]}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
                   min={formData.budget.amount}
-=======
-=======
-                      }
-                    });
-                  }}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                   min={formData.budget.amount}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="py-4";
                 />;
                 <div className="flex justify-between text-sm text-zion-slate-light mt-2">;
@@ -862,10 +577,6 @@ export function BudgetStep({ formData, updateFormData } BudgetStepProps) {;
         </div>;
       </div>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           ;
           {formData.budget.type === "range" && (;
             <div className="mt-6 space-y-8">;
@@ -1014,7 +725,4 @@ type
       </div>
     </div>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

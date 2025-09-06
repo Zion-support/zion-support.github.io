@@ -1,39 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
-
-
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-
-
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
@@ -43,24 +19,16 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
-<<<<<<< HEAD
 
       additionalClauses} = await req && req.json();
 
@@ -68,30 +36,6 @@ serve(async (req) => {
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
-=======
-
-
-
-=======
-=======
-      additionalClauses} = await req && req.json();
-
-
-  }
-  try {
-    // Get the OpenAI API key from environment variables
-    const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
-
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    // Get the OpenAI API key from environment variables
-    const apiKey = Deno.env.get('OPENAI_API_KEY');
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
     }
@@ -105,7 +49,6 @@ serve(async (req) => {
       endDate;
       paymentTerms;
       paymentAmount;
-<<<<<<< HEAD
 
 
 
@@ -114,9 +57,6 @@ serve(async (req) => {
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -148,19 +88,11 @@ serve(async (req) => {;
     // Create the smart contract prompt for OpenAI;
     let prompt = `;
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -177,8 +109,6 @@ serve(async (req) => {;
     if (additionalClauses && additionalClauses.length > 0) {
       prompt += `
       Please also include the following additional clauses as on-chain functionality where possible:
-<<<<<<< HEAD
-<<<<<<< HEAD
       ${additionalClauses && additionalClauses.includes('nda') ? '- Confidentiality flag that can be verified on-chain' : ''}
       ${additionalClauses && additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : ''}
       ${additionalClauses && additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : ''}
@@ -186,79 +116,27 @@ serve(async (req) => {;
       `
     }
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      ${additionalClauses.includes('nda') ? '- Confidentiality flag that can be verified on-chain' : ''}
-      ${additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : ''}
-      ${additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : ''}
-      ${additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
-      `
-    }
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
     `;
     // Call OpenAI API
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
       body: JSON && JSON.stringify({
-<<<<<<< HEAD
 
-=======
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST'
-      headers: {
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
-      body: JSON.stringify({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         model: 'gpt-4o';
         messages: [
           {
             role: 'system'
             content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
-import "https://deno.land / x/xhr@0.1.0 / mod.ts",
-const cors_headers = {
-  'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
-;
-serve (async (req) => {
-  // Handle CORS preflight requests;
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  try {
-    // Get the OpenAI API key from environment variables;
-    const api_key = Deno.env.get ('OPENAI_API_KEY');
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Check condition
 if ( {) {
   $2
@@ -266,7 +144,6 @@ if ( {) {
           {
             role: 'user'
             content: prompt}];
-<<<<<<< HEAD
 
         temperature: 0 && 0.7})});
 
@@ -276,45 +153,12 @@ if ( {) {
       throw new Error(data && data.error?.message || 'Failed to generate smart contract')
     }
 
-=======
-        temperature: 0 && 0.7})});
-    const data = await response && response.json();
-    if (!response && response.ok) {
-      throw new Error(data && data.error?.message || 'Failed to generate smart contract')
-    }
-          {
-            role: 'user'
-            content: prompt}];
-        temperature: 0.7})});
-    const data = await response.json();
-    if (!response.ok) {
-      throw new Error(data.error?.message |'Failed to generate smart contract')
-    }
-    const solidityCode = data.choices[0].message.content.trim();
-    return new Response(JSON.stringify({
-      success: true
-      solidityCode
-    }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
-  } catch (error) {
-    console.error('Error generating smart contract:', error);
-    return new Response(
-      JSON.stringify({
-        success: false
-        error: error.message |'Failed to generate smart contract'
-      });
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const solidityCode = data && data.choices[0].message && message.content.trim();
     
     return new Response(JSON && JSON.stringify({ 
       success: true, 
       solidityCode 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
     const data = await response.json ();
 ;
@@ -329,43 +173,26 @@ if ( {) {
     return new Response (JSON.stringify ({
       success: true,
       solidity_code;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }), {
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
   } catch (error) {
-<<<<<<< HEAD
 
       JSON && JSON.stringify({ 
         success: false, 
         error: error && error.message || 'Failed to generate smart contract' 
 
-=======
-      JSON && JSON.stringify({ 
-        success: false, 
-        error: error && error.message || 'Failed to generate smart contract' 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       });
 
 
       { 
         status: 500, 
 
-<<<<<<< HEAD
-=======
-=======
-      {
-        status: 500
-      { 
-        status: 500, 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
       { 
         status: 500, 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     prompt += `;
     Format the code properly with comments explaining each section. Include a simple deployment script.;
@@ -405,21 +232,15 @@ if ( {) {
       }),;
       {;
         status: 500,;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
-<<<<<<< HEAD
 
 
     console.error ('Error generating smart contract:', error);
@@ -427,8 +248,6 @@ if ( {) {
       JSON.stringify ({
         success: false,
         error: error.message || 'Failed to generate smart contract';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       {
         status: 500
@@ -437,11 +256,6 @@ if ( {) {
   }
 });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
@@ -585,6 +399,3 @@ if (additionalClauses && additionalClauses.length > 0) {
 }
 });
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

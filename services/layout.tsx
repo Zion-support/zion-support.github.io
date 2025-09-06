@@ -23,33 +23,10 @@ export default function ServicesLayout(): any ({;
 }: {;
   children: React && React.ReactNode;
 }) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default /**
  * ServicesLayout - Function description
  */
 function ServicesLayout() {
   return <div>{children}</div>;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-},;
-export default function ServicesLayout({
-  children
-}: {
-  children,
-}: {;
-  children: React.ReactNode;
-}) {
-  return <div>{children}</div>;
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

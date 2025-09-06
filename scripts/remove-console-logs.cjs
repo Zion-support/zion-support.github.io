@@ -59,14 +59,7 @@ function processFile(filePath) {
     console.error(`✗ Error processing ${filePath}:`, error.message);
     return 0}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -89,10 +82,7 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 }
 
 function main() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
@@ -123,21 +113,9 @@ function main() {
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
 }
 
 if (require.main === module) {
   main().catch(console.error)}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-module.exports = { removeConsoleStatements, processFile };
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
-module.exports = { removeConsoleStatements, processFile };
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

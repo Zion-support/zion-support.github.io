@@ -5,14 +5,6 @@ import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSel
 import { RolePicker } from "../components/onboarding/RolePicker";
 import { SignUpForm } from "../components/onboarding/SignUpForm";
 type OnboardingStep = "language" | "role" | "signup";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export function MobileOnboarding() {
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function MobileOnboarding() {;
 
@@ -30,8 +22,6 @@ type OnboardingStep = "language" | "role" | "signup",
 export function MobileOnboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
   const navigate = useNavigate(),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
@@ -55,8 +45,6 @@ export function MobileOnboarding() {;
     setCurrentStep("signup");
   };
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-1 py-8">
@@ -109,19 +97,8 @@ export function MobileOnboarding() {;
 
             <SignUpForm />
           </div>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-
-=======
-        )}
-      </div>
-    </div>
-  )
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -129,20 +106,11 @@ import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSel
 import { RolePicker } from "../components/onboarding/RolePicker",;
 import { SignUpForm } from "../components/onboarding/SignUpForm",;
 type OnboardingStep = "language" | "role" | "signup",;
-<<<<<<< HEAD
 
 export function MobileOnboarding() {;
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
 
-=======
-export function MobileOnboarding() {;
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
-  const navigate = useNavigate();
-export function MobileOnboarding() {;
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),;
-  const navigate = useNavigate(),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const goToNextStep = () => {;
     if (currentStep === "language") {;
       setCurrentStep("role");
@@ -156,12 +124,8 @@ export function MobileOnboarding() {;
   const handleRoleSelect = () => {;
     setCurrentStep("signup");
   };
-<<<<<<< HEAD
 
   return (
-=======
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="min-h-screen flex flex-col">;
       <div className="flex-1 py-8">;
         {currentStep === "language" && (;
@@ -184,12 +148,7 @@ export function MobileOnboarding() {;
     </div>
   );
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -198,7 +157,6 @@ import { RolePicker } from '../components / onboarding / RolePicker';
 import { SignUpForm } from '../components / onboarding / SignUpForm';
 type OnboardingStep = "language" | "role" | "signup";
 ;
-<<<<<<< HEAD
 export /**
  * MobileOnboarding - Function description
  */
@@ -265,15 +223,8 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
-<<<<<<< HEAD
 }
 
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -370,6 +321,3 @@ const handleRoleSelect = () => {
 }</div> </div>) 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

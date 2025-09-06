@@ -8,15 +8,8 @@ interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleBrowserPrint = () => {
     setIsPrinting(true);
@@ -37,10 +30,6 @@ interface PreviewHeaderProps {;
   onBack: () => void;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   const handleBrowserPrint = () => {;
     setIsPrinting(true);
@@ -63,7 +52,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         }
         .no - print {
           display: none !important;
-<<<<<<< HEAD
         }
       }
     `;
@@ -87,8 +75,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <div
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
@@ -113,18 +99,13 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     document.head.append_child (style);
 ;
 
 
 
-=======
   );
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     document.head.append_child (style);
 ;
     // Trigger print dialog;
@@ -165,7 +146,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
   ),;}
  
 }`;
@@ -195,6 +175,3 @@ document.head.appendChild (style);
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

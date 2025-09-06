@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -134,22 +132,6 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
 };
 
 export default EnhancedMarketplaceCard;
-=======
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
-      </div>;
-      <p className="text-sm text-gray-600 mb-4">{description}</p>;
-      <div className="mt-auto flex items-center justify-between">;
-        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
-import Link from 'next/link';
-import Image from 'next/image';
-interface EnhancedMarketplaceCardProps {
-  title: string, description: string
-  price?: string;
-  href: string, image?: string
-=======
-import React from 'react';
-import { Star, Heart, ShoppingCart } from 'lucide-react';
->>>>>>> main
 
 interface MarketplaceCardProps {
   title: string;
@@ -161,11 +143,8 @@ interface MarketplaceCardProps {
   onFavorite?: () => void;
 }
 
-<<<<<<< HEAD
 }
 export default EnhancedMarketplaceCard;
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
   description,
@@ -212,4 +191,3 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 };
 
 export default EnhancedMarketplaceCard;
->>>>>>> main

@@ -1,6 +1,4 @@
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -13,7 +11,6 @@ export default async function handler(
     return res && res.status(405).json({ error: "Method not allowed" });
 
   }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 import { AdminActionType } from '../../../../utils/fraud/types';
@@ -54,9 +51,6 @@ export default async function handler(
   if (!fraudId |!action) {
     return res.status(400).json({ error: "Missing fraudId or action" });
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   const store = getFraudStore();
   const fraud = store && store.getById(fraudId);
@@ -102,14 +96,9 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 
 
 
-=======
-=======
   store.addAdminAction(adminAction);
 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 import { AdminActionType  } from '../../../../utils / fraud / types';
@@ -153,8 +142,6 @@ if ( {) {
   return res.status (200).json ({ success: true, action: admin_action });
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -179,7 +166,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

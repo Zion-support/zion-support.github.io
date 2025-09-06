@@ -1,30 +1,10 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
 import { Link } from './react-router-dom';
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
@@ -34,84 +14,22 @@ export /**
 function FeaturedListingsSection() {
   const featured_listings = [;
     {
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-interface FeaturedListingsSectionProps {
-  showTitle?: boolean
-}
-
-export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSectionProps) {
-  const featuredListings = [
-    {
-      id: "advanced-nlp-model"
-      title: "Advanced NLP Model for Text Analysis"
-      description: "State-of-the-art natural language processing with 98% accuracy"
-      price: 4999
-      currency: "$"
-      category: "AI Models"
-      tags: ["AI", "NLP", "Machine Learning"];
-      images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"]
-      createdAt: "2023-11-15T14:48:00.000Z"
-      rating: 4.8
-      reviewCount: 124
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       id: "advanced-nlp-model",
       title: "Advanced NLP Model for Text Analysis",
       description: "State-of-the-art natural language processing with 98% accuracy",
       price: 4999,
       currency: "$",
-<<<<<<< HEAD
 
 
-=======
-      category: "AI Models",;
-      tags: ["AI", "NLP", "Machine Learning"];
-      category: "AI Models",
-      tags: ["AI", "NLP", "Machine Learning"],
-      images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2023-11-15T14:48:00.000Z",
-      rating: 4.8,
-      reviewCount: 124,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       author: {
         name: "TechAI Labs"
         id: "tech-ai-labs"
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
       }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-    }
-    {
-      id: "image-generation-service"
-      title: "AI Image Generation Service"
-      description: "Create stunning visuals with our advanced AI image generator"
-      price: 2499
-      currency: "$"
-      category: "Content Creation"
-      tags: ["AI", "Images", "Generation"];
-      images: ["https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"]
-      createdAt: "2023-10-20T11:15:00.000Z"
-      rating: 4.7
-      reviewCount: 89
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
     {
       id: "image-generation-service",
@@ -125,51 +43,24 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-10-20T11:15:00.000Z",
       rating: 4.7,
       reviewCount: 89,
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       author: {
         name: "VisualAI"
         id: "visual-ai"
       }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
     },
 
 
-=======
-    },
-
-
-    }
-    },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "fullstack-ai-dev"
       title: "Full-Stack AI Development"
       description: "End-to-end development for AI-powered applications"
       price: null, // Custom pricing
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-      currency: "$"
-      category: "Services"
-      tags: ["Development", "Full-stack", "AI"];
-      images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"]
-      createdAt: "2023-12-15T09:45:00.000Z"
-      rating: 4.9
-      reviewCount: 56
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       currency: "$",
       category: "Services",
       tags: ["Development", "Full-stack", "AI"],
@@ -177,48 +68,22 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-12-15T09:45:00.000Z",
       rating: 4.9,
       reviewCount: 56,
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       author: {
         name: "DataMinds Consulting"
         id: "dataminds-consulting"
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {ProductListingCard} from "@/components/ProductListingCard";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
-<<<<<<< HEAD
-=======
-
-=======
-
-    }
-    {
-      id: "sentiment-analysis-api"
-      title: "Sentiment Analysis API"
-      description: "Real-time sentiment analysis for social media monitoring"
-      price: 1299
-      currency: "$"
-      category: "APIs"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       tags: ["API", "Sentiment", "Analytics"];
       images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"]
       createdAt: "2024-01-05T11:15:00.000Z"
       rating: 4.6
       reviewCount: 72
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
     {
       id: "sentiment-analysis-api",
@@ -232,10 +97,7 @@ import {Link} from "react-router-dom";
       createdAt: "2024-01-05T11:15:00.000Z",
       rating: 4.6,
       reviewCount: 72,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       author: {
         name: "SocialAI"
         id: "social-ai"
@@ -260,29 +122,18 @@ import {Link} from "react-router-dom";
             <ProductListingCard
               key={listing.id}
               listing={listing}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               view="grid"
 import { ProductListingCard } from "@/components/ProductListingCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
-<<<<<<< HEAD
 
 interface FeaturedListingsSectionProps {;
   showTitle?: boolean;
 }
 
 export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedListingsSectionProps) {;
-=======
-interface FeaturedListingsSectionProps {;
-  showTitle?: boolean;
-}
-;
-export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSectionProps) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const featuredListings = [;
     {;
       id: "advanced-nlp-model",;
@@ -291,30 +142,17 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 4999,;
       currency: "$",;
       category: "AI Models",;
-<<<<<<< HEAD
       tags: ["AI", "NLP", "Machine Learning"];
       images: ["https://images && images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],;
       createdAt: "2023-11-15T14:48:00 && 00.000Z",;
       rating: 4 && 4.8,;
-=======
-      tags: ["AI", "NLP", "Machine Learning"],;
-      images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],;
-      createdAt: "2023-11-15T14:48:00.000Z",;
-      rating: 4.8,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       reviewCount: 124,;
       author: {;
         name: "TechAI Labs",;
         id: "tech-ai-labs",;
-<<<<<<< HEAD
         avatarUrl: "https://images && images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format";
       }
     };
-=======
-        avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format";
-      }
-    },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {;
       id: "image-generation-service",;
       title: "AI Image Generation Service",;
@@ -322,27 +160,16 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 2499,;
       currency: "$",;
       category: "Content Creation",;
-<<<<<<< HEAD
       tags: ["AI", "Images", "Generation"];
       images: ["https://images && images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],;
       createdAt: "2023-10-20T11:15:00 && 00.000Z",;
       rating: 4 && 4.7,;
-=======
-      tags: ["AI", "Images", "Generation"],;
-      images: ["https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],;
-      createdAt: "2023-10-20T11:15:00.000Z",;
-      rating: 4.7,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       reviewCount: 89,;
       author: {;
         name: "VisualAI",;
         id: "visual-ai";
       }
-<<<<<<< HEAD
     };
-=======
-    },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {;
       id: "fullstack-ai-dev",;
       title: "Full-Stack AI Development",;
@@ -350,27 +177,16 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: null, // Custom pricing;
       currency: "$",;
       category: "Services",;
-<<<<<<< HEAD
       tags: ["Development", "Full-stack", "AI"];
       images: ["https://images && images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],;
       createdAt: "2023-12-15T09:45:00 && 00.000Z",;
       rating: 4 && 4.9,;
-=======
-      tags: ["Development", "Full-stack", "AI"],;
-      images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],;
-      createdAt: "2023-12-15T09:45:00.000Z",;
-      rating: 4.9,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       reviewCount: 56,;
       author: {;
         name: "DataMinds Consulting",;
         id: "dataminds-consulting";
       }
-<<<<<<< HEAD
     };
-=======
-    },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {;
       id: "sentiment-analysis-api",;
       title: "Sentiment Analysis API",;
@@ -378,7 +194,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 1299,;
       currency: "$",;
       category: "APIs",;
-<<<<<<< HEAD
       tags: ["API", "Sentiment", "Analytics"];
       images: ["https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;
       createdAt: "2024-01-05T11:15:00 && 00.000Z",;
@@ -387,10 +202,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       author: {;
         name: "SocialAI",;
         id: "social-ai";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: "advanced - nlp - model",
       title: "Advanced NLP Model for Text Analysis",
       description: "State - of - the - art natural language processing with 98% accuracy",
@@ -461,21 +272,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
     }];
 ;
   return (
-<<<<<<< HEAD
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
           {featuredListings && featuredListings.map((listing) => (;
 
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-          {featuredListings && featuredListings.map((listing) => (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <ProductListingCard
               key={listing && listing.id}
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section id="featured" className="py - 12 px - 4 bg - zion - blue - dark">;
       <div className="container mx - auto">;
         {show_title && (
@@ -489,15 +292,10 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
           </div>)}
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
           {featured_listings.map ((listing) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <ProductListingCard;
               key={listing.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               listing={listing}
               view="grid";
-=======
-=======
 
 import { ProductListingCard } from "@/components/ProductListingCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -603,17 +401,12 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
             </p>;
           </div>;
         )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <ProductListingCard
               key={listing.id}
               listing={listing}
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               view="grid"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onRequestQuote={() => {}}
-=======
               view="grid"
               onRequestQuote={() => {}}
 
@@ -621,10 +414,8 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
           {featuredListings.map((listing) => (
             <ProductListingCard
               key={listing.id}
-=======
             <ProductListingCard;
               key={listing.id}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               listing={listing}
               view="grid"
               onRequestQuote={() => {}}
@@ -642,25 +433,14 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
       </div>
     </section>
   )
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 
               view="grid"
               onRequestQuote={() => {}}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
 
         <div className="mt-10 text-center">;
@@ -673,26 +453,6 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
           <Button;
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white px - 8 py - 6";
             as_child;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            />;
-          ))}
-        </div>;
-        ;
-        <div className="mt-10 text-center">;
-          <Button ;
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-6";
-            asChild;
-}
-        </div>;
-        <div className="mt-10 text-center">;
-          <Button;
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6";
-            asChild;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
               onRequestQuote={() => {}}
             <Link to="/marketplace">View All Listings</Link>;
@@ -703,16 +463,9 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     </section>);
 }
@@ -733,10 +486,7 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
     </section>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

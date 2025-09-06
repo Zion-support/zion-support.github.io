@@ -2,11 +2,6 @@
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const advancedITInfrastructureExpansion2025V2 = [
   {
 
@@ -382,7 +377,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
-<<<<<<< HEAD
     features: [
       'Identity verification'
       'Access control'
@@ -390,256 +384,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Performance monitoring'
     ]
   }
-=======
-    name: 'Quantum Identity Verification',
-    description: 'Quantum - powered identity verification',
-    category: 'Quantum Computing',
-    pricing: '$599 / month',
-    features: [;
-      'Quantum algorithms',
-      'Identity verification',
-      'Security protocols',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Quantum Internet Security',
-    description: 'Quantum - powered internet security',
-    category: 'Quantum Computing',
-    pricing: '$749 / month',
-    features: [;
-      'Quantum algorithms',
-      'Security protocols',
-      'Threat detection',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Quantum Internet Security Gateway',
-    description: 'Advanced quantum internet security gateway',
-    category: 'Quantum Computing',
-    pricing: '$899 / month',
-    features: [;
-      'Quantum algorithms',
-      'Gateway security',
-      'Performance optimization',
-      'Monitoring tools',
-    ],
-  },
-  {
-    name: 'Quantum Learning Accelerator',
-    description: 'Quantum - powered learning acceleration',
-    category: 'Quantum Computing',
-    pricing: '$649 / month',
-    features: [;
-      'Quantum algorithms',
-      'Learning optimization',
-      'Performance tracking',
-      'Analytics tools',
-    ],
-  },
-  {
-    name: 'Quantum Materials Discovery',
-    description: 'Quantum - powered materials discovery',
-    category: 'Quantum Computing',
-    pricing: '$999 / month',
-    features: [;
-      'Quantum algorithms',
-      'Materials modeling',
-      'Discovery tools',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Quantum Network Security',
-    description: 'Quantum - powered network security',
-    category: 'Quantum Computing',
-    pricing: '$799 / month',
-    features: [;
-      'Quantum algorithms',
-      'Network security',
-      'Threat detection',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Quantum Networking',
-    description: 'Quantum networking infrastructure',
-    category: 'Quantum Computing',
-    pricing: '$949 / month',
-    features: [;
-      'Quantum protocols',
-      'Network management',
-      'Performance optimization',
-      'Security protocols',
-    ],
-  },
-  {
-    name: 'Quantum Neural Ecosystem',
-    description: 'Quantum neural network ecosystem',
-    category: 'Quantum Computing',
-    pricing: '$1099 / month',
-    features: [;
-      'Quantum algorithms',
-      'Neural networks',
-      'Ecosystem management',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Quantum Risk Financial Manager',
-    description: 'Quantum - powered financial risk management',
-    category: 'Quantum Computing',
-    pricing: '$899 / month',
-    features: [;
-      'Quantum algorithms',
-      'Risk assessment',
-      'Financial modeling',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Quantum Storage Solutions',
-    description: 'Quantum - powered storage solutions',
-    category: 'Quantum Computing',
-    pricing: '$799 / month',
-    features: [;
-      'Quantum storage',
-      'Data management',
-      'Performance optimization',
-      'Security protocols',
-    ],
-  },
-  {
-    name: 'Quantum Supply Chain Optimizer',
-    description: 'Quantum - powered supply chain optimization',
-    category: 'Supply Chain',
-    pricing: '$699 / month',
-    features: [;
-      'Quantum algorithms',
-      'Supply chain modeling',
-      'Optimization tools',
-      'Performance analytics',
-    ],
-  },
-  {
-    name: 'Quantum Threat Detection',
-    description: 'Quantum - powered threat detection',
-    category: 'Quantum Computing',
-    pricing: '$849 / month',
-    features: [;
-      'Quantum algorithms',
-      'Threat detection',
-      'Security protocols',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Quantum Workload Orchestration',
-    description: 'Quantum - powered workload orchestration',
-    category: 'Quantum Computing',
-    pricing: '$749 / month',
-    features: [;
-      'Quantum algorithms',
-      'Workload management',
-      'Performance optimization',
-      'Resource allocation',
-    ],
-  },
-  {
-    name: 'Satellite Technology',
-    description: 'Advanced satellite technology platform',
-    category: 'Space Technology',
-    pricing: '$999 / month',
-    features: [;
-      'Satellite design',
-      'Communication systems',
-      'Performance monitoring',
-      'Security protocols',
-    ],
-  },
-  {
-    name: 'Space Colonization Services',
-    description: 'Space colonization planning and infrastructure',
-    category: 'Space Technology',
-    pricing: '$1499 / month',
-    features: [;
-      'Colonization planning',
-      'Infrastructure design',
-      'Resource management',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Space Cybersecurity',
-    description: 'Space - specific cybersecurity solutions',
-    category: 'Space Technology',
-    pricing: '$799 / month',
-    features: [;
-      'Space security protocols',
-      'Threat detection',
-      'Incident response',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Space Data Analytics',
-    description: 'Advanced space data analytics platform',
-    category: 'Space Technology',
-    pricing: '$649 / month',
-    features: [;
-      'Data processing',
-      'Analytics tools',
-      'Visualization',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Space Mining Automation Platform',
-    description: 'Automated space mining platform',
-    category: 'Space Technology',
-    pricing: '$1199 / month',
-    features: [;
-      'Mining automation',
-      'Resource extraction',
-      'Safety systems',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Space Mining Platform',
-    description: 'Comprehensive space mining platform',
-    category: 'Space Technology',
-    pricing: '$999 / month',
-    features: [;
-      'Mining operations',
-      'Resource management',
-      'Safety protocols',
-      'Performance analytics',
-    ],
-  },
-  {
-    name: 'Space Resource Intelligence',
-    description: 'AI - powered space resource intelligence',
-    category: 'Space Technology',
-    pricing: '$749 / month',
-    features: [;
-      'Resource mapping',
-      'Intelligence analysis',
-      'Planning tools',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Zero - Trust Security',
-    description: 'Comprehensive zero - trust security platform',
-    category: 'Cybersecurity',
-    pricing: '$599 / month',
-    features: [;
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Identity verification',
       'Access control',
       'Threat detection',
@@ -648,7 +392,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
-<<<<<<< HEAD
 export const advancedITInfrastructureExpansion2025V2 = [;
   {;
     name: 'Autonomous DevOps Platform',;
@@ -657,10 +400,6 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     pricing: '$399/month',;
     features: [;
       'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
-=======
-=======
-];      'Identity verification_access control_threat detection_performance monitoring';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
 
   },;
@@ -1122,19 +861,10 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 ;
-=======
 
-=======
 export const advancedITInfrastructureExpansion2025V2 = [;
   {;
     name: 'Autonomous DevOps Platform',;
@@ -1603,11 +1333,5 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

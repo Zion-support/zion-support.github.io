@@ -1,24 +1,11 @@
-<<<<<<< HEAD
 export interface EmergingTechService {
 
 export interface EmergingTechService {;
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface EmergingTechService {
-=======
 
-<<<<<<< HEAD
-=======
-export interface EmergingTechService {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
 export interface EmergingTechService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   tagline: string;
@@ -49,27 +36,10 @@ export interface EmergingTechService {;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
-    website: string;
-  }
-
-  {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Virtual experiences, Gaming, Education, Social interaction, Entertainment',
     ],
     roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.',
     competitors: ['No direct competitors - first quantum metaverse platform'],
-<<<<<<< HEAD
-=======
-
-    market_size: '$35.5B quantum metaverse market',
-    growth_rate: '85% annual growth',
-    variant: 'quantum - metaverse - enterprise',
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -86,25 +56,11 @@ export interface EmergingTechService {;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum metaverse platform with enhanced graphics and AI capabilities.';
     launch_date: '2024 - 04 - 30';
-<<<<<<< HEAD
-=======
-
-    customers: 18;
-
-    rating: 4 && 4.8,
-
-    reviews: 11
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface EmergingTechService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -516,18 +472,10 @@ export interface EmergingTechService2025 {
     marketSize: '$35.5B quantum metaverse market', growthRate: '85% annual growth',
     variant: 'quantum-metaverse-enterprise',
     contactInfo: {
-<<<<<<< HEAD
-=======
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     realImplementation: true, implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.',
     launchDate: '2024-04-30', customers: 18,
     rating: 4.8,
-<<<<<<< HEAD
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -540,13 +488,6 @@ export interface EmergingTechService2025 {
     launchDate: '2024-04-30';
     customers: 18;
 
-=======
-    reviews: 11;
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
   id: string,;
@@ -1205,17 +1146,10 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     customers: 18,;
     rating: 4.8;
     reviews: 11;
-<<<<<<< HEAD
   }
 ];
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

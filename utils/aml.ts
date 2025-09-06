@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface AmlMatch {
   list: string;
   name: string;
@@ -36,28 +35,12 @@ let provider: AmlProvider = new MockAmlProvider();
 
 export type { AmlProvider, AmlResult, AmlMatch };
 export { provider };
-=======
-<<<<<<< HEAD
 export type WatchlistMatch = {
-<<<<<<< HEAD
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
-=======
-<<<<<<< HEAD
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
-=======
-export type WatchlistMatch = {;
-  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
-  name: string;
-  score: number; // 0-1 match confidence
-  referenceId?: string;
-  detailsUrl?: string;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   name: string;
 
   score: number; // 0 - 1 match confidence;
@@ -67,13 +50,8 @@ export type WatchlistMatch = {;
 ;
 
 export type AmlCheckResult = {
-<<<<<<< HEAD
   status: "clear" | "match" | "review" | "unknown";
-=======
-<<<<<<< HEAD
   status: "clear" | "match" | "review" | "unknown";
-=======
-<<<<<<< HEAD
 };
 
 export type AmlCheckResult = {;
@@ -81,18 +59,7 @@ export type WatchlistMatch = {
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
 export type AmlCheckResult = {
-=======
-=======
-
-};
-
-export type AmlCheckResult = {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   status: 'clear' | 'match' | 'review' | 'unknown';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   matches: WatchlistMatch[];
   checkedAt: string; // ISO
   provider: "mock" | "remote";
@@ -113,10 +80,6 @@ export interface AmlProvider {
   check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
 }
 class MockAmlProvider implements AmlProvider {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   async checkPerson(params: {
     fullLegalName: string;
     country: string;
@@ -126,10 +89,6 @@ class MockAmlProvider implements AmlProvider {
     const name = params.fullLegalName.toLowerCase();
     if (name.includes("test") || name.includes("demo")) {
       return { status: "match", details: { reason: "Test name detected" } };
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 // AML (Anti-Money Laundering) utilities
 export interface AmlCheck {
   id: string;
@@ -251,28 +210,11 @@ class AmlManager {
     const profile = this.profiles.get(userId);
     if (!profile) {
       throw new Error('Profile not found');
-=======
-
-    const name = params && params.fullLegalName.toLowerCase();
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test name detected' } };
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     return { status: 'clear' }
   }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
-<<<<<<< HEAD
-=======
-
-    const name = params && params.businessName.toLowerCase();
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } };
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
     }
     return { status: "clear" };
   }
@@ -292,30 +234,18 @@ class AmlManager {
     return { status: "clear" };
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 
 export function getAmlProvider(): AmlProvider {
   return provider;
   return new MockAmlProvider();
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 }
 
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
-=======
 
 
 
 
-=======
 
 // Singleton instance
 export const amlManager = new AmlManager();
@@ -368,14 +298,7 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     }
     return { status: 'clear' }
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

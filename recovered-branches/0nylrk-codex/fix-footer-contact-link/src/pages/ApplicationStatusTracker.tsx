@@ -43,7 +43,6 @@ function ApplicationStatusTrackerContent() {
   );
 }
 
-<<<<<<< HEAD
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {ApplicationsTracker} from "@/components/jobs/applications";
@@ -51,14 +50,6 @@ import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Briefcase, Inbox} from "lucide-react";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
-=======
-
-
-=======
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default function ApplicationStatusTracker() {
   return (
@@ -69,9 +60,6 @@ export default function ApplicationStatusTracker() {
     </ProtectedRoute>
   )
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -82,7 +70,6 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -90,8 +77,6 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { useIsMobile } from "@/hooks/use-mobile",;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
@@ -109,41 +94,21 @@ export default /**
  */
 function ApplicationStatusTracker() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  ),;
-  );
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export default function ApplicationStatusTracker() {;
   return (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </ProtectedRoute>);
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </ProtectedRoute>;
   ),;
 } function ApplicationStatusTrackerContent () {
@@ -175,8 +140,5 @@ export default function ApplicationStatusTracker() {
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     </ProtectedRoute>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

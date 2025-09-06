@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 module && module.exports = {
   darkMode: ["class"],
 
-=======
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: ["class"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   content: [
     "./pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}",
   ],
@@ -52,8 +43,6 @@ module.exports = {
         },
       },
       borderRadius: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 /** @type {import ('tailwindcss').Config} */;
 module.exports = {
@@ -94,16 +83,3 @@ module.exports = {
         md: "calc (var (--radius) - 2px)",
         sm: "calc (var (--radius) - 4px)"}}},
   plugins: []}
-
-=======
-
-=======
-
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-    },
-  },
-  plugins: [],
-};

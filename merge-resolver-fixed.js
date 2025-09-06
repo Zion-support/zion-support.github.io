@@ -10,8 +10,6 @@ function fixMergeConflicts(filePath) {
     const originalContent = content;
     
     // Remove merge conflict markers and keep HEAD version
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
@@ -55,8 +53,6 @@ async function main() {
   for (const file of files) {
     try {
       const content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
-      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
         if (fixMergeConflicts(file)) {;
           fixedCount++;        }
   let fixedCount = 0,;
@@ -67,17 +63,12 @@ async function main() {
 }
 }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   let fixedCount = 0;
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8'),;
         if (fixMergeConflicts(file)) {;
-=======
-      if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
         if (fixMergeConflicts(file)) {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
           fixedCount++;
         }
       }
@@ -90,10 +81,4 @@ async function main() {
   console.log('🎉 Merge conflict resolution completed!');
 }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 main().catch(console.error);
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80

@@ -7,10 +7,6 @@ export interface ResumeBasicInfo {
 
 }
 export interface WorkExperience {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ResumeBasicInfo {
 export interface ResumeBasicInfo {;
   id?: string;
@@ -18,12 +14,8 @@ export interface ResumeBasicInfo {;
 
 }
 export interface WorkExperience {
-<<<<<<< HEAD
 
 export interface WorkExperience {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id?: string;
   company_name: string;
   role_title: string;
@@ -35,24 +27,11 @@ export interface WorkExperience {;
   location?: string;
 }
 
-<<<<<<< HEAD
   company_logo_url?: string,
   location?: string;
 
 }
 export interface Education {
-=======
-export interface Education {
-  company_logo_url?: string
-
-  location?: string
-}
-export interface Education {
-
-export interface Education {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id?: string;
   institution: string;
   degree: string;
@@ -65,22 +44,11 @@ export interface Education {;
   location?: string;
 }
 
-<<<<<<< HEAD
   institution_logo_url?: string,
   location?: string;
 
 }
 export interface Skill {
-=======
-export interface Skill {
-  institution_logo_url?: string
-
-  location?: string
-}
-export interface Skill {
-
-export interface Skill {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   id?: string;
   name: string;
   proficiency?: number;
@@ -88,28 +56,15 @@ export interface Skill {;
   years_experience?: number;
 }
 
-<<<<<<< HEAD
   category?: string,
   years_experience?: number;
 
 }
 export interface Certification {
-=======
-export interface Certification {
-  category?: string
-
-  years_experience?: number
-}
-export interface Certification {
-
-export interface Certification {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   id?: string;
   name: string;
   proficiency?: number;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id?: string;
   name: string;
   issuing_organization: string;
@@ -119,24 +74,11 @@ export interface Certification {;
   credential_url?: string;
 }
 
-<<<<<<< HEAD
   credential_id?: string,
   credential_url?: string;
 
 }
 export interface PortfolioProject {
-=======
-export interface PortfolioProject {
-  credential_id?: string
-
-  credential_url?: string
-}
-export interface PortfolioProject {
-
-export interface PortfolioProject {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id?: string;
   title: string;
   description?: string;
@@ -147,24 +89,11 @@ export interface PortfolioProject {;
   pdf_url?: string;
 }
 
-<<<<<<< HEAD
   demo_url?: string,
   pdf_url?: string;
 
 }
 export interface Resume {
-=======
-export interface Resume {
-  demo_url?: string
-
-  pdf_url?: string
-}
-export interface Resume {
-
-export interface Resume {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;
@@ -175,14 +104,11 @@ export interface Resume {;
   portfolio_projects?: PortfolioProject[];
   is_active: boolean;
 }
-=======
   portfolio_projects?: PortfolioProject[]
 
   is_active: boolean
 }
 export interface ResumeBasicInfo {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id?: string,;
   title: string,;
   headline?: string,;
@@ -252,11 +178,7 @@ export interface Resume {;
   skills: Skill[],;
   certifications: Certification[],;
   portfolio_projects?: PortfolioProject[];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   portfolio_projects?: PortfolioProject[],
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   is_active: boolean;
 }
 ;
@@ -264,14 +186,7 @@ export interface Resume {;
 
 export interface ResumeBasicInfo {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   is_active: boolean;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

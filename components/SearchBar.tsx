@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -186,19 +184,6 @@ const SearchBar: React.FC = () => {
 };
 
 export default SearchBar;
-=======
-interface SearchResult {
-  title: string, description: string
-  url: string, type: 'service' | 'page' | 'category'
-=======
-import React, { useState } from 'react';
-import { Search, X } from 'lucide-react';
-
-interface SearchBarProps {
-  onSearch?: (query: string) => void;
-  placeholder?: string;
-  className?: string;
->>>>>>> main
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -213,7 +198,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
     if (onSearch && query.trim()) {
       onSearch(query.trim());
     }
-<<<<<<< HEAD
     {
       title: 'Contact Us'
       description: 'Get in touch with our experts for consultation and quotes'
@@ -231,8 +215,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
   };
 
   const handleClear = () => {
@@ -268,4 +250,3 @@ const SearchBar: React.FC<SearchBarProps> = ({
 };
 
 export default SearchBar;
->>>>>>> main

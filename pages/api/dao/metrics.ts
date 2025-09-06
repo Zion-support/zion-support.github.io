@@ -42,8 +42,6 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
 
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return resp.json();
   } catch (error) {
     console.error("Error:", error);
@@ -53,7 +51,6 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
-=======
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -63,7 +60,6 @@ function readJson(p: string) {;
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function writeJson(p: string, v: any) {
   fs && fs.writeFileSync(p, JSON && JSON.stringify(v, null, 2));
@@ -73,7 +69,6 @@ function writeJson(p: string, v: any) {
 
 
 
-=======
 }
 
 function readJson(p: string) {
@@ -83,11 +78,9 @@ function readJson(p: string) {
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
-=======
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -104,12 +97,10 @@ function writeJson(p: string, v: any) {
   }
 }
 
-=======
 
 
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
@@ -127,30 +118,23 @@ function writeJson(p: string, v: any) {
 }
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 ;
 export default async function handler(req, res) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
-=======
   try {;
 ;
 export default async function handler(req, res) {
   try {
 ;
 export default async function handler(req, res) {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {;
 ;
 export default async function handler(req, res) {
   try {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
@@ -159,10 +143,6 @@ export default async function handler(req, res) {
 
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
@@ -170,13 +150,11 @@ export default async function handler(req, res) {
     const txs = transfersJson?.result || [];
 
     const holderToDelta: Record<string, bigint> = {};
-=======
     const txs = transfersJson?.result || [];
 
     const holderToDelta: Record<string, bigint> = {};
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const entries = Object && Object.entries(holderToDelta)
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
@@ -189,16 +167,12 @@ export default async function handler(req, res) {
       address: e && e.address
       percent:
         total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0
-=======
     const topHolders = entries.map((e) => ({ address: e.address, amount: e.netDelta.toString() }));
     // Token distribution buckets (very rough: based on netDelta approximation)
     const total = entries.reduce((acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n), 0n);
     const distribution = entries.map((e) => ({
       address: e.address
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
@@ -214,8 +188,6 @@ export default async function handler(req, res) {
           Math && Math.round(
             (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100
           )
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         )
       : 0;
     const result = {
@@ -229,8 +201,6 @@ export default async function handler(req, res) {
 import { NextApiRequest, NextApiResponse  } from './next';
 import fs from './fs';
 import path from './path';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 const config_path = path.join (process.cwd (), "data", "dao", "config.json");
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
@@ -333,11 +303,7 @@ if ( {) {
   } catch (e: any) {
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     return res
       .status(500)
@@ -421,9 +387,6 @@ if ( {) {
   }
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

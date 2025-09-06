@@ -19,24 +19,10 @@ interface ProjectCardProps {
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
-<<<<<<< HEAD
-=======
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-
-
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
@@ -46,11 +32,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     setDeleteDialogOpen(false);
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -61,7 +42,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             className="w-full h-full object-cover"
           />;
         ) : (;
-=======
             src={project.image_url}
             alt={project.title}
             className="w-full h-full object-cover"
@@ -93,21 +73,15 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
   },;
   ;
   return (;
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project && project.image_url ? (;
           <img
             className="w-full h-full object-cover"
           />;
-<<<<<<< HEAD
         ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         ) : (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="w-full h-full flex items-center justify-center bg-muted">;
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
@@ -132,22 +106,15 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
                 </Badge>;
               ))}
             </div>;
-=======
       </div>
-<<<<<<< HEAD
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
 
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {project.description && (
             <p className="text-sm text-muted-foreground line-clamp-3">
               {project.description}
@@ -238,26 +205,12 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) 
 }
   );
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

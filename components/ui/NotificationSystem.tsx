@@ -1,23 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 export interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
-=======
-
-
-  id: string;
-  type: "success" | "error" | "warning" | "info";
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   title?: string;
   message: string;
   duration?: number;
 }
 
-<<<<<<< HEAD
 interface NotificationSystemProps {
   notifications: Notification[];
   onDismiss?: (id: string) => void;
@@ -109,67 +100,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return (
     <div className={`fixed ${getPositionStyles()} z-50 space-y-2`}>
       {visibleNotifications.map(notification => (
-=======
-
-const getNotificationStyles = (type: Notification["type"]): string => {
-  const baseStyles = "border-l-4";
-  const typeStyles = {
-    success: "bg-green-50 border-green-400 text-green-800"
-    error: "bg-red-50 border-red-400 text-red-800"
-    warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
-    info: "bg-blue-50 border-blue-400 text-blue-800"
-  }
-  return `${baseStyles} ${typeStyles[type]}`;
-}
-export default function NotificationSystem({
-  notifications
-  onDismiss
-key={notification.id}
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
-        >
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-              {notification.title && (
-                <h4 className="font-medium mb-1">{notification.title}</h4>)}
-              <p className="text-sm">{notification.message}</p>
-            </div>
-            {onDismiss && (
-              <button
-                onClick={() => onDismiss(notification.id)}
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' }
-type NotificationContextValue = {
-  notify: (message: string, tone?: 'default' | 'success' | 'error') => void
-}
-const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} })
-export function useToast() {
-  return useContext(NotificationContext)
-}
-export function NotificationProvider({ children }: { children: ReactNode }) {
-  const [toasts, setToasts] = useState<Toast[]>([])
-  const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
-    const id = Math.random().toString(36).slice(2)
-    setToasts((prev) => [...prev, { id, message, tone }])
-    setTimeout(() => {
-      setToasts((prev) => prev.filter((t) => t.id !== id))
-    }, 3000)
-  }, [])
-    success: "bg-green-50 border-green-400 text-green-800",
-    error: "bg-red-50 border-red-400 text-red-800",
-    warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
-    info: "bg-blue-50 border-blue-400 text-blue-800",
-
-  };
-  return `${baseStyles} ${typeStyles[type]}`;
-};
-
-
-import React from 'react';
-=======
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
->>>>>>> main
 
 interface Notification {
   id: string;
@@ -225,15 +155,12 @@ const NotificationContainer: React.FC = () => {
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
       {notifications.map((notification) => (
-<<<<<<< HEAD
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
         <div
           key={notification.id}
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
         >
           <div className="flex items-start justify-between">
             <div className="flex-1">
-<<<<<<< HEAD
               <div className="flex items-start space-x-2">
                 {getIcon(notification.type)}
                 <div className="flex-1">
@@ -254,58 +181,12 @@ const NotificationContainer: React.FC = () => {
             )}
           </div>
         </div>
-=======
-        <NotificationItem
-          key={notification.id}
-          notification={notification}
-          onRemove={removeNotification}
-        />
->>>>>>> main
       ))}
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default NotificationSystem;
-=======
-              {notification.title && (
-              <p className="text-sm">{notification.message}</p>
-            </div>
-            {onDismiss && (
-              <button
-                onClick={() => onDismiss(notification.id)}
-        <div
-          key={notification && notification.id}
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification && notification.type)}`}>;
-          <div className="flex items-start justify-between">;
-            <div className="flex-1">;
-              {notification && notification.title && (;
-                <h4 className="font-medium mb-1">{notification && notification.title}</h4>;
-              )}
-}
-}
-=======
-const NotificationItem: React.FC<{
-  notification: Notification;
-  onRemove: (id: string) => void;
-}> = ({ notification, onRemove }) => {
-  const icons = {
-    success: CheckCircle,
-    error: AlertCircle,
-    warning: AlertTriangle,
-    info: Info,
-  };
-
-  const colors = {
-    success: 'bg-green-500',
-    error: 'bg-red-500',
-    warning: 'bg-yellow-500',
-    info: 'bg-blue-500',
-  };
-
-  const Icon = icons[notification.type];
->>>>>>> main
 
   return (
     <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>
@@ -326,9 +207,6 @@ const NotificationItem: React.FC<{
   );
 };
 
-<<<<<<< HEAD
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
 export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (context === undefined) {
@@ -336,4 +214,3 @@ export const useNotifications = () => {
   }
   return context;
 };
->>>>>>> main

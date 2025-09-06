@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -86,14 +82,12 @@ const quickLinks = [
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' },
 ];
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-<<<<<<< HEAD
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
 
@@ -130,25 +124,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
-=======
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
-
-  const handleDropdownToggle = (item: string) => {
-    setActiveDropdown(activeDropdown === item ? null : item);
-  };
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   return (
     <AnimatePresence>
       {isOpen && (
@@ -166,12 +141,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
-<<<<<<< HEAD
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
-=======
-            transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
           >
             <div className="p-6">
               {/* Header */}
@@ -184,26 +154,18 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 </div>
                 <button
                   onClick={onClose}
-<<<<<<< HEAD
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-=======
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
               {/* Navigation */}
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
-<<<<<<< HEAD
                       className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
                     >
                       <span className="font-medium">{title}</span>
@@ -238,37 +200,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 ))}
               </nav>
 
-=======
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
-                    >
-                      <span>{title}</span>
-                      <ChevronDown className={`w-5 h-5 transition-transform ${
-                        activeDropdown === title ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-                    {activeDropdown === title && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="ml-4 space-y-2 mt-2"
-                      >
-                        {links.map((link) => (
-                          <Link
-                            key={link.name}
-                            href={link.href}
-                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                            onClick={onClose}
-                          >
-                            {link.name}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </div>
-                ))}
-              </nav>
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
@@ -285,7 +216,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
 
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
@@ -295,29 +225,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <p>kleber@ziontechgroup.com</p>
                   <p>24/7 Support Available</p>
                 </div>
-=======
-              {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center text-gray-600">
-                    <Phone className="w-4 h-4 mr-3" />
-                    <span>+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-center text-gray-600">
-                    <Mail className="w-4 h-4 mr-3" />
-                    <span>kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-start text-gray-600">
-                    <MapPin className="w-4 h-4 mr-3 mt-1" />
-                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                  </div>
-                </div>
-                <button className="flex items-center space-x-3 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                  <LogOut className="h-5 w-5" />
-                  <span className="font-medium">Sign Out</span>
-                </button>
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
               </div>
             </div>
           </motion.div>
@@ -325,16 +232,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
     </AnimatePresence>
   );
-<<<<<<< HEAD
 };
 
 export default Sidebar;
-=======
-}
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -570,12 +470,6 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 ;
 export default Sidebar;
 ;
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-c52f
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -613,18 +507,15 @@ const navigation = {
     { name: 'Contact', href: '/contact' }
   ]
 };
-=======
 import React from 'react';
 import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-<<<<<<< HEAD
 const navigationItems = [
   {
     label: 'Home',
@@ -774,63 +665,3 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     </AnimatePresence>
   );
 }
-<<<<<<< HEAD
-=======
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const menuItems = [
-    { href: '/dashboard', label: 'Dashboard', icon: Home },
-    { href: '/profile', label: 'Profile', icon: User },
-    { href: '/settings', label: 'Settings', icon: Settings },
-  ];
-
-  return (
-    <>
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-          onClick={onClose}
-        />
-      )}
-
-      <div
-        className={'fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ' + (isOpen ? 'translate-x-0' : '-translate-x-full')}
-      >
-        <div className="p-4">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-xl font-bold text-gray-800">Menu</h2>
-            <button
-              onClick={onClose}
-              className="p-2 rounded-md hover:bg-gray-100"
-            >
-              <LogOut className="w-5 h-5" />
-            </button>
-          </div>
-
-          <nav className="space-y-2">
-            {menuItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-                  onClick={onClose}
-                >
-                  <Icon className="w-5 h-5" />
-                  <span>{item.label}</span>
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default Sidebar;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

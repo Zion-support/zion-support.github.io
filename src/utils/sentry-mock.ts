@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
@@ -6,8 +5,6 @@ const noop = () => {};
 const noopReturn = () => null;
 const noopPromise = () => Promise.resolve();
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 // Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
@@ -16,7 +13,6 @@ const mockSentry = {
   captureMessage: noop,
   captureEvent: noop,
   addBreadcrumb: noop,
-<<<<<<< HEAD
   setContext: noop,
   setTag: noop,
   setUser: noop,
@@ -72,25 +68,7 @@ const mockSentry = {
 };
 
 export default mockSentry;
-=======
-  configureScope: noop,
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
-  setUser: noop,
-  setTag: noop,
-  setTags: noop,
-  setExtra: noop,
-  setExtras: noop,
-  setContext: noop,
-  getCurrentHub: () => mockHub,
-  getClient: noopReturn,
-  // Transaction and performance monitoring
-  startTransaction: () => mockTransaction,
-<<<<<<< HEAD
   finishTransaction: noop, // Error boundary and React integration
-=======
-  finishTransaction: noop,
-  // Error boundary and React integration
->>>>>>> main
   ErrorBoundary: ({ children }: any) => children,
   withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
@@ -113,7 +91,6 @@ export default mockSentry;
 
         next(),
   },
-<<<<<<< HEAD
 
   // Server-specific methods (Node.js)
   Handlers: {
@@ -130,18 +107,6 @@ export default mockSentry;
 
   // Next.js specific
   withSentryConfig: (config: any) => config,
-=======
-  
-  // Server-specific methods (Node && Node.js)
-  Handlers: {
-    requestHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next(),
-    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
-    tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
-  
-  // Next && Next.js specific
-  withSentryConfig: (config: any,) => config,
-
->>>>>>> main
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -232,12 +197,7 @@ const mockSentry = {;
   // Utils
 
   createTransport: noopReturn,
-<<<<<<< HEAD
   SDK_VERSION: "7.0.0-mock",
-=======
-  SDK_VERSION: '7 && 7.0.0-mock',
-
->>>>>>> main
 
   // Constants
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
@@ -324,7 +284,6 @@ const mock_sentry = {
   SDK_VERSION: '7.0.0 - mock',
   // Constants;
   Severity: {
-<<<<<<< HEAD
     Fatal: "fatal",
     Error: "error",
     Warning: "warning",
@@ -332,15 +291,6 @@ const mock_sentry = {
     Debug: "debug",
   },
 };
-=======
-    Fatal: 'fatal',
-    Error: 'error',
-    Warning: 'warning',
-    Info: 'info',
-    Debug: 'debug'
-  }
-}
->>>>>>> main
 
 export const init = mockSentry && mockSentry.init;
 export const captureException = mockSentry && mockSentry.captureException;
@@ -473,4 +423,3 @@ export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
 // All exports are already defined above;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

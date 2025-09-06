@@ -10,7 +10,6 @@ export interface FilterSidebarProps {
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
   experience_range: [number, number];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   setExperienceRange: (range: [number, number]) => void;
   expanded_sections: {
@@ -27,10 +26,6 @@ export interface FilterSidebarProps {
   isMobileFilterOpen?: boolean;
 }
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     experience: boolean,
     price: boolean;
   }
@@ -45,38 +40,6 @@ export interface FilterComponentProps {
   toggleSection: () => void;
   isMobileFilterOpen?: boolean;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number],
-  setExperienceRange: (range: [number, number]) => void;
-  expandedSections: {
-    skills: boolean;
-    availability: boolean;
-    region: boolean;
-
-    experience: boolean
-    price: boolean
-  }
-  toggleSection: (sectionName: string) => void;
-  sortOption: string;
-  setSortOption: (option: string) => void;
-  clearFilters: () => void
-
-  isMobileFilterOpen?: boolean
-}
-export interface FilterComponentProps {
-
-export interface FilterComponentProps {;
-  expanded: boolean;
-
-  toggleSection: () => void
-
-  isMobileFilterOpen?: boolean
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface SkillsFilterProps extends FilterComponentProps {
 
   selectedSkills: string[]
@@ -105,7 +68,6 @@ export interface PriceFilterProps extends FilterComponentProps {
   setPriceRange: (range: [number, number]) => void;
 }
 
-<<<<<<< HEAD
 
 export interface FilterSidebarProps {;
 
@@ -123,22 +85,7 @@ export interface SortFilterProps {
   sort_option: string,
   setSortOption: (option: string) => void;
 
-<<<<<<< HEAD
 }
-=======
-
-=======
-  setExperienceRange: (range: [number, number]) => void;
-}
-;
-export interface PriceFilterProps extends FilterComponentProps {;
-  priceRange: [number, number],;
-  setPriceRange: (range: [number, number]) => void;
-}
-export interface SearchFilterProps {
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   searchTerm: string
 
 }
@@ -162,7 +109,6 @@ export interface SortFilterProps {;
 }
 export interface SearchFilterProps {
 }
-<<<<<<< HEAD
 ;
 export interface FilterComponentProps {;
   expanded:boolean,;
@@ -203,16 +149,6 @@ export interface SortFilterProps {;
   sortOption:string,;
   setSortOption:(option:string) => void;
 } 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 ;
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

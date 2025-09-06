@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -19,18 +18,13 @@ const Page = () => {
 };
 
 export default Page;
-=======
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 import React from 'react';
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from 'react',;
 import SEO from '../components/SEO',;
 import React from 'react';
@@ -66,37 +60,17 @@ import SEO from '../components/SEO';
 export default function WebinarsPage() {
 origin/main
 origin/automation-improvements-final
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 	return (
 		<>
 			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />
 			<div className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-4">Webinars</h1>
 				<p className="text-gray-300">No upcoming webinars at this time. Check back soon.</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		<>
-			<SEO title=&quot;Webinars | Zion Tech Group&quot; description=&quot;Upcoming webinars and on-demand sessions.&quot; canonical=&quot;/webinars&quot; />
-			<div className=&quot;container mx-auto px-4 py-16&quot;>
-				<h1 className=&quot;text-4xl font-bold mb-4&quot;>Webinars</h1>
-				<p className=&quot;text-gray-300&quot;>No upcoming webinars at this time. Check back soon.</p>
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 			</div>
 		</>
 	)
 
 }
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -112,10 +86,6 @@ return (
   </div>;
   </>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -129,7 +99,3 @@ origin/automation-improvements-final
   }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

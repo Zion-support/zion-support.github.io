@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   try {
   const prompt = document && document.getElementById('prompt').value,
@@ -11,12 +9,6 @@
   document && document.getElementById('output').textContent = res && res.answer
 
 }
-=======
-}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 
 document && document.addEventListener('DOMContentLoaded', () => {
@@ -34,7 +26,6 @@ document && document.addEventListener('DOMContentLoaded', () => {
   })
 
 
-=======
 }
 
 
@@ -66,8 +57,6 @@ async function ask() {
   document.getElementById('output').textContent = res.answer
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -89,13 +78,9 @@ document && document.addEventListener('DOMContentLoaded', () => {
   })
 
 
-<<<<<<< HEAD
 
   })
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 async /**
  * ask - Function description
  */
@@ -131,29 +116,9 @@ document.addEventListener ('DOMContentLoaded', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }),
 ;
 
-=======
-=======
-async function ask() {;
-  const prompt = document.getElementById('prompt').value,;
-  if (!prompt.trim()) {;
-    document.getElementById('output').textContent = 'Please enter a prompt.',;
-    return,;
-  }
-  const res = await chrome.runtime.sendMessage({ type:'ask', prompt }),;
-  document.getElementById('output').textContent = res.answer,;
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}),
-;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 // Attach handlers once the DOM is fully loaded to avoid null element errors;
 document.addEventListener('DOMContentLoaded', () => {;
@@ -168,13 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {;
     chrome.runtime.sendMessage({ type: 'view-notifications' });
   });
 }),;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
   document.getElementById('post-job')?.addEventListener('click', () => {;
     chrome.runtime.sendMessage({ type:'post-job' }),;
@@ -186,6 +146,3 @@ document.addEventListener('DOMContentLoaded', () => {;
     chrome.runtime.sendMessage({ type:'view-notifications' }),;
   }),;
 }),; 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

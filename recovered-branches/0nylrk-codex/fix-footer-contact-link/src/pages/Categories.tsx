@@ -21,7 +21,6 @@ export default function Categories() {
               business or personal projects.
             </p>
           </div>
-<<<<<<< HEAD
 
           {/* Reuse the Categories Section component */}
           <CategoriesSection showTitle={false} />
@@ -33,9 +32,6 @@ export default function Categories() {
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
   ),;}
  export default function Categories () {
@@ -48,8 +44,6 @@ export default function Categories() {
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           {/* Reuse the Categories Section component */}
           <CategoriesSection show_title={false} />;
         </div>;
@@ -57,4 +51,3 @@ export default function Categories() {
       <Footer />;
     </>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

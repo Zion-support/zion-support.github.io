@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> main
 import { readJson, writeJson } from '../../../utils/fsDb',;
 import { logSupportEventToOperator } from '../../../utils/operator',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

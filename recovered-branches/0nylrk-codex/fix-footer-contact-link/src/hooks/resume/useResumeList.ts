@@ -1,32 +1,17 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 export function useResumeList() {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -44,90 +29,37 @@ export function useResumeList() {;
       const { data: resumeData, error: resumeError } = await supabase
         .from('talent_resumes')
         .select('*')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         .eq('user_id', user && user.id)
         .order('is_active', { ascending: false })
         .order('created_at', { ascending: false });
       if (resumeError) throw resumeError;
-<<<<<<< HEAD
 
       
       if (!resumeData || resumeData && resumeData.length === 0) {
 
-=======
-        .eq('user_id', user.id)
-        .order('is_active', { ascending: false })
-        .order('created_at', { ascending: false });
-      if (resumeError) throw resumeError;
-      if (!resumeData |resumeData.length === 0) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setResumes([]);
         return []
       }
       // Transform data to match Resume type
-<<<<<<< HEAD
-<<<<<<< HEAD
       const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
         id: resume && resume.id;
         user_id: resume && resume.user_id;
-=======
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {Resume} from '@/types / resume';
-import {use_auth} from '@/hooks / use_auth';
-export /**
- * useResumeList - Function description
- */
-function useResumeList() {
-  const { user } = use_auth ();
-  const [is_loading, setIsLoading] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-  const [resumes, set_resumes] = useState < Resume[]>([]);
-;
-  const fetch_resumes = async () => {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Check condition
 if ( {) {
   $2
 }
         basic_info: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           id: resume && resume.id;
           title: resume && resume.title;
           headline: resume && resume.headline,
           summary: resume && resume.summary
         };
-<<<<<<< HEAD
-=======
-          headline: resume.headline,
-          summary: resume.summary;
-        }
-
-=======
-          headline: resume.headline,
-          summary: resume.summary;
-        }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         work_experience: [];
         education: [];
         skills: [];
         certifications: [],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         is_active: resume.is_active;
       }));
 ;
@@ -137,18 +69,12 @@ if ( {) {
       console.error ('Error fetching resumes:', e);
       set_error (e.message);
       return [];
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   // Fetch resumes when the component mounts;
   useEffect (() => {
@@ -160,21 +86,15 @@ if ( {) {
     }
   }, [user]);
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return {
     is_loading;
     error;
     resumes;
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
-=======
       const transformedResumes: Resume[] = resumeData.map(resume => ({
         id: resume.id;
         user_id: resume.user_id;
@@ -189,8 +109,6 @@ if ( {) {
         skills: [];
         certifications: []
         is_active: resume.is_active
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }));
       setResumes(transformedResumes);
       return transformedResumes
@@ -205,7 +123,6 @@ if ( {) {
     resumes;
   }
 }
-<<<<<<< HEAD
 
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -303,6 +220,3 @@ is active: resume.is active
 }
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

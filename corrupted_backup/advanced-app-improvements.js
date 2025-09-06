@@ -156,7 +156,6 @@ export class ErrorTracker {
 }
 
 export const errorTracker = new ErrorTracker();
-<<<<<<< HEAD:advanced-app-improvements.js
 `
   };
 
@@ -167,11 +166,6 @@ export const errorTracker = new ErrorTracker();
     console.log(`Created ${filename}`);
   });
 }
-=======
-
-// Call the monitoring function
-createAdvancedMonitoring();
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/advanced-app-improvements.js
 
 // Create advanced caching system
 function createAdvancedCaching() {
@@ -266,78 +260,18 @@ export class MemoryCache {
     this.cache.clear();
   }
 
-<<<<<<< HEAD:advanced-app-improvements.js
   size() {
     return this.cache.size;
   }
 }`
-=======
-export const redisCache = new RedisCache();
-  `,
-    'cache/memory-cache.js': `// Memory-based caching system
-export class MemoryCache {
-  constructor(maxSize = 1000) {
-    this.cache = new Map();
-    this.accessTimes = new Map();
-    this.maxSize = maxSize;
-  }
-
-  get(key) {
-    if (this.cache.has(key)) {
-      this.accessTimes.set(key, Date.now());
-      return this.cache.get(key);
-    }
-    return null;
-  }
-
-  set(key, value, ttl = 3600) {
-    if (this.cache.size >= this.maxSize) {
-      this.evictLRU();
-    }
-    this.cache.set(key, value);
-    this.accessTimes.set(key, Date.now());
-    
-    if (ttl > 0) {
-      setTimeout(() => {
-        this.delete(key);
-      }, ttl * 1000);
-    }
-  }
-
-  delete(key) {
-    this.cache.delete(key);
-    this.accessTimes.delete(key);
-  }
-
-  clear() {
-    this.cache.clear();
-    this.accessTimes.clear();
-  }
-
-  evictLRU() {
-    const oldestKey = Array.from(this.accessTimes.entries())
-      .sort((a, b) => a[1] - b[1])[0][0];
-    this.delete(oldestKey);
-  }
-}
-
-export const memoryCache = new MemoryCache();
-  `
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/advanced-app-improvements.js
   };
 
   Object.entries(cachingFiles).forEach(([filename, content]) => {
     const fullPath = path.join('/workspace', filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
-<<<<<<< HEAD:advanced-app-improvements.js
     console.log(`Created ${filename}`);
   });
-=======
-    console.log(`[OK] Created ${filename}`);
-  });
-});
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/advanced-app-improvements.js
 }
 
 // Create API optimization utilities
@@ -425,161 +359,8 @@ export class ResponseCache {
     const fullPath = path.join('/workspace', filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
-<<<<<<< HEAD:advanced-app-improvements.js
     console.log(`Created ${filename}`);
   });
-=======
-    console.log(`[OK] Created ${filename}`);
-  });
-});
-}
-
-// Create database optimization utilities
-function createDatabaseOptimization() {
-  console.log('\n🗄️ Creating database optimization utilities...');
-  
-  const dbFiles = {
-    'database/query-optimizer.js': `// Database query optimization
-export class QueryOptimizer {
-  constructor() {
-    this.queryCache = new Map();
-    this.slowQueries = [];
-  }
-
-  optimizeQuery(query, params = []) {
-    // Add query analysis
-    const analysis = this.analyzeQuery(query);
-    
-    return {
-      query,
-      params,
-      analysis,
-      recommendations: this.getRecommendations(analysis)
-    };
-  }
-
-  analyzeQuery(query) {
-    const analysis = {
-      hasIndex: this.checkForIndexes(query),
-      hasJoins: query.toLowerCase().includes('join'),
-      hasSubqueries: query.toLowerCase().includes('select') && query.toLowerCase().split('select').length > 2,
-      hasOrderBy: query.toLowerCase().includes('order by'),
-      hasGroupBy: query.toLowerCase().includes('group by'),
-      estimatedComplexity: this.estimateComplexity(query)
-    };
-    
-    return analysis;
-  }
-
-  checkForIndexes(query) {
-    // Simple index detection (would be more sophisticated in real implementation)
-    const indexKeywords = ['primary key', 'unique', 'index'];
-    return indexKeywords.some(keyword => 
-      query.toLowerCase().includes(keyword)
-    );
-  }
-
-  estimateComplexity(query) {
-    let complexity = 1;
-    if (query.toLowerCase().includes('join')) complexity += 2;
-    if (query.toLowerCase().includes('group by')) complexity += 1;
-    if (query.toLowerCase().includes('order by')) complexity += 1;
-    if (query.toLowerCase().includes('having')) complexity += 1;
-    return complexity;
-  }
-
-  getRecommendations(analysis) {
-    const recommendations = [];
-    
-    if (!analysis.hasIndex && analysis.estimatedComplexity > 2) {
-      recommendations.push('Consider adding indexes for better performance');
-    }
-    
-    if (analysis.hasJoins && analysis.estimatedComplexity > 3) {
-      recommendations.push('Consider query optimization for complex joins');
-    }
-    
-    return recommendations;
-  }
-}
-
-export const queryOptimizer = new QueryOptimizer();`,
-    
-    'database/connection-pool.js': `// Database connection pooling
-export class ConnectionPool {
-  constructor(options = {}) {
-    this.maxConnections = options.maxConnections || 10;
-    this.minConnections = options.minConnections || 2;
-    this.connections = [];
-    this.availableConnections = [];
-    this.usedConnections = new Set();
-  }
-
-  async getConnection() {
-    if (this.availableConnections.length > 0) {
-      const connection = this.availableConnections.pop();
-      this.usedConnections.add(connection);
-      return connection;
-    }
-    
-    if (this.connections.length < this.maxConnections) {
-      const connection = await this.createConnection();
-      this.connections.push(connection);
-      this.usedConnections.add(connection);
-      return connection;
-    }
-    
-    // Wait for a connection to become available
-    return new Promise((resolve) => {
-      const checkForConnection = () => {
-        if (this.availableConnections.length > 0) {
-          const connection = this.availableConnections.pop();
-          this.usedConnections.add(connection);
-          resolve(connection);
-        } else {
-          setTimeout(checkForConnection, 100);
-        }
-      };
-      checkForConnection();
-    }
-});
-  }
-
-  releaseConnection(connection) {
-    this.usedConnections.delete(connection);
-    this.availableConnections.push(connection);
-  }
-
-  async createConnection() {
-    // This would create an actual database connection
-    return {
-      id: Math.random().toString(36).substr(2, 9),
-      createdAt: new Date(),
-      isHealthy: true
-    };
-  }
-
-  getPoolStatus() {
-    return {
-      total: this.connections.length,
-      available: this.availableConnections.length,
-      used: this.usedConnections.size,
-      max: this.maxConnections
-    };
-  }
-}
-
-export const connectionPool = new ConnectionPool();
-  };
-
-  Object.entries(dbFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
-    fs.writeFileSync(fullPath, content);
-    console.log(`[OK] Created ${filename}`);
-  });
-});
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/advanced-app-improvements.js
 }
 
 // Main execution
@@ -590,51 +371,6 @@ async function main() {
     createAdvancedMonitoring();
     createAdvancedCaching();
     createAPIOptimization();
-<<<<<<< HEAD:advanced-app-improvements.js
-=======
-    createDatabaseOptimization();
-    
-    // Create PM2 ecosystem configuration
-    const pm2Config = {
-      apps: [{
-        name: 'ziontechgroup-site',
-        script: 'npm',
-        args: 'start',
-        instances: 'max',
-        exec_mode: 'cluster',
-        env: {
-          NODE_ENV: 'production',
-          PORT: 3000
-        },
-        env_production: {
-          NODE_ENV: 'production',
-          PORT: 3000
-        },
-        max_memory_restart: '1G',
-        node_args: '--max-old-space-size=1024',
-        error_file: './logs/err.log',
-        out_file: './logs/out.log',
-        log_file: './logs/combined.log',
-        time: true
-      }]
-    };
-    
-    fs.writeFileSync('/workspace/ecosystem.config.js', 
-      `module.exports = ${JSON.stringify(pm2Config, null, 2)};`);
-    console.log('[OK] Created PM2 ecosystem configuration');
-    
-    // Create logs directory
-    fs.mkdirSync('/workspace/logs', { recursive: true });
-    console.log('[OK] Created logs directory');
-    
-    console.log('\n🎉 Advanced app improvements completed successfully!');
-    console.log('\n📋 Summary of improvements:');
-    console.log('  - Advanced monitoring system');
-    console.log('  - Caching systems (Redis + Memory)');
-    console.log('  - API optimization utilities');
-    console.log('  - Database optimization tools');
-    console.log('  - PM2 cluster configuration');
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/advanced-app-improvements.js
     
     console.log('✅ Advanced app improvements completed successfully!');
   } catch (error) {

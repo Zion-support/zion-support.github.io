@@ -23,8 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const event = {
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     eventId: uuidv4(), type: "token_transfer" as const
     payload: {
        id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() 
@@ -37,14 +35,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';
 import { sign_payload  } from '../../../utils / sync / signature';
@@ -105,10 +101,7 @@ if (headers["x - zion - signature"] = sig, ) {
   return res.status (200).json ({ status: "created", version, event_id: event.event_id });
 }
 ;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 
   }
 
@@ -185,8 +178,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
   return res.status(200).json({_status: "created", _version, _eventId: event.eventId});
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -301,8 +292,6 @@ export default async function handler(req, res) {
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         try {
           await axios.post(url, body, { headers, timeout: 5000 })

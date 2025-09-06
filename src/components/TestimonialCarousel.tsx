@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 
 const TestimonialCarousel = () => {
@@ -53,10 +50,6 @@ const TestimonialCarousel = () => {
 };
 
 export default TestimonialCarousel;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
 import {  Carousel,  Carousel
   CarouselContent
   CarouselItem
@@ -367,8 +360,3 @@ function TestimonialCarousel() {
 }
     </section>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

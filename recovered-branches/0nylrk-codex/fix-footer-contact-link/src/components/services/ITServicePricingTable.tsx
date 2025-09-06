@@ -27,22 +27,13 @@ export function ITServicePricingTable() {
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
 
-=======
     key: "country",
     direction: "ascending",
   });
 
   const sortedData = useMemo(() => {
-<<<<<<< HEAD
     let filteredData = [...onsiteServicePricing],
     
-=======
-    let filteredData = [...onsiteServicePricing];
-
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter((item) =>
@@ -75,19 +66,6 @@ export function ITServicePricingTable() {
   };
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
-      <div className="flex items-center mb-6">;
-        <div className="relative flex-1">;
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
-          <Input
-            placeholder="Search by country..."
-            value={searchQuery}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
@@ -138,16 +116,10 @@ export function ITServicePricingTable() {;
   },;
 ;
   return (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
       <div className="flex items-center mb-6">;
         <div className="relative flex-1">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Input
             placeholder="Search by country..."
             value={searchQuery}

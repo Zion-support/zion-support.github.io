@@ -26,23 +26,13 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
       </Select>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Select,
   SelectContent,
   SelectItem,
@@ -73,15 +63,9 @@ function SortFilter() {
       </Select>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
   )
 
@@ -107,10 +91,7 @@ function SortFilter() {
 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   )
 
 import {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

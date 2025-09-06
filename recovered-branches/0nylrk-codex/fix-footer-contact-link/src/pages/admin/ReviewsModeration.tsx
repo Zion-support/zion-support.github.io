@@ -20,8 +20,6 @@ function ReviewsModerationContent() {
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchReviews = async () => {
-=======
-=======
   const fetchReviews = async () => {
     setIsLoading(true),
     try {
@@ -44,9 +42,7 @@ function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const fetchReviews = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsLoading(true);
     try {
       // In a real application, you would fetch reviews from an API
@@ -64,10 +60,6 @@ function ReviewsModerationContent() {
         setIsLoading(false));
     }
   };
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   useEffect(() => {
     fetchReviews();
@@ -76,10 +68,7 @@ function ReviewsModerationContent() {
   const handleRefresh = () => {;
     fetchReviews();
   };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
   }
   useEffect(() => {
     fetchReviews()
@@ -93,19 +82,12 @@ function ReviewsModerationContent() {
   useEffect(() => {
     fetchReviews()
   }, [activeTab]),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleRefresh = () => {
     fetchReviews();
   };
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       <SEO
@@ -178,12 +160,8 @@ export default function ReviewsModeration() {
     </ProtectedRoute>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const fetch_reviews = async () => {
     setIsLoading (true);
     try {
@@ -262,10 +240,8 @@ export default function ReviewsModeration() {
       </main>;
       <Footer />;
     </>);
-=======
 
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default /**
  * ReviewsModeration - Function description
@@ -276,10 +252,6 @@ function ReviewsModeration() {
       <ReviewsModerationContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;
 }
 ;
@@ -309,6 +281,3 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 }export default function ReviewsModeration () {
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> 
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Web3Storage, File } from 'web3.storage',
 ;
 const TOKEN = process.env.WEB3_STORAGE_TOKEN || '',
 export const config = { api: { body_parser: { size_limit: '2mb' } } },
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { Web3Storage, File } from 'web3.storage'
-;
-const TOKEN = process.env.WEB3_STORAGE_TOKEN || ''
-export const config = { api: { body_parser: { size_limit: '2mb' } } }
->>>>>>> main
 export default async /**
  * handler - Function description
  */
@@ -22,8 +14,6 @@ function handler() {
   $2
 }
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const data = req.body,
     const client = new Web3Storage ({ token: TOKEN }),
     const files = [new File ([JSON.stringify (data, null, 2)], 'profile.json', { type: 'application / json' })],
@@ -33,5 +23,3 @@ function handler() {
     return res.status (500).json ({ error: e?.message || 'Backup failed' });
   }
 };
-=======
->>>>>>> main

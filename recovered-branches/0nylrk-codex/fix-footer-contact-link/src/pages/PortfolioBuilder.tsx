@@ -56,9 +56,7 @@ function PortfolioBuilderContent() {
     </>
   );
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -77,12 +75,7 @@ function PortfolioBuilderContent() {;
   );
 }
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 
 export default function PortfolioBuilder() {;
@@ -92,19 +85,12 @@ export default function PortfolioBuilder() {;
     </ProtectedRoute>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';
 import {Footer} from '@/components / Footer';
@@ -153,10 +139,6 @@ function PortfolioBuilder() {
       <PortfolioBuilderContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;
 }
 export default function PortfolioBuilder() {
@@ -176,6 +158,3 @@ export default function PortfolioBuilder() {;
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

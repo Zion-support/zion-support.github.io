@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -1088,10 +1086,6 @@ export default function AIServices() {
   ];
   */
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
 
 
 class ErrorBoundary extends React.Component {
@@ -1316,24 +1310,14 @@ export default function AIServices() {
   const filteredServices = selectedCategory === 'all' 
     ? services 
     : services.filter(service => service.category === selectedCategory);
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   return (
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name="description" content="Advanced AI services including autonomous AI agents, financial trading systems, legal document analysis, and more." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <ErrorBoundary>
-=======
-<<<<<<< HEAD
-=======
-        <meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, autonomous agents, computer vision, NLP, predictive analytics" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
@@ -1364,7 +1348,6 @@ export default function AIServices() {
           {/* Category Filter */}
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function AIServices() {
   return (
@@ -1378,7 +1361,6 @@ export default function AIServices() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <ErrorBoundary level="page">
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           <div className="container mx-auto px-4 py-16">
             <h1 className="text-4xl font-bold text-center mb-8">AI Services</h1>
@@ -1386,39 +1368,11 @@ export default function AIServices() {
               Advanced artificial intelligence solutions for your business.
             </p>
           </div>
-<<<<<<< HEAD
         </main>
       </ErrorBoundary>
     </>
   );
 }
-=======
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              >;
-                AI Services;
-              </h1>;
-              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                100+ Advanced Artificial Intelligence Solutions;
-              </p>;
-              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                Harness the power of artificial intelligence with our comprehensive suite of AI services.;
-                From autonomous agents to predictive analytics, we provide cutting-edge AI solutions;
-                to transform your business operations.;
-              </p>;
-            </div>;
-          </section>;
-          {/* Category Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
->>>>>>> main
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
@@ -1585,11 +1539,6 @@ export default function AIServicesPage() {
     </MainLayout>
   );
 }
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
-=======
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function AIServices() {
   return (
@@ -1999,5 +1948,3 @@ export default function AIServicesPage(req, res) {
   }
 }
 ;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> main

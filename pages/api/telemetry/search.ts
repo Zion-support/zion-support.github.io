@@ -56,7 +56,6 @@ export default function handler(req, res) {
     for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1);
     const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }));
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
-=======
 
 
 

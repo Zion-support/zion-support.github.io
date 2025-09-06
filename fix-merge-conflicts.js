@@ -62,14 +62,6 @@ function fixMergeConflicts(filePath) {
     console.error(`Error fixing ${filePath}: ${error.message}`);
     return false;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> main/g,''); content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> main/g,''); content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> main/g,''); content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> main/g,''); content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> main/g,''); content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> main/g,''); content = content.replace(/<<<<<<< HEAD/g,''); content = content.replace(/=======/g,''); content = content.replace(/>>>>>>> main/g,''); const lines = content.split('\n'); const cleanedLines = []; const seenImports = new Set(); for (let i = 0; i < lines.length; i++) { const line = lines[i].trim(); if (line === '' || line.startsWith('import') && seenImports.has(line)) { continue} if (line.startsWith('import')) { seenImports.add(line)} const cleanedLine = line .replace(/,,+/g,',') .replace(/;;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .trim(); if (cleanedLine) { cleanedLines.push(cleanedLine)} } const finalContent = cleanedLines.join('\n'); fs.writeFileSync(filePath,finalContent,'utf8'); console.log(`Fixed merge conflicts in: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } function findFilesWithConflicts(dir) { const files = []; function traverse(currentDir) { const items = fs.readdirSync(currentDir); for (const item of items) { const fullPath = path.join(currentDir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { traverse(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) { const content = fs.readFileSync(fullPath,'utf8'); if (content.includes('<<<<<<< HEAD') || content.includes('>>>>>>> main')) { files.push(fullPath)} } } } traverse(dir); return files} const conflictedFiles = findFilesWithConflicts('.'); console.log(`Found ${conflictedFiles.length} files with merge conflicts`); for (const file of conflictedFiles) { fixMergeConflicts(file)} console.log('Merge conflict resolution complete!');
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 }
 // Main execution
 console.log('Finding files with merge conflict markers...');
@@ -91,8 +83,3 @@ try {
   console.log('TypeScript check found some issues, but continuing...');
 }
 console.log('\nMerge conflict fixing complete!');
-<<<<<<< HEAD
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

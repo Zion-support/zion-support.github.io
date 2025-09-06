@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 tagline: string;
 price: string;
 period: string;
@@ -33,42 +24,8 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
-name: string;
-tagline: string;
-price: string;
-period: string;
-description: string;
-features: string[];
-popular: boolean;
-icon: string;
-category: string;
-}export const microSaasServices: MicroSaasService[] = [ {;
-  id: 'ai-content-generator';
-name: 'AI Content Generator';
-tagline: 'Generate high-quality content with AI';
-price: '$29';
-period: '/month';
-popular: true;
-icon: '🤖';
-category: 'AI & Machine Learning';
-}];
-'All';
-'AI & Machine Learning';
-'Cybersecurity';
-'Cloud Computing';
-'Data Analytics' ];
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface MicroSaasService {
   id: string,
   name: string,
@@ -2241,7 +2198,6 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
   if (categoryName === 'All' || categoryName === 'all') {
     return enhancedRealMicroSaasServices
   }
-<<<<<<< HEAD
 // Service categories
 export const serviceCategories = [
   'AllAI & Enterprise Automation',
@@ -2274,20 +2230,11 @@ export const serviceCategories = [
   'Robotics & AutomationAgriculture & Food Tech'
 ];
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export const getServicesByCategory = (category: string) => {
   if (category === 'All') return allEnhancedRealMicroSaasServices;
   return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
@@ -2307,8 +2254,6 @@ export const serviceCategories = [
   'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
 ];
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   // Map category names to match service categories
   const categoryMapping: { [key: string]: string[] } = {
@@ -2374,14 +2319,6 @@ export const serviceCategories = [
 
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

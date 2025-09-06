@@ -12,10 +12,8 @@ function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string };
 
   const [activeTab, setActiveTab] = useState<string>("kanban");
-=======
 
 
-=======
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {AppHeader} from "@/layout/AppHeader";
@@ -29,7 +27,6 @@ import {Briefcase} from "lucide-react";
 function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string }
   const [activeTab, setActiveTab] = useState<string>("kanban");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { AppHeader } from "@/layout/AppHeader",
@@ -44,10 +41,7 @@ function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string },
   const [activeTab, setActiveTab] = useState<string>("kanban"),
 
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <SEO
@@ -99,12 +93,8 @@ export default function HiringTracker() {
     </ProtectedRoute>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <>;
       <SEO;
@@ -139,10 +129,8 @@ export default function HiringTracker() {
       </main>;
       <Footer />;
     </>);
-=======
 
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default /**
  * HiringTracker - Function description
@@ -153,10 +141,6 @@ function HiringTracker() {
       <HiringTrackerContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;
 }
 ;
@@ -170,6 +154,3 @@ export default function HiringTracker() {;
 }export default function HiringTracker () {
   return (<ProtectedRoute> <HiringTrackerContent /> </ProtectedRoute> 
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

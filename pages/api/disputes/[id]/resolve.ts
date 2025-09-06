@@ -1,6 +1,4 @@
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default async function handler(
   req: NextApiRequest
@@ -8,15 +6,11 @@ export default async function handler(
 ) {
   const { id } = req && req.query;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
 export default async function handler(
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   req: NextApiRequest
   res: NextApiResponse
 ) {;
@@ -28,8 +22,6 @@ export default async function handler(
 
 
   if (req && req.method === "POST") {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       ensureAdmin(user);
     } catch (e: any) {
@@ -38,9 +30,7 @@ export default async function handler(
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status($1).json({ $2 });
     const { resolutionSummary, status } = req && req.body || {};
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const now = new Date().toISOString();
 
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
@@ -104,12 +94,9 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
-=======
     return res.status(200).json({ dispute });
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     return res.status(200).json({ dispute });
 
 
@@ -145,8 +132,6 @@ req: NextApiRequest
     }
     ((dispute.status = status |"Resolved")
       (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -259,7 +244,6 @@ function handler() {
 if ( {) {
   $2
 }
-=======
     try {
       ensure_admin (user);
     } catch (e: any) {
@@ -290,4 +274,3 @@ if ( {) {
     return res.status(200).json({ dispute });
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

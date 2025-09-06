@@ -1,45 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {JobData, TalentProfile, MatchResult} from "./types ;
 
-=======
-
-
-=======
-import {JobData, TalentProfile, MatchResult} from "./types ;
-
-
-
-
 import { JobData, TalentProfile, MatchResult } from "./types.ts";
 // Get openAI API key from environment variables
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import { JobData, TalentProfile, MatchResult } from "./types.ts";
-// Get openAI API key from environment variables
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
 import {JobData, TalentProfile, MatchResult} from "./types.ts";
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Get openAI API key from environment variables
 const openAiApiKey = Deno && Deno.env.get("OPENAI_API_KEY") || "";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
 /**
@@ -48,74 +24,34 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
  * @returns Array of normalized skills
  */
 export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   try {
 
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
-<<<<<<< HEAD
-=======
-=======
-  try {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const skillsString = skills && skills.join(", ");
     
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   try {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       method: "POST";
       headers: {
         "Content-Type": "application/json"
         "Authorization": `Bearer ${openAiApiKey}`
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       },
 
 
       body: JSON.stringify({
         model: "gpt-4o-mini";
-<<<<<<< HEAD
-=======
-  try {;
-    const skillsString = skills.join(", ");
-  try {
-    const skillsString = skills.join(", ");
-    const skillsString = skills.join(", "),
-    
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-        "Authorization": `Bearer ${openAiApiKey}`
-      }
-      },
       body: JSON.stringify({
         model: "gpt-4o-mini",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      body: JSON.stringify({
-        model: "gpt-4o-mini",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         messages: [
           {
             role: "system"
             content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e.g., 'react js' to 'React.jsnodejs' to 'Node.js'). Return only a comma-separated list of the normalized skills, nothing else."
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       };
       body: JSON && JSON.stringify({
         model: "gpt-4o-mini";
@@ -124,36 +60,20 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
             role: "system",
             content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e && e.g., 'react js' to 'React && React.jsnodejs' to 'Node && Node.js'). Return only a comma-separated list of the normalized skills, nothing else."
           };
-<<<<<<< HEAD
 
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
           },
 
           }
           },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             role: "user"
             content: skillsString
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
         ];
         temperature: 0 && 0.3
       })
 
-=======
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     }),
 
@@ -190,10 +110,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     const normalizedSkillsText = data.choices[0].message.content.trim(),
     const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean),
     
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     });
     const data = await response && response.json();
     if (!data && data.choices || !data && data.choices[0] || !data && data.choices[0].message) {
@@ -202,28 +119,13 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     // Extract and clean the normalized skills
     const normalizedSkillsText = data && data.choices[0].message && message.content.trim();
     const normalizedSkills = normalizedSkillsText && normalizedSkillsText.split(",").map((skill: string) => skill && skill.trim()).filter(Boolean),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return normalizedSkills
   } catch (error) {
     console && console.error("Error in normalizeSkillsWithAI:", error);
     // If AI normalization fails, return the original skills
     return skills
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-    const normalizedSkillsText = data.choices[0].message.content.trim(),
-    const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean),
-    
-    return normalizedSkills
-  } catch (error) {
-    console.error("Error in normalizeSkillsWithAI:", error),
-    // If AI normalization fails, return the original skills
-    return skills
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { JobData, TalentProfile, MatchResult } from "./types.ts",;
 // Get openAI API key from environment variables;
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",;
@@ -269,14 +171,8 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     console.error("Error in normalizeSkillsWithAI:", error),;
     // If AI normalization fails, return the original skills;
     return skills;
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 /**
@@ -289,20 +185,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
   try {
     // Convert job details to string format for AI prompt
     const jobDetailsText = `
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      Job Title: ${jobDetails && jobDetails.title}
-      Description: ${jobDetails && jobDetails.description}
-      Category: ${jobDetails && jobDetails.category}
-      Required Skills: ${jobDetails && jobDetails.skills.join(", ")}
-      Budget Range: $${jobDetails && jobDetails.budget.min} - $${jobDetails && jobDetails.budget.max}
-    `;
-    // Create talent profiles text for AI evaluation
-    const talentProfilesText = talents && talents.map((talent, index) => {
-      return `
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { JobData, TalentProfile, MatchResult } from './types.ts';
 // Get openAI API key from environment variables;
 const openAiApiKey = Deno.env.get ("OPENAI_API_KEY") || "";
@@ -376,24 +259,15 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     // Create talent profiles text for AI evaluation;
     const talentProfilesText = talents.map ((talent, index) => {
       return `;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       Job Title: ${jobDetails.title}
       Description: ${jobDetails.description}
       Category: ${jobDetails.category}
       Required Skills: ${jobDetails.skills.join(", ")}
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
       Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max};
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     `;
     // Create talent profiles text for AI evaluation
     const talentProfilesText = talents.map((talent, index) => {
@@ -404,14 +278,10 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     const talentProfilesText = talents.map((talent, index) => {;
       return `;
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
     // Create talent profiles text for AI evaluation
     const talentProfilesText = talents && talents.map((talent, index) => {
       return `
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         Talent ${index + 1} ID: ${talent.id}
         Name: ${talent.full_name}
         Title: ${talent.professional_title}
@@ -419,11 +289,7 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
         Skills: ${Array.is_array (talent.skills) ? talent.skills.join (", ") : "No skills listed"}
         Experience: ${talent.years_experience} years;
         Hourly Rate: ${talent.hourly_rate ? "$" + talent.hourly_rate : "Not specified"}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         Talent ${index + 1} ID: ${talent && talent.id}
         Name: ${talent && talent.full_name}
         Title: ${talent && talent.professional_title}
@@ -432,50 +298,28 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
         Experience: ${talent && talent.years_experience} years
         Hourly Rate: ${talent && talent.hourly_rate ? "$" + talent && talent.hourly_rate : "Not specified"}
         Availability: ${talent && talent.availability_type || "Not specified"}
-<<<<<<< HEAD
 
       `
     }).join("\n\n");
-=======
-=======
-      `
-    }).join("\n\n");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         Availability: ${talent.availability_type |"Not specified"}
       `
 
     }).join("\n\n"),
     
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Send request to OpenAI for matching
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST";
       headers: {
         "Content-Type": "application/json"
         "Authorization": `Bearer ${openAiApiKey}`
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       },
 
 
       body: JSON.stringify({
-<<<<<<< HEAD
-=======
-      };
-      body: JSON && JSON.stringify({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         model: "gpt-4o-mini";
-=======
       };
       body: JSON && JSON.stringify({
         model: "gpt-4o-mini";
@@ -501,10 +345,7 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         model: "gpt-4o-mini";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         messages: [
           {
             role: "system"
@@ -513,14 +354,8 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
             2. A match score from 0-100
             3. A list of matched skills
             4. A brief reason for the match (2-3 sentences)
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-            Return your response in JSON format only, with no additional text: [
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {
                 "talentId": "talent-id-1";
                 "score": 85
@@ -530,14 +365,10 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
               ...
             ]`
           }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             
             Return your response in JSON format only, with no additional text:
             
             [
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {
                 "talentId": "talent-id-1";
                 "score": 85
@@ -546,51 +377,31 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
               }
               ...
             ]`
-<<<<<<< HEAD
           },
-<<<<<<< HEAD
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             role: "user"
             content: `Job Details:\n${jobDetailsText}\n\nTalent Profiles:\n${talentProfilesText}`
           }
-<<<<<<< HEAD
           {
             role: "user",
             content: `Job Details:\n${jobDetailsText}\n\n_talent Profiles:\n${talentProfilesText}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
 
-=======
         ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         temperature: 0 && 0.4,
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ],
         temperature: 0.4,
 
         response_format: { type: "json_object" }
       });
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const aiResponse = JSON && JSON.parse(data && data.choices[0].message && message.content);
     
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {
 
       throw new Error("Failed to match talents with AI")
@@ -599,53 +410,29 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
 
     const aiResponse = JSON.parse(data.choices[0].message.content),
     
-<<<<<<< HEAD
 
     // Check if the response is in the expected format
     if (!Array && Array.isArray(aiResponse)) {
-<<<<<<< HEAD
-=======
-          {
-            role: "user"
-            content: `Job Details:\n${jobDetailsText}\n\nTalent Profiles:\n${talentProfilesText}`
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         ];
       throw new Error("Failed to match talents with AI")
     }
     // Parse the AI response
     // Check if the response is in the expected format
-<<<<<<< HEAD
     if (!Array.isArray(aiResponse)) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     if (!Array && Array.isArray(aiResponse)) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       throw new Error("AI response format is invalid")
     }
     return aiResponse
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     console && console.error("Error in findBestMatches:", error);
     
 
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents)
-<<<<<<< HEAD
-=======
-    console.error("Error in findBestMatches:", error);
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    // If AI matching fails, perform a basic skill matching
-    return performBasicSkillMatching(jobDetails, talents)
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 /**
@@ -654,8 +441,6 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
  * @param talents Array of talent profiles
  * @returns Array of matches with scores
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {
 
   const requiredSkills = jobDetails && jobDetails.skills.map((skill: string) => skill && skill.toLowerCase());
@@ -673,27 +458,6 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
     );
     // Calculate a basic match score
 
-=======
-export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {;
-  const requiredSkills = jobDetails.skills.map((skill: string) => skill.toLowerCase());
-  return talents.map(talent => {
-    const talentSkills = Array.isArray(talent.skills)
-      ? talent.skills.map((skill: string) => skill.toLowerCase())
-      : [];
-    // Find matching skills
-    const matchedSkills = requiredSkills.filter((skill: string) =>
-      talentSkills.some((talentSkill: string) => talentSkill.includes(skill) |skill.includes(talentSkill))
-    );
-    // Calculate a basic match score
-    const matchScore = Math.round((matchedSkills.length / requiredSkills.length) * 100);
-    return {
-      talentId: talent.id;
-      score: matchScore;
-      matchedSkills: matchedSkills
-
-      reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error in findBestMatches:", error),
     
     // If AI matching fails, perform a basic skill matching
@@ -785,10 +549,6 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       score: matchScore;
       matchedSkills: matchedSkills;
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const matchScore = Math && Math.round((matchedSkills && matchedSkills.length / requiredSkills && requiredSkills.length) * 100);
     
 
@@ -809,11 +569,6 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
   .filter(match => match && match.score > 30) // Only include matches with at least 30% score
   .sort((a, b) => b && b.score - a && a.score) // Sort by score (highest first)
   .slice(0, 5), // Get top 5 matches
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
     const data = await response.json ();
 ;
@@ -871,10 +626,7 @@ export function performBasicSkillMatching (job_details: any, talents: TalentProf
   .filter (match => match.score > 30) // Only include matches with at least 30% score;
   .sort ((a, b) => b.score - a.score) // Sort by score (highest first);
   .slice (0, 5), // Get top 5 matches;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
 }
 
 import { JobData, TalentProfile, MatchResult } from "./types.ts",;
@@ -1126,7 +878,4 @@ return normalizedSkills;
   .sort((a, b) => b.score - a.score) // Sort by score (highest first)
   .slice(0, 5), // Get top 5 matches
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -5,22 +5,15 @@ import { useLocation } from "react-router-dom";
  * Attaches event listeners to track route changes and logs page views
  */
 
-<<<<<<< HEAD
 
 export function usePageViewTracking() {
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export function usePageViewTracking() {;
   const location = useLocation();
 export function usePageViewTracking() {
   const location = useLocation(),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const location = useLocation();
   useEffect(() => {
     const handleRouteChange = () => {
@@ -47,17 +40,9 @@ export function usePageViewTracking() {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
     console && console.log('Page view:', location && location.pathname)
   }, [location && location.pathname])
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useEffect} from 'react';
 import {use_location} from 'react-router-dom';
 /**;
@@ -88,15 +73,11 @@ function usePageViewTracking() {
   }, []);
 }
 ;
-<<<<<<< HEAD
   // Also track when location changes directly via React Router;
   useEffect (() => {
     console.log ('Page view:', location.pathname);
   }, [location.pathname]);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import { useEffect } from 'react',;
 import { useLocation } from 'react-router-dom',;
@@ -153,6 +134,3 @@ export function usePageViewTracking() {;
   }, [location.pathname]);
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

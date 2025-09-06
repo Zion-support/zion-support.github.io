@@ -16,7 +16,6 @@ interface BudgetFieldsProps {
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <FormField
@@ -70,24 +69,16 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
->>>>>>> main
-}
-
-export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   return (
     <>
       <FormField
@@ -117,7 +108,3 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

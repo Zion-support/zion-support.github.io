@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -33,19 +32,10 @@ function ITService({ title, description, price, features, benefits, icon, href }
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, SRE, security, and infrastructure management. Engineered for uptime, efficiency, and scalability.'
-=======
-import React from 'react';
-import Link from 'next/link';
-
-export const metadata = {
-  title: 'IT Services | Zion Tech Group - Complete IT Solutions',
-  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and 24/7 support. Transform your IT infrastructure with expert solutions.',
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
 };
 
 export default function ITServicesPage() {
   return (
-<<<<<<< HEAD
     <div className="animate-fade-in">
       <section className="text-center py-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -519,16 +509,12 @@ function Plan({ name, price, duration, features }: {
 export default function ITServicesPage() {
   return (
     <div className="space-y-16">
-=======
-    <div className="max-w-6xl mx-auto px-4 py-8">
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-gray-50 to-blue-100 rounded-lg mb-16">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
           IT Services
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
           Complete IT infrastructure, cloud solutions, and digital transformation services to modernize your business operations.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -832,10 +818,6 @@ function ContactSection() {
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
           Let's discuss how we can improve your infrastructure's reliability, security, and performance. 
           Our IT experts have managed 200+ enterprise systems.
-=======
-          Complete IT infrastructure solutions to modernize, secure, and optimize your technology environment. 
-          From cloud migration to cybersecurity, we deliver enterprise-grade IT services.
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -1106,153 +1088,3 @@ function ContactSection() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-
-function ITServiceCard({ title, description, icon, pricing, features }: {
-  title: string;
-  description: string;
-  icon: string;
-  pricing: string;
-  features: string[];
-}) {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2 mb-4">
-        {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      <div className="text-lg font-semibold text-blue-600">
-        {pricing}
-      </div>
-    </div>
-  );
-}
-
-function CloudServiceCard({ provider, description, features, pricing }: {
-  provider: string;
-  description: string;
-  features: string[];
-  pricing: string;
-}) {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{provider}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2 mb-4">
-        {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      <div className="text-lg font-semibold text-blue-600">
-        {pricing}
-      </div>
-    </div>
-  );
-}
-
-function SecurityServiceCard({ title, description, icon, pricing }: {
-  title: string;
-  description: string;
-  icon: string;
-  pricing: string;
-}) {
-  return (
-    <div className="text-center bg-white p-6 rounded-lg shadow-md border border-gray-200">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="text-lg font-semibold text-blue-600">
-        {pricing}
-      </div>
-    </div>
-  );
-}
-
-function IndustryCard({ icon, title, description, solutions }: {
-  icon: string;
-  title: string;
-  description: string;
-  solutions: string[];
-}) {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {solutions.map((solution, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-            {solution}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function SupportTierCard({ name, price, period, description, features, popular }: {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-}) {
-  return (
-    <div className={`bg-white p-8 rounded-lg shadow-md border-2 ${popular ? 'border-blue-500' : 'border-gray-200'} relative`}>
-      {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-        </div>
-      )}
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="mb-6">
-        <span className="text-4xl font-bold text-gray-900">{price}</span>
-        <span className="text-gray-600">/{period}</span>
-      </div>
-      <ul className="space-y-3">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center">
-            <span className="text-green-500 mr-3">✓</span>
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <button className={`w-full mt-6 py-3 rounded-lg font-semibold transition-colors ${
-        popular 
-          ? 'bg-blue-600 text-white hover:bg-blue-700' 
-          : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-      }`}>
-        Get Started
-      </button>
-    </div>
-  );
-}
-
-function MetricCard({ number, label, description }: {
-  number: string;
-  label: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center bg-white p-6 rounded-lg shadow-md border border-gray-200">
-      <div className="text-4xl font-bold text-blue-600 mb-2">{number}</div>
-      <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
-      <div className="text-sm text-gray-600">{description}</div>
-    </div>
-  );
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-134f

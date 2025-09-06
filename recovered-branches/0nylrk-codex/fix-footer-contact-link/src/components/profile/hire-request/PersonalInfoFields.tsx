@@ -1,16 +1,11 @@
 import {
   FormField,
-=======
-<<<<<<< HEAD
 
 
   FormField,
 FormField,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   FormField,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   FormItem,
   FormLabel,
   FormControl,
@@ -24,7 +19,6 @@ interface PersonalInfoFieldsProps {
 }
 
 export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <FormField
@@ -68,15 +62,9 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   FormField,
   FormItem,
@@ -112,7 +100,6 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 }
 ;
 
-<<<<<<< HEAD
   ),;}
  interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues> 
@@ -201,6 +188,3 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

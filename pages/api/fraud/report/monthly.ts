@@ -1,5 +1,3 @@
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
@@ -25,10 +23,7 @@ export default async function handler(
   }
 
 
-=======
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -50,8 +45,6 @@ if ( {) {
   res.status (200).json (report);
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const month = (req.query.month as string) || new Date().toISOString().slice(0, 7);
   const store = getFraudStore();
   const report = await store.generateMonthlyReport(month);
@@ -64,8 +57,4 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

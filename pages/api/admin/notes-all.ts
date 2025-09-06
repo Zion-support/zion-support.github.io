@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getAllNotes } from './notes',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true',
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' }),
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getAllNotes } from './notes',;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const isAdmin = req.headers['x-admin'] === 'true'
-  if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
->>>>>>> main
   return res.status(200).json({ notes: getAllNotes() })
 };

@@ -46,14 +46,9 @@ export function ResumeVersionSelector({
       setIsLoading(false);
     }
   }
-=======
 
         setNewResumeTitle('')
 
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
       setIsLoading(true);
@@ -62,15 +57,10 @@ export function ResumeVersionSelector({
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
         setNewResumeTitle('')
 
 
         setNewResumeTitle('')
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -105,17 +95,13 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         onResumeChange(resumeId),;
         setSaveDialogOpen(false);
         setNewResumeTitle('');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       setIsLoading(false);
     }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="flex items-center gap-2">
@@ -168,11 +154,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setNewResumeTitle("");
       }
       setIsLoading(false);
@@ -198,7 +179,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Button
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
-<<<<<<< HEAD
 
             <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
               Cancel
@@ -208,10 +188,7 @@ onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() |isLoading}
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -235,18 +212,11 @@ onClick={handleCreateNewVersion}
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   );
 }
   )
 }
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

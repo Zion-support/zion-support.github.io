@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 interface PerformanceMonitorProps {
@@ -36,37 +35,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
           limit: (performance as any).memory.jsHeapSizeLimit
         } : null
       };
-=======
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
-        
-        if (navigationEntry) {
-          setMetrics({
-            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
-            memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0
-          });
-        }
-      });
->>>>>>> main
 
       observer.observe({ entryTypes: ['navigation'] });
 
-<<<<<<< HEAD
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
         console.log('Performance Metrics:', performanceData);
@@ -84,11 +55,6 @@ const PerformanceMonitor: React.FC = () => {
       window.removeEventListener('load', measurePerformance);
     };
   }, [onPerformanceData]);
-=======
-      return () => observer.disconnect();
-    }
-  }, []);
->>>>>>> main
 
   if (!metrics) return null;
 
