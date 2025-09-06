@@ -12,34 +12,11 @@ import { useTranslation } from "react-i18next";
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+<<<<<<< HEAD
 AlertDialogTitle,;
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import {
-  AlertDialog
-  AlertDialogAction
-  AlertDialogCancel
-  AlertDialogContent
-  AlertDialogDescription
-  AlertDialogFooter
-  AlertDialogHeader
-  AlertDialogTitle
-} from "../components/ui/alert-dialog";
-import {
-  useLanguage
-  SupportedLanguage
-  LanguageContextType
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-AlertDialogTitle,;
+=======
+  AlertDialogTitle,
+>>>>>>> main
 } from "../components/ui/alert-dialog";
 import {
   useLanguage,
@@ -233,13 +210,6 @@ export function LanguageDetectionPopup() {;
           <AlertDialogTitle className="text-white">;
           <AlertDialogAction
             onClick={handleAccept}
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
-            {t("general && general.yes")}
-{t("general.no")}
-            {t("general.no")}
-          </AlertDialogCancel>
-          <AlertDialogAction
-            onClick={handleAccept}
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
             {t("general.yes")}
@@ -247,8 +217,7 @@ export function LanguageDetectionPopup() {;
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  );
-}
+<<<<<<< HEAD
 );
             {t('general.no')}
           </AlertDialogCancel>;
@@ -275,43 +244,11 @@ export function LanguageDetectionPopup() {;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
-import { useState, useEffect  } from './react';
-import { use_translation  } from './react - i18next';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from '../components / ui / alert - dialog';
-import {
-  use_language,
-  SupportedLanguage,
-  LanguageContextType,
-} from '../context / LanguageContext';
-export /**
- * LanguageDetectionPopup - Function description
- */
-function LanguageDetectionPopup() {
-  const [open, set_open] = useState (false);
-  const { t } = use_translation ();
-  const { change_language, current_language, supported_languages } =;
-    use_language () as LanguageContextType;
-  const [detected_language, setDetectedLanguage] =;
-    useState < SupportedLanguage | null>(null);
-;
-  useEffect (() => {
-    // Check if this is first visit;
-    const has_visited = local_storage.get_item ("zion_has_visited");
-    // Check condition
-if (return) {
-  $2
-
-
-
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
     // Mark as visited;
     local_storage.set_item ("zion_has_visitedtrue");

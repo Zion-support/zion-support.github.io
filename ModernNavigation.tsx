@@ -7,32 +7,10 @@ import React from './react';
 interface ModernNavigationProps {
 class_name?: string;
 }
-interface ModernNavigationProps {
 
-
-  className?: string;
-}
-export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
-export default function ModernNavigation() {
-export default function Docs({ }: DocsProps) {
-
-  className?: string;
-}
-export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
-
-  // Add props here as needed
-:ModernNavigation.tsx
-}
-export default function ModernNavigation({ }: ModernNavigationProps) {
-}
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-export default function Docs({ }: DocsProps) {
-ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
-  className?: string;
-}
-export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
-origin/main
+export default function ModernNavigation({
+  className = "",
+}: ModernNavigationProps) {
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>

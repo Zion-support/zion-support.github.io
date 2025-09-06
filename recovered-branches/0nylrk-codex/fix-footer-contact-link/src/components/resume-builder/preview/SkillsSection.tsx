@@ -1,21 +1,29 @@
+<<<<<<< HEAD
+
+
 import {Skill} from '@/types/resume';
+=======
+import { Skill } from "@/types/resume";
+>>>>>>> main
+interface SkillsSectionProps {
+  skills: Skill[];
+}
 
 
-
-import { Skill } from '@/types/resume';
-import { Skill } from '@/types/resume';
-import {Skill} from '@/types/resume';
 interface SkillsSectionProps {
   skills: Skill[];
 }
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
+<<<<<<< HEAD
+  const skillsByCategory = skills.reduce((acc, skill) => {;
+    const category = skill.category || 'Other';
+    if (!acc[category]) {
+      acc[category] = []
+    }
+    acc[category].push(skill);
 
-
-        acc[category] = [];
-      }
-      acc[category].push (skill);
-      return acc;
+=======
 import { Skill } from '@/types/resume',;
 interface SkillsSectionProps {;
   skills: Skill[];
@@ -48,13 +56,22 @@ const skillsByCategory = skills.reduce(
 
   if (skills.length === 0) return null,
   
-
+=======
+  const skillsByCategory = skills.reduce(
+    (acc, skill) => {
+      const category = skill.category || "Other";
+      if (!acc[category]) {
+        acc[category] = [];
+      }
+      acc[category].push(skill);
+      return acc;
     },
     {} as Record<string, Skill[]>,
   );
 
   if (skills.length === 0) return null;
 
+>>>>>>> main
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
@@ -63,25 +80,13 @@ const skillsByCategory = skills.reduce(
           <div key={category}>
             <h3 className="text-sm font-medium">{category}</h3>
             <p className="text-sm">
-
-              {skills.map(skill => skill.name).join(', ')}
-
-
-{skills.map((skill) => skill.name).join(", ")}
               {skills.map((skill) => skill.name).join(", ")}
-              {skills.map(skill => skill.name).join(', ')}
             </p>
           </div>
         ))}
       </div>
     </div>
-    },
-    {} as Record < string, Skill[]>,
   );
-;
-  // Check condition
-if (return null) {
-  $2
 }
 import {Skill} from '@/types/resume';
 interface SkillsSectionProps {;
@@ -155,10 +160,4 @@ export function SkillsSection({ skills } SkillsSectionProps) {;
       </div>;
     </div>);
 }
-  ),;}
- if (skills.length === 0) return null;
-return (</p> </div>) ) 
-}</div> </div>) 
-}
-  );
-}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

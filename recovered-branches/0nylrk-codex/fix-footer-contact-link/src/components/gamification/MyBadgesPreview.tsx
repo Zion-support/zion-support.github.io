@@ -89,8 +89,20 @@ export const MyBadgesPreview:React.FC = () => {;
       <div className="flex flex-wrap gap-2">
         {earnedBadges.map(({ badge, date }) => (
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />
+<<<<<<< HEAD
+        ))}
+      </div>
+      {/* Example progress for next badge */}
+      <div className="mt-3 text-xs text-zion-slate-light">
+        <span>Complete your profile for more rewards!</span>
+      </div>
+<<<<<<< HEAD
     </div>;
 );
+=======
+    </div>
+  );
+>>>>>>> main
 };
 
 import React from "react",;

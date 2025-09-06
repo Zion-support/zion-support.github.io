@@ -228,33 +228,14 @@ export default function handler(req, res) {
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 }
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-      security_schemes: {
-  res.setHeader('Content-Typeapplication/json');
-  res.status(200).json(toOpenApi())
-}
-security_schemes: {
-        bearer_auth: { type: "http", scheme: "bearer", bearer_format: "JWT" },
-      },
-    },
-  }
-}
-export default /**
- * handler - Function description
- */
-function handler() {
-  res.set_header ("Content - Type", "application / json");
-  res.status (200).json (toOpenApi ());
-}
 
-
-  res.status(200).json(toOpenApi());
-}
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
+<<<<<<< HEAD
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
 res.setHeader("Content-Type", "application/json");
+=======
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader("Content-Type", "application/json");
+>>>>>>> main
   res.status(200).json(toOpenApi());
 }
 import type { NextApiRequest, NextApiResponse } from 'next';

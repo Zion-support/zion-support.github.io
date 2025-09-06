@@ -108,8 +108,8 @@ function handler() {
   res.status (200).json ({
     ok: true,
     profile,
-    required_documents: getRequiredDocuments (profile.role),
-    optional_documents: getOptionalDocuments (profile.role),
+    requiredDocuments: getRequiredDocuments(profile.role),
+    optionalDocuments: getOptionalDocuments(profile.role),
   });
 }
 

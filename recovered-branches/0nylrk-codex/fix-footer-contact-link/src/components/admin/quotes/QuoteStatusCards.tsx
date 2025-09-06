@@ -213,10 +213,10 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           <p className="text-sm text-zion-slate-light">Finalized or declined quotes</p>
         </CardContent>
       </Card>
+<<<<<<< HEAD
+=======
     </div>
-  );
-}
-
+<<<<<<< HEAD
   )
 },
 import React from "react",;
@@ -304,6 +304,9 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 
     </div>;
 );
+=======
+  );
+>>>>>>> main
 };
 
 

@@ -1,24 +1,19 @@
+<<<<<<< HEAD
+
+
 import { Loader2 } from "lucide-react",
 
-import { Loader2 } from "lucide-react";
-import { Loader2 } from "lucide-react",
+=======
 import {Loader2} from "lucide-react";
+=======
 import { Loader2 } from "lucide-react",
-interface ResultsHeaderProps {
-  isLoading: boolean;
-  resultCount: number
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 import { Loader2 } from "lucide-react";
-
-interface ResultsHeaderProps {
-  isLoading: boolean;
-  resultCount: number
-
-import { Loader2 } from "lucide-react";
+>>>>>>> main
 interface ResultsHeaderProps {
   isLoading: boolean;
   resultCount: number;
-
 }
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
@@ -30,24 +25,13 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         </div>
       ) : (
         <span>
-
-import { Loader2 } from "lucide-react",;
-;
-interface ResultsHeaderProps {;
-  isLoading:boolean,;
-  resultCount:number;
-}
-;
-export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
-  return (;
-          {resultCount === 0
-            ? "No talents found. Try adjusting your filters."
-            : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
-        </span>
+<<<<<<< HEAD
           {resultCount === 0 ? (
             "No talents found. Try adjusting your filters."
           ) : (
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
+<<<<<<< HEAD
+=======
 import { Loader2 } from "lucide-react",;
 interface ResultsHeaderProps {;
   isLoading: boolean;
@@ -82,7 +66,12 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
 
 
           )}
-        </span>;
+=======
+          {resultCount === 0
+            ? "No talents found. Try adjusting your filters."
+            : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
+>>>>>>> main
+        </span>
       )}
     </div>;
   );
@@ -111,8 +100,7 @@ function ResultsHeader() {
     </div>);
 }
     </div>
-
-  )
+  );
 }
 ;
 

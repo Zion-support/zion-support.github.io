@@ -1,69 +1,52 @@
+<<<<<<< HEAD
+
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+
 interface TalentCardAvatarProps {;
 
+  profilePicture?: string;
+  fullName: string;
+=======
+
 
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
+=======
 import React from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TalentCardAvatarProps {
   profilePicture?: string,
   fullName: string
-}
-
-import React from "react";
-
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-
-import React from "react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-import React from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-
-interface TalentCardAvatarProps {
-  profilePicture?: string,
-  fullName: string
-}
-export function TalentCardAvatar({
-  profilePicture
-  fullName
-
+=======
 import React from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 interface TalentCardAvatarProps {
   profilePicture?: string;
   fullName: string;
+>>>>>>> main
 }
 
 export function TalentCardAvatar({
   profilePicture,
   fullName,
-
 }: TalentCardAvatarProps) {
   // Get initials for avatar fallback
-
   const getInitials = (name: string) => {
     return name
-      .split(" ")
-      .map((part) => part[0])
-      .join("")
-      .toUpperCase();
-}
-
-  return (
-    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
-      <AvatarImage src={profilePicture |undefined} alt={fullName} />
-      <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
-        {getInitials(fullName)}
-      </AvatarFallback>
-    </Avatar>
+<<<<<<< HEAD
       .split(' ')
       .map(part => part[0])
       .join('')
+<<<<<<< HEAD
+=======
+      .split(" ")
+      .map((part) => part[0])
+      .join("")
+>>>>>>> main
       .toUpperCase();
   };
       .toUpperCase()
@@ -73,11 +56,13 @@ export function TalentCardAvatar({
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
       <AvatarImage src={profilePicture || undefined} alt={fullName} />
       <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
+<<<<<<< HEAD
         {getInitials(fullName)}
       </AvatarFallback>
     </Avatar>
   )
 }
+=======
 import React from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 interface TalentCardAvatarProps {;
@@ -86,25 +71,6 @@ interface TalentCardAvatarProps {;
 }
 ;
 export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarProps) {;
-
-  profilePicture?: string;
-  fullName: string;
-}
-export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCardAvatarProps) {;
-  // Get initials for avatar fallback;
-  const getInitials = (name: string) => {;
-
-import React from "react",;
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
-;
-interface TalentCardAvatarProps {;
-  profilePicture?:string,;
-  fullName:string;
-}
-;
-export function TalentCardAvatar({ profilePicture, fullName } TalentCardAvatarProps) {;
-  // Get initials for avatar fallback;
-  const getInitials = (name:string) => {;
   // Get initials for avatar fallback;
   const getInitials = (name: string) => {;
     return name;

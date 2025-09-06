@@ -43,9 +43,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
 
 
-  res && res.setHeader("Allow", "GET");
-  return res && res.status(405).end("Method Not Allowed");
+    }
+    return res && res.status(200).json({ dispute });
+  }
 
+  res.setHeader("Allow", "GET");
+  return res.status(405).end("Method Not Allowed");
 }
 
 

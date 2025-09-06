@@ -42,17 +42,12 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
-    </div>;
-);
-
+<<<<<<< HEAD
         <Button variant="outline" onClick={onResetFilters}>
           Clear Filters
         </Button>
       )}
-    </div>
-  );
-}
-
+<<<<<<< HEAD
     </div>;
 );
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
@@ -80,15 +75,16 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
           ? "Try adjusting your filters";
           : "You don't have any fraud flags yet"}
       </p>;
-      {has_filters && (
-        <Button variant="outline" on_click={onResetFilters}>;
-          Clear Filters;
-        </Button>)}
-    </div>);
-}
-;
-
-
+      {hasFilters && (;
+        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
+      )}
+    </div>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+    </div>
+  );
+>>>>>>> main
 };
 
 import React from "react",;

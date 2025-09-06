@@ -112,12 +112,21 @@ export function LanguageSelector() {;
         ))}
       </DropdownMenuContent>;
     </DropdownMenu>;
+  );
+=======
+import React from './react';
+import { use_translation  } from './react - i18next';
+import { Button  } from '@/components / ui / button';
+import { Globe  } from './lucide-react';
 import {
-
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
 DropdownMenuTrigger,;
+=======
+  DropdownMenuTrigger,
+>>>>>>> main
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 

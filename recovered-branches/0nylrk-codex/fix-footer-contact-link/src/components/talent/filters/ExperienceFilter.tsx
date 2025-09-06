@@ -1,31 +1,33 @@
-const handleChange = (values: number[]) => {
+<<<<<<< HEAD
+
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Slider} from "@/components/ui/slider";
 import {ExperienceFilterProps} from "@/types/filters";
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
+=======
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
+import { ExperienceFilterProps } from "@/types/filters";
+export function ExperienceFilter({
+  experienceRange,
+  setExperienceRange,
+  expanded,
+  toggleSection,
+  isMobileFilterOpen,
+}: ExperienceFilterProps) {
+>>>>>>> main
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0], values[1]]);
   };
+=======
 import { ChevronDown, ChevronUp } from "lucide-react",
-import { Slider } from "@/components/ui/slider";
-import { ExperienceFilterProps } from "@/types/filters";
-
-export function ExperienceFilter({
-  experienceRange
-  setExperienceRange
-  expanded
-  toggleSection
-  isMobileFilterOpen
-}: ExperienceFilterProps) {
-  const handleChange = (values: number[]) => {
-    setExperienceRange([values[0], values[1]]);
-  }
 import { Slider } from "@/components/ui/slider",
 import { ExperienceFilterProps } from "@/types/filters",
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0], values[1]])
   },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -40,20 +42,29 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
       {expanded && (
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
-<Slider
-          <Slider
+<<<<<<< HEAD
           <Slider 
+<<<<<<< HEAD
+=======
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Slider } from "@/components/ui/slider",;
 import { ExperienceFilterProps } from "@/types/filters",;
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
+  const handleChange = (values: number[]) => {;
+    setExperienceRange([values[0], values[1]]);
+  };
+
+=======
 
 
 
@@ -101,16 +112,11 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             <span>{experienceRange[0]} years</span>;
             <span>{experienceRange[1]} years</span>;
           </div>;
-
+          <Slider;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
           <Slider
-
-          <Slider 
-
-          <Slider;
-            value={[experienceRange[0], experienceRange[1]]}
-          <Slider ;            value={[experienceRange[0], experienceRange[1]]}
-          <Slider;
-
+>>>>>>> main
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
@@ -120,7 +126,11 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           />;
         </div>;
       )}
-    </div>;
+    </div>
+  );
+}
+
+=======
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
 import { ExperienceFilterProps  } from '@/types / filters';
@@ -160,25 +170,4 @@ function ExperienceFilter() {
         </div>)}
     </div>);
 }
-  ),;}
- export function ExperienceFilter ({
-  experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen 
-}: ExperienceFilterProps) {
-  const handleChange = (values: number[]) => {
-  setExperienceRange ([values[0], values[1]]) 
-};
-mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className=" h-4 w-4 text-zion-slate-light" />) 
-}</button> <span> {
-  experienceRange[0] 
-}years</span> <span> {
-  experienceRange[1] 
-}years</span> </div> <Slider /> </div>) 
-}</div>) 
-}
-            className="mt-6"
-          />
-        </div>
-      )}
-    </div>
-  );
-}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

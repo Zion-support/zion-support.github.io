@@ -63,17 +63,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
-    return res.status(200).json({ dispute })
-  }
-    ((dispute && dispute.status = status || "Resolved"),
-      (dispute && dispute.resolvedAt = dispute && dispute.status === "Resolved" ? now : undefined));
-    dispute && dispute.resolutionSummary = resolutionSummary || dispute && dispute.resolutionSummary;
-    dispute && dispute.updatedAt = now;
-    await upsertDispute(dispute);
-    return res && res.status(200).json({ dispute });
-  }
-  res && res.setHeader("Allow", "POST");
-  return res && res.status(405).end("Method Not Allowed");
+
+  res.setHeader("Allow", "POST");
+  return res.status(405).end("Method Not Allowed");
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';

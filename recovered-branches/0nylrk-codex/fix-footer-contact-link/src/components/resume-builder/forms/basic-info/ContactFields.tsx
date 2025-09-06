@@ -1,16 +1,4 @@
-  FormField,
-
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
+<<<<<<< HEAD
 
 
 interface ContactFieldsProps {
@@ -24,6 +12,22 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+>>>>>>> main
+interface ContactFieldsProps {
+  control: Control<BasicInfoFormData>;
+}
 
 
 interface ContactFieldsProps {
@@ -129,19 +133,17 @@ export function ContactFields({ control } ContactFieldsProps) {;
       <FormField
         control={control}
         name="linkedin"
-      />;
-;
-      <FormField;
-        control={control}
-        name="linkedin";
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>LinkedIn</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://linkedin.com/in/username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>LinkedIn</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="https://linkedin.com/in/username"
+                {...field}
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
         )}
       />;
 ;
@@ -157,30 +159,9 @@ export function ContactFields({ control } ContactFieldsProps) {;
             <FormMessage />;
           </FormItem>;
         )}
-
-      />;
-    </div>;
-              />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="github";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > GitHub</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://github.com / username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-    </div>);
-}
-
-  )
+      />
+    </div>
+  );
 }
 ;
 

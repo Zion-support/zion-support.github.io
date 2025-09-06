@@ -1048,16 +1048,12 @@ origin/automation-improvements-final
                     </div>
                   </div>
                 </div>
-
-
-
-
+<<<<<<< HEAD
 <p className="text-sm text-gray-600 mt-8">
+=======
+
                 <p className="text-sm text-gray-600 mt-8">
-<p className="text-sm text-gray-600 mt-8">
-                <p className="text-sm text-gray-600 mt-8">
-origin/automation-improvements-final
-<p className="text-sm text-gray-600 mt-8">
+>>>>>>> main
                   Last updated: January 2024
                 </p>
               </div>
@@ -1065,27 +1061,10 @@ origin/automation-improvements-final
           </div>
         </section>
       </div>
-    </MainLayout>
+    </MainLayout>;
   );
 }
- 
-ursor/fix-lint-push-and-merge-to-main-ae4e
-import Layout from '../components/layout/Layout';
-import SEOOptimizer from '../components/SEOOptimizer';
-import AnalyticsTracker from '../components/AnalyticsTracker';
-import ErrorBoundary from '../components/ErrorBoundary';
-import { motion } from 'framer-motion';
-import {
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Globe,
-  User,
-  Settings,
-  AlertTriangle,
-  CheckCircle,
-  Mail,;} from 'lucide-react';
+<<<<<<< HEAD
 
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
@@ -1208,6 +1187,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                   Information We Collect;
                 </h2>;
                 <p className="mb-6">;
+=======
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
@@ -2022,6 +2002,30 @@ className="space-y-12"
 export default PrivacyPage;
 
 
+
+
+
+ 
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
                 <p className="mb - 6">;
@@ -2049,23 +2053,31 @@ export default PrivacyPage;
 <p className="text - sm text - gray - 600 mt - 8">;
                   Last updated: January 2024;
                 </p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>);
-}
-
-
- 
-ursor/integrate-build-improve-and-re-verify-b76c
-origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-origin/cursor/integrate-build-improve-and-re-verify-242d
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-origin/main
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                  <a;
+                    href="mailto:kleber@ziontechgroup.com";
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2";
+                  >;
+                    <Mail className="w-5 h-5" />;
+                    Email Us;
+                  </a>;
+                  <a;
+                    href="/contact";
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2";
+                  >;
+                    <User className="w-5 h-5" />;
+                    Contact Form;
+                  </a>;
+                </div>;
+              </motion.div>;
+            </div>;
+          </section>;
+        </main>;
+      </Layout>;
+    </ErrorBoundary>;
+  );
+},;
+export default PrivacyPage;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> main

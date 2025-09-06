@@ -7,41 +7,55 @@ if (req && req.method === "GET") {
     const state = readState();
     return res && res.status(200).json({ overrides: state && state.overrides });
   }
-  if (req && req.method === "POST") {
-    const { jobId, disableCrmSync, disableAtsSync } = req && req.body as {
-      jobId?: string;
-      disableCrmSync?: boolean;
-      disableAtsSync?: boolean;
-    };
-    if (!jobId) return res && res.status(400).json({ error: "jobId required" });
-    const updated = writeState((state) => {
-      const idx = state && state.overrides.findIndex((o) => o && o.jobId === jobId);
-      const entry = {
-        jobId,
-        disableCrmSync: !!disableCrmSync,
-        disableAtsSync: !!disableAtsSync,
-      };
-      if (idx >= 0) state && state.overrides[idx] = entry;
-      else state && state.overrides.push(entry);
-  if (req.method === 'GET') {
-    const state = readState();
-    return res.status(200).json({ overrides: state.overrides })
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-if (req.method === 'POST') {
-    const { jobId, disableCrmSync, disableAtsSync } = req.body as { jobId?: string, disableCrmSync?: boolean, disableAtsSync?: boolean };
-    if (!jobId) return res.status(400).json({ error: 'jobId required' });
-    const updated = writeState(state => {
-      const idx = state.overrides.findIndex(o => o.jobId === jobId);
+<<<<<<< HEAD
+}
+  if (req.method === 'GET') {
+    const { jobId, disableCrmSync, disableAtsSync } = req.body as { jobId?: string, disableCrmSync?: boolean, disableAtsSync?: boolean },;
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       const entry = { jobId, disableCrmSync: !!disableCrmSync, disableAtsSync: !!disableAtsSync };
-      if (idx >= 0) state.overrides[idx] = entry; else state.overrides.push(entry);
+      if (idx >= 0) state.overrides[idx] = entry, else state.overrides.push(entry);
     });
     return res && res.status(200).json({
       ok: true,
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
     });
   }
-return res && res.status(405).json({ error: "Method not allowed" });
+
+  return res && res.status(405).json({ error: "Method not allowed" });
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return res.status(405).json({ error: 'Method not allowed' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+return res.status(405).json({ error: "Method not allowed" });
+=======
+  return res.status(405).json({ error: "Method not allowed" });
+>>>>>>> main
+}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../lib / integrations / file_store';
 export default /**
@@ -156,26 +170,6 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-  return res.status(405).json({ error: 'Method not allowed' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 
-}
-}
-
-}
-return res.status(405).json({ error: "Method not allowed" });
-}
-}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

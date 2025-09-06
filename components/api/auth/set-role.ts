@@ -61,21 +61,9 @@ function handler() {
   }
   set("userId", role === "guest" ? "" : "test-user");
 
-
-
-  export default /**
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { role = 'guest', talent } = req.query as { role?: string, talent?: string };
-  const headers: Record<string, string> = {};
-  const cookies: string[] = [];
-  const set = (k: string, v: string, days = 7) => {
-    const expires = new Date(Date.now() + days * 864e5).toUTCString();
-    cookies.push(`${k}=${encodeURIComponent(v)}, Path=/, SameSite=Lax, Expires=${expires}`)
-  };
-  headers["Set-Cookie"] = cookies && cookies.join();
-  res && res.writeHead(302, { ...headers, Location: "/" });
-  res && res.end();
+  headers["Set-Cookie"] = cookies.join();
+  res.writeHead(302, { ...headers, Location: "/" });
+  res.end();
 }
 export default /**
  * handler - Function description

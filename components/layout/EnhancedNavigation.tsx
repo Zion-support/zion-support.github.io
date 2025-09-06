@@ -908,7 +908,7 @@ export default EnhancedNavigation;
 ;
       </AnimatePresence>
     </nav>
-
+  );
 };
 
 export default EnhancedNavigation;

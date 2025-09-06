@@ -15,17 +15,11 @@ import {
   DialogContent,
   DialogDescription,
   DialogHeader,
+<<<<<<< HEAD
 DialogTitle,;
-import React from "react";
-import {
-Dialog
-  DialogContent
-  DialogDescription
-  DialogHeader
-  DialogTitle
-
+=======
   DialogTitle,
-
+>>>>>>> main
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";

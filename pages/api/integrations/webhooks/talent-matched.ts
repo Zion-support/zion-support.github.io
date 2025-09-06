@@ -96,10 +96,14 @@ export default async function handler(
     });
     writeState((s) => s.logs.push(log));
 
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-  res.status(200).json({ ok: true, eventId });
-}
+
+<<<<<<< HEAD
 res.status(200).json({ ok: true, eventId });
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -131,9 +135,25 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
+}
+;
+  res.status(200).json({ ok: true, eventId });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  res.status(200).json({ ok: true, eventId });
+>>>>>>> main
 }
 }
 

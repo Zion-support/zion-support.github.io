@@ -1,7 +1,4 @@
-
-export * from "./PricingSuggestionBox";
-export * from "./ClientBudgetRecommender";
-export * from "./TalentRateRecommender";
+<<<<<<< HEAD
 // Index utility
 export const Index = () => {
   // Implementation here
@@ -13,11 +10,8 @@ export * from "./ClientBudgetRecommender";
 export * from "./TalentRateRecommender";
 
 export * from './TalentRateRecommender';
-
-export * from './PricingSuggestionBox',;
-export * from './ClientBudgetRecommender',;
-export * from './PricingSuggestionBox';
-export * from './ClientBudgetRecommender';
-export * from './PricingSuggestionBox',;
-export * from './ClientBudgetRecommender',;
-export * from './TalentRateRecommender';
+=======
+export * from "./PricingSuggestionBox";
+export * from "./ClientBudgetRecommender";
+export * from "./TalentRateRecommender";
+>>>>>>> main

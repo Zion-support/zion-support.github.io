@@ -1,41 +1,16 @@
+<<<<<<< HEAD
+
 
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
 
+=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
-
-
-
-import React from "react";
-
-import React from "react";
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-
-import { HelpCategory } from "./types";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HelpCategory} from "./types";
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { HelpCategory } from "./types",
-interface HelpCategoryListProps {
-  categories: HelpCategory[];
-  onCategorySelect: (categoryId: string) => void;
-  searchQuery: string
-}
-export function HelpCategoryList({
-  categories
-  onCategorySelect
-  searchQuery
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 import React from "react";
 import {
   Card,
@@ -45,6 +20,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { HelpCategory } from "./types";
+>>>>>>> main
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
@@ -55,30 +31,31 @@ export function HelpCategoryList({
   categories,
   onCategorySelect,
   searchQuery,
-
 }: HelpCategoryListProps) {
   // Filter categories based on search query
 
   const filteredCategories = searchQuery
     ? categories.filter(
         (category) =>
-category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+          category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
           category.description
             .toLowerCase()
-            .includes(searchQuery.toLowerCase()) |
+            .includes(searchQuery.toLowerCase()) ||
           category.articles.some(
             (article) =>
-              article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+              article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+<<<<<<< HEAD
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HelpCategory} from "./types";
-interface HelpCategoryListProps {;
-  categories: HelpCategory[],;
-  onCategorySelect: (categoryId: string) => void,;
-  searchQuery: string;
-}
+<<<<<<< HEAD
+      );
+=======
+              article.content.toLowerCase().includes(searchQuery.toLowerCase()),
+          ),
+      )
+>>>>>>> main
+    : categories;
+=======
 
       )
     : categories,
@@ -101,6 +78,16 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
     : categories;
   if (filteredCategories && filteredCategories.length === 0) {;
     return (
+      <div className="text-center py-8">
+        <h3 className="text-lg font-medium mb-2">No results found</h3>
+        <p className="text-zion-slate-light">
+          Try adjusting your search query or browse all categories.
+        </p>
+      </div>
+    );
+  }
+
+=======
     );
   }
 );
@@ -185,6 +172,11 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
           Try adjusting your search query or browse all categories.;
         </p>;
       </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    );
+  }
+  return (
+
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       {filteredCategories && filteredCategories.map(category => (;
         <Card
@@ -232,7 +224,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {filteredCategories.map((category) => (
+      {filteredCategories.map(category => (
         <Card
           key={category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -252,7 +244,11 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
           </CardContent>
         </Card>
       ))}
-    </div>;
+    </div>
+  );
+}
+
+=======
 import React from './react';
 import {
   Card,
@@ -322,23 +318,4 @@ if ( {) {
         </Card>))}
     </div>);
 }
-  ),;}
- interface HelpCategoryListProps {
-  categories: HelpCategory[];
-onCategorySelect: (categoryId: string) => void;
-searchQuery: string 
-}categories, onCategorySelect, searchQuery 
-}: HelpCategoryListProps) {
-  //Filter categories based on search query const filteredCategories = searchQuery ? categories.filter (category => category.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || category.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || category.articles.some (article => article.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || article.content.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) : categories;
-if (filteredCategories.length === 0) {
-  return (<div className="text-center py-8" > <h3 className="text-lg font-medium mb-2" >No results found</h3> <p className="text-zion-slate-light" > Try adjusting your search query or browse all categories. </p> </div> </div> <CardTitle> {
-  category.name 
-}</CardTitle> <CardDescription> {
-  category.description 
-}</CardDescription> </CardHeader> <CardContent> </p> </CardContent> </Card>) ) 
-}</div>) 
-}
-      ))}
-    </div>
-  );
-}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

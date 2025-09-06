@@ -1,7 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {useState} from "react";
 export function NewsletterForm() {;
+=======
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+export function NewsletterForm() {
+>>>>>>> main
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -24,17 +32,7 @@ export function NewsletterForm() {
 
 
   const handleSubmit = (e: React.FormEvent) => {
-
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      (setIsSubmitted(true), setEmail(""));
-    }, 1000);
-  }
+<<<<<<< HEAD
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -45,16 +43,19 @@ export function NewsletterForm() {
       setEmail("")
     }, 1000)
   },
-
-  const handleSubmit = (e: React.FormEvent) => {
-e.preventDefault();
+=======
+    e.preventDefault();
     setIsSubmitting(true);
-// Simulate API call
+
+    // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
-}
+  };
+>>>>>>> main
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -163,19 +164,6 @@ export function NewsletterForm() {;
         </form>;
       )}
     </div>;
-      )}
-    </div>
-  );
-        </form>)}
-    </div>);
-  ),; const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault ();
-setIsSubmitting (true);
-//Simulate API call setTimeout ( () => {
-  
-};
-}</div>) 
-}
       )}
     </div>
   );

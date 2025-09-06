@@ -1,23 +1,30 @@
+<<<<<<< HEAD
 
 import { ReactNode  } from './react';
 
-import { ReactNode } from "react";
 export interface HelpArticle {
   id: string;
   title: string;
   content: string;
 
+  last_updated: string;
+  tags: string[];
+
+}
+export interface HelpCategory {
+=======
+
 import {ReactNode} from "react";
 export interface HelpArticle {;
+=======
+import { ReactNode } from "react";
+export interface HelpArticle {
+>>>>>>> main
   id: string;
   title: string;
   content: string;
-  lastUpdated: string,
-  tags: string[]
   lastUpdated: string;
-tags: string[]
-}
-export interface HelpCategory {
+  tags: string[];
 }
 
 export interface HelpCategory {;
@@ -25,7 +32,8 @@ export interface HelpCategory {;
   name: string;
   description: string;
   icon: ReactNode;
-export interface SupportTicket {
+  articles: HelpArticle[];
+}
 
 
 
@@ -36,9 +44,8 @@ export interface SupportTicket {;
   message: string;
   status: "open" | "in - progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
-
-  created_at: string;
-  updated_at: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 
@@ -84,19 +91,6 @@ export interface SupportTicket {;
   status: "open" | "in-progress" | "resolved" | "closed",;
   priority: "low" | "medium" | "high";
   createdAt: string;
-articles: HelpArticle[]
-}
-export interface SupportTicket {
-  id: string;
-  userId: string;
-  subject: string;
-  message: string;
-  status: "open" | "in-progress" | "resolved" | "closed";
-  priority: "low" | "medium" | "high";
-  createdAt: string;
-updatedAt: string;
-}
-
   updatedAt: string;
 }
 ;

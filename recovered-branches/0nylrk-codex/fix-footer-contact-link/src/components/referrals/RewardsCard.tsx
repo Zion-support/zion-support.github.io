@@ -1,47 +1,20 @@
+<<<<<<< HEAD
+
+
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralReward} from "@/types/referrals";
 import {formatDate} from "@/utils/referralUtils";
 import {BadgeDollarSign, Badge} from "lucide-react";
 
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
 import { BadgeDollarSign, Badge } from "lucide-react",
 
-
-
-
-interface RewardsCardProps {
-  rewards: ReferralReward[];
-  isLoading: boolean
-}
-export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
-  if (isLoading) {
-
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-import { ReferralReward } from "@/types/referrals";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {ReferralReward} from "@/types/referrals";
-import {formatDate} from "@/utils/referralUtils";
-import {BadgeDollarSign, Badge} from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReferralReward } from "@/types/referrals",
-import { formatDate } from "@/utils/referralUtils",
-import { BadgeDollarSign, Badge } from "lucide-react",
-
-import { formatDate } from "@/utils/referralUtils";
-import { BadgeDollarSign, Badge } from "lucide-react";
-interface RewardsCardProps {
-  rewards: ReferralReward[];
-  isLoading: boolean
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 import {
   Card,
   CardContent,
@@ -52,10 +25,10 @@ import {
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from "lucide-react";
+>>>>>>> main
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean;
-
 }
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
@@ -78,6 +51,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </Card>
     );
   }
+
   if (rewards.length === 0) {
     return (
       <Card>
@@ -119,35 +93,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
               key={reward.id}
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? "border-b pb-3" : ""
-  )
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralReward } from "@/types/referrals",;
-import { formatDate } from "@/utils/referralUtils",;
-import { BadgeDollarSign, Badge } from "lucide-react",;
-
-interface RewardsCardProps {;
-  rewards: ReferralReward[],;
-  isLoading: boolean;
-}
-export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
-  if (isLoading) {;
-    return (
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralReward } from "@/types/referrals",;
-import { formatDate } from "@/utils/referralUtils",;
-import { BadgeDollarSign, Badge } from "lucide-react",;
-;
-interface RewardsCardProps {;
-  rewards:ReferralReward[],;
-  isLoading:boolean;
-}
-;
-export function RewardsCard({ rewards, isLoading } RewardsCardProps) {;
-  if (isLoading) {;
-    return (;
-}`}
+<<<<<<< HEAD
               }`}
             >
               <div>
@@ -177,6 +123,7 @@ export function RewardsCard({ rewards, isLoading } RewardsCardProps) {;
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralReward } from "@/types/referrals",;
@@ -185,6 +132,9 @@ import { BadgeDollarSign, Badge } from "lucide-react",;
 interface RewardsCardProps {;
   rewards: ReferralReward[];
   isLoading: boolean;
+=======
+  );
+>>>>>>> main
 }
 ;
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;

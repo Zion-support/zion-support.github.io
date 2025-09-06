@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
@@ -10,46 +12,38 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { HireRequestForm } from "./HireRequestForm",
 import { TalentProfile } from "@/types/talent",
 import { UserProfile } from "@/types/auth",
-
-
-
-import React from "react";
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 import React from "react";
 import {
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
 } from "@/components/ui/dialog";
 import { HireRequestForm } from "./HireRequestForm";
-
 import { TalentProfile } from "@/types/talent";
 import { UserProfile } from "@/types/auth";
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {HireRequestForm} from "./HireRequestForm";
-import {TalentProfile} from "@/types/talent";
-import {UserProfile} from "@/types/auth";
-import React from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { HireRequestForm } from "./HireRequestForm",
-import { TalentProfile } from "@/types/talent",
-import { UserProfile } from "@/types/auth",
+>>>>>>> main
 interface HireRequestModalProps {
   talent: TalentProfile | null;
   isOpen: boolean;
   onClose: () => void;
-userDetails?: UserProfile
+  userDetails?: UserProfile;
 }
 
 export function HireRequestModal({
-  talent
-  isOpen
-  onClose
-  userDetails
+  talent,
+  isOpen,
+  onClose,
+  userDetails,
 }: HireRequestModalProps) {
   const handleClose = () => {
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+    onClose();
   };
 
     onClose()
@@ -149,14 +143,20 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
+<<<<<<< HEAD
+        <HireRequestForm 
+=======
+
+        <HireRequestForm
+>>>>>>> main
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
-
-            Hire {talent && talent.full_name}
-          </DialogTitle>;
-        </DialogHeader>;
-        <HireRequestForm
+        />
+      </DialogContent>
+    </Dialog>
+  );
+}
 
 import React from "react",;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
@@ -194,40 +194,4 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails } HireRe
       </DialogContent>;
     </Dialog>);
 }
-  ),;}
- interface HireRequestModalProps {
-  talent: TalentProfile | null;
-isOpen: boolean;
-onClose: () => void;
-userDetails?: UserProfile 
-}export function HireRequestModal ({
-  talent, isOpen, onClose, userDetails 
-}: HireRequestModalProps) {
-  const handleClose = () => {
-  onClose () 
-};
-return (</DialogTitle> </DialogHeader> <HireRequestForm talent= {
-  talent 
-}onClose= {
-  handleClose 
-}userDetails= {
-  userDetails 
-}/> </DialogContent> </Dialog>) 
-}
-<HireRequestForm 
-
-          </DialogTitle>
-        </DialogHeader>
-        <HireRequestForm
-            Hire {talent.full_name}
-          </DialogTitle>
-        </DialogHeader>
-        <HireRequestForm 
-          talent={talent}
-          onClose={handleClose}
-          userDetails={userDetails}
-        />
-      </DialogContent>
-    </Dialog>
-  );
-}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

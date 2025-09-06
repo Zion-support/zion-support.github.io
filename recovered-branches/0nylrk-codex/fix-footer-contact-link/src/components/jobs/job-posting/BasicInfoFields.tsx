@@ -497,28 +497,19 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
             <FormMessage />
           </FormItem>
         )}
-          <FormItem>;
-            <FormLabel > Location</FormLabel>;
-            <FormControl>;
-              <Input;
-                placeholder="e.g. Remote, San Francisco, etc.";
-                {...field}
-              />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-    </div>);
-}
-;
-
+<<<<<<< HEAD
+      />
+    </div>
+<<<<<<< HEAD
 );
 
       />;
     </div>;
   );
-
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 };
               <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />;
             </FormControl>;

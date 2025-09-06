@@ -27,21 +27,11 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
 TableRow,;
-} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { CalendarIcon, Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-
-import React from "react";
-import {
-Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
+=======
+  TableRow,
+>>>>>>> main
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
@@ -129,21 +119,6 @@ import { Badge } from "@/components/ui/badge",
 import { CalendarIcon, Search } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
-id: 6
-      user: "Jamie Smith"
-      action: "Updated budget"
-      target: "Monthly spending cap"
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
-      category: "billing"
-    }
-  ];
-// Function to format the date in a readable way
-  const formatDate = (date: Date) => {
-    const now = new Date();
-    const diffMs = now.getTime() - date.getTime();
-    const diffMins = Math.floor(diffMs / (1000 * 60));
-    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 export function TeamActivity() {
   // Mock activity data
   const activities = [

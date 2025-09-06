@@ -1,47 +1,7 @@
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Mail, Send} from "lucide-react";
-import {useState} from "react";
-import {toast} from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Mail, Send } from "lucide-react",
+<<<<<<< HEAD
 
 
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
-interface ProfileContactProps {
-  email?: string;
-  profileName: string;
-profileType: 'service' | 'talent'
-}
 
-export function ProfileContact({
-  email
-  profileName
-  profileType
-}: ProfileContactProps) {
-  const [message, setMessage] = useState("");
-  const [subject, setSubject] = useState("");
-  const [isSending, setIsSending] = useState(false);
-const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSending(true);
-    // Here would be the actual API call to send the message
-    setTimeout(() => {
-      setIsSending(false);
-      setMessage("");
-(setSubject("")
-        toast({
-          title: "Message Sent"
-          description: `Your message has been sent to ${profileName}.`
-        }));
-    }, 1000);
-  }
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
 interface ProfileContactProps {
   email?: string,
   profileName: string,
@@ -77,7 +37,46 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         description: `Your message has been sent to ${profileName}.`})
     }, 1000)
   },
+=======
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Send } from "lucide-react";
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+interface ProfileContactProps {
+  email?: string;
+  profileName: string;
+  profileType: "service" | "talent";
+}
 
+export function ProfileContact({
+  email,
+  profileName,
+  profileType,
+}: ProfileContactProps) {
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending(false);
+      setMessage("");
+      (setSubject(""),
+        toast({
+          title: "Message Sent",
+          description: `Your message has been sent to ${profileName}.`,
+        }));
+    }, 1000);
+  };
+>>>>>>> main
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -85,7 +84,10 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
       {email && (
         <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
@@ -129,17 +131,61 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         </div>
       </form>
     </div>
+<<<<<<< HEAD
+  )
+<<<<<<< HEAD
+=======
   );
+>>>>>>> main
 }
-  )
-  )
+=======
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import { Textarea  } from '@/components / ui / textarea';
+import { Mail, Send  } from './lucide-react';
+import { useState  } from './react';
+import { toast  } from '@/hooks / use - toast';
+interface ProfileContactProps {
+  email?: string;
+  profile_name: string;
+  profile_type: "service" | "talent";
 }
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Mail, Send } from "lucide-react",;
-import { useState } from "react",;
-import { toast } from "@/hooks/use-toast",;
+export /**
+ * ProfileContact - Function description
+ */
+function ProfileContact() {
+  const [message, set_message] = useState ("");
+  const [subject, set_subject] = useState ("");
+  const [is_sending, setIsSending] = useState (false);
+;
+  const handleSendMessage = (e: React.FormEvent) =>: any {
+    e.prevent_default ();
+    setIsSending (true);
+;
+    // Here would be the actual API call to send the message;
+    set_timeout (() => {
+      setIsSending (false);
+      set_message ("");
+      (set_subject (""),
+        toast ({
+          title: "Message Sent",
+          description: `Your message has been sent to ${profile_name}.`,
+        }));
+    }, 1000);
+  }
+;
+  return (
+    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;
+      <h3 className="text - xl font - bold text - white mb - 4 flex items - center">;
+        <Mail className="mr - 2 h - 5 w - 5 text - zion - cyan" />;
+        Contact;
+      </h3>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      {email && (
+        <div className="mb-4 text-zion-slate-light">
+          <span className="block">Email: </span>
+          <a
+            href={`mailto:${email}`}
 
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";

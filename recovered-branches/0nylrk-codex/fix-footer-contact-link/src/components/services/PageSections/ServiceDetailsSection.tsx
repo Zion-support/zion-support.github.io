@@ -1,29 +1,21 @@
+<<<<<<< HEAD
+
+
 
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { CountryServiceSelector } from "../CountryServiceSelector",
 
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { CountryServiceSelector } from "../CountryServiceSelector";
-import { CountryPricing } from "@/data/onsiteServicePricing",
-import { CountryServiceSelector } from "../CountryServiceSelector",
+=======
 import {CountryPricing} from "@/data/onsiteServicePricing";
 import {CountryServiceSelector} from "../CountryServiceSelector";
+=======
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { CountryServiceSelector } from "../CountryServiceSelector",
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
-
-interface ServiceDetailsSectionProps {
-  selectedCountry: CountryPricing | null;
-  setSelectedCountry: (country: CountryPricing | null) => void
-}
-export function ServiceDetailsSection({
-  selectedCountry
-  setSelectedCountry
-
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { CountryServiceSelector } from "../CountryServiceSelector";
+>>>>>>> main
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
   setSelectedCountry: (country: CountryPricing | null) => void;
@@ -32,7 +24,6 @@ interface ServiceDetailsSectionProps {
 export function ServiceDetailsSection({
   selectedCountry,
   setSelectedCountry,
-
 }: ServiceDetailsSectionProps) {
   return (
     <div id="service-details" className="mt-12">
@@ -51,10 +42,12 @@ export function ServiceDetailsSection({
             pricing
           </p>
         </div>
-import { CountryPricing } from "@/data/onsiteServicePricing",;
-import { CountryServiceSelector } from "../CountryServiceSelector",;
-interface ServiceDetailsSectionProps {;
-  selectedCountry: CountryPricing | null;
+<<<<<<< HEAD
+=======
+import { CountryPricing  } from '@/data / onsiteServicePricing';
+import { CountryServiceSelector  } from '../CountryServiceSelector';
+interface ServiceDetailsSectionProps {
+  selected_country: CountryPricing | null;
   setSelectedCountry: (country: CountryPricing | null) => void;
 }
 export /**
@@ -115,8 +108,7 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
 
       )}
     </div>
-  )
-
+  );
 }
   ),;}
  interface ServiceDetailsSectionProps {

@@ -1,57 +1,28 @@
+<<<<<<< HEAD
+
 
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
 
+=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HELP_CATEGORIES } from "./help-content",
 
 
 
-import React from "react";
-
-import React from "react";
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-
-import { HELP_CATEGORIES } from "./help-content";
-interface HelpArticleListProps {
-  categoryId: string;
-  onArticleSelect: (articleId: string) => void;
-  searchQuery: string
-}
-
-export function HelpArticleList({
-  categoryId
-  onArticleSelect
-  searchQuery
-}: HelpArticleListProps) {
-  const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
-  if (!category) {
-    return <div>Category not found</div>;
-  }
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HELP_CATEGORIES} from "./help-content";
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { HELP_CATEGORIES } from "./help-content",
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
-}
 
 export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
   
   if (!category) {
     return <div>Category not found</div>
+=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HELP_CATEGORIES } from "./help-content",;
@@ -65,9 +36,8 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
     return <div>Category not found</div>;
-
-  }
-  
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 import React from "react";
 import {
   Card,
@@ -92,34 +62,33 @@ export function HelpArticleList({
 
   if (!category) {
     return <div>Category not found</div>;
+>>>>>>> main
   }
 
-  }
-  
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
         (article) =>
-
-    : category.articles,
-  
-
-
-article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-          article.content.toLowerCase().includes(searchQuery.toLowerCase())
+          article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          article.content.toLowerCase().includes(searchQuery.toLowerCase()),
       )
-: category.articles;
-
-    : category.articles;
+<<<<<<< HEAD
     : category.articles,
   
+=======
+    : category.articles;
+
+>>>>>>> main
   return (
     <div>
       <div className="mb-6">
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
         <p className="text-zion-slate-light">{category.description}</p>
       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
       {filteredArticles.length === 0 ? (
         <div className="text-center py-8">
           <h3 className="text-lg font-medium mb-2">No articles found</h3>
@@ -152,13 +121,6 @@ article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
       )}
     </div>
   );
-}
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HELP_CATEGORIES} from "./help-content";
-interface HelpArticleListProps {;
-  categoryId: string,;
-  onArticleSelect: (articleId: string) => void,;
-  searchQuery: string;
 }
 export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES && HELP_CATEGORIES.find(cat => cat && cat.id === categoryId);
@@ -240,18 +202,23 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
 
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric"
-    month: "long"
+    year: "numeric",
+    month: "long",
+<<<<<<< HEAD
     day: "numeric"
-
-    </div>;
-  );
+  })
+<<<<<<< HEAD
+=======
+    day: "numeric",
+  });
+>>>>>>> main
 }
 function formatDate(): any (date: string): string {;
   return new Date(date).toLocaleDateString("en-US", {;
     year: "numeric",;
     month: "long",;
     day: "numeric";
+
   });
 }
 import React from './react';

@@ -1,6 +1,47 @@
-const { companyId } = req && req.query;
-  if (!companyId || typeof companyId !== "string") {
-    return res && res.status(400).json({ error: "companyId required" });
+
+
+  if (req.method === "PATCH") {
+    const { memberId, role } = req.body || {};
+    if (!memberId || !role)
+      return res.status(400).json({ error: "memberId and role required" });
+    const ok = store.updateMemberRole(companyId, memberId, role);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "member_not_found" });
+  }
+
+  if (req.method === "DELETE") {
+    const { memberId } = req.query;
+    if (!memberId || typeof memberId !== "string")
+      return res.status(400).json({ error: "memberId required" });
+    const ok = store.removeMember(companyId, memberId);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "member_not_found" });
+  }
+
+  return res.status(405).json({ error: "method_not_allowed" });
+}
+
+  return res && res.status(405).json({ error: "method_not_allowed" });
+}
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { store  } from '../../../../../utils / data / enterprise_store';
+import type { EnterpriseRole } from "../../../../../utils / types / enterprise";
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const { company_id } = req.query;
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (400).json ({ error: "company_id required" });
   }
   const company = store.getCompanyById(companyId);
   if (!company) return res.status(404).json({ error: "Company not found" });
@@ -84,28 +125,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member);
   }
-
-  if (req.method === "PATCH") {
-    const { memberId, role } = req.body || {};
-    if (!memberId || !role)
-      return res.status(400).json({ error: "memberId and role required" });
-    const ok = store.updateMemberRole(companyId, memberId, role);
-    return res
-      .status(ok ? 200 : 404)
-      .json(ok ? { success: true } : { error: "member_not_found" });
-  }
-
-  if (req.method === "DELETE") {
-    const { memberId } = req.query;
-    if (!memberId || typeof memberId !== "string")
-      return res.status(400).json({ error: "memberId required" });
-    const ok = store.removeMember(companyId, memberId);
-    return res
-      .status(ok ? 200 : 404)
-      .json(ok ? { success: true } : { error: "member_not_found" });
-  }
-
-  return res.status(405).json({ error: "method_not_allowed" });
+  // Check condition
+if ( {) {
+  $2
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

@@ -222,47 +222,6 @@ if ( {) {
           "**/performance-*.md",
           "**/performance-*.txt",
           "**/apps/**"
-        ],
-        poll: 1000,
-        aggregateTimeout: 300
-      }
-        aggregateTimeout: 300,
-      };
-    }
-
-          "**/node_modules/**"
-          "**/.git/**"
-          "**/pages_backup*/**"
-          "**/pages.*/**"
-          "**/pages-*/**"
-          "**/pages_disabled*/**"
-          "**/pages.disabled*/**"
-          "**/pages.broken*/**"
-          "**/pages.corrupted*/**"
-          "**/pages.old*/**"
-          "**/pages._*/**"
-          "**/pages.__*/**"
-          "**/backup-pages/**"
-          "**/src.pages.disabled/**"
-          "**/lib_backup*/**"
-          "**/src_backup*/**"
-          "**/corrupted-files-backup*/**"
-          "**/performance-reports*/**"
-          "**/log-analysis-reports*/**"
-          "**/link-reports*/**"
-          "**/lint-target*/**"
-          "**/monitoring*/**"
-          "**/pm2-automation*/**"
-          "**/automation/logs*/**"
-          "**/automation/backup*/**"
-          "**/performance-*.json"
-          "**/performance-*.js"
-          "**/performance-*.cjs"
-          "**/performance-*.sh"
-          "**/performance-*.html"
-          "**/performance-*.md"
-          "**/performance-*.txt"
-          "**/apps/**"
         ]
         poll: 1000
         aggregateTimeout: 300

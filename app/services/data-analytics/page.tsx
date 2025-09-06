@@ -1,105 +1,142 @@
 export const metadata = { 
-  title: 'Data Analytics Services | Zion Tech Group',
-  description: 'Advanced data analytics solutions including business intelligence, data visualization, machine learning, and data engineering.'
+  title: 'Data Analytics Solutions | Zion Tech Group',
+  description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
 };
 
 export default function DataAnalyticsPage() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Data Analytics Services</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your data into actionable insights with our comprehensive analytics solutions. 
-          From data engineering to advanced visualization, we help you make data-driven decisions.
+    <div className="animate-fade-in">
+      <section className="text-center py-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Data Analytics Solutions
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+          Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. 
+          Turn your data into actionable insights that drive business growth.
         </p>
-      </div>
+      </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <Item 
-          title="Data Engineering" 
-          details={[
-            "ETL/ELT pipelines",
-            "Data warehousing",
-            "Real-time processing",
-            "Data quality management",
-            "Cloud data platforms",
-            "API development"
-          ]} 
-        />
-        <Item 
-          title="Business Intelligence" 
-          details={[
-            "Dashboard development",
-            "KPI tracking",
-            "Report automation",
-            "Data visualization",
-            "Self-service analytics",
-            "Mobile reporting"
-          ]} 
-        />
-        <Item 
-          title="Advanced Analytics" 
-          details={[
-            "Predictive modeling",
-            "Statistical analysis",
-            "Machine learning",
-            "A/B testing",
-            "Customer segmentation",
-            "Forecasting"
-          ]} 
-        />
-      </div>
-
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Our Data Analytics Solutions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ServiceCard
-            title="Business Intelligence Dashboard"
-            description="Interactive dashboards with real-time KPIs and business metrics"
-            price="Starting at $15k"
-            features={["Custom dashboards", "Real-time data", "Mobile responsive", "Export capabilities"]
+      <section className="py-12">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Data Analytics Solutions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <DataServiceCard
+            title="Business Intelligence Dashboards"
+            description="Interactive dashboards and reports for real-time business insights"
+            features={["Custom dashboard design", "Real-time data visualization", "Interactive reports", "Mobile-responsive design", "Automated reporting"]}
+            price="$12k–$40k"
+            icon="📊"
           />
-          <ServiceCard
-            title="Data Pipeline Development"
-            description="Automated data processing and ETL pipelines for your business"
-            price="Starting at $20k"
-            features={["ETL/ELT pipelines", "Data validation", "Error handling", "Monitoring"]
+          <DataServiceCard
+            title="Predictive Analytics & ML"
+            description="Machine learning models for forecasting and predictive insights"
+            features={["Predictive modeling", "Time series forecasting", "Anomaly detection", "Recommendation engines", "Risk assessment"]}
+            price="$18k–$60k"
+            icon="🔮"
           />
-          <ServiceCard
-            title="Predictive Analytics"
-            description="Machine learning models for forecasting and prediction"
-            price="Starting at $25k"
-            features={["Model development", "Data preprocessing", "Model training", "Deployment"]
+          <DataServiceCard
+            title="Data Engineering & ETL"
+            description="Data pipeline development and data warehouse solutions"
+            features={["ETL pipeline development", "Data warehouse design", "Data quality management", "Real-time streaming", "Data governance"]}
+            price="$15k–$50k"
+            icon="⚙️"
           />
-          <ServiceCard
+          <DataServiceCard
             title="Customer Analytics"
-            description="Comprehensive customer behavior analysis and segmentation"
-            price="Starting at $18k"
-            features={["Customer segmentation", "Behavior analysis", "Churn prediction", "Lifetime value"]
+            description="Customer behavior analysis and segmentation for targeted marketing"
+            features={["Customer segmentation", "Behavioral analysis", "Churn prediction", "Lifetime value modeling", "Personalization engines"]}
+            price="$20k–$70k"
+            icon="👥"
           />
-          <ServiceCard
-            title="Data Visualization"
-            description="Advanced data visualization and interactive reports"
-            price="Starting at $12k"
-            features={["Interactive charts", "Custom visualizations", "Storytelling", "Export options"]
+          <DataServiceCard
+            title="Financial Analytics"
+            description="Financial data analysis and reporting for better decision making"
+            features={["Financial reporting", "Budget analysis", "Cost optimization", "Revenue forecasting", "Risk modeling"]}
+            price="$16k–$55k"
+            icon="💰"
           />
-          <ServiceCard
-            title="Data Warehouse Setup"
-            description="Complete data warehouse design and implementation"
-            price="Starting at $30k"
-            features={["Architecture design", "Data modeling", "ETL processes", "Security setup"]
+          <DataServiceCard
+            title="Real-time Analytics"
+            description="Real-time data processing and streaming analytics"
+            features={["Stream processing", "Real-time dashboards", "Event-driven analytics", "Alert systems", "Performance monitoring"]}
+            price="$22k–$80k"
+            icon="⚡"
           />
         </div>
-      </div>
+      </section>
+
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Data Analytics Technology Stack</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Item 
+            title="Data Processing & Storage" 
+            details={[
+              "Apache Spark, Hadoop, and Kafka",
+              "Cloud data warehouses (Snowflake, BigQuery)",
+              "NoSQL databases (MongoDB, Cassandra)",
+              "Data lakes and object storage",
+              "Stream processing platforms",
+              "Data versioning and lineage"
+            ]} 
+          />
+          <Item 
+            title="Analytics & Visualization" 
+            details={[
+              "Tableau, Power BI, and Looker",
+              "Python (Pandas, NumPy, Scikit-learn)",
+              "R and statistical analysis",
+              "Jupyter notebooks and RStudio",
+              "Custom web applications",
+              "Interactive dashboards"
+            ]} 
+          />
+          <Item 
+            title="Machine Learning & AI" 
+            details={[
+              "TensorFlow, PyTorch, and scikit-learn",
+              "MLOps and model deployment",
+              "Feature engineering and selection",
+              "Model monitoring and drift detection",
+              "AutoML and hyperparameter tuning",
+              "Deep learning and neural networks"
+            ]} 
+          />
+        </div>
+      </section>
 
       <Pricing />
-    </section>
+      <ContactSection />
+    </div>
+  );
+}
+
+function DataServiceCard({ title, description, features, price, icon }: { 
+  title: string; 
+  description: string; 
+  features: string[]; 
+  price: string; 
+  icon: string; 
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
+      <ul className="space-y-2">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-sm text-gray-600">
+            <span className="text-green-500 mr-2">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
       <ul className="space-y-2">
         {details.map((detail, index) => (
@@ -113,78 +150,94 @@ function Item({ title, details }: { title: string; details: string[] }) {
   );
 }
 
-function ServiceCard({ title, description, price, features }: { 
-  title: string; 
-  description: string; 
-  price: string; 
-  features: string[] 
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200">
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-1">
-        {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="text-green-500 mr-2">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 function Pricing() {
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Data Analytics Service Packages</h2>
+    <section className="py-12">
+      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Data Analytics Packages</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan 
-          name="Analytics Discovery" 
-          price="$8k–$15k" 
-          duration="2–4 weeks"
+          name="Data Assessment" 
+          price="$8k–$20k" 
+          duration="3–6 weeks"
           features={[
-            "Data assessment",
-            "Requirements analysis",
-            "Technology selection",
-            "Architecture design",
-            "Proof of concept",
-            "Implementation roadmap"
+            "Data quality assessment",
+            "Analytics opportunity identification",
+            "Technology stack recommendations",
+            "ROI analysis and business case",
+            "Implementation roadmap",
+            "Pilot project design"
           ]} 
         />
         <Plan 
           name="Analytics Implementation" 
-          price="$20k–$50k" 
-          duration="6–12 weeks"
+          price="$25k–$100k" 
+          duration="10–20 weeks"
           features={[
-            "Dashboard development",
-            "Data pipeline setup",
-            "Model development",
-            "Testing & validation",
-            "User training",
-            "Documentation"
+            "End-to-end analytics solution",
+            "Data pipeline development",
+            "Dashboard and visualization creation",
+            "Machine learning model development",
+            "Testing and validation",
+            "User training and documentation"
           ]} 
         />
         <Plan 
-          name="Analytics Platform" 
-          price="$50k+" 
-          duration="12+ weeks"
+          name="Managed Analytics" 
+          price="$5k+/mo" 
+          duration="Ongoing"
           features={[
-            "Full platform development",
-            "Advanced analytics",
-            "Machine learning models",
-            "Real-time processing",
-            "Scalable architecture",
-            "Ongoing support"
+            "Continuous data monitoring",
+            "Model maintenance and updates",
+            "Performance optimization",
+            "Regular reporting and insights",
+            "Data quality management",
+            "Scalability and growth support"
           ]} 
         />
       </div>
-      
-      <div className="text-center mt-8">
-        <p className="text-gray-600 mb-4">
-          Ready to unlock insights from your data? Let's discuss your analytics needs.
+    </section>
+  );
+}
+
+function Plan({ name, price, duration, features }: { 
+  name: string; 
+  price: string; 
+  duration: string;
+  features: string[]; 
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
+      <div className="text-gray-600 mb-6">{duration}</div>
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="text-gray-600 flex items-start">
+            <span className="text-green-500 mr-2 mt-1">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <a 
+        href="tel:+13024640950" 
+        className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+
+function ContactSection() {
+  return (
+    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          Ready to Unlock Your Data's Potential?
+        </h3>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's transform your data into actionable insights that drive business growth. 
+          Our data analytics experts have delivered 100+ successful analytics projects.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -200,30 +253,10 @@ function Pricing() {
             Email Us
           </a>
         </div>
+        <div className="mt-8 text-sm text-gray-500">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+        </div>
       </div>
-    </div>
-  );
-}
-
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
-  duration: string;
-  features: string[] 
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-1">{price}</div>
-      <div className="text-sm text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="text-gray-600 flex items-start">
-            <span className="text-green-500 mr-2 mt-1">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
+    </section>
   );
 }

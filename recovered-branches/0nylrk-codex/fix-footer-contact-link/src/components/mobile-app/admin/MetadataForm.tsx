@@ -466,6 +466,17 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
+                    <Input placeholder="e.g., 1.0.0" {...field} />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+          </div>
+        </Form>
+      </CardContent>
+    </Card>
+<<<<<<< HEAD
 );
 
                     <Input 
@@ -507,23 +518,12 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
           </div>;
         </Form>;
       </CardContent>;
-<Input placeholder="e.g., 1.0.0" {...field} />
-                    <Input placeholder="e.g., 1.0.0" {...field} />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-          </div>
-        </Form>
-      </CardContent>
-    </Card>
-
-    </Card>);
-}
-;
-
-
-
+    </Card>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 };
     </Card>);
 }

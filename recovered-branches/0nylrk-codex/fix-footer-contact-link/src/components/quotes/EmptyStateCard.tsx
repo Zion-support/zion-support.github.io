@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 type EmptyStateCardProps = {;
   type: 'active' | 'archived';
 };
@@ -50,15 +52,18 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === 'active',
 
   
+=======
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { MessageSquare, ArchiveIcon } from "lucide-react";
+type EmptyStateCardProps = {
+  type: "active" | "archived";
+};
 
-export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
-  const isActive = type === 'active';
-
-export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
-  const isActive = type === 'active';
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
-  const isActive = type === 'active',
-  
+  const isActive = type === "active";
+
+>>>>>>> main
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
       <CardContent>
@@ -73,27 +78,17 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
           {isActive ? "No hire requests yet" : "No archived requests"}
         </h3>
         <p className="text-zion-slate-light max-w-md mx-auto">
-{isActive
-            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
-
           {isActive
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
-            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
-        </p>
-      </CardContent>
-    </Card>
-  );
-}
-
-          {isActive 
-            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
+<<<<<<< HEAD
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
-            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
+<<<<<<< HEAD
           }
         </p>
       </CardContent>
     </Card>
   )
+=======
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { MessageSquare, ArchiveIcon } from "lucide-react",;
@@ -113,14 +108,6 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
           )}
         </div>;
         <h3 className="text-xl font-medium text-white mb-2">;
-          {isActive ? 'No hire requests yet' :'No archived requests'}
-        </h3>;
-        <p className="text-zion-slate-light max-w-md mx-auto">;
-          {isActive ;
-            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients.";
-            :"You haven't archived any hire requests yet. Archive requests to keep your active list organized.";
-        </div>;
-        <h3 className="text-xl font-medium text-white mb-2">;
           {isActive ? 'No hire requests yet' : 'No archived requests'}
         </h3>;
         <p className="text-zion-slate-light max-w-md mx-auto">;
@@ -131,13 +118,15 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
         </p>;
       </CardContent>;
     </Card>;
-
-          {isActive 
-            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
-            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
-            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
-
-
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
+        </p>
+      </CardContent>
+    </Card>
+  );
+>>>>>>> main
 };
 import React from './react';
 import { Card, CardContent  } from '@/components / ui / card';

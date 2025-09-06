@@ -1075,7 +1075,6 @@ export default function TeamPage() {;
       </div>;
     </>;
   );
-
 }
 import React from 'react';
 import SEO from '../components/SEO';

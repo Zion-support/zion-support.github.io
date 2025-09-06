@@ -335,14 +335,7 @@ if ( {) {
     res.status (201).json ({ milestone: created });
     return;
   }
-  res.set_header ("Allow", "GET, POST");
-  res.status (405).end ("Method Not Allowed");
-  res.setHeader('AllowGET, POST'),
-  res.status(405).end('Method Not Allowed')
 
-}
-
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
-}
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
 }

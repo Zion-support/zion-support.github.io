@@ -27,7 +27,7 @@ const id = String(req && req.query.id || "");
       writeJsonFile("updates && updates.json", updates);
     }
   }
-  const pixel = Buffer && Buffer.from(
+  const pixel = Buffer.from(
     "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
     "base64",
   );

@@ -1,5 +1,10 @@
-import React from './react';
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+>>>>>>> main
+import React from "react";
+=======
 
 import React from "react",
 
@@ -8,16 +13,12 @@ import React from "react";
 import React from "react",
 interface TalentDirectoryHeaderProps {
   title: string;
-  description: string
-import React from "react";
-
-interface TalentDirectoryHeaderProps {
-  title: string;
-description: string
+  description: string;
 }
+
 export function TalentDirectoryHeader({
-  title
-  description
+  title,
+  description,
 }: TalentDirectoryHeaderProps) {
   return (
     <div className="bg-zion-blue-dark border-b border-zion-blue-light">
@@ -25,9 +26,24 @@ export function TalentDirectoryHeader({
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
           {title}
         </h1>
+<<<<<<< HEAD
+        <p className="text-zion-slate-light max-w-2xl">
+<<<<<<< HEAD
+          {description}
+        </p>
+      </div>
+    </div>
+  )
+=======
 interface TalentDirectoryHeaderProps {;
   title: string,;
   description: string;
+=======
+        <p className="text-zion-slate-light max-w-2xl">{description}</p>
+      </div>
+    </div>
+  );
+>>>>>>> main
 }
 
 import React from "react",;

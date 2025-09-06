@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -21,43 +23,25 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
-
-
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
 import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
-  BarChart
-  DollarSign
-  LineChart
-  TrendingUp
-  Users
+  BarChart,
+  DollarSign,
+  LineChart,
+  TrendingUp,
+  Users,
 } from "lucide-react";
-export function PartnerDashboard() {
-  // Placeholder data - would come from API in real implementation
-  const stats = {
-    totalReferrals: 42
-    pendingReferrals: 8
-    completedReferrals: 34
-    conversionRate: 18.5
-    totalRevenue: 850.0
-    pendingRevenue: 200.0
-  }
-
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
-
+>>>>>>> main
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -65,16 +49,19 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
-totalRevenue: 850.00,
-pendingRevenue: 200.00;
-  };
-
+<<<<<<< HEAD
     totalRevenue: 850.00,
     pendingRevenue: 200.00;
   };
     pendingRevenue: 200.00
   },
   
+=======
+    totalRevenue: 850.0,
+    pendingRevenue: 200.0,
+  };
+
+>>>>>>> main
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -94,7 +81,10 @@ pendingRevenue: 200.00;
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">
@@ -109,7 +99,10 @@ pendingRevenue: 200.00;
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">
@@ -125,7 +118,10 @@ pendingRevenue: 200.00;
           </CardContent>
         </Card>
       </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -143,7 +139,10 @@ pendingRevenue: 200.00;
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
@@ -166,19 +165,24 @@ pendingRevenue: 200.00;
         </CardContent>
       </Card>
     </div>
-  return (
-
-  );
-}
+<<<<<<< HEAD
   )
+<<<<<<< HEAD
+=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",;
-    pendingRevenue: 200.00
-  },
-
-  
-  return (
+export function PartnerDashboard() {;
+  // Placeholder data - would come from API in real implementation;
+  const stats = {;
+    totalReferrals: 42,;
+    pendingReferrals: 8,;
+    completedReferrals: 34,;
+    conversionRate: 18.5,;
+    totalRevenue: 850.00;
+    pendingRevenue: 200.00;
+  };
+  return (;
     <div className="space-y-6">;
       {/* Stats Overview */}
 
@@ -271,11 +275,12 @@ export function PartnerDashboard() {;
           </div>;
         </CardContent>;
       </Card>;
-
-
-  )
-
-
+    </div>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
 }
     </div>);
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -5,13 +6,11 @@ import {
   Project,
   Milestone,
   MilestoneStatus,
-  Project
-  Milestone
-  MilestoneStatus
-  isMilestoneStatus
-} from '../types/milestones';
-import { CurrentUser } from './auth';
+<<<<<<< HEAD
   isMilestoneStatus,;
+=======
+  isMilestoneStatus
+>>>>>>> main
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
@@ -152,19 +151,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 
   }
 
-...milestone
-    ...milestone
-    id: `milestone_${Date.now()}`
-    status: 'pending'
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
-    ...milestone,
-    id: `milestone_${Date.now()}`,
-    status: 'pending',
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString();
-  };
-  }
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
   return newMilestone;

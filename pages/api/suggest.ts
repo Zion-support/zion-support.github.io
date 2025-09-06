@@ -166,8 +166,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
-}
+  }
   const { q = "" } = req.query;
+
+  if (req && req.method !== "GET") {
+    res && res.setHeader("Allow", "GET");
+    return res && res.status(405).json({ error: "Method not allowed" });
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+
+  const { q = "" } = req.query;
+  const query = String(q).toLowerCase();
+
+
+  const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
+    s && s.toLowerCase().includes(query),
+  ).slice(0, 5);
 
   return res && res.status(200).json({ suggestions });
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
