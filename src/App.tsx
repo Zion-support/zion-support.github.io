@@ -8,11 +8,8 @@ import Footer from './components/Footer';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
-        </div>
-      </div>
-    </div>
-  </div>
-)
+import Home from './pages/Home';
+import Pricing from './pages/Pricing';
 
 function App() {
   return (
@@ -24,11 +21,14 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />
       </div>
     </Router>
-  )
+  );
 }
+
+export default App;
