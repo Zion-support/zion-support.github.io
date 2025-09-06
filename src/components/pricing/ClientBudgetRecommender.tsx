@@ -1,31 +1,3 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import {
-  getClientBudgetSuggestion,
-  PricingSuggestion,
-  ClientBudgetParams,
-  trackPricingSuggestion,;
-} from '@/services/pricingSuggestionService';
-import { PricingSuggestionBox } from './PricingSuggestionBox';
-import { useAuth } from '@/hooks/useAuth';
-import { Sparkles } from 'lucide-react';
-
-interface ClientBudgetRecommenderProps {
-  jobTitle: string;
-  category: string;
-  timeline?: string;
-  scope?: string;
-  experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {
-  jobTitle: string,
-  category: string,
-  timeline?: string,
-  scope?: string,
-  experienceLevel?: string,
-  onSuggestionApplied: (minValue: number, maxValue: number,) => void
-}
-
 export const ClientBudgetRecommender: React.FC<
   ClientBudgetRecommenderProps
 > = ({
@@ -34,11 +6,7 @@ export const ClientBudgetRecommender: React.FC<
   timeline,
   scope,
   experienceLevel,
-  onSuggestionApplied,
-}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
-  const { user } = useAuth();
+
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
       return;
@@ -49,8 +17,7 @@ export const ClientBudgetRecommender: React.FC<
       const params: ClientBudgetParams = {
         jobTitle,
         category,
-      };        jobTitle;
-        category};
+      };
 
       if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;
@@ -89,37 +56,14 @@ export const ClientBudgetRecommender: React.FC<
       <div>
         {!suggestion && !isLoading ? (
           <Button
-            type='button'
-            variant='outline'
-            onClick={generateSuggestion}
-            disabled={!jobTitle || !category}
-            className='w-full'          >
+
+          >
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
-            suggestion={suggestion}
-            isLoading={isLoading}
-            onApplySuggestion={handleApplySuggestion}
-            rateType='hourly'          />
+
+          />
         )}
       </div>
     </div>
-  );
-};
-if (scope) params.scope = scope;
-if (experienceLevel) params.experienceLevel = experienceLevel;
-//Track this suggestion application if (user && user.id) {;
-  trackPricingSuggestion ({;
-  ;
-
-};
-return (<div className="space-y-4" > <div> {";
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;
-  generateSuggestion ";
-}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
-}</div> </div>) ;
-};
-'"  )
-},
-;

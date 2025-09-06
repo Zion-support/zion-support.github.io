@@ -1,26 +1,6 @@
-    return <Badge variant={style.variant}>{category}</Badge>
+return <Badge variant={style.variant}>{category}</Badge>
   };
 
-import React from "react";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { CalendarIcon, Search } from 'lucide-react'
-import React from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge";
-import { CalendarIcon, Search } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 export function TeamActivity() {
@@ -69,12 +49,7 @@ export function TeamActivity() {
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
       category: "billing"}],
   // Function to format the date in a readable way
-  const formatDate = (date: Date) => {
-    const now = new Date();
-    const diffMs = now.getTime() - date.getTime();
-    const diffMins = Math.floor(diffMs / (1000 * 60));
-    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
     if (diffMins < 60) {
       return `${diffMins} minutes ago`
     } else if (diffHrs < 24) {
@@ -143,7 +118,7 @@ export function TeamActivity() {
           </TableBody>
         </Table>
       </div>
-      
+
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -166,4 +141,4 @@ const getCategoryBadge = (category: string) => {;
   activity.id ;
 }> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
-}"}
+}"

@@ -2,6 +2,7 @@ import { Button } from './ui/button';
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
 import { toast } from './ui/use-toast';
 import { useTranslation } from 'react-i18next';
+
 export function SocialShareSection() {
   const { t } = useTranslation();
 
@@ -37,9 +38,8 @@ export function SocialShareSection() {
   };
 
   const copyLinkToClipboard = () => {
-    navigator.clipboard
-      .writeText(window.location.href)
-      .then(() => {        toast({
+
+        toast({
           title: 'Link Copied!',
           description: 'The link has been copied to your clipboard',
         });
@@ -92,14 +92,12 @@ export function SocialShareSection() {
               Help others discover the future of AI & tech marketplace
             </p>
           </div>
-          <div className='flex flex-wrap gap-3'>
-            {shareLinks.map((link, index) => (              <Button
+
+              <Button
                 key = {index,}
                 className={`${link.color} text-white`}
-                size='sm'
-                onClick={link.onClick}
-                aria-label={link.name}
-                title={link.name}              >
+
+              >
                 {link.icon}
                 <span className='sr-only'>{link.name}</span>
                 <span aria-hidden='true'>{link.name}</span>
@@ -120,5 +118,6 @@ export function SocialShareSection() {
 });
 };
 }</div> </div> </div> </section>) ;
-}'";
+}'"
+
 }

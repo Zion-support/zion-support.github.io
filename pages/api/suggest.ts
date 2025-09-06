@@ -1,34 +1,39 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-
-const SAMPLE_QUERIES = [
-  "React developers under $50/hr",
-  "Part-time DevOps jobs in LATAM",
-  "AI/ML engineers for startup",
-  "Blockchain developers remote",
-  "UI/UX designers available now",
-  "Full-stack developers with Next.js",
-  "Data scientists with Python",
-  "Mobile app developers iOS/Android",
-  "Cloud architects AWS/Azure",
-  "DevOps engineers with Kubernetes",
-];
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") {
-    res.setHeader("Allow", "GET");
-    return res.status(405).json({ error: "Method not allowed" });
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    return res.status(405).end('Method Not Allowed');
   }
 
-  const { q = "" } = req.query;
-  const query = String(q).toLowerCase();
+  try {
+    const { q } = req.query;
+    
+    if (!q || typeof q !== 'string') {
+      return res.status(400).json({ error: 'Query parameter is required' });
+    }
 
-  if (!query) {
-    return res.status(200).json({ suggestions: SAMPLE_QUERIES.slice(0, 5) });
+    // Mock suggestions - replace with actual search logic
+    const suggestions = new Set([
+      'web development',
+      'mobile app development',
+      'UI/UX design',
+      'digital marketing',
+      'data analysis',
+      'cloud computing',
+      'artificial intelligence',
+      'blockchain technology'
+    ]);
+
+    const filtered = Array.from(suggestions)
+      .filter(s => s.toLowerCase().includes(q.toLowerCase()))
+      .slice(0, 8);
+
+    res.status(200).json({ 
+      ok: true, 
+      suggestions: filtered 
+    });
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Failed to get suggestions' });
   }
-
-  const suggestions = SAMPLE_QUERIES.filter((s) =>
-    s.toLowerCase().includes(query),
-  ).slice(0, 5);
-
-  return res.status(200).json({ suggestions });
 }

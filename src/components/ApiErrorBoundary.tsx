@@ -4,7 +4,7 @@ import * as Sentry from '@sentry/nextjs';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCw, WifiOff } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
+
 interface ApiErrorBoundaryProps {
   children: ReactNode;
   queryClient?: QueryClient;
@@ -43,8 +43,8 @@ export class ApiErrorBoundary extends Component<
       error: null,
       errorInfo: null,
       isRetrying: false,
-      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
-    };  }
+
+  }
 
   static getDerivedStateFromError(
     error: Error
@@ -57,12 +57,7 @@ export class ApiErrorBoundary extends Component<
 
   componentDidCatch(error: Error, errorInfo: any) {
     // Log to Sentry
-    Sentry.withScope(scope => {
-      scope.setTag('errorBoundary', 'ApiErrorBoundary');
-      scope.setContext('errorInfo', errorInfo);
-      scope.setLevel('error');
-      Sentry.captureException(error);
-    });
+
     this.setState({
       error,
       errorInfo,
@@ -168,9 +163,8 @@ export class ApiErrorBoundary extends Component<
 
             <div className='flex flex-col gap-2'>
               <Button
-                onClick={this.handleRetry}
-                disabled={this.state.isRetrying}
-                className='w-full'              >
+
+              >
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className='mr-2 h-4 w-4 animate-spin' />
@@ -185,9 +179,8 @@ export class ApiErrorBoundary extends Component<
               </Button>
 
               <Button
-                variant='outline'
-                onClick={() => window.location.reload()}
-                className='w-full'              >
+
+              >
                 Reload Page
               </Button>
             </div>
@@ -220,16 +213,6 @@ export class ApiErrorBoundary extends Component<
 
 // Hook for accessing query client in function components
 export const useApiErrorHandler = () => {
-  const handleApiError = (error: Error) => {
-    Sentry.withScope(scope => {
-      scope.setTag('source', 'useApiErrorHandler');
-      scope.setLevel('error');
-      Sentry.captureException(error);
-    });
-  };
+
   return { handleApiError };
 };
-  return { handleApiError }
-}, 
-  return { handleApiError }
-}, 

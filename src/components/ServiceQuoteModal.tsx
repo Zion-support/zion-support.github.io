@@ -1,7 +1,6 @@
-            ...formData;            startDate: startDate?.toISOString(),
+startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
         }
       });
 
-}
 }

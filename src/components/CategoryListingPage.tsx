@@ -1,18 +1,3 @@
-import { useState, useEffect } from 'react';
-import { GradientHeading } from '@/components/GradientHeading';
-import { ListingScoreCard } from '@/components/ListingScoreCard';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-  Select,
-  SelectTrigger,
-  SelectContent,
-  SelectItem,;
-} from '@/components/ui/select';
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
-import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
-import { safeStorage } from '@/utils/safeStorage';
-
 // Example listing type
 interface Listing {
   id: string;
@@ -57,33 +42,8 @@ export function CategoryListingPage({
 }: CategoryListingPageProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSort, setSelectedSort] = useState(
-    () =>
-      safeStorage.getItem('category_selected_sort') ||
-      sortOptions[0]?.value ||
-      'newest'
-  );
-  const [selectedFilter, setSelectedFilter] = useState(
-    () =>
-      safeStorage.getItem('category_selected_filter') ||
-      filterOptions[0]?.value ||
-      'all'
-  );
-  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    safeStorage.setItem('category_selected_sort', selectedSort);
-  }, [selectedSort]);
-
-  useEffect(() => {
-    safeStorage.setItem('category_selected_filter', selectedFilter);
-  }, [selectedFilter]);
-
-  useEffect(() => {
-    let mounted = true;
-    setIsLoading(true);
-    const timeout = setTimeout(() => {
-      if (mounted) setIsLoading(false);
-    }, 300);    return () => {
+    return () => {
       mounted = false;
       clearTimeout(timeout);
     };
@@ -151,13 +111,8 @@ export function CategoryListingPage({
               <div className='relative'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate' />
                 <Input
-                  type='text'
-                  placeholder='Search listings...'
-                  value={searchQuery}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setSearchQuery(e.target.value)
-                  }
-                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
+
+                />
               </div>
 
               <Select value={selectedSort} onValueChange={setSelectedSort}>
@@ -174,13 +129,8 @@ export function CategoryListingPage({
                     </span>
                   </div>
                 </SelectTrigger>
-                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
-                  {sortOptions.map(option => (
-                    <SelectItem
-                      key={option.value}
-                      value={option.value}
-                      className='text-white'
-                    >                      {option.label}
+
+                      {option.label}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -197,13 +147,8 @@ export function CategoryListingPage({
                     </span>
                   </div>
                 </SelectTrigger>
-                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
-                  {filterOptions.map(option => (
-                    <SelectItem
-                      key={option.value}
-                      value={option.value}
-                      className='text-white'
-                    >                      {option.label}
+
+                      {option.label}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -224,8 +169,8 @@ export function CategoryListingPage({
             {isLoading ? (
               <ListingGridSkeleton />
             ) : processedListings.length > 0 ? (
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                {processedListings.map(listing => (                  <ListingScoreCard
+
+                  <ListingScoreCard
                     key = {listing.id,}
                     title = {listing.title,}
                     description = {listing.description,}
@@ -249,10 +194,8 @@ export function CategoryListingPage({
                   Try adjusting your filters or search query
                 </p>
                 <Button
-                  variant='outline'
-                  onClick={() => {
-                    setSearchQuery('');
-                    setSelectedFilter(filterOptions[0]?.value || 'all');                  }}
+
+                  }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
                 >
                   Clear all filters
@@ -346,4 +289,4 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }";
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" ;
 }</div> </div> </div> </>) ;
-}'"}
+}'"

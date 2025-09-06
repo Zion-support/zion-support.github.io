@@ -1,51 +1,44 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import {readReviews, writeReviews} from '../../../utils/dataStore';
-const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
-type Action = 'approve' | 'remove' | 'edit';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase';
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });  }
-
-  const key = req.headers['x-admin-key'];
-  if (key !== ADMIN_KEY) {
-    return res.status(401).json({ error: 'Unauthorized' });  }
+    res.setHeader('Allow', 'POST');
+    return res.status(405).end('Method Not Allowed');
+  }
 
   try {
-    const { action, reviewId, updates } = req.body as {
-      action: Action;
-      reviewId: string;
-      updates?: { rating?: number; text?: string };
-    };
-    const reviews = await readReviews();
-    const idx = reviews.findIndex(r => r.id === reviewId);
-    if (idx < 0) return res.status(404).json({ error: 'Review not found' });
-
-    if (action === 'approve') {
-      reviews[idx].approved = true;
-    } else if (action === 'remove') {
-      reviews[idx].removed = true;    } else if (action === 'edit') {
-      if (!updates) return res.status(400).json({ error: 'Missing updates' });
-      if (typeof updates.rating === 'number') {
-        if (updates.rating < 1 || updates.rating > 5) {
-          return res.status(400).json({ error: 'Rating must be 1-5' });
-        }
-        reviews[idx].rating = updates.rating;
-      }
-      if (typeof updates.text === 'string') {
-        reviews[idx].text = updates.text.trim();
-      }
-    } else {
-      return res.status(400).json({ error: 'Invalid action' });
+    const { reviewId, action, reason } = req.body;
+    
+    if (!reviewId || !action) {
+      return res.status(400).json({ error: 'Review ID and action are required' });
     }
 
-    await writeReviews(reviews);
-    return res.status(200).json({ message: 'OK' });
-  } catch (error: any) {
-    return res
-      .status(500)
-      .json({ error: 'Internal server error', details: error?.message });
+    const supabase = getServerSupabase();
+    
+    const { data, error } = await supabase
+      .from('reviews')
+      .update({ 
+        status: action,
+        moderation_reason: reason,
+        moderated_at: new Date().toISOString()
+      })
+      .eq('id', reviewId)
+      .select()
+      .single();
+
+    if (error) {
+      return res.status(500).json({ error: error.message });
+    }
+
+    res.status(200).json({ 
+      success: true, 
+      review: data 
+    });
+  } catch (e: any) {
+    res.status(500).json({ 
+      error: 'Internal server error', 
+      details: e?.message 
+    });
   }
+}

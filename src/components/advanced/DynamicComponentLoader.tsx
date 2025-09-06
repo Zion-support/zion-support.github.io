@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { logErrorToProduction } from '@/utils/productionLogger';
+
 interface LoadingState {
   isLoading: boolean;
   error: Error | null;
@@ -38,14 +39,8 @@ const EnhancedLoading: React.FC<{
   showProgress?: boolean;
 }> = ({
   progress = 0,
-  message = 'Loading component...',
-  showProgress = true,
-}) => (
-  <Card className='w-full max-w-md mx-auto'>
-    <CardContent className='p-6'>
-      <div className='flex flex-col items-center space-y-4'>
-        <div className='relative'>
-          <Loader2 className='h-8 w-8 animate-spin text-primary' />          {showProgress && (
+
+          {showProgress && (
             <motion.div
               className='absolute inset-0 rounded-full border-2 border-primary'
               style={{
@@ -72,16 +67,8 @@ const EnhancedLoading: React.FC<{
 
 // Enhanced Error Component
 const EnhancedError: React.FC<{
-  error: Error;
-  retry: () => void;
-  isOnline: boolean;
-  retryCount: number;
-  maxRetries: number;
-}> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-  <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>
-    <CardContent className='p-6'>
-      <div className='flex flex-col items-center space-y-4'>
-        <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>          {isOnline ? (
+
+          {isOnline ? (
             <AlertTriangle className='h-6 w-6 text-red-600' />
           ) : (
             <WifiOff className='h-6 w-6 text-red-600' />
@@ -103,11 +90,8 @@ const EnhancedError: React.FC<{
           )}
         </div>
         {retryCount < maxRetries && (
-          <Button
-            onClick={retry}
-            variant='outline'
-            size='sm'
-            className='border-red-300 text-red-700 hover:bg-red-100'          >
+
+          >
             <RefreshCw className='h-4 w-4 mr-2' />
             Try Again
           </Button>
@@ -121,8 +105,6 @@ const EnhancedError: React.FC<{
 const useNetworkStatus = () => {
   const [isOnline, setIsOnline] = useState(true);
 
-  useEffect(() => {
-    const updateOnlineStatus = () => setIsOnline(navigator.onLine);
     window.addEventListener('online', updateOnlineStatus);
     window.addEventListener('offline', updateOnlineStatus);
 
@@ -190,9 +172,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       setDynamicComponent(() => component.default);
       setProgress(100);
 
-      setTimeout(() => {
-        setLoadingState(prev => ({ ...prev, isLoading: false }));
-      }, 300); // Small delay for smoother transition    } catch (error) {
+    } catch (error) {
       logErrorToProduction('Dynamic component loading failed:', {
         data: error,
       });
@@ -216,9 +196,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   // Prefetch on hover/focus
   useEffect((,) => {
     if (prefetch) {
-      const prefetchTimer = setTimeout(() => {
-        loadComponent();
-      }, 100);
+
       return () => clearTimeout(prefetchTimer);
     } else {
       loadComponent();
@@ -227,21 +205,14 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   }, []);
 
   // Update online status
-  useEffect(() => {
-    setLoadingState(prev => ({ ...prev, isOnline }));
-  }, [isOnline]);
+
   // Loading state
   if (loadingState.isLoading) {
     if (loadingComponent) {
       return React.createElement(loadingComponent);
     }
 
-    
-      >
-        <EnhancedLoading
-          progress={progress}
-          message='Loading component...'
-          showProgress={true}        />
+        />
       </motion.div>
     );
   }
@@ -255,7 +226,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       });
     }
 
-          >
+      >
         <EnhancedError
           error = {loadingState.error,}
           retry = {retry,}
@@ -329,4 +300,4 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //   }
 // )
 
-export default DynamicComponentLoader;export default DynamicComponentLoader 
+export default DynamicComponentLoader;

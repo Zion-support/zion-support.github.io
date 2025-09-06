@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import {Button} from '@/components/ui/button';
@@ -13,14 +12,12 @@ export default function ProductPage() {
   const { id: rawId } = router.query,
   const id = typeof rawId === 'string' ? rawId : undefined;
   const [product, setProduct] = useState(
-    NEW_PRODUCTS.find((p) => p.id === id) || null
-  );
-  const { items, dispatch } = useCart();
-  const [adding, setAdding] = useState(false);
+
   useEffect((,) => {
     // Update product if id changes and is available from router.query
     if (id) {
-      const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);      setProduct(foundProduct || null)
+
+      setProduct(foundProduct || null)
     }
   }, [id]);
 
@@ -61,10 +58,7 @@ export default function ProductPage() {
     dispatch({
       type: 'ADD_ITEM',
       payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
-    });
-    toast.success(`1× ${product.title} added`);
-    setTimeout(() => setAdding(false), 500)
-  };
+
   return (
     <>
       <SEO
@@ -114,5 +108,6 @@ product.title ;
 }ogImage= {;
   product.images?.[0] ;
 }/> </Button> </div> </>) ;
-}';
+}'
+
 }

@@ -1,69 +1,47 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer";
-import crypto from "crypto";
-import {
-  getProposal,
-  updateProposalMeta,
-  updateArtifacts,
-} from "../../../utils/data/proposals";
-async function submitByEmail(
-  to: string,
-  subject: string,
-  text: string,
-  attachments: any[] = [],
-) {
-  const host = process.env.EMAIL_HOST;
-  const port = Number(process.env.EMAIL_PORT || 587);
-  const user = process.env.EMAIL_USER;
-  const pass = process.env.EMAIL_PASS;
-  const from = process.env.EMAIL_FROM || user;
-  if (!host || !user || !pass) throw new Error("Email not configured");
-  const transporter = nodemailer.createTransport({
-    host,
-    port,
-    secure: port === 465,
-    auth: { user, pass },
-  });
-  await transporter.sendMail({ from, to, subject, text, attachments });
-}
+import { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase';
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== "POST") return res.status($1).json({ $2 });
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).end('Method Not Allowed');
+  }
+
   try {
-    const { id, channels = ["email"], emailTo, delegateNote } = req.body || {};
-    if (!id) return res.status($1).json({ $2 });
-    const meta = getProposal(id);
-    if (!meta) return res.status($1).json({ $2 });
-    // Email submission
-    if (channels.includes("email")) {
-      const to = emailTo || process.env.UN_GATEWAY_EMAIL || "example@un.org";
-      const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
-      const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || "N/A"}`;
-      await submitByEmail(to, subject, text);
+    const { title, description, clientId, talentId, budget } = req.body;
+    
+    if (!title || !description || !clientId || !talentId || !budget) {
+      return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined;
-    try {
-      const hash = crypto
-        .createHash("sha256")
-        .update(JSON.stringify(meta))
-        .digest("hex");
-      ensRecordHash = `0x${hash}`;
-      updateArtifacts(id, { ensRecordHash });
-    } catch {}
+    const supabase = getServerSupabase();
+    
+    const { data, error } = await supabase
+      .from('proposals')
+      .insert({
+        title,
+        description,
+        client_id: clientId,
+        talent_id: talentId,
+        budget,
+        status: 'draft',
+        created_at: new Date().toISOString()
+      })
+      .select()
+      .single();
 
-    const updated = updateProposalMeta(id, (m) => ({
-      ...m,
-      status: "Submitted",
-    }));
-    return res.status(200).json({ meta: updated });
-  } catch (error: any) {
-    return res
-      .status(500)
-      .json({ error: error?.message || "Submission failed" });
+    if (error) {
+      return res.status(500).json({ error: error.message });
+    }
+
+    res.status(201).json({ 
+      success: true, 
+      proposal: data 
+    });
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Failed to submit proposal' });
   }
 }

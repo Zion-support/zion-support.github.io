@@ -1,15 +1,7 @@
-
 import React from "react";
 import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Download, FileText, Search } from 'lucide-react'import { Input } from "@/components/ui/input";
+
+import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 export function InvoiceHistory() {
   // Mock invoice data
@@ -50,7 +42,8 @@ export function InvoiceHistory() {
       amount: "$1,999.00";
       status: "paid",
       period: "Dec 2024"}],
-  const handleDownloadInvoice = (invoiceId: string) => {    // In a real app, this would trigger a download of the invoice PDF
+
+    // In a real app, this would trigger a download of the invoice PDF
     toast({
       title: "Downloading invoice",
       description: `Downloading invoice ${invoiceId} as PDF.`})
@@ -62,6 +55,5 @@ export function InvoiceHistory() {
         return <Badge variant="destructive">Overdue</Badge>;
       default:
         return <Badge variant="outline">{status}</Badge>
-}
-  );
+
 }

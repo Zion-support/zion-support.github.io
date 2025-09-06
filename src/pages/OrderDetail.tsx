@@ -9,6 +9,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 import { OrderTimeline } from '@/components/orders/OrderTimeline';
+
 export default function OrderDetailPage() {
   const router = useRouter();
   const { orderId } = router.query as { orderId?: string };
@@ -51,9 +52,8 @@ export default function OrderDetailPage() {
       `Date: ${new Date(order.date).toLocaleDateString()}`,
       '',
       'Items:',
-      ...order.items.map(
-        i => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`
-      ),      '',
+
+      '',
       `Total: $${order.total.toFixed(2)}`,
       '',
       'Shipping Address:',
@@ -79,13 +79,8 @@ export default function OrderDetailPage() {
       <h1 className='text-3xl font-bold'>Order #{order.orderId}</h1>
 
       <div>
-        <h2 className='font-semibold mb-2'>Items</h2>
-        <ul className='space-y-1'>
-          {order.items.map((item, idx) => (
-            <li key={idx} className='flex justify-between'>
-              <span>
-                {item.name} x {item.quantity}
-              </span>              <span>${item.price.toFixed(2)}</span>
+
+              <span>${item.price.toFixed(2)}</span>
             </li>
           ))}
         </ul>
@@ -152,5 +147,3 @@ toast.success ('Order summary copied to clipboard') ;
 </li>) ) ;
 }</ul> </div> <div> </div> <Link href="/orders" className="text-zion-purple underline" > Back to orders </Link> </div>) ;
 }'"
-}
-}

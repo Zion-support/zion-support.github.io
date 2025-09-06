@@ -1,4 +1,3 @@
-    onboardingStatus.responseReceived;
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -22,8 +21,7 @@ function ClientDashboardContent() {
     }
   }, [jobs, selectedJobId]);
 
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId);    setSelectedJobTitle(jobTitle)
+    setSelectedJobTitle(jobTitle)
   };
 
   return (
@@ -72,7 +70,7 @@ function ClientDashboardContent() {
                 <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
-              
+
               <TabsContent value="all" className="mt-0">
                 <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
@@ -90,22 +88,22 @@ function ClientDashboardContent() {
               </TabsContent>
             </Tabs>
           </div>
-          
+
           <div>
             <div className="sticky top-4 space-y-6">
               {/* Active Projects Card */}
               <ActiveProjectsCard />
-              
+
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />
-              
+
               {/* AI Talent Suggestions */}
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
                   AI Talent Suggestions
                 </h2>
-                
+
                 {selectedJobId ? (
                   <SuggestedTalents jobId={selectedJobId} />
                 ) : (
@@ -164,4 +162,4 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 }/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center"> <p className="text-muted-foreground"> Select a job to see AI-matched talent suggestions </p> </div>) ;
 }</div> </div> </div> </div> </main> </>) ;
 }export default function ClientDashboard () {;
-  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
+  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"

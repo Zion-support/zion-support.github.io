@@ -38,12 +38,16 @@ import {
   Lightbulb;
   BookOpen
 
+} from 'lucide-react';
+
 export default function StartupToolsPage() {
   const startupTools = [
     {
       name: 'HubSpot',
       description:
         'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.',
+
+      category: 'Marketing & Sales',
       pricing: 'Free - $45/month',
       rating: 4.7,
       users: '135K+',
@@ -105,283 +109,27 @@ export default function StartupToolsPage() {
       pricing: 'Free - $12/month',
       rating: 4.8,
       users: '10M+',
-      icon: <Calendar className='w-8 h-8 text-blue-400' />,      description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
+      icon: <Calendar className='w-8 h-8 text-blue-400' />,
+
       category: 'Productivity',
       pricing: 'Free - $12/month',
       rating: 4.8,
       users: '10M+',
-      icon: <Calendar className='w-8 h-8 text-blue-400' />,
-      features: [
-        'Automated scheduling',
-        'Calendar integration',
-        'Custom booking pages',
-        'Team scheduling',
-        'Analytics & reporting',
-        'Free tier available',
-      ],
-      website: 'https://calendly.com',
-      useCase:
-        'Essential for startups that need to schedule sales calls, investor meetings, and team collaborations efficiently.',
-      pros: [
-        'Free tier',
-        'Easy integration',
-        'Professional appearance',
-        'Time-saving',
-      ],
-      cons: [
-        'Limited free features',
-        'Basic customization',
-        'Can be expensive',
-      ],
-      bestFor: 'Sales teams, consultants, remote teams',
-    },
-    {
-      name: 'Canva',
-      description:
-        'Graphic design platform that makes it easy to create professional designs without design skills.',      category: 'Design',
-      pricing: 'Free - $12.99/month',
-      rating: 4.6,
-      users: '100M+',
-      icon: <Lightbulb className='w-8 h-8 text-blue-400' />,      description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
+
       category: 'Design',
       pricing: 'Free - $12.99/month',
       rating: 4.6,
       users: '100M+',
-      icon: <Lightbulb className='w-8 h-8 text-blue-400' />,
-      features: [
-        'Design templates',
-        'Stock photos & icons',
-        'Brand kit',
-        'Team collaboration',
-        'Social media formats',
-        'Free tier available',
-      ],
-      website: 'https://canva.com',
-      useCase:
-        'Perfect for startups that need to create marketing materials, social media content, and presentations.',
-      pros: ['Free tier', 'Easy to use', 'Great templates', 'Affordable'],
-      cons: ['Limited customization', 'Watermark on free', 'Basic features'],
-      bestFor: 'Marketing teams, content creators, small businesses',
-    },
-    {
-      name: 'Buffer',
-      description:
-        'Social media management platform that helps businesses schedule posts, analyze performance, and manage multiple accounts.',
-      category: 'Social Media',
-      pricing: 'Free - $15/month',
-      rating: 4.4,
-      users: '140K+',
-      icon: <Globe className='w-8 h-8 text-green-400' />,
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      features: [
-        'Social media scheduling',
-        'Analytics & reporting',
-        'Team collaboration',
-        'Content calendar',
-        'Multiple platforms',
-        'Free tier available',
-      ],
-      website: 'https://buffer.com',
-      useCase:
-        'Ideal for startups that want to maintain a consistent social media presence and grow their audience.',
-      pros: ['Free tier', 'Easy to use', 'Good analytics', 'Affordable'],
-      cons: ['Limited free features', 'Basic scheduling', 'Limited platforms'],
-      bestFor: 'Social media managers, small businesses, content creators',
-    },
-    {
-      name: 'Notion',
-      description:
-        'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.',
-      category: 'Productivity',
-      pricing: 'Free - $8/month',
-      rating: 4.7,
-      users: '20M+',
-      icon: <Zap className='w-8 h-8 text-gray-400' />,
-      color: 'bg-gradient-to-br from-gray-500 to-gray-700',
-      features: [
-        'Note-taking & docs',
-        'Project management',
-        'Team collaboration',
-        'Database & tables',
-        'Templates library',
-        'API integration',
-      ],
-      website: 'https://notion.so',
-      useCase:
-        'Perfect for startup teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
-      pros: [
-        'Highly flexible',
-        'Beautiful interface',
-        'Great templates',
-        'Free tier',
-      ],
-      cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming'],
-      bestFor: 'Remote teams, project managers, knowledge workers',
-    },
-    {
-      name: 'Stripe',
-      description:
-        'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.',
-      category: 'Payments',
-      pricing: '2.9% + 30¢ per transaction',
-      rating: 4.9,
-      users: '1M+',
-      icon: <DollarSign className='w-8 h-8 text-blue-400' />,
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
-      features: [
-        'Global payment methods',
-        'Subscription billing',
-        'Fraud protection',
-        'Compliance tools',
-        'Developer-friendly API',
-        'Analytics dashboard',
-      ],
-      website: 'https://stripe.com',
-      useCase:
-        'Essential for any startup that needs to accept payments, especially SaaS companies and e-commerce businesses.',
-      pros: [
-        'Developer-friendly',
-        'Global reach',
-        'Excellent docs',
-        'Reliable',
-      ],
-      cons: [
-        'Higher fees than some alternatives',
-        'Complex for beginners',
-        'Strict requirements',
-      ],
-      bestFor: 'SaaS companies, e-commerce, online businesses',
-    },
-    {
-      name: 'Intercom',
-      description:
-        'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',      category: 'Customer Support',
-      pricing: '$39 - $999/month',
-      rating: 4.6,
-      users: '25K+',
-      icon: <Users className='w-8 h-8 text-green-400' />,      description: 'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',
+
       category: 'Customer Support',
       pricing: '$39 - $999/month',
       rating: 4.6,
       users: '25K+',
-      icon: <Users className='w-8 h-8 text-green-400' />,
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      features: [
-        'Live chat',
-        'Customer messaging',
-        'Help desk',
-        'User onboarding',
-        'Analytics & reporting',
-        'Integration ecosystem',
-      ],
-      website: 'https://intercom.com',
-      useCase:
-        'Perfect for SaaS startups and online businesses that want to provide excellent customer support and user engagement.',
-      pros: [
-        'Great UX',
-        'Powerful features',
-        'Good integrations',
-        'Mobile apps',
-      ],
-      cons: ['Expensive', 'Complex pricing', 'Can be overwhelming'],
-      bestFor: 'SaaS companies, online businesses, customer support teams',
-    },
-    {
-      name: 'Mixpanel',
-      description:
-        'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',      category: 'Analytics',
-      pricing: 'Free - $25/month',
-      rating: 4.5,
-      users: '26K+',
-      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      features: [
-        'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem'
-      ];
-      website: 'https://intercom.com',
-      useCase: 'Perfect for SaaS startups and online businesses that want to provide excellent customer support and user engagement.',
-      pros: ['Great UXPowerful featuresGood integrationsMobile apps'],
-      cons: ['ExpensiveComplex pricingCan be overwhelming'],
-      bestFor: 'SaaS companies, online businesses, customer support teams'
-    };
-    {
-      name: 'Mixpanel',
-      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
+
       category: 'Analytics',
       pricing: 'Free - $25/month',
       rating: 4.5,
       users: '26K+',
-      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
-      features: [
-        'User behavior tracking',
-        'Funnel analysis',
-        'A/B testing',
-        'Real-time data',
-        'Custom events',
-        'Mobile analytics',
-      ],
-      website: 'https://mixpanel.com',
-      useCase:
-        'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
-      pros: [
-        'Powerful analytics',
-        'Real-time data',
-        'Good documentation',
-        'Flexible',
-      ],
-      cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve'],
-      bestFor: 'Product teams, growth hackers, data analysts',
-    },
-    {
-      name: 'Vercel',
-      description:
-        'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.',
-      category: 'Development',
-      pricing: 'Free - $20/month',
-      rating: 4.8,
-      users: '100K+',
-      icon: <Rocket className='w-8 h-8 text-black' />,
-      color: 'bg-gradient-to-br from-gray-800 to-black',
-      features: [
-        'Zero-config deployment',
-        'Global CDN',
-        'Automatic scaling',
-        'Git integration',
-        'Preview deployments',
-        'Edge functions',
-      ],
-      website: 'https://vercel.com',
-      useCase:
-        'Ideal for startup development teams that want to deploy modern web applications quickly with excellent performance.',
-      pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier'],
-      cons: [
-        'Limited backend features',
-        'Can be expensive for high traffic',
-        'Vendor lock-in',
-      ],
-      bestFor: 'Frontend developers, startup teams, modern web apps',
-    },
-  ];
-
-  const categories = [
-    'All',
-    'Marketing & Sales',
-    'Email Marketing',
-    'Productivity',
-    'Design',
-    'Social Media',
-    'Payments',
-    'Customer Support',
-    'Analytics',
-    'Development',
-  ];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
-  const filteredTools =
-    selectedCategory === 'All'
-      ? startupTools
-      : startupTools.filter(tool => tool.category === selectedCategory);  const filteredTools = selectedCategory === 'All' 
-    ? startupTools 
-    : startupTools.filter(tool => tool.category === selectedCategory);
 
   return (
     <>
@@ -400,6 +148,8 @@ export default function StartupToolsPage() {
           content='Essential tools and resources for startups and entrepreneurs to accelerate growth.'
         />
         <meta name='twitter:card' content='summary_large_image' />
+
+      </Head>
 
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
@@ -447,6 +197,9 @@ export default function StartupToolsPage() {
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
+
+                style={{ animationDelay: '0.4s' }}
+
               >
                 Get Startup Advice
               </Button>
@@ -460,6 +213,7 @@ export default function StartupToolsPage() {
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
+
                 {startupTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Essential Tools</div>
@@ -480,28 +234,10 @@ export default function StartupToolsPage() {
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
                 130M+
               </div>
-              <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {startupTools.length}+
-              </div>
-              <div className="text-gray-400 text-sm">Essential Tools</div>
+              <div className='text-gray-400 text-sm'>Total Users</div>            </div>
+
             </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
-                10
-              </div>
-              <div className="text-gray-400 text-sm">Categories</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
-                4.6+
-              </div>
-              <div className="text-gray-400 text-sm">Avg Rating</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
-                130M+
-              </div>
-              <div className="text-gray-400 text-sm">Total Users</div>
-            </div>
+
           </div>
         </div>
       </section>
@@ -514,6 +250,9 @@ export default function StartupToolsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
+
+              <button
+
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -537,6 +276,8 @@ export default function StartupToolsPage() {
               {selectedCategory === 'All'
                 ? 'All Startup Tools'
                 : `${selectedCategory} Tools`}
+
+            </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Discover the essential tools that successful startups use to grow and scale their businesses.'
@@ -627,10 +368,14 @@ export default function StartupToolsPage() {
                         </div>
                         <div className='text-sm text-gray-300 max-w-xs'>
                           {tool.useCase}
-                        </div>                      </div>                      
+                        </div>                      </div>
+
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{tool.useCase}</div>
+
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -645,6 +390,7 @@ export default function StartupToolsPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+
               Additional Startup Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -675,76 +421,18 @@ export default function StartupToolsPage() {
 
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>
-                <BookOpen className='w-8 h-8 text-white' />              Additional Startup Resources
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Beyond tools, here are additional resources to help your startup succeed.
-            </p>
-          </div>
+                <BookOpen className='w-8 h-8 text-white' />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-white">Startup Communities</h3>
-              <p className="text-gray-400 mb-4">
-                Join startup communities like Y Combinator Startup School, Indie Hackers, and local startup meetups.
-              </p>
-              <Button href="https://www.startupschool.org" variant="outline" size="sm">
                 Explore Communities
               </Button>
             </Card>
 
-            <Card className='text-center'>
-              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>
-                <BookOpen className='w-8 h-8 text-white' />
-              </div>
-              <h3 className='text-xl font-bold mb-4 text-white'>
-                Educational Resources
-              </h3>
-              <p className='text-gray-400 mb-4'>
-                Access free courses from platforms like Coursera, edX, and
-                startup-specific learning resources.
-              </p>
-              <Button
-                href='https://www.coursera.org'
-                variant='outline'
-                size='sm'
-              >                Start Learning
-              </Button>
-            </Card>
-
-            <Card className='text-center'>
-              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>
-                <TrendingUp className='w-8 h-8 text-white' />              </div>
-              <h3 className="text-xl font-bold mb-4 text-white">Educational Resources</h3>
-              <p className="text-gray-400 mb-4">
-                Access free courses from platforms like Coursera, edX, and startup-specific learning resources.
-              </p>
-              <Button href="https://www.coursera.org" variant="outline" size="sm">
                 Start Learning
               </Button>
             </Card>
 
-            <Card className='text-center'>
-              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>
-                <TrendingUp className='w-8 h-8 text-white' />
-              </div>
-              <h3 className='text-xl font-bold mb-4 text-white'>
-                Growth Strategies
-              </h3>
-              <p className='text-gray-400 mb-4'>
-                Learn proven growth strategies from successful entrepreneurs and
-                growth hackers.
-              </p>
-              <Button href='/resources' variant='outline' size='sm'>                View Resources              </div>
-              <h3 className="text-xl font-bold mb-4 text-white">Growth Strategies</h3>
-              <p className="text-gray-400 mb-4">
-                Learn proven growth strategies from successful entrepreneurs and growth hackers.
-              </p>
-              <Button href="/resources" variant="outline" size="sm">
                 View Resources
+
               </Button>
             </Card>
           </div>
@@ -756,6 +444,8 @@ export default function StartupToolsPage() {
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+
+            Ready to Scale Your Startup?
           </h2>
           <p className='text-xl text-orange-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our startup experts can help you choose the right tools, implement
@@ -779,6 +469,9 @@ export default function StartupToolsPage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl"
+
+            >
+
               Explore More Tools
             </Button>
           </div>

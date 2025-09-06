@@ -1,14 +1,3 @@
-import React from 'react';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import z from 'zod';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/router';
-import Image from 'next/image'; // Import next/image
-import { logErrorToProduction } from '@/utils/productionLogger';
-
 import {
   Form,
   FormControl,
@@ -16,39 +5,14 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { AIListingGenerator } from '@/components/listing/AIListingGenerator';
-import { Sparkles } from 'lucide-react';
+
 // Define the form schema with zod
 const productSchema = z.object({
   title: z.string().min(3, 'Title must be at least 3 characters'),
   description: z.string().min(10, 'Description must be at least 10 characters'),
   price: z
     .string()
-    .refine(val => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-      message: 'Price must be a valid number',
-    }),
-  category: z.string().min(1, 'Please select a category'),
-  image:
-    typeof window === 'undefined'
-      ? z.any().optional()
-      : z.instanceof(File).optional(),
-  video:
-    typeof window === 'undefined'
-      ? z.any().optional()
-      : z.instanceof(File).optional(),
-  model:
-    typeof window === 'undefined'
-      ? z.any().optional()
-      : z.instanceof(File).optional(),
-  tags: z.string().optional(),
-});
+
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
 
@@ -75,8 +39,8 @@ export function ProductSubmissionForm() {
   });
 
   // Handle image upload preview
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];    if (file) {
+
+    if (file) {
       form.setValue('image', file);
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -86,22 +50,18 @@ export function ProductSubmissionForm() {
     }
   };
 
-  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];    if (file) {
+    if (file) {
       form.setValue('video', file);
     }
   };
 
-  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];    if (file) {
+    if (file) {
       form.setValue('model', file);
     }
   };
 
   // Apply AI-generated content to the form
-  const handleApplyGenerated = (content: any) => {
-    form.setValue('description', content.description);
-    form.setValue('tags', content.tags.join(', '));
+
     // Set a default price as the middle of the suggested range
     const averagePrice = (
       (content.suggestedPrice.min + content.suggestedPrice.max) /
@@ -291,23 +251,14 @@ export function ProductSubmissionForm() {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
             <FormField
-              control={form.control}
-              name='title'
-              render={({
-                field,
-              }: {
-                field: ControllerRenderProps<ProductFormValues, 'title'>;
-              }) => {
-                const { onChange, onBlur, value, ref } = field;                return (
+
+                return (
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder='Enter product title'
-                        onChange={onChange}
-                        onBlur={onBlur}
-                        value={value}
-                        ref={ref}                      />
+
+                      />
                     </FormControl>
                     <FormDescription>
                       Create a compelling title that describes your product
@@ -319,13 +270,8 @@ export function ProductSubmissionForm() {
             />
 
             <FormField
-              control={form.control}
-              name='description'
-              render={({
-                field,
-              }: {
-                field: ControllerRenderProps<ProductFormValues, 'description'>;
-              }) => (                <FormItem>
+
+                <FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Textarea
@@ -344,13 +290,8 @@ export function ProductSubmissionForm() {
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
               <FormField
-                control={form.control}
-                name='price'
-                render={({
-                  field,
-                }: {
-                  field: ControllerRenderProps<ProductFormValues, 'price'>;
-                }) => (                  <FormItem>
+
+                  <FormItem>
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
                       <Input
@@ -368,13 +309,8 @@ export function ProductSubmissionForm() {
               />
 
               <FormField
-                control={form.control}
-                name='category'
-                render={({
-                  field,
-                }: {
-                  field: ControllerRenderProps<ProductFormValues, 'category'>;
-                }) => (                  <FormItem>
+
+                  <FormItem>
                     <FormLabel>Category</FormLabel>
                     <FormControl>
                       <select
@@ -397,13 +333,8 @@ export function ProductSubmissionForm() {
             </div>
 
             <FormField
-              control={form.control}
-              name='tags'
-              render={({
-                field,
-              }: {
-                field: ControllerRenderProps<ProductFormValues, 'tags'>;
-              }) => (                <FormItem>
+
+                <FormItem>
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
                     <Input
@@ -421,17 +352,8 @@ export function ProductSubmissionForm() {
             />
 
             <FormField
-              control={form.control}
-              name='image'
-              render={() => (
-                <FormItem>
-                  <FormLabel>Product Image</FormLabel>
-                  <FormControl>
-                    <Input
-                      type='file'
-                      accept='image/*'
-                      onChange={handleImageChange}
-                      className='cursor-pointer'                    />
+
+                    />
                   </FormControl>
                   <FormDescription>
                     Upload a high-quality image of your product (recommended
@@ -443,8 +365,8 @@ export function ProductSubmissionForm() {
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
                       <AspectRatio ratio={3 / 2}>
                         <Image
-                          src={imagePreview}
-                          alt='Product image preview'                          width={600} // Example width, adjust as needed
+
+                          width={600} // Example width, adjust as needed
                           height={400} // Example height, adjust as needed
                           className='w-full h-full object-cover'
                           priority={false} // Preview images are not LCP
@@ -460,8 +382,8 @@ export function ProductSubmissionForm() {
             />
 
             <FormField
-              control={form.control}
-              name='video'              render={() => (
+
+              render={() => (
                 <FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
@@ -481,8 +403,8 @@ export function ProductSubmissionForm() {
             />
 
             <FormField
-              control={form.control}
-              name='model'              render={() => (
+
+              render={() => (
                 <FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
@@ -501,11 +423,7 @@ export function ProductSubmissionForm() {
               )}
             />
 
-            <div className='flex justify-end'>
-              <Button
-                type='submit'
-                disabled={isSubmitting}
-                className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'              >
+              >
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
               </Button>
             </div>
@@ -513,9 +431,7 @@ export function ProductSubmissionForm() {
         </Form>
       </TabsContent>
 
-      <TabsContent value='ai'>
-        <AIListingGenerator
-          onApplyGenerated={handleApplyGenerated}          initialValues={{
+          initialValues={{
             title: form.getValues('title'),
             category: form.getValues('category'),
           }}
@@ -610,5 +526,4 @@ const {;
 }className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
-}'"  )
-}
+}'"

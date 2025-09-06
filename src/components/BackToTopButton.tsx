@@ -1,6 +1,5 @@
 import { ArrowUp } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { useEffect, useState } from "react";
+
 export function BackToTopButton() {
   const [visible, setVisible] = useState(false);
 
@@ -20,9 +19,9 @@ export function BackToTopButton() {
     document.body.scrollTo(opts);
   };
 
-      >
+    >
       <ArrowUp className='h-5 w-5' />
     </button>
   );
 
-}"}
+}"

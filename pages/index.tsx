@@ -1,10 +1,5 @@
 import Link from 'next/link';
-import Head from 'next/head';
-import {useState, useEffect, Suspense} from 'react';
-import {ContactInfo, AnimationState} from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
+
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
@@ -29,64 +24,16 @@ export default function Home() {
           </button>
         </div>
       </div>
-    ),
-  };
-  return (;
-    <>;
-      <Head>;
-        <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>;
-        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />;
-        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions" />;
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
-        <meta name="robots" content="index, follow" />;
-        <meta name="author" content="Zion Tech Group" />;
-        <meta name="language" content="en-US" />;
-        <link rel="canonical" href={contact.site} />;
-        <link rel="icon" href="/favicon.ico" />;
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />;
-        <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />;
-        <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />;
-        <meta property="og:url" content={contact.site} />;
-        <meta property="og:type" content="website" />;
-        <meta property="og:site_name" content="Zion Tech Group" />;
-        <meta property="og:locale" content="en_US" />;
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />;
-        <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />;
-        <meta name="twitter:site" content="@ziontechgroup" />;
-        <meta name="twitter:creator" content="@ziontechgroup" />;
-        <script;
-          type="application/ld+json";
-          dangerouslySetInnerHTML={{;
-            __html:JSON.stringify({;
-              "@context":"https://schema.org",;
-              "@type":"Organization",;
-              "name":"Zion Tech Group",;
-              "url":contact.site,;
-              "logo":`${contact.site}/favicon.svg`,;
-              "description":"Leading provider of micro SaaS products, AI services, and IT solutions",;
-              "address":{;
-                "@type":"PostalAddress",;
-                "streetAddress":"364 E Main St STE 1008",;
-                "addressLocality":"Middletown",;
-                "addressRegion":"DE",;
-                "postalCode":"19709",;
-                "addressCountry":"US";
-              },;
-              "contactPoint":{;
-                "@type":"ContactPoint",;
-                "telephone":contact.phone,;
-                "contactType":"customer service",;
-                "email":contact.email;
-              },;
-              "sameAs":[contact.site];
-            });
-          }}
-        />;
-      </Head>;
-      <ErrorBoundary level="page">;
-        <Suspense fallback={<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}>;
-          <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">;
+    );
+
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  }), []);
+  return (
+    <>
+
         {/* Hero Section */}
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">;
           <div className="max-w-4xl mx-auto">;
@@ -251,21 +198,63 @@ import { Button } from '@/components/ui/button';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Welcome to Zion Tech Group
-        </h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Your trusted partner in technology solutions
-        </p>
-        <Button size="lg">
-          Get Started
-        </Button>
-      </div>
-    </div>
-  );
-}
+    <>
+      <Head>
+        <title>Zion Tech Group - AI-Powered IT Services & Solutions</title>
+        <meta name="description" content="Leading provider of AI-powered IT services, cybersecurity, cloud infrastructure, and digital transformation solutions. Transform your business with cutting-edge technology." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="AI services, cybersecurity, cloud infrastructure, digital transformation, IT consulting, machine learning, data analytics" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <AnimatedBackground />
+
+      <main className="relative z-10">
+        {/* Hero Section */}
+        <section className="min-h-screen flex items-center justify-center px-4 py-20">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Zion Tech Group
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Empowering businesses with cutting-edge AI technology, robust cybersecurity, 
+                and innovative cloud solutions for the digital future.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <Button size="lg" className="group">
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <Button variant="outline" size="lg">
+                  Learn More
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-400 text-sm md:text-base">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </section>
 

@@ -1,6 +1,8 @@
-    updateJobMatchStatus, 
+updateJobMatchStatus, 
+
 import { useAuth } from "@/hooks/useAuth";
-import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
+
+import { Badge } from "@/components/ui/badge";
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
@@ -21,13 +23,9 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     } 
   } = useJobSuggestions(currentTalentId);
 
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
+    // In a real app, this might redirect to application form or open a modal
   };
 
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined');
-  };
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-6">
@@ -39,7 +37,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />;
   }
-  
+
   return (
     <div className="space-y-6">
       {/* New Matches Section */}
@@ -51,7 +49,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
               {newMatches.length} New
             </Badge>
           </div>
-          
+
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -64,14 +62,14 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           </div>
         </div>
       )}
-      
+
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
-          
+
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -84,14 +82,14 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           </div>
         </div>
       )}
-      
+
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
-          
+
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard 
@@ -159,4 +157,4 @@ if (isLoading) {;
 }/>) ) ;
 }</div> </div>) ;
 }</div>) ;
-}'"}
+}'"

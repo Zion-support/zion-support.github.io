@@ -1,9 +1,10 @@
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
+color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
         ...cat;
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+
+import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 // This is the type definition copied from Categories.tsx for consistency.
@@ -127,7 +128,7 @@ export function CategoriesSection({
 }: CategoriesSectionProps) {
   const { t } = useTranslation();
   const defaultCategories = getDefaultCategories(t);
-  
+
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -170,7 +171,7 @@ export function CategoriesSection({
             </p>
           </div>
         )}
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {displayCategories.map((category,) => (
             <Link
@@ -190,7 +191,7 @@ export function CategoriesSection({
             </Link>
           ))}
         </div>
-        
+
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
@@ -205,7 +206,7 @@ export function CategoriesSection({
               </Link>            ))}
           </div>
         </div>
-        
+
         <div className="mt-12 flex justify-center">
           <Link 
             href="/categories/all"
@@ -252,7 +253,7 @@ title: cat.name;
 icon: getIcon (cat.iconName) ;
 }) );
 //If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {;
-  
+
 }> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {';
   t ('home.no categories title') ";
 }</h2> <p className="text-zion-slate-light text-lg mb-2" > {';
@@ -268,4 +269,4 @@ icon: getIcon (cat.iconName) ;
 }</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {';
   t ('home.view all categories') ;
 }</Link> </div> </div> </section>) ;
-}'"}
+}'"

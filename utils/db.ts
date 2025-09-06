@@ -1,29 +1,28 @@
 import fs from 'fs';
 import path from 'path';
 
-export function readJsonFile<T>(filePath: string, defaultValue: T): T {
+export function readJsonFile<T>(fileName: string, defaultValue: T): T {
   try {
-    const fullPath = path.join(process.cwd(), filePath);
-    if (!fs.existsSync(fullPath)) {
-      return defaultValue;
-    }
-    const data = fs.readFileSync(fullPath, 'utf8');
-    return JSON.parse(data);
-  } catch (error) {
-    console.error(`Error reading ${filePath}:`, error);
+    const filePath = path.join(process.cwd(), 'data', fileName);
+    if (!fs.existsSync(filePath)) return defaultValue;
+    const content = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(content);
+  } catch {
     return defaultValue;
   }
 }
 
-export function writeJsonFile<T>(filePath: string, data: T): void {
-  try {
-    const fullPath = path.join(process.cwd(), filePath);
-    const dir = path.dirname(fullPath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    fs.writeFileSync(fullPath, JSON.stringify(data, null, 2));
-  } catch (error) {
-    console.error(`Error writing ${filePath}:`, error);
-  }
+export function writeJsonFile<T>(fileName: string, data: T): void {
+  const filePath = path.join(process.cwd(), 'data', fileName);
+  const dir = path.dirname(filePath);
+  fs.mkdirSync(dir, { recursive: true });
+  const tmpPath = filePath + '.tmp';
+  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2));
+  fs.renameSync(tmpPath, filePath);
+}
+
+export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
+  const items = readJsonFile<T[]>(fileName, []);
+  items.push(item);
+  writeJsonFile<T[]>(fileName, items);
 }

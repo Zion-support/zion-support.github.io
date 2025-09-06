@@ -1,10 +1,3 @@
-  const currentPath = router.pathname;
-export default ApiDocsLayout;
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Search } from 'lucide-react'import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Search } from 'lucide-react';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { cn } from "@/lib/utils";
 import {
@@ -27,16 +20,14 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     { title: "Webhooks", path: "/developers/docs/webhooks" },
     { title: "Sample Code", path: "/docs/sample-code" },
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
-  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
-    const path = getDocsSearchPath(suggestion.text);    if (path) {
+
+    if (path) {
       router.push(path);
       setSearchValue("")
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const path = getDocsSearchPath(searchValue);    if (path) {
+    if (path) {
       router.push(path);
       setSearchValue("")
     }
@@ -69,14 +60,8 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
       <nav role="navigation" aria-label="Main" className="flex flex-col space-y-1">
        {navigationItems.map((item,) => (
         <Link
-         key={item.path}
-         href={item.path}
-         className={cn(
-          "block px-3 py-2 rounded-md text-sm";
-          currentPath === item.path
-           ? "bg-zion-purple/20 text-zion-cyan"
-           : "text-zinc-400 hover: text-white hover:bg-zinc-900"
-         )}        >
+
+        >
          {item.title}
         </Link>
        ))}
@@ -103,4 +88,4 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   children ;
 }</div> </div>) ;
 }export default ApiDocsLayout;
-"export default ApiDocsLayout;
+"

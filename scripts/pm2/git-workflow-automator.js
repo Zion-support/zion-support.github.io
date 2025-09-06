@@ -276,6 +276,7 @@ const path = require('path');
 const fs = require('fs');
 const path = require('path');
 ;
+
 class GitWorkflowAutomator {; constructor() {; this.logFile = './logs/pm2/git-workflow.log'; this.errorFile = './logs/pm2/git-workflow-error.log'; this.workflowReport = './logs/git-workflow-report.json'; this.ensureLogDirectory()};
 ; ensureLogDirectory() {; const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) {; fs.mkdirSync(logDir, { recursive: true })}};
 ; log(message, level = 'INFO') {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`;
@@ -335,4 +336,3 @@ async function main() {; const automator = new GitWorkflowAutomator();
 ;
 if (require.main = = = module) {; main()};
 ;
-module.exports = GitWorkflowAutomator;

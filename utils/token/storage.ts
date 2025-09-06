@@ -21,8 +21,21 @@ class TokenStore {
     maxIssueAmount: 10000
   };
 
-  getConfig(): TokenConfig {
-    return { ...this.config };
+export interface TokenStoreData {
+  wallets: Record<string, Wallet>;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+}
+
+function readFromDisk(): TokenStoreData | null {
+  try {
+    ensureDataDir();
+    if (!fs.existsSync(STORE_FILE)) return null;
+    const raw = fs.readFileSync(STORE_FILE, 'utf8');
+    const parsed = JSON.parse(raw) as TokenStoreData;
+    return parsed;
+  } catch {
+    return null;
   }
 
   setConfig(newConfig: Partial<TokenConfig>): void {

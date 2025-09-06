@@ -1,13 +1,8 @@
-
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
-import {
-  Tooltip;
-  TooltipContent;
-  TooltipProvider;
-  TooltipTrigger} from "@/components/ui/tooltip";import { useToast } from "@/hooks/use-toast";
+
+import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
   const [isConnected, setIsConnected] = useState(false);
@@ -15,7 +10,7 @@ export function OnChainExport() {
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
   const { toast } = useToast();
   const { user } = useAuth();
-  
+
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
@@ -28,13 +23,10 @@ export function OnChainExport() {
         });
         return
       }
-      
+
       // Request accounts
+
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0];
-      
-  
-  
-}
-  );
+
 }

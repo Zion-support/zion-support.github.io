@@ -1,4 +1,3 @@
-
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -26,7 +25,7 @@ export function SmartContractBuilder({
   });
   const [deployStatus, setDeployStatus] = useState<string>('');
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
-  
+
   const { deploySmartContract } = useSmartContracts();
 
   const handleLoadTemplate = (templateData: ContractFormValues,) => {
@@ -34,14 +33,14 @@ export function SmartContractBuilder({
   };
 
   // Convert ContractFormValues to contract content string
-  
+
   const handleDeployContract = async () => {
     if (!generatedContract) return;
-    
+
     try {
       setDeployStatus('deploying');
       const contractInfo = await deploySmartContract(generatedContract, deployOptions);
-      
+
       if (contractInfo) {
         setDeploymentInfo(contractInfo);
         setDeployStatus('deployed');
@@ -370,7 +369,7 @@ export function SmartContractBuilder({;
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-            
+
             <div className="flex gap-2">
               <Button 
                 variant="outline" 
@@ -383,7 +382,7 @@ export function SmartContractBuilder({;
               </Button>
             </div>
           </div>
-          
+
           <TabsContent value="form" className="pt-4">
             <ContractForm 
               talent = {talent,}
@@ -393,7 +392,7 @@ export function SmartContractBuilder({;
               onContractGenerated = {handleFormSubmit,}
             />
           </TabsContent>
-          
+
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
@@ -403,7 +402,7 @@ export function SmartContractBuilder({;
                   onClose = {onClose,}
                   deploymentInfo = {deploymentInfo,}
                 />
-                
+
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
@@ -418,7 +417,7 @@ export function SmartContractBuilder({;
             )}
           </TabsContent>
         </Tabs>
-        
+
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
@@ -465,19 +464,4 @@ setActiveTab ("preview");
 }currentValues= {;
   formValues ;
 }/> </DialogContent> </Dialog>) ;
-}'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
-
-            {/* Fallback for old Solidity preview if needed, or remove if fully replaced by on-chain flow */}
-            {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
-          </TabsContent>;
-        </Tabs>;
-        <TemplateManager;
-          isOpen={templateManagerOpen}
-          onClose={() => setTemplateManagerOpen(false)}
-          onSelectTemplate={handleLoadTemplate}
-          currentValues={formValues}
-        />;
-      </DialogContent>;
-    </Dialog>;
-  )}
-}
+}'"

@@ -1,5 +1,3 @@
-    
-
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -35,8 +33,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     category: string,
     keyFeatures: string,
     targetAudience: string
-  }) => {
-    setIsLoading(true);    
+
     try {
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
@@ -45,7 +42,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       if (error) {
         throw new Error(error.message)
       }
-      
+
       if (data && (data as any).error) {
         throw new Error((data as any).error)
       }
@@ -171,5 +168,6 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   handleApply ;
 }/>) ;
 }</div>) ;
-}'";
+}'"
+
 }

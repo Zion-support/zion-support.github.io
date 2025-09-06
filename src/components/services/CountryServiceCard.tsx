@@ -5,25 +5,11 @@ import {
   CardHeader,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
 import { CountryPricing } from '@/data/onsiteServicePricing';
-
-interface CountryServiceCardProps {
-  country: CountryPricing;
-  onSelect: (country: CountryPricing) => void;
-  onQuote?: (country: CountryPricing) => void;
-  isPopular?: boolean;import Link from 'next/link';
-import { Badge } from "@/components/ui/badge";
-import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
-import { CountryPricing } from "@/data/onsiteServicePricing";
-interface CountryServiceCardProps {
-  country: CountryPricing,
-  onSelect: (country: CountryPricing,) => void,
-  onQuote?: (country: CountryPricing,) => void,
-  isPopular?: boolean
-}
 
 export function CountryServiceCard({
   country,
@@ -89,7 +75,6 @@ export function CountryServiceCard({
     }
   };
 
-  
     >
       <CardHeader className='pb-2'>
         <div className='flex items-center justify-between'>
@@ -146,9 +131,8 @@ export function CountryServiceCard({
           Select Service
         </Button>
         <Button
-          variant='outline'
-          className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-          onClick={() => onQuote?.(country)}        >
+
+        >
           Get Quote
         </Button>
         <Button
@@ -161,4 +145,3 @@ export function CountryServiceCard({
       </CardFooter>
     </Card>
   );
-}

@@ -45,6 +45,7 @@ export const usePerformanceMetrics = () = > {; const [metrics, setMetrics] = Rea
 };
 };
 ;
+
 // Debounced search hook;
 export const useDebouncedSearch = (value: string, delay: number = 300) => {,
   const [debouncedValue, setDebouncedValue] = React.useState(value);
@@ -74,7 +75,3 @@ export const usePerformanceMetrics = () => {;
       averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1),
     }));
   }, []);
-;  return { metrics, recordRender };
-};
-  return { metrics, recordRender };
-};

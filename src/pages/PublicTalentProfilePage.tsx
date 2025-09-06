@@ -1,10 +1,3 @@
-
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
-import { Badge } from '@/components/ui/badge';
-import { Star } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react';
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -267,4 +260,4 @@ if (isLoading) {";
 }/> {;
   /* Placeholder for other sidebar elements */ ;
 }</div> </div> </div> </>) ;
-}'"}
+}'"

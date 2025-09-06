@@ -34,4 +34,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     context,
   });
   res.status(200).json({ conversation, message });
+
 }

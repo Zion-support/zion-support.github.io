@@ -28,4 +28,5 @@ export default async function handler(
     if (target) target.lastSyncAt = now;
   });
   res.status(200).json({ ok: true });
+
 }

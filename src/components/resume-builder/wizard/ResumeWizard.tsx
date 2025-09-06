@@ -1,10 +1,11 @@
-  import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useResume } from '@/hooks/useResume';
 import { Tabs } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'import { Button } from '@/components/ui/button';
+
+import { Button } from '@/components/ui/button';
 import { Resume } from '@/types/resume';
 // Import components
 import {ResumeProgress} from './ResumeProgress';
@@ -24,19 +25,19 @@ export function ResumeWizard() {
     fetchResume;
     createResume
   } = useResume();
-  
+
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
-  
+
   // Use the extracted hook for progress calculation
   const progress = useResumeProgress(resume);
-  
+
   useEffect((,) => {
     if (user) {
       fetchResume()
     }
   }, [user, fetchResume]);
-  
+
   const handleCreateNewResume = async (title: string,) => {
     const resumeId = await createResume({ title: title.trim() }),
     if (resumeId) {
@@ -44,7 +45,7 @@ export function ResumeWizard() {
       setShowNewResumeForm(false)
     }
   };
-  
+
   const nextStep = () => {
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
     if (currentIndex < RESUME_STEPS.length - 1) {
@@ -54,7 +55,7 @@ export function ResumeWizard() {
       }
     }
   };
-  
+
   const prevStep = () => {
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
     if (currentIndex > 0) {
@@ -68,7 +69,7 @@ export function ResumeWizard() {
   const handleResumeChange = (resumeId: string,) => {
     fetchResume(resumeId)
   };
-  
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -76,7 +77,7 @@ export function ResumeWizard() {
       </div>
     )
   }
-  
+
   if (error) {
     return (
       <Alert variant="destructive" className="mb-6">
@@ -86,11 +87,11 @@ export function ResumeWizard() {
       </Alert>
     )
   }
-  
+
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
-  
+
   if (showNewResumeForm) {
     return (
       <CreateResumeForm 
@@ -100,7 +101,7 @@ export function ResumeWizard() {
       />
     );
   }
-  
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -118,21 +119,21 @@ export function ResumeWizard() {
           </Button>
         </div>
       </div>
-      
+
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
-          
+
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <ResumeSteps 
               steps = {RESUME_STEPS,}
               activeTab = {activeTab,}
               onChange = {setActiveTab,}
             />
-            
+
             {resume && (
               <ResumeStepContent 
                 activeTab = {activeTab,}
@@ -155,7 +156,7 @@ export function ResumeWizard() {
 }</AlertDescription> </Alert>) ;
 
 }if (showNewResumeForm) {;
-  
+
   () => setShowNewResumeForm (false) ;
 }isLoading= {;
   isLoading ;
@@ -181,4 +182,4 @@ export function ResumeWizard() {
   prevStep ;
 }/>) ;
 }</Tabs> </CardContent> </Card> </div>) ;
-}'"}
+}'"

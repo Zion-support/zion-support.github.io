@@ -25,16 +25,15 @@ export const REGIONS = [  "Machine Learning";
   "Cloud Architecture";
   "TensorFlow"
 
+];
+
 // Regions
 export const REGIONS = [
+
   'North America',
   'Europe',
   'Asia Pacific',
   'South America',
   'Middle East',
-  'Africa',];  "North America";
-  "Europe";
-  "Asia Pacific";
-  "South America";
-  "Middle East";
-  "Africa"
+
+];

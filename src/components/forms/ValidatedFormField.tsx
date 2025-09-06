@@ -1,30 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';import { Checkbox } from '@/components/ui/checkbox';
+
+import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-interface ValidationRule {
-  required?: boolean;
-  minLength?: number;
-  maxLength?: number;
-  pattern?: RegExp;
-  custom?: (value: any) => string | null;
 interface ValidatedFormFieldProps {
   name: string;
   label: string;
@@ -87,10 +67,6 @@ export function ValidatedFormField({
 
     setValidationState('validating');
 
-    const timer = setTimeout(() => {
-      const error = validateField(fieldValue);
-      setValidationState(error ? 'invalid' : 'valid');
-    }, debounceMs);
     setDebounceTimer(timer);
 
     return () => {
@@ -176,15 +152,13 @@ export function ValidatedFormField({
 
       case 'select':
         return (
-          <div className='relative'>
-            <Select
-              onValueChange={value => form.setValue(name, value)}
-              disabled={disabled}
-            >              <SelectTrigger className={baseClasses}>
+
+              <SelectTrigger className={baseClasses}>
                 <SelectValue placeholder={placeholder} />
               </SelectTrigger>
               <SelectContent>
-                {options.map(option => (                  <SelectItem key={option.value} value={option.value}>
+
+                  <SelectItem key={option.value} value={option.value}>
                     {option.label}
                   </SelectItem>
                 ))}
@@ -198,14 +172,8 @@ export function ValidatedFormField({
         return (
           <div className='flex items-center space-x-2'>
             <Checkbox
-              id={name}
-              checked={fieldValue}
-              onCheckedChange={checked => form.setValue(name, checked)}
-              disabled={disabled}
-            />
-            <label
-              htmlFor={name}
-              className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
+
+            >
               {label}
             </label>
             {getValidationIcon()}
@@ -224,12 +192,8 @@ export function ValidatedFormField({
             <div className='absolute inset-y-0 right-0 flex items-center gap-1 pr-3'>
               {getValidationIcon()}
               <Button
-                type='button'
-                variant='ghost'
-                size='sm'
-                className='h-7 w-7 p-0'
-                onClick={() => setShowPassword(!showPassword)}
-                aria-label={showPassword ? 'Hide password' : 'Show password'}              >
+
+              >
                 {showPassword ? (
                   <EyeOff className='h-4 w-4' />
                 ) : (
@@ -258,10 +222,8 @@ export function ValidatedFormField({
   };
 
   if (type === 'checkbox') {
-    
-        render={() => (
-          <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
-            <FormControl>{renderField()}</FormControl>            {(fieldError || description) && (
+
+            {(fieldError || description) && (
               <div className='space-y-1'>
                 {fieldError && (
                   <FormMessage className='text-sm text-red-500'>
@@ -279,14 +241,7 @@ export function ValidatedFormField({
     );
   }
 
-  
-      render={() => (
-        <FormItem>
-          <FormLabel className='text-sm font-medium'>
-            {label}
-            {validation.required && (
-              <span className='text-red-500 ml-1'>*</span>
-            )}          </FormLabel>
+          </FormLabel>
           <FormControl>{renderField()}</FormControl>
           {(fieldError || description) && (
             <div className='space-y-1'>
@@ -348,7 +303,3 @@ export const commonValidations = {
     },
   },
 };
-    };
-  }},
-    };
-  }},

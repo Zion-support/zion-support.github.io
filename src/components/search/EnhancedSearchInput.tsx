@@ -1,7 +1,3 @@
-          
-import { logInfo, logWarn } from '@/utils/productionLogger';
-
-import { logInfo, logWarn } from '@/utils/productionLogger';
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string,) => void,
@@ -9,8 +5,8 @@ interface EnhancedSearchInputProps {
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
    */
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
-  placeholder?: string;  /**
+
+  /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
@@ -62,7 +58,7 @@ export function EnhancedSearchInput({;
           const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {
             signal: AbortSignal.timeout(5000) // 5 second timeout
           });
-          
+
           if (response.ok) {
             const data = await response.json();
             if (Array.isArray(data)) {
@@ -111,7 +107,7 @@ export function EnhancedSearchInput({;
         }
         setHighlightedIndex(-1);
       })
-      .catch(() => setFilteredSuggestions([]));
+
     return () => controller.abort()
   }, [debounced, searchSuggestions]);
 
@@ -123,7 +119,7 @@ export function EnhancedSearchInput({;
         // setHighlightedIndex(-1), // Already handled in onBlur generally
       }
     }
-    
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, []);
@@ -280,7 +276,7 @@ export function EnhancedSearchInput({;
         break
     }
   };
-  
+
   return (
     <div
       className="relative w-full"
@@ -300,20 +296,15 @@ export function EnhancedSearchInput({;
           type="text"
           id="enhanced-search-input"
           name="search"
-          value={value}
-          onChange={(e) => {
-            onChange(e.target.value);
-            setEnterHandledPostFocus(false)
-          }}
-          onFocus={(e) => {
-            setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus
+
+            setHighlightedIndex(-1), // Explicitly reset on focus
             const currentVal = e.target.value;
             setValueOnFocus(currentVal);
             setEnterHandledPostFocus(false);
             e.target.setSelectionRange(currentVal.length, currentVal.length)
           }}
-          onBlur={(e) => {
-            const relatedTarget = e.relatedTarget as HTMLElement;            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
+
+            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
               setIsFocused(false);
               setHighlightedIndex(-1)
             ,}
@@ -336,7 +327,7 @@ export function EnhancedSearchInput({;
           </button>
         )}
       </div>
-      
+
       <AutocompleteSuggestions
         suggestions = {filteredSuggestions,}
         searchTerm = {value,}
@@ -369,54 +360,4 @@ break ;
   () => onChange ('') ";
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
 }</div> <AutocompleteSuggestions /> </div>) ;
-}'"  )
-      default:;
-        break;
-}
-  };
-  return (<div;
-      className="relative w-full";
-      ref={containerRef}
-      role="combobox";
-      aria-expanded={isFocused && filteredSuggestions.length > 0}
-      aria-haspopup="listbox";
-      aria-controls="autocomplete-suggestions-list">;
-      <div className="relative">;
-        <Search ;
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" ;
-        />;
-        <Input;
-          ref={inputRef}
-          type="text";
-          value={value}
-          onChange={(e) => {;
-            onChange(e.target.value);
-}}
-          onFocus={() => setIsFocused(true)}
-          onKeyDown={handleKeyDown} ;
-          placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
-          aria-autocomplete="list";
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-        />;
-        {value && (;
-          <button;
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white";
-            onClick={() => onChange('')}
-
-          >;
-            <X className="h-4 w-4" />;
-          </button>;
-        )}
-      </div>;
-      <AutocompleteSuggestions;
-        suggestions={filteredSuggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelectSuggestion}
-        visible={isFocused}
-        highlightedIndex={highlightedIndex} ;
-        listId="autocomplete-suggestions-list" ;
-      />;
-    </div>;
-  );
-}
+}'"

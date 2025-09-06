@@ -1,7 +1,3 @@
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Star } from 'lucide-react';
-
 interface LeaderboardEntry {
   id: string,
   rank: number,
@@ -61,10 +57,11 @@ export function PartnerLeaderboard() {
       badges: ["newcomer"]
     }
   ];
-  
+
   // Function to render rank badge
   const renderRankBadge = (rank: number,) => {
     switch(rank) {
+
       case 1:
         return <Trophy className="h-5 w-5 text-yellow-500" />;
       case 2:
@@ -73,6 +70,5 @@ export function PartnerLeaderboard() {
         return <Medal className="h-5 w-5 text-amber-700" />,
       default:
         return <span className="text-sm font-semibold">{rank}</span>
-}
-  );
+
 }

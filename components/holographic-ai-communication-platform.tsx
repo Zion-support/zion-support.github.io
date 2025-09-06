@@ -3,24 +3,13 @@ import Head from 'next/head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
+
 export default function HolographicAICommunicationPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
 
-  const features = [
-    'AI-powered 3D holographic projection',
-    'Real-time holographic rendering',
-    'Multi-user holographic meetings',
-    'Gesture and voice control',
-    'Cross-platform WebXR support',
-    'Enterprise-grade security',    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
-  const features = [
-    'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
+  ];
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -34,6 +23,8 @@ export default function HolographicAICommunicationPage() {
           rel='canonical'
           href='https://ziontechgroup.com/holographic-ai-communication-platform'
         />
+
+      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
@@ -98,6 +89,9 @@ export default function HolographicAICommunicationPage() {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
+
+              </div>
+
             </div>
           </div>
         </div>
@@ -105,4 +99,3 @@ export default function HolographicAICommunicationPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-

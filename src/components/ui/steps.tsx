@@ -1,7 +1,3 @@
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-          
-
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
@@ -24,8 +20,8 @@ export function Step({
       )}
     >
       <div
-        className={cn(
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium";          {
+
+          {
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
               status === "incomplete";
             "bg-zion-blue border-zion-cyan text-white":
@@ -67,21 +63,20 @@ interface StepsProps {
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children);
-  
+
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
-        {React.Children.map(childrenArray, (child, index) => {
-          if (!React.isValidElement(child)) return null;          
+
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
-          
+
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status});
         })}
       </ol>
-      
+
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
@@ -95,4 +90,4 @@ export function Steps({ currentStep, className, children }: StepsProps) {
   );
 
 }/> </div> </div> </div>) ;
-}"}
+}"

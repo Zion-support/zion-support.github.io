@@ -17,6 +17,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
+
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required'),
   isDefault: z.boolean(),
@@ -42,12 +43,8 @@ export function TemplateSaveForm({
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      title: editTemplate?.title || '',
-      isDefault: editTemplate?.is_default || false,
-    },
-  });
 
-  const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {
+    if (!currentValues && !editTemplate) {
       return;
     }
 
@@ -79,13 +76,8 @@ export function TemplateSaveForm({
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
         <FormField
-          control={form.control}
-          name='title'
-          render={({
-            field,
-          }: {
-            field: ControllerRenderProps<FormValues, 'title'>;
-          }) => (            <FormItem>
+
+            <FormItem>
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder='Enter template name' />
@@ -96,22 +88,8 @@ export function TemplateSaveForm({
         />
 
         <FormField
-          control={form.control}
-          name='isDefault'
-          render={({
-            field,
-          }: {
-            field: ControllerRenderProps<FormValues, 'isDefault'>;
-          }) => (
-            <FormItem className='flex items-center justify-between'>
-              <FormLabel className='cursor-pointer'>
-                Set as default template
-              </FormLabel>
-              <FormControl>
-                <Switch
-                  aria-label='Default template'
-                  checked={field.value}
-                  onCheckedChange={field.onChange}                />
+
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -149,4 +127,4 @@ try {;
   editTemplate ? "Update" : "Save" ;
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
-}"}
+}"

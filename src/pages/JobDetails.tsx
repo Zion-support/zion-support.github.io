@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from useParams, useNavigateimport { Header } from '@/components/Header';
+
+import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import {
-  Calendar,
-  Clock,
-  DollarSign,
-  Tag,
-  Users,
-  Briefcase,;
-} from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
+
+import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
@@ -18,6 +13,7 @@ import { ApplyToJobModal } from '@/components/messaging/job-application';
 import { SEO } from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { JobDetailsSkeleton } from '@/components/jobs';
+
 interface Job {
   id: string;
   title: string;
@@ -45,10 +41,6 @@ export default function JobDetails() {
 
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
-  const formatBudget = (budget: any) => {
-    if (!budget) return 'Not specified';
-    return `$${budget.min} - $${budget.max}`;
-  };
   if (isLoading) {
     return <JobDetailsSkeleton />;
   }
@@ -57,12 +49,8 @@ export default function JobDetails() {
     return (
       <>
         <Header />
-        <div className='container mx-auto px-4 py-16 text-center'>
-          <h1 className='text-2xl font-bold mb-4'>Job Not Found</h1>
-          <p className='mb-8'>
-            The job you're looking for doesn't exist or has been removed.
-          </p>
-          <Button onClick={() => router.push('/careers')}>View All Jobs</Button>        </div>
+
+        </div>
       </>
     );
   }
@@ -88,10 +76,6 @@ export default function JobDetails() {
     setIsApplyModalOpen(true);
   };
 
-  const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success('Application submitted successfully!');
-    setIsApplyModalOpen(false);
-  };
   const isOwnJob = user?.id === job.client_id;
 
   return (
@@ -101,12 +85,8 @@ export default function JobDetails() {
         description = {job.description.substring(0, 160),}
       />
       <Header />
-      <main className='container mx-auto px-4 py-8'>
-        <div className='mb-6'>
-          <Button
-            variant='outline'
-            size='sm'
-            onClick={() => router.push('/careers')}          >
+
+          >
             ← Back to Jobs
           </Button>
         </div>
@@ -140,12 +120,8 @@ export default function JobDetails() {
                 </div>
 
                 <div>
-                  <h3 className='font-semibold text-lg mb-3'>
-                    Required Skills
-                  </h3>
-                  <div className='flex flex-wrap gap-2'>
-                    {job.skills?.map((skill: string, i: number) => (
-                      <Badge key={i} variant='secondary'>                        {skill}
+
+                        {skill}
                       </Badge>
                     ))}
                   </div>
@@ -186,10 +162,8 @@ export default function JobDetails() {
                 </div>
 
                 {!isOwnJob && (
-                  <Button
-                    className='w-full mt-4'
-                    onClick={handleApply}
-                    disabled={isOwnJob}                  >
+
+                  >
                     Apply Now
                   </Button>
                 )}
@@ -216,10 +190,8 @@ export default function JobDetails() {
             description: job.description,
             company_name: job.company_name ?? 'Company',
             budget: formatBudget(job.budget),
-            client_id: job.client_id,
-          }}
-          isOpen={isApplyModalOpen}
-          onClose={() => setIsApplyModalOpen(false)}        />
+
+        />
       )}
     </>
   );
@@ -261,5 +233,3 @@ const isOwnJob = user?.id === job.client id;
   />) ;
 }</>) ;
 }'"
-}
-}

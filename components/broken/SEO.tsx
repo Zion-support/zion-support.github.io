@@ -1,4 +1,4 @@
- {
+{
   /* Robots Meta */ 
 }{
   noindex && <meta name="robots" content="noindex" /> 
@@ -96,6 +96,7 @@ const SEO: React.FC<SEOProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
+
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -109,6 +110,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />
       {nofollow && <meta name='robots' content='nofollow' />}
 
+      {/* Robots Meta */}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
       {!noindex && !nofollow && <meta name='robots' content='index, follow' />}
@@ -272,15 +274,9 @@ const SEO: React.FC<SEOProps> = ({
   );
 };
 
-export default SEO;            __html: JSON.stringify(structuredData)
+export default SEO;
+
           }}
         />
       )}
     </Head>
-  );
-};
-
-export default SEO;  )
-};
-
-export default SEO;

@@ -18,16 +18,17 @@ let resolvedCount = 0;
 
 for (const file of conflictedFiles) {
   const filePath = path.join(process.cwd(), file);
-  
+
   if (fs.existsSync(filePath)) {
     console.log(`🔧 Resolving ${file}...`);
-    
+
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
-      
+
       // Remove merge conflict markers and keep "ours" version (current branch)
-      
+      content = content.replace(/
+
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         console.log(`✅ Resolved ${file}`);

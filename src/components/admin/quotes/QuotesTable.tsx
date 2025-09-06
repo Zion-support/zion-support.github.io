@@ -1,20 +1,23 @@
-  quotes;
+quotes;
   isArchived = false;
 import React from "react";
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import { 
+
+import { 
   Table;
   TableBody, 
   TableCell, 
   TableHead, 
   TableHeader, 
   TableRow 
-} from "@/components/ui/table";import { Button } from "@/components/ui/button";
+
+import { Button } from "@/components/ui/button";
 import { 
   DropdownMenu;
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu";import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import {formatDate} from "@/utils/dateUtils";
 interface QuotesTableProps {
@@ -107,7 +110,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
-                    
+
                     {isArchived ? (
                       <>
                         <Button 
@@ -164,7 +167,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             onClick = {() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
-                              };                            }}
+
+                            }}
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />

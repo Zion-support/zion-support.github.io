@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 export type AdminNotesPanelProps = {
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
+
 };
 
 type Note = {
@@ -17,19 +18,10 @@ type Note = {
 export default function AdminNotesPanel({
   targetType,
   targetId,
-}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);
 
-type Note = {
-  id: string,
-  targetType: string,
-  targetId: string,
-  text: string,
-  authorId: string,
-  createdAt: number
-};
-
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
   const [isAdmin, setIsAdmin] = useState(true);
+
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
@@ -45,6 +37,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
         }
       );
+
       if (!res.ok) {
         setNotes([]);
         return;
@@ -56,19 +49,13 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
   }
 
   useEffect(() => {
-    if (isAdmin) fetchNotes();  }, [isAdmin, targetType, targetId]);      if (!res.ok) {
-        setNotes([]);
-        return
-      }
-      const data = await res.json();
-      setNotes(data.notes || [])
-    } finally {
-      setLoading(false)
+    if (isAdmin) fetchNotes();  }, [isAdmin, targetType, targetId]);
+
     }
   }
 
   useEffect(() => {
-    if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
+
   }, [isAdmin, targetType, targetId]);
 
   async function addNote() {
@@ -84,6 +71,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         },
         body: JSON.stringify({ targetType, targetId, text }),
       });
+
       if (!res.ok) {
         alert('Failed to add note');
         return;
@@ -91,15 +79,10 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setText('');
       await fetchNotes();
     } finally {
-      setAdding(false);    }      if (!res.ok) {
-        alert('Failed to add note');
-        return
-      }
-      setText('');
-      await fetchNotes()
-    } finally {
-      setAdding(false)
+      setAdding(false);    }
+
     }
+
   }
 
   if (!isAdmin) {
@@ -113,6 +96,8 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
             onChange={e => setIsAdmin(e.target.checked)}
           />
           <label htmlFor='isAdminToggle'>Admin</label>
+
+        </div>
         <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
       </div>
     );
@@ -175,6 +160,9 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
             {notes.map((n) => (
               <li key={n.id} className="rounded border p-2 text-sm">
                 <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+
+                <div>{n.text}</div>
+
               </li>
             ))}
           </ul>

@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Skeleton from '@/components/ui/skeleton';
+
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
 
@@ -36,9 +37,10 @@ export function TokenDisplay() {
               convert to credits.
             </p>
             <div className='mt-2'>
-              <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">
-              <Button variant="outline" size="sm">
+              <Button variant='outline' size='sm'>                View Wallet
+
                 View Wallet
+
               </Button>
             </div>
           </div>

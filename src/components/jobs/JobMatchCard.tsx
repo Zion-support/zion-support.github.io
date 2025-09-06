@@ -1,4 +1,4 @@
-  talentId, 
+talentId, 
   name, 
   title, 
   company, 
@@ -6,5 +6,5 @@
   location, 
   category, 
   matchPercent, 
-}
+
 }

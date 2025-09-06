@@ -1,22 +1,8 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useCallback,
-  ReactNode,;
-} from 'react';
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
 import * as Sentry from '@sentry/nextjs';
-import { logErrorToProduction } from '@/utils/productionLogger';
 
-interface ErrorContextType {
-  reportError: (error: Error, context?: any) => void;
-  showRetryableError: (error: Error, retryAction?: () => void) => void;
-  showNetworkError: (retryAction?: () => void) => void;
-  showAuthError: (loginAction?: () => void) => void;
-  clearAllErrors: () => void;
 }, []);
 
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
@@ -30,7 +16,8 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
 
     // Report to Sentry for production
     if (process.env.NODE_ENV === 'production') {
-      Sentry.withScope(scope => {        if (context) {
+
+        if (context) {
           scope.setContext('errorContext', context);
         }
         scope.setLevel('error');
@@ -39,10 +26,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     }
   }, []);
 
-  const showRetryableError = useCallback(
-    (error: Error, retryAction?: () => void) => {
-      const errorKey = error.message;
-      const currentRetryCount = retryCount[errorKey] || 0;
       reportError(error, { retryCount: currentRetryCount });
 
       // Show user-friendly error message with retry option
@@ -67,8 +50,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     [retryCount, reportError]
   );
 
-  const showNetworkError = useCallback((retryAction?: () => void) => {
-    const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
     toast({
       title: isOnline ? 'Connection Issue' : 'No Internet Connection',
       description: isOnline
@@ -98,8 +79,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     });
   }, []);
 
-  const clearAllErrors = useCallback(() => {
-    setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
+    // Clear any active toasts would go here if the toast system supports it
   }, []);
 
   const contextValue: ErrorContextType = {
@@ -173,12 +153,7 @@ export function useErrorHandler() {
   const { reportError, showRetryableError, showNetworkError, showAuthError } =
     useGlobalErrorHandler();
 
-  const handleApiError = useCallback(
-    (error: any, retryAction?: () => void) => {
-      if (error.response?.status === 401 || error.response?.status === 403) {
-        showAuthError();
-      } else if (error.code === 'NETWORK_ERROR' || !navigator.onLine) {
-        showNetworkError(retryAction);      } else {
+      } else {
         showRetryableError(error, retryAction);
       }
     },
@@ -224,7 +199,4 @@ export function useErrorHandler() {
     reportError,
     handleApiError,
     handleAsyncOperation,
-  };    reportError;
-    handleApiError;
-    handleAsyncOperation}
-} 
+  };

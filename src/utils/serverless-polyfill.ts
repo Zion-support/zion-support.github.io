@@ -64,11 +64,7 @@ if (typeof webpackChunk_N_E === 'undefined') {
 
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
-  __extends: function (d: any, b: any) {
-    if (typeof b !== 'function' && b !== null)
-      throw new TypeError(
-        'Class extends value ' + String(b) + ' is not a constructor or null'
-      );
+
     function __extends_helper(this: any) {
       this.constructor = d;
     }
@@ -297,9 +293,3 @@ export const verifyPolyfills = () => {
 export default {}; // Ensure this can be imported as a module
   ;
 }, // Ensure this can be imported as a module'"
-// Auto-verify in development
-if (process.env.NODE_ENV === 'development') {
-  setTimeout((,) => verifyPolyfills(), 100)
-}
-
-export default {}, // Ensure this can be imported as a module

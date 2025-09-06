@@ -11,4 +11,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     (e) => e.type === "zion.job.posted" && e.timestamp > sinceTs,
   );
   res.status(200).json({ events });
+
 }

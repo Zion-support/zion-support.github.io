@@ -1,56 +1,37 @@
-// Fraud detection types
-export type AdminActionType = 
-  | 'ban_user'
-  | 'suspend_user'
-  | 'flag_content'
-  | 'remove_content'
-  | 'investigate'
-  | 'dismiss'
-  | 'escalate';
+export type AdminActionType = 'investigate' | 'resolve' | 'dismiss' | 'escalate';
+
+export type GptClassificationLabel = 'fraud' | 'suspicious' | 'legitimate' | 'unknown';
+
+export type MonitoredSource = 'api' | 'web' | 'mobile' | 'admin';
+
+export interface StoredFraudRecord {
+  id: string;
+  type: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  description: string;
+  source: MonitoredSource;
+  timestamp: string;
+  status: 'pending' | 'investigating' | 'resolved' | 'false_positive';
+  adminId?: string;
+  resolution?: string;
+  gptClassification?: GptClassificationLabel;
+  confidence?: number;
+}
+
+export interface FraudIngestionData {
+  type: string;
+  description: string;
+  source: MonitoredSource;
+  metadata?: Record<string, any>;
+  userId?: string;
+  ipAddress?: string;
+  userAgent?: string;
+}
 
 export interface AdminAction {
-  id: string;
-  caseId: string;
-  type: AdminActionType;
+  fraudId: string;
+  action: AdminActionType;
+  reason: string;
   adminId: string;
-  reason: string,
-  details: Record<string, any>;
-  createdAt: string;
-  executedAt?: string;
-  status: 'pending' | 'executed' | 'failed',
-}
-
-export interface FraudDetectionResult {
-  isFraud: boolean;
-  confidence: number;
-  reasons: string[];
-  suggestedActions: AdminActionType[],
-  metadata: Record<string, any>;
-}
-
-export interface FraudDetectionConfig {
-  enabled: boolean;
-  rules: {
-    suspiciousActivity: {
-      enabled: boolean;
-      threshold: number,
-    };
-    fakeProfile: {
-      enabled: boolean;
-      threshold: number,
-    };
-    paymentFraud: {
-      enabled: boolean;
-      threshold: number,
-    };
-    spam: {
-      enabled: boolean;
-      threshold: number,
-    };
-  };
-  autoActions: {
-    enabled: boolean;
-    actions: AdminActionType[];
-    confidenceThreshold: number,
-  };
+  timestamp: string;
 }

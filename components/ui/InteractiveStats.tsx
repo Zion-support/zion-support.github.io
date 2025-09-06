@@ -8,24 +8,12 @@ function useCounter(target: number, durationMs: number) {
       if (start === null) start = ts;
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
-      if (progress < 1) raf = requestAnimationFrame(step);    let start: number | null = null,
-    let raf: number,
+      if (progress < 1) raf = requestAnimationFrame(step);
+
     const step = (ts: number) => {
       if (start === null) start = ts,
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
-      if (progress < 1) raf = requestAnimationFrame(step);
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, durationMs]);
-  return value;}
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf)
-  }, [target, durationMs]);
-  return value
-}
 
 export default function InteractiveStats() {
   const hires = useCounter(1200, 1200);
@@ -69,4 +57,3 @@ function Stat({
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
   );
-}

@@ -8,10 +8,10 @@ interface UltraAdvancedFuturisticBackground2026Props {
     | 'quantum-field'
     | 'cyberpunk'
     | 'holographic'
-    | 'multidimensional';  particleCount?: number;interface UltraAdvancedFuturisticBackground2026Props {
-  intensity?: 'low' | 'medium' | 'high' | 'extreme';
-  colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional';
+    | 'multidimensional';  particleCount?: number;
+
   particleCount?: number;
+
   animationSpeed?: number;
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
@@ -40,6 +40,9 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
   enableNeuralNetworks = true;
   enableMultidimensional = true,
   children
+
+}) => {
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -57,17 +60,13 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
     let neuralNodes: NeuralNode[] = [];
     let quantumFields: QuantumField[] = [];
     let holographicLayers: HolographicLayer[] = [];
-    let animationFrameId: number,
-    let particles: Particle[] = [],
-    let neuralNodes: NeuralNode[] = [],
-    let quantumFields: QuantumField[] = [],
-    let holographicLayers: HolographicLayer[] = [],
+
     // Set canvas size
     const resizeCanvas = () => {
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect();
         canvas.width = rect.width;
-        canvas.height = rect.height;        canvas.height = rect.height
+
       }
     };
 
@@ -93,6 +92,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       alpha: number,
       life: number,
       maxLife: number,
+
+      constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
         this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
@@ -101,7 +102,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         this.color = getColorSchemeColor();
         this.alpha = Math.random() * 0.8 + 0.2;
         this.life = Math.random() * 100 + 50;
-        this.maxLife = this.life;      }        this.maxLife = this.life
+        this.maxLife = this.life;      }
+
       }
 
       update() {
@@ -120,7 +122,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         if (this.y > canvas.height) this.y = 0;
 
         // Fade out
-        this.alpha = this.life / this.maxLife;      }        this.alpha = this.life / this.maxLife
+        this.alpha = this.life / this.maxLife;      }
+
       }
 
       draw() {
@@ -130,8 +133,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-        ctx.restore();      }        ctx.restore()
+        ctx.restore();      }
+
       }
+
     }
 
     // Neural network node class
@@ -145,17 +150,21 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       connections: NeuralNode[],
       activation: number,
       pulse: number,
+
+      constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
         this.connections = [];
         this.activation = Math.random();
-        this.pulse = 0;      }        this.pulse = 0
+        this.pulse = 0;      }
+
       }
 
       update() {
         this.activation += (Math.random() - 0.5) * 0.1;
         this.activation = Math.max(0, Math.min(1, this.activation));
-        this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5;      }        this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5
+        this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5;      }
+
       }
 
       draw() {
@@ -170,8 +179,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         this.connections.forEach(connection => {
           const distance = Math.sqrt(
             Math.pow(this.x - connection.x, 2) +
-              Math.pow(this.y - connection.y, 2)          );            Math.pow(this.x - connection.x, 2) + Math.pow(this.y - connection.y, 2)
+              Math.pow(this.y - connection.y, 2)          );
+
           );
+
           if (distance < 150) {
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * this.activation * connection.activation})`;
             ctx.lineWidth = 1;
@@ -181,10 +192,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
             ctx.stroke();
           }
         });
-        ctx.restore();      }            ctx.stroke()
-          }
-        });
-        ctx.restore()
+        ctx.restore();      }
+
+      }
+
     }
 
     // Quantum field class
@@ -198,6 +209,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       radius: number,
       intensity: number,
       phase: number,
+
+      constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
         this.radius = Math.random() * 100 + 50;
@@ -206,11 +219,9 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       }
 
       update() {
-        this.phase += 0.02 * animationSpeed;      }        this.phase = Math.random() * Math.PI * 2
-      }
+        this.phase += 0.02 * animationSpeed;      }
 
-      update() {
-        this.phase += 0.02 * animationSpeed
+      }
 
       draw() {
         ctx.save();
@@ -219,21 +230,19 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         for (let i = 0; i < 3; i++) {
           const waveRadius =
             this.radius + Math.sin(this.phase + (i * Math.PI) / 3) * 20;
-          const alpha = this.intensity * (1 - i / 3);        
-        for (let i = 0, i < 3, i++) {
-          const waveRadius = this.radius + Math.sin(this.phase + i * Math.PI / 3) * 20;
           const alpha = this.intensity * (1 - i / 3);
-          
+
+          ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
           ctx.stroke();
         }
 
-        ctx.restore();      }          ctx.stroke()
-        }
-        
-        ctx.restore()
+        ctx.restore();      }
+
+      }
+
     }
 
     // Holographic layer class
@@ -251,6 +260,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       rotation: number,
       alpha: number,
       color: string,
+
+      constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.width = Math.random() * 200 + 100;
@@ -261,12 +272,13 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
 
       update() {
         this.rotation += 0.005 * animationSpeed;
-        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;      }        this.color = getColorSchemeColor()
+        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;      }
+
       }
 
       update() {
         this.rotation += 0.005 * animationSpeed;
-        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2
+
       }
 
       draw() {
@@ -282,12 +294,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
 
-        ctx.restore();      }        
-        ctx.beginPath();
-        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
-        ctx.stroke();
-        
-        ctx.restore()
+        ctx.restore();      }
+
+      }
+
     }
 
     // Get color based on scheme
@@ -298,6 +308,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         cyberpunk: ['#ff0066', '#00ffff', '#ffff00', '#ff6600'],
         holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000'],
         multidimensional: ['#8000ff', '#00ff80', '#ff8000', '#0080ff'],
+
+      };
 
       const schemeColors = colors[colorScheme] || colors['neural-network'];
       return schemeColors[Math.floor(Math.random() * schemeColors.length)];
@@ -319,57 +331,16 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         Math.random() * canvas.height
       ))
 
+    }
+
     // Initialize neural network
     if (enableNeuralNetworks) {
-      for (let i = 0; i < 20; i++) {
-        neuralNodes.push(
-          new NeuralNode(
-            Math.random() * canvas.width,
-            Math.random() * canvas.height
-          )
-        );      }      for (let i = 0, i < 20, i++) {
-        neuralNodes.push(new NeuralNode(
-          Math.random() * canvas.width;
-          Math.random() * canvas.height
-        ))
 
-      // Create connections
-      neuralNodes.forEach(node => {
-        neuralNodes.forEach(otherNode => {
-          if (node !== otherNode && Math.random() < 0.3) {
-            node.connections.push(otherNode);
-          }
-        });
-      });    }
-
-    // Initialize quantum fields
-    if (enableQuantumEffects) {            node.connections.push(otherNode)
-          }
-        })
-      })
+    }
 
     // Initialize quantum fields
     if (enableQuantumEffects) {
-      for (let i = 0; i < 8; i++) {
-        quantumFields.push(
-          new QuantumField(
-            Math.random() * canvas.width,
-            Math.random() * canvas.height
-          )
-        );      }      for (let i = 0, i < 8, i++) {
-        quantumFields.push(new QuantumField(
-          Math.random() * canvas.width;
-          Math.random() * canvas.height
-        ))
-    }
 
-    // Initialize holographic layers
-    if (enableHolographic) {
-      for (let i = 0; i < 5; i++) {
-        holographicLayers.push(new HolographicLayer());
-      }    }      for (let i = 0, i < 5, i++) {
-        holographicLayers.push(new HolographicLayer())
-      };
     }
 
     // Animation loop
@@ -384,8 +355,9 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         canvas.width / 2,
         canvas.height / 2,
         Math.max(canvas.width, canvas.height) / 2
-      );      );
-      
+      );
+      );
+
       const bgColors = {
         'neural-network': ['rgba(0, 0, 20, 0.8)rgba(0, 20, 40, 0.6)rgba(20, 0, 40, 0.4)'];
         'quantum-field': ['rgba(0, 20, 0, 0.8)rgba(20, 40, 0, 0.6)rgba(40, 0, 20, 0.4)'];
@@ -393,7 +365,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         'holographic': ['rgba(40, 0, 40, 0.8)rgba(0, 40, 40, 0.6)rgba(40, 40, 0, 0.4)'];
         'multidimensional': ['rgba(20, 0, 40, 0.8)rgba(0, 40, 20, 0.6)rgba(40, 20, 0, 0.4)']
       };
-      
+
       const currentBgColors = bgColors[colorScheme] || bgColors['neural-network'];
       gradient.addColorStop(0, currentBgColors[0]);
       gradient.addColorStop(0.5, currentBgColors[1]);
@@ -432,7 +404,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       gradient.addColorStop(0, currentBgColors[0]);
       gradient.addColorStop(0.5, currentBgColors[1]);
       gradient.addColorStop(1, currentBgColors[2]);
-      
+
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -441,8 +413,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         quantumFields.forEach(field => {
           field.update();
           field.draw();
-        });      }          field.draw()
-        })
+        });      }
+
       }
 
       // Update and draw holographic layers
@@ -450,8 +422,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         holographicLayers.forEach(layer => {
           layer.update();
           layer.draw();
-        });      }          layer.draw()
-        })
+        });      }
+
       }
 
       // Update and draw neural network
@@ -459,8 +431,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         neuralNodes.forEach(node => {
           node.update();
           node.draw();
-        });      }          node.draw()
-        })
+        });      }
+
       }
 
       // Update and draw particles
@@ -473,10 +445,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
           particles[index] = new Particle(
             Math.random() * canvas.width,
             Math.random() * canvas.height
-          );        }            Math.random() * canvas.width;
-            Math.random() * canvas.height
-          )
+          );        }
+
         }
+
       });
 
       // Draw particle connections
@@ -486,33 +458,29 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
             const distance = Math.sqrt(
               Math.pow(particle.x - otherParticle.x, 2) +
                 Math.pow(particle.y - otherParticle.y, 2)
+
             );
 
             if (distance < 100) {
               ctx.save();
-              ctx.globalAlpha = ((100 - distance) / 100) * 0.3;              ctx.strokeStyle = getColorSchemeColor();            );
-            
-            if (distance < 100) {
-              ctx.save();
-              ctx.globalAlpha = (100 - distance) / 100 * 0.3;
+              ctx.globalAlpha = ((100 - distance) / 100) * 0.3;              ctx.strokeStyle = getColorSchemeColor();
+
               ctx.strokeStyle = getColorSchemeColor();
+
               ctx.lineWidth = 1;
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.stroke();
               ctx.restore();
+
             }
           });
         });
       }
 
-      animationFrameId = requestAnimationFrame(animate);    };            }
-          })
-        })
-      }
+      animationFrameId = requestAnimationFrame(animate);    };
 
-      animationFrameId = requestAnimationFrame(animate)
     };
 
     animate();
@@ -532,7 +500,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
     enableMultidimensional,
   ]);
 
-  
     >
       <canvas
         ref={canvasRef}
@@ -553,69 +520,18 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
               duration: 8,
               repeat: Infinity,
               ease: 'easeInOut',
-  return (
-    <div ref={containerRef} className="fixed inset-0 w-full h-full overflow-hidden">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ zIndex: -1 }}
-      />
-      
-      {/* Additional visual effects */}
-      {enableMultidimensional && (
-        <div className="absolute inset-0 pointer-events-none">
-          <motion.div
-            className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full"
-            animate={{
-              scale: [1, 1.2, 1];
-              rotate: [0, 180, 360];
-              opacity: [0.1, 0.3, 0.1]
+
             }}
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
-          <motion.div
-            className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
-            animate={{
-              scale: [1.2, 1, 1.2],
-              rotate: [360, 180, 0],
-              opacity: [0.1, 0.3, 0.1],            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: 'easeInOut',            }}
-          />
-        </div>
-      )}
-            }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full"
-            animate={{
-              scale: [1.2, 1, 1.2];
-              rotate: [360, 180, 0];
-              opacity: [0.1, 0.3, 0.1]
+
             }}
             transition={{
               duration: 10,
               repeat: Infinity,
-              ease: 'easeInOut',              ease: "easeInOut"
+
             }}
           />
         </div>
       )}
-
-      {children}
-    </div>
-  );
-};
-
-export default UltraAdvancedFuturisticBackground2026;      {children}
-    </div>
-  )
-};
-
-export default UltraAdvancedFuturisticBackground2026;

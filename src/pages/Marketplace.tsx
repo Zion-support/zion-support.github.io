@@ -5,14 +5,8 @@ import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AuthModal } from '@/components/auth/AuthModal';
-import {
-  ArrowUp,
-  Filter,
-  SortAsc,
-  Sparkles,
-  TrendingUp,
-  Star,;
-} from 'lucide-react';import { SkeletonCard } from '@/components/ui/skeleton';
+
+import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
 import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
 import { Button } from '@/components/ui/button';
@@ -26,6 +20,7 @@ import { useAuth } from '@/context/auth/AuthProvider';
 import { MARKETPLACE_LISTINGS } from '@/data/listingData';
 import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+
 /**
  * Marketplace component props
  */
@@ -33,12 +28,8 @@ export interface MarketplaceProps {
   // All props removed - component now fetches data independently
 
 // Market insights component
-const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-  <Card className='bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6'>
-    <CardContent className='p-6'>
-      <div className='flex items-center gap-2 mb-4'>
-        <TrendingUp className='h-5 w-5 text-blue-400' />
-        <h3 className='text-lg font-semibold'>Market Insights</h3>      </div>
+
+      </div>
       <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
         <div className='text-center'>
           <div className='text-2xl font-bold text-blue-400'>
@@ -71,26 +62,8 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 
 // Filter and sort controls
 const FilterControls: React.FC<{
-  sortBy: string;
-  setSortBy: (sort: string) => void;
-  filterCategory: string;
-  setFilterCategory: (category: string) => void;
-  categories: string[];
-  priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  minAiScore: number;
-  setMinAiScore: (score: number) => void;
-  minRating: number;
-  setMinRating: (rating: number) => void;
-  filterAvailability: string;
-  setFilterAvailability: (value: string) => void;
-  availabilityOptions: string[];
-  filterLocation: string;
-  setFilterLocation: (value: string) => void;
-  locations: string[];
-  showRecommended: boolean;
-  setShowRecommended: (show: boolean) => void;
-  loading: boolean;}> = ({
+
+}> = ({
   sortBy,
   setSortBy,
   filterCategory,
@@ -110,18 +83,8 @@ const FilterControls: React.FC<{
   locations,
   showRecommended,
   setShowRecommended,
-  loading,
-}) => (
-  <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>
-    {loading && (
-      <Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />
-    )}
-    <div className='flex items-center gap-2'>
-      <Filter className='h-4 w-4 text-muted-foreground' />
-      <select
-        value={filterCategory}
-        onChange={e => setFilterCategory(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
+
+      >
         <option value=''>All Categories</option>
         {categories.map(category => (
           <option key={category} value={category}>
@@ -134,9 +97,8 @@ const FilterControls: React.FC<{
     <div className='flex items-center gap-2'>
       <SortAsc className='h-4 w-4 text-muted-foreground' />
       <select
-        value={sortBy}
-        onChange={e => setSortBy(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
+
+      >
         <option value='newest'>Newest First</option>
         <option value='price-low'>Price: Low to High</option>
         <option value='price-high'>Price: High to Low</option>
@@ -149,40 +111,22 @@ const FilterControls: React.FC<{
     <div className='flex items-center gap-2'>
       <span className='text-sm'>$</span>
       <input
-        type='number'
-        value={priceRange[0]}
-        min={MIN_PRICE}
-        max={priceRange[1]}
-        onChange={e => setPriceRange([Number(e.target.value), priceRange[1]])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'
+
       />
-      <span>-</span>
-      <input
-        type='number'
-        value={priceRange[1]}
-        min={priceRange[0]}
-        max={MAX_PRICE}
-        onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'      />
     </div>
 
     <div className='flex items-center gap-2'>
       <span className='text-sm'>AI ≥</span>
       <input
-        type='number'
-        value={minAiScore}
-        min={0}
-        max={100}
-        onChange={e => setMinAiScore(Number(e.target.value))}
-        className='w-16 bg-background border border-border px-2 py-1 rounded'      />
+
+      />
     </div>
 
     <div className='flex items-center gap-2'>
       <span className='text-sm'>Rating ≥</span>
       <select
-        value={minRating}
-        onChange={e => setMinRating(Number(e.target.value))}
-        className='bg-background border border-border px-2 py-1 rounded'      >
+
+      >
         <option value={0}>Any</option>
         <option value={5}>5</option>
         <option value={4}>4</option>
@@ -194,9 +138,8 @@ const FilterControls: React.FC<{
 
     <div className='flex items-center gap-2'>
       <select
-        value={filterAvailability}
-        onChange={e => setFilterAvailability(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
+
+      >
         <option value=''>Any Availability</option>
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>
@@ -208,9 +151,8 @@ const FilterControls: React.FC<{
 
     <div className='flex items-center gap-2'>
       <select
-        value={filterLocation}
-        onChange={e => setFilterLocation(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
+
+      >
         <option value=''>All Locations</option>
         {locations.map(loc => (
           <option key={loc} value={loc}>
@@ -221,10 +163,8 @@ const FilterControls: React.FC<{
     </div>
 
     <Button
-      variant={showRecommended ? 'default' : 'outline'}
-      size='sm'
-      onClick={() => setShowRecommended(!showRecommended)}
-      className='flex items-center gap-2'    >
+
+    >
       <Sparkles className='h-4 w-4' />
       {showRecommended ? 'All Products' : 'Recommended'}
     </Button>
@@ -281,9 +221,7 @@ export default function Marketplace() {
   }, [isAuthenticated, user, router, toast]);
 
   // Fetch function for infinite scroll with AI product generation
-  const fetchProducts = useCallback(
-    async (page: number, limit: number) => {
-      await new Promise(resolve => setTimeout(resolve, 200));
+
       try {
         // Use static marketplace listings data for now (compatible with ProductListing type)
         const params = {
@@ -293,19 +231,7 @@ export default function Marketplace() {
           sort: sortBy,
         };
 
-        logInfo(
-          'Marketplace.tsx: Fetching products using static data with params:',
-          { data: params }
-        );
-
-        // Use static data that's already of type ProductListing[]
-        let items: ProductListing[] = [...MARKETPLACE_LISTINGS];
-
-        // Apply category filter from params
-        if (filterCategory) {
-          items = items.filter(
-            p => p.category.toLowerCase() === filterCategory.toLowerCase()
-          );        }
+        }
 
         logInfo(
           'Marketplace.tsx: Raw items from static data before filtering/sorting:',
@@ -458,10 +384,8 @@ export default function Marketplace() {
   ]); // Added all filter dependencies
 
   // Effect to explicitly refresh data when the component mounts or re-mounts
-  useEffect(() => {
-    logInfo(
-      'Marketplace.tsx: Component mounted/re-mounted, calling refresh to ensure fresh data.'
-    );    // We call refresh directly to ensure data is re-fetched.
+
+    // We call refresh directly to ensure data is re-fetched.
     // The useInfiniteScrollPagination hook's internal logic will manage its state.
     refresh();
     // Reset firstRenderRef for the new instance of the component, so filter changes behave as expected.
@@ -469,47 +393,23 @@ export default function Marketplace() {
   }, [refresh]); // `refresh` is a dependency. Ensure it's stable.
 
   // New effect to scroll to top AFTER products have been updated and refresh flag is set
-  useEffect(() => {
-    if (isRefreshingAfterFilterChange.current && !loading) {
-      // Check flag and ensure loading is false
-      logInfo('Refresh complete and products updated, scrolling to top.');
-      scrollToTop();
-      isRefreshingAfterFilterChange.current = false; // Reset flag      // Optionally, provide user feedback about the filter change
+
+      // Optionally, provide user feedback about the filter change
       // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' });
     }
   }, [products, loading, scrollToTop, toast]); // Depends on products and loading state
 
   // Calculate market stats
-  const marketStats = useMemo(() => {
-    if (products.length === 0) return null;
-    return {
-      averagePrice:
-        products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
-      averageRating:
-        products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,      totalProducts: products.length,
+
+      totalProducts: products.length,
       categoriesCount: Array.from(new Set(products.map(p => p.category)))
         .length,
     };
   }, [products]);
 
   // Get unique categories and other filter values
-  const categories = useMemo(() => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map(p => p.category)));
-  }, []);
-  const locations = useMemo(() => {
-    return Array.from(
-      new Set(MARKETPLACE_LISTINGS.map(p => p.location).filter(Boolean))
-    );
-  }, []).filter(Boolean) as string[];
-  const availabilityOptions = useMemo(() => {
-    return Array.from(
-      new Set(MARKETPLACE_LISTINGS.map(p => p.availability).filter(Boolean))
-    );
-  }, []).filter(Boolean) as string[];
 
-  // Show scroll to top button
-  const [showScrollTop, setShowScrollTop] = useState(false);
-  useEffect(() => {    const handleScroll = () => {
+    const handleScroll = () => {
       setShowScrollTop(window.scrollY > 800);
     };
     window.addEventListener('scroll', handleScroll);
@@ -532,8 +432,8 @@ export default function Marketplace() {
             {t('marketplace.hero_subtitle')}
           </p>
         </motion.div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-          {Array.from({ length: 12 }).map((_, i) => (            <SkeletonCard key={i} />
+
+            <SkeletonCard key={i} />
           ))}
         </div>
       </div>
@@ -644,8 +544,8 @@ export default function Marketplace() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        <AnimatePresence mode='popLayout'>
-          {products.map((product, index) => (            <motion.div
+
+            <motion.div
               key = {product.id,}
               ref = {index === products.length - 1 ? lastElementRef : null,}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -675,9 +575,8 @@ export default function Marketplace() {
                 }}
                 onBuy = {async () => {
                   if (!isAuthenticated) {
-                    setIsAuthModalOpen(true);
-                    return; // Stop further execution
-                  }                  try {
+
+                  try {
                     await router.push(`/checkout/${product.id}`);
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', {
@@ -724,8 +623,8 @@ export default function Marketplace() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-            {Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />
+
+              <SkeletonCard key={`loading-${i}`} />
             ))}
           </div>
         </motion.div>
@@ -751,8 +650,8 @@ export default function Marketplace() {
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
-            onClick={scrollToTop}
-            className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'            initial={{ opacity: 0, scale: 0 }}
+
+            initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
@@ -1005,53 +904,3 @@ case 'newest': ;
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
-  )
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-const Marketplace = () => {;
-  return (;
-    <>;
-      <Head>;
-        <title>Marketplace - Zion Tech Group</title>;
-        <meta name="description" content="Professional Marketplace services"  />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
-          <div className="text-center">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
-              Marketplace;
-            </h1>;
-            <p className="text-xl text-gray-600 mb-12">;
-              Professional Marketplace services and solutions;
-            </p>;
-            <div className="grid md:grid-cols-2 gap-8 mb-12">;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Professional Solutions</li>;
-                  <li>• Expert Implementation</li>;
-                  <li>• 24/7 Support</li>;
-                  <li>• Custom Development</li>;
-                </ul>;
-              </div>;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Industry Expertise</li>;
-                  <li>• Proven Results</li>;
-                  <li>• Scalable Solutions</li>;
-                  <li>• Competitive Pricing</li>;
-                </ul>;
-              </div>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
-                View Pricing;
-              </Link>;
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
-                Contact Us;
-              </Link>;
-            </div>;
-    </>;
-  );
-}

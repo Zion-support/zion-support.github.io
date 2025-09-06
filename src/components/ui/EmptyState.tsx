@@ -1,7 +1,6 @@
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button';
-import { Package, RefreshCw } from 'lucide-react'
-import { Button } from './button';
+
 interface EmptyStateProps {
   text?: string;
   description?: string;
@@ -47,26 +46,21 @@ export function EmptyState({
           variant='outline'
           className='flex items-center gap-2'
         >
-          <RefreshCw className='h-4 w-4' />          Try Again      )}
-      {showRetry && onRetry && (
-        <Button
-          onClick={onRetry}
-          variant='outline'
-          className='flex items-center gap-2'
-        >
-          <RefreshCw className='h-4 w-4' />        <p className="text-gray-400 mb-6 max-w-md">
-          {description}
-        </p>
+          <RefreshCw className='h-4 w-4' />          Try Again
+
       )}
       {showRetry && onRetry && (
         <Button
-          onClick={onRetry}
+
           variant="outline"
           className="flex items-center gap-2"
         >
           <RefreshCw className="h-4 w-4" />
+
+          Try Again
+
         </Button>
       )}
     </div>
   );
-} 
+}

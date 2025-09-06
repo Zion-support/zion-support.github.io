@@ -1,39 +1,10 @@
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { NextSeo } from '@/components/NextSeo';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import {
-  ShoppingCart,
-  Star,
-  Truck,
-  Shield,
-  RotateCcw,
-  Clock,
-  AlertTriangle,
-  ArrowLeft,;
-} from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
-import { useAuth } from '@/hooks/useAuth';
-import { getStripe } from '@/utils/getStripe';import { useRouter } from 'next/router';
-import { NextSeo } from '@/components/NextSeo';
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { getStripe } from "@/utils/getStripe";
 import { useCart } from '@/context/CartContext';
 import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
 import { equipmentListings } from '@/data/equipmentData';
 import { ProductListing } from '@/types/listings';
 import { motion } from 'framer-motion';
 import { useCurrency } from '@/hooks/useCurrency';
-import { logErrorToProduction } from '@/utils/productionLogger';
+
 interface EquipmentSpecification {
   name: string;
 value: string ;
@@ -83,9 +54,8 @@ function convertProductListingToEquipmentDetails(
     reviewCount: item.reviewCount,
     inStock: item.availability === 'In Stock' || !item.availability,
     expectedShipping: item.availability || 'In Stock',
-    specifications: (item.specifications || []).map(spec => ({
-      name: spec,
-      value: '',    })),
+
+    })),
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy',
@@ -93,13 +63,7 @@ function convertProductListingToEquipmentDetails(
 
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
-  equipmentListings.reduce(
-    (acc, item) => {
-      acc[item.id] = convertProductListingToEquipmentDetails(item);
-      return acc;
-    },
-    {} as { [key: string]: EquipmentDetails }
-  );
+
 export default function EquipmentDetail() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
@@ -262,17 +226,13 @@ export default function EquipmentDetail() {
                   : error ||
                     "We couldn't load the equipment details. Please try again."}
               </p>
-              <div className='space-x-4'>
-                <Button
-                  onClick={() => router.back()}
-                  variant='outline'
-                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue'                >
+
+                >
                   <ArrowLeft className='h-4 w-4 mr-2' />
                   Go Back
                 </Button>
-                <Button
-                  onClick={() => router.push('/equipment')}
-                  className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >
+
+                >
                   Browse Equipment
                 </Button>
               </div>
@@ -306,8 +266,8 @@ export default function EquipmentDetail() {
             animate={{ opacity: 1, y: 0 }}
           >
             <button
-              onClick={() => router.push('/equipment')}
-              className='text-zion-cyan hover:text-white transition-colors'            >
+
+            >
               Equipment
             </button>
             <span className='mx-2 text-zion-slate-light'>/</span>
@@ -327,18 +287,13 @@ export default function EquipmentDetail() {
                 className='bg-zion-blue-light rounded-lg overflow-hidden'
               >
                 <ImageWithRetry
-                  src={
-                    equipment.images[selectedImageIndex] ||
-                    equipment.images[0] ||
-                    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
-                  }
-                  alt={equipment.name}
-                  className='object-cover'                />
+
+                />
               </AspectRatio>
 
               {equipment.images.length > 1 && (
-                <div className='grid grid-cols-4 gap-2'>
-                  {equipment.images.map((image, index) => (                    <button
+
+                    <button
                       key = {index,}
                       onClick = {(,) => setSelectedImageIndex(index),}
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${
@@ -387,9 +342,8 @@ export default function EquipmentDetail() {
                 </h1>
 
                 {equipment.rating && (
-                  <div className='flex items-center gap-2'>
-                    <div className='flex items-center'>
-                      {[...Array(5)].map((_, i) => (                        <Star
+
+                        <Star
                           key = {i,}
                           className={`h-4 w-4 ${
                             i < Math.floor(equipment.rating!)
@@ -436,22 +390,8 @@ export default function EquipmentDetail() {
 
               {/* Specifications */}
               {equipment.specifications.length > 0 && (
-                <div className='space-y-4'>
-                  <h3 className='text-lg font-semibold text-white'>
-                    Specifications
-                  </h3>
-                  <div className='grid gap-2'>
-                    {equipment.specifications.map((spec, index) => (
-                      <div
-                        key={index}
-                        className='flex justify-between py-2 border-b border-zion-blue-light'
-                      >
-                        <span className='text-zion-slate-light'>
-                          {spec.name}
-                        </span>
-                        <span className='text-white'>
-                          {spec.value || 'Enterprise Grade'}
-                        </span>                      </div>
+
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -463,32 +403,24 @@ export default function EquipmentDetail() {
                   <label className='text-white font-medium'>Quantity:</label>
                   <div className='flex items-center gap-2'>
                     <Button
-                      variant='outline'
-                      size='sm'
-                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className='h-8 w-8 p-0'                    >
+
+                    >
                       -
                     </Button>
                     <span className='text-white w-8 text-center'>
                       {quantity}
                     </span>
                     <Button
-                      variant='outline'
-                      size='sm'
-                      onClick={() => setQuantity(quantity + 1)}
-                      className='h-8 w-8 p-0'                    >
+
+                    >
                       +
                     </Button>
                   </div>
                 </div>
 
                 <Button
-                  onClick={handleAddToCart}
-                  disabled={isAdding || !equipment.inStock}
-                  size='lg'
-                  variant='outline'
-                  className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
-                  data-testid='add-to-cart-button'                >
+
+                >
                   <ShoppingCart className='h-4 w-4 mr-2' />
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
                 </Button>
@@ -588,5 +520,4 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
   equipment.returnPolicy ;
 }</p> </div> </div>) ;
 }</div> </motion.div> </div> </div> </div> </>) ;
-}'"}
-
+}'"

@@ -1,5 +1,3 @@
-};
-
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />,
@@ -33,10 +31,10 @@ export const AppFeatures: React.FC = () => {
             Everything you love about Zion, now in your pocket. Our mobile app brings all the powerful features you need to succeed.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover: border-zion-cyan transition-colors duration-300">              <CardHeader>
+
+              <CardHeader>
                 <div className="mb-4">{feature.icon}</div>
                 <CardTitle className="text-white">{feature.title}</CardTitle>
               </CardHeader>

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,8 @@ import { toast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
 import { ChatMessage } from "./ChatMessage";
 import { QuickReplyButton } from "./QuickReplyButton";
-import { Send, Loader2 } from 'lucide-react'import { useTheme } from "@/hooks/useTheme";
+
+import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
@@ -50,27 +50,16 @@ export function ChatBotPanel() {
     }
   }, []);
 
-  const handleSendMessage = async (text: string = inputValue) => {
-    if (!text.trim()) return;
       timestamp: new Date()},
-    
-        timestamp: new Date()},
-      
-        description: "We're having trouble connecting to our support service."}),
-            
+
       id: `bot-escalation-${Date.now()}`,
       content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
       sender: "bot",
       timestamp: new Date()},
-    
 
   const handleQuickReply = (text: string,) => {
     handleSendMessage(text)
   };
 
-    
-
-  )
-}
   )
 }

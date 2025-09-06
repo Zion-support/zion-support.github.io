@@ -1,5 +1,5 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-import Link from 'next/link'; // Changed from react-router-dom
+
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
@@ -8,17 +8,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import Skeleton from '@/components/ui/skeleton';
-import { EmptyState } from '@/components/ui/empty-state';
 
-export default function OrdersPage() {
-  const { user } = useAuth();
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
-
-  const formatDate = (date: string) => new Date(date).toLocaleDateString();
   const getStatusBadge = (status: string,) => {
     switch (status) {
       case 'in_escrow':
@@ -83,8 +73,8 @@ export default function OrdersPage() {
         </Table>
       ) : orders.length === 0 ? (
         <EmptyState
-          icon={<FileText className='h-10 w-10' />}
-          title='No Orders'          description="You haven't purchased anything yet."
+
+          description="You haven't purchased anything yet."
         />
       ) : (
         <Table>
@@ -98,7 +88,8 @@ export default function OrdersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {orders.map(order => (              <TableRow key={order.orderId}>
+
+              <TableRow key={order.orderId}>
                 <TableCell className='font-medium'>{order.orderId}</TableCell>
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
@@ -118,4 +109,3 @@ export default function OrdersPage() {
       )}
     </div>
   );
-}

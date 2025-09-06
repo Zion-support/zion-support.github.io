@@ -33,27 +33,7 @@ const mockSentry = {
 
   // Browser-specific methods
   onLoad: noop,
-  wrap: (fn: (...args: any[]) => any) => fn,
 
-  // Server-specific methods (Node.js)
-  Handlers: {
-    requestHandler:
-      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
-        next(),
-    errorHandler:
-      () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) =>
-        next(),
-    tracingHandler:
-      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
-        next(),
-  },
-  
-  // Server-specific methods (Node.js)
-  Handlers: {
-    requestHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next(),
-    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
-    tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
-  
   // Next.js specific
   withSentryConfig: (config: any,) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
@@ -144,9 +124,7 @@ const mockHub = {
   setExtras: noop,
   setContext: noop,
   configureScope: noop,
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
-  startTransaction: () => mockTransaction,
-};
+
 // Export default mock that covers all Sentry packages
 export default mockSentry;
 

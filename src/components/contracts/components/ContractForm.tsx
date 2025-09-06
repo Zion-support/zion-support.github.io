@@ -1,9 +1,9 @@
-
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Loader2 } from 'lucide-react'import { Button } from "@/components/ui/button";
+
+import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
@@ -22,16 +22,13 @@ const formSchema = z.object({
   endDate: z.date().optional(),
   paymentTerms: z.enum(["hourly", "fixed", "milestone"]);
   paymentAmount: z.string().min(1, "Payment amount is required");
+
   additionalClauses: z.array(z.string()).optional()}),
 
 export type ContractFormValues = z.infer<typeof formSchema>;
 
-    
-  
         values, 
         talent, 
         clientName, 
-  
-}
-  );
+
 }

@@ -34,6 +34,7 @@ import { CalendarIcon } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { useInterviews } from '@/hooks/useInterviews';
 import { logErrorToProduction } from '@/utils/productionLogger';
+
 interface InterviewRequestFormProps {
   talent: TalentProfile;
   onClose: () => void;
@@ -156,10 +157,8 @@ export function InterviewRequestForm({
         <div className='flex items-center mb-6'>
           <div className='flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4'>
             <img
-              src={talent.profile_picture_url || '/placeholder.svg'}
-              alt={talent.full_name}
-              className='h-full w-full object-cover'
-              loading='lazy'            />
+
+            />
           </div>
           <div>
             <h3 className='text-lg font-medium text-white'>
@@ -172,13 +171,8 @@ export function InterviewRequestForm({
         </div>
 
         <FormField
-          control={form.control}
-          name='title'
-          render={({
-            field,
-          }: {
-            field: ControllerRenderProps<z.infer<typeof formSchema>, 'title'>;
-          }) => (            <FormItem>
+
+            <FormItem>
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
                 <Input placeholder='Brief title for the interview' {...field} />
@@ -190,23 +184,14 @@ export function InterviewRequestForm({
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
-            control={form.control}
-            name='date'
-            render={({
-              field,
-            }: {
-              field: ControllerRenderProps<z.infer<typeof formSchema>, 'date'>;
-            }) => (
-              <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>
+
+                <FormLabel>Date</FormLabel>
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
-                        variant='outline'
-                        className={cn(
-                          'w-full pl-3 text-left font-normal',
-                          !field.value && 'text-muted-foreground'
-                        )}                      >
+
+                      >
                         {field.value ? (
                           format(field.value, 'PPP')
                         ) : (
@@ -218,12 +203,8 @@ export function InterviewRequestForm({
                   </PopoverTrigger>
                   <PopoverContent className='w-auto p-0' align='start'>
                     <Calendar
-                      mode='single'
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      disabled={date =>
-                        date < new Date() || date > addDays(new Date(), 90)
-                      }                      initialFocus
+
+                      initialFocus
                       className='p-3 pointer-events-auto'
                     />
                   </PopoverContent>
@@ -234,13 +215,8 @@ export function InterviewRequestForm({
           />
 
           <FormField
-            control={form.control}
-            name='time'
-            render={({
-              field,
-            }: {
-              field: ControllerRenderProps<z.infer<typeof formSchema>, 'time'>;
-            }) => (              <FormItem>
+
+              <FormItem>
                 <FormLabel>Time</FormLabel>
                 <Select
                   onValueChange={field.onChange}
@@ -251,8 +227,8 @@ export function InterviewRequestForm({
                       <SelectValue placeholder='Select time' />
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent className='max-h-[300px]'>
-                    {timeSlots.map(time => (                      <SelectItem key={time} value={time}>
+
+                      <SelectItem key={time} value={time}>
                         {time}
                       </SelectItem>
                     ))}
@@ -266,16 +242,8 @@ export function InterviewRequestForm({
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
-            control={form.control}
-            name='duration'
-            render={({
-              field,
-            }: {
-              field: ControllerRenderProps<
-                z.infer<typeof formSchema>,
-                'duration'
-              >;
-            }) => (              <FormItem>
+
+              <FormItem>
                 <FormLabel>Duration</FormLabel>
                 <Select
                   onValueChange={field.onChange}
@@ -299,16 +267,8 @@ export function InterviewRequestForm({
           />
 
           <FormField
-            control={form.control}
-            name='platform'
-            render={({
-              field,
-            }: {
-              field: ControllerRenderProps<
-                z.infer<typeof formSchema>,
-                'platform'
-              >;
-            }) => (              <FormItem>
+
+              <FormItem>
                 <FormLabel>Platform</FormLabel>
                 <Select
                   onValueChange={field.onChange}
@@ -334,16 +294,8 @@ export function InterviewRequestForm({
 
         {form.watch('platform') !== 'in-app' && (
           <FormField
-            control={form.control}
-            name='meetingLink'
-            render={({
-              field,
-            }: {
-              field: ControllerRenderProps<
-                z.infer<typeof formSchema>,
-                'meetingLink'
-              >;
-            }) => (              <FormItem>
+
+              <FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
                   <Input
@@ -358,13 +310,8 @@ export function InterviewRequestForm({
         )}
 
         <FormField
-          control={form.control}
-          name='notes'
-          render={({
-            field,
-          }: {
-            field: ControllerRenderProps<z.infer<typeof formSchema>, 'notes'>;
-          }) => (            <FormItem>
+
+            <FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
                 <Textarea
@@ -435,4 +382,4 @@ toast ({;
 }/>) ;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
 }/> </Button> </div> </form> </Form>) ;
-}'"}
+}'"

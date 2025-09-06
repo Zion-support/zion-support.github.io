@@ -1,15 +1,8 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { ChevronLeft, Bell, Settings } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router';
-import { ChevronLeft, Bell, Settings } from 'lucide-react';
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
-  title: string;  showBack?: boolean;  title: string,
+  title: string;  showBack?: boolean;
+
   showBack?: boolean;
+
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
@@ -74,7 +67,6 @@ export function MobileHeader({
 }: MobileHeaderProps) {
   const router = useRouter();
 
-  
     >
       <div className='flex items-center justify-between h-14 px-4'>
         <div className='flex items-center'>
@@ -108,9 +100,11 @@ export function MobileHeader({
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
+
+            </Button>
+
           )}
         </div>
       </div>
     </header>
-  );  )
-}
+  );

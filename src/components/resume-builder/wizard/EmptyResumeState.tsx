@@ -2,7 +2,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FilePlus } from 'lucide-react';
 import { EmptyResumeProps } from './types';
-export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {  return (
+
+  return (
     <Card className='w-full max-w-2xl mx-auto'>
       <CardContent className='py-8'>
         <div className='text-center'>
@@ -21,13 +22,15 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {  retu
             className="gap-2"
           >
             <FilePlus className="h-4 w-4" />
+
+            Create Resume
+
           </Button>
         </div>
       </CardContent>
     </Card>
   );
 };
-"},
-;
+"
+
   )
-};

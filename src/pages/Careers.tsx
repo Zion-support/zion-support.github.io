@@ -1,11 +1,3 @@
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import Link from 'next/link';
-import { CAREER_JOBS } from '@/data/careersJobs';
-
 export default function Careers() {
   const applyEmail = 'careers@ziontechgroup.com';
   const jobs = CAREER_JOBS;
@@ -157,17 +149,7 @@ export default function Careers() {
             </div>
           </div>
 
-          <div className='mb-24'>
-            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
-              Our Benefits
-            </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'
-                >
-                  <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>                    {benefit.icon}
+                    {benefit.icon}
                   </div>
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {benefit.title}
@@ -211,19 +193,7 @@ export default function Careers() {
                 </TabsTrigger>
               </TabsList>
 
-              {Object.entries(jobs).map(([department, jobList]) => (
-                <TabsContent
-                  key={department}
-                  value={department}
-                  className='space-y-6'
-                >
-                  {jobList.map((job, index) => (
-                    <Card
-                      key={index}
-                      className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'
-                    >
-                      <CardContent className='p-6'>
-                        <div className='flex flex-col md:flex-row md:items-center md:justify-between'>                          <div>
+                          <div>
                             <h3 className='text-xl font-bold text-white mb-2'>
                               {job.title}
                             </h3>
@@ -286,19 +256,3 @@ export default function Careers() {
       </main>
     </>
   );
-import React from 'react';
-import { SEO } from '../components/SEO';
-const Careers: React.FC = () => {;
-  return(<>;
-      <SEO title="Careers - Zion Tech Group" />;
-      <div className="min-h-screen bg-white py-20">;
-        <div className="max-w-4xl mx-auto px-4">;
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Careers</h1>;
-          <p className="text-lg text-gray-600">Content coming soon...</p>;
-        </div>;
-      </div>;
-    </>;
-  );
-};
-export default Careers;
-}

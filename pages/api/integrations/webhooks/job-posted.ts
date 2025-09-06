@@ -20,14 +20,7 @@ export default async function handler(
       c.providerId === "pipedrive",
   );
   const results: any[] = [];
-  for (const conn of connections) {
-    const log = {
-      id: `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-      providerId: conn.providerId,
-      level: "info",
-      action: "sync_contact",
-    };
-    await crm.syncContact(conn, {
+  const syncResult = await crm.syncContact(conn, {
       company: job.company,
       contact: job.contact,
     });

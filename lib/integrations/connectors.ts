@@ -1,10 +1,10 @@
-import { ProviderConnection, SyncLogEntry } from "./types";
-import { v4 as uuidv4 } from "uuid";
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
 
-async function mockProviderCall<T>(
+async function executeProviderAction<T>(
   connection: ProviderConnection,
   action: string,
-  details: Record<string, any>,
+  details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
     id: uuidv4(),
@@ -24,21 +24,21 @@ export const crm = {
     connection: ProviderConnection,
     contact: Record<string, any>,
   ) {
-    return mockProviderCall(connection, "sync_contact", { contact });
+    return executeProviderAction(connection, 'syncContact', { contact });
   },
 
   async addEmailTouchpoint(
     connection: ProviderConnection,
-    touchpoint: Record<string, any>,
+    touchpoint: Record<string, any>
   ) {
-    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
+    return executeProviderAction(connection, 'addEmailTouchpoint', { touchpoint });
   },
 
   async addProjectNote(
     connection: ProviderConnection,
-    note: Record<string, any>,
+    note: Record<string, any>
   ) {
-    return mockProviderCall(connection, "add_project_note", { note });
+    return executeProviderAction(connection, 'addProjectNote', { note });
   },
 };
 
@@ -46,8 +46,25 @@ export const crm = {
 export const ats = {
   async updateStatus(
     connection: ProviderConnection,
-    status: Record<string, any>,
+    status: Record<string, any>
   ) {
-    return mockProviderCall(connection, "update_status", { status });
+    return executeProviderAction(connection, 'updateStatus', { status });
+  },
+
+  async createCandidate(
+    connection: ProviderConnection,
+    candidate: Record<string, any>
+  ) {
+    return executeProviderAction(connection, 'createCandidate', { candidate });
+  },
+};
+
+// Email actions
+export const email = {
+  async sendNotification(
+    connection: ProviderConnection,
+    notification: Record<string, any>
+  ) {
+    return executeProviderAction(connection, 'sendNotification', { notification });
   },
 };

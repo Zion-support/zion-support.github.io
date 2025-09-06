@@ -1,7 +1,7 @@
-
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
-import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils";
+
+import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -22,11 +22,11 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   };
 
   const progressValue = getProgressValue();
-  
+
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
-      
+
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -63,21 +63,5 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     hired: 5,
     rejected: 5},
 
-
   const currentRank = statusRank[current],
   const statusRank_ = statusRank[status];
-
-  const currentRank = statusRank[current];
-  const statusRank_ = statusRank[status];
-
-  if (currentRank < statusRank_) {
-    // This step is complete
-    return <CheckCircle2 className="h-4 w-4 text-green-500" />
-  } else if (currentRank === statusRank_) {
-    // This is the current step
-    return <CircleDot className="h-4 w-4 text-blue-500" />
-  } else {
-    // This step is upcoming
-    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
-  };
-}

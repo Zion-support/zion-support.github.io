@@ -1,5 +1,4 @@
-
-import {useState} from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { SEO } from "@/components/SEO";
@@ -9,7 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'import { formatDistanceToNow, format } from "date-fns";
+
+import { formatDistanceToNow, format } from "date-fns";
 import { ForumPost, ForumReply } from "@/types/community";
 import { useAuth } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
@@ -97,35 +97,28 @@ export default function ForumPostPage() {
   const { toast } = useToast();
   const [post, setPost] = useState(mockPost);
   const [replies, setReplies] = useState(mockReplies);
-  
+
   // Check if this is the user's own post
+
   const isAuthor = user?.id === post?.authorId;
-  
+
   // Check if user is admin/mod
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
-  
-
-
 
       return
     }
-    
-
 
   const handlePinPost = () => {
     if (!isAdminOrMod) return;
-    
+
     setPost({ ...post, isPinned: !post.isPinned }),
-    
 
   const handleLockPost = () => {
     if (!isAdminOrMod) return;
-    
+
     setPost({ ...post, isLocked: !post.isLocked }),
-    
-  
+
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
-}
-  );
+
 }

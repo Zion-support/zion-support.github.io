@@ -1,13 +1,3 @@
-import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { StarIcon } from 'lucide-react';
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useState
-import { Badge } from '@/components/ui/badge';
-import { Star } from 'lucide-react';
-
 interface ListingScoreCardProps {
   title: string;
   description: string;
@@ -37,19 +27,14 @@ export function ListingScoreCard({
   const [mainImageError, setMainImageError] = useState(false);
   const [authorImageError, setAuthorImageError] = useState(false);
 
-  
     >
       {image && !mainImageError && (
         <div className='h-48 w-full overflow-hidden relative'>
           {' '}
           {/* Added relative for Image layout fill */}
           <Image
-            src={image}
-            alt={title}
-            className='object-cover transition-transform duration-300 group-hover:scale-105'
-            onError={() => setMainImageError(true)}
-            priority={false}
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' // General sizes          />
+
+          />
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -87,17 +72,8 @@ export function ListingScoreCard({
         </p>
 
         {rating > 0 && (
-          <div className='flex items-center gap-1 mb-4'>
-            <div className='flex'>
-              {[1, 2, 3, 4, 5].map(star => (
-                <StarIcon
-                  key={star}
-                  className={cn(
-                    'h-4 w-4',
-                    star <= Math.round(rating)
-                      ? 'text-zion-cyan fill-zion-cyan'
-                      : 'text-zion-slate-light'
-                  )}                />
+
+                />
               ))}
             </div>
             <span className='text-sm text-zion-slate-light ml-1'>
@@ -107,13 +83,8 @@ export function ListingScoreCard({
         )}
 
         {tags && tags.length > 0 && (
-          <div className='flex flex-wrap gap-2 mb-4'>
-            {tags.map((tag, i) => (
-              <Badge
-                key={i}
-                variant='outline'
-                className='border-zion-slate-dark text-zion-slate-light'
-              >                {tag}
+
+                {tag}
               </Badge>
             ))}
           </div>
@@ -130,11 +101,8 @@ export function ListingScoreCard({
                 {' '}
                 {/* Added relative and overflow-hidden */}
                 <Image
-                  src={authorImage}
-                  alt={author}
-                  className='object-cover rounded-full'
-                  onError={() => setAuthorImageError(true)}
-                  priority={false}                />
+
+                />
               </div>
             ) : (
               <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple'>
@@ -147,4 +115,3 @@ export function ListingScoreCard({
       </div>
     </div>
   );
-}

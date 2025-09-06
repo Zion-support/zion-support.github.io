@@ -12,21 +12,7 @@ import { Button } from '@/components/ui/button';
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
 import { format } from 'date-fns';
 import { JobMatch } from '@/types/jobs';
-interface JobMatchCardProps {
-  match: JobMatch;
-  onApply: (matchId: string, jobId: string) => void;
-  onDecline: (matchId: string) => void;
-  showApplied?: boolean;
 
-export function JobMatchesCard({
-  match,
-  onApply,
-  onDecline,
-  showApplied = false,
-}: JobMatchCardProps) {
-  const job = match.job;
-
-  if (!job) return null;
   return (
     <Card className='overflow-hidden border-l-4 border-l-blue-500'>
       <CardHeader className='p-4 pb-2'>
@@ -53,13 +39,8 @@ export function JobMatchesCard({
         </p>
 
         {match.matched_skills?.length > 0 && (
-          <div className='mb-3'>
-            <p className='text-xs text-muted-foreground mb-1'>
-              Matched skills:
-            </p>
-            <div className='flex flex-wrap gap-1'>
-              {match.matched_skills.slice(0, 5).map((skill, i) => (
-                <Badge key={i} variant='secondary' className='text-xs'>                  {skill}
+
+                  {skill}
                 </Badge>
               ))}
               {match.matched_skills.length > 5 && (
@@ -94,17 +75,8 @@ export function JobMatchesCard({
             Declined
           </div>
         ) : (
-          <div className='flex gap-2 w-full'>
-            <Button
-              className='flex-1'
-              onClick={() => onApply(match.id, job.id)}
+
             >
-              Apply Now
-            </Button>
-            <Button
-              variant='outline'
-              className='flex-1'
-              onClick={() => onDecline(match.id)}            >
               Decline
             </Button>
           </div>
@@ -112,5 +84,5 @@ export function JobMatchesCard({
       </CardFooter>
     </Card>
   );
-;
+
 }

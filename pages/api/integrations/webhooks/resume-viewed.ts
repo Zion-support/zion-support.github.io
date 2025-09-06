@@ -20,15 +20,8 @@ export default async function handler(
       c.providerId === "pipedrive",
   );
   const results: any[] = [];
-  for (const conn of connections) {
-    const log = {
-      id: `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-      providerId: conn.providerId,
-      level: "info",
-      action: "add_email_touchpoint",
-    };
-    await crm.addEmailTouchpoint(conn, {
-      subject: "Resume viewed",
+  const touchpointResult = await crm.addEmailTouchpoint(conn, {
+      subject: 'Resume viewed',
       resumeId: resume.id,
     });
     writeState((s) => s.logs.push(log));

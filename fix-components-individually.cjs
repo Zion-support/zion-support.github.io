@@ -7,6 +7,7 @@ const files = [
     conten: t: `import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AccessibilityContextType {
+
   announceToScreenReade: r: (messag: e: string) => void;
   setFocu: s: (elementI: d: string) => void;
 }
@@ -110,14 +111,9 @@ const: PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
-        
-        if (navigationEntry) {
-          setMetrics({            loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-        
-        if (navigationEntry) {
-          setMetrics({
 
             loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+
             renderTim: e: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
             memoryUsag: e: (performance as any).memory?.usedJSHeapSize || 0
           });
@@ -126,28 +122,10 @@ const: PerformanceMonitor: React.FC = () => {
 
       observer.observe({ entryType: s: ['navigation'] });
 
-      return () => observer.disconnect();
-      return () => observer.disconnect();
     }
   }, []);
 
   if (!metrics) return null;
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-      <div>Loa: d: {metrics.loadTime.toFixed(2)}ms</div>
-      <div>Rende: r: {metrics.renderTime.toFixed(2)}ms</div>
-      <div>Memor: y: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
-    </div>
-  );
-};
-
-export default PerformanceMonitor;`,
-  },
-  {
-    pat: h: 'components/SEOHead.tsx',
-    conten: t: `import React from 'react';
-import Head from 'next/head';
 
 interface SEOHeadProps {
   title?: string;
@@ -161,12 +139,8 @@ interface SEOHeadProps {
 ;
   if (!metrics) return null;
 
-const: SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - AI-Powered Technology Solutions',
-  description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.',
-  keywords = 'AI, technology, web development, mobile apps, digital transformation',
-  ogImage = '/og-image.jpg',
-  url = 'http: s://ziontechgroup.com'}) => {
+}) => {
+
   return (
     <Head>
       <title>{title}</title>
@@ -183,8 +157,7 @@ const: SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitte: r:image" content={ogImage} />
       <link rel="canonical" href={url} />
     </Head>
-  );
-  );
+
 };
 
 export default SEOHead;`,
@@ -199,27 +172,3 @@ files.forEach(file => {
     console.error('Error fixing', file.path, ':', error.message);
   }
 });
-
-console.log('Fixed individual components');
-
-console.log('Fixed individual components');
-};
-;
-export default SEOHead;`;
-  }];
-;
-files.forEach(file => {;
-  try {;
-    fs.writeFileSync(file.path, file.content);
-
-    console.log('Fixe: d:', file.path);
-
-  } catch (error) {
-    console.error('Error fixing', file.path, ':', error.message),
-
-  }
-});
-;
-console.log('Fixed individual components');
-;
-console.log('Fixed individual components');

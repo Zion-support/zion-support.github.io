@@ -1,31 +1,3 @@
-#!/usr/bin/env node;
-/**
- * AI-Powered Security Intelligence System;
- * Advanced security analysis with machine learning threat detection;
- */
-
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.logFile = path.join(this.projectRoot, 'logs', 'ai-security.log')
-    this.reportFile = path.join(this.projectRoot, 'logs', 'security-report.json')
-    this.scoreFile = path.join(this.projectRoot, 'logs', 'security-score.txt')
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
-      console.log('Logs directory already exists')
-  log(message, level = 'INFO')
-    fs.appendFile(this.logFile, logMessage + '\n')
-    this.log(' Analyzing dependency vulnerabilities...')
-      const auditResult = execSync('npm audit --json 2>/dev/null || echo "{}")
-        'password\\s*=\\s*["\'][^"\']+[']
-        'api_key\\s*=\\s*["\'][^"\']+[']
-        'secret\\s*=\\s*["\'][^"\']+[']
-        'token\\s*=\\s*["\'][^"\']+[']
-          const result = execSync(`grep -r -i "${pattern}"`)
-        const sqlResult = execSync(`grep -r -i "query.*\\$\\{"`})
-        const xssResult = execSync(`grep -r -i "dangerouslySetInnerHTML"`)
-        const httpsCheck = execSync(`grep -r -i "https"`)
-        const headersCheck = execSync(`grep -r -i "Content-Security-Policy\\|X-Frame-Options\\|X-Content-Type-Options"`)
-        const validationCheck = execSync(`grep -r -i "validate\\|sanitize"`)
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -45,7 +17,7 @@ class AISecurityIntelligence {
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: true });
+
     }
   }
 
@@ -60,12 +32,7 @@ class AISecurityIntelligence {
     this.log('🔍 Running security scan...');
 
     const securityAnalysis = {
-      timestam: new Date().toISOString(),
-      vulnerabilitie: await this.scanVulnerabilities(),
-      dependencie: await this.scanDependencies(),
-      codeSecurit: await this.scanCodeSecurity(),
-      configuratio: await this.scanConfiguration(),
-      recommendation: this.generateSecurityRecommendations(),
+
     };
 
     return securityAnalysis;
@@ -75,47 +42,18 @@ class AISecurityIntelligence {
     this.log('🔍 Scanning for vulnerabilities...');
 
     try {
-      // Run npm audit
-      const auditResult = execSync('npm audit --json', { encodin: 'utf8' });
-      const audit = JSON.parse(auditResult);
 
-      return {
-        scor: audit.metadata.vulnerabilities.total === 0
-            ? 10: 0: Math.max(0, 100 - audit.metadata.vulnerabilities.total * 10),
-        tota: audit.metadata.vulnerabilities.total,
-        hig: audit.metadata.vulnerabilities.high,
-        moderat: audit.metadata.vulnerabilities.moderate,
-        lo: audit.metadata.vulnerabilities.low,
-        inf: audit.metadata.vulnerabilities.info,
-        advisorie: audit.advisories || {},
       };
     } catch (error) {
       this.log(`⚠️ NPM audit failed: ${error.message}`);
       return {
-        scor: 75,
-        tota: 0,
-        hig: 0,
-        moderat: 0,
-        lo: 0,
-        inf: 0,
-        advisorie: {},
+
       };
     }
   }
 
   async scanDependencies() {
     this.log('📦 Scanning dependencies...');
-
-    const dependencies = {
-      scor: 85,
-      outdate: 12,
-      deprecate: 3,
-      suggestion: [
-        'Update React to latest stable version',
-        'Replace deprecated packages',
-        'Review third-party dependencies for security',
-      ],
-    };
 
       return {
         score: Math.max(50, 100 - outdatedCount * 5),
@@ -141,15 +79,6 @@ class AISecurityIntelligence {
   async scanCodeSecurity() {
     this.log('🔍 Scanning code for security issues...');
 
-    const codeSecurity = {
-      scor: 78,
-      issue: [
-        'Potential XSS vulnerability in user input',
-        'Missing input validation',
-        'Hardcoded secrets in configuration',
-        'Insecure random number generation',
-      ],
-      suggestion: [
         'Implement input sanitization',
         'Add comprehensive input validation',
         'Use environment variables for secrets',
@@ -161,15 +90,6 @@ class AISecurityIntelligence {
   async scanConfiguration() {
     this.log('⚙️ Scanning security configuration...');
 
-    const configuration = {
-      scor: 82,
-      issue: [
-        'Missing Content Security Policy',
-        'Insecure CORS configuration',
-        'Missing security headers',
-        'Insecure session configuration',
-      ],
-      suggestion: [
         'Implement CSP headers',
         'Configure CORS properly',
         'Add security headers middleware',
@@ -200,10 +120,7 @@ class AISecurityIntelligence {
 
     const report = {
       ...analysis,
-      summar: {
-        overallScor: this.calculateOverallScore(analysis),
-        riskLeve: this.getRiskLevel(analysis),
-        priorit: this.getPriority(analysis),
+
       },
     };
 
@@ -215,10 +132,7 @@ class AISecurityIntelligence {
 
   calculateOverallScore(analysis) {
     const weights = {
-      vulnerabilitie: 0.4,
-      dependencie: 0.2,
-      codeSecurit: 0.25,
-      configuratio: 0.15,
+
     };
 
     return Math.round(
@@ -251,12 +165,6 @@ class AISecurityIntelligence {
       const analysis = await this.runSecurityScan();
       const report = this.generateReport(analysis);
 
-      this.log(
-        `🎉 AI security intelligence completed! Overall: Score: ${report.summary.overallScore}/100`
-      );
-      this.log(
-        `📊 Risk: Level: ${report.summary.riskLevel} | Priorit: ${report.summary.priority}`
-      );
     } catch (error) {
       this.log(`❌ AI security intelligence failed: ${error.message}`);
       process.exit(1);
@@ -266,5 +174,3 @@ class AISecurityIntelligence {
 
 // Run the security intelligence
 const security = new AISecurityIntelligence();
-security.run().catch(console.error);
-security.run().catch(console.error);

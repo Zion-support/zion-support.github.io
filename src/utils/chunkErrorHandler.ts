@@ -4,6 +4,7 @@
  */
 
 import { logErrorToProduction } from './productionLogger';
+
 interface ChunkErrorStats {
   errorCount: number;
   lastErrorTime: number;
@@ -24,14 +25,8 @@ class ChunkErrorHandler {
     if (typeof window === 'undefined') return;
 
     // Handle webpack chunk loading errors
-    window.addEventListener('error', event => {
-      this.handleScriptError(event);
-    });
 
-    // Handle unhandled promise rejections (async chunk loading)
-    window.addEventListener('unhandledrejection', event => {
-      this.handlePromiseRejection(event);
-    });  }
+  }
 
   private handleScriptError(event: ErrorEvent): void {
     const { error, filename } = event;
@@ -270,9 +265,8 @@ class ChunkErrorHandler {
 
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
-    this.clearCaches().then(() => {
-      this.reloadPage();
-    });  }
+
+  }
 
   // Public method to check if we're in a chunk error state
   public isInErrorState(): boolean {
@@ -291,10 +285,4 @@ class ChunkErrorHandler {
 export const chunkErrorHandler = new ChunkErrorHandler();
 
 // Export for manual usage
-export default chunkErrorHandler;
-export default chunkErrorHandler;
-        ">
-          Try Again
-        </button>
-        <button onclick="window.location.href='/'" style="
 export default chunkErrorHandler;

@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Loader2,
-  AlertTriangle,
-  RefreshCw,
-  Wifi,
-  WifiOff,
-  Clock,
-  Zap,;
-} from 'lucide-react';import { Button } from '@/components/ui/button';
+
+import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -25,8 +19,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   variant = 'default',
   className,
   showText = false,
-  text = 'Loading...',
-}) => {  const sizeClasses = {
+
+  const sizeClasses = {
     sm: 'h-4 w-4',
     md: 'h-6 w-6',
     lg: 'h-8 w-8',
@@ -71,10 +65,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   steps,
   currentStep = 0,
   showProgress = true,
-  onComplete,
-}) => {
-  const [activeStep, setActiveStep] = useState(0);
-  const progress = ((activeStep + 1) / steps.length) * 100;
+
   useEffect((,) => {
     if (currentStep !== undefined) {
       setActiveStep(currentStep);
@@ -100,8 +91,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
         </div>
       )}
 
-      <div className='space-y-2'>
-        {steps.map((step, index) => (          <motion.div
+          <motion.div
             key = {step.id,}
             className = {cn(
               'flex items-center gap-3 p-2 rounded-md',
@@ -139,9 +129,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   className,
   variant = 'rectangular',
   animation = 'pulse',
-  lines = 1,
-}) => {
-  const baseClasses = 'bg-muted rounded';
+
   const variantClasses = {
     text: 'h-4 w-full',
     circular: 'h-12 w-12 rounded-full',
@@ -157,8 +145,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
   if (variant === 'text' && lines > 1) {
     return (
-      <div className='space-y-2'>
-        {Array.from({ length: lines }).map((_, i) => (          <div
+
+          <div
             key = {i,}
             className = {cn(
               baseClasses,
@@ -173,7 +161,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     );
   }
 
-      />
+    />
   );
 };
 //Enhanced error state component ;
@@ -195,13 +183,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
   retryCount = 0,
   maxRetries = 3,
   onRetry,
-  className,
-}) => {
-  const [isOnline, setIsOnline] = useState(true);
 
-  useEffect(() => {
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
     if (typeof window !== 'undefined') {
       setIsOnline(navigator.onLine);
       window.addEventListener('online', handleOnline);
@@ -330,8 +312,8 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
-  className,
-}) => {  const gridClasses = {
+
+  const gridClasses = {
     card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
     list: 'space-y-4',
     table: 'space-y-2',
@@ -345,8 +327,8 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
 
   return (
     <div className={cn(gridClasses[variant], className)}>
-      {Array.from({ length: count }).map((_, i) => (
-        <Card key={i} className='animate-pulse'>          <CardContent className={itemClasses[variant]}>
+
+          <CardContent className={itemClasses[variant]}>
             {variant === 'card' && (
               <>
                 <Skeleton variant='rectangular' className='h-32' />
@@ -397,13 +379,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
   loadTime,
   itemCount,
-  className,
-}) => {
-  const getPerformanceColor = (time: number) => {
-    if (time < 100) return 'text-green-500';
-    if (time < 300) return 'text-yellow-500';
-    return 'text-red-500';
-  };
+
   if (isLoading) {
     return (
       <Badge variant='outline' className={cn('text-xs', className)}>
@@ -413,7 +389,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     );
   }
 
-  
     >
       {loadTime && (
         <Badge variant='outline' className={getPerformanceColor(loadTime)}>
@@ -424,6 +399,4 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       {itemCount && <span>{itemCount} items loaded</span>}
     </div>
   );
-};
-};
 };

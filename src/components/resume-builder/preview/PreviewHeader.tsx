@@ -4,11 +4,6 @@ import { Resume } from '@/types/resume';
 import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
-import { Button } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link } from 'lucide-react';
-
-import { Button } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link } from 'lucide-react'
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
@@ -24,13 +19,14 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 
   const handleBrowserPrint = () => {
     setIsPrinting(true);
-    
+
     // Inject print-specific CSS only for the duration of printing
     const style = document.createElement('style');
     style.innerHTML = `
       @media print {
         body * {
           visibility: hidden;
+
         }
         .print-section, .print-section * {
           visibility: visible;
@@ -46,36 +42,13 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
       }
     `;
     document.head.appendChild(style);
-        }
-        .print-section, .print-section * {
-          visibility: visible
-        }
-        .print-section {
-          position: absolute,
-          left: 0,
-          top: 0,
-          width: 100%
-        }
-        .no-print {
-          display: none !important
+
         }
       }
     `;
     document.head.appendChild(style);
 
-    window.print();
-
-    // Remove the temporary style element after printing
-    setTimeout(() => {
-      document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
-  };
-
-  
-    >
-      <Button variant='outline' onClick={onBack} className='gap-2 no-print'>
-        <ArrowLeft className='h-4 w-4' />        Back
+        Back
       </Button>
 
       <div
@@ -83,23 +56,18 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
       >
         <PdfExportButton resume={resume} />
 
-        <Button
-          variant='outline'
-          onClick={handleBrowserPrint}
-          disabled={isPrinting}
-          className='gap-2'        >
+        >
           <FileText className='h-4 w-4' />
           Print
         </Button>
 
         <Button variant='outline' className='gap-2'>
-          <Link className='h-4 w-4' />          Add to Profile        
-        <Button variant="outline" className="gap-2">
-          <Link className="h-4 w-4" />
+          <Link className='h-4 w-4' />          Add to Profile
+
           Add to Profile
+
         </Button>
       </div>
     </div>
   );
 }
-;

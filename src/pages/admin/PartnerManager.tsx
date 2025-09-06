@@ -8,7 +8,8 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { toast } from "@/hooks/use-toast";
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase } from "@/integrations/supabase/client";
+
+import { supabase } from "@/integrations/supabase/client";
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { EmptyState } from "@/components/ui/empty-state";
 interface PartnerProfile {
@@ -53,23 +54,11 @@ export default function PartnerManager() {
     try {
       setIsLoading(true);
       // In a real application, check admin permissions here
-      
+
       const { data, error } = await supabase
         .from('partner_profiles')
         .select('*')
+
         .order('created_at', { ascending: false }),
-        
 
-
-      
-
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>;
-      default:
-        return <Badge variant="outline">{status}</Badge>
-    
-  partners, 
-  isLoading, 
-  onViewDetails, }
-  );
 }

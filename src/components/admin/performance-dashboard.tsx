@@ -3,21 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import {
-  Activity,
-  Zap,
-  Package,
-  TrendingUp,
-  TrendingDown,
-  AlertTriangle,
-  CheckCircle,
-  RefreshCw,
-  BarChart3,
-  Clock,
-  Globe,;
-} from 'lucide-react';
-import { bundleMonitor } from '@/utils/bundleMonitor';
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
+
 interface PerformanceMetrics {
   bundleSize: number;
   loadTime: number;
@@ -106,9 +92,8 @@ export function PerformanceDashboard() {
 
     // Use PerformanceObserver for more accurate metrics
     if ('PerformanceObserver' in window) {
-      return new Promise(resolve => {
-        const observer = new PerformanceObserver(list => {
-          list.getEntries().forEach(entry => {            if (entry.entryType === 'paint') {
+
+            if (entry.entryType === 'paint') {
               if (entry.name === 'first-contentful-paint') {
                 vitals.fcp = entry.startTime;
               }
@@ -135,11 +120,8 @@ export function PerformanceDashboard() {
         });
 
         // Resolve after a short delay
-        setTimeout(() => {
-          observer.disconnect();
-          resolve(vitals);
-        }, 2000);
-      });    }
+
+    }
 
     return vitals;
   };
@@ -147,24 +129,6 @@ export function PerformanceDashboard() {
   const collectChunkData = async (): Promise<BundleChunk[]> => {
     if (typeof window === 'undefined') return [];
 
-    const resourceEntries = performance.getEntriesByType(
-      'resource'
-    ) as PerformanceResourceTiming[];
-    const scriptEntries = resourceEntries.filter(
-      entry =>
-        entry.name.includes('/_next/static/') && entry.name.endsWith('.js')
-    );
-
-    return scriptEntries
-      .map(entry => ({
-        name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
-        size: entry.transferSize || entry.encodedBodySize || 0,
-        loadTime: entry.responseEnd - entry.requestStart,
-        cached: entry.transferSize === 0,
-        type: categorizeChunk(entry.name),
-      }))
-      .sort((a, b) => b.size - a.size);
-  };
   const categorizeChunk = (filename: string): string => {
     if (filename.includes('framework')) return 'framework';
     if (filename.includes('vendor')) return 'vendor';
@@ -187,16 +151,6 @@ export function PerformanceDashboard() {
     return 'text-red-600';
   };
 
-  const getScoreIcon = (score: number) => {
-    if (score >= 90) return <CheckCircle className='w-4 h-4 text-green-600' />;
-    if (score >= 70)
-      return <AlertTriangle className='w-4 h-4 text-yellow-600' />;
-    return <AlertTriangle className='w-4 h-4 text-red-600' />;
-  };
-
-  useEffect(() => {
-    collectMetrics();
-    const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -349,14 +303,8 @@ export function PerformanceDashboard() {
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
-            <div className='space-y-2'>
-              {chunks.slice(0, 10).map((chunk, index) => (
-                <div
-                  key={chunk.name}
-                  className='flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded'
-                >
-                  <div className='flex items-center gap-3'>
-                    <span className='text-sm font-mono text-muted-foreground'>                      {index + 1}
+
+                      {index + 1}
                     </span>
                     <div>
                       <p className='font-medium text-sm'>{chunk.name}</p>
@@ -450,5 +398,3 @@ export function PerformanceDashboard() {
       </Card>
     </div>
   );
-} 
-} 

@@ -1,21 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import {
-  CheckCircle,
-  AlertCircle,
-  TrendingUp,
-  Zap,
-  Shield,
-  Search,;
-} from 'lucide-react';
+
 interface PerformanceMetrics {
   buildSize: string;
   pageCount: number;
@@ -219,13 +203,8 @@ const PerformanceDashboard: React.FC = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className='space-y-4'>
-            {completedImprovements.map(improvement => (
-              <div
-                key={improvement.id}
-                className='flex items-start space-x-3 p-3 border rounded-lg'
-              >
-                <div className='flex-shrink-0 mt-1'>                  {getCategoryIcon(improvement.category)}
+
+                  {getCategoryIcon(improvement.category)}
                 </div>
                 <div className='flex-1 min-w-0'>
                   <div className='flex items-center justify-between'>
@@ -273,5 +252,3 @@ const PerformanceDashboard: React.FC = () => {
 };
 
 export default PerformanceDashboard;
-export default PerformanceDashboard, 
-export default PerformanceDashboard, 

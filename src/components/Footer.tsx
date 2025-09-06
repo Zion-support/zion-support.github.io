@@ -1,14 +1,3 @@
-import { FooterNewsletter } from '@/components/FooterNewsletter';
-import {  Twitter,
-  Linkedin,
-  Facebook,
-  Instagram,
-  Github,
-  ChevronUp,;
-} from 'lucide-react';
-import Link from 'next/link'; // Changed from react-router-dom
-import { FeedbackWidget } from '@/components/feedback/FeedbackWidget';
-
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === '' || envVar === '#' || envVar === '/') {
     return fallback;
@@ -56,52 +45,32 @@ export function Footer() {
             </p>
             <div className='flex flex-wrap gap-3'>
               <a
-                href={TWITTER_URL}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-foreground/80 hover:text-primary transition-colors'
-                aria-label='Twitter'
-                title='Twitter'              >
+
+              >
                 <Twitter className='h-5 w-5' aria-hidden='true' />
                 <span className='sr-only'>Twitter</span>
               </a>
               <a
-                href={LINKEDIN_URL}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-foreground/80 hover:text-primary transition-colors'
-                aria-label='LinkedIn'
-                title='LinkedIn'              >
+
+              >
                 <Linkedin className='h-5 w-5' aria-hidden='true' />
                 <span className='sr-only'>LinkedIn</span>
               </a>
               <a
-                href={FACEBOOK_URL}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-foreground/80 hover:text-primary transition-colors'
-                aria-label='Facebook'
-                title='Facebook'              >
+
+              >
                 <Facebook className='h-5 w-5' aria-hidden='true' />
                 <span className='sr-only'>Facebook</span>
               </a>
               <a
-                href={INSTAGRAM_URL}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-foreground/80 hover:text-primary transition-colors'
-                aria-label='Instagram'
-                title='Instagram'              >
+
+              >
                 <Instagram className='h-5 w-5' aria-hidden='true' />
                 <span className='sr-only'>Instagram</span>
               </a>
               <a
-                href={GITHUB_URL}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-foreground/80 hover:text-primary transition-colors'
-                aria-label='GitHub'
-                title='GitHub'              >
+
+              >
                 <Github className='h-5 w-5' aria-hidden='true' />
                 <span className='sr-only'>GitHub</span>
               </a>
@@ -295,5 +264,3 @@ export function Footer() {
       </div>
     </footer>
   );
-}
-}

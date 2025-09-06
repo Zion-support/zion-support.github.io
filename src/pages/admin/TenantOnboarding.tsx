@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {SEO} from "@/components/SEO";
@@ -29,10 +28,8 @@ export default function TenantOnboarding() {
     custom_domain: "",
     is_co_branded: true
   });
-  
+
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
-  
-      }
-  );
+
 }

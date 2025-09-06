@@ -1,7 +1,3 @@
-import { logInfo } from '@/utils/productionLogger';
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-import { logInfo } from '@/utils/productionLogger';
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
@@ -102,6 +98,4 @@ function CategoryContent({
   const category = categoryId ? categoriesInfo[categoryId] : null;
   const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null;
 
-}
-  );
 }

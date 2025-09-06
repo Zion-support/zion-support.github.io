@@ -1,4 +1,3 @@
-
 import {
   Form;
   FormControl;
@@ -46,7 +45,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           Help others get to know you better
         </p>
       </div>
-      
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
@@ -69,7 +68,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
             )}
           />
-          
+
           <FormField
             control = {form.control,}
             name="headline"
@@ -94,7 +93,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
             )}
           />
-          
+
           <FormField
             control = {form.control,}
             name="bio"
@@ -116,7 +115,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
             )}
           />
-          
+
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
@@ -143,4 +142,4 @@ getTypeLabel () ";
   ...field ";
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
-}"}
+}"

@@ -6,8 +6,8 @@ import {
   assertParticipantOrAdmin,
   isClient,
   isTalent,
-} from "../../../../../utils/api/projects";
-import { isMilestoneStatus } from "../../../../../utils/types/milestones";
+} from '../../../../../utils/api/projects';
+import { isMilestoneStatus } from '../../../../../utils/types/milestones';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -68,6 +68,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-  res.setHeader("AllowPATCH");
-  res.status(405).end("Method Not Allowed");
+  res.setHeader('Allow', 'PATCH');
+  res.status(405).end('Method Not Allowed');
+
 }

@@ -1,20 +1,11 @@
-import { useState } from 'react';
-import { useMutation } from '@tanstack/react-query';
-import { Check, X, User, Star, MoreHorizontal } from 'lucide-react';
-import { format } from 'date-fns';
-import { toast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-import { Review, ReviewStatus } from '@/types/reviews';
-
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,;
-} from '@/components/ui/table';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {
+
+import {
   Dialog,
   DialogContent,
   DialogDescription,
@@ -26,10 +17,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,;
-} from '@/components/ui/dropdown-menu';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+
 interface ReviewsModerationTableProps {
   reviews: Review[];
 isLoading: boolean;
@@ -70,11 +58,8 @@ export function ReviewsModerationTable({
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
       reviewId,
-      status,
-    }: {
-      reviewId: string;
-      status: ReviewStatus;
-    }) => {      const { error } = await supabase
+
+      const { error } = await supabase
         .from('reviews')
         .update({ status })
         .eq('id', reviewId);
@@ -82,7 +67,8 @@ export function ReviewsModerationTable({
       if (error) throw error;
       return { reviewId, status };
     },
-    onSuccess: data => {      toast({
+
+      toast({
         title: 'Review updated',
         description: `Review has been ${data.status}.`,
       });
@@ -100,11 +86,7 @@ export function ReviewsModerationTable({
 
   const getInitials = (name: string,) => {
     return name
-      .split(' ')
-      .map(n => n[0])
-      .join('')
-      .toUpperCase();
-  };
+
   if (isLoading) {
     return (
       <div className='space-y-4'>
@@ -127,25 +109,10 @@ export function ReviewsModerationTable({
     );
   }
 
-  const handleApprove = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: 'approved' });
-  };
-
-  const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: 'rejected' });
-  };
-
-  const handleViewDetails = (review: Review) => {
-    setSelectedReview(review);
-    setViewDetailsOpen(true);
-  };
   const renderStars = (rating: number,) => {
     return (
-      <div className='flex'>
-        {[1, 2, 3, 4, 5].map(star => (
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />
+
+          />
         ))}
       </div>
     );
@@ -165,14 +132,15 @@ export function ReviewsModerationTable({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {reviews.map(review => (            <TableRow key={review.id}>
+
+            <TableRow key={review.id}>
               <TableCell>
                 <div className='flex items-center gap-2'>
                   <Avatar className='h-8 w-8'>
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
-                        src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name || ''}                      />
+
+                      />
                     ) : (
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name ? (
@@ -216,19 +184,13 @@ export function ReviewsModerationTable({
                   {review.status === 'pending' && (
                     <>
                       <Button
-                        size='sm'
-                        variant='outline'
-                        className='h-8 w-8 p-0'
-                        onClick={() => handleApprove(review.id)}
-                        disabled={isPending}                      >
+
+                      >
                         <Check className='h-4 w-4 text-green-500' />
                       </Button>
                       <Button
-                        size='sm'
-                        variant='outline'
-                        className='h-8 w-8 p-0'
-                        onClick={() => handleReject(review.id)}
-                        disabled={isPending}                      >
+
+                      >
                         <X className='h-4 w-4 text-red-500' />
                       </Button>
                     </>
@@ -245,27 +207,8 @@ export function ReviewsModerationTable({
                       >
                         View details
                       </DropdownMenuItem>
-                      {review.status === 'approved' && (
-                        <DropdownMenuItem
-                          onClick={() =>
-                            updateReviewStatus({
-                              reviewId: review.id,
-                              status: 'rejected',
-                            })
-                          }
-                        >
-                          Mark as rejected
-                        </DropdownMenuItem>
-                      )}
-                      {review.status === 'rejected' && (
-                        <DropdownMenuItem
-                          onClick={() =>
-                            updateReviewStatus({
-                              reviewId: review.id,
-                              status: 'approved',
-                            })
-                          }
-                        >                          Mark as approved
+
+                          Mark as approved
                         </DropdownMenuItem>
                       )}
                     </DropdownMenuContent>
@@ -294,8 +237,8 @@ export function ReviewsModerationTable({
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
-                        src={selectedReview.reviewer_profile.avatar_url}
-                        alt={selectedReview.reviewer_profile.display_name || ''}                      />
+
+                      />
                     ) : (
                       <AvatarFallback>
                         {selectedReview.reviewer_profile?.display_name ? (
@@ -347,11 +290,8 @@ export function ReviewsModerationTable({
                   )}
                   {selectedReview.would_work_again !== undefined && (
                     <Badge
-                      variant={
-                        selectedReview.would_work_again
-                          ? 'default'
-                          : 'secondary'
-                      }                    >
+
+                    >
                       {selectedReview.would_work_again
                         ? 'Would work again'
                         : 'Would not work again'}
@@ -377,9 +317,8 @@ export function ReviewsModerationTable({
               {selectedReview.status === 'pending' && (
                 <>
                   <Button
-                    variant='destructive'
-                    onClick={() => handleReject(selectedReview.id)}
-                    disabled={isPending}                  >
+
+                  >
                     Reject
                   </Button>
                   <Button
@@ -392,26 +331,15 @@ export function ReviewsModerationTable({
               )}
               {selectedReview.status === 'approved' && (
                 <Button
-                  variant='destructive'
-                  onClick={() =>
-                    updateReviewStatus({
-                      reviewId: selectedReview.id,
-                      status: 'rejected',
-                    })
-                  }
-                  disabled={isPending}                >
+
+                >
                   Mark as Rejected
                 </Button>
               )}
               {selectedReview.status === 'rejected' && (
                 <Button
-                  onClick={() =>
-                    updateReviewStatus({
-                      reviewId: selectedReview.id,
-                      status: 'approved',
-                    })
-                  }
-                  disabled={isPending}                >
+
+                >
                   Mark as Approved
                 </Button>
               )}
@@ -496,4 +424,4 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }> Mark as Approved </Button>) ;
 }</DialogFooter> </DialogContent> </Dialog>) ;
 }</>) ;
-}"}
+}"

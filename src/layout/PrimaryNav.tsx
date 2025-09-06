@@ -20,6 +20,7 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
+
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
@@ -38,19 +39,12 @@ export function PrimaryNav() {
     // context not available
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const trimmed = query.trim();    if (trimmed) {
+    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed });
       router
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
-        .then(() => setQuery(''))
-        .catch(err =>
-          logErrorToProduction('Search navigation failed', err, {
-            query: trimmed,
-            component: 'PrimaryNav',
-          })
-        );    }
+
+    }
   };
 
   return (
@@ -65,10 +59,8 @@ export function PrimaryNav() {
           <Logo />
 
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className='hidden lg:block order-1 flex-shrink-0'>
-            <ResponsiveNavigation
-              openLoginModal={returnToPath => setLoginOpen(true)}
-            />          </div>
+
+          </div>
 
           {/* Actions container with responsive layout */}
           <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>
@@ -79,12 +71,8 @@ export function PrimaryNav() {
               style={{ width: 'clamp(12rem, 20vw, 16rem)' }}
             >
               <EnhancedSearchInput
-                value={query}
-                onChange={setQuery}
-                onSelectSuggestion={sugg => {
-                  logDebug('PrimaryNav search suggestion selected:', {
-                    suggestion: sugg,
-                  });                  // Handle different suggestion types with proper navigation
+
+                  // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
                     router.push(`/marketplace/listing/${sugg.id}`);
@@ -161,12 +149,8 @@ export function PrimaryNav() {
               {!isLoggedIn && (
                 <>
                   <Link
-                    href='/auth/login'
-                    className='text-sm hover:text-primary whitespace-nowrap'
-                    data-testid='login-link'
-                    onClick={e => {
-                      e.preventDefault();
-                      setLoginOpen(true);                    }}
+
+                    }}
                   >
                     {t('auth.login')}
                   </Link>
@@ -188,12 +172,8 @@ export function PrimaryNav() {
             <LanguageSelector />
             {!isLoggedIn && (
               <Link
-                href='/auth/login'
-                className='text-sm hover:text-primary'
-                data-testid='login-link'
-                onClick={e => {
-                  e.preventDefault();
-                  setLoginOpen(true);                }}
+
+                }}
               >
                 {t('auth.login')}
               </Link>
@@ -206,10 +186,8 @@ export function PrimaryNav() {
           </div>;
           {/* Mobile menu button */}
           <button
-            className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}          >
+
+          >
             {mobileMenuOpen ? (
               <X className='h-6 w-6' />
             ) : (
@@ -221,14 +199,12 @@ export function PrimaryNav() {
       {mobileMenuOpen && (
         <div className='lg:hidden fixed inset-0 z-60 pt-16'>
           <div
-            className='absolute inset-0 bg-black/50 backdrop-blur-sm'
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden='true'          />
+
+          />
           <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>
             <MobileMenu
-              unreadCount={unreadCount}
-              onClose={() => setMobileMenuOpen(false)}
-              openLoginModal={returnToPath => setLoginOpen(true)}            />
+
+            />
           </div>
         </div>
       )}
@@ -284,74 +260,4 @@ setLoginOpen (true) ;
 }onOpenChange= {;
   setLoginOpen ;
 }/> </>) ;
-}'"  { opacity: 0,
-  height: 0;
-}}
-              animate = {;
-
-  { opacity: 1,
-  height: 'auto';
-}}
-              exit = {;
-
-  { opacity: 0,
-  height: 0;
-}}
-              transition={{ duration: 0.3 }}";
-              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">";
-              <div className="px-4 py-6 space-y-4">;
-                {services.map((category, index) => (;
-                  <div key={index}>";
-                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">;
-                      {category.category}
-                    </h3>";
-                    <div className="space-y-2 ml-4">;
-                      {category.items.map((service: unknown, serviceIndex: unknown ;
-                        <Link;
-                          key={serviceIndex}
-                          to={service.path}";
-                          className="block text-gray-300 hover:text-white transition-colors duration-200";
-                          onClick={( setIsOpen(false)}
-                        >;
-                          {service.name}
-                        </Link>;
-                      ))}
-                    </div>;
-                  </div>;
-                ))}
-
-                <div className="pt-4 border-t border-white/10 space-y-2">;
-                  <Link                    to="/solutions";
-                    className="block text-gray-300 hover:text-white transition-colors duration-200";
-                    onClick={: unknown setIsOpen(false)}
-                  >;
-                    Solutions;
-                  </Link>;
-                  <Link                    to="/about";
-                    className="block text-gray-300 hover:text-white transition-colors duration-200";
-                    onClick={: unknown setIsOpen(false)}
-                  >;
-                    About;
-                  </Link>;
-                  <Link                    to="/blog";
-                    className="block text-gray-300 hover:text-white transition-colors duration-200";
-                    onClick={: unknown setIsOpen(false)}
-                  >;
-                    Blog;
-                  </Link>;
-                  <Link                    to="/contact";
-                    className="block text-gray-300 hover:text-white transition-colors duration-200";
-                    onClick={: unknown setIsOpen(false)}
-                  >;
-                    Contact;
-                  </Link>;
-                </div>;
-              </div>;
-            </motion.div>;
-          )};
-        </AnimatePresence>;
-      </nav>;
-    </header>;
-  )}
-'"`;
-}
+}'"

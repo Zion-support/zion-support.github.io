@@ -1,16 +1,5 @@
 import * as React from 'react';
-import {
-  RefreshCw,
-  Wifi,
-  Server,
-  ShoppingCart,
-  Users,
-  Wrench,
-  Lightbulb,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+
 export interface EmptyStateProps {
   type:
     | 'products'
@@ -107,9 +96,8 @@ export function EmptyState({
 
       {action && (
         <Button
-          onClick={action.onClick}
-          variant='outline'
-          className='flex items-center gap-2'        >
+
+        >
           <RefreshCw className='w-4 h-4' />
           {action.label}
         </Button>
@@ -141,9 +129,8 @@ export function ProductsEmptyState({
   onAddProduct,
   isAuthenticated = false,
 }: {
-  onRetry?: () => void;
-  onAddProduct?: () => void;
-  isAuthenticated?: boolean;}) {
+
+}) {
   const action = onAddProduct
     ? {
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
@@ -157,31 +144,23 @@ export function ProductsEmptyState({
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
 
-      />
+    />
   );
 
-export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
+    />
   );
 
-export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
+    />
   );
 
-export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
+    />
   );
 
-export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
+    />
   );
 
-export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
+    />
   );
 
-export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
+    />
   );
-} 
-} 

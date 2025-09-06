@@ -9,11 +9,7 @@ import {
   Terminal,
   Webhook,;
 } from 'lucide-react';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ApiKeysManager } from '@/components/developers/ApiKeysManager';
-import { WebhooksManager } from '@/components/developers/WebhooksManager';
-import { ApiDocumentation } from '@/components/developers/ApiDocumentation';
-import { ApiLogs } from '@/components/developers/ApiLogs';
+
 interface TabDefinition {
   id: string;
   label: string;
@@ -44,17 +40,7 @@ export function DeveloperPortal() {
       </div>
 
       {/* Tabs */}
-      <div className='border-b border-zinc-800 mb-8'>
-        <div className='flex flex-wrap -mb-px'>
-          {tabs.map(tab => {
-            const Icon = tab.icon;
-            
-                onClick={() => setActiveTab(tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
-                  activeTab === tab.id
-                    ? "text-white border-zion-purple"
-                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
-                }`}
-                onClick = {(,) => setActiveTab(tab.id),}
+
               >
                 <Icon size={16} className='mr-2' />
                 {tab.label}
@@ -73,34 +59,11 @@ export function DeveloperPortal() {
       </div>
     </div>
   );
-                onClick={() => setActiveTab(tab.id)}
-              >
-                <Icon size={16} className="mr-2" />
-                {tab.label}
-              </button>
-            )
-          })}
-        </div>
-      </div>
-      
-      {/* Tab content */}
-      <div>
-        {activeTab === "documentation" && <ApiDocumentation />}
-        {activeTab === "api-keys" && <ApiKeysManager />}
-        {activeTab === "webhooks" && <WebhooksManager />}
-        {activeTab === "logs" && <ApiLogs />}
-      </div>
-    </div>
-  );
-}
 
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
-  );
-}
-}
   );
 }

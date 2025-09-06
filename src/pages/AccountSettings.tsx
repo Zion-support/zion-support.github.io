@@ -6,18 +6,13 @@ import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Wallet, Database, Save } from 'lucide-react';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+
 import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+
 export default function AccountSettings() {
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false);
@@ -112,8 +107,8 @@ export default function AccountSettings() {
               <div className='space-y-2'>
                 <Label htmlFor='email'>Email Address</Label>
                 <Input
-                  id='email'
-                  value={user?.email || ''}                  disabled
+
+                  disabled
                   className='bg-gray-100'
                 />
               </div>
@@ -122,16 +117,8 @@ export default function AccountSettings() {
                 <Label htmlFor='didHandle'>Web3 Identity Handle</Label>
                 <div className='flex gap-2'>
                   <Input
-                    id='didHandle'
-                    value={didHandle}
-                    onChange={e => setDidHandle(e.target.value)}
-                    placeholder='ENS / Lens / Ceramic / Farcaster'
-                  />
-                  <Button
-                    variant='outline'
-                    onClick={handleConnectWallet}
-                    type='button'
-                    className='flex items-center gap-1'                  >
+
+                  >
                     <Wallet className='h-4 w-4' />
                     Connect
                   </Button>
@@ -149,9 +136,8 @@ export default function AccountSettings() {
                   </p>
                 </div>
                 <Switch
-                  id='displayWeb3'
-                  checked={displayWeb3}
-                  onCheckedChange={setDisplayWeb3}                />
+
+                />
               </div>
 
               <Separator />
@@ -167,9 +153,8 @@ export default function AccountSettings() {
                   </p>
                 </div>
                 <Switch
-                  id='backup'
-                  checked={enableBackup}
-                  onCheckedChange={setEnableBackup}                />
+
+                />
               </div>
 
               {enableBackup && (
@@ -179,10 +164,7 @@ export default function AccountSettings() {
                 </div>
               )}
 
-              <Button
-                onClick={handleSave}
-                disabled={isSubmitting}
-                className='w-full'              >
+              >
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className='ml-2 h-4 w-4' />}
               </Button>
@@ -271,11 +253,8 @@ export default function AccountSettings() {
               </div>
 
               <div>
-                <h3 className='font-medium mb-2'>Recovery Options</h3>
-                <Button
-                  variant='outline'
-                  className='w-full'
-                  disabled={!enableBackup}                >
+
+                >
                   Restore Profile from Backup
                 </Button>
                 <p className='text-xs text-gray-500 mt-1'>
@@ -290,4 +269,3 @@ export default function AccountSettings() {
       </main>
     </>
   );
-}

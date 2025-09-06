@@ -40,15 +40,12 @@ export async function updateFlagStatus(
   id: string, 
   status: ModerationFlag['status'], 
   adminNotes?: string
-): Promise<ModerationFlag | null> {
-  const flagIndex = flags.findIndex(flag => flag.id === id);
-  if (flagIndex === -1) return null;
-  
-  flags[flagIndex] = {
-    ...flags[flagIndex],
-    status,
-    adminNotes: adminNotes || flags[flagIndex].adminNotes
-  };
-  
-  return flags[flagIndex];
+): Promise<FlaggedContent | undefined> {
+  const flag = await getFlagById(id);
+  if (!flag) return undefined;
+  flag.status = status;
+  flag.adminNotes = adminNotes || flag.adminNotes;
+  flag.updatedAt = new Date().toISOString();
+  await upsertFlag(flag);
+  return flag;
 }

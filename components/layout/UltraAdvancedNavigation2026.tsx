@@ -28,11 +28,14 @@ import {
   Microscope, DollarSign, Home, Users, Briefcase, 
   BookOpen, MessageCircle 
 
+} from 'lucide-react';
+
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',};
+
 };
 
 const serviceCategories = [
@@ -73,6 +76,9 @@ const serviceCategories = [
       { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution', description: 'Unlimited AI content generation', price: '$599/month' }
     ]
   };
+
+  {
+
     title: 'Quantum Computing & Security',
     icon: Atom,
     color: 'from-blue-600 to-cyan-600',
@@ -109,6 +115,9 @@ const serviceCategories = [
       { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure-platform', description: 'Build the quantum internet', price: '$15,999/month' }
     ]
   };
+
+  {
+
     title: 'Emerging Technologies 2026',
     icon: Sparkles,
     color: 'from-green-600 to-emerald-600',
@@ -145,6 +154,9 @@ const serviceCategories = [
       { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing-ai-platform', description: 'Self-optimizing manufacturing', price: '$3,499/month' }
     ]
   };
+
+  {
+
     title: 'Enterprise IT Solutions 2026',
     icon: Shield,
     color: 'from-red-600 to-orange-600',
@@ -181,6 +193,9 @@ const serviceCategories = [
       { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2026', description: 'Enterprise blockchain', price: 'Custom pricing' }
     ]
   };
+
+  {
+
     title: 'Healthcare & Life Sciences',
     icon: Microscope,
     color: 'from-teal-600 to-cyan-600',
@@ -217,6 +232,9 @@ const serviceCategories = [
       { name: 'AI Legal Research', href: '/ai-legal-research-platform', description: 'Revolutionary legal tech', price: '$899/month' }
     ]
   };
+
+  {
+
     title: 'Financial Technology',
     icon: DollarSign,
     color: 'from-emerald-600 to-green-600',
@@ -254,6 +272,8 @@ const serviceCategories = [
     ]
   }
 
+];
+
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'About Us', href: '/about', icon: Users },
@@ -276,13 +296,9 @@ const companyLinks = [
   { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
   { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
   { name: 'Careers', href: '/careers', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Innovative 2026', href: '/2026-innovative-services-showcase', icon: Zap },
-  { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Sparkles },
-  { name: '2026 Pricing', href: '/revolutionary-2026-pricing', icon: DollarSign },
-  { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: 'Careers', href: '/careers', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
+  { name: 'Contact', href: '/contact', icon: MessageCircle },];
+
+];
 
 const UltraAdvancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -294,10 +310,9 @@ const UltraAdvancedNavigation2026 = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 20)
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);  }, []);
+
+  }, []);
 
   const navigationItems = [
     {
@@ -346,6 +361,9 @@ const UltraAdvancedNavigation2026 = () => {
         { name: 'AI Creative', href: '/services?category=ai-creative', description: 'Creative AI and content generation' }
       ]
     };
+
+    {
+
       name: 'Quantum Tech',
       href: '/services?category=quantum',
       icon: Atom,
@@ -379,6 +397,9 @@ const UltraAdvancedNavigation2026 = () => {
         { name: 'Quantum Security', href: '/services?category=quantum-security', description: 'Quantum encryption and security' }
       ]
     };
+
+    {
+
       name: 'Metaverse',
       href: '/services?category=metaverse',
       icon: Globe,
@@ -412,6 +433,9 @@ const UltraAdvancedNavigation2026 = () => {
         { name: 'Consciousness Interface', href: '/services?category=consciousness-interface', description: 'Brain-computer interfaces' }
       ]
     };
+
+    {
+
       name: 'Enterprise IT',
       href: '/services?category=enterprise',
       icon: Zap,
@@ -446,10 +470,13 @@ const UltraAdvancedNavigation2026 = () => {
       ]
     }
 
+  ];
+
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709',  };
+
   };
 
   return (
@@ -464,6 +491,7 @@ const UltraAdvancedNavigation2026 = () => {
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
+
             {/* Logo */}
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -484,108 +512,15 @@ const UltraAdvancedNavigation2026 = () => {
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
-                <div key={item.name} className='relative group'>            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Rocket className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-              </div>
-              <div className="hidden sm:block">
-                <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </div>
-                <div className="text-xs text-gray-400">Revolutionary Technology Solutions</div>
+                <div key={item.name} className='relative group'>
+
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className='hidden lg:flex items-center space-x-8'>
-              {navigationItems.map(item => (
-                <div key={item.name} className='relative group'>
-                    onClick={() =>
-                      setActiveDropdown(
-                        activeDropdown === item.name ? null : item.name
-                      )
-                    }
-                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
-                  >
-                    <item.icon className='w-5 h-5' />
-                    <span className='font-medium'>{item.name}</span>
-                    <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`}
-                    />                  </button>                    <item.icon className="w-5 h-5" />
-                    <span className="font-medium">{item.name}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
 
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden'
-                      >
-                        <div className='p-4'>
-                          <div className='flex items-center space-x-3 mb-4'>
-                            <div
-                              className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}
-                            >
-                              <item.icon className='w-5 h-5 text-white' />
-                            </div>
-                            <div>
-                              <h3 className='text-white font-semibold'>
-                                {item.name}
-                              </h3>
-                              <p className='text-gray-400 text-sm'>
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-
-                          <div className='space-y-2'>
-                            {item.subItems.map(subItem => (
-                              <Link
-                                key={subItem.name}
-                                href={subItem.href}
-                                className='block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group'
-                                onClick={() => setActiveDropdown(null)}
-                              >
-                                <div className='text-white font-medium group-hover:text-purple-300 transition-colors duration-200'>
-                                  {subItem.name}
-                                </div>
-                                <div className='text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200'>                                  {subItem.description}                      >
-                        <div className="p-4">
-                          <div className="flex items-center space-x-3 mb-4">
-                            <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
-                              <item.icon className="w-5 h-5 text-white" />
-                            </div>
-                            <div>
-                              <h3 className="text-white font-semibold">{item.name}</h3>
-                              <p className="text-gray-400 text-sm">{item.description}</p>
-                            </div>
-                          </div>
-                          
-                          <div className="space-y-2">
-                            {item.subItems.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                href={subItem.href}
-                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
-                                onClick={() => setActiveDropdown(null)}
-                              >
-                                <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
-                                  {subItem.name}
-                                </div>
-                                <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
                                   {subItem.description}
+
                                 </div>
                               </Link>
                             ))}
@@ -593,10 +528,10 @@ const UltraAdvancedNavigation2026 = () => {
 
                           <Link
                             href={item.href}
-                            className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}                          
-                          <Link
-                            href={item.href}
-                            className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+                            className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}
+
+                            onClick={() => setActiveDropdown(null)}
+
                           >
                             View All {item.name}
                           </Link>
@@ -613,6 +548,7 @@ const UltraAdvancedNavigation2026 = () => {
                   href='/services'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
                 >
+
                   All Services
                 </Link>
                 <Link
@@ -624,13 +560,10 @@ const UltraAdvancedNavigation2026 = () => {
                 <Link
                   href='/contact'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
-                >                  Contact                  All Services
-                </Link>
-                <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
-                  Pricing
-                </Link>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+                >                  Contact
+
                   Contact
+
                 </Link>
               </div>
             </div>
@@ -643,14 +576,10 @@ const UltraAdvancedNavigation2026 = () => {
               </div>
               <Link
                 href='/contact'
-                className='px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105'              >            <div className="hidden lg:flex items-center space-x-4">
-              <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm font-medium">{contactInfo.phone}</span>
-              </div>
-              <Link
-                href="/contact"
-                className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
+                className='px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105'              >
+
+              >
+
                 Get Started
               </Link>
             </div>
@@ -664,10 +593,10 @@ const UltraAdvancedNavigation2026 = () => {
                 <X className='w-6 h-6' />
               ) : (
                 <Menu className='w-6 h-6' />
-              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              )}            </button>
+
             </button>
+
           </div>
         </div>
       </nav>
@@ -680,8 +609,10 @@ const UltraAdvancedNavigation2026 = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
+
             onClick={() => setIsOpen(false)}
+
           >
             <motion.div
               initial={{ x: '100%' }}
@@ -690,6 +621,7 @@ const UltraAdvancedNavigation2026 = () => {
               transition={{ duration: 0.3, ease: 'easeOut' }}
               className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto'
               onClick={e => e.stopPropagation()}
+
             >
               {/* Mobile Menu Header */}
               <div className='flex items-center justify-between mb-8'>
@@ -706,50 +638,15 @@ const UltraAdvancedNavigation2026 = () => {
                   <X className='w-6 h-6' />                </button>
               </div>
 
-              {/* Mobile Navigation Items */}            >
-              {/* Mobile Menu Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                    <Rocket className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-white font-bold text-lg">Menu</span>
-                </div>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  <X className="w-6 h-6" />
+              {/* Mobile Navigation Items */}
+
                 </button>
               </div>
 
               {/* Mobile Navigation Items */}
-              <div className='space-y-4'>
-                {navigationItems.map(item => (
-                  <div
-                    key={item.name}
-                    className='border-b border-gray-700/50 pb-4'
-                  >
-                      href={item.href}
-                      className='flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2'
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div
-                        className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center`}
-                      >
-                        <item.icon className='w-4 h-4 text-white' />
-                      </div>
-                      <span className='font-medium'>{item.name}</span>
-                    </Link>
 
-                    {/* Mobile Sub-items */}
-                    <div className='mt-3 ml-11 space-y-2'>
-                      {item.subItems.slice(0, 3).map(subItem => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1'                          onClick={() => setIsOpen(false)}                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
                           onClick={() => setIsOpen(false)}
+
                         >
                           {subItem.name}
                         </Link>
@@ -762,26 +659,28 @@ const UltraAdvancedNavigation2026 = () => {
                 <div className='space-y-3 pt-4'>
                   <Link
                     href='/services'
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                <div className="space-y-3 pt-4">
-                  <Link
-                    href="/services"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}
+
+                    onClick={() => setIsOpen(false)}
+
                   >
                     All Services
                   </Link>
                   <Link
                     href='/pricing'
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                    href="/pricing"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}
+
                     onClick={() => setIsOpen(false)}
+
                   >
                     Pricing
                   </Link>
                   <Link
                     href='/contact'
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                    href="/contact"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}
+
                     onClick={() => setIsOpen(false)}
+
                   >
                     Contact
                   </Link>
@@ -792,6 +691,7 @@ const UltraAdvancedNavigation2026 = () => {
                   <div className='flex items-center space-x-3 text-gray-300'>
                     <Phone className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.phone}</span>
+
                   </div>
                   <div className='flex items-center space-x-3 text-gray-300'>
                     <Mail className='w-4 h-4' />
@@ -806,25 +706,15 @@ const UltraAdvancedNavigation2026 = () => {
                 <div className='pt-4'>
                   <Link
                     href='/contact'
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                    onClick={() => setIsOpen(false)}                  </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Mail className="w-4 h-4" />
-                    <span className="text-sm">{contactInfo.email}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <MapPin className="w-4 h-4" />
-                    <span className="text-sm">{contactInfo.address}</span>
+                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                    onClick={() => setIsOpen(false)}
+
                   </div>
                 </div>
 
                 {/* Get Started Button - Mobile */}
-                <div className='pt-4'>
-                  <Link
-                    href='/contact'
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                <div className="pt-4">
-                  <Link
-                    href="/contact"
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+
+                    onClick={() => setIsOpen(false)}
+
                   >
                     Get Started Today
                   </Link>
@@ -837,12 +727,9 @@ const UltraAdvancedNavigation2026 = () => {
 
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
+
     </>
   );
 };
-
-export default UltraAdvancedNavigation2026;    </>
-  );
-}
 
 export default UltraAdvancedNavigation2026;

@@ -4,11 +4,6 @@ import Link from 'next/link';
 import { ShieldAlert } from 'lucide-react';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { ShieldAlert } from 'lucide-react';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
   projectId: string;
   isUnderDispute: boolean;
@@ -32,25 +27,16 @@ export function ProjectActions({
           </Link>
         </Button>
       ) : (
-        <RaiseDisputeButton projectId={projectId} variant='outline' />            <ShieldAlert className="h-4 w-4 mr-2" />
+        <RaiseDisputeButton projectId={projectId} variant='outline' />
+
             View Active Dispute
           </Link>
         </Button>
       ) : (
-        <RaiseDisputeButton projectId={projectId} variant='outline' />
+
+      )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>Add Milestone</Button>
       )}
     </div>
   );
-};
-;
-      )}
-      {isTalent && !isUnderDispute && (
-        <Button onClick={onAddMilestone}>
-          Add Milestone
-        </Button>
-      )}
-    </div>
-  );
-}

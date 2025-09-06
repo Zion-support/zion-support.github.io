@@ -20,14 +20,7 @@ export default async function handler(
       c.providerId === "bamboohr",
   );
   const results: any[] = [];
-  for (const conn of connections) {
-    const log = {
-      id: `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-      providerId: conn.providerId,
-      level: "info",
-      action: "update_status",
-    };
-    await ats.updateStatus(conn, {
+  const statusResult = await ats.updateStatus(conn, {
       applicantId: talent.id,
       status: "hired",
     });

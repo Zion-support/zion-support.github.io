@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { AlertTriangle, Package, Zap } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
+
 interface BundleInfo {
   totalSize: number;
   gzippedSize: number;
@@ -68,13 +68,13 @@ export function BundleAnalyzer() {
       let totalSize = 0;
       let totalLoadTime = 0;
       const chunkData: ChunkInfo[] = [];
-      const chunkData: ChunkInfo[] = [],
 
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0;
         const loadTime = entry.responseEnd - entry.requestStart;
         const cached = entry.transferSize === 0;
 
+        totalSize += size;
         totalLoadTime += loadTime;
 
         chunkData.push({
@@ -98,7 +98,7 @@ export function BundleAnalyzer() {
         cacheHitRate: cacheHitRate * 100,
       });
 
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
+    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error });
     } finally {
       setIsCollecting(false);
@@ -113,11 +113,6 @@ export function BundleAnalyzer() {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
   };
 
-  const getSizeColor = (size: number) => {
-    if (size < 100000) return 'bg-green-500'; // < 100KB
-    if (size < 500000) return 'bg-yellow-500'; // < 500KB
-    return 'bg-red-500'; // > 500KB
-  };
   const toggleAnalyzer = () => {
     const current = localStorage.getItem('bundle-analyzer') === 'true';
     localStorage.setItem('bundle-analyzer', (!current).toString());
@@ -135,10 +130,8 @@ export function BundleAnalyzer() {
     return (
       <div className='fixed bottom-20 right-4 z-50'>
         <Button
-          variant='outline'
-          size='sm'
-          onClick={toggleAnalyzer}
-          className='bg-background/80 backdrop-blur-sm'        >
+
+        >
           <Package className='w-4 h-4 mr-2' />
           Bundle Analyzer
         </Button>
@@ -157,18 +150,13 @@ export function BundleAnalyzer() {
             </CardTitle>
             <div className='flex gap-2'>
               <Button
-                variant='ghost'
-                size='sm'
-                onClick={collectBundleInfo}
-                disabled={isCollecting}
-                className='h-6 w-6 p-0'              >
+
+              >
                 <Zap className='w-3 h-3' />
               </Button>
               <Button
-                variant='ghost'
-                size='sm'
-                onClick={toggleAnalyzer}
-                className='h-6 w-6 p-0'              >
+
+              >
                 ✕
               </Button>
             </div>
@@ -211,18 +199,8 @@ export function BundleAnalyzer() {
               </div>
 
               <div>
-                <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
-                <div className='space-y-1'>
-                  {chunks.map((chunk, index) => (
-                    <div
-                      key={chunk.name}
-                      className='flex justify-between items-center text-xs'
-                    >
-                      <div className='flex items-center gap-2 flex-1 min-w-0'>
-                        <span className='w-4 text-muted-foreground'>
-                          {index + 1}.
-                        </span>
-                        <span className='truncate' title={chunk.name}>                          {chunk.name}
+
+                          {chunk.name}
                         </span>
                         {chunk.cached && (
                           <Badge
@@ -262,4 +240,3 @@ export function BundleAnalyzer() {
       </Card>
     </div>
   );
-} 

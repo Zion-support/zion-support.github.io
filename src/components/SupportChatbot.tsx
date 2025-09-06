@@ -2,12 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
-import { logErrorToProduction } from '@/utils/productionLogger';
 
-interface Msg {
-  id: string;
-  role: 'user' | 'assistant';
-  message: string;
 // Fallback responses when API is unavailable
 const FALLBACK_RESPONSES = [
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
@@ -24,19 +19,6 @@ export function SupportChatbot() {
   const [typing, setTyping] = useState(false);
   const endRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
-
-  const sendMessage = async (text: string) => {
-    const userMsg: Msg = {
-      id: Date.now().toString(),
-      role: 'user',
-      message: text,
-    };
-    setMessages(prev => [...prev, userMsg]);
-    setLoading(true);
-    setTyping(true);
     try {
       // Try the Supabase AI chat function first with streaming
       let res = await fetch(
@@ -64,34 +46,8 @@ export function SupportChatbot() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            messages: [
-              ...messages.map(m => ({ role: m.role, content: m.message })),
-              { role: 'user', content: text },
-            ],
-          }),
-        });
-        if (!res.ok) throw new Error(`API error: ${res.status}`);
-        const data = await res.json().catch(() => ({}));
-        const message =
-          data.message ||
-          data.choices?.[0]?.message?.content ||
-          data.choices?.[0]?.text ||
-          data.completion ||
-          '';
-        const finalMsg =
-          message.trim() ||
-          FALLBACK_RESPONSES[
-            Math.floor(Math.random() * FALLBACK_RESPONSES.length)
-          ] ||
-          "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
-        setMessages(prev => [
-          ...prev,
-          {
-            id: Date.now().toString() + '-a',
-            role: 'assistant',
-            message: finalMsg,
-          },
-        ]);      } else if (res.body) {
+
+      } else if (res.body) {
         const botId = Date.now().toString() + '-a';
         setMessages(prev => [
           ...prev,
@@ -169,12 +125,8 @@ export function SupportChatbot() {
   };
 
   if (!open) {
-    
-        onClick={() => setOpen(true)}
-        size='icon'
-        variant='outline'
-        className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
-        aria-label='Open help chat'      >
+
+      >
         <MessageSquare className='h-5 w-5' />
       </Button>
     );
@@ -185,11 +137,8 @@ export function SupportChatbot() {
       <div className='bg-zion-blue-dark p-2 flex justify-between items-center'>
         <span className='text-white font-medium'>Help Bot</span>
         <Button
-          variant='ghost'
-          size='icon'
-          className='text-white'
-          onClick={() => setOpen(false)}
-          aria-label='Close help bot'        >
+
+        >
           <X className='h-5 w-5' />
         </Button>
       </div>
@@ -253,5 +202,3 @@ setTyping (false) ;
   endRef ;
 }/> </div> </div> </div>) ;
 }'"
-}
-}
