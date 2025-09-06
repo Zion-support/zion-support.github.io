@@ -1,6 +1,4 @@
 
-
-import React, { useState } from "react",
 import {
   Table;
   TableBody;
@@ -9,13 +7,38 @@ import {
   TableHeader;
   TableRow} from "@/components/ui/table",
 import {
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Badge} from "@/components/ui/badge";
+import {PlusCircle, Trash, Mail, UserPlus} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
+export function TeamManagement() {;
+  const [isAddingMember, setIsAddingMember] = useState(false);
+  const [newMemberEmail, setNewMemberEmail] = useState("");
+import React, { useState } from "react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -63,19 +86,16 @@ import { Badge } from "@/components/ui/badge",
       return
     }
     toast({
-
   const handleRemoveMember = (memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed"
       description: "The team member has been removed from your workspace."})
-
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent"
       description: `A new invitation has been sent to ${memberEmail}`})
-
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -176,54 +196,46 @@ if ( {) {
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-
-              <DialogTitle > Add Team Member</DialogTitle>;
-
               <DialogDescription>;
                 Send an invitation to join your workspace. They'll receive an email with instructions.;
               </DialogDescription>;
             </DialogHeader>;
-
-                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">;
-            <div className="grid gap - 4 py - 4">;
+                />;
+              </div>;
               <div className="grid grid - cols - 4 items - center gap - 4">;
-                <Label html_for="email" className="text - right">;
-                          .join("")}
-                      </span>
-                    </div>
-                    <div>
-                      <div className="font-medium">{member.name}</div>
-                      <div className="text-sm text-muted-foreground">
+                <Label html_for="role" className="text - right">;
+                  Role;
+                </Label>;
+                  <option value="admin">Admin</option>;
+                  <option value="recruiter">Recruiter</option>;
+                  <option value="manager">Manager</option>;
+                  <option value="viewer">Viewer</option>;
+                </select>;
+              </div>;
+            </div>;
+            <DialogFooter>;
+            </DialogFooter>;
+          </DialogContent>;
+        </Dialog>;
+      </div>;
                         {member.email}
-                      </div>
-                    </div>
-                  </div>
-                </TableCell>
-                <TableCell>{member.role}</TableCell>
-                <TableCell>
-                  <Badge
+                      </div>;
+                    </div>;
+                  </div>;
+                </TableCell>;
+                <TableCell>{member.role}</TableCell>;
+                <TableCell>;
+                  <Badge;
                     variant={member.status === "active" ? "default" : "outline"}
-                  >
+                <TableCell>{member.role}</TableCell>;
+                <TableCell>;
+                  <Badge;
+                    variant={member.status === "active" ? "default" :"outline"}
+                  >;
                     {member.status}
-                  </Badge>
-                </TableCell>
-                <TableCell>{member.lastActive}</TableCell>
-                <TableCell className="text-right">
-                  <div className="flex justify-end gap-2">
-                    {member.status === "pending" ? (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => handleResendInvite(member.email)}
-                      >
-                        <Mail className="h-4 w-4 mr-1" />
-                        Resend
-                      </Button>
-                    ) : (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-destructive hover:text-destructive"
+                  </Badge>;
+                </TableCell>;
+
 
                         onClick={() => handleRemoveMember(member.id)}
                       >

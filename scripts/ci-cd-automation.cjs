@@ -18,9 +18,6 @@ class CICDAutomation {}
     }};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
-    console.log(logMessage);
-    
     this.report.steps.push({})
       timestamp,
       type,
@@ -100,4 +97,3 @@ if ( {})
      {}
   const automation = new CICDAutomation}(;);
   automation.run().catch(console.error)};
-module.exports = CICDAutomation;

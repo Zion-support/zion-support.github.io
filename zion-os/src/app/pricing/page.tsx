@@ -1,4 +1,7 @@
-
+        ctaLink: "mailto:kleber@ziontechgroup.com";
+      }
+    ];
+  }
   const filteredServices = selectedCategory === "All";
     ? servicePricing;
     : servicePricing.filter(service => service.category === selectedCategory);
@@ -245,21 +248,6 @@ const service_pricing: ServicePricing[] = [;
       }
     ];
   }
-],
-const categories = ["All", "Core Platform", "AI Services", "IT Services", "E - commerce & Services"],
-export default /**
- * PricingPage - Function description
- */
-function PricingPage() {
-  const [selected_category, setSelectedCategory] = useState ("All");
-  const filtered_services = selected_category === "All";
-    ? service_pricing;
-    : service_pricing.filter (service => service.category === selected_category);
-  return (
-    <div className="space - y-8">;
-      <div className="text - center space - y-4">;
-        <h1 className="text - 4xl font - bold">Pricing & Plans</h1>;
-        <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Choose the perfect plan for your business needs. All plans include our core features with transparent pricing and no hidden fees.;
         </p>;
       </div>;
@@ -269,10 +257,6 @@ function PricingPage() {
           {categories.map (category => (
             <button;
               key={category}
-              onClick={() => setSelectedCategory(category)}
-
-                  ? 'bg-blue-600 text-white';
-                  : 'text-gray-300 hover:text-white hover:bg-zinc-700';
               }`}
             >;
               {category}
@@ -314,10 +298,6 @@ function PricingPage() {
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
               {service.tiers.map ((tier, tier_index) => (
                 <div;
-                  key={tierIndex}
-
-                      ? 'border-blue-500 bg-blue-500/10';
-                      : 'border-white/10';
                   }`}
                 >;
                   {tier.popular && (
@@ -325,11 +305,6 @@ function PricingPage() {
                       <span className="bg - blue - 500 text - white px - 3 py - 1 rounded - full text - xs font - medium">;
                         Most Popular;
                       </span>;
-                    </div>;
-                  )}
-
-                  <div className="text-center space-y-4">;
-                    <h3 className="text-xl font-semibold">{tier.name}</h3>;
                     <div>;
                       <span className="text - 3xl font - bold">{tier.price}</span>;
                       <span className="text - lg opacity - 80">{tier.period}</span>;
@@ -345,10 +320,6 @@ function PricingPage() {
                   </ul>;
                   <div className="mt - 6">;
                     <a;
-                      href={tier.ctaLink}
-
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white';
-                          : 'bg-zinc-700 hover:bg-zinc-600 text-white';
                       }`}
                     >;
                       {tier.cta}

@@ -1,4 +1,7 @@
-
+import {
+  saveFeedbackFallback,
+  FeedbackRecord,
+} from "../../utils/feedback/store";
 
 import {
   saveFeedbackFallback
@@ -13,11 +16,42 @@ function bad(res: NextApiResponse, msg: string, code = 400) {
 async function tryWriteToFirestore(doc: FeedbackRecord) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
 
-    process && process.env as Record<string, string | undefined>;
-  if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY)
+    if (admin.apps.length === 0) {
+      admin.initializeApp({
+        credential: admin.credential.cert({
+          projectId: FIREBASE_PROJECT_ID
+          clientEmail: FIREBASE_CLIENT_EMAIL
+          privateKey: (FIREBASE_PRIVATE_KEY |"").replace(/\\n/g, "\n")
+        })
+      });
+    }
+
+    const db = admin.firestore ();
+    await db.collection ("interaction_feedback").doc (doc.id).set (doc);
+
+    return true;
+  } catch (e) {
     return false;
-  try {
-    const admin = require("firebase-admin");
+  }
+}
+  const r = Number(rating);
+  if (!r |r < 1 |r > 5) return bad(res, "rating must be 1-5");
+  const k: FeedbackRecord["kind"] =
+    kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
+  const user = {
+  const doc: FeedbackRecord = {
+    id: uuidv4()
+    createdAtIso: new Date().toISOString()
+    user
+    rating: r
+    comment: comment |undefined
+    kind: k
+    context: context |undefined
+  }
+  const wrote = await tryWriteToFirestore(doc);
+  if (!wrote) saveFeedbackFallback(doc);
+  return ok(res, { id: doc && doc.id });
+}
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 function ok(res: NextApiResponse, data: any) {
@@ -32,6 +66,12 @@ function ok(res: NextApiResponse, data: any) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return bad (res, "Method not allowed", 405)) {
+  $2
 }
   const { rating, comment, kind, context } = req.body || {}
   const r = Number (rating);
@@ -115,13 +155,11 @@ async function tryWriteToFirestore(req, res) {
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false,
   try {
     const admin = require("firebase-admin"),
-
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
           projectId: FIREBASE_PROJECT_ID,
           clientEmail: FIREBASE_CLIENT_EMAIL,
-
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
       } catch (error) {
     console.error("Error:", error);
@@ -277,12 +315,10 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {;
 ;
 export default async function handler(req, res) {
   try {
-
   if (req.method !== "POST") return bad(res, "Method not allowed", 405);
   const { rating, comment, kind, context } = req.body || {};
   const r = Number(rating);
   if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5");
-
   const k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
   const user = {;
     id: (req.headers["x-demo-user-id"] as string) || undefined;
@@ -312,4 +348,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

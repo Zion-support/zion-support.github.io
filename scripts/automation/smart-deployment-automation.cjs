@@ -36,13 +36,11 @@ class SmartDeploymentAutomation {}
             "build": this.runBuildCheck(),
             "test": this.runTestCheck();
        };
-        
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
-        
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -171,4 +169,3 @@ if ( {})
      {}
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
-module.exports = SmartDeploymentAutomation;

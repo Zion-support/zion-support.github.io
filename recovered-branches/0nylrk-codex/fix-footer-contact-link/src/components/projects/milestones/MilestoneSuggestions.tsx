@@ -1,5 +1,18 @@
+  projectName: string,
+  scopeSummary: string,
+  startDate: Date,
+  endDate?: Date;
+  projectType: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+}
 
-
+export function MilestoneSuggestions({;
+import React, { useState } from 'react';
+  projectName;
+  scopeSummary;
+  startDate;
+  endDate;
+  projectType;
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -25,24 +38,23 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
-  projectName,
-  scopeSummary,
-  startDate,
-  endDate,
-  projectType,
 
-  onMilestonesGenerated
-}: MilestoneSuggestionsProps) {
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
-  const [showSuggestions, setShowSuggestions] = useState(false),
+      scope: `${projectName}: ${scopeSummary}`,
+      startDate: startDate.toISOString(),
+      endDate: endDate ? endDate.toISOString() : null,
+      projectType: projectType || "Other"
+    },
 
-  const handleGenerateMilestones = async () => {
-    const input: MilestoneInput = {
-
+    const milestones = await generateMilestones(input),
+    
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+  }
+  };
+
+  };
 
 ;
 export function MilestoneSuggestions({;
@@ -55,7 +67,6 @@ export function MilestoneSuggestions({;
 }: MilestoneSuggestionsProps) {;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
-
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;
       scope: `${projectName}: ${scopeSummary}`,;
@@ -63,33 +74,17 @@ export function MilestoneSuggestions({;
       endDate: endDate ? endDate && endDate.toISOString() : null,;
       projectType: projectType || "Other";
     };
+  onMilestonesGenerated;
+}: MilestoneSuggestionsProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
-    const milestones = await generateMilestones(input);
-    if (milestones.length > 0) {
       setShowSuggestions(true);
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
       }
     }
   }
-;
-  const format_date = (date_string: string) =>: any {
-
-    try {
-      return format (parseISO (date_string), 'MMM dd, yyyy');
-    } catch (error) {
-
-  };
-
-  const formatDate = (dateString: string) => {;
-    try {;
-      return format(parseISO(dateString), 'MMM dd, yyyy');
-    } catch (error) {;
-      return dateString;
-
-    }
-
-  },
 
   return (
     <div className="space-y-4">;
@@ -97,23 +92,9 @@ export function MilestoneSuggestions({;
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
-          disabled={isGenerating |!scopeSummary |!startDate}
-          className="w-full"
-        >
-          {isGenerating ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Generating milestones...
-            </>
-          ) : (
-            <>
-              <Sparkles className="mr-2 h-4 w-4" />
-              Suggest Project Milestones with AI
-            </>
           )}
         </Button>
       )}
-
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -151,4 +132,3 @@ export function MilestoneSuggestions({;
           </CardContent>
         </Card>
       )}
-

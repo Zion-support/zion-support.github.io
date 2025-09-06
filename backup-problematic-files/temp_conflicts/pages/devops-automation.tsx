@@ -134,25 +134,21 @@ export default function DevOpsAutomationPage() {;
     {;
       title:'Automated Testing',;
       description:'Run comprehensive test suites on every commit',;
-      icon:'',;
       color:'from-green-500 to-emerald-600';
     },;
     {;
       title:'Security Scanning',;
       description:'Automated vulnerability detection and compliance checks',;
-      icon:'',;
       color:'from-red-500 to-pink-600';
     },;
     {;
       title:'Deployment Automation',;
       description:'Zero-downtime deployments with rollback capabilities',;
-      icon:'',;
       color:'from-blue-500 to-cyan-600';
     },;
     {;
       title:'Infrastructure Management',;
       description:'Automated scaling and resource optimization',;
-      icon:'',;
       color:'from-purple-500 to-indigo-600';
     }
   ],;
@@ -372,7 +368,6 @@ export default function DevOpsAutomationPage() {;
                       <ul className="text-sm text-gray-300 space-y-1">;
                         {competitor.cons.map((con, conIndex) => (;
                           <li key={conIndex} className="flex items-center">;
-                            <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0"></span>;
                             {con}
                           </li>;
                         ))}

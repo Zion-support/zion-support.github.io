@@ -1,29 +1,11 @@
-
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
-
-interface PromptCardProps {;
-  prompt: Prompt;
-
-export function PromptCard(): any ({ prompt }: PromptCardProps) {;
+interface PromptCardProps {
+  prompt: Prompt
+export function PromptCard({ prompt }: PromptCardProps) {
   const [copied, setCopied] = useState(false);
-  const handleCopy = () => {;
-    navigator && navigator.clipboard.writeText(prompt && prompt.text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);  };
-  const handleSend = () => {;
-    const encoded = encodeURIComponent(prompt && prompt.text);
-    window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
-    setTimeout(() => setCopied(false), 2000);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  const handleSend = () => {;
-    const encoded = encodeURIComponent(prompt && prompt.text);
-    window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
-
-
+  const handleCopy = null;
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>;
       <p className='mb-4 text-sm'>{prompt && prompt.text}</p>;
@@ -32,10 +14,14 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
           variant='outline'
           size='sm'
           onClick={handleCopy}
-          aria-label='Copy prompt'
-        >
-          {copied ? 'Copied' : <Copy className='w-4 h-4' />}
 
+
+}
+  );
+}
+
+import { useState } from 'react';
+import { Copy, Send } from 'lucide-react';
 import { useState } from 'react',;
 import { Copy, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -66,9 +52,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
           {copied ? 'Copied' : <Copy className="w-4 h-4" />}
         </Button>
         <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
-
           <Send className="w-4 h-4" />
-
         </Button>
         <Button
           variant='secondary'
@@ -80,10 +64,6 @@ export function PromptCard({ prompt }: PromptCardProps) {
       </div>
     </div>
   )
-
 }
-
 }
-
 ;
-

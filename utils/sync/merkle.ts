@@ -1,7 +1,3 @@
-
-import crypto from 'crypto';
-
-
 // Merkle tree utilities;
 export const merkle = {
   // Add merkle tree functionality here;

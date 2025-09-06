@@ -1,5 +1,3 @@
-
-const \"Contact\": NextPage = () => {
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -99,8 +97,6 @@ const "ContactPage": React.FC = () => {;
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
-const "Contact": NextPage = () => {
-
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -169,12 +165,6 @@ const "Contact": NextPage = () => {;
       \"email\": \'london@ziontechgroup && ziontechgroup.com\';
     }
   ];
-
-  return (
-    <MainLayout
-      title=\"Contact Us - Zion Tech Group\"
-      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
-
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -356,76 +346,6 @@ const "Contact": NextPage = () => {;
         </div>;
       </section>;
       {/* FAQ Section */}
-      <section className=\"py-20\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"text-center mb-16\">
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-              Get answers to common questions about our services and process
-            </p>
-          </div>
-
-          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-                What is your typical project timeline?
-              </h3>
-              <p className=\"text-gray-600\">
-                Project timelines vary depending on complexity and scope. Simple websites 
-                can take 2-4 weeks, while complex applications may take 3-6 months. 
-                We\'ll provide a detailed timeline during our initial consultation.
-              </p>
-            </div>
-
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-                Do you provide ongoing support?
-              </h3>
-              <p className=\"text-gray-600\">
-                Yes, we offer comprehensive support and maintenance packages to ensure 
-                your solutions continue to perform optimally. This includes updates, 
-                security patches, and technical support.
-              </p>
-            </div>
-
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-                What technologies do you specialize in?
-              </h3>
-              <p className=\"text-gray-600\">
-                We work with modern technologies including React, Node.js, Python, 
-                AWS, Azure, AI/ML frameworks, and blockchain platforms. We choose 
-                the best technology stack for each project\'s specific needs.
-              </p>
-            </div>
-
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-                How do you ensure project quality?
-              </h3>
-              <p className=\"text-gray-600\">
-                We follow industry best practices including code reviews, automated 
-                testing, continuous integration, and regular client feedback sessions 
-                to ensure high-quality deliverables.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </MainLayout>
   );
 };
           {/* Contact Information */}
@@ -434,19 +354,6 @@ const "Contact": NextPage = () => {;
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
-                className=\"text-center mb-16\"
-              >
-                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
-                  Contact Information
-                </h2>
-                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-                  Multiple ways to reach us for your convenience
-                </p>
-              </motion.div>
-
-                {contactInfo.map((info, index) => (
-                  <motion.div
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
                     animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -480,18 +387,6 @@ const "Contact": NextPage = () => {;
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6 }}
-                className=\"text-center mb-16\"
-              >
-                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
-                  Send Us a Message
-                </h2>
-                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-                  Fill out the form below and we\'ll get back to you within 24 hours
-                </p>
-              </motion.div>
-
-                <motion.form
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
                   transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -518,16 +413,6 @@ const "Contact": NextPage = () => {;
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                        placeholder=\"your.email@example.com\"
-                       />
-                    </div>
-                  </div>
-
-                    <div>
-                      <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                        Phone Number
-                      </label>
-                      <input type=\"tel\"
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -543,17 +428,6 @@ const "Contact": NextPage = () => {;
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
-                       />
-                    </div>
-                  </div>
-
-                  <div className=\"mb-6\">
-                    <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                  <div className="mb-6">
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-
-                      Service Interest
-                    </label>
                     <select
                       id=\"service\"
                       name=\"service\"
@@ -564,16 +438,6 @@ const "Contact": NextPage = () => {;
                           {service}
                         </option>;
                       ))}
-                    </select>
-                  </div>
-
-                  <div className=\"mb-6\">
-                    <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-
-                      Message *
-                    </label>
                     <textarea
                       id=\"message\"
                       name=\"message\"
@@ -584,15 +448,6 @@ const "Contact": NextPage = () => {;
                   </div>;
                   <motion&& motion.button
                     type=\"submit\"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ \"scale\": 0.98 }}
-                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
-                  >
-                    <Send className=\"w-5 h-5\"  />
-                    Send Message
-                  </motion.button>
-                </motion.form>
-
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -611,12 +466,6 @@ const "Contact": NextPage = () => {;
           <div className=\"max-w-7xl mx-auto\">;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
-
-              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
-                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
-                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -668,15 +517,6 @@ const "Contact": NextPage = () => {;
                           value={formData && formData.email}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-                          placeholder=\"your@email.com\"
-                        />
-                      </div>
-                    </div>
-
-                      <div>
-                        <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
-                          Company
-                        </label>
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -753,31 +593,6 @@ const "Contact": NextPage = () => {;
                 )}
               </div>;
               {/* Contact Information */}
-              <div className=\"space-y-8\">
-                <div>
-                  <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
-                  <p className=\"text-lg text-gray-300 mb-8\">
-                    We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
-                  </p>
-                </div>
-
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
-                      <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
-                        <info.icon className=\"w-6 h-6 text-white\" />
-                      </div>
-                      <div>
-                        <h3 className=\"text-lg font-semibold text-white mb-1\">{info.title}</h3>
-                        <p className=\"text-cyan-400 font-medium mb-1\">{info.details}</p>
-                        <p className=\"text-gray-400 text-sm\">{info.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-          </section>
           {/* Services Overview */}
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
@@ -814,8 +629,6 @@ const "Contact": NextPage = () => {;
     </>;
   );
 }
-export default ContactPage
-
           </div>
         </section>
       </div>
@@ -826,4 +639,3 @@ export default ContactPage;
       </div>;
     </>;
   );
-

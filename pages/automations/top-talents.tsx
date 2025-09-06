@@ -3,14 +3,9 @@ import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+};
 
-
-type TalentItem = {;
-
-  talentSlug: string;
-  talentName: string;
-  averageRating: number;
-  totalReviews: number;
+type Props = { items: TalentItem[] };
 
 import type { NextPage, GetServerSideProps } from 'next',
 import fs from 'fs',
@@ -18,6 +13,15 @@ import path from 'path',
 import Link from 'next/link',
 type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
 type Props = { items: TalentItem[] },
+import type { NextPage, GetServerSideProps } from 'next';
+import fs from 'fs';
+import path from 'path';
+import Link from 'next/link';
+type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
+type Props = { items: TalentItem[] },
+
+
+
 
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
@@ -38,7 +42,38 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
         {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>
     </main>
-
+  );
+}
+export const getServerSideProps: GetServerSideProps = async () => {
+  const p = path.join(
+    process.cwd()
+    "public"
+    "automations"
+    "top-talents.json"
+  );
+  let items: TalentItem[] = [];
+  try {;
+    const raw = fs && fs.readFileSync(p, "utf8");
+    const data = JSON && JSON.parse(raw);
+    items = data && data.items || [];
+    items = data.items || []
+  } catch {}
+  return { props: { items } }
+}
+export default TopTalentsPage;
+    "public",
+    "automations",
+    "top - talents.json",
+  );
+  let items: TalentItem[] = [];
+  try {
+    const raw = fs.readFileSync (p, "utf8");
+    const data = JSON.parse (raw);
+    items = data.items || [];
+  } catch {}
+  return { props: { items } }
+}
+;
     const raw = fs.readFileSync(p, 'utf8'),
     const data = JSON.parse(raw),
     items = data.items || []
@@ -51,6 +86,8 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
   }
 }
 };
+  )
+},
+export const getServerSideProps: GetServerSideProps = async () => {
 
 export default TopTalentsPage;
-

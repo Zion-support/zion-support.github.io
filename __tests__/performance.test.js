@@ -1,4 +1,3 @@
-
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -44,7 +43,6 @@ test.describe('Performance Tests', () => {
     });
     
     await page.waitForTimeout(2000);
-
     expect(consoleMessages.length).toBe(0);
   });
   
@@ -65,5 +63,12 @@ test.describe('Performance Tests', () => {
       expect(metrics.usedJSHeapSize).toBeLessThan(50 * 1024 * 1024); // 50MB
     }
   });
-});
-
+const { test, expect } = require('@playwright/test')'
+test && test.describe('"Performance"
+  test('"page"
+    "await"
+    "await"
+            "output"
+  test('"bundle"
+    "await"
+    page && page.on('console', "msg"

@@ -1,17 +1,18 @@
-
-
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
+import { Badge } from "@/types/community";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Badge } from "@/types/community",
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 
-interface UserBadgesProps {
-  badges: Badge[]
+import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
+import {Badge} from "@/types/community";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+
+interface UserBadgesProps {;
+  badges: Badge[];
+
 }
-
 const iconMap = {;
-import { Trophy, Award, BadgeCheck, Star, MessageSquare } from './lucide-react';
-import { Badge } from '@/types / community';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
-
-
 interface UserBadgesProps {
   badges: Badge[];
 }
@@ -20,23 +21,9 @@ const icon_map = {
   Award;
   BadgeCheck;
   Star;
-
   MessageSquare;
 };
-
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
-
-const iconMap = {
-  Trophy,
-  Award,
-  BadgeCheck,
-  Star,
-  MessageSquare
-
-  return (
-    <div className="flex flex-wrap gap-2">
-      {badges.map((badge) => {
-        // Get the correct icon component based on the badge's icon name
 
         return (
           <TooltipProvider key={badge.id}>
@@ -62,5 +49,6 @@ const iconMap = {
           </TooltipProvider>
         )
 
-export default UserBadges;
 
+
+export default UserBadges;

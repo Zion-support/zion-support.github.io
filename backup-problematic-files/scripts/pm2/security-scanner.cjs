@@ -354,6 +354,9 @@ scanner.run().catch(error => {
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -398,7 +401,6 @@ class SecurityScanner {}
       
       
       
-      
       // Run npm audit;
       const auditResult = execSync('npm audit --json', { })
         encoding: 'utf8',
@@ -410,15 +412,12 @@ class SecurityScanner {}
 
 
 
-
       const auditData = JSON.parse(auditResult);
       const vulnerabilities = auditData.vulnerabilities || {};
       const criticalCount = Object.values(vulnerabilities).filter(v => v.severity === 'critical').length;
       const highCount = Object.values(vulnerabilities).filter(v => v.severity === 'high').length;
       const moderateCount = Object.values(vulnerabilities).filter(v => v.severity === 'moderate').length;
-
       this.log(`Found ${criticalCount} critical, ${highCount} high, ${moderateCount} moderate vulnerabilities`);
-
 
       this.log(`Found ${criticalCount} critical, ${highCount} high, ${moderateCount} moderate vulnerabilities`);
 
@@ -451,6 +450,8 @@ class SecurityScanner {}
       this.log('Scanning code for security issues...');
       // Check for common security issues;
       const securityIssues = [];
+      // Check for common security issues;
+      const securityIssues = [];
       
       // Check for common security issues;
       const securityIssues = [];
@@ -464,7 +465,6 @@ class SecurityScanner {}
         /secret\s*=\s*['"][^'"]+['"]/gi,
         /token\s*=\s*['"][^'"]+['"]/gi;
       ];
-
 
 
 
@@ -494,7 +494,6 @@ class SecurityScanner {}
 
 
 
-
       return {}
         scanned: true,
         issues: securityIssues,
@@ -512,7 +511,6 @@ class SecurityScanner {}
     };
     try {}
       this.log('Scanning configuration files...');
-      
       
       
       
@@ -564,7 +562,6 @@ class SecurityScanner {}
 
 
 
-
       return {}
         scanned: true,
         issues: configIssues,
@@ -582,14 +579,12 @@ class SecurityScanner {}
 
 
 
-
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
-          
           
           
           
@@ -604,7 +599,6 @@ class SecurityScanner {}
         // Skip directories that can't be read;
       };
     };
-
 
 
 
@@ -627,6 +621,8 @@ class SecurityScanner {}
         alertOnCritical: this.alertOnCritical;
       };
     };
+    const reportFile = path.join(__dirname, '../../logs/pm2/security-scanner-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     const reportFile = path.join(__dirname, '../../logs/pm2/security-scanner-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
@@ -662,7 +658,6 @@ class SecurityScanner {}
         this.log('Security scan completed - no issues found');
       } else {}
         this.log(`Security scan completed - found ${totalIssues} issues`);
-        
         
         
         

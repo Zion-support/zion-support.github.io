@@ -98,4 +98,3 @@ console.log(� Comprehensive report saved "to": ${reportFile}```)
       "stack"
 const logFile = path.join(this.logsDir, ")
     fs.writeFileSync(logFile")
-console.error(")

@@ -181,3 +181,4 @@ module.exports = ImprovedMasterAutomationOrchestrator;
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)

@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface EnterpriseTestimonialsProps {
   // Add props here as needed
-
 export default function EnterpriseTestimonials({ }: EnterpriseTestimonialsProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function EnterpriseTestimonials({ }: EnterpriseTestimonialsProps)
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

@@ -1,32 +1,4 @@
 
- </div> </div> </div>) }
-const ReviewSummary: React.FC<Props> = ({ summary }) => {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
- </div> </div> </div>) };
-
-const ReviewSummary: React.FC<Props> = ({ summary }) => {;
   return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';
 import React from 'react';
@@ -39,9 +11,6 @@ const ReviewSummary: React.FC < Props> = ({ summary }) => {
 import type { ReviewsSummary } from '../../types / reviews';
 import StarRating from './StarRating';
 import {Star} from 'lucide-react';
-type Props = {
-  summary: ReviewsSummary
-const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
     <div className='enhanced-card flex items-center justify-between'>;
       <div>;
@@ -61,8 +30,6 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
       </div>;
     </div>;
   );
-}
-export default ReviewSummary;      <div>
         <div className="flex items-center gap-3">
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
@@ -73,14 +40,9 @@ export default ReviewSummary;      <div>
         </div>
       </div>
     </div>
-);
-}
-export default ReviewSummary;  )
-}
 };
 
 export default ReviewSummary;
-
   summary: ReviewsSummary;
 const ReviewSummary: React.FC < Props> = ({ summary }) => {
   return (

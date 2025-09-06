@@ -844,4 +844,3 @@ module.exports = {}
   DeploymentSystem,
   HealthCheckSystem,
   DeploymentState,
-  main};

@@ -1,20 +1,65 @@
+import { useState, useEffect  } from 'react';
+import { GetServerSideProps  } from 'next';
+import fs from 'fs',
+import path from 'path';
+
+import { useState, useEffect } from 'react';
+import { GetServerSideProps } from 'next';
+import {useState, useEffect} from 'react';
+import {GetServerSideProps} from 'next';
+import { useState, useEffect } from 'react';
+import { GetServerSideProps } from 'next';
+import {useState, useEffect} from 'react';
+import {GetServerSideProps} from 'next';
+import { useState, useEffect } from 'react';
+import { GetServerSideProps } from 'next';
 
 
 import fs from 'fs';
 import path from 'path';
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-
-} from 'lucide-react';
-
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
-
-import { logErrorToProduction } from '@/utils/productionLogger';
-interface LogEntry {
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue;
+} from '@/components/ui/select';
+import {
+  AlertTriangle
+  Info
+  AlertCircle
+  XCircle
+  Search
+  Download
+  RefreshCw;
+  SelectTrigger,;
+  SelectValue,;
+} from '@/components/ui/select';
+import {;
+  AlertTriangle,;
+  Info,;
+  AlertCircle,;
+  XCircle,;
+  Search,;
+  Download,;
+  RefreshCw,;
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,;
+  SelectValue,;
+} from '@/components/ui/select';
+import {
+  AlertTriangle,
+  Info,
+  AlertCircle,
+  XCircle,
+  Search,
+  Download,;
+  RefreshCw,;
 } from 'lucide-react';
 
 
@@ -36,11 +81,37 @@ import {
   XCircle,
   Search,
 
+import fs from 'fs';
+import path from 'path';
+
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+} from 'lucide-react';
+
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
 interface LogEntry {;
   id: string;
   timestamp: string;
-
+  stack?: string;
+  url?: string;
+  userAgent?: string;
+  userId?: string;
+  error?: {
+  error?: {;
+    name: string;
+    message: string;
+    stack?: string;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface LogEntry {
+  id: string;
+  timestamp: string;
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical',;
   message: string;
   category: string;
@@ -75,14 +146,15 @@ interface LogEntry {;
 }
 ;
 interface LogsPageProps {;
-
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
-
-  lastUpdated: string;
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
@@ -94,31 +166,23 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
     case 'error':
       return <AlertCircle className="h-4 w-4 text-red-500" />,
     case 'critical':
-
+  logs: initialLogs
+  errorCount
+  warningCount
+  totalCount
+  lastUpdated
+  logs: initialLogs,
+  errorCount,
+  warningCount,
+  totalCount,
+  lastUpdated,;
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
-
       return <XCircle className="h-4 w-4 text-red-700" />,
     default: return <Info className="h-4 w-4 text-gray-500" />
 ;
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {;
   switch (level) {;
     case 'debug':;
-      return <Info className="h-4 w-4 text-blue-500" />;
-    case 'info':;
-      return <Info className="h-4 w-4 text-green-500" />;
-    case 'warn':;
-      return <AlertTriangle className="h-4 w-4 text-yellow-500" />;
-    case 'error':;
-      return <AlertCircle className="h-4 w-4 text-red-500" />;
-    case 'critical':;
-      return <XCircle className="h-4 w-4 text-red-700" />,;
-    default: return <Info className="h-4 w-4 text-gray-500" />;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-},;
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
   const colors = {;
     debug: 'bg-blue-100 text-blue-800',;
@@ -188,13 +252,16 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
 
 export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
-
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
+
+
+
+
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     Boolean
@@ -205,55 +272,32 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
   const sources = Array && Array.from(new Set(logs && logs.map(log => log && log.source))).filter(;
     Boolean;
   );
-
-
-  useEffect(() => {;
-    // Simulate loading logs;
-    setTimeout(() => {;
-
       setLogs(mockLogs);
       setFilteredLogs(mockLogs);
       setLoading(false);
     }, 1000);
   }, []);
-
-
-  useEffect(() => {;
-    let filtered = [...logs];
-
-    if (searchTerm) {;
-      filtered = filtered && filtered.filter(;
-        log =>;
-          log && log.message.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-          log && log.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-          (log && log.component &&;
-            log && log.component.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
-      );
-    }
-
-    if (levelFilter !== 'all') {;
-      filtered = filtered && filtered.filter(log => log && log.level === levelFilter);
-    }
-
-    if (categoryFilter !== 'all') {;
-      filtered = filtered && filtered.filter(log => log && log.category === categoryFilter);
-
-    }
-    setFilteredLogs(filtered);
-  }, [logs, searchTerm, levelFilter, categoryFilter]);
-
-
-  const getLevelColor = (level: string) => {;
-    switch (level) {;
-
       case 'debug': return 'bg-blue-100 text-blue-800';
       case 'info': return 'bg-green-100 text-green-800';
       case 'warn': return 'bg-yellow-100 text-yellow-800';
       case 'error': return 'bg-red-100 text-red-800';
       case 'critical': return 'bg-red-200 text-red-900';
       default: return 'bg-gray-100 text-gray-800';    }
-  }
-  const exportLogs = () => {
+    const dataStr = JSON.stringify(filteredLogs, null, 2);
+    const dataUri =
+      'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+
+  };
+
+  const exportLogs = () => {;
+    const dataStr = JSON && JSON.stringify(filteredLogs, null, 2);
+    const dataUri =;
+
+      'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+
+
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
@@ -324,19 +368,34 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 }
   },;
   const exportLogs = () => {;
-
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
-
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
+  },;
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();
+  };
 
   const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString();  }
   const formatPerformance = (performance?: LogEntry['performance']) => {
+
+
+    const linkElement = document && document.createElement('a');
+    linkElement && linkElement.setAttribute('href', dataUri);
+    linkElement && linkElement.setAttribute('download', exportFileDefaultName);
+    linkElement && linkElement.click();
+  };
+
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();  };
+
+  const formatPerformance = (performance?: LogEntry['performance']) => {;
+
     if (!performance) return null;
     const parts = [];
     if (performance && performance.memory) {;
@@ -348,16 +407,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     if (performance && performance.fps) {;
       parts && parts.push(`FPS: ${performance && performance.fps}`);
     }
-
-
-    return parts && parts.length > 0 ? parts && parts.join(', ') : null;
-  };
-
-  const errorCount = logs && logs.filter(log => log && log.level === 'error' || log && log.level === 'critical').length;
-  const warningCount = logs && logs.filter(log => log && log.level === 'warn').length;
-  const totalCount = logs && logs.length;
-
-
   return (
     <div className='container mx-auto p-6 space-y-6'>;
       <div className='flex items-center justify-between'>;
@@ -366,84 +415,20 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           <Button onClick={refreshLogs} disabled={isLoading} variant='outline'>;
             <RefreshCw
               className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
-
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
-        <Card>
-          <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-            <CardTitle className='text-sm font-medium'>Total Logs</CardTitle>
-            <Info className='h-4 w-4 text-muted-foreground' />
-          </CardHeader>
-          <CardContent>
-            <div className='text-2xl font-bold'>{totalCount}</div>
-            <p className='text-xs text-muted-foreground'>All log entries</p>          </CardContent>
-
-  const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
-  const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
-
-  useEffect(() => {
-    let filtered = logs;
-
-    // Search filter
-    if (searchTerm) {
-      filtered = filtered.filter(log =>
-        log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
-    }
-
-    // Level filter
-    if (levelFilter !== 'all') {
-      filtered = filtered.filter(log => log.level === levelFilter)
-    }
-
-    // Category filter
-    if (categoryFilter !== 'all') {
-      filtered = filtered.filter(log => log.category === categoryFilter)
-    }
-
-    // Source filter
-    if (sourceFilter !== 'all') {
-      filtered = filtered.filter(log => log.source === sourceFilter)
-    }
-
-    setFilteredLogs(filtered)
-  }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]);
-
-  const refreshLogs = async () => {
-    setIsLoading(true);
-    try {
-      const response = await fetch('/api/admin/logs');
-      if (response.ok) {
-        const data = await response.json();
-        setLogs(data.logs)
-      }
-    } catch (error) {
-      logErrorToProduction('Failed to refresh logs:', error)
-    } finally {
-      setIsLoading(false)
-    }
-  };
-
-  const exportLogs = () => {
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
-    
-    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
-    
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
-    linkElement.click()
+  },;
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();
   };
 
   const formatTimestamp = (timestamp: string) => {
-    return new Date(timestamp).toLocaleString()
-  };
-
+    return new Date(timestamp).toLocaleString();  }
   const formatPerformance = (performance?: LogEntry['performance']) => {
     if (!performance) return null;
-    
     const parts = [];
     if (performance.memory) {
       parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`)
@@ -454,11 +439,10 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     if (performance.fps) {
       parts.push(`FPS: ${performance.fps}`)
     }
-    return parts.length > 0 ? parts.join(', ') : null;
-  }
-  const errorCount = logs.filter(log => log.level === 'error' |log.level === 'critical').length;
-  const warningCount = logs.filter(log => log.level === 'warn').length;
-  const totalCount = logs.length;
+  },;
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();
+  };
 
   const formatPerformance = (performance?: LogEntry['performance']) => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -469,7 +453,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 }
     return parts.length > 0 ? parts.join() : null
   },
-
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -484,6 +467,8 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             Export
           </Button>
         </div>
+
+
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -532,29 +517,26 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
         </Card>
       </div>
-
+      {/* Filters */}
+      {/* Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="relative">
-              <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input
-                placeholder="Search logs..."
-                className="pl-8"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
-            
-            <Select value={levelFilter} onValueChange={setLevelFilter}>
               <SelectTrigger>
-                <SelectValue placeholder='All levels' />
+                <SelectValue placeholder="All levels" />
               </SelectTrigger>
               <SelectContent>
-
+              <SelectTrigger>
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value='all'>All Categories</SelectItem>
+                {categories.map(category => (
               <SelectTrigger>
                 <SelectValue placeholder="All categories" />
               </SelectTrigger>
@@ -576,7 +558,74 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               <SelectContent>
                 <SelectItem value="all">All Sources</SelectItem>
                 {sources.map(source => (
+                    {source}
+                  </SelectItem>                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      {/* Logs Table */}
+                  <SelectItem key={source} value={source}>{source}</SelectItem>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </SelectContent>;
+            </Select>;
+          </div>;
 
+      <Card>;
+        <CardHeader>;
+          <CardTitle > Log Entries ({filtered_logs.length})</CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <div className='space - y-4'>;
+            {filtered_logs.length > 0 ? (
+              filtered_logs.map (log => (
+                <div key={log.id} className='border rounded - lg p - 4 space - y-2'>;
+                  <div className='flex items - center justify - between'>;
+                    <div className='flex items - center space - x-2'>;
+                      <LogLevelIcon level={log.level} />;
+                      <LogLevelBadge level={log.level} />;
+                      <Badge variant='outline'>{log.category}</Badge>;
+                      <Badge variant='secondary'>{log.source}</Badge>;
+                      {log.component && (
+                        <Badge variant='outline'>{log.component}</Badge>)}
+                    </div>;
+                    <span className='text - sm text - muted - foreground'>;
+                      {format_timestamp (log.timestamp)}
+                    </span>;
+                  </div>;
+                  <div className='text - sm font - medium'>{log.message}</div>;
+                  {log.context && Object.keys (log.context).length > 0 && (
+                    <details className='text - xs'>;
+                      <summary className='cursor - pointer text - muted - foreground hover:text - foreground'>;
+                        View Context;
+                      </summary>;
+                      <pre className='mt - 2 p - 2 bg - muted rounded text - xs overflow - x-auto'>                        {JSON.stringify (log.context, null, 2)}
+                      </pre>;
+                    </details>)}
+
+                  {log.error && (
+                    <details className='text - xs'>;
+                      <summary className='cursor - pointer text - red - 600 hover:text - red - 800'>;
+                        View Error Details;
+                      </summary>;
+                      <div className='mt - 2 p - 2 bg - red - 50 rounded'>;
+                        <div>;
+                          <strong > Name:</strong> {log.error.name}
+                        </div>;
+                        <div>;
+                          <strong > Message:</strong> {log.error.message}
+                        </div>;
+                        {log.error.stack && (
+                          <details className='mt - 2'>;
+                            <summary className='cursor - pointer'>;
+                              Stack Trace;
+                            </summary>;
+                            <pre className='mt - 1 text - xs overflow - x-auto'>;
+                              {log.error.stack}
       <Card>
         <CardHeader>
           <CardTitle>Log Entries ({filteredLogs.length})</CardTitle>
@@ -594,18 +643,14 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                       <Badge variant="secondary">{log.source}</Badge>
                       {log.component && (
                         <Badge variant="outline">{log.component}</Badge>
-                      )}
-                    </div>
-                    <span className="text-sm text-muted-foreground">
-                      {formatTimestamp(log.timestamp)}
-                    </span>
-                  </div>
-
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                         View Context
                       </summary>
+
+
+
 
                       <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
                         {JSON.stringify(log.context, null, 2)  } catch (error) {
@@ -620,7 +665,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
                   {log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
@@ -635,13 +679,88 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>
                           </details>
 
+
                 </div>
               ))
             ) : (
               <div className="text-center text-muted-foreground py-8">
                 No logs found matching the current filters.
               </div>
+            )}
+          </div>;
+        </div>;
+      </main>;
+    </>;
+  );
+            }
+          }
+        } catch (fileError) {;
+                            </pre>;
+                          </details>)}
+                        <div className="flex items - center justify - between text - xs text - gray - 500">;
+                          <div>;
+                            {log.session_id && <span > Session: {log.session_id}</span>}
+                            {log.user_id && <span> • User: {log.user_id}</span>}
+                          </div>;
+                          {log.performance && (
+                            <div>{format_performance (log.performance)}</div>)}
+                        </div>;
+                      </div>;
+                      <div className="text - xs text - gray - 500 ml - 4">;
+                        {new Date (log.timestamp).toLocaleString ()}
+                      </div>;
+                    </details>)}
+                  <div className='flex items - center justify - between text - xs text - muted - foreground'>                    <div>;
+                      Session: {log.session_id}
+                      {log.user_id && ` • User: ${log.user_id}`}
+                    </div>;
+                  </div>;
+                  {log.url && (
+                    <div className='text - xs text - muted - foreground truncate'>                      URL: {log.url}
+                    </div>)}
+                </div>))) : (
+              <div className='text - center text - muted - foreground py - 8'>                No logs found matching the current filters.;
+              </div>)}
+          </div>;
+        </div>;
+      </main>;
+    </>);
+}
+export const getServerSideProps: GetServerSideProps = async () => {
+  try {
+    const logs_dir = path.join (process.cwd (), 'logs');
+    const logs: LogEntry[] = [];
+              // Skip malformed log entries;
+            }
+          }
+        } catch (file_error) {
+          // Skip problematic files;
+        }
+      }
+    }
+    const totalCount = logs.length;
+    return {
+      props: {
+        logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
+    }
+  } catch (error) {
+    logErrorToProduction ('Error reading logs:', error);    return {
+      props: {
+        logs: []
+        errorCount: 0
+        warningCount: 0
+        totalCount: 0
+        lastUpdated: new Date().toISOString()
+      }
+    }
 
+        logs: [],
+        errorCount: 0,
+        warningCount: 0,
+        totalCount: 0,
+        lastUpdated: new Date().toISOString(),
+      },
+    };
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -737,8 +856,9 @@ export const getServerSideProps: GetServerSideProps = async () => {;
       },;
     };
   }
-
+  }
 }
+};
 
         errorCount;
         warningCount;
@@ -752,11 +872,4 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 
   }
 }
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-};
-
+;

@@ -1,5 +1,3 @@
-
-
 import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
@@ -18,7 +16,6 @@ describe('Analytics', () => {'}
   test('applies correct styling', () => {'}
     render(<Analytics />);,
   });
-
 import _React from 'react'
 '
 import '@testing-library/jest-dom';
@@ -29,4 +26,3 @@ describe('Analytics', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
-

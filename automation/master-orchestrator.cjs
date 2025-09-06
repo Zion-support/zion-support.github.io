@@ -1,20 +1,8 @@
 #!/usr/bin/env node
 #!/usr/bin/env node
+#!/usr/bin/env node
 
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class MasterOrchestrator {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot, 'logs');
-    this.logFile = path.join(this.logsDir, 'master-orchestrator.log');
-    this.startTime = Date.now();
-    this.results = {};
-    
-    try {
+// Master Automation Orchestrator (clean version)
       fs.mkdirSync(this.logsDir, { "recursive": true });
     } catch {}
   }
@@ -80,7 +68,6 @@ class MasterOrchestrator {
             ? 'WARNING'
             : 'CRITICAL'};
 
-
     try {
       fs.writeFileSync(
         path.join(this.logsDir, 'master-orchestrator-report.json'),
@@ -110,6 +97,8 @@ if (require.main === module) {
 }
 
 module.exports = MasterOrchestrator;
+#!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -136,6 +125,10 @@ class MasterAutomationOrchestrator {
       return { success: true, output: out };
     } catch (e) {
       return {
+        success: false,
+        error: e.message,
+        output: e.stdout?.toString?.() || ''
+      };
         "success": false,
         "error": e.message,
         "output": e.stdout?.toString?.() || ''};
@@ -246,6 +239,8 @@ class MasterAutomationOrchestrator {
 
     const report = {
       timestamp: new Date().toISOString(),
+      failed: total - passed,
+      status: passed === total ? 'HEALTHY' : passed >= Math.floor(total * 0.8) ? 'WARNING' : 'CRITICAL'
       status: 'completed',
       scripts: {
         linting: 'completed',
@@ -260,14 +255,12 @@ class MasterAutomationOrchestrator {
           : passed >= Math.floor(total * 0.8)
             ? 'WARNING'
             : 'CRITICAL'};
-
     try {
       fs.writeFileSync(
         path.join(this.logsDir, 'master-orchestrator-report.json'),
         JSON.stringify({ summary, results: this.results }, null, 2)
       );
     } catch {}
-    this.log(
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
     return passed === total;
@@ -452,66 +445,6 @@ class MasterAutomationOrchestrator {
         build: 'completed',
         automation: 'completed'
       },
-      summary: 'Master automation orchestrator completed successfully',
-    };
-      "failed": total - passed,
-      "status": passed === total
-          ? 'HEALTHY'
-          : passed >= Math.floor(total * 0.8)
-            ? 'WARNING'
-            : 'CRITICAL'};
-
-    try {
-      fs.writeFileSync(
-        path.join(this.logsDir, 'master-orchestrator-report.json'),
-        JSON.stringify({ summary, results: this.results }, null, 2)
-      );
-    } catch {}
-    this.log(
-      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
-    );
-    return passed === total;
-  }
-}
-
-if (require.main === module) {
-  const orchestrator = new MasterOrchestrator();
-  const command = process.argv[2] || 'check';
-  
-  switch (command) {
-    case 'check':
-      orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
-      break;
-    default:
-      console.log('Usage: node automation/master-orchestrator.cjs check');
-    const reportPath = path.join(
-      __dirname,
-      '..',
-      'automation-reports',
-      'master-orchestrator-report.json'
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
-  }
-
-  async run() {
-    try {
-      this.log('🎯 Starting master automation orchestration...');
-
-      await this.runLinting();
-      await this.runBuildProcess();
-      await this.runAutomationScripts();
-      await this.generateReport();
-
-      this.log('🎉 Master automation orchestration completed successfully!');
-    } catch (error) {
-      this.log(`❌ Master automation orchestration failed: ${error.message}`);
-      process.exit(1);
-    }
-  }
-}
-
-module.exports = MasterOrchestrator;
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -660,12 +593,9 @@ class MasterAutomationOrchestrator {
     }
   }
 }
-
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
-// Run the orchestrator
-const orchestrator = new MasterAutomationOrchestrator();
-orchestrator.run().catch(console.error);
 orchestrator.run().catch(console.error);
 
 module.exports = MasterOrchestrator;
+orchestrator.run().catch(console.error);

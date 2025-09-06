@@ -138,8 +138,6 @@ export default function TalentOnboardingPage() {;
       <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-6">;
         <div className="max-w-xl w-full bg-glass/60 rounded-2xl p-8 shadow-xl border border-[var(--border-primary)] animate-fade-in">;
           <div className="text-center space-y-3">;
-            <h1 className="text-2xl md:text-3xl font-semibold text-high-contrast">Thanks! Were using AI to optimize your profile.</h1>;
-            <p className="text-high-contrast-secondary">Youll appear in search results shortly.</p>;
           </div>;
         </div>;
       </div>;
@@ -338,7 +336,6 @@ export default function TalentOnboardingPage() {;
                 onClick={handleSubmit}
                 disabled={submitting}
               >;
-                {submitting ? 'Submitting' :'Submit'}
               </button>;
             )}
           </div>;

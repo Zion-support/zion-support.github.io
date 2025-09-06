@@ -20,3 +20,4 @@ const filesToFix = ['pages/api/docs.ts']
     "replacement"
     "replacement": '"$1${$2}$3"
     "replacement": '"$1\\\\\n  $2"
+    "replacement": '"$1\\\\\n  $2"

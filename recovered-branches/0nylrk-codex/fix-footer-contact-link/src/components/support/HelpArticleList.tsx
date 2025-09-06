@@ -1,14 +1,18 @@
 
 
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
+
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HELP_CATEGORIES } from "./help-content",
+
+
 
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
-
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HELP_CATEGORIES } from "./help-content",;
@@ -22,17 +26,36 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
     return <div>Category not found</div>;
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { HELP_CATEGORIES } from "./help-content";
+interface HelpArticleListProps {
+  categoryId: string;
+  onArticleSelect: (articleId: string) => void;
+  searchQuery: string;
+}
 
+export function HelpArticleList({
+  categoryId,
+  onArticleSelect,
+  searchQuery,
+}: HelpArticleListProps) {
+  const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
+
+  if (!category) {
+    return <div>Category not found</div>;
   }
 
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
         (article) =>
-          article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-          article.content.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-
   return (
     <div>
       <div className="mb-6">
@@ -52,7 +75,6 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
             <Card
               key={article && article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-              onClick={() => onArticleSelect(article && article.id)}
             >;
               <CardHeader className="pb-2">;
                 <CardTitle className="text-lg">{article && article.title}</CardTitle>;
@@ -69,16 +91,33 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
           ))}
         </div>;
       )}
-    </div>
-  );
-}
-
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric"
-    month: "long"
-    day: "numeric"
+}
 
+function formatDate(): any (date: string): string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year: "numeric",;
+    month: "long",;
+    day: "numeric";
+
+  });
+}
+
+import React from './react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { HELP_CATEGORIES  } from './help - content';
+interface HelpArticleListProps {
+  category_id: string;
+  onArticleSelect: (article_id: string) => void;
+  search_query: string;
+}
 ;
   // Check condition
 if ( {) {
@@ -136,6 +175,16 @@ function format_date (date: string): string {
     month: "long",
     day: "numeric",
   });
+                  {article.content.substring(0, 120)}...;
+                </p>;
+              </CardContent>;
+            </Card>;          ))}
+        </div>;
+      )}
+    </div>;
+  ),;
 }
-;
+
+  })
+  })
 

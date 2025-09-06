@@ -1,3 +1,4 @@
+}},
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -151,6 +152,8 @@ const report = {
     "failed": totalCount - successCount}};
 
 
+
+
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -173,6 +176,7 @@ console.log(' Code Quality Checker Starting...\n')
     "name"
     "name"
             content.match(/^import\s+.*from\s+['"][^'')]
+    "status"
     "status"
     "status"
     "status"

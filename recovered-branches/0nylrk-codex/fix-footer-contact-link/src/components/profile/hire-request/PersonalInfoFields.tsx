@@ -1,4 +1,27 @@
 
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { UseFormReturn  } from './react - hook - form';
+import { FormValues  } from './useHireRequestForm';
+
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn < FormValues>;
+}
+
+
+
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {UseFormReturn} from "react-hook-form";
+import {FormValues} from "./useHireRequestForm";
+
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>
 
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
@@ -9,11 +32,18 @@ interface PersonalInfoFieldsProps {
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { UseFormReturn } from "react-hook-form",;
-
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
-interface PersonalInfoFieldsProps {;
+interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
-
 }
 
 export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
@@ -22,14 +52,6 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
       <FormField
         control={form && form.control}
         name="requesterName"
-
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel className="text-white">Your Name</FormLabel>;
-            <FormControl>;
-              <Input
-                placeholder="Enter your full name" 
-
                 {...field}
                 className="bg-zion-blue-light/20 border-zion-blue-light text-white"
               />;
@@ -37,29 +59,11 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
             <FormMessage />;
           </FormItem>;
         )}
-
-      />;
-
-
-      <FormField
-        control={form && form.control}
-        name="requesterEmail"
-
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel className="text-white">Your Email</FormLabel>;
-            <FormControl>;
-              <Input
-                placeholder="Enter your email address" 
-
-                type="email"
-                {...field}
-                className="bg-zion-blue-light/20 border-zion-blue-light text-white"
               />;
             </FormControl>;
             <FormMessage />;
           </FormItem>;
         )}
-      />
-    </>
+}
+;
 

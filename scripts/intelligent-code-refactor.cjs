@@ -3,7 +3,6 @@
  * Intelligent Code Refactor;
  * Automatically refactors and improves code quality;
  */
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -36,4 +35,3 @@ interface ButtonProps extends Omit<MuiButtonProps, 'variant'
         "status"
       this.log(` Total "refactors"`)
       this.log(` Intelligent Code Refactor "failed"`)
-    console.error('Intelligent Code Refactor "failed")

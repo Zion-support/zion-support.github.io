@@ -1,5 +1,4 @@
 import React from 'react';
-}
 
 function setup() {
   const addToCart = vi.fn().mockResolvedValue(undefined);

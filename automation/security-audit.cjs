@@ -1,3 +1,4 @@
+}},
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -23,6 +24,10 @@ const securityChecks = [{
           foundEnvFiles++;
         }
       });
+
+      
+
+      
 
       
 
@@ -125,6 +130,8 @@ const report = {
     "failed": totalCount - successCount}};
 
 
+
+
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -144,6 +151,7 @@ console.log('� Security Audit Starting...\n')
             !content.includes('// "Security")
     "name"
     "name"
+    "status"
     "status"
     "status"
     "status"

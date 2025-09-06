@@ -1,9 +1,10 @@
 #!/usr/bin/env node;
 /**
+#!/usr/bin/env node;
+/**
  * Syntax Error Fixer;
  * Automatically fixes common syntax errors in the codebase;
  */
-
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -58,23 +59,17 @@ const path = require('path')
     
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
-    
     // Fix missing commas in objects
     content = content.replace(/([^,}])\n\s*}/g, '$1,\n}');
-    
     // Fix missing commas in arrays
     content = content.replace(/([^,])\n\s*]/g, '$1,\n]');
-    
     return content;
   }
-
   async fixDirectory(dirPath) {
     const files = fs.readdirSync(dirPath);
-    
     for (const file of files) {
       const filePath = path.join(dirPath, file);
       const stat = fs.statSync(filePath);
-      
       if (stat.isDirectory()) {
         await this.fixDirectory(filePath);
       } else if (file.match(/\.(tsx?|jsx?)$/)) {
@@ -82,7 +77,6 @@ const path = require('path')
       }
     }
   }
-
   generateReport() {
     const report = {
       "timestamp": new Date().toISOString(),
@@ -90,25 +84,19 @@ const path = require('path')
       "errors": this.errors,
       "success": this.errors.length === 0
    };
-
     const reportPath = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fix-report.json';);
     const logDir = path.dirname(reportPath;);
-    
     if () {
       fs.mkdirSync(logDir, { "recursive": true })}
-    
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))) {
     ) {
       fs.mkdirSync(logDir, { "recursive": true })}
-    
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
     this.log(`📄 Report saved "to": ${reportPath}`);
-    
     return report}
 
   async run() {
     this.log('🚀 Starting syntax error fixing...');
-    
     try {
       await this.fixDirectory('components');
       await this.fixDirectory('pages');
@@ -117,18 +105,15 @@ const path = require('path')
       if ( {
         this.log('🎉 Syntax error fixing completed successfully!')} else {
         this.log('⚠️ Syntax error fixing completed with some issues')}
-      
       return report) {
      {
         this.log('🎉 Syntax error fixing completed successfully!')} else {
         this.log('⚠️ Syntax error fixing completed with some issues')}
-      
       return report}} catch (error) {
       this.log(`💥 Syntax error fixing "failed": ${error.message}`, 'ERROR');
       throw error}
   }
 }
-
 if (require.main === module) {
   const fixer = new SyntaxErrorFixer();
   fixer.run().catch(error => {
@@ -136,7 +121,6 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-
 module.exports = SyntaxErrorFixer;
   log(message, level = 'INFO')
     this.log(' Starting syntax error fixing...')
@@ -145,4 +129,5 @@ module.exports = SyntaxErrorFixer;
       execSync('npm run type-check', { "stdio"})
       execSync('npm run format', { "stdio"})
       this.log(` Syntax fixing "failed"`)
+      this.log(`� Syntax error fixing "failed"`)
       this.log(`� Syntax error fixing "failed"`)

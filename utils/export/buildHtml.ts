@@ -1,9 +1,13 @@
-
 import type { BookProject } from '../book/bookTypes';
-
+export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
+export function buildPrintableHtml(project: BookProject): string {;
+  const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
+
+
+
 
   const chapterHtml = chapters;
     .map(;
@@ -21,7 +25,6 @@ export function buildPrintableHtml (project: BookProject): string {
         <div class="content">${paragraphize (c.content)}</div>;
       </section>;
     `);
-
     .join('\n\n');
   const visualsHtml = [;
     ...visuals.timelineImages;
@@ -29,6 +32,9 @@ export function buildPrintableHtml (project: BookProject): string {
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
+
+
+
 
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
     .join ('\n\n'),
@@ -45,6 +51,11 @@ export function buildPrintableHtml (project: BookProject): string {
 <meta charset="utf - 8" />;
 <title>${escape_html (meta.title)}</title>;
 <style>;
+
+
+;
+function escapeHtml(s: string): string {;
+  return s;
 
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
@@ -121,10 +132,6 @@ export function buildPrintableHtml (project: BookProject): string {
 </head>;
 <body>;
   <section class="cover">;
-    <div>${escapeHtml(meta.publisher |'')}</div>;
-    <h1>${escapeHtml(meta.title)}</h1>;
-    <h3>${escapeHtml(meta.subtitle |'')}</h3>;
-    <div class="by">By ${escapeHtml(meta.author)}</div>;
     ${barcode}
   </section>;
   ${quotes_html}
@@ -133,43 +140,13 @@ export function buildPrintableHtml (project: BookProject): string {
 </body>;
 </html>`;
 }
-function paragraphize(text: string): string {if (!text) return '';
-  return text;
-    .split(/\n\n+/);
-    .map((p) => `<p>${escapeHtml(p)}</p>`);
-    .join('\n');
-}
-  </section>;
-  ${quotesHtml  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ${chapterHtml  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ${visualsHtml  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-</body>;
-</html>`;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-function paragraphize(text: string): string {;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

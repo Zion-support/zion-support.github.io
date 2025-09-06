@@ -1,54 +1,99 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Header } from '../components/Header';
-import Footer from '../components/Footer';
-import { GradientHeading } from '../components/GradientHeading';
-import { Card, CardContent } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  Globe,
-  Lightbulb,
-  Shield,
-  Zap,
-  Target
-} from 'lucide-react';
+import Button from '../components/Button';
+import ServiceCard from '../components/ServiceCard';
 
 const Home: React.FC = () => {
+  const services = [
+    {
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence solutions to transform your business.',
+      icon: '🤖'
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Scalable cloud infrastructure and migration services.',
+      icon: '☁️'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      icon: '🔒'
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/services" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-semibold text-lg shadow-2xl"
-              >
-                Explore Services
-              </Link>
-              <Link 
-                to="/contact" 
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
-              >
-                Get Started
-              </Link>
-            </div>
+      <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl font-bold mb-6">
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Empowering businesses with cutting-edge technology solutions. 
+            We help you innovate, scale, and succeed in the digital world.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              Get Started
+            </Button>
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+              Learn More
+            </Button>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              We offer a comprehensive range of technology services to help your business thrive.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <ServiceCard
+                key={index}
+                title={service.title}
+                description={service.description}
+                icon={<span className="text-4xl">{service.icon}</span>}
+              />
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link to="/services">
+              <Button size="lg">
+                View All Services
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Let's work together to build something amazing. Contact us today to get started.
+          </p>
+          <Link to="/contact">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              Contact Us
+            </Button>
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

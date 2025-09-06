@@ -1,31 +1,12 @@
-import React from 'react';
-import type { AppProps } from 'next/app';
-
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
-
-import '../src/styles/globals.css';
-
-export default function App({ Component, pageProps }: AppProps) {;
-
 return <Component {...pageProps} />;
-
-import '../styles/globals.css';
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-
 import '../styles/globals.css';
 import EnhancedNavigation from '../components/layout/EnhancedNavigation';
 import EnhancedFooter from '../components/layout/EnhancedFooter';
 
-export default function App({ Component, pageProps }: AppProps) {;
-  return <Component {...pageProps} />;
-}
-
 import Layout from '../components/layout/Layout';
 import '../styles/globals.css';
-
-  return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
       backdropFilter: 'blur(10px)', color: 'white',
@@ -173,19 +154,41 @@ import '../styles/globals.css';
       )}
     </header>
   );
+}
 
+
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <ErrorBoundary>
+      <PerformanceMonitor />
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </ErrorBoundary>
+  );
+}
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
 
-}
+import '../styles/globals.css';
 
 }
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
 }
 
+import type { AppProps } from 'next / app';
+import '../src / styles / globals.css';
+;
+export default /**
+ * App - Function description
+ */
+function App() {
+return <Component {...page_props} />;
+import '../styles / globals.css';
+;
+export default /**
+ * App - Function description
+ */
+function App() {
+  return <Component {...page_props} />;
+}

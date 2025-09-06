@@ -1,4 +1,3 @@
-
 export default function MainLayout({
   children,
 }: {
@@ -21,4 +20,3 @@ export default function MainLayout({
     </>,;
   );
 },;
-

@@ -14,10 +14,6 @@ class ResourceMonitor {;
     this && this.setupErrorListeners();
     this && this.setupResourceObservers();
     this && this.monitorCriticalResources();
-    // console && console.log(' Resource Monitor started')}
-  stop() {;
-    this && this.isMonitoring = false;
-    // console && console.log(' Resource Monitor stopped')}
   private setupErrorListeners() {;
     // Listen for script loading errors;
     window && window.addEventListener(';
@@ -112,7 +108,6 @@ class ResourceMonitor {;
       error,
       "timestamp": Date && Date.now()};
     this && this.errors.push(resourceError);
-    // console && console.error(' Resource "Error": ', resourceError);
     // Attempt to retry loading;
     this && this.attemptRetry(url, type);
     // Report to analytics/monitoring service;
@@ -130,7 +125,6 @@ class ResourceMonitor {;
     ); // Exponential backoff}
   private retryResource("url": string, "type": ResourceError['type']) {;
 ";
-    // console && console.log(` Retrying resource: ${url} (attempt ${this && this.retryAttempts.get(url)})`);
     if(type === 'script') {;
       this && this.loadScript(url)} else if(type === 'stylesheet') {;
       this && this.loadStylesheet(url)}
@@ -140,28 +134,17 @@ class ResourceMonitor {;
     script && script.async = true;
     script && script.onload = () => {;
 ";
-      // console && console.log(" Script loaded successfully: ${src}");
-      this && this.retryAttempts.delete(src)};
-    script && script.onerror = () => {;
-";
-      // console && console.error(` Script retry "failed": ${src}`)};
     document && document.head.appendChild(script)}
   private loadStylesheet("href": string) {;
     link && link.rel = 'stylesheet';
     link && link.href = href;
     link && link.onload = () => {;
 ";
-      // console && console.log(" Stylesheet loaded successfully: ${href}");
-      this && this.retryAttempts.delete(href)};
-    link && link.onerror = () => {;
-";
-      // console && console.error(` Stylesheet retry "failed": ${href}`)};
     document && document.head.appendChild(link)}
   private reportError("error": ResourceError) {;
     // In production, send to monitoring service';
     if(process && process.env.NODE_ENV === 'production') {;
       // "Example": Sentry, LogRocket, etc.';
-      // console && console.log(' Reporting error to monitoring "service": ', error)}
   }
   private getResourceType("element": HTMLElement): ResourceError['type'] {;
     if(element && element.tagName === 'SCRIPT') return 'script';
@@ -190,5 +173,3 @@ class ResourceMonitor {;
 // Create singleton instance;
 export default resourceMonitor;
 '`;
-interface ResourceError {; url: string; type: 'script' | 'stylesheet' | 'image' | 'font' | 'other'; error: string} timestamp: 'number'} class ResourceMonitor {; private errors: 'ResourceError[] = []; private isMonitoring = false; private retryAttempts = new Map<string',number>(); private maxRetries = 3; start() {; if(this.isMonitoring) return; this.isMonitoring = true; this.setupErrorListeners(); this.setupResourceObservers(); this.monitorCriticalResources(); stop() {; this.isMonitoring = false; private setupErrorListeners() {; window.addEventListener('; 'error',; event => {; if (event.target && event.target !== window) {; if(url) {; this.handleResourceError(); url,; this.getResourceType(target),; event.error?.message || 'Unknown error'; )} } },; true; ); window.addEventListener('unhandledrejection',event => {; if(); event.reason &&'; typeof event.reason === 'string' &&'; event.reason.includes('MIME'); ) {; this.handleResourceError('; 'unknown',other',; `MIME type error: ${event.reason}`; )} })} private setupResourceObservers() {; if(window.MutationObserver) {; this.monitorElement(element)} })})}); observer.observe(document.head,{ childList: 'true',subtree: 'true' }); observer.observe(document.body,{ childList: 'true',subtree: 'true' })} } private monitorElement(element: HTMLElement) {; if(element.tagName === 'SCRIPT' && element.src) {; this.monitorScript(element as HTMLScriptElement)} if(element.tagName === 'LINK' && element.rel === 'stylesheet') {; this.monitorStylesheet(element as HTMLLinkElement)} } private monitorScript(script: anyHTMLScriptElement) {; script.addEventListener('error',() => {; this.handleResourceError(script.src,script',Script loading failed')})} private monitorStylesheet(link: anyHTMLLinkElement) {; link.addEventListener('error',() => {; this.handleResourceError(); link.href,stylesheet',Stylesheet loading failed'; )})} private monitorCriticalResources() {; ; criticalResources.forEach(resource => {; this.checkResourceHealth(resource)})} private async checkResourceHealth(url: string) {; try {; if(!response.ok) {; this.handleResourceError(); url,other',`; `HTTP ${response.status}: ${response.statusText}`; ); return} if(!contentType) {; this.handleResourceError(url,other',No content-type header'); return} if(url.endsWith('.js') && !contentType.includes('javascript')) {; this.handleResourceError(url,'script',`Incorrect MIME type: ${contentType} (expected javascript)`)} else if(url.endsWith('.css') && !contentType.includes('css')) {; this.handleResourceError(url,'stylesheet',`Incorrect MIME type: ${contentType} (expected css)`)} this.handleResourceError(); url,script',`; `Incorrect MIME type: ${contentType} (expected javascript)`; )} else if(url.endsWith('.css') && !contentType.includes('css')) {; this.handleResourceError(); url,stylesheet',`; `Incorrect MIME type: ${contentType} (expected css)`; )} } catch(error) {; '`; this.handleResourceError(url,other',`Fetch error: ${error}`)} } private handleResourceError(); url: 'string',; type: ResourceError['type'],; error: string; ) {; const resourceError: ResourceError = {; url,; type,; error,; timestamp: Date.now()}; this.errors.push(resourceError); this.attemptRetry(url,type); this.reportError(resourceError)} private attemptRetry(url: 'string',type: ResourceError['type']) {; if(attempts >= this.maxRetries) {; `; return} this.retryAttempts.set(url,attempts + 1); setTimeout(); () => {; this.retryResource(url,type)},; Math.pow(2,attempts) * 1000; )} private retryResource(url: 'string',type: ResourceError['type']) {; `; if(type === 'script') {; this.loadScript(url)} else if(type === 'stylesheet') {; this.loadStylesheet(url)} } private loadScript(src: string) {; script.src = src; script.async = true; script.onload = () => {; `; this.retryAttempts.delete(src)}; script.onerror = () => {; `; document.head.appendChild(script)} private loadStylesheet(href: string) {; link.rel = 'stylesheet'; link.href = href; link.onload = () => {; `; this.retryAttempts.delete(href)}; link.onerror = () => {; `; document.head.appendChild(link)} private reportError(error: ResourceError) {; if(process.env.NODE_ENV === 'production') {} } private getResourceType(element: HTMLElement): ResourceError['type'] {; if(element.tagName === 'SCRIPT') return 'script'; if('; element.tagName === 'LINK' &&'; (element as HTMLLinkElement).rel === 'stylesheet'; ); return 'stylesheet'; if(element.tagName === 'IMG') return 'image'; if('; element.tagName === 'LINK' &&'; (element as HTMLLinkElement).rel === 'preload'; ); return 'font'; return 'other'} getErrors(): ResourceError[] {; return [...this.errors]} clearErrors() {; this.errors = []; this.retryAttempts.clear()} getErrorSummary() {; ; this.errors.forEach(error => {; summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}); return summary} } export default resourceMonitor; '`;
-

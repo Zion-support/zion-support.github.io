@@ -1,22 +1,23 @@
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '../../../lib/integrations/fileStore';
-export default function handler(req, res) {
-  try {
-  if (req.method === 'GET') {
+  if (req && req.method === "GET") {
+
     const state = readState();
-    return res.status(200).json({ overrides: state.overrides });
-    } catch (error) {
+    return res && res.status(200).json({ overrides: state && state.overrides });
+  }
+    });
+    return res && res.status(200).json({
+      ok: true,
+      override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 
+  return res && res.status(405).json({ error: "Method not allowed" });
+}
+}
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../lib / integrations / file_store';
 export default /**
@@ -65,24 +66,17 @@ if (state.overrides[idx] = entry) {
 
 
   }
+  }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  return res.status(405).json({ error: 'Method not allowed' });
+}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  }
 
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 

@@ -1,31 +1,62 @@
-
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
-
+interface ActionButtonsProps {
+  flag_id: string;
+  status: string;
 interface ActionButtonsProps {
   flagId: string,
   status: string,
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
-export const ActionButtons: React.FC<ActionButtonsProps> = ({
-  flagId
-  status
-  onAction
-}) => {
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
+  return (
 
-export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
+    <div className="flex space-x-2">
 
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
+interface ActionButtonsProps {
+  flag_id: string;
+  status: string;
+interface ActionButtonsProps {;
+  flagId: string;
+  status: string;
+  onAction: (;
+    flagId: string,;
+    action: "warning" | "suspension" | "ban" | "ignore",;
+  ) => void;
+}
+export const ActionButtons: React.FC<ActionButtonsProps> = ({;
+  flagId,;
+  status,;
+  onAction,;
+}) => {;
   return (
     <div className="flex space-x-2">;
       <Button
         variant="ghost"
         size="icon"
         title="View Details"
+
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
+;
+interface ActionButtonsProps {;
+  flagId:string,;
+  status:string,;
+  onAction:(flagId:string, action:'warning' | 'suspension' | 'ban' | 'ignore') => void;
+}
+;
+export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {;
+  return (;
+    <div className="flex space-x-2">;
+      <Button;
+        variant="ghost";
+        size="icon";
+        title="View Details";
+        onClick={() => alert("View details (would open a detailed view)")}
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
         onClick={() => alert("View details (would open a detailed view)")}
       >;
         <Eye className="h-4 w-4" />;
@@ -34,7 +65,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size="icon"
         title="Send Warning"
-
       >
         <Info className="h-4 w-4" />
       </Button>
@@ -46,7 +76,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size="icon"
         title="Suspend User"
-
       >
         <AlertTriangle className="h-4 w-4" />
       </Button>
@@ -58,14 +87,11 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size="icon"
         title="Ban User"
+    </div>;
+);
 
-      >
-        <Ban className="h-4 w-4" />
-      </Button>
-      {status === 'pending' && (
-        <Button
-          variant="ghost"
-          size="sm"
+    </div>;
+);
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -125,7 +151,33 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         </Button>;
       )}
     </div>;
+    </div>
   );
+};
+  ),;
+},; interface ActionButtonsProps {
+  flagId: string;
+status: string;
+onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void 
+}export const ActionButtons: React.FC<ActionButtonsProps> = ({
+  flagId, status, onAction 
+}) => {
+  return (<div className="flex space-x-2" > ghost"size=" icon"title=" View Details"onClick= {
+  () => alert (" View details (would open a detailed view) ") 
+}> <Eye className=" h-4 w-4"/> </Button> <Button > <Info className=" h-4 w-4"/> </Button> <Button > <AlertTriangle className=" h-4 w-4"/> </Button> <Button > <Ban className=" h-4 w-4" /> </Button> > Ignore </Button>) 
+}</div>) 
+};
+onClick={() => onAction(flagId, "ignore")}
+        >
+          Ignore
+        </Button>
+      )}
+</div>
+  );
+
+}
 
 };
 
+  );
+};

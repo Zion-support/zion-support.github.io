@@ -1,5 +1,20 @@
+interface PricingSuggestionAnalytics {
+  total_suggestions: number;
+  acceptance_rate: number;
+  averagePriceGap: number,
+  suggestionsByCategory: { category: string, count: number, acceptance_rate: number }[];
+  recent_suggestions: {
 
-
+    id: string;
+    user_id: string;
+    suggested_min: number;
+    suggested_max: number;
+    actual_value?: number;
+    accepted: boolean;
+import {useState, useEffect} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import { useState, useEffect } from 'react',
+import { supabase } from "@/integrations/supabase/client",
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -14,54 +29,30 @@ interface PricingSuggestionAnalytics {
     accepted: boolean,
     createdAt: string,
     type: 'client' | 'talent'
-  }[],
-  isLoading: boolean,
-
-  error: string | null
-}
-export function usePricingSuggestionAnalytics(days = 30) {
-
-    isLoading: true,
-    error: null
-  }),
-
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
-
+        setAnalytics({
+          ...mockData;
+          isLoading: false
+          error: null
+        });
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
-
+        console.error("Error fetching pricing suggestion analytics:", error),
         // Process data and setAnalytics({...})
       } catch (error) {
-
-        console.error("Error fetching pricing suggestion analytics:", error),
+        console && console.error("Error fetching pricing suggestion analytics:", error);
         setAnalytics({
           ...analytics,
           isLoading: false,
           error: "Failed to load pricing analytics data."
         })
-import { useState, useEffect } from 'react',;
-import { supabase } from "@/integrations/supabase/client",;
-interface PricingSuggestionAnalytics {;
-  totalSuggestions: number,;
-  acceptanceRate: number,;
-  averagePriceGap: number,;
-  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],;
-  recentSuggestions: {;
-    id: string,;
-    userId: string,;
-    suggestedMin: number,;
-    suggestedMax: number,;
-    actualValue?: number,;
-    accepted: boolean,;
-    createdAt: string,;
-
     type: 'client' | 'talent';
   }[];
   is_loading: boolean,
@@ -142,4 +133,4 @@ if (throw error) {
   }, [days]);
 ;
   return analytics;
-
+}

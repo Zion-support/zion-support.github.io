@@ -1,8 +1,21 @@
 import { GetServerSideProps } from 'next';
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
+
+  };      permanent: true}}
 
 export default function ApiDocsRedirect() {;
   return null;
+}
+      destination: '/developers / docs',
+      permanent: true,
+    },
+  }      permanent: true}}
+}
+;
+export default /**
+ * ApiDocsRedirect - Function description
+ */
+function ApiDocsRedirect() {
 
+
+}
+;

@@ -1,57 +1,35 @@
-
-
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
+import { useFilterTalents } from "./talent/useFilterTalents";
+import { useUIState } from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+import { useAuthStatus } from './talent / useAuthStatus';
+import { useTalentData } from './talent / useTalentData';
+import { useFilterTalents } from './talent / useFilterTalents';
+import { useUIState } from './talent / useUIState';
+export /**
+ * useTalentDirectory - Function description
+ */
+function useTalentDirectory() {
+  // Fetch auth status and saved talents;
 
-    userDetails, 
-    savedTalents, 
-    handleToggleSave 
-  } = useAuthStatus(),
-
-  // Fetch talent data
-  const { 
-    talents, 
-    isLoading 
-  } = useTalentData(),
-
-  } = useTalentData();
-  // Apply filters and sorting
   const {
-    filteredTalents,
-    searchTerm,
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters
-
-  // Manage UI state
+    is_authenticated;
+    user_details,
+    saved_talents,
+    handleToggleSave;
+  } = useAuthStatus ();
+;
+  // Fetch talent data;
   const {
-    isMobileFilterOpen,
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-    toggleSection
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
 
-    // Actions
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters;
-    toggleSection;
-    handleToggleSave
+    expanded_sections;
+
 
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
@@ -136,8 +114,6 @@ export function useTalentDirectory() {;
     clearFilters;
     toggleSection;
     handleToggleSave;
-
   }
 }
 ;
-

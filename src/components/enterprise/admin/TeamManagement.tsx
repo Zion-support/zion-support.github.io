@@ -1,45 +1,3 @@
-
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-
-import React, { useState } from "react",
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table",
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
-import { Trash, Mail, UserPlus } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-export function TeamManagement() {
-  const [isAddingMember, setIsAddingMember] = useState(false),
-  const [newMemberEmail, setNewMemberEmail] = useState(""),
-
   // Mock team members data
   const teamMembers = [
     {
@@ -65,7 +23,6 @@ export function TeamManagement() {
       lastActive: "Never"},
     {
       id: 4,
-
       name: "Taylor Brown",
       email: "taylor@example.com",
       role: "Viewer",
@@ -76,18 +33,14 @@ export function TeamManagement() {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
-
       return
-
         title: 'Email required',
         description: 'Please enter an email address for the new team member.',
         variant: 'destructive',
       })
       return;
-
     }
     toast({
-
     })
     setNewMemberEmail('')
     setIsAddingMember(false)
@@ -105,96 +58,13 @@ export function TeamManagement() {
       title: 'Invitation resent'
       description: `A new invitation has been sent to ${memberEmail}`
     })
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components / ui / table';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components / ui / dialog';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Label } from '@/components / ui / label';
-import { Badge } from '@/components / ui / badge';
-import { Trash, Mail, UserPlus } from 'lucide-react';
-import { toast } from '@/hooks / use - toast';
-  DialogTrigger} from "@/components / ui / dialog",
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { Label  } from '@/components / ui / label';
-import { Badge  } from '@/components / ui / badge';
-import { toast  } from '@/hooks / use - toast';
-export /**
- * TeamManagement - Function description
- */
-function TeamManagement() {
-  const [isAddingMember, setIsAddingMember] = useState (false);
-  const [newMemberEmail, setNewMemberEmail] = useState ('');
-  // Mock team members data;
-  const team_members = [;
-    {
-      id: 1,
-      name: 'Alex Johnson',
-      email: 'alex@example.com',
-      role: 'Admin',
-      status: 'active',
-      last_active: '2 hours ago',
-    },
-    {
-      id: 2,
-      name: 'Jamie Smith',
-      email: 'jamie@example.com',
-      role: 'Recruiter',
-      status: 'active',
-      last_active: 'Yesterday',
-    },
-    {
-      id: 3,
-      name: 'Sam Williams',
-      email: 'sam@example.com',
-      role: 'Manager',
-      status: 'pending',
-      last_active: 'Never',
-    },
-    {
-      id: 4,
-      name: 'Taylor Brown',
-      email: 'taylor@example.com',
-      role: 'Viewer',
-      status: 'active',
-      last_active: '3 days ago',
-    },
-  ];
-  const handleAddMember = () =>: any {
-    // In a real app, this would make an API call to add the member;
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: 'Email required',
-        description: 'Please enter an email address for the new team member.',
-        variant: 'destructive',
-      });
-      return;
+        title: "Email required",
+        description: "Please enter an email address for the new team member.",
+        variant: "destructive"}),
+      return
     }
-    toast ({
-      title: 'Invitation sent',
-      description: `An invitation has been sent to ${newMemberEmail}`,
-    });
-    setNewMemberEmail ('');
-    setIsAddingMember (false);
-  }
 
+    toast({
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -215,6 +85,9 @@ if ( {) {
       title: "Invitation resent",
       description: `A new invitation has been sent to ${memberEmail}`})
   },
+
+
+
 
   return (
     <div className="space-y-6">
@@ -240,6 +113,13 @@ if ( {) {
                   Email
                 </Label>
                 <Input
+                  id="email"
+                  type="email"
+                  placeholder="colleague@company.com"
+                  className="col-span-3"
+                  value={newMemberEmail}
+                  onChange={(e) => setNewMemberEmail(e.target.value)}
+                />
 
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
@@ -284,6 +164,10 @@ if ( {) {
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-sm font-medium">
                         {member.name
+                          .split(" ")
+                          .map((n) => n[0])
+                          .join("")}
+                      </span>
 
                     </div>
                     <div>
@@ -306,15 +190,63 @@ if ( {) {
                   <div className="flex justify-end gap-2">
                     {member.status === "pending" ? (
                       <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => handleResendInvite(member.email)}
+                      >
+                        <Mail className="h-4 w-4 mr-1" />
 
                         Resend
                       </Button>
                     ) : (
                       <Button
-
-                    )}
+                        variant="ghost"
+                        size="sm"
+                        className="text-destructive hover:text-destructive"
+import React, { useState } from "react",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+  // Mock team members data;
+  const teamMembers = [;
+    {;
+      id: 1,;
+  const handleAddMember = () => {;
+    // In a real app, this would make an API call to add the member;
+    if (!newMemberEmail) {;
+      toast({;
+              Add Team Member;
+            </Button>;
+          </DialogTrigger>;
+          <DialogContent>;
+            <DialogHeader>;
+                  <option value='admin'>Admin</option>;
+                  <option value='recruiter'>Recruiter</option>;
+                  <option value='manager'>Manager</option>;
+                  <option value='viewer'>Viewer</option>;
+                </select>;
+              </div>;
+            </div>;
+            <DialogFooter>;
+                      </div>;
+                    </div>;
                   </div>;
                 </TableCell>;
-              </TableRow>;
-            ))}
 
+
+
+                    )}
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))}

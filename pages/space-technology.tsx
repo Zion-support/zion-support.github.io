@@ -1,5 +1,60 @@
 
-
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import {
+  Rocket, Brain, Shield, Zap, Target, Atom, Cpu
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart
+  Lightbulb, Search, Grid, List, TrendingUp
+  User, ShoppingCart, Bell, HelpCircle, FileText
+  Video, Headphones, Code, Database, Network, Server
+  Monitor, Smartphone, Camera, Gamepad2, Palette
+  Music, Film, BookOpenCheck, Building, MessageCircle
+  Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
+} from 'lucide-react'
+  const spaceCapabilities = [
+    {
+      title: 'Space Exploration'
+      description: 'Advanced exploration technologies and systems'
+      icon: <Rocket className="w-6 h-6" />
+    }
+    {
+      title: 'Resource Extraction'
+      description: 'Mining and processing of space resources'
+      icon: <Target className="w-6 h-6" />
+    }
+    {
+      title: 'AI Integration'
+      description: 'Intelligent systems for space operations'
+      icon: <Brain className="w-6 h-6" />
+    }
+    {
+      title: 'Quantum Technology'
+      description: 'Quantum computing for space applications'
+      icon: <Atom className="w-6 h-6" />
+    }
+    {
+      title: 'Autonomous Systems'
+      description: 'Self-operating space technologies'
+      icon: <Settings className="w-6 h-6" />
+    }
+    {
+      title: 'Sustainable Development'
+      description: 'Eco-friendly space infrastructure'
+      icon: <Heart className="w-6 h-6" />
+import React from 'react',;
+import Layout from '../components/layout/Layout',;
+import SEO from '../components/SEO',;
+import { motion } from 'framer-motion',;
+import { 
+  Rocket, Brain, Shield, Zap, Target, Atom, Cpu, 
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
+  Lightbulb, Search, Grid, List, TrendingUp, 
+  User, ShoppingCart, Bell, HelpCircle, FileText, 
+  Video, Headphones, Code, Database, Network, Server, 
+  Monitor, Smartphone, Camera, Gamepad2, Palette, 
+  Music, Film, BookOpenCheck, Building, MessageCircle, 
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
@@ -12,6 +67,9 @@ import {
   Video, Headphones, Code, Database, Network, Server,
   Monitor, Smartphone, Camera, Gamepad2, Palette,
   Music, Film, BookOpenCheck, Building, MessageCircle,
+
+
+
 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react',
@@ -76,12 +134,13 @@ const SpaceTechnologyPage: React.FC = () => {
       period: 'month',
       popular: false,
       icon: <Building className="w-8 h-8" />
-
+    }
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
   ],
   const spaceCapabilities = [
@@ -114,24 +173,25 @@ const SpaceTechnologyPage: React.FC = () => {
       title: 'Sustainable Development',
       description: 'Eco-friendly space infrastructure',
       icon: <Heart className="w-6 h-6" />
-
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
   ],
-
   return (
     <Layout>
-
         title="Space Technology Solutions - Zion Tech Group"
         description="Revolutionary space technology solutions for the future. From resource mining to autonomous systems, explore the final frontier."
         keywords="space technology, space mining, AI space systems, brain-computer interface, autonomous vehicles, quantum space communications"
       />
       <main className="relative z-10">
-
+        {/* Hero Section */}
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
@@ -158,15 +218,27 @@ const SpaceTechnologyPage: React.FC = () => {
                 Pioneering the future of space exploration with cutting-edge technology and intelligent systems
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
-
+                </a>
+                <a 
+                  href="/contact" 
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
                 </Link>
+                <a
+                  href="/contact"
+
+
 
                 <a
                   href="/contact"
+
+
 
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
@@ -177,7 +249,14 @@ const SpaceTechnologyPage: React.FC = () => {
           </div>
         </div>
       </section>
-
+        {/* Space Capabilities */}
+        <section className="py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900">;
+          <div className="max - w-6xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -190,18 +269,20 @@ const SpaceTechnologyPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {spaceCapabilities.map((capability, index) => (
                 <motion.div
-
+                  key={capability.title}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-purple-500/20 rounded-lg mr-3">
-
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
                   <p className="text-gray-300">{capability.description}</p>
                 </motion.div>
-
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -214,20 +295,46 @@ const SpaceTechnologyPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {spaceServices.map((service, index) => (
                 <motion.div
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
 
-                >
+                  className={`relative bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border transition - all duration - 300 hover:scale - 105 ${
+                    service.popular;
+                      ? 'border - purple - 500 shadow - lg shadow - purple - 500 / 25';
+                      : 'border - gray - 700 hover:border - purple - 500';
+
+                  }`}
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
-
+                  )}
+                  <div className="text-center mb-6">
+                    <div className="inline-flex p-3 bg-purple-500/20 rounded-full mb-4">
+                      {service.icon}
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <div className="text-center mb-6">
+                    <div className="inline-flex p-3 bg-purple-500/20 rounded-full mb-4">
+                      {service.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
                     <div className="text-3xl font-bold text-purple-400 mb-2">
-
+                      {service.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       <span className="text-lg text-gray-400">/{service.period}</span>
                     </div>
                   </div>
@@ -235,6 +342,11 @@ const SpaceTechnologyPage: React.FC = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+
+
+                  </ul>
+                  <a 
+                    href="/contact" 
 
                         {feature  } catch (error) {
     console.error("Error:", error);
@@ -247,17 +359,14 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
                   </ul>
                   <a
                     href="/contact"
-
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
                   >
                     Get Started
                   </a>
                 </motion.div>
-
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -289,15 +398,27 @@ const SpaceTechnologyPage: React.FC = () => {
                 Join the space revolution and be part of humanity's next great adventure
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Space Journey
-
+                </a>
+                <a 
+                  href="/contact" 
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Space Journey
                 </Link>
+                <a
+                  href="/contact"
+
+
 
                 <a
                   href="/contact"
+
+
 
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
@@ -310,7 +431,13 @@ const SpaceTechnologyPage: React.FC = () => {
       </main>
     </Layout>
   )
+}
+export default SpaceTechnologyPage;
 
+
+export default SpaceTechnologyPage,;
+;
+;
 export default SpaceTechnologyPage,
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
@@ -328,7 +455,6 @@ export default SpaceTechnologyPage,
                 </a>;
                 <a;
                   href="/contact";
-                  className="px - 8 py - 4 border - 2 border - purple - 400 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105";
                 >;
                   Schedule Consultation;
                 </a>;
@@ -337,8 +463,11 @@ export default SpaceTechnologyPage,
           </div>;
         </section>;
       </main>;
-    </Layout>;
-  );
-},;
-export default SpaceTechnologyPage;
+    </Layout>);
+},
+export default SpaceTechnologyPage,
+;
+
+
+},
 

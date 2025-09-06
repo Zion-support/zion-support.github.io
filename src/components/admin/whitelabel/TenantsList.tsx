@@ -1,10 +1,4 @@
-
-
-        .order('created_at', { ascending: false })
-
 }
-}
-
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -231,4 +225,3 @@ export function TenantsList() {;
   );
 }
 ;
-

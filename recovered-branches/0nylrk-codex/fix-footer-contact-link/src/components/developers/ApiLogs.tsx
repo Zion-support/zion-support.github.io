@@ -1,4 +1,29 @@
 
+export function ApiLogs() {
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+  // Load logs on mount and when pagination changes
+  useEffect(() => {
+    fetchApiLogs(pageSize, currentPage * pageSize)
+  }, [pageSize, currentPage]);
+
+  const handleRefresh = () => {
+    fetchApiLogs(pageSize, currentPage * pageSize)
+  }
+  // Helper to format the timestamp
+  const formatTimestamp = (timestamp: string) => {
+    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
+  }
+export function ApiLogs() {;
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+
+export function ApiLogs() {;
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
 
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -13,7 +38,7 @@ export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
-
+  
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
@@ -25,8 +50,6 @@ export function ApiLogs() {
   // Helper to format the timestamp
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
-  },
-
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -38,23 +61,68 @@ export function ApiLogs() {
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
     }
+import { useState, useEffect } from "react",;
+import { format } from "date-fns",;
+import { List, RefreshCw } from "lucide-react",;
+import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Badge } from "@/components/ui/badge",;
+export function ApiLogs() {;
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),;
+  const [pageSize, setPageSize] = useState(25),;
+  const [currentPage, setCurrentPage] = useState(0),;
+  // Load logs on mount and when pagination changes;
+  useEffect(() => {;
+    fetchApiLogs(pageSize, currentPage * pageSize);
+  }, [pageSize, currentPage]),;
+  const handleRefresh = () => {;
+    fetchApiLogs(pageSize, currentPage * pageSize);
+  },;
+  // Helper to format the timestamp;
+  const formatTimestamp = (timestamp: string) => {;
+    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss');
+  },;
+  // Helper to get badge color based on status code;
+  const getStatusBadge = (statusCode: number) => {;
+    if (statusCode >= 200 && statusCode < 300) {;
+      return <Badge className="bg-green-700">Success</Badge>;
+    } else if (statusCode >= 400 && statusCode < 500) {;
+      return <Badge className="bg-amber-700">Client Error</Badge>;
+    } else if (statusCode >= 500) {;
+      return <Badge className="bg-red-700">Server Error</Badge>;
+    } else {;
+      return <Badge className="bg-blue-700">Other</Badge>;
+    }
+  },;
+  // Calculate pagination info;
+  const totalPages = Math.ceil(totalLogs / pageSize),;
+  const hasNextPage = currentPage < totalPages - 1,;
+  const hasPrevPage = currentPage > 0;
+  return (;
 
+    <Card className="bg-zinc-900 border-zinc-800 text-white">;
+      <CardHeader>;
+        <CardTitle className="text-xl flex items-center">;
+          <List className="mr-2" size={20} /> API Request Logs;
+        </CardTitle>;
+        <CardDescription className="text-zinc-400">;
+          View logs of requests made using your API keys.;
+        </CardDescription>;
+      </CardHeader>;
+
+      <CardContent>;
+        <div className="flex justify-between items-center mb-6">;
+          <div className="flex items-center space-x-2">;
+            <span className="text-sm text-zinc-400">Show</span>;
+  const hasNextPage = currentPage < totalPages - 1;
+  const hasPrevPage = currentPage > 0;
   return (
-    <Card className="bg-zinc-900 border-zinc-800 text-white">
-      <CardHeader>
-        <CardTitle className="text-xl flex items-center">
-          <List className="mr-2" size={20} /> API Request Logs
-        </CardTitle>
-        <CardDescription className="text-zinc-400">
-          View logs of requests made using your API keys.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="flex justify-between items-center mb-6">
-          <div className="flex items-center space-x-2">
-            <span className="text-sm text-zinc-400">Show</span>
             <Select
-
+              value={pageSize && pageSize.toString()}
+              onValueChange={(value) => {;
+                setPageSize(Number(value));
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -133,12 +201,10 @@ export function ApiLogs() {
             </Select>;
             <span className="text-sm text-zinc-400">per page</span>;
           </div>;
-
           <Button variant="outline" size="sm" onClick={handleRefresh}>;
             <RefreshCw size={14} className="mr-1" /> Refresh;
           </Button>;
         </div>;
-
         <div className="overflow-x-auto">;
           <table className="w-full border-collapse">;
             <thead>;
@@ -161,7 +227,6 @@ export function ApiLogs() {
                     </div>;
                   </td>;
                 </tr>;
-              ) : logs && logs.length === 0 ? (;
                 <tr>;
                   <td colSpan={6} className="text-center py-12">;
                     <div className="flex flex-col items-center">;
@@ -173,51 +238,10 @@ export function ApiLogs() {
                     </div>;
                   </td>;
                 </tr>;
-              ) : (;
-                logs && logs.map((log) => (;
-                  <tr key={log && log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">;
-                    <td className="px-4 py-3 text-sm">{formatTimestamp(log && log.created_at)}</td>;
-                    <td className="px-4 py-3">;
-                      <Badge
-                        variant="outline"
-                        className={
-                          log && log.method === 'GET' 
-                            ? "border-green-500 text-green-400" 
-                            : log && log.method === 'POST' 
                             ? "border-blue-500 text-blue-400"
                             : log && log.method === 'PUT'
                             ? "border-yellow-500 text-yellow-400"
                             : "border-red-500 text-red-400"
-
-                        }>;
-                        {log && log.method}
-                      </Badge>;
-                    </td>;
-                    <td className="px-4 py-3 font-mono text-sm text-zinc-400">{log && log.endpoint}</td>;
-                    <td className="px-4 py-3">;
-                      <div className="flex items-center">;
-                        <span className="font-mono mr-2">{log && log.status_code}</span>;
-                        {getStatusBadge(log && log.status_code)}
-                      </div>;
-                    </td>;
-                    <td className="px-4 py-3 text-sm">;
-                      {log && log.response_time_ms ? `${log && log.response_time_ms}ms` : '-'}
-                    </td>;
-                    <td className="px-4 py-3 text-sm">{log && log.ip_address || '-'}</td>;
-                  </tr>;
-                ));
-              )}
-            </tbody>;
-          </table>;
-        </div>;
-
-        {logs && logs.length > 0 && (;
-          <div className="mt-4 flex justify-between items-center">;
-            <div className="text-sm text-zinc-500">;
-              Showing {currentPage * pageSize + 1} to {Math && Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs;
-            </div>;
-            <div className="flex space-x-2">;
-
               <Button
                 variant="outline"
                 size="sm"
@@ -237,4 +261,8 @@ export function ApiLogs() {
             </div>;
           </div>;
         )}
-
+import { useState, useEffect } from './react';
+import { format } from './date - fns';
+import { List, RefreshCw } from './lucide-react';
+import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
+;

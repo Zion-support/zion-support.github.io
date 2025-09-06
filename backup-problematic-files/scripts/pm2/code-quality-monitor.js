@@ -797,7 +797,6 @@ monitor.run().catch(error => {,;
       }),
 ,
       if (status.trim()) {,
-        this.log('  Uncommitted changes detected'),
         return false
       };
 ,
@@ -855,10 +854,6 @@ monitor.run().catch(error => {,;
 ,
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,
-          this.log('\n Suggesting to run lint-fixer to auto-fix issues')
-        };
-      } else {,
-        this.log(' Excellent! No code quality issues found!')
       };
 
     } catch (error) {,

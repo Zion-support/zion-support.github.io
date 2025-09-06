@@ -191,7 +191,6 @@ export default function Signup() {;
                           <div className="relative">;
                             <Input;
                               type={showConfirmPassword ? "text" :"password"}
-                              placeholder="";
                               className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple";
                               {...field}
                               autoComplete="new-password";

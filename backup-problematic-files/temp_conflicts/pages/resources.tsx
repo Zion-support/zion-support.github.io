@@ -10,7 +10,6 @@ export default function ResourcesPage() {;
       <div className="container mx-auto px-4 py-16 text-white">;
         <div className="text-center max-w-3xl mx-auto">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Resources</h1>;
-          <p className="mt-3 text-gray-300">Docs, guides, and references to help you evaluate and deploy faster. Contact:+1 302 464 0950  kleber@ziontechgroup.com</p>;
         </div>;
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
           {[;
@@ -25,7 +24,6 @@ export default function ResourcesPage() {;
               <div className="text-sm text-gray-400">Resource</div>;
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>;
               <p className="mt-1 text-gray-300">{it.blurb}</p>;
-              <div className="mt-3 text-cyan-300">Open </div>;
             </Link>;
           ))}
         </div>;

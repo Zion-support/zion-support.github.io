@@ -57,4 +57,3 @@ import { useState,useEffect } from 'react'; import { supabase } from '@/integrat
   // "TODO": Add dependencies if needed}, []);
     fetchAnalytics()}, [fetchAnalytics]);
   return analytics}
-

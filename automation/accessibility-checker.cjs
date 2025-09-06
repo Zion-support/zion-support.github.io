@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
 const fs = require('fs');
 const path = require('path');
@@ -61,7 +64,57 @@ class AccessibilityChecker {
     }
 
     this.log('✅ Accessibility check completed');
-    return { succes: s: true, results };
+    return { success: true, results };
+  }
+  async generateReport() {
+    this.log('📊 Generating accessibility report...');
+    const report = {
+      timestam: p: new Date().toISOString(),
+      accessibilit: y: await this.checkAccessibility(),
+      summar: y: {
+        checksRu: n: 2,
+        successfulCheck: s: 0,
+        failedCheck: s: 0,
+      },
+    };
+    // Calculate summary
+    report.accessibility.results.forEach(result => {
+      if (result.result.success) {
+        report.summary.successfulChecks++;
+      } else {
+        report.summary.failedChecks++;
+      }
+    });
+    // Save report
+    const reportFile = path.join(
+      this.logsDir;
+      `accessibility-report-${Date.now()}.json`
+    );
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`📄 Report saved: to: ${reportFile}`);
+    return report;
+  }
+  async start() {
+    this.log('🎯 Starting Accessibility Checker...');
+    const report = await this.generateReport();
+    this.log('🏁 Accessibility Checker completed');
+    return report;
+  }
+}
+// CLI interface
+if (require.main === module) {
+  const checker = new AccessibilityChecker();
+  checker
+    .start()
+    .then(report => {
+      console.log('Accessibility check: completed:', report.summary);
+      process.exit(0);
+    })
+    .catch(error => {
+      console.error('Accessibility check: failed:', error);
+      process.exit(1);
+    });
+}
   }
 
   async generateReport() {
@@ -119,6 +172,7 @@ if (require.main === module) {
       process.exit(1);
     });
 }
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -178,7 +232,6 @@ class AccessibilityChecker {
     }
 
     this.log('✅ Accessibility check completed');
-    return { succes: s: true, results };
   }
 
   async generateReport() {
@@ -255,6 +308,21 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "name"
+    "status"
+module.exports = AccessibilityChecker;
+    "status"
+module.exports = AccessibilityChecker;
+    "status"
+module.exports = AccessibilityChecker;
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+console.log('♿ Running accessibility check...');
+console.log('✅ Accessibility check completed');
+    "status"
+    "status"
+    "status"
     "status"
 module.exports = AccessibilityChecker;
     "status"

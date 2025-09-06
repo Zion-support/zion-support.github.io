@@ -1,16 +1,3 @@
-
-
-import React, { useState } from 'react',
-import { Button } from "@/components/ui/button",
-import { Loader2 } from 'lucide-react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useMessaging } from "@/context/MessagingContext",
-import { toast } from "@/hooks/use-toast",
-import { ResumeSelector, ResumeOption } from "../resume-selector",
-import { MessageTab } from "./MessageTab",
-import { ResumeTab } from "./ResumeTab",
-
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,
@@ -23,10 +10,8 @@ interface ApplyFormProps {
 
 }
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
-
   const [message, setMessage] = useState(
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
-
   ),
   const [proposalLink, setProposalLink] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -38,14 +23,13 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     setSelectedResume(resume),
     setSelectedResumeId(resume.id)
   },
-
+  
   const handleApply = async () => {
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before applying."
         variant: "destructive"
-
     }
     try {
       setIsSubmitting(true)
@@ -155,7 +139,6 @@ if ( {) {
       if (onApplySuccess) {
         await onApplySuccess(job.id)
       }
-
       }),
       return
     }
@@ -260,11 +243,11 @@ if ( {) {
           type: selected_resume.type;
         } : null;
       }
-
+      
       toast({
         title: "Application sent",
         description: `Your application for "${job.title}" has been sent.`}),
-
+      
       onClose()
     } catch (error) {
       logErrorToProduction('Failed to send application:', { data: error })
@@ -275,6 +258,50 @@ if ( {) {
       })
     } finally {
       setIsSubmitting(false)
+
+      let fullMessage = message;
+
+import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Loader2 } from 'lucide-react'import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useJobApplications } from "@/hooks/useJobApplications";
+import { useMessaging } from "@/context/MessagingContext";
+import { toast } from "@/hooks/use-toast";
+import { ResumeSelector, ResumeOption } from "../resume-selector";
+import { MessageTab } from "./MessageTab";
+import { ResumeTab } from "./ResumeTab";
+import { Job } from "./types";
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ApplyFormProps {;
+  job: Job,;
+  onClose: () => void,;
+  onApplySuccess?: (jobId: string,) => Promise<void>;
+}
+
+export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormProps) {;
+  const { createConversation } = useMessaging();
+  const { applyToJob } = useJobApplications();
+  const [message, setMessage] = useState(;
+    `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
+  );
+  const [proposalLink, setProposalLink] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [activeTab, setActiveTab] = useState<string>("message");
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+
+  const handleResumeSelected = (resume: ResumeOption) => {;
+    setSelectedResume(resume);    setSelectedResumeId(resume && resume.id);
+  };
+
+  const handleApply = async () => {;
+    if (!message && message.trim()) {;
+      toast({;
+        title: "Message required",;
+        description: "Please enter a message before applying.",;
+        variant: "destructive";
+      });
+      return;
     }
 
   return (
@@ -288,7 +315,6 @@ if ( {) {
             Resume
           </TabsTrigger>
         </TabsList>
-
             message = {message,}
             setMessage = {setMessage,}
             proposalLink = {proposalLink,}
@@ -296,6 +322,8 @@ if ( {) {
           />
         </TabsContent>
 
+
+        
         <TabsContent value="message">
           <MessageTab 
 ;
@@ -314,30 +342,28 @@ if ( {) {
       setIsSubmitting(false);
     }
   };
+  return (;
+    <>;
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;
+          <TabsTrigger value="message" className="flex-1">;
+            Message;
+          </TabsTrigger>;
+          <TabsTrigger value="resume" className="flex-1">;
+            Resume;
+          </TabsTrigger>;
+        </TabsList>;
+        <TabsContent value="message">;
 
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold">Apply to {job.title}</h2>
-        <Button variant="outline" onClick={onClose}>
-          Close
-        </Button>
-      </div>
 
-      <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="message">Message</TabsTrigger>
-          <TabsTrigger value="resume">Resume</TabsTrigger>
-        </TabsList>
-
-        <TabsContent value="message" className="space-y-4">
-          <MessageTab
+          <MessageTab;
             message={message}
-            onMessageChange={setMessage}
-            job={job}
+            setMessage={setMessage}
+            proposalLink={proposalLink}
+            setProposalLink={setProposalLink}
           />
         </TabsContent>
-
+        
         <TabsContent value="resume">
           <ResumeTab 
             onResumeSelected={handleResumeSelected}
@@ -345,7 +371,6 @@ if ( {) {
           />
         </TabsContent>
       </Tabs>
-
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
         <Button
           type="button"
@@ -356,7 +381,6 @@ if ( {) {
           Cancel
         </Button>
         <Button
-
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
         >
           {isSubmitting ? (
@@ -367,7 +391,6 @@ if ( {) {
           ) : (
             'Submit Application'
           )}
-
 if (!applicationSuccess) {
 }//Format message with proposal link if provided let fullMessage = message
 if (proposalLink) {'
@@ -420,11 +443,9 @@ return (<> <Tabs value= {
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application')
 }</Button> </div> </>)
 }'"}
-
         </Button>;
       </div>;
     </>;
   );
 }
 ;
-

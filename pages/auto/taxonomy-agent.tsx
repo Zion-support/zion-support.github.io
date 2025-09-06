@@ -1,5 +1,4 @@
 
-
 const TaxonomyAgent: NextPage = () => {
   return (
     <div>
@@ -10,9 +9,21 @@ const TaxonomyAgent: NextPage = () => {
       <main className="space-y-4">
         <h1 className="text-2xl font-bold">AI Taxonomy Tagger Agent</h1>
         <p>Suggests topic tags for each page to improve discovery and navigation.</p>
+      </main>
+    </div>
+  )
+}
+export default TaxonomyAgent;
 
+
+
+        <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
       </main>
     </div>
   )
 },
+
+export default TaxonomyAgent,;
+export default TaxonomyAgent,
+
 

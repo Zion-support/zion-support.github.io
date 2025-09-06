@@ -1,31 +1,24 @@
 
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
-
   <nav
-
     {...props}
   />
 )
-
 >(({ className, ...props }, ref) => (
   <ul
     ref={ref}
-
     {...props}
 />
 ))
-
 >(({ className, ...props }, ref) => (
-
 ))
-
 interface PaginationButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
   isActive?: boolean
 }
 const PaginationLink = ({
+
 
   ...props
 }: PaginationLinkProps) => (
@@ -34,16 +27,15 @@ const PaginationLink = ({
     className={cn(
       buttonVariants({
 
+
+
         variant: isActive ? "outline" : "ghost",
-
+        variant: isActive ? "outline" : "ghost",
         size}),
-
       className
-    )}
     {...props}
   />
 )
-
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page, isActive, className, ...props }, ref) => (
     <button
@@ -53,8 +45,8 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
 
+
         className;
-      )}
       {...props}
     >;
       {page}
@@ -76,7 +68,6 @@ const PaginationPrevious = ({
     <span>Previous</span>
   </PaginationLink>
 )
-
 const PaginationNext = ({
   className
   ...props
@@ -91,7 +82,6 @@ const PaginationNext = ({
     <ChevronRight className="h-4 w-4&quot; />
   </PaginationLink>
 )
-
 const PaginationEllipsis = ({
   className
   ...props
@@ -105,4 +95,3 @@ const PaginationEllipsis = ({
     <span className="sr-only&quot;>More pages</span>
   </span>
 )
-

@@ -1,9 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import fs from 'fs';
-import path from 'path';
 
-      const { userId = 'demo-user' } = req.query;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
       const user = users[userId as string];
       return res.status(200).json({ progress: user?.progress ?? {} });
     }
@@ -15,45 +14,6 @@ import path from 'path';
         percent
       } = req.body |{}
       if (!courseId)
-        return res.status(400).json({ error: 'courseId required' });
-      const user = users[userId] |{
-        userId
-        name: userId
-        slug: userId
-        certifications: []
-        badges: []
-        boostInSearch: false
-        progress: {}
-      }
-      const courseProgress = user.progress[courseId] |{
-        completedLessons: []
-        percent: 0
-        completed: false
-      }
-      if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {
-        courseProgress.completedLessons.push(lessonId);
-        certifications: [],
-        badges: [],
-        boostInSearch: false,
-        progress: {},
-      };
-      const courseProgress = user && user.progress[courseId] || {
-        completedLessons: [],
-        percent: 0,
-        completed: false,
-      };
-      if (lessonId && !courseProgress && courseProgress.completedLessons.includes(lessonId)) {
-        courseProgress && courseProgress.completedLessons.push(lessonId);
-      }
-      if (typeof percent === 'number') {
-        courseProgress.percent = Math.max(courseProgress.percent, percent);      }
-
-const usersPath = path.join(process.cwd(), 'datalearnusers.json');
-function readUsers() {
-  return JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
-}
-
-
   }
 
 
@@ -61,15 +21,7 @@ function readUsers() {
 }
         course_progress.completed_lessons.push (lesson_id);
       }
-      if (typeof percent === 'number') {
-        courseProgress.percent = Math.max(courseProgress.percent, percent);
-      }
-
-      user.progress[courseId] = courseProgress;
-      users[userId] = user;
-      writeUsers(users);
-      return res.status(200).json({ ok: true, progress: courseProgress });
-    }
-
-  }
-
+      // Check condition
+if ( {) {
+  $2
+}

@@ -18,3 +18,4 @@ console.log('====')
       "recommendations"
     this.log(`Report saved "to"`)
       this.log(` Enhanced automation suite "failed"`)
+      this.log(` Enhanced automation suite "failed"`)

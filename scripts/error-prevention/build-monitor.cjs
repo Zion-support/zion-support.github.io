@@ -15,12 +15,10 @@ class BuildMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
-    
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
       console.log('Running build check...');
-      
       const child = spawn('npm', ['run', 'build'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -33,7 +31,6 @@ class BuildMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
-
       child.on('close', (code) => {}
         if ( {})
           console.log('Build check passed ✓')) {}
@@ -51,13 +48,11 @@ class BuildMonitor {}
   async attemptBuildFix() {}
     try {}
       console.log('Attempting to fix build issues...');
-      
       // Clean build directory;
       const cleanChild = spawn('npm', ['run', 'clean'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
-
       cleanChild.on('close', (code) => {}
         if ( {})
           console.log('Clean completed, retrying build...')) {}
@@ -93,4 +88,3 @@ if ( {})
     process.exit(0)}
 });
   monitor.start().catch(console.error)};
-module.exports = BuildMonitor;

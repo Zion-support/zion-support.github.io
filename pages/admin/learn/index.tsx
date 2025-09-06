@@ -1,3 +1,8 @@
+import { useEffect, useState } from 'react',;
+;
+export default function AdminLearn() {
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
+  const [message, setMessage] = useState(''),
 
 
 import { useEffect, useState } from 'react';
@@ -15,7 +20,18 @@ export default function AdminLearn() {
       headers: { 'Content-Type': 'application/json' },
 
       body: JSON.stringify(form)
+    })
+    const data = await resp.json()
+    if (data.ok) setMessage('Saved')
+    else setMessage('Error: ' + (data.error |'unknown'))
 
+  }
+      body: JSON.stringify(form)
+
+    }),
+    const data = await resp.json(),
+    if (data.ok) setMessage('Saved'),
+    else setMessage('Error: ' + (data.error || 'unknown'))
 import { useEffect, useState } from 'react';
 export default function AdminLearn(req, res) {
   try {
@@ -34,10 +50,8 @@ export default function AdminLearn(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
-
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>
@@ -61,16 +75,18 @@ export default function AdminLearn(req, res) {
       </div>
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
 
+    </div>
+  );
+};
+
       {message && <div className="text-sm">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
     </div>
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-

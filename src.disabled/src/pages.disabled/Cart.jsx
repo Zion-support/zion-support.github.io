@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface CartProps {
   // Add props here as needed
-
 export default function Cart({ }: CartProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function Cart({ }: CartProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

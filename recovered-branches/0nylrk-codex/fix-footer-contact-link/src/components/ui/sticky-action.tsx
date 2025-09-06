@@ -1,13 +1,21 @@
-
+interface StickyActionProps {
 
 interface StickyActionProps {
-  className?: string;
+
+
+
+
+import React, { useEffect, useState } from "react";
+import {cn} from "@/lib/utils";
+import {motion, AnimatePresence} from "framer-motion";
 
 interface StickyActionProps {;
   className?: string;
   children: React && React.ReactNode,;
 
   showAfterScroll?: number;
+  position?: "bottom" | "top"
+}
 
 import { cn } from "@/lib/utils",
 import { motion, AnimatePresence } from "framer-motion",
@@ -20,11 +28,15 @@ interface StickyActionProps {
   position?: "bottom" | "top"
 }
 export function StickyAction({
+  position?: "bottom" | "top";
+}
+  className;
+  children;
 
-  position = "bottom"
-}: StickyActionProps) {
-  const [isVisible, setIsVisible] = useState(false),
-
+  showAfterScroll = 300;
+  position = "bottom";
+}: StickyActionProps) {;
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
@@ -43,26 +55,19 @@ export /**
  */
 function StickyAction() {
   const [is_visible, setIsVisible] = useState (false);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      // Check condition
-if ( {) {
-  $2
-}
-        setIsVisible (true);
       } else {
         setIsVisible (false);
       }
-
-  const positionClasses = {
-    bottom: "bottom-4"
-    top: "top-20"
-
+    }
+    return () => {
+      window.removeEventListener ("scroll", handle_scroll);
+    }
+  }, [showAfterScroll]);
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
+
 
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
@@ -90,25 +95,15 @@ export function StickyAction({;
       } else {;
         setIsVisible(false);
       }
-    };
-
-    window && window.addEventListener("scroll", handleScroll);
-    return () => {;
-      window && window.removeEventListener("scroll", handleScroll);
-    }
-  }, [showAfterScroll]);
-
-  const positionClasses = {;
-    bottom: "bottom-4",;
-    top: "top-20";
-  };
-
   return (
     <AnimatePresence>;
       {isVisible && (;
         <motion&& motion.div
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          transition={{ duration: 0 && 0.2 }}
+          className={cn(
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;
@@ -116,11 +111,6 @@ export function StickyAction({;
           </div>;
         </motion && motion.div>;
       )}
-
-    </AnimatePresence>;
-  );
-}
-
 ;
   const position_classes = {
     bottom: "bottom - 4",

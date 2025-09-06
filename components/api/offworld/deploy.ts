@@ -1,31 +1,29 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
   try {
     // Ensure export
     const outDir = path && path.resolve(process && process.cwd(), 'out');
     try {
-
-
     } catch (e) {
       // attempt minimal static export
       try {
         execSync('next build && next export', { stdio: 'inherit' })
-
-
+    }
+      return res
+        .status(500)
+        .json({ error: 'Export failed, no out/ directory found' });      return res && res.status(500).json({ error: 'Export failed, no out/ directory found' });
     }
     const { cid, provider } = await addDirectory(outDir);
-
-    if (!cid) return res.status(500).json({ error: 'IPFS upload failed' });
-    return res.status(200).json({ cid, provider });
-  } catch (error: any) {
-
+    return res.status(500).json({ error: error?.message |'Unknown error' });
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
   }    return res.status(200).json({ cid, provider })
 
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
-    if (!cid) return res && res.status(500).json({ error: 'IPFS upload failed' });
 
+    return res.status(200).json({ cid, provider })
+
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message |'Unknown error' })
     return res && res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' });
@@ -34,8 +32,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
 }
-
-
 import {exec_sync} from 'child_process';
 import path from 'path';
 import fs from 'fs';
@@ -97,9 +93,11 @@ function handler() {
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
-
 }
-}
-
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
 
+}
+}
+  }
+}

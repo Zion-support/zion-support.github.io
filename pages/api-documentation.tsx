@@ -1,4 +1,3 @@
-
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function APIDocumentationPage() {
@@ -20,6 +19,8 @@ export default function APIDocumentationPage() {
     </Layout>;
   );
 
+}
+import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 export default function APIDocumentationPage() {
@@ -55,7 +56,19 @@ export default function APIDocumentationPage(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
   }
 }
 ;
+
 

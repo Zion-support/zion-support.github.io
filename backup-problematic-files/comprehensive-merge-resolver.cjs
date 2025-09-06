@@ -110,6 +110,7 @@ console.log('� Starting Comprehensive Merge Conflict Resolver...')
       console.log('\n Failed to merge "branches")
   console.error(' Merge conflict resolution "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
 }
 
 if (require.main === module) {

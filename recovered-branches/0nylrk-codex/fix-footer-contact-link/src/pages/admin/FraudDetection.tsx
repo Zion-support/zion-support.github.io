@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -6,6 +5,14 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from "@/components/ui/button",
 import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client";
+import { FraudFlag, FraudStats } from "@/types/fraud";
+// Import refactored components
+
+import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
+import { supabase } from "@/integrations/supabase/client",
+import { FraudFlag, FraudStats } from "@/types/fraud",
+
 
 // Import refactored components
 import {
@@ -14,10 +21,6 @@ import {
   FraudFlagsTable,
   FraudTabContent
 } from "@/components/admin/fraud-detection",
-
-  const [statusFilter, setStatusFilter] = useState<string | null>(null),
-  const [severityFilter, setSeverityFilter] = useState<string | null>(null),
-  const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
 
   const [stats, setStats] = useState<FraudStats>({
 
@@ -34,7 +37,6 @@ import {
       const { data, error } = await supabase
         .from("fraud_flags")
         .select("*")
-
       // Calculate stats
       const newStats: FraudStats = {
         total_flags: data?.length |0
@@ -52,7 +54,7 @@ import {
         variant: "destructive"})
     } finally {
       setIsLoading(false)
-
+    }
     }
     // Apply status filter
     if (statusFilter) {
@@ -66,20 +68,18 @@ import {
     if (contentTypeFilter) {
       result = result.filter((flag) => flag.content_type === contentTypeFilter)
     }
-
       toast({
         title: "Flag updated"
         description: `Action '${action}' was applied successfully.`})
       // Refresh the data
       fetchFraudFlags()
     } catch (error) {
-      console.error("Error updating fraud flag:", error);
+      console.error("Error updating fraud flag:", error),
       toast({
         title: "Error"
         description: "Failed to update flag"
         variant: "destructive"})
     }
-
   const resetFilters = () => {
     setSearchQuery("");
     setStatusFilter(null);
@@ -103,7 +103,6 @@ import {
             </p>
           </div>
           <div className="mt-4 md:mt-0">
-
 ;
     setFilteredFlags(result);
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),;
@@ -162,7 +161,6 @@ import {
             <Button;
               onClick={fetchFraudFlags} ;
               className="bg-zion-purple hover:bg-zion-purple-light";
-
               disabled={isLoading}
             >
               Refresh Data
@@ -178,7 +176,6 @@ import {
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>
-
           <TabsContent value="all" className="mt-6">
 
       toast({;
@@ -418,16 +415,14 @@ if (throw error) {
         {/* Stats Cards */}
         <FraudStatsCards stats={stats} />;
         <Tabs default_value="all" className="mb - 8">;
+        .eq("id", flagId);
+      if (error) throw error;
           <TabsList>;
             <TabsTrigger value="all">All Flags</TabsTrigger>;
             <TabsTrigger value="pending">Pending Review</TabsTrigger>;
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>;
             <TabsTrigger value="actioned">Actioned</TabsTrigger>;
           </TabsList>;
-
-          <TabsContent value="all" className="mt-6">;
-          <TabsContent value="all" className="mt - 6">;
-
             {/* Search and Filters */}
             <FraudFilters;
               search_query={search_query}
@@ -438,10 +433,6 @@ if (throw error) {
               setSeverityFilter={setSeverityFilter}
               contentTypeFilter={contentTypeFilter}
               setContentTypeFilter={setContentTypeFilter}
-
-            />;
-
-
             {/* Flags Table */}
             <Card>;
               <CardContent className="p-0">;
@@ -451,21 +442,3 @@ if (throw error) {
                   hasFilters={hasFilters}
                   resetFilters={resetFilters}
                   onAction={handleAction}
-                />
-              </CardContent>
-            </Card>
-          </TabsContent>
-          <TabsContent value="pending">
-            <FraudTabContent tabValue="pending" />
-          </TabsContent>
-          <TabsContent value="dangerous">
-            <FraudTabContent tabValue="dangerous" />
-          </TabsContent>
-          <TabsContent value="actioned">
-            <FraudTabContent tabValue="actioned" />
-          </TabsContent>
-        </Tabs>
-      </div>
-    </AppLayout>
-  )
-

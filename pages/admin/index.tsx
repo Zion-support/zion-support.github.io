@@ -1,3 +1,5 @@
+import Link from 'next/link',;
+import Link from 'next/link';
 
 
 export default function AdminIndex() {
@@ -8,4 +10,9 @@ export default function AdminIndex() {
         <li><Link href="/admin/partners"><a className="text-blue-600 underline">Partners</a></Link></li>
       </ul>
     </div>
-
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

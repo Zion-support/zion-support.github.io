@@ -298,4 +298,3 @@ if ( {})
      {}
     const scanner = new SecurityScanner}(;);
     scanner.run().catch(console.error)};
-module.exports = SecurityScanner;

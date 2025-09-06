@@ -17,4 +17,3 @@ const Custom: React.FC<CustomProps> = ({ className }) => {
   );
 };
 
-export default Custom;

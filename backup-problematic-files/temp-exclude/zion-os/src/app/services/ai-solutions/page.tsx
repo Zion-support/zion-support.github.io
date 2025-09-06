@@ -39,7 +39,6 @@ const aiServices:AIService[] = [;
     pricing:"Starting at $499/month",;
     startingPrice:499,;
     contactLink:"mailto:kleber@ziontechgroup.com?subject=ZionGPT%20Enterprise%20Inquiry",;
-    icon:"",;
     features:[;
       "Custom knowledge base training",;
       "Multi-language support (100+ languages)",;
@@ -82,7 +81,6 @@ const aiServices:AIService[] = [;
     pricing:"Starting at $199/month",;
     startingPrice:199,;
     contactLink:"mailto:kleber@ziontechgroup.com?subject=AI%20Content%20Generation%20Inquiry",;
-    icon:"",;
     features:[;
       "AI-powered content creation",;
       "Brand voice consistency",;
@@ -125,7 +123,6 @@ const aiServices:AIService[] = [;
     pricing:"Starting at $599/month",;
     startingPrice:599,;
     contactLink:"mailto:kleber@ziontechgroup.com?subject=AI%20Analytics%20Inquiry",;
-    icon:"",;
     features:[;
       "Predictive analytics",;
       "Natural language queries",;
@@ -168,7 +165,6 @@ const aiServices:AIService[] = [;
     pricing:"Starting at $399/month",;
     startingPrice:399,;
     contactLink:"mailto:kleber@ziontechgroup.com?subject=AI%20Automation%20Inquiry",;
-    icon:"",;
     features:[;
       "Process mining and discovery",;
       "Workflow automation",;
@@ -225,7 +221,6 @@ export default function AISolutionsPage() {;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
                 {service.features.map((feature, index) => (;
                   <div key={index} className="flex items-center gap-2 text-sm">;
-                    <span className="text-green-400"></span>;
                     <span>{feature}</span>;
                   </div>;
                 ))}
@@ -238,7 +233,6 @@ export default function AISolutionsPage() {;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
                 {service.technicalSpecs.map((spec, index) => (;
                   <div key={index} className="flex items-center gap-2 text-sm">;
-                    <span className="text-blue-400"></span>;
                     <span>{spec}</span>;
                   </div>;
                 ))}
@@ -251,7 +245,6 @@ export default function AISolutionsPage() {;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
                 {service.useCases.map((useCase, index) => (;
                   <div key={index} className="flex items-center gap-2 text-sm">;
-                    <span className="text-yellow-400"></span>;
                     <span>{useCase}</span>;
                   </div>;
                 ))}
@@ -264,7 +257,6 @@ export default function AISolutionsPage() {;
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">;
                 {service.integration.map((integration, index) => (;
                   <div key={index} className="flex items-center gap-2 text-sm">;
-                    <span className="text-purple-400"></span>;
                     <span>{integration}</span>;
                   </div>;
                 ))}
@@ -295,17 +287,14 @@ export default function AISolutionsPage() {;
         <h2 className="text-3xl font-bold text-center">AI Capabilities Overview</h2>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
           <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10">;
-            <div className="text-3xl mb-3"></div>;
             <h3 className="font-semibold mb-2">Natural Language Processing</h3>;
             <p className="text-sm opacity-80">Advanced text analysis, generation, and understanding across multiple languages</p>;
           </div>;
           <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10">;
-            <div className="text-3xl mb-3"></div>;
             <h3 className="font-semibold mb-2">Computer Vision</h3>;
             <p className="text-sm opacity-80">Image and video analysis, object detection, and visual content understanding</p>;
           </div>;
           <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10">;
-            <div className="text-3xl mb-3"></div>;
             <h3 className="font-semibold mb-2">Predictive Analytics</h3>;
             <p className="text-sm opacity-80">Machine learning models for forecasting, trend analysis, and decision support</p>;
           </div>;
@@ -341,7 +330,6 @@ export default function AISolutionsPage() {;
           href="/services";
           className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-all font-semibold";
         >;
-           Back to All Services;
         </a>;
       </div>;
     </div>;
@@ -367,7 +355,6 @@ export default function AISolutionsPage() {;
 }<div> <h3 className="font-semibold mb-3 text-blue-400">Key Features</h3> <div className="grid grid-cols-1 sm:grid-cols-2 gap-2"> {
   service.features.map ( (feature, index) => (<div key= {
   index 
-}className="flex items-center gap-2 text-sm"> <span className="text-green-400"></span> <span> {
   feature 
 }</span> </div>) ) 
 }</div> </div> {
@@ -375,7 +362,6 @@ export default function AISolutionsPage() {;
 }<div> <h3 className="font-semibold mb-3 text-purple-400">Technical Specifications</h3> <div className="grid grid-cols-1 sm:grid-cols-2 gap-2"> {
   service.technicalSpecs.map ( (spec, index) => (<div key= {
   index 
-}className="flex items-center gap-2 text-sm"> <span className="text-blue-400"></span> <span> {
   spec 
 }</span> </div>) ) 
 }</div> </div> {
@@ -383,7 +369,6 @@ export default function AISolutionsPage() {;
 }<div> <h3 className="font-semibold mb-3 text-green-400">Use Cases</h3> <div className="grid grid-cols-1 sm:grid-cols-2 gap-2"> {
   service.useCases.map ( (useCase, index) => (<div key= {
   index 
-}className="flex items-center gap-2 text-sm"> <span className="text-yellow-400"></span> <span> {
   useCase 
 }</span> </div>) ) 
 }</div> </div> {
@@ -391,7 +376,6 @@ export default function AISolutionsPage() {;
 }<div> <h3 className="font-semibold mb-3 text-orange-400">Integration Options</h3> <div className="grid grid-cols-1 sm:grid-cols-2 gap-2"> {
   service.integration.map ( (integration, index) => (<div key= {
   index 
-}className="flex items-center gap-2 text-sm"> <span className="text-purple-400"></span> <span> {
   integration 
 }</span> </div>) ) 
 }</div> </div> {
@@ -405,9 +389,4 @@ export default function AISolutionsPage() {;
 }className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline" > Learn More </a> </div> </div>) ) 
 }</div> {
   /* AI Capabilities Overview */ 
-}<div className="space-y-6"> <h2 className="text-3xl font-bold text-center">AI Capabilities Overview</h2> <div className="grid grid-cols-1 md:grid-cols-3 gap-6"> <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10"> <div className="text-3xl mb-3"></div> <h3 className="font-semibold mb-2">Natural Language Processing</h3> <p className="text-sm opacity-80">Advanced text analysis, generation, and understanding across multiple languages</p> </div> <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10"> <div className="text-3xl mb-3"></div> <h3 className="font-semibold mb-2">Computer Vision</h3> <p className="text-sm opacity-80">Image and video analysis, object detection, and visual content understanding</p> </div> <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10"> <div className="text-3xl mb-3"></div> <h3 className="font-semibold mb-2">Predictive Analytics</h3> <p className="text-sm opacity-80">Machine learning models for forecasting, trend analysis, and decision support</p> </div> </div> </div> {
-  /* CTA Section */ 
-}<div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10"> <h2 className="text-3xl font-bold">Ready to Harness the Power of AI?</h2> <p className="text-xl opacity-80 max-w-2xl mx-auto"> Let's discuss how our AI solutions can transform your business operations and drive innovation. Get in touch for a personalized AI strategy consultation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="mailto:kleber@ziontechgroup.com?subject=AI%20Solutions%20Consultation" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-lg" > Schedule AI Consultation </a> <a href="tel:+13024640950" className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg" > Call: +1 302 464 0950 </a> </div> </div> {
-  /* Back to Services */ 
-}<div className="text-center"> <a href="/services" className="inline-block px-6 py-3 rounded-lg border border-white/20 text-white hover: bg-white/10 transition-all font-semibold" >  Back to All Services </a> </div> </div>) 
 }

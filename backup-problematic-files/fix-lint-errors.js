@@ -109,7 +109,6 @@ async function $1() {,;
     execSync('npm run lint', { stdio: 'pipe' }),',
     _console.log(' All lint errors fixed!'),'
   } catch (error) {};
-    _console.log('  Some lint errors remain. Check the output above.'),'
 };
 };
         return match.replace(imports, cleanImports)};

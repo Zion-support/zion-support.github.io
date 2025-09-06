@@ -1,48 +1,27 @@
-
-
   id: string;
   title: string;
   description: string;
   skills: string[];
   category: string;
   budget: {
-
-    min: number
-
-    max: number
+    min: number,
+    max: number;
   }
-  deadline: string
-}
+  deadline: string;
 
+}
+export interface TalentProfile {
   id: string;
   full_name: string;
   professional_title: string;
   bio?: string;
   skills: string[];
   years_experience: number;
-
-  hourly_rate?: number,
-  availability_type?: string;
-
-}
-
   talent_id: string;
   job_id: string;
   match_score: number;
-
-  matched_skills: string[],
-  created_at: string;
-
 }
-
-  talentId: string;
   score: number;
-
-  matchedSkills: string[]
-
-  reason?: string
-}
-
   id: string,;
   title: string,;
   description: string,;
@@ -79,6 +58,11 @@ export interface MatchResult {;
   score: number,;
   matchedSkills: string[];
   reason?: string;
+
 }
 ;
 
+
+export interface JobData {;
+
+}

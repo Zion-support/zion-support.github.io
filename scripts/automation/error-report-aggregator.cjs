@@ -131,4 +131,3 @@ class $1 {}
 ;
 // Run the error report aggregator;
 const aggregator = new ErrorReportAggregator();
-aggregator.run().catch(console.error);

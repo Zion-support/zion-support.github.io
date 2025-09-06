@@ -1,7 +1,3 @@
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-
 class AppImprovementAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -86,7 +82,6 @@ class AppImprovementAutomation {}
 });
       };
     };
-
     const reportPath = path.join(this.projectRoot, 'improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Improvement report generated: ${reportPath}`);
@@ -111,4 +106,3 @@ if (require.main === module) {}
   const automation = new AppImprovementAutomation();
   automation.run();
 };
-module.exports = AppImprovementAutomation;

@@ -1,5 +1,4 @@
 
-
 const CustomerSupportChatbot: NextPage = () => {
   return (
     <div>
@@ -17,4 +16,16 @@ const CustomerSupportChatbot: NextPage = () => {
   )
 
 },
+export default CustomerSupportChatbot,
+},
+
+},
+export default CustomerSupportChatbot,
+
+},
+export default CustomerSupportChatbot,
+},
+
+export default CustomerSupportChatbot,;
+export default CustomerSupportChatbot,
 

@@ -1,4 +1,3 @@
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
@@ -19,18 +18,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ]
       })
       const text = resp.choices?.[0]?.message?.content |'No response'
-
       return res.status(200).json({ text })
     }
     // Fallback without API key
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message ?? 'Coach error' })
-
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
   try {
     const api_key = process.env.OPENAI_API_KEY,
     // Check condition
@@ -51,7 +59,6 @@ if ( {) {
     }
     // Fallback without API key;
     return res.status (200).json ({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' });
-
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message ?? 'Coach error' });
   }
@@ -60,32 +67,9 @@ if ( {) {
 
 }
 ;
-    // Fallback without API key;
-    return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' });
-  } catch (error) {
-    return res.status(500).json({ error: e?.message ?? 'Coach error' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
 

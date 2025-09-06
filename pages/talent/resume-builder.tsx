@@ -1,14 +1,14 @@
 
-const ResumeBuilder: NextPage = () => {
-
+  const generateSummaryPrompt = useMemo(() => (
+    `Create a professional resume summary for a ${role.toLowerCase()} with ${experienceYears} years of experience in ${skills}. Tone: ${tone}.\n\nReturn markdown only.`
+  ), [role, experienceYears, skills, tone])
+  const improveSectionPrompt = (sectionName: string, content: string) => (
+    `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
   return (
     <div>
       <Head>
         <title>Resume Builder - Zion AI Marketplace</title>
       </Head>
-
-
-      <h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
       <section className="mb-8">
         <h2 className="text-lg font-semibold mb-2">Profile</h2>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -26,8 +26,6 @@ const ResumeBuilder: NextPage = () => {
           </label>
         </div>
       </section>
-
-
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Summary</h2>
@@ -35,15 +33,29 @@ const ResumeBuilder: NextPage = () => {
             <AIAssistant
               buttonLabel="Generate with AI"
               title="Generate Resume Summary"
-
+              defaultPrompt={generateSummaryPrompt  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onAccept={setSummary  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              authorizationToken={operatorToken  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             />
             <AIAssistant
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
 
+              defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
               onAccept={setSummary}
               authorizationToken={operatorToken}
-
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -59,7 +71,6 @@ const ResumeBuilder: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
             />
           </div>
         </div>
@@ -72,9 +83,9 @@ const ResumeBuilder: NextPage = () => {
             buttonLabel="Improve with AI"
             title="Improve Experience"
 
+            defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
             onAccept={setExperience}
             authorizationToken={operatorToken}
-
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -90,7 +101,6 @@ const ResumeBuilder: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
           />
         </div>
         <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
@@ -102,9 +112,9 @@ const ResumeBuilder: NextPage = () => {
             buttonLabel="Improve with AI"
             title="Improve Skills"
 
+            defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
-
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -120,7 +130,6 @@ const ResumeBuilder: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
           />
         </div>
         <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
@@ -129,4 +138,16 @@ const ResumeBuilder: NextPage = () => {
   )
 
 },
+export default ResumeBuilder,
+},
+
+},
+export default ResumeBuilder,
+
+},
+export default ResumeBuilder,
+},
+
+export default ResumeBuilder,;
+export default ResumeBuilder,
 

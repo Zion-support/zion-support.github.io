@@ -1,3 +1,12 @@
+export interface AdminAction {
+
+
+export interface AdminAction {;
+export interface AdminAction {
+
+
+
+export interface AdminAction {;
 
   id: string;
   case_id: string;
@@ -11,37 +20,20 @@
   status: 'pending' | 'executed' | 'failed',
 
 }
+export interface FraudDetectionResult {
+  is_fraud: boolean;
+}
 
+
+export interface FraudDetectionResult {;
   isFraud: boolean;
   confidence: number;
   reasons: string[];
-  suggestedActions: AdminActionType[]
-  metadata: Record<string, any>;
-}
-
   enabled: boolean;
   rules: {
     suspiciousActivity: {
       enabled: boolean;
 
-      threshold: number,
-    }
-    fake_profile: {
-      enabled: boolean;
-      threshold: number,
-    }
-    payment_fraud: {
-      enabled: boolean;
-      threshold: number,
-    }
-    spam: {
-      enabled: boolean;
-      threshold: number,
-    }
-  }
-  auto_actions: {
-    enabled: boolean;
-    actions: AdminActionType[];
 
     confidenceThreshold: number,
   };

@@ -131,7 +131,6 @@ const Innovations:NextPage = () => {;
         </div>;
         <div className="mt-8">;
           <Link href="/">;
-            <a className="text-indigo-700 font-semibold hover:underline"> Back to Home</a>;
           </Link>;
         </div>;
       </main>;

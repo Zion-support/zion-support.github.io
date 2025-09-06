@@ -1,9 +1,17 @@
 
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+
+export default function WhitepaperGeneratorRedirect() {;
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/tokenomics');
   }, [router]);
   return null;
+
+
+}
+
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -25,10 +33,8 @@ function WhitepaperGeneratorRedirect() {
 router.replace ('/tokenomics');
   }, [router]);
   return null;
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

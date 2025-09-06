@@ -1,7 +1,4 @@
-
-
-}
-}
+;
 
 import React, { useState } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams;
@@ -108,11 +105,15 @@ export default function ProjectRoom() {;
   );
 }
 }
+}
+}
+}
+;
+}
+}
 
 ;
 }
 }
   )
 }
-;
-

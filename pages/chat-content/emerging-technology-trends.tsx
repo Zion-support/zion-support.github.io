@@ -1,5 +1,4 @@
 
-
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const EmergingTechnologyTrends: NextPage = () => {
@@ -9,12 +8,38 @@ const EmergingTechnologyTrends: NextPage = () => {
         <title>EmergingTechnologyTrends - Zion Tech Solutions</title>
         <meta name="description" content="EmergingTechnologyTrends page" />
       </Head>
-
       <main>
         <h1>EmergingTechnologyTrends</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
-
   )
+}
+export default EmergingTechnologyTrends;
+
+},
+export default EmergingTechnologyTrends,
+
+
+      <main>;
+        <h1>EmergingTechnologyTrends</h1>;
+        <p>This page is under construction.</p>;
+      </main>;
+    </div>;
+  ),;
+};
+export default EmergingTechnologyTrends;
+
+
+import Head from 'next / head';
+      <main>;
+        <h1 > EmergingTechnologyTrends</h1>;
+        <p > This page is under construction.</p>;
+      </main>;
+    </div>),
+}
+;
+export default EmergingTechnologyTrends;
+;
+
 

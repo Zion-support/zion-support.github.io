@@ -15,3 +15,4 @@ const corruptedFiles = ['pages/docs/api-reference.tsx']
     "address"
     "site"
         <meta name="description" content="
+        <meta name="description" content="

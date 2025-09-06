@@ -60,4 +60,3 @@ function run() {}
 		};
 	};
 	console.log(`Repaired imports/exports in ${changed} of ${total} files.`)};
-run();

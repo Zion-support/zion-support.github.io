@@ -1,5 +1,3 @@
-
-module.exports = type ServiceItem = { id: string; title: string; description: string; category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps" | "Quantum Computing" | "Blockchain & Web3" | "IoT & Edge" | "Green Tech" | "Space Tech" | "BioTech & Health" | "FinTech & DeFi" | "Metaverse & AR/VR" | "Autonomous Systems" | "Digital Marketing" | "Business Intelligence" | "Supply Chain" | "Healthcare Tech" | "Education Tech" | "Legal Tech" | "Real Estate Tech"; price: string;'"'"
 import React from 'react';
 interface ExpandedServices2025Props {
   // Add props here as needed
@@ -11,4 +9,3 @@ export default function ExpandedServices2025({ }: ExpandedServices2025Props) {
       <p>This component is currently under development.</p>
     </div>
   );
-

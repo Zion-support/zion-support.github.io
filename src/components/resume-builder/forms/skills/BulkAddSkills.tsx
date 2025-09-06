@@ -1,23 +1,5 @@
 
 
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Loader2, Sparkles } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
-import { useResume } from '@/hooks/useResume',;
-import { BulkAddSkillsProps } from './types',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { Textarea } from '@/components/ui/textarea',;
-export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
-  const [bulkSkills, setBulkSkills] = useState(''),;
-  const [error, setError] = useState<string | null>(null),;
-  const { enhanceContent, isEnhancing } = useResumeEnhancer(),;
-  const { addSkill } = useResume(),;
-  const handleCategorizeSkills = async () => {;
-    if (!bulkSkills || bulkSkills.trim().length === 0) {;
-      setError('Please enter some skills to categorize'),;
-      return;
-    }
 ;
     setError(null),;
     try {;
@@ -47,24 +29,20 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           await onSuccess();
         } catch (err) {;
           setError('Failed to parse categorized skills. Please try again.');
-
         }
       }
-    } catch (err: any) {;
-      setError(err && err.message || 'Failed to categorize skills');
+    } catch (err: any) {
+      setError(err.message |'Failed to categorize skills')
     }
-
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
       <div className="space-y-4">
         <div className="space-y-2">
-
             value = {bulkSkills,}
             onChange = {(e,) => setBulkSkills(e.target.value),}
           />
         </div>
-
             value={bulkSkills}
             onChange={(e) => setBulkSkills(e.target.value)}
           />;
@@ -72,9 +50,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
         <Button;
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills.trim()}
-
           className="gap-2"
-        >
           {isEnhancing ? (
             <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
@@ -82,15 +58,40 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           )}
           Categorize with AI
         </Button>
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+      </div>;
+    </div>);
+}
 
+            onChange = {(e,) => setBulkSkills(e && e.target.value),}
+          />;
+        </div>;
+
+        <Button
+          onClick = {handleCategorizeSkills,}
+          disabled = {isEnhancing || !bulkSkills && bulkSkills.trim(),}
+          className="gap-2">;
+          {isEnhancing ? (;
+            <Loader2 className="h-4 w-4 animate-spin" />;
+          ) : (;
+            <Sparkles className="h-4 w-4" />;
+          )}
+          Categorize with AI;
+        </Button>;
+
+        <p className="text-xs text-muted-foreground mt-1">;
+          AI will identify skills and categorize them automatically. This may take a moment to process.;
+        </p>;
+
+        
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
-
+        
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>
-    </div>
+
+'"
+
+'";
   )
-
 },
-

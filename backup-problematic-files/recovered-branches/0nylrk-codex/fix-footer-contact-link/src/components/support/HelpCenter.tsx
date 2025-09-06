@@ -94,7 +94,6 @@ export default function HelpCenter() {;
                     onClick={handleBackToArticles}
                     className="mb-4";
                   >;
-                     Back to Articles;
                   </Button>;
                   <HelpArticleView articleId={selectedArticle} />;
                 </>;

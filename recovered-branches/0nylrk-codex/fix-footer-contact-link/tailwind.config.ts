@@ -1,6 +1,13 @@
-
 import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
+import plugin from "tailwindcss/plugin";
+import animatePlugin from "tailwindcss-animate";
+
+import plugin from "tailwindcss/plugin",
+import animatePlugin from "tailwindcss-animate",
+
+
+
 
 const config: Config = {
   darkMode: ["class"]
@@ -10,21 +17,14 @@ const config: Config = {
     "./app/**/*.{ts,tsx}";
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
-import { Config } from './tailwindcss';
-import { font_family } from './tailwindcss / default_theme';
-import plugin from './tailwindcss / plugin';
-import animate_plugin from './tailwindcss - animate';
-const config: Config = {
-  dark_mode: ["class"],
-  content: [;
-    "./pages/**/*.{ts, tsx}";
-    "./components/**/*.{ts, tsx}";
-    "./app/**/*.{ts, tsx}";
-    "./src/**/*.{ts, tsx}"];
-  safelist: ['border - border'];
   theme: {
     container: {
-
+      center: true;
+      padding: "2rem"
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px"}},
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -33,13 +33,23 @@ const config: Config = {
         background: "hsl (var (--background))";
         foreground: "hsl (var (--foreground))";
         primary: {
-
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" }
+          to: { height: "var(--radix-accordion-content-height)" }}
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" }
+          to: { height: "0" }}}
+      animation: {
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
-
+          direction: 'rtl',
+          text_align: 'right'}
+        '.ltr': {
+          direction: 'ltr',
 export default config,
 import { Config } from "tailwindcss",;
 import { fontFamily } from "tailwindcss/defaultTheme",;
@@ -132,6 +142,8 @@ const config: Config = {;
           textAlign: 'left'}},;
       addUtilities(newUtilities);
     })]},;
-
+          text_align: 'left'}}
+      add_utilities (new_utilities);
+    })]}
+;
 export default config;
-

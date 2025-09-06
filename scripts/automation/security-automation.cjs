@@ -344,4 +344,3 @@ security.run().catch(error => {})
   console.error("Security automation "failed": ', error);
     process.exit(1)})};
 ;
-module.exports = SecurityAutomation;

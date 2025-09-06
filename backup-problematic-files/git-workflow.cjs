@@ -309,6 +309,7 @@ if (require.main === module) {
 }
 module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
 module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
+module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
 
 module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
 

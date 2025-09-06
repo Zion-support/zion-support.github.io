@@ -1,5 +1,4 @@
 
-
 import { useEffect, useState } from "react",
 import Link from "next/link",
 import { BriefcaseIcon, Clock } from 'lucide-react'
@@ -8,47 +7,19 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
-
 export function ActiveProjectsCard() {
+xport function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
   useEffect(() => {
     if (projects && !isLoading) {
 
+
   if (isLoading) {
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { BriefcaseIcon, Clock } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { useProjects } from '@/hooks/useProjects';
-import { Project } from '@/types/projects';
-export function ActiveProjectsCard() {;
-  const { projects, isLoading } = useProjects();
-  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
-
-  useEffect(() => {    if (projects && !isLoading) {;
-      const active = projects;
-        .filter(p => ['offer_accepted', 'in_progress'].includes(p && p.status));
-        .slice(0, 3); // Limit to 3 most recent projects;
-      setActiveProjects(active);
-    }
-  }, [projects, isLoading]);
-
-  if (isLoading) {;
     return (
       <Card>
         <CardHeader>
-
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
           </CardTitle>
@@ -57,7 +28,6 @@ export function ActiveProjectsCard() {;
         <CardContent>
           <div className="space-y-2">
             {[1, 2].map(idx => (
-
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 import { useEffect, useState } from "react",;
 import Link from "next/link",;
@@ -98,26 +68,38 @@ export function ActiveProjectsCard() {;
       </Card>;
     );
 
+
+  }
+    );
   }
 
+
+
+
+  }
+  
   if (activeProjects.length === 0) {
     return (
       <Card>
         <CardHeader>
 
+
+
             <BriefcaseIcon className="h-5 w-5 text-primary" />
-            <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
-
         </CardContent>
       </Card>
     )
   }
 
+
+
   return (
   }
+  return (
+
   return (
     <Card>
       <CardHeader>
@@ -158,7 +140,7 @@ export function ActiveProjectsCard() {;
               </span>
             </div>
             <Button size='sm' variant='outline' className='w-full mt-2' asChild>              <Link href={`/project/${project.id}`}>View Project</Link>            <Button size="sm" variant="outline" className="w-full mt-2" asChild>
-
+  
   return (
     <Card>
       <CardHeader>
@@ -185,9 +167,7 @@ export function ActiveProjectsCard() {;
               <span>Started {new Date(project.start_date).toLocaleDateString()}</span>
             </div>
             <Button size="sm" variant="outline" className="w-full mt-2" asChild>
-
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
         ))}
-

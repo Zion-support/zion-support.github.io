@@ -1,4 +1,20 @@
-
+      requirements: [;
+        'MS/PhD in Physics, Computer Science, or related field3+ years experience in quantum computingKnowledge of quantum algorithms and quantum programmingExperience with Qiskit, Cirq, or similar frameworks']}
+    {title: 'Full-Stack Developer';
+      department: 'Engineering';
+      location: 'Remote / Global';
+      type: 'Full-time';
+      description: 'Build scalable web applications and APIs for our AI-powered platforms.';
+      requirements: [;
+        '3+ years experience in full-stack developmentProficiency in React, Node.js, and TypeScriptExperience with cloud platforms (AWS, GCP, Azure)Knowledge of database design and optimization']}
+    {title: 'Cybersecurity Specialist';
+      department: 'Security';
+      location: 'Remote / Global';
+      type: 'Full-time';
+      description: 'Implement and maintain advanced security protocols for our AI systems.';
+      requirements: [;
+        '5+ years experience in cybersecurityExpertise in threat detection and preventionKnowledge of AI security and adversarial attacksRelevant certifications (CISSP, CEH, etc.)']}];
+  const benefits = [;
       icon: '🏥'}];
   return (
     <div className="space - y-16">;
@@ -24,9 +40,9 @@
                   <h3 className="text - xl font - semibold mb - 2">{position.title}</h3>;
                   <div className="flex flex - wrap gap - 4 text - sm opacity - 70">;
                     <span>{position.department}</span>;
-                    <span></span>;
+                    <span>•</span>;
                     <span>{position.location}</span>;
-                    <span></span>;
+                    <span>•</span>;
                     <span className="text - blue - 400">{position.type}</span>;
                   </div>;
                 </div>;

@@ -1,13 +1,9 @@
 {
-  "timestamp": "2025-09-06T04:52:47.143Z",
-  "duration": "36s",
   "results": {
     "tests": {
       "passed": 0,
       "failed": 2,
       "errors": [
-        "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n",
-        "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
       ]
     },
     "builds": {
@@ -19,7 +15,6 @@
     "linting": {
       "success": false,
       "errors": [
-        "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: eslint: not found\n"
       ]
     },
     "security": {
@@ -28,9 +23,7 @@
       ],
       "fixed": 0
     },
-    "improvements": [
-      "Created performance monitoring script"
-    ]
+    "improvements": ["Created performance monitoring script"]
   },
   "summary": {
     "testsPassed": 0,

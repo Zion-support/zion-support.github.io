@@ -60,4 +60,3 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('JSX Syntax Fixer "failed": ', error);
       process.exit(1)})};
-module.exports = JSXSyntaxFixer;

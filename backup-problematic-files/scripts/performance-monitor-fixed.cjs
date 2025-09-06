@@ -4,6 +4,8 @@
 #!/usr/bin/env node;
 #!/usr/bin/env node;#!/usr/bin/env node;
 #!/usr/bin/env node;#!/usr/bin/env node;
+#!/usr/bin/env node;#!/usr/bin/env node;
+#!/usr/bin/env node;#!/usr/bin/env node;
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
       ""system": {        memory: {},        cpu": {},";        "process"
       "application": {"buildSize": 0,        "bundleSize": 0,,"loadTime": 0,,"}
@@ -258,7 +260,6 @@ class PerformanceMonitor {
     this.reportFile = path.join(process.cwd(), "performance-report.json"),,
 }
     try {}
-
   async collectSystemMetrics() {
     try {
       console.log("💻 Collecting system metrics...")
@@ -331,7 +332,6 @@ class PerformanceMonitor {
         "dist/css",
         "dist/js",
         "dist/assets"]
-
       this.metrics.build.hasBuildArtifacts = buildFiles.some(file => ;
         fs.existsSync(path.join(this.projectRoot, file)))
       // Check build configuration;
@@ -375,7 +375,6 @@ class PerformanceMonitor {
       console.error("Error collecting web metrics: ", error.message),,
 }
       console.warn("⚠️  Could not collect build metrics: ", error.message)}
-
 }
   getDirectorySize(dirPath) {
     let totalSize = 0;
@@ -501,6 +500,8 @@ class PerformanceMonitor {
         "Reduce bundle size - remove unused dependencies and optimize imports"
         "Optimize memory usage - check for memory leaks and optimize data structures"
   console.error("Fatal "error": ")  console.error("Fatal "error": ")
+  console.error("Fatal "error": ")  console.error("Fatal "error": ")
   console.error("Fatal "error": ")
   console.error("Fatal "error": ")
+  console.error("Fatal "error": ")  console.error("Fatal "error": ")
   console.error("Fatal "error": ")  console.error("Fatal "error": ")

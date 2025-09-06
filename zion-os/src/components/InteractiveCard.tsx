@@ -1,4 +1,36 @@
-
+  children?: React.ReactNode;
+}
+export default function InteractiveCard({title;
+  description;
+  icon;
+  href;
+  color = 'from-purple-500 to-blue-500';
+  className = '';
+  children;
+}: InteractiveCardProps) {const [isHovered, setIsHovered] = useState(false);
+'use client',;
+import React, { useState } from 'react',;
+import Link from 'next/link',;
+interface InteractiveCardProps {;
+  title: string,;
+  description: string,;
+  icon: string,;
+  href: string,;
+  color?: string,;
+  className?: string,;
+  children?: React.ReactNode;
+}
+;
+export default function InteractiveCard({;
+  title,;
+  description,;
+  icon,;
+  href,;
+  color = 'from-purple-500 to-blue-500',;
+  className = '',;
+  children;
+}: InteractiveCardProps) {;
+  const [isHovered, setIsHovered] = useState(false),;
   return (;
     <Link;
       href={href}
@@ -6,13 +38,19 @@
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`Navigate to ${title} page`}
-
+    <Link;
+      href={href}
+      className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
+      onMouseEnter={() => setIsHovered (true)}
+      onMouseLeave={() => setIsHovered (false)}
+      aria - label={`Navigate to ${title} page`}
+>;
+      <div className=&quot;relative & quot;>;
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
-
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
@@ -20,16 +58,16 @@
           </p>;
           {/* Custom children or default arrow */}
 
-            <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
 
+{children || (
+
+            <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
-
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
                   isHovered ? 'translate-x-2' : ''
-
               >
                 <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M13 7l5 5m0 0l-5 5m5-5H6&quot; />
               </svg>
@@ -39,13 +77,11 @@
         {/* Hover effect overlay */}
         <div;
           className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
-
           }}
         />;
       </div>;
     </Link>);
 }
-
     <InteractiveCard;
       title={title}
       description={description}
@@ -54,17 +90,13 @@
       className={class_name}
 >;
       {stats && (
-        <div className=&quot;mt - 6 pt - 6 border - t border - white / 10 & quot;>;
-          <div className=&quot;grid grid - cols - 2 gap - 4&quot;>;
-            {stats.map ((stat, index) => (
-              <div key={index} className=&quot;text - center & quot;>;
-                <div className=&quot;text - 2xl font - bold text - white & quot;>{stat.value}</div>;
-                <div className=&quot;text - sm text - gray - 400 & quot;>{stat.label}</div>;
-              </div>))}
           </div>;
         </div>)}
     </InteractiveCard>);
 }
+<div className=&quot;text-4xl mb-4&quot;>💬</div>
+      <div className="text-4xl mb-4">💬</div>
+      
 
       {/* Rating */}
       <div className="flex mb-4">
@@ -75,7 +107,9 @@
         ))}
       </div>;
       {/* Quote */}
-
+      </blockquote>
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
       </blockquote>
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">

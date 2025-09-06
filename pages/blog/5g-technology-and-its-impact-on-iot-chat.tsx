@@ -1,5 +1,4 @@
 
-
 const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
   return (
     <div>
@@ -10,9 +9,21 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
       <main>
         <h1>5gTechnologyAndItsImpactOnIotChat</h1>
         <p>Blog content coming soon...</p>
+      </main>
+    </div>
+  )
+}
+export default Chat5gTechnologyAndItsImpactOnIotChat;
 
+
+
+        <Link href="/blog"><a>Back to Blog</Link></Link>
       </main>
     </div>
   )
 },
+
+export default Chat5gTechnologyAndItsImpactOnIotChat,;
+export default Chat5gTechnologyAndItsImpactOnIotChat,
+
 

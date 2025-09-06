@@ -17,4 +17,3 @@ const Startup: React.FC<StartupProps> = ({ className }) => {
   );
 };
 
-export default Startup;

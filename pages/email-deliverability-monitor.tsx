@@ -1,15 +1,21 @@
 
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/email-deliverability-monitor'));
+  if (!service) return null;
 
+
+import React from 'react',;
+import Head from 'next/head',;
+import { Mail, Phone, MapPin, Check, ArrowRight, Inbox, Star } from 'lucide-react',;
+import Layout from '../components/layout/Layout',;
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
 import React from 'react'
 import Head from 'next/head'
 import { Mail, Phone, MapPin, Check, ArrowRight, Inbox, Star } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-
 export default function EmailDeliverabilityMonitorPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/email-deliverability-monitor'))
   if (!service) return null,
-
   return (
     <Layout>
       <Head>
@@ -30,18 +36,16 @@ export default function EmailDeliverabilityMonitorPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-cyan-400 mt-0.5"><Check /><span>{feat}</span></li>
-
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial  Setup: {service.setupTime}</div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
-
               </div>
             </div>
           </div>
@@ -49,6 +53,12 @@ export default function EmailDeliverabilityMonitorPage() {
       </div>
     </Layout>
   )
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+;
 ;
 

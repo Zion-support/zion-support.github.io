@@ -1,6 +1,25 @@
 
 
-import { cn } from "@/lib/utils",
+
+
+import {cn} from "@/lib/utils";
+import {Badge} from "@/components/ui/badge";
+import {Link} from "react-router-dom";
+interface ListingCardProps {;
+interface ListingCardProps {
+
+  id?: string;
+  title: string,;
+  description: string,;
+  image?: string;
+  category: string,;
+  tags?: string[];
+  author?: string;
+  return (
+    <Link
+      to={`/profile/${profileId}`}
+      className={cn(
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer"
 
 interface ListingCardProps {
   id?: string,
@@ -13,7 +32,6 @@ interface ListingCardProps {
   authorImage?: string,
   className?: string,
   profileType?: 'service' | 'talent'
-
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Link } from "react-router-dom",;
@@ -47,20 +65,10 @@ export function ListingCard({;
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
   return (;
     <Link;
-
       to={`/profile/${profileId}`}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",
-
         className
-
-      )}>;
-      {image && (;
-        <div className="h-48 w-full overflow-hidden">;
-          <img
-            src={image} 
-            alt={title} 
-
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />;
         </div>;
@@ -69,23 +77,11 @@ export function ListingCard({;
         <div className="mb-2">;
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
             {category}
-
-          </Badge>;
-        </div>;
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
-        <p className="text-zion-slate mb-4 flex-grow">{description}</p>;
-
-        {tags && tags.length > 0 && (;
-          <div className="flex flex-wrap gap-2 mb-4">;
-            {tags && tags.map((tag, i) => (;
-              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
-
                 {tag}
               </Badge>;
             ))}
           </div>;
         )}
-
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {authorImage ? (
@@ -103,12 +99,6 @@ export function ListingCard({;
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;
         )}
-
-      </div>;
-    </Link>;
-  );
-}
-
   author_image?: string;
   class_name?: string;
   profile_type?: 'service' | 'talent';

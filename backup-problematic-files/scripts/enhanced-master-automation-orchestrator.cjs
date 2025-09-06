@@ -92,3 +92,4 @@ console.log('======')
     const phase5Tasks = [{ name: 'Metrics Generation', "command": 'echo "Generating final metrics..."}]
       { "name": 'Report Generation', "command": 'echo "Generating comprehensive report..."}
       log('info', '"Recommendations")
+      log('info', '"Recommendations")

@@ -1,3 +1,15 @@
+export interface Application {
+export interface Application {;
+  id: string;
+  name: string;
+  email: string;
+  position: string;
+  experience: number;
+  skills: string[];
+  createdAt: string;
+  updatedAt?: string;
+}
+
 
   id: string;
 
@@ -8,3 +20,7 @@
 }
 export type UserRole = 'admin' | 'user' | 'guest';
 
+
+
+export interface Application {
+  id: string;

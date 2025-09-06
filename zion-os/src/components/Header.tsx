@@ -1,5 +1,21 @@
-
-
+  const navigation = [;
+    { name: 'Home', href: '/' }
+    { name: 'About', href: '/about' }
+    { name: 'Services', href: '/services' }
+    { name: 'AI Solutions', href: '/ai-solutions' }
+    { name: 'Quantum Computing', href: '/quantum-computing' }
+    { name: 'Research & Development', href: '/research-development' }
+    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'News', href: '/news' }
+    { name: 'Contact', href: '/contact' }];
+  const services = [;
+    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' }];
+  return (;
+    <header;
+      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled;
+          ? 'bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl';
+          : 'bg-black/60 backdrop-blur-md border-b border-white/10';
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -27,12 +43,10 @@
                 aria - label={`Navigate to ${item.name} page`}
               >;
                 {item.name}
-
               </Link>
             ))}
 ;
             {/* Services Dropdown */}
-
               <button 
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
@@ -85,7 +99,6 @@
             </div>;
           </nav>;
           {/* CTA Button */}
-
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -97,7 +110,8 @@
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-
+className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
+            className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
@@ -106,24 +120,31 @@
               {isMenuOpen ? (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              aria-label="Get started with Zion Tech Group"
+            >
+              Get Started
+            </Link>
+          </div>
+          {/* Mobile menu button */}
+          <button;
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-controls="mobile-menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              {isMenuOpen ? (
             </svg>;
           </button>;
         </div>;
         {/* Mobile Navigation */}
-
           >
             <div className=&quot;px-2 pt-2 pb-3 space-y-1&quot;>
               {navigation.map((item) => (
                 <Link
-          <div;
-            id=&quot;mobile - menu & quot;
-            className=&quot;lg:hidden border - t border - white / 10 animate - fade - in & quot;
-            role=&quot;navigation & quot;
-            aria - label=&quot;Mobile menu & quot;
-          >;
-            <div className=&quot;px - 2 pt - 2 pb - 3 space - y-1 & quot;>;
-              {navigation.map ((item) => (
-                <Link;
                   key={item.name}
                   href={item.href}
                   className=&quot;block px - 3 py - 3 text - gray - 300 hover:text - white hover:bg - white / 5 rounded - lg transition - all duration - 200 & quot;
@@ -131,10 +152,6 @@
                   aria - label={`Navigate to ${item.name} page`}
                 >;
                   {item.name}
-
-                </Link>;
-              ))}
-
                 {services.map((service) => (
                   <Link
                     key={service.name}
@@ -144,10 +161,6 @@
                     aria - label={`Navigate to ${service.name} service page`}
                   >;
                     {service.name}
-
-                  </Link>;
-                ))}
-
                 <Link
                   href="/contact"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"

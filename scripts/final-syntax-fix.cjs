@@ -1,10 +1,3 @@
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-console.log('🔧 Final Syntax Fix');
-console.log('==================');
-
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -55,14 +48,12 @@ const filesToFix = [
   'components/layout/MainLayout.tsx'
 ];
 let totalFixed = 0;
-
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
       console.log(`⚠️  File not found: ${file}`);
       continue;
     }
-
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
     content = fixSpecificErrors(content);
@@ -76,4 +67,3 @@ for (const file of filesToFix) {
   }
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
-console.log('🎉 Final syntax fix completed!');

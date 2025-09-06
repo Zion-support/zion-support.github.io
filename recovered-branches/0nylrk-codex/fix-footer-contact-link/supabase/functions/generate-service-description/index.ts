@@ -1,7 +1,16 @@
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
+
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -12,7 +21,20 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+        });
+        {
+          status: 400
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+    const { title, keyFeatures, targetAudience } = await req.json(),
 
+    if (!title) {
+      return new Response(
+        JSON.stringify({ 
+          error: "Missing required field: title" 
+        }),
+        { 
+          status: 400, 
+          headers: { ...corsHeaders, "Content-Type": "application/json" } 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
 const corsHeaders = {;
@@ -33,22 +55,31 @@ serve(async (req) => {;
         {;
           status: 400,;
           headers: { ...corsHeaders, "Content-Type": "application/json" } ;
-
         }
       )
     }
+
+        }
+      );
+    }
+
+
+
+
 
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Create a professional and detailed service description for the following service:
 
+
+    
+
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
     const prompt = `Create a professional and detailed service description for the following service:;
-
 Title: ${title}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
@@ -57,7 +88,26 @@ The description should: 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
 3. Use professional language suitable for a marketplace listing
 4. Speak directly to the target audience
-
+        }
+      );
+    }
+      }
+    );
+  } catch (error) {
+      });
+      {
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+    console.error ("Error in generate - service - description:", error);
+;
+    return new Response (
+      JSON.stringify ({
+        error: "Failed to generate service description",
+        details: error.message;
+      });
+      {
+        status: 500,
+        headers: { ...cors_headers, "Content - Type": "application / json" }
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 ;
@@ -90,6 +140,7 @@ The description should: 1. Be approximately 200-300 words;
       }
     );
 
+      }
+    );
   }
 });
-

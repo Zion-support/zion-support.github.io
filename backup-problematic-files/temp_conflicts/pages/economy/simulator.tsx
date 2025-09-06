@@ -96,7 +96,6 @@ export default function EconomySimulatorPage() {;
                   disabled={loadingAnalysis}
                   className="px-3 py-1.5 rounded border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 disabled:opacity-50";
                 >;
-                  {loadingAnalysis ? 'Analyzing' :'Analyze with GPT'}
                 </button>;
               </div>;
               {analysis && (;

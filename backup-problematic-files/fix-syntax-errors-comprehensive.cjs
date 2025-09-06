@@ -115,6 +115,17 @@ function fixSyntaxErrors(filePath) {
     // Fix common syntax errors
 
     // Fix unnecessary escape characters
+const fs = require('fs');
+const path = require('path');
+;
+function fixSyntaxErrors(filePath) {;
+  try {;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+;
+    // Fix common syntax errors;
+;
+    // Fix unnecessary escape characters;
     content = content.replace(/\\:/g, ':');
     content = content.replace(/\\,/g, ',');
     content = content.replace(/\\;/g, ';');
@@ -126,6 +137,17 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/\\\)/g, ')');
 
 
+    // Fix malformed CSS in JSX
+    content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
+    
+;
+    // Fix missing semicolons at end of statements;
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+;
+    // Fix missing commas in objects;
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1:$2,}');
+;
+    // Fix missing closing braces;
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
     
@@ -182,6 +204,7 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
 
+
     
     useEffect(() => {
         const fetchSavedTalents = async () => {
@@ -208,6 +231,9 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
     });
     return { content, fixes };
 }
+;
+    if (openBraces > closeBraces) {;}
+
 // Function to process a single file
 function processFile(filePath) {
     try {
@@ -321,7 +347,6 @@ function processFile(filePath) {;
     return 0;,
 }
 }
-
 // Function to recursively find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {;
   let files = [];
@@ -339,10 +364,8 @@ function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {;
   } catch (error) {;
   console.error(`Error reading directory ${dir}:`, error.message);,
 }
-
   return files;,
 }
-
 // Main execution;
 function $1() {;
   const srcDir = path.join(__dirname, "src");
@@ -393,6 +416,26 @@ async function main() {
 });
     if (openBraces > closeBraces) {
       const missingBraces = openBraces - closeBraces;
+      content += '\n' + '}'.repeat(missingBraces);
+      modified = true;
+    }
+
+    // Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+
+    if (openParens > closeParens) {
+      const missingParens = openParens - closeParens;
+      content += ')'.repeat(missingParens);
+      modified = true;
+    }
+
+    // Fix missing closing brackets
+    const openBrackets = (content.match(/\[/g) || []).length;
+    const closeBrackets = (content.match(/\]/g) || []).length;
+
+    if (openBrackets > closeBrackets) {
+      const missingBraces = openBraces - closeBraces;
       content += '\n''}'.repeat(missingBraces);
       modified = true;
     }
@@ -428,6 +471,7 @@ async function main() {
       content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
       modified = true;
     }
+function processDirectory(dirPath) {
 ;
     // Fix missing React import;
     if (content.includes('React') && !content.includes('import React')) {;

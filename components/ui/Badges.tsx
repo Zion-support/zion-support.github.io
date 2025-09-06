@@ -1,7 +1,5 @@
 import React from 'react';
 
-export function TrustBadge({
-
   type: 'Verified' | 'Pro' | 'Top Rated';
 }) {
   const colorMap = {
@@ -16,6 +14,12 @@ export function TrustBadge({
     </span>
   );
 export function MicroTestimonial({
+  quote
+  author
+}: {
+  quote,
+  author,
+}: {;
 
   quote: string;
   author: string;
@@ -25,7 +29,6 @@ export function MicroTestimonial({
       <blockquote className='italic opacity-90'>“{quote}”</blockquote>;
       <figcaption className='mt-2 font-medium opacity-80'>;
         — {author}
-
   return (
     <figure className='border rounded - md p - 3 text - sm'>;
       <blockquote className='italic opacity - 90'>“{quote}”</blockquote>;
@@ -36,7 +39,23 @@ export function MicroTestimonial({
     Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200',
     Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200'} as const,
   return (
-    <figure className="border rounded-md p-3 text-sm">
-      <blockquote className="italic opacity-90">“{quote}”</blockquote>
-      <figcaption className="mt-2 font-medium opacity-80">— {author}</figcaption>
+    <span className={`inline - flex items - center gap - 1 px - 2 py - 1 text - xs font - medium rounded ${color_map[type]}`}>;
+      <span className="leading - none">{type}</span>;
+    </span>);
+}
+    </figure>;
+  );  const colorMap = {;
+    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;
+    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,;
+  return (
+export /**
+ * MicroTestimonial - Function description
+ */
+function MicroTestimonial() {
+  return (
+    <figure className="border rounded - md p - 3 text - sm">;
+    </figure>
+  );
+}
+}
 

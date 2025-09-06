@@ -1,7 +1,3 @@
-
-type ToasterProps = React.ComponentProps<typeof Sonner>
-const Toaster = ({ ...props }: ToasterProps) => {
-
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
@@ -9,7 +5,6 @@ const Toaster = ({ ...props }: ToasterProps) => {
       toastOptions={{
         classNames: {
           toast:
-
           cancelButton:
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
       {...props}
@@ -34,9 +29,11 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {
             &quot;group-[.toast]:bg - primary group-[.toast]:text - primary - foreground & quot;,
           cancel_button:;
             &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}}
-      {...props}
-    />);
 }
-
 ;
-
+type ToasterProps = React.ComponentProps<typeof Sonner>;
+;
+const Toaster = ({ ...props } ToasterProps) => {;
+  const { theme = "system" } = useTheme();
+;
+;

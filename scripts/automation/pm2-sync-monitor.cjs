@@ -883,4 +883,3 @@ if (require.main === module) {}
   }, 60000)};
 ;
 module.exports = PM2SyncMonitor;
-module.exports = PM2SyncMonitor;

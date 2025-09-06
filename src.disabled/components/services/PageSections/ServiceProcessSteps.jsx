@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface ServiceProcessStepsProps {
   // Add props here as needed
-
 export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

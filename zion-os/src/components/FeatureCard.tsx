@@ -1,6 +1,3 @@
-
-          e.preventDefault();
-          onClick();
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -28,17 +25,6 @@ function FeatureCard() {
   }
   return (
     <div;
-      className={`card group cursor - pointer transition - all duration - 300 ${
-        is_active ? 'scale - 105 shadow - 2xl' : 'hover:scale - 105';
-      } ${color_classes[color as keyof typeof color_classes]}`}
-      on_click={on_click}
-      onKeyDown={(e) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default ();
-          on_click ();
         }
       }}
       tab_index={0}
@@ -61,7 +47,7 @@ if ( {) {
           className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
           on_click={(e) => e.stop_propagation ()}
         >;
-          Learn more ;
+          Learn more →;
         </Link>;
       </div>;
     </div>);

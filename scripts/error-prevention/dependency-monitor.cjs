@@ -15,12 +15,10 @@ class DependencyMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
-    
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
       console.log('Running dependency check...');
-      
       // Check for outdated packages;
       const child = spawn('npm', ['outdated'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
@@ -34,7 +32,6 @@ class DependencyMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
-
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -42,7 +39,6 @@ class DependencyMonitor {}
           console.log('Dependency check passed ✓')}} else {}
           console.log('Dependency check found outdated packages ✗');
           console.log('"Output": ', output);
-          
           // Log outdated packages but don't auto-update;
           this.logOutdatedPackages(output)};
       })} catch (error) {}
@@ -53,7 +49,6 @@ class DependencyMonitor {}
     const outdatedPackages = lines.filter(line => )
       line.includes('→') && !line.includes('Package');
    ;);
-    
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -64,7 +59,6 @@ class DependencyMonitor {}
   async checkPackageIntegrity() {}
     try {}
       console.log('Checking package integrity...');
-      
       const child = spawn('npm', ['ls'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -77,7 +71,6 @@ class DependencyMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
-
       child.on('close', (code) => {}
         if ( {})
           console.log('Package integrity check passed ✓')) {}
@@ -113,4 +106,3 @@ if ( {})
     process.exit(0)}
 });
   monitor.start().catch(console.error)};
-module.exports = DependencyMonitor;

@@ -1,4 +1,7 @@
-
+import { GetServerSideProps } from 'next';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
 import ProductCard from '@/components/ProductCard';
 import { TalentCard  } from '@/components/talent/TalentCard';
 import { CategoryCard  } from '@/components/CategoryCard';
@@ -14,32 +17,15 @@ interface BaseSearchResult {
   description?: string;
   slug: string;
   image?: string;
-  author?: {;
-    name: string;
-
     avatar?: string;
   }
   tags?: string[];
   category?: string;
   date?: string;
-
-;
-
 interface ProductSearchResult extends BaseSearchResult {
   type: 'product' | 'equipment';
   price?: number;
   rating?: number;
-
-;
-
-interface TalentSearchResult extends BaseSearchResult {
-
-interface ProductSearchResult extends BaseSearchResult {;
-  type: 'product' | 'equipment';
-  price?: number;
-  rating?: number;
-
-interface TalentSearchResult extends BaseSearchResult {;
   type: 'talent';
   rating?: number;
 
@@ -52,26 +38,19 @@ interface CategorySearchResult extends BaseSearchResult {
 
 interface CategorySearchResult extends BaseSearchResult {;
   type: 'category';
-
-;
-
 type SearchResult =;
   | ProductSearchResult;
   | TalentSearchResult;
   | BlogSearchResult;
   | CategorySearchResult;
-// Type guard functions
-const hasPrice = (result: SearchResult): result is ProductSearchResult =>
-  result.type === 'product' |result.type === 'equipment';
-const hasRating = (
-  result: SearchResult
-): result is ProductSearchResult | TalentSearchResult =>
-  result.type === 'product' |
-  result.type === 'equipment' |
-  result.type === 'talent';
-interface SearchResultsPageProps {
-
-import { Search, Filter, Grid, List } from 'lucide-react';
+  initialResults: SearchResult[];
+  query: string;
+  slug: string;
+  totalCount: number;
+import { GetServerSideProps } from 'next';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -84,56 +63,28 @@ import { TALENT_PROFILES } from '@/data/talentData';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { useDebounce } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
-
-interface BaseSearchResult {
-  id: string,
-  title: string,
-  description?: string;
-  slug: string,
-  image?: string;
-  author?: {
-    name: string,
-    avatar?: string
-  };
-  tags?: string[];
-  category?: string;
-  date?: string
-}
-
-interface ProductSearchResult extends BaseSearchResult {
-  type: 'product' | 'equipment',
-  price?: number;
-  rating?: number
-}
-
-interface TalentSearchResult extends BaseSearchResult {
-  type: 'talent',
-  rating?: number
-}
-
-interface BlogSearchResult extends BaseSearchResult {
-  type: 'blog'
-}
-
-interface CategorySearchResult extends BaseSearchResult {
-  type: 'category'
-}
-
-type SearchResult = ProductSearchResult | TalentSearchResult | BlogSearchResult | CategorySearchResult;
-
-// Type guard functions
-const hasPrice = (result: SearchResult): result is ProductSearchResult => 
-  result.type === 'product' || result.type === 'equipment';
-
-const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
-  result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
-interface SearchResultsPageProps {;
-
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
+interface OfflineFilters {
+
+  sortBy?: string;
+  category?: string;
+  minPrice?: number;
+  maxPrice?: number;
+          return aPrice - bPrice;        });
+        break;
+      case 'price_desc':;
+        all && all.sort((a, b) => {;
+          const aPrice = a && a.type === 'product' ? (a && a.price ?? 0) : 0;
+          const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
+          return bPrice - aPrice;        });
+        break;
+
+
+
+            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
 
   } catch (error) {
     console.error("Error:", error);
@@ -298,7 +249,6 @@ function offlineSearch(;
         all.sort((a, b) => {;
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
-
           return bRating - aRating;
         });
         break;
@@ -306,6 +256,13 @@ function offlineSearch(;
         break;
     }
   } else {;
+  return { results: paginated, totalCount: all.length }
+export default function SearchResultsPage({
+  initialResults
+  query
+  slug
+  totalCount
+  return { results: paginated, totalCount: all.length };
     all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
 
           return aPrice - bPrice
@@ -320,24 +277,22 @@ function offlineSearch(;
         break;
       case 'rating':
         all.sort((a, b) => {
-          const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
-          const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
-          return bRating - aRating
-        });
-        break;
-      default: break
-    }
-  } else {
-    all.sort((a, b) => a.title.localeCompare(b.title))
 
-  }
-  const start = (page - 1) * limit;
-  }
-  const start = (page - 1) * limit;
-  const paginated = all.slice(start, start + limit);
+export default function SearchResultsPage(): any ({;
+  initialResults,;
+  query,;
+  slug,;
+  totalCount,;
+
 
 }: SearchResultsPageProps) {  const router = useRouter();
+  initialResults;
+  query;
+  slug;
+  totalCount}: SearchResultsPageProps) {
+  const router = useRouter();
 
+}: SearchResultsPageProps) {  const router = useRouter();
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -352,7 +307,6 @@ function offlineSearch(;
 export default function SearchResultsPage(req, res) {
   try {
   const router = useRouter();
-
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -366,19 +320,67 @@ export default function SearchResultsPage(req, res) {
   const [maxPrice, setMaxPrice] = useState('');
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
-
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
+  // Handle search input change;
+  const handleSearch = (newQuery: string) => {;
+    setSearchQuery(newQuery),;
+    if (newQuery && newQuery.trim()) {;
+      router && router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {;
+        shallow: true,;
+      });
+      setCurrentPage(1);    }
+  };
 
-      setTotalResults(offline.totalCount);
-      if (page === 1) {;
-        setResults(offline.results);
-
+  useEffect(() => {;
+    if (debouncedQuery.trim()) {;
       fetchResults(debouncedQuery, 1);
     } else {;
       setResults([]);
+      setTotalResults(0);    }
+  }, [debouncedQuery]);
+  const categories = Array.from(
+    new Set(results.map((r) => r.category).filter(Boolean));
+  );
+      categoryFilter !== 'all' &&
+      categoryFilter &&
+      r.category !== categoryFilter
+    ) {
+  // Group results by type for better display
+  const groupedResults = filteredResults.reduce(
+    (acc, result) => {
+      if (!acc[result.type]) acc[result.type] = [];
+      acc[result.type]!.push(result);
+      return false;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (minPrice && r.type === 'product') {;
+      if ((r.price ?? 0) < Number(minPrice)) {;
+        return false;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (minPrice && r.type === 'product') {;
+      if ((r.price ?? 0) < Number(minPrice)) {;
+        return false;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (minPrice && r.type === 'product') {;
+      if ((r.price ?? 0) < Number(minPrice)) {;
+        return false;
+      }
+    }
+    return true;  });
 
         } catch (error) {
     console.error("Error:", error);
@@ -426,15 +428,10 @@ export default function SearchResultsPage(req, res) {
       acc[result.type]!.push(result);
 
       return acc
-    },
-    {} as Record<string SearchResult[]>),
-
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
       case 'equipment':
-
-
 
   // Group results by type for better display;
   const groupedResults = filteredResults && filteredResults.reduce(;
@@ -451,40 +448,47 @@ export default function SearchResultsPage(req, res) {
       case 'equipment':;
         return (
           <div key={result && result.id} data-testid='result-card'>            <ProductCard
-
-        return (
-          <div key={result.id} data-testid="result-card">
-            <ProductCard
-
               product={{
-
-            />
-          </div>
-        ),
-      case 'talent':
-        return (
-
-                id: result && result.id,
-                user_id: result && result.id,
-                full_name: result && result.title,
-                professional_title: result && result.description || '',
-                profile_picture_url: result && result.image,
-                average_rating: result && result.rating,
-                skills: result && result.tags || [],
-                location: result && result.category,
-                bio: result && result.description,
-                summary: result && result.description,
+                id: result.id
+                name: result.title
+                title: result.title
+                description: result.description |''
+                price: result.price |0
+                images: result.image ? [result.image] : []
+                rating: result.rating |0
+                reviewCount: 0
+                tags: result.tags |[]
+                category: result.category |''
+                currency: '$'
+                created_at: new Date().toISOString()
+                updated_at: new Date().toISOString()
+                stock: (result as any).stock
+                in_stock: ((result as any).stock |0) > 0,              }}
+                id: result.id,
+                name: result.title,
+                title: result.title,
+                description: result.description || '',
+                price: result.price || 0,
+                images: result.image ? [result.image] : [],
+                rating: result.rating || 0,
+                review_count: 0,
+                tags: result.tags || [],
+                category: result.category || '',
+                currency: '$',
+                created_at: new Date ().toISOString (),
+                updated_at: new Date ().toISOString (),
+                stock: (result as any).stock,
+                id: result.id,
+                user_id: result.id,
+                full_name: result.title,
+                professional_title: result.description || '',
+                profile_picture_url: result.image,
+                average_rating: result.rating,
+                skills: result.tags || [],
+                location: result.category,
+                bio: result.description,
+                summary: result.description,
                 is_verified: false,
-                availability_type: 'available',
-
-              }}
-              onViewProfile={(id: string) => {;
-                router && router.push(`/talent/${id}`);
-
-          <div key={result.id} data-testid="result-card">
-            <TalentCard
-              talent={{
-
                 availability_type: 'available'}  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -509,12 +513,28 @@ export default function SearchResultsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
             />
           </div>
         ),
       case 'category':
         return (
+          <div key={result.id} data-testid='result-card'>            <CategoryCard
+              title={result.title}
+              description={result.description |''}
+              icon={result.image |'📁'}
+            />
+          </div>
+        );
+      default:
+          >
+            <h3 className='font-semibold'>{result.title}</h3>
+            <p className='text-gray-600 dark:text-gray-200'>
+              {result.description}
+            </p>
+          </div>
+        );    }
+  }
+  };
 
           <div key={result.id} data-testid="result-card">
             <CategoryCard
@@ -538,29 +558,6 @@ export default function SearchResultsPage(req, res) {
         );
       default:;
 
-        return (
-          <div
-            key={result.id}
-            className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
-            data-testid="result-card"
-          >
-            <h3 className="font-semibold">{result.title}</h3>
-            <p className="text-gray-600 dark:text-gray-200">
-              {result.description}
-            </p>
-          </div>
-        )
-    }
-
-          >;
-            <h3 className='font-semibold'>{result && result.title}</h3>;
-            <p className='text-gray-600 dark:text-gray-200'>;
-              {result && result.description}
-            </p>;
-          </div>;
-        );    }
-  };
-
           >;
             <h3 className='font-semibold'>{result && result.title}</h3>;
             <p className='text-gray-600 dark:text-gray-200'>;
@@ -572,7 +569,6 @@ export default function SearchResultsPage(req, res) {
 
 }
   },
-
   return (
     <>;
       <SEO
@@ -597,12 +593,16 @@ export default function SearchResultsPage(req, res) {
   }
 }
       />
+      <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+
 
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
         >
-          {/* Search Header */}
           <div className="mb-8">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex-1">
@@ -615,47 +615,36 @@ export default function SearchResultsPage(req, res) {
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
-                    : `No results found for "${query}"`  } catch (error) {
+                <Input
+                  type="text"
+                  value={searchQuery  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                </p>
-              </div>
-
-                <Input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => handleSearch(e.target.value)}
+                  onChange={(e) => handleSearch(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   placeholder="Search marketplace..."
                   className="pl-10"
                 />
               </div>
             </div>
-
                 <Button
-                  variant='outline'
-                  size='sm'
-                  className='flex items-center gap-2'
-                  data-testid='filter-button'
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2"
+                  data-testid="filter-button"
                 >
-                  <Filter className="h-4 w-4" />
-                  Filters
                 </Button>
                 <select
-                  value={sortBy  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-                  data-testid="sort-select"
-                >
+
+
+                  data-testid='filter-button'>;
+                  <Filter className='h-4 w-4' />                  Filters;
+                </Button>;
 
                 <select
                   value={sortBy}
@@ -751,29 +740,19 @@ export default function SearchResultsPage(req, res) {
                   <option value='rating'>Highest Rated</option>                </select>;
 
 
-                <select
-                  value={categoryFilter}
-                  onChange={e => setCategoryFilter(e && e.target.value)}
-                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';
-                >;
-                  <option value='all'>All Categories</option>;
-                  {categories && categories.map(c => (                    <option key={c} value={c}>;
-
-                      {c}
-                    </option>;
-                  ))}
-
-                <select
-                  value={categoryFilter}
-                  onChange={(e) => setCategoryFilter(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-                >
-
                   <input
                     type="number"
                     placeholder="Min $"
-                    value={minPrice}
-                    onChange={(e) => setMinPrice(e.target.value)}
+                    value={minPrice  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onChange={(e) => setMinPrice(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
                   <span>-</span>
@@ -794,13 +773,12 @@ export default function SearchResultsPage(req, res) {
                   onChange={(e) => setMinRating(e.target.value)}
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                 >
-                  <option value=''>All Ratings</option>
-                  <option value='4'>4 & up</option>
-                  <option value='3'>3 & up</option>
-                  <option value='2'>2 & up</option>
+                  <option value="">All Ratings</option>
+                  <option value="4">4★ & up</option>
+                  <option value="3">3★ & up</option>
+                  <option value="2">2★ & up</option>
                 </select>
               </div>
-
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -823,11 +801,113 @@ export default function SearchResultsPage(req, res) {
                   <Grid className="h-4 w-4" />
                 </Button>
                 <Button
-
+                >;
+                  <List className='h-4 w-4' />                </Button>;
+              </div>;
+            </div>;
+          </div>;
+          {/* Loading State */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          {loading && results.length === 0 && (
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
+          {filteredResults && filteredResults.length > 0 && (;
+            <div className='space-y-8'>;
+              {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
+                <div key={type}>;
+                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
+                  </h2>;
+
+                  <div
+                    className={
+                      viewMode === 'grid'
+                        ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
+                        : 'space-y-4'
+                    }>;
+                    {typeResults && typeResults.map(renderResultCard)}
+                  </div>;
+                </div>;
+              ))}
+              {/* Load More Button */}
+                    )}
+                  </Button>;
+                </div>;
+              )}
+            </div>;
+          )}
+      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
+    logInfo(`Fetching search results for slug: ${slug}, query: ${query}`),
+    const response = await fetch(
+      `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`;
+    );
+    let results = [];
+    let totalCount = 0;
+      const data = await response.json();
+      results = data.results |[];
+      totalCount = data.totalCount |results.length;
+      logInfo(`Server-side fetch successful: ${results.length} results`);
+    } else {
+      logErrorToProduction (
+        `Search API error: ${response.status} ${response.status_text}`);
+      const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
+      results = offline.results;
+      results = data.results || [];
+      totalCount = data.totalCount || results.length;
+      logInfo(`Server-side fetch successful: ${results.length} results`)
+    } else {
+      logErrorToProduction(`Search API error: ${response.status} ${response.statusText}`),
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+      results = offline.results;
+      totalCount = offline.totalCount
+    }
+
+    return {
+      props: {
+        initialResults: results,
+        query;
+        slug;
+        totalCount}}
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error }),
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+    return {
+      props: {
+        initialResults: offline.results,
+        query;
+        slug;
+        totalCount: offline.totalCount}}
+  }
+
+};
+      total_count = offline.total_count;    }
+    return {
+      props: {
+        initial_results: results,
+        query,
+        slug,
+        total_count,
+      },
+    }
+  } catch (error) {
+    logErrorToProduction ('Error fetching search results:', { data: error });
+    const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
+;
+    return {
+      props: {
+        initial_results: offline.results,
+        query,
+        slug,
+total_count: offline.total_count,
+      },
+    }  }
+}
+;
+
 
           )  } catch (error) {
     console.error("Error:", error);
@@ -943,12 +1023,10 @@ export const getServerSideProps: GetServerSideProps<;
     let results = [];
     let totalCount = 0;
     if (response.ok) {;
-
       const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
-
     } else {;
       logErrorToProduction(;
         `Search API error: ${response.status} ${response.statusText}`);
@@ -990,4 +1068,5 @@ export const getServerSideProps: GetServerSideProps<;
   }
 }
 };
+
 

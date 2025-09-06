@@ -7,6 +7,9 @@
 
 
 
+
+
+
 const fs = require('fs');
 const path = require('path');
 class CriticalErrorFixer {
@@ -174,5 +177,7 @@ const path = require('path')
       this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
       this.log("Critical Errors Fix "failed")
       this.log("Critical Errors Fix "failed")
+      this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
+      this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
       this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
       this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")

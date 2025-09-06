@@ -1,5 +1,4 @@
 
-
 import {
   FormField,
   FormItem,
@@ -9,34 +8,41 @@ import {
   FormMessage
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
-
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
   skills: string[],
   yearsExperience: number,
 
+
+
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
+import { Card, CardContent } from "@/components/ui/card",
+
+interface RateOptimizationSectionProps {
+  control: Control<any>,
+  setValue: UseFormSetValue<any>,
+  skills: string[],
+  yearsExperience: number,
+  location?: string,
+  rateType: "hourly" | "fixed"
+}
   rateType: "hourly" | "fixed"
 }
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
-
   control
   setValue
   skills
   yearsExperience
-
   control,
   setValue,
   skills,
   yearsExperience,
-
   location,
-
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
-
   return (
     <div className="space-y-4">
       <FormField
@@ -50,7 +56,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
                 type="number"
                 min="1"
                 step="0.01"
-
                 {...field}
               />
             </FormControl>
@@ -64,7 +69,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       <Card>
         <CardContent className="pt-4">
           <TalentRateRecommender
-
             skills={skills}
             yearsExperience={yearsExperience}
             location={location}
@@ -76,4 +80,3 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>;
   );
 };
-

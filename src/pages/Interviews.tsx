@@ -1,104 +1,40 @@
-
-
-import React, { useEffect, useState } from "react",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { InterviewCard } from "@/components/interviews/InterviewCard",
-
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
-
-    }
-    loadInterviews()
-  }, [])
-  // Filter interviews based on status and date
-  const now = new Date()
-  const today = startOfDay(now)
-  const upcomingInterviews = interviews
-    .filter(interview => {
-      const interviewDate = parseISO(interview.scheduled_date)
-      return (
-        isAfter(interviewDate, now) &&
-        ['confirmed', 'requested'].includes(interview.status)
-      )
-    })
-    .sort(
-      (a, b) =>
-        parseISO(a.scheduled_date).getTime() -
-        parseISO(b.scheduled_date).getTime()
-    )
-  const pendingInterviews = interviews.filter(
-    interview => interview.status === 'requested'
-  )
-  const pastInterviews = interviews.filter(interview => {
-    const interviewDate = parseISO(interview.scheduled_date)
-    return (
-      !isAfter(interviewDate, now) |
-      ['completed', 'declined', 'cancelled'].includes(interview.status)
-    )
-  })
-  // Group interviews by date
-  const groupInterviewsByDate = (interviews: Interview[]) => {
-    const grouped: Record<string, Interview[]> = {}
-    interviews.forEach(interview => {
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd')
-
-    },
-    
-    loadInterviews()
-  }, []),
-
-  // Filter interviews based on status and date
-  const now = new Date(),
-  const today = startOfDay(now),
-  
-  const upcomingInterviews = interviews
-    .filter((interview) => {
-      const interviewDate = parseISO(interview.scheduled_date),
-      return isAfter(interviewDate, now) && 
-        ['confirmedrequested'].includes(interview.status)
-    })
-    .sort((a, b) => 
-      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
-    ),
-  
-  const pendingInterviews = interviews.filter(interview => 
-    interview.status === 'requested'
-  ),
-  
-  const pastInterviews = interviews.filter(interview => {
-    const interviewDate = parseISO(interview.scheduled_date),
-    return !isAfter(interviewDate, now) || 
-      ['completeddeclinedcancelled'].includes(interview.status)
-  }),
-
-  // Group interviews by date
-  const groupInterviewsByDate = (interviews: Interview[]) => {
-    const grouped: Record<string Interview[]> = {},
-    
-    interviews.forEach((interview) => {
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),
-
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
       }
       grouped[dateKey].push(interview)
-
     return Object.entries(groupedInterviews)
       .sort(
         ([dateA], [dateB]) =>
           parseISO(dateA).getTime() - parseISO(dateB).getTime()
       )
       .map(([date, interviews]) => (
-
             ))}
           </div>
         </div>
       ))
+
+  return (
+    <>;
+      <SEO
+        title='Interviews | Zion AI Marketplace'
+        description='Manage your scheduled interviews with clients and talent'
+      />
+      <main className='container mx-auto px-4 py-8'>
+        <div className='flex justify-between items-center mb-8'>
+          <div>
+            <h1 className='text-3xl font-bold'>Interviews</h1>
+            <p className='text-muted-foreground mt-1'>
+              Schedule and manage your video interviews
+            </p>
+          </div>
+        </div>
+              Schedule and manage your video interviews;
+            </p>;
+          </div>;
+        </div>;
 
   return (
     <>
@@ -113,7 +49,6 @@ function InterviewsContent() {
             <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
           </div>
         </div>
-
                   {upcomingInterviews.length}
                 </span>
               )}
@@ -128,6 +63,7 @@ function InterviewsContent() {
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
           </TabsList>
+
 
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -147,6 +83,7 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
+
 
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -168,6 +105,7 @@ function InterviewsContent() {
             )}
           </TabsContent>
 
+
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
@@ -183,4 +121,13 @@ function InterviewsContent() {
                 </p>
               </div>
             )}
-
+          </TabsContent>;
+        </Tabs>;
+      </main>;
+    </>;
+  );
+    <ProtectedRoute>;
+      <InterviewsContent />;
+    </ProtectedRoute>;
+  );
+}

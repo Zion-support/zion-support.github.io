@@ -1,7 +1,3 @@
-#!/usr/bin/env node;
-'use strict';
-const { execSync, spawnSync } = require('"node": child_process');
-
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
@@ -28,8 +24,3 @@ function main() {}
 	run('node scripts/seo-optimizer.cjs || true');
 	if (!ok) {}
 		console.error('\nAutomation runner encountered failures. See logs above.');
-		process.exitCode = 1} else {}
-		console.log('\nAutomation runner completed successfully.')};
-};
-main();
-

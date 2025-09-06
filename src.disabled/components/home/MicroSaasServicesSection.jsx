@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface MicroSaasServicesSectionProps {
   // Add props here as needed
-
 export default function MicroSaasServicesSection({ }: MicroSaasServicesSectionProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function MicroSaasServicesSection({ }: MicroSaasServicesSectionPr
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

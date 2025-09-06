@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface EnhancedSearchInputProps {
   // Add props here as needed
-
 export default function EnhancedSearchInput({ }: EnhancedSearchInputProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function EnhancedSearchInput({ }: EnhancedSearchInputProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

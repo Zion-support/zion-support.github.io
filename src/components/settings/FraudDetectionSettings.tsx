@@ -1,15 +1,6 @@
-
-
-import React, { useState } from 'react',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Switch } from '@/components/ui/switch',
-import { Button } from '@/components/ui/button',
-import { Label } from '@/components/ui/label',
-
 import { ShieldAlert, Info } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
-
   return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">
@@ -114,4 +105,3 @@ import {
       </CardContent>
     </Card>
   )
-

@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface PartnersProps {
   // Add props here as needed
-
 export default function Partners({ }: PartnersProps) {
   return (
     <div>
@@ -32,6 +31,18 @@ export default function Partners({ }: PartnersProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+:src.pages.disabled/Partners.jsx
+}
+}
+}
+}
+}
+}
+
+
+
+
+
 
 :src.pages.disabled/Partners.jsx
 }
@@ -39,4 +50,3 @@ export default function Partners({ }: PartnersProps) {
 }
 }
 }
-

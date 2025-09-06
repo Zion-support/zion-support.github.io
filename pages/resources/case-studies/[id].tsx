@@ -1,10 +1,115 @@
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+export default function CaseStudyResourcePage() {
+  const router = useRouter(),
+  const { id } = router.query,
+
 
 
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
+        delivering significant improvements in efficiency, quality, and cost reduction.</p>
+        <h2>Background</h2>
+        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
+        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
+        and preventing them from meeting growing customer demands.</p>
+        <ul>
+          <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
+          <li><strong>Real-time Production Optimization:</strong> Dynamic scheduling and resource allocation</li>
+          <li><strong>Automated Quality Control:</strong> Computer vision systems for defect detection</li>
+          <li><strong>Intelligent Scheduling:</strong> AI-powered production planning and optimization</li>
+        </ul>
+        <h2>Implementation</h2>
+        <p>The system was deployed in phases over 6 months:</p>
+        <ul>
+          <li><strong>Phase 1:</strong> Infrastructure setup and data collection</li>
+          <li><strong>Phase 2:</strong> Core AI algorithms deployment</li>
+          <li><strong>Phase 3:</strong> Integration with existing systems</li>
+          <li><strong>Phase 4:</strong> Training and optimization</li>
+        </ul>
+        <h2>Results</h2>
+        <p>The implementation delivered exceptional results:</p>
+        <ul>
+          <li><strong>40% increase in production efficiency</strong> - Streamlined processes and reduced bottlenecks</li>
+          <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
+          <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
+          <li><strong>30% reduction in operational costs</strong> - Optimized resource allocation and reduced waste</li>
+        </ul>
+        <h2>Key Learnings</h2>
+        <p>This project revealed several important insights:</p>
+        <ul>
+          <li>AI systems require high-quality data for optimal performance</li>
+          <li>Human oversight remains crucial for complex decision-making</li>
+          <li>Gradual implementation reduces resistance and improves adoption</li>
+          <li>Continuous monitoring and optimization is essential for long-term success</li>
+        </ul>
+        <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential
+        of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
+        as a leader in smart manufacturing.</p>
+      `
+    {
+      id: 'cloud - infrastructure - optimization',
+      title: 'Cloud Infrastructure Optimization',
+      company: 'E - commerce Platform',
+      industry: 'Technology',
+      results: '50% reduction in cloud costs, 99.9% uptime achieved',
+        <h2>Executive Summary</h2>
+        <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically
+        reduce costs while improving performance and reliability for high-traffic applications.</p>
+        <h2>Background</h2>
+        <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
+        Their infrastructure was not scaling efficiently with their business growth, leading to poor customer
+        experience and high operational expenses.</p>
+        <h2>Challenge</h2>
+        <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability.
+        They required a solution that could automatically adapt to traffic patterns, prevent outages, and
+        optimize resource allocation in real-time.</p>
+        <h2>Solution</h2>
+        <p>We designed and implemented a comprehensive cloud optimization system:</p>
+        <ul>
+          <li><strong>Auto-scaling Infrastructure:</strong> Intelligent resource allocation based on demand</li>
+          <li><strong>Self-healing Systems:</strong> Automatic failure detection and recovery</li>
+          <li><strong>Cost Optimization:</strong> AI algorithms for resource cost management</li>
+          <li><strong>Performance Monitoring:</strong> Real-time metrics and alerting systems</li>
+        </ul>
+        <h2>Implementation</h2>
+        <p>The project was completed in 8 months with careful planning:</p>
+        <ul>
+          <li><strong>Months 1-2:</strong> Infrastructure analysis and design</li>
+          <li><strong>Months 3-4:</strong> Core optimization systems deployment</li>
+          <li><strong>Months 5-6:</strong> Integration and testing</li>
+          <li><strong>Months 7-8:</strong> Gradual migration and optimization</li>
+        </ul>
+        <h2>Results</h2>
+        <p>The optimization delivered outstanding results:</p>
+        <ul>
+          <li><strong>50% reduction in cloud costs</strong> - Intelligent resource allocation eliminated waste</li>
+          <li><strong>99.9% uptime achieved</strong> - Self-healing systems prevented outages</li>
+          <li><strong>3x improvement in performance</strong> - Optimized infrastructure handled traffic spikes</li>
+          <li><strong>40% faster page load times</strong> - Optimized resource delivery improved user experience</li>
+        </ul>
+        <h2>Key Learnings</h2>
+        <p>This project revealed several important insights:</p>
+        <ul>
+          <li>Gradual migration reduces risk and improves system stability</li>
+          <li>Real-time monitoring is essential for optimization</li>
+          <li>Cost optimization requires continuous monitoring and adjustment</li>
+          <li>Self-healing systems significantly improve reliability</li>
+        </ul>
+        <h2>Conclusion</h2>
+        <p>The cloud infrastructure optimization project transformed the platform's performance and cost structure.
+        The self-healing, auto-scaling infrastructure now supports continued business growth while maintaining
+        optimal performance and cost efficiency.</p>
+      `
+    }
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -186,10 +291,8 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
-
   if (!caseStudy) {
     return (
       <>
@@ -204,10 +307,13 @@ export default function CaseStudyResourcePage(req, res) {
                 The case study resource you're looking for doesn't exist.
               </p>
 
+
+
+
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
-                 Back to Resources
+                ← Back to Resources
               </Link>
             </div>
           </main>
@@ -215,7 +321,6 @@ export default function CaseStudyResourcePage(req, res) {
       </>
     )
   }
-
   return (
     <>
       <Head>
@@ -229,13 +334,12 @@ export default function CaseStudyResourcePage(req, res) {
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                 Back to Resources
+                ← Back to Resources
               </Link>
             </nav>
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -247,14 +351,21 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
-
               <div
                 className="prose prose-invert max-w-none"
-
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               />
             </div>
             <div className="text-center">
               <Link
+
+
+
 
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -266,12 +377,72 @@ export default function CaseStudyResourcePage(req, res) {
         </main>
       </div>
     </>
-
   )
   ];
   const caseStudy = caseStudies.find(study => study.id === id);
   if (!caseStudy) {;
     return (;
+
+}
+
+      description: 'Building self - healing, auto - scaling cloud infrastructure.',
+      full_content: `;
+        <h2 > Executive Summary</h2>;
+        <p > This case study demonstrates how intelligent cloud infrastructure optimization can dramatically;
+        reduce costs while improving performance and reliability for high - traffic applications.</p>;
+        <h2 > Background</h2>;
+        <p > A growing e - commerce platform was experiencing skyrocketing cloud costs and frequent outages.;
+        Their infrastructure was not scaling efficiently with their business growth, leading to poor customer;
+        experience and high operational expenses.</p>;
+        <h2 > Challenge</h2>;
+        <p > The platform needed to optimize their cloud infrastructure for cost, performance, and reliability.;
+        They required a solution that could automatically adapt to traffic patterns, prevent outages, and;
+        optimize resource allocation in real - time.</p>;
+        <h2 > Solution</h2>;
+        <p > We designed and implemented a comprehensive cloud optimization system:</p>;
+        <ul>;
+          <li><strong > Auto - scaling Infrastructure:</strong> Intelligent resource allocation based on demand</li>;
+          <li><strong > Self - healing Systems:</strong> Automatic failure detection and recovery</li>;
+          <li><strong > Cost Optimization:</strong> AI algorithms for resource cost management</li>;
+          <li><strong > Performance Monitoring:</strong> Real - time metrics and alerting systems</li>;
+        </ul>;
+        <h2 > Implementation</h2>;
+        <p > The project was completed in 8 months with careful planning:</p>;
+        <ul>;
+          <li><strong > Months 1 - 2:</strong> Infrastructure analysis and design</li>;
+          <li><strong > Months 3 - 4:</strong> Core optimization systems deployment</li>;
+          <li><strong > Months 5 - 6:</strong> Integration and testing</li>;
+          <li><strong > Months 7 - 8:</strong> Gradual migration and optimization</li>;
+        </ul>;
+        <h2 > Results</h2>;
+        <p > The optimization delivered outstanding results:</p>;
+        <ul>;
+          <li><strong > 50% reduction in cloud costs</strong> - Intelligent resource allocation eliminated waste</li>;
+          <li><strong > 99.9% uptime achieved</strong> - Self - healing systems prevented outages</li>;
+          <li><strong > 3x improvement in performance</strong> - Optimized infrastructure handled traffic spikes</li>;
+          <li><strong > 40% faster page load times</strong> - Optimized resource delivery improved user experience</li>;
+        </ul>;
+        <h2 > Key Learnings</h2>;
+        <p > This project revealed several important insights:</p>;
+        <ul>;
+          <li > Gradual migration reduces risk and improves system stability</li>;
+          <li > Real - time monitoring is essential for optimization</li>;
+          <li > Cost optimization requires continuous monitoring and adjustment</li>;
+          <li > Self - healing systems significantly improve reliability</li>;
+        </ul>;
+        <h2 > Conclusion</h2>;
+        <p > The cloud infrastructure optimization project transformed the platform's performance and cost structure.;
+        The self - healing, auto - scaling infrastructure now supports continued business growth while maintaining;
+        optimal performance and cost efficiency.</p>;
+      `;
+    }
+  ],
+  const case_study = case_studies.find (study => study.id === id),
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
       <>;
         <Head>;
           <title > Case Study Resource Not Found | Zion Tech Group</title>;
@@ -285,66 +456,15 @@ export default function CaseStudyResourcePage(req, res) {
               </p>;
               <Link;
                 href="/resources";
-                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
-              >;
-                 Back to Resources;
               </Link>;
             </div>;
           </main>;
         </div>;
-      </>);
-  }
-  return (
-    <>;
-      <Head>;
-        <title>{case_study.title} | Zion Tech Group - Case Study Resource</title>;
-        <meta name="description" content={case_study.description} />;
-        <meta property="og:title" content={`${case_study.title} | Zion Tech Group`} />;
-        <meta property="og:description" content={case_study.description} />;
-      </Head>;
-      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
-        <main className="container mx - auto px - 6 py - 12">;
-          <div className="max - w-4xl mx - auto">;
-            <nav className="mb - 8">;
-              <Link href="/resources" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-                 Back to Resources;
-              </Link>;
-            </nav>;
-            <header className="mb - 12">;
-              <div className="mb - 6">;
-                <span className="px - 3 py - 1 bg - cyan - 400 / 20 text - cyan - 400 text - sm rounded - full border border - cyan - 400 / 30">;
-                  {case_study.industry}
-                </span>;
-              </div>;
-              <h1 className="text - 4xl font - bold mb - 4 text - white">{case_study.title}</h1>;
-              <p className="text - xl text - cyan - 400 font - semibold mb - 2">{case_study.company}</p>;
-              <p className="text - white / 80 text - lg">{case_study.description}</p>;
-            </header>;
-            <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20 mb - 8">;
-              <h2 className="text - 2xl font - bold mb - 4 text - white">Key Results</h2>;
-              <p className="text - green - 400 font - semibold text - lg">{case_study.results}</p>;
-            </div>;
-            <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20 mb - 12">;
-              <div;
-                className="prose prose - invert max - w-none";
-                dangerouslySetInnerHTML={{ __html: case_study.full_content }}
-              />;
-            </div>;
-            <div className="text - center">;
-              <Link;
-                href="/contact";
-                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
               >;
                 Get Started with Your Project;
               </Link>;
             </div>;
           </div>;
         </main>;
-      </div>;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
 

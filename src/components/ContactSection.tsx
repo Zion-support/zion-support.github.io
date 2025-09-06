@@ -1,5 +1,3 @@
-
-
 export function ContactSection() {
   const [formData, setFormData] = useState({
     name: ""
@@ -14,7 +12,6 @@ export function ContactSection() {
     email?: string;
     subject?: string;
     message?: string
-
 import { useState } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -59,20 +56,17 @@ export function ContactSection() {
     const result = schema.safeParse(formData),
     if (!result.success) {
       const fieldErrors: Record<string string> = {},
-
       for (const err of result.error.errors) {
         if (err.path[0]) {
           fieldErrors[err.path[0] as string] = err.message
         }
       }
-
       toast({
         title: "Form Validation Error"
         description: result.error.errors[0]?.message |"Please check your form and try again"
         variant: "destructive"})
       return
     }
-
       toast({
         title: "Form Validation Error",
         description: result.error.errors[0]?.message || "Please check your form and try again",
@@ -88,7 +82,27 @@ export function ContactSection() {
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
       .then(async (res) => {
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
 
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+        setSubmitted(true)
+        setTimeout(() => setSubmitted(false), 2000)
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((err) => {
+        setIsSubmitting(false);        toast({
+
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
         }
         toast({
           title: "Message Sent",
@@ -102,10 +116,15 @@ export function ContactSection() {
         setIsSubmitting(false),
         toast({
 
+
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
+  },
+
+
+
 
   },
 
@@ -196,7 +215,6 @@ export function ContactSection() {
                   <Textarea
                     id="message"
                     name="message"
-
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -214,4 +232,3 @@ export function ContactSection() {
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
-

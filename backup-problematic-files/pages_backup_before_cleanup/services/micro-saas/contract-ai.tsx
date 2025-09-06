@@ -3,7 +3,6 @@ module.exports = default function ContractAI() {; return (; <Article; title="Con
 import React from 'react';
 interface ContractaiProps {
   // Add props here as needed
-}
 export default function Contractai({ }: ContractaiProps) {
   return (
     <div className={className || ''}>
@@ -11,4 +10,3 @@ export default function Contractai({ }: ContractaiProps) {
       <p>This component is under development.</p>
     </div>
   );
-}

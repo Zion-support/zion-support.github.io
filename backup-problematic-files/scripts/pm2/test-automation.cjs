@@ -206,6 +206,9 @@ testAutomation.run().catch(error => {
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -244,6 +247,9 @@ class TestAutomation {}
       // Check if test script exists in package.json;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const testScript = packageJson.scripts?.test || packageJson.scripts?.['test:smoke'];
+      // Check if test script exists in package.json;
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const testScript = packageJson.scripts?.test || packageJson.scripts?.['test:smoke'];
       
       // Check if test script exists in package.json;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -259,7 +265,6 @@ class TestAutomation {}
       // Run tests;
       const testCommand = this.parallelTests ? `${testScript} --run` : testScript;
       this.log(`Running tests: ${testCommand}`);
-      
       
       
       
@@ -314,7 +319,6 @@ class TestAutomation {}
       
       
       
-      
       // Try to run coverage command;
       const coverageCommand = 'npm run test:coverage || npm run coverage || npx jest --coverage';
       const result = execSync(coverageCommand, { })
@@ -363,6 +367,8 @@ class TestAutomation {}
     };
     const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -374,6 +380,8 @@ class TestAutomation {}
   };
   async start() {}
     this.log(`${this.processName} started`);
+    try {}
+      const report = await this.generateReport();
     try {}
       const report = await this.generateReport();
     

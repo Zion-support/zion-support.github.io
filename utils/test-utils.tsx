@@ -1,16 +1,36 @@
 import React from 'react';
-
-import { render, RenderOptions } from '@testing - library / react';
-import { ThemeProvider } from 'next - themes';
-;
-const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
-
   return (
     <ThemeProvider attribute="class" default_theme="light">;
       {children}
+  }
+  isFallback: false
+  isLocale: false
+  isReady: true
+  defaultLocale: 'en'
+  domainLocales: []
+  isPreview: false
+    on: jest.fn (),
+    off: jest.fn (),
+    emit: jest.fn ();
+  },
+  is_fallback: false,
+  is_locale: false,
+  is_ready: true,
+  default_locale: 'en',
+  domain_locales: [],
+  is_preview: false;
+
+  },
+  isFallback: false,
+  isLocale: false,
+  isReady: true,
+  defaultLocale: 'en',
+  domainLocales: [],
+  isPreview: false;
 
 });
 export const createMockProps = (overrides = {}) => ({
+
 
     </ThemeProvider>;
   );
@@ -41,7 +61,9 @@ export const mockNextRouter = () => ({;
 
 });
 export const createMockProps = (overrides = {}) => ({;
-
   ...overrides;
+
+
+
 
 });

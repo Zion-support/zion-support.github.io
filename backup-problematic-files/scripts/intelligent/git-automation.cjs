@@ -599,3 +599,4 @@ gitAutomation.start().catch(console.error);
       console.error('Error loading "history")
       console.error('Error loading "history")
       console.error('Error loading "history")
+      console.error('Error loading "history")

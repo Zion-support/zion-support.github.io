@@ -112,4 +112,3 @@ if ( {})
      {}
     const analyzer = new AICodeAnalyzer}(;);
     analyzer.run().catch(console.error)};
-module.exports = AICodeAnalyzer;

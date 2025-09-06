@@ -1,6 +1,4 @@
 }};
-; async analyzeBuild() {_; try {; this.log(' Analyzing current build...');
-; if (!fs.existsSync('dist')) {; this.log(' Building project first...'); execSync('npm run build', _{; cwd: this.projectRoot; stdio: 'pipe'})};
 ; const buildStats = {_; totalSize: 0, fileCount: 0, largestFiles: []; jsFiles: []; cssFiles: []; assetFiles: []};
 ; const analyzeDirectory = (dir) = > {_; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath);
 ; if (stat.isDirectory()) {; analyzeDirectory(fullPath)} else {_; const fileInfo = {; path: fullPath.replace(this.projectRoot + '/dist/', _''); size: stat.size; sizeKB: Math.round(stat.size / 1024 * 100) / 100};

@@ -15,12 +15,10 @@ class SecurityAuditor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
-    
     console.log('Security Auditor started successfully')};
   async runSecurityCheck() {}
     try {}
       console.log('Running security audit...');
-      
       const child = spawn('npm', ['audit'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -33,7 +31,6 @@ class SecurityAuditor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
-
       child.on('close', (code) => {}
         if ( {})
           console.log('Security audit passed ✓')) {}
@@ -50,12 +47,10 @@ class SecurityAuditor {}
   async attemptSecurityFix() {}
     try {}
       console.log('Attempting to fix security issues...');
-      
       const child = spawn('npm', ['audit', 'fix', '--force'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
-
       child.on('close', (code) => {}
         if ( {})
           console.log('Security fix completed ✓')) {}
@@ -90,4 +85,3 @@ if ( {})
     process.exit(0)}
 });
   auditor.start().catch(console.error)};
-module.exports = SecurityAuditor;

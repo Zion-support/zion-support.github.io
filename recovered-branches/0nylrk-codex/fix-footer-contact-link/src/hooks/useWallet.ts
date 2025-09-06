@@ -1,5 +1,3 @@
-
-
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() {;
   const { user } = useAuth();
@@ -14,6 +12,31 @@ export function useWallet() {;
       setWallet(null);
       setLoading(false);
       return
+import {useEffect, useState} from 'react';
+import {use_auth} from '@/hooks / use_auth';
+import {supabase} from '@/integrations / supabase / client';
+import type { Wallet, TokenTransaction } from '@/types / tokens';
+export /**
+ * use_wallet - Function description
+ */
+function use_wallet() {
+  const { user } = use_auth ();
+  const [wallet, set_wallet] = useState < Wallet | null>(null);
+  const [transactions, set_transactions] = useState < TokenTransaction[]>([]);
+  const [loading, set_loading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  async /**
+ * fetch_wallet - Function description
+ */
+function fetch_wallet() {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_wallet (null);
+      set_loading (false);
+      return;
     }
     try {
       set_loading (true);
@@ -33,14 +56,10 @@ if ( {) {
     } catch (err: any) {
       console.error ('Error fetching wallet:', err);
       set_error (err.message);
-
     } finally {
       set_loading (false);
     }
   }
-
-    setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
-
     setTransactions(prev => [
       {
         id: crypto && crypto.randomUUID();
@@ -146,8 +165,6 @@ if (return) {
     transactions;
     loading;
     error;
-    fetchWallet;
-
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -243,7 +260,6 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
-
     fetchTransactions;
     earnTokens;
 

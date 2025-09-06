@@ -1,21 +1,3 @@
-
-import { Loader2 } from 'lucide-react'
-
-import { NavigationButtonsProps } from './types'
-import { Button } from "@/components/ui/button"
-import { NavigationButtonsProps } from "./types"
-export const NavigationButtons = ({
-  onBack
-  onNext
-  isNextDisabled = false
-  backLabel = "Back"
-  nextLabel = "Next"
-  isLoading = false}: NavigationButtonsProps) => {
-  return (
-    <div className="flex justify-between">
-      {onBack && (
-        <Button variant='outline' onClick={onBack}>
-
 export const NavigationButtons = ({
   onBack,
   onNext,
@@ -23,40 +5,21 @@ export const NavigationButtons = ({
   backLabel = "Back",
   nextLabel = "Next",
   isLoading = false}: NavigationButtonsProps) => {
-
   return (
     <div className="flex justify-between">
       {onBack && (
-
         <Button variant="outline" onClick={onBack}>
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from 'lucide-react';
-import { NavigationButtonsProps } from "./types";
-export const NavigationButtons = ({;
-  onBack;
-  onNext;
-  isNextDisabled = false;
-  backLabel = "Back";
-  nextLabel = "Next";
-  isLoading = false}: NavigationButtonsProps) => {;
-  return (
-    <div className="flex justify-between">;
-      {onBack && (;
-        <Button variant='outline' onClick={onBack}>;
+import { NavigationButtonsProps } from "./types",;
 export const NavigationButtons = ({;
   onBack,;
   onNext,;
   isNextDisabled = false,;
-  backLabel = 'Back',;
-  nextLabel = 'Next',;
-  isLoading = false,;
-}: NavigationButtonsProps) => {;
-  return (
-    <div className='flex justify-between'>;
-      {onBack && (;
-        <Button variant='outline' onClick={onBack}>          {backLabel}
-        <Button variant="outline" onClick={onBack}>;
-  return (
+  backLabel = "Back",;
+  nextLabel = "Next";
+  isLoading = false}: NavigationButtonsProps) => {;
+  return (;
     <div className="flex justify-between">;
       {onBack && (;
         <Button variant="outline" onClick={onBack}>;
@@ -64,12 +27,7 @@ export const NavigationButtons = ({;
         </Button>;
       )}
 
-
-          {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}          {nextLabel}
+"          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
         </Button>;
       )}
-
-    </div>;
-  );
-};
-

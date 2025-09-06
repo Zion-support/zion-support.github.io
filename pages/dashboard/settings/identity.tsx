@@ -1,4 +1,11 @@
-
+import React, { useEffect, useState } from 'react',;
+import Head from 'next/head',;
+import type { KycProfile } from '../../../utils/kyc',;
+import { ProfileBadges } from '../../../components/ui/ProfileBadges',;
+export default function IdentitySettingsPage() {
+  const [userId, setUserId] = useState('demo-user'),
+  const [profile, setProfile] = useState<KycProfile | null>(null),
+  const [error, setError] = useState(''),
 
 import React, { useEffect, useState } from 'react';
 
@@ -11,7 +18,10 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null)
   const [error, setError] = useState('')
   async function load() {
-
+    } catch (e) {
+      setError('Failed to fetch')
+    }
+  }
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
@@ -22,6 +32,7 @@ export default function IdentitySettingsPage(req, res) {
   const [profile, setProfile] = useState<KycProfile | null>(null);
   const [error, setError] = useState('');
   async function load() {;
+
 
     try {
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
@@ -35,26 +46,13 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-  useEffect(() => {
-    load()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-
-  return (
-    <>
-      <Head>
-        <title>Identity Settings - Zion</title>
-        <meta name="description" content="Manage your identity verification status" />
-      </Head>
-      <main className="max-w-3xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-4">Identity</h1>
-        <div className="mb-4">
-
+          <ProfileBadges profile={profile || undefined} />
+        </div>
+        <div className="mb-4 text-sm text-gray-600">
+      </main>
+    </>
+  );
+};
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -67,7 +65,6 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
       </main>
     </>
   )
@@ -75,4 +72,3 @@ export default function IdentitySettingsPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-

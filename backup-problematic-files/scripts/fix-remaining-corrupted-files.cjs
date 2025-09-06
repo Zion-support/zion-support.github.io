@@ -13,3 +13,4 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
       content = "
     "email"
     "password"
+    "password"

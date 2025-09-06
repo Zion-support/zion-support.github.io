@@ -1,12 +1,3 @@
-
-const contactMethods = [
-  EnvelopeIcon,
-  PhoneIcon,
-  MapPinIcon,
-  ClockIcon,
-  ChatBubbleLeftRightIcon;
-} from '@heroicons / react / 24 / outline';
-const contact_methods = [;
   {
     name: 'Email'
     description: 'Get in touch with our team'
@@ -14,55 +5,14 @@ const contact_methods = [;
     href: 'mailto:contact@ziontechgroup.com'
     icon: EnvelopeIcon}
   {
-
-    name: 'Phone',
-    description: 'Speak with an expert',
-    value: '+1 (555) 123 - 4567',
-    href: 'tel:+15551234567',
-    icon: PhoneIcon},
-  {
-    name: 'Office'
-    description: 'Visit our headquarters'
-    value: '1234 Innovation Drive, Silicon Valley, CA 94025'
-    href: '#'
-    icon: MapPinIcon}]
-const officeLocations = [
-  {
-    name: 'Silicon Valley'
-    address: '1234 Innovation Drive, San Jose, CA 94025'
-    phone: '+1 (555) 123-4567'
-    email: 'sv@ziontechgroup.com'
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM PST'}
-  {
-    name: 'London'
-    address: '456 Tech Square, London, UK EC2A 4BX'
-    phone: '+44 20 1234 5678'
-    email: 'london@ziontechgroup.com'
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM GMT'}
-  {
-    name: 'Tokyo',
-    address: '789 Innovation Tower, Tokyo, Japan 100 - 0001',
-    phone: '+81 3 1234 5678',
-    email: 'tokyo@ziontechgroup.com',
-    hours: 'Mon - Fri: 9:00 AM - 6:00 PM JST'}];
-const faqs = [;
-
   {
     question: 'What industries do you serve?'
     answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}
   {
-
-    question: 'How long does implementation take?',
-    answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2 - 4 weeks, while complex enterprise solutions typically take 3 - 6 months.'},
-
   {
     question: 'Do you provide ongoing support?'
     answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
   {
-    question: 'What security measures do you have?'
-    answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
-
-export default function ContactPage() {
   return (
     <div className="bg-black">
 
@@ -72,27 +22,39 @@ export default function ContactPage() {
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               Get in{' '}
+      {/* Contact methods */}
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Multiple ways to reach us
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            {contactMethods.map((method) => (
+              <div key={method.name} className="flex flex-col group">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                  <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+                  {method.name}
+export default function ContactPage() {
+  return (
+    <div className="bg-black">
+      {/* Hero section */}
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Get in{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
-
               technology can accelerate your growth and innovation.
             </p>
           </div>
         </div>
       </div>
-              <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
-                Touch;
-              </span>;
-            </h1>;
-            <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-              Ready to transform your business with AI? Let's discuss how our cutting - edge;
-              technology can accelerate your growth and innovation.;
-            </p>;
-          </div>;
-        </div>;
-      </div>;
       {/* Contact methods */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -109,32 +71,21 @@ export default function ContactPage() {
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {method.name}
                 </dt>
-
                     >
-                      {method.value} <span aria-hidden=&quot;true&quot;>→</span>
+                      {method.value} <span aria-hidden="true">→</span>
                     </Link>
                   </p>
                 </dd>
               </div>
             ))}
-                </dt>;
-                <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
-                  <p className=&quot;flex - auto & quot;>{method.description}</p>;
-                  <p className=&quot;mt - 6&quot;>;
-                    <a;
-                      href={method.href}
-                      className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
-                    >;
-                      {method.value} <span aria - hidden=&quot;true & quot;>→</span>;
-                    </Link>;
-                  </p>;
-                </dd>;
-              </div>))}
           </dl>;
         </div>;
       </div>;
       {/* Contact form */}
-
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Let's start a conversation
           </p>
         </div>
@@ -264,7 +215,10 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* FAQ */}
-
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Common questions
           </p>
         </div>
@@ -276,6 +230,17 @@ export default function ContactPage() {
                   {faq.question}
                 </dt>;
                 <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
+            Common questions
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+          <dl className="space-y-8">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+                <dt className="text-lg font-semibold leading-7 text-white mb-4">
+                  {faq.question}
+                </dt>
+                <dd className="text-base leading-7 text-gray-300">
                   {faq.answer}
                 </dd>;
               </div>))}
@@ -283,7 +248,6 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* CTA section */}
-
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

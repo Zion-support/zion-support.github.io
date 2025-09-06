@@ -1,14 +1,32 @@
-
-
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {ChatBotPanel} from "./ChatBotPanel";
+import {MessageSquare, Info, X} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useTheme} from "@/hooks/useTheme";
+export function SupportWidget() {;
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  return (
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
 import { MessageSquare, Info, X } from "lucide-react",
-
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/hooks/useTheme";
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  return (
+    <>
+    <>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
 
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -17,13 +35,6 @@ import { MessageSquare, Info, X } from "lucide-react",
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
-
-
-      {/* Support panel */}
-      {isOpen && (;
-        <div
-          className={cn(
-
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;
@@ -39,7 +50,6 @@ import { MessageSquare, Info, X } from "lucide-react",
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
-                onClick={() => window && window.location.href = "/help"}
                 aria-label="Help center";
               >;
                 <Info className="h-5 w-5" />;
@@ -48,22 +58,11 @@ import { MessageSquare, Info, X } from "lucide-react",
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
+              <Button;
+                variant="ghost";
+                size="icon";
+                className="h-8 w-8 rounded-full";
                 onClick={() => setIsOpen(false)}
-
-                aria-label="Close support";
-              >;
-                <X className="h-5 w-5" />;
-              </Button>;
-            </div>;
-          </div>;
-
-          <ChatBotPanel />;
-        </div>;
-      )}
-    </>;
-  );
-}
-
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { ChatBotPanel } from './ChatBotPanel';

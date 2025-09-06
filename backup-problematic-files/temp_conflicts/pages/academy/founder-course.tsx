@@ -58,7 +58,6 @@ export default function FounderCoursePage() {;
       <CertificateView completedCount={completedCount} totalCount={totalCount} />;
 ;
       <div className="text-xs text-gray-500 dark:text-gray-400">;
-        Operator prompt:Create a 5-module course for founders launching a decentralized AI work protocol  include mission, DAO, token, governance, and deployment tools.;
       </div>;
     </div>;
   ),;

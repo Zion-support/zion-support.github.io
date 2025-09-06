@@ -1,6 +1,3 @@
-
-  return (;
-    <div className="space-y-8">;
 "use client",
 import { useState  } from './react';,
 interface AIService {
@@ -40,7 +37,6 @@ const ai_services: AIService[] = [;
     pricing: "Starting at $499 / month",
     starting_price: 499,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = ZionGPT%20Enterprise%20Inquiry",
-    icon: "🤖",
     features: [;
       "Custom knowledge base training",
       "Multi - language support (100+ languages)",
@@ -83,7 +79,6 @@ const ai_services: AIService[] = [;
     pricing: "Starting at $199 / month",
     starting_price: 199,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Content%20Generation%20Inquiry",
-    icon: "✍️",
     features: [;
       "AI - powered content creation",
       "Brand voice consistency",
@@ -126,7 +121,6 @@ const ai_services: AIService[] = [;
     pricing: "Starting at $599 / month",
     starting_price: 599,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Analytics%20Inquiry",
-    icon: "📊",
     features: [;
       "Predictive analytics",
       "Natural language queries",
@@ -169,7 +163,6 @@ const ai_services: AIService[] = [;
     pricing: "Starting at $399 / month",
     starting_price: 399,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Automation%20Inquiry",
-    icon: "⚡",
     features: [;
       "Process mining and discovery",
       "Workflow automation",
@@ -189,14 +182,6 @@ const ai_services: AIService[] = [;
       "Cloud services";
     ];
   }
-],
-export default /**
- * AISolutionsPage - Function description
- */
-function AISolutionsPage() {
-  const [selected_service, setSelectedService] = useState < string | null>(null);
-  return (
-    <div className="space - y-8">;
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">AI Solutions & Services</h1>;
@@ -225,7 +210,7 @@ function AISolutionsPage() {
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
                 {service.features.map ((feature, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
-                    <span className="text - green - 400"></span>;
+                    <span className="text - green - 400">✓</span>;
                     <span>{feature}</span>;
                   </div>))}
               </div>;
@@ -236,7 +221,7 @@ function AISolutionsPage() {
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
                 {service.technical_specs.map ((spec, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
-                    <span className="text - blue - 400"></span>;
+                    <span className="text - blue - 400">⚙️</span>;
                     <span>{spec}</span>;
                   </div>))}
               </div>;
@@ -247,7 +232,7 @@ function AISolutionsPage() {
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
                 {service.use_cases.map ((use_case, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
-                    <span className="text - yellow - 400"></span>;
+                    <span className="text - yellow - 400">💡</span>;
                     <span>{use_case}</span>;
                   </div>))}
               </div>;
@@ -258,7 +243,7 @@ function AISolutionsPage() {
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
                 {service.integration.map ((integration, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
-                    <span className="text - purple - 400"></span>;
+                    <span className="text - purple - 400">🔗</span>;
                     <span>{integration}</span>;
                   </div>))}
               </div>;
@@ -285,17 +270,17 @@ function AISolutionsPage() {
         <h2 className="text - 3xl font - bold text - center">AI Capabilities Overview</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
           <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
-            <div className="text - 3xl mb - 3"></div>;
+            <div className="text - 3xl mb - 3">🧠</div>;
             <h3 className="font - semibold mb - 2">Natural Language Processing</h3>;
             <p className="text - sm opacity - 80">Advanced text analysis, generation, and understanding across multiple languages</p>;
           </div>;
           <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
-            <div className="text - 3xl mb - 3"></div>;
+            <div className="text - 3xl mb - 3">🔍</div>;
             <h3 className="font - semibold mb - 2">Computer Vision</h3>;
             <p className="text - sm opacity - 80">Image and video analysis, object detection, and visual content understanding</p>;
           </div>;
           <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
-            <div className="text - 3xl mb - 3"></div>;
+            <div className="text - 3xl mb - 3">📈</div>;
             <h3 className="font - semibold mb - 2">Predictive Analytics</h3>;
             <p className="text - sm opacity - 80">Machine learning models for forecasting, trend analysis, and decision support</p>;
           </div>;
@@ -329,7 +314,7 @@ function AISolutionsPage() {
           href="/services";
           className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";
         >;
-           Back to All Services;
+          ← Back to All Services;
         </a>;
       </div>;
     </div>);

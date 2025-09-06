@@ -1,9 +1,17 @@
-
-
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-
-
+export default function Button(): any ({;
+  children,;
+  variant = 'primary',;
+  size = 'md',;
+  className = '',;
+  onClick,;
+  type = 'button',;
+  disabled = false,;
+}: ButtonProps) {;
+  const baseClasses =;
+    'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
+}
 
   const variantClasses = {;
     primary:;
@@ -24,17 +32,9 @@
     ? 'opacity-50 cursor-not-allowed';
     : 'hover:scale-105 transform';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
-
-
-      >;
-
       {children}
     </button>;
   );
-
-}  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',;
-
-
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
   class_name?: string;
@@ -81,9 +81,34 @@ function Button() {
       className={classes}
       on_click={on_click}
       disabled={disabled}
+      {children}
+    </button>
+);
+}
+
+
+
 
     >
       {children}
     </button>
   );
 
+    </button>);
+  
+  return (
+    <button
+      type={_type}
+      className={_classes}
+      onClick={_onClick}
+      disabled={_disabled}
+    >
+      {_children}
+    </button>
+  )
+
+}
+
+
+    </button>);
+}

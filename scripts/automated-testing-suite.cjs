@@ -1,7 +1,3 @@
-#!/usr/bin/env node
-const { execSync } = require('child_process');
-const fs = require('fs');
-
 console.log('🧪 Automated Testing Suite');
 console.log('=====');
 async function runTests() {
@@ -14,7 +10,6 @@ async function runTests() {
     { name: 'Type Check', command: 'npm run type-check' }
   ];
   const results = [];
-  
   for (const test of tests) {
     try {
       console.log(`\n🔍 Running ${test.name}...`);
@@ -36,7 +31,6 @@ async function runTests() {
       failed: results.filter(r => r.status === 'failed').length
     }
   };
-
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   console.log('\n📊 Test Summary:');
   console.log(`Total: ${report.summary.total}`);
@@ -44,5 +38,3 @@ async function runTests() {
   console.log(`Failed: ${report.summary.failed}`);
   return report;
 }
-
-runTests().catch(console.error);

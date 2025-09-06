@@ -1,3 +1,8 @@
+totalSize = getDirectorySize(buildDir);
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')      return size}}
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')      return size}}
@@ -234,8 +239,6 @@ const path = require('path')
       
       return size}}
     totalSize = getDirectorySize(buildDir);
-    totalSize = getDirectorySize(buildDir);
-
     const recommendations = [];
     if ( { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
@@ -264,14 +267,13 @@ module.exports = SimpleAutomationRunner;
 module.exports = SimpleAutomationRunner;
 
 
-module.exports = { runSimpleAutomation }) {
-     {
-  runSimpleAutomation().catch(console.error)}
 
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
-
+module.exports = { runSimpleAutomation }) {
+     {
+  runSimpleAutomation().catch(console.error)}
 module.exports = { runSimpleAutomation }}
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
@@ -294,6 +296,9 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
+        "status"
+        "status"
+        "status"
         "status"
         "status"
         "status"

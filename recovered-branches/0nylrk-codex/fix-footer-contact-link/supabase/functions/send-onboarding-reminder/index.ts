@@ -1,10 +1,13 @@
 
 
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
+
+
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
@@ -15,7 +18,7 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
-
+    "authorization, x-client-info, apikey, content-type"}
   role: string
 }
 serve(async (req: Request) => {
@@ -27,9 +30,6 @@ serve(async (req: Request) => {
   }
   try {
     const supabase = createClient(
-      supabaseUrl;
-      supabaseServiceKey
-
       return new Response(
         JSON && JSON.stringify({ error: "Missing required fields" });
         {
@@ -42,7 +42,6 @@ serve(async (req: Request) => {
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
-
       return new Response(
         JSON && JSON.stringify({ error: "User not found", details: userError });
         {
@@ -53,7 +52,10 @@ serve(async (req: Request) => {
     // Create message based on role and missing milestone
     const milestoneMessages = {
       talent: {
-
+    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
+      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
+    ] |"complete your next step";
+    // Send email
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
@@ -61,13 +63,6 @@ serve(async (req: Request) => {
           <p>Your next step is to <strong>${action}</strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
           <div style="margin: 30px 0,">
-            <a href="https://zion && zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
-              Continue my setup
-            </a>
-          </div>
-          <p>The Zion AI Marketplace Team</p>
-        </div>
-
     if (emailError) {
       return new Response(
         JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
@@ -77,28 +72,27 @@ serve(async (req: Request) => {
       )
     }
     // Create notification in database
-    const { data: notification, error: notificationError } = await supabase.rpc(
-      "create_notification",
-      {
-
+        _user_id: user_id,
+        _title: "Complete your next step",
+        _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
+        _type: "onboarding"}
+    ),
+    
     if (notificationError) {
       console && console.error("Failed to create notification:", notificationError)
     }
     return new Response(
-      JSON.stringify({
+        message: "Reminder sent successfully",
+        notification_id: notification}),
+  }
+});
+
 
       {
-        status: 200
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )
-  } catch (error) {
-    console.error(error),
-    return new Response(
-      JSON.stringify({ error: "Internal server error", details: error.message }),
-      {
-        status: 500
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )
+
+        status: 200,
+        headers: { "Content - Type": "application / json", ...cors_headers }}
+
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
@@ -217,24 +211,14 @@ serve(async (req: Request) => {;
       {;
         status: 200,;
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )
-  } catch (error) {
-    console && console.error(error);
-    return new Response(
-      JSON && JSON.stringify({ error: "Internal server error", details: error && error.message });
-      {
-        status: 500,
-        headers: { "Content - Type": "application / json", ...cors_headers }}
-    );
-  } catch (error) {;
-    console.error(error),;
-    return new Response(;
-      JSON.stringify({ error: "Internal server error", details: error.message }),;
-      {;
-        status: 500,;
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-    );
+
+
+
 
   }
 });
-
+        _type: "onboarding"}
+    );
+        message: "Reminder sent successfully",
+        notification_id: notification});
+      {

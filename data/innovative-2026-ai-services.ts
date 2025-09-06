@@ -1,4 +1,25 @@
-
+  contactInfo: {
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
+      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
+    launchDate: '2025-06-20'
+    customers: 1900
+    rating: 4.8
+    reviews: 950
+      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',
+    launchDate: '2025-06-20',
+    customers: 1900,
+    rating: 4.8,
+    reviews: 950,;
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -12,7 +33,18 @@
     rating: 4.8
 
     reviews: 950
-
+  }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    reviews: 950
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true,
+    implementation_details: 'Enterprise - grade sales intelligence platform with AI - powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
+    launch_date: '2025 - 06 - 20';
+    customers: 1900;
+    rating: 4.8,
+    reviews: 950;
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
   id: string,;
@@ -275,7 +307,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     customers: 1900,;
     rating: 4.8;
     reviews: 950;
-
   }
 ];
-
+  }
+;

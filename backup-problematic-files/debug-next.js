@@ -13,8 +13,6 @@ console.log(' Components directory exists:', fs.existsSync('components'));
 // Check package.json;
 if (fs.existsSync('package.json')) {;
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  console.log(' Next.js version:', packageJson.dependencies?.next || 'Not found');
-  console.log(' React version:', packageJson.dependencies?.react || 'Not found');
 }
 ;
 // Check pages directory structure;
@@ -25,7 +23,6 @@ if (fs.existsSync('pages')) {;
 }
 ;
 // Check for any problematic files;
-console.log(' Checking for problematic files...');
 const problematicFiles = [];
 const allFiles = getAllFiles('.', ['.tsx', '.ts', '.jsx', '.js']);
 ;
@@ -93,4 +90,3 @@ console.log(' Debug completed');}
 }catch (error) {
   // Skip directories that can't be read 
 }return files;
-}console.log (' Debug completed');

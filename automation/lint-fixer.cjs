@@ -192,3 +192,4 @@ if (require.main === module) {}
 module.exports = LintFixer;
 module.exports = LintFixer;
 module.exports = LintFixer;
+module.exports = LintFixer;

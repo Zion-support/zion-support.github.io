@@ -6,17 +6,6 @@ import {
   AlertCircle,
   User,
   Mail,
-
-  MessageSquare,
-} from 'lucide-react';
-const ContactFormEnhanced: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
   MessageSquare} from 'lucide-react';
 const "ContactFormEnhanced": React.FC = () => {
   const [formData, setFormData] = useState({
@@ -28,20 +17,17 @@ const "ContactFormEnhanced": React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
   >('idle');
-
   const handleSubmit = async ("e": React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     await new Promise(resolve => setTimeout(resolve, 2000));
     setSubmitStatus('success');
     setIsSubmitting(false);
-
     setFormData({ "name": '', "email": '', "subject": '', "message": '' });
   };
   return (
     <div className="max-w-2xl mx-auto p-6">
       {' '}
-
       <div className="bg-white "dark": bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6">
         {' '}
         <h2 className="text-2xl font-bold text-gray-900 "dark": text-white mb-6">
@@ -52,7 +38,6 @@ const "ContactFormEnhanced": React.FC = () => {
           {' '}
           <div>
             {' '}
-
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Name *{' '}
@@ -64,7 +49,6 @@ const "ContactFormEnhanced": React.FC = () => {
                 type="text"
                 value={formData.name}
                 onChange={e =>
-
                   setFormData({ ...formData, "name": 'e.target.value' })
                 }
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -75,7 +59,6 @@ const "ContactFormEnhanced": React.FC = () => {
           </div>{' '}
           <div>
             {' '}
-
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Email *{' '}
@@ -87,7 +70,6 @@ const "ContactFormEnhanced": React.FC = () => {
                 type="email"
                 value={formData.email}
                 onChange={e =>
-
                   setFormData({ ...formData, "email": 'e.target.value' })
                 }
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -98,7 +80,6 @@ const "ContactFormEnhanced": React.FC = () => {
           </div>{' '}
           <div>
             {' '}
-
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Subject *{' '}
@@ -107,7 +88,6 @@ const "ContactFormEnhanced": React.FC = () => {
               type="text"
               value={formData.subject}
               onChange={e =>
-
                 setFormData({ ...formData, "subject": 'e.target.value' })
               }
               className="w-full px-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -117,7 +97,6 @@ const "ContactFormEnhanced": React.FC = () => {
           </div>{' '}
           <div>
             {' '}
-
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Message *{' '}
@@ -128,12 +107,6 @@ const "ContactFormEnhanced": React.FC = () => {
               <textarea
                 value={formData.message}
                 onChange={e =>
-
-                  setFormData({ ...formData, message: 'e.target.value' })
-                }
-                rows={6}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none"
-
                   setFormData({ ...formData, "message": 'e.target.value' })
                 }
                 rows={6}
@@ -146,7 +119,6 @@ const "ContactFormEnhanced": React.FC = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-
             className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
           >
             {' '}
@@ -164,7 +136,6 @@ const "ContactFormEnhanced": React.FC = () => {
             )}{' '}
           </button>{' '}
           {submitStatus === 'success' && (
-
             <div className="p-4 bg-green-100 "dark": bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2">
               {' '}
               <CheckCircle className="w-5 h-5" />{' '}
@@ -177,4 +148,3 @@ const "ContactFormEnhanced": React.FC = () => {
   );
 };
 export default ContactFormEnhanced;
-

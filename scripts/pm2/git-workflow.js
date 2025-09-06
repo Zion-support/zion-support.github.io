@@ -1,4 +1,3 @@
-
             }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
@@ -314,4 +313,8 @@ const gitWorkflow = new GitWorkflow(),
 gitWorkflow.run().catch(error => {,
   process.exit(1)
 }),
+
+
+gitWorkflow.run().catch(error = > {; process.exit(1)});
+
 

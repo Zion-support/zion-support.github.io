@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface LoginContentProps {
   // Add props here as needed
-
 export default function LoginContent({ }: LoginContentProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function LoginContent({ }: LoginContentProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

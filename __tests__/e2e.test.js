@@ -1,4 +1,3 @@
-
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"E2E"
   test('"homepage"
@@ -12,11 +11,3 @@ test && test.describe('"E2E"
     await page && page.click('button[type="submit"
     "await"
     "await"
-    "await"
-    "await"
-
-    await page.fill('input[name="name"
-    await page.fill('input[name="email"
-
-    await page.fill('textarea[name="message"
-

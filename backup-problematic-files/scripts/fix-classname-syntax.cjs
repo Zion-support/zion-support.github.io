@@ -1,3 +1,4 @@
+this.log(`Fixes Applied: ${this.fixes.length}`);
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -101,5 +102,7 @@ const glob = require('glob')
       const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
       const fixedQuoted = quoted.replace(/"([a-z]+)"
       const fixedQuoted = quoted.replace(/"([a-z]+)"
+      const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
+      const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
       const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
       const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"

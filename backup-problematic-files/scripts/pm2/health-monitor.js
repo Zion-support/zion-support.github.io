@@ -1,5 +1,4 @@
 }};
-; async checkSystemResources() {_; try {; this.log(' Checking system resources...');
 ; const memInfo = execSync('free -m', _{ encoding: 'utf8'}); const diskInfo = execSync('df -h', {encoding: 'utf8'}); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', {encoding: 'utf8'});
 ; // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
 ; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0';

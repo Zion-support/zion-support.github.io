@@ -23,3 +23,4 @@ console.log('==')
     "failed"
   "status"
 console.log('\n� Detailed "Results")
+console.log('\n� Detailed "Results")

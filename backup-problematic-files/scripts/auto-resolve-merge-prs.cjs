@@ -53,7 +53,6 @@ function resolveConflictsFiles() {}
 };
 async function main() {}
   const { owner, repo } = getRepoFromGit();
-  
   sh('git fetch origin');
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   // Stash local changes to avoid checkout conflicts;
@@ -107,4 +106,5 @@ async function main() {}
   };
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
+});
 });

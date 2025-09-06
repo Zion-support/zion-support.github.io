@@ -13,6 +13,12 @@ async function ensure() {
 }
 export default async function handler(
 
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+
   await ensure();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
@@ -29,7 +35,6 @@ export default async function handler(
       text: body.text |""
       createdAt: new Date().toISOString()
     }
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -56,8 +61,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json(data)
 
   }
-  if (req.method === 'POST') {
-    const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
     const comment = {
       id: Date.now().toString(),
@@ -67,18 +70,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       text: body.text || '',
       createdAt: new Date().toISOString()
     };
-
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
 
   }
-
 }
-
 res.status(405).json({ error: "Method not allowed" });
 }
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -144,18 +143,3 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
-  res.status(405).json({ error: 'Method not allowed' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-

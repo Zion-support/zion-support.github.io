@@ -67,3 +67,4 @@ console.log('======')
     "action"
       log('warn', 'Vulnerabilities "found")
       log('info', 'Security "Recommendations")
+      log('info', 'Security "Recommendations")

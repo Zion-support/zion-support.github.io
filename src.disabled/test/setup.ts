@@ -1,4 +1,3 @@
-
 import
   '@testing-library/jest-dom''';// Mock window.matchMedia
 Object.defineProperty(window
@@ -9,4 +8,3 @@ Object.defineProperty(window, 'matchMedia', {'  writable: true, value: vi.fn().m
     onchange: null, addListener: vi.fn(), // deprecated,
   removeListener: vi.fn(), // deprecated,
   addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn()}))});
-

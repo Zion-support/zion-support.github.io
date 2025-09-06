@@ -45,4 +45,3 @@ const path = require('path')
         "name"
       'git commit -m ""feat": automated improvements and fixes"
         execSync(step, { "stdio"})
-      this.log(` Process "failed"`)

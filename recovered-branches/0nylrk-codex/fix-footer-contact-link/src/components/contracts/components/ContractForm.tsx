@@ -1,5 +1,7 @@
 
 
+
+
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -16,7 +18,6 @@ import {ProjectDetailsFields} from "./ProjectDetailsFields";
 import {PaymentTermsFields} from "./PaymentTermsFields";
 import {AdditionalClausesFields} from "./AdditionalClausesFields";
 import {DeploymentOptions} from "@/types/smart-contracts";
-
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -33,15 +34,29 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields",
 import { PaymentTermsFields } from "./PaymentTermsFields",
 import { AdditionalClausesFields } from "./AdditionalClausesFields",
 import { DeploymentOptions } from "@/types/smart-contracts",
-
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
   startDate: z.date({
+  talent;
+  clientName;
+  initialValues;
+  onFormValuesChange;
+  onContractGenerated;
+  deployOptions;
+  onDeployOptionsChange;
+}: ContractFormProps) {;
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const { toast } = useToast();
 
-  onDeployOptionsChange?: (options: DeploymentOptions) => void
-}
-
+export function ContractForm({;
+  talent;
+  clientName;
+  initialValues;
+  onFormValuesChange;
+  onContractGenerated;
+  deployOptions;
 export function ContractForm({
   talent,
   clientName,
@@ -49,20 +64,40 @@ export function ContractForm({
   onFormValuesChange,
   onContractGenerated,
   deployOptions,
-
   onDeployOptionsChange
 }: ContractFormProps) {
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const { toast } = useToast();
+  const form = useForm<ContractFormValues>({
+    resolver: zodResolver(formSchema)
+    defaultValues: initialValues |{
+      projectName: ""
+      scopeSummary: ""
+      startDate: new Date()
+      paymentTerms: talent.hourly_rate ? "hourly" : "fixed"
+      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : ""
+      additionalClauses: ["nda", "ip"]}});
+  const [isGenerating, setIsGenerating] = useState(false),
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
+  const { toast } = useToast(),
 
+  const form = useForm<ContractFormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: initialValues || {
+      projectName: "",
+      scopeSummary: "",
+      startDate: new Date(),
+      paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
+      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
+      additionalClauses: ["nda", "ip"]}}),
+  
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
 
-
-        const typedKey = key as keyof ContractFormValues,
-        form.setValue(typedKey, initialValues[typedKey])
-      })
-
+  
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
@@ -72,7 +107,6 @@ export function ContractForm({
     toast({
       title: "Milestones Generated"
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
-
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true)
     try {
@@ -81,10 +115,15 @@ export function ContractForm({
         talent
         clientName
         generatedMilestones
-
       onContractGenerated(contract)
     } catch (error) {
       console.error("Error generating contract:", error);
+      );
+      ),
+      
+      onContractGenerated(contract)
+    } catch (error) {
+      console.error("Error generating contract:", error),
       toast({
         title: "Contract Generation Failed"
         description: error instanceof Error ? error.message : "Something went wrong. Please try again."
@@ -92,6 +131,67 @@ export function ContractForm({
     } finally {
       setIsGenerating(false)
 
+  }, [form, onFormValuesChange]),;
+  const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {;
+    setGeneratedMilestones(milestones),;
+    // If payment terms isn't already set to milestone, update it;
+    if (form.getValues("paymentTerms") !== "milestone") {;
+      form.setValue("paymentTerms", "milestone");
+        const typedKey = key as keyof ContractFormValues;
+        form && form.setValue(typedKey, initialValues[typedKey]);
+      });
+    }
+    }
+  }
+  return (
+    <>;
+      <DialogHeader>;
+        <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
+        <DialogDescription>;
+  // Track form values for template saving;
+  useEffect(() => {;
+    if (onFormValuesChange) {;
+      const subscription = form && form.watch((value) => {;
+        onFormValuesChange(value as ContractFormValues);
+      });
+      return () => subscription && subscription.unsubscribe();
+    }
+  }, [form, onFormValuesChange]);
+  const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {;
+    setGeneratedMilestones(milestones),;
+    // If payment terms isn't already set to milestone, update it;
+    if (form && form.getValues("paymentTerms") !== "milestone") {;
+      form && form.setValue("paymentTerms", "milestone");
+    }
+    toast({;
+      title: "Milestones Generated",;
+      description: `${milestones && milestones.length} milestones have been generated and will be included in the contract.`});
+  };
+  const onSubmit = async (values: ContractFormValues) => {;
+    setIsGenerating(true),;
+    try {;
+      const contract = await generateContract(;
+        values, ;
+        talent, ;
+        clientName, ;
+        generatedMilestones;
+      );
+      onContractGenerated(contract);
+    } catch (error) {;
+      console && console.error("Error generating contract:", error);
+      toast({;
+        title: "Contract Generation Failed",;
+        description: error instanceof Error ? error && error.message : "Something went wrong. Please try again.",;
+        variant: "destructive"});
+    } finally {;
+      setIsGenerating(false);
+    }
+  };
+  return (
+    <>;
+      <DialogHeader>;
+        <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
+        <DialogDescription>;
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
@@ -100,19 +200,20 @@ export function ContractForm({
           <ProjectDetailsFields
             form={form}
           />
-
+          <PaymentTermsFields
+            form={form}
+            talent={talent}
+            handleMilestonesGenerated={handleMilestonesGenerated}
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
-
           />
           <AdditionalClausesFields 
             form={form}
           />
           <Button 
             type="submit" 
-
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
@@ -123,8 +224,7 @@ export function ContractForm({
             ) : (;
               "Generate Contract";
             )}
-          </Button>
-        </form>
-      </Form>
-      <DialogFooter className="gap-2 flex-wrap mt-4">
-
+        >;
+          Reset Form;
+        </Button>;
+      </DialogFooter>;

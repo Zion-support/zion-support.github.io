@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface OpenAppRedirectProps {
   // Add props here as needed
-
 export default function OpenAppRedirect({ }: OpenAppRedirectProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function OpenAppRedirect({ }: OpenAppRedirectProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

@@ -61,7 +61,6 @@ export function BlogSection() {;
                   className="text-zion-cyan p-0 hover:text-zion-purple";
                   asChild;
                 >;
-                  <Link to={`/blog/${post.slug}`}>Read More </Link>;
                 </Button>;
               </CardFooter>;
             </Card>;

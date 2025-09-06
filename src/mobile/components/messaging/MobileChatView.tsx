@@ -1,13 +1,3 @@
-
-
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useRouter } from 'next/router',
-import { toast } from "sonner",
 interface Message {
   id: string;
   content: string;
@@ -21,77 +11,38 @@ interface MobileChatViewProps {
     id: string;
     name: string;
     avatar?: string;
+    id: string,;
+    name: string,;
+    avatar?: string,;
     status?: string;
-  }
-  messages: Message[];
-  on_back: () => void;
+  },;
+  messages: Message[],;
+  onBack: () => void,;
   onSendMessage: (content: string) => void;
-export /**
- * MobileChatView - Function description
- */
-function MobileChatView() {
-  const [new_message, setNewMessage] = useState ('');
-  const router = use_router ();
-  const handle_send = () =>: any {
-    // Check condition
-if (!== '') {) {
-  $2
 }
-      onSendMessage (new_message);
-      setNewMessage ('');
 
-
-
-
-
-    }
-  }
-  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition
-if ( {) {
-  $2
-}
-      e.prevent_default ();
-      handle_send ();
-    }
-
-  const startVideoCall = () =>: any {
-    const room_id = `mobile-${contact.id}`;
-    toast.success ('Starting video call', {
-      description: `Connecting with ${contact.name}...`,
-    });
-    // Navigate to video call page;
-    router.push (`/call/${room_id}`);
-  }
-  const startAudioCall = () =>: any {
-    const room_id = `mobile - audio-${contact.id}`;
-    toast.success ('Starting audio call', {
-      description: `Connecting with ${contact.name}...`,
-    });
-    // Navigate to video call page with audio - only flag;
-    router.push (`/call/${room_id}?audio_only = true`);
-
-  }
-export function MobileChatView(): any ({;
-  contact,;
-  messages,;
-  onBack,;
-  onSendMessage,;
-}: MobileChatViewProps) {;
-  const [newMessage, setNewMessage] = useState('');
-  const router = useRouter();
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+  const [newMessage, setNewMessage] = useState(""),
+  const router = useRouter(),
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage),
+      setNewMessage("")
+;
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState(""),;
+  const router = useRouter(),;
   const handleSend = () => {;
     if (newMessage.trim() !== "") {;
       onSendMessage(newMessage),;
       setNewMessage("");
-
     }
-  };
-
-  const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
-      e && e.preventDefault();
-      handleSend();
+  }
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleSend()
     }
-
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -105,19 +56,22 @@ export function MobileChatView(): any ({;
               </AvatarFallback>
             </Avatar>
             <div>
-
+            <Button
+              variant='ghost'
+              size='icon'
               variant="ghost"
               size="icon"
               onClick={startAudioCall}
-              aria-label="Start audio call"
-            >
-              <Phone className="h-5 w-5" />
-            </Button>
-            
             <Button
               variant="ghost"
               size="icon"
               onClick={startVideoCall}
+              <h3 className="font-medium">{contact.name}</h3>
+              <p className="text-xs text-muted-foreground">
+                {contact.status || "Online"}
+              </p>
+            </div>
+          </div>
               aria-label="Start video call"
             >
               <Video className="h-5 w-5" />
@@ -125,24 +79,82 @@ export function MobileChatView(): any ({;
             
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
-
             </Button>
           </div>
         </div>
       </header>
+            </Button>;
+          </div>;
+        </div>;
+      </header>;
+
+                  ? 'bg-primary text-primary-foreground rounded-tr-none'
+                  : 'bg-muted rounded-tl-none'
+              )}>;
+              <p>{message && message.content}</p>;
+              <div
+                className={cn(
+
 
                     {message.status === 'read' ? '✓✓' : '✓'}
-
-              </div>;
-            </div>;
-          </div>;
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
         ))}
       </div>
-
           </Button>
           <Input
             value={newMessage}
+            onChange={e => setNewMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder='Type a message...'
+            className='flex-1'          />
+          <Button
+            size='icon'
+            onClick={handleSend}
+            disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? 'opacity-50' : ''}
+            aria-label='Send message'          >
+            <Send className='h-5 w-5' />
+      
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Attach file">
+            <PaperclipIcon className="h-5 w-5" />
+          </Button>
+          <Input
+            value={newMessage}
+            onChange={e => setNewMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder='Type a message...'
+            className='flex-1'          />
 
+          <Button
+            size='icon'
+            onClick={handleSend}
+            disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? 'opacity-50' : ''}
+            aria-label='Send message'          >
+            <Send className='h-5 w-5' />
+          </Button>
+        </div>
+      </div>;
+    </div>;
+  );
+};
+}
+}
+      
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Attach file">
+            <PaperclipIcon className="h-5 w-5" />
+          </Button>
+          
+          <Input
+            value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
@@ -157,10 +169,46 @@ export function MobileChatView(): any ({;
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
+            onChange={(e) => setNewMessage(e.target.value)}
 
+            onKeyDown={handleKeyDown}
+
+            className={!newMessage.trim() ? "opacity-50" : ""}
+            aria-label="Send message"
+          >
+            <Send className="h-5 w-5" />
           </Button>
         </div>
       </div>
     </div>
   )
+                  </span>)}
+              </div>;
+            </div>;
+          </div>))}
+      </div>;
+      <div className='sticky bottom - 0 bg - background border - t border - border p - 2'>;
+        <div className='flex items - center gap - 2'>;
+          <Button variant='ghost' size='icon' aria - label='Attach file'>;
+            <PaperclipIcon className='h - 5 w - 5' />;
+          </Button>;
+          <Input;
+            value={new_message}
+            on_change={e => setNewMessage (e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder='Type a message...';
+            className='flex - 1'          />;
+          <Button;
+            size='icon';
+            on_click={handle_send}
+            disabled={!new_message.trim ()}
+            className={!new_message.trim () ? 'opacity - 50' : ''}
+            aria - label='Send message'          >;
+            <Send className='h - 5 w - 5' />;
+          </Button>;
+        </div>;
+      </div>;
+    </div>);
+}
 
+}

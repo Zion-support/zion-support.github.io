@@ -142,4 +142,3 @@ const { execSync } = require('child_process')
         "type"
         "priority"
         "message"
-        "impact"

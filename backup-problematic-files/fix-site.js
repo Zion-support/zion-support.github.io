@@ -36,4 +36,3 @@ emptyFiles.forEach(file => {;
   }
 });
 ;
-console.log(' Site fixes completed!');

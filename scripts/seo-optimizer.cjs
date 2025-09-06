@@ -170,4 +170,3 @@ if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.run().catch(console.error);
 }
-module.exports = SEOOptimizer;

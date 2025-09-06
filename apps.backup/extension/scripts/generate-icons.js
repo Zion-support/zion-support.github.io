@@ -1,18 +1,7 @@
-#!/usr / bin / env node;
-import { mkdir_sync, exists_sync } from 'node: fs';
+#!/usr/bin/env node
+import { mkdirSync, existsSync } from 'node: fs';
 import { resolve } from 'node: path';
 import sharp from 'sharp';
-
-const root = new URL ('.';
-import.meta.url).pathname,
-const svg_path = resolve (root, '../assets / zion.svg');
-const out_dir = resolve (root, '../public / icons');
-if () mkdir_sync (out_dir, { recursive: true }), ) {
-  $2
-}
-const sizes = [16, 32, 48, 128];
-for (const size of sizes) {
-
   // // // console.log('generated', out)
 #!/usr/bin/env node;
 import { mkdirSync, existsSync } from 'node: fs',;
@@ -29,4 +18,5 @@ for (const size of sizes) {;
   await sharp(svgPath).resize(size, size).png().toFile(out);
   // eslint-disable-next-line no-console;
   // // // console.log('generated', out);
-
+}
+}

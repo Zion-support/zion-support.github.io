@@ -1,15 +1,45 @@
 
 
+
+
 interface FraudItem {
 
 
 export default function FraudAdminPage() {
+  const [items, setItems] = useState<FraudItem[]>([])
+  const [adminToken, setAdminToken] = useState<string>('')
+  const [loading, setLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
+  useEffect(() => {
 
+    const saved = localStorage.getItem('admin-token') || '';
+    setAdminToken(saved)
+  }, []);
+
+
+    const saved = localStorage.getItem('admin-token') |''
+    setAdminToken(saved)
+  }, [])
+  const fetchItems = async () => {
+    setLoading(true)
+    setError(null)
+    try {
+    } finally {
+
+      set_loading (false);
+
+    }
+    fetchItems()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [adminToken])
+  const onSaveToken = () => {
+    localStorage.setItem('admin-token', adminToken)
+    fetchItems()
+  }
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST'
       headers: {
-
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -17,11 +47,13 @@ export default function FraudAdminPage() {
         <input
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
-
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
+
+
+
 
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
@@ -33,7 +65,6 @@ export default function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -50,19 +81,16 @@ export default function FraudAdminPage() {
           <tbody>
             {items.map((it) => (
               <tr key={it.id} className="border-t">
-
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
-
                   </div>
                 </td>
                 <td className="p-2 border">
                   <div className="text-sm">
-
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
                 </td>
@@ -81,4 +109,8 @@ export default function FraudAdminPage() {
       </div>
     </div>
   );
-
+};
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }

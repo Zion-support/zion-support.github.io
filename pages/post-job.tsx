@@ -1,4 +1,3 @@
-
 export default function PostJobPage() {
   const router = useRouter()
   const [title, setTitle] = useState('')
@@ -12,13 +11,6 @@ export default function PostJobPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   async function handleSubmit(e: React.FormEvent) {
-
-    e.preventDefault();
-    setError(null);
-
-    if (!title || !description || !category || !clientEmail) {
-      setError('Please fill in all required fields.');
-
       return
     }
     try {
@@ -27,17 +19,10 @@ export default function PostJobPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-
-
       router.push(`/client/dashboard`)
     } catch (err: any) {
       setError(err.message |'Something went wrong')
     } finally {
-
-      setIsSubmitting(false),
-
-    }
-
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 export default function PostJobPage(req, res) {
@@ -62,18 +47,16 @@ export default function PostJobPage(req, res) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
-
+      {error && <p className="text-red-600 mb-3">{error}</p>}
       {error && <p className="text-red-600 mb-3">{error}</p>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -112,15 +95,16 @@ export default function PostJobPage(req, res) {
         <div className="pt-2">
           <button type="submit" className="px-4 py-2 rounded bg-black text-white disabled:opacity-50" disabled={isSubmitting}>
 
+
+  );
+};
+
             {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
-
-}
-
 import { useState } from 'react',
 import { use_router } from 'next / router',
 export default /**
@@ -220,7 +204,7 @@ if ( {) {
         </div>;
         <div className="pt - 2">;
           <button type="submit" className="px - 4 py - 2 rounded bg - black text - white disabled:opacity - 50" disabled={is_submitting}>;
-            {is_submitting ? 'Posting' : 'Post Job'}
+            {is_submitting ? 'Posting…' : 'Post Job'}
           </button>;
         </div>;
       </form>;
@@ -231,4 +215,3 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-

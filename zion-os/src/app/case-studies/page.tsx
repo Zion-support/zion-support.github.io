@@ -1,5 +1,3 @@
-
-    <div className="min-h-screen py-20">;
 export default /**
  * CaseStudiesPage - Function description
  */
@@ -56,7 +54,7 @@ function CaseStudiesPage() {
                   href="/case - studies / healthcare - ai - diagnostics";
                   className="inline - flex items - center text - purple - 400 hover:text - purple - 300 font - medium";
                 >;
-                  Read Full Case Study ;
+                  Read Full Case Study →;
                 </a>;
               </div>;
               <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 6 border border - white / 10">;
@@ -115,7 +113,7 @@ function CaseStudiesPage() {
                 </div>;
               </div>;
               <a href="/case - studies / ai - trading - system" className="text - cyan - 400 hover:text - cyan - 300 font - medium text - sm">;
-                Read More ;
+                Read More →;
               </a>;
             </div>;
             {/* Manufacturing */}
@@ -144,7 +142,7 @@ function CaseStudiesPage() {
                 </div>;
               </div>;
               <a href="/case - studies / smart - factory - automation" className="text - green - 400 hover:text - green - 300 font - medium text - sm">;
-                Read More ;
+                Read More →;
               </a>;
             </div>;
             {/* Retail */}
@@ -173,7 +171,7 @@ function CaseStudiesPage() {
                 </div>;
               </div>;
               <a href="/case - studies / personalized - shopping" className="text - yellow - 400 hover:text - yellow - 300 font - medium text - sm">;
-                Read More ;
+                Read More →;
               </a>;
             </div>;
             {/* Transportation */}
@@ -202,7 +200,7 @@ function CaseStudiesPage() {
                 </div>;
               </div>;
               <a href="/case - studies / autonomous - fleet" className="text - red - 400 hover:text - red - 300 font - medium text - sm">;
-                Read More ;
+                Read More →;
               </a>;
             </div>;
             {/* Energy */}
@@ -231,7 +229,7 @@ function CaseStudiesPage() {
                 </div>;
               </div>;
               <a href="/case - studies / smart - grid - optimization" className="text - indigo - 400 hover:text - indigo - 300 font - medium text - sm">;
-                Read More ;
+                Read More →;
               </a>;
             </div>;
             {/* Cybersecurity */}
@@ -260,7 +258,7 @@ function CaseStudiesPage() {
                 </div>;
               </div>;
               <a href="/case - studies / ai - threat - detection" className="text - purple - 400 hover:text - purple - 300 font - medium text - sm">;
-                Read More ;
+                Read More →;
               </a>;
             </div>;
           </div>;

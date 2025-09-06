@@ -1,4 +1,15 @@
-
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CommunityDiscussion} from "@/components/CommunityDiscussion";
+import {Badge} from "@/components/ui/badge";
+import {UserCheck, Bell, MessageSquare, LogOut, Send, Settings} from "lucide-react";
+import {createTestNotification, createOnboardingNotification, createSystemNotification} from "@/utils/notifications";
+import {NotificationCenter} from "@/components/NotificationCenter";
+import {useToast} from "@/hooks/use-toast";
+import {Link} from "react-router-dom";
+export default function Dashboard() {;
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -8,6 +19,17 @@ import { Badge } from "@/components/ui/badge",
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",
 import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",
 import { NotificationCenter } from "@/components/NotificationCenter",
+import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
+export default function Dashboard() {
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+  if (!user) return null;
+import { useToast } from "@/hooks/use-toast",
+import { Link } from "react-router-dom",
+export default function Dashboard() {
+  const { user, logout } = useAuth(),
+  const { toast } = useToast(),
 
   if (!user) return null,
 
@@ -26,6 +48,8 @@ import { NotificationCenter } from "@/components/NotificationCenter",
         variant: "destructive"});
 
     }
+  }
+  },
 
   return (
     <>;
@@ -34,19 +58,19 @@ import { NotificationCenter } from "@/components/NotificationCenter",
         <div className="container mx-auto px-4 py-8">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Sidebar - User Profile */}
-            <div className="lg:col-span-1">
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
-                    {user.displayName.split(' ').map(name => name[0]).join('')}
-                  </div>
-                  <h2 className="text-xl font-bold text-white">{user.displayName}</h2>
-                  <p className="text-zion-slate-light mb-2">{user.email}</p>
+
+
+                  <Badge 
+
 
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>
+
+
+                  <Button 
+
 
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
@@ -74,7 +98,7 @@ import { NotificationCenter } from "@/components/NotificationCenter",
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">ZION$ Balance</span>
                     <span className="text-zion-cyan font-medium">
-                      <a href="/wallet" className="hover:underline">View Wallet</a>
+                      <a href="/wallet" className="hover:underline">View Wallet</Link>
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
@@ -92,11 +116,14 @@ import { NotificationCenter } from "@/components/NotificationCenter",
                       Send Test Notification
                     </Button>
 
+
+                    <Button 
+
+
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
                         await createOnboardingNotification({
-
                         toast({
                           title: "Onboarding notification sent"
                           description: "Check your notification center"
@@ -107,6 +134,10 @@ import { NotificationCenter } from "@/components/NotificationCenter",
                       Send Onboarding Nudge
                     </Button>
 
+
+                    <Button 
+
+
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
@@ -116,7 +147,7 @@ import { NotificationCenter } from "@/components/NotificationCenter",
                           message: "We've added a new notification center to help you stay updated with important information."
                           actionUrl: "/notifications"
                           actionText: "Explore Now"
-                        });
+                        }),
                         toast({
                           title: "System notification sent"
 
@@ -216,4 +247,11 @@ import { NotificationCenter } from "@/components/NotificationCenter",
       <Footer />
     </>
   )
-
+                  <CommunityDiscussion />;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;

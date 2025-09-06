@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next';
-
     '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
   const quantumServices = [;
     '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026'];
@@ -8,9 +7,6 @@ import { MetadataRoute } from 'next';
   const complianceServices = [;
     '/soc2-compliance-automation'];
   const allRoutes = [;
-
-    lastModified: new Date();
-    changeFrequency: 'weekly';
 export default function sitemap (): MetadataRoute.Sitemap {
   const base_url = 'https: //ziontechgroup.com';
   const routes = [;

@@ -1,15 +1,7 @@
-
-import { Twitter, Linkedin } from 'lucide-react'
-interface Speaker {
-  name: string;
-  title: string;
-  avatar: string;
-  twitter?: string;
-  linkedin?: string;
-  linkedin?: string;
-}
-interface Speaker {
-
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -19,6 +11,14 @@ interface Speaker {
   avatar: string,
   twitter?: string,
 
+
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string
+
+  linkedin?: string
+}
   linkedin?: string
 }
 
@@ -30,9 +30,6 @@ interface Speaker {
   linkedin?: string
 }
 const speakers: Speaker[] = [
-  {
-
-    linkedin: '#'}],
 
 export function SpeakersSection() {
   return (
@@ -42,27 +39,22 @@ export function SpeakersSection() {
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
           {speakers.map((sp) => (
             <div key={sp.name} className="text-center space-y-2">
-
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
                 height={96}
-
                     aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
                     <Linkedin className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">LinkedIn</span>
-
                 )}
               </div>
             </div>
           ))}
-

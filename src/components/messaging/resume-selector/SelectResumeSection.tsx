@@ -1,11 +1,5 @@
 
-
 export function SelectResumeSection({
-  resumeOptions,
-  selectedResume,
-  handleResumeSelect,
-  handleDownloadResume,
-
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -15,6 +9,8 @@ export function SelectResumeSection({
       ) : (
         <>
 
+
+
             >
               <div className="flex items-center">
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
@@ -22,6 +18,14 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
+          
+
+          
+
+
+          
+
+          
 
           {resumeOptions.map((option) => (
             <button
@@ -46,7 +50,6 @@ export function SelectResumeSection({
               onDownload = {handleDownloadResume,}
               isLoading = {isLoading,}
             />
-
 ;
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;
             <ResumePreviewCard;
@@ -54,13 +57,14 @@ export function SelectResumeSection({
               onDownload={handleDownloadResume}
               isLoading={isLoading}
             />;
-
           )}
         </>
       )}
+  );
+}};
+};
 
     </div>;
   );
 }
 ;
-

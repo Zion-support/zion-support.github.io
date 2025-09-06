@@ -1,18 +1,5 @@
-
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
-import Link from './next / link';,
-export const metadata = {
-  title: "AI Autonomous Business Manager - Zion Tech Group",
-  description: "Transform your business operations with our AI - powered autonomous business manager. Intelligent decision - making, process automation, and strategic optimization.",
-  keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"},
-export default /**
- * AIBusinessManagerPage - Function description
- */
-function AIBusinessManagerPage() {
-  return (
-    <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
-      <div className="max - w-7xl mx - auto">;
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
@@ -34,8 +21,6 @@ function AIBusinessManagerPage() {
                 learning, and autonomous decision - making to manage your business operations;
                 with unprecedented efficiency and intelligence.;
               </p>;
-              <p className="text-lg text-gray-300 leading-relaxed">;
-
                 adapts, and optimizes every aspect of your business, ensuring maximum;
                 performance and growth potential.;
               </p>;
@@ -86,9 +71,6 @@ function AIBusinessManagerPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 19v - 6a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v6a2 2 0 002 2h2a2 2 0 002 - 2zm0 0V9a2 2 0 012 - 2h2a2 2 0 012 2v10m - 6 0a2 2 0 002 2h2a2 2 0 002 - 2m0 0V5a2 2 0 012 - 2h2a2 2 0 012 2v14a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2z" />;
                 </svg>;
               </div>;
-              <h3 className="text-xl font-semibold mb-2">Strategic Planning</h3>;
-              <p className="text-gray-400">;
-
                 competitive landscape, and internal capabilities to develop optimal strategies.;
               </p>;
             </div>;
@@ -146,9 +128,6 @@ function AIBusinessManagerPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M13 7h8m0 0v8m0 - 8l - 8 8 - 4-4 - 6 6" />;
                 </svg>;
               </div>;
-              <h3 className="text-xl font-semibold mb-2">Growth Optimization</h3>;
-              <p className="text-gray-400">;
-
                 customer acquisition optimization, and revenue maximization.;
               </p>;
             </div>;
@@ -167,9 +146,6 @@ function AIBusinessManagerPage() {
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
               </div>;
-              <h3 className="text-lg font-semibold mb-2">Data Collection</h3>;
-              <p className="text-gray-400 text-sm">;
-
                 market sources, and external factors.;
               </p>;
             </div>;
@@ -177,9 +153,6 @@ function AIBusinessManagerPage() {
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - purple - 400">2</span>;
               </div>;
-              <h3 className="text-lg font-semibold mb-2">Analysis & Learning</h3>;
-              <p className="text-gray-400 text-sm">;
-
                 and identify optimization opportunities.;
               </p>;
             </div>;
@@ -187,9 +160,6 @@ function AIBusinessManagerPage() {
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - green - 400">3</span>;
               </div>;
-              <h3 className="text-lg font-semibold mb-2">Decision Making</h3>;
-              <p className="text-gray-400 text-sm">;
-
                 business rules, and predictive models.;
               </p>;
             </div>;
@@ -215,30 +185,18 @@ function AIBusinessManagerPage() {
           </div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
             <div className="card">;
-              <h3 className="text-lg font-semibold mb-2">E-commerce & Retail</h3>;
-              <p className="text-gray-400 text-sm">;
-
                 and supply chain optimization.;
               </p>;
             </div>;
             <div className="card">;
-              <h3 className="text-lg font-semibold mb-2">Financial Services</h3>;
-              <p className="text-gray-400 text-sm">;
-
                 and regulatory compliance automation.;
               </p>;
             </div>;
             <div className="card">;
-              <h3 className="text-lg font-semibold mb-2">Manufacturing</h3>;
-              <p className="text-gray-400 text-sm">;
-
                 and supply chain management.;
               </p>;
             </div>;
             <div className="card">;
-              <h3 className="text-lg font-semibold mb-2">Healthcare</h3>;
-              <p className="text-gray-400 text-sm">;
-
                 and administrative efficiency.;
               </p>;
             </div>;

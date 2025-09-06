@@ -1,5 +1,4 @@
 
-
 const InstagramContentScheduler: NextPage = () => {
   return (
     <div>
@@ -17,4 +16,16 @@ const InstagramContentScheduler: NextPage = () => {
   )
 
 },
+export default InstagramContentScheduler,
+},
+
+},
+export default InstagramContentScheduler,
+
+},
+export default InstagramContentScheduler,
+},
+
+export default InstagramContentScheduler,;
+export default InstagramContentScheduler,
 

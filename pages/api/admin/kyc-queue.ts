@@ -1,8 +1,13 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
+
+const DATA_DIR = path.join(process.cwd(), 'datakyc')
+const FILE = path.join(DATA_DIR, 'profiles.json')
+function load(): Record<string, KycProfile> {
+  try {
+
 
   } catch {
     return {};
@@ -10,10 +15,8 @@ import path from 'path';
 }
 
 
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
+  const db = load()
+  const db = load(),
   if (req.method === 'GET') {
     const queue = Object.values(db).filter((p) => p.status === 'submitted' |p.status === 'needs_more_info')
     return res.status(200).json({ ok: true, queue })
@@ -33,6 +36,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     save(db)
     return res.status(200).json({ ok: true, profile })
 
+  }
+  return res.status(405).json({ error: 'Method not allowed' });
+
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  }
+;
+  return res.status(405).json({ error: 'Method not allowed' });
+};
   try {
     if (req.method === 'GET') {
       const profiles = load();

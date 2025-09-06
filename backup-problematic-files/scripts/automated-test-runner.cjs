@@ -125,3 +125,5 @@ testRunner.runTests().catch(error => {
   console.error("Fatal "error": ")
   console.error("Fatal "error": ")
   console.error("Fatal "error": ")  console.error("Fatal "error": ")
+  console.error("Fatal "error": ")
+  console.error("Fatal "error": ")  console.error("Fatal "error": ")

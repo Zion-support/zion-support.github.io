@@ -1,7 +1,3 @@
-
-import React from "react";
-import Head from "next/head";
-import {
   Phone,
   Mail,
   MapPin,
@@ -13,18 +9,10 @@ import {
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-export default function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find((s) =>
-
-    s.link.endsWith("/quantum-internet-security-platform"),;
   );
   if (!service) return null;
 
   return (
-    <UltraAdvancedFuturisticBackground>;
-      <Head>;
-        <title>{service && service.name} - Zion Tech Group</title>;
-        <meta name="description" content={service && service.description} />;
         <link
           rel="canonical"
           href="https://ziontechgroup && ziontechgroup.com/quantum-internet-security-platform"
@@ -56,104 +44,6 @@ export default function QuantumInternetSecurityPage() {
                     <span>{feat}</span>;
                   </li>;
                 ))}
-              </ul>;
-            </div>;
-            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">;
-              <div className="flex items-end justify-between mb-3">;
-                <div>;
-                  <div className="text-3xl font-bold text-white">;
-                    {service && service.price}
-                    <span className="text-slate-400 text-base">;
-                      {service && service.period}
-                    </span>;
-                  </div>;
-                  <div className="text-slate-400">;
-                    {service && service.trialDays}-day free trial  Setup:{" "}
-                    {service && service.setupTime}
-                  </div>;
-                </div>;
-                <div className="flex items-center text-yellow-400">;
-                  <Star className="w-4 h-4 mr-1" />;
-                  {service && service.rating.toFixed(1)}
-                </div>;
-              </div>;
-              <Button
-                href="/contact"
-                variant="quantum"
-                size="lg"
-                className="w-full">;
-                Request a Security Demo;
-                <ArrowRight className="w-5 h-5 ml-2" />;
-              </Button>;
-              <div className="mt-6 space-y-3 text-sm text-slate-300">;
-                <div className="flex items-center space-x-2">;
-                  <Phone className="w-4 h-4 text-cyan-400" />;
-                  <span>{service && service.contactInfo.mobile}</span>;
-                </div>;
-                <div className="flex items-center space-x-2">;
-                  <Mail className="w-4 h-4 text-purple-400" />;
-                  <span>{service && service.contactInfo.email}</span>;
-                </div>;
-                <div className="flex items-center space-x-2">;
-                  <MapPin className="w-4 h-4 text-green-400" />;
-                  <span className="text-xs">{service && service.contactInfo.address}</span>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>;
-  );
-import React from './react';
-import Head from './next / head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Shield,
-  Star,
-} from './lucide-react';
-import UltraAdvancedFuturisticBackground from "../components / ui / UltraAdvancedFuturisticBackground";
-import Button from "../components / ui / Button";
-import { enhancedRealMicroSaasServices  } from '../data / enhanced - real - micro - saas - services';
-export default /**
- * QuantumInternetSecurityPage - Function description
- */
-function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find ((s) =>;
-    s.link.ends_with ("/quantum - internet - security - platform"),
-  );
-  // Check condition
-if (return null) {
-  $2
-                className="w-full"
-              >
-                Request a Security Demo
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>{service.contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <span>{service.contactInfo.email}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-green-400" />
-                  <span className="text-xs">{service.contactInfo.address}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  );
 }
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -196,20 +86,6 @@ if (return null) {
             <div className="bg - black / 30 rounded - 2xl border border - emerald - 500 / 30 p - 6 h - fit">;
               <div className="flex items - end justify - between mb - 3">;
                 <div>;
-                  <div className="text - 3xl font - bold text - white">;
-                    {service.price}
-                    <span className="text - slate - 400 text - base">;
-                      {service.period}
-                    </span>;
-                  </div>;
-                  <div className="text - slate - 400">;
-                    {service.trial_days}-day free trial  Setup:{" "}
-                    {service.setup_time}
-                  </div>;
-                </div>;
-                <div className="flex items - center text - yellow - 400">;
-                  <Star className="w - 4 h - 4 mr - 1" />;
-                  {service.rating.to_fixed (1)}
                 </div>;
               </div>;
               <Button;
@@ -239,5 +115,4 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-    </UltraAdvancedFuturisticBackground>);
 }

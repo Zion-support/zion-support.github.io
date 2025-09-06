@@ -47,7 +47,6 @@ function processFile(filePath) {
     console.error(`✗ Error processing ${filePath}:`, error.message);
     return 0}
 }
-
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -93,5 +92,3 @@ function main() {
 }
 if (require.main === module) {
   main().catch(console.error)}
-
-module.exports = { removeConsoleStatements, processFile };

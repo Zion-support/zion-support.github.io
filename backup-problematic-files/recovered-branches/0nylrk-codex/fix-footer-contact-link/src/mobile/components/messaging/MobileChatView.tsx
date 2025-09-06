@@ -127,7 +127,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
               )}>;                {message.timestamp}
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
-                    {message.status === 'read' ? '' :''}
                   </span>;
                 )}
               </div>;

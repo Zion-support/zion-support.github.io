@@ -1,19 +1,29 @@
-
   [key: string]: any;
 }) =>: any (
   <Suspense fallback={fallback}>;
     <Component {...props} />;
-
-  </Suspense>;
-
-        <div className="p-6 text-center">;
-          <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
-  </Suspense>),
+    this.state = { hasError: false }
+  }
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {return { hasError: true, error }
+  }
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {console.error("Error caught by boundary:", error, errorInfo);
+  }
 // Error boundary for better error handling;
-interface ErrorBoundaryState {hasError: boolean;
+interface ErrorBoundaryState {
+  has_error: boolean,
   error?: Error;
 }
-interface ErrorBoundaryProps {children: ReactNode;
+interface ErrorBoundaryProps {
+  children: ReactNode,
+  fallback?: ReactNode;
+}
+// Error boundary for better error handling;
+interface ErrorBoundaryState {
+  has_error: boolean,
+  error?: Error;
+}
+interface ErrorBoundaryProps {
+  children: ReactNode,
   fallback?: ReactNode;
 }
 export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryState> {
@@ -27,14 +37,8 @@ export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryS
   componentDidCatch (error: Error, error_info: React.ErrorInfo) {
     console.error ("Error caught by boundary:", error, error_info);
   }
-  render () {
-    // Check condition
-if ( {) {
-  $2
-}
-      return this.props.fallback || (
-        <div className="p - 6 text - center">;
-          <div className="text-[var (--error)] text - lg mb - 2">Something went wrong</div>;
+        <div className="p-6 text-center">;
+          <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
           <button;
             on_click={() => this.set_state ({ has_error: false })}
             className="btn - primary";
@@ -43,34 +47,16 @@ if ( {) {
           </button>;
         </div>);
     }
-
   return (;
     <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
   );
 }
-
+  return (;
+    <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
+  );
+}
     <div className={`animate-pulse ${className}`}>;
       {Array.from({ length: lines }).map((_, i) => (;
-export /**
- * LoadingSpinner - Function description
- */
-function LoadingSpinner() {
-  const size_classes = {
-    sm: "w - 4 h - 4",
-    md: "w - 6 h - 6",
-    lg: "w - 8 h - 8";
-  },
-  return (
-    <div className={`animate - spin rounded - full border - 2 border-[var (--border)] border - t-[var (--accent)] ${size_classes[size]} ${class_name}`} />);
-}
-// Skeleton loading component;
-export /**
- * Skeleton - Function description
- */
-function Skeleton() {
-  return (
-    <div className={`animate - pulse ${class_name}`}>;
-      {Array.from ({ length: lines }).map ((_, i) => (
         <div;
           key={i}
           className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb - 0";
@@ -78,7 +64,6 @@ function Skeleton() {
         />))}
     </div>);
 }
-
       // Log performance metrics in development;
       // Check condition
 if ( {) {
@@ -86,21 +71,12 @@ if ( {) {
 }
         // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`);
       }
-
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
-      // Check condition
-if ( {) {
-  $2
-}
-        // Could send to analytics service here;
-        console.warn (`${component_name} took ${duration.to_fixed (2)}ms to render`);
       }
     }
   }
 }
-
     }
   }, [value, delay]);
   return debounced_value;
 }
-

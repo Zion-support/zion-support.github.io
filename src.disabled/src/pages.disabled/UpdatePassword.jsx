@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface UpdatePasswordProps {
   // Add props here as needed
-
 export default function UpdatePassword({ }: UpdatePasswordProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function UpdatePassword({ }: UpdatePasswordProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

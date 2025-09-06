@@ -1,11 +1,13 @@
-
-
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Menu, X} from "lucide-react";
+import {useSidebar} from "./sidebar-context";
+import {cn} from "@/lib/utils";
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Menu, X } from "lucide-react",
 import { useSidebar } from "./sidebar-context",
 import { cn } from "@/lib/utils",
-
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
 }
@@ -14,7 +16,6 @@ interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
     <Button
       variant="ghost"
       size="icon"
-
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Menu, X } from "lucide-react",;
@@ -31,6 +32,9 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
       variant="ghost";
       size="icon";
 
+
+
+
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}>;
@@ -39,5 +43,3 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
     </Button>;
   );
 }
-;
-

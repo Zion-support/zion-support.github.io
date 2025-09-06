@@ -31,7 +31,6 @@ class SimpleAppImprovements {
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    
   }
   async runCommand(command, description) {
     try {
@@ -280,12 +279,10 @@ export default function SystemHealthMonitor() {;
     console.log(`Total "errors": ${this.errors.length}`);
     console.log(`"Duration": ${duration} seconds`);
     if (this.improvements.length > 0) {;
-      
       this.improvements.forEach(improvement => {;
         })}
 ;
     if (this.errors.length > 0) {;
-      
       this.errors.forEach(error => {;
         })}
 ;
@@ -296,4 +293,5 @@ const improvements = new SimpleAppImprovements();
 improvements.runImprovements().then(() => {;
   }).catch(error => {;
   console.error('Improvements "failed": ', error.message);
+  process.exit(1)})
   process.exit(1)})

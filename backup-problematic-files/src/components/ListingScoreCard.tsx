@@ -62,7 +62,6 @@ export function ListingScoreCard({ ;
             {category}
           </Badge>;
           {aiScore === undefined || aiScore === null ? (;
-            <div className="text-xs italic text-zion-slate-light">Beta  simulated results</div>;
           ) :(;
             aiScore > 0 && (;
               <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">;

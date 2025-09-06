@@ -7,7 +7,6 @@ const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
 const chokidar = // // require('chokidar');
-
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -16,7 +15,6 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
-    
     this.errorTypes = {}
       "syntax": [],
       "typescript": [],
@@ -34,9 +32,6 @@ class ErrorDetectionService {}
       level,
       message,
       data,
-      "service": 'error-detection-service'
-    };
-
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -62,7 +57,6 @@ class ErrorDetectionService {}
       // Start file watching for real-time detection;
       this.startFileWatching();
       this.log('info', 'Error Detection Service started successfully');
-      
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -77,7 +71,6 @@ class ErrorDetectionService {}
       'backups',
       'temp'
     ];
-
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -226,7 +219,6 @@ class ErrorDetectionService {}
         'vite.config.ts',
         'tailwind.config.js'
       ];
-
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -257,7 +249,6 @@ class ErrorDetectionService {}
     const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
-
     sourceDirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
@@ -296,7 +287,6 @@ class ErrorDetectionService {}
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
-    
     if (openComments !== closeComments) {}
       return true};
     // Check for missing semicolons in certain contexts;
@@ -493,7 +483,6 @@ class ErrorDetectionService {}
       const count = this.errorTypes[type].length;
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
-      
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -642,4 +631,3 @@ process.on('unhandledRejection', (reason, promise) => {}
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
   process.exit(1)}
-});

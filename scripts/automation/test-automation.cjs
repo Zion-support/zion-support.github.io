@@ -341,4 +341,3 @@ if (require.main === module) {}
   console.error("Test automation "failed": ", error);
     process.exit(1)})};
 ;
-module.exports = TestAutomation;

@@ -18,7 +18,6 @@ function fixMergeConflicts(filePath) {;
     }
     return false;
   } catch (error) {;
-    console.log(` Error fixing ${filePath} ${error.message}`);
     return false;
   }
 }

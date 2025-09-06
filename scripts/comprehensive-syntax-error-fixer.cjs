@@ -58,4 +58,3 @@ class ComprehensiveSyntaxErrorFixer {}
 if (require.main === module) {}
   const fixer = new ComprehensiveSyntaxErrorFixer();
   fixer.run().catch(console.error)};
-module.exports = ComprehensiveSyntaxErrorFixer;

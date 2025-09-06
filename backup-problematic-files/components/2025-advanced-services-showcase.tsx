@@ -476,7 +476,6 @@ export default function AdvancedServicesShowcase() {;
                 </h2>;
                 <p className="text-gray-600 dark:text-gray-400">;
                   {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
-                  {searchTerm && `  Search: "${searchTerm}"`}
                 </p>;
               </div>;
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">;

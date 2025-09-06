@@ -1,35 +1,20 @@
-
 interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggested_price: {
-    min: number,
-    max: number;
 
+  description: string
+  tags: string[]
+  suggestedPrice: {
+    min: number
+
+    max: number
   }
-  keyPoints: string[]
+  key_points: string[];
 }
 interface AIListingGeneratorProps {
-
-
-interface GeneratedContent {;
-  description: string,;
-  tags: string[],;
-  suggestedPrice: {;
-    min: number,;
-    max: number;
-  };
-  keyPoints: string[];
-}
-
-interface AIListingGeneratorProps {;
-  onApplyGenerated?: (content: GeneratedContent,) => void,;
-  initialValues?: {;
 
     title?: string;
     category?: string;
     keyFeatures?: string;
-    targetAudience?: string
+    targetAudience?: string;
   }
 }
 
@@ -48,20 +33,22 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     keyFeatures: string
     targetAudience: string
   }) => {
-    setIsLoading(true)
+    setIsLoading (true);
     try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
-        body: { title, category, keyFeatures, targetAudience }
-      })
-      if (error) {
-        throw new Error(error.message)
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (error.message);
       }
       if (data && (data as any).error) {
         throw new Error((data as any).error)
       }
 
       setGeneratedContent((data as any)?.generated || null)
-
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -71,9 +58,7 @@ import { AIListingForm } from "./AIListingForm",
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
       toast({
-        title: "Content Generated"
         description: "AI has created optimized listing content for you."
       })
     } catch (error) {
@@ -83,34 +68,15 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
-      // Check condition
-if (.error) {) {
-  $2
-}
-        throw new Error ((data as any).error);
-      }
-      setGeneratedContent ((data as any)?.generated || null);
-      toast ({
-        title: "Content Generated",
-        description: "AI has created optimized listing content for you.";
-      });
-    } catch (error) {
-      logErrorToProduction ('Error generating content:', { data: error }),
-      toast ({
-        title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
-        variant: "destructive";
-      });
     } finally {
       setIsLoading (false);
     }
+
 
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
-    }
-
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -124,14 +90,12 @@ if (.error) {) {
           </p>
         </CardHeader>
         <CardContent>
-
             onSubmit = {handleGenerate,}
             isLoading = {isLoading,}
             initialValues = {initialValues,}
           />
         </CardContent>
       </Card>
-
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 ;
@@ -144,37 +108,11 @@ if (.error) {) {
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
         title: "Generation Failed",;
-        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
-  };
-
-  const handleApply = () => {;
-    if (generatedContent && onApplyGenerated) {;
-      onApplyGenerated(generatedContent);
-      toast({;
-        title: "Content Applied",;
-        description: "The generated content has been applied to your listing.";
-      });
-
-  const handle_apply = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      onApplyGenerated (generated_content);
-      toast ({
-        title: "Content Applied",
-        description: "The generated content has been applied to your listing.";
-      });
-    }
-  },
-
-  return (
-
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -194,14 +132,30 @@ if ( {) {
           />;
         </CardContent>;
       </Card>;
-
       {isLoading && <LoadingContentSkeleton />}
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
+}) => {
+  setIsLoading (true);
+try {
+  const {
+}catch (error) {';
+  logErrorToProduction ('Error generating content:', {
+  data: error;
+});
+toast ({
+}finally {
+  setIsLoading (false);
+}
+}
+
+}
+}
+}
+}
 
     </div>;
   );
 }
 ;
-

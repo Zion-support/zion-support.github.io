@@ -190,7 +190,6 @@ export default function UpdatePassword() {;
                             <Input;
                               type="password";
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
-                              placeholder="";
                               disabled={isLoading}
                               {...field}
                             />;

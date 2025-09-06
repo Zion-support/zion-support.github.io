@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface HRPlatformProps {
   // Add props here as needed
-
 export default function HRPlatform({ }: HRPlatformProps) {
   return (
     <div>
@@ -32,6 +31,18 @@ export default function HRPlatform({ }: HRPlatformProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+:src.pages.disabled/HRPlatform.jsx
+}
+}
+}
+}
+}
+}
+
+
+
+
+
 
 :src.pages.disabled/HRPlatform.jsx
 }
@@ -39,4 +50,3 @@ export default function HRPlatform({ }: HRPlatformProps) {
 }
 }
 }
-

@@ -1,6 +1,28 @@
-
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+async function fetchFromGitHub(): Promise<any[]> {
   try {
 
+
+      } catch {
+        // ignore;
+      }
+    }
+return results;
+  } catch {
+    return [];
+  }
+}
+  }
+const remote = await fetchFromGitHub()
+
+const remote = await fetchFromGitHub(),
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+async function fetchFromGitHub(): Promise<any[]> {;
+  try {
     const repoUrl = require('../../../package.json').repository?.url || '';
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
@@ -87,6 +109,17 @@ export default async function handler(req, res) {
   }
 
   const remote = await fetchFromGitHub();
+  return res.status(200).json({ logs: remote });
+}
+}
+};
+const remote = await fetchFromGitHub (),
+  return res.status (200).json ({ logs: remote });
+}
+;
+
 
   return res.status(200).json({ logs: remote });
+
+};
 

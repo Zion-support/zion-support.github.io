@@ -1,7 +1,6 @@
 /*;
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
-  These definitions are **not** a replacement for `@types/react`  they only;
   exist so that isolated compilation of individual files (e.g., in CI or code;
   review bots) will not fail when full React type declarations are not;
   present.  They purposefully model just enough surface-area used throughout;

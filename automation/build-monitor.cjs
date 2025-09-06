@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
+const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -50,6 +51,8 @@ class BuildMonitor {}
       });
 
 
+
+
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
@@ -87,6 +90,8 @@ class BuildMonitor {}
         success: false,
         error: error.message,
         output: error.stdout || error.stderr,
+
+
 
 
       return buildResult;
@@ -132,6 +137,8 @@ class BuildMonitor {}
       platform: process.platform,
 
 
+
+
       return buildResult;
     };
   };
@@ -158,6 +165,8 @@ class BuildMonitor {}
       this.log('Build failure reported');
     } catch (_) {}
   }
+
+
 
 
       this.log('Type check completed successfully');
@@ -244,6 +253,8 @@ class BuildMonitor {}
       this.log('Optimizing build...');
 
 
+
+
       // Clean up first;
       await this.cleanupOldBuilds();
       // Run build with optimization;
@@ -301,6 +312,9 @@ if (require.main === module) {}
     console.error('Build Monitor "failed": ', error);
     process.exit(1);
   }
+});
+};
+module.exports = BuildMonitor;
 }
 const monitor = new BuildMonitor();
 monitor.start().catch(error => {

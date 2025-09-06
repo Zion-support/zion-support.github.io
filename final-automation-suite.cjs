@@ -267,7 +267,6 @@ const path = require("path")
     return files;
   }
     return files}
-    return files}
 }
 
 const checker = new CodeQualityChecker();
@@ -413,7 +412,6 @@ class PerformanceMonitor {
     
     return size;
   }
-    return size}
     return size}
 }
 

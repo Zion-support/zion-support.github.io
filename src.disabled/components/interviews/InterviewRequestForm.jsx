@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface InterviewRequestFormProps {
   // Add props here as needed
-
 export default function InterviewRequestForm({ }: InterviewRequestFormProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function InterviewRequestForm({ }: InterviewRequestFormProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

@@ -17,3 +17,4 @@ console.log('=')
     console.log('\n Detailed report saved "to")
   console.error('Automation "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;

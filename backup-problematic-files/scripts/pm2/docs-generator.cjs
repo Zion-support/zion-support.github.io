@@ -389,6 +389,9 @@ generator.run().catch(error => {
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -433,7 +436,6 @@ class DocsGenerator {}
       
       
       
-      
       // Check if JSDoc is available;
       try {}
         execSync('npx jsdoc --version', { "stdio": 'pipe' }
@@ -457,7 +459,6 @@ class DocsGenerator {}
 
 
 
-
       this.log('API documentation generated successfully');
       return { "generated": true, "outputDir": docsDir };
     } catch (error) {}
@@ -472,6 +473,8 @@ class DocsGenerator {}
     };
     try {}
       this.log('Generating component documentation...');
+      // Look for React/Vue/Svelte components;
+      const componentFiles = this.findComponentFiles();
       // Look for React/Vue/Svelte components;
       const componentFiles = this.findComponentFiles();
       
@@ -490,7 +493,6 @@ class DocsGenerator {}
       
       
       
-      
       const docsDir = 'docs/components';
       if (!fs.existsSync(docsDir)) {}
         fs.mkdirSync(docsDir, { "recursive": true }
@@ -498,7 +500,6 @@ class DocsGenerator {}
       };
       const docsFile = path.join(docsDir, 'components.md');
       fs.writeFileSync(docsFile, componentDocs);
-
 
 
 
@@ -517,14 +518,12 @@ class DocsGenerator {}
 
 
 
-
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
-          
           
           
           
@@ -539,7 +538,6 @@ class DocsGenerator {}
         // Skip directories that can't be read;
       };
     };
-
 
 
 
@@ -617,6 +615,8 @@ class DocsGenerator {}
       this.log('Updating README...');
       const readmePath = 'README.md';
       let readmeContent = '';
+      const readmePath = 'README.md';
+      let readmeContent = '';
       
       const readmePath = 'README.md';
       let readmeContent = '';
@@ -628,6 +628,9 @@ class DocsGenerator {}
       };
       // Generate project information;
       const projectInfo = await this.generateProjectInfo();
+      // Update or create README;
+      const newReadme = this.generateReadmeContent(projectInfo, readmeContent);
+      fs.writeFileSync(readmePath, newReadme);
       // Update or create README;
       const newReadme = this.generateReadmeContent(projectInfo, readmeContent);
       fs.writeFileSync(readmePath, newReadme);
@@ -649,7 +652,6 @@ class DocsGenerator {}
   async generateProjectInfo() {}
     try {}
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      
       
       
       
@@ -683,6 +685,9 @@ class DocsGenerator {}
     let readme = `# ${projectInfo.name}\n\n`;`
     readme += `**"Version": ** ${projectInfo.version}\n\n`;`
     readme += `${projectInfo.description}\n\n`;`
+    let readme = `# ${projectInfo.name}\n\n`;`
+    readme += `**"Version": ** ${projectInfo.version}\n\n`;`
+    readme += `${projectInfo.description}\n\n`;`
     
     let readme = `# ${projectInfo.name}\n\n`;`
     readme += `**"Version": ** ${projectInfo.version}\n\n`;`
@@ -697,7 +702,6 @@ class DocsGenerator {}
     readme += `**"License": ** ${projectInfo.license}\n\n`;`
     readme += "---\n\n";
     readme += `*Last "updated": ${timestamp}*\n\n`;`
-    
     
     
     
@@ -740,6 +744,8 @@ class DocsGenerator {}
     };
     const reportFile = path.join(__dirname, '../../logs/pm2/docs-generator-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    const reportFile = path.join(__dirname, '../../logs/pm2/docs-generator-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     const reportFile = path.join(__dirname, '../../logs/pm2/docs-generator-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -753,6 +759,8 @@ class DocsGenerator {}
     this.log(`${this.processName} started`);
     try {}
       const report = await this.generateReport();
+    try {}
+      const report = await this.generateReport();
     
     try {}
       const report = await this.generateReport();
@@ -763,9 +771,7 @@ class DocsGenerator {}
       if (report.apiDocs.generated) generatedCount++;
       if (report.componentDocs.generated) generatedCount++;
       if (report.readmeUpdate.updated) generatedCount++;
-      
       this.log(`Documentation generation "completed": ${generatedCount} items generated`);
-      
       
       this.log(`Documentation generation "completed": ${generatedCount} items generated`);
       

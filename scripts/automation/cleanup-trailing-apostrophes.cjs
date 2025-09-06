@@ -63,7 +63,6 @@ function $1() {}
   fs.writeFileSync(f, updated, "utf8');
         changed += 1};
     } catch (e) {}
-  
 } catch (e) {}
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
@@ -71,4 +70,3 @@ function $1() {}
   console.log(`Cleaned ${changed} files.`)};
 ;
 if (require.main === module) {}
-  main()};

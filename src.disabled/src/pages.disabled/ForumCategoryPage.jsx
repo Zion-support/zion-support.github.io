@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface ForumCategoryPageProps {
   // Add props here as needed
-
 export default function ForumCategoryPage({ }: ForumCategoryPageProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function ForumCategoryPage({ }: ForumCategoryPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

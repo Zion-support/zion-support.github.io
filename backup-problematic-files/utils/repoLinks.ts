@@ -15,5 +15,7 @@ export function githubFileUrl(pathInRepo: string): string | undefined {if (!repo
 export function githubActionsUrl(): string | undefined {if (!repoWebUrl) return undefined;
   return `${repoWebUrl.replace(/#.*$/, "")}/actions`;
 }
-export function githubRepoUrl(): string | undefined {return repoWebUrl?.replace(/#.*$/, "");
+;
+export function githubRepoUrl(): string | undefined {;
+  return repoWebUrl?.replace(/#.*$/, "");
 }

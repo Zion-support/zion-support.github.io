@@ -347,7 +347,6 @@ jest.mock('@/context/CartContext', () => {;
   return { __esModule:true, useCart, CartProvider, default:CartProvider },;
 }),;
 ;
-// Wishlist hook  return empty list helpers;
 jest.mock('@/hooks/useWishlist', () => {;
   const useWishlist = () => ({ items:[] as string[], toggle:jest.fn(), isWishlisted:() => false }),;
   return { __esModule:true, useWishlist, default:useWishlist },;

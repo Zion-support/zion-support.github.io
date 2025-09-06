@@ -4,12 +4,10 @@ import { v4, as, uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Job } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
-
-
-const FILE = "jobs && jobs.json";
-
-
-export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  try {
 
   if (!rateLimit(req, res)) return;
 
@@ -18,6 +16,62 @@ export default async function handler(
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
     return;
+  }
+    }
+    const nowIso = new Date().toISOString();
+    const job: Job = {
+
+
+      deliveryDeadlineIso: deliveryDeadlineIso
+        ? String(deliveryDeadlineIso)
+        : undefined
+      clientEmail: String(clientEmail)
+      status: "New"
+      createdAtIso: nowIso
+      updatedAtIso: nowIso
+    }
+    // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
+
+    if (!job && job.category) {
+      const skills = (job && job.requiredSkills || []).map((s) => s && s.toLowerCase());
+
+      if (
+        skills && skills.some(
+          (s) =>
+
+            s && s.includes("openai") ||
+            s && s.includes("langchain") ||
+            s && s.includes("rag"),
+
+        )
+      )
+        job && job.category = "LLM App";
+      else if (
+        skills && skills.some(
+          (s) =>
+
+            s && s.includes("aws") ||
+            s && s.includes("kubernetes") ||
+            s && s.includes("terraform"),
+
+        )
+      )
+        job && job.category = "Cloud";
+      else job && job.category = "General";
+
+    }
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    jobs && jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs);
+    res && res.status(201).json({ job });
+    return;
+  }
+
+    }
+
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    jobs.unshift(job);
+    writeJsonFile<Job[]>(FILE, jobs);
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -113,6 +167,7 @@ export default async function handler(req, res) {
     const jobs = readJsonFile<Job[]>(FILE, []),;
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs),;
+
     res.status(201).json({ job });
     return
 }
@@ -130,6 +185,8 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
 
   }
 
@@ -197,10 +254,6 @@ if (=>) {
     writeJsonFile < Job[]>(FILE, jobs);
     res.status (201).json ({ job });
     return;
-  }
-  res.set_header ("Allow", "GET, POST");
-  res.status (405).end ("Method Not Allowed");
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

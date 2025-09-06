@@ -13,7 +13,6 @@ export default function ZGPLibraryPage() {;
         <p className="text-lg mb-4">Access our Zion Governance Protocol resources and documentation.</p>;
         <div className="mt-4">;
           <a href="/governance" className="text-blue-600 hover:underline">;
-             Back to Governance;
           </a>;
         </div>;
       </div>;

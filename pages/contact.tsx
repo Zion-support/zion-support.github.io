@@ -1,17 +1,40 @@
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+
+
 import React from "react";
 import Layout from "../components/Layout";
-
 import React from 'react';
-
 import Layout from '../components/Layout';
-
 import Layout from '../components/Layout';
+origin/automation-improvements-final
 
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -71,18 +94,14 @@ export default function Contact() {
 }
   };
   return (
-
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
-
 import React from 'react';
-
 import Head from 'next/head';
 import Link from 'next/link';
 
 import React from "react";
 import Layout from "../components/Layout";
-
 export default function Contact() {
   return (
     <>
@@ -105,7 +124,6 @@ export default function Contact() {
             {/* A placeholder for a contact form could go here */}
             <p className="text-gray-500 text-sm">
               (Contact form functionality would be implemented here)
-
             </p>
           </div>
           <Link href="/services" className="btn-secondary">
@@ -115,7 +133,6 @@ export default function Contact() {
       </div>
     </>
   );
-
 import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
@@ -124,7 +141,6 @@ const ContactPage: React.FC = () => {
       <Head>
         <title>Contact Us - Zion Tech Group</title>
         <meta
-          name='description'
           content='Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation.'
         />
         <meta
@@ -200,7 +216,6 @@ const ContactPage: React.FC = () => {
                   <ContactForm />
                 </div>
               </div>
-
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -512,19 +527,12 @@ const ContactPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
             </div>
           </div>
         </div>
       </div>
-
-  );
-
-}
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

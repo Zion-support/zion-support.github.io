@@ -1,4 +1,4 @@
-
+  style?: React.CSSProperties;
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string
   style?: React.CSSProperties
@@ -11,7 +11,6 @@ export function InteractiveFeatures({
   style
 }: InteractiveFeaturesProps) {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null)
-
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -52,7 +51,6 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       title: "Equipment Catalog",
       description: "Find specialized hardware for development and research.",
       details:
-
         "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.",
       icon: <Settings className="h-8 w-8 text-amber-700" />,
       link: "/equipment"}],
@@ -62,6 +60,8 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
   },
 
   return (
+
+
     <section className={cn("py-16 bg-zion-blue-dark", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
@@ -72,12 +72,10 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
             Hover or click a card to learn more about what Zion offers
           </p>
         </div>
-
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
-
                 {feature.icon}
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
@@ -88,19 +86,18 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               </CardHeader>
               <div
                 className={cn(
+                  'transition-all duration-300',
 
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
                     : 'max-h-0 opacity-0 p-0'
                 )}              >
                 <CardContent className='text-sm text-zion-slate-light p-0'>
-
                   "transition-all duration-300",
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
                 )}
               >
                 <CardContent className="text-sm text-zion-slate-light p-0">
-
                   <p>{feature.details}</p>
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
                     <Link href={feature.link} className="flex items-center gap-1">
@@ -112,16 +109,15 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
             </Card>
           ))}
 
+export default InteractiveFeatures;
+;
+}
+}
+
         </div>;
+export default InteractiveFeatures
+
+ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </section>;
   );
-
-
-
-            </Card>))}
-        </div>;
-      </div>;
-    </section>);
-export default InteractiveFeatures;
-

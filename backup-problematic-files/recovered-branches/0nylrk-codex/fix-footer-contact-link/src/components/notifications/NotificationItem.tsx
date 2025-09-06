@@ -21,7 +21,6 @@ export const getTypeIcon = (type:NotificationType) => {;
     case 'hire_request':;
       return <span className="text-zion-purple"></span>,;
     case 'onboarding':;
-      return <span className="text-zion-cyan"></span>,;
     case 'system':;
       return <span className="text-yellow-500"></span>,;
     default:;

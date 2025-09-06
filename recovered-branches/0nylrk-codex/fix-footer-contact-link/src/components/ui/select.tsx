@@ -1,4 +1,3 @@
-
 const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
 const SelectValue = SelectPrimitive.Value
@@ -9,13 +8,11 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-
       className
     )}
     {...props}
   >;
     {children}
-
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ))
@@ -27,12 +24,11 @@ const SelectScrollUpButton = React.forwardRef<
   <SelectPrimitive.ScrollUpButton
     ref={ref}
     className={cn(
-
       className
     )}
     {...props}
   >
-    <ChevronUp className=&quot;h-4 w-4&quot; />
+    <ChevronUp className="h-4 w-4" />
   </SelectPrimitive.ScrollUpButton>
 ))
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName
@@ -43,12 +39,11 @@ const SelectScrollDownButton = React.forwardRef<
   <SelectPrimitive.ScrollDownButton
     ref={ref}
     className={cn(
-
       className
     )}
     {...props}
   >
-    <ChevronDown className=&quot;h-4 w-4&quot; />
+    <ChevronDown className="h-4 w-4" />
   </SelectPrimitive.ScrollDownButton>
 ))
 SelectScrollDownButton.displayName =
@@ -56,12 +51,11 @@ SelectScrollDownButton.displayName =
 const SelectContent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
->(({ className, children, position = &quot;popper&quot;, ...props }, ref) => (
+>(({ className, children, position = "popper", ...props }, ref) => (
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
-
         className
       )}
       position={position}
@@ -70,7 +64,6 @@ const SelectContent = React.forwardRef<
       <SelectScrollUpButton />
       <SelectPrimitive.Viewport
         className={cn(
-
         )}
 import * as React from &quot;react & quot;
 import * as SelectPrimitive from &quot;@radix - ui / react - select & quot;
@@ -153,11 +146,6 @@ const SelectContent = React.forward_ref<;
       </SelectPrimitive.Viewport>;
       <SelectScrollDownButton />;
     </SelectPrimitive.Content>;
-  </SelectPrimitive.Portal>;
-));
-SelectContent.displayName = SelectPrimitive.Content.displayName;
-const SelectLabel = React.forwardRef<;
-
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
 >(({ className, ...props }, ref) => (;
   </SelectPrimitive.Portal>));
@@ -170,18 +158,22 @@ const SelectLabel = React.forward_ref<;
     ref={ref}
     className={cn (&quot;py - 1.5 pl - 8 pr - 2 text - sm font - semibold & quot;, class_name)}
     {...props}
-  />;
-));
-SelectLabel.displayName = SelectPrimitive.Label.displayName;
-const SelectItem = React.forwardRef<;
-
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 >(({ className, children, ...props }, ref) => (;
   <SelectPrimitive.Item;
     ref={ref}
+      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+
+
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
       &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
-
     className={cn(
       "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
@@ -189,9 +181,9 @@ const SelectItem = React.forwardRef<;
     )}
     {...props}
   >
-    <span className=&quot;absolute left-2 flex h-3.5 w-3.5 items-center justify-center&quot;>
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <SelectPrimitive.ItemIndicator>
-        <Check className=&quot;h-4 w-4&quot; />
+        <Check className="h-4 w-4" />
       </SelectPrimitive.ItemIndicator>
     </span>
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
@@ -203,19 +195,19 @@ const SelectSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
-  />));
-SelectLabel.display_name = SelectPrimitive.Label.display_name;
-const SelectItem = React.forward_ref<;
-  React.ElementRef < typeof SelectPrimitive.Item>,
-  React.ComponentPropsWithoutRef < typeof SelectPrimitive.Item>;
->(({ class_name, children, ...props }, ref) => (
-  <SelectPrimitive.Item;
-    ref={ref}
-className={cn (
-      &quot;relative flex w - full cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
-      class_name)}
-    {...props}
-  />;
-));
-SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
+  SelectSeparator;
+  SelectScrollUpButton;
+  SelectScrollDownButton}
 
+export {;
+  Select,;
+  SelectGroup,;
+  SelectValue,;
+  SelectTrigger,;
+  SelectContent,;
+  SelectLabel,;
+  SelectItem,;
+  SelectSeparator;
+  SelectScrollUpButton;
+  SelectScrollDownButton}
+;

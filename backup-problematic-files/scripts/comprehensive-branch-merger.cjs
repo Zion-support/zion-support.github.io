@@ -1,6 +1,9 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process')
 // console.log('� Comprehensive Branch Merger')
 console.log('==')
@@ -21,4 +24,5 @@ console.log('==')
       console.log('\n⚠ Some branches failed to "merge")
         execSync('git push origin main', { "stdio"})
         console.error(' Failed to push "changes")
+    console.error(' Comprehensive branch merger "failed")
     console.error(' Comprehensive branch merger "failed")

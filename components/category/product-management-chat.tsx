@@ -1,12 +1,4 @@
 import type { NextPage } from 'next';
-import Link from 'next/link';
-import Seo from '../../components/seo/Seo';
-
-  return (
-
-const ProductManagementChat: NextPage = () => {
-  return (
-
     <div>
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />
       <main>
@@ -17,8 +9,6 @@ const ProductManagementChat: NextPage = () => {
     </div>
   )
 }
-
-
     <div>;
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
       <main>;
@@ -29,6 +19,4 @@ const ProductManagementChat: NextPage = () => {
     </div>;
   );
 };
-
 export default ProductManagementChat;
-

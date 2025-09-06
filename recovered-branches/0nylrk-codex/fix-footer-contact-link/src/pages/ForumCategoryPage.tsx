@@ -1,5 +1,7 @@
 
 
+
+
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -11,13 +13,10 @@ import {ForumPost, ForumCategoryInfo} from "@/types/community";
 import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
-// Mock category data
-const categoriesInfo: Record<string, ForumCategoryInfo> = {
-  "getting-hired": {
-    id: "getting-hired"
-    name: "Getting Hired"
-    description: "Tips, strategies, and questions about getting hired on the platform.";
+    adminOnly: false
 
+    icon: "Briefcase"
+  }
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -40,14 +39,9 @@ import {
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
-    id: "getting-hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.",
-
     adminOnly: false,
     icon: "Briefcase"
   },
-
   "project-help": {
 
     id: "project-help"
@@ -56,7 +50,12 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: false
 
     icon: "MessageSquare"
-
+  "ai-tools": {
+    id: "ai-tools",
+    name: "AI Tools Discussion",
+    description: "Discuss AI tools, frameworks, and best practices.",
+    adminOnly: false,
+    icon: "Code"
   "feedback": {
 
     id: "feedback"
@@ -65,7 +64,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: false
 
     icon: "FileText"
-
   "announcements": {
 
     id: "announcements"
@@ -75,48 +73,96 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 
     icon: "Megaphone"
   }
-
 // Mock data for posts by category
 const postsByCategory: Record<string, ForumPost[]> = {
   "getting-hired": [
     {
 
-      replyCount: 6
+    }
+    {
+      id: "6"
+      title: "Portfolio pieces that clients actually care about"
+      content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
     }
   ];
   "project - help": [;
     {
+      id: "3",
+      title: "Looking for feedback on my automated testing approach",
+      content: "I've set up a CI / CD pipeline with the following testing strategy...",
+      author_id: "user3",
+      author_name: "Michael Wong",
+      category_id: "project - help",
+      tags: ["testing", "automation", "ci - cd"];
+      created_at: "2025 - 04 - 10T14:30:00Z",
+      updated_at: "2025 - 04 - 10T14:30:00Z",
+      upvotes: 5,
+      downvotes: 0,
+      reply_count: 2;
+    }
+    {
+      id: "5",
+      title: "How to handle client scope creep?",
+      content: "I'm working on a project where the client keeps adding requirements...",
+      author_id: "user5",
+      author_name: "David Lin",
+      category_id: "project - help",
+      tags: ["client - management", "scope", "projects"];
+      created_at: "2025 - 04 - 08T10:20:00Z",
+      updated_at: "2025 - 04 - 08T10:20:00Z",
+      upvotes: 24,
+      downvotes: 0,
 
+      replyCount: 7,
       isAnswered: true
 
     }
   ];
   "ai - tools": [;
     {
-
-      replyCount: 9
-
     }
   ];
   "feedback": [;
     {
-
-      replyCount: 5
-
     }
   ];
   "announcements": [;
     {
-
-const iconMap = {
-  "Briefcase": Briefcase,
-  "MessageSquare": MessageSquare,
-  "Code": Code,
-  "FileText": FileText,
-  "Megaphone": Megaphone
-
-  if (!categoryId || !categoriesInfo[categoryId]) {
-
+      id: "9",
+      title: "Platform Update: New AI Matching Algorithm",
+      content: "We're excited to announce the launch of our new and improved AI matching algorithm...",
+      author_id: "admin1",
+      author_name: "Zion Team",
+      author_role: "Admin",
+      category_id: "announcements",
+      tags: ["update", "matching", "algorithm"];
+      created_at: "2025 - 04 - 02T15:00:00Z",
+      updated_at: "2025 - 04 - 02T15:00:00Z",
+      upvotes: 42,
+      downvotes: 0,
+      reply_count: 11,
+      is_pinned: true;
+    }
+    {
+      id: "10",
+      title: "Maintenance Scheduled: April 15th",
+      content: "We will be performing scheduled maintenance on April 15th from 2am - 4am UTC...",
+      author_id: "admin1",
+      author_name: "Zion Team",
+      author_role: "Admin",
+      category_id: "announcements",
+      tags: ["maintenance", "downtime"];
+      created_at: "2025 - 04 - 10T09:00:00Z",
+      updated_at: "2025 - 04 - 10T09:00:00Z",
+      upvotes: 8,
+      downvotes: 0,
+      reply_count: 2,
+      is_pinned: true;
+    }
+  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;
     return (
       <AppLayout>;
         <div className="container py-8">;
@@ -128,7 +174,6 @@ const iconMap = {
       </AppLayout>;
     );
   }
-
   // Filter posts based on search query
   const filteredPosts = searchQuery
     ? posts.filter(post =>
@@ -136,7 +181,6 @@ const iconMap = {
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-
   return (
     <AppLayout>
       <SEO
@@ -173,42 +217,13 @@ const iconMap = {
         <div className="mb-6">
           <div className="relative">
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-
-
-  const category = categoriesInfo[categoryId];
-  const IconComponent = iconMap[category && category.icon as keyof typeof iconMap] || MessageSquare;
-  const posts = postsByCategory[categoryId] || [];
-
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
-
               value={searchQuery}
-
-              onChange={(e) => setSearchQuery(e && e.target.value)}
-            />;
-          </div>;
-        </div>;
-
-        {posts && posts.length > 0 ? (;
-          <div className="space-y-4">;
-            {filteredPosts && filteredPosts.map((post) => (;
-              <PostCard key={post && post.id} post={post} />;
-            ))}
-          </div>;
-        ) : (;
-          <div className="text-center py-16">;
-            <h2 className="text-xl font-medium mb-2">No posts yet</h2>;
-            <p className="text-muted-foreground mb-6">Be the first to start a discussion in this category!</p>;
-
-            {canCreatePost && (;
-              <Button asChild>;
-                <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>;
-                  Create New Post;
-                </Link>;
-              </Button>;
-
             )}
           </div>;
         )}
-
+  "Megaphone": Megaphone;
+}
+;

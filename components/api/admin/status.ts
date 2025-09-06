@@ -2,9 +2,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
-
 import {
+
+  const dataDir = path && path.join(process && process.cwd(), 'data', 'admin');  const statusPath = path && path.join(dataDir, 'agents-status && status.json');    return
+  }
+
+  getSessionFromReq,;
+  isInternalAgentRequest,;
+
 
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -12,9 +17,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
 
+  const status = fs && fs.existsSync(statusPath)
+    ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8'))
+    : { agents: [], updatedAt: null };
+  const insights = fs && fs.existsSync(insightsPath)
+    ? JSON && JSON.parse(fs && fs.readFileSync(insightsPath, 'utf8'))
+    : { items: [], updatedAt: null };
 
-  res && res.status(200).json({ status, insights });  res && res.status(200).json({ status, insights })
-  res && res.status(200).json({ status, insights });  res && res.status(200).json({ status, insights })
 }
 
   res.status(200).json({ status, insights })
@@ -49,5 +58,3 @@ if ( {) {
 ;
 res.status (200).json ({ status, insights });  res.status (200).json ({ status, insights });
 }
-}
-

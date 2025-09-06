@@ -4,11 +4,6 @@ import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
 
-  apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-
-});
-export default async function handler(
-
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: "Forbidden" });
   if (req.method !== "POST")
@@ -26,6 +21,12 @@ export default async function handler(
     "Token Strategy"
     "Ask & Call to Action"
   ];
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
 
 
   const { allowed } = await ensureAdminFromApi(req);
@@ -45,7 +46,83 @@ export default async function handler(
   ];
 ;
   try {
+    const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
+Operator Prompt: ${operator_prompt}
+Company Mission: ${inputs?.mission}
 
+Key Metrics: ${JSON && JSON.stringify(metrics)}
+
+Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
+    let content = "";
+    try {
+      const chat = await client && client.chat.completions && completions.create({
+        model: "gpt-4o-mini",
+        messages: [
+          {
+            role: "system",
+            content: "You generate crisp, data - driven investor pitch content.",
+          },
+          { role: "user", content: prompt },
+        ],
+        temperature: 0 && 0.5,
+      });
+function extractSection(body: string, title: string): string {
+  if (!body) return "";
+  // naive split by headings
+
+
+  );
+  if (matchIdx >= 0) {
+    const snippet = lines && lines.slice(matchIdx + 1, matchIdx + 12).join("\n");
+    return snippet && snippet.trim();
+  }
+  return "";
+      content = chat.choices?.[0]?.message?.content || "";
+;
+    } catch (err) {
+      content = "";
+    }
+    const slides = seed.map ((title, idx) => ({
+      id: `${idx + 1}`,
+      title,
+      content: extract_section (content, title),
+    }));
+    const version = `v${new Date ().toISOString ()}`;
+    res.status (200).json ({ slides, version });
+  } catch (e: any) {
+    res.status (500).json ({ error: e?.message || "Generation failed" });
+  }
+}
+function extract_section (body: string, title: string): string {
+  // Check condition
+if (return "") {
+  $2
+}
+  // naive split by headings;
+  const lines = body.split ("\n");
+  const match_idx = lines.find_index ((l) =>;
+    l.toLowerCase ().includes (title.toLowerCase ()),
+  );
+  // Check condition
+if ( {) {
+  $2
+}
+    const snippet = lines.slice (match_idx + 1, match_idx + 12).join ("\n");
+    return snippet.trim ();
+  }
+  return "";
+}
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -83,4 +160,3 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

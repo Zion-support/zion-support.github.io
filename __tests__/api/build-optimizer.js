@@ -21,7 +21,6 @@ buildOptimizer.start().catch(console.error);
 }
 // Start the service;
 const buildOptimizer = new BuildOptimizer();
-buildOptimizer.start().catch(console.error);
 },;
 ,;
 // Start the service,;

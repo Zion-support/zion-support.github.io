@@ -13,3 +13,4 @@ console.log('')
 const filesToFix = [{ "path"}]
   { "path"}
   { "path"}
+  { "path"}

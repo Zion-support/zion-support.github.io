@@ -1,4 +1,10 @@
-
+; async walkDirectory(dir) {; const analyses = [];
+; try {; const items = fs && fs.readdirSync(dir);
+; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
+; if (stat && stat.isDirectory()) {; if (!fullPath && fullPath.includes('node_modules') &&; !fullPath && fullPath.includes('.git') &&; !fullPath && fullPath.includes('dist') &&; !fullPath && fullPath.includes('build') &&; !fullPath && fullPath.includes('.next') &&; !fullPath && fullPath.includes('coverage') &&; !fullPath && fullPath.includes('logs')) {; const subAnalyses = await this && this.walkDirectory(fullPath); analyses && analyses.push(...subAnalyses)}} else if (stat && stat.isFile()) {; const ext = path && path.extname(fullPath); if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {; const analysis = await this && this.analyzeFile(fullPath); if (analysis) {; analyses && analyses.push(analysis)}}}}} catch (error) {; this && this.log(`Error walking directory ${dir}: ${error && error.message}`)};
+; return analyses};
+; generateReport(analyses) {; const totalFiles = analyses && analyses.length; const totalIssues = analyses && analyses.reduce((sum, analysis) = > sum + analysis && analysis.issues.length, 0);
+; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
 };
 };
 ;
@@ -28,6 +34,35 @@
             message: 'Trailing spaces found';
             severity: 'low';
           });
+    };
+  };
+,
+  async analyzeFile(filePath) {,
+    try {,
+      const content = fs.readFileSync(filePath, 'utf8'),
+      const stats = fs.statSync(filePath),
+,
+      const analysis = {,
+        file: filePath,
+        size: stats.size,
+        lines: content.split('\n').length,
+        issues: [],
+      };
+,
+      // Check for common code quality issues,
+      const lines = content.split('\n'),
+,
+      lines.forEach((line, index) => {,
+        const lineNum = index + 1,
+,
+        // Trailing spaces,
+        if (line.match(/[ \t]+$/)) {,
+          analysis.issues.push({,
+            line: lineNum,
+            type: 'trailing-spaces',
+            message: 'Trailing spaces found',
+            severity: 'low',
+          }),
         };
 ,
         // Long lines (over 120 characters),
@@ -115,28 +150,6 @@
           };
         };
       };
-    } catch (error) {,
-      this.log(`Error walking directory ${dir}: ${error.message}`),
-    };
-,
-    return analyses,
-  };
-,
-  generateReport(analyses) {,
-    const totalFiles = analyses.length,
-    const totalIssues = analyses.reduce((sum, analysis) => sum + analysis.issues.length, 0),
-,
-    const issuesByType = {};
-    const issuesBySeverity = { low: 0, medium: 0, high: 0 };
-,
-    analyses.forEach(analysis => {,
-      analysis.issues.forEach(issue => {,
-        // Count by type,
-        issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1,
-,
-        // Count by severity,
-        issuesBySeverity[issue.severity]++,
-      }),
     }),
 ,
     const report = {,
@@ -145,13 +158,6 @@
         totalFiles,
         totalIssues,
         issuesByType,
-        issuesBySeverity,
-      },
-      files: analyses.filter(analysis => analysis.issues.length > 0),
-      recommendations: this.generateRecommendations(issuesByType, totalIssues),
-    };
-,
-    return report,
   };
 ,
   generateRecommendations(issuesByType, totalIssues) {,
@@ -162,8 +168,6 @@
         type: 'trailing-spaces',
         priority: 'low',
         message: 'Remove trailing spaces from files',
-        action: 'Run the lint-fixer to automatically remove trailing spaces',
-      }),
     };
 ,
     if (issuesByType['console-statement'] > 0) {,
@@ -171,8 +175,6 @@
         type: 'console-statement',
         priority: 'medium',
         message: 'Remove console statements from production code',
-        action: 'Replace console statements with proper logging or remove them',
-      }),
     };
 ,
     if (issuesByType['unused-import'] > 0) {,
@@ -180,8 +182,6 @@
         type: 'unused-import',
         priority: 'medium',
         message: 'Remove unused imports',
-        action: 'Clean up unused imports to reduce bundle size',
-      }),
     };
 ,
     if (totalIssues > 100) {,
@@ -189,24 +189,12 @@
         type: 'general',
         priority: 'high',
         message: 'High number of code quality issues detected',
-        action: 'Run comprehensive code cleanup and establish coding standards',
-      }),
-    };
-,
-    return recommendations,
   };
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
-        fs.mkdirSync(reportDir, { recursive: true }),
-      };
-,
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
-      this.log(`Report saved to: ${this.reportFile}`),
-    } catch (error) {,
-      this.log(`Error saving report: ${error.message}`),
     };
   };
 ,
@@ -214,41 +202,22 @@
     try {,
       const status = execSync('git status --porcelain', {,
         cwd: this.projectRoot,
-        encoding: 'utf8',
-      }),
-,
-      if (status.trim()) {,
-        this.log('  Uncommitted changes detected'),
-        return false,
-      };
-,
-      return true,
-    } catch (error) {,
-      this.log(`Error checking git status: ${error.message}`),
-      return false,
     };
   };
 ,
   async run() {,
-    this.log(' Starting Code Quality Monitor...'),
     this.log(`Project root: ${this.projectRoot}`),
 ,
     try {,
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
-        fs.mkdirSync(logsDir, { recursive: true }),
       };
 ,
       // Check git status,
       const isClean = await this.checkGitStatus(),
 ,
       // Analyze all files,
-      this.log(' Analyzing code files...'),
-      const analyses = await this.walkDirectory(this.projectRoot),
-,
-      // Generate report,
-      this.log(' Generating quality report...'),
       const report = this.generateReport(analyses),
 ,
       // Save report,
@@ -257,34 +226,15 @@
       const duration = Date.now() - this.startTime,
 ,
       // Log summary,
-      this.log('\n Code Quality Report Summary: '),
       this.log(`Files analyzed: ${report.summary.totalFiles}`),
       this.log(`Total issues: ${report.summary.totalIssues}`),
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.summary.totalIssues > 0) {,
-        this.log('\n Issues by type: '),
-        Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
-          this.log(`  ${type}: ${count}`),
-        }),
-,
-        this.log('\n Recommendations: '),
-        report.recommendations.forEach(rec => {,
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
-          this.log(`    Action: ${rec.action}`),
         }),
 ,
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,
-          this.log('\n Suggesting to run lint-fixer to auto-fix issues'),
-        };
-      } else {,
-        this.log(' Excellent! No code quality issues found!'),
-      };
-,
-    } catch (error) {,
-      this.log(` Error running code quality monitor: ${error.message}`),
-      process.exit(1),
     };
   };
 };
@@ -292,8 +242,6 @@
 // Run the code quality monitor,
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
-  process.exit(1),
-}),
 }}
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
@@ -383,28 +331,28 @@ if ( {) {
     encoding: 'utf8'});
 ; if () {) {
   $2
-} this.log (' Uncommitted changes detected'); return false}
+} this.log ('⚠️ Uncommitted changes detected'); return false}
 ; return true} catch (error) { this.log (`Error checking git status: ${error.message}`); return false}}
-; async run () { this.log (' Starting Code Quality Monitor...'); this.log (`Project root: ${this.project_root}`);
+; async run () { this.log ('🔍 Starting Code Quality Monitor...'); this.log (`Project root: ${this.project_root}`);
 ; try { // Create logs directory if it doesn't exist; const logs_dir = path.dirname (this.log_file); if () {) {
   $2
 } fs.mkdir_sync (logs_dir, { recursive: true })}
 ; // Check git status; const is_clean = await this.checkGitStatus ();
-; // Analyze all files; this.log (' Analyzing code files...'); const analyses = await this.walk_directory (this.project_root);
-; // Generate report; this.log (' Generating quality report...'); const report = this.generate_report (analyses);
+; // Analyze all files; this.log ('📁 Analyzing code files...'); const analyses = await this.walk_directory (this.project_root);
+; // Generate report; this.log ('📊 Generating quality report...'); const report = this.generate_report (analyses);
 ; // Save report; await this.save_report (report);
 ; const duration = Date.now () - this.start_time;
-; // Log summary; this.log ('\n Code Quality Report Summary: '); this.log (`Files analyzed: ${report.summary.total_files}`); this.log (`Total issues: ${report.summary.total_issues}`); this.log (`Duration: ${duration}ms`);
+; // Log summary; this.log ('\n📊 Code Quality Report Summary: '); this.log (`Files analyzed: ${report.summary.total_files}`); this.log (`Total issues: ${report.summary.total_issues}`); this.log (`Duration: ${duration}ms`);
 ; // Check condition
 if ( {) {
   $2
-} this.log ('\n Issues by type: '); Object.entries (report.summary.issuesByType).for_each (([type, count]) = > { this.log (` ${type}: ${count}`)});
-; this.log ('\n Recommendations: '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`); this.log (` Action: ${rec.action}`)});
+} this.log ('\n🚨 Issues by type: '); Object.entries (report.summary.issuesByType).for_each (([type, count]) = > { this.log (` ${type}: ${count}`)});
+; this.log ('\n💡 Recommendations: '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`); this.log (` Action: ${rec.action}`)});
 ; // If there are many issues and git is clean, suggest running the lint fixer; // Check condition
 if ( {) {
   $2
-} this.log ('\n Suggesting to run lint - fixer to auto - fix issues')}} else { this.log (' Excellent! No code quality issues found!')}
-} catch (error) { this.log (` Error running code quality monitor: ${error.message}`); process.exit (1)}}}
+} this.log ('\n🔧 Suggesting to run lint - fixer to auto - fix issues')}} else { this.log ('✨ Excellent! No code quality issues found!')}
+} catch (error) { this.log (`❌ Error running code quality monitor: ${error.message}`); process.exit (1)}}}
 ;
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor ();
@@ -422,4 +370,5 @@ const monitor = new CodeQualityMonitor(),;
 monitor.run().catch(error => {,;
   process.exit(1);
 });
+monitor.run().catch(error = > {; process.exit(1)});
 

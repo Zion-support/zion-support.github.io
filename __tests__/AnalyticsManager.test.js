@@ -1,5 +1,3 @@
-
-
 import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
@@ -18,7 +16,6 @@ describe('AnalyticsManager', () => {'}
   test('applies correct styling', () => {'}
     render(<AnalyticsManager />);,
   });
-
 import _React from 'react'
 '
 import '@testing-library/jest-dom';
@@ -29,4 +26,3 @@ describe('AnalyticsManager', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
-

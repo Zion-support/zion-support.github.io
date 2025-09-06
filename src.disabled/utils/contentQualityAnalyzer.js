@@ -1,5 +1,3 @@
-
-
 "export": class ContentQualityAnalyzer {
   static instance;
   constructor() {

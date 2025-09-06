@@ -1,20 +1,29 @@
-
-
-import React from "react",
-
+export function ApiGettingStarted() {
+  const authExample = `curl -X GET \\
+  https: //api.zionai.com/v1/jobs \\
+  -H "Authorization: Bearer YOUR_API_KEY"`,;
+const quickStartJs = `import axios from 'axios';
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
-
+  -H "Authorization: Bearer YOUR_API_KEY"`
+const quickStartJs = `import axios from 'axios';
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
+  -H "Authorization: Bearer YOUR_API_KEY"`,
 
+  const quickStartJs = `import axios from 'axios',
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`;
   }
+});
+console.log(response.data),`;
+}),
+
+// // // console.log(response.data),`,
 
   return (
     <ApiDocsLayout>
@@ -28,7 +37,6 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
         </p>
         <h2>Authentication</h2>
         <p>
-
         </p>
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
@@ -67,11 +75,13 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors"
           >
             Download Postman Collection
-          </a>
+          </Link>
         </div>
       </div>
     </ApiDocsLayout>
   )
+});
+}
+
 
 export default ApiGettingStarted;
-

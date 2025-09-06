@@ -1,5 +1,4 @@
 
-
 const LanguageSync: NextPage = () => {
   return (
     <div>
@@ -21,4 +20,16 @@ const LanguageSync: NextPage = () => {
   )
 
 },
+export default LanguageSync,
+},
+
+},
+export default LanguageSync,
+
+},
+export default LanguageSync,
+},
+
+export default LanguageSync,;
+export default LanguageSync,
 

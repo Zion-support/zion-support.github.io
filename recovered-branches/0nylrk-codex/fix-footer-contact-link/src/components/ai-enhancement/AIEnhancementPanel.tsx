@@ -1,25 +1,35 @@
 
 
+
+import React, { useState } from 'react';
+  onClose?: () => void;
+  showInstructions?: boolean;
+  initialContent?: string;
+}
+
+
+
+export function AIEnhancementPanel({;
   title;
   defaultOptions;
   onApply;
   onClose;
+    content: initialContent || defaultOptions && defaultOptions.content}),;
+  const [generatedContent, setGeneratedContent] = useState<string>('');
+  const [copied, setCopied] = useState(false);
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
 
   showInstructions = true;
   initialContent = '';
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions;
-
-    content: initialContent || defaultOptions && defaultOptions.content}),;
-  const [generatedContent, setGeneratedContent] = useState<string>('');
-  const [copied, setCopied] = useState(false);
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-
     const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result)
     }
+
+  };
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -57,7 +67,9 @@ export function AIEnhancementPanel({;
     if (result) {;
       setGeneratedContent(result);
     }
-  },
+
+
+
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -66,16 +78,10 @@ export function AIEnhancementPanel({;
     setOptions({
       ...options
       [field]: e.target.value})
-
-  const handleApply = () => {
-    onApply(generatedContent);
-    if (onClose) onClose()
-
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
-
   return (
     <Card className="w-full max-w-2xl mx-auto">;
       <CardHeader>;
@@ -93,11 +99,6 @@ export function AIEnhancementPanel({;
             className="min-h-[100px]"
             value={options && options.content}
             onChange={(e) => handleInputChange(e, 'content')}
-
-          />;
-        </div>;
-
-
         {/* Context input */}
         <div className="space-y-2">;
           <label className="text-sm font-medium">Context (optional)</label>;
@@ -106,11 +107,6 @@ export function AIEnhancementPanel({;
             className="min-h-[60px]"
             value={options && options.context}
             onChange={(e) => handleInputChange(e, 'context')}
-
-          />;
-        </div>;
-
-
         {/* Instructions input (optional) */}
         {showInstructions && (;
           <div className="space-y-2">;
@@ -122,7 +118,6 @@ export function AIEnhancementPanel({;
             />;
           </div>;
         )}
-
         >
           {isEnhancing ? (
             <>
@@ -144,30 +139,18 @@ export function AIEnhancementPanel({;
               <Button
                 variant="ghost"
                 size="sm"
-          onClick={handleGenerate} 
-          className="w-full" 
-          disabled={isEnhancing || !options && options.content && !options && options.context}>;
           {isEnhancing ? (;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Enhancing...;
             </>;
-          ) : (;
-            <>;
-              <Sparkles className="mr-2 h-4 w-4" />;
-              Generate Enhanced Content;
-            </>;
-          )}
-        </Button>;
-
         {/* Output area */}
         {generatedContent && (;
           <div className="space-y-2 mt-4">;
             <div className="flex justify-between items-center">;
               <label className="text-sm font-medium">Generated content</label>;
-              <Button
-                variant="ghost" 
-                size="sm" 
+        {/* Generate button */}
+        <Button
                 onClick={handleCopy}
                 className="h-8">;
                 {copied ? (;
@@ -178,35 +161,16 @@ export function AIEnhancementPanel({;
               </Button>;
             </div>;
             <div className="relative">;
-              <Textarea
-                value={generatedContent}
-                onChange={(e) => setGeneratedContent(e && e.target.value)}
                 className="min-h-[200px]";
               />;
             </div>;
           </div>;
         )}
-
-      </CardContent>;
-
-      {generatedContent && (;
-        <CardFooter className="flex justify-between">;
-          {onClose && (;
-            <Button variant="outline" onClick={onClose}>;
-              Cancel;
-            </Button>;
-
-          )}
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
         </CardFooter>;
       )}
-
-    </Card>;
-  );
-}
-
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components / ui / card';
 import {Textarea} from '@/components / ui / textarea';
 import {Button} from '@/components / ui / button';

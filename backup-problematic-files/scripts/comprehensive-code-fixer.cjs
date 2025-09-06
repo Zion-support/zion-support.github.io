@@ -1,6 +1,9 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
 console.log('')
@@ -41,4 +44,5 @@ console.log('')
     execSync('npx tsc --noEmit', { "stdio"})
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
+    console.error(' Comprehensive Code Fixer "failed")
     console.error(' Comprehensive Code Fixer "failed")

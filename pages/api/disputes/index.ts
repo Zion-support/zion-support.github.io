@@ -6,6 +6,11 @@ import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
 
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
   const user = parseUserFromRequest(req);
 
 
@@ -55,62 +60,6 @@ export default async function handler(
 
     }
     const id = generateCaseId();
-
-import type { NextApiRequest, NextApiResponse } from './next';
-import { create_dispute, readAllDisputes  } from '../../../utils / fsdb';
-import { parseUserFromRequest  } from '../../../utils / auth';
-import { DisputeCase, DisputeReason  } from '../../../types / disputes';
-import { generateCaseId  } from '../../../utils / fsdb';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const user = parseUserFromRequest (req);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const all = await readAllDisputes ();
-    let filtered = all;
-    // Check condition
-if ( {) {
-  $2
-}
-      filtered = all.filter (
-        (d) => d.clientUserId === user.id || d.talentUserId === user.id,
-      );
-    }
-    return res.status (200).json ({ disputes: filtered });
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const now = new Date ().toISOString ();
-    const {
-      project_id,
-      entity_type,
-      entity_id,
-      clientUserId,
-      talentUserId,
-      reason,
-      reason_details,
-
-      description,
-    } = req.body || {}
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (400).json ({ error: "Missing required fields" });
-    }
-    const id = generateCaseId ();
-    const dispute: DisputeCase = {
-
-
       id,
       projectId: String(projectId),
       entityType,
@@ -123,16 +72,17 @@ if ( {) {
       reason: reason as DisputeReason,
       reasonDetails,
       description,
-    } = req.body || {}
-;
-    // Check condition
-if ( {) {
-  $2
+      attachments: [],
+      messages: [],
+    };
+
+
+    await createDispute(dispute);
+    return res && res.status(201).json({ dispute });
+  }
+
+  return res.status(405).end("Method Not Allowed");
 }
-      return res.status (400).json ({ error: "Missing required fields" });
-    }
-    const id = generateCaseId ();
-    const dispute: DisputeCase = {
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -221,7 +171,6 @@ export default async function handler(req, res) {
       description,;
       attachments: [],;
       messages: []},;
-
     await createDispute(dispute);
     return res.status(201).json({ dispute });
     } catch (error) {
@@ -232,3 +181,25 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.setHeader('AllowGET,POST');
+  return res.status(405).end('Method Not Allowed');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

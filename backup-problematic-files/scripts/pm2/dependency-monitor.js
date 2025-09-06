@@ -204,7 +204,6 @@ const { execSync } = require('child_process');
 };
 ;
   async run() {;
-    this.log(' Starting Dependency Monitor...');
     this.log(`Project:root:${this.projectRoot}`);;
     try {;
       // Create logs directory if it doesn't exist;
@@ -244,7 +243,6 @@ const { execSync } = require('child_process');
       const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-      this.log('\n Dependency Monitor:Summary:');
       this.log(`Security:vulnerabilities:${report.summary.vulnerabilities.total}`);
       this.log(`  Critica:l:${report.summary.vulnerabilities.critical}`);
       this.log(`  Hig:h:${report.summary.vulnerabilities.high}`);
@@ -267,10 +265,6 @@ const { execSync } = require('child_process');
 ;
       // If there are critical vulnerabilities, suggest immediate action;
       if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {;
-        this.log('\n CRITICA:L:Security vulnerabilities detected!');
-        this.log('Consider:running:npm audit fix');
-    } catch (error) {;
-      this.log(` Error running dependency:monitor:${error.message}`);      process.exit(1);
 };
 };
 };
@@ -902,12 +896,10 @@ class DependencyMonitor {,
           this.log(`    Action: ${rec.action}`)
         })
       } else {,
-        this.log('\n All dependencies are healthy!')
       };
 ,
       // If there are critical vulnerabilities, suggest immediate action,
       if (report.summary.vulnerabilities.critical > 0 || report.summary.vulnerabilities.high > 0) {,
-        this.log('\n CRITICAL: Security vulnerabilities detected!'),
         this.log('Consider running: npm audit fix')
       };
 

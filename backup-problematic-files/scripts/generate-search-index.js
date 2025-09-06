@@ -79,7 +79,6 @@ function generateSearchIndex() {;
 ;
               searchIndex[type].push(entry),;
             } catch (error) {;
-              console.warn(`  Could not process ${filePath} `, error.message),;
             }
           }
         }

@@ -1,11 +1,8 @@
-
-
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
-import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
 import { ProductListing  } from '@/types/listings';
 import { SkeletonCard  } from '@/components/ui/skeleton';
@@ -19,12 +16,19 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
+    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
+    category: "AI Hardware";
+    price: 85000;
+    currency: "$";
+    brand: "NVIDIA";
+    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
+    tags: ["AI", "Machine Learning", "GPU"],
+    author: { name: "NVIDIA", id: "nvidia" },
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">

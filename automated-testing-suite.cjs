@@ -66,7 +66,6 @@ class AutomatedTestingSuite {}
   };
   async run() {}
     this.log('🚀 Starting Automated Testing Suite...');
-    
     try {}
       const testResults = await this.runTests();
       const buildResults = await this.runBuild();
@@ -88,4 +87,3 @@ if (require.main === module) {}
   const suite = new AutomatedTestingSuite();
   suite.run();
 };
-module.exports = AutomatedTestingSuite;

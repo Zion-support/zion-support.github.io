@@ -104,7 +104,6 @@ const servicesFixed = servicesContent
   .replace(/createdAt: "2024-01-15T10:00:00\.000Z"/g, '"createdAt": "2024-01-15T10:00:00.000Z"')
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
-
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
 const authFixed = authContent
@@ -125,10 +124,12 @@ console.log(`\n📊 Syntax fixing complete:`)) {
   }
 }
 }
-
 if ( {
   ) {
      {
+console.log('✨ Final comprehensive fixes completed!');
+  }} else {
+  }
 if ( {
   ) {
      {

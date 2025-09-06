@@ -3,32 +3,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
 
 
-const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
-const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
-const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
-
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "POST") {;
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method not allowed" });
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { AccessToken } from 'livekit-server-sdk';
-const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
-const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
-const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-
-  }
-  try {
 
     });
     at.addGrant({
@@ -47,11 +21,48 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
 
-    console.error('Token error', err);
-    return res.status(500).json({ error: 'Failed to create token' });
-
-  }
-
   }
 }
 
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+  }
+}
+  }
+}
+    console.error('Token error', err);
+    return res.status(500).json({ error: 'Failed to create token' });
+  }
+
+    const token = await at && at.toJwt();
+
+    return res && res.status(200).json({
+;
+    const token = await at.to_jwt ();
+;
+    return res.status (200).json ({
+      token,
+
+
+
+  }
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    console.error ("Token error", err);
+    return res.status (500).json ({ error: "Failed to create token" });
+  }
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+  }
+}

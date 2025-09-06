@@ -1,27 +1,13 @@
-import { GetServerSideProps, GetServerSidePropsContext } from 'next / types';
-import { createServerSideClient } from '../src / utils / supabase / server';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { User, Mail, Calendar, Shield } from 'lucide-react';
-import Link from 'next/link';
-import Head from 'next/head';
-import type { User as SupabaseUser } from '@supabase/supabase-js';
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
 export default /**
  * PrivatePage - Function description
  */
 function PrivatePage() {
   return (
-    <>
-      <Head>
-
         <Card>
           <CardHeader>
             <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -62,14 +48,11 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
-
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
-
                 <div>
                   <span className="font-medium">Last Sign In: </span>
-
                   {user.last_sign_in_at
                     ? new Date(user.last_sign_in_at).toLocaleString()
                     : 'Never'
@@ -83,7 +66,6 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
-
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>
                   Go to Dashboard
@@ -100,6 +82,20 @@ function PrivatePage() {
       </div>
     </>
   )
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+  const supabase = createServerSideClient (context);
+  const { data, error } = await supabase.auth.get_user ();
+  // Check condition
+if ( {) {
+  $2
+}
+    return {
+      redirect: {
+        destination: '/auth / login';
+        permanent: false}}
+  }
+  return {
+    props: {
 
   } catch (error) {
     console.error("Error:", error);
@@ -118,20 +114,3 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return {;
-    props: {;
-      user: data.user}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-} ;
-

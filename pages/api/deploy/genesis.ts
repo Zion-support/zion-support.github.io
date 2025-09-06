@@ -1,6 +1,5 @@
 
 
-
 function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
@@ -8,10 +7,6 @@ function summarizeModules(
   const active = [
     ...Object && Object.entries(modules)
       .filter(([, v]) => v)
-
-      .map(([k]) => `/${k}`),
-    ...Object && Object.entries(bonus)
-
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
@@ -32,39 +27,22 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req && req.method !== "POST") {
-    return res && res.status(405).json({ error: "Method not allowed" });
-
-function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
-  const active = [
-    ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
-    ...Object.entries(bonus).filter(([, v]) => v).map(([k]) => `/${k}`)];
-  return active.length ? active.sort().join() : 'None'
-}
-
-function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {
-  const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length;
-  return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
-}
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-
   }
   try {
 
     const body = req && req.body || {};
 
     const {
-      instanceName,
-      defaultLanguage = "en",
-      deploymentRegion,
-      tokenActivation = false,
-      governanceMode = "democratic",
-      branding = {},
-      modules = {},
-      bonusModules = {},
+
+      instanceName
+      defaultLanguage = "en"
+      deploymentRegion
+      tokenActivation = false
+      governanceMode = "democratic"
+      branding = {}
+      modules = {}
+      bonusModules = {}
+
     } = body;
 
 
@@ -76,10 +54,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     // Simulated provisioning operations
     const now = new Date().toISOString();
-
-    const provisionId = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`;
-
-
     const outputActions = {
       zionGPT: {
         initialized: true
@@ -168,13 +142,6 @@ if ( {) {
         whitepaper: "/whitepaper"
         roadmap: "/roadmap"
         book: {
-
-          pdf: "/book/manifesto && manifesto.pdf",
-          trailerScript: "/trailer/script",
-        },
-        summit: "/summit",
-      },
-
       publicPages: [
         "/about"
         "/manifesto"
@@ -225,18 +192,9 @@ if ( {) {
     const access = {
       roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
-
-        type: "application/json",
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
-      },
-    };
-
-
       operator,
       access,
     });
-
-  } catch (err: any) {
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
@@ -251,6 +209,8 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  }
+}
   }
 }
       version: 'Zion OS v1.0.0'};
@@ -474,10 +434,6 @@ export default async function handler(req, res) {
       export: {;
         type: 'application/json';
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
-
-    return res.status(200).json({ outputActions, deployLog, access, operator })
-  } catch (err: any) {
-    return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
   } catch (error) {
@@ -485,19 +441,10 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-  } catch (err: any) {
-
-    return res && res.status(500).json({ error: err && err.message || "Internal error" });
-
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-    return res.status (500).json ({ error: err.message || "Internal error" });
   }
 }

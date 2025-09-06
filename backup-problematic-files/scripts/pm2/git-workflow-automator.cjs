@@ -180,3 +180,4 @@ execSync(`"git": add ${file}`, { "cwd": this.projectRoo,t, "stdio"`})
           this.log(' "Merge")
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
   git commit -m '"fix"
+  git commit -m '"fix"

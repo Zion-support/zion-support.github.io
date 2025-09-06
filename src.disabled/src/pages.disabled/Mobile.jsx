@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface MobileProps {
   // Add props here as needed
-
 export default function Mobile({ }: MobileProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function Mobile({ }: MobileProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

@@ -1,20 +1,22 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIAutonomousBusinessOperations() {
-	return (
-		<ServiceLanding
+			implementationWeeks="Implementation: 3–6 weeks"
+			roiNote="Average ROI 5–12x within 120 days"
+			features={[
+				"Autonomous KPI monitoring and anomaly detection"
+				"Agentic workflows for ticket triage, billing, collections, and renewals"
+				"Human-in-the-loop approvals and audit trails"
+				"Playbooks for incident response and customer recovery"
+				"Compliance logging and role-based access"
 
-			title="AI‑Powered Autonomous Business Operations"
-			slug="ai-autonomous-business-operations"
-			description="Continuous AI agents coordinate workflows across sales, support, finance, and operations. They monitor KPIs, trigger automations, and collaborate with humans to keep your business always-on."
-			subtitle="From reactive to autonomous: 24/7 operations with measurable outcomes."
+				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
+			]}
+			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
+
 
 			pricePerMonthUSD={3500  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Average ROI 5–12x within 120 days"
 			features={[
@@ -24,7 +26,6 @@ export default function AIAutonomousBusinessOperations() {
 				"Playbooks for incident response and customer recovery",
 				"Compliance logging and role-based access",
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
-
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -47,4 +48,3 @@ export default function AIAutonomousBusinessOperations() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

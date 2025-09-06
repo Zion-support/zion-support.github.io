@@ -1,43 +1,29 @@
 
-
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
-
-import * as React from &quot;react & quot;
-import * as RadioGroupPrimitive from &quot;@radix - ui / react - radio - group & quot;
-import { Circle } from 'lucide-react';
-import { cn } from &quot;@/lib / utils & quot;
-;
-const RadioGroup = React.forward_ref<;
-  React.ElementRef < typeof RadioGroupPrimitive.Root>,
-  React.ComponentPropsWithoutRef < typeof RadioGroupPrimitive.Root>;
->(({ class_name, ...props }, ref) => {
-
-  return (
-    <RadioGroupPrimitive.Root;
-      className={cn (&quot;grid gap - 2&quot;, class_name)}
-  return (
-    <RadioGroupPrimitive.Root
-
       {...props}
+      className={cn(&quot;grid gap-2&quot; className)}
+ursor/fix-website-loading-errors-and-merge-6662
       ref={ref}
     />);
 });
-RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
-const RadioGroupItem = React.forwardRef<;
+
+
 
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
-
+RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
+const RadioGroupItem = React.forwardRef<;
+  React.ElementRef<typeof RadioGroupPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
 >(({ className, ...props }, ref) => {;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
 
+
         className
-      )}
       {...props}
     >
       <RadioGroupPrimitive.Indicator className=&quot;flex items-center justify-center&quot;>
@@ -47,9 +33,8 @@ const RadioGroupItem = React.forwardRef<;
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
+export { RadioGroup, RadioGroupItem }
 
-export { RadioGroup, RadioGroupItem };
 
 export { RadioGroup, RadioGroupItem }
 ;
-

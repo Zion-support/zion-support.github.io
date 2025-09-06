@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -43,7 +41,6 @@ export default function PricingEnhanced2026Page() {
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3
-
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -62,9 +59,7 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
-
   ],
-
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -74,10 +69,12 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-
-
         'Mobile App AccessAPI Access (1000 calls/month)'
-
+      ]
+      icon: <Sparkles className="w-8 h-8" />
+      variant: 'quantum' as const
+      popular: false
+      cta: 'Start Free Trial'
       color: 'from-blue-500 to-indigo-600'
 
     };
@@ -89,10 +86,12 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-
-
         'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
-
+      ]
+      icon: <Star className="w-8 h-8" />
+      variant: 'holographic' as const
+      popular: true
+      cta: 'Start Free Trial'
       color: 'from-purple-500 to-pink-600'
 
     };
@@ -104,9 +103,44 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-
-
         'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
+      ]
+      icon: <Crown className="w-8 h-8" />
+      variant: 'quantum-advanced' as const
+      popular: false
+      cta: 'Contact Sales'
+      color: 'from-yellow-500 to-orange-600'
+    }
+      color: 'from-green-500 to-emerald-600'
+    }
+    {
+      name: 'Zero Trust Network Architecture 2026'
+      price: '$6,999/month'
+      description: 'ArrowRight-generation network security with continuous verification'
+      features: ['Continuous verificationMicro-segmentationReal-time threat detection']
+      link: 'https://ziontechgroup.com/services/zero-trust-network-architecture-2026'
+      icon: '🛡️'
+      color: 'from-red-500 to-pink-600'
+    }
+    {
+      name: 'AI Healthcare Diagnostics Platform'
+      price: '$1,499/month'
+      description: 'AI-powered medical diagnostics with 95% accuracy rate'
+      features: ['Medical image analysisDiagnosis predictionTreatment recommendations']
+      link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics'
+      icon: '🏥'
+      color: 'from-blue-500 to-cyan-600'
+    }
+    {
+      name: 'Quantum Internet Security Platform'
+      price: '$4,999/month'
+      description: 'Unbreakable quantum encryption for the future internet'
+      features: ['Quantum key distributionPost-quantum cryptographyReal-time threat detection']
+      link: 'https://ziontechgroup.com/services/quantum-internet-security-platform'
+      icon: '🔐'
+      color: 'from-blue-500 to-cyan-600'
+    }
+  ]
 
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
@@ -116,29 +150,83 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
           <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions." />
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />
           <link rel="icon" href="/favicon.svg" />
-
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+          <meta name="twitter:card" content="summary_large_image" />;
+          <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />;
+          <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />;
+          <meta name="twitter:image" content="https://ziontechgroup.com / og - image.svg" />;
+        </Head>;
+        {/* Enhanced Header Section */}
+
+        <div className="relative z - 10 pt - 20 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
         </Head>
-
+        {/* Enhanced Header Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="max-w-7xl mx-auto text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               Enhanced 2026 Pricing
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
 
+              Achieve remarkable ROI with transparent, competitive pricing.
+            </p>
+            className="max - w-7xl mx - auto text - center";
+          >;
+            <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6">;
+              Enhanced 2026 Pricing;
+            </h1>;
+            <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
+              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.;
+              Achieve remarkable ROI with transparent, competitive pricing.;
+            </p>;
+            {/* Billing Cycle Toggle */}
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
+            {/* Billing Cycle Toggle */}
+            {/* Billing Cycle Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
 
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
@@ -161,20 +249,10 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                 }`}
               >;
                 <span;
-                  className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${;
-                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1';
-                  }`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                />
-              </button>
-              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
-                Yearly <span className="text-cyan-400 text-sm">(Save 20%)</span>
-              </span>
-            </div>
-
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -194,13 +272,15 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
             </div>
           </motion.div>
         </div>
-
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
-
+                  key={tier.name}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative"
                 >
                   <UltraFuturisticCard
@@ -216,18 +296,16 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 }
                   >
                     {tier.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
-                        </div>
-                      </div>
+
+
+
+                    
 
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
@@ -241,7 +319,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                         <span className="text-gray-400">{tier.period}</span>
                         {tier.savings && (
                           <div className="text-sm text-green-400 mt-1">{tier.savings}</div>
-
                       </div>
                       <ul className="text-left space-y-3 mb-8">
                         {tier.features.map((feature, idx) => (
@@ -260,7 +337,26 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                              window.open(`mailto:${contactInfo.email}?subject=Enterprise Pricing Inquiry`, '_blank')
                            } else {
                              window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank')
-
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -273,49 +369,24 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCategories.map((category, index) => (
                 <motion.div
-                  key={category.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                >
-                  <UltraFuturisticCard variant="quantum-advanced" className="h-full">
-                    <div className="p-6">
-                      <div className="flex items-center mb-4">
-                        <div className={`p-3 rounded-full bg-gradient-to-r ${category.color} mr-4`}>
-                          <category.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <h3 className="text-xl font-bold text-white">{category.name}</h3>
-                      </div>
-                      <p className="text-gray-400 mb-4">{category.description}</p>
-                      <div className="mb-4">
-                        <span className="text-2xl font-bold text-cyan-400">{category.avgPrice}</span>
-                        <div className="text-sm text-green-400">{category.savings}</div>
-                      </div>
-                      <ul className="space-y-2 mb-4">
-                        {category.services.map((service, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-300">
-                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+              className="text - center mb - 12";
+            >;
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
+                Service Categories & Pricing;
+              </h2>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                Explore our comprehensive service categories with transparent pricing and competitive advantages;
+              </p>;
+            </motion.div>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+              {service_categories.map ((category, index) => (
+                <motion.div;
+                  key={category.name}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
 
                       </ul>
 
@@ -324,7 +395,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                         variant="primary"
                         size="sm"
                         className="w-full"
-
                       >
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -332,7 +402,50 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
-
+        {/* Featured Services Showcase */}
+        <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 20">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </div>;
+        {/* Featured Services Showcase */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -345,47 +458,24 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {featuredServices.map((service, index) => (
                 <motion.div
-                  key={service.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                >
-                  <UltraFuturisticCard variant="holographic" className="h-full">
-                    <div className="p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="text-4xl">{service.icon}</div>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                          <div className="text-sm text-gray-400">Starting price</div>
-                        </div>
-                      </div>
-                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                      <p className="text-gray-400 mb-4">{service.description}</p>
-                      <ul className="space-y-2 mb-4">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-300">
-                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+              className="text - center mb - 12";
+            >;
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
+                Featured Services;
+              </h2>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                Discover our most popular and innovative services that are transforming businesses worldwide;
+              </p>;
+            </motion.div>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+              {featured_services.map ((service, index) => (
+                <motion.div;
+                  key={service.name}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
 
                       </ul>
 
@@ -395,7 +485,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                           variant="primary"
                           size="sm"
                           className="flex-1"
-
                         >
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
@@ -403,7 +492,26 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                         <Button
                           variant="secondary"
                           size="sm"
-
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -416,7 +524,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                 <Button
                   variant="primary"
                   size="lg"
-
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
@@ -424,7 +531,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                 <Button
                   variant="secondary"
                   size="lg"
-
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -439,10 +545,50 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
         </div>
       </div>
     </UltraFuturisticBackground>
-
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+
+}
+
+              className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30 text - center";
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text - xl text - gray - 300 mb - 8">;
+                Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Button;
+                  variant="primary";
+                  size="lg";
+                  on_click={() => window.open (`mailto:${contact_info.email}?subject = Business Transformation Consultation`, '_blank')}
+                >;
+                  <Mail className="w - 5 h - 5 mr - 2" />;
+                  Schedule Consultation;
+                </Button>;
+                <Button;
+                  variant="secondary";
+                  size="lg";
+                  on_click={() => window.open (`tel:${contact_info.mobile}`, '_blank')}
+                >;
+                  <Phone className="w - 5 h - 5 mr - 2" />;
+                  Call Now;
+                </Button>;
+              </div>;
+              <div className="mt - 8 text - sm text - gray - 400">;
+                <p > Contact: {contact_info.mobile} | {contact_info.email}</p>;
+                <p>{contact_info.address}</p>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </div>;
+    </UltraFuturisticBackground>);
+}
+
 

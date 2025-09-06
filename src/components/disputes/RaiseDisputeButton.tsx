@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {  Dialog
@@ -8,6 +7,10 @@ import {  Dialog
   DialogDescription
 } from '@/components/ui/dialog'
 import { DisputeForm } from './DisputeForm'
+Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
 
 import { ShieldAlert } from 'lucide-react'
   DialogDescription} from "@/components/ui/dialog"
@@ -21,12 +24,24 @@ interface RaiseDisputeButtonProps {
   className?: string
 
 export function RaiseDisputeButton({
-
 Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { 
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription} from "@/components/ui/dialog",
+import { DisputeForm } from "./DisputeForm",
+import { useRouter } from 'next/router',
+import { ShieldAlert } from 'lucide-react'
+
+interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
@@ -35,13 +50,13 @@ Dialog,
 }
 
 export function RaiseDisputeButton({ 
-
   projectId,
   milestoneId, 
   variant = "outline", 
   size,
   className 
 }: RaiseDisputeButtonProps) {
+
 
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
@@ -62,10 +77,9 @@ export function RaiseDisputeButton({
         <ShieldAlert className="h-4 w-4 mr-2" />
         Raise Dispute
       </Button>
-
+      
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
-          <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
               Please provide details about the issue you're experiencing with
@@ -73,6 +87,47 @@ export function RaiseDisputeButton({
             </DialogDescription>
           </DialogHeader>
 
+        onClick={() => setIsDialogOpen(true)}      >;
+        <ShieldAlert className='h-4 w-4 mr-2' />;
+        Raise Dispute;
+      </Button>;
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className='sm:max-w-[550px]'>;
+          <DialogHeader>;
+            <DialogTitle>Raise a Dispute</DialogTitle>;
+      <Button;
+        variant={variant}
+        size={size}
+        className={class_name}
+        on_click={() => setIsDialogOpen (true)}      >;
+        <ShieldAlert className='h - 4 w - 4 mr - 2' />;
+        Raise Dispute;
+      </Button>;
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className='sm:max - w-[550px]'>;
+          <DialogHeader>;
+            <DialogTitle > Raise a Dispute</DialogTitle>;
+
+            <DialogDescription>;
+              Please provide details about the issue you're experiencing with;
+              this project.;
+            </DialogDescription>;
+          </DialogHeader>;
+
+}
+
+          <DisputeForm;
+            project_id={project_id}
+            milestone_id={milestone_id}
+            onDisputeCreated={handleDisputeCreated}
+            onCancel={() => setIsDialogOpen(false)}          />
+        </DialogContent>
+      </Dialog>
+    </>
+  )
+}
+          
           <DisputeForm 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -126,7 +181,6 @@ export function RaiseDisputeButton({;
             </DialogDescription>;
           </DialogHeader>;
           <DisputeForm;
-
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
@@ -135,4 +189,3 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
-

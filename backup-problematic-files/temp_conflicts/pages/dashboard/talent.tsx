@@ -213,7 +213,6 @@ export default function TalentDashboardSuggestedJobs() {;
                   {s.budget_min || s.budget_max ? (;
                     <span>;
                       {s.budget_min ? `$${s.budget_min}` :""}
-                      {s.budget_min && s.budget_max ? "" :""}
                       {s.budget_max ? `$${s.budget_max}` :""} budget;
                     </span>;
                   ) :(;

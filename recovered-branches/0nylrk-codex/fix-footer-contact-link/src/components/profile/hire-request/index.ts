@@ -1,1 +1,1 @@
-
+export { HireRequestModal } from "./HireRequestModal";

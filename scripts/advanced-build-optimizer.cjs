@@ -1,6 +1,3 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
 console.log('⚡ Starting Advanced Build Optimization...')
   log(message, type = 'info')
@@ -90,4 +87,3 @@ console.log('⚡ Starting Advanced Build Optimization...')
           "impact"
           resolve({ "size": 0, "message"})
           resolve({ "size": 0, "message"})
-    this.log(' Build Optimization "Summary")

@@ -1,5 +1,3 @@
-
-    <div className="space-y-8">;
 "use client",
 import { useState  } from './react';,
 interface ITService {
@@ -34,7 +32,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $15, 000",
     starting_price: 15000,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Cloud%20Migration%20Inquiry",
-    icon: "☁️",
     features: [;
       "Multi - cloud strategy planning",
       "Infrastructure as Code (IaC)",
@@ -79,7 +76,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $8, 500",
     starting_price: 8500,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Cybersecurity%20Inquiry",
-    icon: "🔒",
     features: [;
       "Penetration testing",
       "Security audits and assessments",
@@ -124,7 +120,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $6, 500",
     starting_price: 6500,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Network%20Infrastructure%20Inquiry",
-    icon: "🌐",
     features: [;
       "Network design and planning",
       "Hardware procurement and setup",
@@ -169,7 +164,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $200 / hour",
     starting_price: 200,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = IT%20Strategy%20Inquiry",
-    icon: "💡",
     features: [;
       "Technology roadmap planning",
       "Digital transformation strategy",
@@ -214,7 +208,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $25, 000",
     starting_price: 25000,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Data%20Center%20Inquiry",
-    icon: "🏢",
     features: [;
       "Data center design and planning",
       "Infrastructure procurement",
@@ -259,7 +252,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $2, 500 / month",
     starting_price: 2500,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Managed%20IT%20Services%20Inquiry",
-    icon: "🔄",
     features: [;
       "24 / 7 monitoring and alerting",
       "Help desk support",
@@ -287,13 +279,6 @@ const it_services: ITService[] = [;
       "Financial Services";
     ];
   }
-],
-export default /**
- * ITSolutionsPage - Function description
- */
-function ITSolutionsPage() {
-  return (
-    <div className="space - y-8">;
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">IT Solutions & Services</h1>;
@@ -323,7 +308,7 @@ function ITSolutionsPage() {
               <div className="grid grid - cols - 1 gap - 2">;
                 {service.deliverables.map ((deliverable, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
-                    <span className="text - green - 400"></span>;
+                    <span className="text - green - 400">✓</span>;
                     <span>{deliverable}</span>;
                   </div>))}
               </div>;
@@ -334,7 +319,7 @@ function ITSolutionsPage() {
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
                 {service.features.map ((feature, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
-                    <span className="text - blue - 400"></span>;
+                    <span className="text - blue - 400">⚙️</span>;
                     <span>{feature}</span>;
                   </div>))}
               </div>;
@@ -345,7 +330,7 @@ function ITSolutionsPage() {
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
                 {service.technologies.map ((tech, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
-                    <span className="text - yellow - 400"></span>;
+                    <span className="text - yellow - 400">🔧</span>;
                     <span>{tech}</span>;
                   </div>))}
               </div>;
@@ -356,7 +341,7 @@ function ITSolutionsPage() {
               <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 2">;
                 {service.industries.map ((industry, index) => (
                   <div key={index} className="flex items - center gap - 2 text - sm">;
-                    <span className="text - purple - 400"></span>;
+                    <span className="text - purple - 400">🏢</span>;
                     <span>{industry}</span>;
                   </div>))}
               </div>;
@@ -383,22 +368,22 @@ function ITSolutionsPage() {
         <h2 className="text - 3xl font - bold text - center">IT Capabilities Overview</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6">;
           <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
-            <div className="text - 3xl mb - 3"></div>;
+            <div className="text - 3xl mb - 3">☁️</div>;
             <h3 className="font - semibold mb - 2">Cloud Solutions</h3>;
             <p className="text - sm opacity - 80">Multi - cloud strategy, migration, and optimization</p>;
           </div>;
           <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
-            <div className="text - 3xl mb - 3"></div>;
+            <div className="text - 3xl mb - 3">🔒</div>;
             <h3 className="font - semibold mb - 2">Cybersecurity</h3>;
             <p className="text - sm opacity - 80">Comprehensive security and compliance solutions</p>;
           </div>;
           <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
-            <div className="text - 3xl mb - 3"></div>;
+            <div className="text - 3xl mb - 3">🌐</div>;
             <h3 className="font - semibold mb - 2">Infrastructure</h3>;
             <p className="text - sm opacity - 80">Network design, implementation, and management</p>;
           </div>;
           <div className="text - center p - 6 rounded - lg bg - white / 5 border border - white / 10">;
-            <div className="text - 3xl mb - 3"></div>;
+            <div className="text - 3xl mb - 3">💡</div>;
             <h3 className="font - semibold mb - 2">Strategy</h3>;
             <p className="text - sm opacity - 80">IT strategy and digital transformation consulting</p>;
           </div>;
@@ -432,7 +417,7 @@ function ITSolutionsPage() {
           href="/services";
           className="inline - block px - 6 py - 3 rounded - lg border border - white / 20 text - white hover: bg - white / 10 transition - all font - semibold";
         >;
-           Back to All Services;
+          ← Back to All Services;
         </a>;
       </div>;
     </div>);

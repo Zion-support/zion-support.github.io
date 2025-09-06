@@ -853,4 +853,3 @@ module.exports = {}
   analyzeCodeQuality,
   runAutomatedCodeImprovements,
   optimizeDevelopmentWorkflow,
-  main};

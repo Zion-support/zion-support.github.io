@@ -46,7 +46,6 @@ function autoResolveConflicts() {}
 };
 async function main() {}
   const { owner, repo } = getRepo();
-  
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   sh('git fetch origin');
   sh('git checkout main');
@@ -76,4 +75,5 @@ async function main() {}
   try { sh(`git checkout ${startBranch}`)} catch {};
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
+});
 });

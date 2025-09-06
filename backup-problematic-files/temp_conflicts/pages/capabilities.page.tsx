@@ -1,7 +1,6 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout',;
 ;
 const CAPABILITIES = [;
-  'Fullstack WebMobile (iOS/Android)','AI/MLCloud & DevOps','Data EngineeringBlockchain','IoTSecurity';
 ],;
 ;
 export default function CapabilitiesPage() {;

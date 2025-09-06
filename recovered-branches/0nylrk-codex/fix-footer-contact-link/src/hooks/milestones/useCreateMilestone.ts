@@ -1,12 +1,26 @@
-
-
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone} from './types';
 import {useRecordActivity} from './useRecordActivity';
-
+        .select()
+        .single();
+      if (error) throw error;
+      // Create activity record
+      return null
+export const useCreateMilestone = (project_id?: string) =>: any {
+  const { user } = use_auth ();
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const { recordMilestoneActivity } = useRecordActivity ();
+;
+  const create_milestone = async (milestone_data: Omit < Milestone, 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
+    // Check condition
+if (return null) {
+  $2
+    } finally {
+      setIsSubmitting (false);
+    }
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -17,7 +31,7 @@ export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
-
+  
   const createMilestone = async (milestoneData: Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
     if (!user || !projectId) return null,
     
@@ -47,7 +61,6 @@ export const useCreateMilestone = (projectId?: string) => {
       return null
     } finally {
       setIsSubmitting(false)
-
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -86,7 +99,5 @@ export const useCreateMilestone = (projectId?: string) => {;
   return {;
     createMilestone;
     isSubmitting;
-
   }
 };
-

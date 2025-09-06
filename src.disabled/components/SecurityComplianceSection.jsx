@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface SecurityComplianceSectionProps {
   // Add props here as needed
-
 export default function SecurityComplianceSection({ }: SecurityComplianceSectionProps) {
   return (
     <div>
@@ -32,6 +31,4 @@ export default function SecurityComplianceSection({ }: SecurityComplianceSection
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

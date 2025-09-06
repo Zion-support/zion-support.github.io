@@ -1,3 +1,8 @@
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'automated-financial-analytics-platform' } })
+}
 
 export async function getStaticProps() {;
 	return (getSlugStaticProps as any)({ params: { slug: 'automated-financial-analytics-platform' } });
@@ -14,4 +19,7 @@ export default function AutomatedFinancialAnalyticsPlatform(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
+
 

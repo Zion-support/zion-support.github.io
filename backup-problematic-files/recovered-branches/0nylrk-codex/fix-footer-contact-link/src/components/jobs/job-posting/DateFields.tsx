@@ -35,7 +35,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
                 ) :(;
                   <span>Pick a date</span>;
                 )}
-=======
               <Button;
                 variant={"outline"}
                 className={cn(;

@@ -13,7 +13,6 @@ export default function GPTLibraryPage() {;
         <p className="text-lg mb-4">Access our curated collection of GPT models and AI solutions.</p>;
         <div className="mt-4">;
           <a href="/" className="text-blue-600 hover:underline">;
-             Back to Home;
           </a>;
         </div>;
       </div>;

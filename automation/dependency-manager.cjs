@@ -320,3 +320,4 @@ if ( {})
 module.exports = DependencyManager;
 module.exports = DependencyManager;
 module.exports = DependencyManager;
+module.exports = DependencyManager;

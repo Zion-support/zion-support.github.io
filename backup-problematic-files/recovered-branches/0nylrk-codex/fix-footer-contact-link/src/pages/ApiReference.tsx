@@ -199,7 +199,6 @@ export function ApiReference() {;
         </div>;
 ;
         {/* Endpoint details */}
-=======
                 </li>;              ))}
             </ul>;
           </div>;

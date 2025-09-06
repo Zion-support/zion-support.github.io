@@ -12,11 +12,11 @@ echo "$files_with_conflicts"
 for file in $files_with_conflicts; do
     if [ -f "$file" ]; then
         echo "Fixing conflicts in: $file"
-        
+
         # Use sed to remove merge conflict markers and keep HEAD version
         sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
         sed -i '/^>>>>>>> /d' "$file"
-        
+
         # Remove any remaining conflict markers
         sed -i '/^<<<<<<< /d' "$file"
         sed -i '/^=======/d' "$file"

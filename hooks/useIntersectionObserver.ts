@@ -5,24 +5,6 @@ interface UseIntersectionObserverProps {
   root_margin?: string;
   freezeOnceVisible?: boolean;
 }
-export function useIntersectionObserver({
-
-  threshold = 0;
-  root = null;
-  rootMargin = '0%';
-  freezeOnceVisible = false
-}: UseIntersectionObserverProps = {}) {
-  const [entry, setEntry] = useState<IntersectionObserverEntry>();
-  const [node, setNode] = useState<Element | null>(null);
-  const observer = useRef<IntersectionObserver | null>(null);
-  const frozen = entry?.isIntersecting && freezeOnceVisible;
-  const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
-    setEntry(entry)
-  }
-  useEffect(() => {
-    const hasIOSupport = !!window.IntersectionObserver;
-    if (!hasIOSupport |frozen |!node) return;
-    const observerParams = { threshold, root, rootMargin }
     const currentObserver = new IntersectionObserver(updateEntry, observerParams);
     observer && observer.current = currentObserver;
     currentObserver && currentObserver.observe(node);

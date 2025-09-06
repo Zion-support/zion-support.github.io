@@ -1,7 +1,7 @@
-
-import React from "react";
-import {
-
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
@@ -68,18 +68,11 @@ function ApplyToJobModal() {
             Complete your application for this position;
           </DialogDescription>;
         </DialogHeader>;
-
-        <ApplyForm
-        <ApplyForm;
-
           job={job}
           on_close={on_close}
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
-
-    </Dialog>;
-
   );
     </Dialog>);
 }

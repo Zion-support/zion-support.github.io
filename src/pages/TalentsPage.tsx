@@ -1,11 +1,9 @@
 
-
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
-import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
 import { TALENT_PROFILES  } from '@/data/talentData';
 import { TalentProfile  } from '@/types/talent';
@@ -16,7 +14,6 @@ import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card'
 import Spinner from '@/components/ui/spinner';
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-
   // Loading state
   if (loading && talents.length === 0) {
     return (

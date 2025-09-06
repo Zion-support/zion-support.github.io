@@ -1,14 +1,3 @@
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {
-      bundleSize: 0
-      loadTime: 0
-      memoryUsage: 0
-      timestamp: new Date().toISOString()
-    }
   }
   async measureBundleSize() {
     try {
@@ -27,16 +16,6 @@ class PerformanceMonitor {
   }
   generateReport() {
     const report = {
-
-      timestamp: this.metrics.timestamp
-      bundleSize: this.metrics.bundleSize
-      memoryUsage: this.metrics.memoryUsage
-      recommendations: []
-    }
-
-    if (this.metrics.bundleSize > 1000000) {
-      report.recommendations.push(
-        "Consider code splitting to reduce bundle size"
       );
     }
     if (this && this.metrics.memoryUsage > 100) {
@@ -94,20 +73,6 @@ if ( {) {
     return report;
   }
 }
-const monitor = new PerformanceMonitor();
-monitor.measureBundleSize();
-monitor.measureMemoryUsage();
-const report = monitor.generateReport();
-const reportPath = path.join(process.cwd(), "performance-report.json");
-fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-console.log("Performance report generated:", reportPath);
-monitor && monitor.measureBundleSize();
-monitor && monitor.measureMemoryUsage();
-const report = monitor && monitor.generateReport();
-const reportPath = path && path.join(process && process.cwd(), "performance-report && report.json");
-fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
-console && console.log("Performance report generated:", reportPath);
-console.log('Performance report generated:', reportPath);
 const monitor = new PerformanceMonitor ();
 monitor.measureBundleSize ();
 monitor.measureMemoryUsage ();

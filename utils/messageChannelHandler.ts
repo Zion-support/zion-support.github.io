@@ -1,5 +1,11 @@
-
-
+};
+};
+};
+};
+;
+,;
+,
+ursor/integrate-build-improve-and-re-verify-8f7d
 }}}};
 ;
 ;
@@ -7,13 +13,14 @@
 }
 }
 }
+},
+
 
 export const messageChannelHandler = {
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
-
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -25,9 +32,13 @@ export const messageChannelHandler: MessageHandler = {
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
   }
-
+};
+};
+};
+};
+,
 // Message channel handler for real-time communication
-export class MessageChannelHandler {;
+export class MessageChannelHandler {
   private channels: Map<string, MessageChannel> = new Map();
   createChannel(id: string): MessageChannel {
     const channel = new MessageChannel();
@@ -72,9 +83,12 @@ if ( {) {
 }
 export default MessageChannelHandler;
 
+
+
+
 }}}};
 ;
 
 },;
 ,;
-
+;

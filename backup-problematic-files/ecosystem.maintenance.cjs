@@ -15,6 +15,7 @@ module.exports = {}
       "error_file": 'logs/maintenance-runner-error.log',
       "out_file": 'logs/maintenance-runner-out.log',
       "merge_logs": true},
+
   ]};
   ]};
   ]};

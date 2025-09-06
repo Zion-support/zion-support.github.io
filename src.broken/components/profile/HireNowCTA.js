@@ -1,4 +1,3 @@
-
 :src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
@@ -88,7 +87,6 @@ export function HireNowCTA("props": "any) {;
     </Card>)}
 ;
 export default HireNowCTA;
-
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
@@ -102,14 +100,12 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
-
 :src/components/profile/HireNowCTA.jsx
     }
     );
     const handleSubmit = (props: any) => {
     });
     const handleSubmit = (e) => {
-
         e.preventDefault();
         if (onHire) {
             onHire(formData);
@@ -119,7 +115,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '',
             budget: '',
             startDate: '',
-
 :src/components/profile/HireNowCTA.jsx
             message: ''}
     );
@@ -128,7 +123,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         });
         setIsFormOpen(false);
     };
-
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
@@ -192,4 +186,3 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>);
-

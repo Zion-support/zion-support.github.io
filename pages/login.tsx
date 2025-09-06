@@ -1,16 +1,190 @@
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from './components/Layout';
 
-import React, { useState } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import Layout from "./components/Layout";
-
-import {
+import {;
+  Mail,;
+  Lock,;
+  Eye,;
+  EyeOff,;
+  ArrowRight,;
+  CheckCircle,;
+  AlertCircle,;
+  User,;
+  Shield,;
+  Globe,;
+  Smartphone,;
+  Monitor,;
+  Server,;
+  Database,;
+  Cloud,;
+  Brain,;
+  Code,;
+  Settings,;
+  Wrench,;
+  Cog,;
+  Activity,;
+  PieChart,;
+  BarChart,;
+  TrendingUp,;
+  DollarSign,;
+  ShoppingCart,;
+  Home,;
+  Trash2,;
+  Camera,;
+  Heart,;
+  ClipboardList,;
+  TreePine,;
+  Droplets,;
+  Building,;
+  Rocket,;
+  Lightbulb,;
+  Target,;
+  MessageSquare,;
+  HelpCircle,;
+  Info,;
+  XCircle,;
+  Plus,;
+  Minus,;
+  ChevronUp,;
+  ChevronRight,;
+  ChevronLeft,;
+  ChevronDown,;
+  ArrowUp,;
+  ArrowDown,;
+  ArrowLeft,;
+  Pause,;
+  Stop,;
+  SkipForward,;
+  SkipBack,;
+  Volume2,;
+  VolumeX,;
+  Maximize,;
+  Minimize,;
+  RotateCcw,;
+  RotateCw,;
+  RefreshCw,;
+  Upload,;
+  Share,;
+  Copy,;
+  Edit,;
+  Trash,;
+  Save,;
+  Unlock,;
+  Bell,;
+  BellOff,;
+  Star as StarIcon,;
+  Heart as HeartIcon,;
+  ThumbsUp,;
+  ThumbsDown,;
+  MessageCircle,;
+  Send,;
+  Paperclip,;
+  Smile,;
+  Frown,;
+  Meh,;
+  Laugh,;
+  Angry,;
+  Sad,;
+  Surprised,;
+  Wink,;
+  Kiss,;
+  Tongue,;
+  Wink2,;
+  KissWinkHeart,;
+  KissClosedEyes,;
+  StuckOutTongue,;
+  StuckOutTongueWinkingEye,;
+  StuckOutTongueClosedEyes,;
+  Disappointed,;
+  Worried,;
+  Angry2,;
+  Rage,;
+  Cry,;
+  Scream,;
+  Confounded,;
+  Hugging,;
+  Smirk,;
+  NoMouth,;
+  NeutralFace,;
+  Expressionless,;
+  Unamused,;
+  RollingEyes,;
+  Thinking,;
+  LyingFace,;
+  HandOverMouth,;
+  ShushingFace,;
+  ExplodingHead,;
+  CowboyHatFace,;
+  DisguisedFace,;
+  Sunglasses,;
+  NerdFace,;
+  MonocleFace,;
+  Confused,;
+  WorriedFace,;
+  SlightlyFrowningFace,;
+  OpenMouth,;
+  Hushed,;
+  Astonished,;
+  Flushed,;
+  PleadingFace,;
+  FrowningFace,;
+  AnguishedFace,;
+  FearfulFace,;
+  ColdSweat,;
+  DisappointedRelieved,;
+  CryFace,;
+  LoudlyCryingFace,;
+  ScreamFace,;
+  StuckOutTongueFace,;
+  DroolingFace,;
+  UnamusedFace,;
+  SweatSmile,;
+  Sweat,;
+  WearyFace,;
+  TiredFace,;
+  SleepyFace,;
+  YawningFace,;
+  DizzyFace,;
+  ExplodingHeadFace,;
+  CowboyHatFace2,;
+  DisguisedFace2,;
+  SunglassesFace,;
+  NerdFace2,;
+  MonocleFace2,;
+  ConfusedFace,;
+  WorriedFace2,;
+  SlightlyFrowningFace2,;
+  OpenMouthFace,;
+  HushedFace,;
+  AstonishedFace,;
+  FlushedFace,;
+  PleadingFace2,;
+  FrowningFace2,;
+  AnguishedFace2,;
+  FearfulFace2,;
+  ColdSweatFace,;
+  DisappointedRelievedFace,;
+  CryFace2,;
+  LoudlyCryingFace2,;
+  ScreamFace2,;
+  StuckOutTongueFace2,;
+  DroolingFace2,;
+  UnamusedFace2,;
+  SweatSmileFace,;
+  SweatFace,;
+  WearyFace2,;
+  TiredFace2,;
+  SleepyFace2,;
+  YawningFace2,;
+  DizzyFace2,;
 
 } from "lucide-react";
-
   DizzyFace2
 } from 'lucide-react';
+origin/automation-improvements-final
 
   Mail
   Lock
@@ -188,61 +362,64 @@ import {
   YawningFace2
   DizzyFace2
 } from "lucide-react";
-
-export default function LoginPage() {
-  const [formData, setFormData] = useState({
+    email: ""
+    password: ""
+    email: "",
+    password: "",;
 
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const [error, setError] = useState("");
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+  const [error, setError] = useState('');
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+origin/automation-improvements-final
       ...prev
       [name]: value
-
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-
     setError("");
     try {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      // For demo purposes, accept any email/password;
-      if (formData && formData.email && formData && formData.password) {;
-        // Redirect to dashboard or home page;
-        window && window.location.href = "/";
-      } else {;
-
         setError("Please fill in all fields");
       }
     } catch (err) {;
       setError("Login failed. Please try again.");
+    setError('');
 
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // For demo purposes, accept any email/password
+      if (formData.email && formData.password) {
+        // Redirect to dashboard or home page
+        window.location.href = '/';
+      } else {
+        setError('Please fill in all fields');
+      }
+    } catch (err) {
+      setError('Login failed. Please try again.');
     } finally {
     } finally {;
       setIsLoading(false);
     }
   }
   return (
-    <Layout>
-      <Head>
-        <title>Login - Zion Tech Group</title>
-
-        <meta
-          name="description"
-          content="Sign in to your Zion Tech Group account to access your dashboard and services."
-        />
-
-        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
-
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -259,7 +436,6 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-
               <Link
                 href="/contact"
 
@@ -268,7 +444,6 @@ export default function LoginPage() {
               </Link>;
             </p>;
           </motion && motion.div>;
-
           <motion&& motion.div
 
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
@@ -286,8 +461,6 @@ export default function LoginPage() {
                   {error}
                 </motion && motion.div>;
               )}
-              <div>
-
                   Email address
                 </label>
                 <div className="relative">
@@ -315,16 +488,6 @@ export default function LoginPage() {
                     onChange={handleInputChange}
                     className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
-                  />
-                </div>
-              </div>
-              <div>
-
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-
                   Password
                 </label>
                 <div className="relative">
@@ -366,26 +529,11 @@ export default function LoginPage() {
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
                     )}
-
-                  </button>;
-                </div>;
-              </div>;
-
-              <div className="flex items-center justify-between">;
-                <div className="flex items-center">;
-
                   <input
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  />
-
-                  <label
-                    htmlFor="remember-me"
-                    className="ml-2 block text-sm text-gray-900"
-                  >
-
                     Remember me
                   </label>
                 </div>
@@ -399,38 +547,6 @@ export default function LoginPage() {
                 </div>
               </div>
               <div>
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  {isLoading ? (
-                    <div className="flex items-center">
-                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                      Signing in...
-                    </div>
-                  ) : (
-                    <div className="flex items-center">
-                      Sign in
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  )}
-                </button>
-              </div>
-            </form>
-            <div className="mt-6">
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-gray-300" />
-                </div>
-                <div className="relative flex justify-center text-sm">
-
-                  <span className="px-2 bg-white text-gray-500">
-                    Or continue with
-                  </span>
-
-                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
-
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -452,7 +568,6 @@ export default function LoginPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
-
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;

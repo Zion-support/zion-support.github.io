@@ -1,10 +1,5 @@
-
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-
   referrals: number,
   earnings: number,
-
   badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -20,8 +15,8 @@ export function PartnerLeaderboard() {
       earnings: 4500
       badges: ["gold", "trending"]
 
+
     {
-      id: "2"
       rank: 2
       name: "Machine Learning Hub"
       avatar: ""
@@ -29,8 +24,8 @@ export function PartnerLeaderboard() {
       earnings: 3625
       badges: ["silver"]
 
+
     {
-      id: "3"
       rank: 3
       name: "Neural Networks Pro"
       avatar: ""
@@ -38,15 +33,14 @@ export function PartnerLeaderboard() {
       earnings: 3100
       badges: ["bronze"]
 
+
     {
-      id: "4"
       rank: 4
       name: "AI Career Insights"
       avatar: ""
       referrals: 98
       earnings: 2450
       badges: []
-
     {
       id: "5",
       rank: 5,
@@ -55,7 +49,6 @@ export function PartnerLeaderboard() {
       referrals: 87,
       earnings: 2175,
       badges: ["newcomer"]
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
@@ -119,22 +112,13 @@ export function PartnerLeaderboard() {;
       badges: ["newcomer"];
     }
   ];
-
   // Function to render rank badge;
-  const renderRankBadge = (rank: number,) => {;
-    switch(rank) {;
+  const renderRankBadge = (rank: number, ) =>: any {
+    switch (rank) {
       case 1:;
-        return <Trophy className="h-5 w-5 text-yellow-500" />;
+        return <Trophy className="h - 5 w - 5 text - yellow - 500" />;
       case 2:;
-        return <Medal className="h-5 w-5 text-gray-400" />;
+        return <Medal className="h - 5 w - 5 text - gray - 400" />;
       case 3:;
-        return <Medal className="h-5 w-5 text-amber-700" />,;
+        return <Medal className="h - 5 w - 5 text - amber - 700" />,
       default:;
-        return <span className="text-sm font-semibold">{rank}</span>;
-
-}
-
-  )
-}
-;
-

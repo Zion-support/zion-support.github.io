@@ -50,14 +50,12 @@ export default function TokenIntegrationsPage() {;
         <h2 className="text-lg font-semibold">DePIN Hook</h2>;
         <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>;
         <div className="flex gap-2">;
-          <button onClick={syncDepin} className="px-4 py-2 rounded bg-purple-600 text-white">{depinsSyncing ? 'Syncing' :'Sync DePIN Rewards'}</button>;
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>;
         {rewards && (;
           <div className="mt-3 space-y-2 text-sm">;
             {rewards.map((r, i) => (;
               <div key={i} className="flex items-center justify-between">;
-                <span>{r.network}  {r.reason}</span>;
                 <span className="font-medium">+{r.points} ZION$</span>;
               </div>;
             ))}

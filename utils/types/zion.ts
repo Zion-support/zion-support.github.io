@@ -1,12 +1,18 @@
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
-
-export interface Branding {;
-
+export interface Branding {logoUrl?: string;
+  primaryColor?: string;
+  secondaryColor?: string;
+  subdomain?: string;
 }
-;
-export interface DeployModules {;
-  marketplace: boolean;
-
+export interface DeployModules {marketplace: boolean;
+export interface Branding {;
+  logoUrl?: string;
+  primaryColor?: string;
+  secondaryColor?: string;
+  subdomain?: string;
+  logoUrl?: string,;
+  primaryColor?: string,;
+  secondaryColor?: string,;
+  subdomain?: string;
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -18,7 +24,26 @@ export interface DeployModules {;
   apiDocsWiki: boolean;
   zionBrain: boolean;
   // Bonus;
-
+}
+export interface DeployInput {instanceName: string;
+  defaultLanguage: string;
+  deploymentRegion: string;
+  tokenActivation: boolean;
+  governanceMode: GovernanceMode;
+  branding: Branding;
+  modules: DeployModules;
+  requestedRoutes?: string[];
+}
+export interface DeployLogEntry {timestamp: string;
+  level: "info" | "warn" | "error";
+  action: string;
+  details?: Record<string unknown> | string;
+}
+export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event";
+  path: string;
+  description?: string;
+}
+export interface DeployResult {success: boolean;
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -29,13 +54,8 @@ export interface DeployModules {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
-export interface DeployInput {instanceName: string;
-  defaultLanguage: string;
-  deploymentRegion: string;
-  tokenActivation: boolean;
-
+;
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -65,12 +85,10 @@ export interface GeneratedAsset {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
 ;
 export interface DeployResult {;
   success: boolean;
-
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
@@ -78,10 +96,20 @@ export interface DeployResult {;
   summary: string;
   version: string;
 
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
+export interface Branding {
+  logo_url?: string,
+  primary_color?: string,
+  secondary_color?: string,
+  subdomain?: string;
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
 
 }
 export interface DeployModules {
@@ -137,10 +165,16 @@ export interface DeployResult {
 export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean;
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
 
+
+
+}
+
+  adminKeyConfigured: boolean;
 }

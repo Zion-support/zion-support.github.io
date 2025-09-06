@@ -37,6 +37,3 @@ export function AppHeader() {;
           <MainNavigation />;
         </div>;
       </div>;
-    </header>);
-
-'"

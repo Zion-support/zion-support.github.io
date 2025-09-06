@@ -1,5 +1,3 @@
-
-
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -14,70 +12,35 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',;
 import { futuristic2028Services } from '../data/2028-futuristic-innovations',;
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services',;
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-const serviceCategories = [
-  {
-    title: '🚀 2028 Futuristic Innovations',
-    description: 'Beyond the future of technology',
-    icon: Rocket,
-    color: 'from-violet-600 to-purple-600',
-    services: futuristic2028Services.slice(0, 4)
-  },
-  {
-    title: '🏙️ Smart City & Infrastructure',
-    description: 'Intelligent urban solutions',
-    icon: Building,
-    color: 'from-blue-600 to-cyan-600',
-    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4)
-  },
-  {
-    title: '⚛️ Quantum & Advanced Tech',
-    description: 'Quantum computing and beyond',
-    icon: Atom,
-    color: 'from-indigo-600 to-blue-600',
-    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
-  },
-  {
-    title: '🤖 AI & Machine Learning',
-    description: 'Next-generation AI solutions',
-    icon: Brain,
-    color: 'from-emerald-600 to-teal-600',
-    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
-  },
-  {
-    title: '⛓️ Blockchain & Web3',
-    description: 'Decentralized solutions',
-    icon: Globe,
-    color: 'from-orange-600 to-red-600',
-    services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(0, 4)
-  },
-  {
-    title: '🚗 Autonomous & Mobility',
-    description: 'Self-driving and mobility solutions',
-    icon: Car,
-    color: 'from-red-600 to-pink-600',
-    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
 
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-
+    description: 'Intelligent urban solutions'
+    icon: Building
+    color: 'from-blue-600 to-cyan-600'
+    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') |s.category.includes('Infrastructure')).slice(0, 4)
+  }
+  {
+    description: 'Quantum computing and beyond'
+    icon: Atom
+    color: 'from-indigo-600 to-blue-600'
+    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
+  }
+  {
+    description: 'Next-generation AI solutions'
+    icon: Brain
+    color: 'from-emerald-600 to-teal-600'
+    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
+  }
   }
 }
 ],
-
 export default function ServicesShowcase2028() {
   return (
     <>
@@ -92,7 +55,20 @@ export default function ServicesShowcase2028() {
         <link rel="canonical" href="https://ziontechgroup.com/2028-services-showcase" />
       </Head>
       <UltraFuturisticNavigation2028 />
-
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden">
+        {/* Animated Background */}
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden">
+        {/* Animated Background */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -100,7 +76,21 @@ export default function ServicesShowcase2028() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="space-y-8"
           >
             <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
@@ -116,7 +106,8 @@ export default function ServicesShowcase2028() {
             </h1>
             <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
 
-              Experience the future of technology with our cutting-edge 2028 services.
+
+
 
               From AI consciousness to quantum internet, we're building tomorrow's solutions today.
             </p>
@@ -136,7 +127,6 @@ export default function ServicesShowcase2028() {
                 <DollarSign className="w-5 h-5" />
               </Link>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-16">
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400">50+</div>
@@ -158,7 +148,6 @@ export default function ServicesShowcase2028() {
           </motion.div>
         </div>
       </section>
-
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -167,13 +156,20 @@ export default function ServicesShowcase2028() {
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
 
+
+
+
               and propel you into the future of technology.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
               <motion.div
-
+                key={category.title}
+                initial={{ opacity: 0, coordinate_y: 30 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="group relative"
               >
                 <div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
@@ -190,7 +186,18 @@ export default function ServicesShowcase2028() {
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200 text-sm">{service.name}</span>
                         </div>
-
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </div>;
+                    <Link;
+                      href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
                     >
                       <span>Explore More</span>
@@ -199,7 +206,6 @@ export default function ServicesShowcase2028() {
                   </div>
                 </div>
               </motion.div>
-
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -213,7 +219,11 @@ export default function ServicesShowcase2028() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {futuristic2028Services.slice(0, 6).map((service, index) => (
               <motion.div
-
+                key={service.id}
+                initial={{ opacity: 0, coordinate_x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, coordinate_x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="group relative"
               >
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
@@ -235,12 +245,22 @@ export default function ServicesShowcase2028() {
                         <span className="text-purple-300">({service.reviews} reviews)</span>
                       </div>
                       <div className="text-sm text-purple-300">
-
+                        <span className="font-medium">Market Size:</span> {service.marketSize  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </div>
+                      <div className="text-sm text-purple-300">
+                        <span className="font-medium">Growth Rate:</span> {service.growthRate  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
                       <Link
-
                         className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                       >
                         Learn More
@@ -253,7 +273,6 @@ export default function ServicesShowcase2028() {
                   </div>
                 </div>
               </motion.div>
-
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -266,29 +285,31 @@ export default function ServicesShowcase2028() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
             >
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
               <p className="text-purple-300 mb-6">
 
-                Our services target markets with exponential growth potential, 
 
                 Our services target markets with exponential growth potential,
 
+                Our services target markets with exponential growth potential, 
+                Our services target markets with exponential growth potential,
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>
               <div className="text-purple-300">Average Annual Growth</div>
             </motion.div>
             <motion.div
-
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
             >
               <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Size</h3>
               <p className="text-blue-300 mb-6">
+
+
+
 
                 $500 billion with rapid expansion expected.
               </p>
@@ -296,12 +317,14 @@ export default function ServicesShowcase2028() {
               <div className="text-blue-300">Total Addressable Market</div>
             </motion.div>
             <motion.div
-
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >
               <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Edge</h3>
               <p className="text-pink-300 mb-6">
+
+
+
 
                 and AI algorithms that competitors cannot replicate.
               </p>
@@ -311,7 +334,14 @@ export default function ServicesShowcase2028() {
           </div>
         </div>
       </section>
-
+      {/* CTA Section */}
+      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="space-y-8"
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -319,7 +349,8 @@ export default function ServicesShowcase2028() {
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
 
-              Join hundreds of forward-thinking companies already leveraging our futuristic services
+
+
 
               to gain competitive advantages and drive innovation.
             </p>
@@ -359,8 +390,9 @@ export default function ServicesShowcase2028() {
       <UltraFuturisticFooter2028 />
     </>
 
-  )
-            className="space-y-8";
+}
+
+            className="space - y-8";
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold text - white mb - 6">;
               Ready to <span className="bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent">Transform</span> Your Business?;
@@ -403,10 +435,5 @@ export default function ServicesShowcase2028() {
         </div>;
       </section>;
       <UltraFuturisticFooter2028 />;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
 

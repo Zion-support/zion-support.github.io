@@ -57,6 +57,13 @@ class PerformanceMonitor {
     };
   };
   log(message) {}
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {}
+      fs.mkdirSync(logDir, { "recursive": true }
+});
+    };
+  };
+  log(message) {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     process.stdout.write(logMessage);
@@ -342,6 +349,10 @@ class PerformanceMonitor {
         this.log('Bundle analysis completed');
       }
       await this.optimizeBuild();
+        });
+        this.log('Bundle analysis completed');
+      }
+      await this.optimizeBuild();
     } catch (error) {
       this.log(`Build size optimization failed: ${error.message}`);
     }
@@ -550,5 +561,6 @@ if (require.main === module) {
     const monitor = new PerformanceMonitor(),
     monitor.monitorPerformance().catch(console.error)
   }
+module.exports = PerformanceMonitor;
 
 module.exports = PerformanceMonitor;

@@ -306,6 +306,9 @@ optimizer.run().catch(error => {
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -346,7 +349,6 @@ class BuildOptimizer {}
       
       
       
-      
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         this.log('No dist directory found, running build first...');
@@ -358,9 +360,7 @@ class BuildOptimizer {}
         const stats = fs.statSync(file.path);
         return total + stats.size;
       }, 0);
-
       this.log(`Total bundle "size": ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
-      
 
       this.log(`Total bundle "size": ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
       
@@ -388,14 +388,12 @@ class BuildOptimizer {}
     
     
     
-    
     const scanDir = (currentDir) => {}
       try {}
         const items = fs.readdirSync(currentDir);
         for (const item of items) {}
           const itemPath = path.join(currentDir, item);
           const stat = fs.statSync(itemPath);
-          
           
           
           
@@ -419,7 +417,6 @@ class BuildOptimizer {}
 
 
 
-
     scanDir(dir);
     return files;
   };
@@ -430,7 +427,6 @@ class BuildOptimizer {}
   async optimizeBuild() {}
     try {}
       this.log('Starting build optimization...');
-      
       
       
       
@@ -447,13 +443,11 @@ class BuildOptimizer {}
       
       
       
-      
       execSync(buildCommand, { })
         "stdio": 'pipe',
         "cwd": process.cwd();
       }
 });
-
 
 
 
@@ -468,7 +462,6 @@ class BuildOptimizer {}
   getOptimizedBuildCommand() {}
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
     const buildScript = packageJson.scripts?.build || 'npm run build';
-    
     
     
     
@@ -492,7 +485,6 @@ class BuildOptimizer {}
       
       
       
-      
       // This is a simplified check - in practice, you'd analyze the bundle;
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
@@ -501,7 +493,6 @@ class BuildOptimizer {}
       // Look for unused code patterns;
       const bundleFiles = this.getBundleFiles(distDir);
       let unusedCodeFound = 0;
-
 
 
 
@@ -518,7 +509,6 @@ class BuildOptimizer {}
         };
       };
       this.log(`Tree shaking check completed. Potential unused code in ${unusedCodeFound} files`);
-      
       
       
       
@@ -544,16 +534,13 @@ class BuildOptimizer {}
       
       
       
-      
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         return { "checked": false, "error": 'No dist directory found' };
       };
       const bundleFiles = this.getBundleFiles(distDir);
       const chunkFiles = bundleFiles.filter(f => f.name.includes('chunk') || f.name.includes('vendor'));
-      
       this.log(`Found ${chunkFiles.length} chunk files`);
-      
       
       this.log(`Found ${chunkFiles.length} chunk files`);
       
@@ -587,6 +574,8 @@ class BuildOptimizer {}
         "minification": this.minification;
       };
     };
+    const reportFile = path.join(__dirname, '../../logs/pm2/build-optimizer-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     const reportFile = path.join(__dirname, '../../logs/pm2/build-optimizer-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 

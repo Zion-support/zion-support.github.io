@@ -1,12 +1,29 @@
+import React from './react';
+import { complete_sitemap, dynamic_paths  } from '@/config / sitemap';
+import { Link  } from './react-router-dom';
+import { ChevronRight  } from './lucide-react';
+import { SEO  } from './SEO';
+import { AppLayout  } from '@/layout / AppLayout';
 
-
+export const SitemapPage: React.FC = () => {
+import React from 'react';
+import {completeSitemap, dynamicPaths} from '@/config/sitemap';
+import {Link} from 'react-router-dom';
+import {ChevronRight} from 'lucide-react';
+import {SEO} from './SEO';
+import {AppLayout} from '@/layout/AppLayout';
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import { Link } from 'react-router-dom',
 import { ChevronRight } from 'lucide-react',
 import { SEO } from './SEO',
 import { AppLayout } from '@/layout/AppLayout',
-
+import React from "react";
+import { completeSitemap, dynamicPaths } from "@/config/sitemap";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
+import { SEO } from "./SEO";
+import { AppLayout } from "@/layout/AppLayout";
 export const SitemapPage: React.FC = () => {
   return (
     <AppLayout>
@@ -52,8 +69,8 @@ export const SitemapPage: React.FC = () => {
               {completeSitemap
                 .filter(
                   (route) =>
-                    route.requiredRoles?.includes("jobSeeker") |
-                    route.requiredRoles?.includes("creator")
+                    route.requiredRoles?.includes("jobSeeker") ||
+                    route.requiredRoles?.includes("creator"),
                 )
                 .map((route) => (
                   <li key={route.path}>
@@ -80,8 +97,8 @@ export const SitemapPage: React.FC = () => {
               {completeSitemap
                 .filter(
                   (route) =>
-                    route.requiredRoles?.includes("employer") |
-                    route.requiredRoles?.includes("buyer")
+                    route.requiredRoles?.includes("employer") ||
+                    route.requiredRoles?.includes("buyer"),
                 )
                 .map((route) => (
                   <li key={route.path}>
@@ -109,7 +126,7 @@ export const SitemapPage: React.FC = () => {
                 .filter(
                   (route) =>
                     route.requiredAuth &&
-                    (!route.requiredRoles |route.requiredRoles.length === 0)
+                    (!route.requiredRoles || route.requiredRoles.length === 0),
                 )
                 .map((route) => (
                   <li key={route.path}>
@@ -165,13 +182,9 @@ export const SitemapPage: React.FC = () => {
                   </div>
                 </li>
               ))}
-
             </ul>;
           </div>;
         </div>;
       </div>;
-    </AppLayout>;
-
   );
 };
-

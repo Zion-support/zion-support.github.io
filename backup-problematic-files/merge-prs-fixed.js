@@ -22,7 +22,6 @@ try {;
     }
 ;
     // Fetch latest changes;
-    console.log(' Fetching latest changes...');
     execSync('git fetch --all --prune');
 ;
     // Switch to main branch;
@@ -60,7 +59,6 @@ try {;
     }
 ;
     // Get all branches;
-    console.log(' Getting all branches...');
     const branches = execSync('git branch -r', { encoding:'utf8' });
     const branchList = branches.split('\n');
         .map(branch => branch.trim());
@@ -84,13 +82,11 @@ try {;
             ;
             console.log(` Successfully merged ${branchName}`);
         } catch (error) {;
-            console.log(`  Error merging ${branch} ${error.message}`);
             // Continue with other branches;
         }
     }
 ;
     // Push all changes;
-    console.log(' Pushing all changes to main...');
     execSync('git push origin main');
 ;
     console.log(' All merge operations completed successfully!');
@@ -99,5 +95,4 @@ try {;
     console.log(' Repository is now clean and up to date');
 ;
 } catch (error) {;
-    console.error(' Error during merge process:', error.message);
     process.exit(1);}

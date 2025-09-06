@@ -145,7 +145,6 @@ export default function ServicesPage() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <Head>;
-        <title>Services  Zion Tech Group | AI, Quantum Computing & Technology Solutions</title>;
         <meta name="description" content="Discover Zion Tech Group's comprehensive AI, quantum computing, and technology services. Transform your business with cutting-edge solutions." />;
         <meta property="og:title" content="Zion Tech Group Services" />;
         <meta property="og:description" content="AI, quantum computing, and technology solutions for modern businesses." />;

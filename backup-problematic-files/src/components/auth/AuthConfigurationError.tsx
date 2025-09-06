@@ -47,11 +47,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
           <div className="bg-gray-50 rounded-lg p-4 mb-6">;
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>;
             <ul className="text-sm text-gray-700 space-y-1">;
-              <li> AUTH0_SECRET</li>;
-              <li> AUTH0_BASE_URL</li>;
-              <li> AUTH0_ISSUER_BASE_URL</li>;
-              <li> AUTH0_CLIENT_ID</li>;
-              <li> AUTH0_CLIENT_SECRET</li>;
             </ul>;
           </div>;
 ;
