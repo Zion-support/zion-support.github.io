@@ -47,4 +47,3 @@ export default function PortfolioBuilder() {
     </ProtectedRoute>
   )
 }
-;

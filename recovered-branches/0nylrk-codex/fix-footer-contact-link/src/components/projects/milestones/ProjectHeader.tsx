@@ -27,4 +27,3 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
     </div>
   )
 }
-;

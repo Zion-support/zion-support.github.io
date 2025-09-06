@@ -53,4 +53,3 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
     </div>
   )
 }
-;

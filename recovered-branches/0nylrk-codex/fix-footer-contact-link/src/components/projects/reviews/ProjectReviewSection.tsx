@@ -105,4 +105,3 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     </Card>
   )
 }
-;
