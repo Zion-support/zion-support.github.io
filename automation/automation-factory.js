@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 };
 };
 ;
@@ -188,6 +191,16 @@ class CodeQualityMonitor {
 ; loadStatus() {; try {; if (fs && fs.existsSync(this && this.statusFile)) {; const status = JSON && JSON.parse(fs && fs.readFileSync(this && this.statusFile, "utf8")); this && this.runningScripts = new Map(Object && Object.entries(status && status.runningScripts || {}))}} catch (error) {; this && this.log(`Error loading status: ${error && error.message}`)}}}};
 ; generateCodeQualityScript() {; const script = `#!/usr/bin/env node;const fs = require("fs");
 <<<<<<< HEAD
+=======
+
+;const fs = require("fs");
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+const path = require("path");
+const { execSync } = require("child_process");
+;
+=======
+<<<<<<< HEAD
 const path = require("path");
 const { execSync } = require("child_process");
 class CodeQualityMonitor {; constructor() {; this && this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this && this.logFile = path && path.join(__dirname, "logs", "code-quality && quality.log")};
@@ -225,6 +238,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
@@ -239,6 +253,8 @@ class CodeQualityMonitor {;
 ;
   log(message) {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 const fs = require("fs");
 }}; loadStatus() {try {; if (fs.existsSync(this.statusFile)) {; const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")); this.runningScripts = new Map(Object.entries(status.runningScripts |{}))}} catch (error) {this.log(`Error loading status: ${error.message}`)}}}}; generateCodeQualityScript() {const script = `#!/usr/bin/env node;const fs = require("fs");
@@ -246,6 +262,7 @@ const path = require("path");
 const { execSync } = require("child_process");const fs = require("fs");
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
     console.log(message);
@@ -527,6 +544,12 @@ optimizer.optimizePerformance().then(report => {
     const metricsFile = path.join(__dirname, "logs", "code-quality-metrics.json");
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
 <<<<<<< HEAD
+};
+};
+;
+const monitor = new CodeQualityMonitor();
+=======
+<<<<<<< HEAD
   }
 }
 }}; loadStatus() {try {; if (fs.existsSync(this.statusFile)) {; const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")); this.runningScripts = new Map(Object.entries(status.runningScripts |{}))}} catch (error) {this.log(`Error loading status: ${error.message}`)}}}}; generateCodeQualityScript() {const script = `#!/usr/bin/env node;const fs = require("fs");
@@ -551,6 +574,7 @@ const monitor = new CodeQualityMonitor();
 };
 ;
 const monitor = new CodeQualityMonitor();
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 monitor.analyzeCodeQuality().then(metrics => {;
   if (metrics) {;
     console.log("Metrics:", metrics);
@@ -578,7 +602,10 @@ monitor.analyzeCodeQuality().then(metrics => {;
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ;
 class PerformanceOptimizer {;
   constructor() {;
@@ -943,6 +970,9 @@ module.exports = AutomationFactory;
         const success = await this.runScript(name);
         results.push({ name, success });
 <<<<<<< HEAD
+    };
+=======
+<<<<<<< HEAD
 
     cwd: __dirname});
 ; this.runningScripts.set(scriptName, { startTime, pid: child.pid }); this.saveStatus();
@@ -983,6 +1013,7 @@ module.exports = AutomationFactory;
 =======
     };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   loadStatus() {,
@@ -991,11 +1022,17 @@ module.exports = AutomationFactory;
         const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         this.runningScripts = new Map(Object.entries(status.runningScripts || {})),
       };
     } catch (error) {,
       this.log(`Error loading status: ${error.message}`),
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     };
       };
     };
@@ -1015,21 +1052,32 @@ class CodeQualityMonitor {,
       testCoverage: 0,
       performance: 0,
 <<<<<<< HEAD
+      lastUpdated: new Date().toISOString(),
+    };
+    this.logFile = path.join(__dirname, "logs", "code-quality.log"),
+=======
+<<<<<<< HEAD
 =======
       lastUpdated: new Date().toISOString(),
     };
     this.logFile = path.join(__dirname, "logs", "code-quality.log"),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = \`[\${timestamp}] \${message}\\n\`,
 <<<<<<< HEAD
+    console.log(message),
+    fs.appendFileSync(this.logFile, logMessage),
+=======
+<<<<<<< HEAD
 =======
     console.log(message),
     fs.appendFileSync(this.logFile, logMessage),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   async analyzeCodeQuality() {,
@@ -1046,11 +1094,17 @@ class CodeQualityMonitor {,
       this.log("Code quality analysis completed successfully"),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       return this.metrics,
     } catch (error) {,
       this.log(\`Code quality analysis failed: \${error.message}\`, "ERROR"),
       return null,
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     };
   };
 ,
@@ -1063,12 +1117,18 @@ class CodeQualityMonitor {,
         const lines = content.split("\\n"),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         totalComplexity += lines.length * 0.1, // Simplified complexity metric,
       }),
       return Math.min(Math.floor(totalComplexity), 100),
     } catch (error) {,
       return Math.floor(Math.random() * 10) + 1,
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     };
   };
 ,
@@ -1080,6 +1140,9 @@ class CodeQualityMonitor {,
         const stats = fs.statSync(file),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         return acc + stats.size,
       }, 0) / totalFiles,
 ,
@@ -1087,24 +1150,35 @@ class CodeQualityMonitor {,
       return Math.max(50, 100 - Math.floor(avgFileSize / 1000)),
     } catch (error) {,
       return Math.floor(Math.random() * 100) + 50,
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     };
   };
 ,
   calculateTestCoverage() {,
     // Placeholder for test coverage calculation,
 <<<<<<< HEAD
+    return Math.floor(Math.random() * 100),
+=======
+<<<<<<< HEAD
 =======
     return Math.floor(Math.random() * 100),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   calculatePerformance() {,
     // Placeholder for performance calculation,
 <<<<<<< HEAD
+    return Math.floor(Math.random() * 100) + 70,
+=======
+<<<<<<< HEAD
 =======
     return Math.floor(Math.random() * 100) + 70,
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   getTypeScriptFiles() {,
@@ -1119,9 +1193,13 @@ class CodeQualityMonitor {,
 ,
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
 <<<<<<< HEAD
+          walkDir(fullPath),
+=======
+<<<<<<< HEAD
 =======
           walkDir(fullPath),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {,
           files.push(fullPath),
         };
@@ -1130,17 +1208,25 @@ class CodeQualityMonitor {,
 ,
     walkDir(projectRoot),
 <<<<<<< HEAD
+    return files,
+=======
+<<<<<<< HEAD
 =======
     return files,
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   saveMetrics() {,
     const metricsFile = path.join(__dirname, "logs", "code-quality-metrics.json"),
 <<<<<<< HEAD
+    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2)),
+=======
+<<<<<<< HEAD
 =======
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2)),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 };
 ,
@@ -1148,9 +1234,13 @@ const monitor = new CodeQualityMonitor(),
 monitor.analyzeCodeQuality().then(metrics => {,
   if (metrics) {,
 <<<<<<< HEAD
+    console.log("Metrics:", metrics),
+=======
+<<<<<<< HEAD
 =======
     console.log("Metrics:", metrics),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 }),`,
 ,
@@ -1166,11 +1256,17 @@ monitor.analyzeCodeQuality().then(metrics => {,
       successCount: 0,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       errorCount: 0,
     }),
 ,
     this.log("Generated enhanced code quality monitor script"),
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   generatePerformanceOptimizer() {,
@@ -1183,19 +1279,28 @@ class PerformanceOptimizer {,
   constructor() {,
     this.optimizations = [],
 <<<<<<< HEAD
+    this.logFile = path.join(__dirname, "logs", "performance-optimizer.log"),
+=======
+<<<<<<< HEAD
 =======
     this.logFile = path.join(__dirname, "logs", "performance-optimizer.log"),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = \`[\${timestamp}] \${message}\\n\`,
 <<<<<<< HEAD
+    console.log(message),
+    fs.appendFileSync(this.logFile, logMessage),
+=======
+<<<<<<< HEAD
 =======
     console.log(message),
     fs.appendFileSync(this.logFile, logMessage),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   async optimizePerformance() {,
@@ -1218,20 +1323,30 @@ class PerformanceOptimizer {,
         imageOptimization: imageOptimization,
         dependencies: dependencyAnalysis,
 <<<<<<< HEAD
+        recommendations: this.generateRecommendations(),
+=======
+<<<<<<< HEAD
 =======
         recommendations: this.generateRecommendations(),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       };
 ,
       this.saveReport(report),
       this.log("Performance optimization completed"),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       return report,
     } catch (error) {,
       this.log(\`Performance optimization failed: \${error.message}\`, "ERROR"),
       return null,
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     };
   };
 ,
@@ -1242,9 +1357,13 @@ class PerformanceOptimizer {,
         totalSize: "2.1MB",
         gzippedSize: "650KB",
 <<<<<<< HEAD
+        recommendations: ["Consider code splitting", "Remove unused dependencies"],
+=======
+<<<<<<< HEAD
 =======
         recommendations: ["Consider code splitting", "Remove unused dependencies"],
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       };
     } catch (error) {,
       return { error: error.message };
@@ -1271,9 +1390,13 @@ class PerformanceOptimizer {,
         productionDependencies: dependencies.length,
         devDependencies: devDependencies.length,
 <<<<<<< HEAD
+        potentialUnused: this.findUnusedDependencies(),
+=======
+<<<<<<< HEAD
 =======
         potentialUnused: this.findUnusedDependencies(),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       };
     } catch (error) {,
       return { error: error.message };
@@ -1283,9 +1406,13 @@ class PerformanceOptimizer {,
   findUnusedDependencies() {,
     // Placeholder for unused dependency detection,
 <<<<<<< HEAD
+    return ["example-unused-package"],
+=======
+<<<<<<< HEAD
 =======
     return ["example-unused-package"],
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   generateRecommendations() {,
@@ -1295,18 +1422,27 @@ class PerformanceOptimizer {,
       "Remove unused dependencies",
       "Enable gzip compression",
 <<<<<<< HEAD
+      "Use React.memo for expensive components",
+    ],
+=======
+<<<<<<< HEAD
 =======
       "Use React.memo for expensive components",
     ],
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   saveReport(report) {,
     const reportFile = path.join(__dirname, "logs", "performance-report.json"),
 <<<<<<< HEAD
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
+=======
+<<<<<<< HEAD
 =======
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 };
 ,
@@ -1314,9 +1450,13 @@ const optimizer = new PerformanceOptimizer(),
 optimizer.optimizePerformance().then(report => {,
   if (report) {,
 <<<<<<< HEAD
+    console.log("Performance report:", report),
+=======
+<<<<<<< HEAD
 =======
     console.log("Performance report:", report),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 }),`,
 ,
@@ -1332,20 +1472,30 @@ optimizer.optimizePerformance().then(report => {,
       successCount: 0,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       errorCount: 0,
     }),
 ,
     this.log("Generated performance optimizer script"),
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   };
 ,
   async runScript(scriptName, options = {}) {,
     if (!this.scripts.has(scriptName)) {,
       this.log(`Script "${scriptName}" not found`, "ERROR"),
 <<<<<<< HEAD
+      return false,
+=======
+<<<<<<< HEAD
 =======
       return false,
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     };
 ,
     const script = this.scripts.get(scriptName),
@@ -1357,11 +1507,17 @@ optimizer.optimizePerformance().then(report => {,
       this.saveStatus(),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ,
       const child = spawn("node", [script.path], {,
         stdio: "pipe",
         cwd: __dirname,
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       }),
 ,
       this.runningScripts.set(scriptName, { startTime, pid: child.pid }),
@@ -1378,17 +1534,25 @@ optimizer.optimizePerformance().then(report => {,
           } else {,
             script.errorCount++,
 <<<<<<< HEAD
+            this.log(`Script "${scriptName}" failed with code ${code}`, "ERROR"),
+=======
+<<<<<<< HEAD
 =======
             this.log(`Script "${scriptName}" failed with code ${code}`, "ERROR"),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
           };
 ,
           script.lastRun = new Date().toISOString(),
           this.saveStatus(),
 <<<<<<< HEAD
+          resolve(code === 0),
+=======
+<<<<<<< HEAD
 =======
           resolve(code === 0),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         }),
 ,
         child.on("error", (error) => {,
@@ -1397,20 +1561,30 @@ optimizer.optimizePerformance().then(report => {,
           this.runningScripts.delete(scriptName),
           this.saveStatus(),
 <<<<<<< HEAD
+          resolve(false),
+        }),
+      }),
+=======
+<<<<<<< HEAD
 =======
           resolve(false),
         }),
       }),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     } catch (error) {,
       script.errorCount++,
       this.log(`Failed to start script "${scriptName}": ${error.message}`, "ERROR"),
       this.runningScripts.delete(scriptName),
       this.saveStatus(),
 <<<<<<< HEAD
+      return false,
+=======
+<<<<<<< HEAD
 =======
       return false,
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     };
   };
 ,
@@ -1585,4 +1759,7 @@ if ( {) {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -22,6 +25,16 @@
  * Performance Monitor - PM2 Automation Script;
  * Monitors application performance and optimizes when needed;
  */
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+>>>>>>> main
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+=======
 <<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
@@ -59,6 +72,7 @@ class PerformanceMonitor {}
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 
 class PerformanceMonitor {
   constructor() {
@@ -66,6 +80,15 @@ class PerformanceMonitor {
     this.ensureLogsDir();
   }
 
+<<<<<<< HEAD
+  ensureLogsDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'info') {
+=======
 <<<<<<< HEAD
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -82,7 +105,15 @@ class PerformanceMonitor {
     };
   };
   log(message) {}
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logMessage);
+    
+    const logFile = path.join(this.logsDir, 'performance-monitor.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+=======
 =======
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
@@ -406,6 +437,14 @@ class PerformanceMonitor {
         global.gc();
         this.log('Garbage collection performed');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+      }
+      
+      const performance = {
+=======
       }
     } catch (error) {
       this.log(`Memory optimization failed: ${error.message}`);
@@ -544,6 +583,7 @@ class PerformanceMonitor {
       
       const performance = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         timestamp: new Date().toISOString(),
         buildTime: buildTime,
         bundleSize: bundleSize,
@@ -815,4 +855,7 @@ monitor.run().catch(console.error);
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

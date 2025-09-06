@@ -1,69 +1,56 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn(),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+    };
+  },
+}));
 
-interface SetupProps {
-  // Add props here as needed
-}
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
 
-export default function Setup({ }: SetupProps) {
-  return (
-    <div>
-      <h1>Setup</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-// Mock ResizeObserver;
+// Mock IntersectionObserver
+// @ts-ignore
+global.IntersectionObserver = class IntersectionObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+// @ts-ignore
 global.ResizeObserver = class ResizeObserver {
-  observe () { /* do nothing */ }
-  unobserve () { /* do nothing */ }
-  disconnect () { /* do nothing */ }
-},
-// Mock window.scroll_to;
-global.window.scroll_to = vi.fn (), // vi should be globally available;
-// Ensure React Testing Library cleans up and mocks are restored between tests;
-// -----------------------------------------------------------------------------;
-// Jest - compatibility shim ------------------------------------------------------;
-// -----------------------------------------------------------------------------;
-// A lot of legacy test files still call `jest.fn ()`, `jest.mock ()` etc.  Rather;
-// than refactor them all at once we map those calls to Vitest's equivalent;
-// (`vi`).  The shim only runs in the test environment and has no effect on;
-// production bundles.;
-// deliberately attaching to global for test environment setup;
-  SnapshotSerializer: () => {}}
-// eslint - disable - next - line @typescript - eslint / no - explicit - any;
-(global_this as any).jest = {
-  // Core mocking utilities;
-  fn: vi.fn.bind (vi),
-  mock: vi.mock.bind (vi),
-  spy_on: vi.spy_on.bind (vi),
-  // Timing helpers;
-  useFakeTimers: vi.useFakeTimers.bind (vi),
-  useRealTimers: vi.useRealTimers.bind (vi),
-  advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
-  runAllTimers: vi.runAllTimers.bind (vi),
-  // Reset / clear mocks;
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-import React from 'react';
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
 
-interface SetupProps {
-  // Add props here as needed
-}
-
-export default function Setup({ }: SetupProps) {
-  return (
-    <div>
-      <h1>Setup</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+// Mock window.scrollTo
+global.window.scrollTo = jest.fn();

@@ -145,12 +145,6 @@ export default function BusinessAutomationPage() {
     </div>
   );
 }
-
-        className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${
-          popular 
-            ? 'bg-green-600 text-white hover:bg-green-700' 
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-        }`}
 function AutomationServiceCard({ title, description, features, pricing, icon }: { 
   title: string; 
   description: string; 
