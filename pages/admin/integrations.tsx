@@ -1,13 +1,11 @@
 
 
+interface Integration {
   id: string;
   name: string;
   category: 'crm' | 'ats';
   description?: string;
-<<<<<<< HEAD
-=======
-
-
+}
 interface ConnectionMap {;
   [providerId: string]: any,;
 function StatusIcon(): any ({;

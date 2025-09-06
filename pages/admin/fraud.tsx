@@ -3,7 +3,12 @@
 
 
 interface FraudItem {
-
+  id: string;
+  type: string;
+  description: string;
+  status: string;
+  createdAt: string;
+}
 
 export default function FraudAdminPage() {
   const [items, setItems] = useState<FraudItem[]>([])
