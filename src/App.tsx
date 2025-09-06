@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import ToastContainer from './components/ToastContainer';
 import { ThemeProvider } from './components/ThemeProvider';
 import ScrollToTop from './components/ScrollToTop';
-import BackToTop from './components/BackToTop';
+import BackToTop from './components/BackToTopButton';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
