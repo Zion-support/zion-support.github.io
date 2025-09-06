@@ -7,10 +7,10 @@ export async function simulateAction<T = any>(
 ): Promise<{ log: SyncLogEntry, result: T }> {
   const log: SyncLogEntry = {
     id: uuidv4(),
-    timestamp: Date.now();
-    providerId: connection.providerId;
-    level: 'info';
-    action;
+    timestamp: Date.now(),
+    providerId: connection.providerId,
+    level: 'info',
+    action,
     details};
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return { log, result: { ok: true } as unknown as T }
@@ -19,11 +19,11 @@ export async function simulateAction<T = any>(
 // CRM actions
 export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
-    return simulateAction(connection, 'crm.syncContact', { contact })
-  };
+    return simulateAction(connection, 'crm.syncContact', { contact });
+  },
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note })
-  };
+  },
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })
   }};

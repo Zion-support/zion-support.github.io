@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const actionMap: Record<string, ModerationStatus> = {
       approve: 'approved',
       remove: 'removed',
-      warn: 'warned';
+      warn: 'warned',
       ban: 'banned'};
     const status = actionMap[action];
     if (!status) return res.status(400).json({ error: 'Invalid action' });

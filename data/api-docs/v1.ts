@@ -5,26 +5,26 @@ const v1: ApiDocsSpec = {
   product: 'Zion OS',
   versions: ['v1'],
   defaultVersion: 'v1',
-  lastUpdatedIso: new Date().toISOString();
+  lastUpdatedIso: new Date().toISOString(),
   sections: [
     {
-      id: 'auth';
-      title: 'Auth (JWT, OAuth, Wallet)';
-      description: 'Authenticate using JWT, OAuth 2.0, or connect a wallet.';
+      id: 'auth',
+      title: 'Auth (JWT, OAuth, Wallet)',
+      description: 'Authenticate using JWT, OAuth 2.0, or connect a wallet.',
       endpoints: [
         {
-          id: 'auth-login-jwt';
-          title: 'JWT Login';
-          description: 'Obtain a JWT by providing credentials.';
-          path: '/v1/auth/login';
-          method: 'POST';
-          visibility: 'public';
-          auth: ['none'];
-          requestBodySchema: { type: 'object', properties: { email: { type: 'string' }, password: { type: 'string' } }, required: ['emailpassword'] };
-          responseBodySchema: { type: 'object', properties: { token: { type: 'string' }, expiresIn: { type: 'number' } } };
+          id: 'auth-login-jwt',
+          title: 'JWT Login',
+          description: 'Obtain a JWT by providing credentials.',
+          path: '/v1/auth/login',
+          method: 'POST',
+          visibility: 'public',
+          auth: ['none'],
+          requestBodySchema: { type: 'object', properties: { email: { type: 'string' }, password: { type: 'string' } }, required: ['emailpassword'] },
+          responseBodySchema: { type: 'object', properties: { token: { type: 'string' }, expiresIn: { type: 'number' } } },
           samples: [
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: application/json' -d '{"email":"user@zion.os","password":"***"}'` };
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'user@zion.os', password: '***' }) }).then(r => r.json()),` };
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: application/json' -d '{"email":"user@zion.os","password":"***"}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'user@zion.os', password: '***' }) }).then(r => r.json())` },
             { language: 'python', code: `import requests\nresp = requests.post('${baseUrl}/v1/auth/login', json={'email':'user@zion.ospassword':'***'})\nprint(resp.json())` }];
           errors: [
             { code: 'INVALID_CREDENTIALS', httpStatus: 401, message: 'Email or password incorrect' }];
@@ -34,9 +34,9 @@ const v1: ApiDocsSpec = {
           title: 'OAuth Token';
           description: 'Exchange auth code for access token.';
           path: '/v1/oauth/token';
-          method: 'POST';
+          method: 'POST',
           visibility: 'partner';
-          auth: ['none'];
+          auth: ['none'],
           requestBodySchema: { type: 'object', properties: { code: { type: 'string' }, redirect_uri: { type: 'string' } }, required: ['coderedirect_uri'] };
           responseBodySchema: { type: 'object', properties: { access_token: { type: 'string' }, refresh_token: { type: 'string' } } };
           samples: [
@@ -54,7 +54,7 @@ const v1: ApiDocsSpec = {
           description: 'Fetch a talent profile by ID.';
           path: '/v1/talent/{talentId}';
           method: 'GET';
-          visibility: 'public';
+          visibility: 'public',
           auth: ['jwt'];
           params: { talentId: 'The UUID of the talent' };
           responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } };
@@ -73,7 +73,7 @@ const v1: ApiDocsSpec = {
           description: 'List job postings with optional filters.';
           path: '/v1/jobs';
           method: 'GET';
-          visibility: 'public';
+          visibility: 'public',
           auth: ['jwt'];
           query: { q: 'Search text', status: 'open|closed' };
           responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } };
@@ -91,7 +91,7 @@ const v1: ApiDocsSpec = {
           title: 'Create Quote';
           description: 'Create a quote with milestones.';
           path: '/v1/quotes';
-          method: 'POST';
+          method: 'POST',
           visibility: 'partner';
           auth: ['jwt'];
           requestBodySchema: { type: 'object', properties: { jobId: { type: 'string' }, milestones: { type: 'array', items: { type: 'object', properties: { title: { type: 'string' }, amount: { type: 'number' } } } } }, required: ['jobIdmilestones'] };
@@ -110,8 +110,8 @@ const v1: ApiDocsSpec = {
           title: 'Send Message';
           description: 'Send a message between users.';
           path: '/v1/messages';
-          method: 'POST';
-          visibility: 'public';
+          method: 'POST',
+          visibility: 'public',
           auth: ['jwt'];
           requestBodySchema: { type: 'object', properties: { to: { type: 'string' }, body: { type: 'string' } }, required: ['tobody'] };
           responseBodySchema: { type: 'object', properties: { id: { type: 'string' } } };
@@ -130,7 +130,7 @@ const v1: ApiDocsSpec = {
           description: 'Fetch wallet balance for the current user.';
           path: '/v1/wallet/balance';
           method: 'GET';
-          visibility: 'public';
+          visibility: 'public',
           auth: ['walletjwt'];
           responseBodySchema: { type: 'object', properties: { balance: { type: 'number' }, currency: { type: 'string' } } };
           samples: [
@@ -148,7 +148,7 @@ const v1: ApiDocsSpec = {
           description: 'List DAO proposals.';
           path: '/v1/dao/proposals';
           method: 'GET';
-          visibility: 'public';
+          visibility: 'public',
           auth: ['jwt'];
           responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } } } };
           samples: [
