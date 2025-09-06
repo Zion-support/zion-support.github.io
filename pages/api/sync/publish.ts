@@ -35,7 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   if (event.type === "proposal") {
-    const votes = (event as any).payload?.votes,
+    const votes = (event as any).payload?.votes;
     const providedRoot = event.merkleRoot;
     if (!Array.isArray(votes) || !providedRoot) {
       return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
@@ -46,14 +46,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
-  const entityId = getEntityId(event),
+  const entityId = getEntityId(event);
   const currentState = readState();
   upsertEvent(currentState, event);
   writeState(currentState);
   const alreadyPropagated = payload.propagate === false;
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
     const headers: Record<string, string> = {};
-    const localBody = { ...event; propagate: false },
+    const localBody = { ...event, propagate: false };
     const baseSignature = require("../../../utils/sync/signature");
     const sig = baseSignature.signPayload(localBody);
     if (sig) headers["x-zion-signature"] = sig;

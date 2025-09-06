@@ -16,6 +16,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false })
   }
 
-  writeState(state),
-  return res.status(200).json({ peers: state.config.peers })
+  writeState(state);
+  return res.status(200).json({ peers: state.config.peers });
 }

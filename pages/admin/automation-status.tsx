@@ -1,55 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
-const AutomationStatus: React.FC = () => {
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const AutomationStatus: NextPage = () => {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const AutomationStatus: NextPage = () => {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+export default function AutomationStatus() {
   return (
-    <div>
+    <>
       <Head>
-        <title>AutomationStatus - Zion Tech Solutions</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <meta name='description' content='AutomationStatus page' />
-=======
-        <meta name="description" content="AutomationStatus page" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        <title>Automation Status - Admin</title>
+        <meta name="description" content="View automation system status" />
       </Head>
-      
-      <main>
-        <h1>AutomationStatus</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  )
-};
-
-<<<<<<< HEAD
-export default AutomationStatus;
-=======
-        <meta name="description" content="AutomationStatus page" />
-      </Head>
-      
-      <main>
-        <h1>AutomationStatus</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  )
-};
-
-export default AutomationStatus;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-export default AutomationStatus;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">Automation Status</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-green-100 p-6 rounded-lg">
+            <h2 className="text-xl font-semibold mb-2">Build System</h2>
+            <p className="text-green-600">Running</p>
+          </div>
+          <div className="bg-green-100 p-6 rounded-lg">
+            <h2 className="text-xl font-semibold mb-2">Testing</h2>
+            <p className="text-green-600">Active</p>
+          </div>
+          <div className="bg-yellow-100 p-6 rounded-lg">
+            <h2 className="text-xl font-semibold mb-2">Deployment</h2>
+            <p className="text-yellow-600">Pending</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

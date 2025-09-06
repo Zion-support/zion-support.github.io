@@ -21,15 +21,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${personId}:${startDate}`;
   const version = nextVersionFor(state, entityKey);
   const event = {
-    eventId: uuidv4();
+    eventId: uuidv4(),
     type: "talent_mobility" as const,
-    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate };
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate },
     originInstanceId: state.config.instanceId,
-    version;
-    timestamp: Date.now()},
+    version,
+    timestamp: Date.now()
+  };
   upsertEvent(state, event);
   writeState(state);
-  const body = { ...event; propagate: false },
+  const body = { ...event, propagate: false };
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
@@ -39,9 +40,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .map(async (peer) => {
         const url = new URL("/api/sync/publish", peer.baseUrl).toString();
         try {
-          await axios.post(url, body, { headers, timeout: 5000 })
+          await axios.post(url, body, { headers, timeout: 5000 });
         } catch {}
       })
-  ),
-  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+  );
+  return res.status(200).json({ status: "created", version, eventId: event.eventId });
 }
