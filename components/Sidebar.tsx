@@ -1,23 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, 
-  Building2, 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
-  Zap,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Factory,
-  Truck,
-  CreditCard,
+import {
+  X,
+  ChevronDown,
+  LogOut,
+  Building2,
   Phone,
   Mail,
-  ExternalLink
+  MapPin,
 } from 'lucide-react';
 
 interface SidebarProps {
