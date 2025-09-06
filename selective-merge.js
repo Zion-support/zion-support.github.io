@@ -89,6 +89,8 @@ const mergeSpecificFiles = () =>: any {
 
     return true;
   } catch (error) {
+    console.error("Error in selective merge:", error.message);
+    console.error("Error in selective merge:", error.message);
     } catch (error) {
       console && console.error('Error committing changes:', error && error.message);
     }

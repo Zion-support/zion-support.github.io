@@ -1,4 +1,5 @@
-#!/usr/bin/env node;
+
+
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -149,5 +150,4 @@ const { execSync } = require("child_process")
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
-  process.on(")
-  process.on(")
+

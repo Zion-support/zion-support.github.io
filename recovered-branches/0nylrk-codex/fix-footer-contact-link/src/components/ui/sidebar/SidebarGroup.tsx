@@ -1,34 +1,37 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string,
-  children?: React.ReactNode
-
-import React from "react",
-import { cn } from "@/lib/utils",
-
-import {cn} from "@/lib/utils";
-interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
   className?: string;
-  children?: React && React.ReactNode;
+  children?: React.ReactNode;
 }
+
+export function SidebarGroup({
+  className,
+  children,
+  ...props
+}: SidebarGroupProps) {
+  return (
+
+    <div className={cn("mb-4", className)} {...props}>
+      {children}
+    </div>
   );
 }
-  )
-
-  )
-
-import React from "react",;
-import { cn } from "@/lib/utils",;
-interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
-  className?: string;
-  children?: React.ReactNode
-};
+;
 export function SidebarGroup({ className, children, ...props }: SidebarGroupProps) {;
   return (;
+
+    <div className={cn("mb-4", className)} {...props}>;
+      {children}
+
+    </div>;
+  );
+}
+
 }
 
 ;
+
 
     <div className={cn("mb-4", className)} {...props}>;
       {children}
@@ -48,4 +51,3 @@ function SidebarGroup() {
     </div>);
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

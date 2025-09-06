@@ -98,5 +98,4 @@ main().catch(error => {})
   log(`CI/CD Automation Process "failed": ${error.message}`);
   process.exit(1);
 }
-});
-});
+

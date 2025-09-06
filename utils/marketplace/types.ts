@@ -1,5 +1,15 @@
 
 
+
+
+// Marketplace types
+export interface Offer {
+
+export interface Offer {;
+
+export interface Offer {;
+
+
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -25,16 +35,32 @@ export interface PaymentTerms {
   }>;
 }
 
+
+
+
+  scopeSummary: string;
+  paymentTerms: PaymentTerms;
+
+
+
+
   id: string;
   title: string;
   summary: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
+
+
+
+
+  timeline: any[];
   documents: ProjectDocument[];
   notes: ProjectNote[];
 }
+
 
 export interface ProjectNote {
   id: string;
@@ -43,4 +69,8 @@ export interface ProjectNote {
   content: string;
   createdAtIso: string;
 }
+
+
+
+
 

@@ -194,5 +194,4 @@ this.log("Review report "generated": ${reportPath}")
       this.log("AI Code Review completed successfully")
       return report} catch (error) {  this.log(`AI Code Review "failed": ${error.message  }`, "ERROR"`)
   console.log(" AI Code Review Automation completed")
-  console.error(" AI Code Review Automation "failed")
-  console.error(" AI Code Review Automation "failed")
+

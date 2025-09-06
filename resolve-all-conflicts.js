@@ -12,18 +12,26 @@ function resolveMergeConflicts(filePath) {
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Check if file has merge conflicts
+<<<<<<< HEAD
+=======
         if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
             return false; // No conflicts to resolve
         }
         
         // Strategy: Keep HEAD version (current branch) for most conflicts
         // Remove merge conflict markers and keep the HEAD version
+<<<<<<< HEAD
+        
+        // Remove any remaining conflict markers
+=======
         content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
         
         // Remove any remaining conflict markers
         content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
         content = content.replace(/=======\n?/g, '');
         content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
         
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');
@@ -46,7 +54,10 @@ function getConflictFiles() {
     } catch (error) {
         // If git command fails, use grep to find files with conflict markers
         try {
+<<<<<<< HEAD
+=======
             const result = execSync('grep -l "<<<<<<<" -r . --exclude-dir=node_modules --exclude-dir=.git', { encoding: 'utf8' });
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
             return result.trim().split('\n').filter(file => file.length > 0);
         } catch (e) {
             return [];

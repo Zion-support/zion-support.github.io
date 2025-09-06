@@ -41,8 +41,6 @@ async function checkAutomationStatus() { const statusReport = {
 
 
 
-
-
     // Check automation scripts}
     _console.log('📋 Checking automation scripts...');',
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',',

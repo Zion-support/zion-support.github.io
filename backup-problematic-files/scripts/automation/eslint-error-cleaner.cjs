@@ -576,7 +576,8 @@ this.log("📄 Report "generated": ${reportFile}");
     try {
   // Step "1": Try auto-fix first;
       const autoFixResult = await this.runAutoFix();
-      // Step 2: Run ESLint check to see remaining errors, const checkResult = await this.runESLintCheck(),
+      // Step 2: Run ESLint check to see remaining errors;
+      const checkResult = await this.runESLintCheck();
       if (checkResult.success) {
   this.log("🎉 No ESLint errors found after auto-fix!");
         return { success: true, "errors": [], "fixed": 0 }
@@ -584,7 +585,8 @@ this.log("📄 Report "generated": ${reportFile}");
 ;
       // Step "3": Attempt manual fixes for remaining errors;
       const fixResults = await this.attemptFixes(checkResult.errors);
-      // Step 4: Generate report, const report = await this.generateReport(fixResults),
+      // Step 4: Generate report;
+      const report = await this.generateReport(fixResults);
       this.log("🎉 ESLint Error Cleaner completed!`);
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`;
   async run() {
@@ -592,7 +594,8 @@ this.log("📄 Report "generated": ${reportFile}");
     try {
   // Step "1": Try auto-fix first;
       const autoFixResult = await this.runAutoFix();
-      // Step 2: Run ESLint check to see remaining errors, const checkResult = await this.runESLintCheck(),
+      // Step 2: Run ESLint check to see remaining errors;
+      const checkResult = await this.runESLintCheck();
       if (checkResult.success) {
   this.log("🎉 No ESLint errors found after auto-fix!");
         return { success: true, "errors": [], "fixed": 0 }
@@ -600,7 +603,8 @@ this.log("📄 Report "generated": ${reportFile}");
 ;
       // Step "3": Attempt manual fixes for remaining errors;
       const fixResults = await this.attemptFixes(checkResult.errors);
-      // Step 4: Generate report, const report = await this.generateReport(fixResults),
+      // Step 4: Generate report;
+      const report = await this.generateReport(fixResults);
       this.log("🎉 ESLint Error Cleaner completed!");
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors';
       );
@@ -685,5 +689,4 @@ if (require.main === module) {
     console.error('ESLint error cleaner "failed": ', error);
     process.exit(1)})}
 ;
-module.exports = ESLintErrorCleaner
-module.exports = ESLintErrorCleaner
+

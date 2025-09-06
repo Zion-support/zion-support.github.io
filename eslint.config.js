@@ -10,47 +10,86 @@ import globals from 'globals';
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
 });
 
 export default [
+<<<<<<< HEAD
   // ...compat.extends('next/core-web-vitals'), // Not needed for Vite project
+=======
+  js.configs.recommended,
+  {
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly'
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
+    }
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1446
   {
     ignores: [
       'node_modules/**',
+      '.next/**',
       'dist/**',
       'build/**',
-      'coverage/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
       'scripts/**',
       'automation/**',
+      'automation_backup/**',
+      'apps.backup/**',
       'backup-problematic-files/**',
+      'backup-merge-conflicts/**',
+      'corrupted_backup/**',
+      'corrupted-files-backup/**',
       'src.disabled/**',
       'components.disabled/**',
       'pages.disabled/**',
       'zion-os/**',
       'zion-website/**',
       'zion_academy/**',
-      'api/**',
       'api-backup/**',
       'api-disabled/**',
       'api.disabled/**',
       'backup/**',
       'backups/**',
       'broken_files_backup/**',
-      'corrupted-files-backup/**',
       'cypress_backup/**',
       'data_backup/**',
       'deployment/**',
+      'deployments/**',
+      'dao/**',
       'e2e/**',
       'server/**',
       'temp_*/**',
       'test_build/**',
       'tests/**',
       '__tests__/**',
-      'types/**',
+      'components/apps/extension/**',
+      'lib.broken/**',
+      'middleware/**',
+      'netlify/**',
+      'pm2-automation/**',
+      'pm2-backups/**',
+      'recovered-branches/**',
+      'src.broken/**',
+      'src_backup_temp/**',
+      'test-next/**',
+      'tools/**',
+      'utils/**',
       '*.cjs',
       '*.mjs',
       'supabase/**',
@@ -82,6 +121,7 @@ export default [
       'structural-*.js',
       'system-*.js',
       'ultimate-*.js',
+<<<<<<< HEAD
       '*.js',
       'src_backup_temp/**',
       'temp-backup/**',
@@ -178,4 +218,10 @@ export default [
       'no-console': 'off',
     },
   },
+=======
+      'pages_backup_conflict/**',
+      'data.disabled/**'
+    ]
+  }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1446
 ];

@@ -25,6 +25,7 @@ import React from 'react';
 interface PostJobProps {
   // Add props here as needed
 
+
 }
 
 export default function PostJob({ }: PostJobProps) {
@@ -35,7 +36,10 @@ export default function PostJob({ }: PostJobProps) {
     </div>
   );
 
+
+
 }
+
 :src.pages.disabled/PostJob.jsx
 }
 }
@@ -43,3 +47,16 @@ export default function PostJob({ }: PostJobProps) {
 }
 }
 :temp_exclude/src.pages.disabled/PostJob.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/PostJob.jsx
+}
+}
+}
+}
+}

@@ -5,6 +5,7 @@ export interface ModerationResult {
   reason?: string;
   moderatedBy?: string;
   moderatedAt: Date;
+
 ;
 export interface ModerationAction {
   id: string;
@@ -14,6 +15,7 @@ export interface ModerationAction {
   adminId: string;
   reason?: string;
   createdAt: string;
+
 }
 }
 export interface ModerationFlag {

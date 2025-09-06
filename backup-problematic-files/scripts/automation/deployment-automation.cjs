@@ -326,5 +326,4 @@ if ( {})
      {}
   const deployment = new DeploymentAutomation}(;);
   deployment.run().catch(console.error)};
-module.exports = DeploymentAutomation;
-module.exports = DeploymentAutomation;
+
